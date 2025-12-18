@@ -3,7 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import parse from "html-react-parser";
 import Image from "next/image";
-import cheerio from 'cheerio';
+import * as cheerio from "cheerio";
 import { useRouter } from 'next/router';
 // import BlogSubscriberForm from "../../components/BlogSubscriberForm";
 import TimerModal from "../../components/TimerModal";
