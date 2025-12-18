@@ -1,0 +1,20 @@
+{
+    "redirects": [
+      { "source": "/dynamics-365-consultant/", "destination": "/our-services/dynamics-365-consultant/", "statusCode": 301 },
+      { "source": "/blog/migrating-dynamics-gp-to-d365-business-central/", "destination": "/blog/migrate-from-dynamics-gp-to-bc/", "statusCode": 301 },
+      { "source": "/blog/dynamics-crm-guide-overview/", "destination": "/blog/what-is-dynamics-365-crm/", "statusCode": 301 },
+      { "source": "/dynamics-365-business-central-feature-comparison/", "destination": "/dynamics-nav-vs-business-central/", "statusCode": 301 },
+      { "source": "/blog/best-crm-software/", "destination": "/blog/best-crm-software-for-small-business/", "statusCode": 301 },
+      { "source": "/blog/power-apps-pricing-licensing/", "destination": "/blog/power-apps-pricing-licensing-uk/", "statusCode": 301 },
+      { "source": "/dynamics-365-sales-copilot/", "destination": "/products/microsoft-dynamics-365-sales/copilot/", "statusCode": 301 },
+      { "source": "/dynamics-365-business-central-pricing-licensing/", "destination": "/products/dynamics-365-business-central/pricing-licensing/", "statusCode": 301 },
+      { "source": "/power-bi-support/", "destination": "/products/microsoft-power-bi/support/", "statusCode": 301 },
+      { "source": "/case-studies/nav09-nav18-upgrade/", "destination": "/case-studies/nav2009-nav18-upgrade/", "statusCode": 301 },
+       { "source": "/blog/what-is-the-best-accounting-software-for-charities/", "destination": "/blog/best-accounting-software-for-charities-uk/", "statusCode": 301 },
+        { "source": "/blog/erp-solutions-for-manufacturing/", "destination": "/blog/erp-solutions-for-manufacturing-uk/", "statusCode": 301 },
+        { "source": "/blog/10-best-erp-systems-for-small-businesses/", "destination": "/blog/15-best-erp-systems-for-small-businesses/", "statusCode": 301 }
+    ]
+  }
+  
+  
+  
