@@ -14,6 +14,7 @@ import {
 } from "react-share";
 import BlogSearchinner from "../../components/BlogSearchinner";
 
+
 // Utility function to parse HTML content and extract image URLs
 function parseImagesFromHtml(htmlContent) {
   if (!htmlContent) {
