@@ -5,10 +5,17 @@ import Pagination from "../../components/Pagination";
 import { paginate } from "../../helpers/paginate";
 import BlogSearch from "../../components/BlogSearch";
 import TimerModal from "../../components/TimerModal";
+/* ===============================
+   SHARED HELPER (SERVER + CLIENT)
+================================ */
+const cleanSlug = (slug = "") =>
+  slug.replace(/^\/+|\/+$/g, "");
 
+/* ===============================
+   STATIC PROPS
+================================ */
 export async function getStaticProps() {
   const backend = process.env.NEXT_PUBLIC_BACKEND_URL;
-
 
   const urls = {
     blogs: `${backend}/api/allblog`,
@@ -36,16 +43,32 @@ export async function getStaticProps() {
     fetchSafeJson("blograndomblogs", urls.blograndomblogs),
     fetchSafeJson("blogtranding", urls.blogtranding),
   ]);
+  
+
+
+  const slimBlog = (post) => ({
+    id: post.id,
+    title: post.title,
+    title_slug: cleanSlug(post.title_slug),
+    short_description: post.short_description,
+    image: post.image,
+    publish_date: post.publish_date,
+    read_time: post.read_time,
+    author: post.author,
+    category: post.category,
+    category_slug: cleanSlug(post.category_slug),
+  });
+
 
   return {
     props: {
-      blogs,
-      businesscentral,
-      categoryblogs,
-      blograndomblogs,
-      blogtranding,
-    },
-    revalidate: 60,
+    blogs: blogs.map(slimBlog),
+    businesscentral: businesscentral.map(slimBlog),
+    blograndomblogs: blograndomblogs.map(slimBlog),
+    blogtranding: blogtranding.map(slimBlog),
+    categoryblogs,
+  },
+  revalidate: 60,
   };
 }
 
@@ -57,6 +80,8 @@ const categoryColors = [
   '#b52c36',
   '#273266',
 ];
+
+
 
 
 function Blogshome({ blogs, businesscentral, categoryblogs, blograndomblogs, blogtranding }) {
@@ -90,7 +115,11 @@ function Blogshome({ blogs, businesscentral, categoryblogs, blograndomblogs, blo
               <div className="col-lg-6">
                 <div className="blogs-lates">
                   <div className="blog-sian"><span>Latest</span></div>
-                  <h1><a href={`/blog/${blogs[0].title_slug}`}>{blogs[0].title}</a></h1>
+                  <h1>
+                    <a href={`/blog/${cleanSlug(blogs[0].title_slug)}`}>
+                      {blogs[0].title}
+                    </a>
+                  </h1>
                   <div className="blogs-info-list">
                     <span className="user">
                       <a href={`/blog/author/${blogs[0].author?.split(" ").join("-")}`}>
@@ -108,12 +137,14 @@ function Blogshome({ blogs, businesscentral, categoryblogs, blograndomblogs, blo
                   <div className="b-card-info">
                     <p>{blogs[0].short_description?.substring(0, 180)}...</p>
                     <div className="page-link-read">
-                      <a href={`/blog/${blogs[0].title_slug}`}>Read More <span>{">"}</span></a>
+                      <a href={`/blog/${cleanSlug(blogs[0].title_slug)}`}>
+                        Read More <span>{">"}</span>
+                      </a>
                     </div>
                   </div>
                 </div>
                 <div className="prom-bann">
-                  <a href={`/blog/${blogs[0].title_slug}`}>
+                  <a href={`/blog/${cleanSlug(blogs[0].title_slug)}`}>
                     <img src={blogs[0].image} alt={blogs[0].title} />
                   </a>
                 </div>
@@ -147,7 +178,7 @@ function Blogshome({ blogs, businesscentral, categoryblogs, blograndomblogs, blo
                       </span>
                     </div>
                   ))} */}
-                  <div className="blog-sian" style={{marginBottom:'30px'}}><span>Insights from Forbes Technology Council</span></div>
+                  <div className="blog-sian" style={{ marginBottom: '30px' }}><span>Insights from Forbes Technology Council</span></div>
                   <div className="blg-side-new">
                     <a href="https://www.forbes.com/councils/forbestechcouncil/2025/10/30/how-to-reimagine-erp-for-the-ai-era-of-business/" target="_balnk" rel="nofollow">
                       <img src="/img/fab-3.jpg" width={140} alt="fob-ai" />
@@ -163,7 +194,7 @@ function Blogshome({ blogs, businesscentral, categoryblogs, blograndomblogs, blo
                     </div>
 
                   </div>
-                 
+
                   <div className="blg-side-new">
                     <a href="https://www.forbes.com/councils/forbestechcouncil/2025/09/19/how-to-integrate-generative-ai-as-a-strategic-partner/" target="_balnk" rel="nofollow">
                       <img src="/img/fob-ai.jpg" width={140} alt="fob-ai" />
@@ -194,7 +225,7 @@ function Blogshome({ blogs, businesscentral, categoryblogs, blograndomblogs, blo
                     </div>
 
                   </div>
-                   <div className="nxx-image">
+                  <div className="nxx-image">
                     <a href="https://councils.forbes.com/profile/Manish-Goyal-Co-founder-Dynamics-Square/1e25d5c2-1d98-46cd-834b-70d335b73b35" target="_balnk" rel="nofollow"><img src="/img/forber-01.png" alt="menu--ss" width={400} /></a>
                   </div>
 
@@ -213,7 +244,11 @@ function Blogshome({ blogs, businesscentral, categoryblogs, blograndomblogs, blo
               {blogtranding.map((item, i) => (
                 <div className="blogs-lates" key={`tr-${i}`}>
                   <div className="blog-sian"><span>Most Trending</span></div>
-                  <h2><a href={`/blog/${item.title_slug}`}>{item.title}</a></h2>
+                  <h2>
+                    <a href={`/blog/${cleanSlug(item.title_slug)}`}>
+                      {item.title}
+                    </a>
+                  </h2>
                   <div className="blogs-info-list">
                     <span className="user">
                       <a href={`/blog/author/${item.author?.split(" ").join("-")}`}>
@@ -223,7 +258,7 @@ function Blogshome({ blogs, businesscentral, categoryblogs, blograndomblogs, blo
                     <span className="date"><a><i className="bi bi-calendar"></i> {item.publish_date}</a></span>
                     <span className="time"><a><i className="bi bi-clock"></i> {item.read_time}</a></span>
                     <span className="cate">
-                      <a href={`/blog/category/${item.category_slug}`}>
+                      <a href={`/blog/category/${cleanSlug(item.category_slug)}`}>
                         <i className="bi bi-app"></i> {item.category}
                       </a>
                     </span>
@@ -231,7 +266,7 @@ function Blogshome({ blogs, businesscentral, categoryblogs, blograndomblogs, blo
                   <div className="b-card-info">
                     <p>{item.short_description?.substring(0, 180)}...</p>
                     <div className="page-link-read">
-                      <a href={`/blog/${item.title_slug}`}>Read More <span>{">"}</span></a>
+                      <a href={`/blog/${cleanSlug(item.title_slug)}`}>Read More <span>{">"}</span></a>
                     </div>
                   </div>
                 </div>
@@ -283,7 +318,11 @@ function Blogshome({ blogs, businesscentral, categoryblogs, blograndomblogs, blo
             <div className="col-lg-9">
               {paginatedPosts.map((item, i) => (
                 <div className="blogs-lates blogs-lates-rept" key={`rnd-${i}`}>
-                  <h3><a href={`/blog/${item.title_slug}`}>{item.title}</a></h3>
+                  <h3>
+                    <a href={`/blog/${cleanSlug(item.title_slug)}`}>
+                      {item.title}
+                    </a>
+                  </h3>
                   <div className="blogs-info-list">
                     <span className="user">
                       <a href={`/blog/author/${item.author?.split(" ").join("-")}`}>
@@ -293,7 +332,7 @@ function Blogshome({ blogs, businesscentral, categoryblogs, blograndomblogs, blo
                     <span className="date"><a><i className="bi bi-calendar"></i> {item.publish_date}</a></span>
                     <span className="time"><a><i className="bi bi-clock"></i> {item.read_time}</a></span>
                     <span className="cate">
-                      <a href={`/blog/category/${item.category_slug}`}>
+                      <a href={`/blog/category/${cleanSlug(item.category_slug)}`}>
                         <i className="bi bi-app"></i> {item.category}
                       </a>
                     </span>
