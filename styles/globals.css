@@ -541,11 +541,11 @@ section {
 }
 .navbar .getstarted,
 .navbar .getstarted:focus {
-  background: #bb2b36 !important;
+  background: #bb2b36;
   padding: 0.5rem 1rem;
   margin-left: 20px;
   border-radius: 4px;
-  color: #fff !important;
+  color: #fff;
 }
 .Health-Check .content .read-more:hover,
 .Solution-banner .btn-get-started:hover,
@@ -3520,7 +3520,8 @@ section {
   padding: 0.8rem 1.5rem;
   border-radius: 4px;
   transition: 0.5s;
-  background: var(--color-red);
+  color:#fff !important;
+  background: var(--color-red) !important;
   box-shadow: 0 5px 30px rgb(65 84 241 / 40%);
   -moz-box-shadow: 0 5px 30px rgb(65 84 241 / 40%);
   -webkit-box-shadow: 0 5px 30px rgb(65 84 241 / 40%);
