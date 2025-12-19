@@ -357,7 +357,6 @@ function Blogshome({ blogs, businesscentral, categoryblogs, blograndomblogs, blo
         </div>
       </div>
       <TimerModal />
-      
     </div>
   );
 }
