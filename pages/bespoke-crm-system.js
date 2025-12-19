@@ -107,7 +107,7 @@ const Startup = () => {
             <div className="row">
               <div className="col-lg-5">
                 <div className="call_to_action-right over-img">
-                  <img src="/img/MaskGroup8.png" alt="imagea" />
+                  <Image src="/img/MaskGroup8.png" alt="imagea" width={339} height={483} />
                 </div>
               </div>
               <div className="col-lg-7 align-self-center">

@@ -39,9 +39,11 @@ const Career = () => {
             <div className="row">
               <div className="col-lg-5 align-self-center">
                 <div className="commen-left-pic">
-                  <img
+                  <Image
                     src="/img/carrer-left-pic.png"
                     alt="carrer-left-pic"
+                    width={514}
+                    height={613}
                   />
                 </div>
               </div>
@@ -155,7 +157,7 @@ const Career = () => {
             </header>
             <div className="section-header section-heade-custom">
               <h3>
-                4.5 <img src="/img/star-red.svg" alt="star-red" />
+                4.5 <Image src="/img/star-red.svg" alt="star-red" width={197} height={36} />
               </h3>
               <p>90% of Employees on Glassdoor Recommend Dynamics Square</p>
             </div>

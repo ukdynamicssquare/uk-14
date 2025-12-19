@@ -42,7 +42,7 @@ const ContactUs = () => {
                     <h2>Why Choose Dynamics Square</h2>
                     <div className="new-flex-se">
                       <div className="left">
-                        <img src="/img/card_travel.png" alt="card_travel" />
+                        <Image src="/img/card_travel.png" alt="card_travel" width={32} height={32} />
                       </div>
                       <div className="right">
                         <span>350+ Successful Implementations and Counting!</span>
@@ -50,7 +50,7 @@ const ContactUs = () => {
                     </div>
                     <div className="new-flex-se">
                       <div className="left">
-                        <img src="/img/workspace_premi.png" alt="workspace_premi" />
+                        <Image src="/img/workspace_premi.png" alt="workspace_premi" width={32} height={32} />
                       </div>
                       <div className="right">
                         <span>150+ Certified Professionals at Your Service!</span>
@@ -59,7 +59,7 @@ const ContactUs = () => {
                     </div>
                     <div className="new-flex-se">
                       <div className="left">
-                        <img src="/img/chronic.png" alt="chronic" />
+                        <Image src="/img/chronic.png" alt="chronic" width={32} height={32} />
                       </div>
                       <div className="right">
                         <span>4x Improved Productivity!</span>
@@ -67,7 +67,7 @@ const ContactUs = () => {
                     </div>
                     <div className="new-flex-se">
                       <div className="left">
-                        <img src="/img/diversity-3.png" alt="diversity-3" />
+                        <Image src="/img/diversity-3.png" alt="diversity-3" width={32} height={32} />
                       </div>
                       <div className="right">
                         <span>24/7 Support to Keep Your Business Up and Running!</span>
@@ -154,28 +154,28 @@ const ContactUs = () => {
                   >
                     <SwiperSlide>
                       <div className='thum-tab'>
-                        <img src="/img/Arteak-new-logo.png" alt='Arteak-new-logo' />
+                        <Image src="/img/Arteak-new-logo.png" alt='Arteak-new-logo' width={160} height={60} />
                       </div>
                     </SwiperSlide>
 
                     <SwiperSlide>
                       <div className='thum-tab'>
-                        <img src="/img/parweld-new-logo.png" alt='parweld-new-logo' />
+                        <Image src="/img/parweld-new-logo.png" alt='parweld-new-logo' width={160} height={60} />
                       </div>
                     </SwiperSlide>
                     <SwiperSlide>
                       <div className='thum-tab'>
-                        <img src="/img/green-wireless-logo.png" alt='green-wireless-logo' />
+                        <Image src="/img/green-wireless-logo.png" alt='green-wireless-logo' width={160} height={60} />
                       </div>
                     </SwiperSlide>
                     <SwiperSlide>
                       <div className='thum-tab'>
-                        <img src="/img/timesco-logo.png" alt='timesco-logo' />
+                        <Image src="/img/timesco-logo.png" alt='timesco-logo' width={160} height={60} />
                       </div>
                     </SwiperSlide>
                     <SwiperSlide>
                       <div className='thum-tab'>
-                        <img src="/img/omicron_engineering_blur.png" alt='omicron_engineering_blur' />
+                        <Image src="/img/omicron_engineering_blur.png" alt='omicron_engineering_blur' width={160} height={60} />
                       </div>
                     </SwiperSlide>
                     {/* <SwiperSlide>
@@ -208,7 +208,7 @@ const ContactUs = () => {
                         <div className='col-lg-7'>
                           <div className='test-s-info'>
                             <figure>
-                              <img src="/img/testimonials/Terence-Turner.png" alt="erence-Turner" />
+                              <Image src="/img/testimonials/Terence-Turner.png" alt="erence-Turner" width={126} height={126} />
                               <p>Dynamics Square Team provided us a top-level service. Well trained staff as well as excellent support when needed. Very professional and trustworthy.</p>
                               <h5>Terence Turner</h5>
                               <span>General Manager</span>
@@ -240,7 +240,7 @@ const ContactUs = () => {
                         <div className='col-lg-7'>
                           <div className='test-s-info'>
                             <figure>
-                              <img src="/img/testimonials/Jonathan-W.png" alt="Jonathan-W" />
+                              <Image src="/img/testimonials/Jonathan-W.png" alt="Jonathan-W" width={126} height={126} />
                               <p>We have worked with Dynamics Square since 2019. Our working relationship has built during this period, and we have found them to be very professional</p>
                               <h5>Jonathan W</h5>
                               <span>Technical Director</span>
@@ -273,7 +273,7 @@ const ContactUs = () => {
                         <div className='col-lg-7'>
                           <div className='test-s-info'>
                             <figure>
-                              <img src="/img/avatar.png" alt="avatar" />
+                              <Image src="/img/avatar.png" alt="avatar" width={126} height={126} />
                               <p>Kudos to Dynamics Square for seamless implementation support.Their dedication made us confident in a successful launch!</p>
                               <h5>Andy Bird</h5>
                               <span>Managing Director</span>
@@ -305,7 +305,7 @@ const ContactUs = () => {
                         <div className='col-lg-7'>
                           <div className='test-s-info'>
                             <figure>
-                              <img src="/img/avatar.png" alt="avatar" />
+                              <Image src="/img/avatar.png" alt="avatar" width={126} height={126} />
                               <p>Dynamics Square has been a solid partner for 4 years, skillfully upgrading us from NAV2018 to Business Central. They offer great value and professionalism.</p>
                               <h5>Mark Shaxted</h5>
                               <span>Operations Manager</span>
@@ -337,7 +337,7 @@ const ContactUs = () => {
                         <div className='col-lg-7'>
                           <div className='test-s-info'>
                             <figure>
-                              <img src="/img/avatar.png" alt="avatar" />
+                              <Image src="/img/avatar.png" alt="avatar" width={126} height={126} />
                               <p>Impressed by Dynamics Square's ERP upgrade & customization. Their virtual collaboration made our transition seamless. Highly recommend for business growth.</p>
                               <h5>Tristan Cliffe</h5>
                               <span>Director</span>

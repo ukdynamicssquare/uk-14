@@ -222,7 +222,7 @@ const AboutUs = () => {
               <div className="col-lg-4">
                 <div className="team-memb">
                   <div className="tem-mem-pic">
-                  <Link href="https://www.linkedin.com/in/manish-g-74854a44" target="_blank">
+                  <Link href="https://www.linkedin.com/in/manish-g-74854a44">
                   <Image src="/img/manish-goyal.png" alt="manish-goyal" width={238} height={238} />
 
                   </Link>
@@ -233,7 +233,7 @@ const AboutUs = () => {
                     <p>"Helping companies with Digital Transformation using innovative Microsoft cloud technology"</p>
                   </div>
                    <div className="social">
-                    <Link href="https://www.linkedin.com/in/manish-g-74854a44" target="_blank">
+                    <Link href="https://www.linkedin.com/in/manish-g-74854a44">
                       <i className="bi bi-linkedin" style={{fontSize:'26px'}}></i>
                       </Link>
                     </div> 
@@ -394,7 +394,7 @@ const AboutUs = () => {
               <div className="row bg-grays">
                   <div className="col-lg-6 align-self-center">
                     <div className="text-center">
-                    <Image src="/img/new-side-1.png" alt="new-side-1" width={482} height={447} />
+                    <Image src="/img/new-side-1.png" alt="new-side-1" width={482} height={448} />
                     </div>
                   </div>
                   <div className="col-lg-6 align-self-center">
@@ -403,38 +403,38 @@ const AboutUs = () => {
                       <p>We streamline your business processes with modern ERP systems powered by cloud technology, AI, and machine learning, ensuring sustainability and continuous growth.</p>
                       <ul className="new-com-list">
                         <li>
-                          <Link href="/products/dynamics-365-business-central/" target="_blank">
-                            <img src="/img/group-2122.png" alt="Business-Central" />
+                          <Link href="/products/dynamics-365-business-central/" >
+                            <Image src="/img/group-2122.png" alt="Business-Central" width={105} height={105} />
                             <span>Business <br /> Central</span>
                           </Link>
                         </li>
                         <li>
-                          <Link href="/products/microsoft-dynamics-365-finance/" target="_blank">
-                            <img src="/img/group-2123.png" alt="Finance" />
+                          <Link href="/products/microsoft-dynamics-365-finance/">
+                            <Image src="/img/group-2123.png" alt="Finance" width={105} height={105} />
                             <span>Finance</span>
                           </Link>
                         </li>
                         <li>
-                          <Link href="/products/microsoft-dynamics-365-commerce/" target="_blank">
-                            <img src="/img/group-2124.png" alt="Commerce" />
+                          <Link href="/products/microsoft-dynamics-365-commerce/">
+                            <Image src="/img/group-2124.png" alt="Commerce" width={105} height={105} />
                             <span>Commerce</span>
                           </Link>
                         </li>
                         <li>
-                          <Link href="/products/dynamics-365-human-resources/" target="_blank">
-                            <img src="/img/group-2125.png" alt="Human-Resources" />
+                          <Link href="/products/dynamics-365-human-resources/">
+                            <Image src="/img/group-2125.png" alt="Human-Resources" width={105} height={105} />
                             <span>Human <br /> Resources</span>
                           </Link>
                         </li>
                         <li>
-                          <Link href="/products/dynamics-365-supply-chain-management/" target="_blank">
-                            <img src="/img/group-2126.png" alt="Supply-chain" />
+                          <Link href="/products/dynamics-365-supply-chain-management/">
+                            <Image src="/img/group-2126.png" alt="Supply-chain" width={105} height={105} />
                             <span>Supply <br /> Chain</span>
                           </Link>
                         </li>
                         <li>
-                          <Link href="/products/dynamics-365-project-operations/" target="_blank">
-                            <img src="/img/group-2127.png" alt="Project-Operations" />
+                          <Link href="/products/dynamics-365-project-operations/">
+                            <Image src="/img/group-2127.png" alt="Project-Operations" width={105} height={105} />
                             <span>Project <br /> Operations</span>
                           </Link>
                         </li>
@@ -458,26 +458,26 @@ const AboutUs = () => {
                       <p>Digital transformation isn't successful without meeting customer expectations. We help you build strong relationships, nurture clients and boost sales through Microsoft CRM solutions.</p>
                       <ul className="new-com-list">
                         <li>
-                          <Link href="/products/microsoft-dynamics-365-sales/" target="_blank">
-                            <img src="/img/group-2138.png" alt="Sales" />
+                          <Link href="/products/microsoft-dynamics-365-sales/">
+                            <Image src="/img/group-2138.png" alt="Sales" width={105} height={105} />
                             <span>Sales</span>
                           </Link>
                         </li>
                         <li>
-                          <Link href="/products/microsoft-dynamics-365-marketing/" target="_blank">
-                            <img src="/img/group-2139.png" alt="Marketing" />
+                          <Link href="/products/microsoft-dynamics-365-marketing/">
+                            <Image src="/img/group-2139.png" alt="Marketing" width={105} height={105} />
                             <span>Marketing</span>
                           </Link>
                         </li>
                         <li>
-                          <Link href="/products/microsoft-dynamics-365-field-service/" target="_blank">
-                            <img src="/img/group-2137.png" alt="Field-Service" />
+                          <Link href="/products/microsoft-dynamics-365-field-service/">
+                            <Image src="/img/group-2137.png" alt="Field-Service" width={105} height={105} />
                             <span>Field <br /> Service</span>
                           </Link>
                         </li>
                         <li>
-                          <Link href="/products/microsoft-dynamics-365-customer-service/" target="_blank">
-                            <img src="/img/group-2136.png" alt="Customer-Service" />
+                          <Link href="/products/microsoft-dynamics-365-customer-service/">
+                            <Image src="/img/group-2136.png" alt="Customer-Service" width={105} height={105} />
                             <span>Customer <br /> Service</span>
                           </Link>
                         </li>
@@ -499,26 +499,26 @@ const AboutUs = () => {
                       <p>Make informed decision by connecting apps with Azure cloud and develop end-to-end business solutions for effectively analyzing data, building solutions, automating processes, and creating virtual agents.</p>
                       <ul className="new-com-list">
                         <li>
-                          <Link href="/products/microsoft-power-bi/" target="_blank">
-                            <img src="/img/group-2214.png" alt="Power-BI" />
+                          <Link href="/products/microsoft-power-bi/">
+                            <Image src="/img/group-2214.png" width={105} height={105} alt="Power-BI" />
                             <span>Power <br /> BI</span>
                           </Link>
                         </li>
                         <li>
-                          <Link href="/products/microsoft-power-automate/" target="_blank">
-                            <img src="/img/group-2213.png" alt=">Power-Automate" />
+                          <Link href="/products/microsoft-power-automate/">
+                            <Image src="/img/group-2213.png" width={105} height={105} alt=">Power-Automate" />
                             <span>Power <br /> Automate</span>
                           </Link>
                         </li>
                         <li>
-                          <Link href="/products/microsoft-power-apps/" target="_blank">
-                            <img src="/img/group-2211.png" alt="Power-Apps" />
+                          <Link href="/products/microsoft-power-apps/">
+                            <Image src="/img/group-2211.png" width={105} height={105} alt="Power-Apps" />
                             <span>Power <br /> Apps</span>
                           </Link>
                         </li>
                         <li>
-                          <Link href="/products/microsoft-power-virtual-agents/" target="_blank">
-                            <img src="/img/group-22101.png" alt="Virtual-Agents" />
+                          <Link href="/products/microsoft-power-virtual-agents/">
+                            <Image src="/img/group-22101.png" width={105} height={105} alt="Virtual-Agents" />
                             <span>Virtual <br /> Agents</span>
                           </Link>
                         </li>
@@ -540,20 +540,20 @@ const AboutUs = () => {
                       <p>Leverage the power of next-gen technologies like Azure, IoT, IIoT, AI, and ML. Save time and money by connecting your business to intelligent Microsoft Cloud Ecosystem.</p>
                       <ul className="new-com-list">
                         <li>
-                          <Link href="/products/microsoft-dynamics-365-mixed-reality/" target="_blank">
-                            <img src="/img/group-1998.png" alt="Mixed-Reality" />
+                          <Link href="/products/microsoft-dynamics-365-mixed-reality/">
+                            <Image src="/img/group-1998.png" width={105} height={105} alt="Mixed-Reality" />
                             <span>Mixed <br /> Reality</span>
                           </Link>
                         </li>
                         <li>
-                          <Link href="/products/microsoft-azure/" target="_blank">
-                            <img src="/img/group-2164.png" alt="Azure" />
+                          <Link href="/products/microsoft-azure/">
+                            <Image src="/img/group-2164.png" width={105} height={105} alt="Azure" />
                             <span>Azure</span>
                           </Link>
                         </li>
                         <li>
-                          <Link href="/products/microsoft-dynamics-365-ai/" target="_blank">
-                            <img src="/img/group-1977.png" alt="AI" />
+                          <Link href="/products/microsoft-dynamics-365-ai/">
+                            <Image src="/img/group-1977.png" width={105} height={105} alt="AI" />
                             <span>AI</span>
                           </Link>
                         </li>
@@ -591,7 +591,7 @@ const AboutUs = () => {
               </div>
               <div className="col-lg-12 col-md-12">
               <div className="price-btn d-flex justify-content-center">
-                <Link href="/case-studies/" className="btn-get-red" target="_blank">
+                <Link href="/case-studies/" className="btn-get-red">
 
                   <span>Read Success Stories</span> 
                 </Link>

@@ -74,7 +74,7 @@ const UpgradeServices = () => {
             <div className="col-lg-6">
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                  <img src="/img/strong_communication.png" alt="strong_communication" />
+                  <Image src="/img/strong_communication.png" alt="strong_communication" width={98} height={98} />
                 </div>
                 <div className="style-grid-content">
                   <h3>Strong Communication</h3>
@@ -86,7 +86,7 @@ const UpgradeServices = () => {
 
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                  <img src="/img/proven_records.png" alt="proven_records" />
+                  <Image src="/img/proven_records.png" alt="proven_records" width={98} height={98} />
                 </div>
                 <div className="style-grid-content">
                   <h3>Proven Track Record</h3>
@@ -97,7 +97,7 @@ const UpgradeServices = () => {
             <div className="col-lg-6">
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                  <img src="/img/Equipped_resources.png" alt="Equipped_resources" />
+                  <Image src="/img/Equipped_resources.png" alt="Equipped_resources" width={98} height={98} />
                 </div>
                 <div className="style-grid-content">
                   <h3>Equipped with Resources</h3>
@@ -107,9 +107,10 @@ const UpgradeServices = () => {
 
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                  <img
+                  <Image
                     src="/img/robust_Methodlogy.png"
                     alt="robust_Methodlogy"
+                    width={98} height={98}
                   />
                 </div>
                 <div className="style-grid-content">

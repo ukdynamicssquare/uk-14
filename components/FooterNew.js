@@ -376,11 +376,11 @@ const FooterNew = () => {
             <div className="row gy-4">
               <div className="col-lg-3 col-md-6 footer-info" style={{marginTop:'0px'}}>
                 <Link href="/" className="logo d-flex align-items-center">
-                  <Image
+                  <img
                     src="/img/dynamics_square_tm_logo_footer.svg"
                     alt="Dynamics Square TM Logo"
-                    style={{ marginBottom: "20px" }}
-                    width={230} height={81}
+                    style={{ marginBottom: "20px", height: "21px", width: "auto",}}
+                    width={301} height={21}
                   />
                 </Link>
                 <p>

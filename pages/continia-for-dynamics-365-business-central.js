@@ -55,10 +55,10 @@ const Continia = () => {
                 </div>
               </div>
               <div className='m-b-image-banner m-b-image-banner-nn'>
-                <Image src="/img/cont-shape-pic.png" alt='bc-support-banner' width={944} height={322} />
+                <Image src="/img/cont-shape-pic.png" alt='bc-support-banner' width={944} height={322} priority />
               </div>
               <div className='m-b-image-banner-bott'>
-                <Image src="/img/cont-shape.png" alt='cont-shape' width={1898} height={470} />
+                <Image src="/img/cont-shape.png" alt='cont-shape' width={1898} height={470} priority />
               </div>
             </div>
 
@@ -117,28 +117,28 @@ const Continia = () => {
           <div className="row g-3 ">
             <div className="col-lg-3 col-md-6  d-flex">
               <div className="card-700 card-700-img">
-                <img src="/img/con-ic-01.png" alt="con-ic-01" width={197} height={76} />
+                <Image src="/img/con-ic-01.png" alt="con-ic-01" width={197} height={76} />
                 <p><b>Document Capture</b><br />
                   to process invoices without lifting a finger</p>
               </div>
             </div>
             <div className="col-lg-3 col-md-6  d-flex">
               <div className="card-700 card-700-img">
-                <img src="/img/con-ic-02.png" alt="con-ic-02" width={197} height={76} />
+                <Image src="/img/con-ic-02.png" alt="con-ic-02" width={197} height={76} />
                 <p><b>Expense Management</b><br />
                   that eliminates paper receipts and messy spreadsheets </p>
               </div>
             </div>
             <div className="col-lg-3 col-md-6  d-flex">
               <div className="card-700 card-700-img">
-                <img src="/img/con-ic-03.png" alt="con-ic-03" width={197} height={76} />
+                <Image src="/img/con-ic-03.png" alt="con-ic-03" width={197} height={76} />
                 <p><b>Payment Management</b><br />
                   that keeps errors and missed deadlines off your books </p>
               </div>
             </div>
             <div className="col-lg-3 col-md-6  d-flex">
               <div className="card-700 card-700-img">
-                <img src="/img/con-ic-04.png" alt="con-ic-04" width={197} height={76} />
+                <Image src="/img/con-ic-04.png" alt="con-ic-04" width={197} height={76} />
                 <p><b>Document Output </b><br />
                   for seamless, consistent communication with vendors and clients </p>
               </div>
@@ -180,7 +180,7 @@ const Continia = () => {
             </div>
           </div>
         </div>
-        <img src="/img/n-015.png" alt="n-015" />
+        <Image src="/img/n-015.png" alt="n-015" width={671} height={344} />
       </section>
       <section className='solution-new-banner-three pd-con-63'>
         {/* <div className="container" ref={containerRef}> */}
@@ -626,7 +626,7 @@ const Continia = () => {
                     aria-controls="s-pills-home-1"
                     aria-selected="true"
                   >
-                    <h3><img src="/img/autostop-01.png" alt="autostop-01" width={24} height={24} />Process Automation with Precision</h3>
+                    <h3><Image src="/img/autostop-01.png" alt="autostop-01" width={24} height={24} />Process Automation with Precision</h3>
                   </button>
                   <button
                     className="nav-link"
@@ -638,7 +638,7 @@ const Continia = () => {
                     aria-controls="s-pills-home-2"
                     aria-selected="false"
                   >
-                    <h3><img src="/img/autostop-02.png" alt="autostop-02" width={24} height={24} />Accuracy Where It Matters Most</h3>
+                    <h3><Image src="/img/autostop-02.png" alt="autostop-02" width={24} height={24} />Accuracy Where It Matters Most</h3>
                   </button>
                   <button
                     className="nav-link"
@@ -650,7 +650,7 @@ const Continia = () => {
                     aria-controls="s-pills-hpme-3"
                     aria-selected="false"
                   >
-                    <h3><img src="/img/autostop-03.png" alt="autostop-03" width={24} height={24} />Built-in Security and Compliance</h3>
+                    <h3><Image src="/img/autostop-03.png" alt="autostop-03" width={24} height={24} />Built-in Security and Compliance</h3>
                   </button>
                   <button
                     className="nav-link"
@@ -662,7 +662,7 @@ const Continia = () => {
                     aria-controls="s-pills-home-4"
                     aria-selected="false"
                   >
-                    <h3><img src="/img/autostop-04.png" alt="autostop-04" width={24} height={24} />Real-Time Visibility and Control</h3>
+                    <h3><Image src="/img/autostop-04.png" alt="autostop-04" width={24} height={24} />Real-Time Visibility and Control</h3>
                   </button>
                   <button
                     className="nav-link"
@@ -674,7 +674,7 @@ const Continia = () => {
                     aria-controls="s-pills-home-5"
                     aria-selected="false"
                   >
-                    <h3><img src="/img/autostop-05.png" alt="autostop-05" width={24} height={24} />ROI You Can Measure in Days</h3>
+                    <h3><Image src="/img/autostop-05.png" alt="autostop-05" width={24} height={24} />ROI You Can Measure in Days</h3>
                   </button>
                   <button
                     className="nav-link"
@@ -686,7 +686,7 @@ const Continia = () => {
                     aria-controls="s-pills-home-6"
                     aria-selected="false"
                   >
-                    <h3><img src="/img/autostop-06.png" alt="autostop-06" width={24} height={24} />Sustainability</h3>
+                    <h3><Image src="/img/autostop-06.png" alt="autostop-06" width={24} height={24} />Sustainability</h3>
                   </button>
 
                 </div>
@@ -945,10 +945,10 @@ const Continia = () => {
                 <h2>Business Central Continia: Precision Builds Reputation </h2>
                 <p>With Continia integration with Business Central, you gain decision clarity.</p>
                 <ul className="bx-pi-cc">
-                  <li><div className="im-60-b"><img src="/img/autostop-07.png" alt="autostop-02" width={24} height={24} /></div><span>Know which vendors delay payments and which team delays approvals</span></li>
-                  <li><div className="im-60-b"><img src="/img/autostop-08.png" alt="autostop-02" width={24} height={24} /></div><span>See which expense types bleed budget</span></li>
-                  <li><div className="im-60-b"><img src="/img/autostop-09.png" alt="autostop-02" width={24} height={24} /></div><span>Receive alerts for invoice duplicates before payment</span></li>
-                  <li><div className="im-60-b"><img src="/img/autostop-10.png" alt="autostop-02" width={24} height={24} /></div><span>Trace every action to a human or a rule</span></li>
+                  <li><div className="im-60-b"><Image src="/img/autostop-07.png" alt="autostop-02" width={25} height={25} /></div><span>Know which vendors delay payments and which team delays approvals</span></li>
+                  <li><div className="im-60-b"><Image src="/img/autostop-08.png" alt="autostop-02" width={25} height={25} /></div><span>See which expense types bleed budget</span></li>
+                  <li><div className="im-60-b"><Image src="/img/autostop-09.png" alt="autostop-02" width={25} height={25} /></div><span>Receive alerts for invoice duplicates before payment</span></li>
+                  <li><div className="im-60-b"><Image src="/img/autostop-10.png" alt="autostop-02" width={25} height={25} /></div><span>Trace every action to a human or a rule</span></li>
                 </ul>
 
                 <Link

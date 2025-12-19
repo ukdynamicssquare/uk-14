@@ -54,10 +54,10 @@ const ContiniaExpence = () => {
                 </div>
               </div>
               <div className='m-b-image-banner m-b-image-banner-nn'>
-                <Image src="/img/exp-mangnet-banner.png" alt='bc-support-banner' width={944} height={322} />
+                <Image src="/img/exp-mangnet-banner.png" alt='bc-support-banner' width={944} height={322} priority />
               </div>
               <div className='m-b-image-banner-bott'>
-                <Image src="/img/cont-shape.png" alt='cont-shape' width={1898} height={470} />
+                <Image src="/img/cont-shape.png" alt='cont-shape' width={1898} height={470} priority />
               </div>
             </div>
 
@@ -145,7 +145,7 @@ const ContiniaExpence = () => {
             </div>
           </div>
         </div>
-        <img src="/img/n-015.png" alt="n-015" />
+        <Image src="/img/n-015.png" alt="n-015" width={671} height={344} />
       </section>
       <section className='solution-new-banner-three pd-con-63'>
         {/* <div className="container" ref={containerRef}> */}
@@ -557,7 +557,7 @@ const ContiniaExpence = () => {
                     aria-controls="s-pills-home-1"
                     aria-selected="true"
                   >
-                    <h3><img src="/img/exp-mangnet-icon-1.png" alt="exp-mangnet-icon-1" width={24} height={24} />Time Savings Across the Board</h3>
+                    <h3><Image src="/img/exp-mangnet-icon-1.png" alt="exp-mangnet-icon-1" width={24} height={24} />Time Savings Across the Board</h3>
                   </button>
                   <button
                     className="nav-link"
@@ -569,7 +569,7 @@ const ContiniaExpence = () => {
                     aria-controls="s-pills-home-2"
                     aria-selected="false"
                   >
-                    <h3><img src="/img/exp-mangnet-icon-2.png" alt="exp-mangnet-icon-2" width={24} height={24} />Real-Time Visibility Into Spend </h3>
+                    <h3><Image src="/img/exp-mangnet-icon-2.png" alt="exp-mangnet-icon-2" width={24} height={24} />Real-Time Visibility Into Spend </h3>
                   </button>
                   <button
                     className="nav-link"
@@ -581,7 +581,7 @@ const ContiniaExpence = () => {
                     aria-controls="s-pills-hpme-3"
                     aria-selected="false"
                   >
-                    <h3><img src="/img/exp-mangnet-icon-3.png" alt="exp-mangnet-icon-3" width={24} height={24} />Audit-Ready Compliance</h3>
+                    <h3><Image src="/img/exp-mangnet-icon-3.png" alt="exp-mangnet-icon-3" width={24} height={24} />Audit-Ready Compliance</h3>
                   </button>
                   <button
                     className="nav-link"
@@ -593,7 +593,7 @@ const ContiniaExpence = () => {
                     aria-controls="s-pills-home-4"
                     aria-selected="false"
                   >
-                    <h3><img src="/img/exp-mangnet-icon-4.png" alt="exp-mangnet-icon-4" width={24} height={24} />Scalable, No Matter the Team Size</h3>
+                    <h3><Image src="/img/exp-mangnet-icon-4.png" alt="exp-mangnet-icon-4" width={24} height={24} />Scalable, No Matter the Team Size</h3>
                   </button>
                   <button
                     className="nav-link"
@@ -605,7 +605,7 @@ const ContiniaExpence = () => {
                     aria-controls="s-pills-home-5"
                     aria-selected="false"
                   >
-                    <h3><img src="/img/exp-mangnet-icon-5.png" alt="exp-mangnet-icon-5" width={24} height={24} />AI-Driven Efficiency </h3>
+                    <h3><Image src="/img/exp-mangnet-icon-5.png" alt="exp-mangnet-icon-5" width={24} height={24} />AI-Driven Efficiency </h3>
                   </button>
                  
 
