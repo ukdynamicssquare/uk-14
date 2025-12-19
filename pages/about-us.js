@@ -57,7 +57,7 @@ const AboutUs = () => {
               <div className="col-lg-6 align-self-center">
                 <Image src="/img/about-pic.png" alt="About-us"
                 width={775} height={528} 
-                priority = {true}
+                priority
                 />
               </div>
             </div>
@@ -123,7 +123,7 @@ const AboutUs = () => {
               <div className="col-lg-4">
                 <div className="mission-content">
                   <div className="mission-inner-con">
-                    <img src="/img/mission.png" alt="mission" />
+                    <Image src="/img/mission.png" width={158} height={158} alt="mission" />
                     <h3>Mission</h3>
                     <p>
                     To empower every business on the planet to achieve more and cope with the world's next wave through Microsoft Business Apps such as D365 Business Central, Finance, Sales, Supply Chain - hosted under Microsoft Azure Cloud; a highly secure and advanced cloud network. 
@@ -134,7 +134,7 @@ const AboutUs = () => {
               <div className="col-lg-4">
                 <div className="mission-content">
                   <div className="mission-inner-con">
-                    <img src="/img/vission.png" alt="vission" />
+                    <Image src="/img/vission.png" alt="vission" width={158} height={158}  />
                     <h3>Vision</h3>
                     <p>
                     To simplify & automate business processes, improve customer experience, boost sales ROI by breaking data silos into meaningful insights by integrating Power BI, AI, and ML - Powered by Microsoft cloud technology.
@@ -145,7 +145,7 @@ const AboutUs = () => {
               <div className="col-lg-4">
                 <div className="mission-content">
                   <div className="mission-inner-con">
-                    <img src="/img/approch-new.png" alt="approch" className="wsd" />
+                    <Image src="/img/approch-new.png" alt="approch" className="wsd" width={158} height={158}  />
                     <h3>Approach</h3>
                     <p>
                     We strive to build long-term relationships by making cloud techology accessible. We nurture fundamental values - "customer centricity" and "value proposition". Our clients are at our "central focus" for all our actions - engaging, informing, and adding value to their Vision.
@@ -205,7 +205,7 @@ const AboutUs = () => {
               <div className="col-lg-4">
                 <div className="team-memb">
                   <div className="tem-mem-pic">
-                    <img src="/img/gaurav-goyal.png" alt="gaurav-goyal" />
+                    <Image src="/img/gaurav-goyal.png" alt="gaurav-goyal" width={238} height={238} />
                   </div>
                   <div className="tem-mem-info">
                     <h4>Gaurav Goyal</h4>
@@ -223,7 +223,7 @@ const AboutUs = () => {
                 <div className="team-memb">
                   <div className="tem-mem-pic">
                   <Link href="https://www.linkedin.com/in/manish-g-74854a44" target="_blank">
-                  <img src="/img/manish-goyal.png" alt="manish-goyal" />
+                  <Image src="/img/manish-goyal.png" alt="manish-goyal" width={238} height={238} />
 
                   </Link>
                   </div>
@@ -242,7 +242,7 @@ const AboutUs = () => {
               <div className="col-lg-4">
                 <div className="team-memb">
                   <div className="tem-mem-pic">
-                    <img src="/img/dr-felton-lean.png" alt="dr-felton-lean" />
+                    <Image src="/img/dr-felton-lean.png" alt="dr-felton-lean" width={238} height={238} />
                   </div>
                   <div className="tem-mem-info">
                     <h4>Dr. Felton Lean</h4>

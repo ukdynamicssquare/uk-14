@@ -53,6 +53,7 @@ const WhyMigrade360 = () => {
                 src="/img/why-migrate-36--banner.png"
                 alt="why-migrate-36--banner"
                 width={660} height={464}
+                priority
               />
             </div>
           </div>
@@ -102,6 +103,7 @@ const WhyMigrade360 = () => {
 
                   <li>Limited mobility</li> 
                   </ul>
+                  
                 </div>
             </div>
             <div className="col-lg-12">
@@ -111,7 +113,7 @@ const WhyMigrade360 = () => {
             Don't let outdated technology hold your business back from achieving great success. 
             Check out the overview of Migrating to Microsoft Dynamics 365 - <b>Watch Video</b> </p>
            <div className="text-center"  style={{paddingTop:"30px"}}>
-           <iframe width="560" height="315" src="https://www.youtube.com/embed/nIGQrswcj-s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/nIGQrswcj-s" title="YouTube video player"></iframe>
            </div>
               </div>
             </div>
@@ -474,7 +476,7 @@ const WhyMigrade360 = () => {
                 <p>Dynamics 365 for Cloud offers a different and flexible pricing model to all businesses, irrespective of any differentiating parameter. You can even enhance the performance of your current system at any time by contacting your ERP partner.</p>
                 <br />
                 <p><b>Eliminate the misconceptions of moving to the cloud</b></p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/cipqse0mrBU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/cipqse0mrBU" title="YouTube video player"></iframe>
             
               </div>
             </div>
@@ -486,7 +488,7 @@ const WhyMigrade360 = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="call_to_action-right over-img">
-                <img src="/img/MaskGroup8.png" alt="image" />
+                <Image src="/img/MaskGroup8.png" width={339} height={483} alt="image" />
               </div>
             </div>
             <div className="col-lg-7 align-self-center">

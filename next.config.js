@@ -11,21 +11,33 @@ const nextConfig = {
   // Recommended for production / Docker
   output: "standalone",
 
-  // Image optimization
+  // Image optimization (FIXED)
   images: {
     formats: ["image/avif", "image/webp"],
-    domains: [
-      "blognew.dynamicssquare.co.uk",
-      "blognew.dynamicssquare.com",
-      "cdn.gemsroot.com"
-    ]
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "blognew.dynamicssquare.co.uk",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "blognew.dynamicssquare.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "cdn.gemsroot.com",
+        pathname: "/**",
+      },
+    ],
     // Enable only if needed
     // unoptimized: true,
   },
 
   // Public env variable (frontend safe)
   env: {
-    NEXT_PUBLIC_BACKEND_URL: "https://blognew.dynamicssquare.co.uk"
+    NEXT_PUBLIC_BACKEND_URL: "https://blognew.dynamicssquare.co.uk",
   },
 
   // Security headers (production safe)
@@ -38,21 +50,21 @@ const nextConfig = {
           { key: "X-Content-Type-Options", value: "nosniff" },
           {
             key: "Referrer-Policy",
-            value: "strict-origin-when-cross-origin"
+            value: "strict-origin-when-cross-origin",
           },
           {
             key: "Permissions-Policy",
-            value: "camera=(), microphone=(), geolocation=()"
-          }
-        ]
-      }
+            value: "camera=(), microphone=(), geolocation=()",
+          },
+        ],
+      },
     ];
   },
 
   // Keep during migration, remove later
   eslint: {
-    ignoreDuringBuilds: true
-  }
+    ignoreDuringBuilds: true,
+  },
 };
 
 module.exports = nextConfig;

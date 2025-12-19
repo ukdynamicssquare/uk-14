@@ -4512,7 +4512,7 @@ section {
   z-index: 9;
 }
 .about-timeline .swiper-pagination {
-  top: 0;
+  top: 0 !important;
   z-index: 9;
   height: 80px;
 }
