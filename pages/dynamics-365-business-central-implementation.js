@@ -55,7 +55,7 @@ const BusinessCentralImplementation = () => {
                 </div>
               </div>
               <div className='m-b-image-banner'>
-                <Image src="/img/bc-support-banner.png" alt='bc-support-banner' width={1097} height={656} />
+                <Image src="/img/bc-support-banner.png" alt='bc-support-banner' width={1097} height={656} priority />
                 <div className='ff-one'>  <span className=''>Scalability for Future Growth</span></div>
                 <div className='ff-two'>  <span className=''>Tailored Implementation Strategy</span></div>
               </div>

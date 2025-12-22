@@ -1,12 +1,13 @@
 
+import { useEffect, useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import parse from "html-react-parser";
 import Image from "next/image";
 import * as cheerio from "cheerio";
 import { useRouter } from 'next/router';
+import dynamic from "next/dynamic";
 // import BlogSubscriberForm from "../../components/BlogSubscriberForm";
-import TimerModal from "../../components/TimerModal";
 import {
   FacebookShareButton,
   TwitterShareButton,
@@ -14,6 +15,10 @@ import {
 } from "react-share";
 import BlogSearchinner from "../../components/BlogSearchinner";
 
+const TimerModal = dynamic(
+  () => import("../../components/TimerModal"),
+  { ssr: false }
+);
 
 // Utility function to parse HTML content and extract image URLs
 function parseImagesFromHtml(htmlContent) {
@@ -39,7 +44,11 @@ function parseImagesFromHtml(htmlContent) {
 function Post({ blogs, blogcat, authordetials, author }) {
   const router = useRouter();
   const images = parseImagesFromHtml(blogs.description);
+  const [mounted, setMounted] = useState(false);
 
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <div>
@@ -55,14 +64,14 @@ function Post({ blogs, blogcat, authordetials, author }) {
                   href={`https://www.dynamicssquare.co.uk/blog/${item.title_slug}` +
                     '/'}
                 />
-                {item.rank==1 && <meta name="robots" content="noindex, nofollow" />}
+                {item.rank == 1 && <meta name="robots" content="noindex, nofollow" />}
                 <meta property="og:title" content={item.meta_title} />
                 <meta property="og:site_name" content="Dynamics Square" />
                 <meta
                   property="og:url"
                   content={`https://www.dynamicssquare.co.uk/blog/${item.title_slug}` +
                     '/'}
-                /> 
+                />
                 <meta property="og:description" content={item.meta_keyword} />
                 <meta property="og:type" content="website" />
                 <meta property="og:image" content={`${item.meta_image}`} />
@@ -99,8 +108,8 @@ function Post({ blogs, blogcat, authordetials, author }) {
                     />
                   ))}
               </Head>
-             
-              
+
+
               <div className="container">
                 <div className="row">
                   <div className="col-lg-12">
@@ -125,11 +134,11 @@ function Post({ blogs, blogcat, authordetials, author }) {
                     </div>
                   </div>
                 </div>
-                  <BlogSearchinner />     
+                <BlogSearchinner />
 
                 <div className="row g-5">
                   <div className="col-lg-8">
-                    
+
                     <div className="blogs-single-post-sec">
                       <div className="blogs-lates blogs-lates-top-head">
                         <h1>{item.title}</h1>
@@ -137,17 +146,24 @@ function Post({ blogs, blogcat, authordetials, author }) {
                           <div className="left-list">
                             <span className="user">
                               <Link href={`/blog/author/${encodeURIComponent(item.author.split(" ").join("-"))}`}>{item.author}</Link>
-                              
+
                             </span>
                             <span className="date">
                               <a>
-                                <i className="bi bi-calendar"></i>{" "}
-                                {item.publish_date}
+                                {item.publish_date && (
+                                  <>
+                                    <i className="bi bi-calendar"></i> {item.publish_date}
+                                  </>
+                                )}
                               </a>
                             </span>
                             <span className="time">
                               <a>
-                                <i className="bi bi-clock"></i> {item.read_time}
+                                {item.read_time && (
+                                  <>
+                                    <i className="bi bi-clock"></i> {item.read_time}
+                                  </>
+                                )}
                               </a>
                             </span>
                             <span className="cate">
@@ -158,37 +174,32 @@ function Post({ blogs, blogcat, authordetials, author }) {
                           </div>
 
                           <div className="sociallist">
-                            <FacebookShareButton
-                              url={`https://www.dynamicssquare.co.uk/blog/${item.title_slug}`}
-                              media={`${item.meta_image}`}
-                              quote={item.title}
-                            >
-                              <a>
-                                <i className="bi bi-facebook"></i>
-                              </a>
-                            </FacebookShareButton>
+                            {mounted && (
+                              <>
+                                <FacebookShareButton
+                                  url={`https://www.dynamicssquare.co.uk/blog/${item.title_slug}`}
+                                  quote={item.title}
+                                >
+                                  <a><i className="bi bi-facebook"></i></a>
+                                </FacebookShareButton>
 
-                            <TwitterShareButton
-                              url={`https://www.dynamicssquare.co.uk/blog/${item.title_slug}`}
-                              media={`${item.meta_image}`}
-                              quote={item.title}
-                            >
-                              <a>
-                                <i className="bi bi-twitter"></i>
-                              </a>
-                            </TwitterShareButton>
+                                <TwitterShareButton
+                                  url={`https://www.dynamicssquare.co.uk/blog/${item.title_slug}`}
+                                  quote={item.title}
+                                >
+                                  <a><i className="bi bi-twitter"></i></a>
+                                </TwitterShareButton>
 
-                            <LinkedinShareButton
-                              url={`https://www.dynamicssquare.co.uk/blog/${item.title_slug}`}
-                              media={`${item.meta_image}`}
-                              source={item.title}
-                              summary={item.short_description.substring(0, 60)}
-                            >
-                              <a>
-                                <i className="bi bi-linkedin"></i>
-                              </a>
-                            </LinkedinShareButton> 
+                                <LinkedinShareButton
+                                  url={`https://www.dynamicssquare.co.uk/blog/${item.title_slug}`}
+                                  source={item.title}
+                                >
+                                  <a><i className="bi bi-linkedin"></i></a>
+                                </LinkedinShareButton>
+                              </>
+                            )}
                           </div>
+
                         </div>
                       </div>
 
@@ -198,7 +209,8 @@ function Post({ blogs, blogcat, authordetials, author }) {
                             trinityScript.setAttribute('fetchpriority', 'high');
                             trinityScript.src = 'https://trinitymedia.ai/player/trinity/2900012927/?pageURL=' + encodeURIComponent(window.location.href);
                             document.body.appendChild(trinityScript);</script> */}
-                          {parse(item.description)}
+                          {/* {parse(item.description)} */}
+                          {mounted && parse(item.description)}
                           {/* {parse(item.description, {
                             replace: (domNode) => {
                               // Render images using next/image
@@ -220,7 +232,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
                               return domNode;
                             },
                           })} */}
-                       
+
                         </div>
                         {/* <div><em>Tags</em>:
                         <>
@@ -233,36 +245,35 @@ function Post({ blogs, blogcat, authordetials, author }) {
                         </>
                            </div> */}
                         <div className="sociallist sociallist-bott">
-                          <FacebookShareButton
-                            url={`https://www.dynamicssquare.co.uk/blog/${item.title_slug}`}
-                            media={`${item.meta_image}`}
-                            quote={item.title}
-                          >
-                            <a>
-                              <i className="bi bi-facebook"></i>
-                            </a>
-                          </FacebookShareButton>
+                          {mounted && (
+                            <>
+                              <FacebookShareButton
+                                url={`https://www.dynamicssquare.co.uk/blog/${item.title_slug}`}
+                                media={`${item.meta_image}`}
+                                quote={item.title}
+                              >
+                                <a><i className="bi bi-facebook"></i></a>
+                              </FacebookShareButton>
 
-                          <TwitterShareButton
-                            url={`https://www.dynamicssquare.co.uk/blog/${item.title_slug}`}
-                            media={`${item.meta_image}`}
-                            quote={item.title}
-                          >
-                            <a>
-                              <i className="bi bi-twitter"></i>
-                            </a>
-                          </TwitterShareButton>
+                              <TwitterShareButton
+                                url={`https://www.dynamicssquare.co.uk/blog/${item.title_slug}`}
+                                media={`${item.meta_image}`}
+                                quote={item.title}
+                              >
+                                <a><i className="bi bi-twitter"></i></a>
+                              </TwitterShareButton>
 
-                          <LinkedinShareButton
-                            url={`https://www.dynamicssquare.co.uk/blog/${item.title_slug}`}
-                            media={`${item.meta_image}`}
-                            source={item.title}
-                          >
-                            <a>
-                              <i className="bi bi-linkedin"></i>
-                            </a>
-                          </LinkedinShareButton>
+                              <LinkedinShareButton
+                                url={`https://www.dynamicssquare.co.uk/blog/${item.title_slug}`}
+                                media={`${item.meta_image}`}
+                                source={item.title}
+                              >
+                                <a><i className="bi bi-linkedin"></i></a>
+                              </LinkedinShareButton>
+                            </>
+                          )}
                         </div>
+
                         {authordetials &&
                           authordetials.map((author, i) => (
                             <div className="author-side-head" key={i}>
@@ -288,16 +299,16 @@ function Post({ blogs, blogcat, authordetials, author }) {
                   </div>
                   <div className="col-lg-4">
                     <div className="prom-bann">
-                        <a style={{ marginBottom: '20px', display: 'block' }} rel="nofollow" href="https://www.forbes.com/councils/forbestechcouncil/2025/12/03/are-you-prepared-turning-dynamics-365-license-renewal-into-strategic-advantage/" target="_blank">
-                          {/* <Image src="/img/blog-side-pic-top.png" width={413} height={350} alt="d605-left" /></a> */}
-                          <Image src="/img/forber-03.png" width={413} height={392} alt="d605-left" /></a>
+                      <a style={{ marginBottom: '20px', display: 'block' }} rel="nofollow" href="https://www.forbes.com/councils/forbestechcouncil/2025/12/03/are-you-prepared-turning-dynamics-365-license-renewal-into-strategic-advantage/" target="_blank">
+                        {/* <Image src="/img/blog-side-pic-top.png" width={413} height={350} alt="d605-left" /></a> */}
+                        <Image src="/img/forber-03.png" width={413} height={392} alt="d605-left" /></a>
                       <a href="https://msdynamicsworld.com/vendor/dynamics-square-usa" target="_blank" rel="nofollow"><Image
-                          src="/img/blog-side001.png"
-                          alt="blog-side-pic-2"
-                          width={413}
-                          height={168}
-                        />
-                       </a>
+                        src="/img/blog-side001.png"
+                        alt="blog-side-pic-2"
+                        width={413}
+                        height={168}
+                      />
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -319,20 +330,25 @@ function Post({ blogs, blogcat, authordetials, author }) {
                               <div className="blogs-info-list">
                                 <span className="user">
                                   <Link href={`/blog/author/${item1.author.split(" ").join("-")}`}>
-                                    <i className="bi bi-person-circle"></i>{" "}
-                                    {item1.author}
+                                    <i className="bi bi-person-circle"></i> {item1.author}
                                   </Link>
                                 </span>
                                 <span className="date">
                                   <a>
-                                    <i className="bi bi-calendar"></i>{" "}
-                                    {item1.publish_date}
+                                    {item.publish_date && (
+                                      <>
+                                        <i className="bi bi-calendar"></i> {item.publish_date}
+                                      </>
+                                    )}
                                   </a>
                                 </span>
                                 <span className="time">
                                   <a>
-                                    <i className="bi bi-clock"></i>{" "}
-                                    {item1.read_time}
+                                    {item.read_time && (
+                                      <>
+                                        <i className="bi bi-clock"></i> {item.read_time}
+                                      </>
+                                    )}
                                   </a>
                                 </span>
                                 <span className="cate">

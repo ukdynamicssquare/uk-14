@@ -79,7 +79,7 @@ const Wms = () => {
                 <Image
                   src="/img/wms-team-business-central.png"
                   alt="warehouse for business central"
-                  width={442} height={453}
+                  width={442} height={453} priority 
                 />
               </div>
             </div>

@@ -55,10 +55,10 @@ const Continia = () => {
                 </div>
               </div>
               <div className='m-b-image-banner m-b-image-banner-nn'>
-                <Image src="/img/yavrio-banner.png" alt='bc-support-banner' width={944} height={322} />
+                <Image src="/img/yavrio-banner.png" alt='bc-support-banner' width={944} height={322} priority />
               </div>
               <div className='m-b-image-banner-bott'>
-                <Image src="/img/cont-shape.png" alt='cont-shape' width={1898} height={470} />
+                <Image src="/img/cont-shape.png" alt='cont-shape' width={1898} height={470} priority />
               </div>
             </div>
 
@@ -170,9 +170,9 @@ const Continia = () => {
                       <h3>Banking Feed Automation</h3>
                       <p>Connect Business Central directly with Yavrio for live bank feeds. Gain up-to-date transaction data across accounts without manual imports.</p>
                       <ul>
-                        <li><i class="bi bi-check"></i> <span>Real-time synchronisation of bank data into Business Central</span></li>
-                        <li><i class="bi bi-check"></i> <span>Multi-bank and multi-currency support</span></li>
-                        <li><i class="bi bi-check"></i> <span>Fileless, automated data refresh for accurate cash visibility</span></li>
+                        <li><i className="bi bi-check"></i> <span>Real-time synchronisation of bank data into Business Central</span></li>
+                        <li><i className="bi bi-check"></i> <span>Multi-bank and multi-currency support</span></li>
+                        <li><i className="bi bi-check"></i> <span>Fileless, automated data refresh for accurate cash visibility</span></li>
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
@@ -186,9 +186,9 @@ const Continia = () => {
                       <h3>Reconciliation Automation</h3>
                       <p>Eliminate manual reconciliation with smart matching tools.</p>
                       <ul>
-                        <li><i class="bi bi-check"></i> <span>AI-driven transaction matching for faster month-end close</span></li>
-                        <li><i class="bi bi-check"></i> <span>Error reduction through automated checks</span></li>
-                        <li><i class="bi bi-check"></i> <span>Transparent, audit-ready reconciliation inside Business Central</span></li>
+                        <li><i className="bi bi-check"></i> <span>AI-driven transaction matching for faster month-end close</span></li>
+                        <li><i className="bi bi-check"></i> <span>Error reduction through automated checks</span></li>
+                        <li><i className="bi bi-check"></i> <span>Transparent, audit-ready reconciliation inside Business Central</span></li>
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
@@ -202,9 +202,9 @@ const Continia = () => {
                       <h3>Payment Processing Integration</h3>
                       <p>Move payments securely and directly from Business Central using Yavrio connectivity.</p>
                       <ul>
-                        <li><i class="bi bi-check"></i> <span>API-driven payment initiation with connected banks</span></li>
-                        <li><i class="bi bi-check"></i> <span>Approval workflows managed inside Business Central</span></li>
-                        <li><i class="bi bi-check"></i> <span>Payment status updates returned directly to ERP</span></li>
+                        <li><i className="bi bi-check"></i> <span>API-driven payment initiation with connected banks</span></li>
+                        <li><i className="bi bi-check"></i> <span>Approval workflows managed inside Business Central</span></li>
+                        <li><i className="bi bi-check"></i> <span>Payment status updates returned directly to ERP</span></li>
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>

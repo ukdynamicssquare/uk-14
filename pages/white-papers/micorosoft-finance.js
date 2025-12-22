@@ -165,7 +165,7 @@ const fetchCountryCodeByIP = () => {
               </div>
             </div>
             <div className="col-lg-6 align-self-center text-center">
-              <img width={800} src="/img/finace-white-papper-banner.png" alt="whitepaper-one" />
+              <img width={800} src="/img/finace-white-papper-banner.png" alt="whitepaper-one" priority />
             </div>
           </div>
         </div>

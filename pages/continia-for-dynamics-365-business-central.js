@@ -204,11 +204,11 @@ const Continia = () => {
                       <p>Continia Document Capture Business Central automates the full cycle of accounts payable, from receiving the invoice to approval, posting, and archiving, directly inside your ERP. Now, this is real automation!</p>
                       <p><b>Key Features:</b></p>
                       <ul>
-                        <li><i class="bi bi-check"></i> <span>Continia OCR in Business Central automates invoice reading</span></li>
-                        <li><i class="bi bi-check"></i> <span>Workflow-based approvals to avoid bottlenecks</span></li>
-                        <li><i class="bi bi-check"></i> <span>Digital archiving to store, index, and retrieve in one click</span></li>
-                        <li><i class="bi bi-check"></i> <span>Auto-approves invoices via purchase orders/receipts</span></li>
-                        <li><i class="bi bi-check"></i> <span>Secure e-document exchange in compliance</span></li>
+                        <li><i className="bi bi-check"></i> <span>Continia OCR in Business Central automates invoice reading</span></li>
+                        <li><i className="bi bi-check"></i> <span>Workflow-based approvals to avoid bottlenecks</span></li>
+                        <li><i className="bi bi-check"></i> <span>Digital archiving to store, index, and retrieve in one click</span></li>
+                        <li><i className="bi bi-check"></i> <span>Auto-approves invoices via purchase orders/receipts</span></li>
+                        <li><i className="bi bi-check"></i> <span>Secure e-document exchange in compliance</span></li>
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
@@ -223,11 +223,11 @@ const Continia = () => {
                       <p>Continia Expense Management Business Central lets employees submit expenses via mobile, tracks mileage, and handles approvals, all without breaking your compliance or your patience.</p>
                       <p><b>Key Features:</b></p>
                       <ul>
-                        <li><i class="bi bi-check"></i> <span>Employee expense entry via app from anywhere</span></li>
-                        <li><i class="bi bi-check"></i> <span>Mileage tracking to make trip claims accurate and fast</span></li>
-                        <li><i class="bi bi-check"></i> <span>Credit card reconciliation to eliminate mismatches</span></li>
-                        <li><i class="bi bi-check"></i> <span>Managers approve expenses online without Business Central login</span></li>
-                        <li><i class="bi bi-check"></i> <span>Secure, indexed storage with full approval visibility</span></li>
+                        <li><i className="bi bi-check"></i> <span>Employee expense entry via app from anywhere</span></li>
+                        <li><i className="bi bi-check"></i> <span>Mileage tracking to make trip claims accurate and fast</span></li>
+                        <li><i className="bi bi-check"></i> <span>Credit card reconciliation to eliminate mismatches</span></li>
+                        <li><i className="bi bi-check"></i> <span>Managers approve expenses online without Business Central login</span></li>
+                        <li><i className="bi bi-check"></i> <span>Secure, indexed storage with full approval visibility</span></li>
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
@@ -242,11 +242,11 @@ const Continia = () => {
                       <p>Continia Document Output Business Central ERP automates document distribution, from quotes and invoices to statements and reminders, in a way that saves time, removes errors, and keeps your brand consistent.</p>
                       <p><b>Key Features:</b></p>
                       <ul>
-                        <li><i class="bi bi-check"></i> <span>Automate sending of documents based on real ERP activity</span></li>
-                        <li><i class="bi bi-check"></i> <span>Templates for consistent branding</span></li>
-                        <li><i class="bi bi-check"></i> <span>Pick the delivery method per customer, document, or dimension</span></li>
-                        <li><i class="bi bi-check"></i> <span>Auto-generate multilingual templates with AI-powered translations</span></li>
-                        <li><i class="bi bi-check"></i> <span>Secure PDFs with watermarks, passwords, and background images</span></li>
+                        <li><i className="bi bi-check"></i> <span>Automate sending of documents based on real ERP activity</span></li>
+                        <li><i className="bi bi-check"></i> <span>Templates for consistent branding</span></li>
+                        <li><i className="bi bi-check"></i> <span>Pick the delivery method per customer, document, or dimension</span></li>
+                        <li><i className="bi bi-check"></i> <span>Auto-generate multilingual templates with AI-powered translations</span></li>
+                        <li><i className="bi bi-check"></i> <span>Secure PDFs with watermarks, passwords, and background images</span></li>
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
@@ -261,11 +261,11 @@ const Continia = () => {
                       <p>Continia Payment Management Business Central handles outbound and inbound payments securely, with full automation, clear approvals, and end-to-end reconciliation, all embedded in Business Central.</p>
                       <p><b>Key Features:</b></p>
                       <ul>
-                        <li><i class="bi bi-check"></i> <span>Secure and automated payment handling</span></li>
-                        <li><i class="bi bi-check"></i> <span>Integration with bank files be they local or international banks</span></li>
-                        <li><i class="bi bi-check"></i> <span>Approval workflows to prevent fraud and ensure policy compliance</span></li>
-                        <li><i class="bi bi-check"></i> <span>Summarise payouts to reduce bank fees without losing details</span></li>
-                        <li><i class="bi bi-check"></i> <span>Auto-reconcile payments with 95%+ match rate</span></li>
+                        <li><i className="bi bi-check"></i> <span>Secure and automated payment handling</span></li>
+                        <li><i className="bi bi-check"></i> <span>Integration with bank files be they local or international banks</span></li>
+                        <li><i className="bi bi-check"></i> <span>Approval workflows to prevent fraud and ensure policy compliance</span></li>
+                        <li><i className="bi bi-check"></i> <span>Summarise payouts to reduce bank fees without losing details</span></li>
+                        <li><i className="bi bi-check"></i> <span>Auto-reconcile payments with 95%+ match rate</span></li>
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
