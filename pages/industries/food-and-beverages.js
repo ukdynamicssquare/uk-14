@@ -41,7 +41,7 @@ const Startup = () => {
         channel="youtube"
         autoplay
         isOpen={isOpen}
-        videoId="hiaL1f4SQCQ"
+        videoId="BADYTyAHJmU"
         onClose={() => setOpen(false)}
       />
       <main>

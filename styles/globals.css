@@ -17266,7 +17266,7 @@ margin: -30px 0px -80px;
   margin-bottom: 0px;
 }
 .hero-new-bg {
-  background-color: #f7f9fb;
+  background-color: #f1f0f4;
   padding: 80px 0px 120px;
 }
 .hero-new-bg span {
@@ -17342,6 +17342,7 @@ margin: -30px 0px -80px;
   border-radius: 50%;
   color: #fff;
   font-weight: 500;
+  z-index:1
 }
 .mm-p {
   font-weight: 400;
