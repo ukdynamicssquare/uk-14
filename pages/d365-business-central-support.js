@@ -725,4 +725,5 @@ const BcSupport = () => {
         </>
     );
 }
+
 export default BcSupport;
