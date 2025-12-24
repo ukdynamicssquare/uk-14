@@ -113,7 +113,7 @@ function CategoryBlogs({ blogs, categoryblogs }) {
                           textDecoration: 'none',
                           color: categoryColors[i % categoryColors.length],
                           border: `1px solid ${categoryColors[i % categoryColors.length]}`,
-                        }} href={`/blog/category/${cateitem.category_slug}`}>{cateitem.category_name}</a>
+                        }} href={`/blog/category/${cateitem.category_slug}/`}>{cateitem.category_name}</a>
 
                       </li>
                     ))}
@@ -131,12 +131,12 @@ function CategoryBlogs({ blogs, categoryblogs }) {
                   <div className="blogs-lates blogs-lates-rept">
                     <h3>
 
-                      <a href={`/blog/${item.title_slug}`}>{item.title}</a>
+                      <a href={`/blog/${item.title_slug}/`}>{item.title}</a>
 
                     </h3>
                     <div className="blogs-info-list">
                       <span className="user">
-                        <a href={`/blog/author/${item.author.split(" ").join("-")}`}>
+                        <a href={`/blog/author/${item.author.split(" ").join("-")}/`}>
                           <i className="bi bi-person-circle"></i>
                           {item.author}
                         </a>
@@ -162,7 +162,7 @@ function CategoryBlogs({ blogs, categoryblogs }) {
                     <div className="b-card-info">
                       <p>{item.short_description}</p>
                       <div className="page-link-read">
-                        <a href={`/blog/${item.title_slug}`}>
+                        <a href={`/blog/${item.title_slug}/`}>
                           Read More <span>{">"}</span>
 
                         </a>

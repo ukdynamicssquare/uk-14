@@ -43,7 +43,9 @@ function parseImagesFromHtml(htmlContent) {
 
 function Post({ blogs, blogcat, authordetials, author }) {
   const router = useRouter();
-  const images = parseImagesFromHtml(blogs.description);
+  const images = blogs?.[0]?.description
+    ? parseImagesFromHtml(blogs[0].description)
+    : [];
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -145,7 +147,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
                         <div className="blogs-info-list">
                           <div className="left-list">
                             <span className="user">
-                              <Link href={`/blog/author/${encodeURIComponent(item.author.split(" ").join("-"))}`}>{item.author}</Link>
+                              <Link href={`/blog/author/${encodeURIComponent(item.author.split(" ").join("-"))}/`}>{item.author}</Link>
 
                             </span>
                             <span className="date">
@@ -167,8 +169,10 @@ function Post({ blogs, blogcat, authordetials, author }) {
                               </a>
                             </span>
                             <span className="cate">
-                              <Link href={`/blog/category/${item.category_slug}`}>
-                                <i className="bi bi-app"></i> {item.category}
+                              <Link href={`/blog/category/${item.category_slug}/`}>
+                                <span>
+                                  <i className="bi bi-app"></i> {item.category}
+                                </span>
                               </Link>
                             </span>
                           </div>
@@ -177,21 +181,21 @@ function Post({ blogs, blogcat, authordetials, author }) {
                             {mounted && (
                               <>
                                 <FacebookShareButton
-                                  url={`https://www.dynamicssquare.co.uk/blog/${item.title_slug}`}
+                                  url={`https://www.dynamicssquare.co.uk/blog/${item.title_slug}/`}
                                   quote={item.title}
                                 >
                                   <a><i className="bi bi-facebook"></i></a>
                                 </FacebookShareButton>
 
                                 <TwitterShareButton
-                                  url={`https://www.dynamicssquare.co.uk/blog/${item.title_slug}`}
+                                  url={`https://www.dynamicssquare.co.uk/blog/${item.title_slug}/`}
                                   quote={item.title}
                                 >
                                   <a><i className="bi bi-twitter"></i></a>
                                 </TwitterShareButton>
 
                                 <LinkedinShareButton
-                                  url={`https://www.dynamicssquare.co.uk/blog/${item.title_slug}`}
+                                  url={`https://www.dynamicssquare.co.uk/blog/${item.title_slug}/`}
                                   source={item.title}
                                 >
                                   <a><i className="bi bi-linkedin"></i></a>
@@ -248,7 +252,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
                           {mounted && (
                             <>
                               <FacebookShareButton
-                                url={`https://www.dynamicssquare.co.uk/blog/${item.title_slug}`}
+                                url={`https://www.dynamicssquare.co.uk/blog/${item.title_slug}/`}
                                 media={`${item.meta_image}`}
                                 quote={item.title}
                               >
@@ -256,7 +260,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
                               </FacebookShareButton>
 
                               <TwitterShareButton
-                                url={`https://www.dynamicssquare.co.uk/blog/${item.title_slug}`}
+                                url={`https://www.dynamicssquare.co.uk/blog/${item.title_slug}/`}
                                 media={`${item.meta_image}`}
                                 quote={item.title}
                               >
@@ -264,7 +268,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
                               </TwitterShareButton>
 
                               <LinkedinShareButton
-                                url={`https://www.dynamicssquare.co.uk/blog/${item.title_slug}`}
+                                url={`https://www.dynamicssquare.co.uk/blog/${item.title_slug}/`}
                                 media={`${item.meta_image}`}
                                 source={item.title}
                               >
@@ -287,7 +291,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
                                 <span className="link-din"><a href={author.linkedin_url} target="_blank"> <i className="bi bi-linkedin"></i></a></span>
                               </div>
                               <div className="right">
-                                <Link href={`/blog/author/${author.name.split(" ").join("-")}`}><span>{author.name}</span></Link>
+                                <Link href={`/blog/author/${author.name.split(" ").join("-")}/`}><span>{author.name}</span></Link>
                                 <p>{author.about}</p>
                               </div>
                             </div>
@@ -316,21 +320,21 @@ function Post({ blogs, blogcat, authordetials, author }) {
                 <div className="row pd-90">
 
                   {blogcat &&
-                    blogcat.map((item1, i) => {
-                      if (router.query.slug != item1.title_slug) {
+                    blogcat.map((item, i) => {
+                      if (router.query.slug != item.title_slug) {
                         return (
                           <div className="col-lg-6" key={i}>
 
                             <div className="blogs-lates blogs-lates-repet">
                               <h3>
-                                <Link href={`/blog/${item1.title_slug}`}>
-                                  {item1.title}
+                                <Link href={`/blog/${item.title_slug}/`}>
+                                  {item.title}
                                 </Link>
                               </h3>
                               <div className="blogs-info-list">
                                 <span className="user">
-                                  <Link href={`/blog/author/${item1.author.split(" ").join("-")}`}>
-                                    <i className="bi bi-person-circle"></i> {item1.author}
+                                  <Link href={`/blog/author/${item.author.split(" ").join("-")}/`}>
+                                    <i className="bi bi-person-circle"></i> {item.author}
                                   </Link>
                                 </span>
                                 <span className="date">
@@ -352,15 +356,17 @@ function Post({ blogs, blogcat, authordetials, author }) {
                                   </a>
                                 </span>
                                 <span className="cate">
-                                  <Link href={`/blog/category/${item.category_slug}`}>
-                                    <i className="bi bi-app"></i> {item.category}
+                                  <Link href={`/blog/category/${item.category_slug}/`}>
+                                    <span>
+                                      <i className="bi bi-app"></i> {item.category}
+                                    </span>
                                   </Link>
                                 </span>
                               </div>
                               <div className="b-card-info">
-                                <p>{item1.short_description.substring(0, 60)}</p>
+                                <p>{item.short_description.substring(0, 60)}</p>
                                 <div className="page-link-read">
-                                  <a href={`/blog/${item1.title_slug}`}>
+                                  <a href={`/blog/${item.title_slug}/`}>
                                     Read More <span>{">"}</span>
                                   </a>
                                 </div>
@@ -481,30 +487,55 @@ function Post({ blogs, blogcat, authordetials, author }) {
 
 
 export async function getServerSideProps(context) {
-  let slug = context.query.slug;
-  console.log(slug);
+  const { resolvedUrl, query } = context;
+  const slug = query.slug;
 
-  const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}` + '/api/blog_details/' + slug);
-  const blogs = await res.json();
-  const bloglength = blogs.length;
-  if (bloglength >= 1) {
-    const category = blogs[0]["category_slug"];
-    const res1 = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}` + '/api/blog/related/' + category);
-    const blogcat = await res1.json();
-
-    const author = blogs[0]["author_email"];
-    const authorres = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}` + '/api/blog/author/details/' + author.split("-").join(" ")
-    );
-    const authordetials = await authorres.json();
-
-    return { props: { blogs, blogcat, authordetials, author } };
-  }
-  else {
+  // 🔒 FORCE trailing slash (SEO FIX)
+  if (!resolvedUrl.endsWith("/")) {
     return {
-      notFound: true,
+      redirect: {
+        destination: `${resolvedUrl}/`,
+        permanent: true, // 301
+      },
     };
   }
 
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blog_details/${slug}`
+  );
+
+  if (!res.ok) {
+    return { notFound: true };
+  }
+
+  const blogs = await res.json();
+
+  if (!blogs || blogs.length < 1) {
+    return { notFound: true };
+  }
+
+  const category = blogs[0].category_slug;
+  const res1 = await fetch(
+    `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blog/related/${category}`
+  );
+  const blogcat = await res1.json();
+
+  const author = blogs[0].author_email;
+  const authorres = await fetch(
+    `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blog/author/details/${author.split("-").join(" ")}`
+  );
+  const authordetials = await authorres.json();
+
+  return {
+    props: {
+      blogs,
+      blogcat,
+      authordetials,
+      author,
+    },
+  };
 }
+
 export default Post;
+
 
