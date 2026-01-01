@@ -87,7 +87,7 @@ const CompareErps = () => {
   // }, []);
 
   useEffect(() => {
-  fetch('https://erptoolapi.onrender.com/api/frontend/products')
+  fetch('https://erptoolapi.onrender.com/api/frontend/products/domain/dynamicssquare-uk')
     .then(res => res.json())
     .then(data => {
       setAllErps(data);
