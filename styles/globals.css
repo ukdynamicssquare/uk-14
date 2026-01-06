@@ -17769,6 +17769,166 @@ padding-top: 160px;
 .ms-hh{
     display:none
   }
+/*aboot new*/
+
+.header-section{
+  padding:100px 0px 60px
+}
+.about-title-head{
+  padding-right:60px
+}
+.about-title-head span{
+  font-size: 15px;
+  font-weight: 500;
+  color: #463d52;
+  display:block;
+  margin-bottom:12px
+}
+.about-title-head h1{
+  color:#60518c;
+  background-image: linear-gradient(to right, #984b6e, #60518c 100%);
+  font-size: 48px !important;
+  font-weight: bold;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+.about-title-head p{
+  margin-bottom:30px
+}
+.about-title-head img{}
+.about-head-pic{
+  text-align: right;
+}
+.about-head-pic img{}
+.second-head{
+  padding-bottom:30px;
+}
+.second-head h2,.size-sz p{
+  color:#60518c;
+  background-image: linear-gradient(to right, #984b6e, #60518c 100%);
+  font-family: Lato;
+  font-size: 32px;
+  font-weight: bold;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-bottom:15px;
+
+}
+.new-col{
+  color: #61518c;
+}
+.second-head p{
+  font-family: Inter;
+  font-size: 16px;
+}
+.size-sz{
+  position:relative
+}
+.size-sz p{
+  font-size: 24px;
+  font-weight: bold;
+}
+.size-sz::before {
+content: "";
+    position: absolute;
+    top: 0;
+    left: -60px;
+    width: 112px;
+    height: 102px;
+    background: url(/img/qt-up-colo.png) no-repeat center bottom;
+    background-size: contain;
+}
+.second-head ul li:not(:last-child){
+  margin-bottom:8px
+}
+.size-sz::after {
+content: "";
+    position: absolute;
+    top: -20px;
+    right: -60px;
+    width: 112px;
+    height: 102px;
+    background: url(/img/qt-up-colo.png) no-repeat center bottom;
+    background-size: contain;
+    transform: rotate(180deg);
+}
+.about-bg-0{
+   background-color:#f0eff3;
+   background-image: linear-gradient(to bottom, #fff 13%, #f0eff3 88%);
+}
+.about-p-40{
+  padding-top:60px
+}
+.float-inf--card{
+  position:relative
+}
+.float-inf--card{
+ border-radius: 8px;
+  box-shadow: 21.1px 17.9px 42.1px 0 rgba(0, 0, 0, 0.25);
+   /* Glass background */
+   background-color:#60518c;
+background: linear-gradient(135deg, rgb(84 10 116 / 61%), rgb(142 68 173 / 85%)) padding-box, /* Gradient border */ linear-gradient(100deg, #ffffffb5, rgba(255, 255, 255, 0)) border-box;
+    border: 1.5px solid transparent;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+.leader-se{
+  position:relative;
+  margin-top: -40px;
+}
+.float-inf--card.float-inf--card-f{
+position: absolute;
+    width: 90%;
+    left: 100px;
+    bottom: -50px;
+}
+.float-inf--card p{
+font-family: 'Lato';
+  font-size: 16px;
+  font-weight: 500;
+  padding: 24px 38px;
+  color:#fff;
+  margin-bottom: 0;
+}
+.float-inf--card::before{
+  content: "";
+    position: absolute;
+  top: -35px;
+    left: -4px;
+    width: 112px;
+    height: 102px;
+    background: url(/img/qt-up-wh.png) no-repeat center bottom;
+    background-size: contain;
+}
+.float-inf--card::after {
+content: "";
+    position: absolute;
+  bottom: -30px;
+    right: -10px;
+    width: 112px;
+    height: 102px;
+    background: url(/img/qt-up-wh.png) no-repeat center bottom;
+    background-size: contain;
+    transform: rotate(180deg);
+}
+.about-bg-1{
+  background-color: #f1f0f4;
+}
+.indut-card-one-cu{
+  border-radius: 12px;
+}
+.g-p-40{
+  padding-top:40px
+}
+.slution-new-cta-two.slution-new-cta-two-p{
+  padding:100px 0px
+}
+.slution-new-cta-two-pp img{
+  mix-blend-mode: normal !important;
+}
 @media (min-width: 1440px) and (max-width: 1700px) {
   .flot-5 {
     right: 21.3%;

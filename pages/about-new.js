@@ -1,0 +1,506 @@
+import Link from "next/link";
+import Head from "next/head";
+import Image from "next/image";
+import useCardScrollEffect from "../components/useCardScrollEffect";
+const AboutNew = () => {
+
+  useCardScrollEffect()
+
+  return (
+    <>
+      <Head>
+        <title>
+          About Dynamics Square | Dynamics 365 Business Central Partner
+        </title>
+        <meta name="robots" content="noindex, nofollow" />
+      </Head>
+
+      <div className="header-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6 align-self-center">
+              <div className="about-title-head">
+                <span>Dynamics Square UK</span>
+                <h1>About Us</h1>
+                <p>
+                  At Dynamics Square, our story began with a clear purpose in
+                  2011 that guides us even today. We formed our company with the
+                  belief that trust should be the foundation of every business
+                  relationship.
+                </p>
+                <Image
+                  src="/img/partner-logo-black-3.png"
+                  width={263}
+                  height={74}
+                  alt="partner-logo-black"
+                />
+              </div>
+            </div>
+            <div className="col-lg-1"></div>
+            <div className="col-lg-5">
+              <div className="about-head-pic">
+                <Image
+                  src="/img/about-new-1.png"
+                  alt="about-new-1"
+                  width={481}
+                  height={351}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section>
+        <div className="container-fluid p-0 m-0">
+          <div className="row g-0">
+            <div className="col-lg-12">
+              <div className="second-head text-center">
+                <h2>Our Journey So Far</h2>
+              </div>
+            </div>
+          </div>
+          <div className="row g-0">
+            <div className="col-lg-12">
+              <img
+                src="/img/about-new-sv-r.svg"
+                alt="about-new-2"
+                width={1920}
+                height={874}
+                style={{ width: "100%", height: "auto" }}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="pt-0 about-bg-0">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-10">
+              <div className="second-head text-center size-sz">
+                <p>
+                  We never aimed to work as just another technology provider.
+                  Our intention has always centred around careful understanding,
+                  honest guidance, and steady partnership.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="row about-p-40">
+            <div className="col-lg-4">
+              <div className="leader-se">
+                <Image
+                  src="/img/about-new-3.png"
+                  alt="about-new-2"
+                  width={523}
+                  height={464}
+                />
+                <div className="float-inf--card float-inf--card-f">
+                  <p>
+                    As a tech company, we believe technology is meant to
+                    simplify, not complicate.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-1"></div>
+            <div className="col-lg-6">
+              <div className="leader-se-about">
+                <p>
+                  As a Microsoft Dynamics 365 implementation partner, we focus
+                  on serving businesses with practical help that brings clarity
+                  and confidence to their everyday operations.
+                </p>
+                <p>
+                  Technology moves at a fast pace, yet we choose to approach
+                  every client through careful listening. Trust grows
+                  progressively when conversations stay honest and simple, and
+                  we work to build that trust through every interaction.
+                </p>
+                <p>
+                  Each member of our team believes that meaningful partnerships
+                  come from genuine care. This value influences the way we build
+                  solutions and the way we stand with our clients across their
+                  entire journey.
+                </p>
+                <p>
+                  Our Co-Founder and CEO, Manish Goyal, shaped our approach with
+                  a belief that guides our work every day.
+                </p>
+                <p>
+                  <b>
+                    As an ERP and CRM partner in UK, we bring Dynamics 365
+                    solutions that support consistent growth, smoother
+                    processes, and stronger visibility across your business.
+                  </b>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6">
+              <div className="solution-new-banner-sub-head second-head">
+                <h2>What We Deliver</h2>
+                <p className="new-col">
+                  <b>Complete Microsoft Business Solutions</b>
+                </p>
+                <p>
+                  We provide a wide ecosystem of solutions that bring structure
+                  into business operations. Our delivery covers:
+                </p>
+                <ul>
+                  <li>Dynamics 365 ERP and CRM</li>
+                  <li>Power Platform, including Power Apps and Power BI</li>
+                  <li>Azure cloud services</li>
+                  <li>
+                    Microsoft 365, covering communication and collaboration
+                  </li>
+                  <li>ISV integrations across industries</li>
+                  <li>Copilot AI features for productivity and planning</li>
+                </ul>
+                <p>
+                  Each service forms one part of a larger structure that
+                  supports business stability and growth. We guide clients
+                  through planning, setup, development, deployment, and support,
+                  giving each organisation a clear path forward.
+                </p>
+                <div className="text-lg-start">
+                  <Link
+                    href="#exampleModal"
+                    data-bs-toggle="modal"
+                    className="btn-get-started scrollto"
+                  >
+                    <span>
+                      Learn What Business Central Is &nbsp;
+                      <i className="bi bi-arrow-right"></i>
+                    </span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-1"></div>
+            <div className="col-lg-5">
+              <div className="dsa-minee">
+                <Image
+                  src="/img/about-new-4.png"
+                  alt="about-new-4"
+                  width={565}
+                  height={634}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="about-bg-1">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6">
+              <div className="solution-new-banner-sub-head second-head">
+                <h2>Industries We Have Worked For</h2>
+                <p>
+                  As a reliable Microsoft Dynamics 365 implementation partner in
+                  the UK, our work spans across several industries that require
+                  stable systems, clear processes, and strong operational
+                  control.
+                </p>
+                <p>
+                  <b>We partner with businesses that are into:</b>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="row g-3">
+            <div className="col-lg-4 col-md-6 d-flex">
+              <div className="indut-card-one indut-card-one-cu">
+                <a href="/industries/dynamics-365-for-distribution/">
+                  <div className="pic">
+                    <img
+                      src="/img/about-new-5.jpg"
+                      alt="Distribution and logistics"
+                    />
+                    <h3>Distribution and logistics</h3>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6 d-flex">
+              <div className="indut-card-one indut-card-one-cu">
+                <a href="/industries/dynamics-365-for-distribution/">
+                  <div className="pic">
+                    <img src="/img/about-new-6.jpg" alt="Manufacturing" />
+                    <h3>Manufacturing</h3>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6 d-flex">
+              <div className="indut-card-one indut-card-one-cu">
+                <a href="/industries/dynamics-365-for-distribution/">
+                  <div className="pic">
+                    <img
+                      src="/img/about-new-7.jpg"
+                      alt="Finance and Professional Services"
+                    />
+                    <h3>Finance and Professional Services</h3>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6 d-flex">
+              <div className="indut-card-one indut-card-one-cu">
+                <a href="/industries/dynamics-365-for-distribution/">
+                  <div className="pic">
+                    <img
+                      src="/img/about-new-8.jpg"
+                      alt="Retail and eCommerce"
+                    />
+                    <h3>Retail and eCommerce</h3>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6 d-flex">
+              <div className="indut-card-one indut-card-one-cu">
+                <a href="/industries/dynamics-365-for-distribution/">
+                  <div className="pic">
+                    <img src="/img/about-new-9.jpg" alt="Healthcare" />
+                    <h3>Healthcare</h3>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6 d-flex">
+              <div className="indut-card-one indut-card-one-cu">
+                <a href="/industries/dynamics-365-for-distribution/">
+                  <div className="pic">
+                    <img src="/img/about-new-10.jpg" alt="Education" />
+                    <h3>Education</h3>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="row g-p-40">
+            <div className="col-lg-6">
+              <p>
+                Each industry carries unique challenges, varied data flows,
+                specialised compliance, and distinct customer expectations. Our
+                deep industry experience helps us shape solutions that meet
+                daily realities with clarity and confidence.
+              </p>
+              <div className="text-lg-start">
+                <Link
+                  href="#exampleModal"
+                  data-bs-toggle="modal"
+                  className="btn-get-started scrollto"
+                >
+                  <span>
+                    Explore More Industries &nbsp;
+                    <i className="bi bi-arrow-right"></i>
+                  </span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="about-bg-2">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6">
+              <div className="solution-new-banner-sub-head second-head">
+                <h2>Case Study Highlights</h2>
+                <p>
+                  <b>Our work spans a wide range of transformation journeys. These stories show our approach to real challenges.</b>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="row  g-p-40">
+            <div className="col-12">
+              <div className="stached-scroll-card">
+                <div className='mycard'>
+                  <div className='mycard__inner'>
+                    <div className='mycard__inner-left'>
+                      <h3>Global Manufacturer</h3>
+                      <p>A global manufacturer faced system limitations, supply chain concerns, data gaps, and operational complexity. We delivered Business Central, customer engagement solutions, and a complete eCommerce link. This created stable processes, automated warehouse functions, unified data, and powerful customer engagement capabilities.</p>
+                    </div>
+                    <div className='mycard__inner-right'>
+                      <Image src="/img/about-new-11.jpg" width={580} height={456} alt="Global Manufacturer" />
+                    </div>
+                  </div>
+                </div>
+                <div className='mycard'>
+                  <div className='mycard__inner'>
+                    <div className='mycard__inner-left'>
+                      <h3>Medical Supplies Provider</h3>
+                      <p>A medical supplier operated with an outdated NAV system, manual work, and visibility concerns. We deployed Business Central, mobile warehouse systems, document management, and training. Their operations received clarity, stability, and efficiency, supported by a cloud structure suitable for future growth.</p>
+                    </div>
+                    <div className='mycard__inner-right'>
+                      <Image src="/img/about-new-12.jpg" width={580} height={456} alt="Medical Supplies Provider" />
+                    </div>
+                  </div>
+                </div>
+                <div className='mycard'>
+                  <div className='mycard__inner'>
+                    <div className='mycard__inner-left'>
+                      <h3>Orthopaedic Supplier</h3>
+                      <p>A surgical instrument supplier dealt with spreadsheets, errors, delays, and warehouse issues. We created a Business Central solution supported by mobile tools, automated bank settlement, and faster invoicing. This transformed operations and reduced manual workload.</p>
+                    </div>
+                    <div className='mycard__inner-right'>
+                      <Image src="/img/about-new-13.jpg" width={580} height={456} alt="Orthopaedic Supplier" />
+                    </div>
+                  </div>
+                </div>
+                <div className='mycard'>
+                  <div className='mycard__inner'>
+                    <div className='mycard__inner-left'>
+                      <h3>Distribution Business</h3>
+                      <p>A distribution firm experienced unnecessary system add-ons, delays, and operational complexity. We migrated them to the cloud, redesigned their configuration, and helped them gain real-time system clarity. This created better financial tracking, improved warehouse functions, and dependable decision-making.</p>
+                    </div>
+                    <div className='mycard__inner-right'>
+                      <Image src="/img/about-new-14.jpg" width={580} height={456} alt="Distribution Business" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section className='solution-new-cta slution-new-cta-two slution-new-cta-two-p'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-lg-10'>
+              <div className='solution-new-cta-001'>
+                <h3>Start Your Journey with Dynamics Square</h3>
+                <p>You deserve a partner who listens, guides, builds, and stays with you throughout your journey.</p>
+                <div>
+                  <Link
+                    href="#exampleModal"
+                    data-bs-toggle="modal"
+                    className="btn-get-started scrollto">
+                    <span>Talk to Our Experts &nbsp;<i className="bi bi-arrow-right"></i></span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <Image src="/img/about-new-15.png" alt="n-015" width={863} height={424} />
+      </section>
+<section className="about-bg-1">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6">
+              <div className="solution-new-banner-sub-head second-head">
+                <h2>How Do We Implement: Our Methodology</h2>
+                <p>
+                  <b>We follow a simple and transparent method that helps clients move steadily through their transformation.</b>
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="row g-p-40">
+            <div className="col-lg-12">
+             <div className="abot-status-pic">
+              <Image src="/img/about-new-21.png" alt="about-new-21" width={1225} height={440} />
+             </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="about-bg-3">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-8">
+              <div className="solution-new-banner-sub-head second-head">
+                <h2>Services That Support Every Stage of Your Growth</h2>
+                <p>We work with a consultative approach that studies your business, industry, and goals. The guidance you receive is practical, structured, and easy to follow.</p>
+              </div>
+            </div>
+          </div>
+          <div className='row g-5'>
+            <div className='col-lg-4 d-flex'>
+              <div className='solution-new-card-001'>
+                  <Image src="/img/about-new-22.png" width={40} height={40} alt="Advisory and Consulting" />
+                  <h3>Advisory and Consulting</h3>
+                  <p>Our team at Dynamics Square carries out smooth Business Central implementations . We study your business needs carefully and configure the system so that every process runs in line with your goals.</p>
+              </div>
+            </div>
+             <div className='col-lg-4 d-flex'>
+              <div className='solution-new-card-001'>
+                  <Image src="/img/about-new-23.png" width={40} height={40} alt="Dynamics 365 Implementation" />
+                  <h3>Dynamics 365 Implementation</h3>
+                  <p>We ensure every stage of implementation stays consistent through detailed scoping, configuration, data migration, and testing. Every step is explained with clarity so your team stays confident.</p>
+              </div>
+            </div>
+             <div className='col-lg-4 d-flex'>
+              <div className='solution-new-card-001'>
+                  <Image src="/img/about-new-24.png" width={40} height={40} alt="Solutioning" />
+                  <h3>Solutioning</h3>
+                  <p>We study your workflows and customer journeys carefully so that we can design systems that support efficiency and scalability.</p>
+              </div>
+            </div>
+             <div className='col-lg-4 d-flex'>
+              <div className='solution-new-card-001'>
+                  <Image src="/img/about-new-25.png" width={40} height={40} alt="Upgrade" />
+                  <h3>Upgrade</h3>
+                  <p>Our upgrade services include careful planning, structured communication, and minimal functional disruption.</p>
+              </div>
+            </div>
+             <div className='col-lg-4 d-flex'>
+              <div className='solution-new-card-001'>
+                  <Image src="/img/about-new-26.png" width={40} height={40} alt="Training" />
+                  <h3>Training</h3>
+                  <p>Our training programmes are role-based and hands on. Each session empowers your team to feel confident and comfortable with the system.</p>
+              </div>
+            </div>
+             <div className='col-lg-4 d-flex'>
+              <div className='solution-new-card-001'>
+                  <Image src="/img/about-new-27.png" width={40} height={40} alt="Dedicated Support" />
+                  <h3>Dedicated Support</h3>
+                  <p>Support remains proactive, responsive, and handled by real people who understand your business. Every interaction stays human and helpful.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section className='solution-new-cta slution-new-cta-two slution-new-cta-two-pp'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-lg-10'>
+              <div className='solution-new-cta-001'>
+                <h3>Start Your Journey with Dynamics Square</h3>
+                <p>You deserve a partner who listens, guides, builds, and stays with you throughout your journey.</p>
+                <div>
+                  <Link
+                    href="#exampleModal"
+                    data-bs-toggle="modal"
+                    className="btn-get-started scrollto">
+                    <span>Talk to Our Experts &nbsp;<i className="bi bi-arrow-right"></i></span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <Image src="/img/about-new-31.png" alt="n-015" width={1097} height={424} />
+      </section>
+    </>
+  );
+};
+
+export default AboutNew;
