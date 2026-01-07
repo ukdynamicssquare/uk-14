@@ -1,7 +1,16 @@
+import React, { useRef, useState } from 'react';
 import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
 import useCardScrollEffect from "../components/useCardScrollEffect";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+// import required modules
+import { Navigation } from 'swiper/modules';
 const AboutNew = () => {
 
   useCardScrollEffect()
@@ -399,7 +408,113 @@ const AboutNew = () => {
         </div>
         <Image src="/img/about-new-15.png" alt="n-015" width={863} height={424} />
       </section>
-<section className="about-bg-1">
+      <section className="about-bg-3">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-8">
+              <div className="solution-new-banner-sub-head second-head">
+                <h2>Dynamics Square Delivers Practical Industry-Specific Solutions</h2>
+                <p>We support everyday business needs through tools such as:</p>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+        <div className='row-d'>
+          <div className='col-lg-12'>
+            <Swiper
+              spaceBetween={30}
+              centeredSlides={true}
+              navigation={true}
+              modules={[Navigation]}
+              breakpoints={{
+                640: {
+                  slidesPerView: 2,
+                  spaceBetween: 10,
+                },
+                768: {
+                  slidesPerView: 3,
+                  spaceBetween: 10,
+                },
+                1024: {
+                  slidesPerView: 3,
+                  spaceBetween: 10,
+                },
+                1300: {
+                  slidesPerView: 5,
+                  spaceBetween: 10,
+                },
+                1400: {
+                  slidesPerView: 5,
+                  spaceBetween: 10,
+                },
+              }}
+
+              className="mySwiper mySwiper-side"
+            >
+              <SwiperSlide>
+                <div className='card0-01 card0-01-1'>
+                  <a href="/shopify-connector-business-central/">
+                    <img src="/img/about-new-16.png" width={273} height={192} alt="about-new-16" />
+                    <h3>Continia Document Capture for AP automation</h3>
+                    <div className='ct--a'>
+                      <span>Get Started</span>
+                    </div>
+                  </a>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className='card0-01 card0-01-1'>
+                  <a href="/shopify-connector-business-central/">
+                    <img src="/img/about-new-18.png" width={273} height={192} alt="about-new-18" />
+                    <h3>Import Consignment Solution for consignment updates</h3>
+                    <div className='ct--a'>
+                      <span>Get Started</span>
+                    </div>
+                  </a>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className='card0-01 card0-01-1'>
+                  <a href="/shopify-connector-business-central/">
+                    <img src="/img/about-new-17.png" width={273} height={192} alt="about-new-17" />
+                    <h3>Continia Expense Management for employee expenses</h3>
+                    <div className='ct--a'>
+                      <span>Get Started</span>
+                    </div>
+                  </a>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className='card0-01 card0-01-1'>
+                  <a href="/shopify-connector-business-central/">
+                    <img src="/img/about-new-19.png" width={273} height={192} alt="about-new-19" />
+                    <h3>Yavrio for bank reconciliation</h3>
+                    <div className='ct--a'>
+                      <span>Get Started</span>
+                    </div>
+                  </a>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className='card0-01 card0-01-1'>
+                  <a href="/shopify-connector-business-central/">
+                    <img src="/img/about-new-20.png" width={273} height={192} alt="about-new-20" />
+                    <h3>Tasklet for warehouse management</h3>
+                    <div className='ct--a'>
+                      <span>Get Started</span>
+                    </div>
+                  </a>
+                </div>
+              </SwiperSlide>
+
+            </Swiper>
+          </div>
+        </div>
+      </section>
+      <section className="about-bg-1">
         <div className="container">
           <div className="row">
             <div className="col-lg-6">
@@ -411,12 +526,12 @@ const AboutNew = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="row g-p-40">
             <div className="col-lg-12">
-             <div className="abot-status-pic">
-              <Image src="/img/about-new-21.png" alt="about-new-21" width={1225} height={440} />
-             </div>
+              <div className="abot-status-pic">
+                <Image src="/img/about-new-21.png" alt="about-new-21" width={1225} height={440} />
+              </div>
             </div>
           </div>
         </div>
@@ -434,63 +549,135 @@ const AboutNew = () => {
           <div className='row g-5'>
             <div className='col-lg-4 d-flex'>
               <div className='solution-new-card-001'>
-                  <Image src="/img/about-new-22.png" width={40} height={40} alt="Advisory and Consulting" />
-                  <h3>Advisory and Consulting</h3>
-                  <p>Our team at Dynamics Square carries out smooth Business Central implementations . We study your business needs carefully and configure the system so that every process runs in line with your goals.</p>
+                <Image src="/img/about-new-22.png" width={40} height={40} alt="Advisory and Consulting" />
+                <h3>Advisory and Consulting</h3>
+                <p>Our team at Dynamics Square carries out smooth Business Central implementations . We study your business needs carefully and configure the system so that every process runs in line with your goals.</p>
               </div>
             </div>
-             <div className='col-lg-4 d-flex'>
+            <div className='col-lg-4 d-flex'>
               <div className='solution-new-card-001'>
-                  <Image src="/img/about-new-23.png" width={40} height={40} alt="Dynamics 365 Implementation" />
-                  <h3>Dynamics 365 Implementation</h3>
-                  <p>We ensure every stage of implementation stays consistent through detailed scoping, configuration, data migration, and testing. Every step is explained with clarity so your team stays confident.</p>
+                <Image src="/img/about-new-23.png" width={40} height={40} alt="Dynamics 365 Implementation" />
+                <h3>Dynamics 365 Implementation</h3>
+                <p>We ensure every stage of implementation stays consistent through detailed scoping, configuration, data migration, and testing. Every step is explained with clarity so your team stays confident.</p>
               </div>
             </div>
-             <div className='col-lg-4 d-flex'>
+            <div className='col-lg-4 d-flex'>
               <div className='solution-new-card-001'>
-                  <Image src="/img/about-new-24.png" width={40} height={40} alt="Solutioning" />
-                  <h3>Solutioning</h3>
-                  <p>We study your workflows and customer journeys carefully so that we can design systems that support efficiency and scalability.</p>
+                <Image src="/img/about-new-24.png" width={40} height={40} alt="Solutioning" />
+                <h3>Solutioning</h3>
+                <p>We study your workflows and customer journeys carefully so that we can design systems that support efficiency and scalability.</p>
               </div>
             </div>
-             <div className='col-lg-4 d-flex'>
+            <div className='col-lg-4 d-flex'>
               <div className='solution-new-card-001'>
-                  <Image src="/img/about-new-25.png" width={40} height={40} alt="Upgrade" />
-                  <h3>Upgrade</h3>
-                  <p>Our upgrade services include careful planning, structured communication, and minimal functional disruption.</p>
+                <Image src="/img/about-new-25.png" width={40} height={40} alt="Upgrade" />
+                <h3>Upgrade</h3>
+                <p>Our upgrade services include careful planning, structured communication, and minimal functional disruption.</p>
               </div>
             </div>
-             <div className='col-lg-4 d-flex'>
+            <div className='col-lg-4 d-flex'>
               <div className='solution-new-card-001'>
-                  <Image src="/img/about-new-26.png" width={40} height={40} alt="Training" />
-                  <h3>Training</h3>
-                  <p>Our training programmes are role-based and hands on. Each session empowers your team to feel confident and comfortable with the system.</p>
+                <Image src="/img/about-new-26.png" width={40} height={40} alt="Training" />
+                <h3>Training</h3>
+                <p>Our training programmes are role-based and hands on. Each session empowers your team to feel confident and comfortable with the system.</p>
               </div>
             </div>
-             <div className='col-lg-4 d-flex'>
+            <div className='col-lg-4 d-flex'>
               <div className='solution-new-card-001'>
-                  <Image src="/img/about-new-27.png" width={40} height={40} alt="Dedicated Support" />
-                  <h3>Dedicated Support</h3>
-                  <p>Support remains proactive, responsive, and handled by real people who understand your business. Every interaction stays human and helpful.</p>
+                <Image src="/img/about-new-27.png" width={40} height={40} alt="Dedicated Support" />
+                <h3>Dedicated Support</h3>
+                <p>Support remains proactive, responsive, and handled by real people who understand your business. Every interaction stays human and helpful.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
-      
-      <section className='solution-new-cta slution-new-cta-two slution-new-cta-two-pp'>
-        <div className='container'>
-          <div className='row'>
-            <div className='col-lg-10'>
-              <div className='solution-new-cta-001'>
-                <h3>Start Your Journey with Dynamics Square</h3>
-                <p>You deserve a partner who listens, guides, builds, and stays with you throughout your journey.</p>
+      <section className="about-bg-1">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-8">
+              <div className="solution-new-banner-sub-head second-head">
+                <h2>The Team of Experts Who Guide Our Work</h2>
+                <p>Our strength comes from the experience and the values carried by the people who lead our solutions. Their clarity, patience, and steady approach have shaped our reputation as trusted Dynamics 365 consultants.</p>
+              </div>
+            </div>
+          </div>
+          <div className='row g-3'>
+            <div className='col-lg-4 d-flex'>
+              <div className='solution-new-card-002'>
+                <Image src="/img/about-new-28.png" width={185} height={176} alt="Advisory and Consulting" />
+                <div className="float-inf--card float-inf--card-icn">
+                  <p>The best solutions are understood, designed, and earned</p>
+                </div>
+                <div className='back-white-r'>
+                  <h4>Darshan Mungekar,
+                    <span>Principal Solution Architect</span></h4>
+                  <p>Our team at Dynamics Square carries out smooth Business Central implementations . We study your business needs carefully and configure the system so that every process runs in line with your goals.</p>
+                </div>
+              </div>
+            </div>
+            <div className='col-lg-4 d-flex'>
+              <div className='solution-new-card-002'>
+                <Image src="/img/about-new-29.png" width={185} height={176} alt="Advisory and Consulting" />
+                <div className="float-inf--card float-inf--card-icn">
+                  <p>The best solutions are understood, designed, and earned</p>
+                </div>
+                <div className='back-white-r'>
+                  <h4>Nitesh Sharma,
+                    <span>Head of Business Development</span></h4>
+                  <p>Nitesh carries a decade of experience and deep market understanding. His approach focuses on helping organisations make informed decisions with the right guidance and the right technology.</p>
+                </div>
+              </div>
+            </div>
+            <div className='col-lg-4 d-flex'>
+              <div className='solution-new-card-002'>
+                <Image src="/img/about-new-30.png" width={185} height={176} alt="Advisory and Consulting" />
+                <div className="float-inf--card float-inf--card-icn">
+                  <p>
+                    As a tech company, we believe technology is meant to
+                    simplify, not complicate.
+                  </p>
+                </div>
+                <div className='back-white-r'>
+                  <h4>B. Ravindran,
+                    <span>Solution Architect</span></h4>
+                  <p>Ravindran brings more than 12 years of experience in Dynamics 365 Finance and large-scale implementations. His calm and structured approach helps organisations move through complex projects with confidence.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className='row justify-content-center'>
+            <div className='col-lg-8'>
+              <div className='center-cta-abot text-center'>
+                <h4>Dynamics Square Has a Team That Truly Cares</h4>
+                <p>Behind every solution stands a group of people who invest fully in the success of your business. Our team includes support engineers with empathy, industry specific consultants, NAV, BC, and AX specialists, and experienced solution architects who focus on solving real business problems. We keep our commitment firm across every project, small or large, and we work with the simple intention of creating systems that support your growth.</p>
                 <div>
                   <Link
                     href="#exampleModal"
                     data-bs-toggle="modal"
                     className="btn-get-started scrollto">
-                    <span>Talk to Our Experts &nbsp;<i className="bi bi-arrow-right"></i></span>
+                    <span>Request a Free Consultation &nbsp;<i className="bi bi-arrow-right"></i></span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className='solution-new-cta slution-new-cta-two slution-new-cta-two-pp'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-lg-10'>
+              <div className='solution-new-cta-001'>
+                <h3>Explore Dynamics 365 Solutions</h3>
+                <p>Learn how the right Microsoft technologies can support your growth.</p>
+                <div>
+                  <Link
+                    href="#exampleModal"
+                    data-bs-toggle="modal"
+                    className="btn-get-started scrollto">
+                    <span>Request a Free Consultation &nbsp;<i className="bi bi-arrow-right"></i></span>
                   </Link>
                 </div>
               </div>
@@ -498,6 +685,104 @@ const AboutNew = () => {
           </div>
         </div>
         <Image src="/img/about-new-31.png" alt="n-015" width={1097} height={424} />
+      </section>
+      <section className="about-bg-2">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-8">
+              <div className="solution-new-banner-sub-head second-head">
+                <h2>Why Organisations Choose Dynamics Square</h2>
+                <p>Businesses across sectors choose Dynamics Square for several reasons.</p>
+              </div>
+            </div>
+          </div>
+          <div className='row'>
+            <div className='col-lg-7'>
+              <div className='row'>
+                <div className='col-lg-6 d-flex '>
+                  <div className='card557'>
+                    <div className='card-233-body'>
+                      <h3><span><i className="bi bi-check2"></i></span>Certified Microsoft Partner</h3>
+                      <p>500+ projects powered by certified Dynamics 365 experts.</p>
+                    </div>
+                  </div>
+                </div>
+                <div className='col-lg-6 d-flex '>
+                  <div className='card557'>
+                    <div className='card-233-body'>
+                      <h3><span><i className="bi bi-check2"></i></span>Rich Industry Experience</h3>
+                      <p>We carry 14 of experience across 12 different industries.</p>
+                    </div>
+                  </div>
+                </div>
+                <div className='col-lg-6 d-flex '>
+                  <div className='card557'>
+                    <div className='card-233-body'>
+                      <h3><span><i className="bi bi-check2"></i></span>Agile Global Teams</h3>
+                      <p>Onsite and offshore teams work together to support your operations.</p>
+                    </div>
+                  </div>
+                </div>
+                <div className='col-lg-6 d-flex '>
+                  <div className='card557'>
+                    <div className='card-233-body'>
+                      <h3><span><i className="bi bi-check2"></i></span>Deep Knowledge Across NAV and AX</h3>
+                      <p>Our experience dates back to early NAV and AX systems.</p>
+                    </div>
+                  </div>
+                </div>
+                <div className='col-lg-6 d-flex '>
+                  <div className='card557'>
+                    <div className='card-233-body'>
+                      <h3><span><i className="bi bi-check2"></i></span>Value-Driven Approach</h3>
+                      <p>Our hybrid model supports cost efficiency with steady personal attention.</p>
+                    </div>
+                  </div>
+                </div>
+                <div className='col-lg-6 d-flex '>
+                  <div className='card557'>
+                    <div className='card-233-body'>
+                      <h3><span><i className="bi bi-check2"></i></span>Structured Solution Architecture</h3>
+                      <p>Our architects question, analyse, and recommend before they deploy any system.</p>
+                    </div>
+                  </div>
+                </div>
+                <div className='col-lg-6 d-flex '>
+                  <div className='card557'>
+                    <div className='card-233-body'>
+                      <h3><span><i className="bi bi-check2"></i></span>Full 360-Degree Dynamics Expertise</h3>
+                      <p>We bring ERP, CRM, ISVs, and Power Platform under one partner.</p>
+                    </div>
+                  </div>
+                </div>
+                <div className='col-lg-6 d-flex '>
+                  <div className='card557'>
+                    <div className='card-233-body'>
+                      <h3><span><i className="bi bi-check2"></i></span>Strong Client Relationships</h3>
+                      <p>Clients stay with us for more than 5 years on average.</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-12">
+                  <div>
+                  <Link
+                    href="#exampleModal"
+                    data-bs-toggle="modal"
+                    className="btn-get-started scrollto">
+                    <span>Let’s Get You Started &nbsp;<i className="bi bi-arrow-right"></i></span>
+                  </Link>
+                </div>
+                </div>
+              </div>
+            </div>
+            <div className='col-lg-5 order-2 align-self-center'>
+              <div className='img-backs-sid'>
+                <Image src="/img/about-new-32.png" alt="copil-side" width={495} height={4985} className='im-two' />
+              </div>
+            </div>
+          </div>
+
+        </div>
       </section>
     </>
   );
