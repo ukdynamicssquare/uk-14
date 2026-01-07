@@ -186,8 +186,7 @@ const AboutNew = () => {
                     data-bs-toggle="modal"
                     className="btn-get-started scrollto"
                   >
-                    <span>
-                      Learn What Business Central Is &nbsp;
+                    <span>Transform My Business &nbsp;
                       <i className="bi bi-arrow-right"></i>
                     </span>
                   </Link>
@@ -552,7 +551,7 @@ const AboutNew = () => {
               <div className='solution-new-card-001'>
                 <Image src="/img/about-new-22.png" width={40} height={40} alt="Advisory and Consulting" />
                 <h3>Advisory and Consulting</h3>
-                <p>Our team at Dynamics Square carries out smooth Business Central implementations . We study your business needs carefully and configure the system so that every process runs in line with your goals.</p>
+                <p>We work with a consultative approach that studies your business, industry, and goals. The guidance you receive is practical, structured, and easy to follow.</p>
               </div>
             </div>
             <div className='col-lg-4 d-flex'>
@@ -613,7 +612,7 @@ const AboutNew = () => {
                 <div className='back-white-r'>
                   <h4>Darshan Mungekar,
                     <span>Principal Solution Architect</span></h4>
-                  <p>Our team at Dynamics Square carries out smooth Business Central implementations . We study your business needs carefully and configure the system so that every process runs in line with your goals.</p>
+                  <p>Darshan holds more than 22 years of experience in manufacturing and ERP consulting. His knowledge spans the entire Dynamics 365 suite, warehouse management systems, and digital transformation projects across continents. </p>
                 </div>
               </div>
             </div>
@@ -621,12 +620,12 @@ const AboutNew = () => {
               <div className='solution-new-card-002'>
                 <Image src="/img/about-new-29.png" width={185} height={176} alt="Advisory and Consulting" />
                 <div className="float-inf--card float-inf--card-icn">
-                  <p>The best solutions are understood, designed, and earned</p>
+                  <p>Every business has a story, and I learn about it before supporting its transformation.</p>
                 </div>
                 <div className='back-white-r'>
                   <h4>Nitesh Sharma,
                     <span>Head of Business Development</span></h4>
-                  <p>Nitesh carries a decade of experience and deep market understanding. His approach focuses on helping organisations make informed decisions with the right guidance and the right technology.</p>
+                  <p>Nitesh carries a decade of experience and deep market understanding. His approach focuses on helping organisations make informed decisions with the right guidance and the right technology</p>
                 </div>
               </div>
             </div>
@@ -634,7 +633,7 @@ const AboutNew = () => {
               <div className='solution-new-card-002'>
                 <Image src="/img/about-new-30.png" width={185} height={176} alt="Advisory and Consulting" />
                 <div className="float-inf--card float-inf--card-icn">
-                  <p>The best solutions are understood, designed, and earned</p>
+                  <p>Every successful implementation begins with listening before launching</p>
                 </div>
                 <div className='back-white-r'>
                   <h4>B. Ravindran,
@@ -645,7 +644,7 @@ const AboutNew = () => {
             </div>
           </div>
           <div className='row justify-content-center'>
-            <div className='col-lg-6'>
+            <div className='col-lg-9'>
               <div className='center-cta-abot text-center'>
                 <h4>Dynamics Square Has a Team That Truly Cares</h4>
                 <p>Behind every solution stands a group of people who invest fully in the success of your business. Our team includes support engineers with empathy, industry specific consultants, NAV, BC, and AX specialists, and experienced solution architects who focus on solving real business problems. We keep our commitment firm across every project, small or large, and we work with the simple intention of creating systems that support your growth.</p>
@@ -654,7 +653,7 @@ const AboutNew = () => {
                     href="#exampleModal"
                     data-bs-toggle="modal"
                     className="btn-get-started scrollto">
-                    <span>Request a Free Consultation &nbsp;<i className="bi bi-arrow-right"></i></span>
+                    <span>Speak To Our Expert Today &nbsp;<i className="bi bi-arrow-right"></i></span>
                   </Link>
                 </div>
               </div>

@@ -17903,6 +17903,9 @@ font-family: 'Lato';
     background: url(/img/qt-up-wh.png) no-repeat center bottom;
     background-size: contain;
 }
+.float-inf--card p{
+  padding: 24px 20px;
+}
 .float-inf--card::after {
 content: "";
     position: absolute;
