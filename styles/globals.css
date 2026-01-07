@@ -17829,7 +17829,7 @@ padding-top: 160px;
 }
 .size-sz p{
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 600;
 }
 .size-sz::before {
 content: "";

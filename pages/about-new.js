@@ -11,6 +11,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 // import required modules
 import { Navigation } from 'swiper/modules';
+import CircularRing from '../components/CircularRing';
 const AboutNew = () => {
 
   useCardScrollEffect()
@@ -39,8 +40,8 @@ const AboutNew = () => {
                 </p>
                 <Image
                   src="/img/partner-logo-black-3.png"
-                  width={263}
-                  height={74}
+                  width={200}
+                  height={56}
                   alt="partner-logo-black"
                 />
               </div>
@@ -86,7 +87,7 @@ const AboutNew = () => {
       <section className="pt-0 about-bg-0">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-lg-10">
+            <div className="col-lg-8">
               <div className="second-head text-center size-sz">
                 <p>
                   We never aimed to work as just another technology provider.
@@ -299,13 +300,13 @@ const AboutNew = () => {
           </div>
           <div className="row g-p-40">
             <div className="col-lg-6">
-              <p>
+              <p style={{marginBottom:'-10px'}}>
                 Each industry carries unique challenges, varied data flows,
                 specialised compliance, and distinct customer expectations. Our
                 deep industry experience helps us shape solutions that meet
                 daily realities with clarity and confidence.
               </p>
-              <div className="text-lg-start">
+              <div className="text-lg-start" style={{paddingBottom:'20px'}}>
                 <Link
                   href="#exampleModal"
                   data-bs-toggle="modal"
@@ -411,7 +412,7 @@ const AboutNew = () => {
       <section className="about-bg-3">
         <div className="container">
           <div className="row">
-            <div className="col-lg-8">
+            <div className="col-lg-6">
               <div className="solution-new-banner-sub-head second-head">
                 <h2>Dynamics Square Delivers Practical Industry-Specific Solutions</h2>
                 <p>We support everyday business needs through tools such as:</p>
@@ -539,7 +540,7 @@ const AboutNew = () => {
       <section className="about-bg-3">
         <div className="container">
           <div className="row">
-            <div className="col-lg-8">
+            <div className="col-lg-6">
               <div className="solution-new-banner-sub-head second-head">
                 <h2>Services That Support Every Stage of Your Growth</h2>
                 <p>We work with a consultative approach that studies your business, industry, and goals. The guidance you receive is practical, structured, and easy to follow.</p>
@@ -595,7 +596,7 @@ const AboutNew = () => {
       <section className="about-bg-1">
         <div className="container">
           <div className="row">
-            <div className="col-lg-8">
+            <div className="col-lg-6">
               <div className="solution-new-banner-sub-head second-head">
                 <h2>The Team of Experts Who Guide Our Work</h2>
                 <p>Our strength comes from the experience and the values carried by the people who lead our solutions. Their clarity, patience, and steady approach have shaped our reputation as trusted Dynamics 365 consultants.</p>
@@ -633,10 +634,7 @@ const AboutNew = () => {
               <div className='solution-new-card-002'>
                 <Image src="/img/about-new-30.png" width={185} height={176} alt="Advisory and Consulting" />
                 <div className="float-inf--card float-inf--card-icn">
-                  <p>
-                    As a tech company, we believe technology is meant to
-                    simplify, not complicate.
-                  </p>
+                  <p>The best solutions are understood, designed, and earned</p>
                 </div>
                 <div className='back-white-r'>
                   <h4>B. Ravindran,
@@ -647,7 +645,7 @@ const AboutNew = () => {
             </div>
           </div>
           <div className='row justify-content-center'>
-            <div className='col-lg-8'>
+            <div className='col-lg-6'>
               <div className='center-cta-abot text-center'>
                 <h4>Dynamics Square Has a Team That Truly Cares</h4>
                 <p>Behind every solution stands a group of people who invest fully in the success of your business. Our team includes support engineers with empathy, industry specific consultants, NAV, BC, and AX specialists, and experienced solution architects who focus on solving real business problems. We keep our commitment firm across every project, small or large, and we work with the simple intention of creating systems that support your growth.</p>
@@ -689,7 +687,7 @@ const AboutNew = () => {
       <section className="about-bg-2">
         <div className="container">
           <div className="row">
-            <div className="col-lg-8">
+            <div className="col-lg-6">
               <div className="solution-new-banner-sub-head second-head">
                 <h2>Why Organisations Choose Dynamics Square</h2>
                 <p>Businesses across sectors choose Dynamics Square for several reasons.</p>
@@ -784,6 +782,8 @@ const AboutNew = () => {
 
         </div>
       </section>
+            {/* <CircularRing /> */}
+      
     </>
   );
 };
