@@ -70,7 +70,7 @@ const AboutNew = () => {
               </div>
             </div>
           </div>
-          <div className="row g-0">
+          <div className="row g-0 achiv-desk-d">
             <div className="col-lg-12">
               <img
                 src="/img/about-new-sv-r.svg"
@@ -79,6 +79,49 @@ const AboutNew = () => {
                 height={874}
                 style={{ width: "100%", height: "auto" }}
               />
+            </div>
+          </div>
+          <div className="row g-0 achiv-mobile-d">
+            <div className="col-lg-12">
+              <div className='achiv-mobile'>
+                <ul>
+                  <li>
+                    <Image src="/img/about-new-33.png" width={34} height={34} alt="about-new-33" />
+                    <div>
+                      <span>2011</span>
+                      <p>Our company began with a mission to simplify ERP complexity for businesses.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <Image src="/img/about-new-34.png" width={34} height={34} alt="about-new-34" />
+                    <div>
+                      <span>2015</span>
+                      <p>We expanded across the UK, US, Canada, and Australia through a consistent demand for practical and reliable support.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <Image src="/img/about-new-35.png" width={34} height={34} alt="about-new-35" />
+                    <div>
+                      <span>2023</span>
+                      <p>We supported more than 500 customers with solutions designed around real-world needs.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <Image src="/img/about-new-37.png" width={34} height={34} alt="about-new-36" />
+                    <div>
+                      <span>2024</span>
+                      <p>We reached a team strength of 150 certified experts across global offices.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <Image src="/img/about-new-38.png" width={34} height={34} alt="about-new-37" />
+                    <div>
+                      <span>2025</span>
+                      <p>We stepped into a future shaped by AI led transformation and sustainability focussed progress.</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -156,7 +199,7 @@ const AboutNew = () => {
           <div className="row">
             <div className="col-lg-6">
               <div className="solution-new-banner-sub-head second-head">
-                <h2>What We Deliver</h2>
+                <h2 className="mine-77">What We Deliver</h2>
                 <p className="new-col">
                   <b>Complete Microsoft Business Solutions</b>
                 </p>
@@ -299,13 +342,13 @@ const AboutNew = () => {
           </div>
           <div className="row g-p-40">
             <div className="col-lg-6">
-              <p style={{marginBottom:'-10px'}}>
+              <p style={{ marginBottom: '-10px' }}>
                 Each industry carries unique challenges, varied data flows,
                 specialised compliance, and distinct customer expectations. Our
                 deep industry experience helps us shape solutions that meet
                 daily realities with clarity and confidence.
               </p>
-              <div className="text-lg-start" style={{paddingBottom:'20px'}}>
+              <div className="text-lg-start" style={{ paddingBottom: '20px' }}>
                 <Link
                   href="#exampleModal"
                   data-bs-toggle="modal"
@@ -527,10 +570,112 @@ const AboutNew = () => {
             </div>
           </div>
 
-          <div className="row g-p-40">
+          <div className="row g-p-40 ds-hh">
             <div className="col-lg-12">
               <div className="abot-status-pic">
                 <Image src="/img/about-new-21.png" alt="about-new-21" width={1225} height={440} />
+              </div>
+            </div>
+          </div>
+          <div className="row solution-faq solution-faq-col faq ms-hh">
+            <div className="col-lg-12">
+              <div className="accordion accordion-flush" id="faqlist1">
+                <div className="accordion-item">
+                  <h3 className="accordion-header">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq-content-1"
+                    >Analysis Phase</button>
+                  </h3>
+                  <div
+                    id="faq-content-1"
+                    className="accordion-collapse collapse"
+                    data-bs-parent="#faqlist1"
+                  >
+                    <div className="accordion-body">
+                      <p>We gather requirements, run gap fit sessions, define the project scope, and create necessary functional documents.</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="accordion-item">
+                  <h3 className="accordion-header">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq-content-2"
+                    >Design Phase</button>
+                  </h3>
+                  <div
+                    id="faq-content-2"
+                    className="accordion-collapse collapse"
+                    data-bs-parent="#faqlist1"
+                  >
+                    <div className="accordion-body">
+                      <p>We translate your business needs into detailed solution blueprints, data templates, and architecture plans.</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="accordion-item">
+                  <h3 className="accordion-header">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq-content-3"
+                    >Development Phase</button>
+                  </h3>
+                  <div
+                    id="faq-content-3"
+                    className="accordion-collapse collapse"
+                    data-bs-parent="#faqlist1"
+                  >
+                    <div className="accordion-body">
+                      <p>We configure systems, develop necessary features, perform unit testing, and prepare your UAT environment.</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="accordion-item">
+                  <h3 className="accordion-header">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq-content-4"
+                    >Deployment Phase</button>
+                  </h3>
+                  <div
+                    id="faq-content-4"
+                    className="accordion-collapse collapse"
+                    data-bs-parent="#faqlist1"
+                  >
+                    <div className="accordion-body">
+                      <p>We train users, run final tests, migrate data, and complete a smooth go live.</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="accordion-item">
+                  <h3 className="accordion-header">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#faq-content-5"
+                    >Post Go-Live Phase</button>
+                  </h3>
+                  <div
+                    id="faq-content-5"
+                    className="accordion-collapse collapse"
+                    data-bs-parent="#faqlist1"
+                  >
+                    <div className="accordion-body">
+                      <p>We provide post launch support, monitor systems, resolve issues, and guide your internal teams for future continuity.</p>
+                    </div>
+                  </div>
+                </div>
+                
               </div>
             </div>
           </div>
@@ -762,13 +907,13 @@ const AboutNew = () => {
                 </div>
                 <div className="col-lg-12">
                   <div>
-                  <Link
-                    href="#exampleModal"
-                    data-bs-toggle="modal"
-                    className="btn-get-started scrollto">
-                    <span>Let’s Get You Started &nbsp;<i className="bi bi-arrow-right"></i></span>
-                  </Link>
-                </div>
+                    <Link
+                      href="#exampleModal"
+                      data-bs-toggle="modal"
+                      className="btn-get-started scrollto">
+                      <span>Let’s Get You Started &nbsp;<i className="bi bi-arrow-right"></i></span>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -781,8 +926,8 @@ const AboutNew = () => {
 
         </div>
       </section>
-            {/* <CircularRing /> */}
-      
+      {/* <CircularRing /> */}
+
     </>
   );
 };
