@@ -773,7 +773,7 @@ const AboutNew = () => {
               </div>
             </div>
             <div className='col-lg-5 order-2 align-self-center'>
-              <div className='img-backs-sid'>
+              <div className='img-backs-sid img-backs-sid-t'>
                 <Image src="/img/about-new-32.png" alt="copil-side" width={495} height={4985} className='im-two' />
               </div>
             </div>

@@ -18375,8 +18375,50 @@ display:none
         height: 100%;
         object-fit: cover;
 }
+.header-section {
+    padding: 40px 0px 40px;
+}
+.leader-se {
+    position: relative;
+    margin-top: -60px;
+    padding-bottom: 40px;
+}
+.float-inf--card.float-inf--card-f {
+position: relative;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+}
+.about-head-pic {
+    padding-top: 40px;
+    text-align: center;
+}
+.about-title-head h1 {
+    font-size: 36px !important;
+}
+.second-head h2 {
+    font-size: 28px;
+}
+.about-title-head {
+    padding-right: 0;
+    text-align: center;
+}
+.solution-new-cta.slution-new-cta-two img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.img-backs-sid-t{
+  padding-top:30px
+}
 }
 @media (max-width: 768px) {
+  .size-sz p {
+    font-size: 20px;
+}
+.size-sz::before,.size-sz::after{
+  display:none
+}
   .ds-hh{
     display:none
   }
