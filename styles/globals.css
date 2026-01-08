@@ -18025,7 +18025,7 @@ display:none
   margin-bottom: 30px;
 }
 .achiv-mobile-d{
-  display:none
+  display:none !important
 }
 .achiv-mobile{}
 .achiv-mobile ul{
@@ -18438,10 +18438,10 @@ position: relative;
 }
 @media (max-width: 768px) {
   .achiv-desk-d{
-    display:none
+    display:none !important
   }
   .achiv-mobile-d{
-    display:block
+    display:block !important
   }
   .size-sz p {
     font-size: 20px;
