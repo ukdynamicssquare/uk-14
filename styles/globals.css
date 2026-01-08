@@ -16403,7 +16403,10 @@ margin: -30px 0px -80px;
   z-index: 10;
   transform: translateY(45px);
 }
-
+.mycard:nth-child(11) {
+  z-index: 10;
+  transform: translateY(50px);
+}
 .mycard__inner {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -17723,6 +17726,9 @@ padding-top: 160px;
     .col-whole-card h4{
       font-size:18px;
       margin-bottom:30px
+    }
+    .col-whole-card ul li:not(:last-child){
+      margin-bottom:5px
     }
     .col-bag-car{
     border-radius: 8px;
