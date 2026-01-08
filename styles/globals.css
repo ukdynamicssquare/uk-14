@@ -18447,13 +18447,13 @@ position: relative;
     font-size: 20px;
 }
 .size-sz::before,.size-sz::after{
-  display:none
+  display:none !important
 }
   .ds-hh{
-    display:none
+    display:none !important
   }
   .ms-hh{
-    display:block
+    display:block !important
   }
   .btn-home {
     font-size: 16px !important;
