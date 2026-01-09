@@ -11,6 +11,7 @@ const Dynamics365ForProfessionalServices = () => {
     <>
       <Head>
         <title>Dynamics 365 for Professional Services</title>
+         <meta name="robots" content="noindex, nofollow" />
         <meta
           name="description"
           content="Simplify banking with Yavrio integration with Dynamics 365 Business Central — automate reconciliation, enhance accuracy, and save hours of manual work."
