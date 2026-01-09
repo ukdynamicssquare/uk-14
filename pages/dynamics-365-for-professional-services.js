@@ -538,7 +538,7 @@ const Dynamics365ForProfessionalServices = () => {
                     <tr>
                       <td>Flexibility</td>
                       <td>High flexibility with simpler configurations</td>
-                      <td>High flexibility with simpler configurations</td>
+                      <td>Structured, highly extensible framework</td>
                     </tr>
                     <tr>
                       <td>Best For</td>
