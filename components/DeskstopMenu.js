@@ -1103,7 +1103,7 @@ const DeskstopMenu = () => {
                     />
                   </div>
                   <div className="content">
-                    <span>Manufacturing (Microsoft Cloud)</span>
+                    <span>Manufacturing</span>
                     <p>
                       Connect your people and operations to drive profitability
                     </p>

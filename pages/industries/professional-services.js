@@ -1,670 +1,649 @@
-import React, { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
-import ModalVideo from "react-modal-video";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/pagination";
-import Blog from "../../components/Blog";
-import { Autoplay, FreeMode, Pagination } from "swiper/modules";
-const ProfessionalService = () => {
-  const [isOpen, setOpen] = useState(false);
+import useCardScrollEffect from "../../components/useCardScrollEffect";
+const Dynamics365ForProfessionalServices = () => {
+
+  useCardScrollEffect()
 
   return (
     <>
       <Head>
-        <meta charSet="utf-8" />
-        <title>
-          Microsoft Dynamics 365 For Professional Services | Dynamics Square
-        </title>
+        <title>Dynamics 365 For Professional Services | Dynamics Square</title>
         <meta
           name="description"
-          content="Dynamics 365 for professional services: streamline and efficiently manage your professional services from end-to-end administration to project automation to financial management, and more."
+          content="Dynamics 365 for professional services helps firms manage projects, resources, billing, and profitability with real-time insights and automation. Partner with Dynamics Square UK today."
         />
         <link
           rel="canonical"
           href="https://www.dynamicssquare.co.uk/industries/professional-services/"
         />
+        <meta property="og:locale" content="GB" />
         <meta property="og:type" content="website" />
+        <meta property="og:title" content=" Dynamics 365 For Professional Services | Dynamics Square " />
+        <meta property="og:description" content="Dynamics 365 for professional services helps firms manage projects, resources, billing, and profitability with real-time insights and automation. Partner with Dynamics Square UK today." />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/industries/professional-services/" />
-        <meta property="og:title" content="Microsoft Dynamics 365 For Professional Services | Dynamics Square" />
-        <meta property="og:description" content="Dynamics 365 for professional services: streamline and efficiently manage your professional services from end-to-end administration to project automation to financial management, and more." />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/professional service banner.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/industries/professional-services/" />
-        <meta property="twitter:title" content="Microsoft Dynamics 365 For Professional Services | Dynamics Square" />
-        <meta property="twitter:description" content="Dynamics 365 for professional services: streamline and efficiently manage your professional services from end-to-end administration to project automation to financial management, and more." />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/professional service banner.png" />
+        <meta property="og:site_name" content="Dynamics Square UK" />
+        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/professional-services-01.png" />
+        <meta property="og:image:width" content="200" />
+        <meta property="og:image:height" content="200" />
+        <meta property="og:image:type" content="image/png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@dsquare_uk" />
+        <meta name="twitter:title" content="Dynamics 365 For Professional Services | Dynamics Square" />
+        <meta name="twitter:description" content="Dynamics 365 for professional services helps firms manage projects, resources, billing, and profitability with real-time insights and automation. Partner with Dynamics Square UK today." />
+        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/professional-services-01.png" />
       </Head>
-      <ModalVideo
-        channel="youtube"
-        autoplay
-        isOpen={isOpen}
-        videoId="Ykm-vyjBK4w"
-        onClose={() => setOpen(false)}
-      />
-      <main>
-        <section className="Solution-banner hero-1 hero">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-6 mobile-1 align-self-center">
-                <h1>
-                  Dynamics 365 <br />
-                  For Professional Services
-                </h1>
-                <p>
-                  Streamline and efficiently manage your professional services
-                  from end-to-end administration to project automation to
-                  financial management, and more.
-                </p>
-                <div className="text-center text-lg-start">
+      <div className='solution-new-banner-one solution-new-banner-one-colo'>
+        <div className='container'>
+          <div className='row justify-content-center'>
+            <div className='col-lg-8'>
+              <div className='solution-new-banner-one-content'>
+                <h1>Dynamics 365 for Professional Services</h1>
+                <span className='large-heading'>Better Planning. Stronger Coordination for Service Firms</span>
+                <p>Dynamics 365 for professional services helps service firms in the UK bring order to their projects, teams, clients, and financials. It connects planning, scheduling, resourcing, billing, and performance tracking so that teams work with steady clarity across every stage of a project. Choose a setup that keeps client work organised, supports stronger coordination, and helps every department move in the same direction.</p>
+                <div className="text-center">
                   <Link
                     href="#exampleModal"
                     data-bs-toggle="modal"
                     className="btn-get-started scrollto">
-
-                    <span>Schedule a Demo</span>
-
+                    <span>Start Your Services Transformation &nbsp;<i className="bi bi-arrow-right"></i></span>
                   </Link>
                 </div>
               </div>
-              <div className="col-lg-6 align-self-center">
-                <Image
-                  src="/img/professional service banner.png"
-                  alt="Dynamics 365 For Professional Services"
-                  width={723} height={473}
-                  priority={true}
-                />
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <section>
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12">
+              <div className='m-b-image-nnn'>
+                <Image src="/img/professional-services-01.png" alt='bc-support-banner' width={1097} height={656} priority />
               </div>
             </div>
           </div>
-        </section>
-        <section>
-          <div className="container">
-            <header className="section-header">
-              <h2>
-                Boost Your Professional Services <br />
-                with Dynamics 365
-              </h2>
-              <p>
-                Enable project automation, budget control, time management,
-                accuracy in reports and invoices, resource management, warehouse
-                management and more by implementing Dynamics 365 for
-                Professional Services. At Dynamics Square, we have experts to
-                help boost your operational efficiency and transform your
-                professional services by upgrading your system with{" "}
-                <Link href="/products/microsoft-dynamics-365/">
-                  Microsoft Dynamics 365 solutions
-                </Link>
-                .
-              </p>
-            </header>
+        </div>
+      </section>
+      <section className='bg-003s pd-con-69'>
+        <div className="container my-float-i">
+          <div className="row">
+            <div className="col-lg-6">
+              <div className="supprt-header-new-one">
+                <h2>What is Dynamics 365 for Professional Service Companies?</h2>
+                <p>Dynamics 365 for professional service companies supports companies that run people driven work. These firms depend on accurate time records, resource scheduling, cost tracking, and consistent communication to guide every engagement. Dynamics 365 solutions for professional services bring these activities together in one place. Microsoft provides two reliable systems that help such companies run daily operations:</p>
+                <br />
+              </div>
+            </div>
           </div>
-        </section>
-        <section className="Solution-business-why custom-pd-1">
-          <div className="container">
-            <div className="row gx-5">
-              <div className="col-lg-6 align-self-center">
-                <h2>
-                  How Dynamics 365 Professional
-                  <br />
-                  Services Can Boost <br />
-                  Your Business Potentials?
-                </h2>
-                <p>
-                  Dynamics 365 solutions for Professional Services are designed
-                  to manage your end-to-end project execution, track project
-                  status in real-time, manage & automate finance, and drive an
-                  efficient and innovative approach across your project
-                  development cycle.
+
+          <div className="row g-5">
+            <div className="col-lg-6 d-flex">
+              <div className="col-whole-card">
+                <h4>1. Dynamics 365 Business Central</h4>
+                <div className="col-bag-car">
+                  <Image src="/img/wholesale-pic-02.png" alt="wholesale-pic-02" width={93} height={93} />
+                </div>
+                <p><a href="/products/dynamics-365-business-central/">Dynamics 365 Business Central</a> for Professional Services works well for small to mid-sized consultancies, agencies, engineering services firms, legal practices, accounting firms, and growing advisory teams.
+                  The solutions available in Dynamics 365 suite help companies run projects, manage resources, handle billing, capture timesheets, track expenses, and keep financials accurate.
                 </p>
+                <p><b>Service firms choose Dynamics 365 Business Central ERP when:</b></p>
+                <ul>
+                  <li>The business wants one system for projects, resources, clients, and accounts.</li>
+                  <li>Teams need clear visibility across tasks, workloads, and deadlines.</li>
+                  <li>The company prefers simple processes with minimal customisation.</li>
+                  <li>Billing cycles need reliable tracking supported by accurate time records.</li>
+                  <li>Managers want a tool that is simple to learn and easy to maintain.</li>
+                </ul>
               </div>
-              <div className="col-lg-6 align-self-center">
-                <div className="content-icons-modil-1">
-                  <div className="content-inner-moil-1">
-                    <div className="icons-left">
-                      <div className="ext-bord">
-                        <i className="bi bi-check2"></i>
-                      </div>
+            </div>
+            <div className="col-lg-6 d-flex">
+              <div className="col-whole-card">
+                <h4>2. Dynamics 365 Finance and Supply Chain Management</h4>
+                <div className="col-bag-car">
+                  <Image src="/img/wholesale-pic-03.png" alt="wholesale-pic-03" width={386} height={96} />
+                </div>
+                <p><a href="/products/microsoft-dynamics-365-finance-operations/">Dynamics 365 Finance and Operations</a> for large service firms helps them when they need to handle large delivery teams, multi-region projects, heavy compliance, and several operating units. The system has features to support advanced project accounting, multi-currency work, complex pricing, and structured approvals.</p>
+
+                <p><b>Large service firms choose <a href="/products/microsoft-dynamics-365-finance/">Dynamics 365 Finance</a> and/or Dynamics 365 Supply Chain Management when:</b></p>
+                <ul>
+                  <li>They operate with several legal entities or several countries.</li>
+                  <li>They want reliable financial consolidation across many service lines.</li>
+                  <li>They manage complex project structures with staged delivery.</li>
+                  <li>They depend on accurate cost behaviour across long delivery cycles.</li>
+                  <li>They coordinate many teams that require structured planning and scheduling.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className='bg-004s'>
+        <div className="container my-float-i">
+          <div className="row">
+            <div className="col-lg-6">
+              <div className="supprt-header-new-one">
+                <h2>Challenges in the Professional Services Industry</h2>
+                <p>Service companies run work that depends on skilled people, organised workflows, and strong client communication. When any stage loses clarity, the entire delivery cycle slows down. Some challenges that UK service companies face include the following:</p>
+                <br />
+              </div>
+            </div>
+          </div>
+
+          <div className="row g-5">
+            <div className="col-lg-6 d-flex">
+              <div className="solution-new-card-001 solution-new-card-009">
+                <img src="/img/professional-services-02.png" alt="professional-services-02" width={40} height={40} />
+                <h3>Scattered Project Information</h3>
+                <p>When project plans sit in different tools, teams struggle to follow tasks, deadlines, or progress. This creates confusion across delivery.</p>
+              </div>
+            </div>
+            <div className="col-lg-6 d-flex">
+              <div className="solution-new-card-001 solution-new-card-009">
+                <img src="/img/professional-services-03.png" alt="professional-services-03" width={40} height={40} />
+                <h3>Unclear Resource Availability</h3>
+                <p>When schedules are spread across sheets, it becomes difficult to assign the right person at the right time.</p>
+              </div>
+            </div>
+            <div className="col-lg-6 d-flex">
+              <div className="solution-new-card-001 solution-new-card-009">
+                <img src="/img/professional-services-04.png" alt="professional-services-04" width={40} height={40} />
+                <h3>Inaccurate Time and Expense Records</h3>
+                <p>When timesheets and expenses move through manual steps, billing becomes slow and approvals take longer.</p>
+              </div>
+            </div>
+            <div className="col-lg-6 d-flex">
+              <div className="solution-new-card-001 solution-new-card-009">
+                <img src="/img/professional-services-05.png" alt="professional-services-05" width={40} height={40} />
+                <h3>Weak Cost Tracking During Delivery</h3>
+                <p>When project costs remain separated from accounts, managers cannot understand how budgets behave during each stage.</p>
+              </div>
+            </div>
+            <div className="col-lg-6 d-flex">
+              <div className="solution-new-card-001 solution-new-card-009">
+                <img src="/img/professional-services-06.png" alt="professional-services-06" width={40} height={40} />
+                <h3>Slow Client Communication</h3>
+                <p>When updates do not reach clients or internal teams, questions increase and delivery confidence weakens.</p>
+              </div>
+            </div>
+            <div className="col-lg-6 d-flex">
+              <div className="solution-new-card-001 solution-new-card-009">
+                <img src="/img/professional-services-07.png" alt="professional-services-07" width={40} height={40} />
+                <h3>Disorganised Document History</h3>
+                <p>When files, proposals, contracts, and work notes stay scattered across folders, teams lose time searching for accurate information.</p>
+              </div>
+            </div>
+            <div className="col-lg-6 d-flex">
+              <div className="solution-new-card-001 solution-new-card-009">
+                <img src="/img/professional-services-08.png" alt="professional-services-08" width={40} height={40} />
+                <h3>Late Insight into Project Risks</h3>
+                <p>When risk signals remain unseen, small issues grow until they affect client trust and delivery timelines.</p>
+              </div>
+            </div>
+            <div className="col-lg-6 d-flex">
+              <div className="solution-new-card-001 solution-new-card-009">
+                <img src="/img/professional-services-09.png" alt="professional-services-09" width={40} height={40} />
+                <h3>Limited Visibility Across Operating Units</h3>
+                <p>When each team follows separate tools, senior leaders struggle to see performance trends across the entire business.</p>
+              </div>
+            </div>
+            <div className="col-lg-6 d-flex">
+              <div className="solution-new-card-001 solution-new-card-009">
+                <img src="/img/professional-services-10.png" alt="professional-services-10" width={40} height={40} />
+                <h3>Disconnected Support Records</h3>
+                <p>When service requests and support enquiries sit outside project data, clients face delays in getting the right answers.</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+      <section className='solution-new-banner-three pd-con-63'>
+        {/* <div className="container" ref={containerRef}> */}
+        <div className="container">
+          <div className='row'>
+            <div className='col-lg-7'>
+              <div className='solution-new-banner-sub-head'>
+                <h2>How Dynamics 365 for Professional Services Resolves These Challenges</h2>
+                <p>Service firms thrive when their systems keep every action traceable and every update timely. <a href="/products/microsoft-dynamics-365/">Dynamics 365 solutions</a> help connect sales, planning, delivery, billing, finance, and client support in one environment. Teams see the same information, follow one workflow, and work with consistent accuracy.</p>
+                <p><b>Here’s how Dynamics 365 for professional services helps service firms across the UK:</b></p>
+              </div>
+            </div>
+          </div>
+          <br />
+          <div className="row">
+            <div className="col-12">
+              <div className="stached-scroll-card">
+                <div className='mycard'>
+                  <div className='mycard__inner'>
+                    <div className='mycard__inner-left'>
+                      <h3>Clear View of Projects, Tasks, and Progress</h3>
+                      <p>The <a href="/products/microsoft-dynamics-erp/">Microsoft ERP system</a> keeps all project details in one place. The outcome? Your teams see plans, tasks, milestones, and progress without confusion. This gives project managers the clarity they need to guide workloads and timelines across every client engagement.</p>
+                      <p><b>Benefits:</b></p>
+                      <ul>
+                        <li>Better task visibility for all delivery teams</li>
+                        <li>Clear progress tracking across each project stage</li>
+                        <li>Stronger planning supported by reliable information</li>
+                      </ul>
                     </div>
-                    <div className="cintent-right">
-                      <p>
-                        With an all-in-one integrated{" "}
-                        <Link href="/products/microsoft-dynamics-erp/">
-                          ERP solution
-                        </Link>
-                        , enterprises can manage their day-to-day tasks with
-                        data automation, simplify their decision-making process
-                        with AI-based reports & key analytics in real-time.
-                      </p>
+                    <div className='mycard__inner-right'>
+                      <Image src="/img/professional-services-11.png" width={580} height={456} alt="Clear View of Projects, Tasks, and Progress" />
                     </div>
                   </div>
-
-                  <div className="content-inner-moil-1">
-                    <div className="icons-left">
-                      <div className="ext-bord">
-                        <i className="bi bi-check2"></i>
-                      </div>
+                </div>
+                <div className='mycard'>
+                  <div className='mycard__inner'>
+                    <div className='mycard__inner-left'>
+                      <h3>Steady Resource Planning and Allocation</h3>
+                      <p>Service firms depend on people, skillsets, and availability. Dynamics 365 features for professional services offer simple scheduling tools that help teams allocate resources with confidence. It empowers managers to assign people based on availability, skill level, and demand.</p>
+                      <p><b>Benefits:</b></p>
+                      <ul>
+                        <li>Accurate scheduling supported by real time availability</li>
+                        <li>Better work balance across consultants and team</li>
+                        <li>Improved delivery timelines for clients</li>
+                      </ul>
                     </div>
-                    <div className="cintent-right">
-                      <p>
-                        Project managers can focus more on successful project
-                        completion rather than indulging in repetitive and
-                        time-consuming data-driven practices.
-                      </p>
+                    <div className='mycard__inner-right'>
+                      <Image src="/img/professional-services-12.png" width={580} height={456} alt="Steady Resource Planning and Allocation" />
                     </div>
                   </div>
-
-                  <div className="content-inner-moil-1">
-                    <div className="icons-left">
-                      <div className="ext-bord">
-                        <i className="bi bi-check2"></i>
-                      </div>
+                </div>
+                <div className='mycard'>
+                  <div className='mycard__inner'>
+                    <div className='mycard__inner-left'>
+                      <h3>Consistent Time and Expense Recording</h3>
+                      <p>Accurate time entry supports billing, budgets, and profitability. The Microsoft ERP system for professional services firms allows staff to submit timesheets and expenses from any device. These records reach managers immediately and flow into accounts without manual re-entry.</p>
+                      <p><b>Benefits:</b></p>
+                      <ul>
+                        <li>Faster approvals for billing and expenses</li>
+                        <li>Lower chances of errors during accounting</li>
+                        <li>Clear visibility into effort and project cost</li>
+                      </ul>
                     </div>
-                    <div className="cintent-right">
-                      <p>
-                        It is seamless data-driven practices that eliminate the
-                        data redundancies and enable everyone involved in the
-                        project can stay updated with real-time project
-                        completion levels and ongoing activities to ensure
-                        hassle-free and timely completion of the project.
+                    <div className='mycard__inner-right'>
+                      <Image src="/img/professional-services-13.png" width={580} height={456} alt="Consistent Time and Expense Recording" />
+                    </div>
+                  </div>
+                </div>
+                <div className='mycard'>
+                  <div className='mycard__inner'>
+                    <div className='mycard__inner-left'>
+                      <h3>Connected Project Accounting and Financials</h3>
+                      <p>Dynamics 365 ERP environment connects project delivery with accounts.
+                        Costs, revenue, budgets, and cash flow stay visible to managers and finance teams. This helps businesses in keeping financial accuracy during each delivery cycle, improving overall operations.
                       </p>
+                      <p><b>Benefits:</b></p>
+                      <ul>
+                        <li>Clear project cost tracking</li>
+                        <li>Steady control over revenue recognition</li>
+                        <li>More confidence during budget planning</li>
+                      </ul>
+                    </div>
+                    <div className='mycard__inner-right'>
+                      <Image src="/img/professional-services-14.png" width={580} height={456} alt="Connected Project Accounting and Financials" />
+                    </div>
+                  </div>
+                </div>
+                <div className='mycard'>
+                  <div className='mycard__inner'>
+                    <div className='mycard__inner-left'>
+                      <h3>Strong Client Relationship Management</h3>
+                      <p><a href="/products/microsoft-dynamics-crm/">Dynamics 365 CRM systems</a> help service-based firms manage leads, proposals, contracts, and client conversations in one environment. Teams follow a stable process from enquiry to project creation. Updates reach everyone who needs them, so communication stays smooth.</p>
+                      <p><b>Benefits:</b></p>
+                      <ul>
+                        <li>Stronger response time for new enquiries</li>
+                        <li>Better coordination between sales and delivery</li>
+                        <li>Cleaner record of client history</li>
+                      </ul>
+                    </div>
+                    <div className='mycard__inner-right'>
+                      <Image src="/img/professional-services-15.png" width={580} height={456} alt="Strong Client Relationship Management" />
+                    </div>
+                  </div>
+                </div>
+
+                <div className='mycard'>
+                  <div className='mycard__inner'>
+                    <div className='mycard__inner-left'>
+                      <h3>Organised Document and Knowledge Management</h3>
+                      <p>Service firms handle proposals, project files, work notes, contracts, and support documents. Dynamics 365 ERP system for professional services firms stores these items in one place and keeps them linked to the right client or project.
+                        Your professionals find the right information quickly, which saves time every day.
+                      </p>
+                      <p><b>Benefits:</b></p>
+                      <ul>
+                        <li>Faster access to relevant files</li>
+                        <li>Lower risk of outdated information</li>
+                        <li>Clear ownership across documents</li>
+                      </ul>
+                    </div>
+                    <div className='mycard__inner-right'>
+                      <Image src="/img/professional-services-16.png" width={580} height={456} alt="Organised Document and Knowledge Management" />
+                    </div>
+                  </div>
+                </div>
+                <div className='mycard'>
+                  <div className='mycard__inner'>
+                    <div className='mycard__inner-left'>
+                      <h3>Consistent View Across All Business Units</h3>
+                      <p>Directors and senior managers depend on clear visibility across operations.
+                        Dynamics 365 for service sector provides dashboards that show revenue, capacity, utilisation, project health, and outstanding tasks. This helps leaders guide teams with better insights.
+                      </p>
+                      <p><b>Benefits:</b></p>
+                      <ul>
+                        <li>Clear visibility of performance trends</li>
+                        <li>Better planning across departments</li>
+                        <li>Faster decisions supported by live information</li>
+                      </ul>
+                    </div>
+                    <div className='mycard__inner-right'>
+                      <Image src="/img/professional-services-17.png" width={580} height={456} alt="Consistent View Across All Business Units" />
+                    </div>
+                  </div>
+                </div>
+                <div className='mycard'>
+                  <div className='mycard__inner'>
+                    <div className='mycard__inner-left'>
+                      <h3>Reliable Forecasting with Predictive Tools</h3>
+                      <p>Dynamics 365 system for professional services companies studies project history, resource capacity, win rates, billing cycles, and workload patterns. This helps teams estimate future demand with stronger confidence. Managers prepare resources, budgets, and schedules with better clarity.</p>
+                      <p><b>Benefits:</b></p>
+                      <ul>
+                        <li>Stable resource availability</li>
+                        <li>Stronger workload balance</li>
+                        <li>Clearer view of upcoming revenue</li>
+
+                      </ul>
+                    </div>
+                    <div className='mycard__inner-right'>
+                      <Image src="/img/professional-services-18.png" width={580} height={456} alt="Reliable Forecasting with Predictive Tools" />
+                    </div>
+                  </div>
+                </div>
+                <div className='mycard'>
+                  <div className='mycard__inner'>
+                    <div className='mycard__inner-left'>
+                      <h3>Streamlined Support and Client Enquiries</h3>
+                      <p>Many service firms in the UK offer ongoing client support after project delivery.
+                        <a href="/products/microsoft-dynamics-365-customer-service/">Dynamics 365 for customer service</a> professional setup connects service requests, follow ups, and client notes with project records. Teams respond faster because all relevant details remain visible.
+                      </p>
+                      <p><b>Benefits:</b></p>
+                      <ul>
+                        <li>Faster client response times</li>
+                        <li>Clear routing of service requests</li>
+                        <li>Better visibility across support history</li>
+
+
+                      </ul>
+                    </div>
+                    <div className='mycard__inner-right'>
+                      <Image src="/img/professional-services-19.png" width={580} height={456} alt="Streamlined Support and Client Enquiries" />
+                    </div>
+                  </div>
+                </div>
+                <div className='mycard'>
+                  <div className='mycard__inner'>
+                    <div className='mycard__inner-left'>
+                      <h3>Full Project Lifecycle and Client View</h3>
+                      <p>From the first enquiry to final delivery and long-term support, every detail stays connected. Dynamics 365 system for professional service industries provides one platform for all teams. This helps firms understand client expectations, plan future work, and deliver with steady clarity.</p>
+                      <p><b>Benefits:</b></p>
+                      <ul>
+                        <li>Higher client confidence</li>
+                        <li>Better repeat business</li>
+                        <li>Clear insight into how projects behave</li>
+                      </ul>
+                    </div>
+                    <div className='mycard__inner-right'>
+                      <Image src="/img/professional-services-20.png" width={580} height={456} alt="Full Project Lifecycle and Client View" />
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </section>
-        <section className="call_to_action call_to_action-height">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-5">
-                <div className="call_to_action-right over-img">
-                  <img src="/img/MaskGroup8.png" alt="image" />
-                </div>
+        </div>
+      </section>
+      <section className='bg-003-023'>
+        <div className="container my-float-i">
+          <div className="row">
+            <div className="col-lg-5 align-self-center">
+              <div className="whole-image">
+                <Image src="/img/professional-services-21.png" alt="professional-services-21" width={416} height={436} />
               </div>
-              <div className="col-lg-7 align-self-center">
-                <div className="call_to_action-left">
-                  <h3>Talk to Our Expert Team</h3>
-                  <p>
-                    Connect, discuss, and allow us to diagnose your business
-                    requirementssuited to your customized professional service
-                    needs. can support and serve your mission purpose.
-                  </p>
-                  <div className="m-o-t m-o-t-inde">
+            </div>
+            <div className="col-lg-7">
+              <div className="row g-3 ">
+                <div className="col-lg-12">
+                  <div className="supprt-header-new-one">
+                    <h2>Why Dynamics 365 is a Strong Fit for the Professional Services Industry</h2>
+                  </div>
+                </div>
+                <div className="col-lg-6 d-flex">
+                  <div className="card-712">
+                    <h4>Unified Operations</h4>
+                    <p>The system links sales, planning, delivery, billing, and finance so that teams work together with clarity.</p>
+                  </div>
+                </div>
+                <div className="col-lg-6 d-flex">
+                  <div className="card-712">
+                    <h4>Built to Scale with Any Service Firm</h4>
+                    <p>It supports small consultancies and large multi-region service companies with flexible tools.</p>
+                  </div>
+                </div>
+                <div className="col-lg-6 d-flex">
+                  <div className="card-712">
+                    <h4>Reduced Hands-On Tasks</h4>
+                    <p>Automation removes repetitive steps and helps staff maintain accuracy every day.</p>
+                  </div>
+                </div>
+                <div className="col-lg-6 d-flex">
+                  <div className="card-712">
+                    <h4>Greater Accessibility Due to Cloud</h4>
+                    <p>Service teams work from offices, client sites, or home with steady access to project data.</p>
+                  </div>
+                </div>
+                <div className="col-lg-6 d-flex">
+                  <div className="card-712">
+                    <h4>Helpful Predictive Features</h4>
+                    <p>System insights guide managers during planning, scheduling, and performance reviews.</p>
+                  </div>
+                </div>
+                <div className="col-lg-6 d-flex">
+                  <div className="card-712">
+                    <h4>UK-Compliant Features</h4>
+                    <p>The platform supports UK tax rules, compliance expectations, and practical service workflows.</p>
+                  </div>
+                </div>
+                <div className="col-lg-12 align-self-center">
+                  <div className="card-700-bot">
                     <Link
                       href="#exampleModal"
                       data-bs-toggle="modal"
                       className="btn-get-started scrollto">
-
-                      <span>Schedule a Demo</span>
-
+                      <span>Connect now  <i className="bi bi-arrow-right"></i></span>
                     </Link>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </section>
-        <section className="industry_service_bottoms">
+
+        </div>
+      </section>
+      <section>
+        <div className="container">
+          <div className='row'>
+            <div className='col-lg-7'>
+              <div className='solution-new-banner-sub-head'>
+                <h2>Choosing the Best ERP for Professional Services</h2>
+                <p>A simple comparison helps service firms select a system suited to their scale and delivery style.</p>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-9">
+              <div className="table-responsive tabls-cloud tabls-cloud-pad">
+                <table className="table table-bordered table-striped">
+                  <thead className="thead-dark">
+                    <tr>
+                      <th>Criteria</th>
+                      <th>Business Central</th>
+                      <th>Finance and Operations</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Company Size</td>
+                      <td>Small to mid-sized organisations</td>
+                      <td>Large enterprises</td>
+                    </tr>
+                    <tr>
+                      <td>Users</td>
+                      <td>10–300</td>
+                      <td>300+</td>
+                    </tr>
+                    <tr>
+                      <td>Operations</td>
+                      <td>Single or limited locations</td>
+                      <td>Multi-site and global operations</td>
+                    </tr>
+                    <tr>
+                      <td>Project Complexity</td>
+                      <td>Basic to moderately complex projects</td>
+                      <td>Highly complex, multi-phase projects</td>
+                    </tr>
+                    <tr>
+                      <td>Resource Planning</td>
+                      <td>Standard planning capabilities</td>
+                      <td>Advanced resource planning</td>
+                    </tr>
+                    <tr>
+                      <td>Implementation Time</td>
+                      <td>2–6 months</td>
+                      <td>6–12 months</td>
+                    </tr>
+                    <tr>
+                      <td>Cost</td>
+                      <td>Lower total cost</td>
+                      <td>Higher investment</td>
+                    </tr>
+                    <tr>
+                      <td>Reporting</td>
+                      <td>Built-in reporting tools</td>
+                      <td>Advanced financial and operational reporting</td>
+                    </tr>
+                    <tr>
+                      <td>Flexibility</td>
+                      <td>High flexibility with simpler configurations</td>
+                      <td>Structured, highly extensible framework</td>
+                    </tr>
+                    <tr>
+                      <td>Best For</td>
+                      <td>Growing professional/service firms</td>
+                      <td>Large-scale consulting and enterprise service organisations</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className='solution-new-cta slution-new-cta-two pd-con-62'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-lg-6'>
+              <div className='solution-new-cta-001'>
+                <h3>Drive Operational Excellence Across Every Engagement</h3>
+                <p>Centralise your projects, resources, and financials with Dynamics 365 and elevate your firm’s delivery standards.</p>
+                <div>
+                  <Link
+                    href="#exampleModal"
+                    data-bs-toggle="modal"
+                    className="btn-get-started scrollto">
+                    <span>Start Your Transformation &nbsp;<i className="bi bi-arrow-right"></i></span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img src="/img/n-015.png" alt="n-015" />
+      </section>
+      <section className='bg-003s pd-con-66'>
+        <div className="container my-float-i">
+          <div className="row">
+            <div className="col-lg-5 align-self-center order-3">
+              <div className='img-backs-sid-two text-center'>
+                <Image src="/img/professional-services-22.png" alt="professional-services-22" width={398} height={455} className='im-two' />
+              </div>
+            </div>
+            <div className="col-lg-1 order-2"></div>
+            <div className="col-lg-6 order-1">
+              <div className="supprt-header-new-one supprt-header-new-one-ul">
+                <h2>Partnering with Dynamics Square, UK</h2>
+                <p>Professional services companies across the UK choose partners who understand project delivery, client expectations, and steady billing cycles.</p>
+                <p>Dynamics Square supports firms through <a href="/our-services/dynamics-365-implementation-services/">Dynamics 365 implementation</a>, training, and ongoing Dynamics 365 support.</p>
+                <p>Our team guides companies across planning, scheduling, resource setup, billing structures, document organisation, and financial reporting.</p>
+                <p>Our team guides companies across planning, scheduling, resource setup, billing structures, document organisation, and financial reporting.</p>
+                <Link
+                  href="#exampleModal"
+                  data-bs-toggle="modal"
+                  className="btn-get-started scrollto">
+                  <span>Transform Your Professional Services Business &nbsp;<i className="bi bi-arrow-right"></i></span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className='bg-003s pd-con-67'>
+        <div className="container my-float-i">
+          <div className="row">
+            <div className="col-lg-5 align-self-center">
+              <div className='img-backs-sid-two text-center'>
+                <Image src="/img/professional-services-23.png" alt="professional-services-23" width={400} height={450} className='im-two' />
+              </div>
+            </div>
+            <div className="col-lg-1"></div>
+            <div className="col-lg-6">
+              <div className="supprt-header-new-one supprt-header-new-one-ul">
+                <h3>Outcomes to Expect with Dynamics 365 for Professional Services</h3>
+                <ul>
+                  <li><i className="bi bi-check"></i><span>Better project accuracy and predictable delivery timelines</span></li>
+                  <li><i className="bi bi-check"></i><span>Faster billing supported by accurate time and expense records</span></li>
+                  <li><i className="bi bi-check"></i><span>Clear cost and revenue visibility across every project stage</span></li>
+                  <li><i className="bi bi-check"></i><span>Detailed resource utilisation reports</span></li>
+                  <li><i className="bi bi-check"></i><span>One dashboard covering clients, projects, revenue, and performance</span></li>
+
+                </ul>
+                <p>These results reflect UK service companies using the Dynamics 365 solutions platform with guidance from Dynamics Square.</p>
+                <Link
+                  href="#exampleModal"
+                  data-bs-toggle="modal"
+                  className="btn-get-started scrollto">
+                  <span>Schedule A Free Consultation Today <i className="bi bi-arrow-right"></i></span>
+                </Link>
+              </div>
+            </div>
+
+
+
+
+          </div>
+        </div>
+      </section>
+       <section className="solution-faq faq">
           <div className="container">
-            <header className="section-header">
+            <header className="supprt-header-new-one text-center">
               <h2>
-                Dynamics 365 Solutions <br />
-                For Your Professional Services{" "}
-              </h2>
-              <p>
-                How professional services firms can use Microsoft Dynamics 365
-                to transform their business
-              </p>
-              <br /> <br />
-            </header>
-            <div className="row position-relative">
-              <div className="col-lg-6">
-                <div className="busine_service_bottom-right-indst">
-                  <div className="card_new_img text-center">
-                    <img
-                      src="/img/icons-commerce_user-experience.svg"
-                      alt="icons-commerce_user-experienc.svg"
-                      width={48}
-                      height={48}
-                    />
-                  </div>
-                  <div className="card_new_content">
-                    <h3>Custom CRM Solution</h3>
-                    <p>
-                      Get a 360-degree view of your clients or customer data
-                      from lead generation to opportunity management, making
-                      proposals to managing finance, and more.
-                    </p>
-                  </div>
-                </div>
-                <div className="busine_service_bottom-right-indst">
-                  <div className="card_new_img text-center">
-                    <img
-                      src="/img/icons_Customer-Feedback- (1).svg"
-                      alt="Business Central Upgrade-icons"
-                      width={48}
-                      height={48}
-                    />
-                  </div>
-                  <div className="card_new_content">
-                    <h3>HR & Payroll</h3>
-                    <p>
-                      Accelerate onboarding, improve your resource utilization,
-                      quickly resolve issues, maximize adaption rate in your
-                      organization with D365 for Professional Services.
-                    </p>
-                  </div>
-                </div>
-                <div className="busine_service_bottom-right-indst">
-                  <div className="card_new_img text-center">
-                    <img
-                      src="/img/connect-collaborate-1.svg"
-                      alt="connect-collaborate-1"
-                      width={48}
-                      height={48}
-                    />
-                  </div>
-                  <div className="card_new_content">
-                    <h3>Employee Collaboration Portal</h3>
-                    <p>
-                      Enable your workforce to collaborate and drive effective
-                      communication along with a centralized data-driven
-                      approach with Professional Service industry solutions.
-                    </p>
-                  </div>
-                </div>
-                <div className="busine_service_bottom-right-indst">
-                  <div className="card_new_img text-center">
-                    <img
-                      src="/img/icons-implementation-service_Sales-.svg"
-                      alt="icons-implementation-service_Sales-"
-                      width={48}
-                      height={48}
-                    />
-                  </div>
-                  <div className="card_new_content">
-                    <h3>Business Intelligence Analytics</h3>
-                    <p>
-                      Support and ensure productive decision making, future
-                      predictions, and more with AI-based insights and
-                      IoT-connected data experience.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-6">
-                <div className="busine_service_bottom-right-indst">
-                  <div className="card_new_img text-center">
-                    <img
-                      src="/img/icons-implementation-service_HR.svg"
-                      alt="icons-implementation-service_HR"
-                      width={48}
-                      height={48}
-                    />
-                  </div>
-                  <div className="card_new_content">
-                    <h3>Custom Development</h3>
-                    <p>
-                      Get custom-built deployment to support across your
-                      customized processes to streamline your processes and
-                      drive consistent flow throughout your organization.
-                    </p>
-                  </div>
-                </div>
-                <div className="busine_service_bottom-right-indst">
-                  <div className="card_new_img text-center">
-                    <img
-                      src="/img/Budgeting-Planning.svg"
-                      alt="Budgeting-Planning"
-                      width={48}
-                      height={48}
-                    />
-                  </div>
-                  <div className="card_new_content">
-                    <h3>Budgeting & Planning</h3>
-                    <p>
-                      Leverage AI and ML-based insights in real-time to forecast
-                      data, manage finances, and plan budgeting to accelerate
-                      processes and maximize productivity.
-                    </p>
-                  </div>
-                </div>
-                <div className="busine_service_bottom-right-indst">
-                  <div className="card_new_img text-center">
-                    <img
-                      src="/img/Time-Expense-Management.svg"
-                      alt="Time-Expense-Management"
-                      width={48}
-                      height={48}
-                    />
-                  </div>
-                  <div className="card_new_content">
-                    <h3>Time & Expense Management</h3>
-                    <p>
-                      Dynamics 365 for Professional Services when configured and
-                      integrated with your other applications can help to
-                      seamlessly manage time and expenses to boost productivity.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="busine_service_bottom-right-indst">
-                  <div className="card_new_img text-center">
-                    <img
-                      src="/img/control-icon-analysis.svg"
-                      alt="control-icon-analysis"
-                      width={48}
-                      height={48}
-                    />
-                  </div>
-                  <div className="card_new_content">
-                    <h3>Control & Analysis</h3>
-                    <p>
-                      Insights based on past project performance and other
-                      business data help to manage control and analyze things to
-                      faster the project delivery and ensure project success.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className="call-to-action-center hero-4">
-          <div className="container">
-            <div className="row justify-content-center">
-              <div className="col-lg-9">
-                <div className="call-to-action-content">
-                  <h3>
-                    How Microsoft's Professional Service Solution Can Help Your
-                    Business to Uplift High
-                  </h3>
-                  <p>
-                    If your processes are compromising at some level, nothing
-                    will work out, and making productive decisions in business
-                    can lead your business toward a productive path. Share your
-                    pain business points with us, experts at Dynamics Square can
-                    reveal your business requirement and suggest a productive
-                    solution for your business.
-                  </p>
-                  <div className="text-center m-o-t m-o-t-hv">
-                    <Link
-                      href="#exampleModal"
-                      data-bs-toggle="modal"
-                      className="btn-get-started scrollto">
-
-                      <span>Get Started Now</span>
-
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className="busine_service_bottom">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-6 align-self-center">
-                <div className="busine_service_bottom-left">
-                  <div className="busine_service_bottom-right">
-                    <Image
-                      src="/img/proffesional service side.png"
-                      className="fix-im"
-                      alt="proffesional service side"
-                      width={553} height={541}
-                    />
-                    <div className="video-ytube video-ytubes">
-                      <div className="popup-btn popup-btns">
-                        <Link href="#javascript:void(0)" onClick={() => setOpen(true)}>
-
-                          <Image
-                            src="/img/proffesional video-service.png"
-                            alt="proffesional video-service"
-                            width={390} height={259}
-                          />
-                          <span className="cente-icns">
-                            <img src="/img/play_icons.svg" alt="play_icons" />
-                          </span>
-
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-lg-6 d-flex align-items-center">
-                <div className="side-heading">
-                  <h2>
-                    How Dynamics 365 <br />
-                    For Professional Services <br />
-                    Can Maximize Your Business Potentials?
-                  </h2>
-                  <p>
-                    Let's have a complete visualization of how Dynamics 365
-                    Solutions for Professional Services can help your business
-                    to improve the overall business flow, simplify practices,
-                    and accelerate service delivery.
-                  </p>
-                  <div className="text-lg-start mm-t">
-                    <Link
-                      href="#exampleModal"
-                      data-bs-toggle="modal"
-                      className="btn-get-started scrollto">
-
-                      <span>Schedule a Demo</span>
-
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="industry-more-sec">
-          <div className="container">
-            <header className="section-header">
-              <h2>Explore Other Industries</h2>
-            </header>
-            <div className="row mobile-margin-01">
-              <div className="col-lg-12">
-                <div className="swiper mySwiper">
-                  <div className="swiper-wrapper">
-                    <Swiper
-                      autoplay={{
-                        delay: 2500,
-                        disableOnInteraction: false,
-                      }}
-                      breakpoints={{
-                        640: {
-                          slidesPerView: 1,
-                          spaceBetween: 20,
-                        },
-                        768: {
-                          slidesPerView: 1,
-                          spaceBetween: 40,
-                        },
-                        1024: {
-                          slidesPerView: 2,
-                          spaceBetween: 10,
-                        },
-                        1300: {
-                          slidesPerView: 3,
-                          spaceBetween: 10,
-                        },
-                        1400: {
-                          slidesPerView: 3,
-                          spaceBetween: 10,
-                        },
-                      }}
-                      freeMode={true}
-                      pagination={{
-                        clickable: true,
-                      }}
-                      modules={[Autoplay, FreeMode, Pagination]}
-                      className="mySwiper"
-                    >
-                      <SwiperSlide>
-                        <div className="swiper-slide">
-                          <div className="industries-list-more">
-                            <Link href="/industries/food-and-beverages/">
-
-                              <div className="img-wrp">
-                                <img
-                                  src="/img/Food-and-beverage.svg"
-                                  alt="Food-and-beverage"
-                                />
-                              </div>
-                              <div className="text-wrp-content">
-                                <h3>Food & Beverages</h3>
-                                <p>
-                                  Efficiently manage your inventory and supply
-                                  chain by implementing Dynamics 365 for Food
-                                  and Beverages business.
-                                </p>
-                                <span>Explore Now</span>
-                              </div>
-
-                            </Link>
-                          </div>
-                        </div>
-                      </SwiperSlide>
-                      <SwiperSlide>
-                        <div className="swiper-slide">
-                          <div className="swiper-slide">
-                            <div className="industries-list-more">
-                              <Link href="/industries/microsoft-cloud-for-nonprofit/">
-
-                                <div className="img-wrp">
-                                  <img
-                                    src="/img/NotforProfit.svg"
-                                    alt="NotforProfit"
-                                  />
-                                </div>
-                                <div className="text-wrp-content">
-                                  <h3>Not for Profit</h3>
-                                  <p>
-                                    Bring Transparency And Drive Efficiency In
-                                    Your Non-Profit Organization With
-                                    Microsoft Dynamics 365 For Charities.
-                                  </p>
-                                  <span>Explore Now</span>
-                                </div>
-
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
-                      </SwiperSlide>
-                      <SwiperSlide>
-                        <div className="swiper-slide">
-                          <div className="swiper-slide">
-                            <div className="industries-list-more">
-                              <Link href="/industries/ecommerce/">
-
-                                <div className="img-wrp">
-                                  <img
-                                    src="/img/Ecommerce.svg"
-                                    alt="Ecommerce"
-                                  />
-                                </div>
-                                <div className="text-wrp-content">
-                                  <h3>E-Commerce</h3>
-                                  <p>
-                                    Optimize Your End-To-End Ecommerce
-                                    Processes And Improve Your Customer
-                                    Experience.
-                                  </p>
-                                  <span>Explore Now</span>
-                                </div>
-
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
-                      </SwiperSlide>
-
-                      <SwiperSlide>
-                        <div className="swiper-slide">
-                          <div className="swiper-slide">
-                            <div className="industries-list-more">
-                              <Link href="/industries/microsoft-cloud-for-manufacturing/">
-
-                                <div className="img-wrp">
-                                  <img
-                                    src="/img/microsoft-cloud-for-manufacturing.svg"
-                                    alt="microsoft-cloud-for-manufacturing"
-                                  />
-                                </div>
-                                <div className="text-wrp-content">
-                                  <h3>Manufacturing & Distribution</h3>
-                                  <p>
-                                    Keep track of your production lines and
-                                    bring transparency with Microsoft Dynamics
-                                    365 for Manufacturing and Distribution.
-                                  </p>
-                                  <span>Explore Now</span>
-                                </div>
-
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
-                      </SwiperSlide>
-                      <SwiperSlide>
-                        <div className="swiper-slide">
-                          <div className="swiper-slide">
-                            <div className="industries-list-more">
-                              <Link href="/industries/startups/">
-
-                                <div className="img-wrp">
-                                  <img
-                                    src="/img/start-up.svg"
-                                    alt="start-up"
-                                  />
-                                </div>
-                                <div className="text-wrp-content">
-                                  <h3>Startups</h3>
-                                  <p>
-                                    Leverage maximum possible resources to
-                                    manage end-to-end business processes for
-                                    your Startup with Microsoft Dynamics 365.
-                                  </p>
-                                  <span>Explore Now</span>
-                                </div>
-
-                              </Link>
-                            </div>
-                          </div>
-                        </div>
-                      </SwiperSlide>
-                    </Swiper>
-                  </div>
-                  <div className="swiper-pagination"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-       
-
-        <section className="solution-faq faq">
-          <div className="container">
-            <header className="section-header">
-              <h3>
                 Have you got
                 <br />
                 questions about Professional Services industry?
-              </h3>
+              </h2>
               <p>Click through to our FAQ for the best answers!</p>
             </header>
             <div className="row justify-content-center mar-top-7">
@@ -811,26 +790,8 @@ const ProfessionalService = () => {
             </div>
           </div>
         </section>
-        <section className="blogs-extra">
-          <div className="container">
-            <header className="section-header">
-            <h2>Explore Our Recent Blogs & Resources</h2>
-            </header>
-            <div className="row top-2 gx-5">
-              <Blog />
-              <div className="col-lg-6 align-self-center">
-                <Image
-                  src="/img/n/Dynamics-365-for-professional-services.png"
-                  alt="professional-services"
-                  width={790} height={470}
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
     </>
   );
 };
 
-export default ProfessionalService;
+export default Dynamics365ForProfessionalServices;
