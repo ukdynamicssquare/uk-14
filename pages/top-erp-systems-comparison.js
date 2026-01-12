@@ -189,10 +189,10 @@ const CompareErps = () => {
   return (
     <>
       <Head>
-        <title>ERP Comparison 2025: Which System Fits Your Business Needs?</title>
+        <title>ERP Comparison 2026: Which System Fits Your Business Needs?</title>
         <meta
           name="description"
-          content="Compare top ERP systems for 2025. Get features, pricing, and benefits to find the best ERP software that fits your business needs and boosts efficiency."
+          content="Compare top ERP systems for 2026. Get features, pricing, and benefits to find the best ERP software that fits your business needs and boosts efficiency."
         />
         <link
           rel="canonical"
@@ -200,24 +200,24 @@ const CompareErps = () => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/top-erp-systems-comparison/" />
-        <meta property="og:title" content="ERP Comparison 2025: Which System Fits Your Business Needs?" />
-        <meta property="og:description" content="Compare top ERP systems for 2025. Get features, pricing, and benefits to find the best ERP software that fits your business needs and boosts efficiency.​" />
+        <meta property="og:title" content="ERP Comparison 2026: Which System Fits Your Business Needs?" />
+        <meta property="og:description" content="Compare top ERP systems for 2026. Get features, pricing, and benefits to find the best ERP software that fits your business needs and boosts efficiency.​" />
         <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/erp-f-im.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/top-erp-systems-comparison/" />
-        <meta property="twitter:title" content="ERP Comparison 2025: Which System Fits Your Business Needs?" />
-        <meta property="twitter:description" content="Compare top ERP systems for 2025. Get features, pricing, and benefits to find the best ERP software that fits your business needs and boosts efficiency." />
+        <meta property="twitter:title" content="ERP Comparison 2026: Which System Fits Your Business Needs?" />
+        <meta property="twitter:description" content="Compare top ERP systems for 2026. Get features, pricing, and benefits to find the best ERP software that fits your business needs and boosts efficiency." />
         <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/erp-f-im.png" />
       </Head>
       <div className="container py-5">
         <div className='row justify-content-center'>
           <div className='col-lg-8'>
             <div className='solution-new-banner-one-content'>
-              <h1 className='large-heading'>Compare the Top ERP Systems for Your Business in 2025 </h1>
-              <p>Start with our side-by-side ERP software comparison 2025 tool, covering top ERP systems for 2025 in terms of features, pricing, and deployment. Assess capabilities, estimate ERP cost per user, and shortlist platforms that match your requirements across cloud ERP systems for 2025 and on-premises ERP systems. </p>
+              <h1 className='large-heading'>Compare the Top ERP Systems for Your Business in 2026 </h1>
+              <p>Start with our side-by-side ERP software comparison 2026 tool, covering top ERP systems for 2026 in terms of features, pricing, and deployment. Assess capabilities, estimate ERP cost per user, and shortlist platforms that match your requirements across cloud ERP systems for 2026 and on-premises ERP systems. </p>
               <p>Request ERP demos and price quotes for leading options below or browse categories to compare industry picks and other popular segments.
-                Read our selection guide packed with practical insights to support a confident choice among the top 10 ERP systems for 2025 so you choose the best ERP software for your business in 2025. </p>
+                Read our selection guide packed with practical insights to support a confident choice among the top 10 ERP systems for 2026 so you choose the best ERP software for your business in 2026. </p>
             </div>
           </div>
 

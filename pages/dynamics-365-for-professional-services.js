@@ -26,7 +26,7 @@ const Dynamics365ForProfessionalServices = () => {
         <meta property="og:description" content="Simplify banking with Yavrio integration with Dynamics 365 Business Central — automate reconciliation, enhance accuracy, and save hours of manual work." />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/dynamics-365-for-professional-services/" />
         <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/wholesale-pic-01.png" />
+        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/professional-services-01.png" />
         <meta property="og:image:width" content="200" />
         <meta property="og:image:height" content="200" />
         <meta property="og:image:type" content="image/png" />
@@ -34,7 +34,7 @@ const Dynamics365ForProfessionalServices = () => {
         <meta name="twitter:site" content="@dsquare_uk" />
         <meta name="twitter:title" content="Dynamics 365 for Professional Services" />
         <meta name="twitter:description" content="Simplify banking with Yavrio integration with Dynamics 365 Business Central — automate reconciliation, enhance accuracy, and save hours of manual work." />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/wholesale-pic-01.png" />
+        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/professional-services-01.png" />
       </Head>
       <div className='solution-new-banner-one solution-new-banner-one-colo'>
         <div className='container'>
@@ -63,7 +63,7 @@ const Dynamics365ForProfessionalServices = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className='m-b-image-nnn'>
-                <Image src="/img/wholesale-pic-01.png" alt='bc-support-banner' width={1097} height={656} />
+                <Image src="/img/professional-services-01.png" alt='bc-support-banner' width={1097} height={656} priority />
               </div>
             </div>
           </div>
@@ -137,63 +137,63 @@ const Dynamics365ForProfessionalServices = () => {
           <div className="row g-5">
             <div className="col-lg-6 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/wholesale-pic-04.png" alt="wholesale-pic-04" width={40} height={36} />
+                <img src="/img/professional-services-02.png" alt="professional-services-02" width={40} height={40} />
                 <h3>Scattered Project Information</h3>
                 <p>When project plans sit in different tools, teams struggle to follow tasks, deadlines, or progress. This creates confusion across delivery.</p>
               </div>
             </div>
             <div className="col-lg-6 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/wholesale-pic-05.png" alt="wholesale-pic-05" width={40} height={36} />
+                <img src="/img/professional-services-03.png" alt="professional-services-03" width={40} height={40} />
                 <h3>Unclear Resource Availability</h3>
                 <p>When schedules are spread across sheets, it becomes difficult to assign the right person at the right time.</p>
               </div>
             </div>
             <div className="col-lg-6 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/wholesale-pic-06.png" alt="wholesale-pic-06" width={40} height={36} />
+                <img src="/img/professional-services-04.png" alt="professional-services-04" width={40} height={40} />
                 <h3>Inaccurate Time and Expense Records</h3>
                 <p>When timesheets and expenses move through manual steps, billing becomes slow and approvals take longer.</p>
               </div>
             </div>
             <div className="col-lg-6 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/wholesale-pic-07.png" alt="wholesale-pic-07" width={40} height={36} />
+                <img src="/img/professional-services-05.png" alt="professional-services-05" width={40} height={40} />
                 <h3>Weak Cost Tracking During Delivery</h3>
                 <p>When project costs remain separated from accounts, managers cannot understand how budgets behave during each stage.</p>
               </div>
             </div>
             <div className="col-lg-6 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/wholesale-pic-08.png" alt="wholesale-pic-08" width={40} height={36} />
+                <img src="/img/professional-services-06.png" alt="professional-services-06" width={40} height={40} />
                 <h3>Slow Client Communication</h3>
                 <p>When updates do not reach clients or internal teams, questions increase and delivery confidence weakens.</p>
               </div>
             </div>
             <div className="col-lg-6 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/wholesale-pic-09.png" alt="wholesale-pic-09" width={40} height={36} />
+                <img src="/img/professional-services-07.png" alt="professional-services-07" width={40} height={40} />
                 <h3>Disorganised Document History</h3>
                 <p>When files, proposals, contracts, and work notes stay scattered across folders, teams lose time searching for accurate information.</p>
               </div>
             </div>
             <div className="col-lg-6 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/wholesale-pic-10.png" alt="wholesale-pic-10" width={40} height={36} />
+                <img src="/img/professional-services-08.png" alt="professional-services-08" width={40} height={40} />
                 <h3>Late Insight into Project Risks</h3>
                 <p>When risk signals remain unseen, small issues grow until they affect client trust and delivery timelines.</p>
               </div>
             </div>
             <div className="col-lg-6 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/wholesale-pic-11.png" alt="wholesale-pic-11" width={40} height={36} />
+                <img src="/img/professional-services-09.png" alt="professional-services-09" width={40} height={40} />
                 <h3>Limited Visibility Across Operating Units</h3>
                 <p>When each team follows separate tools, senior leaders struggle to see performance trends across the entire business.</p>
               </div>
             </div>
             <div className="col-lg-6 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/wholesale-pic-12.png" alt="wholesale-pic-12" width={40} height={36} />
+                <img src="/img/professional-services-10.png" alt="professional-services-10" width={40} height={40} />
                 <h3>Disconnected Support Records</h3>
                 <p>When service requests and support enquiries sit outside project data, clients face delays in getting the right answers.</p>
               </div>
@@ -232,7 +232,7 @@ const Dynamics365ForProfessionalServices = () => {
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/wholesale-pic-14.png" width={580} height={456} alt="Clear View of Projects, Tasks, and Progress" />
+                      <Image src="/img/professional-services-11.png" width={580} height={456} alt="Clear View of Projects, Tasks, and Progress" />
                     </div>
                   </div>
                 </div>
@@ -249,7 +249,7 @@ const Dynamics365ForProfessionalServices = () => {
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/wholesale-pic-14.png" width={580} height={456} alt="Steady Resource Planning and Allocation" />
+                      <Image src="/img/professional-services-12.png" width={580} height={456} alt="Steady Resource Planning and Allocation" />
                     </div>
                   </div>
                 </div>
@@ -266,7 +266,7 @@ const Dynamics365ForProfessionalServices = () => {
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/wholesale-pic-14.png" width={580} height={456} alt="Consistent Time and Expense Recording" />
+                      <Image src="/img/professional-services-13.png" width={580} height={456} alt="Consistent Time and Expense Recording" />
                     </div>
                   </div>
                 </div>
@@ -285,7 +285,7 @@ const Dynamics365ForProfessionalServices = () => {
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/wholesale-pic-14.png" width={580} height={456} alt="Connected Project Accounting and Financials" />
+                      <Image src="/img/professional-services-14.png" width={580} height={456} alt="Connected Project Accounting and Financials" />
                     </div>
                   </div>
                 </div>
@@ -302,7 +302,7 @@ const Dynamics365ForProfessionalServices = () => {
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/wholesale-pic-14.png" width={580} height={456} alt="Strong Client Relationship Management" />
+                      <Image src="/img/professional-services-15.png" width={580} height={456} alt="Strong Client Relationship Management" />
                     </div>
                   </div>
                 </div>
@@ -322,7 +322,7 @@ const Dynamics365ForProfessionalServices = () => {
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/wholesale-pic-14.png" width={580} height={456} alt="Organised Document and Knowledge Management" />
+                      <Image src="/img/professional-services-16.png" width={580} height={456} alt="Organised Document and Knowledge Management" />
                     </div>
                   </div>
                 </div>
@@ -341,7 +341,7 @@ const Dynamics365ForProfessionalServices = () => {
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/wholesale-pic-14.png" width={580} height={456} alt="Consistent View Across All Business Units" />
+                      <Image src="/img/professional-services-17.png" width={580} height={456} alt="Consistent View Across All Business Units" />
                     </div>
                   </div>
                 </div>
@@ -359,7 +359,7 @@ const Dynamics365ForProfessionalServices = () => {
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/wholesale-pic-14.png" width={580} height={456} alt="Reliable Forecasting with Predictive Tools" />
+                      <Image src="/img/professional-services-18.png" width={580} height={456} alt="Reliable Forecasting with Predictive Tools" />
                     </div>
                   </div>
                 </div>
@@ -380,7 +380,7 @@ const Dynamics365ForProfessionalServices = () => {
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/wholesale-pic-14.png" width={580} height={456} alt="Streamlined Support and Client Enquiries" />
+                      <Image src="/img/professional-services-19.png" width={580} height={456} alt="Streamlined Support and Client Enquiries" />
                     </div>
                   </div>
                 </div>
@@ -397,7 +397,7 @@ const Dynamics365ForProfessionalServices = () => {
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/wholesale-pic-14.png" width={580} height={456} alt="Full Project Lifecycle and Client View" />
+                      <Image src="/img/professional-services-20.png" width={580} height={456} alt="Full Project Lifecycle and Client View" />
                     </div>
                   </div>
                 </div>
@@ -411,7 +411,7 @@ const Dynamics365ForProfessionalServices = () => {
           <div className="row">
             <div className="col-lg-5 align-self-center">
               <div className="whole-image">
-                <Image src="/img/wholesale-pic-27.png" alt="wholesale-pic-27" width={383} height={487} />
+                <Image src="/img/professional-services-21.png" alt="professional-services-21" width={416} height={436} />
               </div>
             </div>
             <div className="col-lg-7">
@@ -579,7 +579,7 @@ const Dynamics365ForProfessionalServices = () => {
           <div className="row">
             <div className="col-lg-5 align-self-center order-3">
               <div className='img-backs-sid-two text-center'>
-                <Image src="/img/wholesale-pic-28.png" alt="wholesale-pic-28" width={401} height={455} className='im-two' />
+                <Image src="/img/professional-services-22.png" alt="professional-services-22" width={398} height={455} className='im-two' />
               </div>
             </div>
             <div className="col-lg-1 order-2"></div>
@@ -606,7 +606,7 @@ const Dynamics365ForProfessionalServices = () => {
           <div className="row">
             <div className="col-lg-5 align-self-center">
               <div className='img-backs-sid-two text-center'>
-                <Image src="/img/wholesale-pic-29.png" alt="wholesale-pic-29" width={400} height={450} className='im-two' />
+                <Image src="/img/professional-services-23.png" alt="professional-services-23" width={400} height={450} className='im-two' />
               </div>
             </div>
             <div className="col-lg-1"></div>
