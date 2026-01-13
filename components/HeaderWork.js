@@ -31,6 +31,7 @@ const HeaderWork = () => {
       "/continia-expense-management": `${gname}`,
       "/case-studies/business-central-reimplementation-for-food-trader": `${gname}`,
       "/case-studies/business-central-reimplementation-for-recycling-industry": `${gname}`,
+      "/industries/dynamics-365-for-discrete-manufacturing": `${gname}`,
        "/book-a-demo": `${gname}`,
   };
 
