@@ -366,7 +366,7 @@ const Dynamics365ForProfessionalServices = () => {
                   <div className='mycard__inner'>
                     <div className='mycard__inner-left'>
                       <h3>Streamlined Support and Client Enquiries</h3>
-                      <p>Many service firms in the UK offer ongoing client support after project delivery.
+                      <p>Many service firms in the UK offer ongoing client support after project delivery. 
                         <a href="/products/microsoft-dynamics-365-customer-service/">Dynamics 365 for customer service</a> professional setup connects service requests, follow ups, and client notes with project records. Teams respond faster because all relevant details remain visible.
                       </p>
                       <p><b>Benefits:</b></p>
