@@ -41,10 +41,10 @@ const BusinessCentral = () => {
   return (
     <>
       <Head>
-        <title>Microsoft Dynamics 365 Business Central Partner UK</title>
+        <title>Microsoft Dynamics 365 Business Central - Dynamics Square</title>
         <meta
           name="description"
-          content="Transform your business with Dynamics 365 Business Central, the smartest cloud ERP. Partner with a trusted Microsoft expert in the UK for AI-powered solutions."
+          content="Microsoft Dynamics 365 Business Central is a smart ERP solution that unifies finance, operations, sales, and supply chain for growing businesses."
         />
         <meta name="keywords" content="Microsoft Dynamics 365 Business Central, Business Central UK, Microsoft Dynamics 365 Pricing, Business Central Team Member License, Business Dynamics 365, Dynamics 365 Business Central Essentials, ERP Microsoft Dynamics 365,Microsfot 365 Business, Microsoft Bc, Microsoft Business Central Pricing UK, Microsoft Business Central Partner, Business Central Integration, MS Dynamics Business Central, Business Central Support"></meta>
         <link
@@ -53,14 +53,14 @@ const BusinessCentral = () => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/" />
-        <meta property="og:title" content="Microsoft Dynamics 365 Business Central Partner UK" />
-        <meta property="og:description" content="Transform your business with Dynamics 365 Business Central, the smartest cloud ERP. Partner with a trusted Microsoft expert in the UK for AI-powered solutions." />
+        <meta property="og:title" content="Microsoft Dynamics 365 Business Central - Dynamics Square" />
+        <meta property="og:description" content="Microsoft Dynamics 365 Business Central is a smart ERP solution that unifies finance, operations, sales, and supply chain for growing businesses." />
         <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/business-center-new-banner.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/" />
-        <meta property="twitter:title" content="Microsoft Dynamics 365 Business Central Partner UK" />
-        <meta property="twitter:description" content="Transform your business with Dynamics 365 Business Central, the smartest cloud ERP. Partner with a trusted Microsoft expert in the UK for AI-powered solutions." />
+        <meta property="twitter:title" content="Microsoft Dynamics 365 Business Central - Dynamics Square" />
+        <meta property="twitter:description" content="Microsoft Dynamics 365 Business Central is a smart ERP solution that unifies finance, operations, sales, and supply chain for growing businesses." />
         <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/business-center-new-banner.png" />
 
         <script
