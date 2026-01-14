@@ -1,48 +1,362 @@
 [
-    {
-      "id": 1,
-      "question": "What is Dynamics 365 Business Central?",
-      "answer": "<p><a target=\"_blank\" href=\"/blog/what-is-dynamics-365-business-central/\">Dynamics 365 Business Central</a>&nbsp;is a one-stop solution for all your enterprise needs. Since Business Central is built with excel-like features and easy-to-use navigation, anyone exposed to advanced excel functionality can easily adapt and leverage the powerful use of Business Central.</p><p>Business Central is designed as a complete <a target=\"_blank\" href=\"/products/microsoft-dynamics-erp/\">ERP solution</a> for modern enterprises seeking to simplify end-to-end enterprise practices from financials to sales, warehousing to supply chain, project management to general reporting, assembly to manufacturing; Business Central is embedded with all potential business management solutions that give you real-time eyes into your business.&nbsp;</p><p>You can host your application whether on cloud (private or public) or on-premise; the choice is yours. When it comes to <a target=\"_blank\" href=\"/blog/what-is-dynamics-365-business-central/\">Dynamics 365 Business Central Overview</a>, it comprises huge things.&nbsp;</p><p>To get more information about Business Central, how it works, and how it can transform your business context, do contact Dynamics Square. Our <a target=\"_blank\" href=\"/\">Dynamics 365 Business Central experts</a> can assist you with the right and precise information.</p>"
-    },
-    {
-      "id": 2,
-      "question": "How is Business Central related to Dynamics NAV?",
-      "answer": "<p>Dynamics 365 Business Central is the updated version of <a target=\"_blank\" href=\"/products/microsoft-dynamics-nav/\">Dynamics NAV</a>. With its upgrade, Microsoft changed its name too. The Core functionality remains the same and is updated with advanced features and navigation to support modern enterprises and to serve every industry. However, existing Dynamics NAV users can still avail of the support services. Dynamics Square offers highly reliable and efficient NAV and Business Central Support Services at cost-effective rates.</p>"
-    },
-    {
-      "id": 3,
-      "question": "How do I upgrade to Dynamics 365 Business Central?",
-      "answer": "<p>Often, enterprises seem confused about when is the right time to upgrade to Dynamics 365 Business Central. If the same question is rolling out in your mind, contact <a target=\"_blank\" href=\"/\">Dynamics Square</a>. We provide free-system health-check to identify your system lacks and upgrading needs considering your current business practices. Our experts can let you know whether you are in need to upgrade your current system or not.</p><p>To know more about Why move to Dynamics 365 Business Central?&nbsp;<a target=\"_blank\" href=\"/contact-us/\">Contact our Dynamics 365 experts</a>, we can help you with all your questions. For instance, when you need to upgrade, what are possible personalized options for you? What sort of implementation practices do we follow while upgrading your existing business solution to Microsoft Dynamics 365 Business Central?</p>"
-    },
-    {
-      "id": 4,
-      "question": "Is there any training available to understand Business Central?",
-      "answer": "<p>Microsoft Dynamics 365 Business Central comes with a simple, easy-to understand user interface and provides a smooth experience to all users, whether administrators or operators. There might be a need for training to understand the workings of added integrations, customizations, and add-ons. In such a case, you can avail yourself of the learning and training provided by your Business Central implementation partner, and they will guide you along the right path.</p>"
-    },
-    {
-      "id": 5,
-      "question": "Can I customise Business Central?",
-      "answer": "<p>Yes, Business Central is totally customisable as per your unique business and its changing needs. Irrespective of the industry, business type, and size, you can customise this powerful application to simplify your business operations. In short, <a href=\"/products/dynamics-365-business-central/customisation/\" target=\"_blank\">customisations</a> are the path to more productivity and easy business growth.</p>"
-    },
-    {
-      "id": 6,
-      "question": "What industries can Dynamics 365 Business Central Support?",
-      "answer": "<p>Dynamics 365 Business Central is designed in such a way that any industry from retailers to manufacturers, food &amp; beverages to operations, e-commerce industry to financial services, and more can avail of seamless support in terms of Dynamics 365 business central. Moreover, Business Central can be personalized as per your industry-specific needs, or custom operational navigation takes place in your organization.To get more information about how this ERP solution can be implemented and leveraged by your specific industry, talk to us, we as a Business Central Consulting Services Provider are here to answer all your queries.</p>"
-    },
-    {
-      "id": 7,
-      "question": "How much does Dynamics 365 Business Central cost?",
-      "answer": "<p><a target=\"_blank\" href=\"/products/dynamics-365-business-central/pricing-licensing/\">Dynamics 365 Business Central pricing</a> <!-- -->goes as per your specific business processes. You can choose out of the given licensing options:</p><ul><li>Essential</li><li>Premium</li><li>Team Member</li></ul><p>Essential plan comes to fulfil your essential business requirement whereas premium comes with extra functionality layers.</p><ul><li>For Dynamics 365 Business Central Essential plan, you will be charged £57.50 per user/per month.</li><li>For Dynamics 365 Business Central Premium plan, you need to invest £82.20 per user/per month.</li><li>For Dynamics 365 Business Central Team Member, users will be charged £6.60 per user/per month.</li></ul><p>If you manage processes like finance, purchase/sales, and inventory, an essential license would be an ideal deal for your business to start your journey.</p><p>If you are a manufacturer and provide services, a premium license would be the best-suitable way to start with.</p><p>So, it's up to you, you can buy Business Central suited to your specific needs or user requirements. To know more or which plan would be ideal for your business, Dynamics Square - Microsoft authorized Business Central Consulting Services provider can help.</p><p>Here you need to understand that this cost is just a licensing cost, it doesn't include any sort of implementation, customization, or integration cost. Your actual costs can be revealed by your Dynamics 365 Business Central Implementation Partner once you share your requirement with them.</p><p>Initially, you can start with Microsoft<!-- --> <a target=\"_blank\" href=\"/blog/dynamics-365-business-central-trial/\">Business Central Trial</a> <!-- -->at no cost for 30 days. After your trial period, if you find Business Central - a suitable deal for your business, you can continue by availing any of the given licensing suited to your budget and requirements.</p>"
-    },
-    {
-      "id": 8,
-      "question": "How do I get ongoing support for Dynamics 365 Business Central?",
-      "answer": "<p>You will get direct support from Dynamics Square as we are a gold partner for Microsoft's products with existence in the UK market and other global locations with a well-equipped support system. Our support system includes end-user training, technical assistance, and off-hours support whenever required.</p><p>If you are seeking professional and trustworthy support services, selecting Dynamics Square - a trustworthy Business Central Support Partner in the UK can help.</p>"
-    },
-    {
-      "id": 9,
-      "question": "How does Power BI Fit with Dynamics 365 Business Central?",
-      "answer": "<p>Business Central is an all-in-one ERP solution. In case you want advancement in your reporting &amp; analytics terms, seamless integration with <a target=\"_blank\" href=\"/products/microsoft-power-bi/\">Power BI</a> can be done as both are Microsoft's products, hence, Power BI fits well with Dynamic 365 Business Central. Power BI can enable visualization in your reporting, key metrics, and your entire business analytics. You can create your own business reports and dashboards leveraging standard reporting templates and other visuals.</p><p>If you want expert advice on how you can leverage Power BI and Business Central together, connect with us, being a reliable <a target=\"_blank\" href=\"/d365-business-central-support/\">Business Central Support</a>, <a target=\"_blank\" href=\"/dynamics-nav-to-business-central/\">NAV Upgrade</a>, and Implementation partner, we can always provide you with expert consulting.</p>"
-    }
-  ]
-  
+  {
+    "id": 1,
+    "question": "What is Microsoft Dynamics 365 Business Central?",
+    "answer": "<p><a href=\"/blog/what-is-dynamics-365-business-central/\">Dynamics 365 Business Central</a> is a 360-degree business management solution that helps you manage your finance, operations, sales, service, and CRM on a unified platform.</p><p>To put it simply, Business Central serves as a complete <a href=\"/products/microsoft-dynamics-erp/\">ERP solution</a> for SMBs. This AI-powered, cloud-based Microsoft ERP solution has a modular structure, which makes it extremely versatile when it comes to deployment and meeting the unique needs of businesses.</p><p>Get in touch with our Dynamics 365 <a href=\"/\">Business Central experts</a> for a demo and a complete Dynamics 365 Business Central overview. </p>"
+  },
+  {
+    "id": 2,
+    "question": "Who can use Dynamics 365 Business Central?",
+    "answer": "<p>Dynamics 365 Business Central suits small and mid-sized businesses looking for a modern ERP to streamline daily operations.</p>"
+  },
+  {
+    "id": 3,
+    "question": "Is Dynamics 365 Business Central cloud-based?",
+    "answer": "<p>Yes, Dynamics 365 Business Central runs on Microsoft Cloud, making it a secure ERP solution that can be accessed anytime from any device.</p>"
+  },
+  {
+    "id": 4,
+    "question": "How does Business Central help small businesses?",
+    "answer": "<p>Dynamics 365 Business Central comes with AI capabilities. AI agents in Microsoft Business Central like <a href=\"/blog/sales-order-agent-explained-features-setup-and-benefits/\">Sales Order Agent simplify</a> the process of capturing sales orders from customers’ emails. Besides, Business Central automates manual tasks, improves visibility, and simplifies accounting, customer service, and inventory tracking.</p>"
+  },
+  {
+    "id": 5,
+    "question": "Is Business Central an ERP system?",
+    "answer": "<p>Yes, Microsoft designed Dynamics 365 Business Central as an ERP system to manage financials, supply chains, projects, and more.</p>"
+  },
+  {
+    "id": 6,
+    "question": "What can you do with Dynamics 365 Business Central?",
+    "answer": "<p>With Dynamics 365 Business Central, you can handle accounting, inventory, purchasing, sales, and customer management in one place.</p>"
+  },
+  {
+    "id": 7,
+    "question": "How is Business Central different from Dynamics NAV?",
+    "answer": "<p>Business Central is the cloud-based evolution of <a href=\"/products/microsoft-dynamics-nav/\">Dynamics NAV</a>, with added AI and integration features.</p>"
+  },
+  {
+    "id": 8,
+    "question": "Can Dynamics 365 Business Central be used on mobile?",
+    "answer": "<p>Yes, Microsoft Business Central has dedicated mobile and tablet apps for Android and iOS.</p>"
+  },
+  {
+    "id": 9,
+    "question": "Is Business Central available in the UK?",
+    "answer": "<p>Yes, Microsoft Dynamics 365 Business Central is available in the UK with localised features for tax, currency, and compliance.</p>"
+  },
+  {
+    "id": 10,
+    "question": "How do I get started with Business Central?",
+    "answer": "<p>You can start by connecting with a certified Microsoft Business Central implementation partner in the UK like Dynamics Square for setup and training.</p>"
+  },
+  {
+    "id": 11,
+    "question": "How much does Dynamics 365 Business Central cost?",
+    "answer": "<p>Dynamics 365 Business Central pricing starts at £57.50* per user per month for the Essentials plan.</p>"
+  },
+  {
+    "id": 12,
+    "question": "Are there different pricing plans for Business Central?",
+    "answer": "<p>Yes, Microsoft offers different <a href=\"/products/dynamics-365-business-central/pricing-licensing/\">Business Central pricing plans</a>:</p><ul><li>Dynamics 365 Business Central free trial</li><li>Dynamics 365 Business Central Essentials</li><li>Dynamics 365 Business Central Premium</li><li>Dynamics 365 Business Central Team Members</li></ul><p>For details on Business Central pricing plans, contact Dynamics Square, your trusted Business Central implementation partner in the UK.</p>"
+  },
+  {
+    "id": 13,
+    "question": "Can I pay monthly for Business Central?",
+    "answer": "<p>Yes, for Business Central, you can choose monthly or annual billing based on your needs.</p>"
+  },
+  {
+    "id": 14,
+    "question": "Is there a free trial for Business Central?",
+    "answer": "<p>Yes, Microsoft offers a free 30-day <a href=\"/blog/dynamics-365-business-central-trial/\">Business central trial</a>, so you can explore key features before purchasing. Connect with our consultant to claim your free trial today.</p>"
+  },
+  {
+    "id": 15,
+    "question": "What is the difference between Essentials and Premium plans?",
+    "answer": "<p>Business Central Essentials covers finance, sales, and purchasing, while Business Central Premium adds service and manufacturing modules. See Also: <a href=\"/blog/business-central-essentials-vs-premium/\">business central essentials vs premium</a>.</p>"
+  },
+  {
+    "id": 16,
+    "question": "Does Microsoft offer discounts for Business Central?",
+    "answer": "<p>Discounts may apply through Microsoft partners. <a href=\"/contact-us/\">Contact Dynamics Square</a> to discuss Business Central implementation and your eligibility for possible discounts.</p>"
+  },
+  {
+    "id": 17,
+    "question": "How many users can I add in Business Central?",
+    "answer": "<p>Dynamics 365 Business Central is a highly flexible <a href=\"/products/microsoft-dynamics-erp/\">Microsoft ERP</a> to which you can add as many users as your licence and business structure require.</p>"
+  },
+  {
+    "id": 18,
+    "question": "Is Business Central included in Microsoft 365?",
+    "answer": "<p>No, Business Central is separate and a part of the larger <a href=\"/products/microsoft-dynamics-365/\">Dynamics 365 suite</a>, but it integrates seamlessly with Microsoft 365 apps like Outlook and Excel.</p>"
+  },
+  {
+    "id": 19,
+    "question": "How do I buy a Business Central licence?",
+    "answer": "<p>You can purchase Business Central licences through an authorised Microsoft partner like Dynamics Square.</p>"
+  },
+  {
+    "id": 21,
+    "question": "How long does it take to implement Business Central?",
+    "answer": "<p><a href=\"/dynamics-365-business-central-implementation/\">Dynamics 365 Business Central implementation</a> can take from a few weeks to a few months depending on your business size and customisation requirements.</p>"
+  },
+  {
+    "id": 22,
+    "question": "Can Business Central be customised during implementation?",
+    "answer": "<p>Yes, <a href=\"/products/dynamics-365-business-central/customisation/\">customised Microsoft Dynamics 365 Business Central</a> can be tailored to match your processes and workflows.</p>"
+  },
+  {
+    "id": 23,
+    "question": "Can Business Central be integrated with existing systems?",
+    "answer": "<p>Yes, Business Central integration is effortless with Microsoft and third-party systems.</p>"
+  },
+  {
+    "id": 24,
+    "question": "Is training provided during Business Central implementation?",
+    "answer": "<p>Dynamics Square provides <a href=\"/our-services/dynamics-365-training/\">Business Central training</a> after implementation as part of the onboarding process.</p>"
+  },
+  {
+    "id": 25,
+    "question": "How do I migrate data from my old system to Business Central?",
+    "answer": "<p>Data migration from an old system to Dynamics 365 Business Central is a complex and critical process that must be carried out by qualified <a href=\"/our-services/dynamics-365-consultant/\">Business Central consultants</a> only. Dynamics Square has a team of Business Central experts who can ensure seamless data migration.</p>"
+  },
+  {
+    "id": 26,
+    "question": "What should I prepare before starting implementation?",
+    "answer": "<p>It’s a collaborative process where your Business Central partner will be working closely with your team to gather clean data, map processes, and define key objectives.</p>"
+  },
+  {
+    "id": 31,
+    "question": "What modules are available in Business Central?",
+    "answer": "<p>Business Central is an all-in-one Microsoft ERP that, with the Essentials plan, covers finance, sales, purchasing, inventory, projects, and warehouse management. Business Central Premium adds service order management and manufacturing modules.</p>"
+  },
+  {
+    "id": 32,
+    "question": "Does Business Central handle inventory management?",
+    "answer": "<p>Yes, Microsoft Business Central manages stock, warehouse operations, and reorder levels.</p>"
+  },
+  {
+    "id": 33,
+    "question": "Can Business Central manage accounting and finance?",
+    "answer": "<p>Yes, Business Central handles general ledger, cash flow, budgets, and reporting.</p>"
+  },
+  {
+    "id": 34,
+    "question": "Does Business Central support project management?",
+    "answer": "<p>Yes, Business Central Essentials plan covers the project management module, which allows planning, tracking, and billing for projects.</p>"
+  },
+  {
+    "id": 35,
+    "question": "Can I run manufacturing operations with Business Central?",
+    "answer": "<p>Yes, the Business Central Premium plan supports production orders, BOMs, and capacity planning.</p>"
+  },
+  {
+    "id": 36,
+    "question": "How does Business Central handle sales and CRM?",
+    "answer": "<p>Sales and CRM are two different modules in Business Central that cover all essential features like tracking leads, managing quotes, and more. For advanced functionality, Dynamics 365 Business Central can be integrated with <a href=\"/products/microsoft-dynamics-365-sales/\">Dynamics 365 Sales</a>.</p>"
+  },
+  {
+    "id": 37,
+    "question": "Can Business Central automate purchase orders?",
+    "answer": "<p>Yes, Business Central creates and approves purchase orders automatically based on demand.</p>"
+  },
+  {
+    "id": 38,
+    "question": "Does Business Central include HR and payroll features?",
+    "answer": "<p>Business Central covers basic HR functions, and payroll integrates through add-ons.</p>"
+  },
+  {
+    "id": 39,
+    "question": "Can I track expenses and budgets in Business Central?",
+    "answer": "<p>Yes, you can. Business Central allows complete control over expenses and budget forecasting.</p>"
+  },
+  {
+    "id": 40,
+    "question": "How does Business Central support service management?",
+    "answer": "<p>Dynamics 365 Business Central helps manage service contracts, orders, and technician schedules.</p>"
+  },
+  {
+    "id": 41,
+    "question": "Does Business Central work with Microsoft Teams?",
+    "answer": "<p>Yes, it does. You can share data from Business Central and collaborate directly through Teams.</p>"
+  },
+  {
+    "id": 42,
+    "question": "Can Business Central integrate with Power BI?",
+    "answer": "<p>Yes, Business Central connects seamlessly with <a href=\"/products/microsoft-power-bi/\">Power BI</a> for rich analytics and advanced reporting.</p>"
+  },
+  {
+    "id": 43,
+    "question": "Does Business Central work with Microsoft Power Platform?",
+    "answer": "<p>Yes, <a href=\"/blog/business-central-with-power-platform-integration/\">Microsoft Business Central integrates with Power Platform</a> like Power Apps, Power Automate, and Power BI.</p>"
+  },
+  {
+    "id": 44,
+    "question": "Can Business Central connect with Shopify or eCommerce stores?",
+    "answer": "<p>Yes, connectors available on the Microsoft AppSource marketplace allow smooth data flow between Business Central and eCommerce systems.</p>"
+  },
+  {
+    "id": 45,
+    "question": "Does Business Central connect to Dynamics 365 Sales?",
+    "answer": "<p>Yes, it does. A qualified Business Central consultant can help you <a href=\"/blog/business-central-integration-with-dynamics-365-sales\">connect your Business Central to Dynamics 365 Sales</a>. The integration syncs data between sales, finance, and operations.</p>"
+  },
+  {
+    "id": 51,
+    "question": "Does Business Central have built-in AI features?",
+    "answer": "<p>Yes, <a href=\"/blog/top-copilot-features-in-dynamics-365-business-central/\">Microsoft Copilot in Business Central</a> supports AI-powered forecasting, insights, and recommendations, which helps simplify things for the users.</p>"
+  },
+  {
+    "id": 52,
+    "question": "How does automation work in Business Central?",
+    "answer": "<p><a href=\"/products/microsoft-power-automate/\">Power Automate</a> helps automate workflows like approvals, reminders, and data entry in Business Central.</p>"
+  },
+  {
+    "id": 53,
+    "question": "Does Business Central use Microsoft Copilot?",
+    "answer": "<p>Yes, <a href=\"/products/dynamics-365-copilot/\">Copilot</a> in Dynamics 365 Business Central adds AI-assisted guidance for tasks and decision-making.</p>"
+  },
+  {
+    "id": 54,
+    "question": "How secure is AI data in Business Central?",
+    "answer": "<p>AI data in Business Central is protected through Microsoft’s enterprise-grade security framework, which includes encryption, role-based access control, and continuous threat monitoring.</p><p>Every insight or prediction generated by AI stays within your secure Microsoft cloud environment, ensuring complete data privacy and compliance.</p>"
+  },
+  {
+    "id": 55,
+    "question": "Do I need coding skills to use automation in Business Central?",
+    "answer": "<p>No, most automation can be set up through simple configuration with the help of a Business Central consultant like Dynamics Square.</p>"
+  },
+  {
+    "id": 61,
+    "question": "Can Business Central work for manufacturing companies?",
+    "answer": "<p>Yes, the Premium plan includes the <a href=\"/blog/business-central-for-manufacturing/\">Business Central for manufacturing</a> module, which helps manage production planning, capacity, and material requirements.</p>"
+  },
+  {
+    "id": 62,
+    "question": "Is Business Central suitable for retail businesses?",
+    "answer": "<p>Yes, Business Central fits retail operations perfectly by connecting inventory, sales, and customer management on one platform. It helps retailers track stock in real time, manage multi-store transactions, and deliver consistent customer experiences both online and in-store.</p>"
+  },
+  {
+    "id": 63,
+    "question": "Can Business Central help professional services firms?",
+    "answer": "<p>Yes, Microsoft Business Central streamlines project management, billing, and resource planning for professional services. It provides firms with real-time visibility into project costs, progress, and profitability while helping teams manage time, budgets, and client engagements efficiently. Check now: <a href=\"/industries/professional-services/\">Dynamics 365 for professional services</a>.</p>"
+  },
+  {
+    "id": 64,
+    "question": "How does Business Central help distribution companies?",
+    "answer": "<p>Dynamics 365 Business Central strengthens distribution operations by improving order accuracy, warehouse management, and supplier coordination. It offers real-time inventory tracking, automated purchase planning, and integrated logistics that keep products moving smoothly from supplier to customer.</p>"
+  },
+  {
+    "id": 65,
+    "question": "Is Business Central good for educational institutions?",
+    "answer": "<p>Yes, Business Central supports educational institutions by managing finances, operations, and administrative workflows. It helps track budgets, student services, and resource utilisation while ensuring transparency and efficiency across departments. See Also – <a href=\"/industries/dynamics-365-for-education/\">Dynamics 365 for educational institutions</a>.</p>"
+  },
+  {
+    "id": 66,
+    "question": "Can healthcare companies use Business Central?",
+    "answer": "<p>Yes, healthcare organisations benefit from Business Central’s secure and compliant structure. It supports patient data management, financial tracking, and inventory control for medical supplies while maintaining adherence to healthcare regulations. See Also – <a href=\"/industries/dynamics-365-for-healthcare/\">Dynamics 365 for healthcare</a>.</p>"
+  },
+  {
+    "id": 67,
+    "question": "Is Business Central useful for non-profit organisations?",
+    "answer": "<p>Yes, <a href=\"/industries/microsoft-cloud-for-nonprofit/\">Business Central helps non-profits</a> manage donations, funding, and grant tracking with accuracy. It streamlines reporting, budgeting, and resource allocation, ensuring every contribution is effectively used toward the organisation’s mission.</p>"
+  },
+  {
+    "id": 68,
+    "question": "Can logistics companies use Business Central?",
+    "answer": "<p>Yes, Business Central enhances logistics operations by optimising <a href=\"/blog/shipment-management-in-dynamics-365-business-central/\">shipment tracking</a>, route planning, and order fulfilment. It connects warehousing, finance, and customer data to keep supply chains running efficiently and on schedule.</p>"
+  },
+  {
+    "id": 69,
+    "question": "Can small startups benefit from Business Central?",
+    "answer": "<p>Yes, <a href=\"/industries/startups/\">Business Central gives startups</a> enterprise-level tools that grow with their business. It simplifies accounting, inventory, and sales from day one while providing the flexibility to scale operations as the company expands.</p>"
+  },
+  {
+    "id": 71,
+    "question": "How secure is Dynamics 365 Business Central?",
+    "answer": "<p>Dynamics 365 Business Central is safeguarded through Microsoft’s enterprise-grade cloud security, combining multi-layer encryption, continuous threat detection, and advanced identity management.</p><p>Every transaction and dataset is monitored to maintain confidentiality, integrity, and compliance across your entire business environment.</p>"
+  },
+  {
+    "id": 72,
+    "question": "Is my data safe in the Business Central cloud?",
+    "answer": "<p>Yes, your data remains fully protected in the Business Central cloud through encryption both in transit and at rest. Microsoft’s global security framework, combined with strict access controls and regular compliance audits, ensures your business information stays private, secure, and always recoverable.</p>"
+  },
+  {
+    "id": 73,
+    "question": "Who manages Business Central’s cloud servers?",
+    "answer": "<p>Microsoft fully manages Business Central’s cloud servers, ensuring consistent performance, reliability, and security. All hosting, updates, backups, and maintenance are handled directly by Microsoft’s global data centres, giving businesses peace of mind with a system that runs smoothly and stays always available.</p>"
+  },
+  {
+    "id": 74,
+    "question": "Does Business Central meet GDPR standards?",
+    "answer": "<p>Yes, it complies fully with GDPR and other privacy laws.</p>"
+  },
+  {
+    "id": 75,
+    "question": "How often does Microsoft update Business Central?",
+    "answer": "<p>Updates are released twice yearly in the form of Wave 1 and Wave 2 releases that include new features, enhancements, and fixes.</p>"
+  },
+  {
+    "id": 81,
+    "question": "Does Microsoft provide support for Business Central?",
+    "answer": "<p>Yes, through certified Microsoft partners like Dynamics Square.</p>"
+  },
+  {
+    "id": 82,
+    "question": "Can my partner handle Business Central support?",
+    "answer": "<p>Yes, at Dynamics Square, our dedicated support team of Business Central consultants provides complete functional and technical assistance for Business Central. We ensure your system runs smoothly through quick issue resolution, regular monitoring, and proactive maintenance.</p>"
+  },
+  {
+    "id": 83,
+    "question": "How do I contact support for Business Central?",
+    "answer": "<p>You can reach our Dynamics Square support team directly through email, call, or chat. Our certified Business Central consultants provide fast and reliable help tailored to your business needs.</p>"
+  },
+  {
+    "id": 84,
+    "question": "How often does Business Central receive new features?",
+    "answer": "<p>Microsoft releases major <a href=\/dynamics-365-business-central-features/\">Business Central feature</a> updates twice a year. Dynamics Square helps you plan, test, and implement these enhancements smoothly within your system.</p>"
+  },
+  {
+    "id": 85,
+    "question": "Does Microsoft provide training for Business Central?",
+    "answer": "<p>As a trusted <a href=\"/products/dynamics-365-business-central/\">Business Central partner in the UK</a>, Dynamics Square offers custom training sessions designed for your teams. Our goal is to help users adopt and master Business Central confidently.</p>"
+  },
+  {
+    "id": 86,
+    "question": "How do I report bugs in Business Central?",
+    "answer": "<p>You can report any issue directly to the Dynamics Square <a href=\"/our-services/dynamics-365-support-services/\">D365 support</a> team at Dynamics Square. We diagnose, resolve, and coordinate with Microsoft if required to keep your system stable and efficient.</p>"
+  },
+  {
+    "id": 91,
+    "question": "Does Business Central support multiple companies?",
+    "answer": "<p>Yes, you can manage multiple entities within one environment with Business Central.</p>"
+  },
+  {
+    "id": 92,
+    "question": "Can Business Central handle multiple currencies?",
+    "answer": "<p>Yes, Dynamics 365 Business Central supports global transactions in multiple currencies.</p>"
+  },
+  {
+    "id": 93,
+    "question": "Is Business Central suitable for global operations?",
+    "answer": "<p>Yes, Business Central supports localisation, languages, and compliance worldwide.</p>"
+  },
+  {
+    "id": 94,
+    "question": "How does Business Central perform under heavy workloads?",
+    "answer": "<p>D365 Business Central, or BC, in short, scales dynamically to maintain consistent performance.</p>"
+  },
+  {
+    "id": 95,
+    "question": "Can Business Central support remote teams?",
+    "answer": "<p>Yes, Business Central is fully accessible from anywhere with an internet connection.</p>"
+  },
+  {
+    "id": 96,
+    "question": "Does Business Central work well for hybrid workplaces?",
+    "answer": "<p>Yes, it does. Microsoft Business Central connects teams across offices and remote locations seamlessly.</p>"
+  },
+  {
+    "id": 97,
+    "question": "How reliable is Business Central for long-term business growth?",
+    "answer": "<p>D365 BC is known for its dependability factor. It grows with your business and adapts to change.</p>"
+  }
+]
