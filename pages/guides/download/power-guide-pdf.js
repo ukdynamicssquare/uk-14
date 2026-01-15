@@ -27,7 +27,7 @@ const PdfpgDownload = () => {
               <div className="text-center">
                 <div className="">
                   <a
-                    href="/pdf/PowerBI-e-guide.pdf"
+                    href="/pdf/Power-BI-User-Guide.pdf"
                     className="btn-get-started scrollto"
                     target='_blank'
                   >

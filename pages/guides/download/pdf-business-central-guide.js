@@ -27,7 +27,7 @@ const BusinessPdfDownload = () => {
               <div className="text-center">
                 <div className="">
                   <a
-                    href="/pdf/Business-central-e-guide.pdf"
+                    href="/pdf/Microsoft-Dynamics-365-Business-Central-User-Guide.pdf"
                     className="btn-get-started scrollto"
                     target='_blank'
                   >
