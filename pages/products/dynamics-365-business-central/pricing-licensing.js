@@ -395,9 +395,6 @@ const BusinessCentralPricingLicensing = () => {
 
                   <span>Get Started Now</span>
                 </Link>
-                <Link href="#about" className="btn-get-whit">
-                  <span>See Licensing Guide</span>
-                </Link>
               </div>
             </div>
           </div>
