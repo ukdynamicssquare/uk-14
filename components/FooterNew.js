@@ -692,7 +692,7 @@ const FooterNew = () => {
         </div>
         <div className="container">
           <div className="copyright">
-          <span> &copy; Copyright &nbsp;2025 Dynamics Square UK. All rights reserved.</span><br/>
+          <span> &copy; Copyright &nbsp;2026 Dynamics Square UK. All rights reserved.</span><br/>
             <div className="footer-extra-link">
               <Link href="/terms-of-use/">Terms of Use </Link>
               <Link href="/cookie-policy/">| Cookie </Link>
