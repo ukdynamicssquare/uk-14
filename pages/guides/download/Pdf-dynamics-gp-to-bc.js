@@ -24,7 +24,7 @@ const PdfCRMDownload = () => {
               <div className="text-center">
                 <div className="">
                   <a
-                    href="/pdf/DynamicsGP-BC-ebook.pdf"
+                    href="/pdf/Dynamics-GP-to-Business-Central-Migration.pdf"
                     className="btn-get-started scrollto"
                     target='_blank'
                   >

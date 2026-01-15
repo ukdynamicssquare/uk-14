@@ -339,13 +339,69 @@ const BusinessCentralPricingLicensing = () => {
           </div>
         </div>
       </section>
-      <section id="pricing" className="pricing">
+      <section id="pricing" className="solution-new-pricing">
         <div className="container">
           <header className="section-header">
             <h2>Dynamics 365 Business Central Pricing UK: Here it is!</h2>
             <p>Check out the Business Central Licensing cost available below:</p>
           </header>
+           <div className='row g-3'>
+            <div className='col-lg-3 d-flex'>
+              <div className='solution-new-pricing-card col-ff3'>
+                <h3>Business Central<span>Free Trial</span>
+                </h3>
+                <p>Begin a 30-day trial to see how finance, sales, service, and operations align within a single experience. Engage with the platform and see real results.</p>
+                <h4>£0.0*</h4>
+                <a href="#exampleModal" data-bs-toggle="modal" className="btn-dd-t btn-get-started" >Try for Free </a>
+                <p className='disclm'>*Get a 30-day free trial to see it for yourself.</p>
+              </div>
+            </div>
+            <div className='col-lg-3 d-flex'>
+              <div className='solution-new-pricing-card'>
+                <h3>Business Central<span>Essentials</span>
+                </h3>
+                <p>Handle finance, sales, and operations through one smart system. Built-in Copilot (Microsoft AI) helps you drive clarity, speed, and stronger outcomes.</p>
+                <h4>£61.50<span>/user/month</span></h4>
+                <a href="#exampleModal" data-bs-toggle="modal" className="btn-dd-t btn-get-started" >Contact us</a>
+                <p className='disclm'>*Excluding VAT</p>
+              </div>
+            </div>
+            <div className='col-lg-3 d-flex'>
+              <div className='solution-new-pricing-card col-ff3'>
+                <h3>Business Central<span>Premium</span>
+                </h3>
+                <p>Access every feature from the Essentials plan, along with advanced tools for service and manufacturing. Designed for expanding teams seeking better clarity.</p>
+                <h4>£84.60<span>/user/month</span></h4>
+                <a href="#exampleModal" data-bs-toggle="modal" className="btn-dd-t btn-get-started" >Contact us</a>
+                <p className='disclm'>*Excluding VAT</p>
+              </div>
+            </div>
+            <div className='col-lg-3 d-flex'>
+              <div className='solution-new-pricing-card'>
+                <h3>Business Central<span>Team Member</span>
+                </h3>
+                <p>Gain access to view records, approve requests, and edit specific details. A perfect match for those supporting daily tasks across departments.</p>
+                <h4>£6.60<span>/user/month</span></h4>
+                <a href="#exampleModal" data-bs-toggle="modal" className="btn-dd-t btn-get-started" >Contact us</a>
+                <p className='disclm'>*Excluding VAT</p>
+              </div>
+            </div>
+
+          </div>
           <div className="row gy-4">
+            <div className="col-lg-12 col-md-12">
+              <div className="price-btn d-flex justify-content-center">
+                <Link href="#exampleModal" data-bs-toggle="modal" className="btn-get-red">
+
+                  <span>Get Started Now</span>
+                </Link>
+                <Link href="#about" className="btn-get-whit">
+                  <span>See Licensing Guide</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+          {/* <div className="row gy-4">
             <div className="col-lg-4">
               <div className="box">
                 <h3>
@@ -440,18 +496,8 @@ const BusinessCentralPricingLicensing = () => {
               </div>
             </div>
 
-            <div className="col-lg-12 col-md-12">
-              <div className="price-btn d-flex justify-content-center">
-                <Link href="#exampleModal" data-bs-toggle="modal" className="btn-get-red">
-
-                  <span>Get Started Now</span>
-                </Link>
-                {/* <Link href="#about" className="btn-get-whit">
-                  <span>See Licensing Guide</span>
-                </Link> */}
-              </div>
-            </div>
-          </div>
+            
+          </div> */}
         </div>
       </section>
       <section className="solution-faq faq">
@@ -798,7 +844,9 @@ const BusinessCentralPricingLicensing = () => {
                         customer wants any changes with its version of Business
                         Central, they need to contact Dynamics Square to resolve
                         all queries.</p><p>
-                        See also - <ul>
+                        See also - 
+                      </p>
+                      <ul>
                         <li><Link
                           href="/why-choose-microsoft-dynamics-365-business-central/"
                           target="_blank">Why Choose Microsoft Dynamics 365 Business Central? </Link></li>
@@ -811,7 +859,6 @@ const BusinessCentralPricingLicensing = () => {
                         <li><Link href="/dynamics-365-business-central-vs-netsuite/" target="_blank">Business Central Vs NetSuite</Link></li>
 
                         </ul>
-                      </p>
                     </div>
                   </div>
                 </div>
