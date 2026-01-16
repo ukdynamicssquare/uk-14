@@ -200,6 +200,7 @@ const FormNewUIFooter = () => {
               <div className="mb-3 form-group">
                 <input
                   type="text"
+                  id="name"
                   className="form-control"
                   placeholder=""
                   name="name"
@@ -218,6 +219,7 @@ const FormNewUIFooter = () => {
                 <input
                   type="text"
                   className="form-control"
+                  id="job"
                   placeholder=""
                   name="job"
                   value={formData.job}
@@ -233,6 +235,7 @@ const FormNewUIFooter = () => {
                 <input
                   type="email"
                   className="form-control"
+                  id="email"
                   placeholder=""
                   name="email"
                   value={formData.email}
@@ -289,8 +292,9 @@ const FormNewUIFooter = () => {
               <div className="mb-3 form-group">
                 <input
                   type="text"
-                  className="form-control"
                   placeholder=""
+                  className="form-control"
+                  id="companyname"
                   name="companyname"
                   value={formData.companyname}
                   onChange={handleChange}
@@ -303,8 +307,8 @@ const FormNewUIFooter = () => {
               <div className="mb-3 form-group">
                 <select
                   className="form-select"
+                  id="service"
                   name="service"
-                  aria-label="Default select example"
                   value={formData.service}
                   onChange={handleChange}
                 >
@@ -323,8 +327,9 @@ const FormNewUIFooter = () => {
               <div className="mb-3 form-group">
                 <textarea
                   className="form-control"
-                  placeholder=""
+                  id="message"
                   rows="3"
+                  placeholder=""
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
@@ -342,7 +347,7 @@ const FormNewUIFooter = () => {
                   className="form-check-input"
                   id="exampleCheck1"
                 />
-                <label className="form-check-label">
+                <label htmlFor="exampleCheck1" className="form-check-label">
                   I agree to the
                   <a href="/privacy-policy/" target="_blank">
                     {" "}
