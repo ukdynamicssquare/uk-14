@@ -38,7 +38,7 @@ class HeaderOld extends Component {
             <nav id="navbar" className="navbar">
               <div className="left-logo">
                 <a href="/" className="logo">
-                  <img
+                  <Image
                     src="/img/dynamics_square_tm_logo.svg"
                     alt="Dynamics Square TM Logo"
                     width="282"

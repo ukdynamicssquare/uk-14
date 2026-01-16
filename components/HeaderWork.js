@@ -111,13 +111,13 @@ const HeaderWork = () => {
           <nav id="navbar" className="navbar">
             <div className="left-logo">
               <a href="/" className="logo">
-                <img
+                <Image
                   src={getLogoSrc()}
                   alt="Dynamics Square TM Logo"
                   width="282"
                   height="19"
                 />
-                <img className="log-part" src={getLogoSrctwo()}  alt="" width="141"
+                <Image className="log-part" src={getLogoSrctwo()}  alt="" width="141"
                   height="40" />
               </a>
             </div>

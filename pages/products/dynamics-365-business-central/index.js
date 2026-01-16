@@ -167,7 +167,7 @@ const BusinessCentral = () => {
           <div className='row justify-content-center'>
             <div className='col-lg-10'>
               <div className="solution-new-banner-one-imgs">
-                <Image src="/img/business-new-banner.png" alt="BC Banner" width={890} height={568} className="flot-1" />
+                <Image src="/img/business-new-banner.png" alt="BC Banner" width={890} height={568} className="flot-1" priority />
               </div>
             </div>
           </div>
@@ -221,7 +221,7 @@ const BusinessCentral = () => {
               </div>
             </div>
             <div className='col-lg-6'>
-              <div className='dsa-minee'><img src="/img/bb-cc-busneww.png" alt="business central dashboard" /></div>
+              <div className='dsa-minee'><Image src="/img/bb-cc-busneww.png" alt="business central dashboard" width={630} height={540} /></div>
             </div>
           </div>
 
