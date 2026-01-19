@@ -206,6 +206,7 @@ const FormNewUIFooter = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
+                  aria-label="Name"
 
                 />
                 <label htmlFor="name">*Name</label>
@@ -224,6 +225,7 @@ const FormNewUIFooter = () => {
                   name="job"
                   value={formData.job}
                   onChange={handleChange}
+                  aria-label="Job title"
                 />
                 <label htmlFor="Job">Job title</label>
               </div>
@@ -240,6 +242,7 @@ const FormNewUIFooter = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
+                  aria-label="Work email"
                 />
                 <label htmlFor="email">*Work Email</label>
               </div>
@@ -298,6 +301,7 @@ const FormNewUIFooter = () => {
                   name="companyname"
                   value={formData.companyname}
                   onChange={handleChange}
+                  aria-label="Company name"
                 />
                 <label htmlFor="Company Name">*Company Name</label>
               </div>
@@ -311,6 +315,7 @@ const FormNewUIFooter = () => {
                   name="service"
                   value={formData.service}
                   onChange={handleChange}
+                  aria-label="Service type"
                 >
                   <option disabled hidden value="">
                     Looking For?
@@ -333,6 +338,7 @@ const FormNewUIFooter = () => {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
+                  aria-label="Message or requirements"
                 ></textarea>
                 <label htmlFor="message">*Any specific requirements or questions?</label>
               </div>
