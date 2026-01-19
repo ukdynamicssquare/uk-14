@@ -267,6 +267,7 @@ const FormNewUIFooter = () => {
                   inputClass="form-control" // CSS class for the input
                   inputProps={{
                     name: 'phone',
+                    'aria-label': 'Phone number',
                     required: false,
                     autoFocus: false,
                     onBlur: () => {
