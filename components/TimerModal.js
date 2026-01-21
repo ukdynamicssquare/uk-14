@@ -51,7 +51,7 @@ const TimerModal = () => {
               </button>
 
               <a 
-                href="https://www.forbes.com/councils/forbestechcouncil/2025/12/03/are-you-prepared-turning-dynamics-365-license-renewal-into-strategic-advantage/" 
+                href="https://www.forbes.com/councils/forbestechcouncil/2026/01/20/the-single-source-of-truth-dilemma-why-data-fragmentation-still-exists-and-how-to-solve-it-with-unified-platforms/" 
                 target="_blank" 
                 rel="nofollow"
                 onClick={handleCloseModal}
