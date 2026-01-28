@@ -60,15 +60,27 @@ const nextConfig = {
       },
       //new code
       // 🧠 Next.js static assets (hashed → safe for 1 year)
-    {
-      source: "/_next/static/:path*",
-      headers: [
-        {
-          key: "Cache-Control",
-          value: "public, max-age=31536000, immutable",
-        },
-      ],
-    },
+    // 🧠 HTML (must NOT be cached long)
+      {
+        source: "/",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=0, must-revalidate",
+          },
+        ],
+      },
+
+      // ⚡ Next.js static files (hashed → 1 year cache)
+      {
+        source: "/_next/static/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
 
     // 🖼 Public images (YOU control versioning)
     {
