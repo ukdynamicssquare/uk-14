@@ -11345,8 +11345,8 @@ inner-info-left ul li span {
   font-size: 18px;
   color: #393053;
   line-height: 1.5;
-  flex: 13.999999%;
-  max-width: 13.999999%;
+  flex: 16.5%;
+  max-width: 16.5%;
   border-radius: 5px;
   border-color: rgb(255 255 255 / 0%);
   background-color: #efeef3;
@@ -11509,6 +11509,9 @@ figure {
 }
 .g-66 {
   padding: 0px 60px;
+}
+.g-77 {
+  padding: 30px 0px 0px ;
 }
 .achive-sec {
   background: #7865af;

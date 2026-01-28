@@ -10,7 +10,7 @@ const Dynamics365ForProfessionalServices = () => {
   return (
     <>
       <Head>
-        <title>Dynamics 365 For Professional Services | Dynamics Square</title>
+        <title>Miscrosoft Dynamics 365 For Professional Services | Dynamics Square</title>
         <meta
           name="description"
           content="Dynamics 365 for professional services helps firms manage projects, resources, billing, and profitability with real-time insights and automation. Partner with Dynamics Square UK today."
@@ -21,7 +21,7 @@ const Dynamics365ForProfessionalServices = () => {
         />
         <meta property="og:locale" content="GB" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content=" Dynamics 365 For Professional Services | Dynamics Square " />
+        <meta property="og:title" content="Miscrosoft Dynamics 365 For Professional Services | Dynamics Square " />
         <meta property="og:description" content="Dynamics 365 for professional services helps firms manage projects, resources, billing, and profitability with real-time insights and automation. Partner with Dynamics Square UK today." />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/industries/professional-services/" />
         <meta property="og:site_name" content="Dynamics Square UK" />
@@ -31,7 +31,7 @@ const Dynamics365ForProfessionalServices = () => {
         <meta property="og:image:type" content="image/png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="Dynamics 365 For Professional Services | Dynamics Square" />
+        <meta name="twitter:title" content="Miscrosoft Dynamics 365 For Professional Services | Dynamics Square" />
         <meta name="twitter:description" content="Dynamics 365 for professional services helps firms manage projects, resources, billing, and profitability with real-time insights and automation. Partner with Dynamics Square UK today." />
         <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/professional-services-01.png" />
       </Head>
