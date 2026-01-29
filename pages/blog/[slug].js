@@ -53,7 +53,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
   }, []);
 
   return (
-    <div>
+    <main>
       <section>
         {blogs &&
           blogs.map((item, i) => (
@@ -403,7 +403,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
           ))}
       </section>
       <TimerModal />
-    </div>
+    </main>
   );
 }
 
