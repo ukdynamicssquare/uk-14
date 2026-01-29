@@ -393,6 +393,26 @@ const HomeOneNew = () => {
                 >
                   <button
                     className="nav-link active"
+                    id="nav-industry-four-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#nav-industry-four"
+                    type="button"
+                    role="tab"
+                    aria-controls="nav-industry-four"
+                    aria-selected="true"
+                  >
+                    <div className="rounded-circle">
+                      <img
+                        src="/img/ind-06.png"
+                        alt="Distribution"
+                        width="32"
+                        height="32"
+                      />
+                    </div>
+                    <span>Distribution</span>
+                  </button>
+                  <button
+                    className="nav-link"
                     id="nav-industry-one-tab"
                     data-bs-toggle="tab"
                     data-bs-target="#nav-industry-one"
@@ -451,26 +471,7 @@ const HomeOneNew = () => {
                     </div>
                     <span>Manufacturing</span>
                   </button>
-                  <button
-                    className="nav-link"
-                    id="nav-industry-four-tab"
-                    data-bs-toggle="tab"
-                    data-bs-target="#nav-industry-four"
-                    type="button"
-                    role="tab"
-                    aria-controls="nav-industry-four"
-                    aria-selected="true"
-                  >
-                    <div className="rounded-circle">
-                      <img
-                        src="/img/rocket_launch.png"
-                        alt="StartUp"
-                        width="32"
-                        height="32"
-                      />
-                    </div>
-                    <span>StartUp</span>
-                  </button>
+                  
                   <button
                     className="nav-link"
                     id="nav-industry-five-tab"
@@ -483,13 +484,13 @@ const HomeOneNew = () => {
                   >
                     <div className="rounded-circle">
                       <img
-                        src="/img/volunteer_activism.png"
-                        alt="Not for Profit"
+                        src="/img/ind-07.png"
+                        alt="Retail"
                         width="32"
                         height="32"
                       />
                     </div>
-                    <span>Not for Profit</span>
+                    <span>Retail</span>
                   </button>
                   <button
                     className="nav-link"
@@ -503,13 +504,13 @@ const HomeOneNew = () => {
                   >
                     <div className="rounded-circle">
                       <img
-                        src="/img/fastfood.png"
-                        alt="Food & Beverages"
+                        src="/img/ind-08.png"
+                        alt="Logistics"
                         width="32"
                         height="32"
                       />
                     </div>
-                    <span>Food & Beverages</span>
+                    <span>Logistics</span>
                   </button>
                   {/* <button className="nav-link">
                     <div className="rounded-circle">
@@ -528,7 +529,7 @@ const HomeOneNew = () => {
 
                 <div className="tab-content" id="nav-tabContentss">
                   <div
-                    className="tab-pane fade active show"
+                    className="tab-pane fade"
                     id="nav-industry-one"
                     role="tabpanel"
                     aria-labelledby="nav-industry-one-tab"
@@ -711,7 +712,7 @@ const HomeOneNew = () => {
                   </div>
 
                   <div
-                    className="tab-pane fade"
+                    className="tab-pane fade active show"
                     id="nav-industry-four"
                     role="tabpanel"
                     aria-labelledby="nav-industry-four-tab"
@@ -722,49 +723,42 @@ const HomeOneNew = () => {
                           <Image
                             width={414}
                             height={465}
-                            src="/img/004.png"
-                            alt="StartUp"
+                            src="/img/ind-03.png"
+                            alt="Distribution"
                           />
                         </div>
                       </div>
                       <div className="left-sect">
                         <div className="tags-indy">
-                          <span>StartUp</span>
+                          <span>Distribution</span>
                         </div>
                         <div className="inner-info-left">
-                          <h3>
-                            Committing to helping your business stay relevant
-                          </h3>
-                          <p>
-                            Grow by incorporating digital business strategy,
-                            customer experience, marketing modernization, and
-                            data and AI expertise with Microsoft's business
-                            solutions.
-                          </p>
+                          <h3>Streamline Your Distribution Operations at Scale</h3>
+                          <p>Empowering distributors with connected systems to manage supply, demand, and profitability in one place.</p>
                           <ul>
                             <li>
                               <i className="bi bi-check-circle"></i>{" "}
-                              <span>Marketing Campaigns</span>
+                              <span>Real-Time Inventory Visibility</span>
                             </li>
                             <li>
                               <i className="bi bi-check-circle"></i>{" "}
-                              <span>Automated Workflows</span>
+                              <span>Smarter Demand & Supply Planning</span>
                             </li>
                             <li>
                               <i className="bi bi-check-circle"></i>{" "}
-                              <span>Program Dashboard </span>
+                              <span>Automated Order & Procurement Workflows</span>
                             </li>
                             <li>
                               <i className="bi bi-check-circle"></i>{" "}
-                              <span>Financial Analysis</span>
+                              <span>Actionable Financial & Sales Insights</span>
                             </li>
                             <li>
                               <i className="bi bi-check-circle"></i>{" "}
-                              <span>Informed Decision Making</span>
+                              <span>Stronger Partner & Customer Relationships</span>
                             </li>
                           </ul>
                           <Link
-                            href="/industries/startups/"
+                            href="/industries/dynamics-365-for-distribution/"
                             className="lins-indu"
                           >
                             Know more about solutions
@@ -786,48 +780,42 @@ const HomeOneNew = () => {
                           <Image
                             width={414}
                             height={465}
-                            src="/img/005.png"
-                            alt="Not For Profit"
+                            src="/img/ind-04.png"
+                            alt="Retail"
                           />
                         </div>
                       </div>
                       <div className="left-sect">
                         <div className="tags-indy">
-                          <span>Not For Profit</span>
+                          <span>Retail</span>
                         </div>
                         <div className="inner-info-left">
-                          <h3>
-                            Witness the Growth of Substance with
-                            Government-Specific ERP Solutions
-                          </h3>
-                          <p>
-                            Make your vision a reality by ensuring the desired
-                            performance.
-                          </p>
+                          <h3>Deliver Unified Retail Experiences Across Channels</h3>
+                          <p>Helping retailers connect stores, customers, and operations to drive growth and loyalty seamlessly.</p>
                           <ul>
                             <li>
                               <i className="bi bi-check-circle"></i>{" "}
-                              <span>Fundraising Management </span>
+                              <span>Omnichannel Sales & Customer Engagement</span>
                             </li>
                             <li>
                               <i className="bi bi-check-circle"></i>{" "}
-                              <span>Volunteer Management</span>
+                              <span>Intelligent Inventory & Replenishment</span>
                             </li>
                             <li>
                               <i className="bi bi-check-circle"></i>{" "}
-                              <span>Action Dashboard</span>
+                              <span>Faster Billing & POS Integration</span>
                             </li>
                             <li>
                               <i className="bi bi-check-circle"></i>{" "}
-                              <span>Consumer Marketing Journey</span>
+                              <span>Data-Driven Pricing & Promotions</span>
                             </li>
                             <li>
                               <i className="bi bi-check-circle"></i>{" "}
-                              <span>Analysis of the Impact Created</span>
+                              <span>Personalized Customer Experiences</span>
                             </li>
                           </ul>
                           <Link
-                            href="/industries/microsoft-cloud-for-nonprofit/"
+                            href="/industries/dynamics-365-for-retail/"
                             className="lins-indu"
                           >
                             Know more about solutions
@@ -849,47 +837,44 @@ const HomeOneNew = () => {
                           <Image
                             width={414}
                             height={465}
-                            src="/img/006.png"
-                            alt="Food & Beverage"
+                            src="/img/ind-05.png"
+                            alt="Logistics"
                           />
                         </div>
                       </div>
                       <div className="left-sect">
                         <div className="tags-indy">
-                          <span>Food & Beverage</span>
+                          <span>Logistics</span>
                         </div>
                         <div className="inner-info-left">
-                          <h3>Reduce complexity, Exceed expectations</h3>
-                          <p>
-                            Optimise your processes to unlock unlimited growth
-                            opportunities.
-                          </p>
+                          <h3>Optimize Logistics Operations with Intelligent Automation</h3>
+                          <p>Enabling logistics businesses to improve visibility, efficiency, and delivery performance across the supply chain.</p>
                           <ul>
                             <li>
                               <i className="bi bi-check-circle"></i>{" "}
-                              <span>Simplified Supply Chain Management</span>
+                              <span>End-to-End Shipment Tracking</span>
                             </li>
                             <li>
                               <i className="bi bi-check-circle"></i>{" "}
                               <span>
-                                Improved Production and Quality Control
+                                Warehouse & Fleet Optimization
                               </span>
                             </li>
                             <li>
                               <i className="bi bi-check-circle"></i>{" "}
-                              <span>Automated Replenishment</span>
+                              <span>Automated Routing & Scheduling</span>
                             </li>
                             <li>
                               <i className="bi bi-check-circle"></i>{" "}
-                              <span>Quality Assurance</span>
+                              <span>Cost & Performance Analytics</span>
                             </li>
                             <li>
                               <i className="bi bi-check-circle"></i>{" "}
-                              <span>Enhanced Collaboration</span>
+                              <span>Improved Service Reliability & Compliance</span>
                             </li>
                           </ul>
                           <Link
-                            href="/industries/food-and-beverages/"
+                            href="/industries/dynamics-365-for-logistics/"
                             className="lins-indu"
                           >
                             Know more about solutions
