@@ -1616,16 +1616,16 @@ const HomeOneNew = () => {
                     ``{" "}
                     <li>
                       <Image
-                        src="/img/feat-03.png"
-                        alt="cli-3.png"
+                        src="/img/awa-01.png"
+                        alt="awa-01.png"
                         width={250}
                         height={150}
                       />
                     </li>
                     <li>
                       <Image
-                        src="/img/feat-05.png"
-                        alt="cli-5.png"
+                        src="/img/awa-02.png"
+                        alt="awa-02.png"
                         width={250}
                         height={150}
                       />
