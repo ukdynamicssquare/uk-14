@@ -1597,53 +1597,24 @@ const HomeOneNew = () => {
               <div className="col-lg-12">
                 <div className="client-home-new-list client-home-new-list-one">
                   <ul>
-                    <li>
-                      <Image
-                        src="/img/feat-02.png"
-                        alt="cli-2.png"
-                        width={250}
-                        height={150}
-                      />
+                     <li>
+                      <Image src="/img/feat-03.png" alt="cli-3.png" width={250} height={150} />
                     </li>
                     <li>
-                      <Image
-                        src="/img/feat-04.png"
-                        alt="cli-4.png"
-                        width={250}
-                        height={150}
-                      />
+                      <Image src="/img/feat-02.png" alt="cli-2.png" width={250} height={150} />
                     </li>
                     <li>
-                      <Image
-                        src="/img/awa-01.png"
-                        alt="awa-01.png"
-                        width={250}
-                        height={150}
-                      />
+                      <Image src="/img/feat-04.png" alt="cli-4.png" width={250} height={150} />
+                    </li>      
+                    <li>
+                      <Image src="/img/awa-01.png" alt="awa-01" width={250} height={150} />
+                    </li>
+                    
+                    <li>
+                      <Image src="/img/awa-02.png" alt="ms-dyanmics-logo" width={250} height={150} />
                     </li>
                     <li>
-                      <Image
-                        src="/img/awa-02.png"
-                        alt="awa-02.png"
-                        width={250}
-                        height={150}
-                      />
-                    </li>
-                    <li>
-                      <Image
-                        src="/img/ms-dyanmics-logo.png"
-                        alt="ms-dyanmics-logo"
-                        width={250}
-                        height={150}
-                      />
-                    </li>
-                    <li>
-                      <Image
-                        src="/img/feat-01.png"
-                        alt="cli-1.png"
-                        width={250}
-                        height={150}
-                      />
+                      <Image src="/img/feat-01.png" alt="cli-1.png" width={250} height={150} />
                     </li>
                   </ul>
                 </div>
