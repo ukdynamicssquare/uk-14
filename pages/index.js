@@ -1613,7 +1613,6 @@ const HomeOneNew = () => {
                         height={150}
                       />
                     </li>
-                    ``{" "}
                     <li>
                       <Image
                         src="/img/awa-01.png"
