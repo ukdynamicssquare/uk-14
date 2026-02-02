@@ -9315,9 +9315,11 @@ ul.checkmark li {
   border-bottom: 1px solid #c9d2db;
   position: relative;
   display: block;
-  overflow: hidden;
-  min-height:600px;
+  /* overflow: hidden; */
   width: 100%;
+  /* CLS fixes */
+  min-height: 700px;              /* bump slightly for safety */
+  contain: layout style;          /* isolate reflow */
 }
 .blogs-content p {
   font-size: 17px;
@@ -9383,6 +9385,7 @@ ul.checkmark li {
 }
 .blogs-content img {
   display: block;
+  aspect-ratio: attr(width) / attr(height);
   /* margin-bottom:25px */
 }
 .blog-tagged {
