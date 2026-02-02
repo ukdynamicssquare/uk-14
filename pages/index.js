@@ -8,22 +8,22 @@ const HomeOneNew = () => {
     <>
       <Head>
         <title>
-          Microsoft Dynamics 365 Partner UK & Business Central Partner - Dynamics Square™
+          Trusted Microsoft Dynamics 365 Partner in the UK - Dynamics Square™
         </title>
         <meta
           name="description"
-          content="Dynamics Square™ is a trusted Microsoft Dynamics 365 Partner in the UK, delivering tailored Business Central ERP & CRM solutions, implementation, upgrades, and ongoing support for growing businesses.  Contact us today!"
+          content="Dynamics Square™ is a trusted Microsoft Dynamics 365 Partner in the UK, delivering tailored ERP & CRM solutions, implementation, upgrades, and ongoing support for growing businesses.  Contact us today!"
         />
         <link rel="canonical" href="https://www.dynamicssquare.co.uk/" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/" />
         <meta
           property="og:title"
-          content="Microsoft Dynamics 365 Partner UK & Business Central Partner - Dynamics Square™"
+          content="Trusted Microsoft Dynamics 365 Partner in the UK - Dynamics Square™"
         />
         <meta
           property="og:description"
-          content="Dynamics Square™ is a trusted Microsoft Dynamics 365 Partner in the UK, delivering tailored Business Central ERP & CRM solutions, implementation, upgrades, and ongoing support for growing businesses.  Contact us today!"
+          content="Dynamics Square™ is a trusted Microsoft Dynamics 365 Partner in the UK, delivering tailored ERP & CRM solutions, implementation, upgrades, and ongoing support for growing businesses.  Contact us today!"
         />
         <meta
           property="og:image"
@@ -37,11 +37,11 @@ const HomeOneNew = () => {
         />
         <meta
           property="twitter:title"
-          content="Microsoft Dynamics 365 Partner UK & Business Central Partner - Dynamics Square™"
+          content="Trusted Microsoft Dynamics 365 Partner in the UK - Dynamics Square™"
         />
         <meta
           property="twitter:description"
-          content="Dynamics Square™ is a trusted Microsoft Dynamics 365 Partner in the UK, delivering tailored Business Central ERP & CRM solutions, implementation, upgrades, and ongoing support for growing businesses.  Contact us today!"
+          content="Dynamics Square™ is a trusted Microsoft Dynamics 365 Partner in the UK, delivering tailored ERP & CRM solutions, implementation, upgrades, and ongoing support for growing businesses.  Contact us today!"
         />
         <meta
           property="twitter:image"
