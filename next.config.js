@@ -18,12 +18,12 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "blognew.dynamicssquare.co.uk",
-        pathname: "/**",
+        pathname: "/upload/**",
       },
       {
         protocol: "https",
         hostname: "blognew.dynamicssquare.com",
-        pathname: "/**",
+        pathname: "/public/upload/**",
       },
       {
         protocol: "https",
