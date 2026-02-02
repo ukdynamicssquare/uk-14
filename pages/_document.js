@@ -42,20 +42,36 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-5G8CCP6W');`
             }
           </Script>
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
+           {/* Microsoft Clarity */}
+          <Script id="clarity" strategy="afterInteractive">
+            {`
               (function(c,l,a,r,i,t,y){
-                  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-                  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-                  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;
+                t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];
+                y.parentNode.insertBefore(t,y);
               })(window, document, "clarity", "script", "tib4o2otj4");
-            `,
-            }}
-          />
-          <Script id="apollo" strategy="beforeInteractive">
-            {`function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script"); o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0, o.onload=function(){window.trackingFunctions.onLoad({appId:"66322a5ecb3cc6056bd458d4"})}, document.head.appendChild(o)}initApollo();
-                `}
+            `}
+          </Script>
+
+          {/* Apollo Tracker */}
+          <Script id="apollo" strategy="afterInteractive">
+            {`
+              (function(){
+                var n=Math.random().toString(36).substring(7);
+                var s=document.createElement("script");
+                s.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n;
+                s.async=true;
+                s.onload=function(){
+                  window.trackingFunctions &&
+                  window.trackingFunctions.onLoad({
+                    appId:"66322a5ecb3cc6056bd458d4"
+                  });
+                };
+                document.head.appendChild(s);
+              })();
+            `}
           </Script>
           {/* <Script id="hotjar" strategy="beforeInteractive">
             {`
