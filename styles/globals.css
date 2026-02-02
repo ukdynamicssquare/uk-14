@@ -331,6 +331,7 @@ section {
 .header {
   transition: 0.5s all ease;
   z-index: 997;
+  min-height:64px;
   /* padding: 15px 30px; */
 }
 .top-header-sec {
@@ -481,6 +482,9 @@ section {
   display: flex;
   list-style: none;
   align-items: center;
+}
+.right-nav{
+  /* min-height:40px */
 }
 .acord-list,
 .addre-left,
@@ -9312,6 +9316,8 @@ ul.checkmark li {
   position: relative;
   display: block;
   overflow: hidden;
+  min-height:600px;
+  width: 100%;
 }
 .blogs-content p {
   font-size: 17px;
