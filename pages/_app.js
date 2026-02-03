@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import Header from "../components/Header";
 // import CookieConsent from "react-cookie-consent";
 import { useState, useEffect } from "react";
-import LoadingBar from "react-top-loading-bar";
+// import LoadingBar from "react-top-loading-bar";
 import HeaderWork from "../components/HeaderWork";
 import Footer from "../components/Footer";
 import CookieConsentBanner from "../components/CookieConsentBanner";
@@ -65,13 +65,13 @@ function MyApp({ Component, pageProps }) {
   ) {
     return (
       <>
-      <LoadingBar
+      {/* <LoadingBar
       color='#bb2b36'
       progress={progress}
       waitingTime={400}
       height={2}
       onLoaderFinished={() => setProgress(0)}
-      />
+      /> */}
         <HeaderWork />
         <Component {...pageProps} />
         {/* <CookieConsent
@@ -115,13 +115,13 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-    <LoadingBar
+    {/* <LoadingBar
       color='#bb2b36'
       progress={progress}
       waitingTime={400}
       height={2}
       onLoaderFinished={() => setProgress(0)}
-      />
+      /> */}
       <Layouts>
         <Component {...pageProps} />
       </Layouts>

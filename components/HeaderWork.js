@@ -116,9 +116,10 @@ const HeaderWork = () => {
                   alt="Dynamics Square TM Logo"
                   width="282"
                   height="19"
+                  priority
                 />
                 <Image className="log-part" src={getLogoSrctwo()}  alt="" width="141"
-                  height="40" />
+                  height="40" priority />
               </a>
             </div>
             <div className="right-nav">

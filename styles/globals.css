@@ -329,9 +329,13 @@ section {
   opacity: 1;
 }
 .header {
-  transition: 0.5s all ease;
+  /* transition: 0.5s all ease; */
   z-index: 997;
   min-height:64px;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    opacity 0.3s ease;
   /* padding: 15px 30px; */
 }
 .top-header-sec {
