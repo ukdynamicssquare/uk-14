@@ -27,7 +27,6 @@ const MicrosoftCloudForNonpro = () => {
         />
 
       </Head>
-      <main>
         <section className="top-banner-new">
           <div className="container">
             <div className="row">
@@ -885,11 +884,6 @@ const MicrosoftCloudForNonpro = () => {
             </div>
           </div>
         </section>
-
-
-
-
-      </main>
     </>
   );
 };

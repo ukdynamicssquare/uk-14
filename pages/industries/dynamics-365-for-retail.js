@@ -26,7 +26,6 @@ const MicrosoftCloudForNonprofit = () => {
         />
    
       </Head>
-      <main>
         <section className="Solution-banner hero-1 hero">
           <div className="container">
             <div className="row">
@@ -525,7 +524,6 @@ const MicrosoftCloudForNonprofit = () => {
             </div>
           </div>
         </section>
-      </main>
     </>
   );
 };

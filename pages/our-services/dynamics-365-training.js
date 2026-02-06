@@ -36,7 +36,6 @@ const Dynamics365Training = () => {
         <meta property="twitter:description" contet="Get Dynamics 365 trainings from the UK's leading Microsoft Solution Partners to properly utilize the solution and get most out of it." />
         <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/Microsoft-Dynamics-365-Training.png/" />
       </Head>
-      <main>
         <section className="Solution-banner hero-1 hero">
           <div className="container">
             <div className="row">
@@ -285,9 +284,6 @@ const Dynamics365Training = () => {
             </div>
           </div>
         </section>
-
-       
-      </main>
     </>
   );
 };

@@ -44,7 +44,6 @@ const Manufacturing = () => {
         videoId="XHOmBV4js_E"
         onClose={() => setOpen(false)}
       />
-      <main>
         <section className="Solution-banner hero-1 hero">
           <div className="container">
             <div className="row">
@@ -795,7 +794,6 @@ const Manufacturing = () => {
             </div>
           </div>
         </section>
-      </main>
     </>
   );
 };

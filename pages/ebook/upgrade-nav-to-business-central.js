@@ -57,7 +57,6 @@ const StartGuide = () => {
           href="https://www.dynamicssquare.co.uk/ebook/upgrade-nav-to-business-central/"
         />
       </Head>
-      <main>
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -428,7 +427,6 @@ const StartGuide = () => {
         </div>
       </section>
       <CommonEbookForm />
-      </main>
     </>
   );
 };

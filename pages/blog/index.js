@@ -87,7 +87,7 @@ function Blogshome({ blogs, businesscentral, categoryblogs, blograndomblogs, blo
   const paginatedPosts = paginate(blograndomblogs, currentPage, pageSize);
 
   return (
-    <main>
+    <>
       <Head>
         <title>Best Microsoft Dynamics 365 Blogs | Dynamics Square - Dynamics 365 Blogs</title>
         <meta name="description" content="Dynamics 365 Blogs" />
@@ -354,7 +354,7 @@ function Blogshome({ blogs, businesscentral, categoryblogs, blograndomblogs, blo
         </div>
       </div>
       <TimerModal />
-    </main>
+    </>
   );
 }
 

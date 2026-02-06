@@ -34,7 +34,6 @@ const HomeOneNewBack = () => {
                 <meta property="twitter:description" content="Dynamics Square™ is a trusted Microsoft Dynamics 365 Partner in the UK, delivering tailored Business Central ERP & CRM solutions, implementation, upgrades, and ongoing support for growing businesses.  Contact us today!" />
                 <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/home-page-og.png" />
             </Head>
-            <main>
                 <section className='home-baner-head-new'>
                     <div className='container'>
                         <div className='row'>
@@ -676,10 +675,6 @@ const HomeOneNewBack = () => {
 
                     </div>
                 </section>
-
-            </main>
-
-
             <FooterNew />
 
         </>

@@ -35,7 +35,6 @@ const Dynamics365ForDistribution = () => {
         <meta property="twitter:description" content="Dynamics 365 for Distribution ERP+ CRM: optimises supply chain, inventory, and customer interactions, enhancing efficiency in the trade & distribution process." />
         <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/distribution-banner.png" />
       </Head>
-      <main>
         <section className="Solution-banner hero-1 hero">
           <div className="container">
             <div className="row">
@@ -511,10 +510,6 @@ const Dynamics365ForDistribution = () => {
             </div>
           </div>
         </section>
-
-
-
-      </main>
     </>
   );
 };

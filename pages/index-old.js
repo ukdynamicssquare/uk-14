@@ -35,8 +35,6 @@ const HomeOne = () => {
                 <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/home-page-og.png" />
 
             </Head>
-
-            <main>
                 <section className='home-baner-head-new'>
                     <div className='container'>
                         <div className='row'>
@@ -586,8 +584,6 @@ const HomeOne = () => {
 
                     </div>
                 </section>
-
-            </main>
 
 
             <FooterNew />

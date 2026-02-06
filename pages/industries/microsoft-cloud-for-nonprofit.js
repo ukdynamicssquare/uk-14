@@ -44,7 +44,6 @@ const MicrosoftCloudForNonprofit = () => {
         videoId="wWF7Z-8WaPU"
         onClose={() => setOpen(false)}
       />
-      <main>
         <section className="Solution-banner hero-1 hero">
           <div className="container">
             <div className="row">
@@ -756,7 +755,6 @@ const MicrosoftCloudForNonprofit = () => {
             </div>
           </div>
         </section>
-      </main>
     </>
   );
 };

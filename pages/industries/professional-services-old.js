@@ -48,7 +48,6 @@ const ProfessionalService = () => {
         videoId="Ykm-vyjBK4w"
         onClose={() => setOpen(false)}
       />
-      <main>
         <section className="Solution-banner hero-1 hero">
           <div className="container">
             <div className="row">
@@ -829,7 +828,6 @@ const ProfessionalService = () => {
             </div>
           </div>
         </section>
-      </main>
     </>
   );
 };

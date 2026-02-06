@@ -26,7 +26,6 @@ const NonProfits = () => {
         videoId="qLjfAsQRWaM"
         onClose={() => setOpen(false)}
       />
-      <main>
         <section className="Solution-banner hero-1 hero">
           <div className="container">
             <div className="row">
@@ -543,7 +542,6 @@ With Dynamics 365 Solutions </h2>
             </div>
           </div>
         </section>
-      </main>
     </>
   );
 };

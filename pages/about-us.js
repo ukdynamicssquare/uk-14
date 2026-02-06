@@ -44,7 +44,6 @@ const AboutUs = () => {
         <meta property="twitter:description" content="Learn about Dynamics Square and explore what makes us unique and one of the most trusted Dynamics 365 Business Central partners in the UK and Europe region." />
         <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/about-pic.png" />
       </Head>
-      <main>
       <section className="Solution-banner hero-1 hero about-banner">
           <div className="container">
             <div className="row">
@@ -614,7 +613,6 @@ const AboutUs = () => {
             </div>
           </div>
         </section>
-      </main>
     </>
   );
 };

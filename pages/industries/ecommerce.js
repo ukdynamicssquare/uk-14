@@ -43,7 +43,6 @@ const Ecommerce = () => {
              videoId="f9V87NftLBA"
             onClose={() => setOpen(false)}
           />
-      <main>
       <section className="Solution-banner hero-1 hero">
           <div className="container">
             <div className="row">
@@ -659,7 +658,6 @@ const Ecommerce = () => {
             </div>
           </div>
         </section>
-      </main>
     </>
   );
 };

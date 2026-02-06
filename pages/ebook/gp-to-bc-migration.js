@@ -75,7 +75,6 @@ const StartGuideGp = () => {
         <meta name="twitter:description" content="Download our free eBook - Unlock seamless transitions with 'Dynamics GP to Business Central Migration.' Utilise the evolution of your business effortlessly." />
         <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/dynamics-GP-BC-Ebook-banner-image.png" />
       </Head>
-      <main>
       <section className="Solution-banner hero-1 hero">
          <div className="container">
            <div className="row">
@@ -343,7 +342,6 @@ const StartGuideGp = () => {
        </section>
 
        <CommonEbookForm />
-      </main>
     </>
   );
 };

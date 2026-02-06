@@ -1171,9 +1171,9 @@ const BusinessCentral = () => {
               <div className='col-lg-10'>
                 <div className='solution-new-cta-001'>
                   <span className='solution-new-cta-t'>CASE STORY</span>
-                  <h3>Learn How UK Defence Apparel Maker Boosted Efficiency By Up To 50% with Business Central ERP.</h3>
+                  <h3>How a European Food Trading Startup Built Control Using Business Central</h3>
                   <div>
-                    <Link href="/case-studies/" className="btn-get-started scrollto">
+                    <Link href="/case-studies/business-central-reimplementation-for-food-trader/" className="btn-get-started scrollto">
                       <span>Read Case Story &nbsp;<i className="bi bi-arrow-right"></i></span>
                     </Link>
                   </div>

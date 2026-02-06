@@ -40,7 +40,6 @@ const MicrosoftCloudForNonprofit = () => {
         <meta name="twitter:description" content="Optimise logistics operations with Dynamics 365. Streamline supply chains, boost efficiency, and enhance real-time visibility across your logistics network." />
         <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/logistic-main-banner.png" />
       </Head>
-      <main>
         <section className="Solution-banner hero-1 hero">
           <div className="container">
             <div className="row">
@@ -538,7 +537,6 @@ const MicrosoftCloudForNonprofit = () => {
             </div>
           </div>
         </section>
-      </main>
     </>
   );
 };

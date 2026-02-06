@@ -79,7 +79,6 @@ const StartGuideThree = () => {
         <meta property="twitter:description" content="Learn how to streamline your supply chain processes and optimize your operations with our Dynamics 365 Supply Chain Management guide. Download our free eBook to discover expert tips, real-world examples, and best practices for achieving supply chain excellence." />
         <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/dynamics-SCM-Ebook-og.png" />
       </Head>
-      <main>
       <section className="Solution-banner hero-1 hero">
          <div className="container">
            <div className="row">
@@ -530,7 +529,6 @@ const StartGuideThree = () => {
            </div>
          </div>
        )} */}
-      </main>
     </>
   );
 };

@@ -49,7 +49,6 @@ const HomeOneNew = () => {
         />
       </Head>
 
-      <main>
         <section className="home-baner-head-new">
           <div className="container">
             <div className="row">
@@ -1727,7 +1726,6 @@ const HomeOneNew = () => {
             </div>
           </div>
         </section>
-      </main>
 
       <FooterNew />
     </>

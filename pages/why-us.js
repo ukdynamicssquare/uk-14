@@ -21,7 +21,6 @@ const WhyUs = () => {
         />
         <link rel="canonical" href="https://www.dynamicssquare.co.uk/why-us/" />
       </Head>
-      <main>
         <section className="Solution-banner hero-1 hero about-banner">
           <div className="container">
             <div className="row">
@@ -396,7 +395,6 @@ const WhyUs = () => {
             </div>
           </div>
         </section>
-      </main>
     </>
   );
 };

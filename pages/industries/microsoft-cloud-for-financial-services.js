@@ -42,7 +42,6 @@ const MicrosoftCloudForFinancialServices = () => {
         <meta name="twitter:description" content="Unlock agility and innovation in financial services with Microsoft Cloud, which empowers secure, compliant, and customer-centric solutions." />
         <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/Microsoft-Cloud-Financial-Services-banner.png" />
       </Head>
-      <main>
         <section className="Solution-banner hero-1 hero">
           <div className="container">
             <div className="row">
@@ -561,7 +560,6 @@ const MicrosoftCloudForFinancialServices = () => {
             </div>
           </div>
         </section>
-      </main>
     </>
   );
 };

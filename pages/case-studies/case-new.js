@@ -13,7 +13,7 @@ const CaseNew = () => {
             </Head>
 
 
-            <main>
+        
                 <div className='case-new-banner' style={{ backgroundImage: 'url("https://www.dynamicssquare.ca/img/case-study-banner.jpg")' }}>
                     <div className='container'>
                         <div className='row'>
@@ -185,7 +185,7 @@ const CaseNew = () => {
                         </div>
                     </div>
                 </section>
-            </main>
+
 
         </>
     );

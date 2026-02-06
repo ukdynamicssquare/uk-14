@@ -66,7 +66,6 @@ const Howtochooserighterp = () => {
           href="https://www.dynamicssquare.co.uk/ebook/how-to-choose-right-erp/"
         />
       </Head>
-      <main>
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -424,7 +423,6 @@ const Howtochooserighterp = () => {
         </div>
       </section>
       <CommonEbookForm />
-      </main>
     </>
   );
 };

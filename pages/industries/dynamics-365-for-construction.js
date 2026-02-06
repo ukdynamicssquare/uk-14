@@ -34,7 +34,6 @@ const Dynamics365ForConstruction = () => {
         <meta property="twitter:description" content="Dynamics 365 for Construction optimises project management, collaboration, and efficiency, simplifying construction processes for enhanced productivity." />
         <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/construction-banner.png" />
       </Head>
-      <main>
         <section className="Solution-banner hero-1 hero">
           <div className="container">
             <div className="row">
@@ -520,10 +519,6 @@ const Dynamics365ForConstruction = () => {
             </div>
           </div>
         </section>
-      
-
-      
-      </main>
     </>
   );
 };

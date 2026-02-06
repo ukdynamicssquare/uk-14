@@ -29,7 +29,6 @@ const ContactUs = () => {
         />
  
       </Head>
-      <main>
         <section className="Solution-banner about-banner">
           <div className="container">
             <div className="row">
@@ -1068,7 +1067,6 @@ const ContactUs = () => {
             </div>
           </div>
         </section>
-      </main>
       <FooterHideNew />
     </>
   );

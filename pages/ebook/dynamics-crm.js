@@ -56,7 +56,6 @@ const StartGuideTwo = () => {
           href="https://www.dynamicssquare.co.uk/ebook/dynamics-crm/"
         />
       </Head>
-      <main>
       <section className="Solution-banner hero-1 hero">
          <div className="container">
            <div className="row">
@@ -391,7 +390,6 @@ const StartGuideTwo = () => {
          </div>
        </section>
        <CommonEbookForm />
-      </main>
     </>
   );
 };

@@ -26,7 +26,6 @@ const ErpMicrosoftCloudFor = () => {
         />
 
       </Head>
-      <main>
         <section className="top-banner-new">
           <div className="container">
             <div className="row">
@@ -599,11 +598,6 @@ const ErpMicrosoftCloudFor = () => {
             </div>
           </div>
         </section>
-
-
-
-
-      </main>
     </>
   );
 };

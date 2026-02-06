@@ -16,7 +16,6 @@ const Dynamics365Consultant = () => {
         />
         <link rel="canonical" href="https://www.dynamicssquare.co.uk/our-services/dynamics-365-consultant/" />
       </Head>
-      <main>
         <section className="Solution-banner hero-1 hero about-banner">
           <div className="container">
             <div className="row">
@@ -193,7 +192,6 @@ const Dynamics365Consultant = () => {
           </div>
           </div>
         </section>
-      </main>
     </>
   );
 };

@@ -57,7 +57,6 @@ const StartGuideOne = () => {
           href="https://www.dynamicssquare.co.uk/ebook/dynamics-365-finance/"
         />
       </Head>
-      <main>
       <section className="Solution-banner hero-1 hero">
          <div className="container">
            <div className="row">
@@ -371,7 +370,6 @@ const StartGuideOne = () => {
        </section>
 
      <CommonEbookForm />
-      </main>
     </>
   );
 };

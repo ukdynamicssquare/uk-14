@@ -73,7 +73,9 @@ function MyApp({ Component, pageProps }) {
       onLoaderFinished={() => setProgress(0)}
       /> */}
         <HeaderWork />
-        <Component {...pageProps} />
+        <main>
+          <Component {...pageProps} />
+        </main>
         {/* <CookieConsent
           location="bottom"
           buttonText="Accept"
@@ -123,7 +125,7 @@ function MyApp({ Component, pageProps }) {
       onLoaderFinished={() => setProgress(0)}
       /> */}
       <Layouts>
-        <Component {...pageProps} />
+        <main><Component {...pageProps} /></main>
       </Layouts>
       {/* <CookieConsent
         location="bottom"

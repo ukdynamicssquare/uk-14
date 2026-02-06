@@ -37,7 +37,6 @@ const Customisation = () => {
         <meta name="twitter:description" content="Unlock the full potential of Dynamics 365 Business Central with customisation, optimising workflows and enhancing business performance." />
         <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/Customise-Business-banner.png" />
       </Head>
-      <main>
         <section className="Solution-banner hero-1 hero">
           <div className="container">
             <div className="row">
@@ -466,8 +465,6 @@ const Customisation = () => {
           </div>
         </div>
       </section>
-
-      </main>
     </>
   );
 };

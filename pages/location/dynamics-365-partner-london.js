@@ -40,11 +40,6 @@ export default function HomeOld() {
 
         
       </Head>
-      <main>
-
-
-
-
         <section id="h-banner" className="hero hero-home">
           <div className="container">
             <div className="row justify-content-center">
@@ -1272,12 +1267,6 @@ export default function HomeOld() {
 
           </div>
         </section>
-
-
-
-
-
-      </main>
     </>
   );
 }

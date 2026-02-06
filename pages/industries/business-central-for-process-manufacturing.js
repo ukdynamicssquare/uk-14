@@ -36,7 +36,6 @@ const Manufacturing = () => {
         <meta property="twitter:description" content="Optimise your process manufacturing with Business Central. Streamline production, manage resources, and ensure quality with an integrated, scalable ERP solution." />
         <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/BC-Process-Manufacturing.png" />
       </Head>
-      <main>
         <section className="Solution-banner hero-1 hero">
           <div className="container">
             <div className="row">
@@ -519,7 +518,6 @@ const Manufacturing = () => {
             </div>
           </div>
         </section>
-      </main>
     </>
   );
 };

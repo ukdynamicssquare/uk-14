@@ -35,7 +35,6 @@ const ErpMicrosoftCloudFor = () => {
         <meta property="twitter:description" content="Enhance productivity with Dynamics 365 Copilot Services—AI-powered assistance for automation, insights, and collaboration. Streamline workflows and drive efficiency" />
         <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/copilot-new-banner.png" />
       </Head>
-      <main>
         <section className="top-banner-new top-banner-new-bg">
           <div className="container">
             <div className="row">
@@ -568,8 +567,6 @@ const ErpMicrosoftCloudFor = () => {
             </div>
           </div>
         </section>
-
-      </main>
     </>
   );
 };

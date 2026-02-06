@@ -15,7 +15,6 @@ const Career = () => {
         <link rel="canonical" href="https://www.dynamicssquare.co.uk/career/"/>
           
         </Head>
-        <main>
         <section className="Solution-banner hero-1 hero about-banner carrer-into">
           <div className="container">
             <div className="row">
@@ -189,7 +188,6 @@ const Career = () => {
             </div>
           </div>
         </section>
-        </main>
       </>
     );
   };

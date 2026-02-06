@@ -26,7 +26,6 @@ const Education = () => {
         />
         <meta name="robots" content="index,follow"/>
       </Head>
-      <main>
         <section className="Solution-banner hero-1 hero">
           <div className="container">
             <div className="row">
@@ -573,7 +572,6 @@ const Education = () => {
             </div>
           </div>
         </section>
-      </main>
     </>
   );
 };

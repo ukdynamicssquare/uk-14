@@ -162,9 +162,7 @@ const CategoryList = () => {
                           />
                         </div>
                         <div className="commen-boc-2-info">
-                          <p>
-                          Dynamics Square is a trusted Microsoft Solutions Partner that drives digital transformation for worldwide businesses.
-                          </p>
+                          <p>A specialist in plastic automation simplified its complex buy-sell operations and strengthened project control using Microsoft Dynamics 365 Business Central.</p>
                         </div>
                         <div className="btn-003">
                           <a
@@ -186,7 +184,7 @@ const CategoryList = () => {
                         </div>
                         <div className="commen-boc-2-info">
                           <p>
-                          Dynamics Square, we're passionate about empowering businesses to achieve their full potential. 
+                          A leading UK orthodontic supplier sought to improve operational efficiency, gain better data visibility, and support future growth. 
                           </p>
                         </div>
                         <div className="btn-003">
@@ -563,7 +561,7 @@ const CategoryList = () => {
                         </div>
                         <div className="commen-boc-2-info">
                           <p>
-                          Dynamics Square, we're passionate about empowering businesses to achieve their full potential. 
+                          A leading UK orthodontic supplier sought to improve operational efficiency, gain better data visibility, and support future growth. 
                           </p>
                         </div>
                         <div className="btn-003">
@@ -724,9 +722,7 @@ const CategoryList = () => {
                           />
                         </div>
                         <div className="commen-boc-2-info">
-                          <p>
-                          Dynamics Square is a trusted Microsoft Solutions Partner that drives digital transformation for worldwide businesses.
-                          </p>
+                          <p>A specialist in plastic automation simplified its complex buy-sell operations and strengthened project control using Microsoft Dynamics 365 Business Central</p>
                         </div>
                         <div className="btn-003">
                           <a

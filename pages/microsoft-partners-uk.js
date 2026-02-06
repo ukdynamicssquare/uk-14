@@ -19,7 +19,6 @@ const PartnerUK = () => {
         />
         <link rel="canonical" href="https://www.dynamicssquare.co.uk/microsoft-partners-uk/" />
       </Head>
-      <main>
         <section className="Solution-banner hero-1 hero about-banner">
           <div className="container">
             <div className="row">
@@ -190,7 +189,6 @@ const PartnerUK = () => {
             </div>
           </div>
         </section>
-      </main>
     </>
   );
 };
