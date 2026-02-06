@@ -500,7 +500,7 @@ const BusinessCentral = () => {
                 <h3>Dynamics 365 <span>Sales Enterprise</span>
                 </h3>
                 <p>Dynamics 365 Sales Enterprise edition comprises advanced sales force automation with contextual insights, next generation AI, and flexible configuration. It is designed for organisations that require deeper pipeline visibility, forecasting, and sales guidance.</p>
-                <h4>£80.70<span>per user per month <br />(per user per month)</span></h4>
+                <h4>£80.70<span>per user per month <br />(paid yearly)</span></h4>
                 <a href="#exampleModal" data-bs-toggle="modal" className="btn-dd-t btn-get-started" >Contact us</a>
                 <p className='disclm'>*Price excludes VAT</p>
               </div>

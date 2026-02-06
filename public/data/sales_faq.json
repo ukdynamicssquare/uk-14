@@ -1,88 +1,123 @@
-[
+[    
     {
       "id": 1,
-      "question": "1. Who should use Dynamics 365 Sales?",
-      "answer": "<p>Dynamics 365 Sales is suitable for organisations that has a dedicated sales team that manage leads, customers, and deals through structured sales processes.</p>"
+      "question": "1. What is Microsoft Dynamics 365 Sales?",
+      "answer": "<p>Dynamics 365 for sales is a customer relationship management software that helps to effortlessly build strong relationships with your customers and seamlessly manage your sales campaigns to close sales faster. AI-based sales insights help businesses effectively leverage their sales data to connect and engage with the right customers from anywhere and anytime. With mobile efficiency, Salespeople and Sales Managers can stay updated with any sales activity and customer behavior in real-time.</p>"
     },
     {
       "id": 2,
-      "question": "2. Can small teams use Dynamics 365 Sales effectively?",
-      "answer": "<p>Small sales teams can use Dynamics 365 Sales to organise leads, track deals, and stay consistent.</p>"
+      "question": "2. Who should use Dynamics 365 Sales?",
+      "answer": "<p>Dynamics 365 Sales is a powerful sales management solution to manage sales and customers using a single app leveraging mobile devices. It helps to identify actual customers to connect and engage with them in real-time. Utilizing sales insights and customer data, salespeople can make instant and productive decisions supporting their sales campaigns. Sales managers can monitor their sales team's performance and, if necessary, can guide them to improve things to obtain better results and ensure campaign success.</p><p>When you implement Dynamics 365 Sales, it enables sales managers to access and create excel documents without switching apps. They can even instantly create sales documents using a single interface when configured with other Microsoft apps.</p><p>To avail of a free consultation to manage your sales and customers or to implement<a href=\"/products/microsoft-dynamics-crm/\"> Microsoft Dynamics CRM </a> solution for your business, experts at Dynamics Square can help.</p>"
     },
     {
       "id": 3,
-      "question": "3. Does Dynamics 365 Sales work with Microsoft Outlook and Teams?",
-      "answer": "<p>Yes, Dynamics 365 Sales connects with Outlook and Teams to manage emails, meetings, and sales records.</p>"
+      "question": "3. How does Microsoft Dynamics 365 help in Sales?",
+      "answer": "<p>Microsoft Dynamics 365 for Sales helps enterprises to effectively roll out their sales campaigns, manage customers, and drive productivity. This sales management solution helps to streamline their sales data, connect & engage customers, and make informed decisions leveraging sales analytics to close maximized sales in a faster manner.</p><p>Dynamics 365 for Sales helps enterprises to eliminate their time-consuming manual efforts, repetitive tasks, and other redundancies. It enables businesses to focus more on their core sales tasks that drive sales, customers, profitability.</p><p>No matter what business context you belong to, out of the available CRM systems, Microsoft Dynamics 365 Sales can help you bring your entire sales and customers data at the siloed interface that can be seamlessly accessed, edited, utilized, and shared with anyone in your organizational connection even without switching apps.</p><p>With Dynamics 365 Sales, everyone involved in the Sales process can access data and manage customers from anywhere and at any time using mobile or tab devices. To know how Dynamics 365 sales can help to improve your customer experience and impact your sales drive, contact experts at Dynamics Square.</p>"
     },
     {
       "id": 4,
-      "question": "4. What type of sales processes does Dynamics 365 Sales support?",
-      "answer": "<p>Dynamics 365 Sales helps with lead to opportunity, opportunity to close, and post-sale relationship management.</p>"
+      "question": "4. Is Dynamics 365 Sales available on-premises?",
+      "answer": "<p>Yes, Dynamics 365 Sales is available on-premises but only for Dynamics 365 Sales Enterprise Plan not for the Sales Professional plan. Enterprise Plan comes with both the<a href=\"/microsoft-dynamics-365-cloud-vs-on-premise/\"> on-premises </a> and cloud versions whereas Sales Professional license comes with cloud facilitation only.</p>"
     },
     {
       "id": 5,
-      "question": "5. Can Dynamics 365 Sales help prioritise leads and opportunities?",
-      "answer": "<p>Dynamics 365 Sales uses AI and insights to help professionals focus on high-priority leads.</p>"
+      "question": "5. How much does it cost to implement Microsoft Dynamics 365 for Sales?",
+      "answer": "<p>Dynamics 365 Sales is suitable for organisations that has a dedicated sales team that manage leads, customers, and deals through structured sales processes.</p>"
     },
     {
       "id": 6,
-      "question": "6. Does Dynamics 365 Sales support forecasting and pipeline tracking?",
-      "answer": "<p>Sales leaders use Dynamics 365 Sales to view pipelines, track progress, and forecast revenue.</p>"
+      "question": "6. Who should use Dynamics 365 Sales?",
+      "answer": "<p>Addressing your specific business needs and a number of user requirements, your licensing need for Dynamics 365 Sales may go different. To know your exact licensing cost, connect with Dynamics Square. Here, we are giving a rough idea of licensing to implement Dynamics 365 Sales considering the most common licensing model:</p><p><b>Dynamics 365 Sales Professional</b><ul><li>£50.00 - per user per month</li></ul></p><p><b>Dynamics 365 Sales Enterprise</b><ul><li>£80.70 - per user per month</li></ul></p><p><b>Dynamics 365 Sales Premium</b><ul><li>£115.30 - per user per month</li></ul></p>"
     },
     {
       "id": 7,
-      "question": "7. How secure is customer data in Dynamics 365 Sales?",
+      "question": "7. How does Dynamics 365 Sales Works?",
+      "answer": "<p>Dynamics 365 Sales helps to transform your entire sales model. It enables businesses to improve and uplift their digital sales experience. They can connect and engage the actual customers in real-time. With centralized data, Dynamics 365 Sales enables people to collaborate and process the same customer data in real-time which helps to streamline and accelerate sales.</p><p>Instant sales reports and other actionable insights help everyone in the sales team to make informed decisions in real-time as Dynamics 365 sales eliminate the need for manual data processing and repetitive tasks.</p><p>When you get handy with sales insights and customer behavior in real-time, it helps convert the leads and close the sales faster. Sales managers can monitor and control the sales process and can suggest supporting the ongoing sales process or campaign.</p><p>With predictive insights, salespeople can manage sales, customers, and can determine their priorities to impact and accelerate sales and profitability.</p>"
+    },
+    {
+      "id": 8,
+      "question": "8. How do I access Dynamics 365 Sales Professional?",
+      "answer": "<p>All you need to sign in to your Microsoft 365 account in your Sales Professional App, now select Microsoft 365 App launcher, and then Dynamics 365. The selection of the app entirely depends on the subscription you have availed of.</p><p>Now, select Sales Professional on Dynamics 365 Home Page and you are ready to navigate according to your need leveraging the Navigation bar, Site map, Data records, and other business practices available in your Dynamics 365 Sales Professional.</p><p>To know further how to efficiently make use of Microsoft Dynamics Sales features, contact Dynamics Square today, our Dynamics 365 sales experts can assist you.</p>"
+    },
+    {
+      "id": 9,
+      "question": "9. Can small teams use Dynamics 365 Sales effectively?",
+      "answer": "<p>Small sales teams can use Dynamics 365 Sales to organise leads, track deals, and stay consistent.</p>"
+    },
+    {
+      "id": 10,
+      "question": "10. Does Dynamics 365 Sales work with Microsoft Outlook and Teams?",
+      "answer": "<p>Yes, Dynamics 365 Sales connects with Outlook and Teams to manage emails, meetings, and sales records.</p>"
+    },
+    {
+      "id": 11,
+      "question": "11. What type of sales processes does Dynamics 365 Sales support?",
+      "answer": "<p>Dynamics 365 Sales helps with lead to opportunity, opportunity to close, and post-sale relationship management.</p>"
+    },
+    {
+      "id": 12,
+      "question": "12. Can Dynamics 365 Sales help prioritise leads and opportunities?",
+      "answer": "<p>Dynamics 365 Sales uses AI and insights to help professionals focus on high-priority leads.</p>"
+    },
+    {
+      "id": 13,
+      "question": "13. Does Dynamics 365 Sales support forecasting and pipeline tracking?",
+      "answer": "<p>Sales leaders use Dynamics 365 Sales to view pipelines, track progress, and forecast revenue.</p>"
+    },
+    {
+      "id": 14,
+      "question": "14. How secure is customer data in Dynamics 365 Sales?",
       "answer": "<p>Dynamics 365 Sales protects customer data through role-based access, permissions, and Microsoft security controls.</p>"
     },
      {
-      "id": 8,
-      "question": "8. Can Dynamics 365 Sales be customised for different industries?",
+      "id": 15,
+      "question": "15. Can Dynamics 365 Sales be customised for different industries?",
       "answer": "<p>Dynamics 365 Sales allows configuration of fields, views, dashboards, and processes for industry needs.</p>"
     },
      {
-      "id": 9,
-      "question": "9. Does Dynamics 365 Sales support remote and mobile sales teams?",
+      "id": 16,
+      "question": "16. Does Dynamics 365 Sales support remote and mobile sales teams?",
       "answer": "<p>Yes, sales teams can access Dynamics 365 Sales through web and mobile apps from any location.</p>"
     },
      {
-      "id": 10,
-      "question": "10. What role does Copilot play in Dynamics 365 Sales?",
+      "id": 17,
+      "question": "17. What role does Copilot play in Dynamics 365 Sales?",
       "answer": "<p>Dynamics 365 Sales protects customer data through role-based access, permissions, and Microsoft security controls.</p>"
     },
      {
-      "id": 11,
-      "question": "11. Can Dynamics 365 Sales integrate with other business systems?",
+      "id": 18,
+      "question": "18. Can Dynamics 365 Sales integrate with other business systems?",
       "answer": "<p>Dynamics 365 Sales integrates with <a href=\"/products/microsoft-power-platform/\">Power Platform</a> and selected third-party business applications to fulfil specific business requirements.</p>"
     },
      {
-      "id": 12,
-      "question": "12. How long does it take to start using Dynamics 365 Sales?",
+      "id": 19,
+      "question": "19. How long does it take to start using Dynamics 365 Sales?",
       "answer": "<p>Sales teams can start using Dynamics 365 Sales quickly after setup, configuration, and user onboarding.</p>"
     },
      {
-      "id": 13,
-      "question": "13. Why does selling feel easier with Copilot for Dynamics 365 Sales?",
+      "id": 20,
+      "question": "20. Why does selling feel easier with Copilot for Dynamics 365 Sales?",
       "answer": "<p>Selling feels effortless with Copilot for Dynamics 365 Sales because it handles recall, follow-ups, and context quietly in the background, letting salespeople stay present in conversations instead of managing mental checklists.</p>"
     }
     ,
      {
-      "id": 14,
-      "question": "14. Why does it take time to implement Dynamics 365 for Sales?",
+      "id": 21,
+      "question": "21. Why does it take time to implement Dynamics 365 for Sales?",
       "answer": "<p><b>A Dynamics 365 for Sales implementation</b> takes time because it aligns the system with real selling behaviour, approvals, and decision paths rather than forcing a generic setup on every team.</p>"
     },
      {
-      "id": 15,
-      "question": "15. How do people actually learn how to use Dynamics 365 for Sales?",
+      "id": 22,
+      "question": "22. How do people actually learn how to use Dynamics 365 for Sales?",
       "answer": "<p>Dynamics Square conducts training sessions to help users learn <b>how to use Dynamics 365 for Sales</b>. Besides, the intuitive UI of the system guides actions naturally to simplify daily operations within the application.</p>"
     },
      {
-      "id": 16,
-      "question": "16. What changes when teams use Sales Navigator with Dynamics 365 Sales?",
+      "id": 23,
+      "question": "23. What changes when teams use Sales Navigator with Dynamics 365 Sales?",
       "answer": "<p>With Sales Navigator with Dynamics 365 Sales, buyer insights live inside the sales record, helping conversations start informed instead of cold.</p>"
     },
      {
-      "id": 17,
-      "question": "17. Why does pricing stay cleaner with Microsoft Dynamics 365 for Sales CPQ?",
+      "id": 24,
+      "question": "24. Why does pricing stay cleaner with Microsoft Dynamics 365 for Sales CPQ?",
       "answer": "<p><b>Microsoft Dynamics 365 for Sales CPQ</b> keeps pricing logic consistent by embedding rules directly into the quoting flow, reducing errors and approval delays.</p>"
     }
   ]
