@@ -388,58 +388,49 @@ const BusinessCentral = () => {
           <div className='row'>
             <div className='col-lg-9'>
               <div className='solution-new-banner-sub-head'>
-                <h2>Copilot in Dynamics 365 Finance: AI That Redefines Finance</h2>
-                <p>What if your finance system worked like a strategic advisor instead of a record keeper? Copilot in Dynamics 365 Finance brings AI powered intelligence, automation, and real-time insights to finance leaders. It eliminates bottlenecks and accelerates financial clarity.</p>
+                <h2>Agents in Dynamics 365 Sales</h2>
               </div>
             </div>
           </div>
-          <div className='row'>
-            <div className='col-lg-12'>
-              <div className='solution-new-six-img'>
-                <Image src="/img/solution-new-six-img.png" width={1282} height={383} alt="New Solution" />
-              </div>
-            </div>
-          </div>
-          <div className='row g-3 m-t-4'>
-            <div className='col-lg-4 d-flex'>
-              <div className='solution-new-six-card'>
-                <h3>Enhanced Collections Management</h3>
-                <p>Summarise account details, track overdue payments, and identify customers with pending balances instantly.</p>
-              </div>
-            </div>
-            <div className='col-lg-4 d-flex'>
-              <div className='solution-new-six-card'>
-                <h3>Plan with Precision</h3>
-                <p>Budgeting, forecasting, and scenario planning powered by AI means finance leaders can respond faster with data backed decisions.</p>
-              </div>
-            </div>
-            <div className='col-lg-4 d-flex'>
-              <div className='solution-new-six-card'>
-                <h3>Get Instant Financial Insights</h3>
-                <p>Spot trends, market shifts, and demand patterns with data captured in real time to support faster decisions.</p>
-              </div>
-            </div>
-            <div className='col-lg-4'>
-              <div className='solution-new-six-card'>
-                <h3>Automate Manual Tasks</h3>
-                <p>Cut repetitive finance activities through automation and save time with AI-generated summaries.</p>
-              </div>
-            </div>
-            <div className='col-lg-4'>
-              <div className='solution-new-six-card'>
-                <h3>Stay Ahead with Predictive Intelligence</h3>
-                <p>Detect financial risks and opportunities before they impact business outcomes with proactive intelligence.</p>
-              </div>
-            </div>
-            <div className='col-lg-4'>
-              <div className='solution-new-six-card'>
-                <h3>Simplify Compliance and Reporting</h3>
-                <p>Generate accurate reports, automate tax processes, and keep pace with changing regulations confidently.</p>
 
+          <div className='row g-3 m-t-2'>
+            <div className='col-lg-6'>
+              <div className='solution-new-bg'>
+                <div className='solution-new-six-card'>
+                  <h3 style={{fontSize:"18px"}}>AI-First Selling, Built into Your CRM</h3>
+                  <p>Dynamics 365 Sales delivers a fully agentic CRM solution through prebuilt sales agents that support the entire customer engagement journey, from lead qualification to deal close and beyond. These agents work with sellers to reduce manual effort and improve focus on high value customer conversations.</p>
+                </div>
+              </div>
+              <div className='solution-new-bg'>
+                <div className='solution-new-six-card'>
+                  <h3 style={{fontSize:"18px"}}>Built on Copilot and Copilot Studio</h3>
+                  <p style={{ marginBottom: '15px' }}>Sales agents are powered by Microsoft Copilot and extended through Copilot Studio. Organisations can combine prebuilt agents with custom agents to support specific sales processes and scale productivity across teams.</p>
+                  <p>Together, Copilot, agents, and Dynamics 365 Sales enable AI-first selling with clarity, consistency, and confidence.</p>
+                </div>
+              </div>
+            </div>
+            <div className='col-lg-6 d-flex'>
+              <div className='solution-new-bg'>
+                <div className='solution-new-six-card'>
+                  <h3 style={{fontSize:"18px",marginBottom: '25px'}}>Prebuilt Sales Agents+</h3>
+                  <div style={{marginBottom: '20px'}}>
+                    <h3>Sales Qualification Agent</h3>
+                    <p>Researches and prioritises inbound leads, engages prospects, and prepares personalised outreach. Sellers gain time to focus on relationship building and opportunity progression.</p>
+                  </div>
+                  <div style={{marginBottom: '20px'}}>
+                    <h3>Sales Close Agent</h3>
+                    <p>Analyses active deals and highlights insights that help sellers prioritise actions and move opportunities forward faster. Available in preview.</p>
+                  </div>
+                  <div>
+                    <h3>Sales Research Agent</h3>
+                    <p>Answers complex sales questions in real time by analysing data across systems and turning information into clear, decision ready insights. Available in preview.</p>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div className='col-lg-12'>
+
+            {/* <div className='col-lg-12'>
               <div className='text-center'>
                 <Link
                   href="#exampleModal"
@@ -448,7 +439,7 @@ const BusinessCentral = () => {
                   <span>Book a Demo!  &nbsp;<i className="bi bi-arrow-right"></i></span>
                 </Link>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -528,7 +519,7 @@ const BusinessCentral = () => {
           </div>
         </div>
       </section>
-   
+
       <section className="busnes-upgrade-serve-one" style={{ paddingTop: '0px' }}>
         <div className="container">
           <div className="row">

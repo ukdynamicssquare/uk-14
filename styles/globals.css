@@ -18095,6 +18095,18 @@ display:none
 .achiv-mobile ul>li>div>p{
   font-size: 15px;
 }
+.solution-new-bg{
+    background-color: #e6e7f0;
+    padding: 15px;
+    margin-bottom: 16px;
+}
+.solution-new-bg .solution-new-six-card{
+  background-color:transparent
+}
+.solution-new-bg .solution-new-six-card h3{
+  margin-bottom:10px;
+}
+
 @media (min-width: 1440px) and (max-width: 1700px) {
   .row-d .swiper-wrapper {
     margin-left: -490px;
