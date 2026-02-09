@@ -1165,7 +1165,7 @@ const BusinessCentral = () => {
         </div>
       </section>
       <section className='solution-new-cta'>
-        <div className='asd'>
+        <div className='asd asd3'>
           <div className='container'>
             <div className='row'>
               <div className='col-lg-10'>
