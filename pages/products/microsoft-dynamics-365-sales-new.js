@@ -404,8 +404,8 @@ const BusinessCentral = () => {
               <div className='solution-new-bg'>
                 <div className='solution-new-six-card'>
                   <h3 style={{fontSize:"18px"}}>Built on Copilot and Copilot Studio</h3>
-                  <p style={{ marginBottom: '15px' }}>Sales agents are powered by Microsoft Copilot and extended through Copilot Studio. Organisations can combine prebuilt agents with custom agents to support specific sales processes and scale productivity across teams.</p>
-                  <p>Together, Copilot, agents, and Dynamics 365 Sales enable AI-first selling with clarity, consistency, and confidence.</p>
+                  <p style={{ marginBottom: '15px' }}>Sales agents are powered by <a href="/blog/microsoft-dynamics-copilot/">Microsoft Copilot</a> and extended through Copilot Studio. Organisations can combine prebuilt agents with custom agents to support specific sales processes and scale productivity across teams.</p>
+                  <p>Together, <a href="/products/microsoft-dynamics-365-sales/copilot/">Copilot, agents, and Dynamics 365 Sales</a> enable AI-first selling with clarity, consistency, and confidence.</p>
                 </div>
               </div>
             </div>
@@ -462,7 +462,7 @@ const BusinessCentral = () => {
             </div>
           </div>
         </div>
-        <img src="/img/n-015.png" alt="n-015" />
+        <img src="/img/mask-group-aaa.png" alt="n-015" />
       </section>
       <section id='section8' className='solution-new-pricing'>
         <div className='container'>
@@ -573,7 +573,7 @@ const BusinessCentral = () => {
         <div className='container'>
           <div className="col-lg-9">
             <div className="solution-new-banner-sub-head">
-              <h2>Get Started with Microsoft Dynamics 365 Finance</h2>
+              <h2>Get Started with Microsoft Dynamics 365 Sales</h2>
               <p>Reports, e-books, videos, training, and more, everything you need to explore the system.</p>
             </div>
           </div>
@@ -582,24 +582,11 @@ const BusinessCentral = () => {
 
               <div className='bc-new-tabs-li'>
                 <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                  <li className="nav-item" role="presentation">
-                    <button className="nav-link active" id="pills-home-02-tab" data-bs-toggle="pill" data-bs-target="#pills-home-02" type="button" role="tab" aria-controls="pills-home-02" aria-selected="false">e-Books</button>
-                  </li>
-                  {/* <li className="nav-item" role="presentation">
-                    <button className="nav-link" id="pills-home-01-tab" data-bs-toggle="pill" data-bs-target="#pills-home-01" type="button" role="tab" aria-controls="pills-home-01" aria-selected="true">Researches</button>
-                  </li> */}
-
-                  <li className="nav-item" role="presentation">
+                  <li className="nav-item active" role="presentation">
                     <button className="nav-link" id="pills-home-03-tab" data-bs-toggle="pill" data-bs-target="#pills-home-03" type="button" role="tab" aria-controls="pills-home-03" aria-selected="false">Podcasts</button>
                   </li>
-                  {/* <li className="nav-item" role="presentation">
-                    <button className="nav-link" id="pills-home-04-tab" data-bs-toggle="pill" data-bs-target="#pills-home-04" type="button" role="tab" aria-controls="pills-home-04" aria-selected="false">Guides</button>
-                  </li> */}
                   <li className="nav-item" role="presentation">
                     <button className="nav-link" id="pills-home-05-tab" data-bs-toggle="pill" data-bs-target="#pills-home-05" type="button" role="tab" aria-controls="pills-home-05" aria-selected="false">Videos</button>
-                  </li>
-                  <li className="nav-item" role="presentation">
-                    <button className="nav-link" id="pills-home-06-tab" data-bs-toggle="pill" data-bs-target="#pills-home-06" type="button" role="tab" aria-controls="pills-home-06" aria-selected="false">White Paper</button>
                   </li>
                   <li className="nav-item" role="presentation">
                     <button className="nav-link" id="pills-home-07-tab" data-bs-toggle="pill" data-bs-target="#pills-home-07" type="button" role="tab" aria-controls="pills-home-07" aria-selected="false">Blogs</button>
@@ -609,67 +596,9 @@ const BusinessCentral = () => {
               </div>
             </div>
             <div className='col-lg-12'>
-              {/* <p className='pt-200'><b>Reach new markets with Business Central</b></p> */}
               <div className='bc-new-tabs-li-body'>
                 <div className="tab-content" id="pills-tabContent">
-                  {/* <div className="tab-pane fade" id="pills-home-01" role="tabpanel" aria-labelledby="pills-home-01-tab">
-
-                    <div className='row'>
-                      <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
-                        <div className='card0-01 card0-02'>
-                          <a onClick={() => handleOpenModal('pdf2')}>
-                            <img src="/img/bc-8-18.png" width={273} height={192} alt="bc-8-17" />
-                            <h3>Reach new markets with Business Central</h3>
-                            <p>Research from Nucleus shows better productivity, lower costs, and stronger control.</p>
-                            <div className='ct--a'>
-                              <span>Download the report</span>
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                      <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
-                        <div className='card0-01 card0-02'>
-                          <a onClick={() => handleOpenModal('pdf1')}>
-                            <img src="/img/bc-8-17.png" width={273} height={192} alt="bc-8-18" />
-                            <h3>See how firms gained from Business Central</h3>
-                            <p>This 2024 Forrester study shows the returns real customers saw after getting started.</p>
-                            <div className='ct--a'>
-                              <span>Download the study</span>
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-
-                  </div> */}
-                  <div className="tab-pane fade show active" id="pills-home-02" role="tabpanel" aria-labelledby="pills-home-02-tab">
-                    <div className='row'>
-                      <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
-                        <div className='card0-01 card0-02'>
-                          <a href="/ebook/dynamics-365-finance/">
-                            <img src="/img/nav-guide-pic.png" width={273} height={192} alt="bc-8-17" />
-                            <h3>Dynamics 365 Finance Guide </h3>
-                            <p>A Quick Start Guide To Dynamics 365 Finance</p>
-                            <div className='ct--a'>
-                              <span>Read now</span>
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                      {/* <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
-                        <div className='card0-01 card0-02'>
-                          <a href="/ebook/upgrade-nav-to-business-central/">
-                            <img src="/img/dynamics-SCM-Ebook-featured-image.png" width={273} height={192} alt="bc-8-17" />
-                            <h3>A Complete Guide to Dynamics SCM</h3>
-                            <div className='ct--a'>
-                              <span>Read now</span>
-                            </div>
-                          </a>
-                        </div>
-                      </div> */}
-                    </div>
-                  </div>
-                  <div className="tab-pane fade" id="pills-home-03" role="tabpanel" aria-labelledby="pills-home-03-tab">
+                  <div className="tab-pane fade show active" id="pills-home-03" role="tabpanel" aria-labelledby="pills-home-03-tab">
                     <div className='row'>
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
@@ -698,30 +627,14 @@ const BusinessCentral = () => {
                       </div>
                     </div>
                   </div>
-                  {/* <div className="tab-pane fade" id="pills-home-04" role="tabpanel" aria-labelledby="pills-home-04-tab"><div className='row'>
-                    <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
-                      <div className='card0-01 card0-02'>
-                        <a href="/guides/business-central-guide-for-smb/">
-                          <img src="/img/chapter5-5.png" width={273} height={192} alt="bc-8-17" />
-                          <h3>Comprehensive Business Central Guide for SMBs in 2025</h3>
-                          <p>A detailed guide helping SMBs automate operations, improve scalability, and prepare for long-term digital growth.</p>
-                          <div className='ct--a'>
-                            <span>View this Guide</span>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-
-                  </div>
-                  </div> */}
                   <div className="tab-pane fade" id="pills-home-05" role="tabpanel" aria-labelledby="pills-home-05-tab">
                     <div className='row'>
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
-                          <a href="https://youtu.be/f0EmJkDmpg4?si=8kVDObQ4LcrEHEzO" target='_blank'>
-                            <img src="/img/thumb-01.jpg" width={273} height={192} alt="bc-8-20" />
-                            <h3>Microsoft Dynamics 365 Finance Premium</h3>
-                            <p>Introducing business performance management capabilities in Dynamics 365 Finance.</p>
+                          <a href="https://www.youtube.com/watch?v=buh-r3WxZtA" target='_blank'>
+                            <img src="/img/sales-vid-01.jpg" width={273} height={192} alt="bc-8-20" />
+                            <h3>Microsoft Dynamics 365 Sales Accelerator Overview</h3>
+                            <p>In this video, get a comprehensive overview of Sales Accelerator in Microsoft Dynamics 365.</p>
                             <div className='ct--a'>
                               <span>Watch now</span>
                             </div>
@@ -730,10 +643,10 @@ const BusinessCentral = () => {
                       </div>
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
-                          <a href="https://youtu.be/43S3_bV8ht0?si=F4Tmf_ebE7D7HsOS" target='_blank'>
-                            <img src="/img/thumb-02.jpg" width={273} height={192} alt="bc-8-21" />
-                            <h3>Microsoft Copilot for Finance</h3>
-                            <p>Introducing Microsoft Copilot for Finance, the AI assistant for finance professionals.</p>
+                          <a href="https://www.youtube.com/watch?v=RQC9Qu9-hbI" target='_blank'>
+                            <img src="/img/sales-vid-02.jpg" width={273} height={192} alt="bc-8-21" />
+                            <h3>EY redefines CRM with Dynamics 365 Sales and Sales Agent in Microsoft 365 Copilot</h3>
+                            <p>EY redefines CRM with Dynamics 365 and Sales Agent in Microsoft 365 Copilot, facilitating data entry and freeing sellers to focus on relationships. </p>
                             <div className='ct--a'>
                               <span>Watch now</span>
                             </div>
@@ -742,10 +655,10 @@ const BusinessCentral = () => {
                       </div>
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
-                          <a href="https://youtu.be/0G2HO5dSVoM?si=VfXiFOIQUnK2RuWO" target='_blank'>
-                            <img src="/img/thumb-03.jpg" width={273} height={192} alt="bc-8-21" />
-                            <h3>Get started with the Financial Reconciliation Agent for Copilot for Finance</h3>
-                            <p>The Financial Reconciliation Agent in Microsoft 365 Copilot for Finance simplifies and automates</p>
+                          <a href="https://www.youtube.com/watch?v=x6zLv5V0eC0" target='_blank'>
+                            <img src="/img/sales-vid-03.jpg" width={273} height={192} alt="bc-8-21" />
+                            <h3>Customer ROI with Dynamics 365 Sales</h3>
+                            <p>Learn about the powerful transformations seen with Dynamics 365 Sales and Microsoft 365 Copilot, such as improved sales performance, enhanced customer interactions, and increased productivity.</p>
                             <div className='ct--a'>
                               <span>Watch now</span>
                             </div>
@@ -755,26 +668,10 @@ const BusinessCentral = () => {
 
                     </div>
                   </div>
-                  <div className="tab-pane fade" id="pills-home-06" role="tabpanel" aria-labelledby="pills-home-06-tab">
-                    <div className='row'>
-                      <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
-                        <div className='card0-01 card0-02'>
-                          <a href="/white-papers/micorosoft-finance/">
-                            <img src="/img/finacne-white-paper-category.png" width={273} height={192} alt="bc-8-17" />
-                            <h3>Build Resilience in Your Financial Operations</h3>
-                            <p>A maturity model designed to strengthen people, processes, and technology.</p>
-                            <div className='ct--a'>
-                              <span>Read Case Study</span>
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-
-                    </div>
-                  </div>
+  
                   <div className="tab-pane fade" id="pills-home-07" role="tabpanel" aria-labelledby="pills-home-07-tab">
                     <div className='row'>
-                      <BlogFinanaceCard categorySlug="dynamics-365-finance" />
+                      <BlogFinanaceCard categorySlug="dynamics-365-crm" />
 
                     </div>
                   </div>
