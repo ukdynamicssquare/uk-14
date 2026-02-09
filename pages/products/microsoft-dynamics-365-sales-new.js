@@ -42,25 +42,25 @@ const BusinessCentral = () => {
     <>
       <Head>
         <meta name="robots" content="noindex, nofollow" />
-        <title>Microsoft Dynamics 365 Finance Partner | Dynamics Square</title>
+        <title>Dynamics 365 Sales | Microsoft Sales CRM Solutions</title>
         <meta
           name="description"
-          content="Boost your financial visibility and faster your financial decision making by implementing Microsoft Dynamics 365 Finance. Book a free consultation today."
+          content="Boost sales productivity with Microsoft Dynamics 365 Sales. Manage leads, track opportunities, and close deals faster with AI-driven insights. Connect with us today!"
         />
         <link
           rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-finance/"
+          href="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-sales/"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-finance/" />
-        <meta property="og:title" content="Microsoft Dynamics 365 Finance Partner | Dynamics Square" />
-        <meta property="og:description" content="Boost your financial visibility and faster your financial decision making by implementing Microsoft Dynamics 365 Finance. Book a free consultation today." />
+        <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-sales/" />
+        <meta property="og:title" content="Dynamics 365 Sales | Microsoft Sales CRM Solutions" />
+        <meta property="og:description" content="Boost sales productivity with Microsoft Dynamics 365 Sales. Manage leads, track opportunities, and close deals faster with AI-driven insights. Connect with us today!" />
         <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/Sales-banner.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-finance/" />
-        <meta property="twitter:title" content="Microsoft Dynamics 365 Finance Partner | Dynamics Square" />
-        <meta property="twitter:description" content="Boost your financial visibility and faster your financial decision making by implementing Microsoft Dynamics 365 Finance. Book a free consultation today." />
+        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-sales/" />
+        <meta property="twitter:title" content="Dynamics 365 Sales | Microsoft Sales CRM Solutions" />
+        <meta property="twitter:description" content="Boost sales productivity with Microsoft Dynamics 365 Sales. Manage leads, track opportunities, and close deals faster with AI-driven insights. Connect with us today!" />
         <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/Sales-banner.png" />
 
       </Head>
@@ -308,8 +308,8 @@ const BusinessCentral = () => {
             <div className='row'>
               <div className='col-lg-10'>
                 <div className='solution-new-cta-001'>
-                  <span className='solution-new-cta-t'>Power Your Finance Future</span>
-                  <h3>Drive growth with AI-driven insights, automation, and control across every financial decision.</h3>
+                  <span className='solution-new-cta-t'>Equip Your Sales Teams with Agentic CRM Intelligence</span>
+                  <h3>Adopt AI guided selling that improves focus, prioritisation, and consistent deal progression.</h3>
                   <div>
                     <Link href="/contact-us/" className="btn-get-started scrollto">
                       <span>Get Started Today &nbsp;<i className="bi bi-arrow-right"></i></span>
@@ -449,13 +449,14 @@ const BusinessCentral = () => {
           <div className='row'>
             <div className='col-lg-9'>
               <div className='solution-new-cta-001'>
-                <h3>Need help selecting the right Dynamics 365 Sales licence for your organisation?</h3>
+                <h3>Move From Manual Selling to AI-First Sales Execution</h3>
+                <p>Support sellers with agents, insights, and guidance across every stage of sales cycles.</p>
                 <div>
                   <Link
                     href="#exampleModal"
                     data-bs-toggle="modal"
                     className="btn-get-started scrollto">
-                    <span>Speak with Our Experts &nbsp;<i className="bi bi-arrow-right"></i></span>
+                    <span>Talk to Our Experts &nbsp;<i className="bi bi-arrow-right"></i></span>
                   </Link>
                 </div>
               </div>
@@ -582,8 +583,8 @@ const BusinessCentral = () => {
 
               <div className='bc-new-tabs-li'>
                 <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                  <li className="nav-item active" role="presentation">
-                    <button className="nav-link" id="pills-home-03-tab" data-bs-toggle="pill" data-bs-target="#pills-home-03" type="button" role="tab" aria-controls="pills-home-03" aria-selected="false">Podcasts</button>
+                  <li className="nav-item" role="presentation">
+                    <button className="nav-link active" id="pills-home-03-tab" data-bs-toggle="pill" data-bs-target="#pills-home-03" type="button" role="tab" aria-controls="pills-home-03" aria-selected="false">Podcasts</button>
                   </li>
                   <li className="nav-item" role="presentation">
                     <button className="nav-link" id="pills-home-05-tab" data-bs-toggle="pill" data-bs-target="#pills-home-05" type="button" role="tab" aria-controls="pills-home-05" aria-selected="false">Videos</button>

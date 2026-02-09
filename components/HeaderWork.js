@@ -70,7 +70,7 @@ const HeaderWork = () => {
 
 
     // Handle hover tab switching
-    const navLinks = document.querySelectorAll(".nav-link");
+    const navLinks = document.querySelectorAll(".megamenu .nav-link");
     navLinks.forEach((link) => {
       link.addEventListener("mouseenter", (event) => {
         const targetTab = new bootstrap.Tab(event.target);
