@@ -469,8 +469,8 @@ const BusinessCentral = () => {
           <div className='row'>
             <div className='col-lg-9'>
               <div className='solution-new-banner-sub-head'>
-                <h2>Dynamics 365 Finance Pricing & Licensing</h2>
-                <p>Financial clarity drives better decisions, faster growth, and lasting resilience. With Dynamics 365 Finance, businesses in the UK gain the power to simplify complexity, strengthen control, and scale with confidence.</p>
+                <h2>Dynamics 365 Sales CRM Pricing & Licensing</h2>
+                <p>Choose a Dynamics 365 Sales plan that matches your sales structure, data needs, and growth goals. Each edition builds on Microsoft’s agentic CRM solution and supports secure, scalable selling.</p>
               </div>
             </div>
           </div>
