@@ -35,7 +35,7 @@ const Inedex = () => {
                 // onClick={() => goToSection(1)}
               >
                 Scroll Down
-                <div class="scroll-down-aaa">
+                <div className="scroll-down-aaa">
                   <span></span>
                   <span></span>
                   <span></span>

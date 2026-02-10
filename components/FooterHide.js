@@ -589,7 +589,7 @@ const FooterHideNew = () => {
               <div className="col-lg-2  col-md-12 text-md-start">
                 {/* <div className='btnuu '>
                   <p>GET IN TOUCH</p>
-                <a href="#">Request Consultation <i class="bi bi-arrow-right"></i></a>
+                <a href="#">Request Consultation <i className="bi bi-arrow-right"></i></a>
                 </div> */}
                 <p>FOLLOW US</p>
 

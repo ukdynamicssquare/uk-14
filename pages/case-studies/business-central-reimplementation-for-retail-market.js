@@ -247,7 +247,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="ce-image-ce">
-                  <img src="/img/case-s-03.png" alt="Case Study" class="img-fluid" />
+                  <img src="/img/case-s-03.png" alt="Case Study" className="img-fluid" />
               </div>
             </div>
           </div>

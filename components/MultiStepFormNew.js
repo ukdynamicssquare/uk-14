@@ -186,8 +186,8 @@ const MultiStepFormNew = () => {
                 {loading ? (
                   <div className='loading-scrren'>
                     <div>
-                      <div class="spinner-border text-primary" role="status">
-                        <span class="sr-only"></span>
+                      <div className="spinner-border text-primary" role="status">
+                        <span className="sr-only"></span>
                       </div>
                     </div>
                   </div>

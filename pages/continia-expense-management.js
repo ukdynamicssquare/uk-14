@@ -166,10 +166,10 @@ const ContiniaExpence = () => {
                     <div className='mycard__inner-left mycard__inner-left-ul'>
                       <h3>Mobile-First Expense Capture </h3>
                       <ul>
-                        <li><i class="bi bi-check"></i> <span>Submit expenses from anywhere using the Continia Expense Management App</span></li>
-                        <li><i class="bi bi-check"></i> <span>AI-powered scanner reads, extracts, and categorises receipts in under 30 seconds </span></li>
-                        <li><i class="bi bi-check"></i> <span>Snap a receipt, share a PDF, or upload from other apps — it just works </span></li>
-                        <li><i class="bi bi-check"></i> <span>No need to keep paper. No need to remember later</span></li>
+                        <li><i className="bi bi-check"></i> <span>Submit expenses from anywhere using the Continia Expense Management App</span></li>
+                        <li><i className="bi bi-check"></i> <span>AI-powered scanner reads, extracts, and categorises receipts in under 30 seconds </span></li>
+                        <li><i className="bi bi-check"></i> <span>Snap a receipt, share a PDF, or upload from other apps — it just works </span></li>
+                        <li><i className="bi bi-check"></i> <span>No need to keep paper. No need to remember later</span></li>
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
@@ -182,10 +182,10 @@ const ContiniaExpence = () => {
                     <div className='mycard__inner-left mycard__inner-left-ul'>
                       <h3>Mileage Made Simple</h3>
                       <ul>
-                        <li><i class="bi bi-check"></i> <span>Google Maps integration for start–finish mileage tracking</span></li>
-                        <li><i class="bi bi-check"></i> <span>Add "via" points for complex routes </span></li>
-                        <li><i class="bi bi-check"></i> <span>Create templates for frequent travel patterns</span></li>
-                        <li><i class="bi bi-check"></i> <span>Automatic calculation based on real-world routes </span></li>
+                        <li><i className="bi bi-check"></i> <span>Google Maps integration for start–finish mileage tracking</span></li>
+                        <li><i className="bi bi-check"></i> <span>Add "via" points for complex routes </span></li>
+                        <li><i className="bi bi-check"></i> <span>Create templates for frequent travel patterns</span></li>
+                        <li><i className="bi bi-check"></i> <span>Automatic calculation based on real-world routes </span></li>
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
@@ -198,10 +198,10 @@ const ContiniaExpence = () => {
                     <div className='mycard__inner-left mycard__inner-left-ul'>
                       <h3>Smart Credit Card Reconciliation</h3>
                       <ul>
-                        <li><i class="bi bi-check"></i> <span>Smart Credit Card Reconciliation</span></li>
-                        <li><i class="bi bi-check"></i> <span>Match receipts to transactions and missing receipts get flagged automatically </span></li>
-                        <li><i class="bi bi-check"></i> <span>Create expense reports from card activity in seconds </span></li>
-                        <li><i class="bi bi-check"></i> <span>Instant alerts for unmatched or suspicious items </span></li>
+                        <li><i className="bi bi-check"></i> <span>Smart Credit Card Reconciliation</span></li>
+                        <li><i className="bi bi-check"></i> <span>Match receipts to transactions and missing receipts get flagged automatically </span></li>
+                        <li><i className="bi bi-check"></i> <span>Create expense reports from card activity in seconds </span></li>
+                        <li><i className="bi bi-check"></i> <span>Instant alerts for unmatched or suspicious items </span></li>
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
@@ -214,10 +214,10 @@ const ContiniaExpence = () => {
                     <div className='mycard__inner-left mycard__inner-left-ul'>
                       <h3>Streamlined Approvals </h3>
                       <ul>
-                        <li><i class="bi bi-check"></i> <span>Web Approval Portal for managers; no need to log in to BC </span></li>
-                        <li><i class="bi bi-check"></i> <span>Fully configurable approval workflows </span></li>
-                        <li><i class="bi bi-check"></i> <span>All documents, per diems, and mileage visible for context </span></li>
-                        <li><i class="bi bi-check"></i> <span>Approvals from any device, across any company code </span></li>
+                        <li><i className="bi bi-check"></i> <span>Web Approval Portal for managers; no need to log in to BC </span></li>
+                        <li><i className="bi bi-check"></i> <span>Fully configurable approval workflows </span></li>
+                        <li><i className="bi bi-check"></i> <span>All documents, per diems, and mileage visible for context </span></li>
+                        <li><i className="bi bi-check"></i> <span>Approvals from any device, across any company code </span></li>
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
@@ -230,10 +230,10 @@ const ContiniaExpence = () => {
                     <div className='mycard__inner-left mycard__inner-left-ul'>
                       <h3>Secure Digital Archiving </h3>
                       <ul>
-                        <li><i class="bi bi-check"></i> <span>Receipts and expense docs are securely stored </span></li>
-                        <li><i class="bi bi-check"></i> <span>Indexed, audit-traceable, and fully searchable </span></li>
-                        <li><i class="bi bi-check"></i> <span>Certified audit-proof in jurisdictions like Germany </span></li>
-                        <li><i class="bi bi-check"></i> <span>Track every document’s journey from submission to booking </span></li>
+                        <li><i className="bi bi-check"></i> <span>Receipts and expense docs are securely stored </span></li>
+                        <li><i className="bi bi-check"></i> <span>Indexed, audit-traceable, and fully searchable </span></li>
+                        <li><i className="bi bi-check"></i> <span>Certified audit-proof in jurisdictions like Germany </span></li>
+                        <li><i className="bi bi-check"></i> <span>Track every document’s journey from submission to booking </span></li>
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
@@ -246,10 +246,10 @@ const ContiniaExpence = () => {
                     <div className='mycard__inner-left mycard__inner-left-ul'>
                       <h3>Per Diems and Purchase Contracts</h3>
                       <ul>
-                        <li><i class="bi bi-check"></i> <span>Auto-calculate travel allowances for meals and accommodation</span></li>
-                        <li><i class="bi bi-check"></i> <span>Manage subscriptions and contracts with expiry alerts</span></li>
-                        <li><i class="bi bi-check"></i> <span>Never pay for unused software again </span></li>
-                        <li><i class="bi bi-check"></i> <span>Avoid forgotten renewals and hidden cost creep</span></li>
+                        <li><i className="bi bi-check"></i> <span>Auto-calculate travel allowances for meals and accommodation</span></li>
+                        <li><i className="bi bi-check"></i> <span>Manage subscriptions and contracts with expiry alerts</span></li>
+                        <li><i className="bi bi-check"></i> <span>Never pay for unused software again </span></li>
+                        <li><i className="bi bi-check"></i> <span>Avoid forgotten renewals and hidden cost creep</span></li>
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
