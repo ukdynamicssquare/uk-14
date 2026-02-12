@@ -86,7 +86,7 @@ const FormErpCompare = ({ onSuccess }) => {
     if (Object.keys(validationErrors).length === 0) {
       setSubmitting(true);
       try {
-        await emailjs.sendForm('service_x0eo9w8', 'template_e2eswsj', e.target, 'xIFtTfBj6NR498Plv');
+        await emailjs.sendForm('service_o50k44u', 'template_9y7o4fr', e.target, 'HX4_bDzP6dt5FVC9H');
         await fetch('https://blognew.dynamicssquare.co.uk/api/formData', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -101,6 +101,7 @@ const FormErpCompare = ({ onSuccess }) => {
           companyname: '',
           currentPageUrl: '',
           defaultCountryName: '',
+          formtag:'',
         });
       } catch (error) {
         console.error('Error submitting form:', error);
@@ -124,6 +125,7 @@ const FormErpCompare = ({ onSuccess }) => {
             value={formData.name}
             onChange={handleChange}
           />
+           <input type="hidden" name="currentPageUrl" value={currentPageUrl} />
           {errors.name && <div className="text-danger">{errors.name}</div>}
         </div>
         <div className="mb-3">
