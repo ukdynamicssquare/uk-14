@@ -113,11 +113,12 @@ const HeaderWork = () => {
             <div className="left-logo">
               <a href="/" className="logo">
                 <div className="logo-wrapper">
-                  <img
+                  <Image
                   src={getLogoSrc()}
                   alt="Dynamics Square TM Logo"
-                  fetchpriorit
-                  y="high"
+                  priority
+                  width={301}
+                  height={21}
                 />
                  <Image className="log-part" src={getLogoSrctwo()}  alt="" width="141"
                   height="40" priority />
