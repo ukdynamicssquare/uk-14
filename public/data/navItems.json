@@ -26,5 +26,13 @@
     { "id": "section6", "label": "Copilot in Finance" },
     { "id": "section8", "label": "Pricing & Licensing" },
     { "id": "section9", "label": "Resources" }
+  ],
+  "products/microsoft-dynamics-365-sales": [
+    { "id": "section2", "label": "Why Implement" },
+    { "id": "section3", "label": "Features" },
+    { "id": "section4", "label": "Benefits" },
+    { "id": "section6", "label": "Copilot in Finance" },
+    { "id": "section8", "label": "Pricing & Licensing" },
+    { "id": "section9", "label": "Resources" }
   ]
 }

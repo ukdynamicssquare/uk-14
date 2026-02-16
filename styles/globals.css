@@ -16184,7 +16184,9 @@ margin: -30px 0px -80px;
    background: url("/img/exp-man-bg-1.png") no-repeat center right;
   background-size: contain;
 }
-
+.asd.asd4{
+   background: url("/img/sales-new-09.png") no-repeat center right;
+}
 .solution-new-cta::before {
   content: "";
   position: absolute;

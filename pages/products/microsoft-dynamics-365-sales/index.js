@@ -1,20 +1,42 @@
-import React, { useState } from "react";
-import Head from "next/head";
-import Image from "next/image";
-import Script from "next/script";
-import Link from "next/link";
-import ModalVideo from "react-modal-video";
-import Blog from "../../../components/Blog";
-const Sales = () => {
-  const [isOpen, setOpen] = useState(false);
-  const [open, setsOpen] = useState(false);
+import { useRef, useState } from 'react';
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+// import useGsapScrollCards from '../../../hooks/useGsapScrollCards';
+import faqData from '../../../public/data/sales_faq.json';
+import useCardScrollEffect from "../../../components/useCardScrollEffect";
+import BcPopPdf from '../../../components/BCPdfPopup';
+import NavBar from '../../../components/NavBar';
+import BlogFinanaceCard from '../../../components/BlogFinanaceCard';
 
-  const colostyle = {
-    color: "#111",
-    fontSize: "14px",
-    color: "rgb(184 43 55)",
 
-  }
+
+// const StackedCards = dynamic(() => import("../../components/StackedCards"), {
+//     ssr: false,
+//   });
+
+const SalesNew = () => {
+  /*gsap card scroll*/
+  // const containerRef = useRef(null);
+  // useGsapScrollCards(containerRef);
+  /*gsap card scroll*/
+
+  useCardScrollEffect()
+
+  /*faq*/
+  const [visibleCount, setVisibleCount] = useState(5);
+
+  const handleLoadMore = () => {
+    setVisibleCount((prev) => prev + 3);
+  };
+
+  const [pdfType, setPdfType] = useState(null);
+  const handleOpenModal = (type) => {
+    setPdfType(type);
+    // Open modal manually (needed since you use Bootstrap)
+    const modal = new bootstrap.Modal(document.getElementById('pdfModel'));
+    modal.show();
+  };
 
   return (
     <>
@@ -22,7 +44,7 @@ const Sales = () => {
         <title>Dynamics 365 Sales | Microsoft Sales CRM Solutions</title>
         <meta
           name="description"
-          content="Dynamics 365 for sales is a customer relationship management software that helps to effortlessly build strong relationships with your customers and seamlessly"
+          content="Boost sales productivity with Microsoft Dynamics 365 Sales. Manage leads, track opportunities, and close deals faster with AI-driven insights. Connect with us today!"
         />
         <link
           rel="canonical"
@@ -31,146 +53,242 @@ const Sales = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-sales/" />
         <meta property="og:title" content="Dynamics 365 Sales | Microsoft Sales CRM Solutions" />
-        <meta property="og:description" content="Dynamics 365 for sales is a customer relationship management software that helps to effortlessly build strong relationships with your customers and seamlessly." />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/Sales-banner.png" />
+        <meta property="og:description" content="Boost sales productivity with Microsoft Dynamics 365 Sales. Manage leads, track opportunities, and close deals faster with AI-driven insights. Connect with us today!" />
+        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/sales-new-01.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-sales/" />
         <meta property="twitter:title" content="Dynamics 365 Sales | Microsoft Sales CRM Solutions" />
-        <meta property="twitter:description" content="Dynamics 365 for sales is a customer relationship management software that helps to effortlessly build strong relationships with your customers and seamlessly." />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/Sales-banner.png" />
+        <meta property="twitter:description" content="Boost sales productivity with Microsoft Dynamics 365 Sales. Manage leads, track opportunities, and close deals faster with AI-driven insights. Connect with us today!" />
+        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/sales-new-01.png" />
+
       </Head>
-      <ModalVideo
-        channel="youtube"
-        autoplay
-        isOpen={isOpen}
-        videoId="yCJ7C1KS-Jw"
-        onClose={() => setOpen(false)}
-      />
-      <section className="Solution-banner hero-1 hero">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-6 mobile-1 align-self-center">
-              <h1>Dynamics 365 Sales</h1>
-              <p>Better sales, engaged customers & improved revenue. Grow your business with high-velocity sales and personalised customer engagement with Dynamics 365 sales.</p>
-              <div>
-                <div className="text-center text-lg-start">
+      <div className='solution-new-banner-one'>
+        <div className='container'>
+          <div className='row justify-content-center'>
+            <div className='col-lg-8'>
+              <div className='solution-new-banner-one-content'>
+                <h1>Microsoft Dynamics 365 Sales</h1>
+                <span className='large-heading'>Deploy a trusted agentic CRM solution used by sales teams across the world</span>
+                <p>Microsoft Dynamics 365 Sales brings pipeline, customer data, and seller actions into one connected system. Dynamics 365 for Sales is an agentic CRM solution with built-in AI and Copilot support that help sales professionals to close deals faster and improve daily productivity with guided, data-led selling.</p>
+                <div className="text-center">
                   <Link
                     href="#exampleModal"
                     data-bs-toggle="modal"
                     className="btn-get-started scrollto">
-
-                    <span>Schedule a Demo</span>
-
+                    <span>Try for Free &nbsp;<i className="bi bi-arrow-right"></i></span>
                   </Link>
                 </div>
               </div>
             </div>
-            <div className="col-lg-6 align-self-center">
-              <Image src="/img/Sales-banner.png" alt="Dynamics 365 Sales" width={771} height={478} priority={true} />
+
+          </div>
+          <div className='row justify-content-center'>
+            <div className='col-lg-10'>
+              <div className="solution-new-banner-one-imgs">
+                <Image src="/img/sales-new-01.png" alt="sales-new-01" width={916} height={584} className="flot-1" priority />
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div className='container cust-pp'>
+          <div className='row'>
+            <div className='col-lg-12'>
+              <div className='flecx'>
+                <div className='left-fl'>
+                  <p>Dynamics Square helps small and medium businesses simplify processes, boost productivity, and achieve measurable results with the AI-powered Dynamics 365 Business Central ERP.</p>
+                </div>
+                <div className='left-rl'>
+                  <Image src="/img/partner-logo-black.png" width={193} height={55} alt="partner-logo-black" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div className='container' id='section1'>
+          <div className='row'>
+            <div className='col-lg-6'>
+              <div className='solution-new-banner-sub-head'>
+                <h2>What is Dynamics 365 Sales?</h2>
+                <p>Microsoft Dynamics 365 for Sales (formerly known as Dynamics CRM) helps to improve end-to-end sales practices, build & improve your customer relationship, and supports to close sales deals faster.</p>
+                <p>Microsoft Dynamics 365 Sales integrates sellers, customers, and data into an intelligent sales system. SMEs use this app alongside Business Central. <a href="/blog/business-central-integration-with-dynamics-365-sales/">Business Central integration with Dynamics 365 Sales</a> gives growing enterprises a complete ERP and CRM solution.</p>
+                <p>This Agentic CRM solution uses AI, automation, and real-time insights to help sales teams manage leads, opportunities, and customer relationships with greater clarity and focus.</p>
+                <p>Built on a flexible and cloud-based platform, Dynamics 365 Sales adapts easily to different sales models and industries. Organisations can configure fields, views, dashboards, and <a href="/products/dynamics-365-copilot/">AI agents in Dynamics 365 Sales</a> to match their sales methodology, data sources, and growth plans.  </p>
+                <p><b>In short, Dynamics 365 Sales is:</b></p>
+                <ul className='banner-sub-head-list'>
+                  <li><i className="bi bi-check2"></i> A unified system for lead, opportunity, and customer management</li>
+                  <li><i className="bi bi-check2"></i> An agentic CRM solution powered by AI, Copilot, and sales agents</li>
+                  <li><i className="bi bi-check2"></i> A scalable cloud platform that supports modern selling teams</li>
+                </ul>
+                <p>Ready to equip your sales team with an intelligent and connected CRM solution?</p>
+                <div className="text-lg-start">
+                  <Link
+                    href="#exampleModal"
+                    data-bs-toggle="modal"
+                    className="btn-get-started scrollto">
+                    <span>Book Your Free Dynamics 365 Sales CRM Demo &nbsp;<i className="bi bi-arrow-right"></i></span>
+                  </Link>
+
+
+                </div>
+              </div>
+            </div>
+            <div className='col-lg-6 align-self-center'>
+              <div className='dsa-minee'><Image src="/img/sales-new-02.png" alt="sales-new-02" width={630} height={588} /></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <NavBar />
+      <section id='section2' className="solution-new-banner-two">
+        <div className='container'>
+          {/* <div className='row'>
+            <div className='col-lg-9'>
+              <div className='solution-new-banner-sub-head'>
+                <h2>Dynamics 365 Finance Implementation: <br/>Why Your Business Needs It</h2>
+              </div>
+            </div>
+          </div> */}
+          <div className='row'>
+            <div className='col-lg-6 align-self-center'>
+              <div className='product-side-001'>
+                <div className="flot-8">
+                  <Image src="/img/sales-new-03.png" width={523} height={459} alt="sales-new-03" />
+                </div>
+                <img width={563} height={478} src="/img/n-007.png" alt="sales-new-03" className="flot-9" />
+              </div>
+            </div>
+            <div className='col-lg-6 align-self-center'>
+              <div className='product-side-002-content'>
+                <div className='solution-new-banner-sub-head' style={{ paddingBottom: '0px' }}>
+                  <h2>Business Challenges Solved by Dynamics 365 Sales</h2>
+                </div>
+                <p>Dynamics 365 Sales capabilities address common challenges faced by modern sales teams across industries. Some of the most frequent challenges include:</p>
+                <ul className='banner-sub-head-list'>
+                  <li><i className="bi bi-check2"></i> Working with traditional CRMs that rely heavily on manual updates</li>
+                  <li><i className="bi bi-check2"></i> Limited visibility into pipeline health and deal priorities</li>
+                  <li><i className="bi bi-check2"></i> Sellers spending excessive time on research and data entry</li>
+                  <li><i className="bi bi-check2"></i> Missed follow-ups due to unclear next best actions</li>
+                  <li><i className="bi bi-check2"></i> Inconsistent sales execution across teams and regions</li>
+                  <li><i className="bi bi-check2"></i> Poor forecasting accuracy caused by incomplete opportunity data</li>
+                  <li><i className="bi bi-check2"></i> Difficulty qualifying leads at scale with limited context</li>
+                  <li><i className="bi bi-check2"></i> Sales insights scattered across emails, calls, and documents</li>
+                  <li><i className="bi bi-check2"></i> Limited guidance for sellers during complex deal cycles</li>
+                </ul>
+                <p>Dynamics 365 Sales is an agentic CRM solution that brings data, AI, and seller actions into one connected system. It helps sales teams stay focused, act on the right opportunities, and move deals forward with confidence and consistency.</p>
+                <p>Whether building a sales function or scaling an established team, Dynamics 365 Sales features support structured growth with full clarity and control.</p>
+                <div className="text-lg-start">
+                  <Link
+                    href="#exampleModal"
+                    data-bs-toggle="modal"
+                    className="btn-get-started scrollto">
+                    <span>Book Your Free Dynamics 365 Sales Demo &nbsp;<i className="bi bi-arrow-right"></i></span>
+                  </Link>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
       </section>
-      <section>
+      <section id='section3' className='solution-new-banner-three'>
+        {/* <div className="container" ref={containerRef}> */}
         <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-9">
-              <header className="section-header">
-                <h2>What is dynamics 365 Sales?</h2>
-                <p>
-                  Microsoft Dynamics 365 for Sales (formerly known as Dynamics
-                  CRM) helps to improve end-to-end sales practices, build &
-                  improve your customer relationship, and supports to close
-                  sales deals faster. With actionable sales insights configured
-                  for mobile devices, it helps to make instant productive
-                  decisions, engage customers, and drive effective sales
-                  strategy.
-                </p>
-              </header>
+          <div className='row'>
+            <div className='col-lg-9'>
+              <div className='solution-new-banner-sub-head'>
+                <h2>Inside Dynamics 365 Sales: What Powers Your Sales Teams</h2>
+                <p><b>Dynamics 365 Sales features</b> let you run sales operations with total control and confidence. Replace manual follow ups with AI driven actions, reduce delays through intelligent guidance, and improve deal outcomes with real time visibility. Here is how this agentic CRM solution transforms selling for modern organisations:</p>
+              </div>
             </div>
           </div>
-
-          <div className="row p-lg-6">
-            <div className="col-lg-6">
-              <div className="finace-acc">
-                <div className="accordion" id="accnew">
-                  <div className="accordion-item">
-                    <h3 className="accordion-header" id="headingTwo">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#fin1"
-                        aria-expanded="false"
-                        aria-controls="fin1"
-                      >
-                        <div className="wr-in">
-                          <img src="/img/sales-hub-app.svg" alt="icons" width="36"
-                            height="36" />
-                        </div>
-                        <span>Sales Hub App</span>
-                      </button>
-                    </h3>
-                    <div
-                      id="fin1"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingTwo"
-                      data-bs-parent="#accnew"
-                    >
-                      <div className="accordion-body">
-                        Developed on unified interface framework configured with
-                        responsiveness that facilitates users with interactive
-                        app view and navigation for any screen or device. The
-                        Sales Hub app is designed to be used by both desktops
-                        and mobile devices and comes with Microsoft Dynamics 365
-                        Sales Enterprise Plan.
-                      </div>
+          <div className="row">
+            <div className="col-12">
+              <div className="stached-scroll-card">
+                <div className='mycard'>
+                  <div className='mycard__inner'>
+                    <div className='mycard__inner-left'>
+                      <h3>Automated Lead and Opportunity Management</h3>
+                      <p>Manual lead handling slows response times and weakens conversion rates but with Dynamics 365 CRM Sales, teams can:</p>
+                      <ul>
+                        <li>Automatically research and qualify incoming leads using AI agents</li>
+                        <li>Prioritise opportunities with AI based scoring and guided work lists</li>
+                        <li>Reduce manual data entry across emails, calls, and meetings</li>
+                      </ul>
+                    </div>
+                    <div className='mycard__inner-right'>
+                      <Image src="/img/sales-new-04.png" width={510} height={401} alt="Automated Lead and Opportunity Management" />
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-
-            <div className="col-lg-6">
-              <div className="finace-acc">
-                <hr className="mob-disp" />
-                <div className="accordion" id="accnew">
-                  <div className="accordion-item">
-                    <h3 className="accordion-header" id="headingTwo">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#fin3"
-                        aria-expanded="false"
-                        aria-controls="fin3"
-                      >
-                        <div className="wr-in">
-                          <img
-                            src="/img/sales-proffesional-app.svg"
-                            alt="icons"
-                            width="36"
-                            height="36"
-                          />
-                        </div>
-                        <span>Sales Professional App</span>
-                      </button>
-                    </h3>
-                    <div
-                      id="fin3"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingTwo"
-                      data-bs-parent="#accnew"
-                    >
-                      <div className="accordion-body">
-                        Sales Professional App is designed similar to the Sales
-                        Hub app. The only difference is- the entities that Sales
-                        Professional app comprises are a subset of entities
-                        included in the Sales Enterprise licensing. This app
-                        comes and can be availed of with Microsoft Dynamics 365
-                        Sales Professional licensing Plan.
-                      </div>
+                <div className='mycard'>
+                  <div className='mycard__inner'>
+                    <div className='mycard__inner-left'>
+                      <h3>Intelligent Pipeline and Deal Execution</h3>
+                      <p>When priorities are not clear, it causes deals to stall without warning. Dynamics 365 Sales helps teams to:</p>
+                      <ul>
+                        <li>Track pipeline health with real time insights and summaries</li>
+                        <li>Receive AI driven alerts for the best next sales actions</li>
+                        <li>Progress deals faster with consistent and guided sales steps</li>
+                      </ul>
+                    </div>
+                    <div className='mycard__inner-right'>
+                      <Image src="/img/sales-new-05.png" width={510} height={401} alt="Intelligent Pipeline and Deal Execution" />
+                    </div>
+                  </div>
+                </div>
+                <div className='mycard'>
+                  <div className='mycard__inner'>
+                    <div className='mycard__inner-left'>
+                      <h3>Smarter Forecasting and Performance Insight</h3>
+                      <p>Sales forecasting based on intuition creates risk and uncertainty. With <b>Dynamics 365 Sales app</b>, leaders can:</p>
+                      <ul>
+                        <li>Predict revenue using AI supported forecasting models</li>
+                        <li>Compare performance against targets with clear visual charts</li>
+                        <li>Analyse conversion rates and win trends using Copilot queries</li>
+                      </ul>
+                    </div>
+                    <div className='mycard__inner-right'>
+                      <Image src="/img/sales-new-06.png" width={510} height={401} alt="Smarter Forecasting and Performance Insight" />
+                    </div>
+                  </div>
+                </div>
+                <div className='mycard'>
+                  <div className='mycard__inner'>
+                    <div className='mycard__inner-left'>
+                      <h3>Personalised Customer Engagement at Scale</h3>
+                      <p>Make every impression, every engagement count because Generic outreach weakens trust and engagement over time. A part of <a href="/products/dynamics-365-customer-engagement/">Dynamics 365 CE</a> (<b>Customer Engagement</b>), Dynamics 365 Sales enables teams to:</p>
+                      <ul>
+                        <li>Prepare for meetings with AI generated customer summaries</li>
+                        <li>Draft emails and call notes using Copilot assistance</li>
+                        <li>Maintain consistent and informed interactions across channels</li>
+                      </ul>
+                    </div>
+                    <div className='mycard__inner-right'>
+                      <Image src="/img/sales-new-07.png" width={510} height={401} alt="Personalised Customer Engagement at Scale<" />
+                    </div>
+                  </div>
+                </div>
+                <div className='mycard'>
+                  <div className='mycard__inner'>
+                    <div className='mycard__inner-left'>
+                      <h3>Connected Selling with Secure Foundations</h3>
+                      <p>When your apps are disconnected, they limit visibility and create security concerns. Dynamics 365 Sales integrates with:</p>
+                      <ul>
+                        <li>Microsoft 365 and other <a href="/products/microsoft-dynamics-365/">Dynamics 365 apps</a> to support daily seller productivity</li>
+                        <li>Power Platform to extend workflows and automation</li>
+                        <li>Enterprise grade security controls to protect customer data</li>
+                      </ul>
+                    </div>
+                    <div className='mycard__inner-right'>
+                      <Image src="/img/sales-new-08.png" width={571} height={369} alt="Connected Selling with Secure Foundations" />
                     </div>
                   </div>
                 </div>
@@ -179,861 +297,454 @@ const Sales = () => {
           </div>
         </div>
       </section>
-      <section className="Solution-business-why">
+      <section className='solution-new-cta'>
+        <div className='asd asd4'>
+          <div className='container'>
+            <div className='row'>
+              <div className='col-lg-10'>
+                <div className='solution-new-cta-001'>
+                  <span className='solution-new-cta-t'>Equip Your Sales Teams with Agentic CRM Intelligence</span>
+                  <h3>Adopt AI guided selling that improves focus, prioritisation, and consistent deal progression.</h3>
+                  <div>
+                    <Link href="/contact-us/" className="btn-get-started scrollto">
+                      <span>Get Started Today &nbsp;<i className="bi bi-arrow-right"></i></span>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <section id='section4' className='solution-new-banner-four'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-lg-9'>
+              <div className='solution-new-banner-sub-head'>
+                <h2>Dynamics 365 Sales Benefits: The Advantage Modern Sales Teams Need</h2>
+                <p>High performing sales organisations share a common trait. They run selling on systems that guide action, reduce friction, and improve outcomes. Dynamics 365 Sales delivers clarity, focus, and execution through an agentic CRM solution built for modern selling teams.</p>
+              </div>
+            </div>
+          </div>
+          <div className='row'>
+            <div className='col-lg-6'>
+              <div className='product-side-002'>
+                <ul>
+                  <li>
+                    <h3>Close Deals Faster with Clear Priorities</h3>
+                    <p>Deals stall when sellers juggle too many tasks without direction. Dynamics 365 Sales uses AI driven prioritisation, opportunity scoring, and guided actions so sellers focus on the deals that matter most.</p>
+                  </li>
+                  <li>
+                    <h3>Improve Pipeline Visibility and Forecast Accuracy</h3>
+                    <p>Unclear pipelines weaken planning and confidence. With real time pipeline insights and AI supported forecasting, Dynamics 365 Sales helps leaders track progress, predict revenue, and plan with greater certainty.</p>
+                  </li>
+                  <li>
+                    <h3>Increase Seller Productivity with AI Assistance</h3>
+                    <p>Manual updates drain selling time and energy. Copilot supports sellers with email drafts, call summaries, meeting preparation, and automatic activity capture across daily workflows.</p>
+                  </li>
+                  <li>
+                    <h3>Deliver Better Customer Experiences at Scale</h3>
+                    <p>Inconsistent interactions damage trust over time. Dynamics 365 Sales equips teams with customer summaries, history, and insights so every conversation feels informed, relevant, and timely.</p>
+                  </li>
+                  <li>
+                    <h3>Scale Sales Operations with Security and Control</h3>
+                    <p>Growth increases data risk and process complexity. Dynamics 365 Sales provides role-based access, compliance controls, and secure data handling to support expansion without compromising governance.</p>
+                  </li>
+                </ul>
+                <div className='product-side-002-ext'>
+                  <p>Organisations using Dynamics 365 Sales report stronger pipeline control, improved forecast confidence, and measurable gains in seller productivity across teams.</p>
+                  <div className="text-lg-start">
+                    <Link
+                      href="#exampleModal"
+                      data-bs-toggle="modal"
+                      className="btn-get-started scrollto">
+                      <span>Claim Your Free Dynamics 365 Sales Consultation &nbsp;<i className="bi bi-arrow-right"></i></span>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className='col-lg-6 align-self-center'>
+              <div className='product-side-002-img001'>
+                <Image src="/img/sales-new-10.png" width={592} height={680} alt="Card 6" />
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className='n-014' >
+          <img src="/img/n-014.png" width={604} height={958} alt="Card 6" />
+        </div>
+      </section>
+
+      <section id='section6' className='solution-new-six' style={{ backgroundColor: '#fff' }}>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-lg-9'>
+              <div className='solution-new-banner-sub-head'>
+                <h2>Agents in Dynamics 365 Sales</h2>
+              </div>
+            </div>
+          </div>
+          <div className='row'>
+            <div className='col-lg-12'>
+              <div className='text-center' style={{marginBottom:'30px'}}>
+                <Image src='/img/sales-new-11.png' alt='sales-new-11' width={1282} height={383} />
+              </div>
+            </div>
+          </div>
+
+          <div className='row g-3 m-t-2'>
+            <div className='col-lg-6'>
+              <div className='solution-new-bg'>
+                <div className='solution-new-six-card'>
+                  <h3 style={{fontSize:"18px"}}>AI-First Selling, Built into Your CRM</h3>
+                  <p>Dynamics 365 Sales delivers a fully agentic CRM solution through prebuilt sales agents that support the entire customer engagement journey, from lead qualification to deal close and beyond. These agents work with sellers to reduce manual effort and improve focus on high value customer conversations.</p>
+                </div>
+              </div>
+              <div className='solution-new-bg'>
+                <div className='solution-new-six-card'>
+                  <h3 style={{fontSize:"18px"}}>Built on Copilot and Copilot Studio</h3>
+                  <p style={{ marginBottom: '15px' }}>Sales agents are powered by <a href="/blog/microsoft-dynamics-copilot/">Microsoft Copilot</a> and extended through Copilot Studio. Organisations can combine prebuilt agents with custom agents to support specific sales processes and scale productivity across teams.</p>
+                  <p>Together, <a href="/products/microsoft-dynamics-365-sales/copilot/">Copilot, agents, and Dynamics 365 Sales</a> enable AI-first selling with clarity, consistency, and confidence.</p>
+                </div>
+              </div>
+            </div>
+            <div className='col-lg-6 d-flex'>
+              <div className='solution-new-bg'>
+                <div className='solution-new-six-card'>
+                  <h3 style={{fontSize:"18px",marginBottom: '25px'}}>Prebuilt Sales Agents+</h3>
+                  <div style={{marginBottom: '20px'}}>
+                    <h3>Sales Qualification Agent</h3>
+                    <p>Researches and prioritises inbound leads, engages prospects, and prepares personalised outreach. Sellers gain time to focus on relationship building and opportunity progression.</p>
+                  </div>
+                  <div style={{marginBottom: '20px'}}>
+                    <h3>Sales Close Agent</h3>
+                    <p>Analyses active deals and highlights insights that help sellers prioritise actions and move opportunities forward faster. Available in preview.</p>
+                  </div>
+                  <div>
+                    <h3>Sales Research Agent</h3>
+                    <p>Answers complex sales questions in real time by analysing data across systems and turning information into clear, decision ready insights. Available in preview.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            {/* <div className='col-lg-12'>
+              <div className='text-center'>
+                <Link
+                  href="#exampleModal"
+                  data-bs-toggle="modal"
+                  className="btn-get-started scrollto">
+                  <span>Book a Demo!  &nbsp;<i className="bi bi-arrow-right"></i></span>
+                </Link>
+              </div>
+            </div> */}
+          </div>
+        </div>
+      </section>
+
+      <section className='solution-new-cta slution-new-cta-two'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-lg-9'>
+              <div className='solution-new-cta-001'>
+                <h3>Move From Manual Selling to AI-First Sales Execution</h3>
+                <p>Support sellers with agents, insights, and guidance across every stage of sales cycles.</p>
+                <div>
+                  <Link
+                    href="#exampleModal"
+                    data-bs-toggle="modal"
+                    className="btn-get-started scrollto">
+                    <span>Talk to Our Experts &nbsp;<i className="bi bi-arrow-right"></i></span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img src="/img/mask-group-aaa.png" alt="n-015" />
+      </section>
+      <section id='section8' className='solution-new-pricing'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-lg-9'>
+              <div className='solution-new-banner-sub-head'>
+                <h2>Dynamics 365 Sales CRM Pricing & Licensing</h2>
+                <p>Choose a Dynamics 365 Sales plan that matches your sales structure, data needs, and growth goals. Each edition builds on Microsoft’s agentic CRM solution and supports secure, scalable selling.</p>
+              </div>
+            </div>
+          </div>
+
+          <div className='row g-3'>
+            <div className='col-lg-4 d-flex'>
+              <div className='solution-new-pricing-card'>
+                <h3>Dynamics 365 <span>Sales Professional</span>
+                </h3>
+                <p>Dynamics 365 Sales Professional covers core sales force automation with Microsoft 365 integration for everyday selling tasks. It is ideal for teams that need structured lead, contact, and opportunity management.</p>
+                <h4>£50.00 <span>per user per month<br />(billed annually)</span></h4>
+                <a href="#exampleModal" data-bs-toggle="modal" className="btn-dd-t btn-get-started" >Contact us</a>
+                <p className='disclm'>*Price excludes VAT</p>
+              </div>
+            </div>
+            <div className='col-lg-4 d-flex'>
+              <div className='solution-new-pricing-card'>
+                <h3>Dynamics 365 <span>Sales Enterprise</span>
+                </h3>
+                <p>Dynamics 365 Sales Enterprise edition comprises advanced sales force automation with contextual insights, next generation AI, and flexible configuration. It is designed for organisations that require deeper pipeline visibility, forecasting, and sales guidance.</p>
+                <h4>£80.70<span>per user per month <br />(paid yearly)</span></h4>
+                <a href="#exampleModal" data-bs-toggle="modal" className="btn-dd-t btn-get-started" >Contact us</a>
+                <p className='disclm'>*Price excludes VAT</p>
+              </div>
+            </div>
+            <div className='col-lg-4 d-flex'>
+              <div className='solution-new-pricing-card'>
+                <h3>Dynamics 365 <span>Sales Premium</span>
+                </h3>
+                <p>Enterprise capabilities combined with prebuilt and customisable intelligence for sellers and managers. Ideal for teams adopting sales agents, advanced insights, and AI driven selling at scale.</p>
+                <h4>£115.30<span>per user per month <br />(paid yearly)</span></h4>
+                <a href="#exampleModal" data-bs-toggle="modal" className="btn-dd-t btn-get-started" >Contact us</a>
+                <p className='disclm'>*Price excludes VAT</p>
+              </div>
+            </div>
+          </div>
+          <div className='row'>
+            <div className='col-lg-7 d-flex'>
+              <div className='solution-new-card-001-p'>
+                <p>Want to try it for free?</p>
+                < a href="/products/dynamics-365-business-central/pricing-licensing" className="btn-get-started scrollto">
+                  <span>Claim Your Free Dynamics 365 Sales Trial Here &nbsp;<i className="bi bi-arrow-right"></i></span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="busnes-upgrade-serve-one" style={{ paddingTop: '0px' }}>
         <div className="container">
           <div className="row">
-            <div className="col-lg-5 align-self-center">
-              <div className="wy-sultion-left-head">
-                <h2>Dynamics 365 For Sales Features</h2>
-                <h3>
-                  Explore the benefits of implementing Microsoft Dynamics 365
-                  Sales for your business.
-                </h3>
+            <div className="col-lg-8">
+              <div className="solution-new-banner-sub-head">
+                <h2>What Dynamics 365 Sales Services Do We Offer?</h2>
+                <p>Work with Dynamics Square to reinforce your sales operations using Dynamics 365 Sales. As a trusted Microsoft Solutions Partner in the UK, we help organisations adopt an agentic CRM solution that supports clarity, structure, and consistent sales performance.</p>
               </div>
-
-              <div className="m-o-t m-o-t-b">
-                {/* <Link href="#about" className="btn-get-started scrollto">
-                  <span>Know More</span>
-                </Link> */}
-              </div>
-              {/* <div className="downlad_guid">
-                        <Link href="#">
-                        <span>Download Microsoft Guide</span>
-                        </Link>
-                     </div> */}
-            </div>
-            <div className="col-lg-7">
-              <div className="row gx-4">
-                <div className="col-lg-6">
-                  <div className="why-solution-wrapper">
-                    <div className="why-solution-wrapper-inner">
-                      <h3>
-                        Build & Improve <br />
-                        Customer Relationship{" "}
-                      </h3>
-                      <div className="overlay">
-                        <p>
-                          With a unified view of interactions and real-time
-                          engaging facilitation, connect, engage, and build
-                          customer relationships. Identify whom and how to
-                          engage to drive conversions.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="why-solution-wrapper-inner">
-                      <h3>
-                        Collaborate & <br />
-                        Engage Faster
-                      </h3>
-                      <div className="overlay">
-                        <p>
-                          Gain visibility into the right data insights,
-                          collaborate with your sales team in real-time, and
-                          manage your end-to-end sales pipeline leveraging a
-                          single collaborated workspace.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-6 top-m">
-                  <div className="why-solution-wrapper">
-                    <div className="why-solution-wrapper-inner">
-                      <h3>
-                        Close <br />
-                        Sales Faster
-                      </h3>
-                      <div className="overlay">
-                        <p>
-                          Leveraging AI-based insights, connect and engage with
-                          the right customers across communication channels.
-                          Meet and collaborate with your customers virtually to
-                          close sales faster.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="why-solution-wrapper-inner">
-                      <h3>
-                        Make Informed <br />
-                        Decisions
-                      </h3>
-                      <div className="overlay">
-                        <p>
-                          With AI-based data-driven practices, automate your
-                          sales and marketing practices and make informed
-                          decisions to enable and drive continuous productivity.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="busnes-upgrade-serve-one">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-9">
-              <header className="section-header">
-                <h2>Dynamics 365 Sales Service</h2>
-                <p>We offer a full range of services to support you on your Dynamics 365 Sales journey including implementation, upgrade and support.</p>
-              </header>
             </div>
           </div>
           <div className="row">
             <div className="col-lg-3 d-flex">
-              <div className="upgrade-box-one d-flex-fil">
+              <div className="upgrade-box-one upgrade-box-one-c d-flex-fil">
                 <Image src="/img/settings_b.png" alt="settings_b" width={48} height={48} />
                 <h3>Implementation</h3>
-                <p>Proactively manage your sales with an improved customer experience by implementing Dynamics 365 Sales.</p>
-                <a href="/dynamics-365-sales-implementation/">Get Started <i className="bi bi-arrow-right"></i></a>
+                <p>Deliver a structured Dynamics 365 Sales implementation aligned with your sales processes and team workflows. Our approach focuses on clean configuration, role-based setup, and practical adoption across sellers and managers.</p>
+                <a href="#exampleModal" data-bs-toggle="modal">Get Started <i className="bi bi-arrow-right"></i></a>
               </div>
             </div>
             <div className="col-lg-3 d-flex">
-              <div className="upgrade-box-one d-flex-fil">
+              <div className="upgrade-box-one upgrade-box-one-c d-flex-fil">
                 <Image src="/img/outbound.png" alt="outbound" width={48} height={48} />
-                <h3>Upgrade</h3>
-                <p>Uplift your business deliveries by simply upgrading your system with Microsoft's Sales Management Solution.</p>
+                <h3>Upgrade and Migration</h3>
+                <p>Move from legacy CRM systems to Dynamics 365 Sales with confidence. We manage data migration, process alignment, and transition planning so your sales teams can start working effectively as soon as it goes live.</p>
                 <a href="#exampleModal" data-bs-toggle="modal">Get Started <i className="bi bi-arrow-right"></i></a>
               </div>
             </div>
 
             <div className="col-lg-3 d-flex">
-              <div className="upgrade-box-one d-flex-fil">
+              <div className="upgrade-box-one upgrade-box-one-c d-flex-fil">
                 <Image src="/img/person_pin.png" alt="person_pin" width={48} height={48} />
                 <h3>Support</h3>
-                <p>Bring continuity and drive sales efficiency all through Dynamics 365 Sales support services.</p>
+                <p>Keep your sales CRM system running smoothly with ongoing Dynamics 365 Sales support. Our team resolves issues, manages updates, and ensures your CRM continues to support daily selling without any disruption.</p>
                 <a href="#exampleModal" data-bs-toggle="modal">Get Started <i className="bi bi-arrow-right"></i></a>
               </div>
             </div>
 
             <div className="col-lg-3 d-flex">
-              <div className="upgrade-box-one d-flex-fil">
+              <div className="upgrade-box-one upgrade-box-one-c d-flex-fil">
                 <img className="image-backx" src="/img/free-cons.png" alt="free-cons" />
                 <Image src="/img/forum.png" alt="forum" width={48} height={48} />
                 <h3>Consulting</h3>
-                <p>Get optimum D365 sales services suited to your customised business needs.</p>
+                <p>Gain Dynamics 365 Sales insights on improving pipeline visibility, forecasting, and seller productivity. Our consultants help you use Copilot, sales agents, and analytics in ways that are in line with your business goals.</p>
                 <a href="#exampleModal" data-bs-toggle="modal">Get Started <i className="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div>
         </div>
       </section>
-      {/* <section className="busine_service_bottom">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-6 align-self-center">
-              <div className="busine_service_bottom-left">
-                <div className="busine_service_bottom-right">
-                  <Image
-                    src="/img/sales-side image.png"
-                    className="fix-im"
-                    alt="Dynamics 365 Sales Service"
-                    width={561} height={531}
-                  />
-                  <div className="video-ytube video-ytubes">
-                    <div className="popup-btn popup-btns">
-                      <Link href="#javascript:void(0)">
-                        <a onClick={() => setOpen(true)}>
-                          <Image
-                            src="/img/Video-Sales.png"
-                            alt="sales-video-Sales"
-                            width={390} height={259}
-                          />
-                          <span className="cente-icns">
-                            <img src="/img/play_icons.svg" alt="play_icons" />
-                          </span>
-                        </a>
-                      </Link>
+      <section id='section9' className='p-t-1-60'>
+        <div className='container'>
+          <div className="col-lg-9">
+            <div className="solution-new-banner-sub-head">
+              <h2>Get Started with Microsoft Dynamics 365 Sales</h2>
+              <p>Reports, e-books, videos, training, and more, everything you need to explore the system.</p>
+            </div>
+          </div>
+          <div className='row'>
+            <div className='col-lg-12'>
+
+              <div className='bc-new-tabs-li'>
+                <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                  <li className="nav-item" role="presentation">
+                    <button className="nav-link active" id="pills-home-03-tab" data-bs-toggle="pill" data-bs-target="#pills-home-03" type="button" role="tab" aria-controls="pills-home-03" aria-selected="false">Podcasts</button>
+                  </li>
+                  <li className="nav-item" role="presentation">
+                    <button className="nav-link" id="pills-home-05-tab" data-bs-toggle="pill" data-bs-target="#pills-home-05" type="button" role="tab" aria-controls="pills-home-05" aria-selected="false">Videos</button>
+                  </li>
+                  <li className="nav-item" role="presentation">
+                    <button className="nav-link" id="pills-home-07-tab" data-bs-toggle="pill" data-bs-target="#pills-home-07" type="button" role="tab" aria-controls="pills-home-07" aria-selected="false">Blogs</button>
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+            <div className='col-lg-12'>
+              <div className='bc-new-tabs-li-body'>
+                <div className="tab-content" id="pills-tabContent">
+                  <div className="tab-pane fade show active" id="pills-home-03" role="tabpanel" aria-labelledby="pills-home-03-tab">
+                    <div className='row'>
+                      <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
+                        <div className='card0-01 card0-02'>
+                          <a href="https://youtu.be/44hqw-S27D0?si=mCEpK1p1hVAXszlj" target='_blank'>
+                            <img src="/img/bc-8-20.png" width={273} height={192} alt="bc-8-20" />
+                            <h3>Is Your Business Ready for an ERP System?</h3>
+                            <p>Explore key signs, benefits, and steps to ERP readiness with Dynamics Square experts in this episode.</p>
+                            <div className='ct--a'>
+                              <span>Watch now</span>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+
+                      <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
+                        <div className='card0-01 card0-02'>
+                          <a href="https://youtu.be/Of8upj7BtGo?si=Lsf5SCwBtIpSU1ST" target='_blank'>
+                            <img src="/img/bc-8-22.png" width={273} height={192} alt="bc-8-22" />
+                            <h3>Signs Your Business Is Ready for an ERP System</h3>
+                            <p>Understand when to adopt ERP, its benefits, and how Dynamics 365 drives business transformation.</p>
+                            <div className='ct--a'>
+                              <span>Watch now</span>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6 align-self-center">
-              <div className="side-heading">
-                <h2>Dynamics 365 Sales Service</h2>
-                <p>
-                  We offer a full range of services to support you on your
-                  Dynamics 365 Sales journey including implementation, upgrade
-                  and support.
-                </p>
-              </div>
-              <div className="busine_service_bottom-right">
-                <div className="card_new_img">
-                  <img
-                    src="/img/Business-Central-Implementation-icons.svg"
-                    alt="Business-Central-Implementation-icons"
-                    width="64"
-                    height="64"
-                  />
-                </div>
-                <div className="card_new_content">
-                  <h3>Dynamics 365 Sales Implementation</h3>
-                  <p>
-                    Proactively manage your sales with an improved customer
-                    experience by{" "}
-                    <a
-                      rel=""
-                      target="_self"
-                      href="https://www.dynamicssquare.co.uk/blog/dynamics-365-sales-implementation-guide/"
-                    >
-                      implementing Dynamics 365 Sales.
-                    </a>
-                  </p>
-                  <div className="action-content">
-                    <Link href="/dynamics-365-sales-implementation/">
-                    <a target="_blank">Get Started</a>
-                    </Link>
+                  <div className="tab-pane fade" id="pills-home-05" role="tabpanel" aria-labelledby="pills-home-05-tab">
+                    <div className='row'>
+                      <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
+                        <div className='card0-01 card0-02'>
+                          <a href="https://www.youtube.com/watch?v=buh-r3WxZtA" target='_blank'>
+                            <img src="/img/sales-vid-01.jpg" width={273} height={192} alt="bc-8-20" />
+                            <h3>Microsoft Dynamics 365 Sales Accelerator Overview</h3>
+                            <p>In this video, get a comprehensive overview of Sales Accelerator in Microsoft Dynamics 365.</p>
+                            <div className='ct--a'>
+                              <span>Watch now</span>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
+                        <div className='card0-01 card0-02'>
+                          <a href="https://www.youtube.com/watch?v=RQC9Qu9-hbI" target='_blank'>
+                            <img src="/img/sales-vid-02.jpg" width={273} height={192} alt="bc-8-21" />
+                            <h3>EY redefines CRM with Dynamics 365 Sales and Sales Agent in Microsoft 365 Copilot</h3>
+                            <p>EY redefines CRM with Dynamics 365 and Sales Agent in Microsoft 365 Copilot, facilitating data entry and freeing sellers to focus on relationships. </p>
+                            <div className='ct--a'>
+                              <span>Watch now</span>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
+                        <div className='card0-01 card0-02'>
+                          <a href="https://www.youtube.com/watch?v=x6zLv5V0eC0" target='_blank'>
+                            <img src="/img/sales-vid-03.jpg" width={273} height={192} alt="bc-8-21" />
+                            <h3>Customer ROI with Dynamics 365 Sales</h3>
+                            <p>Learn about the powerful transformations seen with Dynamics 365 Sales and Microsoft 365 Copilot, such as improved sales performance, enhanced customer interactions, and increased productivity.</p>
+                            <div className='ct--a'>
+                              <span>Watch now</span>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div className="busine_service_bottom-right">
-                <div className="card_new_img">
-                  <img
-                    src="/img/Business Central Upgrade-icons.svg"
-                    alt="Business Central Upgrade-icons"
-                    width="64"
-                    height="64"
-                  />
-                </div>
-                <div className="card_new_content">
-                  <h3>Dynamics 365 Sales Upgrade</h3>
-                  <p>
-                    Uplift your business deliveries by simply upgrading your
-                    system with Microsoft's Sales Management Solution.
-                  </p>
-                  <div className="action-content">
-                    <Link href="/our-services/dynamics-365-support-services/">
-                      <a target="_blank">Get Started</a>
-                    </Link>
+  
+                  <div className="tab-pane fade" id="pills-home-07" role="tabpanel" aria-labelledby="pills-home-07-tab">
+                    <div className='row'>
+                      <BlogFinanaceCard categorySlug="dynamics-365-crm" />
+
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div className="busine_service_bottom-right">
-                <div className="card_new_img">
-                  <img
-                    src="/img/Business-Central-Support-icons.svg"
-                    alt="Business-Central-Support-icons"
-                    width="64"
-                    height="64"
-                  />
-                </div>
-                <div className="card_new_content">
-                  <h3>Dynamics 365 Sales Support</h3>
-                  <p>
-                    Bring continuity and drive sales efficiency all through
-                    Dynamics 365 Sales support services.
-                  </p>
-                  <div className="action-content">
-                    <Link href="/dynamics-nav-to-business-central/">
-                      <a target="_blank">Get Started</a>
-                    </Link>
-                  </div>
+
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section> */}
-      <section className="new-module-sec">
+      </section>
+      <section className="solution-faq faq solution-faq-r">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-lg-9">
-              <header className="section-header">
-                <h2>Microsoft Copilot for Dynamics 365 Sales</h2>
-                <p><a href="/products/microsoft-dynamics-365-sales/copilot/">Microsoft Copilot comes embedded in Dynamics 365 Sales</a> and serves as an intelligent AI assistant to accelerate lead capture and closing deals faster. It is a boon for sales executives because it helps them resolve queries instantly and offers an optimum level of customer satisfaction.</p>
-              </header>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-lg-6 align-self-center">
-              <div className="new-box-sect-left">
-                <div className="over-la-pic-1">
-                  <Image width={914} height={664} src="/img/Ellipse-bg.png" alt="Ellipse-bg" />
-                </div>
-                <Image width={630} height={440} src="/img/sales-copilote-side-pic.png" alt="sales-copilote-side-pic" />
-              </div>
-            </div>
-            <div className="col-lg-6 align-self-center">
-              <div className="new-box-sect-right">
-
-                <div className="c-bi-po-inn">
-                  <h3>Faster Sales Cycle</h3>
-                  <p>Copilot is capable enough to summarise leads and opportunities to close deals with the minimum resources. Also, it can track the sales history to collect customer data and help sales professionals pitch personalised offers.</p>
-                </div>
-                <div className="c-bi-po-inn">
-                  <h3>Improved Deal Closure Rate</h3>
-                  <p>Copilot can filter out the high-potential and critical leads so that a business can distribute the resources accordingly. With Copilot, we can identify cross-sell and upsell opportunities.</p>
-                </div>
-                <div className="c-bi-po-inn">
-                  <h3>Optimised Processes</h3>
-                  <p>Sales executives can generate leads while optimising the process with a personalised approach. It aids businesses to build stronger relationships with customers, supercharging relationships.</p>
-                </div>
-                <div className="c-bi-po-inn">
-                  <h3>Enhanced Customer Satisfaction</h3>
-                  <p>Drive a customer-centric approach to offer great customer satisfaction. Establish a streamlined communication channel to understand customer requirements and interests.</p>
-                </div>
+            <div className="col-lg-9 ">
+              <div className="solution-new-banner-sub-head text-center">
+                <h2>Have you got
+                  questions about Dynamics 365 Finance?</h2>
+                <p>Click through to our FAQ for the best answers!</p>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section id="pricing" className="pricing">
-        <div className="container">
-          <header className="section-header">
-            <h2>Dynamics 365 Sales Pricing</h2>
-            <p>
-              Choose The Applications That Are Right For Your Business Needs.{" "}
-            </p>
-          </header>
-          <div className="row gy-4 p-9">
-            <div className="col-lg-3 d-flex">
-              <div className="box box-22">
-                <h3>
-                  Dynamics 365 Sales
-                  <br />
-                  Free Trial
-                </h3>
-                <div className="price">
-                  £0<span></span>
-                </div>
-                <ul>
-                  <li className="">
-                    This is help your sales team stay focused, boost productivity, and build customer trust
-                  </li>
-                </ul>
-                <Link href="#exampleModal" data-bs-toggle="modal" className="btn btn-get-ress">
 
-                  <span>Try For Free</span>
 
-                </Link>
-              </div>
-            </div>
-            <div className="col-lg-3 d-flex">
-              <div className="box box-22">
-                <h3>
-                  Dynamics 365 Sales
-                  <br />
-                  Professional
-                </h3>
-                <div className="price">
-                  £50.40<span>user/month, paid yearly</span>
-                </div>
-                <ul>
-                  <li className="">
-                    Core sales force automation and Microsoft 365 integration
-                  </li>
-                  <li style={colostyle}>
-                    <i className="bi bi-check-lg"></i>Microsoft Sales Copilot available at an additional cost
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="col-lg-3 d-flex">
-              <div className="box box-22">
-                <h3>
-                  Dynamics 365 Sales
-                  <br />
-                  Enterprise
-                </h3>
-                <div className="price">
-                  £80.70<span>user/month, paid yearly</span>
-                </div>
-                <ul>
-                  <li className="">
-                    Industry-leading sales force automation with contextual
-                    insights and advanced customisation capabilities
-                  </li>
-                  <li style={colostyle}>
-                    <i className="bi bi-check-lg"></i>Includes now Microsoft Sales Copilot
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="col-lg-3 d-flex">
-              {/* <div className="box">
-                        <h4>Business Central<br />
-                           Essentials
-                        </h4>
-                        <div className="price"><sup>£</sup>52.80<span>user/month, paid yearly</span></div>
-                        <ul>
-                           <li> <i className="bi bi-check-lg"></i> Read and Approve</li>
-                           <li> <i className="bi bi-check-lg"></i> Employee Self Serve</li>
-                           <li> <i className="bi bi-check-lg"></i> Run All Reports</li>
-                        </ul>
-                       
-                     </div> */}
-              <div className="box box-22">
-                <h3>
-                  Dynamics 365 Sales
-                  <br />
-                  Premium
-                </h3>
-                <div className="price">
-                  £115.30<span>user/month, paid yearly</span>
-                </div>
-                <ul>
-                  <li className="">
-                    Dynamics 365 Sales Enterprise plus prebuilt customisable
-                    intelligence solutions for sellers and managers
-                  </li>
-                  <li style={colostyle}>
-                    <i className="bi bi-check-lg"></i>Includes now Microsoft Sales Copilot
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="col-lg-12 col-md-12">
-              <div className="price-btn price-btnasd d-flex justify-content-center">
-                <Link href="#exampleModal" data-bs-toggle="modal" className="btn-get-red">
-
-                  <span>Get Started Now</span>
-
-                </Link>
-                {/* <Link href="#about" className="btn-get-whit">
-                              <span>See Licensing Guide</span>
-                              </Link> */}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="call-to-action-center hero-4">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-8">
-              <div className="call-to-action-content">
-                <h3>Maximize your business potentials</h3>
-                <p>
-                  Drive new business challenges by implementing Dynamics 365
-                  Sales
-                </p>
-                <div className="text-center m-o-t new-btn-nn">
-                  <Link
-                    href="#exampleModal"
-                    data-bs-toggle="modal"
-                    className="btn-get-started scrollto">
-
-                    <span>Get Started Now</span>
-
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="solution-faq faq">
-        <div className="container">
-          <header className="section-header">
-            <h2>
-              Have you got
-              <br />
-              questions about Sales?
-            </h2>
-            <p>Click through to our FAQ for the best answers!</p>
-          </header>
           <div className="row justify-content-center mar-top-7">
             <div className="col-lg-8">
               <div className="accordion accordion-flush" id="faqlist1">
-                <div className="accordion-item">
-                  <h3 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-content-1"
+                {faqData.slice(0, visibleCount).map((faq) => (
+                  <div className="accordion-item" key={faq.id}>
+                    <h3 className="accordion-header">
+                      <button
+                        className="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target={`#faq-content-${faq.id}`}
+                      >
+                        {faq.question}
+                      </button>
+                    </h3>
+                    <div
+                      id={`faq-content-${faq.id}`}
+                      className="accordion-collapse collapse"
+                      data-bs-parent="#faqlist1"
                     >
-                      What is Microsoft Dynamics 365 Sales?
-                    </button>
-                  </h3>
-                  <div
-                    id="faq-content-1"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#faqlist1"
-                  >
-                    <div className="accordion-body">
-                      Dynamics 365 for sales is a customer relationship
-                      management software that helps to effortlessly build
-                      strong relationships with your customers and seamlessly
-                      manage your sales campaigns to close sales faster.
-                      AI-based sales insights help businesses effectively
-                      leverage their sales data to connect and engage with the
-                      right customers from anywhere and anytime. With mobile
-                      efficiency, Salespeople and Sales Managers can stay
-                      updated with any sales activity and customer behavior in
-                      real-time.
+                      <div
+                        className="accordion-body"
+                        dangerouslySetInnerHTML={{ __html: faq.answer }}
+                      />
                     </div>
                   </div>
-                </div>
-                <div className="accordion-item">
-                  <h3 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-content-2"
-                    >
-                      What is Dynamics 365 for Sales used for?
-                    </button>
-                  </h3>
-                  <div
-                    id="faq-content-2"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#faqlist1"
-                  >
-                    <div className="accordion-body">
-                      Dynamics 365 Sales is a powerful sales management solution
-                      to manage sales and customers using a single app
-                      leveraging mobile devices. It helps to identify actual
-                      customers to connect and engage with them in real-time.
-                      Utilizing sales insights and customer data, salespeople
-                      can make instant and productive decisions supporting their
-                      sales campaigns. Sales managers can monitor their sales
-                      team's performance and, if necessary, can guide them to
-                      improve things to obtain better results and ensure
-                      campaign success.
-                      <br />
-                      <br />
-                      When you implement Dynamics 365 Sales, it enables sales
-                      managers to access and create excel documents without
-                      switching apps. They can even instantly create sales
-                      documents using a single interface when configured with
-                      other Microsoft apps..
-                      <br />
-                      <br />
-                      To avail of a free consultation to manage your sales and
-                      customers or to implement{" "}
-                      <Link href="/products/microsoft-dynamics-crm/" target="_blank">
-                        Microsoft Dynamics CRM
-                      </Link>{" "}
-                      solution for your business, experts at Dynamics Square can
-                      help.
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <h3 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-content-3"
-                    >
-                      How does Microsoft Dynamics 365 help in Sales?
-                    </button>
-                  </h3>
-                  <div
-                    id="faq-content-3"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#faqlist1"
-                  >
-                    <div className="accordion-body">
-                      Microsoft Dynamics 365 for Sales helps enterprises to
-                      effectively roll out their sales campaigns, manage
-                      customers, and drive productivity. This sales management
-                      solution helps to streamline their sales data, connect &
-                      engage customers, and make informed decisions leveraging
-                      sales analytics to close maximized sales in a faster
-                      manner.
-                      <br />
-                      <br />
-                      Dynamics 365 for Sales helps enterprises to eliminate
-                      their time-consuming manual efforts, repetitive tasks, and
-                      other redundancies. It enables businesses to focus more on
-                      their core sales tasks that drive sales, customers,
-                      profitability.
-                      <br />
-                      <br />
-                      No matter what business context you belong to, out of the
-                      available CRM systems, Microsoft Dynamics 365 Sales can
-                      help you bring your entire sales and customers data at the
-                      siloed interface that can be seamlessly accessed, edited,
-                      utilized, and shared with anyone in your organizational
-                      connection even without switching apps.
-                      <br />
-                      <br />
-                      With Dynamics 365 Sales, everyone involved in the Sales
-                      process can access data and manage customers from anywhere
-                      and at any time using mobile or tab devices. To know how
-                      Dynamics 365 sales can help to improve your customer
-                      experience and impact your sales drive, contact experts at
-                      Dynamics Square.
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <h3 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-content-4"
-                    >
-                      Is Dynamics 365 Sales available on-premises?
-                    </button>
-                  </h3>
-                  <div
-                    id="faq-content-4"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#faqlist1"
-                  >
-                    <div className="accordion-body">
-                      Yes, Dynamics 365 Sales is available on-premises but only
-                      for Dynamics 365 Sales Enterprise Plan not for the Sales
-                      Professional plan. Enterprise Plan comes with both the{" "}
-                      <Link href="/microsoft-dynamics-365-cloud-vs-on-premise/" target="_blank">
-                        on-premises
-                      </Link>{" "}
-                      and cloud versions whereas Sales Professional license
-                      comes with cloud facilitation only.
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <h3 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-content-5"
-                    >
-                      How much does it cost to implement Microsoft Dynamics 365
-                      for Sales?
-                    </button>
-                  </h3>
-                  <div
-                    id="faq-content-5"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#faqlist1"
-                  >
-                    <div className="accordion-body">
-                      Addressing your specific business needs and a number of
-                      user requirements, your licensing need for Dynamics 365
-                      Sales may go different. To know your exact licensing cost,
-                      connect with Dynamics Square. Here, we are giving a rough
-                      idea of licensing to implement Dynamics 365 Sales
-                      considering the most common licensing model:
-                      <br />
-                      <br />
-                      <b>Dynamics 365 Sales Professional</b>
-                      <br />
-                      <br />
-                      <ul>
-                        <li>
-                          For first{" "}
-                          <Link href="/products/microsoft-dynamics-365/" target="_blank">
-                            Dynamics 365 App
-                          </Link>{" "}
-                          - 49 pounds/ per user (approx.)
-                        </li>
-                        <li>
-                          For Subsequent Dynamics 365 App - 15 pounds/per user
-                          (approx.)
-                        </li>
-                      </ul>
-                      <b>Dynamics 365 Sales Enterprise</b>
-                      <br />
-                      <br />
-                      <ul>
-                        <li>
-                          For First Dynamics 365 App - 71.60 Pounds/per user
-                          (approx.)
-                        </li>
-                        <li>
-                          For Subsequent Dynamics 365 App - 15 pounds/per user
-                          (approx.)
-                        </li>
-                      </ul>
-                      <b>Dynamics 365 Sales Premium </b>
-                      <br />
-                      <br />
-                      <ul>
-                        <li>
-                          For First Dynamics 365 App - 101.80 Pounds/per user.
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <h3 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-content-6"
-                    >
-                      How does Dynamics 365 Sales Works?
-                    </button>
-                  </h3>
-                  <div
-                    id="faq-content-6"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#faqlist1"
-                  >
-                    <div className="accordion-body">
-                      Dynamics 365 Sales helps to transform your entire sales
-                      model. It enables businesses to improve and uplift their
-                      digital sales experience. They can connect and engage the
-                      actual customers in real-time. With centralized data,
-                      Dynamics 365 Sales enables people to collaborate and
-                      process the same customer data in real-time which helps to
-                      streamline and accelerate sales.
-                      <br />
-                      <br />
-                      Instant sales reports and other actionable insights help
-                      everyone in the sales team to make informed decisions in
-                      real-time as Dynamics 365 sales eliminate the need for
-                      manual data processing and repetitive tasks.
-                      <br />
-                      <br />
-                      When you get handy with sales insights and customer
-                      behavior in real-time, it helps convert the leads and
-                      close the sales faster. Sales managers can monitor and
-                      control the sales process and can suggest supporting the
-                      ongoing sales process or campaign.
-                      <br />
-                      <br />
-                      With predictive insights, salespeople can manage sales,
-                      customers, and can determine their priorities to impact
-                      and accelerate sales and profitability.
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <h3 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-content-7"
-                    >
-                      How do I access Dynamics 365 Sales Professional?
-                    </button>
-                  </h3>
-                  <div
-                    id="faq-content-7"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#faqlist1"
-                  >
-                    <div className="accordion-body">
-                      All you need to sign in to your Microsoft 365 account in
-                      your Sales Professional App, now select Microsoft 365 App
-                      launcher, and then Dynamics 365. The selection of the app
-                      entirely depends on the subscription you have availed of.
-                      <br />
-                      <br />
-                      Now, select Sales Professional on Dynamics 365 Home Page
-                      and you are ready to navigate according to your need
-                      leveraging the Navigation bar, Site map, Data records, and
-                      other business practices available in your Dynamics 365
-                      Sales Professional.
-                      <br />
-                      <br />
-                      To know further how to efficiently make use of Microsoft
-                      Dynamics Sales features, contact Dynamics Square today,
-                      our Dynamics 365 sales experts can assist you.
-                    </div>
-                  </div>
-                </div>
+                ))}
               </div>
+
+              {visibleCount < faqData.length && (
+                <div className="text-center mt-4">
+                  <button className="btn faq-btn-l btn-get-started" onClick={handleLoadMore}>
+                    Load More <i className="bi bi-chevron-down"></i>
+                  </button>
+                </div>
+              )}
             </div>
           </div>
+
+
+
+
         </div>
       </section>
-      <section className="blogs-extra">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-9">
-              <header className="section-header">
-                <h2>Explore Our Recent Blogs & Resources</h2>
-                <p>
-                  Whether you are a start-up, an SMB, or an enterprise, the
-                  Dynamics Square blog is the best place to get inspired and
-                  learn more about Microsoft Business Applications.
-                </p>
-              </header>
-            </div>
-          </div>
-
-          <div className="row top-2 gx-5">
-            <Blog />
-            <div className="col-lg-6">
-              <div className="blogs-extra-title">
-                <h3>Documents</h3>
-              </div>
-              <div className="blogs-extra-right">
-                <ul>
-                  <li>
-                    <Link href="/pdf/6-strategies-to-boost-sales-productivity.pdf" target="_blank">
-
-                      <i className="bi bi-file-earmark-pdf"></i>6 Strategies
-                                              to Boost Sales Productivity
-                                            
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/pdf/Building-relationships-in-todays-sales-environment.pdf"
-                      target="_blank">
-
-                      <i className="bi bi-file-earmark-pdf"></i>Building
-                                              Relationships in Today's Sales Environment
-                                            
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/pdf/Dynamics-365-Sales-Professional.pdf" target="_blank">
-
-                      <i className="bi bi-file-earmark-pdf"></i>Dynamics 365
-                                              Sales Professional
-                                            
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/pdf/Dynamics365SalesKeyCapabilitiesOverviewFINAL63017.pdf"
-                      target="_blank">
-
-                      <i className="bi bi-file-earmark-pdf"></i>Key Capability
-                                              of Dynamics 365 Sales
-                                            
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="/pdf/Dynamics_365_Enterprise_edition_Licensing_Guide.pdf"
-                      target="_blank">
-
-                      <i className="bi bi-file-earmark-pdf"></i>Licensing
-                                              Guide
-                                            
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-              <div className="blogs-extra-title">
-                <h4>Learn More</h4>
-              </div>
-              <div className="blogs-extra-right">
-                <ul>
-                  <li><Link href="/blog/dynamics-365-sales-implementation-guide/" target="_blank"><i className="bi bi-box-arrow-up-right"></i>Microsoft Dynamics 365 Sales Implementation Guide</Link></li>
-                  <li><Link href="/blog/top-benefits-of-dynamics-365-sales/" target="_blank"><i className="bi bi-box-arrow-up-right"></i>Top 10 Benefits Of Dynamics 365 Sales</Link></li>
-                  <li><Link href="/blog/dynamics-crm-guide-overview/" target="_blank"><i className="bi bi-box-arrow-up-right"></i>Dynamics 365 CRM Guide</Link></li>
-
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <BcPopPdf pdfType={pdfType} />
     </>
   );
 };
 
-export default Sales;
+export default SalesNew;
