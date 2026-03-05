@@ -11,10 +11,10 @@ const FieldService = () => {
   return (
     <>
       <Head>
-        <title>Microsoft Dynamics 365 Field Service – Optimize On-Site Operations</title>
+        <title>Microsoft Dynamics 365 Field Service - Dynamics Square UK</title>
         <meta
           name="description"
-          content="Optimize on-site service with Dynamics 365 Field Service. Improve scheduling, resource allocation, and customer satisfaction effortlessly. Contact now Today!"
+          content="Transform field operations with Dynamics 365 Field Service. UK experts for implementation, integration & support. Book your free consultation."
         />
         <link
           rel="canonical"
@@ -22,14 +22,14 @@ const FieldService = () => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-field-service/" />
-        <meta property="og:title" content="Microsoft Dynamics 365 Field Service – Optimize On-Site Operations" />
-        <meta property="og:description" content="Optimize on-site service with Dynamics 365 Field Service. Improve scheduling, resource allocation, and customer satisfaction effortlessly. Contact now Today!" />
+        <meta property="og:title" content="Microsoft Dynamics 365 Field Service - Dynamics Square UK" />
+        <meta property="og:description" content="Transform field operations with Dynamics 365 Field Service. UK experts for implementation, integration & support. Book your free consultation." />
         <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/FieldServicebanner.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-field-service/" />
-        <meta property="twitter:title" content="Microsoft Dynamics 365 Field Service – Optimize On-Site Operations" />
-        <meta property="twitter:description" content="Optimize on-site service with Dynamics 365 Field Service. Improve scheduling, resource allocation, and customer satisfaction effortlessly. Contact now Today!" />
+        <meta property="twitter:title" content="Microsoft Dynamics 365 Field Service - Dynamics Square UK" />
+        <meta property="twitter:description" content="Transform field operations with Dynamics 365 Field Service. UK experts for implementation, integration & support. Book your free consultation." />
         <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/FieldServicebanner.png" />
        
       

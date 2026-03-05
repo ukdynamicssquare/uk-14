@@ -9,7 +9,7 @@ const BcSupport = () => {
     return (
         <>
             <Head>
-                <title>Dynamics 365 Business Central Support Services | Dynamics Square UK</title>
+                <title>Business Central Support & Services | Dynamics Square UK</title>
                 <meta
                     name="description"
                     content="We provide Dynamics 365 Business Central support services to help you streamline operations, resolve issues quickly, and enhance overall business performance."
@@ -20,13 +20,13 @@ const BcSupport = () => {
                 />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://www.dynamicssquare.co.uk/d365-business-central-support/" />
-                <meta property="og:title" content="Dynamics 365 Business Central Support Services | Dynamics Square UK" />
+                <meta property="og:title" content="Business Central Support & Services | Dynamics Square UK" />
                 <meta property="og:description" content="We provide Dynamics 365 Business Central support services to help you streamline operations, resolve issues quickly, and enhance overall business performance." />
                 <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/bc-support-banner.png" />
 
                 <meta property="twitter:card" content="summary_large_image" />
                 <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/d365-business-central-support/" />
-                <meta property="twitter:title" content="Dynamics 365 Business Central Support Services | Dynamics Square UK" />
+                <meta property="twitter:title" content="Business Central Support & Services | Dynamics Square UK" />
                 <meta property="twitter:description" content="We provide Dynamics 365 Business Central support services to help you streamline operations, resolve issues quickly, and enhance overall business performance." />
                 <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/bc-support-banner.png" />
             </Head>
