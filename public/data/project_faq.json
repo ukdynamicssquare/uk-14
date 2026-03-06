@@ -1,0 +1,78 @@
+[    
+    {
+      "id": 1,
+      "question": "1. What is Dynamics 365 Project Operations used for?",
+      "answer": "<p>Dynamics 365 Project Operations is used to manage the full project lifecycle, from deal management and estimating to resource scheduling, time and expense tracking, billing, and revenue recognition. It connects sales, delivery, and finance within one unified application.</p>"
+    },
+    {
+      "id": 2,
+      "question": "2. Who should use Dynamics 365 Project Operations?",
+      "answer": "<p>It is designed for project-centric organisations such as consulting firms, professional services companies, IT services providers, engineering firms, and any business that delivers revenue through projects.</p>"
+    },
+    {
+      "id": 3,
+      "question": "3. How is Dynamics 365 Project Operations different from traditional project management tools?",
+      "answer": "<p>Traditional tools focus mainly on task tracking. Dynamics 365 Project Operations connects project delivery with financial management, resource utilisation, billing models, and accounting standards such as IFRS.</p>"
+    },
+    {
+      "id": 4,
+      "question": "4. Does Dynamics 365 Project Operations support fixed-price and time and materials billing?",
+      "answer": "<p>Yes. It supports adaptable billing models including fixed-price, time and materials, and retainer-type contracts.</p>"
+    },
+    {
+      "id": 5,
+      "question": "5. Can it integrate with Dynamics 365 Finance?",
+      "answer": "<p>Yes. It interoperates with Dynamics 365 Finance or external ERP systems using open APIs to extend financial capabilities.</p>"
+    },
+    {
+      "id": 6,
+      "question": "6. How does Dynamics 365 Project Operations improve resource utilisation?",
+      "answer": "<p>It uses universal resource scheduling, skill profiles, and proficiency models to match the right people to the right projects and balance workloads effectively.</p>"
+    },
+    {
+      "id": 7,
+      "question": "7. What role does AI play in Dynamics 365 Project Operations?",
+      "answer": "<p>Copilot and ERP agents such as the Time Entry Agent and Expense Agent help automate time tracking, expense reporting, approvals, and financial reconciliation while improving accuracy.</p>"
+    },
+    {
+      "id": 8,
+      "question": "8. Does it help with revenue recognition and compliance?",
+      "answer": "<p>Yes. It supports project accounting, cost and revenue profiles, accruals, postings, and adherence to accounting standards including IFRS.</p>"
+    },
+    {
+      "id": 9,
+      "question": "9. Can teams track project budgets in real time?",
+      "answer": "<p>Yes. Teams can track budget-to-actual consumption, generate forecasting snapshots, and use built-in dashboards to monitor project performance.</p>"
+    },
+    {
+      "id": 10,
+      "question": "10. Does it support forecasting for projects?",
+      "answer": "<p>Yes. Built-in insights help organisations forecast trends, generate budget and time snapshots, and adjust delivery decisions based on current performance.</p>"
+    },
+    {
+      "id": 11,
+      "question": "11. How does Dynamics 365 Project Operations simplify time and expense management?",
+      "answer": "<p>Time Entry Agent drafts time sheets, Expense Agent creates draft expense reports from receipts and emails, and Activity Approvals Agent prioritises entries that require review.</p>"
+    },
+    {
+      "id": 12,
+      "question": "12. Is Dynamics 365 Project Operations suitable for global organisations?",
+      "answer": "<p>Yes, it supports customised costing based on geography and exchange rates and aligns with international accounting practices.</p>"
+    },
+    {
+      "id": 13,
+      "question": "13. What is the pricing of Dynamics 365 Project Operations?",
+      "answer": "<p>The standard pricing is $135 per user per month, paid yearly.</p>"
+    },
+    {
+      "id": 14,
+      "question": "14. Can Dynamics 365 Project Operations work with Microsoft Teams and Power BI?",
+      "answer": "<p>Yes. It supports collaboration in Microsoft Teams and provides dashboards and reporting capabilities through Power BI.</p>"
+    },
+     {
+      "id": 15,
+      "question": "15. How does it support project profitability?",
+      "answer": "<p>How does it support project profitability?</p>"
+    }
+  ]
+  
