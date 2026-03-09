@@ -99,7 +99,7 @@ const SalesNew = () => {
             <div className='col-lg-12'>
               <div className='flecx'>
                 <div className='left-fl'>
-                  <p>Dynamics Square helps small and medium businesses simplify processes, boost productivity, and achieve measurable results with the AI-powered Dynamics 365 Business Central ERP.</p>
+                  <p>Dynamics Square helps businesses manage leads, strengthen customer relationships, and close deals faster with the AI-powered Dynamics 365 Sales CRM.</p>
                 </div>
                 <div className='left-rl'>
                   <Image src="/img/partner-logo-black.png" width={193} height={55} alt="partner-logo-black" />
