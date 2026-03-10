@@ -79,8 +79,8 @@ const SupportServices = () => {
               <div className="custom-p-002">
                 <p>- Ensure reliability and smoother domain practices by leveraging our flexible support services available to global businesses.</p>
                 <p>- With the right set of resources, tools, and expertise in your domain, you can avail of our trustworthy Dynamics 365 support services to drive uninterrupted operational flow and enable you to focus on growing business.</p>
-                <p>- We have a highly equipped team of expert professionals who are proficient in offering implementation, support, and upgrade services with a 100% success rate.</p>
-                <p>- Say goodbye to downtime and hello to a business boost! Our Dynamics 365 consultants use Microsoft's proven methods to solve any issue swiftly and effectively.</p>
+                <p>- We have a highly equipped team of expert professionals who are proficient in offering Dynamics 365 implementation, support, and upgrade services with a 100% success rate.</p>
+                <p>- Say goodbye to downtime and hello to a business boost! Our consultants use Microsoft's proven methods to solve any issue swiftly and effectively.</p>
                 <p>- Get back to the business of growth with our Microsoft-certified Dynamics 365 consultants. They'll handle any issue, big or small, so you can focus on boosting your operations.</p>
               </div>
               <div className="custom-btn-new" style={{marginTop:'-40px'}}>

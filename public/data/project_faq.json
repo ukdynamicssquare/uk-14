@@ -2,77 +2,117 @@
     {
       "id": 1,
       "question": "1. What is Dynamics 365 Project Operations used for?",
-      "answer": "<p>Dynamics 365 Project Operations is used to manage the full project lifecycle, from deal management and estimating to resource scheduling, time and expense tracking, billing, and revenue recognition. It connects sales, delivery, and finance within one unified application.</p>"
+      "answer": "<p>Microsoft Dynamics 365 Project Operations is an ERP (Enterprise Resource Planning) solution capable of managing and streamlining projects effortlessly. It comes with many extensive capabilities, including team collaboration, opportunity management, project planning, resource management, customer billing, and expense management.</p>"
     },
     {
       "id": 2,
-      "question": "2. Who should use Dynamics 365 Project Operations?",
-      "answer": "<p>It is designed for project-centric organisations such as consulting firms, professional services companies, IT services providers, engineering firms, and any business that delivers revenue through projects.</p>"
+      "question": "2. Does Microsoft Project Operation integrate with Business Central?",
+      "answer": "<p>Microsoft Dynamics Project Operations is a powerful application to seamlessly manage operations with full productivity and efficiency. However, organisations can integrate it with <a href=\"/products/dynamics-365-business-central/\">Business Central</a> or other native integrations to enhance the features for smooth operations. There are a few more modules that can be integrated without any restrictions, such as Human Resources, Sales, Marketing, Customer Service, and more.</p>"
     },
     {
       "id": 3,
-      "question": "3. How is Dynamics 365 Project Operations different from traditional project management tools?",
-      "answer": "<p>Traditional tools focus mainly on task tracking. Dynamics 365 Project Operations connects project delivery with financial management, resource utilisation, billing models, and accounting standards such as IFRS.</p>"
+      "question": "3. How do I install Project Operations in Dynamics 365?",
+      "answer": "<p>When installing project operations from <a href=\"/products/microsoft-dynamics-365/\">microsoft dynamics 365</a>, there are several installation options available. You have two options to start the installation:</p><ul><li>Using the existing CDS environment</li><li>Using a new CDS environment</li></ul><p>You must have access to Power Platform Administrator and a Project Operations to install project operations in a new environment.</p><p>In case, you have to create a new CDS environment using the Power Platform admin.</p><p>In the case of an existing CDS, you must have access to a <a href=\"/products/microsoft-power-platform/\">Power Platform</a> Administrator with a licence for Project Operations. Using <a href=\"/products/microsoft-power-bi/\">Power BI</a>, you have to locate the environment using the Power Platform admin center.</p>"
     },
     {
       "id": 4,
-      "question": "4. Does Dynamics 365 Project Operations support fixed-price and time and materials billing?",
-      "answer": "<p>Yes. It supports adaptable billing models including fixed-price, time and materials, and retainer-type contracts.</p>"
+      "question": "4. What are the core modules in Dynamics 365 Project Operations?",
+      "answer": "<p>There are a few core modules which are: Contract Management, Sales, Project Management, Resource Management, Team Collaboration, Finance Management, and Time and Expense Management. These are the modules that let users seamlessly manage an entire project in an organisation for easy growth.</p>"
     },
     {
       "id": 5,
-      "question": "5. Can it integrate with Dynamics 365 Finance?",
-      "answer": "<p>Yes. It interoperates with Dynamics 365 Finance or external ERP systems using open APIs to extend financial capabilities.</p>"
+      "question": "5. What is the price of D365 Project Operations?",
+      "answer": "<p>Microsoft doesn't sell its business management solutions directly to customers. You have to search for and collaborate with a reliable support partner like Dynamics Square for any kind of update,<!-- --> <a target=\"_blank\" href=\"/our-services/dynamics-365-upgrade-services/\">upgrade</a>, or<!-- --> <a target=\"_blank\" href=\"/our-services/dynamics-365-implementation-services/\">implementation</a> <!-- -->service for your business. The pricing for D365 Project Operations is entirely dependent on your company's needs and the type of deployment. The standard cloud deployment pricing is £103.80 per user/month and is also available on Microsoft's website. On-premises deployment always comes with customised pricing, and it depends on business to business.</p>"
     },
     {
       "id": 6,
-      "question": "6. How does Dynamics 365 Project Operations improve resource utilisation?",
-      "answer": "<p>It uses universal resource scheduling, skill profiles, and proficiency models to match the right people to the right projects and balance workloads effectively.</p>"
+      "question": "6. Can D365 Project Operations help businesses boost sales and enhance revenue?",
+      "answer": "<p>D365 Project Operations helps users to increase transparency across different processes and departments and to provide accurate data insights using advanced technologies like <a href=\"/products/microsoft-dynamics-365-ai/\">Artificial Intelligence</a>, <a href=\"/products/azure-machine-learning/\">Machine Learning</a>, and Business Intelligence. This helps the users to take actionable decisions in real-time, resulting in improved efficiency and productivity to get more deals.</p>"
     },
     {
       "id": 7,
-      "question": "7. What role does AI play in Dynamics 365 Project Operations?",
-      "answer": "<p>Copilot and ERP agents such as the Time Entry Agent and Expense Agent help automate time tracking, expense reporting, approvals, and financial reconciliation while improving accuracy.</p>"
+      "question": "7. How to start using Dynamics 365 Project Operations?",
+      "answer": "<p>The first step you have to take is to search for the right support partner for proper implementation of your D365 Project Operations solution as per your business needs. Following that, you must be patient until the implementation is completed, at which point your partner will train you on the solution's functions and features. Once everything is set up, you or your team members can start using the solution at full pace.</p>"
     },
     {
       "id": 8,
-      "question": "8. Does it help with revenue recognition and compliance?",
-      "answer": "<p>Yes. It supports project accounting, cost and revenue profiles, accruals, postings, and adherence to accounting standards including IFRS.</p>"
+      "question": "8. What are the core functions of Dynamic 365 Project Operations?",
+      "answer": "<p>Project Operations covers a lot of areas of a business, resulting in overall growth of almost all departments. Some of the areas are listed below:</p><ul><li>Project Planning</li><li>Project Sales</li><li>Invoicing</li><li>Revenue management</li><li>Ledger management</li><li>Project allocation</li><li>Management of project finances</li></ul>"
     },
     {
       "id": 9,
-      "question": "9. Can teams track project budgets in real time?",
-      "answer": "<p>Yes. Teams can track budget-to-actual consumption, generate forecasting snapshots, and use built-in dashboards to monitor project performance.</p>"
+      "question": "9. How does Project Operation work?",
+      "answer": "<p>Project Operations works by offering the capabilities to manage and streamline various projects efficiently with minimal errors. It analyses the existing resources, optimises them for optimum productivity, and delivers results to gain maximised revenue using minimum resources.</p>"
     },
     {
       "id": 10,
-      "question": "10. Does it support forecasting for projects?",
-      "answer": "<p>Yes. Built-in insights help organisations forecast trends, generate budget and time snapshots, and adjust delivery decisions based on current performance.</p>"
+      "question": "10. Who should use Dynamics 365 Project Operations?",
+      "answer": "<p>It is designed for project-centric organisations such as consulting firms, professional services companies, IT services providers, engineering firms, and any business that delivers revenue through projects.</p>"
     },
     {
       "id": 11,
-      "question": "11. How does Dynamics 365 Project Operations simplify time and expense management?",
-      "answer": "<p>Time Entry Agent drafts time sheets, Expense Agent creates draft expense reports from receipts and emails, and Activity Approvals Agent prioritises entries that require review.</p>"
+      "question": "11. How is Dynamics 365 Project Operations different from traditional project management tools?",
+      "answer": "<p>Traditional tools focus mainly on task tracking. Dynamics 365 Project Operations connects project delivery with financial management, resource utilisation, billing models, and accounting standards such as IFRS.</p>"
     },
     {
       "id": 12,
-      "question": "12. Is Dynamics 365 Project Operations suitable for global organisations?",
-      "answer": "<p>Yes, it supports customised costing based on geography and exchange rates and aligns with international accounting practices.</p>"
+      "question": "12. Does Dynamics 365 Project Operations support fixed-price and time and materials billing?",
+      "answer": "<p>Yes. It supports adaptable billing models including fixed-price, time and materials, and retainer-type contracts.</p>"
     },
     {
       "id": 13,
-      "question": "13. What is the pricing of Dynamics 365 Project Operations?",
-      "answer": "<p>The standard pricing is $135 per user per month, paid yearly.</p>"
+      "question": "13. Can it integrate with Dynamics 365 Finance?",
+      "answer": "<p>Yes. It interoperates with Dynamics 365 Finance or external ERP systems using open APIs to extend financial capabilities.</p>"
     },
     {
       "id": 14,
-      "question": "14. Can Dynamics 365 Project Operations work with Microsoft Teams and Power BI?",
+      "question": "14. How does Dynamics 365 Project Operations improve resource utilisation?",
+      "answer": "<p>It uses universal resource scheduling, skill profiles, and proficiency models to match the right people to the right projects and balance workloads effectively.</p>"
+    },
+    {
+      "id": 15,
+      "question": "15. What role does AI play in Dynamics 365 Project Operations?",
+      "answer": "<p>Copilot and ERP agents such as the Time Entry Agent and Expense Agent help automate time tracking, expense reporting, approvals, and financial reconciliation while improving accuracy.</p>"
+    },
+    {
+      "id": 16,
+      "question": "16. Does it help with revenue recognition and compliance?",
+      "answer": "<p>Yes. It supports project accounting, cost and revenue profiles, accruals, postings, and adherence to accounting standards including IFRS.</p>"
+    },
+    {
+      "id": 17,
+      "question": "17. Can teams track project budgets in real time?",
+      "answer": "<p>Yes. Teams can track budget-to-actual consumption, generate forecasting snapshots, and use built-in dashboards to monitor project performance.</p>"
+    },
+    {
+      "id": 18,
+      "question": "18. Does it support forecasting for projects?",
+      "answer": "<p>Yes. Built-in insights help organisations forecast trends, generate budget and time snapshots, and adjust delivery decisions based on current performance.</p>"
+    },
+    {
+      "id": 19,
+      "question": "19. How does Dynamics 365 Project Operations simplify time and expense management?",
+      "answer": "<p>Time Entry Agent drafts time sheets, Expense Agent creates draft expense reports from receipts and emails, and Activity Approvals Agent prioritises entries that require review.</p>"
+    },
+    {
+      "id": 20,
+      "question": "20. Is Dynamics 365 Project Operations suitable for global organisations?",
+      "answer": "<p>Yes, it supports customised costing based on geography and exchange rates and aligns with international accounting practices.</p>"
+    },
+    {
+      "id": 21,
+      "question": "21. What is the pricing of Dynamics 365 Project Operations?",
+      "answer": "<p>The standard pricing is $135 per user per month, paid yearly.</p>"
+    },
+    {
+      "id": 22,
+      "question": "22. Can Dynamics 365 Project Operations work with Microsoft Teams and Power BI?",
       "answer": "<p>Yes. It supports collaboration in Microsoft Teams and provides dashboards and reporting capabilities through Power BI.</p>"
     },
      {
-      "id": 15,
-      "question": "15. How does it support project profitability?",
-      "answer": "<p>How does it support project profitability?</p>"
+      "id": 23,
+      "question": "23. How does it support project profitability?",
+      "answer": "<p>By combining accurate estimating, controlled resource scheduling, real-time budget tracking, structured billing, and revenue recognition, it helps organisations protect margins and improve financial visibility across projects.</p>"
     }
   ]
   
