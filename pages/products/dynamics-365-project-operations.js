@@ -38,6 +38,141 @@ const ProjectOpeartion = () => {
     modal.show();
   };
 
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Service",
+        "@id": "https://www.dynamicssquare.co.uk/products/dynamics-365-project-operations/#service",
+        "name": "Dynamics 365 Project Operations",
+        "serviceType": "Dynamics 365 ERP Implementation and Consulting",
+        "provider": {
+          "@type": "Organization",
+          "name": "Dynamics Square UK",
+          "url": "https://www.dynamicssquare.co.uk"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "United Kingdom"
+        },
+        "description": "Dynamics Square UK provides implementation, consulting, migration, and support services for Microsoft Dynamics 365 Project Operations to help organisations manage project delivery, resources, and financials in one unified system.",
+        "serviceOutput": {
+          "@id": "#software"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "#software",
+        "name": "Microsoft Dynamics 365 Project Operations",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Cloud",
+        "creator": {
+          "@type": "Organization",
+          "name": "Microsoft"
+        },
+        "description": "Microsoft Dynamics 365 Project Operations is an AI-powered project-to-profit solution that connects project management, resource scheduling, finance, billing, and resource planning in one system.",
+        "offers": {
+          "@type": "Offer",
+          "price": "103.80",
+          "priceCurrency": "GBP",
+          "availability": "https://schema.org/InStock"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.dynamicssquare.co.uk/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Products",
+            "item": "https://www.dynamicssquare.co.uk/products/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Dynamics 365 Project Operations",
+            "item": "https://www.dynamicssquare.co.uk/products/dynamics-365-project-operations/"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Does Microsoft Project Operations integrate with Business Central?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Microsoft Dynamics 365 Project Operations can integrate with Dynamics 365 Business Central and other Microsoft applications to extend financial and operational capabilities."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I install Project Operations in Dynamics 365?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Dynamics 365 Project Operations can be installed in either an existing or a new Power Platform environment using the Power Platform Admin Center and a valid licence."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are the core modules in Dynamics 365 Project Operations?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Core modules include contract management, sales management, project management, resource management, finance management, team collaboration, and time and expense tracking."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the price of Dynamics 365 Project Operations?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The standard cloud licensing price for Dynamics 365 Project Operations is approximately £103.80 per user per month when billed annually."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can Dynamics 365 Project Operations help businesses boost sales and revenue?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. The solution improves transparency, provides analytics insights, and helps organisations optimise resources and productivity to increase revenue."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can organisations start using Dynamics 365 Project Operations?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Organisations typically begin by working with a Microsoft partner for implementation who configures the system, migrates data, and provides training."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are the core functions of Dynamics 365 Project Operations?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Key functions include project planning, project sales, invoicing, revenue management, financial tracking, resource allocation, and project accounting."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does Dynamics 365 Project Operations work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "It connects project planning, resource scheduling, time tracking, financial management, and billing within one system to maximise project profitability."
+            }
+          }
+        ]
+      }
+    ]
+  };
+
   return (
     <>
       <Head>
@@ -66,6 +201,10 @@ const ProjectOpeartion = () => {
         <meta name="twitter:title" content="Dynamics 365 Project Operations Partner UK | Dynamics Square" />
         <meta name="twitter:description" content="Struggling with project visibility and billing? Deploy Dynamics 365 Project Operations with Dynamics Square UK. Improve resource utilisation and profitability." />
         <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/project-operation-banner.png" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
       </Head>
       <div className='solution-new-banner-one'>
         <div className='container'>
@@ -122,7 +261,7 @@ const ProjectOpeartion = () => {
             <div className='col-lg-6'>
               <div className='solution-new-banner-sub-head'>
                 <h2>What is Dynamics 365 Project Operations?</h2>
-                <p>D365 PO, or Microsoft Dynamics 365 Project Operations, is a project-to-profit system made for businesses that provide services through projects. It brings together project accounting, resource scheduling, time and cost tracking, billing, and deal management all in one application.</p>
+                <p>Microsoft Dynamics 365 Project Operations, is a project-to-profit system made for businesses that provide services through projects. It brings together project accounting, resource scheduling, time and cost tracking, billing, and deal management all in one application.</p>
                 <p>Dynamics 365 for project operations supports the complete quote-to-cash journey. Sales teams can build accurate estimates using standardised templates and adaptable billing models such as fixed-price or time and materials. Project managers track budget-to-actual consumption and use built-in insights to adjust delivery. Resource managers align the right people to the right projects using skill profiles and universal resource scheduling.</p>
                 <p>With Copilot and ERP agents such as the Time Entry Agent and Expense Agent, routine tasks are automated to improve accuracy and reduce manual effort. <a href="/products/microsoft-dynamics-365-finance/">Integration with Dynamics 365 Finance</a> and support for IFRS strengthen financial control across the lifecycle.</p>
                 <p><b>In nutshell:</b></p>
