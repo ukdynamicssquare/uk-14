@@ -9,10 +9,10 @@ const BcSupport = () => {
     return (
         <>
             <Head>
-                <title>Business Central Support & Services | Dynamics Square UK</title>
+                <title>D365 Business Central Support & Services UK - Dynamics Sqaure</title>
                 <meta
                     name="description"
-                    content="We provide Dynamics 365 Business Central support services to help you streamline operations, resolve issues quickly, and enhance overall business performance."
+                    content="Get expert Dynamics 365 Business Central support & services in the UK from Dynamics Square. Fast issue resolution, system optimisation, upgrades, and ongoing ERP support."
                 />
                 <link
                     rel="canonical"
@@ -20,14 +20,14 @@ const BcSupport = () => {
                 />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://www.dynamicssquare.co.uk/d365-business-central-support/" />
-                <meta property="og:title" content="Business Central Support & Services | Dynamics Square UK" />
-                <meta property="og:description" content="We provide Dynamics 365 Business Central support services to help you streamline operations, resolve issues quickly, and enhance overall business performance." />
+                <meta property="og:title" content="D365 Business Central Support & Services UK - Dynamics Sqaure" />
+                <meta property="og:description" content="Get expert Dynamics 365 Business Central support & services in the UK from Dynamics Square. Fast issue resolution, system optimisation, upgrades, and ongoing ERP support." />
                 <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/bc-support-banner.png" />
 
                 <meta property="twitter:card" content="summary_large_image" />
                 <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/d365-business-central-support/" />
-                <meta property="twitter:title" content="Business Central Support & Services | Dynamics Square UK" />
-                <meta property="twitter:description" content="We provide Dynamics 365 Business Central support services to help you streamline operations, resolve issues quickly, and enhance overall business performance." />
+                <meta property="twitter:title" content="D365 Business Central Support & Services UK - Dynamics Sqaure" />
+                <meta property="twitter:description" content="Get expert Dynamics 365 Business Central support & services in the UK from Dynamics Square. Fast issue resolution, system optimisation, upgrades, and ongoing ERP support." />
                 <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/bc-support-banner.png" />
             </Head>
             <div className='solution-new-banner-one'>
@@ -35,7 +35,7 @@ const BcSupport = () => {
                     <div className='row justify-content-center'>
                         <div className='col-lg-8'>
                             <div className='solution-new-banner-one-content'>
-                                <h1>Dynamics 365 Business Central Support Services</h1>
+                                <h1>Dynamics 365 Business Central Support</h1>
                                 <span className='large-heading'>Beyond Support: We Engineer Growth!</span>
                                 <p>Dynamics Square's Dynamics 365 Business Central Support Services can help you to improve your business operations. Our all-encompassing support guarantees the smooth operation of your Microsoft ERP solution, therefore enabling you to concentrate on efficiency and expansion. </p>
                                 <div className="text-center">
@@ -558,8 +558,8 @@ const BcSupport = () => {
                                         <div className="accordion-body">
                                             <p>
                                                 Business Central with Cloud deployment offers two
-                                                license plans: Essentials (£57.50 per user/month) and
-                                                Premium (£82.20 per user/month). Dynamics 365 Business
+                                                license plans: Essentials (£61.50 per user/month) and
+                                                Premium (£84.60 per user/month). Dynamics 365 Business
                                                 Central Essential comes with Finance Management, Sales
                                                 and Marketing, Purchasing Payables, Inventory, Supply
                                                 Planning and Availability, Project Management, and
