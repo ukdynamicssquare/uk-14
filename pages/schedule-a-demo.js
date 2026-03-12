@@ -27,7 +27,7 @@ const ScheduleDemoForm = () => {
            
               <div className="sedule-forma">
                 {/* <Form /> */}
-                <iframe src='https://outlook.office.com/book/RequestaPersonalisedDemo@dynamicssquare.com/?ismsaljsauthenabled' className="mycc-width"></iframe>
+                <iframe src='https://outlook.office.com/book/Bookademo1@dynamicssquare.com' className="mycc-width"></iframe>
               </div>
               
               
