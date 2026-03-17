@@ -40,7 +40,7 @@ const SalesNew = () => {
   return (
     <>
       <Head>
-            <meta name="robots" content="noindex, nofollow" />
+        <meta name="robots" content="noindex, nofollow" />
         <title>Microsoft Dynamics ERP | A Complete ERP Solutions</title>
         <meta
           name="description"
@@ -156,12 +156,42 @@ const SalesNew = () => {
               </div>
             </div>
             <div className='col-lg-12'>
-              <div>
+              <div className='ext-pp-colo'>
                 <p>So, how do traditional ERPs differ from AI-powered ERP solutions?</p>
               </div>
             </div>
           </div>
-          <div className='row'>
+          <div className='row erp-boder-1'>
+            <div className='col-lg-6'>
+              <div className='ttop-wrp'>
+                <div className='top-de'>
+                  <span>In a traditional ERP:</span>
+                </div>
+                <div className='botom-de'>
+                  <ul>
+                    <li><Image src="/img/serve-ic-01.png" alt="" width={40} height={40}/> <p>A finance manager reviews month-end reports manually</p></li>
+                    <li><Image src="/img/serve-ic-01.png" alt="" width={40} height={40} /> <p>Inventory planners analyse stock levels periodically</p></li>
+                    <li><Image src="/img/serve-ic-01.png" alt="" width={40} height={40} /> <p>Your team wastes hours on repetitive operations, spreadsheet juggling, and siloed workflows that cause delays and errors</p></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className='col-lg-6'>
+              <div className='ttop-wrp'>
+                <div className='top-de top-de-c'>
+                  <span>In an agentic ERP system:</span>
+                </div>
+                <div className='botom-de'>
+                  <ul>
+                    <li><Image src="/img/serve-ic-01.png" alt="" width={40} height={40}/> <p>A finance manager reviews month-end reports manually</p></li>
+                    <li><Image src="/img/serve-ic-01.png" alt="" width={40} height={40} /> <p>Inventory planners analyse stock levels periodically</p></li>
+                    <li><Image src="/img/serve-ic-01.png" alt="" width={40} height={40} /> <p>Your team wastes hours on repetitive operations, spreadsheet juggling, and siloed workflows that cause delays and errors</p></li>
+                    <li><Image src="/img/serve-ic-01.png" alt="" width={40} height={40} /> <p>Your team wastes hours on repetitive operations, spreadsheet juggling, and siloed workflows that cause delays and errors</p></li>
+                    <li><Image src="/img/serve-ic-01.png" alt="" width={40} height={40} /> <p>Your team wastes hours on repetitive operations, spreadsheet juggling, and siloed workflows that cause delays and errors</p></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
             
           </div>
         </div>

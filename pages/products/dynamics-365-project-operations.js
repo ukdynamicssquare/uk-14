@@ -177,10 +177,10 @@ const ProjectOpeartion = () => {
     <>
       <Head>
    
-        <title>Dynamics 365 Project Operations Partner UK | Dynamics Square</title>
+        <title>Dynamics 365 Project Operations | Dynamics Square UK</title>
         <meta
           name="description"
-          content="Struggling with project visibility and billing? Deploy Dynamics 365 Project Operations with Dynamics Square UK. Improve resource utilisation and profitability. "
+          content="Transform project management with Dynamics 365 Project Operations. Connect sales, delivery and finance with trusted UK experts at Dynamics Square UK. "
         />
         <link
           rel="canonical"
@@ -188,8 +188,8 @@ const ProjectOpeartion = () => {
         />
         <meta property="og:locale" content="GB" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content=" Dynamics 365 Project Operations Partner UK | Dynamics Square " />
-        <meta property="og:description" content="Struggling with project visibility and billing? Deploy Dynamics 365 Project Operations with Dynamics Square UK. Improve resource utilisation and profitability." />
+        <meta property="og:title" content=" Dynamics 365 Project Operations | Dynamics Square UK " />
+        <meta property="og:description" content="Transform project management with Dynamics 365 Project Operations. Connect sales, delivery and finance with trusted UK experts at Dynamics Square UK." />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/dynamics-365-project-operations/" />
         <meta property="og:site_name" content="Dynamics Square UK" />
         <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/project-operation-banner.png" />
@@ -198,8 +198,8 @@ const ProjectOpeartion = () => {
         <meta property="og:image:type" content="image/png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="Dynamics 365 Project Operations Partner UK | Dynamics Square" />
-        <meta name="twitter:description" content="Struggling with project visibility and billing? Deploy Dynamics 365 Project Operations with Dynamics Square UK. Improve resource utilisation and profitability." />
+        <meta name="twitter:title" content="Dynamics 365 Project Operations | Dynamics Square UK" />
+        <meta name="twitter:description" content="Transform project management with Dynamics 365 Project Operations. Connect sales, delivery and finance with trusted UK experts at Dynamics Square UK." />
         <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/project-operation-banner.png" />
         <script
           type="application/ld+json"
