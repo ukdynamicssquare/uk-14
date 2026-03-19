@@ -18134,7 +18134,7 @@ list-style: inherit;
 .erp-boder-1{
   border: solid 1px #b07dc6;
   padding: 60px 20px;
-  margin-top: 60px;
+margin-top: 60px !important;
 }
 .ttop-wrp{}
 .top-de{
