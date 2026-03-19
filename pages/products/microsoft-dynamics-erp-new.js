@@ -530,9 +530,9 @@ const SalesNew = () => {
             <div className='col-lg-5 align-self-center'>
               <div className='product-side-002-content'>
                 <div className='solution-new-banner-sub-head' style={{ paddingBottom: '0px' }}>
-                  <h2>Dynamics 365 Integrations</h2>
-                  <p>One of the strongest advantages of the Dynamics 365 ERP system is ecosystem connectivity.</p>
-                  <p><b>Native integrations include:</b></p>
+                  <h2>Why Organisations Choose Microsoft Dynamics 365 ERP?</h2>
+                  <p>When evaluating a Microsoft Dynamics ERP partner or selecting a Microsoft Dynamics ERP consultant, decision-makers look beyond features. </p>
+                  <p><b>They focus on crucial questions:</b></p>
                 </div>
                 <div className='card-0101'>
                   <Image src="/img/image-760.png" alt="Dynamics GP" width={48} height={48} />
