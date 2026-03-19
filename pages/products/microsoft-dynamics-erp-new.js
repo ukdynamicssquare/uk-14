@@ -2,23 +2,11 @@ import { useRef, useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-// import useGsapScrollCards from '../../../hooks/useGsapScrollCards';
-import faqData from '../../public/data/sales_faq.json';
+import faqData from '../../public/data/dynamics-erp-faq.json';
 import useCardScrollEffect from "../../components/useCardScrollEffect";
-import BcPopPdf from '../../components/BCPdfPopup';
-import BlogFinanaceCard from '../../components/BlogFinanaceCard';
 
-
-
-// const StackedCards = dynamic(() => import("../../components/StackedCards"), {
-//     ssr: false,
-//   });
 
 const SalesNew = () => {
-  /*gsap card scroll*/
-  // const containerRef = useRef(null);
-  // useGsapScrollCards(containerRef);
-  /*gsap card scroll*/
 
   useCardScrollEffect()
 
@@ -27,14 +15,6 @@ const SalesNew = () => {
 
   const handleLoadMore = () => {
     setVisibleCount((prev) => prev + 3);
-  };
-
-  const [pdfType, setPdfType] = useState(null);
-  const handleOpenModal = (type) => {
-    setPdfType(type);
-    // Open modal manually (needed since you use Bootstrap)
-    const modal = new bootstrap.Modal(document.getElementById('pdfModel'));
-    modal.show();
   };
 
   return (
@@ -169,9 +149,9 @@ const SalesNew = () => {
                 </div>
                 <div className='botom-de'>
                   <ul>
-                    <li><Image src="/img/serve-ic-01.png" alt="" width={40} height={40}/> <p>A finance manager reviews month-end reports manually</p></li>
-                    <li><Image src="/img/serve-ic-01.png" alt="" width={40} height={40} /> <p>Inventory planners analyse stock levels periodically</p></li>
-                    <li><Image src="/img/serve-ic-01.png" alt="" width={40} height={40} /> <p>Your team wastes hours on repetitive operations, spreadsheet juggling, and siloed workflows that cause delays and errors</p></li>
+                    <li><Image src="/img/serve-ic-01.png" alt="" width={40} height={40} /> <p>A finance manager reviews month-end reports manually.</p></li>
+                    <li><Image src="/img/serve-ic-01.png" alt="" width={40} height={40} /> <p>Inventory planners analyse stock levels periodically.</p></li>
+                    <li><Image src="/img/serve-ic-01.png" alt="" width={40} height={40} /> <p>Procurement teams respond to shortages after alerts.</p></li>
                   </ul>
                 </div>
               </div>
@@ -183,16 +163,72 @@ const SalesNew = () => {
                 </div>
                 <div className='botom-de'>
                   <ul>
-                    <li><Image src="/img/serve-ic-01.png" alt="" width={40} height={40}/> <p>A finance manager reviews month-end reports manually</p></li>
-                    <li><Image src="/img/serve-ic-01.png" alt="" width={40} height={40} /> <p>Inventory planners analyse stock levels periodically</p></li>
-                    <li><Image src="/img/serve-ic-01.png" alt="" width={40} height={40} /> <p>Your team wastes hours on repetitive operations, spreadsheet juggling, and siloed workflows that cause delays and errors</p></li>
-                    <li><Image src="/img/serve-ic-01.png" alt="" width={40} height={40} /> <p>Your team wastes hours on repetitive operations, spreadsheet juggling, and siloed workflows that cause delays and errors</p></li>
-                    <li><Image src="/img/serve-ic-01.png" alt="" width={40} height={40} /> <p>Your team wastes hours on repetitive operations, spreadsheet juggling, and siloed workflows that cause delays and errors</p></li>
+                    <li><Image src="/img/serve-ic-01.png" alt="" width={40} height={40} /> <p>The AI agent flags unusual spending patterns before month-end.</p></li>
+                    <li><Image src="/img/serve-ic-01.png" alt="" width={40} height={40} /> <p>It predicts potential stockouts based on demand signals.</p></li>
+                    <li><Image src="/img/serve-ic-01.png" alt="" width={40} height={40} /> <p>It recommends purchase orders automatically.</p></li>
+                    <li><Image src="/img/serve-ic-01.png" alt="" width={40} height={40} /> <p>It drafts journal entries for review.</p></li>
+                    <li><Image src="/img/serve-ic-01.png" alt="" width={40} height={40} /> <p>It prepares cash flow forecasts without manual spreadsheet work.</p></li>
                   </ul>
                 </div>
               </div>
             </div>
-            
+
+          </div>
+        </div>
+      </section>
+      <section id='section4' className='solution-new-banner-four new-bg-00'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-lg-4 align-self-center'>
+              <div className='product-side-002-img001a'>
+                <Image src="/img/group-3602s1.png" width={485} height={627} alt="Card 6" />
+
+              </div>
+            </div>
+            <div className='col-lg-8'>
+              <div className='row'>
+                <div className='col-lg-12'>
+                  <div className='solution-new-banner-sub-head new-bg-00-1'>
+                    <h2>Core Characteristics of Agentic ERP</h2>
+                    <p>An ERP solution qualifies as “agentic” when it demonstrates:</p>
+                  </div>
+                </div>
+              </div>
+              <div className='row g-3'>
+                <div class="col-lg-6 d-flex">
+                  <div class="solution-new-six-card">
+                    <h3>Autonomy (Within Boundaries)</h3>
+                    <p>The system can initiate tasks such as generating recommendations, drafting communications, or preparing financial entries.</p>
+                  </div>
+                </div>
+                <div class="col-lg-6 d-flex">
+                  <div class="solution-new-six-card">
+                    <h3>Contextual Awareness</h3>
+                    <p>It understands transactional patterns, historical data, and organisational structure.</p>
+                  </div>
+                </div>
+                <div class="col-lg-6 d-flex">
+                  <div class="solution-new-six-card">
+                    <h3>Continuous Monitoring</h3>
+                    <p>Instead of static reporting cycles, it watches processes in real time.</p>
+                  </div>
+                </div>
+                <div class="col-lg-6 d-flex">
+                  <div class="solution-new-six-card">
+                    <h3>Decision Support</h3>
+                    <p>It prioritises actions and presents structured recommendations.</p>
+                  </div>
+                </div>
+                <div class="col-lg-6 d-flex">
+                  <div class="solution-new-six-card">
+                    <h3>Learning Capability</h3>
+                    <p>It improves accuracy based on historical corrections and outcomes.</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
           </div>
         </div>
       </section>
@@ -202,8 +238,8 @@ const SalesNew = () => {
           <div className='row'>
             <div className='col-lg-9'>
               <div className='solution-new-banner-sub-head'>
-                <h2>Inside Dynamics 365 Sales: What Powers Your Sales Teams</h2>
-                <p><b>Dynamics 365 Sales features</b> let you run sales operations with total control and confidence. Replace manual follow ups with AI driven actions, reduce delays through intelligent guidance, and improve deal outcomes with real time visibility. Here is how this agentic CRM solution transforms selling for modern organisations:</p>
+                <h2>Microsoft Dynamics 365 ERP Products</h2>
+                <p>Below is a structured overview of every core Microsoft Dynamics ERP application within the Dynamics 365 suite. Each product can operate independently or as part of a fully integrated enterprise architecture.</p>
               </div>
             </div>
           </div>
@@ -212,14 +248,28 @@ const SalesNew = () => {
               <div className="stached-scroll-card">
                 <div className='mycard'>
                   <div className='mycard__inner'>
-                    <div className='mycard__inner-left'>
-                      <h3>Automated Lead and Opportunity Management</h3>
-                      <p>Manual lead handling slows response times and weakens conversion rates but with Dynamics 365 CRM Sales, teams can:</p>
+                    <div className='mycard__inner-left mycard__inner-left-bb'>
+                      <h3>Dynamics 365 Business Central</h3>
+                      <p>Dynamics 365 Business Central is Microsoft’s all-in-one ERP designed for small and mid-sized businesses.</p>
+                      <p><b>Key capabilities include:</b></p>
                       <ul>
-                        <li>Automatically research and qualify incoming leads using AI agents</li>
-                        <li>Prioritise opportunities with AI based scoring and guided work lists</li>
-                        <li>Reduce manual data entry across emails, calls, and meetings</li>
+                        <li>Financial management</li>
+                        <li>Sales and purchasing</li>
+                        <li>Inventory and warehouse management</li>
+                        <li>Project tracking</li>
+                        <li>Basic manufacturing</li>
+                        <li>Reporting and analytics</li>
                       </ul>
+                      <p>For organisations moving from legacy systems like Dynamics NAV, Sage, or entry-level accounting software, Business Central offers a natural progression into a modern Dynamics 365 ERP system.</p>
+                      <div className="">
+                        <Link
+                          href="#exampleModal"
+                          data-bs-toggle="modal"
+                          className="btn-get-started scrollto">
+
+                          <span>Learn More Here</span> <i className="bi bi-arrow-right"></i>
+                        </Link>
+                      </div>
                     </div>
                     <div className='mycard__inner-right'>
                       <Image src="/img/sales-new-04.png" width={510} height={401} alt="Automated Lead and Opportunity Management" />
@@ -228,69 +278,209 @@ const SalesNew = () => {
                 </div>
                 <div className='mycard'>
                   <div className='mycard__inner'>
-                    <div className='mycard__inner-left'>
-                      <h3>Intelligent Pipeline and Deal Execution</h3>
-                      <p>When priorities are not clear, it causes deals to stall without warning. Dynamics 365 Sales helps teams to:</p>
+                    <div className='mycard__inner-left mycard__inner-left-bb'>
+                      <h3>Dynamics 365 Finance</h3>
+                      <p>Dynamics 365 Finance is built for organisations that require advanced financial governance, multi-country compliance, and enterprise-level reporting.</p>
+                      <p><b>Key capabilities include:</b></p>
                       <ul>
-                        <li>Track pipeline health with real time insights and summaries</li>
-                        <li>Receive AI driven alerts for the best next sales actions</li>
-                        <li>Progress deals faster with consistent and guided sales steps</li>
+                        <li>Advanced general ledger</li>
+                        <li>Multi-currency, multi-entity consolidation</li>
+                        <li>Budget control and forecasting</li>
+                        <li>Regulatory compliance</li>
+                        <li>Embedded AI-driven financial insights</li>
                       </ul>
+                      <p>This Microsoft ERP solution supports CFOs and finance leaders seeking predictive visibility rather than retrospective reporting. If financial complexity is your core challenge, this is the backbone of your Microsoft Dynamics ERP Software architecture.</p>
+                      <div className="">
+                        <Link
+                          href="#exampleModal"
+                          data-bs-toggle="modal"
+                          className="btn-get-started scrollto">
+
+                          <span>Learn More Here</span> <i className="bi bi-arrow-right"></i>
+                        </Link>
+                      </div>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/sales-new-05.png" width={510} height={401} alt="Intelligent Pipeline and Deal Execution" />
+                      <Image src="/img/sales-new-04.png" width={510} height={401} alt="Automated Lead and Opportunity Management" />
                     </div>
                   </div>
                 </div>
                 <div className='mycard'>
                   <div className='mycard__inner'>
-                    <div className='mycard__inner-left'>
-                      <h3>Smarter Forecasting and Performance Insight</h3>
-                      <p>Sales forecasting based on intuition creates risk and uncertainty. With <b>Dynamics 365 Sales app</b>, leaders can:</p>
+                    <div className='mycard__inner-left mycard__inner-left-bb'>
+                      <h3>Dynamics 365 Supply Chain Management</h3>
+                      <p>Dynamics 365 Supply Chain Management addresses operational efficiency across procurement, manufacturing, warehousing, and distribution.</p>
+                      <p><b>Key capabilities include:</b></p>
                       <ul>
-                        <li>Predict revenue using AI supported forecasting models</li>
-                        <li>Compare performance against targets with clear visual charts</li>
-                        <li>Analyse conversion rates and win trends using Copilot queries</li>
+                        <li>Demand forecasting</li>
+                        <li>Production planning</li>
+                        <li>Inventory optimisation</li>
+                        <li>Asset management</li>
+                        <li>Warehouse automation</li>
+                        <li>Quality control</li>
                       </ul>
+                      <p>AI-powered forecasting improves stock positioning. Embedded analytics reduce disruptions. Real-time visibility enhances fulfilment reliability. For organisations with complex logistics, this transforms ERP from a static database into a decision-making engine.</p>
+                      <div className="">
+                        <Link
+                          href="#exampleModal"
+                          data-bs-toggle="modal"
+                          className="btn-get-started scrollto">
+
+                          <span>Learn More Here</span> <i className="bi bi-arrow-right"></i>
+                        </Link>
+                      </div>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/sales-new-06.png" width={510} height={401} alt="Smarter Forecasting and Performance Insight" />
+                      <Image src="/img/sales-new-04.png" width={510} height={401} alt="Automated Lead and Opportunity Management" />
                     </div>
                   </div>
                 </div>
                 <div className='mycard'>
                   <div className='mycard__inner'>
-                    <div className='mycard__inner-left'>
-                      <h3>Personalised Customer Engagement at Scale</h3>
-                      <p>Make every impression, every engagement count because Generic outreach weakens trust and engagement over time. A part of <a href="/products/dynamics-365-customer-engagement/">Dynamics 365 CE</a> (<b>Customer Engagement</b>), Dynamics 365 Sales enables teams to:</p>
+                    <div className='mycard__inner-left mycard__inner-left-bb'>
+                      <h3>Dynamics 365 Project Operations</h3>
+                      <p>Dynamics 365 Project Operations is designed for project-centric businesses.</p>
+                      <p><b>Key capabilities include:</b></p>
                       <ul>
-                        <li>Prepare for meetings with AI generated customer summaries</li>
-                        <li>Draft emails and call notes using Copilot assistance</li>
-                        <li>Maintain consistent and informed interactions across channels</li>
+                        <li>Project planning</li>
+                        <li>Resource scheduling</li>
+                        <li>Time and expense management</li>
+                        <li>Project accounting</li>
+                        <li>Revenue recognition</li>
+                        <li>Financial reporting</li>
                       </ul>
+                      <p>Professional services firms, consultancies, and engineering companies rely on Dynamics 365 Project Operations to ensure margin control and delivery predictability. This application bridges CRM and ERP, connecting sales pipelines directly with project financial execution.</p>
+                      <div className="">
+                        <Link
+                          href="#exampleModal"
+                          data-bs-toggle="modal"
+                          className="btn-get-started scrollto">
+
+                          <span>Learn More Here</span> <i className="bi bi-arrow-right"></i>
+                        </Link>
+                      </div>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/sales-new-07.png" width={510} height={401} alt="Personalised Customer Engagement at Scale<" />
+                      <Image src="/img/sales-new-04.png" width={510} height={401} alt="Automated Lead and Opportunity Management" />
                     </div>
                   </div>
                 </div>
                 <div className='mycard'>
                   <div className='mycard__inner'>
-                    <div className='mycard__inner-left'>
-                      <h3>Connected Selling with Secure Foundations</h3>
-                      <p>When your apps are disconnected, they limit visibility and create security concerns. Dynamics 365 Sales integrates with:</p>
+                    <div className='mycard__inner-left mycard__inner-left-bb'>
+                      <h3>Dynamics 365 Human Resources</h3>
+                      <p>Dynamics 365 Human Resources supports workforce management, compliance, and employee engagement.</p>
+                      <p><b>Key capabilities include:</b></p>
                       <ul>
-                        <li>Microsoft 365 and other <a href="/products/microsoft-dynamics-365/">Dynamics 365 apps</a> to support daily seller productivity</li>
-                        <li>Power Platform to extend workflows and automation</li>
-                        <li>Enterprise grade security controls to protect customer data</li>
+                        <li>Leave and absence management</li>
+                        <li>Compensation planning</li>
+                        <li>Benefits administration</li>
+                        <li>Skills tracking</li>
+                        <li>Regulatory compliance</li>
                       </ul>
+                      <p>For organisations with complex workforce structures, HR integration into the broader Dynamics 365 ERP ecosystem ensures payroll, finance, and workforce data remain aligned.</p>
+                      <div className="">
+                        <Link
+                          href="#exampleModal"
+                          data-bs-toggle="modal"
+                          className="btn-get-started scrollto">
+
+                          <span>Learn More Here</span> <i className="bi bi-arrow-right"></i>
+                        </Link>
+                      </div>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/sales-new-08.png" width={571} height={369} alt="Connected Selling with Secure Foundations" />
+                      <Image src="/img/sales-new-04.png" width={510} height={401} alt="Automated Lead and Opportunity Management" />
+                    </div>
+                  </div>
+                </div>
+                <div className='mycard'>
+                  <div className='mycard__inner'>
+                    <div className='mycard__inner-left mycard__inner-left-bb'>
+                      <h3>Dynamics 365 Commerce</h3>
+                      <p>Dynamics 365 Commerce connects retail, e-commerce, and supply chain operations.</p>
+                      <p><b>Key capabilities include:</b></p>
+                      <ul>
+                        <li>Unified point-of-sale</li>
+                        <li>E-commerce platform integration</li>
+                        <li>Real-time inventory visibility</li>
+                        <li>Customer insights</li>
+                        <li>Omnichannel retail management</li>
+
+                      </ul>
+                      <p>Retailers and distributors use Commerce to eliminate data silos between physical stores, warehouses, and digital platforms.</p>
+                      <div className="">
+                        <Link
+                          href="#exampleModal"
+                          data-bs-toggle="modal"
+                          className="btn-get-started scrollto">
+
+                          <span>Learn More Here</span> <i className="bi bi-arrow-right"></i>
+                        </Link>
+                      </div>
+                    </div>
+                    <div className='mycard__inner-right'>
+                      <Image src="/img/sales-new-04.png" width={510} height={401} alt="Automated Lead and Opportunity Management" />
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id='section2' className="solution-new-banner-two">
+        <div className='container'>
+          <div className='row g-5'>
+            <div className='col-lg-6 align-self-center'>
+              <div className='product-side-002-content'>
+                <div className='solution-new-banner-sub-head' style={{ paddingBottom: '0px' }}>
+                  <h2>Legacy Systems: GP, NAV, and AX</h2>
+                </div>
+                <p><b>Many organisations still operate on:</b></p>
+                <div className='card-lin-001'>
+                  <a href="#">
+                    <Image src="/img/image-760.png" alt="Dynamics GP" width={48} height={48} />
+                    <span>Dynamics GP</span>
+                  </a>
+                </div>
+                <div className='card-lin-001'>
+                  <a href="#">
+                    <Image src="/img/image-760.png" alt="Dynamics GP" width={48} height={48} />
+                    <span>Dynamics NAV</span>
+                  </a>
+                </div>
+                <div className='card-lin-001'>
+                  <a href="#">
+                    <Image src="/img/image-760.png" alt="Dynamics GP" width={48} height={48} />
+                    <span>Dynamics AX</span>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+            <div className='col-lg-6 align-self-center'>
+              <div className='product-side-002-content'>
+                <p>These legacy systems are either approaching end-of-support milestones or lack modern AI, automation, and cloud capabilities.
+                  Migrating from legacy to Microsoft Dynamics 365 ERP is no longer optional for organisations seeking scalability, compliance, and innovation readiness.
+                </p>
+                <ul className='banner-sub-head-list'>
+                  <li><i className="bi bi-check2"></i> NAV to Business Central upgrades</li>
+                  <li><i className="bi bi-check2"></i> AX to Finance and Supply Chain migrations</li>
+                  <li><i className="bi bi-check2"></i> GP modernisation strategies</li>
+                  <li><i className="bi bi-check2"></i> Hybrid transformation roadmaps</li>
+                </ul>
+                <div className="">
+                  <Link
+                    href="#exampleModal"
+                    data-bs-toggle="modal"
+                    className="btn-get-started scrollto">
+
+                    <span>Talk to a Microsoft Consultant</span> <i className="bi bi-arrow-right"></i>
+                  </Link>
+                </div>
+              </div>
+
             </div>
           </div>
         </div>
@@ -301,11 +491,11 @@ const SalesNew = () => {
             <div className='row'>
               <div className='col-lg-10'>
                 <div className='solution-new-cta-001'>
-                  <span className='solution-new-cta-t'>Equip Your Sales Teams with Agentic CRM Intelligence</span>
-                  <h3>Adopt AI guided selling that improves focus, prioritisation, and consistent deal progression.</h3>
+                  <span className='solution-new-cta-t'>Don’t Delay the Digital Transformation. Take the Next Step</span>
+                  <h3>Your ERP decision shapes your next decade of operations. Make it deliberate.</h3>
                   <div>
                     <Link href="/contact-us/" className="btn-get-started scrollto">
-                      <span>Get Started Today &nbsp;<i className="bi bi-arrow-right"></i></span>
+                      <span>Request a Tailored ERP Assessment &nbsp;<i className="bi bi-arrow-right"></i></span>
                     </Link>
                   </div>
                 </div>
@@ -313,67 +503,101 @@ const SalesNew = () => {
             </div>
           </div>
         </div>
-
       </section>
-      <section id='section4' className='solution-new-banner-four'>
+      <section id='section2' className="solution-new-banner-t">
         <div className='container'>
-          <div className='row'>
-            <div className='col-lg-9'>
-              <div className='solution-new-banner-sub-head'>
-                <h2>Dynamics 365 Sales Benefits: The Advantage Modern Sales Teams Need</h2>
-                <p>High performing sales organisations share a common trait. They run selling on systems that guide action, reduce friction, and improve outcomes. Dynamics 365 Sales delivers clarity, focus, and execution through an agentic CRM solution built for modern selling teams.</p>
+          <div className='row g-5'>
+            <div className='col-lg-8 align-self-center'>
+              <div className='product-side-002-content'>
+                <div className='solution-new-banner-sub-head' style={{ paddingBottom: '0px' }}>
+                  <h2>Dynamics 365 Integrations</h2>
+                  <p>One of the strongest advantages of the Dynamics 365 ERP system is ecosystem connectivity.</p>
+                </div>
+              </div>
+
+            </div>
+            <div className='col-lg-12 align-self-center'>
+              <div className='product-side-002-content'>
+                <img src="/img/ero-new-banner.png" alt="Dynamics 365 Integrations" width={1366} height={599} />
               </div>
             </div>
           </div>
-          <div className='row'>
+        </div>
+      </section>
+      <section id='section4' className='solution-new-banner-four'>
+        <div className='container'>
+          <div className='row g-5'>
+            <div className='col-lg-5 align-self-center'>
+              <div className='product-side-002-content'>
+                <div className='solution-new-banner-sub-head' style={{ paddingBottom: '0px' }}>
+                  <h2>Dynamics 365 Integrations</h2>
+                  <p>One of the strongest advantages of the Dynamics 365 ERP system is ecosystem connectivity.</p>
+                  <p><b>Native integrations include:</b></p>
+                </div>
+                <div className='card-0101'>
+                  <Image src="/img/image-760.png" alt="Dynamics GP" width={48} height={48} />
+                  <p className='m-0'>Will this scale over the next decade?</p>
+                </div>
+                <div className='card-0101'>
+                  <Image src="/img/image-760.png" alt="Dynamics GP" width={48} height={48} />
+                  <p className='m-0'>Does it reduce operational and compliance risk?</p>
+                </div>
+                <div className='card-0101'>
+                  <Image src="/img/image-760.png" alt="Dynamics GP" width={48} height={48} />
+                  <p className='m-0'>Is the total cost sustainable in long term?</p>
+                </div>
+                <div className='card-0101'>
+                  <Image src="/img/image-760.png" alt="Dynamics GP" width={48} height={48} />
+                  <p className='m-0'>Is the solution stable and future-ready?</p>
+                </div>
+              </div>
+            </div>
+            <div className='col-lg-1'></div>
             <div className='col-lg-6'>
               <div className='product-side-002'>
+                <p>And this is precisely where Microsoft Dynamics 365 ERPs stand apart. Let’s take a glance at the reasons why Microsoft Dynamics ERP ticks the maximum right boxes for companies:</p>
                 <ul>
                   <li>
-                    <h3>Close Deals Faster with Clear Priorities</h3>
-                    <p>Deals stall when sellers juggle too many tasks without direction. Dynamics 365 Sales uses AI driven prioritisation, opportunity scoring, and guided actions so sellers focus on the deals that matter most.</p>
+                    <h3>Built to Scale Without Replacing the Platform</h3>
+                    <p>Many ERP systems become restrictive as organisations grow. That’s, however, not the case when you have a Dynamics 365 ERP. It is modular and expandable. You can begin with a focused deployment and scale into multi-entity, multi-country operations without changing systems. And that protects long-term investment.</p>
                   </li>
                   <li>
-                    <h3>Improve Pipeline Visibility and Forecast Accuracy</h3>
-                    <p>Unclear pipelines weaken planning and confidence. With real time pipeline insights and AI supported forecasting, Dynamics 365 Sales helps leaders track progress, predict revenue, and plan with greater certainty.</p>
+                    <h3>Enterprise-Grade Security and Compliance</h3>
+                    <p>ERP systems hold your most sensitive financial and operational data. With Microsoft ERP solutions, security is foundational. It comes with Azure-backed cloud infrastructure, role-based access control, continuous security updates, and strong compliance alignment, that too out-of-the-box. For UK organisations navigating regulatory pressure, this reduces risk exposure.</p>
                   </li>
                   <li>
-                    <h3>Increase Seller Productivity with AI Assistance</h3>
-                    <p>Manual updates drain selling time and energy. Copilot supports sellers with email drafts, call summaries, meeting preparation, and automatic activity capture across daily workflows.</p>
+                    <h3>Predictable Total Cost of Ownership</h3>
+                    <p>ERP cost is not just licence pricing. Infrastructure, upgrades, integration, and maintenance often drive long-term expense. As the Dynamics 365 ERP system is cloud-native, infrastructure overhead is reduced, Updates are continuous rather than disruptive, and AI enhancements roll out without major upgrades. Consequently, the financial model remains predictable.</p>
                   </li>
                   <li>
-                    <h3>Deliver Better Customer Experiences at Scale</h3>
-                    <p>Inconsistent interactions damage trust over time. Dynamics 365 Sales equips teams with customer summaries, history, and insights so every conversation feels informed, relevant, and timely.</p>
+                    <h3>Native Microsoft Ecosystem Integration</h3>
+                    <p>Most organisations already use Microsoft 365, Teams, and Power BI. Microsoft Dynamics ERP software integrates natively across this ecosystem, reducing friction, improving adoption, and minimising custom integration layers. That translates to faster value realisation which brings the peace of mind and keep things running smoothly.</p>
                   </li>
                   <li>
-                    <h3>Scale Sales Operations with Security and Control</h3>
-                    <p>Growth increases data risk and process complexity. Dynamics 365 Sales provides role-based access, compliance controls, and secure data handling to support expansion without compromising governance.</p>
+                    <h3>AI Embedded at the Core</h3>
+                    <p>With AI-Powered ERP Solutions in Dynamics 365, intelligence is built into workflows. Organisations gain predictive forecasting, automated anomaly detection, intelligent inventory optimisation, and Copilot-assisted financial processes. The ERP becomes an operational support system and not just a transactional database.</p>
+                  </li>
+                  <li>
+                    <h3>Long-Term Solution Stability</h3>
+                    <p>ERP is a decade-level decision. Choosing Microsoft ERP means aligning with a technology partner that continuously invests in cloud, AI, compliance, and global infrastructure. That reduces strategic uncertainty.</p>
                   </li>
                 </ul>
                 <div className='product-side-002-ext'>
-                  <p>Organisations using Dynamics 365 Sales report stronger pipeline control, improved forecast confidence, and measurable gains in seller productivity across teams.</p>
                   <div className="text-lg-start">
                     <Link
                       href="#exampleModal"
                       data-bs-toggle="modal"
                       className="btn-get-started scrollto">
-                      <span>Claim Your Free Dynamics 365 Sales Consultation &nbsp;<i className="bi bi-arrow-right"></i></span>
+                      <span>Claim Your Free Consultation &nbsp;<i className="bi bi-arrow-right"></i></span>
                     </Link>
                   </div>
                 </div>
               </div>
             </div>
-            <div className='col-lg-6 align-self-center'>
-              <div className='product-side-002-img001'>
-                <Image src="/img/sales-new-10.png" width={592} height={680} alt="Card 6" />
 
-              </div>
-            </div>
           </div>
         </div>
-        <div className='n-014' >
-          <img src="/img/n-014.png" width={604} height={958} alt="Card 6" />
-        </div>
+
       </section>
 
       <section id='section6' className='solution-new-six' style={{ backgroundColor: '#fff' }}>
@@ -381,76 +605,64 @@ const SalesNew = () => {
           <div className='row'>
             <div className='col-lg-9'>
               <div className='solution-new-banner-sub-head'>
-                <h2>Agents in Dynamics 365 Sales</h2>
+                <h2>Dynamics 365 ERP Implementation: What to Expect</h2>
+                <p>Dynamics 365 ERP implementation is not a software deployment. It is a business transformation initiative. A structured approach typically includes:</p>
               </div>
             </div>
           </div>
           <div className='row'>
             <div className='col-lg-12'>
               <div className='text-center' style={{ marginBottom: '30px' }}>
-                <Image src='/img/sales-new-11.png' alt='sales-new-11' width={1282} height={383} />
+                <Image src='/img/ero-new-banner-1.png' alt='ero-new-banner-1' width={1321} height={353} />
               </div>
             </div>
           </div>
 
           <div className='row g-3 m-t-2'>
-            <div className='col-lg-6'>
-              <div className='solution-new-bg'>
-                <div className='solution-new-six-card'>
-                  <h3 style={{ fontSize: "18px" }}>AI-First Selling, Built into Your CRM</h3>
-                  <p>Dynamics 365 Sales delivers a fully agentic CRM solution through prebuilt sales agents that support the entire customer engagement journey, from lead qualification to deal close and beyond. These agents work with sellers to reduce manual effort and improve focus on high value customer conversations.</p>
-                </div>
-              </div>
-              <div className='solution-new-bg'>
-                <div className='solution-new-six-card'>
-                  <h3 style={{ fontSize: "18px" }}>Built on Copilot and Copilot Studio</h3>
-                  <p style={{ marginBottom: '15px' }}>Sales agents are powered by <a href="/blog/microsoft-dynamics-copilot/">Microsoft Copilot</a> and extended through Copilot Studio. Organisations can combine prebuilt agents with custom agents to support specific sales processes and scale productivity across teams.</p>
-                  <p>Together, <a href="/products/microsoft-dynamics-365-sales/copilot/">Copilot, agents, and Dynamics 365 Sales</a> enable AI-first selling with clarity, consistency, and confidence.</p>
-                </div>
-              </div>
-            </div>
-            <div className='col-lg-6 d-flex'>
-              <div className='solution-new-bg'>
-                <div className='solution-new-six-card'>
-                  <h3 style={{ fontSize: "18px", marginBottom: '25px' }}>Prebuilt Sales Agents+</h3>
-                  <div style={{ marginBottom: '20px' }}>
-                    <h3>Sales Qualification Agent</h3>
-                    <p>Researches and prioritises inbound leads, engages prospects, and prepares personalised outreach. Sellers gain time to focus on relationship building and opportunity progression.</p>
-                  </div>
-                  <div style={{ marginBottom: '20px' }}>
-                    <h3>Sales Close Agent</h3>
-                    <p>Analyses active deals and highlights insights that help sellers prioritise actions and move opportunities forward faster. Available in preview.</p>
-                  </div>
-                  <div>
-                    <h3>Sales Research Agent</h3>
-                    <p>Answers complex sales questions in real time by analysing data across systems and turning information into clear, decision ready insights. Available in preview.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
 
 
-            {/* <div className='col-lg-12'>
-              <div className='text-center'>
+
+            <div className='col-lg-12'>
+              <div className='text-center' style={{ paddingTop: '30px' }}>
+                <p>Selecting the right Microsoft Dynamics ERP partner determines implementation success more than the software itself.</p>
                 <Link
                   href="#exampleModal"
                   data-bs-toggle="modal"
                   className="btn-get-started scrollto">
-                  <span>Book a Demo!  &nbsp;<i className="bi bi-arrow-right"></i></span>
+                  <span>Start Your ERP Implementation Plan  &nbsp;<i className="bi bi-arrow-right"></i></span>
                 </Link>
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
       </section>
 
-      <section className='solution-new-cta slution-new-cta-two'>
+      <section className='solution-new-cta slution-new-cta-two0'>
         <div className='container'>
-          <div className='row'>
-            <div className='col-lg-9'>
-              <div className='solution-new-cta-001'>
-                <h3>Move From Manual Selling to AI-First Sales Execution</h3>
-                <p>Support sellers with agents, insights, and guidance across every stage of sales cycles.</p>
+          <div className='row g-5'>
+            <div className='col-lg-6'>
+              <div className='solution-new-cta-0011'>
+                <h2>Is Microsoft Dynamics 365 ERP Right for You?</h2>
+                <br />
+                <div>
+                  <p>You should consider Microsoft Dynamics 365 ERP if:</p>
+                  <ul>
+                    <li>Your current system lacks scalability.</li>
+                    <li>Reporting requires excessive manual effort.</li>
+                    <li>Compliance requirements are increasing.</li>
+                    <li>You operate across multiple entities or regions.</li>
+                    <li>AI-driven forecasting would improve decision-making.</li>
+                    <li>You want a unified ecosystem across ERP, CRM, and analytics.</li>
+                  </ul>
+                </div>
+                <br />
+                <p>You may need a structured assessment if:</p>
+                <ul>
+                  <li>You are unsure which ERP module fits your business model.</li>
+                  <li>You operate in a regulated UK industry.</li>
+                  <li>You are transitioning from NAV, GP, AX, or another legacy ERP.</li>
+                  <li>You require phased deployment across departments.</li>
+                </ul>
                 <div>
                   <Link
                     href="#exampleModal"
@@ -461,235 +673,63 @@ const SalesNew = () => {
                 </div>
               </div>
             </div>
+            <div className='col-lg-6'>
+              <div>
+                <Image src="/img/group-36015.png" alt="Microsoft Dynamics 365 ERP Right for You" width={592} height={680} />
+              </div>
+            </div>
           </div>
         </div>
-        <img src="/img/mask-group-aaa.png" alt="n-015" />
       </section>
-      <section id='section8' className='solution-new-pricing'>
+      <section id='section2' className="solution-new-banner-two">
         <div className='container'>
           <div className='row'>
-            <div className='col-lg-9'>
-              <div className='solution-new-banner-sub-head'>
-                <h2>Dynamics 365 Sales CRM Pricing & Licensing</h2>
-                <p>Choose a Dynamics 365 Sales plan that matches your sales structure, data needs, and growth goals. Each edition builds on Microsoft’s agentic CRM solution and supports secure, scalable selling.</p>
-              </div>
-            </div>
-          </div>
-
-          <div className='row g-3'>
-            <div className='col-lg-4 d-flex'>
-              <div className='solution-new-pricing-card'>
-                <h3>Dynamics 365 <span>Sales Professional</span>
-                </h3>
-                <p>Dynamics 365 Sales Professional covers core sales force automation with Microsoft 365 integration for everyday selling tasks. It is ideal for teams that need structured lead, contact, and opportunity management.</p>
-                <h4>£50.00 <span>per user per month<br />(billed annually)</span></h4>
-                <a href="#exampleModal" data-bs-toggle="modal" className="btn-dd-t btn-get-started" >Contact us</a>
-                <p className='disclm'>*Price excludes VAT</p>
-              </div>
-            </div>
-            <div className='col-lg-4 d-flex'>
-              <div className='solution-new-pricing-card'>
-                <h3>Dynamics 365 <span>Sales Enterprise</span>
-                </h3>
-                <p>Dynamics 365 Sales Enterprise edition comprises advanced sales force automation with contextual insights, next generation AI, and flexible configuration. It is designed for organisations that require deeper pipeline visibility, forecasting, and sales guidance.</p>
-                <h4>£80.70<span>per user per month <br />(paid yearly)</span></h4>
-                <a href="#exampleModal" data-bs-toggle="modal" className="btn-dd-t btn-get-started" >Contact us</a>
-                <p className='disclm'>*Price excludes VAT</p>
-              </div>
-            </div>
-            <div className='col-lg-4 d-flex'>
-              <div className='solution-new-pricing-card'>
-                <h3>Dynamics 365 <span>Sales Premium</span>
-                </h3>
-                <p>Enterprise capabilities combined with prebuilt and customisable intelligence for sellers and managers. Ideal for teams adopting sales agents, advanced insights, and AI driven selling at scale.</p>
-                <h4>£115.30<span>per user per month <br />(paid yearly)</span></h4>
-                <a href="#exampleModal" data-bs-toggle="modal" className="btn-dd-t btn-get-started" >Contact us</a>
-                <p className='disclm'>*Price excludes VAT</p>
-              </div>
-            </div>
-          </div>
-          <div className='row'>
-            <div className='col-lg-7 d-flex'>
-              <div className='solution-new-card-001-p'>
-                <p>Want to try it for free?</p>
-                < a href="/products/dynamics-365-business-central/pricing-licensing" className="btn-get-started scrollto">
-                  <span>Claim Your Free Dynamics 365 Sales Trial Here &nbsp;<i className="bi bi-arrow-right"></i></span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="busnes-upgrade-serve-one" style={{ paddingTop: '0px' }}>
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-8">
-              <div className="solution-new-banner-sub-head">
-                <h2>What Dynamics 365 Sales Services Do We Offer?</h2>
-                <p>Work with Dynamics Square to reinforce your sales operations using Dynamics 365 Sales. As a trusted Microsoft Solutions Partner in the UK, we help organisations adopt an agentic CRM solution that supports clarity, structure, and consistent sales performance.</p>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-lg-3 d-flex">
-              <div className="upgrade-box-one upgrade-box-one-c d-flex-fil">
-                <Image src="/img/settings_b.png" alt="settings_b" width={48} height={48} />
-                <h3>Implementation</h3>
-                <p>Deliver a structured Dynamics 365 Sales implementation aligned with your sales processes and team workflows. Our approach focuses on clean configuration, role-based setup, and practical adoption across sellers and managers.</p>
-                <a href="#exampleModal" data-bs-toggle="modal">Get Started <i className="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-            <div className="col-lg-3 d-flex">
-              <div className="upgrade-box-one upgrade-box-one-c d-flex-fil">
-                <Image src="/img/outbound.png" alt="outbound" width={48} height={48} />
-                <h3>Upgrade and Migration</h3>
-                <p>Move from legacy CRM systems to Dynamics 365 Sales with confidence. We manage data migration, process alignment, and transition planning so your sales teams can start working effectively as soon as it goes live.</p>
-                <a href="#exampleModal" data-bs-toggle="modal">Get Started <i className="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-
-            <div className="col-lg-3 d-flex">
-              <div className="upgrade-box-one upgrade-box-one-c d-flex-fil">
-                <Image src="/img/person_pin.png" alt="person_pin" width={48} height={48} />
-                <h3>Support</h3>
-                <p>Keep your sales CRM system running smoothly with ongoing Dynamics 365 Sales support. Our team resolves issues, manages updates, and ensures your CRM continues to support daily selling without any disruption.</p>
-                <a href="#exampleModal" data-bs-toggle="modal">Get Started <i className="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-
-            <div className="col-lg-3 d-flex">
-              <div className="upgrade-box-one upgrade-box-one-c d-flex-fil">
-                <img className="image-backx" src="/img/free-cons.png" alt="free-cons" />
-                <Image src="/img/forum.png" alt="forum" width={48} height={48} />
-                <h3>Consulting</h3>
-                <p>Gain Dynamics 365 Sales insights on improving pipeline visibility, forecasting, and seller productivity. Our consultants help you use Copilot, sales agents, and analytics in ways that are in line with your business goals.</p>
-                <a href="#exampleModal" data-bs-toggle="modal">Get Started <i className="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id='section9' className='p-t-1-60'>
-        <div className='container'>
-          <div className="col-lg-9">
-            <div className="solution-new-banner-sub-head">
-              <h2>Get Started with Microsoft Dynamics 365 Sales</h2>
-              <p>Reports, e-books, videos, training, and more, everything you need to explore the system.</p>
-            </div>
-          </div>
-          <div className='row'>
-            <div className='col-lg-12'>
-
-              <div className='bc-new-tabs-li'>
-                <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                  <li className="nav-item" role="presentation">
-                    <button className="nav-link active" id="pills-home-03-tab" data-bs-toggle="pill" data-bs-target="#pills-home-03" type="button" role="tab" aria-controls="pills-home-03" aria-selected="false">Podcasts</button>
-                  </li>
-                  <li className="nav-item" role="presentation">
-                    <button className="nav-link" id="pills-home-05-tab" data-bs-toggle="pill" data-bs-target="#pills-home-05" type="button" role="tab" aria-controls="pills-home-05" aria-selected="false">Videos</button>
-                  </li>
-                  <li className="nav-item" role="presentation">
-                    <button className="nav-link" id="pills-home-07-tab" data-bs-toggle="pill" data-bs-target="#pills-home-07" type="button" role="tab" aria-controls="pills-home-07" aria-selected="false">Blogs</button>
-                  </li>
-
-                </ul>
-              </div>
-            </div>
-            <div className='col-lg-12'>
-              <div className='bc-new-tabs-li-body'>
-                <div className="tab-content" id="pills-tabContent">
-                  <div className="tab-pane fade show active" id="pills-home-03" role="tabpanel" aria-labelledby="pills-home-03-tab">
-                    <div className='row'>
-                      <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
-                        <div className='card0-01 card0-02'>
-                          <a href="https://youtu.be/44hqw-S27D0?si=mCEpK1p1hVAXszlj" target='_blank'>
-                            <img src="/img/bc-8-20.png" width={273} height={192} alt="bc-8-20" />
-                            <h3>Is Your Business Ready for an ERP System?</h3>
-                            <p>Explore key signs, benefits, and steps to ERP readiness with Dynamics Square experts in this episode.</p>
-                            <div className='ct--a'>
-                              <span>Watch now</span>
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-
-                      <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
-                        <div className='card0-01 card0-02'>
-                          <a href="https://youtu.be/Of8upj7BtGo?si=Lsf5SCwBtIpSU1ST" target='_blank'>
-                            <img src="/img/bc-8-22.png" width={273} height={192} alt="bc-8-22" />
-                            <h3>Signs Your Business Is Ready for an ERP System</h3>
-                            <p>Understand when to adopt ERP, its benefits, and how Dynamics 365 drives business transformation.</p>
-                            <div className='ct--a'>
-                              <span>Watch now</span>
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="tab-pane fade" id="pills-home-05" role="tabpanel" aria-labelledby="pills-home-05-tab">
-                    <div className='row'>
-                      <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
-                        <div className='card0-01 card0-02'>
-                          <a href="https://www.youtube.com/watch?v=buh-r3WxZtA" target='_blank'>
-                            <img src="/img/sales-vid-01.jpg" width={273} height={192} alt="bc-8-20" />
-                            <h3>Microsoft Dynamics 365 Sales Accelerator Overview</h3>
-                            <p>In this video, get a comprehensive overview of Sales Accelerator in Microsoft Dynamics 365.</p>
-                            <div className='ct--a'>
-                              <span>Watch now</span>
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                      <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
-                        <div className='card0-01 card0-02'>
-                          <a href="https://www.youtube.com/watch?v=RQC9Qu9-hbI" target='_blank'>
-                            <img src="/img/sales-vid-02.jpg" width={273} height={192} alt="bc-8-21" />
-                            <h3>EY redefines CRM with Dynamics 365 Sales and Sales Agent in Microsoft 365 Copilot</h3>
-                            <p>EY redefines CRM with Dynamics 365 and Sales Agent in Microsoft 365 Copilot, facilitating data entry and freeing sellers to focus on relationships. </p>
-                            <div className='ct--a'>
-                              <span>Watch now</span>
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                      <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
-                        <div className='card0-01 card0-02'>
-                          <a href="https://www.youtube.com/watch?v=x6zLv5V0eC0" target='_blank'>
-                            <img src="/img/sales-vid-03.jpg" width={273} height={192} alt="bc-8-21" />
-                            <h3>Customer ROI with Dynamics 365 Sales</h3>
-                            <p>Learn about the powerful transformations seen with Dynamics 365 Sales and Microsoft 365 Copilot, such as improved sales performance, enhanced customer interactions, and increased productivity.</p>
-                            <div className='ct--a'>
-                              <span>Watch now</span>
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-
-                    </div>
-                  </div>
-
-                  <div className="tab-pane fade" id="pills-home-07" role="tabpanel" aria-labelledby="pills-home-07-tab">
-                    <div className='row'>
-                      <BlogFinanaceCard categorySlug="dynamics-365-crm" />
-
-                    </div>
-                  </div>
-
+            <div className='col-lg-5 align-self-center'>
+              <div className='product-side-001'>
+                <div className="flot-8">
+                  <Image src="/img/why-ds-pic.png" width={536} height={619} alt="Why Dynamics Square" />
                 </div>
               </div>
             </div>
+            <div className='col-lg-1'></div>
+            <div className='col-lg-6 align-self-center'>
+              <div className='product-side-002-content'>
+                <div className='solution-new-banner-sub-head' style={{ paddingBottom: '0px' }}>
+                  <h2>Why Dynamics Square?</h2>
+                </div>
+                <p>As a specialised and certified Microsoft Dynamics ERP partner, Dynamics Square focuses exclusively on Microsoft solutions.</p>
+                <p><b>We deliver:</b></p>
+                <ul className='banner-sub-head-list'>
+                  <li><i className="bi bi-check2"></i> Business Central implementations</li>
+                  <li><i className="bi bi-check2"></i> Finance & Supply Chain deployments</li>
+                  <li><i className="bi bi-check2"></i> Project Operations rollouts</li>
+                  <li><i className="bi bi-check2"></i> Commerce integrations</li>
+                  <li><i className="bi bi-check2"></i> Legacy system upgrades</li>
+                  <li><i className="bi bi-check2"></i> Ongoing optimisation and support</li>
+                </ul>
+                <p>Our approach is structured, transparent, and outcome driven. We prioritise operational clarity, risk mitigation, and measurable ROI. We do not believe in overselling functionality. We architect systems aligned with operational reality.</p>
+                <div>
+                  <Link
+                    href="#exampleModal"
+                    data-bs-toggle="modal"
+                    className="btn-get-started scrollto">
+                    <span>Claim Your Free Consultation Today &nbsp;<i className="bi bi-arrow-right"></i></span>
+                  </Link>
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
       </section>
+
       <section className="solution-faq faq solution-faq-r">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-9 ">
               <div className="solution-new-banner-sub-head text-center">
                 <h2>Have you got
-                  questions about Dynamics 365 Finance?</h2>
+                  questions about Microsoft Dynamics ERP?</h2>
                 <p>Click through to our FAQ for the best answers!</p>
               </div>
             </div>
@@ -734,13 +774,8 @@ const SalesNew = () => {
               )}
             </div>
           </div>
-
-
-
-
         </div>
       </section>
-      <BcPopPdf pdfType={pdfType} />
     </>
   );
 };

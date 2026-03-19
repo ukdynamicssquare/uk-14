@@ -1,0 +1,38 @@
+[    
+    {
+      "id": 1,
+      "question": "1. What is the difference between ERP and CRM?",
+      "answer": "<p>ERP is known as \"Enterprise Resource Planning,\" which can manage and streamline business operations to boost efficiency and productivity in a business. CRM is known as Customer Relationship Management capable to streamline all customer interactions and provides a superior experience to all customers.</p>"
+    },
+    {
+      "id": 2,
+      "question": "2. What is Microsoft Dynamics ERP?",
+      "answer": "<p>Microsoft Dynamics ERP is an enterprise resource management application capable of connecting almost all departments of a business and streamlining all operations for efficient business practices. It provides a centrally managed platform where all users of the organisation can interact, communicate, and share data in real-time without any restrictions. MS Dynamics ERP can successfully connect the supply chain, finance, operations, commerce, manufacturing, human resources, and reporting.</p>"
+    },
+    {
+      "id": 3,
+      "question": "3. What are the major ERP solutions from Microsoft?",
+      "answer": "<p>Microsoft possesses various ERP solutions built to deal with specific business operations. These solutions are given below:</p><ul><li>Microsoft Dynamics GP : Accounting software.</li><li>Microsoft Dynamics NAV : An ERP solution for SMBs.</li><li>Microsoft Dynamics SL : Business management solution.</li><li><a target=\"_blank\" href=\"/products/microsoft-dynamics-ax/\">Microsoft Dynamics AX</a> : For finance management </li><li><a target=\"_blank\" href=\"/products/microsoft-dynamics-365-finance/\">Microsoft Dynamics 365 Finance</a> : Microsoft Dynamics 365 Finance</li><li><a target=\"_blank\" href=\"/products/dynamics-365-business-central/\">Microsoft Dynamics 365 Business Central</a> : All-in-one business management</li></ul>"
+    },
+    {
+      "id": 4,
+      "question": "4. State some benefits of Microsoft Dynamics ERP",
+      "answer": "<p>MS Dynamics ERP offers a number of benefits to businesses, helping them grow in terms of revenue and customers. It offers many benefits, including better insights, scalability, adaptability, seamless data reporting, improved efficiency, high revenue, and ease of customization as per changing business needs.</p>"
+    },
+    {
+      "id": 5,
+      "question": "5. What are the top features of Microsoft Dynamics ERP?",
+      "answer": "<p>When it comes to features, Dynamics ERP has a number of advanced functions and capabilities to supercharge the growth with enhanced productivity and efficiency. Some of the features are: customisable dashboards, personalised reports, adaptable with add-ons, showing real-time analytics, and much more.</p>"
+    },
+    {
+      "id": 6,
+      "question": "6. What are the top industries that are actively using Microsoft Dynamics ERP?",
+      "answer": "<p>Businesses are using ERP solutions to smooth their business operations while following simplified methods. Almost all industries are using this solution, but some are totally dependent on it, including distribution, manufacturing, wholesale, construction, healthcare, transport, logistics, and food and beverage. </p>"
+    },
+    {
+      "id": 7,
+      "question": "7. How much does Microsoft ERP implementation cost, and how much time will it take?",
+      "answer": "<p>When it comes to stating the exact time and cost of Microsoft ERP implementation, no one can give you accurate data as these two things depend on various factors, like the complexity of the system, server deployment, amount of data transfer, number of integrations, and type of customization.</p>"
+    }
+  ]
+  
