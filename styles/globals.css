@@ -18165,6 +18165,7 @@ background: linear-gradient(
 .botom-de ul li{
     display: flex;
     gap: 20px;
+    align-items: flex-start;
 }
 .botom-de ul li:not(:last-child){
   margin-bottom: 10px;
@@ -18198,7 +18199,7 @@ display: inline-flex;
 }
 .card-0101 {
     background-color: #c4b0d9;
-    background-image: linear-gradient(99deg, #c4b0d9 20%, #fff 92%), linear-gradient(96deg, #fff -2%, rgba(255, 255, 255, 0) 74%);
+    background-image: linear-gradient(99deg, #c4b0d9 20%, #faf6fd 92%), linear-gradient(96deg, #faf6fd -2%, rgba(255, 255, 255, 0) 74%);
     padding: 15px;
     border-radius: 8px;
     display: flex;
@@ -18375,6 +18376,13 @@ color: #fff !important;
   }
 }
 @media (max-width: 992px) {
+  .product-side-002-img001a {
+        margin-bottom: 40px;
+    }
+  .ttop-wrp.ttop-wrp-om{margin-top: 100px;}
+  .new-tex-left.top-banner-new h1,.new-tex-left.top-banner-new h2,.new-tex-left.top-banner-new p,.new-tex-left.top-banner-new ul,.new-tex-left .ne-callt-batt{
+    text-align: left;
+  }
         .row-d .swiper-wrapper {
     margin-left: 0px;
 } 
