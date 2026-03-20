@@ -18356,7 +18356,7 @@ color: #fff !important;
     font-size: 13px;
 }
 .mycard__inner-left-bb>div{
-  margin-top: -30px;
+  margin-top: -30px !important;
 }
 .mycard__inner-left-bb>div .btn-get-started{
 font-size: 13px;
