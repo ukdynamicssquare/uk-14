@@ -18344,6 +18344,28 @@ color: #fff !important;
     margin-top: 20px;
 }
 }
+@media (max-width: 1400px) {
+    .mycard__inner {
+        padding: 15px;
+    }
+    .mycard__inner-left-bb p {
+      font-size: 13px;
+}
+.mycard__inner-left ul li{
+  padding: 6px 20px;
+    font-size: 13px;
+}
+.mycard__inner-left-bb>div{
+  margin-top: -30px;
+}
+.mycard__inner-left-bb>div .btn-get-started{
+font-size: 13px;
+padding: 0.6rem 1.4rem;
+}
+.mycard__inner-left-bb h3{
+margin-bottom: 10px;
+}
+}
 @media (min-width: 768px) and (max-width: 1200px) {
   .product-side-002-img001a {
         margin-bottom: 0px;

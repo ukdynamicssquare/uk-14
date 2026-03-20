@@ -109,7 +109,7 @@ const SalesNew = () => {
       <section id='section2' className="solution-new-banner-t">
         <div className='container'>
           <div className='row'>
-            <div className='col-lg-6 align-self-center'>
+            <div className='col-lg-7 align-self-center'>
               <div className='product-side-002-content'>
                 <div className='solution-new-banner-sub-head' style={{ paddingBottom: '0px' }}>
                   <h2>What Are Agentic ERP Solutions?</h2>
