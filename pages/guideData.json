@@ -1,0 +1,567 @@
+{
+  "meta": {
+    "title": "The Ultimate Guide to Microsoft Dynamics 365 | Dynamics Square",
+    "description": "The complete guide to Microsoft Dynamics 365 — ERP, CRM, AI, and the Power Platform. Written by Dynamics Square, UK's trusted Microsoft implementation partner.",
+    "edition": "1st Edition",
+    "company": "Dynamics Square",
+    "phone": "0203 769 7689",
+    "email": "info@dynamicssquare.co.uk",
+    "website": "https://www.dynamicssquare.co.uk/"
+  },
+  "herooo": {
+    "badge": "Complete Guide",
+    "heading": "The Ultimate Guide to",
+    "headingAccent": "Microsoft Dynamics 365",
+    "subheading": "Everything decision-makers need to understand how ERP, CRM, data, and AI work together — and how to get it right, first time.",
+    "ctaPrimary": { "label": "Read the Guide", "href": "#introduction" },
+    "ctaSecondary": { "label": "Talk to Dynamics Square", "href": "#contact" },
+    "stats": [
+      { "num": "170%", "label": "Avg. projected ROI\nacross case studies" },
+      { "num": "7mo",  "label": "Avg. payback period\nfor DS clients" },
+      { "num": "18%",  "label": "Productivity uplift\npost go-live" },
+      { "num": "200+", "label": "Successful Dynamics\nimplementations" }
+    ],
+    "ceoQuote": {
+      "text": "AI is becoming practical and useful. It is not just a buzzword anymore. Microsoft Copilot is helping teams automate routine work, understand data faster, and make better decisions with less effort.",
+      "name": "Manish Goyal",
+      "title": "Founder & CEO, Dynamics Square"
+    }
+  },
+  "toc": [
+    { "href": "#introduction",       "label": "Introduction" },
+    { "href": "#challenges",         "label": "Challenges Today",                "sub": true },
+    { "href": "#why-integrated",     "label": "Why ERP+CRM+AI?",                 "sub": true },
+    { "href": "#about-ds",           "label": "What Dynamics Square Stands For", "sub": true },
+    { "href": "#ecosystem",          "label": "The Ecosystem" },
+    { "href": "#applications-stack", "label": "Applications Stack",              "sub": true },
+    { "href": "#azure",              "label": "Azure Foundation",                "sub": true },
+    { "href": "#dynamics365",        "label": "Dynamics 365 at a Glance" },
+    { "href": "#erp-solutions",      "label": "Core ERP Solutions" },
+    { "href": "#business-central",   "label": "Business Central",                "sub": true },
+    { "href": "#bc-new",             "label": "What's New in BC",                "sub": true },
+    { "href": "#bc-licensing",       "label": "Licensing Explained",             "sub": true },
+    { "href": "#d365-finance",       "label": "D365 Finance",                    "sub": true },
+    { "href": "#d365-scm",           "label": "Supply Chain Mgmt",               "sub": true },
+    { "href": "#comparison",         "label": "BC vs Finance vs SCM",            "sub": true },
+    { "href": "#crm-solutions",      "label": "CRM Solutions" },
+    { "href": "#d365-sales",         "label": "D365 Sales",                      "sub": true },
+    { "href": "#d365-service",       "label": "Customer Service",                "sub": true },
+    { "href": "#field-service",      "label": "Field Service",                   "sub": true },
+    { "href": "#customer-insights",  "label": "Customer Insights",               "sub": true },
+    { "href": "#data-layer",         "label": "Data & Analytics" },
+    { "href": "#power-platform",     "label": "Power Platform & AI" },
+    { "href": "#copilot",            "label": "Copilot & AI Agents",             "sub": true },
+    { "href": "#industries",         "label": "Industry Solutions" },
+    { "href": "#isv",                "label": "ISV Ecosystem" },
+    { "href": "#architecture",       "label": "Solution Architectures" },
+    { "href": "#implementation",     "label": "Implementation Approach" },
+    { "href": "#migration",          "label": "Migration Scenarios" },
+    { "href": "#roi",                "label": "ROI & Value" },
+    { "href": "#case-stories",       "label": "Case Stories",                    "sub": true },
+    { "href": "#partner",            "label": "Choosing a Partner" },
+    { "href": "#final-thoughts",     "label": "Final Thoughts" },
+    { "href": "#contact",            "label": "Talk to Us" }
+  ],
+  "sections": {
+    "introduction": {
+      "label": "01",
+      "title": "Introduction to the Ultimate Guide",
+      "lead": "This guide exists because most organisations today feel the friction. Teams are working hard, systems are running, yet simple decisions take longer than they should. Spreadsheets accumulate. Workarounds breed workarounds. Somewhere along the way, the technology that was supposed to help became the bottleneck.",
+      "body": "This is a guide for those who sense something needs to change — but want clarity before taking serious action. It explains why connected business systems matter, how modern platforms fit together, and what long-term value actually looks like when technology supports the business the way it should.",
+      "challenges": {
+        "title": "Challenges Modern Businesses Face Today",
+        "intro": "Most organisations don't struggle because their people lack skill or commitment. The real challenge, more often than not, lies in the systems. Over the years, companies bolt on tools to solve immediate problems. Each tool works well in isolation. None of them talk to each other particularly well.",
+        "body": "The result? People become the bridge between systems. Manual data entry. Reconciliation by spreadsheet. Reports that are always slightly behind reality.",
+        "cards": [
+          { "icon": "🔗", "title": "Disconnected Systems",    "text": "Finance, sales, and operations running on separate platforms with no single version of the truth." },
+          { "icon": "⏱",  "title": "Manual Bottlenecks",     "text": "Data entry, reconciliations, approvals — all consuming time that should be spent on value creation." },
+          { "icon": "🔍", "title": "Limited Visibility",      "text": "Leadership operating on fragmented information. Slow, uncertain decisions as a consequence." },
+          { "icon": "📦", "title": "Individual Dependencies", "text": "Operations that depend on key people rather than robust systems. A single resignation creates a crisis." }
+        ],
+        "stat": { "num": "53%", "text": "of businesses report that ERP implementation is a priority investment, with manufacturing and distribution among the fastest adopters." }
+      },
+      "whyIntegrated": {
+        "title": "Why ERP, CRM, Data, and AI Must Work Together",
+        "intro": "In every organisation, daily activity across departments is deeply interconnected. A sale affects finance. Inventory responds to demand. Service history shapes the next customer conversation. Technology should reflect this reality — not fight it.",
+        "benefits": [
+          { "bold": "Single source of truth", "text": "financial data, customer records, and operational metrics stay aligned across every department." },
+          { "bold": "Reduced manual effort",  "text": "automation handles approvals, reconciliations, data capture, and routine updates." },
+          { "bold": "Faster, reliable insight","text": "dashboards reflect live activity, not yesterday's export." },
+          { "bold": "AI that actually works",  "text": "because AI depends entirely on accurate, connected data. Without strong foundations, AI amplifies noise rather than delivering clarity." }
+        ],
+        "callout": "Integration matters before intelligence delivers real benefit. An AI layer built on fractured data produces confident-sounding nonsense. Build the foundation first."
+      },
+      "aboutDS": {
+        "title": "What Dynamics Square Stands For",
+        "intro": "Dynamics Square works with organisations that want technology to support growth — without adding operational complexity. The goal is genuinely simple: systems should make work easier, clearer, and more reliable for everyone in the business.",
+        "pillars": [
+          { "title": "Clarity Across the Business",       "text": "Leaders need to trust their numbers. Teams need to see what's happening and why. That starts with systems that tell the truth.",                    "color": "#007880" },
+          { "title": "Systems That Support Growth",       "text": "Businesses evolve. Through expansion, regulation, acquisition, and market change. Technology should adapt — not resist.",                        "color": "#b42828" },
+          { "title": "Long-Term Value Over Quick Fixes",  "text": "Technology decisions shape operations for years. Sustainable platforms support continuous improvement — not endless replacement cycles.",        "color": "#f0a500" }
+        ],
+        "quote": {
+          "text": "Most businesses don't lack ambition. What they lack is clarity across systems. When leaders can trust their numbers and see the full picture, growth becomes a controlled decision rather than a risky leap.",
+          "attr": "Nitesh Sharma, Head of Business Development, Dynamics Square"
+        }
+      }
+    },
+    "ecosystem": {
+      "label": "02",
+      "title": "The Microsoft Business Applications Ecosystem",
+      "lead": "Business Central, Finance, Sales, Power BI, Power Platform, Copilot, Azure — these names are bandied about constantly. The question most organisations actually have is: how do they all fit together?",
+      "body": "They're not separate tools. They're layers of a connected ecosystem, each with a defined role, all sharing a common foundation.",
+      "layers": [
+        { "title": "Layer 1: Dynamics 365 Applications — Business Operations", "text": "Finance, supply chain, sales, customer service, project management. These manage the transactions, records, approvals, and workflows that keep the organisation running every day.", "accent": false },
+        { "title": "Layer 2: Power Platform — Automation & Development",       "text": "Power BI, Power Automate, Power Apps, Power Pages. Teams extend and improve core processes without heavy development — automating tasks, building apps, creating dashboards.",        "accent": false },
+        { "title": "Layer 3: Data Foundation",                                  "text": "A shared data environment that organises and connects information across systems. This is what makes reporting consistent and forecasts trustworthy across departments.",              "accent": false },
+        { "title": "Layer 4: AI Assistance — Copilot & AI Agents",             "text": "Microsoft Copilot works across the entire stack — summarising information, identifying patterns, suggesting actions. AI agents operate at the workflow level, automating day-to-day operations without human prompting.", "accent": true }
+      ],
+      "azure": {
+        "title": "The Role of Azure as the Foundation",
+        "intro": "Azure is the infrastructure that holds all of this together. It's largely invisible to end users — its value shows in system stability, performance, and the ability to scale without rebuilding.",
+        "stat": { "num": "70%+", "text": "of new ERP rollouts now choose cloud over on-premises infrastructure — reflecting the shift toward scalable, resilient, modern business platforms." },
+        "cards": [
+          { "icon": "☁️", "title": "Cloud Scalability",          "text": "Capacity adjusts as demand changes. Scale users, data, and operations without rebuilding infrastructure." },
+          { "icon": "🔒", "title": "Security & Compliance",      "text": "Security controls, identity management, and compliance frameworks embedded at platform level across regions." },
+          { "icon": "🔄", "title": "Data Services & Integration","text": "Structured and unstructured data coexist within a single environment. Managed storage, processing, and integration." },
+          { "icon": "🤖", "title": "AI & Machine Learning",      "text": "Advanced intelligence capabilities — forecasting, anomaly detection, natural language — run on Azure's infrastructure." }
+        ],
+        "quote": {
+          "text": "Most operational complexity is not created by scale, but by disconnected decisions made over time. When systems are designed to work together from the start, complexity reduces naturally instead of being managed endlessly.",
+          "attr": "Darshan Mungekar, Principal Solution Architect, Dynamics Square"
+        }
+      },
+      "takeaways": [
+        "Microsoft Business Applications function as a connected environment, not isolated tools.",
+        "Dynamics 365, Power Platform, data, and AI share a common foundation — which eliminates the integration headaches of bolt-on software.",
+        "Azure provides scalability, security, and stability across the entire ecosystem.",
+        "Shared data and security reduce duplication and operational complexity.",
+        "Ecosystem-based platforms support long-term adaptability. You grow by adding layers, not replacing systems."
+      ]
+    },
+    "dynamics365": {
+      "label": "03",
+      "title": "Dynamics 365 at a Glance",
+      "lead": "Dynamics 365 is a portfolio of connected business applications designed to run core operations and customer-facing processes on a shared foundation. It brings agentic ERP and CRM capabilities together — supported by data, automation, and intelligence.",
+      "body": "At its core, it supports how a business earns revenue, manages costs, serves customers, and maintains operational control. The real strength lies in how seamlessly different apps within the ecosystem connect to serve as a unified platform.",
+      "erpCrm": {
+        "title": "ERP and CRM — Explained Simply",
+        "erp": {
+          "icon": "⚙️",
+          "title": "ERP — How the Business Runs Internally",
+          "text": "Accounting, procurement, inventory, supply chain, production, compliance, and reporting. ERP answers questions around cost, control, efficiency, and delivery."
+        },
+        "crm": {
+          "icon": "🤝",
+          "title": "CRM — How the Business Engages Externally",
+          "text": "Lead management, sales forecasting, customer communication, service requests, and marketing journeys. CRM answers questions around demand, relationships, and customer experience."
+        }
+      }
+    },
+    "erp": {
+      "label": "04",
+      "title": "Core ERP Solutions in Dynamics 365",
+      "lead": "ERP is the operational backbone of any business. It governs how money flows, how goods move, how commitments get fulfilled, and how control stays intact. Microsoft offers three closely related ERP applications, each designed for different levels of complexity.",
+      "businessCentral": {
+        "title": "Dynamics 365 Business Central: The Most Popular Option for SMEs",
+        "intro": "Business Central is a cloud-based, agentic ERP solution built for small to mid-sized organisations that need strong financial control, operational visibility, and room to grow — without enterprise-level complexity. It's where most UK businesses start, and many stay.",
+        "body": "It replaces legacy accounting systems, spreadsheets, and outdated ERP platforms that can no longer support modern business demands.",
+        "capabilities": [
+          { "icon": "💷", "title": "Finance & Accounting",       "text": "General ledger, accounts payable/receivable, cash flow, bank reconciliation, fixed assets, VAT compliance." },
+          { "icon": "📦", "title": "Inventory & Supply Chain",   "text": "Real-time inventory tracking, warehouse management, demand-driven replenishment, and vendor management." },
+          { "icon": "🧾", "title": "Sales & Purchasing",         "text": "Sales orders, invoicing, pricing, purchase approvals, credit management, and payment terms — all connected to finance." },
+          { "icon": "📋", "title": "Projects & Manufacturing",   "text": "Job costing, project tracking, resource usage, assembly orders, and light production processes." },
+          { "icon": "📊", "title": "Embedded Power BI",          "text": "Role-specific analytics for finance, sales, inventory, manufacturing, and projects — built in, not bolted on." },
+          { "icon": "🌱", "title": "Sustainability Tracking",    "text": "Scope 3 emissions, ESG reporting, carbon equivalent calculations, and CSRD preparation. Compliance-ready and data-driven." }
+        ],
+        "quote": {
+          "text": "Business Central delivers the strongest results when organisations avoid over-engineering early. Consistent, well-designed simplicity scales more reliably than complexity introduced too soon.",
+          "attr": "B. Ravindran, Solution Architect, Dynamics Square"
+        },
+        "industries": ["Distributors & Wholesalers", "Professional Services", "Light Manufacturers", "Retail & E-Commerce", "Growing SMEs"],
+        "whatsNew": {
+          "title": "What's New in Business Central — and Why It Matters",
+          "intro": "Business Central follows a continuous evolution model — structured six-month release waves, plus monthly updates. Progress without instability. Here's what's arrived recently:",
+          "updates": [
+            { "title": "🤖 AI Agents: From Assistance to Execution",   "text": "Business Central is no longer limited to AI suggestions. Autonomous and semi-autonomous agents now actively participate in workflows — Sales Order Agents, Payables Agents, and Bank Reconciliation Agents handle real work. AI has shifted from 'help me understand' to 'help me act faster and more accurately.'" },
+            { "title": "💰 Finance: Faster, Clearer, More Governed",    "text": "Enhanced audit trails, improved payables workflows, expanded VAT and excise tax support. Finance teams spend less time validating data and more time interpreting performance — while compliance stays intact." },
+            { "title": "📈 Reporting as a First-Class Feature",         "text": "Reporting in Business Central has shifted from static, after-the-fact reviews to embedded, decision-ready insight. Native Power BI apps across finance, sales, inventory, manufacturing, and projects. Drill-back reporting. Dynamic dimensions. Cash flow and inventory forecasting." },
+            { "title": "🌍 Sustainability: Operational, Not Just Reported", "text": "Sustainability is now embedded in operational processes — not a side report. Scope 3 value-chain tracking, carbon calculations, ESG and CSRD preparation, energy consumption tracking. Auditable, not estimated." }
+          ],
+          "callout": "Rather than forcing businesses to re-platform as they grow, Business Central continues to grow with them. It's expanding in intelligence, automation, compliance readiness, and operational depth — without sacrificing simplicity."
+        },
+        "licensing": {
+          "title": "Business Central Licensing Explained",
+          "rows": [
+            { "type": "Essentials",       "who": "Most SMEs",                                    "includes": "Finance, purchasing, sales, inventory, projects, basic supply chain" },
+            { "type": "Premium",          "who": "Manufacturers & complex service businesses",   "includes": "Everything in Essentials + manufacturing + advanced service management" },
+            { "type": "Team Member",      "who": "Occasional users",                             "includes": "View data, approve workflows, update basic records — at a lower cost" },
+            { "type": "Attach Licences",  "who": "BC base licence holders",                     "includes": "Add D365 Sales, Customer Service, Field Service, or Customer Insights at reduced cost" }
+          ]
+        }
+      },
+      "finance": {
+        "title": "Dynamics 365 Finance",
+        "intro": "Designed for complex, multi-entity organisations. Finance targets enterprises operating across multiple legal entities, regions, and regulatory environments — with higher transaction volumes, layered approval structures, and advanced reporting requirements.",
+        "capabilities": "Key capabilities: multi-entity financial consolidation, global tax management, multi-currency accounting, intercompany settlements, treasury and liquidity management, budget planning, regulatory compliance across jurisdictions, and financial scenario analysis.",
+        "industries": ["Multinational Enterprises", "Global Professional Services", "Large Retail Groups", "Complex Corporate Groups"]
+      },
+      "scm": {
+        "title": "Dynamics 365 Supply Chain Management",
+        "intro": "Supply Chain Management delivers end-to-end supply chain visibility — planning, execution, and optimisation across complex sourcing, production, warehousing, and distribution networks.",
+        "capabilities": "Key capabilities: advanced warehouse and bin management, procurement and supplier collaboration, production planning and shop floor control, demand forecasting, transportation and route optimisation, quality management, and logistics performance monitoring.",
+        "industries": ["Manufacturing Enterprises", "Global Distributors", "Logistics Providers", "Large E-Commerce Fulfilment"]
+      },
+      "comparison": {
+        "title": "Business Central vs Finance vs Supply Chain Management",
+        "headers": ["Area", "Business Central", "D365 Finance", "Supply Chain Mgmt"],
+        "rows": [
+          ["ERP Category",          "Mid-market ERP",              "Enterprise Financial ERP",                    "Enterprise Operations ERP"],
+          ["Company Size",          "SMB to mid-market",           "500+ employees, global",                      "Manufacturing & distribution enterprises"],
+          ["Primary Focus",         "Unified business management", "Financial governance & global compliance",     "Complex supply chain operations"],
+          ["Deployment",            "Cloud-first",                 "Cloud-first",                                 "Cloud-first"],
+          ["Implementation Speed",  "Faster, lower overhead",      "Longer, enterprise complexity",               "Longer, operational complexity"]
+        ]
+      },
+      "takeaways": [
+        "Business Central provides unified ERP for growing SMEs — finance, operations, supply chain, and AI in one system.",
+        "Finance delivers enterprise financial governance across multi-entity and multi-country operations.",
+        "Supply Chain Management supports complex manufacturing, logistics, and distribution networks.",
+        "All three can operate independently or together, depending on business scale and complexity.",
+        "Choosing the right solution depends on operational complexity, geographic presence, and transaction volume."
+      ]
+    },
+    "crm": {
+      "label": "05",
+      "title": "Customer Engagement (CRM) Solutions in Dynamics 365",
+      "lead": "Customer engagement defines how organisations attract demand, manage relationships, resolve issues, and maintain trust over time. Dynamics 365 CRM capability sits across four closely connected applications — each addressing a specific stage of the customer lifecycle.",
+      "sales": {
+        "title": "Dynamics 365 Sales",
+        "intro": "An agentic CRM solution supporting the full journey from initial interest to closed revenue. It provides structure around how leads progress, how opportunities mature, and how sales activity connects to fulfilment and finance.",
+        "cards": [
+          { "icon": "🎯", "title": "Lead-to-Cash Process",       "text": "Lead capture, opportunity tracking, quote and order preparation, handover to finance — structured for consistency and forecasting accuracy." },
+          { "icon": "📊", "title": "Pipeline Visibility",         "text": "Forecast models based on real activity. Deal tracking by stage and probability. Performance visibility across teams." },
+          { "icon": "✉️", "title": "Outlook, Teams & ERP",        "text": "Email and calendar tracking, collaboration through Teams, live order and invoice visibility through ERP." },
+          { "icon": "🤖", "title": "AI Sales Agents",             "text": "Sales Qualification Agent researches leads autonomously. Sales Research Agent answers complex questions in natural language. Email Assistance drafts professional follow-ups." }
+        ]
+      },
+      "customerService": {
+        "title": "Dynamics 365 Customer Service",
+        "intro": "A cloud-based customer support platform managing service requests, automating case handling, and delivering consistent, AI-assisted support across email, chat, phone, and self-service portals.",
+        "capabilities": ["Omnichannel case management", "SLA enforcement and escalation rules", "Knowledge base and self-service portals", "AI-powered agent assistance — case summaries, suggested responses, faster resolution guidance", "Queue-based workload management"]
+      },
+      "fieldService": {
+        "title": "Dynamics 365 Field Service",
+        "intro": "An agentic solution for scheduling field technicians, managing work orders, and delivering efficient on-site service. The Scheduling Operations Agent optimises technician schedules by considering priorities, travel time, and availability — and adjusts plans in real-time when disruptions occur.",
+        "capabilities": ["Work order management and tracking", "Skill-based scheduling and resource optimisation", "Mobile-first field workforce tools with offline access", "Asset lifecycle and contract management", "AI-powered natural language work order updates from job site"]
+      },
+      "customerInsights": {
+        "title": "Dynamics 365 Customer Insights",
+        "intro": "An agentic CRM solution that unifies customer data from ERP, CRM, marketing, e-commerce, and service platforms — creating a single, consistent customer profile. It resolves the fragmentation that most organisations quietly tolerate for years.",
+        "capabilities": ["Identity matching and data unification", "Behaviour-based segmentation", "AI-powered journey orchestration", "Predictive customer value indicators", "Copilot-driven segment creation from plain language criteria"]
+      }
+    },
+    "dataLayer": {
+      "label": "06",
+      "title": "Data, Analytics, and the Intelligence Layer",
+      "lead": "Data sits at the centre of every meaningful business decision. Yet most organisations still trust spreadsheets over dashboards, and wait until month-end to understand what happened last week. The Microsoft ecosystem changes that.",
+      "powerBI": {
+        "title": "Power BI — Operational Reporting That's Actually Operational",
+        "text": "Power BI provides reporting and analytics across finance, operations, sales, and service — connected directly to Dynamics 365 so reports reflect live business activity, not yesterday's export. Role-specific views mean finance leaders see financial performance while operations teams see throughput and service resolution metrics."
+      },
+      "fabric": {
+        "title": "Microsoft Fabric — The Data Foundation",
+        "text": "Microsoft Fabric provides a single platform for managing, analysing, and governing data across the entire organisation — bringing data engineering, analytics, reporting, and governance into one environment. Rather than moving data between multiple tools, Fabric centralises how data is stored, processed, and used. Power BI handles the visualisation; Fabric handles the preparation, structure, and governance."
+      }
+    },
+    "powerPlatform": {
+      "label": "07",
+      "title": "Low-Code Automation and Customisation",
+      "lead": "Standard systems rarely cover every operational nuance. Teams need flexibility to adapt processes, automate repetitive work, and extend systems — without heavy development cycles or long waiting lists for IT support.",
+      "tools": [
+        { "icon": "📱", "title": "Power Apps",     "text": "Custom applications layered on top of existing data and processes — mobile apps for field teams, approval tools, department-specific productivity solutions — without heavy development." },
+        { "icon": "⚡", "title": "Power Automate", "text": "Workflow automation across systems, users, and approvals. Approval workflows, notifications, data sync, scheduled tasks. Replaces repetitive manual steps with structured, reliable processes." },
+        { "icon": "🌐", "title": "Power Pages",    "text": "Secure external portals for customer self-service, vendor collaboration, and partner access — without exposing core systems directly." },
+        { "icon": "📊", "title": "Power BI",       "text": "The reporting and analytics layer that converts operational data into decisions. Embedded directly in Dynamics 365 — not a separate tool to log into." }
+      ],
+      "copilot": {
+        "title": "Copilot Studio and AI Capabilities",
+        "intro": "Copilot Studio enables organisations to build conversational AI agents that interact with users through natural language. AI assistance is embedded directly into Dynamics 365 applications — not available as a separate tool requiring users to context-switch.",
+        "stat": { "num": "40%", "text": "of organisations now view AI as an important consideration when selecting an ERP system, with 16% requiring embedded AI as a must-have feature. Intelligence is no longer optional." },
+        "agents": [
+          {
+            "product": "Business Central",
+            "accent": true,
+            "items": [
+              { "name": "Sales Order Agent",        "text": "Analyses customer emails and automatically captures sales orders." },
+              { "name": "Payables Agent",            "text": "Monitors invoices, extracts data, prepares draft entries for review." },
+              { "name": "Bank Reconciliation Agent", "text": "Identifies and matches unmatched transactions by analysing dates, amounts, and descriptions." }
+            ]
+          },
+          {
+            "product": "Dynamics 365 Sales",
+            "accent": false,
+            "items": [
+              { "name": "Sales Qualification Agent", "text": "Autonomously researches leads, assesses fit, initiates outreach." },
+              { "name": "Sales Research Agent",      "text": "Answers complex questions about sales data in natural language." },
+              { "name": "Email Assistance",          "text": "Drafts professional emails, summarises conversations, tracks unanswered messages." }
+            ]
+          },
+          {
+            "product": "Finance",
+            "accent": false,
+            "items": [
+              { "name": "Account Reconciliation Agent",      "text": "Detects differences between subledgers and general ledger, suggests fixes before period-end." },
+              { "name": "Collection Coordinator Summary",    "text": "AI-generated account status summaries and automatic reminder letters." }
+            ]
+          },
+          {
+            "product": "Field Service",
+            "accent": true,
+            "items": [
+              { "name": "Scheduling Operations Agent",     "text": "Optimises technician schedules in real-time." },
+              { "name": "Work Order Update",               "text": "Natural language updates directly from the job site via mobile." },
+              { "name": "Inspection Template Creation",    "text": "Converts PDFs or images into editable inspection templates." }
+            ]
+          }
+        ]
+      }
+    },
+    "industries": {
+      "label": "08",
+      "title": "Industry-Specific Solutions",
+      "lead": "Every industry operates with its own pressures, regulations, and rhythms. Generic systems rarely reflect these realities without heavy adjustment. Real value appears when core platforms align naturally with industry workflows.",
+      "headers": ["Industry", "Core Priorities", "Key DS Capabilities"],
+      "rows": [
+        ["Manufacturing",               "Production efficiency, cost control, delivery",         "Production planning, BOM management, shop floor control, demand forecasting, quality tracking"],
+        ["Wholesale & Distribution",    "Volume, speed, accuracy, margin discipline",            "Order management, bin-level inventory, barcode/mobile WMS, customer portals, e-commerce integration"],
+        ["Retail & E-Commerce",         "Omnichannel alignment, customer loyalty",               "POS integration, centralised inventory, omnichannel order orchestration, Customer Insights & loyalty"],
+        ["Professional Services",       "Project profitability, utilisation, billing",           "Project accounting, resource management, time & expense, CRM-to-delivery handover"],
+        ["Non-Profit",                  "Fund accountability, transparency, efficiency",         "Fund & grant accounting, donor management, compliance reporting, automation with limited headcount"],
+        ["Healthcare & Public Sector",  "Compliance, security, reporting",                      "Role-based access control, regulatory alignment, process automation, operational transparency"]
+      ]
+    },
+    "isv": {
+      "label": "09",
+      "title": "ISV Ecosystem: Extending Dynamics 365",
+      "lead": "No platform covers every business requirement out of the box. Every organisation carries industry nuance, regulatory pressure, and operational habits built over years. The question is how to extend — without creating fragility and upgrade risk.",
+      "body": "Within the Dynamics 365 ecosystem, Independent Software Vendors (ISVs) provide the answer. They extend standard capability in focused areas while remaining aligned with the platform — no bespoke code, no broken upgrades.",
+      "categories": [
+        { "title": "📄 Document Management", "text": "Automated document capture, invoice processing, approval workflows, audit-ready storage. Example: Continia Document Capture." },
+        { "title": "💳 Expense Management",  "text": "Mobile expense capture, policy-based approvals, automated posting to finance, real-time spend visibility. Example: Continia Expense Management." },
+        { "title": "📦 Warehouse Management","text": "Barcode and mobile-driven workflows, bin-level movement, picking optimisation, inventory accuracy tracking. Example: Tasklet Mobile WMS." },
+        { "title": "👥 Payroll & HR",        "text": "Payroll processing, employee lifecycle, leave management, integrated with finance. Example: Elevate HR." }
+      ],
+      "ownIsv": {
+        "name": "Import Consignment Solution by Dynamics Square",
+        "text": "A purpose-built add-on that helps UK-based importers and manufacturers track their consignments from origin to receipt. Designed for real operational needs, not hypothetical use cases."
+      },
+      "evalProcess": "ISVs are treated as part of the overall solution architecture, not optional extras. Recommendations follow structured evaluation based on real operational impact — not feature lists. Evaluation criteria: native Dynamics 365 integration, alignment with Microsoft upgrade cycles, proven adoption in relevant industries, clear product roadmap and vendor support, data security and compliance alignment, and total cost over the solution lifecycle."
+    },
+    "architecture": {
+      "label": "10",
+      "title": "End-to-End Solution Architectures",
+      "lead": "Business systems deliver value when designed as a complete operating environment — not a collection of connected parts. Architecture defines how processes flow, how data moves, and how decisions get supported over time.",
+      "layers": [
+        { "title": "ERP Layer",          "color": "#007880", "text": "Financials, operations, supply chain, compliance. The transactional backbone of the business." },
+        { "title": "CRM Layer",          "color": "#b42828", "text": "Sales, service, field operations, customer engagement. Captures demand and experience." },
+        { "title": "Automation Layer",   "color": "#f0a500", "text": "Power Platform — workflow automation, custom apps, controlled extensions." },
+        { "title": "Analytics Layer",    "color": "#6b21a8", "text": "Power BI and Fabric — reporting, dashboards, and insight across every role." },
+        { "title": "ISV Layer",          "color": "#059669", "text": "Focused extensions for warehousing, documents, payroll, compliance, and industry needs." },
+        { "title": "AI & Copilot Layer", "color": "#0ea5e9", "text": "Autonomous agents and AI assistance embedded across every layer — from data entry to forecasting." }
+      ],
+      "quote": {
+        "text": "Good architecture is rarely noticed when things are running well. Its value becomes clear when a business needs to grow, change, or respond quickly without breaking what already works.",
+        "attr": "Darshan Mungekar, Principal Solution Architect, Dynamics Square"
+      }
+    },
+    "implementation": {
+      "label": "11",
+      "title": "Implementation Approach by Dynamics Square",
+      "lead": "Technology success depends less on software choice and more on how it gets implemented. Many projects struggle because solutions move too fast, assumptions remain unchallenged, or business context receives limited attention. Dynamics Square's approach is built around people, processes, and outcomes.",
+      "steps": [
+        { "num": "1", "title": "Discovery & Solution Design",       "text": "Understanding objectives, mapping current processes, identifying pain points, defining success criteria. Solution design translates this into a structured blueprint that aligns technology with business reality — not theoretical processes." },
+        { "num": "2", "title": "Fit Gap Analysis",                   "text": "Evaluates how standard platform functionality aligns with business requirements. Identifies what standard functionality covers, what configuration handles, what genuinely requires extension — and what gaps disappear when processes become clearer." },
+        { "num": "3", "title": "Data Migration & Integrations",      "text": "Data quality shapes trust in the new system from day one. Migration focuses on accuracy, relevance, and structure — not volume. Integration ensures systems exchange information reliably, with clean data ownership and minimal duplication." },
+        { "num": "4", "title": "Testing, Training & Go Live",        "text": "Testing validates real-condition behaviour. Role-based training ensures users feel confident. Go live preparation focuses on readiness, not speed — reducing disruption and supporting a smoother transition." },
+        { "num": "5", "title": "Post Go-Live Support & Optimisation","text": "Implementation continues beyond launch. Issue resolution, user support, process optimisation, and planning for future enhancements. The platform evolves with the business rather than remaining static." }
+      ],
+      "quote": {
+        "text": "Fit-gap analysis is not about finding gaps in the system. It is about deciding which gaps matter, and which ones disappear when processes become clearer.",
+        "attr": "B. Ravindran, Solution Architect, Dynamics Square"
+      }
+    },
+    "migration": {
+      "label": "12",
+      "title": "Migration and Upgrade Scenarios",
+      "lead": "System change rarely begins from a blank slate. Most organisations carry years of operational history, customised processes, and data shaped by earlier decisions. Migration requires care, structure, and realism — not speed.",
+      "scenarios": [
+        {
+          "title": "NAV to Business Central",
+          "text": "Many organisations still operate on older Microsoft Dynamics NAV. It's familiar, but it struggles with modern reporting, integration, and scalability demands. Migration to Business Central offers a structured path forward — retaining functional continuity while modernising the platform."
+        },
+        {
+          "title": "Legacy ERP to Dynamics 365",
+          "text": "Organisations on bespoke or legacy ERP platforms typically face fragmented systems, limited reporting, manual workarounds, and difficulty scaling. Migration to Dynamics 365 introduces a connected platform designed for current operating models — with careful planning around process redesign, data structure, and change management."
+        },
+        {
+          "title": "On-Premises to Cloud",
+          "text": "Cloud migration shifts infrastructure management, security updates, and scalability to the platform — freeing IT from maintenance cycles and improving accessibility across locations. Planning covers data, integrations, access, and user readiness to ensure continuity throughout."
+        }
+      ],
+      "risks": [
+        "Carrying unnecessary customisations forward — DS reviews and challenges before migrating.",
+        "Migrating unused or poor-quality data — DS cleanses and validates, not just transfers.",
+        "Underestimating process change impact — change management is built into every project.",
+        "Insufficient testing under real scenarios — UAT with real business conditions, not lab conditions."
+      ],
+      "quote": {
+        "text": "Most system migrations fail for reasons that have nothing to do with technology. They fail because assumptions go unchallenged, data is rushed, and people are brought in too late.",
+        "attr": "Arish Siddiqui, Senior Manager, Business Development, Dynamics Square"
+      }
+    },
+    "roi": {
+      "label": "13",
+      "title": "ROI, Business Value, and Success Metrics",
+      "lead": "Success with ERP and CRM doesn't end at go-live. The real measure appears in how the system changes daily work, decision quality, and business confidence over time.",
+      "stats": [
+        { "num": "78%",  "text": "of organisations experience productivity improvements after adopting ERP systems." },
+        { "num": "91%",  "text": "of organisations report improved inventory levels post-ERP implementation." },
+        { "num": "~7mo", "text": "Average payback period across Dynamics Square client implementations." }
+      ],
+      "quote": {
+        "text": "Return on investment is rarely about cost savings alone. The real value shows up when teams spend less time fixing problems and more time moving the business forward.",
+        "attr": "Nitesh Sharma, Head of Business Development, Dynamics Square"
+      },
+      "caseStories": {
+        "title": "Real-World Impact: Case Stories by Dynamics Square",
+        "intro": "The following cases represent actual implementations delivered by Dynamics Square — each demonstrating measurable, documented impact that separates genuine transformation from technology procurement.",
+        "cases": [
+          {
+            "num": "1",
+            "title": "Multi-Entity Tea, Coffee & Macadamia Producer",
+            "subtitle": "Agricultural processing & export · Africa & UK · Multiple legal entities",
+            "challenge": "Finance in ERP, procurement and warehousing offline. Manual auction handling, handwritten inventory records, Excel-driven reporting across six entities.",
+            "solution": "Dynamics Square unified finance, production, and warehouse operations on Business Central — extended with barcode-driven warehouse mobility, Power BI reporting, virtual warehouses for stock segregation, and enforced Bills of Materials across blending operations.",
+            "metrics": [
+              { "val": "~170%", "label": "Projected ROI (3yr)" },
+              { "val": "~7mo",  "label": "Payback period" },
+              { "val": "~18%",  "label": "Productivity improvement" },
+              { "val": "6",     "label": "Entities on one reporting layer" }
+            ]
+          },
+          {
+            "num": "2",
+            "title": "Multi-Sector Construction & Materials Group",
+            "subtitle": "Construction materials, aggregates & property services · Fast-growth group",
+            "challenge": "Legacy ERP, fragmented finance, manual processes, zero margin visibility. Leadership unable to see profitability by product, customer, or channel.",
+            "solution": "Business Central as financial and operational core, with clean integration preserving the existing field invoicing system. Continia Document Capture for vendor invoicing. Power BI for product, customer, and channel-level profitability. Phased, low-disruption rollout.",
+            "metrics": [
+              { "val": "~172%", "label": "Projected ROI (3yr)" },
+              { "val": "~7mo",  "label": "Payback period" },
+              { "val": "~18%",  "label": "Productivity uplift" },
+              { "val": "1.5 FTE","label": "Cost avoidance" }
+            ]
+          },
+          {
+            "num": "3",
+            "title": "Sustainable Fashion & Circular Manufacturing Startup",
+            "subtitle": "Ethical fashion · Circular production · Rapid growth",
+            "challenge": "Data across spreadsheets and basic accounting software. No production routing, no sustainability metrics, no data foundation for scale.",
+            "solution": "Business Central covering finance, procurement, production, inventory, and early-stage CRM. Machine and work centre tracking for production visibility. Designed for future Power BI and CRM expansion.",
+            "metrics": [
+              { "val": "~172%", "label": "Projected ROI (3yr)" },
+              { "val": "~£32K", "label": "Legacy system costs avoided" },
+              { "val": "~18%",  "label": "Productivity gain" },
+              { "val": "✓",     "label": "Sustainability data foundation" }
+            ]
+          },
+          {
+            "num": "4",
+            "title": "European Food Trading Startup",
+            "subtitle": "Cross-border food trading · Multiple legal entities · UK & Europe",
+            "challenge": "Operational complexity from day one with no system structure. Manual coordination, multi-entity confusion, and compliance pressure threatening accuracy during early growth.",
+            "solution": "Business Central across finance, sales, purchasing, inventory, and fixed assets. Structured, phased implementation establishing control, visibility, and secure remote access from day one.",
+            "metrics": [
+              { "val": "~162%", "label": "Projected ROI (3yr)" },
+              { "val": "<12mo", "label": "Payback period" },
+              { "val": "3",     "label": "Legal entities unified" },
+              { "val": "✓",     "label": "Avoided operational hires" }
+            ]
+          },
+          {
+            "num": "5",
+            "title": "Retail & Warehouse Automation Business",
+            "subtitle": "Equestrian retail · Physical & e-commerce · Robotic warehouse · Ireland",
+            "challenge": "Warehouse robotics operating in isolation. Fragile ERP and POS integrations. Manual reporting. Seasonal demand amplifying operational pressure.",
+            "solution": "Business Central reimplementation, integrated mobile warehouse management, robotics coordination for goods-out, automated document capture, stabilised e-commerce integrations, and onsite DS support throughout.",
+            "metrics": [
+              { "val": "✓", "label": "Faster retail & warehouse ops" },
+              { "val": "✓", "label": "Improved dispatch accuracy" },
+              { "val": "✓", "label": "Automated daily reporting" },
+              { "val": "✓", "label": "End-to-end channel visibility" }
+            ]
+          },
+          {
+            "num": "7",
+            "title": "Century-Old Global Manufacturing Brand",
+            "subtitle": "Global manufacturer · Full ecosystem transformation · ERP + CRM + E-Commerce",
+            "challenge": "Legacy systems limiting scalability, visibility, and customer engagement across a growing global footprint.",
+            "solution": "Full ecosystem transformation — Business Central for ERP, D365 Sales, Customer Service, and Customer Insights for CRM, integrated e-commerce platforms, robotics-enabled warehousing, and automated reporting.",
+            "metrics": [
+              { "val": "✓", "label": "Unified ERP+CRM+E-Commerce" },
+              { "val": "✓", "label": "Real-time operational insight" },
+              { "val": "✓", "label": "Data integrity restored" },
+              { "val": "✓", "label": "AI-ready data foundation" }
+            ]
+          }
+        ]
+      }
+    },
+    "partner": {
+      "label": "14",
+      "title": "Choosing the Right Partner",
+      "lead": "Technology platforms create potential. Partners determine outcomes. Many ERP and CRM initiatives struggle or stall not because the software is wrong, but because the implementation partner focused on configuration rather than understanding the business.",
+      "dsAdvantages": [
+        { "label": "Business-First Approach",  "text": "Understanding operational reality before proposing solutions. Every implementation starts with discovery, not a product demo." },
+        { "label": "Industry Depth",           "text": "Proven experience across manufacturing, distribution, retail, professional services, non-profit, and more. Solutions shaped by real-world knowledge." },
+        { "label": "Structured Methodology",   "text": "Discovery, fit-gap, migration, testing, training, go-live, and ongoing optimisation — each phase with clear accountability." },
+        { "label": "Long-Term Optimisation",   "text": "Post go-live isn't the finish line. DS supports continuous improvement, system evolution, and platform expansion as the business grows." },
+        { "label": "UK-Based Expertise",       "text": "Deep knowledge of UK regulatory requirements, VAT, payroll, and industry-specific compliance. Available on 0203 769 7689." },
+        { "label": "Own ISV Capability",       "text": "Dynamics Square develops its own ISV solutions — including the Import Consignment Solution for UK importers — meaning practical, tested extensions." }
+      ],
+      "quote": {
+        "text": "Software creates potential. Partners determine outcomes. The difference between a painful project and a successful one usually comes down to guidance, not configuration. And this is where we focus — thorough, end-to-end guidance.",
+        "attr": "Arish Siddiqui, Senior Manager, Business Development, Dynamics Square"
+      },
+      "evalTitle": "What to Look for Beyond Technical Skills",
+      "evalText": "Technical expertise matters. But it rarely determines long-term success on its own. Evaluate potential partners on: their ability to listen and understand your operational reality, experience across relevant industries and scenarios, structured approach to discovery and design, discipline around scope and data governance, commitment to user adoption and change management, and willingness to challenge assumptions rather than simply agreeing with requirements. The best partners tell you things you don't want to hear — early enough to do something about it."
+    },
+    "finalThoughts": {
+      "label": "15",
+      "title": "Final Thoughts",
+      "lead": "This guide exists to support clear thinking, not quick decisions. Business applications shape how organisations operate every day — how teams collaborate, how leaders make choices under pressure, how growth happens with confidence rather than chaos.",
+      "sections": [
+        {
+          "title": "Technology as an Enabler, Not a Burden",
+          "text": "Technology delivers value when it removes friction from daily work. Systems should support people in doing their jobs well, consistently, and with clarity. When technology aligns with business reality, teams focus on outcomes rather than workarounds."
+        },
+        {
+          "title": "The Future of Business Applications",
+          "text": "Business applications are moving toward tighter integration, embedded intelligence, and low-code flexibility. The direction is clear: ERP, CRM, data, and AI operating as one environment — not four separate budgets. Organisations that invest in strong foundations now will be well-positioned to adopt new capabilities as they emerge."
+        },
+        {
+          "title": "How to Take the Next Step With Confidence",
+          "text": "A practical starting point: review current systems and identify where the real pain sits. Define what success looks like beyond go-live — not just functionality, but operational outcomes. Prioritise the areas that will deliver immediate, visible value. And choose a partner who listens before they propose."
+        }
+      ],
+      "callout": "Business platforms remain central to operations for years. Decisions made early influence flexibility, cost, and confidence for a long time afterwards. Working with Dynamics Square means building with long-term value in mind — clarity, scalability, and trust at every stage of the journey."
+    },
+    "cta": {
+      "heading": "Ready to Declutter the Mess and Bring Things Up to Speed?",
+      "body": "Sales, service, finance, or supply chain — unify everything on one connected platform with Dynamics 365. Implementations, integrations, migrations, or support — Dynamics Square is one call away.",
+      "btnLabel": "Book a Discovery Call",
+      "btnHref": "https://www.dynamicssquare.co.uk/"
+    }
+  }
+}

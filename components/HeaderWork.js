@@ -29,6 +29,7 @@ const HeaderWork = () => {
     "/products/dynamics-365-human-resources": `${gname}`,
     "/products/dynamics-365-project-operations": `${gname}`,
      "/continia-for-dynamics-365-business-central": `${gname}`,
+     "/the-ultimate-guide-to-microsoft-dynamics-365": `${gname}`,
      "/industries/professional-services": `${gname}`,
       "/continia-expense-management": `${gname}`,
       "/case-studies/business-central-reimplementation-for-food-trader": `${gname}`,
