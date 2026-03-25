@@ -433,6 +433,7 @@ export default function Dynamics365GuidePage() {
     <>
       <Head>
        <title>The Ultimate Guide to Microsoft Dynamics 365 | Dynamics Square</title>
+        <meta name="robots" content="noindex, nofollow" />
         <meta
           name="description"
           content="Integrate Insights Works with Business Central to optimise your entire order fulfillment process along with streamlining warehouse operations."
@@ -467,7 +468,7 @@ export default function Dynamics365GuidePage() {
               <p className="herooo-sub">{herooo.subheading}</p>
               <div className="d-flex gap-3 justify-content-center flex-wrap">
                 <a href={herooo.ctaPrimary.href} className="btn-ds-primary" onClick={e => scrollTo(e, herooo.ctaPrimary.href)}>{herooo.ctaPrimary.label} →</a>
-                <a href={herooo.ctaSecondary.href} className="btn-ds-outline" onClick={e => scrollTo(e, herooo.ctaSecondary.href)}>{herooo.ctaSecondary.label}</a>
+                <a href={herooo.ctaSecondary.href} className="btn-ds-outline" onClick={e => scrollTo(e, herooo.ctaSecondary.href)}>Talk to expert </a>
               </div>
               <div className="herooo-stats-bar">
                 {herooo.stats.map(st => (
