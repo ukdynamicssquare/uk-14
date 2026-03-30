@@ -42,7 +42,7 @@ export default function HomeOld() {
                   url: "https://www.dynamicssquare.co.uk/",
                   sameAs: [
                     "https://www.facebook.com/dynamicssquareuk/",
-                    "https://twitter.com/dsquare_uk",
+                    "https://x.com/dsquare_uk",
                     "https://www.linkedin.com/showcase/dynamics-square-uk/",
                     "https://www.youtube.com/c/DynamicsSquare",
                   ],
@@ -171,7 +171,7 @@ export default function HomeOld() {
               url: "https://www.dynamicssquare.co.uk/",
               sameAs: [
                 "https://www.facebook.com/dynamicssquareuk/",
-                "https://twitter.com/dsquare_uk",
+                "https://x.com/dsquare_uk",
                 "https://www.linkedin.com/showcase/dynamics-square-uk/",
                 "https://www.youtube.com/c/DynamicsSquare",
               ],
@@ -286,7 +286,7 @@ export default function HomeOld() {
               url: "https://www.dynamicssquare.co.uk/",
               sameAs: [
                 "https://www.facebook.com/dynamicssquareuk/",
-                "https://twitter.com/dsquare_uk",
+                "https://x.com/dsquare_uk",
                 "https://www.linkedin.com/showcase/dynamics-square-uk/",
                 "https://www.youtube.com/c/DynamicsSquare",
               ],

@@ -347,7 +347,7 @@ const ManufacturingManagement = () => {
                 <h2>Manufacturing Module in Industries</h2>
               </div>
               <div className="custom-p-001">
-                <p>TManufacturing has become a part of our everyday life. From day to night, we use countless products to simplify our living. The businesses who manufacture these products have to make sure of the optimum level of usability and customer satisfaction while meeting changing standards. Microsoft Dynamics 365 Business Central for Manufacturing is one such solution that can help such companies in simplifying the manufacturing process and adapt to changing demands. Regardless of the boundaries, D365 Business Central manufacturing can be utilised with different objectives in various industries.</p>
+                <p>Manufacturing has become a part of our everyday life. From day to night, we use countless products to simplify our living. The businesses who manufacture these products have to make sure of the optimum level of usability and customer satisfaction while meeting changing standards. Microsoft Dynamics 365 Business Central for Manufacturing is one such solution that can help such companies in simplifying the manufacturing process and adapt to changing demands. Regardless of the boundaries, D365 Business Central manufacturing can be utilised with different objectives in various industries.</p>
                 <p>
                   <ul>
                     <li>Automotive</li>

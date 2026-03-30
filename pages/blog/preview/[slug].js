@@ -144,7 +144,7 @@ function BlogPreview({ blogs }) {
                               quote={item.title}
                             >
                               <a>
-                                <i className="bi bi-twitter"></i>
+                                <i className="bi bi-twitter-x"></i>
                               </a>
                             </TwitterShareButton>
 
@@ -197,7 +197,7 @@ function BlogPreview({ blogs }) {
                             quote={item.title}
                           >
                             <a>
-                              <i className="bi bi-twitter"></i>
+                              <i className="bi bi-twitter-x"></i>
                             </a>
                           </TwitterShareButton>
 

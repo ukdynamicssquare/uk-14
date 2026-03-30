@@ -191,7 +191,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
                                   url={`https://www.dynamicssquare.co.uk/blog/${item.title_slug}/`}
                                   quote={item.title}
                                 >
-                                  <a><i className="bi bi-twitter"></i></a>
+                                  <a><i className="bi bi-twitter-x"></i></a>
                                 </TwitterShareButton>
 
                                 <LinkedinShareButton
@@ -264,7 +264,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
                                 media={`${item.meta_image}`}
                                 quote={item.title}
                               >
-                                <a><i className="bi bi-twitter"></i></a>
+                                <a><i className="bi bi-twitter-x"></i></a>
                               </TwitterShareButton>
 
                               <LinkedinShareButton

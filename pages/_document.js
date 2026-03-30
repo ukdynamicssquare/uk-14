@@ -238,7 +238,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   "url": "https://www.dynamicssquare.co.uk/",
                   "sameAs": [
                     "https://www.facebook.com/dynamicssquareuk/",
-                    "https://twitter.com/dsquare_uk",
+                    "https://x.com/dsquare_uk",
                     "https://www.linkedin.com/showcase/dynamics-square-uk/",
                     "https://www.youtube.com/c/DynamicsSquare"
                   ]
@@ -287,7 +287,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   "url": "https://www.dynamicssquare.co.uk/",
                   "sameAs": [
                     "https://www.facebook.com/dynamicssquareuk/",
-                    "https://twitter.com/dsquare_uk",
+                    "https://x.com/dsquare_uk",
                     "https://www.linkedin.com/showcase/dynamics-square-uk/",
                     "https://www.youtube.com/c/DynamicsSquare"
                   ]
@@ -336,7 +336,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                   "url": "https://www.dynamicssquare.co.uk/",
                   "sameAs": [
                     "https://www.facebook.com/dynamicssquareuk/",
-                    "https://twitter.com/dsquare_uk",
+                    "https://x.com/dsquare_uk",
                     "https://www.linkedin.com/showcase/dynamics-square-uk/",
                     "https://www.youtube.com/c/DynamicsSquare"
                   ]

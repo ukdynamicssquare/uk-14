@@ -590,11 +590,11 @@ const Footerwithoutcaptch = () => {
                   <a
                     target="_blank"
                     rel=""
-                    href="https://twitter.com/dsquare_uk"
+                    href="https://x.com/dsquare_uk"
                     className="twitter"
                     aria-label="Twitter"
                   >
-                    <i className="bi bi-twitter"></i>
+                    <i className="bi bi-twitter-x"></i>
                   </a>
                   <a
                     target="_blank"

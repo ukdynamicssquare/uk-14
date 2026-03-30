@@ -613,7 +613,7 @@ const FooterNew = () => {
                   <a
                     target="_blank"
                     rel=""
-                    href="https://twitter.com/dsquare_uk"
+                    href="https://x.com/dsquare_uk"
                     className="twitter"
                     aria-label="Twitter"
                   >
