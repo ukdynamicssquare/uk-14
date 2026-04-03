@@ -679,7 +679,8 @@ const FooterHideNew = () => {
                     width={88} height={88}
                   />
                   </div>
-                  
+                   <img src="/img/ISO_9001-2015.png" alt="microsoft-partner" className="footer-img" width="90" height="90" />
+                  <img src="/img/ISO_9001-2015_2.png" alt="microsoft-partner" className="footer-img" width="90" height="90" />
 
               </div>
             </div>

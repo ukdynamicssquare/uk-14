@@ -640,7 +640,7 @@ const FooterNew = () => {
                   
                 </div>
                 <div className="footer-bottm-subscriber">
-                <div className='award-ssd'>
+                <div className='award-ssd'  style={{display:'flex',gap:'10px',flexWrap:'wrap'}}>
                   <img
                     src="/img/microsoft-partner-footer.png"
                     alt="microsoft-partner"
@@ -648,12 +648,6 @@ const FooterNew = () => {
                     width={150} height={150}
                   />
                   <br/>
-                  <img
-                    src="/img/forber-02.png"
-                    alt="microsoft-partner"
-                    className="footer-img"
-                    width={150} height={150}
-                  />
               </div> 
                   {/* <p>Subscribe Newsletter</p>
                   <span>
@@ -684,6 +678,8 @@ const FooterNew = () => {
                     width={88} height={88}
                   />
                   </div>
+                   <img src="/img/ISO_9001-2015.png" alt="microsoft-partner" className="footer-img" width="90" height="90" />
+                  <img src="/img/ISO_9001-2015_2.png" alt="microsoft-partner" className="footer-img" width="90" height="90" />
                   
 
               </div>
