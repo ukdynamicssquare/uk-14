@@ -19,22 +19,32 @@ const MultiStepFormNew = () => {
   const emailPattern = /^[a-zA-Z0-9._%+-]+@(?!gmail.com)(?!yahoo.com)(?!hotmail.com)(?!hotmail.co.in)(?!hotmail.co.uk)(?!yahoo.co.in)(?!aol.com)(?!live.com)(?!outlook.com)(?!outlook.co.uk)[a-zA-Z0-9_-]+\.[a-zA-Z0-9-.]{2,61}$/;
   const isValidPhoneNumber = (phone) => /^\d{10,15}$/.test(phone);
 
-  useEffect(() => {
-    const fetchQuestions = async () => {
-      try {
-        const response = await fetch('https://blognew.dynamicssquare.co.uk/api/get-all-questions/1');
-        if (!response.ok) throw new Error('Failed to fetch questions');
-        const data = await response.json();
-        setQuestions(data);
-      } catch (error) {
-        setFetchError(error.message);
-      } finally {
-        setLoading(false);
-      }
-    };
+useEffect(() => {
+  const fetchQuestions = async () => {
+    try {
+      const response = await fetch('https://blognew.dynamicssquare.co.uk/api/get-all-questions/1');
+      if (!response.ok) throw new Error('Failed to fetch questions');
+      const data = await response.json();
 
-    fetchQuestions();
-  }, []);
+      setQuestions(data);
+
+      // ✅ FIX: set default "Yes" for first question
+      if (data.length > 0) {
+        setFormData(prev => ({
+          ...prev,
+          [data[0].ques_id]: "Yes"
+        }));
+      }
+
+    } catch (error) {
+      setFetchError(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  fetchQuestions();
+}, []);
 
   const handleInputChange = (quesId, value, isMultiSelect = false) => {
     if (isMultiSelect) {
@@ -115,6 +125,7 @@ const MultiStepFormNew = () => {
       name: formData.name,
       email: formData.email,
       phone: formData.phone,
+      company: formData.company,
       terms_agree: formData.agreement ? 1 : 0,
     };
 
