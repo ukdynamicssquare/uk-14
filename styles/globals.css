@@ -18238,6 +18238,19 @@ color: #fff !important;
 .product-side-002-img001a{
     margin-bottom: -120px;
 }
+.main-form-wrper-pdds{
+  padding: 25px;
+}
+ .sd-title .modal-title {
+font-size: 18px;
+    padding-left: 30px;
+}
+.spiner-wrpers{
+  display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 30px;
+}
 @media (min-width: 1440px) and (max-width: 1700px) {
   .row-d .swiper-wrapper {
     margin-left: -490px;
