@@ -1,143 +1,432 @@
+// pages/_app.js
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "../styles/globals.css";
+
 import Layouts from "../components/Layouts";
-import { useRouter } from "next/router";
-import Header from "../components/Header";
-// import CookieConsent from "react-cookie-consent";
-import { useState, useEffect } from "react";
-// import LoadingBar from "react-top-loading-bar";
 import HeaderWork from "../components/HeaderWork";
-import Footer from "../components/Footer";
 import CookieConsentBanner from "../components/CookieConsentBanner";
 
-// function MyApp({ Component, pageProps }) {
-
-//   return
-
-//   <Layouts>
-//       <Component {...pageProps} />
-//     </Layouts>
-// }
-
-// export default MyApp
+import { useRouter } from "next/router";
+import { useState, useEffect } from "react";
+import Script from "next/script";
+import Head from "next/head";
 
 function MyApp({ Component, pageProps }) {
-  const [progress, setProgress] = useState(0);
-  useEffect(() => {
-    router.events.on("routeChangeStart", () => {
-      setProgress(40);
-    });
-
-    router.events.on("routeChangeComplete", () => {
-      setProgress(600);
-    });
-  });
-
   const router = useRouter();
-  if (
-    router.asPath == "/contact-us/" ||
-    router.asPath == "/contact-test/" ||
-    router.asPath ==
-      "/contact-us/?utm_source=email&utm_medium=contact-us&utm_campaign=navtobc_jan&utm_term=ds_uk" ||
-    router.asPath ==
-      "/contact-us/?utm_source=email&utm_medium=contact-us&utm_campaign=business_central_support&utm_term=ds_uk" ||
-    router.asPath == "/thank-you/" ||
-    router.asPath == "/thanks-webinar-registration/" ||
-    router.asPath == "/thank-you/email-subscriber/" ||
-    router.asPath == "/subscribe-updates/" ||
-    router.asPath ==
-      "/subscribe-updates/?utm_source=email&utm_medium=subscribe_updates&utm_campaign=business_central_support&utm_term=ds_uk" ||
-    router.asPath ==
-      "/subscribe-updates/?utm_source=email&utm_medium=subscribe_updates&utm_campaign=navtobc_jan&utm_term=ds_uk" ||
-    router.asPath == "/guides/download/Pdf-dynamics-crm/" ||
-    router.asPath == "/guides/download/Pdf-guide-finance/" ||
-    router.asPath == "/guides/download/Pdf-d365-supply-chain-management/" ||
-    router.asPath == "/guides/download/power-guide-pdf/" ||
-    router.asPath == "/thank-you-for-registration/" ||
-    router.asPath == "/not-for-profit-fundrasing-engagenment/" ||
-    router.asPath == "/guides/download/pdf-business-central-guide/" ||
-    router.asPath == "/schedule-a-demo/" ||
-    router.asPath == "/test-form/" ||
-    router.asPath == "/erp-implementation-cost-calculator/" ||
-    router.asPath == "/schedule-a-demo" ||
-    router.asPath == "/"
-  ) {
-    return (
-      <>
-      {/* <LoadingBar
-      color='#bb2b36'
-      progress={progress}
-      waitingTime={400}
-      height={2}
-      onLoaderFinished={() => setProgress(0)}
-      /> */}
-        <HeaderWork />
-        <main>
-          <Component {...pageProps} />
-        </main>
-        {/* <CookieConsent
-          location="bottom"
-          buttonText="Accept"
-          cookieName="myAwesomeCookieName2"
-        >
-          We use cookies on our website to give you the most relevant experience
-          by remembering your preferences and repeat visits. By clicking
-          "Accept", you consent to the use of ALL the cookies. Do not sell my
-          personal information.
-        </CookieConsent> */}
-        <CookieConsentBanner />
-      </>
-    );
-  }
+  const [progress, setProgress] = useState(0);
 
-  // if (
-  //   router.asPath == "/newapi/" ||
-  //   router.asPath == "/erp-for-startups/"
-    
-  // ) {
-  //   return (
-  //     <>
-  //        <HeaderWork />
-  //       <Component {...pageProps} />
-  //       <CookieConsent
-  //         location="bottom"
-  //         buttonText="Accept"
-  //         cookieName="myAwesomeCookieName2"
-  //       >
-  //         We use cookies on our website to give you the most relevant experience
-  //         by remembering your preferences and repeat visits. By clicking
-  //         "Accept", you consent to the use of ALL the cookies. Do not sell my
-  //         personal information.
-  //       </CookieConsent>
-  //       <Footer />
-  //     </>
-  //   );
-  // }
+  // ✅ FIXED router events (no memory leak)
+  useEffect(() => {
+    const handleStart = () => setProgress(40);
+    const handleComplete = () => setProgress(100);
+
+    router.events.on("routeChangeStart", handleStart);
+    router.events.on("routeChangeComplete", handleComplete);
+
+    return () => {
+      router.events.off("routeChangeStart", handleStart);
+      router.events.off("routeChangeComplete", handleComplete);
+    };
+  }, [router]);
+
+  // ✅ ALL YOUR ROUTES (OPTIMIZED)
+  const pathname = router.pathname;
+
+  const landingRoutes = [
+    "/",
+    "/contact-us",
+    "/contact-test",
+    "/thank-you",
+    "/thanks-webinar-registration",
+    "/thank-you/email-subscriber",
+    "/subscribe-updates",
+    "/guides/download/Pdf-dynamics-crm",
+    "/guides/download/Pdf-guide-finance",
+    "/guides/download/Pdf-d365-supply-chain-management",
+    "/guides/download/power-guide-pdf",
+    "/guides/download/pdf-business-central-guide",
+    "/thank-you-for-registration",
+    "/not-for-profit-fundrasing-engagenment",
+    "/schedule-a-demo",
+    "/test-form",
+    "/erp-implementation-cost-calculator",
+  ];
+
+  const isLandingPage = landingRoutes.includes(pathname);
 
   return (
     <>
-    {/* <LoadingBar
-      color='#bb2b36'
-      progress={progress}
-      waitingTime={400}
-      height={2}
-      onLoaderFinished={() => setProgress(0)}
-      /> */}
-      <Layouts>
-        <main><Component {...pageProps} /></main>
-      </Layouts>
-      {/* <CookieConsent
-        location="bottom"
-        buttonText="Accept"
-        cookieName="myAwesomeCookieName2"
-      >
-        We use cookies on our website to give you the most relevant experience
-        by remembering your preferences and repeat visits. By clicking "Accept",
-        you consent to the use of ALL the cookies. Do not sell my personal
-        information.
-      </CookieConsent> */}
-       <CookieConsentBanner />
+      {/* ========================= */}
+      {/* ✅ GLOBAL SCHEMA */}
+      {/* ========================= */}
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": "https://www.dynamicssquare.co.uk/#organization",
+                  "name": "Dynamics Square UK Ltd.",
+                  "url": "https://www.dynamicssquare.co.uk/",
+                  "sameAs": [
+                    "https://www.facebook.com/dynamicssquareuk/",
+                    "https://x.com/dsquare_uk",
+                    "https://www.linkedin.com/showcase/dynamics-square-uk/",
+                    "https://www.youtube.com/c/DynamicsSquare"
+                  ],
+                  "logo": {
+                    "@type": "ImageObject",
+                    "@id": "https://www.dynamicssquare.co.uk/#logo",
+                    "inLanguage": "en-GB",
+                    "url": "https://www.dynamicssquare.co.uk/img/dynamicssqure-logo.svg",
+                    "contentUrl": "https://www.dynamicssquare.co.uk/img/dynamicssqure-logo.svg",
+                    "width": "1024",
+                    "height": "1024",
+                    "caption": "Dynamics Square UK"
+                  },
+                  "image": { "@id": "https://www.dynamicssquare.co.uk/#logo" },
+                  "description": "Dynamics Square™ is a trusted Dynamics 365 Partner in London, UK, offering expert Dynamics 365 solutions for Business Central, CRM, ERP & more. Contact us today!",
+                  "alternateName": "Dynamics Square software company in London, United Kingdom",
+                  "telephone": "+ 44 203 769 7689, +44 161 394 0487",
+                  "email": "info@dynamicssquare.co.uk",
+                  "brand": {
+                    "@type": "Brand",
+                    "name": "Dynamics Square UK Ltd.",
+                    "logo": "https://www.dynamicssquare.co.uk/img/dynamicssqure-logo.svg"
+                  },
+                  "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4.3",
+                    "reviewCount": "1280"
+                  }
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://www.dynamicssquare.co.uk/#website",
+                  "url": "https://www.dynamicssquare.co.uk/",
+                  "name": "Dynamics Square UK Ltd.",
+                  "alternateName": "Dynamics Square Microsoft Gold Partner company in London, UK",
+                  "description": "Dynamics Square™ is a trusted Dynamics 365 Partner in London, UK, offering expert Dynamics 365 solutions for Business Central, CRM, ERP & more. Contact us today!",
+                  "publisher": { "@id": "https://www.dynamicssquare.co.uk/#organization" },
+                  "potentialAction": [
+                    {
+                      "@type": "SearchAction",
+                      "target": {
+                        "@type": "EntryPoint",
+                        "urlTemplate": "https://www.dynamicssquare.co.uk/?s={search_term_string}"
+                      },
+                      "query-input": "required name=search_term_string"
+                    }
+                  ],
+                  "inLanguage": "en-GB"
+                },
+                {
+                  "@type": "WebPage",
+                  "@id": "https://www.dynamicssquare.co.uk/#webpage",
+                  "url": "https://www.dynamicssquare.co.uk/",
+                  "name": "Trusted Dynamics 365 CRM and ERP Partner for UK Region | Dynamics Square UK",
+                  "isPartOf": { "@id": "https://www.dynamicssquare.co.uk/#website" },
+                  "about": { "@id": "https://www.dynamicssquare.co.uk/#organization" },
+                  "primaryImageOfPage": { "@id": "https://www.dynamicssquare.co.uk/#logo" },
+                  "datePublished": "2021-08-31T06:09:16+00:00",
+                  "dateModified": "2021-11-07T09:15:37+00:00",
+                  "description": "Dynamics Square is Dynamics 365 partner in the UK who help your business succeed by deploying the finest CRM, ERP, and Microsoft cloud solutions for your unique needs.",
+                  "inLanguage": "en-GB",
+                  "potentialAction": [
+                    {
+                      "@type": "ReadAction",
+                      "target": ["https://www.dynamicssquare.co.uk/"]
+                    }
+                  ],
+                  "headline": "As a Dynamics 365 partner, we assist your business in scaling up by giving unbiased advise on the best Microsoft dynamics ERP and CRM solutions.",
+                  "keywords": [
+                    "dynamics 365 partner uk",
+                    "erp consultants UK",
+                    "crm consultancy",
+                    "d365 business central",
+                    "crm expert online",
+                    "d365 for finance",
+                    "Microsoft NAV partner",
+                    "dynamics crm implementation",
+                    "d365 field service",
+                    "crm implementation services"
+                  ]
+                },
+                {
+                  "@type": "LocalBusiness",
+                  "name": "Dynamics Square UK Ltd. - London Office",
+                  "description": "Dynamics Square is Dynamics 365 partner in the London, UK who help your business succeed by deploying the finest CRM, ERP, and Microsoft cloud solutions for your unique needs.",
+                  "image": "https://www.dynamicssquare.co.uk/img/dynamicssqure-logo.svg",
+                  "alternateName": "Dynamics Square Software company in London, UK",
+                  "priceRange": "£££-£££",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Kemp House, 152-160 City Road",
+                    "addressLocality": "London",
+                    "addressRegion": "London",
+                    "addressCountry": "United Kingdom",
+                    "postalCode": "EC1V 2NX",
+                    "telephone": "+44-207-193-2502, +44-747-927-3380",
+                    "email": "info@dynamicssquare.co.uk"
+                  },
+                  "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 51.52706865727293,
+                    "longitude": -0.08876773400079006
+                  },
+                  "brand": {
+                    "@type": "Brand",
+                    "name": "Dynamics Square UK Ltd.",
+                    "logo": "https://www.dynamicssquare.co.uk/img/dynamicssqure-logo.svg"
+                  },
+                  "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "4.3",
+                    "reviewCount": "1260"
+                  },
+                  "openingHoursSpecification": [
+                    {
+                      "@type": "OpeningHoursSpecification",
+                      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                      "opens": "08:00",
+                      "closes": "17:00"
+                    },
+                    {
+                      "@type": "OpeningHoursSpecification",
+                      "dayOfWeek": ["Saturday", "Sunday"],
+                      "opens": "Closed",
+                      "closes": "Closed"
+                    }
+                  ],
+                  "url": "https://www.dynamicssquare.co.uk/",
+                  "sameAs": [
+                    "https://www.facebook.com/dynamicssquareuk/",
+                    "https://x.com/dsquare_uk",
+                    "https://www.linkedin.com/showcase/dynamics-square-uk/",
+                    "https://www.youtube.com/c/DynamicsSquare"
+                  ]
+                },
+                {
+                  "@type": "LocalBusiness",
+                  "name": "Dynamics Square UK Ltd. - Manchester Office",
+                  "description": "Dynamics Square: Leading Dynamics 365 Business Central partner in Manchester, UK. Transform your business with tailored ERP, CRM solutions and expert support.",
+                  "image": "https://www.dynamicssquare.co.uk/img/dynamicssqure-logo.svg",
+                  "alternateName": "Dynamics Square Software company in Manchester, UK",
+                  "priceRange": "£££-£££",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "International House 61 Mosley Street",
+                    "addressLocality": "Manchester",
+                    "addressRegion": "UK",
+                    "addressCountry": "United Kingdom",
+                    "postalCode": "M2 3HZ",
+                    "telephone": "+44 161 394 0487",
+                    "email": "info@dynamicssquare.co.uk"
+                  },
+                  "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 53.47866198452941,
+                    "longitude": -2.2374762932529038
+                  },
+                  "brand": {
+                    "@type": "Brand",
+                    "name": "Dynamics Square UK Ltd.",
+                    "logo": "https://www.dynamicssquare.co.uk/img/dynamicssqure-logo.svg"
+                  },
+                  "openingHoursSpecification": [
+                    {
+                      "@type": "OpeningHoursSpecification",
+                      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                      "opens": "08:00",
+                      "closes": "17:00"
+                    },
+                    {
+                      "@type": "OpeningHoursSpecification",
+                      "dayOfWeek": ["Saturday", "Sunday"],
+                      "opens": "Closed",
+                      "closes": "Closed"
+                    }
+                  ],
+                  "url": "https://www.dynamicssquare.co.uk/",
+                  "sameAs": [
+                    "https://www.facebook.com/dynamicssquareuk/",
+                    "https://x.com/dsquare_uk",
+                    "https://www.linkedin.com/showcase/dynamics-square-uk/",
+                    "https://www.youtube.com/c/DynamicsSquare"
+                  ]
+                },
+                {
+                  "@type": "LocalBusiness",
+                  "name": "Dynamics Square UK Ltd. - Birmingham Office",
+                  "description": "Dynamics Square is your trusted Dynamics 365 ERP & CRM partner in Birmingham, UK, helping businesses streamline operations and boost growth with expert solutions.",
+                  "image": "https://www.dynamicssquare.co.uk/img/dynamicssqure-logo.svg",
+                  "alternateName": "Dynamics Square Software company in Birmingham, UK",
+                  "priceRange": "£££-£££",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Izabella House, 24 - 26 Regents Place, City Centre",
+                    "addressLocality": "Birmingham",
+                    "addressRegion": "Birmingham, UK",
+                    "addressCountry": "United Kingdom",
+                    "postalCode": "B1 3NJ",
+                    "telephone": "+44 121 790 0574",
+                    "email": "info@dynamicssquare.co.uk"
+                  },
+                  "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 52.486175934043345,
+                    "longitude": -1.9099113644176346
+                  },
+                  "brand": {
+                    "@type": "Brand",
+                    "name": "Dynamics Square UK Ltd.",
+                    "logo": "https://www.dynamicssquare.co.uk/img/dynamicssqure-logo.svg"
+                  },
+                  "openingHoursSpecification": [
+                    {
+                      "@type": "OpeningHoursSpecification",
+                      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                      "opens": "08:00",
+                      "closes": "17:00"
+                    },
+                    {
+                      "@type": "OpeningHoursSpecification",
+                      "dayOfWeek": ["Saturday", "Sunday"],
+                      "opens": "Closed",
+                      "closes": "Closed"
+                    }
+                  ],
+                  "url": "https://www.dynamicssquare.co.uk/",
+                  "sameAs": [
+                    "https://www.facebook.com/dynamicssquareuk/",
+                    "https://x.com/dsquare_uk",
+                    "https://www.linkedin.com/showcase/dynamics-square-uk/",
+                    "https://www.youtube.com/c/DynamicsSquare"
+                  ]
+                }
+              ]
+            }),
+          }}
+        />
+      </Head>
+
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-G7DMKRQVGJ" strategy="afterInteractive" />
+      <Script id="ga" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-G7DMKRQVGJ');
+        `}
+      </Script>
+
+      {/* ✅ GTM */}
+      <Script id="gtm" strategy="afterInteractive">
+        {`
+          (function(w,d,s,l,i){w[l]=w[l]||[];
+          w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
+          var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+          j.async=true;
+          j.src='https://www.googletagmanager.com/gtm.js?id=GTM-5G8CCP6W';
+          f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-5G8CCP6W');
+        `}
+      </Script>
+
+      {/* ========================= */}
+      {/* ✅ MICROSOFT CLARITY */}
+      {/* ========================= */}
+      <Script id="clarity" strategy="afterInteractive">
+        {`
+          (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;
+            t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];
+            y.parentNode.insertBefore(t,y);
+          })(window, document, "clarity", "script", "tib4o2otj4");
+        `}
+      </Script>
+
+      {/* ========================= */}
+      {/* ✅ APOLLO TRACKER */}
+      {/* ========================= */}
+      <Script id="apollo" strategy="lazyOnload">
+        {`
+          (function(){
+            var n=Math.random().toString(36).substring(7);
+            var s=document.createElement("script");
+            s.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n;
+            s.async=true;
+            s.onload=function(){
+              window.trackingFunctions &&
+              window.trackingFunctions.onLoad({
+                appId:"66322a5ecb3cc6056bd458d4"
+              });
+            };
+            document.head.appendChild(s);
+          })();
+        `}
+      </Script>
+
+      {/* ========================= */}
+      {/* ✅ ZOHO CHAT */}
+      {/* ========================= */}
+      <Script id="zoho" strategy="lazyOnload">
+        {`
+          var $zoho=$zoho || {};
+          $zoho.salesiq = $zoho.salesiq || {
+            widgetcode: "siq2c0a7348126da1eec1533d7b2fe81669a9a9454a36812c4485ee1ce065e0a657e9757eecc59243ed2c9ad7fb7bda1383",
+            values:{},
+            ready:function(){}
+          };
+          var d=document;
+          var s=d.createElement("script");
+          s.type="text/javascript";
+          s.defer=true;
+          s.src="https://salesiq.zohopublic.in/widget";
+          var t=d.getElementsByTagName("script")[0];
+          t.parentNode.insertBefore(s,t);
+        `}
+      </Script>
+
+      {/* ========================= */}
+      {/* ✅ BOOTSTRAP JS */}
+      {/* ========================= */}
+      <Script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        strategy="lazyOnload"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossOrigin="anonymous"
+      />
+
+      {/* ========================= */}
+      {/* ✅ PAGE RENDER */}
+      {/* ========================= */}
+      {isLandingPage ? (
+        <>
+          <HeaderWork />
+          <main>
+            <Component {...pageProps} />
+          </main>
+          <CookieConsentBanner />
+        </>
+      ) : (
+        <>
+          <Layouts>
+            <main>
+              <Component {...pageProps} />
+            </main>
+          </Layouts>
+          <CookieConsentBanner />
+        </>
+      )}
     </>
   );
 }
