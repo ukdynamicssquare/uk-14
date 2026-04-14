@@ -20,7 +20,7 @@ const SalesNew = () => {
   return (
     <>
       <Head>
-        <title>Microsoft Dynamics ERP | A Complete ERP Solutions</title>
+        <title>Microsoft Dynamics ERP: A Complete ERP Solution</title>
         <meta
           name="description"
           content="Simplify and manage your enterprise practices by an Integrated Microsoft Dynamics ERP Solution solutions. Request a free demo at Dynamics Square UK today!"
@@ -31,13 +31,13 @@ const SalesNew = () => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-erp/" />
-        <meta property="og:title" content="Microsoft Dynamics ERP | Enterprise Grade ERP Solution" />
+        <meta property="og:title" content="Microsoft Dynamics ERP: A Complete ERP Solution" />
         <meta property="og:description" content="Simplify and manage your enterprise practices by an Integrated Microsoft Dynamics ERP Solution. Request a free demo from our ERP expert today." />
         <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/erp-new-pic-00.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-erp/" />
-        <meta property="twitter:title" content="Microsoft Dynamics ERP | Enterprise Grade ERP Solution" />
+        <meta property="twitter:title" content="Microsoft Dynamics ERP: A Complete ERP Solution" />
         <meta property="twitter:description" content="Simplify and manage your enterprise practices by an Integrated Microsoft Dynamics ERP Solution. Request a free demo from our ERP expert today." />
         <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/erp-new-pic-00.png" />
 
@@ -46,9 +46,9 @@ const SalesNew = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-6 mobile-1 align-self-center">
-              <h1>Microsoft Dynamics 365 ERP</h1>
+              <h1>Microsoft Dynamics ERP</h1>
               <h2>Agentic and AI-Powered ERP Solutions for Modern Enterprises</h2>
-              <p>Dynamics 365 ERP is a collection of agentic and AI-powered, cloud-based ERP applications for managing finance, operations, supply chain, sales, projects, and people, all hosted on Microsoft’s secure cloud platform.</p>
+              <p>Microsoft Dynamics ERP is a collection of agentic and AI-powered, cloud-based ERP applications for managing finance, operations, supply chain, sales, projects, and people, all hosted on Microsoft’s secure cloud platform.</p>
               <p style={{ marginTop: '-15px' }}>Get your hands on a suitable Microsoft ERP to make your operations seamless and business futureproof. Schedule a free call today to get clarity on:</p>
               <ul>
                 <li>Which ERP fits your size</li>
@@ -188,7 +188,7 @@ const SalesNew = () => {
               <div className='row'>
                 <div className='col-lg-12'>
                   <div className='solution-new-banner-sub-head new-bg-00-1'>
-                    <h2>Core Characteristics of Agentic ERP</h2>
+                    <h2>Core Characteristics of Agentic Microsoft ERP</h2>
                     <p>An ERP solution qualifies as “agentic” when it demonstrates:</p>
                   </div>
                 </div>
@@ -503,7 +503,7 @@ const SalesNew = () => {
             <div className='col-lg-8 align-self-center'>
               <div className='product-side-002-content'>
                 <div className='solution-new-banner-sub-head' style={{ paddingBottom: '0px' }}>
-                  <h2>Dynamics 365 Integrations</h2>
+                  <h2>Microsoft Dynamics 365 ERP Integrations</h2>
                   <p>One of the strongest advantages of the Dynamics 365 ERP system is ecosystem connectivity.</p>
                 </div>
               </div>
@@ -523,7 +523,7 @@ const SalesNew = () => {
             <div className='col-lg-5 align-self-center'>
               <div className='product-side-002-content'>
                 <div className='solution-new-banner-sub-head' style={{ paddingBottom: '0px' }}>
-                  <h2>Why Organisations Choose Microsoft Dynamics 365 ERP?</h2>
+                  <h2>Why Organisations Choose Microsoft Dynamics ERP?</h2>
                   <p>When evaluating a Microsoft Dynamics ERP partner or selecting a <a href="/our-services/dynamics-365-consultant/">Microsoft Dynamics ERP consultant</a>, decision-makers look beyond features. </p>
                   <p><b>They focus on crucial questions:</b></p>
                 </div>
@@ -599,7 +599,7 @@ const SalesNew = () => {
             <div className='col-lg-9'>
               <div className='solution-new-banner-sub-head'>
                 <h2>Dynamics 365 ERP Implementation: What to Expect</h2>
-                <p>Dynamics 365 ERP implementation is not a software deployment. It is a business transformation initiative. A structured approach typically includes:</p>
+                <p>Microsoft Dynamics ERP implementation is not a software deployment. It is a business transformation initiative. A structured approach typically includes:</p>
               </div>
             </div>
           </div>
@@ -635,7 +635,7 @@ const SalesNew = () => {
           <div className='row g-5'>
             <div className='col-lg-6'>
               <div className='solution-new-cta-0011'>
-                <h2>Is Microsoft Dynamics 365 ERP Right for You?</h2>
+                <h2>Is Microsoft Dynamics ERP Right for You?</h2>
                 <br />
                 <div>
                   <p>You should consider Microsoft Dynamics 365 ERP if:</p>
