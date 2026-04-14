@@ -342,7 +342,7 @@ function MyApp({ Component, pageProps }) {
       {/* ========================= */}
       {/* ✅ MICROSOFT CLARITY */}
       {/* ========================= */}
-      <Script id="clarity" strategy="afterInteractive">
+      <Script id="clarity" strategy="lazyOnload">
         {`
           (function(c,l,a,r,i,t,y){
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
