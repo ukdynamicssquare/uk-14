@@ -41,7 +41,7 @@ const BusinessCentral = () => {
   return (
     <>
       <Head>
-        <title>Microsoft Dynamics 365 Finance – Transform Your Financial Operations</title>
+        <title>Microsoft Dynamics 365 Finance Partner | Dynamics Square</title>
         <meta
           name="description"
           content="Boost your financial visibility and faster your financial decision making by implementing Microsoft Dynamics 365 Finance. Book a free consultation today."
@@ -52,13 +52,13 @@ const BusinessCentral = () => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-finance/" />
-        <meta property="og:title" content="Microsoft Dynamics 365 Finance – Transform Your Financial Operations" />
+        <meta property="og:title" content="Microsoft Dynamics 365 Finance Partner | Dynamics Square" />
         <meta property="og:description" content="Boost your financial visibility and faster your financial decision making by implementing Microsoft Dynamics 365 Finance. Book a free consultation today." />
         <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/Dynamics-365-Finance-Banner.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-finance/" />
-        <meta property="twitter:title" content="Microsoft Dynamics 365 Finance – Transform Your Financial Operations" />
+        <meta property="twitter:title" content="Microsoft Dynamics 365 Finance Partner | Dynamics Square" />
         <meta property="twitter:description" content="Boost your financial visibility and faster your financial decision making by implementing Microsoft Dynamics 365 Finance. Book a free consultation today." />
         <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/Dynamics-365-Finance-Banner.png" />
 

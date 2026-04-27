@@ -9,7 +9,7 @@ const BcSupport = () => {
     return (
         <>
             <Head>
-                <title>D365 Business Central Support & Services UK - Dynamics Sqaure</title>
+                <title>Dynamics 365 Business Central Support & Services UK - Dynamics Square</title>
                 <meta
                     name="description"
                     content="Get expert Dynamics 365 Business Central support & services in the UK from Dynamics Square. Fast issue resolution, system optimisation, upgrades, and ongoing ERP support."
@@ -20,13 +20,13 @@ const BcSupport = () => {
                 />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://www.dynamicssquare.co.uk/d365-business-central-support/" />
-                <meta property="og:title" content="D365 Business Central Support & Services UK - Dynamics Sqaure" />
+                <meta property="og:title" content="Dynamics 365 Business Central Support & Services UK - Dynamics Square" />
                 <meta property="og:description" content="Get expert Dynamics 365 Business Central support & services in the UK from Dynamics Square. Fast issue resolution, system optimisation, upgrades, and ongoing ERP support." />
                 <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/bc-support-banner.png" />
 
                 <meta property="twitter:card" content="summary_large_image" />
                 <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/d365-business-central-support/" />
-                <meta property="twitter:title" content="D365 Business Central Support & Services UK - Dynamics Sqaure" />
+                <meta property="twitter:title" content="Dynamics 365 Business Central Support & Services UK - Dynamics Square" />
                 <meta property="twitter:description" content="Get expert Dynamics 365 Business Central support & services in the UK from Dynamics Square. Fast issue resolution, system optimisation, upgrades, and ongoing ERP support." />
                 <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/bc-support-banner.png" />
             </Head>

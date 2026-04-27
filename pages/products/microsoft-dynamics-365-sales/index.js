@@ -41,7 +41,7 @@ const SalesNew = () => {
   return (
     <>
       <Head>
-        <title>Dynamics 365 Sales - Boost Sales with Microsoft CRM</title>
+        <title>Dynamics 365 Sales | Microsoft Sales CRM Solutions</title>
         <meta
           name="description"
           content="Boost sales productivity with Microsoft Dynamics 365 Sales. Manage leads, track opportunities, and close deals faster with AI-driven insights. Connect with us today!"
@@ -52,13 +52,13 @@ const SalesNew = () => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-sales/" />
-        <meta property="og:title" content="Dynamics 365 Sales - Boost Sales with Microsoft CRM" />
+        <meta property="og:title" content="Dynamics 365 Sales | Microsoft Sales CRM Solutions" />
         <meta property="og:description" content="Boost sales productivity with Microsoft Dynamics 365 Sales. Manage leads, track opportunities, and close deals faster with AI-driven insights. Connect with us today!" />
         <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/sales-new-01.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-sales/" />
-        <meta property="twitter:title" content="Dynamics 365 Sales - Boost Sales with Microsoft CRM" />
+        <meta property="twitter:title" content="Dynamics 365 Sales | Microsoft Sales CRM Solutions" />
         <meta property="twitter:description" content="Boost sales productivity with Microsoft Dynamics 365 Sales. Manage leads, track opportunities, and close deals faster with AI-driven insights. Connect with us today!" />
         <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/sales-new-01.png" />
 
