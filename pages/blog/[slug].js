@@ -303,7 +303,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
                   </div>
                   <div className="col-lg-4">
                     <div className="prom-bann">
-                      <a style={{ marginBottom: '20px', display: 'block' }} rel="nofollow" href="https://www.forbes.com/councils/forbestechcouncil/2026/03/20/why-erp-ecosystems-are-a-strategic-architecture-decision/" target="_blank">
+                      <a style={{ marginBottom: '20px', display: 'block' }} rel="nofollow" href="https://www.forbes.com/councils/forbestechcouncil/2026/04/21/the-cost-illusion-in-erp-why-companies-overspend/" target="_blank">
                         {/* <Image src="/img/blog-side-pic-top.png" width={413} height={350} alt="d605-left" /></a> */}
                         <Image src="/img/forber-03.png" width={413} height={392} alt="d605-left" /></a>
                       <a href="https://msdynamicsworld.com/vendor/dynamics-square-usa" target="_blank" rel="nofollow"><Image
