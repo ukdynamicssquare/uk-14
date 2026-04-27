@@ -290,7 +290,7 @@ const ProjectOpeartion = () => {
 
         </div>
       </div>
-      <NavBar />
+      {/* <NavBar /> */}
       <section id='section2' className="solution-new-banner-two">
         <div className='container'>
           {/* <div className='row'>

@@ -21,10 +21,10 @@ const ImplementationSales = () => {
   return (
     <>
       <Head>
-        <title>Dynamics 365 for Sales Implementation Partner UK</title>
+        <title>Dynamics 365 Sales Implementation | Dynamics Square UK</title>
         <meta
           name="description"
-          content="Bring sales, empower team, and increase revenue through Dynamics 365 Sales implementation from UK's leading Microsoft Gold Partner - Dynamics Square"
+          content="Drive revenue growth with Dynamics 365 Sales implementation by Dynamics Square UK. Optimise sales processes, improve visibility, and close deals faster."
         />
         <link
           rel="canonical"
@@ -716,7 +716,7 @@ const ImplementationSales = () => {
           </div>
         </div>
       </section>
-      <section id="pricing" className="pricing">
+      <section id="pricing" className="pricinga">
         <div className="container">
           <header className="section-header">
             <h2>Dynamics 365 Sales Pricing</h2>
@@ -724,107 +724,35 @@ const ImplementationSales = () => {
               Choose The Applications That Are Right For Your Business Needs.{" "}
             </p>
           </header>
-          <div className="row gy-4 p-9">
-            <div className="col-lg-4">
-              {/* <div className="box">
-                        <h4>Business Central<br />
-                           Essentials
-                        </h4>
-                        <div className="price"><sup>£</sup>52.80<span>Per-User/Per Month</span></div>
-                        <ul>
-                           <li> <i className="bi bi-check-lg"></i> Financial Management</li>
-                           <li> <i className="bi bi-check-lg"></i> Inventory Management</li>
-                           <li> <i className="bi bi-check-lg"></i> Order Management</li>
-                           <li> <i className="bi bi-check-lg"></i> Purchase Order Management</li>
-                           <li> <i className="bi bi-check-lg"></i> Project Management</li>
-                           <li> <i className="bi bi-check-lg"></i> Additional Capabilities</li>
-                        </ul>
-                       
-                     </div> */}
-              <div className="box box-22">
-                <h3>
-                  Dynamics 365 Sales
-                  <br />
-                  Professional
+           <div className='row g-3'>
+            <div className='col-lg-4 d-flex'>
+              <div className='solution-new-pricing-card'>
+                <h3>Dynamics 365 <span>Sales Professional</span>
                 </h3>
-                <div className="price">
-                  £53.40<span>Per-User/Per Month</span>
-                </div>
-                <ul>
-                  <li className="">
-                    Core sales force automation and Microsoft 365 integration
-                  </li>
-                  <li style={colostyle}>
-                    <i className="bi bi-check-lg"></i>Microsoft Sales Copilot available at an additional cost
-                  </li>
-                </ul>
+                <p>Dynamics 365 Sales Professional covers core sales force automation with Microsoft 365 integration for everyday selling tasks. It is ideal for teams that need structured lead, contact, and opportunity management.</p>
+                <h4>£50.00 <span>per user per month<br />(billed annually)</span></h4>
+                <a href="#exampleModal" data-bs-toggle="modal" className="btn-dd-t btn-get-started" >Contact us</a>
+                <p className='disclm'>*Price excludes VAT</p>
               </div>
             </div>
-            <div className="col-lg-4">
-              <div className="box box-22">
-                <h3>
-                  Dynamics 365 Sales
-                  <br />
-                  Enterprise
+            <div className='col-lg-4 d-flex'>
+              <div className='solution-new-pricing-card'>
+                <h3>Dynamics 365 <span>Sales Enterprise</span>
                 </h3>
-                <div className="price">
-                  £86.30<span>Per-User/Per Month</span>
-                </div>
-                <ul>
-                  <li className="">
-                    Industry-leading sales force automation with contextual
-                    insights and advanced customisation capabilities
-                  </li>
-                  <li style={colostyle}>
-                    <i className="bi bi-check-lg"></i>Includes now Microsoft Sales Copilot
-                  </li>
-                </ul>
+                <p>Dynamics 365 Sales Enterprise edition comprises advanced sales force automation with contextual insights, next generation AI, and flexible configuration. It is designed for organisations that require deeper pipeline visibility, forecasting, and sales guidance.</p>
+                <h4>£80.70<span>per user per month <br />(paid yearly)</span></h4>
+                <a href="#exampleModal" data-bs-toggle="modal" className="btn-dd-t btn-get-started" >Contact us</a>
+                <p className='disclm'>*Price excludes VAT</p>
               </div>
             </div>
-            <div className="col-lg-4">
-              {/* <div className="box">
-                        <h4>Business Central<br />
-                           Essentials
-                        </h4>
-                        <div className="price"><sup>£</sup>52.80<span>Per-User/Per Month</span></div>
-                        <ul>
-                           <li> <i className="bi bi-check-lg"></i> Read and Approve</li>
-                           <li> <i className="bi bi-check-lg"></i> Employee Self Serve</li>
-                           <li> <i className="bi bi-check-lg"></i> Run All Reports</li>
-                        </ul>
-                       
-                     </div> */}
-              <div className="box box-22">
-                <h3>
-                  Dynamics 365 Sales
-                  <br />
-                  Premium
+            <div className='col-lg-4 d-flex'>
+              <div className='solution-new-pricing-card'>
+                <h3>Dynamics 365 <span>Sales Premium</span>
                 </h3>
-                <div className="price">
-                  £123.30<span>Per-User/Per Month</span>
-                </div>
-                <ul>
-                  <li className="">
-                    Dynamics 365 Sales Enterprise plus prebuilt customisable
-                    intelligence solutions for sellers and managers
-                  </li>
-                  <li style={colostyle}>
-                    <i className="bi bi-check-lg"></i>Includes now Microsoft Sales Copilot
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="col-lg-12 col-md-12">
-              <div className="price-btn price-btnasd d-flex justify-content-center">
-                <Link href="#exampleModal" data-bs-toggle="modal" className="btn-get-red">
-
-                  <span>Get Started Now</span>
-
-                </Link>
-                {/* <Link href="#about" className="btn-get-whit">
-                              <span>See Licensing Guide</span>
-                              </Link> */}
+                <p>Enterprise capabilities combined with prebuilt and customisable intelligence for sellers and managers. Ideal for teams adopting sales agents, advanced insights, and AI driven selling at scale.</p>
+                <h4>£115.30<span>per user per month <br />(paid yearly)</span></h4>
+                <a href="#exampleModal" data-bs-toggle="modal" className="btn-dd-t btn-get-started" >Contact us</a>
+                <p className='disclm'>*Price excludes VAT</p>
               </div>
             </div>
           </div>

@@ -743,8 +743,8 @@ const SupplyChainImplementation = () => {
               </header>
             </div>
           </div>
-          <div className="row gy-4 p-9 justify-content-center">
-            <div className="col-lg-6 d-flex">
+           <div className="row gy-4 p-9">
+            <div className="col-lg-4 d-flex">
               <div className="box box-22">
                 <h3>
                   Dynamics 365
@@ -752,16 +752,22 @@ const SupplyChainImplementation = () => {
                   Supply Chain Management
                 </h3>
                 <div className="price">
-                  £172.60<span>Per-User/Per Month</span>
+                £161.50<span>user/month, paid yearly</span>
                 </div>
                 <ul>
                   <li className="text-center">
-                    Build Resilience with an Agile Supply Chain with Dynamics 365. Enhance Customer Service. Drive Business Sales. Manage Topline Revenue. Market Smarter. Services: Cloud-Based CRM, Customer Support, Automate Sales, Marketing Features.
+                    Build Resilience with an Agile Supply Chain with{" "}
+                    <Link href="/products/microsoft-dynamics-365/" target="_blank">
+                    Dynamics 365
+                    </Link>
+                    . Enhance Customer Service. Drive Business Sales. Manage
+                    Topline Revenue. Market Smarter. Services: Cloud-Based CRM,
+                    Customer Support, Automate Sales, Marketing Features.
                   </li>
                 </ul>
               </div>
             </div>
-              <div className="col-lg-6 d-flex">
+            <div className="col-lg-4 d-flex">
               <div className="box box-22">
                 <h3>
                   Dynamics 365
@@ -769,31 +775,42 @@ const SupplyChainImplementation = () => {
                   Supply Chain Management Premium
                 </h3>
                 <div className="price">
-                  £246.60<span>Per-User/Per Month</span>
+                £230.70<span>user/month, paid yearly</span>
                 </div>
                 <ul>
                   <li className="text-center">
-                   All dynamics 365 SCM standard features along with added Copilot capabilities
+                    All dynamics 365 SCM standard features along with added Copilot capabilities
                   </li>
                 </ul>
               </div>
             </div>
+            <div className="col-lg-4 d-flex">
+              <div className="box box-22">
+                <h3>
+                  Dynamics 365
+                  <br />
+                  Intelligent Order Management
+                </h3>
+                <div className="price">
+                £242.24<span>/month</span>
+                </div>
+                <ul>
+                  <li className="text-center">
+                   Manage up to 1,000 order lines/month with AI and real-time inventory
+                  </li>
+                </ul>
+              </div>
+            </div>
+        
+
             <div className="col-lg-12 col-md-12">
-              <p
-                className="text-center"
-                style={{ padding: "50px 0px 0px 0px" }}
-              >
-                <b>
-                  Looking for Customised Pricing as per your business
-                  requirements?
-                </b>
-              </p>
               <div className="price-btn price-btnasd d-flex justify-content-center">
                 <Link href="#exampleModal" data-bs-toggle="modal" className="btn-get-red">
 
-                  <span>Get the Quotes NOW!</span>
+                  <span>Get Started Now</span>
 
                 </Link>
+
               </div>
             </div>
           </div>

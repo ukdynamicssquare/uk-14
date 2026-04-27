@@ -14,10 +14,10 @@ const MarketingImplementation = () => {
   return (
     <>
       <Head>
-        <title>Dynamics 365 Marketing Implementation | Dynamics Square</title>
+        <title>Dynamics 365 Marketing Implementation | Dynamics Square UK</title>
         <meta
           name="description"
-          content="Centralises customer information, utilize marketing automation, and enhance overall marketing performance through implementing Dynamics 365 Marketing."
+          content="Dynamics 365 Marketing implementation services by Dynamics Square UK. Drive smarter campaigns, real-time insights, and improved customer engagement."
         />
         <link
           rel="canonical"
@@ -733,7 +733,7 @@ const MarketingImplementation = () => {
                 </h3>
                 <p><b>New Customer</b></p>
                 <div className="price">
-                  £1346<span>Per-Tenant/Per Month</span>
+                  £1,307.20<span>Per-Tenant/Per Month</span>
                 </div>
                 <ul>
                   <li className="text-center">10,000 People Interacted and 100,00 People Unified</li>
@@ -747,7 +747,7 @@ const MarketingImplementation = () => {
                 </h3>
                 <p><b>Existing Customer</b></p>
                 <div className="price">
-                  £792<span>Per-Tenant/Per Month</span>
+                  £769.00<span>Per-Tenant/Per Month</span>
                 </div>
                 <ul>
                   <li className="text-center">

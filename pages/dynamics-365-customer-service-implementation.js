@@ -15,11 +15,11 @@ const CustomerServiceImplementation = () => {
       <>
         <Head>
         <title>
-          Dynamics 365 Customer Service Implementation | Dynamics Square
+          Dynamics 365 Customer Service Implementation | Dynamics Square UK
         </title>
         <meta
           name="description"
-          content="We are one of the certified Dynamics 365 Customer Service Implementation partner in UK providing effort-less and cost-effective implementation services to enhance profitability and easy growth."
+          content="Transform your support operations with Dynamics 365 Customer Service implementation by Dynamics Square UK for faster response and better CX."
         />
         <link
           rel="canonical"
@@ -748,111 +748,153 @@ const CustomerServiceImplementation = () => {
               </div>
             </div>
 
-            <div className="row gy-4 p-9">
-              <div className="col-lg-6 col-md-6">
-                <div className="box box-22">
-                  <h3>
-                    Dynamics 365 Customer Service
-                    <br />
-                    Professional
-                  </h3>
-                  <div className="price">
-                    <sup>£</sup>52.80<span>Per-User/Per Month</span>
-                  </div>
-                  <ul>
-                    <li>
-                      <i className="bi bi-check-lg"></i> Case management
-                    </li>
-                    <li>
-                      <i className="bi bi-check-lg"></i> Knowledge management
-                    </li>
-                    <li>
-                      <i className="bi bi-check-lg"></i> SLAs
-                    </li>
-                    <li>
-                      <i className="bi bi-check-lg"></i> Templates
-                    </li>
-                    <li>
-                      <i className="bi bi-check-lg"></i> Unlimited number of users
-                    </li>
-                    <li>
-                      <i className="bi bi-check-lg"></i> Additional Capabilities
-                    </li>
-                  </ul>
+            <div className="row p-9 justify-content-center">
+            <div className="col-lg-10">
+              <div className="row  gy-4 ">
+                <div className="col-lg-6 d-flex">
+              <div className="box box-22">
+                <h3>
+                  Dynamics 365 Customer Service
+                  <br />
+                  Free Trial
+                </h3>
+                <div className="price">
+                  £0<span></span>
                 </div>
-              </div>
+                <ul>
+                  <li className="">
+                Deliver outstanding service that meets and exceeds customer expectations
+                  </li>
+                </ul>
+                <Link href="#exampleModal" data-bs-toggle="modal" className="btn btn-get-ress">
 
-              <div className="col-lg-6 col-md-6">
-                <div className="box box-22">
-                  <h3>
-                    Dynamics 365 Customer Service
-                    <br />
-                    Essentials
-                  </h3>
-                  <div className="price">
-                    <sup>£</sup>135.70<span>Per-User/Per Month</span>
-                  </div>
-                  <ul>
-                    <li>
-                      <i className="bi bi-check-lg"></i> All features of the
-                      Professional set
-                    </li>
-                    <li>
-                      <i className="bi bi-check-lg"></i> All features of the
-                      Professional set
-                    </li>
-                    <li>
-                      <i className="bi bi-check-lg"></i> Case management
-                    </li>
-                    <li>
-                      <i className="bi bi-check-lg"></i> Unified service desk
-                    </li>
-                    <li>
-                      <i className="bi bi-check-lg"></i> Embedded intelligence
-                    </li>
-                    <li>
-                      <i className="bi bi-check-lg"></i> Context-driven
-                      suggestions
-                    </li>
-                    <li>
-                      <i className="bi bi-check-lg"></i> Service gamification
-                    </li>
-                    <li>
-                      <i className="bi bi-check-lg"></i> Customization and
-                      extensibility
-                    </li>
-                    <li>
-                      <i className="bi bi-check-lg"></i> Portals
-                    </li>
-                    <li>
-                      <i className="bi bi-check-lg"></i> Analytics and KPI
-                      reporting
-                    </li>
-                  </ul>
-                </div>
-              </div>
+                  <span>Try For Free</span>
 
-              <div className="col-lg-12 col-md-12">
-                <p
-                  className="text-center"
-                  style={{ padding: "50px 0px 0px 0px" }}
-                >
-                  <b>
-                    Looking for Customised Pricing as per your business
-                    requirements?
-                  </b>
-                </p>
-                <div className="price-btn price-btnasd d-flex justify-content-center">
-                  <Link
-                    data-bs-toggle="modal"
-                    href="#exampleModal"
-                    className="btn-get-red"
-                  >
-                    <span>Get the Quotes Now!</span>
-                  </Link>
-                </div>
+                </Link>
               </div>
             </div>
+            <div className="col-lg-6 d-flex">
+              <div className="box box-22">
+                <h3>
+                  Dynamics 365 Customer Service
+                  <br />
+                  Professional
+                </h3>
+                <div className="price">
+                £38.40<span>user/month, paid yearly</span>
+                </div>
+                <ul>
+                  <li>
+                    <i className="bi bi-check-lg"></i> Case management
+                  </li>
+                  <li>
+                    <i className="bi bi-check-lg"></i> Knowledge management
+                  </li>
+                  <li>
+                    <i className="bi bi-check-lg"></i> SLAs
+                  </li>
+                  <li>
+                    <i className="bi bi-check-lg"></i> Templates
+                  </li>
+                  <li>
+                    <i className="bi bi-check-lg"></i> Unlimited number of users
+                  </li>
+                  <li>
+                    <i className="bi bi-check-lg"></i> Additional Capabilities
+                  </li>
+                  <li>
+                    <i className="bi bi-check-lg"></i> Personal Views and Dashboards 
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="col-lg-6 d-flex">
+              <div className="box box-22">
+                <h3>
+                  Dynamics 365 Customer Service
+                  <br />
+                  Enterprise
+                </h3>
+                <div className="price">
+                £80.70<span>user/month, paid yearly</span>
+                </div>
+                <ul>
+                  <li>
+                    <i className="bi bi-check-lg"></i> All features of the
+                    Professional set
+                  </li>
+                  <li>
+                    <i className="bi bi-check-lg"></i> Unified service desk 
+                  </li>
+                  <li>
+                    <i className="bi bi-check-lg"></i> Embedded intelligence 
+                  </li>
+                  <li>
+                    <i className="bi bi-check-lg"></i> Context-driven suggestions 
+                  </li>
+                  <li>
+                    <i className="bi bi-check-lg"></i> Service gamification
+                  </li>
+                  <li>
+                    <i className="bi bi-check-lg"></i> Customization and extensibility 
+                  </li>
+                  <li>
+                    <i className="bi bi-check-lg"></i> Analytics and KPI reporting 
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+            <div className="col-lg-6 d-flex">
+              <div className="box box-22">
+                <h3>
+                  Dynamics 365 Customer Service<br/> Premium
+                  <br />
+                  
+                </h3>
+                <div className="price">
+                £149.90<span>user/month, paid yearly</span>
+                </div>
+                <ul>
+                  <li>
+                    <i className="bi bi-check-lg"></i> Transform customer engagement with an integrated contact center and CRM service solution all powered by generative AI.
+                  </li>
+                  <li>
+                    <i className="bi bi-check-lg"></i> All features of the
+                    Professional set
+                  </li>
+                  <li>
+                    <i className="bi bi-check-lg"></i> Unified service desk 
+                  </li>
+                  <li>
+                    <i className="bi bi-check-lg"></i> Embedded intelligence 
+                  </li>
+                  <li>
+                    <i className="bi bi-check-lg"></i> Service gamification
+                  </li>
+                  <li>
+                    <i className="bi bi-check-lg"></i> Customization and extensibility, etc.
+                  </li>
+                </ul>
+              </div>
+            </div>
+              </div>
+            </div>
+
+            <div className="col-lg-12 col-md-12">
+              <div className="price-btn price-btnasd d-flex justify-content-center">
+                <Link href="#exampleModal" data-bs-toggle="modal" className="btn-get-red">
+
+                  <span>Get Personlised Pricing Now! </span>
+
+                </Link>
+                {/* <Link href="#about" className="btn-get-whit">
+                            <span>See Licensing Guide</span>
+                            </Link> */}
+              </div>
+            </div>
+          </div>
           </div>
         </section>
         <section className="call-to-action-center hero-4">

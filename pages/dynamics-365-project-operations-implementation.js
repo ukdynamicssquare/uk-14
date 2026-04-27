@@ -15,11 +15,11 @@ const ProjectOperationImplementation = () => {
     <>
       <Head>
         <title>
-          Dynamics 365 Project Operations Implementation | Dynamics Square
+          Dynamics 365 Project Operations Implementation | Dynamics Square UK
         </title>
         <meta
           name="description"
-          content="Avail Project Automation, optimize resources, and drive project success with increased profitability through the Dynamics 365 Project Operations implementing today!"
+          content="Dynamics Square UK delivers expert Dynamics 365 Project Operations implementation to streamline projects, improve visibility, and boost margins."
         />
         <link
           rel="canonical"

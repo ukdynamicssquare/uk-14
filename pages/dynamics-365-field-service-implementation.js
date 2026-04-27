@@ -15,11 +15,11 @@ const FieldServicesImplementation = () => {
     <>
       <Head>
         <title>
-          Dynamics 365 Field Service Implementation | Dynamics Square
+          Dynamics 365 Field Service Implementation | Dynamics Square UK
         </title>
         <meta
           name="description"
-          content="Optimize resources, explore upsell deals, track tickets 24x7, and improve overall customer engagement through Dynamics 365 Field Service Implementation. Get it Today!"
+          content="Dynamics Square UK delivers expert Dynamics 365 Field Service implementation to optimise workforce, automate scheduling, and enhance service delivery."
         />
         <link
           rel="canonical"
@@ -753,7 +753,7 @@ const FieldServicesImplementation = () => {
               <div className="box box-22">
                 <h3>Dynamics 365 Field Service</h3>
                 <div className="price">
-                  £86.30<span>Per-User/Per Month</span>
+                  £80.70<span>Per-User/Per Month</span>
                 </div>
                 <ul>
                   <li className="text-center">
@@ -766,7 +766,7 @@ const FieldServicesImplementation = () => {
               <div className="box box-22">
                 <h3>Dynamics 365 Field Service Contractor</h3>
                 <div className="price">
-                 £41.10<span>Per-User/Per Month</span>
+                 £38.40<span>Per-User/Per Month</span>
                 </div>
                 <ul>
                   <li className="text-center">
