@@ -644,7 +644,6 @@ const AboutUs = () => {
                     <ul className="new-com-listss">
                       <li className="icon-box001">
                         <Link href="/products/microsoft-dynamics-365-mixed-reality/">
-
                           <div className="icon-box-inner">
                             <div className="inner-circle">
                               <Image src="/img/menu-icons/mixed-Reality-icons.svg" alt="Mixed Reality" width={40} height={40} />
