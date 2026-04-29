@@ -18251,6 +18251,81 @@ font-size: 18px;
     align-items: center;
     margin-top: 30px;
 }
+/* Card wrapper */
+.icon-box001 {
+  list-style: none;
+  text-align: center;
+}
+
+/* Make full clickable */
+.icon-box001 a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* OUTER SHADOW BOX (only for icon) */
+.icon-box-inner {
+  width: 60px;
+  height: 60px;
+  background: #f3f5f7;
+  border-radius: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 
+    8px 8px 16px #d1d9e6,
+    -8px -8px 16px #ffffff;
+
+  margin-bottom: 10px;
+  transition:.4s ease
+}
+
+/* Inner circle */
+.new-com-listss {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap:20px;
+   flex-wrap: wrap;
+}
+.inner-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  /* background: linear-gradient(145deg, #4fd1c5, #2bb5a8); */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow:
+    inset 4px 4px 8px rgba(0,0,0,0.1),
+    inset -4px -4px 8px rgba(255,255,255,0.6);
+}
+.inner-circle img{
+  width:34px;
+  height:34px
+}
+
+/* TEXT OUTSIDE */
+.icon-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Hover effect */
+.icon-box-inner:hover {
+  transform: translateY(-5px);
+  box-shadow: 
+    12px 12px 20px #d1d9e6,
+    -12px -12px 20px #ffffff;
+}
 @media (min-width: 1440px) and (max-width: 1700px) {
   .row-d .swiper-wrapper {
     margin-left: -490px;
