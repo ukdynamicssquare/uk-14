@@ -153,7 +153,7 @@ const StartGuideTwo = () => {
                <div className="aboot-erp-content">
                  <h3>What's more about this eBook?</h3>
                  <p>
-                   Microsoft Dynamics CRM is a simple yet powerful tool that can
+                   <a href="/products/microsoft-dynamics-crm/">Microsoft Dynamics CRM</a> is a simple yet powerful tool that can
                    help businesses streamline the entire customer relationship
                    journey. Dynamics 365 CRM is a flexible and customizable tool
                    that offers numerous capabilities, including tracking sales

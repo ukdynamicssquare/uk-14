@@ -35,6 +35,9 @@ const HeaderWork = () => {
       "/case-studies/business-central-reimplementation-for-food-trader": `${gname}`,
       "/case-studies/business-central-reimplementation-for-recycling-industry": `${gname}`,
       "/industries/dynamics-365-for-discrete-manufacturing": `${gname}`,
+      "/industries/dynamics-365-for-distribution": `${gname}`,
+      "/case-studies/business-central-for-tool-manufacturing-company": `${gname}`,
+      "/case-studies/dynamics-365-finance-for-logistic-uk-multi-entity": `${gname}`,
        "/book-a-demo": `${gname}`,
   };
 
