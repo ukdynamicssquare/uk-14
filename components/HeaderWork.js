@@ -8,15 +8,15 @@ import { useRouter } from "next/router";
 const HeaderWork = () => {
   const [isFixed, setIsFixed] = useState(false);
   const router = useRouter();
-  const gname="services-header"
+  const gname = "services-header"
   const headerClassMap = {
     "/": "specific-header",
     "/index-new": "specific-header",
     "/products/dynamics-365-business-central/bc-support": `${gname}`,
     "/dynamics-365-business-central-implementation": `${gname}`,
     "/d365-business-central-support": `${gname}`,
-     "/products/dynamics-365-business-central": `${gname}`,
-     "/products/microsoft-dynamics-365-finance": `${gname}`,
+    "/products/dynamics-365-business-central": `${gname}`,
+    "/products/microsoft-dynamics-365-finance": `${gname}`,
     "/products/dynamics-365-business-central/financial-management": `${gname}`,
     "/products/dynamics-365-business-central/sales-order-management": `${gname}`,
     "/products/dynamics-365-business-central/supply-chain-management": `${gname}`,
@@ -28,17 +28,20 @@ const HeaderWork = () => {
     "/products/dynamics-365-human-resources": `${gname}`,
     "/products/dynamics-365-human-resources": `${gname}`,
     "/products/dynamics-365-project-operations": `${gname}`,
-     "/continia-for-dynamics-365-business-central": `${gname}`,
-     "/the-ultimate-guide-to-microsoft-dynamics-365": `${gname}`,
-     "/industries/professional-services": `${gname}`,
-      "/continia-expense-management": `${gname}`,
-      "/case-studies/business-central-reimplementation-for-food-trader": `${gname}`,
-      "/case-studies/business-central-reimplementation-for-recycling-industry": `${gname}`,
-      "/industries/dynamics-365-for-discrete-manufacturing": `${gname}`,
-      "/industries/dynamics-365-for-distribution": `${gname}`,
-      "/case-studies/business-central-for-tool-manufacturing-company": `${gname}`,
-      "/case-studies/dynamics-365-finance-for-logistic-uk-multi-entity": `${gname}`,
-       "/book-a-demo": `${gname}`,
+    "/continia-for-dynamics-365-business-central": `${gname}`,
+    "/the-ultimate-guide-to-microsoft-dynamics-365": `${gname}`,
+    "/industries/professional-services": `${gname}`,
+    "/continia-expense-management": `${gname}`,
+    "/case-studies/business-central-reimplementation-for-food-trader": `${gname}`,
+    "/case-studies/business-central-reimplementation-for-recycling-industry": `${gname}`,
+    "/industries/dynamics-365-for-discrete-manufacturing": `${gname}`,
+    "/industries/dynamics-365-for-distribution": `${gname}`,
+    "/case-studies/business-central-for-tool-manufacturing-company": `${gname}`,
+    "/case-studies/dynamics-365-finance-for-logistic-uk-multi-entity": `${gname}`,
+    "/case-studies/business-central-with-crm-implement-for-equestrian-manufacturing": `${gname}`,
+    "/case-studies/d365-finance-and-operations-for-project-management": `${gname}`,
+    "/case-studies/dynamics-365-f&O-implementation-for-healthcare": `${gname}`,
+    "/book-a-demo": `${gname}`,
   };
 
   const currentHeaderClass = headerClassMap[router.pathname] || "";
@@ -54,7 +57,7 @@ const HeaderWork = () => {
     }
   };
 
-    const getLogoSrctwo = () => {
+  const getLogoSrctwo = () => {
     switch (router.pathname) {
       case "/":
         return "/img/partner-logo-white-2.png";
@@ -119,16 +122,16 @@ const HeaderWork = () => {
               <a href="/" className="logo">
                 <div className="logo-wrapper">
                   <Image
-                  src={getLogoSrc()}
-                  alt="Dynamics Square TM Logo"
-                  priority
-                  width={301}
-                  height={21}
-                />
-                 <Image className="log-part" src={getLogoSrctwo()}  alt="" width="141"
-                  height="40" priority />
+                    src={getLogoSrc()}
+                    alt="Dynamics Square TM Logo"
+                    priority
+                    width={301}
+                    height={21}
+                  />
+                  <Image className="log-part" src={getLogoSrctwo()} alt="" width="141"
+                    height="40" priority />
                 </div>
-               
+
               </a>
             </div>
             <div className="right-nav">

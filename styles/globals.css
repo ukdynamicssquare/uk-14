@@ -17305,6 +17305,9 @@ margin: -30px 0px -80px;
   margin-bottom: 20px;
   margin-left: 15px;
 }
+.flex-c-card p{
+    margin-left: 15px;
+}
 .flex-c-card ul {
   margin-bottom: 0;
 }

@@ -355,8 +355,8 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
                 <div className="flex-c-card">
                   <h3>Resolution of Regulatory Compliance</h3>
                   <ul>
-                    <li>•	Upgraded system and infrastructure to meet HMRC requirements</li>
-                    <li>•	Restored the ability to submit VAT returns digitally under Making Tax Digital</li>
+                    <li>Upgraded system and infrastructure to meet HMRC requirements</li>
+                    <li>Restored the ability to submit VAT returns digitally under Making Tax Digital</li>
                     <li>Brought the organisation back into full regulatory compliance</li>
                   </ul>
                 </div>
