@@ -142,7 +142,7 @@
     "dynamics365": {
       "label": "03",
       "title": "Dynamics 365 at a Glance",
-      "lead": "Dynamics 365 is a portfolio of connected business applications designed to run core operations and customer-facing processes on a shared foundation. It brings agentic ERP and CRM capabilities together — supported by data, automation, and intelligence.",
+      "lead": "<a href=\"/products/microsoft-dynamics-365/\">Dynamics 365</a> is a portfolio of connected business applications designed to run core operations and customer-facing processes on a shared foundation. It brings agentic ERP and CRM capabilities together — supported by data, automation, and intelligence.",
       "body": "At its core, it supports how a business earns revenue, manages costs, serves customers, and maintains operational control. The real strength lies in how seamlessly different apps within the ecosystem connect to serve as a unified platform.",
       "erpCrm": {
         "title": "ERP and CRM — Explained Simply",
@@ -164,7 +164,7 @@
       "lead": "ERP is the operational backbone of any business. It governs how money flows, how goods move, how commitments get fulfilled, and how control stays intact. Microsoft offers three closely related ERP applications, each designed for different levels of complexity.",
       "businessCentral": {
         "title": "Dynamics 365 Business Central: The Most Popular Option for SMEs",
-        "intro": "Business Central is a cloud-based, agentic ERP solution built for small to mid-sized organisations that need strong financial control, operational visibility, and room to grow — without enterprise-level complexity. It's where most UK businesses start, and many stay.",
+        "intro": "<a href=\"/products/dynamics-365-business-central/\">Business Central</a> is a cloud-based, agentic ERP solution built for small to mid-sized organisations that need strong financial control, operational visibility, and room to grow — without enterprise-level complexity. It's where most UK businesses start, and many stay.",
         "body": "It replaces legacy accounting systems, spreadsheets, and outdated ERP platforms that can no longer support modern business demands.",
         "capabilities": [
           { "icon": "💷", "title": "Finance & Accounting",       "text": "General ledger, accounts payable/receivable, cash flow, bank reconciliation, fixed assets, VAT compliance." },
@@ -183,7 +183,7 @@
           "title": "What's New in Business Central — and Why It Matters",
           "intro": "Business Central follows a continuous evolution model — structured six-month release waves, plus monthly updates. Progress without instability. Here's what's arrived recently:",
           "updates": [
-            { "title": "🤖 AI Agents: From Assistance to Execution",   "text": "Business Central is no longer limited to AI suggestions. Autonomous and semi-autonomous agents now actively participate in workflows — Sales Order Agents, Payables Agents, and Bank Reconciliation Agents handle real work. AI has shifted from 'help me understand' to 'help me act faster and more accurately.'" },
+            { "title": "🤖 AI Agents: From Assistance to Execution",   "text": "Business Central is no longer limited to AI suggestions. Autonomous and semi-autonomous agents now actively participate in workflows — <a href=\"/blog/sales-order-agent-explained-features-setup-and-benefits/\">Sales Order Agents</a>, Payables Agents, and Bank Reconciliation Agents handle real work. AI has shifted from 'help me understand' to 'help me act faster and more accurately.'" },
             { "title": "💰 Finance: Faster, Clearer, More Governed",    "text": "Enhanced audit trails, improved payables workflows, expanded VAT and excise tax support. Finance teams spend less time validating data and more time interpreting performance — while compliance stays intact." },
             { "title": "📈 Reporting as a First-Class Feature",         "text": "Reporting in Business Central has shifted from static, after-the-fact reviews to embedded, decision-ready insight. Native Power BI apps across finance, sales, inventory, manufacturing, and projects. Drill-back reporting. Dynamic dimensions. Cash flow and inventory forecasting." },
             { "title": "🌍 Sustainability: Operational, Not Just Reported", "text": "Sustainability is now embedded in operational processes — not a side report. Scope 3 value-chain tracking, carbon calculations, ESG and CSRD preparation, energy consumption tracking. Auditable, not estimated." }
@@ -203,12 +203,12 @@
       "finance": {
         "title": "Dynamics 365 Finance",
         "intro": "Designed for complex, multi-entity organisations. Finance targets enterprises operating across multiple legal entities, regions, and regulatory environments — with higher transaction volumes, layered approval structures, and advanced reporting requirements.",
-        "capabilities": "Key capabilities: multi-entity financial consolidation, global tax management, multi-currency accounting, intercompany settlements, treasury and liquidity management, budget planning, regulatory compliance across jurisdictions, and financial scenario analysis.",
+        "capabilities": "Key capabilities: multi-entity <a href=\"/blog/financial-consolidation-in-dynamics-365-finance/\">financial consolidation</a>, global tax management, multi-currency accounting, intercompany settlements, treasury and liquidity management, budget planning, regulatory compliance across jurisdictions, and financial scenario analysis.",
         "industries": ["Multinational Enterprises", "Global Professional Services", "Large Retail Groups", "Complex Corporate Groups"]
       },
       "scm": {
         "title": "Dynamics 365 Supply Chain Management",
-        "intro": "Supply Chain Management delivers end-to-end supply chain visibility — planning, execution, and optimisation across complex sourcing, production, warehousing, and distribution networks.",
+        "intro": "<a href=\"/products/dynamics-365-supply-chain-management/\">Supply Chain Management</a> delivers end-to-end supply chain visibility — planning, execution, and optimisation across complex sourcing, production, warehousing, and distribution networks.",
         "capabilities": "Key capabilities: advanced warehouse and bin management, procurement and supplier collaboration, production planning and shop floor control, demand forecasting, transportation and route optimisation, quality management, and logistics performance monitoring.",
         "industries": ["Manufacturing Enterprises", "Global Distributors", "Logistics Providers", "Large E-Commerce Fulfilment"]
       },
@@ -234,10 +234,10 @@
     "crm": {
       "label": "05",
       "title": "Customer Engagement (CRM) Solutions in Dynamics 365",
-      "lead": "Customer engagement defines how organisations attract demand, manage relationships, resolve issues, and maintain trust over time. Dynamics 365 CRM capability sits across four closely connected applications — each addressing a specific stage of the customer lifecycle.",
+      "lead": "<a href=\"/products/dynamics-365-customer-engagement/\">Customer engagement</a> defines how organisations attract demand, manage relationships, resolve issues, and maintain trust over time. <a href=\"/products/microsoft-dynamics-crm/\">Dynamics 365 CRM</a> capability sits across four closely connected applications — each addressing a specific stage of the customer lifecycle.",
       "sales": {
         "title": "Dynamics 365 Sales",
-        "intro": "An agentic CRM solution supporting the full journey from initial interest to closed revenue. It provides structure around how leads progress, how opportunities mature, and how sales activity connects to fulfilment and finance.",
+        "intro": "<a href=\"/products/microsoft-dynamics-365-sales/\">An agentic CRM solution</a> supporting the full journey from initial interest to closed revenue. It provides structure around how leads progress, how opportunities mature, and how sales activity connects to fulfilment and finance.",
         "cards": [
           { "icon": "🎯", "title": "Lead-to-Cash Process",       "text": "Lead capture, opportunity tracking, quote and order preparation, handover to finance — structured for consistency and forecasting accuracy." },
           { "icon": "📊", "title": "Pipeline Visibility",         "text": "Forecast models based on real activity. Deal tracking by stage and probability. Performance visibility across teams." },
@@ -356,7 +356,7 @@
         "name": "Import Consignment Solution by Dynamics Square",
         "text": "A purpose-built add-on that helps UK-based importers and manufacturers track their consignments from origin to receipt. Designed for real operational needs, not hypothetical use cases."
       },
-      "evalProcess": "ISVs are treated as part of the overall solution architecture, not optional extras. Recommendations follow structured evaluation based on real operational impact — not feature lists. Evaluation criteria: native Dynamics 365 integration, alignment with Microsoft upgrade cycles, proven adoption in relevant industries, clear product roadmap and vendor support, data security and compliance alignment, and total cost over the solution lifecycle."
+      "evalProcess": "ISVs are treated as part of the overall solution architecture, not optional extras. Recommendations follow structured evaluation based on real operational impact — not feature lists. Evaluation criteria: native <a href=\"/products/microsoft-dynamics-365/integration/\">Dynamics 365 integration</a>, alignment with Microsoft upgrade cycles, proven adoption in relevant industries, clear product roadmap and vendor support, data security and compliance alignment, and total cost over the solution lifecycle."
     },
     "architecture": {
       "label": "10",
@@ -398,7 +398,7 @@
       "scenarios": [
         {
           "title": "NAV to Business Central",
-          "text": "Many organisations still operate on older Microsoft Dynamics NAV. It's familiar, but it struggles with modern reporting, integration, and scalability demands. Migration to Business Central offers a structured path forward — retaining functional continuity while modernising the platform."
+          "text": "Many organisations still operate on older <a href=\"/products/microsoft-dynamics-nav/\">Microsoft Dynamics NAV</a>. It's familiar, but it struggles with modern reporting, integration, and scalability demands. Migration to Business Central offers a structured path forward — retaining functional continuity while modernising the platform."
         },
         {
           "title": "Legacy ERP to Dynamics 365",

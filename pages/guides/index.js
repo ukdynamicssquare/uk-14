@@ -68,6 +68,34 @@ const Guides = () => {
                     <div className="col-lg-6">
                       <div className="card card-custom-1 p-3">
                         <Link
+                          href="/the-ultimate-guide-to-microsoft-dynamics-365/"
+                          className="over-ff text-center"
+                        >
+                          <img
+                            className="card-img-top"
+                            src="/img/chapter5-5.png"
+                            alt="business-central-guide"
+                          />
+                        </Link>
+                        <div className="card-body">
+                          <h5 className="card-title">
+                            <Link href="/the-ultimate-guide-to-microsoft-dynamics-365/">
+                            The Ultimate Guide to Microsoft Dynamics 365
+                            </Link>
+                          </h5>
+                          <div className="btn-003 btn-009">
+                            <Link
+                              href="/the-ultimate-guide-to-microsoft-dynamics-365/"
+                              className="btn btn-sm btn-danger">
+                             View The Guide
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col-lg-6">
+                      <div className="card card-custom-1 p-3">
+                        <Link
                           href="/guides/business-central-guide-for-smb/"
                           className="over-ff text-center"
                         >

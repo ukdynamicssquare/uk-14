@@ -432,11 +432,10 @@ export default function Dynamics365GuidePage() {
   return (
     <>
       <Head>
-       <title>The Ultimate Guide to Microsoft Dynamics 365 | Dynamics Square</title>
-        <meta name="robots" content="noindex, nofollow" />
+        <title>The Ultimate Guide to Microsoft Dynamics 365 | Dynamics Square</title>
         <meta
           name="description"
-          content="Integrate Insights Works with Business Central to optimise your entire order fulfillment process along with streamlining warehouse operations."
+          content="Comprehensive guide to Microsoft Dynamics 365—features, benefits, modules and how it transforms modern business operations."
         />
         <link
           rel="canonical"
@@ -445,13 +444,13 @@ export default function Dynamics365GuidePage() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/the-ultimate-guide-to-microsoft-dynamics-365/" />
         <meta property="og:title" content="The Ultimate Guide to Microsoft Dynamics 365 | Dynamics Square" />
-        <meta property="og:description" content="Dynamics 365 cloud vs on-premise, which one is better for your business? Let's compare both Dynamics 365 cloud and Dynamics 365 on-premise." />
+        <meta property="og:description" content="Comprehensive guide to Microsoft Dynamics 365—features, benefits, modules and how it transforms modern business operations." />
         <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/MicrosoftTeams-image-5.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/the-ultimate-guide-to-microsoft-dynamics-365/" />
         <meta property="twitter:title" content="The Ultimate Guide to Microsoft Dynamics 365 | Dynamics Square" />
-        <meta property="twitter:description" content="Dynamics 365 cloud vs on-premise, which one is better for your business? Let's compare both Dynamics 365 cloud and Dynamics 365 on-premise." />
+        <meta property="twitter:description" content="Comprehensive guide to Microsoft Dynamics 365—features, benefits, modules and how it transforms modern business operations." />
         <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/MicrosoftTeams-image-5.png" />
         <style dangerouslySetInnerHTML={{ __html: CSS }} />
       </Head>
@@ -500,7 +499,7 @@ export default function Dynamics365GuidePage() {
               <span className="toc-heading">Contents</span>
               {toc.map(item => (
                 <a key={item.href} href={item.href}
-                  className={`${item.sub ? 'toc-sub' : ''}${activeId === item.href.replace('#','') ? ' active' : ''}`}
+                  className={`${item.sub ? 'toc-sub' : ''}${activeId === item.href.replace('#', '') ? ' active' : ''}`}
                   onClick={e => scrollTo(e, item.href)}>
                   {item.label}
                 </a>
@@ -600,7 +599,11 @@ export default function Dynamics365GuidePage() {
             <div id="dynamics365" className="section-anchor fade-in">
               <SectionEyebrow label={s.dynamics365.label} />
               <h2 className="section-titleee">{s.dynamics365.title}</h2>
-              <p className="lead-para">{s.dynamics365.lead}</p>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: s.dynamics365.lead,
+                }}
+              />
               <p>{s.dynamics365.body}</p>
               <h3 className="sub-title">{s.dynamics365.erpCrm.title}</h3>
               <div className="row g-3">
@@ -631,7 +634,11 @@ export default function Dynamics365GuidePage() {
 
               <div id="business-central" className="section-anchor">
                 <h3 className="sub-title">{s.erp.businessCentral.title}</h3>
-                <p>{s.erp.businessCentral.intro}</p>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: s.erp.businessCentral.intro,
+                  }}
+                />
                 <p>{s.erp.businessCentral.body}</p>
                 <div className="row g-3 mt-1">
                   {s.erp.businessCentral.capabilities.map(c => (
@@ -648,7 +655,11 @@ export default function Dynamics365GuidePage() {
                 <div className="row g-3 mt-1">
                   {s.erp.businessCentral.whatsNew.updates.map(u => (
                     <div key={u.title} className="col-md-6">
-                      <div className="agent-card"><h5>{u.title}</h5><p>{u.text}</p></div>
+                      <div className="agent-card"><h5>{u.title}</h5><p
+                        dangerouslySetInnerHTML={{
+                          __html: u.text,
+                        }}
+                      /></div>
                     </div>
                   ))}
                 </div>
@@ -669,13 +680,22 @@ export default function Dynamics365GuidePage() {
 
               <div id="d365-finance" className="section-anchor">
                 <h3 className="sub-title">{s.erp.finance.title}</h3>
-                <p>{s.erp.finance.intro}</p><p>{s.erp.finance.capabilities}</p>
+                <p>{s.erp.finance.intro}</p>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: s.erp.finance.capabilities,
+                  }}
+                />
                 <p>Best suited for: {s.erp.finance.industries.map(p => <span key={p} className="ds-pill">{p}</span>)}</p>
               </div>
 
               <div id="d365-scm" className="section-anchor">
                 <h3 className="sub-title">{s.erp.scm.title}</h3>
-                <p>{s.erp.scm.intro}</p><p>{s.erp.scm.capabilities}</p>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: s.erp.scm.intro,
+                  }}
+                /><p>{s.erp.scm.capabilities}</p>
                 <p>Best suited for: {s.erp.scm.industries.map(p => <span key={p} className="ds-pill">{p}</span>)}</p>
               </div>
 
@@ -684,7 +704,7 @@ export default function Dynamics365GuidePage() {
                 <div className="ds-table-wrap">
                   <table className="ds-table">
                     <thead><tr>{s.erp.comparison.headers.map(h => <th key={h}>{h}</th>)}</tr></thead>
-                    <tbody>{s.erp.comparison.rows.map((row,i) => <tr key={i}>{row.map((cell,j) => <td key={j}>{cell}</td>)}</tr>)}</tbody>
+                    <tbody>{s.erp.comparison.rows.map((row, i) => <tr key={i}>{row.map((cell, j) => <td key={j}>{cell}</td>)}</tr>)}</tbody>
                   </table>
                 </div>
               </div>
@@ -699,11 +719,19 @@ export default function Dynamics365GuidePage() {
             <div id="crm-solutions" className="section-anchor fade-in">
               <SectionEyebrow label={s.crm.label} />
               <h2 className="section-titleee">{s.crm.title}</h2>
-              <p className="lead-para">{s.crm.lead}</p>
+              <p className="lead-para"
+                  dangerouslySetInnerHTML={{
+                    __html: s.crm.lead,
+                  }}
+                />
 
               <div id="d365-sales" className="section-anchor">
                 <h3 className="sub-title">{s.crm.sales.title}</h3>
-                <p>{s.crm.sales.intro}</p>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: s.crm.sales.intro,
+                  }}
+                />
                 <div className="row g-3 mt-1">
                   {s.crm.sales.cards.map(c => (
                     <div key={c.title} className="col-sm-6"><CapCard icon={c.icon} title={c.title}>{c.text}</CapCard></div>
@@ -786,7 +814,7 @@ export default function Dynamics365GuidePage() {
               <div className="ds-table-wrap">
                 <table className="ds-table">
                   <thead><tr>{s.industries.headers.map(h => <th key={h}>{h}</th>)}</tr></thead>
-                  <tbody>{s.industries.rows.map((row,i) => <tr key={i}>{row.map((cell,j) => <td key={j}>{cell}</td>)}</tr>)}</tbody>
+                  <tbody>{s.industries.rows.map((row, i) => <tr key={i}>{row.map((cell, j) => <td key={j}>{cell}</td>)}</tr>)}</tbody>
                 </table>
               </div>
             </div>
@@ -808,7 +836,11 @@ export default function Dynamics365GuidePage() {
                 <p className="mb-0"><strong>{s.isv.ownIsv.name}</strong> — {s.isv.ownIsv.text}</p>
               </Callout>
               <h3 className="sub-title">How Dynamics Square Evaluates and Recommends ISVs</h3>
-              <p>{s.isv.evalProcess}</p>
+              <p
+                  dangerouslySetInnerHTML={{
+                    __html: s.isv.evalProcess,
+                  }}
+                />
             </div>
 
             <hr className="ds-divider" />
@@ -850,7 +882,11 @@ export default function Dynamics365GuidePage() {
               <p className="lead-para">{s.migration.lead}</p>
               {s.migration.scenarios.map(sc => (
                 <div key={sc.title} className="scenario-card">
-                  <h4>{sc.title}</h4><p>{sc.text}</p>
+                  <h4>{sc.title}</h4><p
+                  dangerouslySetInnerHTML={{
+                    __html: sc.text,
+                  }}
+                />
                 </div>
               ))}
               <Callout variant="red" label="Common Migration Risks — and How DS Avoids Them">
@@ -932,13 +968,13 @@ export default function Dynamics365GuidePage() {
               <div className="ds-cta">
                 <h2>{s.cta.heading}</h2>
                 <p>{s.cta.body}</p>
-                <a href="#exampleModal"  data-bs-toggle="modal" rel="noreferrer" className="btn-ds-primary" style={{ fontSize: '1rem', padding: '0.85rem 2rem' }}>
+                <a href="#exampleModal" data-bs-toggle="modal" rel="noreferrer" className="btn-ds-primary" style={{ fontSize: '1rem', padding: '0.85rem 2rem' }}>
                   {s.cta.btnLabel} →
                 </a>
                 <div className="contact-details">
                   <div className="d-flex justify-content-center gap-4 flex-wrap mt-3">
-                    <span>📧 <a style={{color:"#fff"}} href={`mailto:${meta.email}`}>{meta.email}</a></span>
-                    <span>📞 <a style={{color:"#fff"}} href={`tel:${meta.phone.replace(/\s/g,'')}`}>{meta.phone}</a></span>
+                    <span>📧 <a style={{ color: "#fff" }} href={`mailto:${meta.email}`}>{meta.email}</a></span>
+                    <span>📞 <a style={{ color: "#fff" }} href={`tel:${meta.phone.replace(/\s/g, '')}`}>{meta.phone}</a></span>
                   </div>
                 </div>
               </div>
