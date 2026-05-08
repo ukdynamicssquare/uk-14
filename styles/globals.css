@@ -17419,6 +17419,11 @@ margin: -30px 0px -80px;
   color: #ba2d38;
   animation: blink 1s linear infinite;
 }
+.cc-color-g{
+  color: #984b6e !important;
+    font-size: 20px !important;
+    font-weight: 600 !important;
+}
 @keyframes blink {
   0% {
     opacity: 1;

@@ -41,6 +41,7 @@ const HeaderWork = () => {
     "/case-studies/business-central-with-crm-implement-for-equestrian-manufacturing": `${gname}`,
     "/case-studies/d365-finance-and-operations-for-project-management": `${gname}`,
     "/case-studies/dynamics-365-f&O-implementation-for-healthcare": `${gname}`,
+    "/products/microsoft-dynamics-crm": `${gname}`,
     "/book-a-demo": `${gname}`,
   };
 
