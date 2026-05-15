@@ -101,7 +101,7 @@ const PowerBIImplementation = () => {
                   sources and prepare powerful reports, custom data
                   visualizations, and other interactive insights to be
                   demonstrated on user dashboards. With Power BI implementation,
-                  you can empower every level of people in your organization to
+                  you can empower every level of people in your organisation to
                   make instant decisions to support continuity and drive
                   maximized productivity.
                 </p>
@@ -109,7 +109,7 @@ const PowerBIImplementation = () => {
                   Microsoft Power BI comes with both on-premises and on-cloud
                   facilitation. If you have data security concerns, you can
                   prepare reports using Power BI desktop and can share the same
-                  within your organizational boundaries.
+                  within your organisational boundaries.
                 </p>
                 <p>
                   Later you can publish these reports on the cloud using the
@@ -189,7 +189,7 @@ const PowerBIImplementation = () => {
                     Creating highly customized, visual, and interactive reports
                     is no longer a complex job now. Power BI makes everything
                     possible whereby you can create, publish, share the reports
-                    within your organization and allow them to make instant
+                    within your organisation and allow them to make instant
                     data-driven decisions.
                   </p>
                 </div>
@@ -262,7 +262,7 @@ const PowerBIImplementation = () => {
                     To make strategic and productive decisions, leverage Power
                     BI to know what's happening in your business in real-time.
                     Implement Power BI to streamline your analytics in real-time
-                    to stay updated with every organizational move from factory
+                    to stay updated with every organisational move from factory
                     sensors to capacity planning to social media sources.
                   </p>
                 </div>

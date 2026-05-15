@@ -11,7 +11,7 @@ const BusinessCentralUpgrade = () => {
         </title>
         <meta
           name="description"
-          content="With Dynamics 365 Business Central upgrade, understand your customer behavior, know your process flow, stay updated with real-time data, and enable everyone in your organization to make faster and productive decisions."
+          content="With Dynamics 365 Business Central upgrade, understand your customer behavior, know your process flow, stay updated with real-time data, and enable everyone in your organisation to make faster and productive decisions."
         />
         <link
           rel="canonical"
@@ -88,7 +88,7 @@ const BusinessCentralUpgrade = () => {
                   </p>
                   <p>
                     Empower your workforce, evolve your processes, and improve
-                    your overall organizational performance.
+                    your overall organisational performance.
                   </p>
                   <div className="cltt-actt">
                     <a href="/contact-us/" target="_blank">Learn More</a>
@@ -286,7 +286,7 @@ const BusinessCentralUpgrade = () => {
                       >
                         <div className="accordion-body">
                           Managing finance becomes a vast part of when your
-                          organization starts growing. If you can't stay updated
+                          organisation starts growing. If you can't stay updated
                           with real-time performance metrics and day-to-day
                           financial visibility, your system has been outdated.
                           Here, you are required to implement Business Central in

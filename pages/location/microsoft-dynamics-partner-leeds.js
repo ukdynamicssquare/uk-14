@@ -117,14 +117,14 @@ const MicrosoftDynamicsPartnerLeeds = () => {
                   Let your search for the{" "}
                   <Link href="/"> best Dynamics 365 partner in Leeds</Link> end
                   with us because we have a global network of <b>250+</b>{" "}
-                  clients and <b>11+</b> years of experience. We are healthy-
+                  clients and <b>14+</b> years of experience. We are healthy-
                   aware of your pain points and focus on removing them
                   seamlessly, streamlining your enterprise operations in
                   alignment with Microsoft business applications.
                 </p>
                 <p>
                   We offer real-time business solutions that enhance your market
-                  value with the help of a team of <strong>135+</strong>{" "}
+                  value with the help of a team of <strong>150+</strong>{" "}
                   Microsoft consultants, which makes us the exceptional dynamics
                   365 consultants in Leeds.
                 </p>

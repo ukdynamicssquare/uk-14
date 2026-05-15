@@ -480,13 +480,13 @@ const WhyMigrade360 = () => {
             
             <div className="col-lg-12">
               <div className="custom-p-001">
-                <p>Dynamics Square has been in the Microsoft ERP and CRM implementation industry for the last 12+ years, and we know what modern businesses require to grow fast. Magento integration is one such solution for commerce businesses that can accelerate overall growth while increasing revenue by 2X or 3X.</p>
+                <p>Dynamics Square has been in the Microsoft ERP and CRM implementation industry for the last 14+ years, and we know what modern businesses require to grow fast. Magento integration is one such solution for commerce businesses that can accelerate overall growth while increasing revenue by 2X or 3X.</p>
                 <p>Trust us, we have seen the results of SMBs that have almost doubled their revenue in 1-2 years by capturing global customers and selling their product worldwide.  </p>
 
                 <p>If you want to sell your products globally, Magento Dynamics 365 integration is going to simplify your entire business operations and let you focus more on doing business in all directions. </p>
                 <p><b>Currently, we have:</b></p>
                 <ul>
-                  <li>12+ years of Partnership with Microsoft </li>
+                  <li>14+ years of Partnership with Microsoft </li>
 
                   <li>150+ Microsoft Certified Consultants </li>
 

@@ -96,13 +96,13 @@ const MicrosoftDynamicsPartnerEdinburgh = () => {
                   globe for our tech-driven business-oriented solutions.
                   <br />
                   <br />
-                  We have a proficient team of <b>135+</b> Microsoft-certified
+                  We have a proficient team of <b>150+</b> Microsoft-certified
                   consultants practicing the consultancy services with
                   impeccable knowledge and experience; thus, Dynamics Square is
                   the leading Dynamics 365 consultant in Edinburgh.
                   <br />
                   <br />
-                  The dedicated team of Dynamics Square has <b>11+ years</b> of
+                  The dedicated team of Dynamics Square has <b>14+ years</b> of
                   experience in streamlining business operations effectively and
                   providing 24x7 customer service support to level up your
                   customer service experience, making us an authorized Microsoft
@@ -178,7 +178,7 @@ const MicrosoftDynamicsPartnerEdinburgh = () => {
                           people in a centralized approach.
                         </p>
                         <p>
-                          It also enables the organization to manage its
+                          It also enables the organisation to manage its
                           finances and increase profits by allowing them to make
                           quick decisions.
                         </p>
@@ -197,7 +197,7 @@ const MicrosoftDynamicsPartnerEdinburgh = () => {
                         </p>
                         <p>
                           Simplify processes, increase visibility, and improve
-                          team interactions to take your organization to the
+                          team interactions to take your organisation to the
                           next level. Your operations will be more agile thanks
                           to the Business Central solution. Make it a success
                           throughout your operations by optimizing your
@@ -249,7 +249,7 @@ const MicrosoftDynamicsPartnerEdinburgh = () => {
                       <div className="accordion-body">
                         <p>
                           With Microsoft Dynamics 365 Finance, you can empower
-                          your organization's capacity to make the best
+                          your organisation's capacity to make the best
                           financial decisions possible.
                         </p>
                         <p>
@@ -505,7 +505,7 @@ const MicrosoftDynamicsPartnerEdinburgh = () => {
               We recognize that your company is distinct, and you require
               solutions that represent your values. We can assist you in
               designing business operations, corporate terminology, and other
-              organizational processes to meet your requirements.
+              organisational processes to meet your requirements.
             </p>
             <br />
             <p>

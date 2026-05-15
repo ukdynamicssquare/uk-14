@@ -430,7 +430,7 @@ const ImplementationSales = () => {
                           <p>
                             In this, our team will start working to prepare the
                             FRD (Functional Requirement Document) to understand
-                            the organization's current processes to better
+                            the organisation's current processes to better
                             understand the requirement better.
                           </p>
                         </div>

@@ -86,7 +86,7 @@ const Index = () => {
               Supply Chain Management?
             </h2>
             <p>
-              Microsoft Dynamics 365 Supply Chain helps organizations simplify,
+              Microsoft Dynamics 365 Supply Chain helps organisations simplify,
               streamline, and accelerate their supply chain practices just to
               produce, drive, and scale high. You can bring a unified view of
               your entire supply chain cycle from inventory, warehousing,
@@ -747,7 +747,7 @@ const Index = () => {
                   <h3>Product information management</h3>
                   <p>
                     Product information management (PIM) is the process of
-                    organising and sharing product data across an organization,
+                    organising and sharing product data across an organisation,
                     from initial conception to final sale. By maintaining a
                     shared product definition, businesses can better manage
                     configurations of a product to fit within specific

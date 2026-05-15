@@ -115,8 +115,8 @@ export default function HomeOld() {
             <div className="row justify-content-center">
               <div className="col-lg-10">
                 <header className="section-header section-header-home">
-                  <h2>350+ Businesses Rely on Dynamics Square </h2>
-                  <p><strong>Long-term commitment is at the heart of our mission</strong>: Formed in the year 2011, we have come a long way by building trust among 350+ clients as a reliable Microsoft Dynamics Solution Partner. We take pride in helping organizations succeed and adapt continuously, with Microsoft Dynamics 365 Product Suite.</p>
+                  <h2>500+ Businesses Rely on Dynamics Square </h2>
+                  <p><strong>Long-term commitment is at the heart of our mission</strong>: Formed in the year 2011, we have come a long way by building trust among 500+ clients as a reliable Microsoft Dynamics Solution Partner. We take pride in helping organizations succeed and adapt continuously, with Microsoft Dynamics 365 Product Suite.</p>
                 </header>
               </div>
             </div>
@@ -981,8 +981,8 @@ export default function HomeOld() {
                   </figure>
                 </div>
                 <div className="w-achive-b">
-                  <h4>350+</h4>
-                  <p><span>Project Succesess</span>Over 350 projects delivered & counting! Join our journey to success.</p>
+                  <h4>500+</h4>
+                  <p><span>Project Succesess</span>Over 500+ projects delivered & counting! Join our journey to success.</p>
                 </div>
               </div>
               <div className="col-lg-4">

@@ -477,7 +477,7 @@ const FinanceImplementation = () => {
             </h2>
             <p>
               Go beyond the basics and implement a unified platform for your
-              organization
+              organisation
             </p>
           </header>
           <div className="row g-5">

@@ -737,7 +737,7 @@ Read to test the waters with D365 Project Operations? </p>
               </div>
               <div className="custom002">
                 <p>Choosing the right partner is a critical choice for all business owners or decision-makers. A wrong choice can make you bear a huge investment loss, whereas a right choice can double or triple the revenue by simplifying the entire business operations.</p>
-                <p>This is where Dynamics Square comes in. With 11+ years of experience in the industry and a huge team of <Link href="/" target="_blank">Microsoft certified consultants</Link>, we are the ideal partner for your Dynamics 365 Project Operations implementation needs.</p>
+                <p>This is where Dynamics Square comes in. With 14+ years of experience in the industry and a huge team of <Link href="/" target="_blank">Microsoft certified consultants</Link>, we are the ideal partner for your Dynamics 365 Project Operations implementation needs.</p>
                 <p>At Dynamics Square, our motto is to offer best-in-class customer satisfaction and take a collaborative approach to ensure your project's success, irrespective of the complexity or the scenario.</p>
 
                 <p>We offer end-to-end services, including <Link href="/products/microsoft-dynamics-365/" target="_blank">Dynamics 365</Link> Project Operations consulting, solution customization, deployment, on-site training, and durable support. For all businesses, we offer Microsoft's proven methodology and our expertise to deliver a tailored solution for your unique business requirements.</p>

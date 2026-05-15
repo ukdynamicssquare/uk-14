@@ -72,7 +72,7 @@ const FinancevsSapErp = () => {
                   <br />
                   <br />
                   Transitioning from a startup to a mid or a large- size
-                  organization demands the operational heads to stay focused and
+                  organisation demands the operational heads to stay focused and
                   systematic for efficiently managing the fast altering business
                   operations. Most businesses, therefore, look for comprehensive
                   ERP platforms to ensure effective management of expanding
@@ -82,7 +82,7 @@ const FinancevsSapErp = () => {
                   tasks.
                   <br />
                   <br />
-                  Choosing an appropriate ERP system for emerging organizations
+                  Choosing an appropriate ERP system for emerging organisations
                   can be a revolutionary decision. Picking the right ERP,
                   however, can turn into a complicated task when enterprises are
                   not sure of which ERP features they need for their operations.
@@ -119,7 +119,7 @@ const FinancevsSapErp = () => {
                   <Link href="/products/microsoft-dynamics-erp/" target="_blank">
                   ERP solutions
                   </Link>
-                  for medium and large- size organizations - Microsoft Dynamics
+                  for medium and large- size organisations - Microsoft Dynamics
                   365 Finance and Operations (or D365 F&O), and SAP ERP. The
                   team deep- dived into the notable features of both these smart
                   ERP platforms to assist enterprises in evaluating and picking
@@ -151,7 +151,7 @@ const FinancevsSapErp = () => {
                   integration with other Microsoft business applications. D365
                   F&O ensures a shorter training and learning curve due to its
                   user- friendly and interactive interface that makes it the
-                  primary purchasing criteria for most organizations.
+                  primary purchasing criteria for most organisations.
                 </p>
               </div>
             </div>
@@ -160,7 +160,7 @@ const FinancevsSapErp = () => {
                 <img src="/img/sap-erp.png" alt="sap-erp" />
                 <p>
                   SAP ERP has a strong market foothold, but it seems to be ideal
-                  'only' for multinational organizations and small- size
+                  'only' for multinational organisations and small- size
                   enterprises. SAP ERP usually promises to deliver on most
                   business aspects, however, costs comparatively higher than
                   other ERP variants. Basic customizations, primarily using
@@ -226,7 +226,7 @@ const FinancevsSapErp = () => {
                       </td>
                       <td>
                         <p>
-                          Organizations need to have a thorough understanding
+                          organisations need to have a thorough understanding
                           and knowledge of SAP
                         </p>
                       </td>
@@ -338,7 +338,7 @@ const FinancevsSapErp = () => {
                 <h3>Cons</h3>
                 <ul>
                   <li>
-                    Considered to be more suitable for large organizations, thus
+                    Considered to be more suitable for large organisations, thus
                     compelling small enterprises to search for other ERP
                     variants
                   </li>

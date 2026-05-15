@@ -91,7 +91,7 @@ const MicrosoftDynamicsGP = () => {
               <div className="style-grid-1">
                 <div className="style-grid-content">
                   <h3>Business Intelligence</h3>
-                  <p>The BI system of the tool allows you to check out the reports of data that are pre-built on your dashboard so that you are able to make instant decisions that are intelligent as well as much efficient for your organization.</p>
+                  <p>The BI system of the tool allows you to check out the reports of data that are pre-built on your dashboard so that you are able to make instant decisions that are intelligent as well as much efficient for your organisation.</p>
                 </div>
               </div>
               <div className="style-grid-1">
@@ -174,7 +174,7 @@ const MicrosoftDynamicsGP = () => {
                       reports of data that are pre-built on your dashboard so
                       that you are able to make instant decisions that are
                       intelligent as well as much efficient for your
-                      organization.
+                      organisation.
                     </p>
                   </div>
                 </div>

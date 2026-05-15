@@ -258,7 +258,7 @@ const ProfessionalService = () => {
                     <p>
                       Accelerate onboarding, improve your resource utilization,
                       quickly resolve issues, maximize adaption rate in your
-                      organization with D365 for Professional Services.
+                      organisation with D365 for Professional Services.
                     </p>
                   </div>
                 </div>
@@ -314,7 +314,7 @@ const ProfessionalService = () => {
                     <p>
                       Get custom-built deployment to support across your
                       customized processes to streamline your processes and
-                      drive consistent flow throughout your organization.
+                      drive consistent flow throughout your organisation.
                     </p>
                   </div>
                 </div>
@@ -553,7 +553,7 @@ const ProfessionalService = () => {
                                   <h3>Not for Profit</h3>
                                   <p>
                                     Bring Transparency And Drive Efficiency In
-                                    Your Non-Profit Organization With
+                                    Your Non-Profit organisation With
                                     Microsoft Dynamics 365 For Charities.
                                   </p>
                                   <span>Explore Now</span>
@@ -689,9 +689,9 @@ const ProfessionalService = () => {
                     >
                       <div className="accordion-body">
                         Microsoft Dynamics 365 offers a comprehensive solution
-                        for the Professional service industry. Organizations can
+                        for the Professional service industry. organisations can
                         simplify and drive their end-to-end tasks that come
-                        across their professional services domain. Organizations
+                        across their professional services domain. organisations
                         can manage, automate, & faster their tasks, empower
                         their workforce, and drive excellence in their business.
                         <br />
@@ -699,7 +699,7 @@ const ProfessionalService = () => {
                         Whether it comes to project automation, financial
                         management, client & vendor management, or customer
                         engagement; Dynamics 365 can help and empower everyone
-                        in your organization from top management to executive
+                        in your organisation from top management to executive
                         level to simply, manage, and accelerate their tasks.
                         With powerful decision-making capability, businesses can
                         make instant, productive, and informed decisions to

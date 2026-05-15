@@ -419,7 +419,7 @@ const ImplementationServices = () => {
                             so that your end-users can quickly and seamlessly
                             adapt the newly configured and implemented features
                             & functionalities to encourage and drive efficiency
-                            throughout the organization.
+                            throughout the organisation.
                           </p>
                         </div>
                       </SwiperSlide>

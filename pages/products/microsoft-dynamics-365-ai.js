@@ -10,7 +10,7 @@ const MicrosoftDynamics365Ai = () => {
       <title>Microsoft Dynamics 365 AI | Artificial intelligence</title>
         <meta
           name="description"
-          content="Improve customer's experience and organization's processes with Dynamics 365 AI (Artificial Intelligence). Schedule a free Dynamics 365 AI demo today."
+          content="Improve customer's experience and organisation's processes with Dynamics 365 AI (Artificial Intelligence). Schedule a free Dynamics 365 AI demo today."
         />
         <link
           rel="canonical"
@@ -21,7 +21,7 @@ const MicrosoftDynamics365Ai = () => {
         <meta property="og:title" content="
 Microsoft Dynamics 365 AI | Artificial intelligence
 " />
-        <meta property="og:description" content="Improve customer's experience and organization's processes with Dynamics 365 AI (Artificial Intelligence). Schedule a free Dynamics 365 AI demo today." />
+        <meta property="og:description" content="Improve customer's experience and organisation's processes with Dynamics 365 AI (Artificial Intelligence). Schedule a free Dynamics 365 AI demo today." />
         <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/Artificial-Intelligence-banner.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
@@ -29,7 +29,7 @@ Microsoft Dynamics 365 AI | Artificial intelligence
         <meta property="twitter:title" content="
 Microsoft Dynamics 365 AI | Artificial intelligence
 " />
-        <meta property="twitter:description" content="Improve customer's experience and organization's processes with Dynamics 365 AI (Artificial Intelligence). Schedule a free Dynamics 365 AI demo today." />
+        <meta property="twitter:description" content="Improve customer's experience and organisation's processes with Dynamics 365 AI (Artificial Intelligence). Schedule a free Dynamics 365 AI demo today." />
         <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/Artificial-Intelligence-banner.png" />
       </Head>
       <section className="Solution-banner hero-1 hero">
@@ -42,7 +42,7 @@ Microsoft Dynamics 365 AI | Artificial intelligence
                 Dynamics 365 AI
               </h1>
               <p>
-                Improve Your Customer's Experience And Your Organization
+                Improve Your Customer's Experience And Your organisation
                 Processes With Dynamics 365 Artificial Intelligence
               </p>
               <div>
@@ -180,7 +180,7 @@ Microsoft Dynamics 365 AI | Artificial intelligence
                         system to come up with insights that are extremely
                         beneficial for you to analyse a lot of things. This can
                         be helpful for you in not just making decisions for your
-                        organization but also in understanding the behaviours
+                        organisation but also in understanding the behaviours
                         and trends of your client to act accordingly in the
                         future.
                       </div>

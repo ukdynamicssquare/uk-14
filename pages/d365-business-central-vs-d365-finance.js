@@ -374,7 +374,7 @@ const BCvsFinance = () => {
                     >
                       <div className="accordion-body">
                         <p>Firstly, understand your business requirements, calculate the resources, forecast future needs, search for a reliable partner, and thereafter choose a solution that can help your business in the long run. </p>
-                        <p>You shouldn't select the solution based on the size of the organization. Instead, you need to choose a solution based on your current and future needs. For example, a small financial organisation with 10 employees and complex financial processes must go with D365 Finance rather than BC.</p>
+                        <p>You shouldn't select the solution based on the size of the organisation. Instead, you need to choose a solution based on your current and future needs. For example, a small financial organisation with 10 employees and complex financial processes must go with D365 Finance rather than BC.</p>
                       </div>
                     </div>
                   </div>

@@ -89,7 +89,7 @@ const Startup = () => {
               <p>
                 With AI insights and 360-degree data view, bring transparency in
                 your field service, and enable smarter maintenance to impact the
-                overall manufacturing impact throughout your organization.
+                overall manufacturing impact throughout your organisation.
               </p>
             </header>
           </div>
@@ -641,7 +641,7 @@ const Startup = () => {
                                   <h3>Not for Profit</h3>
                                   <p>
                                     Bring Transparency And Drive Efficiency In
-                                    Your Non-Profit Organization With Microsoft
+                                    Your Non-Profit organisation With Microsoft
                                     Dynamics 365 For Charities.
                                   </p>
                                   <span>Explore Now</span>

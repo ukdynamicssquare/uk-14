@@ -77,7 +77,7 @@ const Inedex = () => {
                     </Link>
                     &nbsp;(CRM)&nbsp;software applications ) that help your
                     business transform into an ultra-efficient, customer-centric,
-                    thriving organization.
+                    thriving organisation.
                   </p>
                   <p className="ne4">
                     We analyze your requirements, understand your unique work

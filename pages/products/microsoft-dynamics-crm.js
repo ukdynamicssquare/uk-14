@@ -859,7 +859,7 @@ const MicrosoftDynamicsCrm = () => {
                     data-bs-parent="#faqlist1"
                   >
                     <div className="accordion-body">
-                      <p>Yes, it supports customizations per specific business requirements of the organization. You will need the right <Link
+                      <p>Yes, it supports customizations per specific business requirements of the organisation. You will need the right <Link
                         href="/our-services/dynamics-365-implementation-services/"
                         target="_blank">Dynamics 365 implementation partner</Link> to successfully implement the application without errors.</p>
                     </div>

@@ -124,7 +124,7 @@ const Marketing = () => {
                         spend time searching and collecting data from different
                         team members, it definitely saves a lot of time. When
                         time is saved and the information is available at one
-                        single place, the operations of the organization
+                        single place, the operations of the organisation
                         continues to happen much smoothly and efficiently.
                       </div>
                     </div>
@@ -288,7 +288,7 @@ const Marketing = () => {
                         to collect feedback from the customers in order to
                         understand whether the product or service marketed is
                         gaining likes from the customers or not. Based on this
-                        feedback survey, teh organizations can either continue
+                        feedback survey, teh organisations can either continue
                         with the product or may think of making any changes in
                         it.
                       </div>

@@ -219,7 +219,7 @@ const SystemHealth = () => {
                   A good code enables your system to run smoother and in an
                   uninterrupted way. On the other way, a bad code can ruin your
                   system gradually or when you plan to alter your system. If you
-                  allow multiple organizations, developers, or contractors to
+                  allow multiple organisations, developers, or contractors to
                   work on your system, it could be a result of bad code.
                 </p>
                 <p>
@@ -313,7 +313,7 @@ const SystemHealth = () => {
                   Do you think that your data is reliable and is free of
                   redundancies? If not, will occur issues or unreliability while
                   creating analytics and reports or sharing with people in your
-                  organization.
+                  organisation.
                 </p>
                 <p>
                   At Dynamics Square, we can suggest how to remove redundant

@@ -352,7 +352,7 @@ const Howtochooserighterp = () => {
                           <br />
                           <br />
                           At Dynamics Square, we adhere to Microsoft's Mission -
-                          “to empower every person and every organization on the
+                          “to empower every person and every organisation on the
                           planet to achieve more.”
                           <br />
                           <br />

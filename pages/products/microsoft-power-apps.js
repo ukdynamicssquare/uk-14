@@ -39,7 +39,7 @@ const PowerApps = () => {
               <h1>Microsoft Power Apps</h1>
               <p>
                 Build low-code applications, drive swiftness and modernize
-                processes across your organization without compromising quality
+                processes across your organisation without compromising quality
                 and speed with Microsoft Power Apps.
               </p>
               <div>

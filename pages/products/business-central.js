@@ -3269,7 +3269,7 @@ const BusinessCentral = () => {
                       of Dynamics 365 business central. Moreover, Business
                       Central can be personalized as per your industry-specific
                       needs, or custom operational navigation takes place in
-                      your organization.To get more information about how this
+                      your organisation.To get more information about how this
                       ERP solution can be implemented and leveraged by your
                       specific industry, talk to us, we as a Business Central
                       Consulting Services Provider are here to answer all your

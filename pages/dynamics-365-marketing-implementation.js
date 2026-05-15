@@ -268,7 +268,7 @@ const MarketingImplementation = () => {
                         <p>
                           From turning into a lead to becoming a recurring
                           customer, the customer journey must be engaging so
-                          that customers stay hooked with the organization.
+                          that customers stay hooked with the organisation.
                           There is no need for the team to directly interact
                           with customers because Dynamics 365 Marketing
                           implementation would make your system proficient
@@ -447,7 +447,7 @@ const MarketingImplementation = () => {
                         <div className="box-6-bottom">
                           <h4>Analysis Phase</h4>
                           <p>
-                            In order to comprehend the organization's current
+                            In order to comprehend the organisation's current
                             operations and even forecast future requirements,
                             our team will commence working to prepare the FRD
                             (Functional Requirement Document).

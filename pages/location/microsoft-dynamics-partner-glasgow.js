@@ -74,7 +74,7 @@ const MicrosoftDynamicsPartnerGlasgow = () => {
                   extensive customer support within your budget.
                 </p>
                 <p>
-                  We at Dynamics Square have a team of <strong>135+</strong>{" "}
+                  We at Dynamics Square have a team of <strong>150+</strong>{" "}
                   Microsoft consultants and a network of <strong>250+</strong>{" "}
                   clients worldwide, helping businesses scale their growth,
                   streamline their business operations, and drive maximum output
@@ -376,7 +376,7 @@ const MicrosoftDynamicsPartnerGlasgow = () => {
                             Dynamics 365 Human Resources
                           </Link>{" "}
                           may help manage your HR operations, track employee
-                          performance, and improve organizational agility.
+                          performance, and improve organisational agility.
                           <br />
                           <br />
                           Connect with us today to learn how Dynamics 365 Human
@@ -483,7 +483,7 @@ const MicrosoftDynamicsPartnerGlasgow = () => {
                 <p>
                   As a Microsoft Dynamics Partner Glasgow, we can thoroughly
                   evaluate your system issues, uncover additional requirements,
-                  and recommend the best possible solution for your organization
+                  and recommend the best possible solution for your organisation
                   to achieve scaled growth.
                 </p>
               </div>

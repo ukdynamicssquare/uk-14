@@ -680,7 +680,7 @@ const D360 = () => {
 
                 <p>Our team of highly skilled technical consultants is here to understand the challenges you're facing, providing personalised solutions in the blink of an eye. We're committed to keeping your business on track, no matter what hurdles come your way.</p>
 
-                <p>With a proven track record of serving 350+ satisfied customers across the globe and boasting a team of 150+ certified Dynamics 365 consultants, we've made it our mission to build lasting relationships with our clients while delivering cost-effective, comprehensive solutions.</p>
+                <p>With a proven track record of serving 500+ satisfied customers across the globe and boasting a team of 150+ certified Dynamics 365 consultants, we've made it our mission to build lasting relationships with our clients while delivering cost-effective, comprehensive solutions.</p>
 
                 <p>Don't let your business issues hold you back - Dynamics Square is here for you, ready to provide instant support whenever you need it. Let us help you unlock your business's full potential.</p>
               </header>
@@ -1029,7 +1029,7 @@ const D360 = () => {
                 <div className="commen-boc-2-info">
                   <h3>Trustworthy Partner</h3>
                   <p>
-                    Dynamics Square is Microsoft's gold partner. So far, we have delivered <b>70+</b> implementation projects and serving <b>350+</b> clients globally.
+                    Dynamics Square is Microsoft's gold partner. So far, we have delivered <b>70+</b> implementation projects and serving <b>500+</b> clients globally.
                   </p>
                 </div>
               </div>
@@ -1055,7 +1055,7 @@ const D360 = () => {
                 <div className="commen-boc-2-info">
                   <h3>Off-Hours Support</h3>
                   <p>
-                    We provide all-time support to our UK clients with the help of our 135+ Microsoft certified professionals present in 7 global locations.
+                    We provide all-time support to our UK clients with the help of our 150+ Microsoft certified professionals present in 7 global locations.
                   </p>
                 </div>
               </div>

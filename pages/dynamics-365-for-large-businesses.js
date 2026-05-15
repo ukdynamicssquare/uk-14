@@ -831,8 +831,8 @@ const MicrosoftCloudForNonpro = () => {
                   </figure>
                 </div>
                 <div className="w-achive-b">
-                  <h4>350+</h4>
-                  <p><span>Project Succesess</span>Over 350 projects delivered & counting! Join our journey to success.</p>
+                  <h4>500+</h4>
+                  <p><span>Project Succesess</span>Over 500+ projects delivered & counting! Join our journey to success.</p>
                 </div>
               </div>
               <div className="col-lg-4">

@@ -38,7 +38,7 @@ const HumanResourceImplementation = () => {
                 <br />
                 <strong>
                   Learn how Dynamics 365 Human Resources implementation can help
-                  you improve your organizational agility while streamlining
+                  you improve your organisational agility while streamlining
                   entire HR operations from recruitment to administration.
                 </strong>
               </p>
@@ -452,7 +452,7 @@ const HumanResourceImplementation = () => {
                           <p>
                             Our team will begin work on preparing the FRD
                             (Functional Requirement Document) in order to gain
-                            an understanding of the organization's current
+                            an understanding of the organisation's current
                             processes as well as to predict any future
                             requirements.
                           </p>

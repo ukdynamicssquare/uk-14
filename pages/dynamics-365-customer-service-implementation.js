@@ -441,10 +441,10 @@ const CustomerServiceImplementation = () => {
                             <p>
                               Our team will start working on the FRD (Functional
                               Requirement Document) to understand the
-                              organization's current processes and even predict
+                              organisation's current processes and even predict
                               future requirements. This will help us to streamline
                               and improve upon current processes, as well as
-                              anticipate any future needs that the organization
+                              anticipate any future needs that the organisation
                               may have.
                             </p>
                           </div>

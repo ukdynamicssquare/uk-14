@@ -138,7 +138,7 @@ const DynamicsNavSupportEndingSoon = () => {
                   </h3>
                   <p>
                     Business Central's flexible subscription model allows
-                    organization to have more control on adding or subtracting
+                    organisation to have more control on adding or subtracting
                     users per month.
                   </p>
                 </div>

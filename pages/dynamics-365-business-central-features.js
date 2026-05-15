@@ -276,8 +276,8 @@ const BusinessCentralFeatures = () => {
               <div className="commen-rit-info">
                 <h3>Human Resource Management Features</h3>
                 <p>
-                  When your organization is at the growing stage, managing human
-                  resources could be quite challenging for your organization
+                  When your organisation is at the growing stage, managing human
+                  resources could be quite challenging for your organisation
                   from storing employee data to ensuring employee training,
                   managing expenses to reimbursement, monitoring employee
                   performance, reporting, and more.

@@ -316,7 +316,7 @@ const MicrosoftDynamicsPartnerLiverpool = () => {
                 <p>If you are already using any of the Microsoft Dynamics 365 business solutions and want to upgrade or customise them with other applications, Dynamics Square can be your ideal partner.</p>
                 <p><b>Our Core Features:</b></p>
                 <ul>
-                <li>12+ years Partnership with Microsoft</li>
+                <li>14+ years Partnership with Microsoft</li>
 
                 <li>150+ Microsoft Certified Consultants</li> 
 
@@ -357,7 +357,7 @@ const MicrosoftDynamicsPartnerLiverpool = () => {
             <div className="col-lg-7">
               <div className="parten-more">
                 <h3>Trustworthy Partner</h3>
-                <p>With 12+ years of experience serving businesses like yours, we have gained trust and faith among our 300+ global customers. This confidence lets us offer you the remarkable experience a business can have with collaboration.  </p>
+                <p>With 14+ years of experience serving businesses like yours, we have gained trust and faith among our 300+ global customers. This confidence lets us offer you the remarkable experience a business can have with collaboration.  </p>
               </div>
               <div className="parten-more">
                 <h3>Business-Specific Solution</h3>

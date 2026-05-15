@@ -283,7 +283,7 @@ const SageErpToBusinessCentral = () => {
                     </div>
                   </div>
                   <div className="cintent-right">
-                    <p>The organization can access centralised database and remote connectivity.</p>
+                    <p>The organisation can access centralised database and remote connectivity.</p>
                   </div>
                 </div>
                 <div className="content-inner-moil-1">

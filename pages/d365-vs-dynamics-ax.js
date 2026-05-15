@@ -356,7 +356,7 @@ const D365VSDynamicsAX = () => {
                       data-bs-parent="#accnew"
                     >
                       <div className="accordion-body">
-                        <p>Centralised data servers let you receive, share, and store data in the cloud, which builds a consistent data flow across different departments of the organization. You can even avail yourself of data insights that can help you make proactive decisions to enhance the quality of a particular process. </p>
+                        <p>Centralised data servers let you receive, share, and store data in the cloud, which builds a consistent data flow across different departments of the organisation. You can even avail yourself of data insights that can help you make proactive decisions to enhance the quality of a particular process. </p>
                       </div>
                     </div>
                   </div>

@@ -545,7 +545,7 @@ const DynamicsNavToBusinessCentral = () => {
               <div className="col-lg-6">
                 <div className="video-info-call">
                   <h3>Dynamics Square believe in doing an Auditing of your NAV System before suggesting a new one</h3>
-                  <p>Upgrading an ERP is quite a critical decision for organizations as it is done through ample research and the involvement of the right ERP Implementation partner.</p>
+                  <p>Upgrading an ERP is quite a critical decision for organisations as it is done through ample research and the involvement of the right ERP Implementation partner.</p>
                   <div className="bb-tn">
                     <Link
                       href="/free-dynamics-365-system-health-check/"
@@ -608,7 +608,7 @@ const DynamicsNavToBusinessCentral = () => {
                       data-bs-target="#faq-content-1"
                     >
                       <div className='left-newww'>
-                        <i className="bi bi-check-circle"></i> Are you facing difficulty managing finances in your organizations?</div>
+                        <i className="bi bi-check-circle"></i> Are you facing difficulty managing finances in your organisations?</div>
                     </button>
                   </h3>
                   <div
@@ -661,7 +661,7 @@ const DynamicsNavToBusinessCentral = () => {
                     data-bs-parent="#faqlist1"
                   >
                     <div className="accordion-body">
-                      If you are seeking help in decision-making, then fret not! By automating reports and financial dashboards, organizations can gain real-time insights into their financial status. This analysis helps in decision-making and risk management. Further, it empowers decision-makers to analyze and predict data, enabling them to respond intelligently and make informed plans that are refraining from risks etc.
+                      If you are seeking help in decision-making, then fret not! By automating reports and financial dashboards, organisations can gain real-time insights into their financial status. This analysis helps in decision-making and risk management. Further, it empowers decision-makers to analyze and predict data, enabling them to respond intelligently and make informed plans that are refraining from risks etc.
                     </div>
                   </div>
                 </div>
@@ -683,7 +683,7 @@ const DynamicsNavToBusinessCentral = () => {
                     data-bs-parent="#faqlist1"
                   >
                     <div className="accordion-body">
-                      D365 Business Central permits the employees in the organizations to create custom workflows.  For example, you can set up approval workflows for purchase orders, sales orders, or expense reports. Then automation ensures that the assigned person reviews the document before proceeding. Further, automation in the inventory management process ensures that you have the right amount of stock on hand, minimizing overstocking or understocking issues. Sales and Customer Relationship Management is also streamlined through automation.
+                      D365 Business Central permits the employees in the organisations to create custom workflows.  For example, you can set up approval workflows for purchase orders, sales orders, or expense reports. Then automation ensures that the assigned person reviews the document before proceeding. Further, automation in the inventory management process ensures that you have the right amount of stock on hand, minimizing overstocking or understocking issues. Sales and Customer Relationship Management is also streamlined through automation.
                     </div>
                   </div>
                 </div>
@@ -696,7 +696,7 @@ const DynamicsNavToBusinessCentral = () => {
                       data-bs-target="#faq-content-5"
                     >
                       <div className='left-newww'>
-                        <i className="bi bi-check-circle"></i> Are you worried about managing your organization whilst working remotely or globally?</div>
+                        <i className="bi bi-check-circle"></i> Are you worried about managing your organisation whilst working remotely or globally?</div>
                     </button>
                   </h3>
                   <div
@@ -705,7 +705,7 @@ const DynamicsNavToBusinessCentral = () => {
                     data-bs-parent="#faqlist1"
                   >
                     <div className="accordion-body">
-                      With Business Central Upgrade, you can access the system remotely from anywhere with an internet connection. This feature is increasingly important in today's flexible work environments. Additionally, if you are considering expansion, then Dynamics Business Central Upgrade is a must for your organization. This can easily adjust to your changing business needs in different locations of the world.
+                      With Business Central Upgrade, you can access the system remotely from anywhere with an internet connection. This feature is increasingly important in today's flexible work environments. Additionally, if you are considering expansion, then Dynamics Business Central Upgrade is a must for your organisation. This can easily adjust to your changing business needs in different locations of the world.
                       <br />
                       <br />
                       For companies that rely on Microsoft NAV, the move to D365 Business Central can represent a substantial upgrade in technology that can facilitate <b>Big Wins</b>.
@@ -781,7 +781,7 @@ const DynamicsNavToBusinessCentral = () => {
 
                 </div>
                 <h3>Standard Business Central</h3>
-                <p>This route is for the organization that wants Microsoft Dynamics 365 Business Central with its standard features for a specific business process. With its functionality, one can start fresh and not carry over any existing modifications from previous <Link href="/products/microsoft-dynamics-erp/" target='_blank'>ERP systems</Link>. This is apt for companies looking for an easy-to-navigate transition without any extensive modifications.</p>
+                <p>This route is for the organisation that wants Microsoft Dynamics 365 Business Central with its standard features for a specific business process. With its functionality, one can start fresh and not carry over any existing modifications from previous <Link href="/products/microsoft-dynamics-erp/" target='_blank'>ERP systems</Link>. This is apt for companies looking for an easy-to-navigate transition without any extensive modifications.</p>
                 {/* <Link href="/">
                   <a className="read-more">
                     <span>Know More</span>
@@ -821,7 +821,7 @@ const DynamicsNavToBusinessCentral = () => {
 
                 </div>
                 <h3>Bridging Customization</h3>
-                <p>This route is for organizations that want to adopt Business Central but do not need to use the entire range of its functionality. These are for businesses who want to experience Transition to the Clouds for the first time.</p>
+                <p>This route is for organisations that want to adopt Business Central but do not need to use the entire range of its functionality. These are for businesses who want to experience Transition to the Clouds for the first time.</p>
                 {/* <Link href="/">
                   <a className="read-more">
                     <span>Know More</span>
@@ -1084,7 +1084,7 @@ const DynamicsNavToBusinessCentral = () => {
                 <div className="tem-mem-info">
                   <h4>Nitesh Sharma</h4>
                   <span>Head of Business Development</span>
-                  {/* <p>"Nurturing people and investing in their capabilities to build a resilient organization."</p> */}
+                  {/* <p>"Nurturing people and investing in their capabilities to build a resilient organisation."</p> */}
                 </div>
                 <div className="social">
                   <Link href="https://www.linkedin.com/in/niteshsharmads/" target='_blank'>

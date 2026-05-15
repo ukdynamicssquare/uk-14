@@ -195,7 +195,7 @@ const AzureIoTHub = () => {
                           Continuously monitor your device to track device
                           status from device creations to device connections and
                           device failures to ensure uninterrupted and smoother
-                          IoT workflow in your organization.
+                          IoT workflow in your organisation.
                         </p>
                       </div>
                     </div>

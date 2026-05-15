@@ -20,7 +20,7 @@ const MigrateFandSC = () => {
                 365 Finance & Supply Chain?
               </h1>
               <p>
-                Boost your organization's ability to develop, modify and control
+                Boost your organisation's ability to develop, modify and control
                 budgets, make faster financial decision making with Microsoft
                 Dynamics 365 Finance.
               </p>
@@ -336,10 +336,10 @@ const MigrateFandSC = () => {
                           <Link href="/products/dynamics-365-supply-chain-management/">
                             Microsoft Dynamics 365 for Supply Chain Management
                           </Link>
-                          , organizations get quicker, more predictable paths to
+                          , organisations get quicker, more predictable paths to
                           achieving results. By getting enterprise best
                           practices across every phase of the project
-                          life-cycle, LCS empowers organizations to deliver
+                          life-cycle, LCS empowers organisations to deliver
                           predictable, efficient, best practice implementations.
                         </p>
                         <p>
@@ -541,7 +541,7 @@ const MigrateFandSC = () => {
               proven methodologies to help clients to design, implement and
               manage their business solutions that align to business priorities,
               maximum return on their investment and to create high performance
-              organizations.
+              organisations.
             </p>
           </header>
           <div className="row pad-3y">

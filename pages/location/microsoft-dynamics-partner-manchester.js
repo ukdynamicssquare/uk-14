@@ -479,13 +479,13 @@ const MicrosoftDynamicsPartnerManchester = () => {
             <div className="col-lg-6 align-self-center">
               <div className="commen-rit-info">
                 <p>
-                Since the last 11+ years, we have been serving various businesses of all types, sizes, and industries with Microsoft Dynamics business solutions to transform their businesses in a better way. 
+                Since the last 14+ years, we have been serving various businesses of all types, sizes, and industries with Microsoft Dynamics business solutions to transform their businesses in a better way. 
                 </p>
                 <p>These projects let us understand the core business problems and the best way to solve them while utilising the minimum resources and without wasting any time. This is all due to the team of Dynamics 365 experts we currently have. </p>
                 
                   <p>Being a top-notch Microsoft <Link href="/"> Dynamics 365 partner in the UK</Link>, we can help you with everything from <Link href="/dynamics-365-business-central-implementation/">implementing Business Central</Link> for SMBs to customising Dynamics Finance to meet your complex financial needs.</p>
                   <p>Our team is experienced enough to deliver best-in-class solutions for all industries, irrespective of the issue, such as a functional issue, lag issue, performance issue, system error, or even training to better understand a particular Dynamics 365 application. </p>
-                  <p>With 135+ certified Microsoft consultants serving 250 businesses around the globe, we can help you improve your business while maximising its growth potential. </p>
+                  <p>With 150+ certified Microsoft consultants serving 250 businesses around the globe, we can help you improve your business while maximising its growth potential. </p>
                   <p>Currently, we are one of the top Microsoft Dynamics Gold Partners in Manchester, offering remote as well as field services to businesses situated near Manchester as well. In short, we are just a call away. </p>
                   <p>Whenever you face any kind of issue related to Microsoft Dynamics 365 solutions, you need to pick up the phone and call us at <strong>+44-207-193-2502</strong>. </p>
                   

@@ -59,7 +59,7 @@ const Microsoftsustainabilitymanager = () => {
                     <h2>What is Microsoft Cloud for Sustainability? </h2>
                     <p>
                       <Link href="/blog//microsoft-cloud-for-sustainability/" target="_blank">Microsoft Cloud for Sustainability
-                    </Link> is the latest launched application to help organizations
+                    </Link> is the latest launched application to help organisations
                       simplify their sustainability process by offering many
                       data insights to accelerate the environment sustainability
                       journey. Sustainability Manager is a SaaS (Software as a
@@ -82,7 +82,7 @@ const Microsoftsustainabilitymanager = () => {
               <div className="side-heding-new">
                 <h3>Microsoft Sustainability Manager Features</h3>
                 <p>
-                  With Microsoft Sustainability Manager, organizations can track
+                  With Microsoft Sustainability Manager, organisations can track
                   their sustainability performance, carbon footprints, emission
                   activities, and more.
                 </p>
@@ -120,7 +120,7 @@ const Microsoftsustainabilitymanager = () => {
                       <div className="accordion-body">
                         <p>
                           It accurately collects all emission footprints data of
-                          an organization's processes or operations using
+                          an organisation's processes or operations using
                           automation and direct data connections.
                           <br />
                           <br />
@@ -162,7 +162,7 @@ const Microsoftsustainabilitymanager = () => {
                     >
                       <div className="accordion-body">
                         <p>
-                          It helps the organizations take action to reduce
+                          It helps the organisations take action to reduce
                           emissions and set goals for it. Also, users can track
                           the progress and updates in the sustainability data
                           model.
@@ -277,7 +277,7 @@ const Microsoftsustainabilitymanager = () => {
                 <div className="commen-boc-2-info">
                   <h3>Sustainable Infrastructure </h3>
                   <p>
-                    It helps organizations find opportunities to replace the
+                    It helps organisations find opportunities to replace the
                     progress, system, activities, and operations with renewable
                     solutions.
                   </p>
@@ -314,7 +314,7 @@ const Microsoftsustainabilitymanager = () => {
                   <h3>Reducing Impacts</h3>
                   <p>
                     It tracks and reports the environmental impacts of the
-                    organizations and helps them reduce their emissions and
+                    organisations and helps them reduce their emissions and
                     footprints.
                   </p>
                 </div>
@@ -331,7 +331,7 @@ const Microsoftsustainabilitymanager = () => {
                 <h2>Microsoft Sustainability Manager Pricing</h2>
                 <p>
                   Explore the Microsoft Sustainability Manager pricing for
-                  business and organizations.
+                  business and organisations.
                 </p>
               </header>
             </div>
@@ -442,7 +442,7 @@ const Microsoftsustainabilitymanager = () => {
                     data-bs-parent="#accrlist1"
                   >
                     <div className="accordion-body">
-                      <p>Sustainability Manager is essential for monitoring carbon footprints because it provides a structured framework for data gathering, calculation, analysis, and reporting. Businesses can use it to gather data on energy use, emissions, and other relevant variables. It then automatically calculates the organization's carbon footprint based on the data collected. Using its extensive analysis capabilities, the application may identify areas that require improvement and set precise reduction targets. Additionally, Sustainability Manager generates comprehensive reports that can be given to stakeholders as proof of their commitment to and progress in sustainability. </p>
+                      <p>Sustainability Manager is essential for monitoring carbon footprints because it provides a structured framework for data gathering, calculation, analysis, and reporting. Businesses can use it to gather data on energy use, emissions, and other relevant variables. It then automatically calculates the organisation's carbon footprint based on the data collected. Using its extensive analysis capabilities, the application may identify areas that require improvement and set precise reduction targets. Additionally, Sustainability Manager generates comprehensive reports that can be given to stakeholders as proof of their commitment to and progress in sustainability. </p>
                     </div>
                   </div>
                 </div>
@@ -461,7 +461,7 @@ const Microsoftsustainabilitymanager = () => {
                     data-bs-parent="#accrlist1"
                   >
                     <div className="accordion-body">
-                      <p>By facilitating the seamless integration of several data sources, Sustainability Manager makes it possible to conduct a thorough and accurate assessment of the environmental impact. Organisations can connect energy meters, building management systems, car tracking systems, and garbage management systems to provide real-time data and insights. This integration for Sustainability Manager ensures a complete view of an organization's sustainability performance. </p>
+                      <p>By facilitating the seamless integration of several data sources, Sustainability Manager makes it possible to conduct a thorough and accurate assessment of the environmental impact. Organisations can connect energy meters, building management systems, car tracking systems, and garbage management systems to provide real-time data and insights. This integration for Sustainability Manager ensures a complete view of an organisation's sustainability performance. </p>
                     </div>
                   </div>
                 </div>

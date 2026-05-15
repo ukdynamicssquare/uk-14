@@ -86,7 +86,7 @@ const MicrosoftDynamics365MixedReality = () => {
               & timely collaboration to improve overall work performance, drive
               effective growth, and maximize desired revenues. Share & solve
               problems in real-time and provide instant support to your
-              customers or clients to impact the overall organizational success.
+              customers or clients to impact the overall organisational success.
             </p>
           </header>
           <div className="row p-lg-6">
@@ -494,12 +494,12 @@ const MicrosoftDynamics365MixedReality = () => {
                   >
                     <div className="accordion-body">
                       Mixed Reality is a next-generation solution that can be
-                      leveraged to empower people in your organization and to
+                      leveraged to empower people in your organisation and to
                       improve your customer experience while reducing risks and
                       costing. Mix Reality combines physical and digital worlds
                       to interact in real-time to serve several purposes from
                       remote services to virtual visualization to preparing
-                      learning guides for the users within your organization.
+                      learning guides for the users within your organisation.
                       <br />
                       <br />
                       Mixed Reality bridges the gap between people and objects
@@ -535,7 +535,7 @@ const MicrosoftDynamics365MixedReality = () => {
                       facilitate your workforce with the self-created Mix
                       Reality guides to learn the required information in
                       real-time and implement the same to ensure smoother and
-                      continuous operational flow in your organization.
+                      continuous operational flow in your organisation.
                       <br />
                       <br />
                       Mixed Reality Services can be availed of in the following
@@ -574,7 +574,7 @@ const MicrosoftDynamics365MixedReality = () => {
                   >
                     <div className="accordion-body">
                       Mixed Reality is a business transforming solution that
-                      enables the organization in various terms. It can help to
+                      enables the organisation in various terms. It can help to
                       simplify your complex processes and ease your day-to-day
                       tasks by bringing the digital information to demonstrate
                       like real-world experience. Here are few key benefits that
@@ -719,7 +719,7 @@ const MicrosoftDynamics365MixedReality = () => {
                       Mixed Reality can help with Experiential Training which
                       allows the workforce to learn things in the process
                       without indulging in any risk. This enables continuity in
-                      business flow and empowers people in your organization to
+                      business flow and empowers people in your organisation to
                       resolve the interruptions by self-learning in real-time.{" "}
                       <br />
                       <br />

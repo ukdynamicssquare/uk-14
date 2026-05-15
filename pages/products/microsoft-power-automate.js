@@ -530,7 +530,7 @@ const PowerAutomate = () => {
                 £115.30<span>bot/month, paid yearly</span>
                 </div>
                 <ul>
-                  <li>License a bot for unattended desktop or cloud flows, accessible by unlimited users across your organization for streamlined, scalable automation and workflow execution.</li>
+                  <li>License a bot for unattended desktop or cloud flows, accessible by unlimited users across your organisation for streamlined, scalable automation and workflow execution.</li>
                 </ul>
               </div>
             </div>

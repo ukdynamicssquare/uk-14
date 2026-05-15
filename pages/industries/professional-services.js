@@ -668,9 +668,9 @@ const Dynamics365ForProfessionalServices = () => {
                     >
                       <div className="accordion-body">
                         Microsoft Dynamics 365 offers a comprehensive solution
-                        for the Professional service industry. Organizations can
+                        for the Professional service industry. organisations can
                         simplify and drive their end-to-end tasks that come
-                        across their professional services domain. Organizations
+                        across their professional services domain. organisations
                         can manage, automate, & faster their tasks, empower
                         their workforce, and drive excellence in their business.
                         <br />
@@ -678,7 +678,7 @@ const Dynamics365ForProfessionalServices = () => {
                         Whether it comes to project automation, financial
                         management, client & vendor management, or customer
                         engagement; Dynamics 365 can help and empower everyone
-                        in your organization from top management to executive
+                        in your organisation from top management to executive
                         level to simply, manage, and accelerate their tasks.
                         With powerful decision-making capability, businesses can
                         make instant, productive, and informed decisions to

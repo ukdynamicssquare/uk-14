@@ -447,7 +447,7 @@ const FieldServicesImplementation = () => {
                           <p>
                             In this, our team will start working to prepare the
                             FRD (Functional Requirement Document) so we can gain
-                            an understanding of the organization's current
+                            an understanding of the organisation's current
                             processes. We will also use the information
                             collected to predict future requirements.
                           </p>

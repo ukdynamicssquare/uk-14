@@ -461,7 +461,7 @@ const PowerBiSupport = () => {
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#faq-content-4"
-                    >What are the options for customizing Power BI services for my organization? </button>
+                    >What are the options for customizing Power BI services for my organisation? </button>
                   </h3>
                   <div
                     id="faq-content-4"

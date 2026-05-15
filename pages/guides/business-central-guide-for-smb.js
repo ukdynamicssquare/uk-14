@@ -261,7 +261,7 @@ const PowerBIGuide = () => {
               <div className="cont-table-inner">
                 <p>
                   In today's digital world, business Intelligence plays a vital
-                  role in helping organizations assemble, integrate, visualize,
+                  role in helping organisations assemble, integrate, visualize,
                   and analyse unorganised data to make smarter and more informed
                   decisions. The digital transformation of customers is pushing
                   industries to rely totally on data for a sustainable and
@@ -358,7 +358,7 @@ const PowerBIGuide = () => {
                   must-have for today's businesses, whether small or large.
                 </p>
                 <p>
-                  Power BI enables the organization to track customers as well
+                  Power BI enables the organisation to track customers as well
                   as competitors using available metrics, whether demographics,
                   age, or the number of sales.
                 </p>

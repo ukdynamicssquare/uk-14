@@ -452,7 +452,7 @@ const ProjectOperationImplementation = () => {
                           <p>
                             Our team will begin working on the FRD (Functional
                             Requirement Document) in order to comprehend the
-                            organization's current processes, as well as
+                            organisation's current processes, as well as
                             anticipate future requirements.
                           </p>
                         </div>

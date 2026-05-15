@@ -122,7 +122,7 @@ const PowerVirtualAgents = () => {
                         The platform offers a plethora of tools and functions
                         that help the user in understanding how to do what in
                         creating the chatbot that is required for the purposes
-                        that the organization has.
+                        that the organisation has.
                       </div>
                     </div>
                   </div>
@@ -228,7 +228,7 @@ const PowerVirtualAgents = () => {
                         created with the use of the platform. Moreover, this
                         tool from Microsoft has come up to be one of the best
                         options to create chatbots that are not just helpful for
-                        the organizations in saving time but also are created in
+                        the organisations in saving time but also are created in
                         the most professional way to offer high-end results.
                       </div>
                     </div>
@@ -264,7 +264,7 @@ const PowerVirtualAgents = () => {
                       <div className="accordion-body">
                         Once you are convinced with the features and working of
                         the tool, you will surely wish to try out this wonder
-                        option to create chatbots for your organization too.
+                        option to create chatbots for your organisation too.
                         <br />
                         <br />
                         The best thing is that if you are already using

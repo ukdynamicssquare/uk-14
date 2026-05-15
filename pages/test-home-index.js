@@ -36,8 +36,8 @@ export default function HomeOld() {
               "@context": "https://schema.org",
               "@graph": [
                 {
-                  "@type": "Organization",
-                  "@id": "https://www.dynamicssquare.co.uk/#organization",
+                  "@type": "organisation",
+                  "@id": "https://www.dynamicssquare.co.uk/#organisation",
                   name: "Dynamics Square",
                   url: "https://www.dynamicssquare.co.uk/",
                   sameAs: [
@@ -67,7 +67,7 @@ export default function HomeOld() {
                   description:
                     "Dynamics Square is UK's leading Microsoft Dynamics 365 Partner. We help businesses implement Microsoft Dynamics 365 solutions. Contact us to know more.",
                   publisher: {
-                    "@id": "https://www.dynamicssquare.co.uk/#organization",
+                    "@id": "https://www.dynamicssquare.co.uk/#organisation",
                   },
                   potentialAction: [
                     {
@@ -102,7 +102,7 @@ export default function HomeOld() {
                     "@id": "https://www.dynamicssquare.co.uk/#website",
                   },
                   about: {
-                    "@id": "https://www.dynamicssquare.co.uk/#organization",
+                    "@id": "https://www.dynamicssquare.co.uk/#organisation",
                   },
                   primaryImageOfPage: {
                     "@id": "https://www.dynamicssquare.co.uk/#primaryimage",
@@ -139,7 +139,7 @@ export default function HomeOld() {
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "http://schema.org",
-              "@type": "Organization",
+              "@type": "organisation",
               name: "Dynamics Square UK Ltd.",
               description:
                 "We assist your company business in scaling up by giving unbiased advise on the best Microsoft ERP and CRM solutions.",
@@ -1037,7 +1037,7 @@ export default function HomeOld() {
                       duration={300}
                     />
                   </span> */}
-                  <span className="inner">12+</span>
+                  <span className="inner">14+</span>
                   <p>Years of Expertise</p>
                 </div>
               </div>

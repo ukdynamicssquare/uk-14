@@ -44,7 +44,7 @@ const ContactUs = () => {
                         <Image src="/img/card_travel.png" alt="card_travel" width={32} height={32} />
                       </div>
                       <div className="right">
-                        <span>350+ Successful Implementations and Counting!</span>
+                        <span>500+ Successful Implementations and Counting!</span>
                       </div>
                     </div>
                     <div className="new-flex-se">
@@ -130,7 +130,7 @@ const ContactUs = () => {
               </div>
               <div className="col-lg-12">
                 <div className="new-co-title new-co-title-ll text-center">
-                <h3>350+ Global Businesses Trust Dynamics Square</h3>
+                <h3>500+ Global Businesses Trust Dynamics Square</h3>
                 </div>
               </div>
             </div>

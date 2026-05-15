@@ -5,7 +5,7 @@ const IndustriesList = () => {
   return (
     <>
       <Head>
-        <title>Dyanmics 356 for Industries | Dynamics Square</title>
+        <title>Dynamics 356 for Industries | Dynamics Square</title>
         <meta
           name="description"
           content="Power the growth of your industry by implementing Dynamics 365 Business applications. Our Dynamics 365 experts have the expertise to assist you in any time."
@@ -310,7 +310,7 @@ const IndustriesList = () => {
               <div className="indut-icon-card-one">
                 <img src="/img/in-icon-01.png" alt="Successful Implementation" width={40} height={40} />
                 <h4>Successful Implementation</h4>
-                <p>350+ Businesses Trust Us: Successful businesses have chosen us for /transformative results. </p>
+                <p>500+ Businesses Trust Us: Successful businesses have chosen us for /transformative results. </p>
               </div>
             </div>
             <div className="col-lg-3 col-md-6 d-flex">

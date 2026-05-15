@@ -67,7 +67,7 @@ const PowerBI = () => {
               With our dedicated Power BI consulting services you can transform
               and strengthen your data into actionable insights. With Microsoft
               Power BI solution, you can visualize data, create immersive
-              reports and can share the same across their organization to
+              reports and can share the same across their organisation to
               strengthen everyone with productive decision-making capabilities.
             </p>
           </header>
@@ -239,7 +239,7 @@ const PowerBI = () => {
                           With Power BI, it becomes easy to create visual
                           reports & analytics, publish & share the insights, and
                           enable everyone to make data-driven decisions across
-                          the organizational boundaries.
+                          the organisational boundaries.
                         </p>
                       </div>
                     </div>
@@ -713,7 +713,7 @@ const PowerBI = () => {
                       visuals, key analytics, and other graphical analysis.
                       Users can even develop their own visuals suited to their
                       specific business needs and can share the same within
-                      their organization to be used further by their workforce.
+                      their organisation to be used further by their workforce.
                       All the Power BI reports can be published and demonstrated
                       on user dashboards. These reports and insights available
                       in different visualizations help businesses for better
@@ -860,7 +860,7 @@ const PowerBI = () => {
                       Power BI Report Server is the on-premises reporting
                       solution wherein users can create reports today and can
                       move to the cloud later. If you want to keep data within
-                      your organizational boundaries, you can simply create,
+                      your organisational boundaries, you can simply create,
                       access, and share accordingly. It is included in the Power
                       BI premium plan. It works on your own terms.
                       <br />
@@ -898,11 +898,11 @@ const PowerBI = () => {
                       your business at no cost. With this simple step, any
                       business user can start creating their reports, but this
                       will not allow you to share or distribute your reports to
-                      the people in your organization.
+                      the people in your organisation.
                       <br />
                       <br />
                       Once you opt for the Power BI Pro license, you will be get
-                      permitted to share your reports with other users (each
+                      permitted to share your reports with other users each
                       with a Power BI Pro license in your workspace. Rest, you
                       can always contact Dynamics Square to enquire about Power
                       BI licensing costs for your business.

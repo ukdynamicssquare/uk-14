@@ -187,7 +187,7 @@ const BusinessCentralImplementation = () => {
                 <h2>Why the Right Implementation Partner Matters</h2>
                 <p><b>Is it important to go with an experienced Business Central implementation partner?</b></p>
                 <p>Research by Gartner reveals a striking reality: Between 55% and 75% of ERP initiatives don’t hit the mark on their objectives, leaving businesses with untapped potential and unmet goals. </p>
-                <p>So, what does this research indicate? The intervention of a Dynamics 365 implementation partner who holds expertise in your business domain becomes crucial. With 11+ industries penetrated, Dynamics Square can help you avoid these frequently made ERP implementation mistakes: </p>
+                <p>So, what does this research indicate? The intervention of a Dynamics 365 implementation partner who holds expertise in your business domain becomes crucial. With 14+ industries penetrated, Dynamics Square can help you avoid these frequently made ERP implementation mistakes: </p>
               </div>
             </div>
           </div>
@@ -428,7 +428,7 @@ const BusinessCentralImplementation = () => {
                     <div className='card-233-body'>
                       <h3><span><i className="bi bi-check2"></i></span>Proven Expertise</h3>
                     </div>
-                    <p>350+ successful business central implementation projects across 11+ industries </p>
+                    <p>500+ successful business central implementation projects across 14+ industries </p>
 
                   </div>
                 </div>

@@ -55,7 +55,7 @@ const MicrosoftCloudForNonprofit = () => {
                 </h1>
                 <p>
                   Drive Mission-Critical Practices And Ensure Continuous Growth
-                  Of Your Non-Profit Organization With Microsoft Cloud <br />
+                  Of Your Non-Profit organisation With Microsoft Cloud <br />
                   For Non-Profit Solution.
                 </p>
                 <div className="text-center text-lg-start">
@@ -196,7 +196,7 @@ const MicrosoftCloudForNonprofit = () => {
                   </h3>
                   <p>
                     Let's understand how Microsoft Cloud for your Non-for-profit
-                    organization
+                    organisation
                     <br />
                     can support and serve your mission purpose.
                     <br />

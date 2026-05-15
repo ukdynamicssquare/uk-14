@@ -530,7 +530,7 @@ const BusinessCentralPricingLicensing = () => {
                       <p>
                         The Dynamics 365 Business Central is a cloud-based ERP
                         application built to ease the working of small to medium
-                        sized businesses. The employees of an organization can
+                        sized businesses. The employees of an organisation can
                         manage all the processes and operations through the
                         dashboard of Business Central. Due to its flexibility
                         and customization, it becomes easy to streamline the

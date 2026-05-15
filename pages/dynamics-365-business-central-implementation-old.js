@@ -925,7 +925,7 @@ const BusinessCentralImplementation = () => {
                       </p>
                       <p>
                         With AI-built business insights, people in your
-                        organization can forecast data and can have real-time
+                        organisation can forecast data and can have real-time
                         insight into actual performance, profit or margins, and
                         potential for improvement.
                       </p>

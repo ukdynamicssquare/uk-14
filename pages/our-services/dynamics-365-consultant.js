@@ -12,7 +12,7 @@ const Dynamics365Consultant = () => {
         </title>
         <meta
           name="description"
-          content="Get the seamless Dynamics 365 Consultancy service from the certified Microsoft Dynamics consultants UK. We are reliable, cost-effective, and trusted by 350+ clients."
+          content="Get the seamless Dynamics 365 Consultancy service from the certified Microsoft Dynamics consultants UK. We are reliable, cost-effective, and trusted by 500+ clients."
         />
         <link rel="canonical" href="https://www.dynamicssquare.co.uk/our-services/dynamics-365-consultant/" />
       </Head>
@@ -46,7 +46,7 @@ const Dynamics365Consultant = () => {
 
                   <div className="domain-Expertise-list domain-Expertise-list-p">
                     <p>With a team of 150+ certified Microsoft dynamics 365 consultants from different domains, Dynamics Square can offer you the best possible support to get your business back on track. Being a Microsoft certified solution partner, we have been helping businesses like yours to resolve even complex issues with minimal time and resources. It makes us stand out while offering cost-effective and trustworthy services.</p>
-                    <p>Our 12+ years of extensive experience in offering <Link href="/products/microsoft-dynamics-erp/">Dynamics 365 ERP</Link> and CRM solutions in the UK has helped us build a brand you can rely on. This trust in us can supercharge your business operations, minimise complexities from the system, utilise the resources, and accelerate the business towards steep growth.</p>
+                    <p>Our 14+ years of extensive experience in offering <Link href="/products/microsoft-dynamics-erp/">Dynamics 365 ERP</Link> and CRM solutions in the UK has helped us build a brand you can rely on. This trust in us can supercharge your business operations, minimise complexities from the system, utilise the resources, and accelerate the business towards steep growth.</p>
                     <p>Microsoft has entitled us a UK's top Gold partner to offer all businesses best-in-class <Link href="/our-services/dynamics-365-implementation-services/">Dynamics 365 implementation</Link>, support, and upgrade services. However, Microsoft has transformed the partner programme and replaced this title (Microsoft Gold Partner) with a unified designation: Microsoft Solution Partner.</p>
                   </div>
                 </div>
@@ -157,7 +157,7 @@ const Dynamics365Consultant = () => {
                 <ul>
                   <li>12+<span>years Partnership <br /> with Microsoft </span></li>
                   <li>150+<span>Microsoft Certified <br /> Consultants </span></li>
-                  <li>350+ <span>Global <br /> Clients </span></li>
+                  <li>500+ <span>Global <br /> Clients </span></li>
                   <li>20+<span>Microsoft Product <br /> Expertise </span></li>
                   <li>99% <span>Customer <br /> Satisfaction </span></li>
                   <li>100+<span>Technical <br /> Consultants </span></li>
@@ -171,7 +171,7 @@ const Dynamics365Consultant = () => {
             
                 <div className="style-grid-content">
                   <h3>Process Optimization </h3>
-                  <p>Once you optimise the processes, they can enhance a business's overall efficiency, enabling it to get more output with limited resources. While working with 350+ clients, our certified consultants have understood the perfect way to optimise processes while maximising them for better results.  </p>
+                  <p>Once you optimise the processes, they can enhance a business's overall efficiency, enabling it to get more output with limited resources. While working with 500+ clients, our certified consultants have understood the perfect way to optimise processes while maximising them for better results.  </p>
                 </div>
               </div>
               <div className="style-grid-1">

@@ -431,7 +431,7 @@ const SupplyChainImplementation = () => {
                           <h4>Analysis Phase</h4>
                           <p>
                             In order to better understand the current processes
-                            of the organization and predict future requirements,
+                            of the organisation and predict future requirements,
                             our team will begin preparing the FRD (Functional
                             Requirement Document).
                           </p>

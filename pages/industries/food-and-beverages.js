@@ -19,7 +19,7 @@ const Startup = () => {
         <title>Microsoft Dynamics 365 for Food and Beverages Industry</title>
         <meta
           name="description"
-          content="Enable quick adaption, simplify processes, and drive continuity throughout your organization with Dynamics 365 for Food and Beverages Industry Solutions."
+          content="Enable quick adaption, simplify processes, and drive continuity throughout your organisation with Dynamics 365 for Food and Beverages Industry Solutions."
         />
         <link
           rel="canonical"
@@ -28,13 +28,13 @@ const Startup = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/industries/food-and-beverages/" />
         <meta property="og:title" content="Microsoft Dynamics 365 for Food and Beverages Industry" />
-        <meta property="og:description" content="Enable quick adaption, simplify processes, and drive continuity throughout your organization with Dynamics 365 for Food and Beverages Industry Solutions." />
+        <meta property="og:description" content="Enable quick adaption, simplify processes, and drive continuity throughout your organisation with Dynamics 365 for Food and Beverages Industry Solutions." />
         <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/food-and-beverages-banner.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/industries/food-and-beverages/" />
         <meta property="twitter:title" content="Microsoft Dynamics 365 for Food and Beverages Industry" />
-        <meta property="twitter:description" content="Enable quick adaption, simplify processes, and drive continuity throughout your organization with Dynamics 365 for Food and Beverages Industry Solutions." />
+        <meta property="twitter:description" content="Enable quick adaption, simplify processes, and drive continuity throughout your organisation with Dynamics 365 for Food and Beverages Industry Solutions." />
         <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/food-and-beverages-banner.png" />
       </Head>
       <ModalVideo
@@ -520,7 +520,7 @@ const Startup = () => {
                                   <h3>Not for Profit</h3>
                                   <p>
                                     Bring Transparency And Drive Efficiency In
-                                    Your Non-Profit Organization With Microsoft
+                                    Your Non-Profit organisation With Microsoft
                                     Dynamics 365 For Charities.
                                   </p>
                                   <span>Explore Now</span>

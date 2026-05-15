@@ -49,7 +49,7 @@ const MicrosoftDynamicsPartnerLiverpool = () => {
                 <h2>Looking for a Reliable Microsoft Certified Partner near Bristol?</h2>
 
                 <p>
-                If so, stop your search here; we have got your back. For the past 11+ years Dynamics Square is a{" "} <Link href="/">
+                If so, stop your search here; we have got your back. For the past 14+ years Dynamics Square is a{" "} <Link href="/">
                     Microsoft Gold Certified Partner in Bristol
                   </Link> , we have been delivering our expertise and innovative solutions to businesses like yours in order to increase revenue and build a sustainable business. </p>
                 <p>
@@ -544,7 +544,7 @@ If you require minor adjustments or have minor issues, our Microsoft-certified t
                 <p>
                 Dynamics Square can help you with any kind of <Link href="/our-services/dynamics-365-implementation-services/">D365 implementation</Link>, upgrade, or support service related to any Microsoft Dynamics product. All our services run on a fixed Microsoft methodology that enhances the performance of the business while eliminating redundancies from the system. 
                 </p>
-                <p>We are a Dynamics 365 partner serving more than 250 businesses with over 135+ certified Microsoft consultants. We are helping businesses streamline their processes, improve their business capabilities, and drive continuous growth.</p>
+                <p>We are a Dynamics 365 partner serving more than 250 businesses with over 150+ certified Microsoft consultants. We are helping businesses streamline their processes, improve their business capabilities, and drive continuous growth.</p>
                 
                   <p>If you're a business owner who is seeking <Link href="/our-services/dynamics-365-support-services/">Microsoft Dynamics support</Link> , you can connect with us and get your issue resolved in no time. It's possible that your current system isn't performing well because of the unreliable and unsupportive Microsoft support partner. If you are going through the same phase, pick up the phone and contact us now to enjoy seamless, hassle-free, and low-cost services. </p>
                   

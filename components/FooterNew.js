@@ -488,8 +488,8 @@ const FooterNew = () => {
                       </li>
                       <li>
                         <i className="bi bi-chevron-right"></i>
-                        <Link href="">
-                        Audit
+                        <Link href="/free-dynamics-365-system-health-check/">
+                        D365 Health Check
                         </Link>
                       </li>
                       <li>

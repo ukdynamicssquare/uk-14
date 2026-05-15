@@ -170,7 +170,7 @@ const PartnerUK = () => {
               <header className="section-header">
               <h2 style={{textAlign:'left'}}>Our Core Features:</h2>
                   <ul style={{textAlign:'left'}}>
-                    <li>12+ years Partnership with Microsoft </li>
+                    <li>14+ years Partnership with Microsoft </li>
                     <li>150+ Microsoft Certified Consultants </li>
                     <li>300+ Global Clients </li>
                     <li>20+ Microsoft Product Expertise </li>

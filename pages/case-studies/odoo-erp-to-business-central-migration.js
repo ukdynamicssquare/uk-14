@@ -58,7 +58,7 @@ const OdooErpToBusinessCentralMigration = () => {
                   />
                 </div>
                 <div className="col-lg-9 align-self-center">
-                  <p>The business is a trusted provider of wireless and technology solutions for businesses, with 15+ years of experience in the industry. Founded in 2008, they are a leading supplier of carrier-grade antenna and enclosure protection solutions. Also, the organization further offers customized solutions to meet unique business needs. They offer a comprehensive range of products that includes two-way radios, public safety communications, wireless broadband, and high-quality indoor and outdoor antennas. The company offers its bespoke products to the global IoT and M2M industries.</p>
+                  <p>The business is a trusted provider of wireless and technology solutions for businesses, with 15+ years of experience in the industry. Founded in 2008, they are a leading supplier of carrier-grade antenna and enclosure protection solutions. Also, the organisation further offers customized solutions to meet unique business needs. They offer a comprehensive range of products that includes two-way radios, public safety communications, wireless broadband, and high-quality indoor and outdoor antennas. The company offers its bespoke products to the global IoT and M2M industries.</p>
                 </div>
               </div>
             </div>

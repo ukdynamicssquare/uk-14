@@ -16,7 +16,7 @@ const MicrosoftDynamicsPartnerCardiff = () => {
           <div className="row">
             <div className="col-lg-6 mobile-1 align-self-center">
               <h1>Microsoft Dynamics <br />Partner in Cardiff</h1>
-              <p>Get reliable on-site support, leverage the extensive expertise of 135+ technical consultants, and join hands with Dynamics Square, a trustworthy Microsoft partner who has a proven record of successful implementation.</p>
+              <p>Get reliable on-site support, leverage the extensive expertise of 150+ technical consultants, and join hands with Dynamics Square, a trustworthy Microsoft partner who has a proven record of successful implementation.</p>
               <div className="text-center text-lg-start">
                   <Link
                     href="#exampleModal"

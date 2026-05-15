@@ -73,8 +73,8 @@ const FinanceOperations = () => {
     },
     {
       id: "faq12",
-      title: "12. Does D365 for Finance and Operations fit for my organization? ",
-      content: "<p>This is the best application available to streamline all financial processes if you belong to a small or medium-sized organization. Also, it helps the users monitor day-to-day operations tasks to make informed decisions whenever required.</p>"
+      title: "12. Does D365 for Finance and Operations fit for my organisation? ",
+      content: "<p>This is the best application available to streamline all financial processes if you belong to a small or medium-sized organisation. Also, it helps the users monitor day-to-day operations tasks to make informed decisions whenever required.</p>"
     },
     {
       id: "faq13",
@@ -210,14 +210,14 @@ const FinanceOperations = () => {
                     <p>
                       Unifying financial and business operations enables
                       businesses to deliver real-time visibility across their
-                      organization for better and faster decisions.
+                      organisation for better and faster decisions.
                     </p>
                   </li>
                   <li>
                     <strong>TRANSFORM BUSINESS FASTER</strong>
                     <p>
                       Transforming businesses by easily redesigning processes
-                      without disrupting operations is crucial for organizations
+                      without disrupting operations is crucial for organisations
                       to stay competitive.
                     </p>
                   </li>
@@ -226,7 +226,7 @@ const FinanceOperations = () => {
                     <p>
                       Helping businesses grow at their own pace is about giving
                       them the choice and flexibility to modernize their
-                      organizations at the pace that works for them with the
+                      organisations at the pace that works for them with the
                       ability to do business anywhere, anytime.
                     </p>
                   </li>
@@ -316,7 +316,7 @@ const FinanceOperations = () => {
                         <p>
                           Provide a fast and efficient way to register financial
                           transactions, manage relationships between
-                          subsidiaries and the parent organization, manage
+                          subsidiaries and the parent organisation, manage
                           internal cost accounting, currency translation, and
                           reports in any supported currency.
                         </p>
@@ -338,7 +338,7 @@ const FinanceOperations = () => {
                           <li>
                            <p> <strong>Budget Planning</strong></p>
                             <br />
-                            Manage your organization's budget, including
+                            Manage your organisation's budget, including
                             flexible configuration options, instant calculation
                             of available budget funds, pooling of budgets, and
                             budget workflows for review and approval, with
@@ -392,7 +392,7 @@ const FinanceOperations = () => {
                           Connect sales and purchasing processes with logistics,
                           production, and warehouse management to provide
                           visibility and management throughout the supply chain.
-                          Manage distributed organizations with inter-company
+                          Manage distributed organisations with inter-company
                           and multi-site capabilities.
                         </p>
                         <ul>
@@ -555,7 +555,7 @@ const FinanceOperations = () => {
                         <p>
                           Designed for ease of implementation and adoption,
                           Microsoft Dynamics 365 for Finance and Operations
-                          delivers insights at all levels of the organization to
+                          delivers insights at all levels of the organisation to
                           support innovation, speeds response to changing
                           constraints, and improves quality and customer
                           satisfaction. Microsoft Dynamics supports integration
@@ -582,7 +582,7 @@ const FinanceOperations = () => {
                               jobs and simulate alternatives by dragging Gantt
                               chart items. Resolve scheduling overloads by
                               reassigning operations to alternate work centers.
-                              Optimize scheduling across the organization with a
+                              Optimize scheduling across the organisation with a
                               unified resource model and scheduling engine.
                             </p>
                           </li>
@@ -590,7 +590,7 @@ const FinanceOperations = () => {
                             <p><strong>Demand Forecasting</strong></p>
                             <p>
                               Demand Forecasting is a lightweight, yet powerful
-                              tool that enables organizations to forecast based
+                              tool that enables organisations to forecast based
                               on historical data, leverage the power of Azure
                               Machine Learning, adjust the forecasts using
                               Microsoft Excel, and import the values into
@@ -635,7 +635,7 @@ const FinanceOperations = () => {
                             <p>
                               Microsoft Dynamics 365 helps IT professionals
                               manage business growth, mitigate risk, improve
-                              organizational productivity, and deliver amazing
+                              organisational productivity, and deliver amazing
                               customer experiences through tools that improve
                               the speed of doing business.
                             </p>
@@ -644,7 +644,7 @@ const FinanceOperations = () => {
                             <p><strong>Mobility</strong></p>
                             <p>
                               The Dynamics 365 for Finance and Operations mobile
-                              app empowers your organization to mobilize your
+                              app empowers your organisation to mobilize your
                               business processes. Enable employees to perform
                               work anytime, anywhere to keep your customers
                               happy, increase productivity, and drive business
@@ -936,7 +936,7 @@ const FinanceOperations = () => {
               </div>
               <div className="custom-p-001">
                 <p>In the world of complex business scenarios, managing the financial and operational activities of a business isn't easy at all. You will need an advanced solution to deal with all issues without complicating the operations. In such a scenario, Dynamics Square is available by your side to help you analyse your business requirements and offer you a highly personalised solution that can facilitate your business growth.</p>
-                <p>With <strong>350+</strong> global clients and <strong>150+</strong> <Link href="/our-services/dynamics-365-consultant/" target="_blank">Dynamics 365 technical consultants</Link>, we offer you our consistent and reliable support to keep you going regardless of the complexity. With a track record of successful implementation, Dynamics Square has gained the trust of business owners while transforming their businesses towards steady growth and business scalability.  </p>
+                <p>With <strong>500+</strong> global clients and <strong>150+</strong> <Link href="/our-services/dynamics-365-consultant/" target="_blank">Dynamics 365 technical consultants</Link>, we offer you our consistent and reliable support to keep you going regardless of the complexity. With a track record of successful implementation, Dynamics Square has gained the trust of business owners while transforming their businesses towards steady growth and business scalability.  </p>
               <div className="text-lg-start">
                   <Link
                     href="#exampleModal"
@@ -1283,7 +1283,7 @@ const FinanceOperations = () => {
                       data-bs-toggle="collapse"
                       data-bs-target="#faq-content-11"
                     >
-                  Does D365 for Finance and Operations fit for my organization? 
+                  Does D365 for Finance and Operations fit for my organisation? 
                     </button>
                   </h3>
                   <div
@@ -1292,7 +1292,7 @@ const FinanceOperations = () => {
                     data-bs-parent="#faqlist1"
                   >
                     <div className="accordion-body">
-                      <p>This is the best application available to streamline all financial processes if you belong to a small or medium-sized organization. Also, it helps the users monitor day-to-day operations tasks to make informed decisions whenever required.</p>
+                      <p>This is the best application available to streamline all financial processes if you belong to a small or medium-sized organisation. Also, it helps the users monitor day-to-day operations tasks to make informed decisions whenever required.</p>
                     </div>
                   </div>
                 </div>

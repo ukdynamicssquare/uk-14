@@ -68,7 +68,7 @@ const MicrosoftDynamicsAX = () => {
                 <h2>What is Microsoft Dynamics AX?</h2>
                 <p>
                   Microsoft Dynamics AX (Axapta) is a complete business
-                  management solution for medium-sized and large organizations
+                  management solution for medium-sized and large organisations
                   that work with popular Microsoft software to improve staff
                   productivity.
                 </p>
@@ -78,7 +78,7 @@ const MicrosoftDynamicsAX = () => {
                 </p>
                 <p>
                   Microsoft Dynamics AX consolidates and standardizes processes,
-                  improving visibility across the organization and simplifying
+                  improving visibility across the organisation and simplifying
                   compliance.
                 </p>
                 <p>
@@ -345,7 +345,7 @@ const MicrosoftDynamicsAX = () => {
                         <ul>
                           <li>Selection ad recruitment</li>
                           <li>Self-service portal for employees</li>
-                          <li>Workforce management for the organization</li>
+                          <li>Workforce management for the organisation</li>
                           <li>
                             Performance management including training and
                             development
@@ -546,9 +546,9 @@ const MicrosoftDynamicsAX = () => {
                     <p>
                       Dynamics AX comes with ease of customization so that the
                       users can customize its features and specifications
-                      depending upon their requirements. Every organization has
+                      depending upon their requirements. Every organisation has
                       got different requirements and necessities. Hence, the
-                      organizations can make the required customization in the
+                      organisations can make the required customization in the
                       tool to match up with their requirements.
                     </p>
                   </div>
@@ -563,7 +563,7 @@ const MicrosoftDynamicsAX = () => {
                     <p>
                       Dynamics AX also allows easy integration of different
                       tools and software options available within your
-                      organization to manage things in a much better way.
+                      organisation to manage things in a much better way.
                     </p>
                   </div>
                 </div>
@@ -591,11 +591,11 @@ const MicrosoftDynamicsAX = () => {
                   <div className="overlay">
                     <p>
                       No doubt, pricing plays a major role while selecting any
-                      tool or software for your organization. Dynamics AX is
+                      tool or software for your organisation. Dynamics AX is
                       definitely not going to disappoint in this section. It
                       comes with a much lower cost that does not offer a burden
                       on your investments and finances even if you are a small
-                      organization or even just a startup.
+                      organisation or even just a startup.
                     </p>
                   </div>
                 </div>
@@ -610,7 +610,7 @@ const MicrosoftDynamicsAX = () => {
                       When it comes to investment, the majority of clients
                       prefer to choose the one that is well-known and has a good
                       market reputation. Microsoft is a well-known name now and
-                      also a highly reliable one. Thus, a lot of organizations
+                      also a highly reliable one. Thus, a lot of organisations
                       prefer to choose Microsoft and its recently released
                       Microsoft Dynamics AX (Axapta) for solving several
                       ERP-related instances.
@@ -641,7 +641,7 @@ const MicrosoftDynamicsAX = () => {
               <div className="style-grid-1">
                 <div className="style-grid-content">
                   <h3>Modern Interface</h3>
-                  <p>The latest interface of the tool is modern and is even more simpler in looks as well as use. Thus, a lot of time and money is saved as the organizations do not have to invest in training of the employees for the the tool. The interface is easy to understand so that the employees can go through it to understand it and just a minor knowledge can help them in starting with the operations too.</p>
+                  <p>The latest interface of the tool is modern and is even more simpler in looks as well as use. Thus, a lot of time and money is saved as the organisations do not have to invest in training of the employees for the the tool. The interface is easy to understand so that the employees can go through it to understand it and just a minor knowledge can help them in starting with the operations too.</p>
                   </div>
                 </div>
             </div>
@@ -657,7 +657,7 @@ const MicrosoftDynamicsAX = () => {
             <div className="style-grid-1">
                 <div className="style-grid-content">
                   <h3>Cortana Integration</h3>
-                  <p>The integration of Cortana feature has simplified tasks even better. The users can make use of voice command to get several tasks done. Thus, it allows the users to do two tasks together at the same time that can help in saving a lot of time and effort. With all such features and benefits, surely, Microsoft Dynamics AX is going to transform the way business organizations operate these days to have a better future ahead.</p>
+                  <p>The integration of Cortana feature has simplified tasks even better. The users can make use of voice command to get several tasks done. Thus, it allows the users to do two tasks together at the same time that can help in saving a lot of time and effort. With all such features and benefits, surely, Microsoft Dynamics AX is going to transform the way business organisations operate these days to have a better future ahead.</p>
                   </div>
                 </div>
             </div>

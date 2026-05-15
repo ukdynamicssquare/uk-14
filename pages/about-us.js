@@ -71,7 +71,7 @@ const AboutUs = () => {
                 <h3>We’re Microsoft <br />Solutions Partner  </h3>
               </div>
               <div className="right-content">
-                <p>As a Microsoft Gold Partner or Microsoft Solutions Partner, we are trusted by 350+ global clients for our reliable and smooth Dynamics 365 solutions. Our team of 150+ Microsoft consultants is proactively delivering cloud technology, high-tech innovations, effective training, and consistent support to ensure substantial growth for your organisation. </p>
+                <p>As a Microsoft Gold Partner or Microsoft Solutions Partner, we are trusted by 500+ global clients for our reliable and smooth Dynamics 365 solutions. Our team of 150+ Microsoft consultants is proactively delivering cloud technology, high-tech innovations, effective training, and consistent support to ensure substantial growth for your organisation. </p>
               </div>
             </div>
           </div>
@@ -82,7 +82,7 @@ const AboutUs = () => {
           <div className="row inner-side-pad">
             <div className="col-lg-4 col-md-4">
               <div className="counter-sec inerr">
-                <h3>350+</h3>
+                <h3>500+</h3>
                 <p>Clients Worldwide</p>
               </div>
             </div>
@@ -209,7 +209,7 @@ const AboutUs = () => {
                 <div className="tem-mem-info">
                   <h4>Gaurav Goyal</h4>
                   <span>Co-Founder</span>
-                  <p>"Nurturing people and investing in their capabilities to build a resilient organization."</p>
+                  <p>"Nurturing people and investing in their capabilities to build a resilient organisation."</p>
                 </div>
                 {/* <div className="social">
                     <Link href="https://www.linkedin.com/in/gauravg1">

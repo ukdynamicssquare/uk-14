@@ -148,7 +148,7 @@ const AdvantagesfinanceScm = () => {
                     <i className="bi bi-check-lg"></i>{" "}
                     <span>Years of Expertise</span>
                   </h3>
-                  <p>Since the last 11+ years, we have been serving our expertise to the businesses of the UK with our best-in-class <Link
+                  <p>Since the last 14+ years, we have been serving our expertise to the businesses of the UK with our best-in-class <Link
                     href="/our-services/dynamics-365-implementation-services/"
                     target="_blank">Dynamics 365 implementation</Link>, <Link href="/our-services/dynamics-365-support-services/" target="_blank">support</Link>, and upgrade services. </p>
                 </div>
@@ -159,7 +159,7 @@ const AdvantagesfinanceScm = () => {
                     <i className="bi bi-check-lg"></i>{" "}
                     <span>Customers That Trust Us </span>
                   </h3>
-                  <p>With 350+ global customers, we have been helping businesses build seamless opportunities for growth and scalability. </p>
+                  <p>With 500+ global customers, we have been helping businesses build seamless opportunities for growth and scalability. </p>
                 </div>
               </div>
               <div className="col-lg-4 col-md-6">

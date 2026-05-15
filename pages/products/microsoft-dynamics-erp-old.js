@@ -74,7 +74,7 @@ const Erp = () => {
                 <p>
                   Support your end-to-end concurrent as well as futuristic
                   enterprise practices with Microsoft Dynamics ERP. Seamlessly
-                  connect people across your organization to drive efficiency
+                  connect people across your organisation to drive efficiency
                   and have real-time eyes into every business process. With
                   AI-based reports and key analytics, make informed decisions
                   with a timely effect to reinforce productivity, encourage
@@ -245,7 +245,7 @@ const Erp = () => {
                         Manage end-to-end employees' data while streamlining
                         related tasks including onboarding, payroll, and other
                         internal happenings. With simplified data-driven
-                        practices, ERP solution helps organizations retain their
+                        practices, ERP solution helps organisations retain their
                         talent, track their performance, and identify issues in
                         advance to prevent them from taking place. Moreover,
                         data automation eliminates manual data processing that
@@ -380,7 +380,7 @@ const Erp = () => {
               <div className="commen-rit-info">
                 <h2>Dynamics NAV</h2>
                 <p>
-                  Designed for small to mid-sized organizations embedded with
+                  Designed for small to mid-sized organisations embedded with
                   proven domain-specific functionality and seamless navigation
                   to effectively drive finance, supply chain, manufacturing, and
                   operations. Microsoft Dynamics NAV (Navision) enables brands
@@ -438,7 +438,7 @@ const Erp = () => {
                   intelligence techniques to gain depth financial insights
                   leveraging the recent historical data combined with the
                   current financial flow and involved strategies. Designed for
-                  small to mid-sized organizations, Dynamics GP helps
+                  small to mid-sized organisations, Dynamics GP helps
                   enterprises to streamline their finance and accounting to
                   impact overall business growth.
                 </p>

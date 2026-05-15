@@ -264,7 +264,7 @@ const PowerBIGuide = () => {
               <div className="cont-table-inner">
                 <p>
                   In today's digital world, business Intelligence plays a vital
-                  role in helping organizations assemble, integrate, visualize,
+                  role in helping organisations assemble, integrate, visualize,
                   and analyse unorganised data to make smarter and more informed
                   decisions. The digital transformation of customers is pushing
                   industries to rely totally on data for a sustainable and
@@ -367,7 +367,7 @@ const PowerBIGuide = () => {
                   must-have for today's businesses, whether small or large.
                 </p>
                 <p>
-                  Power BI enables the organization to track customers as well
+                  Power BI enables the organisation to track customers as well
                   as competitors using available metrics, whether demographics,
                   age, or the number of sales.
                 </p>
@@ -542,7 +542,7 @@ const PowerBIGuide = () => {
                 <p>
                   Power BI eliminates the use of multiple applications to
                   execute and consume the data for the advancement of the
-                  organization. It even reduces the cost, complexity, and
+                  organisation. It even reduces the cost, complexity, and
                   security risks of data management using secured cloud servers
                   from Microsoft Azure.
                   <br className="mrg" />
@@ -706,9 +706,9 @@ const PowerBIGuide = () => {
                 </p>
                 <p>
                   Power BI is one of the powerful data analytics tools for
-                  organizations, whether small or large. It provides seamless
+                  organisations, whether small or large. It provides seamless
                   data visualisation and reporting to the users, helping them
-                  serve the organization as well as the customers better. There
+                  serve the organisation as well as the customers better. There
                   are various components that help the users to achieve such
                   exceptional outcomes.
                 </p>
@@ -896,7 +896,7 @@ const PowerBIGuide = () => {
                   to build reports and dashboards without writing queries.
                   <br className="mrg" />
                   This feature of Power BI lets users establish a connection
-                  with the organization's database, whether it is SQL or Oracle,
+                  with the organisation's database, whether it is SQL or Oracle,
                   in real-time.
                 </p>
                 <p>
@@ -906,7 +906,7 @@ const PowerBIGuide = () => {
                   There is a feature in Power BI that lets the users refresh or
                   update their database automatically in real time.
                   <br className="mrg" />
-                  This makes the organization save time and money while
+                  This makes the organisation save time and money while
                   automating the data update process irrespective of the server
                   location they are using, whether cloud or on-premises.
                 </p>
@@ -968,7 +968,7 @@ const PowerBIGuide = () => {
                 </p>
                 <p>
                   Due to cloud storage, Microsoft Power BI offers immense
-                  security to the organization's data with its secured servers
+                  security to the organisation's data with its secured servers
                   hosted on Microsoft Azure.
                   <br className="mrg" />
                   Power BI offers rich visibility, cyber threat safety servers,
@@ -1028,7 +1028,7 @@ const PowerBIGuide = () => {
                   equipped with the latest features and functions to tackle
                   complex processes.
                   <br className="mrg" />
-                  Organizations don't have to be concerned about installing
+                  organisations don't have to be concerned about installing
                   updates as Microsoft will automatically process the updates
                   without hampering any processes or operations.
                 </p>
@@ -1212,12 +1212,12 @@ const PowerBIGuide = () => {
                 </p>
                 <p>
                   Microsoft Power BI Dashboards are an amazing feature and do
-                  offer a lot of advantages to users and organizations:
+                  offer a lot of advantages to users and organisations:
                 </p>
                 <ul>
                   <li>
                     A user can share the dashboard with the team or other
-                    employees of the organization instantly and get the remarks
+                    employees of the organisation instantly and get the remarks
                     for a particular task.
                   </li>
                   <li>
@@ -1249,7 +1249,7 @@ const PowerBIGuide = () => {
                   <br className="mrg" />
                   Also, the Power BI shows the visual representation of the data
                   briefly, and on the other hand, reports show the detailed
-                  version of the data as per the organization's standard.
+                  version of the data as per the organisation's standard.
                 </p>
               </div>
               <div className="iner-pp">
@@ -1474,7 +1474,7 @@ const PowerBIGuide = () => {
                   the finance or marketing department.
                   <br className="mrg" /> In this section, you will get to know
                   more Power BI dashboards examples and their need in an
-                  organization:{" "}
+                  organisation:{" "}
                 </p>
                 <ul>
                   <li>Finance Dashboard</li>
@@ -1566,7 +1566,7 @@ const PowerBIGuide = () => {
                   </li>
                   <li>
                     <b>Recruit Charts</b>: Displays new employees of the
-                    organization
+                    organisation
                   </li>
                   <li>
                     <b>Bar Chart</b>: Displays employees geographically
@@ -1695,7 +1695,7 @@ const PowerBIGuide = () => {
                   <li>
                     <b>Scatterplot</b>: Displays average bank balance and level
                     of education by age to show the more engaged customers with
-                    the organization.
+                    the organisation.
                   </li>
                   <li>
                     <b>100% Stacked Bar Chart</b>: Shows the education and
@@ -1770,8 +1770,8 @@ const PowerBIGuide = () => {
                   gather and extract data with analyzing it for more results and
                   growth. Power BI enables thousands of users to interact and
                   create personalized dashboards based on different aspects of
-                  the business. The organization uses the dashboard to gain
-                  insights and focus efforts on the organization's weaker areas.
+                  the business. The organisation uses the dashboard to gain
+                  insights and focus efforts on the organisation's weaker areas.
                 </p>
                 <p>
                   <b>Finance - Case 2:</b> PwC, the world's largest accounting
@@ -2318,13 +2318,13 @@ const PowerBIGuide = () => {
                   <b className="h3">Power BI for non-profit </b>
                 </p>
                 <p>
-                  Microsoft is keen to work for the non-profit organizations and
+                  Microsoft is keen to work for the non-profit organisations and
                   offer various{" "}
                   <a href="https://nonprofit.microsoft.com/register">
                     discounts and grants
                   </a>
                   . In this section, you will get the pricing and licensing
-                  plans for non-profits organizations.
+                  plans for non-profits organisations.
                 </p>
                 <br />
               </div>
@@ -2336,7 +2336,7 @@ const PowerBIGuide = () => {
                   <div className="body-in">
                     <h4>Grant</h4>
                     <p>
-                      Enables the organization to connect and collect data from
+                      Enables the organisation to connect and collect data from
                       hundreds of external sources, build customize
                       visualisations, publish on Power BI Services, and embed
                       the dashboard on any website.
@@ -2738,7 +2738,7 @@ const PowerBIGuide = () => {
                   We are a certified{" "}
                   <Link href="/">Microsoft gold partner</Link> and a leading{" "}
                   <b>Power BI consultant</b> in the UK, working for the last{" "}
-                  <b>11+ years</b> to help organizations get data-driven results
+                  <b>14+ years</b> to help organisations get data-driven results
                   for high-impact growth.
                 </p>
                 <p>
@@ -2775,7 +2775,7 @@ const PowerBIGuide = () => {
                 </p>
                 <p>
                   With a team of over{" "}
-                  <b>135+ Microsoft Certified Professionals</b>, we are serving{" "}
+                  <b>150+ Microsoft Certified Professionals</b>, we are serving{" "}
                   <Link href="/case-studies/">300+ happy clients</Link>{" "}
                   across the globe to offer innovative and data-driven
                   solutions.{" "}
