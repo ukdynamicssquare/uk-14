@@ -12,7 +12,7 @@ const MicrosoftDynamics365MixedReality = () => {
         <title>Microsoft Dynamics 365 Remote Assist & Mixed Reality</title>
         <meta
           name="description"
-          content="Empower your workforce and optimize your operations with Dynamics 365 Mixed Reality Applications like remote assist, product visualize and guides."
+          content="Empower your workforce and optimise your operations with Dynamics 365 Mixed Reality Applications like remote assist, product visualize and guides."
         />
         <link
           rel="canonical"

@@ -245,7 +245,7 @@ const AzureIoT = () => {
                         - an IoT platform, develop a digital demonstration of
                         real-world things, data, people, or business processes
                         to get valuable integrated insights helping your
-                        business to optimize operations & costs and drive better
+                        business to optimise operations & costs and drive better
                         product strategy along with improved customer experience
                         with continuity and reliability.
                       </div>

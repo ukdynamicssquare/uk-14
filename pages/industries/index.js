@@ -24,7 +24,7 @@ const IndustriesList = () => {
                 <h1>Unlock the Power of Dynamics 365 Tailored to Your Industry Needs</h1>
                 <p>Explore how Dynamics 365 transforms your industry, empowering your business to innovate, grow, and succeed.</p>
                 <a href="/contact-us/" className="btn">Contact Us</a>
-                <span>Discover how we can customize Dynamics 365<br />
+                <span>Discover how we can customise Dynamics 365<br />
                   for your specific business needs.</span>
               </div>
             </div>

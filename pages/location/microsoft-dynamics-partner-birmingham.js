@@ -353,7 +353,7 @@ const MicrosoftDynamicsPartnerBirmingham = () => {
                       data-bs-parent="#accnews"
                     >
                       <div className="accordion-body">
-                        <p>A modern HR solution to optimize workforce with streamlined HR processes and enable self-service capabilities.</p>
+                        <p>A modern HR solution to optimise workforce with streamlined HR processes and enable self-service capabilities.</p>
                       </div>
                     </div>
                   </div>
@@ -424,8 +424,8 @@ const MicrosoftDynamicsPartnerBirmingham = () => {
               <div className="commen-rit-info">
                 <h3>Drive Growth and Innovation with Dynamics Square's Microsoft Business App Expertise</h3>
                 <p>From the last few years, its been a roller coaster ride for all businesses and owners while sustaining the revenue and core operations. It's not easy at all, but we have been helping our clients to run the successful business in tough times too.</p>
-                <p>We are helping the businesses like yours to manage and optimize all operations using a top-notch Microsoft business solution based on your requirement. From the last 11 years, we are serving our superior support services to all business regardless of size, type, and the industry. Our team of expert consultants has years of experience working with businesses to identify pain points, design custom solutions, and implement best-in-class technologies to drive results. From Dynamics 365 Finance and Supply Chain to Business Central support, we have deep expertise in all areas of Microsoft Business Apps and can help you transform the way you works</p>
-                <p>With our comprehensive solutions, you can streamline your operations, gain valuable insights, and make informed decisions to drive growth and innovation. Whether you're looking to improve your financial management, optimize your supply chain, or enhance your customer engagement, we have the expertise and resources to help you achieve your goals.</p>
+                <p>We are helping the businesses like yours to manage and optimise all operations using a top-notch Microsoft business solution based on your requirement. From the last 11 years, we are serving our superior support services to all business regardless of size, type, and the industry. Our team of expert consultants has years of experience working with businesses to identify pain points, design custom solutions, and implement best-in-class technologies to drive results. From Dynamics 365 Finance and Supply Chain to Business Central support, we have deep expertise in all areas of Microsoft Business Apps and can help you transform the way you works</p>
+                <p>With our comprehensive solutions, you can streamline your operations, gain valuable insights, and make informed decisions to drive growth and innovation. Whether you're looking to improve your financial management, optimise your supply chain, or enhance your customer engagement, we have the expertise and resources to help you achieve your goals.</p>
                 <p>Don't let your business fall behind - partner with Dynamics Square today to unlock your full potential.</p>
               </div>
             </div>

@@ -265,7 +265,7 @@ const MicrosoftDynamicsPartnerLeeds = () => {
                         <p>
                           While keeping real-time eyes on your end-to-end supply
                           chain operations, scrutinize modern Supply Chain
-                          capabilities, optimize resources, increase operational
+                          capabilities, optimise resources, increase operational
                           efficiency, and expedite time to market.
                         </p>
                         <p>
@@ -363,7 +363,7 @@ const MicrosoftDynamicsPartnerLeeds = () => {
                         <p>
                           Revamp your data into actionable insights with
                           Microsoft Power BI. With interactive dashboards
-                          available on all devices, you can monitor, analyze,
+                          available on all devices, you can monitor, analyse,
                           and share your most essential data.
                         </p>
                         <p>

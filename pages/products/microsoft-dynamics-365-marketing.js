@@ -162,7 +162,7 @@ const Marketing = () => {
                         for the employees. Different customers need different
                         marketing strategies depending upon the requirements and
                         the product or service that is being marketed. Dynamic
-                        365 allows the users to customize such communication or
+                        365 allows the users to customise such communication or
                         marketing strategy well by carefully segmenting the
                         customers in different segments according to diverse
                         factors.
@@ -246,7 +246,7 @@ const Marketing = () => {
                         There are several templates available for emails that
                         has to be sent to the customers and clients for the
                         purpose of marketing. The platform also allows the users
-                        to customize these email templates so that they can be
+                        to customise these email templates so that they can be
                         personalized as per the customer segmentation and
                         according to the products and services for which the
                         marketing campaign is being conducted.

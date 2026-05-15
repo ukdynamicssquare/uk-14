@@ -347,7 +347,7 @@ const Startup = () => {
                     <h3>Predict Opportunity</h3>
                     <p>
                       With real-time key data, analytics, and insights, evaluate
-                      and analyze the current situations and predict future
+                      and analyse the current situations and predict future
                       opportunities.
                     </p>
                   </div>

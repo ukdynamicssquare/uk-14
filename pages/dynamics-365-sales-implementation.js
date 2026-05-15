@@ -440,7 +440,7 @@ const ImplementationSales = () => {
                           <h4>Design Phase</h4>
                           <p>
                             Our team will create a GAP-FIT manual based on
-                            functional requirements to analyze the standard and
+                            functional requirements to analyse the standard and
                             specific needs of the business. In this we specify
                             the necessary, standard, and add-on configurations
                             and integration needs.

@@ -113,7 +113,7 @@ const CookiePolicy = () => {
               <p>
                 Like every professional site, we also use analytics cookies that
                 help us to improve our analytics part. These cookies enable us
-                to identify the visitor count on our website and user behavior
+                to identify the visitor count on our website and user behaviour
                 like how they interact or move through our website. These
                 cookies also collect information on how much time you spend on
                 our website and what exact pages you visited using our website.

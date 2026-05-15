@@ -157,7 +157,7 @@ const ErpMicrosoftCloudFor = () => {
                       <div className='card-233-body'>
                         <h3><span><i className="bi bi-check2"></i></span>Task Prioritization</h3>
                       </div>
-                      <p>Uses AI to suggest and prioritize high-impact tasks.</p>
+                      <p>Uses AI to suggest and prioritise high-impact tasks.</p>
 
                     </div>
                   </div>
@@ -321,7 +321,7 @@ const ErpMicrosoftCloudFor = () => {
                         <h3>Dynamics 365 Sales</h3>
                         <ul>
                           <li><i className="bi bi-check2"></i><span>Automatically generates meeting summaries and follow-up suggestions based on customer interactions</span></li>
-                          <li><i className="bi bi-check2"></i><span>Provides predictive analytics to identify and prioritize high-potential leads.</span></li>
+                          <li><i className="bi bi-check2"></i><span>Provides predictive analytics to identify and prioritise high-potential leads.</span></li>
                           <li><i className="bi bi-check2"></i><span>Keeps an eye on sales trends to improve strategies in real-time.</span></li>
                           <li><i className="bi bi-check2"></i><span>Facilitates seamless integration with Microsoft Teams for collaborative sales planning.</span></li>
                         </ul>
@@ -354,7 +354,7 @@ const ErpMicrosoftCloudFor = () => {
                         <img src="/img/chapter-04.png" alt="chapter-01" />
                         <h3>Dynamics 365 Marketing</h3>
                         <ul>
-                          <li><i className="bi bi-check2"></i><span>Offers personalized campaign suggestions tailored to audience behavior.</span></li>
+                          <li><i className="bi bi-check2"></i><span>Offers personalized campaign suggestions tailored to audience behaviour.</span></li>
                           <li><i className="bi bi-check2"></i><span>Enables automated email generation for targeted outreach.</span></li>
                           <li><i className="bi bi-check2"></i><span>Tracks campaign performance and provides actionable insights</span></li>
                           <li><i className="bi bi-check2"></i><span>Supports integration with LinkedIn for extended audience reach.</span></li>
@@ -392,7 +392,7 @@ const ErpMicrosoftCloudFor = () => {
                         <img src="/img/chapter-02.png" alt="chapter-01" />
                         <h3>Dynamics 365 SCM</h3>
                         <ul>
-                          <li><i className="bi bi-check2"></i><span>Helps with demand forecasting to optimize inventory levels.</span></li>
+                          <li><i className="bi bi-check2"></i><span>Helps with demand forecasting to optimise inventory levels.</span></li>
                           <li><i className="bi bi-check2"></i><span>Helps you work in tandem with vendors with real-time information. </span></li>
                           <li><i className="bi bi-check2"></i><span>Automates the creation of purchase orders and restocking alerts.</span></li>
                           <li><i className="bi bi-check2"></i><span>Reduces operational disruptions with predictive maintenance insights.</span></li>

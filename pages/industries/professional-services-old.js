@@ -368,7 +368,7 @@ const ProfessionalService = () => {
                     <h3>Control & Analysis</h3>
                     <p>
                       Insights based on past project performance and other
-                      business data help to manage control and analyze things to
+                      business data help to manage control and analyse things to
                       faster the project delivery and ensure project success.
                     </p>
                   </div>
@@ -738,7 +738,7 @@ const ProfessionalService = () => {
                         automation, financial part, service & delivery model,
                         production line, clients, and more, Dynamics 365 can be
                         implemented and customized as per your customized
-                        business model addressing the core behavior of your
+                        business model addressing the core behaviour of your
                         business.
                         <br />
                         <br />
@@ -798,9 +798,9 @@ const ProfessionalService = () => {
                             productivity.
                           </li>
                           <li>
-                            Businesses can list key stakeholders, analyze
+                            Businesses can list key stakeholders, analyse
                             management information, drive engagement
-                            profitability, and optimize growth.
+                            profitability, and optimise growth.
                           </li>
                         </ul>
                       </div>

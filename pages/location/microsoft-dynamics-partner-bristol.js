@@ -452,7 +452,7 @@ If you require minor adjustments or have minor issues, our Microsoft-certified t
                           capabilities can truly help.
                         </p>
                         <p>
-                          Connect us today to understand how you can optimize
+                          Connect us today to understand how you can optimise
                           your HR operations and can gain your workforce
                           insights with Dynamics 365 Human Resource.
                         </p>

@@ -2,18 +2,18 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Script from 'next/script';
 import Link from 'next/link';
-const PowerbiPdf = () => {
+const PowerbiPdfFinance = () => {
   return (
     <>
       <Head>
-      <title>Microsoft Copilot White Paper| Dynamics Square</title>
+      <title>Microsoft Finance White Paper| Dynamics Square</title>
         <meta
           name="description"
           content="Thanks for getting in touch - someone will contact you soon!"
         />
         <link
           rel="canonical"
-          href="https://www.dynamicssquare.co.uk/white-papers/download/pdf-micorosoft-copilot/"
+          href="https://www.dynamicssquare.co.uk/white-papers/download/pdf-microsoft-finance/"
         />
       </Head>
      
@@ -21,12 +21,12 @@ const PowerbiPdf = () => {
         <div className="container">
           <div className="row justify-content-center ">
             <div className="col-lg-7 align-self-center text-center custom0004">
-              <h1 style={{fontSize:'30px'}}>Microsoft Copilot: The Catalyst for Transformation in Your Business</h1>
+              <h1 style={{fontSize:'30px'}}>Microsoft Finance: The Catalyst for Transformation in Your Business</h1>
               <p>Get Your Copy Now!</p>
               <div className="text-center">
                 <div className="">
                   <a
-                    href="/pdf/Copilot-UK.pdf"
+                    href="/pdf/Finance-whitepaper-1.pdf"
                     className="btn-get-started scrollto"
                     download
                   >
@@ -44,4 +44,4 @@ const PowerbiPdf = () => {
   );
 };
 
-export default PowerbiPdf;
+export default PowerbiPdfFinance;

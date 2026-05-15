@@ -35,7 +35,7 @@ const ProjectOperationImplementation = () => {
                 Project Operations <br /> Implementation
               </h1>
               <p>
-                Avail Project Automation, optimize resources, and drive project
+                Avail Project Automation, optimise resources, and drive project
                 success with increased profitability through the implementation
                 of Dynamics 365 Project Operations.
                 <br />

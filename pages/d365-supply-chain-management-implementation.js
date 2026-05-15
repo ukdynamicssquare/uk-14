@@ -256,7 +256,7 @@ const SupplyChainImplementation = () => {
                         <p>
                           There is always a room for improvement in every
                           business. This powerful application comes with process
-                          optimization that enables the users to optimize the
+                          optimization that enables the users to optimise the
                           existing operations and prepare the system for data
                           and demand forecasting.
                         </p>
@@ -999,7 +999,7 @@ const SupplyChainImplementation = () => {
                         you to understand the core features, and capabilities of
                         this powerful solution. Also, we will help you
                         understand the effectiveness of this software so that
-                        you can customize it in future too.
+                        you can customise it in future too.
                       </p>
                       <p>
                         <b>See Also -</b>

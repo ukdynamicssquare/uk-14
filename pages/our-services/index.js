@@ -53,7 +53,7 @@ const Inedex = () => {
               <span className='s-ttgs'>Consulting</span>
               <h2>Plan with Confidence,
               Execute with Precision</h2>
-              <p>Our expert consultants analyze your business needs and recommend the best Microsoft Dynamics 365 solution. Whether you need process optimization or digital transformation, we help you achieve faster ROI with future-ready strategies.</p>
+              <p>Our expert consultants analyse your business needs and recommend the best Microsoft Dynamics 365 solution. Whether you need process optimization or digital transformation, we help you achieve faster ROI with future-ready strategies.</p>
               <div className="text-lg-start">
                 <Link
                   href="/our-services/dynamics-365-consultant/"

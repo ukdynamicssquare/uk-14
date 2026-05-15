@@ -928,10 +928,10 @@ const PowerBIGuide = () => {
                 </p>
                 <p>
                   Power BI is a flexible application that allows users to
-                  customize and get more out of it. Such customizations enable
+                  customise and get more out of it. Such customizations enable
                   users to shortlist the data, change tile placements, and
                   adjust the columns for more data consumption. Also, Power BI
-                  enables users to customize the viewpoints of tiles to increase
+                  enables users to customise the viewpoints of tiles to increase
                   the overall productivity and efficiency of the application.
                 </p>
               </div>
@@ -1016,7 +1016,7 @@ const PowerBIGuide = () => {
                 </p>
                 <p>
                   A personalised dashboard makes the data reporting easy to
-                  access as well as easy to use. Users can customize the
+                  access as well as easy to use. Users can customise the
                   dashboard as per their requirements and make Power BI work for
                   them.
                 </p>
@@ -1226,7 +1226,7 @@ const PowerBIGuide = () => {
                     the data visualization experience smoother.
                   </li>
                   <li>
-                    Dashboards are easy to personalize and customize as per your
+                    Dashboards are easy to personalise and customise as per your
                     requirements and can be reset to default whenever required.{" "}
                   </li>
                   <li>
@@ -2337,7 +2337,7 @@ const PowerBIGuide = () => {
                     <h4>Grant</h4>
                     <p>
                       Enables the organisation to connect and collect data from
-                      hundreds of external sources, build customize
+                      hundreds of external sources, build customise
                       visualisations, publish on Power BI Services, and embed
                       the dashboard on any website.
                     </p>
@@ -2754,7 +2754,7 @@ const PowerBIGuide = () => {
                 </p>
                 <p>
                   We have sufficient resources, knowledge, and a team of experts
-                  to implement, integrate, develop, and customize Power BI with
+                  to implement, integrate, develop, and customise Power BI with
                   the utmost support to keep it working for you.
                 </p>
                 <p>

@@ -1033,7 +1033,7 @@ const BusinessCentral = () => {
                     <div className='row'>
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
-                          <a href="/white-papers/micorosoft-finance/">
+                          <a href="/white-papers/microsoft-finance/">
                             <img src="/img/finacne-white-paper-category.png" width={273} height={192} alt="bc-8-17" />
                             <h3>Build Resilience in Your Financial Operations</h3>
                             <p>A maturity model designed to strengthen people, processes, and technology.</p>

@@ -54,7 +54,7 @@ const UpgradeServices = () => {
             <header className="section-header">
             <h2>Why Should you Consider Changing your Microsoft Partner?</h2>
             <p>Most business owners are more concerned with implementing a <Link href="/products/microsoft-dynamics-erp/" target="_blank">Microsoft ERP solution</Link> than getting a faithful support service for a better future. Businesses need to understand that the secret to a successful business lies in availing themselves of consistent and reliable support as a priority.</p>
-            <p>Businesses expend significant effort and research when selecting an <Link href="/" target="_blank">ERP implementation partner</Link> with a long-term relationship goal. In fact, businesses have to search for a partner who can offer seamless and timely support along with effective project implementation. Because this is the only way to streamline business operations, eliminate redundancies, maximize ROI, control costs, optimize resources, increase performance, and much more. </p>
+            <p>Businesses expend significant effort and research when selecting an <Link href="/" target="_blank">ERP implementation partner</Link> with a long-term relationship goal. In fact, businesses have to search for a partner who can offer seamless and timely support along with effective project implementation. Because this is the only way to streamline business operations, eliminate redundancies, maximize ROI, control costs, optimise resources, increase performance, and much more. </p>
           </header>
             </div>
           </div>

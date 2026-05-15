@@ -607,7 +607,7 @@ const AdvantagesCapabilities = () => {
                    data-bs-parent="#faqlist1"
                  >
                    <div className="accordion-body">
-                    <p>Yes, Business Central includes robust <a href="/products/dynamics-365-business-central/warehouse-management/">inventory and warehouse management</a> features like stock tracking, bin management, cycle counting, and demand forecasting to optimize supply chain operations. </p>
+                    <p>Yes, Business Central includes robust <a href="/products/dynamics-365-business-central/warehouse-management/">inventory and warehouse management</a> features like stock tracking, bin management, cycle counting, and demand forecasting to optimise supply chain operations. </p>
                    </div>
                  </div>
                </div>

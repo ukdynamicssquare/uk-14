@@ -2617,7 +2617,7 @@ const PowerBIGuide = () => {
               <div className="cont-table-inner">
                 <ul>
                   <li>
-                    You can now customize menus to suit your purpose and
+                    You can now customise menus to suit your purpose and
                     preference without any limitations.
                   </li>
                 </ul>

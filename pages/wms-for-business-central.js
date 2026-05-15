@@ -556,7 +556,7 @@ const Wms = () => {
                         <p><b>Benefits of Print Label:</b></p>
                         <ul>
                           <li>Prints labels using the cloud as well as an on-premises platform. </li>
-                          <li>User can easily customize the label design. </li>
+                          <li>User can easily customise the label design. </li>
                           <li>Avail data from other features of Mobile WMS. </li>
                           </ul>
                       </div>

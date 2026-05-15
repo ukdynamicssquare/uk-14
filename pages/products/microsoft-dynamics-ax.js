@@ -545,7 +545,7 @@ const MicrosoftDynamicsAX = () => {
                   <div className="overlay">
                     <p>
                       Dynamics AX comes with ease of customization so that the
-                      users can customize its features and specifications
+                      users can customise its features and specifications
                       depending upon their requirements. Every organisation has
                       got different requirements and necessities. Hence, the
                       organisations can make the required customization in the

@@ -187,7 +187,7 @@ const QuickbooksToBusinessCentralMigration = () => {
                               />
                             </div>
                             <div className="text-wrp-content">
-                              <p>With Business Central's implementation, they now can optimize their inventory management processes.</p>
+                              <p>With Business Central's implementation, they now can optimise their inventory management processes.</p>
                             </div>
                           </div>
                         </div>
@@ -204,7 +204,7 @@ const QuickbooksToBusinessCentralMigration = () => {
                               />
                             </div>
                             <div className="text-wrp-content">
-                              <p>Now the company can track inventory levels, manage replenishment, set up automated reorder points, and analyze inventory turnover.</p>
+                              <p>Now the company can track inventory levels, manage replenishment, set up automated reorder points, and analyse inventory turnover.</p>
                             </div>
                           </div>
                         </div>
@@ -309,7 +309,7 @@ const QuickbooksToBusinessCentralMigration = () => {
             <div className="col-md-12">
               <div className="case-clent-test">
                 <p>
-                  We worked with Nitesh to further customize our Microsoft
+                  We worked with Nitesh to further customise our Microsoft
                   Dynamics Package. He provided us a top level service with well
                   trained staff as well as excellent support when needed.
                   Dynamics Square is a very professional and trustworth. Will

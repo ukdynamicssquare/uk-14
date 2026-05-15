@@ -69,14 +69,14 @@ const StartGuideThree = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/ebook/d365-supply-chain-management/" />
         <meta property="og:title" content="Ultimate Dynamics 365 Supply Chain eBook" />
-        <meta property="og:description" content="Learn how to streamline your supply chain processes and optimize your operations with our Dynamics 365 Supply Chain Management guide. Download our free eBook to discover expert tips, real-world examples, and best practices for achieving supply chain excellence." />
+        <meta property="og:description" content="Learn how to streamline your supply chain processes and optimise your operations with our Dynamics 365 Supply Chain Management guide. Download our free eBook to discover expert tips, real-world examples, and best practices for achieving supply chain excellence." />
         <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/dynamics-SCM-Ebook-og.png" />
         <meta property="og:image:width" content="1200" />
           <meta property="og:image:height" content="630" />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/ebook/d365-supply-chain-management/" />
         <meta property="twitter:title" content="Ultimate Dynamics 365 Supply Chain eBook" />
-        <meta property="twitter:description" content="Learn how to streamline your supply chain processes and optimize your operations with our Dynamics 365 Supply Chain Management guide. Download our free eBook to discover expert tips, real-world examples, and best practices for achieving supply chain excellence." />
+        <meta property="twitter:description" content="Learn how to streamline your supply chain processes and optimise your operations with our Dynamics 365 Supply Chain Management guide. Download our free eBook to discover expert tips, real-world examples, and best practices for achieving supply chain excellence." />
         <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/dynamics-SCM-Ebook-og.png" />
       </Head>
       <section className="Solution-banner hero-1 hero">
@@ -293,7 +293,7 @@ const StartGuideThree = () => {
                          aria-expanded="false"
                          aria-controls="collapseTwo"
                        >
-                         Can I customize my Microsoft Dynamics 265 SCM?
+                         Can I customise my Microsoft Dynamics 265 SCM?
                        </button>
                      </h3>
                      <div

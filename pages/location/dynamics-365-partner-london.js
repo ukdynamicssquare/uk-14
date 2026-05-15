@@ -372,7 +372,7 @@ export default function HomeOld() {
                           <ul>
                             <li><i className="bi bi-check-circle"></i> <span>Enhanced decision making with real-time insights</span></li>
                             <li><i className="bi bi-check-circle"></i> <span>Improved operational efficiency with increased productivity</span></li>
-                            <li><i className="bi bi-check-circle"></i> <span>Analyse customer behavior for tailored experience</span></li>
+                            <li><i className="bi bi-check-circle"></i> <span>Analyse customer behaviour for tailored experience</span></li>
                             <li><i className="bi bi-check-circle"></i> <span>Simplify data visualization and report generation</span></li>
                             <li><i className="bi bi-check-circle"></i> <span>Improves communication and enable team collaboration</span></li>
                           </ul>

@@ -186,7 +186,7 @@ const SalesInsightsanOverview = () => {
                 </p>
                 <p>
                   The in-built ML in Dynamics 365 Sales Insights enables sales
-                  leaders to prioritize leads and opportunities with the highest
+                  leaders to prioritise leads and opportunities with the highest
                   likelihood of conversion.
                 </p>
                 <p>

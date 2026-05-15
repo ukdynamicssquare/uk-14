@@ -535,11 +535,11 @@ const HomeOne = () => {
                                 <div className='card-666 card-666-1'>
                                     <div className='crad-img'>
                                         <Image src="/img/res-tag-05.png" alt="res-tag-01" width={610} height={610} />
-                                        <span><a href="/white-papers/micorosoft-copilot/">Whitepaper</a></span>
+                                        <span><a href="/white-papers/microsoft-copilot/">Whitepaper</a></span>
                                         <p>Microsoft Copilot: The Catalyst for Transformation in Your Business.</p>
                                     </div>
                                     <div className='card-666-anc'>
-                                        <a href="/white-papers/micorosoft-copilot/">Read more <i className="bi bi-arrow-right"></i></a>
+                                        <a href="/white-papers/microsoft-copilot/">Read more <i className="bi bi-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -547,11 +547,11 @@ const HomeOne = () => {
                                 <div className='card-666 card-666-1'>
                                     <div className='crad-img'>
                                         <Image src="/img/res-tag-02.jpg" alt="res-tag-01" width={610} height={610} />
-                                        <span><a href="/white-papers/micorosoft-finance/">Whitepaper</a></span>
+                                        <span><a href="/white-papers/microsoft-finance/">Whitepaper</a></span>
                                         <p>The Future of Finance Management.</p>
                                     </div>
                                     <div className='card-666-anc'>
-                                        <a href="/white-papers/micorosoft-finance/">Read more <i className="bi bi-arrow-right"></i></a>
+                                        <a href="/white-papers/microsoft-finance/">Read more <i className="bi bi-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>

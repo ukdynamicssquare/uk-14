@@ -61,7 +61,7 @@ const WhyChooseBc = () => {
                   is a cloud-based, unified business management solution that helps enterprises transform their entry-level accounting software or legacy Enterprise Resource Planning (ERP) system into a comprehensive solution to manage critical business functions. It seamlessly streamlines and connect different departments of a business, including finance, operations, sales, supply chain, distribution, and customer service.  
                   <br />
                   <br />
-                  Microsoft Dynamics 365 Business Central enables the businesses to leverage the power of cloud manage core business operations, improve customer service, maximise productivity, optimize resources, enhance overall efficiency, and boost ROI. 
+                  Microsoft Dynamics 365 Business Central enables the businesses to leverage the power of cloud manage core business operations, improve customer service, maximise productivity, optimise resources, enhance overall efficiency, and boost ROI. 
                 </p>
                 <p><b>Business Central is a modern, advance, and AI-powered solution that has helped over 200,000 customers and 3 million global users to streamline their processes, improve customer relations, and enable growth. </b></p>
               </header>

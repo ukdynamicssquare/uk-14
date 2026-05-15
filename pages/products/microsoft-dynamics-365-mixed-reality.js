@@ -14,7 +14,7 @@ const MicrosoftDynamics365MixedReality = () => {
         <title>Microsoft Dynamics 365 Remote Assist &amp; Mixed Reality</title>
         <meta
           name="description"
-          content="Empower your workforce and optimize your operations with Dynamics 365 Mixed Reality Applications like remote assist, product visualize and guides."
+          content="Empower your workforce and optimise your operations with Dynamics 365 Mixed Reality Applications like remote assist, product visualize and guides."
         />
         <link
           rel="canonical"
@@ -23,13 +23,13 @@ const MicrosoftDynamics365MixedReality = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-mixed-reality/" />
         <meta property="og:title" content="Microsoft Dynamics 365 Remote Assist & Mixed Reality" />
-        <meta property="og:description" content="Empower your workforce and optimize your operations with Dynamics 365 Mixed Reality Applications like remote assist, product visualize and guides." />
+        <meta property="og:description" content="Empower your workforce and optimise your operations with Dynamics 365 Mixed Reality Applications like remote assist, product visualize and guides." />
         <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/Mixed-Reality-banner.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-mixed-reality/" />
         <meta property="twitter:title" content="Microsoft Dynamics 365 Remote Assist & Mixed Reality" />
-        <meta property="twitter:description" content="Empower your workforce and optimize your operations with Dynamics 365 Mixed Reality Applications like remote assist, product visualize and guides." />
+        <meta property="twitter:description" content="Empower your workforce and optimise your operations with Dynamics 365 Mixed Reality Applications like remote assist, product visualize and guides." />
         <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/Mixed-Reality-banner.png" />
 
       </Head>
@@ -50,7 +50,7 @@ const MicrosoftDynamics365MixedReality = () => {
                 Mixed Reality
               </h1>
               <p>
-                Empower your workforce and optimize your operations with
+                Empower your workforce and optimise your operations with
                 Dynamics 365 Mixed Reality Applications.
               </p>
               <div>

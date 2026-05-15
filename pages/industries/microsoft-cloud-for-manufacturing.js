@@ -354,7 +354,7 @@ const Manufacturing = () => {
                     <h3>Streamline Operations</h3>
                     <p>
                       Securely connect employees, products, and processes with
-                      real-time efficiency to quickly optimize the issues and
+                      real-time efficiency to quickly optimise the issues and
                       drive improved workflow with manufacturing cloud
                       solutions.
                     </p>
@@ -374,7 +374,7 @@ const Manufacturing = () => {
                     <h3>Manufacturing Intelligence</h3>
                     <p>
                       Leveraging AI-powered automation combined with IoT and
-                      Mixed Reality, optimize processes, improve equipment
+                      Mixed Reality, optimise processes, improve equipment
                       effectiveness, protect industrial IoT, and ensure OT
                       security.
                     </p>

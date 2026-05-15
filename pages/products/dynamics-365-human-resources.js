@@ -966,7 +966,7 @@ const HumanResour = () => {
                        <div className='card0-01 card0-02'>
                          <a href="https://youtu.be/LKmtKeN2hwk?si=ApJU_46aphXvKfz1" target='_blank'>
                            <img src="/img/y-thum-02.jpg" width={273} height={192} alt="bc-8-21" />
-                           <h3>How to optimize HR programs with Microsoft Dynamics Human Resources</h3>
+                           <h3>How to optimise HR programs with Microsoft Dynamics Human Resources</h3>
                            <p>Learn how to strengthen your operational HR programs, like benefits, leave and absence, and compliance with Microsoft Dynamics 365 Human Resources.</p>
                            <div className='ct--a'>
                              <span>Watch now</span>
@@ -979,7 +979,7 @@ const HumanResour = () => {
                          <a href="https://youtu.be/8EKxmQLteto?si=D42o3JbtSRdHIhun" target='_blank'>
                            <img src="/img/y-thum-03.jpg" width={273} height={192} alt="bc-8-21" />
                            <h3>How to transform your employee experience with Microsoft Dynamics 365 Human Resources</h3>
-                           <p>Learn how to foster self-service to provide a better employee experience and optimize workforce costs with Microsoft Dynamics 365 Human Resources.</p>
+                           <p>Learn how to foster self-service to provide a better employee experience and optimise workforce costs with Microsoft Dynamics 365 Human Resources.</p>
                            <div className='ct--a'>
                              <span>Watch now</span>
                            </div>
@@ -993,7 +993,7 @@ const HumanResour = () => {
                    <div className='row'>
                      <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                        <div className='card0-01 card0-02'>
-                         <a href="/white-papers/micorosoft-finance/">
+                         <a href="/white-papers/microsoft-finance/">
                            <img src="/img/finacne-white-paper-category.png" width={273} height={192} alt="bc-8-17" />
                            <h3>Build Resilience in Your Financial Operations</h3>
                            <p>A maturity model designed to strengthen people, processes, and technology.</p>

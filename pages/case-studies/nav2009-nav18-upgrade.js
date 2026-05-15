@@ -366,7 +366,7 @@ const CrmTrading = () => {
               <div className="case-clent-test">
                 <p>
                   We are impressed with their product awareness, technical
-                  skills and commitment to us. They analyze the situation and
+                  skills and commitment to us. They analyse the situation and
                   deliver to best fit our requirement and solutions.
                 </p>
                 <h4>Mark Shaxted</h4>

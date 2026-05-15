@@ -271,7 +271,7 @@ const Dynamics365CustomerEngagement = () => {
                   Facilitate your customers with self-service options, improve
                   your customer engagement level, empower your support agents to
                   quickly resolve customer issues using AI-powered insights,
-                  optimize service operations, proactively monitor & fix device
+                  optimise service operations, proactively monitor & fix device
                   issues by combining them with IoT solutions.
                 </p>
               </div>
@@ -284,7 +284,7 @@ const Dynamics365CustomerEngagement = () => {
                 <h3>Dynamics 365 Field Service</h3>
                 <p>
                   Drive connected service experience, uplift your employees'
-                  effectiveness, and optimize your services operations all
+                  effectiveness, and optimise your services operations all
                   through{" "}
                   <Link href="/products/microsoft-dynamics-365-field-service/" target="_blank">
                     Dynamics 365 Field Service
@@ -377,10 +377,10 @@ const Dynamics365CustomerEngagement = () => {
                 <div className="style-grid-content">
                   <h3>Drive Predictive Approach</h3>
                   <p>
-                    Leverage data analytics capabilities to analyze your
+                    Leverage data analytics capabilities to analyse your
                     customer data to serve better. Gain predictive sales &
                     marketing insights to proactively make informed decisions.
-                    Predict your project service pipeline, optimize resources,
+                    Predict your project service pipeline, optimise resources,
                     drive project service automation, and ensure successful
                     client or customer delivery as anticipated.
                   </p>

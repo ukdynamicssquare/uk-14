@@ -469,7 +469,7 @@ const MicrosoftDynamicsPartnerGlasgow = () => {
                 <h3>Microsoft Partner You Can Trust!</h3>
                 <p>
                   Suppose you're already using Microsoft Dynamics Services and
-                  want to update, personalize, or combine your system with other
+                  want to update, personalise, or combine your system with other
                   tools. In that case, we can still provide you with our finest
                   services to support your existing and future workflows.
                   Businesses looking for tried-and-true Microsoft Dynamics

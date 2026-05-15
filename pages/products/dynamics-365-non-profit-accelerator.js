@@ -11,7 +11,7 @@ const NonProfitAccelerator = () => {
     <>
       <Head>
       <title>Dynamics 365 Nonprofit Accelerator | Dynamics Square UK</title>
-<meta name="description" content="Implement Dynamics 365 Nonprofit Accelerator to simplify charity operations, streamline funds management, build customize solutions, and monitor expenses while optimizing funds."/>
+<meta name="description" content="Implement Dynamics 365 Nonprofit Accelerator to simplify charity operations, streamline funds management, build customise solutions, and monitor expenses while optimizing funds."/>
 <link rel="canonical" href="https://www.dynamicssquare.co.uk/products/dynamics-365-non-profit-accelerator/" />
       </Head>
       <ModalVideo

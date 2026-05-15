@@ -248,7 +248,7 @@ const StartGuideOne = () => {
                          aria-expanded="false"
                          aria-controls="collapseTwo"
                        >
-                        Can I customize my Microsoft Dynamics 365 Finance?
+                        Can I customise my Microsoft Dynamics 365 Finance?
                        </button>
                      </h3>
                      <div

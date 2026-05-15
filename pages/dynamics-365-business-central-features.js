@@ -70,10 +70,10 @@ const BusinessCentralFeatures = () => {
                   </Link>{" "}
                   is a powerful business management solution baked with high-end
                   useful features and functional navigation to streamline your
-                  operations, optimize productivity, and attain scalability.
+                  operations, optimise productivity, and attain scalability.
                   Considering your different business practices, leveraging
                   Dynamics 365 Business Central features, businesses can take
-                  control of end-to-end practices, optimize processes, and
+                  control of end-to-end practices, optimise processes, and
                   ensure efficient support at every touch point.
                 </p>
                 <p>
@@ -256,13 +256,13 @@ const BusinessCentralFeatures = () => {
                    Supply Chain
                   </Link>{" "}
                   module that helps to seamlessly track your inventory level,
-                  optimize operational flow, and maximize your resource
+                  optimise operational flow, and maximize your resource
                   utilization with improved visibility into every process in
                   real-time.
                 </p>
                 <p>
                   Business Central comes with a high-end Supply Chain module to
-                  optimize your inventory levels, track logistics flow, and
+                  optimise your inventory levels, track logistics flow, and
                   monitor the end-to-end operational practices in real-time
                   wrapped with informed decision-making capability to roll out
                   efficiency and maximize profitability.
@@ -287,7 +287,7 @@ const BusinessCentralFeatures = () => {
                   <Link href="/products/dynamics-365-human-resources/" target="_blank">
                   Human Resource capabilities
                   </Link>{" "}
-                  to seamlessly manage employees' records, organize the required
+                  to seamlessly manage employees' records, organise the required
                   database, manage employee reporting, simplify expenses &amp;
                   reimburse management, monitor employee performance, manage
                   attendance, etc. to ensure seamless employee information

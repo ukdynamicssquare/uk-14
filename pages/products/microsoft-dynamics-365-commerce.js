@@ -79,7 +79,7 @@ const Commerce = () => {
                 <p>It focuses on more than just sales. It brings together every part of your retail environment, from a customer scrolling on a tablet at midnight to a team member processing returns during the day. Everything works in harmony. The result? Customer loyalty. Relationships that last and operations that move with clarity and control. </p>
                 <p>
                   Personalize your <Link href="/products/dynamics-365-customer-engagement/" target="_blank">customer engagement</Link>, maximize revenues, boost
-                  your employee productivity, and optimize your operations, and
+                  your employee productivity, and optimise your operations, and
                   drive improved supply chain practices while reducing costs and
                   increasing efficiency.
                 </p>
@@ -619,7 +619,7 @@ const Commerce = () => {
                         Microsoft Dynamics 365 Commerce is a proven retail
                         solution that integrates or unifies your back-office,
                         in-store, and digital experiences. D365 Commerce enables
-                        you to optimize your operations, improve your employee
+                        you to optimise your operations, improve your employee
                         productivity, boost customer engagement, and drive
                         efficient results while reducing costs, time, and
                         energy. With built-in AI capabilities, streamline your

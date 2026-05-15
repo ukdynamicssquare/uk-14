@@ -666,7 +666,7 @@ const Sales = () => {
                       leverage their sales data to connect and engage with the
                       right customers from anywhere and anytime. With mobile
                       efficiency, Salespeople and Sales Managers can stay
-                      updated with any sales activity and customer behavior in
+                      updated with any sales activity and customer behaviour in
                       real-time.
                     </div>
                   </div>
@@ -894,7 +894,7 @@ const Sales = () => {
                       <br />
                       <br />
                       When you get handy with sales insights and customer
-                      behavior in real-time, it helps convert the leads and
+                      behaviour in real-time, it helps convert the leads and
                       close the sales faster. Sales managers can monitor and
                       control the sales process and can suggest supporting the
                       ongoing sales process or campaign.

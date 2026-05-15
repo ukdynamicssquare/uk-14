@@ -120,7 +120,7 @@ const MicrosoftDynamicsGP = () => {
               <div className="style-grid-1">
                 <div className="style-grid-content">
                   <h3>HR/Payroll Management</h3>
-                  <p>With Microsoft Dynamics Great Plains HR/Payroll Management Solution, you can optimize your employees' management and improve service to employees via accurate reporting and user query tools and customized lists that support better intelligence into different levels of employee data</p>
+                  <p>With Microsoft Dynamics Great Plains HR/Payroll Management Solution, you can optimise your employees' management and improve service to employees via accurate reporting and user query tools and customized lists that support better intelligence into different levels of employee data</p>
                 </div>
               </div>
 
@@ -251,7 +251,7 @@ const MicrosoftDynamicsGP = () => {
                   <div className="overlay">
                     <p>
                       With Microsoft Dynamics Great Plains HR/Payroll Management
-                      Solution, you can optimize your employees' management and
+                      Solution, you can optimise your employees' management and
                       improve service to employees via accurate reporting and
                       user query tools and customized lists that support better
                       intelligence into different levels of employee data

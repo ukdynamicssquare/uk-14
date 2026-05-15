@@ -1223,7 +1223,7 @@ const HomeOneNew = () => {
                           <ul>
                             <li><i className="bi bi-check-circle"></i> <span>Enhanced decision making with real-time insights</span></li>
                             <li><i className="bi bi-check-circle"></i> <span>Improved operational efficiency with increased productivity</span></li>
-                            <li><i className="bi bi-check-circle"></i> <span>Analyse customer behavior for tailored experience</span></li>
+                            <li><i className="bi bi-check-circle"></i> <span>Analyse customer behaviour for tailored experience</span></li>
                             <li><i className="bi bi-check-circle"></i> <span>Simplify data visualization and report generation</span></li>
                             <li><i className="bi bi-check-circle"></i> <span>Improves communication and enable team collaboration</span></li>
                           </ul>
@@ -1644,7 +1644,7 @@ const HomeOneNew = () => {
                       height={610}
                     />
                     <span>
-                      <a href="/white-papers/micorosoft-copilot/">Whitepaper</a>
+                      <a href="/white-papers/microsoft-copilot/">Whitepaper</a>
                     </span>
                     <p>
                       Microsoft Copilot: The Catalyst for Transformation in Your
@@ -1652,7 +1652,7 @@ const HomeOneNew = () => {
                     </p>
                   </div>
                   <div className="card-666-anc">
-                    <a href="/white-papers/micorosoft-copilot/">
+                    <a href="/white-papers/microsoft-copilot/">
                       Read more <i className="bi bi-arrow-right"></i>
                     </a>
                   </div>
@@ -1668,12 +1668,12 @@ const HomeOneNew = () => {
                       height={610}
                     />
                     <span>
-                      <a href="/white-papers/micorosoft-finance/">Whitepaper</a>
+                      <a href="/white-papers/microsoft-finance/">Whitepaper</a>
                     </span>
                     <p>The Future of Finance Management.</p>
                   </div>
                   <div className="card-666-anc">
-                    <a href="/white-papers/micorosoft-finance/">
+                    <a href="/white-papers/microsoft-finance/">
                       Read more <i className="bi bi-arrow-right"></i>
                     </a>
                   </div>

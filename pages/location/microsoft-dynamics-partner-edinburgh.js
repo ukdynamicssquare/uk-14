@@ -264,7 +264,7 @@ const MicrosoftDynamicsPartnerEdinburgh = () => {
                           concludes agreements more rapidly and effectively.
                         </p>
                         <p>
-                          You can organize and manage your financial information
+                          You can organise and manage your financial information
                           with a general ledger. D365 Finance assists you with
                           account receivables, payables, tax management.
                         </p>
@@ -305,7 +305,7 @@ const MicrosoftDynamicsPartnerEdinburgh = () => {
                           >
                             Microsoft Dynamics 365 Supply Chain
                           </Link>{" "}
-                          enables businesses to streamline, optimize, and
+                          enables businesses to streamline, optimise, and
                           automate supply chain processes to manufacture,
                           manage, and deploy high-volume products.
                         </p>
@@ -356,7 +356,7 @@ const MicrosoftDynamicsPartnerEdinburgh = () => {
                             Power BI experts
                           </Link>{" "}
                           in Edinburgh. Microsoft Power BI allows businesses to
-                          build reports and dashboards to monitor, analyze, and
+                          build reports and dashboards to monitor, analyse, and
                           transform data into actionable insights.
                         </p>
                         <p>
@@ -502,7 +502,7 @@ const MicrosoftDynamicsPartnerEdinburgh = () => {
           <header className="section-header">
             <h2>Edinburgh Based Microsoft Gold Partners</h2>
             <p>
-              We recognize that your company is distinct, and you require
+              We recognise that your company is distinct, and you require
               solutions that represent your values. We can assist you in
               designing business operations, corporate terminology, and other
               organisational processes to meet your requirements.

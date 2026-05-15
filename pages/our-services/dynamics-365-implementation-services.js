@@ -169,7 +169,7 @@ const ImplementationServices = () => {
                   <p>
                     Enabling resilient supply chain integrated with AI practices
                     and seamlessly adaptable to bring transparency, faster time
-                    to market, optimize inventory & logistics, predict potential
+                    to market, optimise inventory & logistics, predict potential
                     disruptions, and enhance asset productivity & longevity.
                   </p>
                 </div>

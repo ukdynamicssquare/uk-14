@@ -129,7 +129,7 @@ const Startup = () => {
                     <div className="cintent-right">
                       <p>
                         Dynamics 365 for Food and Beverages helps manufacturing
-                        units to analyze demand, manage inventory levels, and
+                        units to analyse demand, manage inventory levels, and
                         drive real-time financial visibility to minimize costs
                         and maximize outcomes.
                       </p>

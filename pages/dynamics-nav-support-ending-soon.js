@@ -176,7 +176,7 @@ const DynamicsNavSupportEndingSoon = () => {
                   </h3>
                   <p>
                     Business Central app can be downloaded from Microsoft App
-                    source helping businesses to customize solutions to as per
+                    source helping businesses to customise solutions to as per
                     industry specific needs.
                   </p>
                 </div>

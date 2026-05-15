@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import emailjs from "@emailjs/browser";
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
-const Whitepaerguide = () => {
+const WhitepaerguideFianace = () => {
 
   const router = useRouter();
   const [display, setDisplay] = useState(false);
@@ -119,7 +119,7 @@ const fetchCountryCodeByIP = () => {
         company_name: '',
         phone: '',
       });
-      router.push("/white-papers/download/pdf-micorosoft-copilot/");
+      router.push("/white-papers/download/pdf-microsoft-finance/");
     } catch (error) {
       console.error(error.text);
     } finally {
@@ -136,21 +136,22 @@ const fetchCountryCodeByIP = () => {
   return (
     <>
       <Head>
-      <title>Microsoft Copilot White Paper | Dynamics Square</title>
+      <title>Dynamics 365 Finance with Copilot WhitePaper | Dynamics Square</title>
         <meta
           name="description"
-          content="Explore Microsoft's Copilot White Paper by Dynamics Square, offering insights into AI-driven productivity, integration, and business transformation."
+          content="How Dynamics 365 Finance with Copilot boosts efficiency, automates tasks, and drives smarter financial decisions in this comprehensive whitepaper."
         />
         <link
           rel="canonical"
-          href="https://www.dynamicssquare.co.uk/white-papers/micorosoft-copilot/"
+          href="https://www.dynamicssquare.co.uk/white-papers/microsoft-finance/"
         />
       </Head>
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
             <div className="col-lg-6 mobile-1 align-self-center">
-              <h1>Get Started with Microsoft Copilot: A Guide to AI-induced Business Transformation</h1>
+              <h1>The Future of Finance Management: Transform the way Finance works
+              with Microsoft Copilot</h1>
               <br />
               <div>
                 <div className="text-center text-lg-start">
@@ -164,7 +165,7 @@ const fetchCountryCodeByIP = () => {
               </div>
             </div>
             <div className="col-lg-6 align-self-center text-center">
-              <img width={450} src="/img/whitepaper-one.png" alt="whitepaper-one" priority />
+              <img width={800} src="/img/finace-white-papper-banner.png" alt="whitepaper-one" priority />
             </div>
           </div>
         </div>
@@ -182,36 +183,37 @@ const fetchCountryCodeByIP = () => {
             <div className="col-lg-3 align-self-center">
               <div className="inner-l">
                 <div className="left-let">
-                  <h3>The Role of AI in Building the Future</h3>
+                  <h3>The Future of Finance Management: Dynamics 365 Finance</h3>
                   <div className="shape"></div>
                 </div>
                 <div className="left-let">
-                  <h3>An Overview of Microsoft Copilot</h3>
+                  <h3>Finance
+                  Microsoft – Your Partner for Business Success</h3>
                   <div className="shape"></div>
                 </div>
                 <div className="left-let">
-                  <h3>Copilot: The Need for Modern Businesses</h3>
+                  <h3>Common Financial Challenges in Modern Industries</h3>
                 </div>
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
               <div className="text-center remove-pre">
-                <Image src="/img/tablet-ebook-one.png" alt="tablet-ebook" width={487} height={613} />
+                <Image src="/img/finace-whitper-center.png" alt="tablet-ebook" width={487} height={613} />
               </div>
             </div>
             <div className="col-lg-3 align-self-center">
               <div className="inner-l">
                 <div className="left-rit">
-                  <h3>The Essence of the Cloud for Productivity</h3>
+                  <h3>The Perfect Solution to Eliminate all Financial Challenges</h3>
                   <div className="shape-l"></div>
                 </div>
                 <div className="left-rit">
-                  <h3>Dealing with Evolving Business Needs</h3>
+                  <h3>Microsoft 365 Copilot for Finance</h3>
                   <div className="shape-l"></div>
                 </div>
-                <div className="left-rit">
+                {/* <div className="left-rit">
                   <h3>Copilot for Individuals and Organisations</h3>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -233,9 +235,10 @@ const fetchCountryCodeByIP = () => {
             <div className="col-lg-6 align-self-center">
               <div className="aboot-erp-content">
                 <h3>What’s More in This White Paper?</h3>
-                <p>This white paper will guide you through the substantial impact of AI on our daily lives as well as business. It will help you understand the impact of AI for businesses, the introduction to Microsoft's in-house AI assistance - Copilot, and its integration with other solutions in the Dynamics 365 Ecosystem.</p>
-                <p>From start to finish, you will find the facts and latest statistics to justify the statements about AI, digital transformation, business efficiency, and digital transformation through innovations. This white paper offers the essential information you need to know about the current scenarios of AI and its different aspects.</p>
-                <p>Reading this in-depth piece of knowledge enables businesses to implement automation, increase productivity, and ensure high-end data security. Even so, you will get to know the different deployment options and what suits you best to meet your business needs.</p>
+                <p>The whitepaper goes into great detail about Microsoft Dynamics 365 Finance, and Microsoft Copilot comes integrated into it, showing how they can completely change the way you handle your finances. It starts by listing the main financial problems that companies have, like inefficient processes, poor data quality, regulatory compliance complexities, lack of integration, and multi-entity management. These problems make it harder to make decisions, run operations efficiently, and keep track of finances correctly.</p>
+                <p>Microsoft Dynamics 365 Finance is a strong business solution that improves finance-related tasks, automates work processes, and gathers all data in one place. It helps increase the output of various crucial processes such as automated bank reconciliation, cash flow management, and customised financial reporting.</p>
+                <p>The integrated Microsoft Copilot helps automate repetitive processes, offer real-time information, and improve the abilities of users by acting as a personal assistant to them. Copilot’s functionalities, such as tracking customer balances, generating automated emails, and centralizing financial data, are emphasized for their ability to save time and improve accuracy.</p>
+                <p>The white paper concludes with an emphasis on using an advanced financial management tool like Dynamics 365 Finance powered with Copilot to deal with challenges. The solution helps drive business growth through new ideas and increase overall efficiency through process automation. No wonder why it is the preferred choice for companies that want to improve their finances and be successful in the long run.</p>
               </div>
             </div>
           </div>
@@ -430,4 +433,4 @@ display: flex;
   );
 };
 
-export default Whitepaerguide;
+export default WhitepaerguideFianace;

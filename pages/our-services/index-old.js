@@ -80,13 +80,13 @@ const Inedex = () => {
                     thriving organisation.
                   </p>
                   <p className="ne4">
-                    We analyze your requirements, understand your unique work
+                    We analyse your requirements, understand your unique work
                     style, and create a customized blueprint outlining solutions
                     ideal for your business.
                   </p>
                   <p className="ne4">
                     If your internal processes are consumed by chaos, we'll
-                    organize them. If you plan on establishing new clear-cut
+                    organise them. If you plan on establishing new clear-cut
                     guidelines and standards for work and conduct, we'll devise
                     them. If you want your teams to be proficient in multiple
                     important technologies, we'll educate and train them. What we

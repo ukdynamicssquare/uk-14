@@ -719,7 +719,7 @@ const FieldService = () => {
                           Create and manage work orders seamlessly at customers’
                           locations. By making effective use of scheduling and
                           dispatch tools, manage your resources and equipment to
-                          improve your customer service, and optimize service
+                          improve your customer service, and optimise service
                           schedules.
                         </li>
                         <li>

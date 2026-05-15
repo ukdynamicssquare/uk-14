@@ -110,7 +110,7 @@ const AzureDigitalTwins = () => {
                         Craft digital representation or digital twins of
                         real-world objects, people, places, and more and bring
                         life to these digital twins to drive better product
-                        strategy, optimize operations & costs to improve
+                        strategy, optimise operations & costs to improve
                         customer experience.
                       </div>
                     </div>
@@ -301,7 +301,7 @@ const AzureDigitalTwins = () => {
                         <p>
                           Get inputs from connected devices and systems to
                           connect your IoT devices, Logic Apps, and REST APIs to
-                          make an efficient connected environment to optimize
+                          make an efficient connected environment to optimise
                           processes and predict device performance.
                         </p>
                       </div>

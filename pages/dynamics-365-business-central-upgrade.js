@@ -11,7 +11,7 @@ const BusinessCentralUpgrade = () => {
         </title>
         <meta
           name="description"
-          content="With Dynamics 365 Business Central upgrade, understand your customer behavior, know your process flow, stay updated with real-time data, and enable everyone in your organisation to make faster and productive decisions."
+          content="With Dynamics 365 Business Central upgrade, understand your customer behaviour, know your process flow, stay updated with real-time data, and enable everyone in your organisation to make faster and productive decisions."
         />
         <link
           rel="canonical"
@@ -174,7 +174,7 @@ const BusinessCentralUpgrade = () => {
                           To retain customers, it is essential to interact with
                           the right customers and engage them at the right time.
                           To drive so, you need a system upgrade that enables you
-                          to understand your customer behavior and let you know
+                          to understand your customer behaviour and let you know
                           whom to interact with, when to engage, and more.
                           Business Central makes it possible.
                         </div>

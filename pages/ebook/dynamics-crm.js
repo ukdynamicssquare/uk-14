@@ -266,7 +266,7 @@ const StartGuideTwo = () => {
                          aria-expanded="false"
                          aria-controls="collapseTwo"
                        >
-                         Can I customize my Microsoft Dynamics CRM?
+                         Can I customise my Microsoft Dynamics CRM?
                        </button>
                      </h3>
                      <div

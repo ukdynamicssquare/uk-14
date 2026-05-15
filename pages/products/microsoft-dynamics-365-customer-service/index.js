@@ -798,7 +798,7 @@ const CustomerService = () => {
                     <div className="accordion-body">
                       Dynamics 365 customer service comes with a number of vital
                       features to seamlessly and effectively drive your
-                      customers, track customer behavior to serve them a
+                      customers, track customer behaviour to serve them a
                       personalized solution. Here is the list of Dynamics 365
                       Customer Service key features:
                       <br />

@@ -548,7 +548,7 @@ const PowerBIImplementation = () => {
                     more useful insights to gain a competitive advantage by
                     integrating your Power BI with Microsoft Azure. Further,
                     this integration will help you to connect, collaborate, and
-                    analyze your overall vital data and reveal highly productive
+                    analyse your overall vital data and reveal highly productive
                     insights.
                   </p>
                 </div>

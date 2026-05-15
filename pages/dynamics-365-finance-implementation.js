@@ -492,7 +492,7 @@ const FinanceImplementation = () => {
                 <div className="style-grid-content">
                   <h3>Budgeting</h3>
                   <p>
-                    Dynamics 365 Finance is designed to optimize total costs
+                    Dynamics 365 Finance is designed to optimise total costs
                     across your investment areas leveraging process automation.
                     It allows you to control, manage, and modify budgets. It
                     enables you to predict the data accurately and ensure

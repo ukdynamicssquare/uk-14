@@ -161,7 +161,7 @@ const Startup = () => {
                         efficiencies. Streamline sales data and enable
                         omnichannel experience throughout your manufacturing
                         flow. Seamlessly manage Bills of Materials, Capacity
-                        Planning, optimize stock, and keep running your
+                        Planning, optimise stock, and keep running your
                         production lines
                       </p>
                     </div>

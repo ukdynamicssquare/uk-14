@@ -74,7 +74,7 @@ const BusinessCentralImplementation = () => {
                   To overcome business challenges and maximize outcomes,
                   implement Microsoft Dynamics 365 Business Central—a cloud ERP
                   designed for SMBs to boost sales, drive customers, manage
-                  projects, improve financial visibility, optimize supply chain
+                  projects, improve financial visibility, optimise supply chain
                   and warehousing, and accelerate decision-making with AI-driven
                   insights. Our certified Business Central consultants work with
                   you to achieve the best possible results while minimizing
@@ -274,7 +274,7 @@ const BusinessCentralImplementation = () => {
                         both internal and external policies. With transparent
                         and built-in intelligence views into inventory levels
                         and process flow, they can predict stock replenishment
-                        and analyze demand.
+                        and analyse demand.
                       </div>
                     </div>
                   </div>
@@ -309,7 +309,7 @@ const BusinessCentralImplementation = () => {
                         shelves in your Business Central account to view your
                         warehousing layout. Streamline product receiving and
                         capacity to ensure the right placement of items and
-                        faster shipments. Seamlessly optimize your warehousing
+                        faster shipments. Seamlessly optimise your warehousing
                         practices by connecting customers and operations.
                       </div>
                     </div>
@@ -595,7 +595,7 @@ const BusinessCentralImplementation = () => {
                       from customer transactions to inventory, purchasing,
                       accounting, financial reporting & key analytics. Gain
                       insights into accounts payable and receivables, track
-                      general ledger, predict sales, analyze budgeting, and
+                      general ledger, predict sales, analyse budgeting, and
                       more.
                     </p>
                   </div>
@@ -633,7 +633,7 @@ const BusinessCentralImplementation = () => {
                   <div className="overlay">
                     <p>
                       Manage your resources, simplify your end-to-end sales
-                      process, forecast sales, optimize planning & execution,
+                      process, forecast sales, optimise planning & execution,
                       and keep tracking your sales data in real-time via
                       AI-based sales insights, reporting, and key analytics all
                       through with Microsoft Dynamics 365 Business Central
@@ -985,7 +985,7 @@ const BusinessCentralImplementation = () => {
                       <br />
                       During the installation phase, several configuration
                       settings will be demonstrated wherein you can either
-                      choose to customize the settings or can go with the
+                      choose to customise the settings or can go with the
                       initial settings. Once your settings are done, you can
                       even change the configuration settings by making use of
                       tools like Business Central Server Administration tool and

@@ -84,7 +84,7 @@ const WhyMigrade360 = () => {
                 <p>Magento lets you adapt the desired persona to open the opportunities of deep analysis, data capture, and intensifying even the minute details of the data. It empowers the developers to build a website that their customers thrive on.</p>
                 <p>Some of the top benefits of Magento are:</p>
                 <ul>
-                  <li>Easy to customize (due to drag-and-drop features) </li>
+                  <li>Easy to customise (due to drag-and-drop features) </li>
                   <li>Simple to scale </li>
                   <li>SEO friendly </li>
                   <li>Flexible to use </li>

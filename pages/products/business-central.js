@@ -251,7 +251,7 @@ const BusinessCentral = () => {
                                 <p>
                                   Distribute the budget between actual and
                                   budgeted costs for operations and projects to
-                                  analyze returns.
+                                  analyse returns.
                                 </p>
                               </div>
                             </div>
@@ -1569,7 +1569,7 @@ const BusinessCentral = () => {
                           <h4>Cost Accounting</h4>
                           <p>
                             Distribute the budget between actual and budgeted
-                            costs for operations and projects to analyze
+                            costs for operations and projects to analyse
                             returns.
                           </p>
                         </div>

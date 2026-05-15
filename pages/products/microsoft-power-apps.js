@@ -346,7 +346,7 @@ const PowerApps = () => {
                         <p>
                           Leverage Power Apps canvas to begin your designing
                           journey from scratch to professional. Customize every
-                          aspect of your app to optimize for specific tasks and
+                          aspect of your app to optimise for specific tasks and
                           functions.
                         </p>
                       </div>
@@ -366,7 +366,7 @@ const PowerApps = () => {
                           Automatically generate interactive, immersive, and
                           responsive business applications from your data model
                           that can run on any device. The drag-and-drop designer
-                          enables your team to customize business entities and
+                          enables your team to customise business entities and
                           tailor the user experience to specific roles.
                         </p>
                       </div>

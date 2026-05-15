@@ -125,7 +125,7 @@ const BusinessCentralVSFinance = () => {
                 <ul>
                   <li>Built for SMBs to offer all-in-one ERP. </li>
                   <li>It comes with powerful capabilities in business management, including financial, inventory, and project management. </li>
-                  <li>Being a modular ERP, you can customize it as per your requirements and scale the solution as you grow. </li>
+                  <li>Being a modular ERP, you can customise it as per your requirements and scale the solution as you grow. </li>
                   <li>A simplified user interface enables users to understand the features and functionalities with ease. </li>
                   <li>Cloud-based deployment lets you connect with the system from anywhere and anytime. </li>
                   <li>It comes with a lower cost of ownership, a low initial investment cost, and high value for money. </li>

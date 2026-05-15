@@ -66,7 +66,7 @@ const AzureMachineLearning = () => {
                   accurately and instantly to support your process optimization
                   and critical business practices. Accelerate your model
                   deployment with Azure Machine Learning Services, scale your
-                  MLOps (Machine Learning Operations), optimize operational
+                  MLOps (Machine Learning Operations), optimise operational
                   efficiency, and your operational costing while enabling high
                   end-security to ensure uninterrupted and efficient business
                   flow.

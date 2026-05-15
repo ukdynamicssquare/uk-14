@@ -9,7 +9,7 @@ const AzureIoTEdge = () => {
         <title>Azure IoT Edge | Cloud Intelligent Solutions</title>
         <meta
           name="description"
-          content="With Azure IoT Edge, optimize your device performance, measure your equipment to prevent downtime, enable your devices to respond promptly."
+          content="With Azure IoT Edge, optimise your device performance, measure your equipment to prevent downtime, enable your devices to respond promptly."
         />
         <link
           rel="canonical"
@@ -59,7 +59,7 @@ const AzureIoTEdge = () => {
             <p>
               Azure IoT Edge is a cloud intelligent solution deployed
               on-premises that enables you to remotely deploy the cloud-based
-              workloads on your IoT devices to optimize IoT connected
+              workloads on your IoT devices to optimise IoT connected
               environment, reduce system downtime, get performance data in
               real-time to prevent system failure, or track the devices or
               equipment performance.
@@ -70,7 +70,7 @@ const AzureIoTEdge = () => {
               Eliminate data silos and streamline operational data at scale
               using Azure cloud. Securely deploy and manage your cloud-equipped
               workloads with remote efficiency and run the execution directly on
-              IoT devices. With Azure IoT Edge, optimize your device
+              IoT devices. With Azure IoT Edge, optimise your device
               performance, measure your equipment to prevent downtime, enable
               your devices to respond promptly in case of local changes made,
               and enable them to be operated with extended capability.
@@ -107,7 +107,7 @@ const AzureIoTEdge = () => {
                     >
                       <div className="accordion-body">
                         Deploy AI models built securely on the cloud and run
-                        them on-premises to optimize data, device performance,
+                        them on-premises to optimise data, device performance,
                         and cloud spend to ensure a smoother data-intelligence
                         experience.
                       </div>
@@ -268,7 +268,7 @@ const AzureIoTEdge = () => {
                         <p>
                           Designed with free and open-source code and comes
                           under the MIT license that enables code flexibility
-                          and provides more control to customize your code
+                          and provides more control to customise your code
                           according to a specific workflow.
                         </p>
                       </div>

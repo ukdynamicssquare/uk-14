@@ -143,7 +143,7 @@ const PowerAutomate = () => {
                       <div className="accordion-body">
                         While the platform helps in creating automated flows, it
                         also allows you to record the processes from start to
-                        end. You can visualize the recording process and analyze
+                        end. You can visualize the recording process and analyse
                         the flow and understand it will actually happen. This
                         way, you can check out in advance how the flow is going
                         to work and look before you actually finalize a

@@ -48,7 +48,7 @@ const Index = () => {
                 Supply Chain Management
               </h1>
               <p>
-                Explore new Supply Chain capabilities, optimize resources,
+                Explore new Supply Chain capabilities, optimise resources,
                 maximize operational efficiency, and accelerate time to market
                 while keeping real-time eyes in your end-to-end supply chain
                 operations.
@@ -351,7 +351,7 @@ const Index = () => {
                       </h3>
                       <div className="overlay">
                         <p>
-                          Maximize operational efficiency, optimize your
+                          Maximize operational efficiency, optimise your
                           workforce productivity, drive scalability by bringing
                           transparency in your supply chain cycle from ordering,
                           warehousing, forecasting to inventory management and
@@ -1119,7 +1119,7 @@ const Index = () => {
                       data-bs-toggle="collapse"
                       data-bs-target="#faq-content-7"
                     >
-                      Can I customize or integrate my Supply Chain Management
+                      Can I customise or integrate my Supply Chain Management
                     </button>
                   </h3>
                   <div

@@ -166,8 +166,8 @@ const DynamicsNavToBusinessCentral = () => {
             <div className="col-lg-5 align-self-center">
               <div className="commen-lef-pic">
                 <img
-                  src="/img/analyze-real-time.png"
-                  alt="analyze-real-time"
+                  src="/img/analyse-real-time.png"
+                  alt="analyse-real-time"
                 />
               </div>
             </div>
@@ -408,7 +408,7 @@ const DynamicsNavToBusinessCentral = () => {
 
                 <img
                   src="/img/pillars-3.png"
-                  alt="analyze-real-time"
+                  alt="analyse-real-time"
                 />
               </div>
             </div>
@@ -459,7 +459,7 @@ const DynamicsNavToBusinessCentral = () => {
             <div className="col-lg-9">
               <header className="section-header">
                 <h2>Is it the right time to upgrade your NAV to Business Central?  </h2>
-                <p>Let's consider the 4 factors to analyze that is the right time to level up</p>
+                <p>Let's consider the 4 factors to analyse that is the right time to level up</p>
               </header>
             </div>
           </div>
@@ -661,7 +661,7 @@ const DynamicsNavToBusinessCentral = () => {
                     data-bs-parent="#faqlist1"
                   >
                     <div className="accordion-body">
-                      If you are seeking help in decision-making, then fret not! By automating reports and financial dashboards, organisations can gain real-time insights into their financial status. This analysis helps in decision-making and risk management. Further, it empowers decision-makers to analyze and predict data, enabling them to respond intelligently and make informed plans that are refraining from risks etc.
+                      If you are seeking help in decision-making, then fret not! By automating reports and financial dashboards, organisations can gain real-time insights into their financial status. This analysis helps in decision-making and risk management. Further, it empowers decision-makers to analyse and predict data, enabling them to respond intelligently and make informed plans that are refraining from risks etc.
                     </div>
                   </div>
                 </div>
@@ -733,9 +733,9 @@ const DynamicsNavToBusinessCentral = () => {
             <div className="col-lg-6 align-self-center">
               <div className="commen-rit-info commen-rit-info-nav">
                 <h2>How you can do more with Microsoft Business Central Upgrade?</h2>
-                <p>Upgrade to Dynamics 365 Business Central with added/additional extensions empowers workplaces to easily customize their system by adding or removing solutions. This flexibility saves time that wasn’t there before. </p>
+                <p>Upgrade to Dynamics 365 Business Central with added/additional extensions empowers workplaces to easily customise their system by adding or removing solutions. This flexibility saves time that wasn’t there before. </p>
 
-                <p>Previously companies spent money on lengthy and complex processes however with the Dynamics 365 BC upgrade, you can customize and grow as per your goals.</p>
+                <p>Previously companies spent money on lengthy and complex processes however with the Dynamics 365 BC upgrade, you can customise and grow as per your goals.</p>
 
                 <p>Each new version of ERP brings forth new functionalities that can grow the business, amplify the performance, and protect your data like never before. Moreover, advanced cloud capabilities in newer versions have more refined interfaces and integrations that make everything easy and quick. </p>
 

@@ -215,7 +215,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
                               />
                             </div>
                             <div className="text-wrp-content">
-                              <p>Integration with Warehouse Management System: Integrated the Tasklet WMS to optimize warehouse operations and improve inventory accuracy.</p>
+                              <p>Integration with Warehouse Management System: Integrated the Tasklet WMS to optimise warehouse operations and improve inventory accuracy.</p>
                             </div>
                           </div>
                         </div>
@@ -398,7 +398,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
               <div className="case-clent-test">
                 <p>
                   We are impressed with their product awareness, technical
-                  skills and commitment to us. They analyze the situation and
+                  skills and commitment to us. They analyse the situation and
                   deliver to best fit our requirement and solutions.
                 </p>
                 <h4>Mark Shaxted</h4>

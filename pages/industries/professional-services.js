@@ -717,7 +717,7 @@ const Dynamics365ForProfessionalServices = () => {
                         automation, financial part, service & delivery model,
                         production line, clients, and more, Dynamics 365 can be
                         implemented and customized as per your customized
-                        business model addressing the core behavior of your
+                        business model addressing the core behaviour of your
                         business.
                         <br />
                         <br />
@@ -777,9 +777,9 @@ const Dynamics365ForProfessionalServices = () => {
                             productivity.
                           </li>
                           <li>
-                            Businesses can list key stakeholders, analyze
+                            Businesses can list key stakeholders, analyse
                             management information, drive engagement
-                            profitability, and optimize growth.
+                            profitability, and optimise growth.
                           </li>
                         </ul>
                       </div>

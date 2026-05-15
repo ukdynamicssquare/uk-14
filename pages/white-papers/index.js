@@ -62,7 +62,7 @@ const WhitePaper = () => {
                   <div className="col-lg-6 d-flex">
                       <div className="card card-custom-1 p-3">
                         <a
-                          href="/white-papers/micorosoft-copilot/"
+                          href="/white-papers/microsoft-copilot/"
                           className="over-ff text-center"
                         >
                           <img
@@ -73,14 +73,14 @@ const WhitePaper = () => {
                         </a>
                         <div className="card-body">
                           <h5 className="card-title">
-                            <a href="/white-papers/micorosoft-copilot/">
+                            <a href="/white-papers/microsoft-copilot/">
                             Microsoft Copilot: The Catalyst for Transformation in Your Business
                             </a>
                           </h5>
                           <div className="btn-003 btn-009">
                             <a
                               className="btn btn-sm btn-danger"
-                              href="/white-papers/micorosoft-copilot/"
+                              href="/white-papers/microsoft-copilot/"
                             >
                               Read Now
                             </a>
@@ -91,7 +91,7 @@ const WhitePaper = () => {
                     <div className="col-lg-6 d-flex">
                       <div className="card card-custom-1 p-3">
                         <a
-                          href="/white-papers/micorosoft-finance/"
+                          href="/white-papers/microsoft-finance/"
                           className="over-ff text-center"
                         >
                           <img
@@ -102,14 +102,14 @@ const WhitePaper = () => {
                         </a>
                         <div className="card-body">
                           <h5 className="card-title">
-                            <a href="/white-papers/micorosoft-finance/">
+                            <a href="/white-papers/microsoft-finance/">
                             Dynamics 365 Finance with Copilot WhitePaper
                             </a>
                           </h5>
                           <div className="btn-003 btn-009">
                             <a
                               className="btn btn-sm btn-danger"
-                              href="/white-papers/micorosoft-finance/"
+                              href="/white-papers/microsoft-finance/"
                             >
                               Read Now
                             </a>

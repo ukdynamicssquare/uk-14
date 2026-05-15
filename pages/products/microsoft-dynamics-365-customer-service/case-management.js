@@ -331,7 +331,7 @@ const CasetManagement = () => {
             <div className="col-lg-8">
               <div className="call-to-action-content">
                 <h3>Streamline Case Management with Dynamics 365 Customer Service</h3>
-                <p>Implement Dynamics 365 Customer Service to simplify the entire processes of creating, accepting and resolving tickets. Connect with a Dynamics 365 consultant to personalize Customer Service to suit your business needs.</p>
+                <p>Implement Dynamics 365 Customer Service to simplify the entire processes of creating, accepting and resolving tickets. Connect with a Dynamics 365 consultant to personalise Customer Service to suit your business needs.</p>
                 <div className="text-center m-o-t new-btn-nn">
                   <Link
                     href="#exampleModal"
