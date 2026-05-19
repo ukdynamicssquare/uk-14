@@ -53,6 +53,11 @@ const HomeOneNew = () => {
           <div className="container">
             <div className="row">
               <div className="col-lg-12">
+                <div className="prom-banner-new">
+                  <a href="https://forms.reg.buzz/subcon-2026/?exhibitor-inviter=dynamics-square" rel="nofollow"><Image src="/img/regis-banner.png" alt="regis-banner" width={1900} height={300}/></a>
+                </div>
+              </div>
+              <div className="col-lg-12">
                 <div className="floting-b">
                   <div className="orbit-parent">
                     <div className="orbit-child child1"></div>

@@ -3,7 +3,7 @@ import Image from "next/image";
 import DeskstopMenu from "./DeskstopMenu";
 import MobileMenu from "./MobileMenu";
 import { useRouter } from "next/router";
-// import TimerModal from "./TimerModal";
+import TimerModal from "./TimerModal";
 
 const HeaderWork = () => {
   const [isFixed, setIsFixed] = useState(false);
@@ -44,7 +44,7 @@ const HeaderWork = () => {
     "/products/microsoft-dynamics-crm": `${gname}`,
     "/book-a-demo": `${gname}`,
   };
-
+  const hide = ["/contact-us", "/thank-you"];
   const currentHeaderClass = headerClassMap[router.pathname] || "";
 
   const getLogoSrc = () => {
@@ -102,9 +102,12 @@ const HeaderWork = () => {
     };
   }, []);
 
+
   return (
     <>
-      {/* <TimerModal /> */}
+      {!hide.some((p) => router.pathname.startsWith(p)) && (
+        <TimerModal />
+      )}
       <header
         id="header"
         className={`header ${isFixed ? "fixed-top" : ""} ${currentHeaderClass}`}

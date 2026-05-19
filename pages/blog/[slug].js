@@ -15,10 +15,10 @@ import {
 } from "react-share";
 import BlogSearchinner from "../../components/BlogSearchinner";
 
-const TimerModal = dynamic(
-  () => import("../../components/TimerModal"),
-  { ssr: false }
-);
+// const TimerModal = dynamic(
+//   () => import("../../components/TimerModal"),
+//   { ssr: false }
+// );
 
 // Utility function to parse HTML content and extract image URLs
 function parseImagesFromHtml(htmlContent) {
@@ -402,7 +402,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
             </div>
           ))}
       </section>
-      <TimerModal />
+      {/* <TimerModal /> */}
     </>
   );
 }

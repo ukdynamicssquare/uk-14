@@ -50,13 +50,20 @@ const TimerModal = () => {
                 <span aria-hidden="true">×</span>
               </button>
 
-              <a 
+              {/* <a 
                 href="https://www.forbes.com/councils/forbestechcouncil/2026/04/21/the-cost-illusion-in-erp-why-companies-overspend/" 
                 target="_blank" 
                 rel="nofollow"
                 onClick={handleCloseModal}
               >
                 <img src="/img/forber-03.png" alt="forber-03" />
+              </a> */}
+              <a 
+                href="https://forms.reg.buzz/subcon-2026/?exhibitor-inviter=dynamics-square" 
+                rel="nofollow"
+                onClick={handleCloseModal}
+              >
+                <img src="/img/regi-big-pic.png" alt="regi-big-pic" />
               </a>
 
               <div className="buttonn-clo">
