@@ -52,6 +52,24 @@ function Post({ blogs, blogcat, authordetials, author }) {
     setMounted(true);
   }, []);
 
+
+  function formatDate(date) {
+    if (!date) return "";
+
+    const parsedDate = new Date(
+      String(date).replace(/\.\d+Z$/, "Z")
+    );
+
+    if (isNaN(parsedDate)) return "";
+
+    return parsedDate.toLocaleDateString("en-US", {
+      month: "short",
+      day: "numeric",
+      year: "numeric",
+      timeZone: "UTC",
+    });
+  }
+
   return (
     <>
       <section>
@@ -150,15 +168,28 @@ function Post({ blogs, blogcat, authordetials, author }) {
                               <Link href={`/blog/author/${encodeURIComponent(item.author.split(" ").join("-"))}/`}>{item.author}</Link>
 
                             </span>
-                            <span className="date">
-                              <a>
-                                {item.publish_date && (
-                                  <>
-                                    <i className="bi bi-calendar"></i> {item.publish_date}
-                                  </>
+                            <>
+                              {item.publish_date && (
+                                <span className="date">
+                                  <a>
+                                    <i className="bi bi-calendar"></i>
+                                    {" "}Published: {formatDate(item.publish_date)}
+                                  </a>
+                                </span>
+                              )}
+
+                              {item.updated_at &&
+                                item.publish_date &&
+                                formatDate(item.updated_at) !== formatDate(item.publish_date) && (
+                                  <span className="date">
+                                    <a>
+                                      <i className="bi bi-calendar"></i>
+                                      {" "}Updated: {formatDate(item.updated_at)}
+                                    </a>
+                                  </span>
                                 )}
-                              </a>
-                            </span>
+                            </>
+
                             <span className="time">
                               <a>
                                 {item.read_time && (
@@ -337,15 +368,27 @@ function Post({ blogs, blogcat, authordetials, author }) {
                                     <i className="bi bi-person-circle"></i> {item.author}
                                   </Link>
                                 </span>
+                                <>
+                              {item.publish_date && (
                                 <span className="date">
                                   <a>
-                                    {item.publish_date && (
-                                      <>
-                                        <i className="bi bi-calendar"></i> {item.publish_date}
-                                      </>
-                                    )}
+                                    <i className="bi bi-calendar"></i>
+                                    {" "}Published: {formatDate(item.publish_date)}
                                   </a>
                                 </span>
+                              )}
+
+                              {item.updated_at &&
+                                item.publish_date &&
+                                formatDate(item.updated_at) !== formatDate(item.publish_date) && (
+                                  <span className="date">
+                                    <a>
+                                      <i className="bi bi-calendar"></i>
+                                      {" "}Updated: {formatDate(item.updated_at)}
+                                    </a>
+                                  </span>
+                                )}
+                            </>
                                 <span className="time">
                                   <a>
                                     {item.read_time && (

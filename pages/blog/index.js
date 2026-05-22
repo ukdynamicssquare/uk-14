@@ -50,6 +50,7 @@ export async function getStaticProps() {
     short_description: post.short_description,
     image: post.image,
     publish_date: post.publish_date,
+    updated_at: post.updated_at,
     read_time: post.read_time,
     author: post.author,
     category: post.category,
@@ -78,7 +79,22 @@ const categoryColors = [
   '#273266',
 ];
 
+function formatDate(date) {
+  if (!date) return "";
 
+  const parsedDate = new Date(
+    String(date).replace(/\.\d+Z$/, "Z")
+  );
+
+  if (isNaN(parsedDate)) return "";
+
+  return parsedDate.toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+    timeZone: "UTC",
+  });
+}
 
 
 function Blogshome({ blogs, businesscentral, categoryblogs, blograndomblogs, blogtranding }) {
@@ -123,7 +139,27 @@ function Blogshome({ blogs, businesscentral, categoryblogs, blograndomblogs, blo
                         <i className="bi bi-person-circle"></i> {blogs[0].author}
                       </a>
                     </span>
-                    <span className="date"><a><i className="bi bi-calendar"></i> {blogs[0].publish_date}</a></span>
+                    <>
+                      {blogs?.[0]?.publish_date && (
+                        <span className="date">
+                          <a>
+                            <i className="bi bi-calendar"></i>
+                            {" "}Published: {formatDate(blogs[0].publish_date)}
+                          </a>
+                        </span>
+                      )}
+
+                      {blogs?.[0]?.updated_at &&
+                        blogs?.[0]?.publish_date &&
+                        formatDate(blogs[0].updated_at) !== formatDate(blogs[0].publish_date) && (
+                          <span className="date ms-2">
+                            <a>
+                              <i className="bi bi-calendar"></i>
+                              {" "}Updated: {formatDate(blogs[0].updated_at)}
+                            </a>
+                          </span>
+                        )}
+                    </>
                     <span className="time"><a><i className="bi bi-clock"></i> {blogs[0].read_time}</a></span>
                     <span className="cate">
                       <a href={`/blog/category/${blogs[0].category_slug}/`}>
@@ -252,7 +288,27 @@ function Blogshome({ blogs, businesscentral, categoryblogs, blograndomblogs, blo
                         <i className="bi bi-person-circle"></i> {item.author}
                       </a>
                     </span>
-                    <span className="date"><a><i className="bi bi-calendar"></i> {item.publish_date}</a></span>
+                    <>
+                      {item?.publish_date && (
+                        <span className="date">
+                          <a>
+                            <i className="bi bi-calendar"></i>
+                            {" "}Published: {formatDate(item.publish_date)}
+                          </a>
+                        </span>
+                      )}
+
+                      {item?.updated_at &&
+                        item?.publish_date &&
+                        formatDate(item.updated_at) !== formatDate(item.publish_date) && (
+                          <span className="date ms-2">
+                            <a>
+                              <i className="bi bi-calendar"></i>
+                              {" "}Updated: {formatDate(item.updated_at)}
+                            </a>
+                          </span>
+                        )}
+                    </>
                     <span className="time"><a><i className="bi bi-clock"></i> {item.read_time}</a></span>
                     <span className="cate">
                       <a href={`/blog/category/${item.category_slug}/`}>
@@ -326,7 +382,27 @@ function Blogshome({ blogs, businesscentral, categoryblogs, blograndomblogs, blo
                         <i className="bi bi-person-circle"></i> {item.author}
                       </a>
                     </span>
-                    <span className="date"><a><i className="bi bi-calendar"></i> {item.publish_date}</a></span>
+                    <>
+                      {item?.publish_date && (
+                        <span className="date">
+                          <a>
+                            <i className="bi bi-calendar"></i>
+                            {" "}Published: {formatDate(item.publish_date)}
+                          </a>
+                        </span>
+                      )}
+
+                      {item?.updated_at &&
+                        item?.publish_date &&
+                        formatDate(item.updated_at) !== formatDate(item.publish_date) && (
+                          <span className="date ms-2">
+                            <a>
+                              <i className="bi bi-calendar"></i>
+                              {" "}Updated: {formatDate(item.updated_at)}
+                            </a>
+                          </span>
+                        )}
+                    </>
                     <span className="time"><a><i className="bi bi-clock"></i> {item.read_time}</a></span>
                     <span className="cate">
                       <a href={`/blog/category/${item.category_slug}/`}>
