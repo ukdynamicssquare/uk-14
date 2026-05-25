@@ -194,32 +194,32 @@ const SalesNew = () => {
                 </div>
               </div>
               <div className='row g-3'>
-                <div class="col-lg-6 d-flex">
-                  <div class="solution-new-six-card">
+                <div className="col-lg-6 d-flex">
+                  <div className="solution-new-six-card">
                     <h3>Autonomy (Within Boundaries)</h3>
                     <p>The system can initiate tasks such as generating recommendations, drafting communications, or preparing financial entries.</p>
                   </div>
                 </div>
-                <div class="col-lg-6 d-flex">
-                  <div class="solution-new-six-card">
+                <div className="col-lg-6 d-flex">
+                  <div className="solution-new-six-card">
                     <h3>Contextual Awareness</h3>
                     <p>It understands transactional patterns, historical data, and organisational structure.</p>
                   </div>
                 </div>
-                <div class="col-lg-6 d-flex">
-                  <div class="solution-new-six-card">
+                <div className="col-lg-6 d-flex">
+                  <div className="solution-new-six-card">
                     <h3>Continuous Monitoring</h3>
                     <p>Instead of static reporting cycles, it watches processes in real time.</p>
                   </div>
                 </div>
-                <div class="col-lg-6 d-flex">
-                  <div class="solution-new-six-card">
+                <div className="col-lg-6 d-flex">
+                  <div className="solution-new-six-card">
                     <h3>Decision Support</h3>
                     <p>It prioritises actions and presents structured recommendations.</p>
                   </div>
                 </div>
-                <div class="col-lg-6 d-flex">
-                  <div class="solution-new-six-card">
+                <div className="col-lg-6 d-flex">
+                  <div className="solution-new-six-card">
                     <h3>Learning Capability</h3>
                     <p>It improves accuracy based on historical corrections and outcomes.</p>
                   </div>
