@@ -41,10 +41,10 @@ const SalesNew = () => {
   return (
     <>
       <Head>
-        <title>Dynamics 365 Sales | Microsoft Sales CRM Solutions</title>
+        <title>Microsoft Dynamics 365 Sales Software UK | Free Demo</title>
         <meta
           name="description"
-          content="Boost sales productivity with Microsoft Dynamics 365 Sales. Manage leads, track opportunities, and close deals faster with AI-driven insights. Connect with us today!"
+          content="Transform your sales operations with Microsoft Dynamics 365 Sales Software in the UK. Automate workflows and improve customer engagement."
         />
         <link
           rel="canonical"
@@ -52,14 +52,14 @@ const SalesNew = () => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-sales/" />
-        <meta property="og:title" content="Dynamics 365 Sales | Microsoft Sales CRM Solutions" />
-        <meta property="og:description" content="Boost sales productivity with Microsoft Dynamics 365 Sales. Manage leads, track opportunities, and close deals faster with AI-driven insights. Connect with us today!" />
+        <meta property="og:title" content="Microsoft Dynamics 365 Sales Software UK | Free Demo" />
+        <meta property="og:description" content="Transform your sales operations with Microsoft Dynamics 365 Sales Software in the UK. Automate workflows and improve customer engagement." />
         <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/sales-new-01.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-sales/" />
-        <meta property="twitter:title" content="Dynamics 365 Sales | Microsoft Sales CRM Solutions" />
-        <meta property="twitter:description" content="Boost sales productivity with Microsoft Dynamics 365 Sales. Manage leads, track opportunities, and close deals faster with AI-driven insights. Connect with us today!" />
+        <meta property="twitter:title" content="Microsoft Dynamics 365 Sales Software UK | Free Demo" />
+        <meta property="twitter:description" content="Transform your sales operations with Microsoft Dynamics 365 Sales Software in the UK. Automate workflows and improve customer engagement." />
         <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/sales-new-01.png" />
 
       </Head>
@@ -116,7 +116,7 @@ const SalesNew = () => {
             <div className='col-lg-6'>
               <div className='solution-new-banner-sub-head'>
                 <h2>What is Dynamics 365 Sales?</h2>
-                <p>Microsoft Dynamics 365 for Sales (formerly known as Dynamics CRM) helps to improve end-to-end sales practices, build & improve your customer relationship, and supports to close sales deals faster.</p>
+                <p>Microsoft Dynamics 365 for Sales (formerly known as <a href="/products/microsoft-dynamics-crm/">Dynamics CRM</a>) helps to improve end-to-end sales practices, build & improve your customer relationship, and supports to close sales deals faster.</p>
                 <p>Microsoft Dynamics 365 Sales integrates sellers, customers, and data into an intelligent sales system. SMEs use this app alongside Business Central. <a href="/blog/business-central-integration-with-dynamics-365-sales/">Business Central integration with Dynamics 365 Sales</a> gives growing enterprises a complete ERP and CRM solution.</p>
                 <p>This Agentic CRM solution uses AI, automation, and real-time insights to help sales teams manage leads, opportunities, and customer relationships with greater clarity and focus.</p>
                 <p>Built on a flexible and cloud-based platform, Dynamics 365 Sales adapts easily to different sales models and industries. Organisations can configure fields, views, dashboards, and <a href="/products/dynamics-365-copilot/">AI agents in Dynamics 365 Sales</a> to match their sales methodology, data sources, and growth plans.  </p>
