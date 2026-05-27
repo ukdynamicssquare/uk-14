@@ -1716,7 +1716,7 @@ const BusinessCentral = () => {
                     <div className='row'>
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
-                          <a href="/case-studies/microsoft-business-central-implementation/">
+                          <a href="/case-studies/business-central-reimplementation-for-recycling-industry/">
                             <Image src="/img/Summit-Systems.png" width={850} height={410} alt="bc-8-17" />
                             <h3>Driving Efficiency with Microsoft Business Central for Manufacturers</h3>
                             <p>A UK plastic automation company streamlined operations and scaled growth with Dynamics 365 Business Central.</p>
