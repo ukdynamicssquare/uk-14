@@ -23,15 +23,15 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
         <meta property="og:description" content="Dynamics 365 Finance streamlined multi-entity logistics operations in the UK, improving financial visibility, automating processes, and enabling scalable, compliant growth." />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/case-studies/dynamics-365-finance-for-logistic-uk-multi-entity/" />
         <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/old-mill-feature.jpg" />
+        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/case-v-02.png" />
         <meta property="og:image:width" content="200" />
         <meta property="og:image:height" content="200" />
-        <meta property="og:image:type" content="image/jpg" />
+        <meta property="og:image:type" content="image/png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@dsquare_uk" />
         <meta name="twitter:title" content="Dynamics 365 Finance for UK Logistics: Transforming Multi-Entity Operations | Case Study | Case Study" />
         <meta name="twitter:description" content="Dynamics 365 Finance streamlined multi-entity logistics operations in the UK, improving financial visibility, automating processes, and enabling scalable, compliant growth." />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/old-mill-feature.jpg" />
+        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/case-v-02.png" />
       </Head>
       <section className="hero hero-new-bg">
         <div className="container">
@@ -40,7 +40,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
               <div className="webin-top-left case-study-bann" style={{ textAlign: 'center' }}>
                 <div className="top-se">
                   <span className="date-ti">Case Study</span>
-                  <h1>Microsoft Business Central Reimplementation</h1>
+                  <h1>Microsoft Dynamics 365 Finance Implementation Optimisation</h1>
                   <p>How a Global Logistics Business Strengthened Financial Control and Prepared for Multi-Entity Rollout with Microsoft Dynamics 365</p>
                 </div>
               </div>
@@ -81,7 +81,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
             <div className="col-lg-6 align-self-center">
               <div className="busine_service_bottom-left custom012">
                 <Image
-                  src="/img/case-s-01.png"
+                  src="/img/case-v-00.png"
                   className="fix-im"
                   alt="case-s-01"
                   width={400} height={450}
@@ -211,7 +211,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           </div>
           <div className="row gx-5">
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/case-s-02.png" alt="case-s-02" width={733} height={512} />
+              <Image src="/img/case-v-01.png" alt="case-v-01" width={633} height={651} />
             </div>
             <div className="col-lg-6 align-self-center">
               <div className="ms-c-po">
@@ -264,7 +264,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
             </div>
             <div className="col-lg-4 d-flex">
               <div className="card-929">
-                <p>Address gaps in training and reporting from the initial implementation</p>
+                <p>Stabilise financial operations before expanding to additional entities</p>
               </div>
             </div>
             <div className="col-lg-4 d-flex">
@@ -285,7 +285,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="ce-image-ce">
-                <img src="/img/case-s-03.png" alt="Case Study" className="img-fluid" />
+                <Image src="/img/case-v-02.png" alt="Case Study" width={863} height={597} className="img-fluid" />
               </div>
             </div>
           </div>
@@ -440,12 +440,12 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
               </div>
               <div className="content-icons-modil-1">
                 <p>This case study highlights an often-overlooked reality. Implementing an ERP system is only one part of the journey. Ensuring it is configured correctly, adopted by users, and aligned with business needs is what determines success.</p>
-                <p>This case study highlights an often-overlooked reality. Implementing an ERP system is only one part of the journey. Ensuring it is configured correctly, adopted by users, and aligned with business needs is what determines success.</p>
+                <p>In this instance, the organisation recognised the gaps in its initial implementation and chose to address them with a structured approach. By focusing on one entity first, it created a controlled environment to correct issues, build confidence, and establish best practices.</p>
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
               <div className="content-icons-modil-1">
-                <p>This case study highlights an often-overlooked reality. Implementing an ERP system is only one part of the journey. Ensuring it is configured correctly, adopted by users, and aligned with business needs is what determines success.</p>
+                <p><b>The next phase of the journey is already defined:</b></p>
                 <ul>
                   <li>Introduction of document capture capabilities to improve accounts payable automation</li>
                   <li>Implementation of bank feed integration for smoother financial operations</li>
@@ -455,7 +455,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
                   <li>Implementation of budgeting capabilities to strengthen financial planning</li>
                 </ul>
                 <p>As the business prepares to expand its system across additional regions, the lessons learned from this phase will play a critical role.</p>
-                <p>Dynamics Square supports this transition by applying a structured and informed approach, helping convert an incomplete implementation into a stable and dependable system.</p>
+                <p>This transformation does not involve the replacement of systems. The objective is to enhance their productivity. It involves transforming an existing investment into a dependable platform that facilitates growth, compliance, and clarity.</p>
                 <p>Dynamics Square supports this transition by applying a structured and informed approach, helping convert an incomplete implementation into a stable and dependable system.</p>
               </div>
             </div>

@@ -23,7 +23,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
         <meta property="og:description" content="Dynamics Square UK delivers tailored Dynamics 365 F&O implementation for healthcare, improving compliance, finance control, and operational efficiency." />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/case-studies/dynamics-365-f&O-implementation-for-healthcare/" />
         <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/old-mill-feature.jpg" />
+        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/case-v-11.png" />
         <meta property="og:image:width" content="200" />
         <meta property="og:image:height" content="200" />
         <meta property="og:image:type" content="image/jpg" />
@@ -31,7 +31,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
         <meta name="twitter:site" content="@dsquare_uk" />
         <meta name="twitter:title" content="Dynamics 365 F&O Implementation for Healthcare - Dynamics Square" />
         <meta name="twitter:description" content="Dynamics Square UK delivers tailored Dynamics 365 F&O implementation for healthcare, improving compliance, finance control, and operational efficiency." />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/old-mill-feature.jpg" />
+        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/case-v-11.png" />
       </Head>
       <section className="hero hero-new-bg">
         <div className="container">
@@ -40,7 +40,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
               <div className="webin-top-left case-study-bann" style={{ textAlign: 'center' }}>
                 <div className="top-se">
                   <span className="date-ti">Case Study</span>
-                  <h1>Microsoft Business Central Reimplementation</h1>
+                  <h1>Microsoft Dynamics 365 Finance and Operations Managed Support and System Optimisation   </h1>
                   <p>How a Clinical Research Organisation Improved Financial Processes and System Adoption with Dynamics 365 Finance and Operations</p>
                 </div>
               </div>
@@ -82,9 +82,9 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
             <div className="col-lg-6 align-self-center">
               <div className="busine_service_bottom-left custom012">
                 <Image
-                  src="/img/case-s-01.png"
+                  src="/img/case-v-09.png"
                   className="fix-im"
-                  alt="case-s-01"
+                  alt="case-v-09"
                   width={400} height={450}
                 />
               </div>
@@ -209,7 +209,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           </div>
           <div className="row gx-5">
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/case-s-02.png" alt="case-s-02" width={733} height={512} />
+              <Image src="/img/case-v-10.png" alt="case-v-10" width={633} height={561} />
             </div>
             <div className="col-lg-6 align-self-center">
               <div className="ms-c-po">
@@ -278,7 +278,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="ce-image-ce">
-                <img src="/img/case-s-03.png" alt="Case Study" className="img-fluid" />
+                <Image src="/img/case-v-11.png" width={828} height={597} alt="Case Study" className="img-fluid" />
               </div>
             </div>
           </div>

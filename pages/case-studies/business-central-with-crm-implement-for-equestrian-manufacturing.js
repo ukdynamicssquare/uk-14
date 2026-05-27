@@ -23,7 +23,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
         <meta property="og:description" content="Unified Microsoft Dynamics 365 Business Central and Microsoft Dynamics 365 CRM for equestrian manufacturing—streamlining production, sales, and customer insights end-to-end." />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/case-studies/business-central-with-crm-implement-for-equestrian-manufacturing/" />
         <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/old-mill-feature.jpg" />
+        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/case-v-08.png" />
         <meta property="og:image:width" content="200" />
         <meta property="og:image:height" content="200" />
         <meta property="og:image:type" content="image/jpg" />
@@ -31,7 +31,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
         <meta name="twitter:site" content="@dsquare_uk" />
         <meta name="twitter:title" content="Microsoft Business Central with CRM for Equestrian Manufacturing | Case Study" />
         <meta name="twitter:description" content="Unified Microsoft Dynamics 365 Business Central and Microsoft Dynamics 365 CRM for equestrian manufacturing—streamlining production, sales, and customer insights end-to-end." />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/old-mill-feature.jpg" />
+        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/case-v-08.png" />
       </Head>
       <section className="hero hero-new-bg">
         <div className="container">
@@ -40,7 +40,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
               <div className="webin-top-left case-study-bann" style={{ textAlign: 'center' }}>
                 <div className="top-se">
                   <span className="date-ti">Case Study</span>
-                  <h1>Microsoft Business Central Reimplementation</h1>
+                  <h1>Microsoft Dynamics 365 Business Central and CRM Implementation</h1>
                   <p>How a UK-Based Global Manufacturer Rebuilt Its Operational Core and Scaled with Confidence Using Microsoft Dynamics 365</p>
                 </div>
               </div>
@@ -81,9 +81,9 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
             <div className="col-lg-6 align-self-center">
               <div className="busine_service_bottom-left custom012">
                 <Image
-                  src="/img/case-s-01.png"
+                  src="/img/case-v-06.png"
                   className="fix-im"
-                  alt="case-s-01"
+                  alt="case-v-06"
                   width={400} height={450}
                 />
               </div>
@@ -203,7 +203,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           </div>
           <div className="row gx-5">
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/case-s-02.png" alt="case-s-02" width={733} height={512} />
+              <Image src="/img/case-v-07.png" alt="case-v-07" width={633} height={561} />
             </div>
             <div className="col-lg-6 align-self-center">
               <div className="ms-c-po">
@@ -270,7 +270,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="ce-image-ce">
-                <img src="/img/case-s-03.png" alt="Case Study" className="img-fluid" />
+                <Image src="/img/case-v-08.png" alt="Case Study" width={1036} height={699} className="img-fluid" />
               </div>
             </div>
           </div>

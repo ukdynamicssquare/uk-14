@@ -40,7 +40,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
               <div className="webin-top-left case-study-bann" style={{ textAlign: 'center' }}>
                 <div className="top-se">
                   <span className="date-ti">Case Study</span>
-                  <h1>Microsoft Business Central Reimplementation</h1>
+                  <h1>FS Apps 10 to Microsoft Dynamics 365 Finance and Human Resources Implementation and Cloud Migration </h1>
                   <p>How a Multi-Entity Engineering Business Built Financial Clarity and Operational Control with Microsoft Dynamics 365</p>
                 </div>
               </div>
@@ -74,7 +74,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
               <div className="custom-p-001">
                 <p>This organisation operates within a project-driven engineering environment, managing complex operations across multiple European regions. Its structure spans six legal entities, with plans already in place to expand to eight in the near future. Each entity contributes to a broader operational model that relies heavily on coordination across finance, projects, procurement, and workforce management.</p>
                 <p>As the business grew, so did the need for consistency and control across entities. Financial reporting, project costing, and intercompany transactions required alignment, while local compliance and operational nuances still needed to be preserved.</p>
-                <p>As the business grew, so did the need for consistency and control across entities. Financial reporting, project costing, and intercompany transactions required alignment, while local compliance and operational nuances still needed to be preserved.</p>
+                <p>The organisation had been operating on a shared instance of a legacy ERP system. While this setup had supported earlier stages of growth, it began to create limitations as transaction volumes increased and operational complexity deepened.</p>
                 <p>With expansion underway and timelines defined for system retirement, the business reached a point where transformation was no longer optional. It became a necessary step to maintain operational continuity and support future growth.</p>
                 <p>To navigate this transition, the organisation partnered with Dynamics Square.</p>
               </div>
@@ -82,9 +82,9 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
             <div className="col-lg-6 align-self-center">
               <div className="busine_service_bottom-left custom012">
                 <Image
-                  src="/img/case-s-01.png"
+                  src="/img/case-v-12.png"
                   className="fix-im"
-                  alt="case-s-01"
+                  alt="case-v-12"
                   width={400} height={450}
                 />
               </div>
@@ -190,7 +190,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           </div>
           <div className="row gx-5">
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/case-s-02.png" alt="case-s-02" width={733} height={512} />
+              <Image src="/img/case-v-13.png" alt="case-v-13" width={633} height={561} />
             </div>
             <div className="col-lg-6 align-self-center">
               <div className="ms-c-po">
@@ -262,7 +262,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="ce-image-ce">
-                <img src="/img/case-s-03.png" alt="Case Study" className="img-fluid" />
+                <Image src="/img/case-v-14.png" width={1427} height={1048} alt="Case Study" className="img-fluid" />
               </div>
             </div>
           </div>
