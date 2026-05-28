@@ -36,7 +36,17 @@ function parseImagesFromHtml(htmlContent) {
 }
 
 function Post({ blogs, blogcat, authordetials, author }) {
+
   const router = useRouter();
+
+  // FIX ADDED
+  if (router.isFallback) {
+    return (
+      <div className="container py-5">
+        <h2>Loading...</h2>
+      </div>
+    );
+  }
 
   const images = blogs?.[0]?.description
     ? parseImagesFromHtml(blogs[0].description)
@@ -655,13 +665,16 @@ export async function getStaticPaths() {
       )
       .map((blog) => ({
         params: {
-          slug: blog.title_slug,
+          // FIX ADDED
+          slug: blog.title_slug.trim(),
         },
       }));
 
     return {
       paths,
-      fallback: "blocking",
+
+      // FIX ADDED
+      fallback: true,
     };
   } catch (error) {
     console.error(
@@ -671,7 +684,9 @@ export async function getStaticPaths() {
 
     return {
       paths: [],
-      fallback: "blocking",
+
+      // FIX ADDED
+      fallback: true,
     };
   }
 }
@@ -685,27 +700,29 @@ export async function getStaticProps(context) {
       `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blog_details/${slug}`
     );
 
-    // WAIT FOR API
+    // FIX ADDED
     if (!blogRes.ok) {
       return {
-        redirect: {
-          destination: "/blog",
-          permanent: false,
+        props: {
+          blogs: [],
+          blogcat: [],
+          authordetials: [],
+          author: "",
         },
+
         revalidate: 5,
       };
     }
 
     const blogs = await blogRes.json();
 
-    // TEMP EMPTY DATA
+    // FIX ADDED
     if (
       !blogs ||
       !Array.isArray(blogs) ||
       blogs.length === 0
     ) {
 
-      // DO NOT CACHE 404
       return {
         props: {
           blogs: [],
