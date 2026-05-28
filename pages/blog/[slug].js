@@ -677,58 +677,53 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-  const { params } = context;
-
-  const slug = params.slug;
+  const slug = context?.params?.slug?.trim();
 
   try {
 
-    // MAIN BLOG FETCH
     const blogRes = await fetch(
-      `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blog_details/${slug}`,
-      {
-        headers: {
-          Accept: "application/json",
-        },
-      }
+      `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blog_details/${slug}`
     );
 
-    // API FAILED
+    // WAIT FOR API
     if (!blogRes.ok) {
       return {
-        notFound: true,
-
-        // Retry quickly
-        revalidate: 10,
+        redirect: {
+          destination: "/blog",
+          permanent: false,
+        },
+        revalidate: 5,
       };
     }
 
     const blogs = await blogRes.json();
 
-    // EMPTY BLOG DATA
-    // DO NOT CACHE LONG 404
+    // TEMP EMPTY DATA
     if (
       !blogs ||
       !Array.isArray(blogs) ||
       blogs.length === 0
     ) {
-      return {
-        notFound: true,
 
-        // Important:
-        // prevents long cached 404
-        revalidate: 10,
+      // DO NOT CACHE 404
+      return {
+        props: {
+          blogs: [],
+          blogcat: [],
+          authordetials: [],
+          author: "",
+        },
+
+        revalidate: 5,
       };
     }
 
-    // SAFE OPTIONAL DATA
     const category =
       blogs?.[0]?.category_slug || "";
 
     const author =
       blogs?.[0]?.author_email || "";
 
-    // PARALLEL FETCHES
     const [relatedRes, authorRes] =
       await Promise.allSettled([
         fetch(
@@ -736,40 +731,26 @@ export async function getStaticProps(context) {
         ),
 
         fetch(
-          `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blog/author/details/${author
-            .split("-")
-            .join(" ")}`
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blog/author/details/${author}`
         ),
       ]);
 
-    // SAFE RELATED BLOGS
     let blogcat = [];
+    let authordetials = [];
 
     if (
       relatedRes.status === "fulfilled" &&
       relatedRes.value.ok
     ) {
-      try {
-        blogcat =
-          await relatedRes.value.json();
-      } catch (e) {
-        blogcat = [];
-      }
+      blogcat = await relatedRes.value.json();
     }
-
-    // SAFE AUTHOR DETAILS
-    let authordetials = [];
 
     if (
       authorRes.status === "fulfilled" &&
       authorRes.value.ok
     ) {
-      try {
-        authordetials =
-          await authorRes.value.json();
-      } catch (e) {
-        authordetials = [];
-      }
+      authordetials =
+        await authorRes.value.json();
     }
 
     return {
@@ -780,24 +761,20 @@ export async function getStaticProps(context) {
         author,
       },
 
-      // MAIN ISR CACHE
-      // 5 min
-      revalidate: 60,
+      revalidate: 300,
     };
 
   } catch (error) {
 
-    console.error(
-      "ISR BLOG PAGE ERROR:",
-      error
-    );
-
-    // DO NOT CACHE FAILURE LONG
     return {
-      notFound: true,
+      props: {
+        blogs: [],
+        blogcat: [],
+        authordetials: [],
+        author: "",
+      },
 
-      // Retry fast
-      revalidate: 10,
+      revalidate: 5,
     };
   }
 }
