@@ -14,11 +14,11 @@ import {
 
 import BlogSearchinner from "../../components/BlogSearchinner";
 
-/* =========================================
-   PARSE IMAGES
-========================================= */
+// Utility function to parse HTML content and extract image URLs
 function parseImagesFromHtml(htmlContent) {
-  if (!htmlContent) return [];
+  if (!htmlContent) {
+    return [];
+  }
 
   const $ = cheerio.load(htmlContent.toString());
 
@@ -34,11 +34,18 @@ function parseImagesFromHtml(htmlContent) {
   return images;
 }
 
-/* =========================================
-   COMPONENT
-========================================= */
 function Post({ blogs, blogcat, authordetials, author }) {
+
   const router = useRouter();
+
+  // SSR LOADING FIX
+  if (!blogs || blogs.length === 0) {
+    return (
+      <div className="container py-5">
+        <h2>Loading blog...</h2>
+      </div>
+    );
+  }
 
   const images = blogs?.[0]?.description
     ? parseImagesFromHtml(blogs[0].description)
@@ -50,10 +57,8 @@ function Post({ blogs, blogcat, authordetials, author }) {
     setMounted(true);
   }, []);
 
-  /* =========================================
-     DATE FORMAT
-  ========================================= */
   function formatDate(date) {
+
     if (!date) return "";
 
     const parsedDate = new Date(
@@ -70,26 +75,12 @@ function Post({ blogs, blogcat, authordetials, author }) {
     });
   }
 
-  /* =========================================
-     LOADING / EMPTY STATE
-  ========================================= */
-  if (!blogs || blogs.length < 1) {
-    return (
-      <div className="container py-5">
-        <h2>Blog is updating...</h2>
-      </div>
-    );
-  }
-
   return (
     <>
       <section>
         {blogs &&
           blogs.map((item, i) => (
             <div key={i}>
-              {/* =========================================
-                  SEO
-              ========================================= */}
               <Head>
                 <title>{item.meta_title}</title>
 
@@ -160,7 +151,6 @@ function Post({ blogs, blogcat, authordetials, author }) {
                   content={`${item.meta_image}`}
                 />
 
-                {/* JSON LD */}
                 {item.additional_script &&
                   item.additional_script.trim() !== "{}" && (
                     <script
@@ -171,10 +161,10 @@ function Post({ blogs, blogcat, authordetials, author }) {
                     />
                   )}
 
-                {/* MULTI SCRIPT */}
                 {item.additional_multiscript &&
                   (() => {
                     try {
+
                       return JSON.parse(
                         item.additional_multiscript
                       ).map((scriptContent, index) => (
@@ -186,7 +176,9 @@ function Post({ blogs, blogcat, authordetials, author }) {
                           }}
                         />
                       ));
+
                     } catch (error) {
+
                       return null;
                     }
                   })()}
@@ -194,14 +186,16 @@ function Post({ blogs, blogcat, authordetials, author }) {
 
               <div className="container">
 
-                {/* =========================================
-                    BREADCRUMB
-                ========================================= */}
                 <div className="row">
+
                   <div className="col-lg-12">
+
                     <div className="blogs-breadcromb">
+
                       <nav aria-label="breadcrumb">
+
                         <ol className="breadcrumb">
+
                           <li className="breadcrumb-item">
                             <Link href="/">
                               Home
@@ -217,19 +211,21 @@ function Post({ blogs, blogcat, authordetials, author }) {
                           <li className="breadcrumb-item active">
                             {item.title}
                           </li>
+
                         </ol>
+
                       </nav>
+
                     </div>
+
                   </div>
+
                 </div>
 
                 <BlogSearchinner />
 
                 <div className="row g-5">
 
-                  {/* =========================================
-                      LEFT CONTENT
-                  ========================================= */}
                   <div className="col-lg-8">
 
                     <div className="blogs-single-post-sec">
@@ -243,6 +239,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
                           <div className="left-list">
 
                             <span className="user">
+
                               <Link
                                 href={`/blog/author/${encodeURIComponent(
                                   item.author
@@ -252,46 +249,46 @@ function Post({ blogs, blogcat, authordetials, author }) {
                               >
                                 {item.author}
                               </Link>
+
                             </span>
 
-                            {/* PUBLISHED */}
-                            {item.publish_date && (
-                              <span className="date">
-                                <a>
-                                  <i className="bi bi-calendar-event"></i>
-
-                                  {" "}
-                                  Published:{" "}
-                                  {formatDate(
-                                    item.publish_date
-                                  )}
-                                </a>
-                              </span>
-                            )}
-
-                            {/* UPDATED */}
-                            {item.updated_at &&
-                              item.publish_date &&
-                              formatDate(
-                                item.updated_at
-                              ) !==
-                                formatDate(
-                                  item.publish_date
-                                ) && (
+                            <>
+                              {item.publish_date && (
                                 <span className="date">
                                   <a>
-                                    <i className="bi bi-arrow-repeat"></i>
+                                    <i className="bi bi-calendar-event"></i>
 
                                     {" "}
-                                    Updated:{" "}
+                                    Published:{" "}
                                     {formatDate(
-                                      item.updated_at
+                                      item.publish_date
                                     )}
                                   </a>
                                 </span>
                               )}
 
-                            {/* READ TIME */}
+                              {item.updated_at &&
+                                item.publish_date &&
+                                formatDate(
+                                  item.updated_at
+                                ) !==
+                                  formatDate(
+                                    item.publish_date
+                                  ) && (
+                                  <span className="date">
+                                    <a>
+                                      <i className="bi bi-arrow-repeat"></i>
+
+                                      {" "}
+                                      Updated:{" "}
+                                      {formatDate(
+                                        item.updated_at
+                                      )}
+                                    </a>
+                                  </span>
+                                )}
+                            </>
+
                             <span className="time">
                               <a>
                                 {item.read_time && (
@@ -303,8 +300,8 @@ function Post({ blogs, blogcat, authordetials, author }) {
                               </a>
                             </span>
 
-                            {/* CATEGORY */}
                             <span className="cate">
+
                               <Link
                                 href={`/blog/category/${item.category_slug}/`}
                               >
@@ -313,12 +310,13 @@ function Post({ blogs, blogcat, authordetials, author }) {
                                   {item.category}
                                 </span>
                               </Link>
+
                             </span>
 
                           </div>
 
-                          {/* SOCIAL */}
                           <div className="sociallist">
+
                             {mounted && (
                               <>
                                 <FacebookShareButton
@@ -349,13 +347,13 @@ function Post({ blogs, blogcat, authordetials, author }) {
                                 </LinkedinShareButton>
                               </>
                             )}
+
                           </div>
+
                         </div>
+
                       </div>
 
-                      {/* =========================================
-                          BLOG CONTENT
-                      ========================================= */}
                       <div className="blogs-content">
 
                         <div className="blogs-content-inner">
@@ -364,7 +362,6 @@ function Post({ blogs, blogcat, authordetials, author }) {
                             parse(item.description || "", {
                               replace: (domNode) => {
 
-                                /* IMAGE OPTIMIZATION */
                                 if (
                                   domNode.name === "img" &&
                                   domNode.attribs?.src
@@ -391,12 +388,10 @@ function Post({ blogs, blogcat, authordetials, author }) {
                                           alt || "blog-image"
                                         }
                                         width={
-                                          Number(width) ||
-                                          1200
+                                          Number(width) || 1200
                                         }
                                         height={
-                                          Number(height) ||
-                                          700
+                                          Number(height) || 700
                                         }
                                         sizes="(max-width: 768px) 100vw, 1200px"
                                         style={{
@@ -410,7 +405,6 @@ function Post({ blogs, blogcat, authordetials, author }) {
                                   );
                                 }
 
-                                /* IFRAME LAZY */
                                 if (
                                   domNode.name === "iframe"
                                 ) {
@@ -429,15 +423,15 @@ function Post({ blogs, blogcat, authordetials, author }) {
                                 return undefined;
                               },
                             })}
+
                         </div>
 
-                        {/* SOCIAL BOTTOM */}
                         <div className="sociallist sociallist-bott">
-
                           {mounted && (
                             <>
                               <FacebookShareButton
                                 url={`https://www.dynamicssquare.co.uk/blog/${item.title_slug}/`}
+                                media={`${item.meta_image}`}
                                 quote={item.title}
                               >
                                 <a>
@@ -447,6 +441,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
 
                               <TwitterShareButton
                                 url={`https://www.dynamicssquare.co.uk/blog/${item.title_slug}/`}
+                                media={`${item.meta_image}`}
                                 quote={item.title}
                               >
                                 <a>
@@ -456,6 +451,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
 
                               <LinkedinShareButton
                                 url={`https://www.dynamicssquare.co.uk/blog/${item.title_slug}/`}
+                                media={`${item.meta_image}`}
                                 source={item.title}
                               >
                                 <a>
@@ -466,7 +462,6 @@ function Post({ blogs, blogcat, authordetials, author }) {
                           )}
                         </div>
 
-                        {/* AUTHOR */}
                         {authordetials &&
                           authordetials.map(
                             (author, i) => (
@@ -475,12 +470,11 @@ function Post({ blogs, blogcat, authordetials, author }) {
                                 key={i}
                               >
                                 <div className="left">
-
                                   <img
                                     src={
                                       author.profile_photo_path
                                     }
-                                    alt="author"
+                                    alt="bg-pic"
                                     width={74}
                                     height={74}
                                   />
@@ -496,11 +490,9 @@ function Post({ blogs, blogcat, authordetials, author }) {
                                       <i className="bi bi-linkedin"></i>
                                     </a>
                                   </span>
-
                                 </div>
 
                                 <div className="right">
-
                                   <Link
                                     href={`/blog/author/${author.name
                                       .split(" ")
@@ -512,23 +504,16 @@ function Post({ blogs, blogcat, authordetials, author }) {
                                   </Link>
 
                                   <p>{author.about}</p>
-
                                 </div>
                               </div>
                             )
                           )}
-
                       </div>
                     </div>
                   </div>
 
-                  {/* =========================================
-                      SIDEBAR
-                  ========================================= */}
                   <div className="col-lg-4">
-
                     <div className="prom-bann">
-
                       <a
                         style={{
                           marginBottom: "20px",
@@ -542,7 +527,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
                           src="/img/forber-03.png"
                           width={413}
                           height={392}
-                          alt="forbes"
+                          alt="d605-left"
                         />
                       </a>
 
@@ -558,32 +543,23 @@ function Post({ blogs, blogcat, authordetials, author }) {
                           height={168}
                         />
                       </a>
-
                     </div>
                   </div>
                 </div>
 
-                {/* =========================================
-                    RELATED BLOGS
-                ========================================= */}
                 <div className="row pd-90">
-
                   {blogcat &&
                     blogcat.map((item, i) => {
-
                       if (
                         router.query.slug !=
                         item.title_slug
                       ) {
-
                         return (
                           <div
                             className="col-lg-6"
                             key={i}
                           >
-
                             <div className="blogs-lates blogs-lates-repet">
-
                               <h3>
                                 <Link
                                   href={`/blog/${item.title_slug}/`}
@@ -593,7 +569,6 @@ function Post({ blogs, blogcat, authordetials, author }) {
                               </h3>
 
                               <div className="blogs-info-list">
-
                                 <span className="user">
                                   <Link
                                     href={`/blog/author/${item.author
@@ -605,17 +580,67 @@ function Post({ blogs, blogcat, authordetials, author }) {
                                   </Link>
                                 </span>
 
+                                <>
+                                  {item.publish_date && (
+                                    <span className="date">
+                                      <a>
+                                        <i className="bi bi-calendar-event"></i>
+
+                                        {" "}
+                                        Published:{" "}
+                                        {formatDate(
+                                          item.publish_date
+                                        )}
+                                      </a>
+                                    </span>
+                                  )}
+
+                                  {item.updated_at &&
+                                    item.publish_date &&
+                                    formatDate(
+                                      item.updated_at
+                                    ) !==
+                                      formatDate(
+                                        item.publish_date
+                                      ) && (
+                                      <span className="date">
+                                        <a>
+                                          <i className="bi bi-arrow-repeat"></i>
+
+                                          {" "}
+                                          Updated:{" "}
+                                          {formatDate(
+                                            item.updated_at
+                                          )}
+                                        </a>
+                                      </span>
+                                    )}
+                                </>
+
                                 <span className="time">
                                   <a>
-                                    <i className="bi bi-clock"></i>{" "}
-                                    {item.read_time}
+                                    {item.read_time && (
+                                      <>
+                                        <i className="bi bi-clock"></i>{" "}
+                                        {item.read_time}
+                                      </>
+                                    )}
                                   </a>
                                 </span>
 
+                                <span className="cate">
+                                  <Link
+                                    href={`/blog/category/${item.category_slug}/`}
+                                  >
+                                    <span>
+                                      <i className="bi bi-collection"></i>{" "}
+                                      {item.category}
+                                    </span>
+                                  </Link>
+                                </span>
                               </div>
 
                               <div className="b-card-info">
-
                                 <p>
                                   {item.short_description.substring(
                                     0,
@@ -631,7 +656,6 @@ function Post({ blogs, blogcat, authordetials, author }) {
                                     <span>{">"}</span>
                                   </a>
                                 </div>
-
                               </div>
                             </div>
                           </div>
@@ -647,102 +671,44 @@ function Post({ blogs, blogcat, authordetials, author }) {
   );
 }
 
-/* =========================================
-   STATIC PATHS
-========================================= */
-export async function getStaticPaths() {
-  try {
+// ==========================
+// SERVER SIDE RENDERING
+// ==========================
 
-    const res = await fetch(
-      `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/allblogsfetch`
-    );
+export async function getServerSideProps(context) {
 
-    const allBlogs = await res.json();
-
-    const paths = allBlogs
-      .filter(
-        (blog) =>
-          blog?.title_slug &&
-          typeof blog.title_slug === "string"
-      )
-      .map((blog) => ({
-        params: {
-          slug: blog.title_slug,
-        },
-      }));
-
-    return {
-      paths,
-
-      // IMPORTANT
-      fallback: "blocking",
-    };
-
-  } catch (error) {
-
-    console.error(
-      "Error fetching static paths:",
-      error
-    );
-
-    return {
-      paths: [],
-      fallback: "blocking",
-    };
-  }
-}
-
-/* =========================================
-   STATIC PROPS + ISR
-========================================= */
-export async function getStaticProps(context) {
-
-  const { params } = context;
-
-  const slug = params.slug;
+  const slug =
+    context?.params?.slug?.trim();
 
   try {
 
-    /* BLOG FETCH */
+    // MAIN BLOG FETCH
     const blogRes = await fetch(
-      `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blog_details/${slug}`
+      `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blog_details/${slug}`,
+      {
+        headers: {
+          Accept: "application/json",
+        },
+      }
     );
 
-    /* API FAILED */
+    // REAL 404 ONLY
     if (!blogRes.ok) {
       return {
         notFound: true,
-
-        // retry quickly
-        revalidate: 10,
       };
     }
 
     const blogs = await blogRes.json();
 
-    /* REDIRECT SLUG SUPPORT */
-    if (blogs?.redirect_slug) {
-
-      return {
-        redirect: {
-          destination: `/blog/${blogs.redirect_slug}/`,
-          permanent: true,
-        },
-      };
-    }
-
-    /* BLOG EMPTY */
+    // EMPTY BLOG
     if (
       !blogs ||
       !Array.isArray(blogs) ||
       blogs.length === 0
     ) {
-
       return {
         notFound: true,
-
-        // prevent long cached 404
-        revalidate: 10,
       };
     }
 
@@ -752,51 +718,35 @@ export async function getStaticProps(context) {
     const author =
       blogs?.[0]?.author_email || "";
 
-    /* PARALLEL FETCH */
+    // PARALLEL FETCH
     const [relatedRes, authorRes] =
       await Promise.allSettled([
-
         fetch(
           `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blog/related/${category}`
         ),
 
         fetch(
-          `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blog/author/details/${author
-            .split("-")
-            .join(" ")}`
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blog/author/details/${author}`
         ),
       ]);
 
-    /* RELATED BLOGS */
     let blogcat = [];
+    let authordetials = [];
 
     if (
       relatedRes.status === "fulfilled" &&
       relatedRes.value.ok
     ) {
-
-      try {
-        blogcat =
-          await relatedRes.value.json();
-      } catch (e) {
-        blogcat = [];
-      }
+      blogcat =
+        await relatedRes.value.json();
     }
-
-    /* AUTHOR DETAILS */
-    let authordetials = [];
 
     if (
       authorRes.status === "fulfilled" &&
       authorRes.value.ok
     ) {
-
-      try {
-        authordetials =
-          await authorRes.value.json();
-      } catch (e) {
-        authordetials = [];
-      }
+      authordetials =
+        await authorRes.value.json();
     }
 
     return {
@@ -806,26 +756,19 @@ export async function getStaticProps(context) {
         authordetials,
         author,
       },
-
-      // ISR
-      revalidate: 300,
     };
 
   } catch (error) {
 
     console.error(
-      "ISR BLOG PAGE ERROR:",
+      "BLOG PAGE ERROR:",
       error
     );
 
     return {
       notFound: true,
-
-      // retry quickly
-      revalidate: 10,
     };
   }
 }
 
 export default Post;
-
