@@ -14,6 +14,13 @@ import {
 
 import BlogSearchinner from "../../components/BlogSearchinner";
 
+const cleanSlug = (slug = "") => {
+  return String(slug)
+    .replace(/^\/+/, "")
+    .replace(/\/+$/, "")
+    .trim();
+};
+
 // Utility function to parse HTML content and extract image URLs
 function parseImagesFromHtml(htmlContent) {
   if (!htmlContent) {
@@ -91,7 +98,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
 
                 <link
                   rel="canonical"
-                  href={`https://www.dynamicssquare.co.uk/blog/${item.title_slug}/`}
+                  href={`https://www.dynamicssquare.co.uk/blog/${cleanSlug(item.title_slug)}/`}
                 />
 
                 {item.rank == 1 && (
@@ -113,7 +120,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
 
                 <meta
                   property="og:url"
-                  content={`https://www.dynamicssquare.co.uk/blog/${item.title_slug}/`}
+                  content={`https://www.dynamicssquare.co.uk/blog/${cleanSlug(item.title_slug)}/`}
                 />
 
                 <meta
@@ -241,11 +248,11 @@ function Post({ blogs, blogcat, authordetials, author }) {
                             <span className="user">
 
                               <Link
-                                href={`/blog/author/${encodeURIComponent(
-                                  item.author
-                                    .split(" ")
-                                    .join("-")
-                                )}/`}
+                                href={`/blog/author/${cleanSlug(
+  encodeURIComponent(
+    item.author.split(" ").join("-")
+  )
+)}/`}
                               >
                                 {item.author}
                               </Link>
@@ -303,7 +310,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
                             <span className="cate">
 
                               <Link
-                                href={`/blog/category/${item.category_slug}/`}
+                                href={`/blog/category/${cleanSlug(item.category_slug)}/`}
                               >
                                 <span>
                                   <i className="bi bi-collection"></i>{" "}
@@ -320,7 +327,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
                             {mounted && (
                               <>
                                 <FacebookShareButton
-                                  url={`https://www.dynamicssquare.co.uk/blog/${item.title_slug}/`}
+                                  url={`https://www.dynamicssquare.co.uk/blog/${cleanSlug(item.title_slug)}/`}
                                   quote={item.title}
                                 >
                                   <a>
@@ -329,7 +336,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
                                 </FacebookShareButton>
 
                                 <TwitterShareButton
-                                  url={`https://www.dynamicssquare.co.uk/blog/${item.title_slug}/`}
+                                  url={`https://www.dynamicssquare.co.uk/blog/${cleanSlug(item.title_slug)}/`}
                                   quote={item.title}
                                 >
                                   <a>
@@ -338,7 +345,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
                                 </TwitterShareButton>
 
                                 <LinkedinShareButton
-                                  url={`https://www.dynamicssquare.co.uk/blog/${item.title_slug}/`}
+                                  url={`https://www.dynamicssquare.co.uk/blog/${cleanSlug(item.title_slug)}/`}
                                   source={item.title}
                                 >
                                   <a>
@@ -562,7 +569,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
                             <div className="blogs-lates blogs-lates-repet">
                               <h3>
                                 <Link
-                                  href={`/blog/${item.title_slug}/`}
+                                  href={`/blog/${cleanSlug(item.title_slug)}/`}
                                 >
                                   {item.title}
                                 </Link>
@@ -630,7 +637,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
 
                                 <span className="cate">
                                   <Link
-                                    href={`/blog/category/${item.category_slug}/`}
+                                    href={`/blog/category/${cleanSlug(item.category_slug)}/`}
                                   >
                                     <span>
                                       <i className="bi bi-collection"></i>{" "}
@@ -650,7 +657,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
 
                                 <div className="page-link-read">
                                   <a
-                                    href={`/blog/${item.title_slug}/`}
+                                    href={`/blog/${cleanSlug(item.title_slug)}/`}
                                   >
                                     Read More{" "}
                                     <span>{">"}</span>
@@ -677,8 +684,19 @@ function Post({ blogs, blogcat, authordetials, author }) {
 
 export async function getServerSideProps(context) {
 
-  const slug =
-    context?.params?.slug?.trim();
+  /* =====================================
+     CLEAN SLUG
+  ===================================== */
+  const cleanSlug = (slug = "") => {
+    return String(slug)
+      .replace(/^\/+/, "")
+      .replace(/\/+$/, "")
+      .trim();
+  };
+
+  const slug = cleanSlug(
+    context?.params?.slug
+  );
 
   try {
 
@@ -699,21 +717,38 @@ export async function getServerSideProps(context) {
       };
     }
 
-    const blogs = await blogRes.json();
+    const blogsData = await blogRes.json();
 
     // EMPTY BLOG
     if (
-      !blogs ||
-      !Array.isArray(blogs) ||
-      blogs.length === 0
+      !blogsData ||
+      !Array.isArray(blogsData) ||
+      blogsData.length === 0
     ) {
       return {
         notFound: true,
       };
     }
 
+    /* =====================================
+       CLEAN BLOG DATA
+    ===================================== */
+    const blogs = blogsData.map((blog) => ({
+      ...blog,
+
+      title_slug: cleanSlug(
+        blog.title_slug
+      ),
+
+      category_slug: cleanSlug(
+        blog.category_slug
+      ),
+    }));
+
     const category =
-      blogs?.[0]?.category_slug || "";
+      cleanSlug(
+        blogs?.[0]?.category_slug
+      ) || "";
 
     const author =
       blogs?.[0]?.author_email || "";
@@ -733,14 +768,35 @@ export async function getServerSideProps(context) {
     let blogcat = [];
     let authordetials = [];
 
+    /* =====================================
+       RELATED BLOGS
+    ===================================== */
     if (
       relatedRes.status === "fulfilled" &&
       relatedRes.value.ok
     ) {
-      blogcat =
+
+      const relatedData =
         await relatedRes.value.json();
+
+      blogcat = relatedData.map(
+        (blog) => ({
+          ...blog,
+
+          title_slug: cleanSlug(
+            blog.title_slug
+          ),
+
+          category_slug: cleanSlug(
+            blog.category_slug
+          ),
+        })
+      );
     }
 
+    /* =====================================
+       AUTHOR DETAILS
+    ===================================== */
     if (
       authorRes.status === "fulfilled" &&
       authorRes.value.ok
