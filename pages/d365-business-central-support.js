@@ -9,10 +9,10 @@ const BcSupport = () => {
     return (
         <>
             <Head>
-                <title>Dynamics 365 Business Central Support & Services UK - Dynamics Square</title>
+                <title>Dynamics 365 Business Central Support | Dynamics Square UK</title>
                 <meta
                     name="description"
-                    content="Get expert Dynamics 365 Business Central support & services in the UK from Dynamics Square. Fast issue resolution, system optimisation, upgrades, and ongoing ERP support."
+                    content="We provide comprehensive Dynamics 365 Business Central support services, including customisations, integrations, training, add-ons, and technical support."
                 />
                 <link
                     rel="canonical"
@@ -20,14 +20,14 @@ const BcSupport = () => {
                 />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://www.dynamicssquare.co.uk/d365-business-central-support/" />
-                <meta property="og:title" content="Dynamics 365 Business Central Support & Services UK - Dynamics Square" />
-                <meta property="og:description" content="Get expert Dynamics 365 Business Central support & services in the UK from Dynamics Square. Fast issue resolution, system optimisation, upgrades, and ongoing ERP support." />
+                <meta property="og:title" content="Dynamics 365 Business Central Support | Dynamics Square UK" />
+                <meta property="og:description" content="We provide comprehensive Dynamics 365 Business Central support services, including customisations, integrations, training, add-ons, and technical support." />
                 <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/bc-support-banner.png" />
 
                 <meta property="twitter:card" content="summary_large_image" />
                 <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/d365-business-central-support/" />
-                <meta property="twitter:title" content="Dynamics 365 Business Central Support & Services UK - Dynamics Square" />
-                <meta property="twitter:description" content="Get expert Dynamics 365 Business Central support & services in the UK from Dynamics Square. Fast issue resolution, system optimisation, upgrades, and ongoing ERP support." />
+                <meta property="twitter:title" content="Dynamics 365 Business Central Support | Dynamics Square UK" />
+                <meta property="twitter:description" content="We provide comprehensive Dynamics 365 Business Central support services, including customisations, integrations, training, add-ons, and technical support." />
                 <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/bc-support-banner.png" />
             </Head>
             <div className='solution-new-banner-one'>
