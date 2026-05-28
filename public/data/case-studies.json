@@ -1,0 +1,210 @@
+[
+      {
+    "id": 22,
+    "title": "How a Global Logistics Business Strengthened Financial Control and Prepared for Multi-Entity Rollout with Microsoft Dynamics 365",
+    "image": "/img/logistic-uk.jpg",
+    "alt": "logistic-uk",
+    "slug": "/case-studies/dynamics-365-finance-for-logistic-uk-multi-entity/",
+    "category": "Implementation"
+  },
+        {
+    "id": 23,
+    "title": "How a Tooling and Distribution Business Restored Compliance and Rebuilt Trust with Microsoft Dynamics 365",
+    "image": "/img/tool-manufacturing-company.jpg",
+    "alt": "tool-manufacturing-company",
+    "slug": "/case-studies/business-central-for-tool-manufacturing-company/",
+    "category": "Upgrade"
+  },
+        {
+    "id": 24,
+    "title": "How a UK-Based Global Manufacturer Rebuilt Its Operational Core and Scaled with Confidence Using Microsoft Dynamics 365",
+    "image": "/img/implement-for-equestrian.jpg",
+    "alt": "implement-for-equestrian",
+    "slug": "/case-studies/business-central-with-crm-implement-for-equestrian-manufacturing/",
+    "category": "Implementation"
+  },
+        {
+    "id": 25,
+    "title": "How a Multi-Entity Engineering Business Built Financial Clarity and Operational Control with Microsoft Dynamics 365",
+    "image": "/img/operations-for-project-management.jpg",
+    "alt": "operations-for-project-management",
+    "slug": "/case-studies/d365-finance-and-operations-for-project-management/",
+    "category": "Implementation"
+  },
+        {
+    "id": 26,
+    "title": "How a Multi-Entity Engineering Business Built Financial Clarity and Operational Control with Microsoft Dynamics 365",
+    "image": "/img/f&O-implementation-for-healthcare.jpg",
+    "alt": "f&O-implementation-for-healthcare",
+    "slug": "/case-studies/dynamics-365-f&O-implementation-for-healthcare/",
+    "category": "Support"
+  },
+  {
+    "id": 1,
+    "title": "Ireland’s Leading Saddlery Retailer Boosted Warehouse Efficiency by 60% After Moving from Dynamics NAV to Business Central On-Premise",
+    "image": "/img/old-mill-feature.jpg",
+    "alt": "old-mill-feature",
+    "slug": "/case-studies/business-central-reimplementation-for-retail-market/",
+    "category": "Implementation"
+  },
+  {
+    "id": 2,
+    "title": "Emerging European food trader boosted operational control by 162% ROI in 3 years by adopting Business Central from scratch with Dynamics Square",
+    "image": "/img/mgg-food-feautre.jpg",
+    "alt": "mgg-food-feautre",
+    "slug": "/case-studies/business-central-reimplementation-for-food-trader/",
+    "category": "Implementation"
+  },
+  {
+    "id": 3,
+    "title": "A specialist in plastic automation simplified its complex buy-sell operations and strengthened project control using Microsoft Dynamics 365 Business Central.",
+    "image": "/img/Summit-Systems.png",
+    "alt": "Summit-Systems",
+    "slug": "/case-studies/business-central-reimplementation-for-recycling-industry/",
+    "category": "Implementation"
+  },
+  {
+    "id": 4,
+    "title": "A leading UK orthodontic supplier sought to improve operational efficiency, gain better data visibility, and support future growth.",
+    "image": "/img/orth-care.png",
+    "alt": "orth-care",
+    "slug": "/case-studies/nav-2013-r2-to-business-central-upgrade/",
+    "category": "Upgrade"
+  },
+  {
+    "id": 5,
+    "title": "UK's top personal care brand boosted operational efficiency up to 4X by upgrading from Dynamics NAV 2009 to Dynamics NAV 2018.",
+    "image": "/img/case-studies-1.jpg",
+    "alt": "crm-trading",
+    "slug": "/case-studies/nav2009-nav18-upgrade/",
+    "category": "Upgrade"
+  },
+  {
+    "id": 6,
+    "title": "UK's top sexual wellness brand improved productivity by up to 68% by upgrading to Business Central On-premise from Dynamics NAV.",
+    "image": "/img/case-studies-2.jpg",
+    "alt": "case-studies-2",
+    "slug": "/case-studies/nav09-to-business-central-upgrade/",
+    "category": "Upgrade"
+  },
+  {
+    "id": 7,
+    "title": "A medical instrument supplier and manufacturer doubled revenue and improved production capacity by upgrading to Business Central Online from Dynamics NAV.",
+    "image": "/img/case-studies-3.jpg",
+    "alt": "timesco-logo",
+    "slug": "/case-studies/nav13R2-to-business-central/",
+    "category": "Upgrade"
+  },
+  {
+    "id": 8,
+    "title": "A UK's leading defence apparel manufacturer increased efficiency and accuracy by up to 50% by implementing Microsoft Dynamics 365 Business Central online.",
+    "image": "/img/case-studies-4.jpg",
+    "alt": "cqc-logo",
+    "slug": "/case-studies/nav2009R2-to-business-central/",
+    "category": "Implementation"
+  },
+  {
+    "id": 9,
+    "title": "Learn how an HSSE consulting firm improved overall accounting and financial processes by implementing Dynamics 365 Business Central.",
+    "image": "/img/case-studies-5.jpg",
+    "alt": "arteak-logo",
+    "slug": "/case-studies/migrate-nav9-to-business-central/",
+    "category": "Implementation"
+  },
+  {
+    "id": 10,
+    "title": "A UK-based paper and forest product manufacturer doubled its sales volume and customers with dedicated support from Dynamics Square.",
+    "image": "/img/case-studies-6.jpg",
+    "alt": "wipersupplywide",
+    "slug": "/case-studies/nav-2016-support-services/",
+    "category": "Support"
+  },
+  {
+    "id": 11,
+    "title": "Learn how a UK-based tea manufacturing brand received stress-free Dynamics NAV support from Dynamics Square through customization and dedicated services.",
+    "image": "/img/case-studies-7.jpg",
+    "alt": "tea",
+    "slug": "/case-studies/nav16-support/",
+    "category": "Support"
+  },
+  {
+    "id": 12,
+    "title": "UK’s leading manufacturer of orthopedic implants has gained 80% more visibility with a Business Central implementation.",
+    "image": "/img/Leda-Ortho.jpg",
+    "alt": "Leda-Ortho",
+    "slug": "/case-studies/upgrading-to-dynamics-365-business-central/",
+    "category": "Upgrade"
+  },
+  {
+    "id": 13,
+    "title": "A leading college in London has improved the department collaboration by 80% with the Business Central upgrade.",
+    "image": "/img/BSix.jpg",
+    "alt": "BSix",
+    "slug": "/case-studies/upgrade-from-nav09-to-business-central/",
+    "category": "Upgrade"
+  },
+  {
+    "id": 14,
+    "title": "An established importer of citrus fruits has achieved enhanced operational efficiency by 80% with the Business Central implementation.",
+    "image": "/img/Greenstar.jpg",
+    "alt": "Greenstar",
+    "slug": "/case-studies/quickbooks-to-business-central-migration/",
+    "category": "Implementation"
+  },
+  {
+    "id": 15,
+    "title": "A leading supplier of carrier-grade antenna has enabled faster order processing and customer service by 60% with Business Central implementation.",
+    "image": "/img/GTT-Wireless.jpg",
+    "alt": "GTT-Wireless",
+    "slug": "/case-studies/odoo-erp-to-business-central-migration/",
+    "category": "Implementation"
+  },
+  {
+    "id": 16,
+    "title": "A leading supplier of fertilizer and agrochemicals has increased customer satisfaction by 70% with Business Central upgrade.",
+    "image": "/img/Meirion-Davies.jpg",
+    "alt": "Meirion-Davies",
+    "slug": "/case-studies/dynamics-nav09-to-business-central-upgrade/",
+    "category": "Upgrade"
+  },
+  {
+    "id": 17,
+    "title": "A leading car restoration and customization company has enhanced their ROI by 30% with Business Central implementation.",
+    "image": "/img/Omicron-Engineering.jpg",
+    "alt": "Omicron-Engineering",
+    "slug": "/case-studies/access-dimension-erp-to-business-central-migration/",
+    "category": "Implementation"
+  },
+  {
+    "id": 18,
+    "title": "A business leader in transformational switchboards has increased the data accuracy rate by 8% with our Power BI Support services.",
+    "image": "/img/Comxo.jpg",
+    "alt": "Comxo",
+    "slug": "/case-studies/power-bi-support-solutions/",
+    "category": "Support"
+  },
+  {
+    "id": 19,
+    "title": "A leading builder’s merchant support company has achieved business transparency by 60% with Business Central implementation.",
+    "image": "/img/ALMI-Group.jpg",
+    "alt": "ALMI-Group",
+    "slug": "/case-studies/sage-erp-to-business-central/",
+    "category": "Implementation"
+  },
+  {
+    "id": 20,
+    "title": "A UK’s leading melamine food display manufacturing and supply company has achieved enhanced productivity by 50% with Business Central cloud re-implementation.",
+    "image": "/img/Dalebrook-Supplies.jpg",
+    "alt": "Dalebrook-Supplies",
+    "slug": "/case-studies/migrate-on-premises-to-business-central-cloud/",
+    "category": "Implementation"
+  },
+  {
+    "id": 21,
+    "title": "A leading business in the design and manufacturing of lifting and handling solution has achieved 40% more transparency in sales and stock with Power BI implementation.",
+    "image": "/img/WH-Scout.jpg",
+    "alt": "WH-Scout",
+    "slug": "/case-studies/microsoft-power-bi-implementation/",
+    "category": "Implementation"
+  }
+]

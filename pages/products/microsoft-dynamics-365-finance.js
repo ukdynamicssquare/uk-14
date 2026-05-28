@@ -352,7 +352,9 @@ const BusinessCentral = () => {
         </div>
       </section>
       <section className='solution-new-cta'>
-        <div className='asd'>
+        <div className='asd' style={{
+  backgroundImage: "url('/img/Maskgrou12.png')"
+}}>
           <div className='container'>
             <div className='row'>
               <div className='col-lg-10'>
@@ -857,12 +859,13 @@ const BusinessCentral = () => {
               <div className='bc-new-tabs-li'>
                 <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
                   <li className="nav-item" role="presentation">
-                    <button className="nav-link active" id="pills-home-02-tab" data-bs-toggle="pill" data-bs-target="#pills-home-02" type="button" role="tab" aria-controls="pills-home-02" aria-selected="false">e-Books</button>
+                    <button className="nav-link  active" id="pills-home-01-tab" data-bs-toggle="pill" data-bs-target="#pills-home-01" type="button" role="tab" aria-controls="pills-home-01" aria-selected="true">Case Studies</button>
                   </li>
-                  {/* <li className="nav-item" role="presentation">
-                    <button className="nav-link" id="pills-home-01-tab" data-bs-toggle="pill" data-bs-target="#pills-home-01" type="button" role="tab" aria-controls="pills-home-01" aria-selected="true">Researches</button>
-                  </li> */}
 
+                  <li className="nav-item" role="presentation">
+                    <button className="nav-link" id="pills-home-02-tab" data-bs-toggle="pill" data-bs-target="#pills-home-02" type="button" role="tab" aria-controls="pills-home-02" aria-selected="false">e-Books</button>
+                  </li>
+                  
                   <li className="nav-item" role="presentation">
                     <button className="nav-link" id="pills-home-03-tab" data-bs-toggle="pill" data-bs-target="#pills-home-03" type="button" role="tab" aria-controls="pills-home-03" aria-selected="false">Podcasts</button>
                   </li>
@@ -886,37 +889,49 @@ const BusinessCentral = () => {
               {/* <p className='pt-200'><b>Reach new markets with Business Central</b></p> */}
               <div className='bc-new-tabs-li-body'>
                 <div className="tab-content" id="pills-tabContent">
-                  {/* <div className="tab-pane fade" id="pills-home-01" role="tabpanel" aria-labelledby="pills-home-01-tab">
+                  <div className="tab-pane fade  show active" id="pills-home-01" role="tabpanel" aria-labelledby="pills-home-01-tab">
 
                     <div className='row'>
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
-                          <a onClick={() => handleOpenModal('pdf2')}>
-                            <img src="/img/bc-8-18.png" width={273} height={192} alt="bc-8-17" />
-                            <h3>Reach new markets with Business Central</h3>
-                            <p>Research from Nucleus shows better productivity, lower costs, and stronger control.</p>
+                          <a href='/case-studies/dynamics-365-finance-for-logistic-uk-multi-entity/'>
+                            <img src="/img/logistic-uk.jpg" width={273} height={192} alt="bc-8-17" />
+                            <h3>Dynamics 365 Finance for Logistic UK Multi Entity</h3>
+                            <p>How a Global Logistics Business Strengthened Financial Control and Prepared for Multi-Entity Rollout with Microsoft Dynamics 365...</p>
                             <div className='ct--a'>
-                              <span>Download the report</span>
+                              <span>Read More</span>
                             </div>
                           </a>
                         </div>
                       </div>
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
-                          <a onClick={() => handleOpenModal('pdf1')}>
-                            <img src="/img/bc-8-17.png" width={273} height={192} alt="bc-8-18" />
-                            <h3>See how firms gained from Business Central</h3>
-                            <p>This 2024 Forrester study shows the returns real customers saw after getting started.</p>
+                          <a href='/case-studies/d365-finance-and-operations-for-project-management/'>
+                            <img src="/img/operations-for-project-management.jpg" width={273} height={192} alt="bc-8-18" />
+                            <h3>D365 Finance and Operations for Project Management</h3>
+                            <p>How a Multi-Entity Engineering Business Built Financial Clarity and Operational Control with Microsoft Dynamics 365..</p>
                             <div className='ct--a'>
-                              <span>Download the study</span>
+                              <span>Read More</span>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
+                        <div className='card0-01 card0-02'>
+                          <a href='/case-studies/dynamics-365-f&O-implementation-for-healthcare/'>
+                            <img src="/img/f&O-implementation-for-healthcare.jpg" width={273} height={192} alt="bc-8-18" />
+                            <h3>Dynamics 365 F&O Implementation for Healthcare</h3>
+                            <p>How a Clinical Research Organisation Improved Financial Processes and System Adoption with Dynamics 365 Finance and Operations...</p>
+                            <div className='ct--a'>
+                              <span>Read More</span>
                             </div>
                           </a>
                         </div>
                       </div>
                     </div>
 
-                  </div> */}
-                  <div className="tab-pane fade show active" id="pills-home-02" role="tabpanel" aria-labelledby="pills-home-02-tab">
+                  </div>
+                  <div className="tab-pane fade" id="pills-home-02" role="tabpanel" aria-labelledby="pills-home-02-tab">
                     <div className='row'>
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
