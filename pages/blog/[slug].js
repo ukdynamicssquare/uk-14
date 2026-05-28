@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
-import parse, { domToReact } from "html-react-parser";
+import parse from "html-react-parser";
 import Image from "next/image";
 import * as cheerio from "cheerio";
 import { useRouter } from "next/router";
-import dynamic from "next/dynamic";
 
 import {
   FacebookShareButton,
@@ -39,11 +38,11 @@ function Post({ blogs, blogcat, authordetials, author }) {
 
   const router = useRouter();
 
-  // FIX ADDED
-  if (router.isFallback) {
+  // SSR LOADING FIX
+  if (!blogs || blogs.length === 0) {
     return (
       <div className="container py-5">
-        <h2>Loading...</h2>
+        <h2>Loading blog...</h2>
       </div>
     );
   }
@@ -59,6 +58,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
   }, []);
 
   function formatDate(date) {
+
     if (!date) return "";
 
     const parsedDate = new Date(
@@ -83,6 +83,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
             <div key={i}>
               <Head>
                 <title>{item.meta_title}</title>
+
                 <meta
                   name="description"
                   content={item.meta_description}
@@ -163,6 +164,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
                 {item.additional_multiscript &&
                   (() => {
                     try {
+
                       return JSON.parse(
                         item.additional_multiscript
                       ).map((scriptContent, index) => (
@@ -174,18 +176,26 @@ function Post({ blogs, blogcat, authordetials, author }) {
                           }}
                         />
                       ));
+
                     } catch (error) {
+
                       return null;
                     }
                   })()}
               </Head>
 
               <div className="container">
+
                 <div className="row">
+
                   <div className="col-lg-12">
+
                     <div className="blogs-breadcromb">
+
                       <nav aria-label="breadcrumb">
+
                         <ol className="breadcrumb">
+
                           <li className="breadcrumb-item">
                             <Link href="/">
                               Home
@@ -201,23 +211,35 @@ function Post({ blogs, blogcat, authordetials, author }) {
                           <li className="breadcrumb-item active">
                             {item.title}
                           </li>
+
                         </ol>
+
                       </nav>
+
                     </div>
+
                   </div>
+
                 </div>
 
                 <BlogSearchinner />
 
                 <div className="row g-5">
+
                   <div className="col-lg-8">
+
                     <div className="blogs-single-post-sec">
+
                       <div className="blogs-lates blogs-lates-top-head">
+
                         <h1>{item.title}</h1>
 
                         <div className="blogs-info-list">
+
                           <div className="left-list">
+
                             <span className="user">
+
                               <Link
                                 href={`/blog/author/${encodeURIComponent(
                                   item.author
@@ -227,6 +249,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
                               >
                                 {item.author}
                               </Link>
+
                             </span>
 
                             <>
@@ -278,6 +301,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
                             </span>
 
                             <span className="cate">
+
                               <Link
                                 href={`/blog/category/${item.category_slug}/`}
                               >
@@ -286,10 +310,13 @@ function Post({ blogs, blogcat, authordetials, author }) {
                                   {item.category}
                                 </span>
                               </Link>
+
                             </span>
+
                           </div>
 
                           <div className="sociallist">
+
                             {mounted && (
                               <>
                                 <FacebookShareButton
@@ -320,18 +347,21 @@ function Post({ blogs, blogcat, authordetials, author }) {
                                 </LinkedinShareButton>
                               </>
                             )}
+
                           </div>
+
                         </div>
+
                       </div>
 
                       <div className="blogs-content">
+
                         <div className="blogs-content-inner">
 
                           {mounted &&
                             parse(item.description || "", {
                               replace: (domNode) => {
 
-                                // Optimize IMG tags
                                 if (
                                   domNode.name === "img" &&
                                   domNode.attribs?.src
@@ -358,12 +388,10 @@ function Post({ blogs, blogcat, authordetials, author }) {
                                           alt || "blog-image"
                                         }
                                         width={
-                                          Number(width) ||
-                                          1200
+                                          Number(width) || 1200
                                         }
                                         height={
-                                          Number(height) ||
-                                          700
+                                          Number(height) || 700
                                         }
                                         sizes="(max-width: 768px) 100vw, 1200px"
                                         style={{
@@ -377,7 +405,6 @@ function Post({ blogs, blogcat, authordetials, author }) {
                                   );
                                 }
 
-                                // Add lazy loading to iframe
                                 if (
                                   domNode.name === "iframe"
                                 ) {
@@ -393,7 +420,6 @@ function Post({ blogs, blogcat, authordetials, author }) {
                                   );
                                 }
 
-                                // Keep other HTML same
                                 return undefined;
                               },
                             })}
@@ -645,93 +671,44 @@ function Post({ blogs, blogcat, authordetials, author }) {
   );
 }
 
-/* ===========================
-   ISR STATIC GENERATION
-=========================== */
+// ==========================
+// SERVER SIDE RENDERING
+// ==========================
 
-export async function getStaticPaths() {
-  try {
-    const res = await fetch(
-      `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/allblogsfetch`
-    );
+export async function getServerSideProps(context) {
 
-    const allBlogs = await res.json();
-
-    const paths = allBlogs
-      .filter(
-        (blog) =>
-          blog?.title_slug &&
-          typeof blog.title_slug === "string"
-      )
-      .map((blog) => ({
-        params: {
-          // FIX ADDED
-          slug: blog.title_slug.trim(),
-        },
-      }));
-
-    return {
-      paths,
-
-      // FIX ADDED
-      fallback: true,
-    };
-  } catch (error) {
-    console.error(
-      "Error fetching static paths:",
-      error
-    );
-
-    return {
-      paths: [],
-
-      // FIX ADDED
-      fallback: true,
-    };
-  }
-}
-
-export async function getStaticProps(context) {
-  const slug = context?.params?.slug?.trim();
+  const slug =
+    context?.params?.slug?.trim();
 
   try {
 
+    // MAIN BLOG FETCH
     const blogRes = await fetch(
-      `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blog_details/${slug}`
+      `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blog_details/${slug}`,
+      {
+        headers: {
+          Accept: "application/json",
+        },
+      }
     );
 
-    // FIX ADDED
+    // REAL 404 ONLY
     if (!blogRes.ok) {
       return {
-        props: {
-          blogs: [],
-          blogcat: [],
-          authordetials: [],
-          author: "",
-        },
-
-        revalidate: 5,
+        notFound: true,
       };
     }
 
     const blogs = await blogRes.json();
 
-    // FIX ADDED
+    // EMPTY BLOG
     if (
       !blogs ||
       !Array.isArray(blogs) ||
       blogs.length === 0
     ) {
-
       return {
-        props: {
-          blogs: [],
-          blogcat: [],
-          authordetials: [],
-          author: "",
-        },
-
-        revalidate: 5,
+        notFound: true,
       };
     }
 
@@ -741,6 +718,7 @@ export async function getStaticProps(context) {
     const author =
       blogs?.[0]?.author_email || "";
 
+    // PARALLEL FETCH
     const [relatedRes, authorRes] =
       await Promise.allSettled([
         fetch(
@@ -759,7 +737,8 @@ export async function getStaticProps(context) {
       relatedRes.status === "fulfilled" &&
       relatedRes.value.ok
     ) {
-      blogcat = await relatedRes.value.json();
+      blogcat =
+        await relatedRes.value.json();
     }
 
     if (
@@ -777,21 +756,17 @@ export async function getStaticProps(context) {
         authordetials,
         author,
       },
-
-      revalidate: 300,
     };
 
   } catch (error) {
 
-    return {
-      props: {
-        blogs: [],
-        blogcat: [],
-        authordetials: [],
-        author: "",
-      },
+    console.error(
+      "BLOG PAGE ERROR:",
+      error
+    );
 
-      revalidate: 5,
+    return {
+      notFound: true,
     };
   }
 }
