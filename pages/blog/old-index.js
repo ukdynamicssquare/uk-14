@@ -99,7 +99,7 @@ export default OldIndex;
 //                         </span>
 //                         <span className="date">
 //                           <a>
-//                             <i className="bi bi-calendar"></i>{" "}
+//                             <i className="bi bi-calendar-event"></i>{" "}
 //                             {item.publish_date}
 //                           </a>
 //                         </span>
@@ -110,7 +110,7 @@ export default OldIndex;
 //                         </span>
 //                         <span className="cate">
 //                           <a href={`/blog/category/${item.category_slug}`}>
-//                             <i className="bi bi-app"></i> {item.category}
+//                             <i className="bi bi-collection"></i> {item.category}
 //                           </a>
 //                         </span>
 //                       </div>
@@ -168,7 +168,7 @@ export default OldIndex;
 //                             </span>
 //                             <span className="date">
 //                               <a>
-//                                 <i className="bi bi-calendar"></i>{" "}
+//                                 <i className="bi bi-calendar-event"></i>{" "}
 //                                 {businessitem.publish_date}
 //                               </a>
 //                             </span>
@@ -180,7 +180,7 @@ export default OldIndex;
 //                             </span>
 //                             <span className="cate">
 //                               <a href={`/blog/category/${businessitem.category_slug}`}>
-//                                 <i className="bi bi-app"></i> {businessitem.category}
+//                                 <i className="bi bi-collection"></i> {businessitem.category}
 //                               </a>
 //                             </span>
 //                           </div>
@@ -215,7 +215,7 @@ export default OldIndex;
 //                             </span>
 //                             <span className="date">
 //                               <a>
-//                                 <i className="bi bi-calendar"></i>{" "}
+//                                 <i className="bi bi-calendar-event"></i>{" "}
 //                                 {trandig.publish_date}
 //                               </a>
 //                             </span>
@@ -226,7 +226,7 @@ export default OldIndex;
 //                             </span>
 //                             <span className="cate">
 //                               <a href="">
-//                                 <i className="bi bi-app"></i> {trandig.category}
+//                                 <i className="bi bi-collection"></i> {trandig.category}
 //                               </a>
 //                             </span>
 //                           </div>
@@ -301,7 +301,7 @@ export default OldIndex;
 //                           </span>
 //                           <span className="date">
 //                             <a>
-//                               <i className="bi bi-calendar"></i>{" "}
+//                               <i className="bi bi-calendar-event"></i>{" "}
 //                               {randomitem.publish_date}
 //                             </a>
 //                           </span>
@@ -312,7 +312,7 @@ export default OldIndex;
 //                           </span>
 //                           <span className="cate">
 //                             <a href={`/blog/category/${randomitem.category_slug}`}>
-//                               <i className="bi bi-app"></i> {randomitem.category}
+//                               <i className="bi bi-collection"></i> {randomitem.category}
 //                             </a>
 //                           </span>
 //                         </div>

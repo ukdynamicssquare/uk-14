@@ -143,7 +143,7 @@ function CategoryBlogs({ blogs, categoryblogs }) {
                       </span>
                       <span className="date">
                         <a>
-                          <i className="bi bi-calendar"></i>
+                          <i className="bi bi-calendar-event"></i>
                           {item.publish_date}
                         </a>
                       </span>
@@ -155,7 +155,7 @@ function CategoryBlogs({ blogs, categoryblogs }) {
                       </span>
                       <span className="cate">
                         <a href={`/blog/category/${item.category_slug}`}>
-                          <i className="bi bi-app"></i> {item.category}
+                          <i className="bi bi-collection"></i> {item.category}
                         </a>
                       </span>
                     </div>

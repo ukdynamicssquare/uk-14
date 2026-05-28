@@ -143,7 +143,7 @@ function Blogshome({ blogs, businesscentral, categoryblogs, blograndomblogs, blo
                       {blogs?.[0]?.publish_date && (
                         <span className="date">
                           <a>
-                            <i className="bi bi-calendar"></i>
+                            <i className="bi bi-calendar-event"></i>
                             {" "}Published: {formatDate(blogs[0].publish_date)}
                           </a>
                         </span>
@@ -154,7 +154,7 @@ function Blogshome({ blogs, businesscentral, categoryblogs, blograndomblogs, blo
                         formatDate(blogs[0].updated_at) !== formatDate(blogs[0].publish_date) && (
                           <span className="date ms-2">
                             <a>
-                              <i className="bi bi-calendar"></i>
+                              <i className="bi bi-arrow-repeat"></i>
                               {" "}Updated: {formatDate(blogs[0].updated_at)}
                             </a>
                           </span>
@@ -163,7 +163,7 @@ function Blogshome({ blogs, businesscentral, categoryblogs, blograndomblogs, blo
                     <span className="time"><a><i className="bi bi-clock"></i> {blogs[0].read_time}</a></span>
                     <span className="cate">
                       <a href={`/blog/category/${blogs[0].category_slug}/`}>
-                        <i className="bi bi-app"></i> {blogs[0].category}
+                        <i className="bi bi-collection"></i> {blogs[0].category}
                       </a>
                     </span>
                   </div>
@@ -202,11 +202,11 @@ function Blogshome({ blogs, businesscentral, categoryblogs, blograndomblogs, blo
                           <i className="bi bi-person-circle"></i> {item.author}
                         </a>
                       </span>
-                      <span className="date"><a><i className="bi bi-calendar"></i> {item.publish_date}</a></span>
+                      <span className="date"><a><i className="bi bi-calendar-event"></i> {item.publish_date}</a></span>
                       <span className="time"><a><i className="bi bi-clock"></i> {item.read_time}</a></span>
                       <span className="cate">
                         <a href={`/blog/category/${item.category_slug}`}>
-                          <i className="bi bi-app"></i> {item.category}
+                          <i className="bi bi-collection"></i> {item.category}
                         </a>
                       </span>
                     </div>
@@ -222,7 +222,7 @@ function Blogshome({ blogs, businesscentral, categoryblogs, blograndomblogs, blo
                         <a href="https://www.forbes.com/councils/forbestechcouncil/people/manishgoyal/" target="_balnk" rel="nofollow">
                           <i className="bi bi-person-circle"></i> Manish Goyal
                         </a>
-                        <span className="date"><a><i className="bi bi-calendar"></i> Oct 30, 2025</a></span>
+                        <span className="date"><a><i className="bi bi-calendar-event"></i> Oct 30, 2025</a></span>
                       </span>
                     </div>
 
@@ -238,7 +238,7 @@ function Blogshome({ blogs, businesscentral, categoryblogs, blograndomblogs, blo
                         <a href="https://www.forbes.com/councils/forbestechcouncil/people/manishgoyal/" target="_balnk" rel="nofollow">
                           <i className="bi bi-person-circle"></i> Manish Goyal
                         </a>
-                        <span className="date"><a><i className="bi bi-calendar"></i> Sep 19, 2025</a></span>
+                        <span className="date"><a><i className="bi bi-calendar-event"></i> Sep 19, 2025</a></span>
                       </span>
                     </div>
 
@@ -253,7 +253,7 @@ function Blogshome({ blogs, businesscentral, categoryblogs, blograndomblogs, blo
                         <a href="https://www.forbes.com/councils/forbestechcouncil/people/manishgoyal/" target="_balnk" rel="nofollow">
                           <i className="bi bi-person-circle"></i> Manish Goyal
                         </a>
-                        <span className="date"><a><i className="bi bi-calendar"></i> Aug 29, 202519</a></span>
+                        <span className="date"><a><i className="bi bi-calendar-event"></i> Aug 29, 202519</a></span>
                       </span>
                     </div>
 
@@ -292,7 +292,7 @@ function Blogshome({ blogs, businesscentral, categoryblogs, blograndomblogs, blo
                       {item?.publish_date && (
                         <span className="date">
                           <a>
-                            <i className="bi bi-calendar"></i>
+                            <i className="bi bi-calendar-event"></i>
                             {" "}Published: {formatDate(item.publish_date)}
                           </a>
                         </span>
@@ -303,7 +303,7 @@ function Blogshome({ blogs, businesscentral, categoryblogs, blograndomblogs, blo
                         formatDate(item.updated_at) !== formatDate(item.publish_date) && (
                           <span className="date ms-2">
                             <a>
-                              <i className="bi bi-calendar"></i>
+                              <i className="bi bi-arrow-repeat"></i>
                               {" "}Updated: {formatDate(item.updated_at)}
                             </a>
                           </span>
@@ -312,7 +312,7 @@ function Blogshome({ blogs, businesscentral, categoryblogs, blograndomblogs, blo
                     <span className="time"><a><i className="bi bi-clock"></i> {item.read_time}</a></span>
                     <span className="cate">
                       <a href={`/blog/category/${item.category_slug}/`}>
-                        <i className="bi bi-app"></i> {item.category}
+                        <i className="bi bi-collection"></i> {item.category}
                       </a>
                     </span>
                   </div>
@@ -386,7 +386,7 @@ function Blogshome({ blogs, businesscentral, categoryblogs, blograndomblogs, blo
                       {item?.publish_date && (
                         <span className="date">
                           <a>
-                            <i className="bi bi-calendar"></i>
+                            <i className="bi bi-calendar-event"></i>
                             {" "}Published: {formatDate(item.publish_date)}
                           </a>
                         </span>
@@ -397,7 +397,7 @@ function Blogshome({ blogs, businesscentral, categoryblogs, blograndomblogs, blo
                         formatDate(item.updated_at) !== formatDate(item.publish_date) && (
                           <span className="date ms-2">
                             <a>
-                              <i className="bi bi-calendar"></i>
+                              <i className="bi bi-arrow-repeat"></i>
                               {" "}Updated: {formatDate(item.updated_at)}
                             </a>
                           </span>
@@ -406,7 +406,7 @@ function Blogshome({ blogs, businesscentral, categoryblogs, blograndomblogs, blo
                     <span className="time"><a><i className="bi bi-clock"></i> {item.read_time}</a></span>
                     <span className="cate">
                       <a href={`/blog/category/${item.category_slug}/`}>
-                        <i className="bi bi-app"></i> {item.category}
+                        <i className="bi bi-collection"></i> {item.category}
                       </a>
                     </span>
                   </div>
