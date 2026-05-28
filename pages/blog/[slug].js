@@ -35,9 +35,6 @@ function parseImagesFromHtml(htmlContent) {
   return images;
 }
 
-const cleanSlug = (slug = "") =>
-  slug.replace(/^\/+|\/+$/g, "");
-
 function Post({ blogs, blogcat, authordetials, author }) {
   const router = useRouter();
 
@@ -83,8 +80,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
 
                 <link
                   rel="canonical"
-                  href={`https://www.dynamicssquare.co.uk/blog/${cleanSlug(item.title_slug)}/`}
-                  key="canonical"
+                  href={`https://www.dynamicssquare.co.uk/blog/${item.title_slug}/`}
                 />
 
                 {item.rank == 1 && (
@@ -243,9 +239,9 @@ function Post({ blogs, blogcat, authordetials, author }) {
                                 formatDate(
                                   item.updated_at
                                 ) !==
-                                formatDate(
-                                  item.publish_date
-                                ) && (
+                                  formatDate(
+                                    item.publish_date
+                                  ) && (
                                   <span className="date">
                                     <a>
                                       <i className="bi bi-arrow-repeat"></i>
@@ -287,7 +283,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
                             {mounted && (
                               <>
                                 <FacebookShareButton
-                                  url={`https://www.dynamicssquare.co.uk/blog/${cleanSlug(item.title_slug)}/`}
+                                  url={`https://www.dynamicssquare.co.uk/blog/${item.title_slug}/`}
                                   quote={item.title}
                                 >
                                   <a>
@@ -296,7 +292,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
                                 </FacebookShareButton>
 
                                 <TwitterShareButton
-                                  url={`https://www.dynamicssquare.co.uk/blog/${cleanSlug(item.title_slug)}/`}
+                                  url={`https://www.dynamicssquare.co.uk/blog/${item.title_slug}/`}
                                   quote={item.title}
                                 >
                                   <a>
@@ -305,7 +301,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
                                 </TwitterShareButton>
 
                                 <LinkedinShareButton
-                                  url={`https://www.dynamicssquare.co.uk/blog/${cleanSlug(item.title_slug)}/`}
+                                  url={`https://www.dynamicssquare.co.uk/blog/${item.title_slug}/`}
                                   source={item.title}
                                 >
                                   <a>
@@ -530,7 +526,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
                             <div className="blogs-lates blogs-lates-repet">
                               <h3>
                                 <Link
-                                  href={`/blog/${cleanSlug(item.title_slug)}/`}
+                                  href={`/blog/${item.title_slug}/`}
                                 >
                                   {item.title}
                                 </Link>
@@ -568,9 +564,9 @@ function Post({ blogs, blogcat, authordetials, author }) {
                                     formatDate(
                                       item.updated_at
                                     ) !==
-                                    formatDate(
-                                      item.publish_date
-                                    ) && (
+                                      formatDate(
+                                        item.publish_date
+                                      ) && (
                                       <span className="date">
                                         <a>
                                           <i className="bi bi-arrow-repeat"></i>
@@ -618,7 +614,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
 
                                 <div className="page-link-read">
                                   <a
-                                    href={`/blog/${cleanSlug(item.title_slug)}/`}
+                                    href={`/blog/${item.title_slug}/`}
                                   >
                                     Read More{" "}
                                     <span>{">"}</span>
@@ -659,7 +655,7 @@ export async function getStaticPaths() {
       )
       .map((blog) => ({
         params: {
-          slug: cleanSlug(blog.title_slug),
+          slug: blog.title_slug,
         },
       }));
 
