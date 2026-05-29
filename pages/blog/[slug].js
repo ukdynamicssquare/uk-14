@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
-import parse from "html-react-parser";
+import parse, { domToReact } from "html-react-parser";
 import Image from "next/image";
 import * as cheerio from "cheerio";
 import { useRouter } from "next/router";
@@ -15,11 +15,39 @@ import {
 import BlogSearchinner from "../../components/BlogSearchinner";
 
 const cleanSlug = (slug = "") => {
-  return String(slug)
-    .replace(/^\/+/, "")
-    .replace(/\/+$/, "")
-    .trim();
+  return String(slug).replace(/^\/+/, "").replace(/\/+$/, "").trim();
 };
+
+function TableOfContents({ toc, showAllToc, setShowAllToc }) {
+  if (!toc.length) return null;
+
+  return (
+    <div className="blog-toc">
+      <h3>In this article</h3>
+
+      <ul>
+        {(showAllToc ? toc : toc.slice(0, 4)).map((heading, index) => (
+          <li key={index}>
+            <a href={`#${heading.id}`}>
+              <i className="bi bi-chevron-right"></i>
+              {heading.text}
+            </a>
+          </li>
+        ))}
+      </ul>
+
+      {toc.length > 4 && (
+        <button
+          type="button"
+          className="toc-load-more"
+          onClick={() => setShowAllToc(!showAllToc)}
+        >
+          {showAllToc ? "Show Less" : "Load More"}
+        </button>
+      )}
+    </div>
+  );
+}
 
 // Utility function to parse HTML content and extract image URLs
 function parseImagesFromHtml(htmlContent) {
@@ -41,8 +69,42 @@ function parseImagesFromHtml(htmlContent) {
   return images;
 }
 
-function Post({ blogs, blogcat, authordetials, author }) {
+//table of content
+function generateTOC(htmlContent) {
+  if (!htmlContent) {
+    return {
+      toc: [],
+      updatedHtml: "",
+    };
+  }
 
+  const $ = cheerio.load(htmlContent);
+
+  const toc = [];
+
+  $("h2").each((index, element) => {
+    const text = $(element).text().trim();
+
+    const id = text
+      .toLowerCase()
+      .replace(/[^\w\s-]/g, "")
+      .replace(/\s+/g, "-");
+
+    $(element).attr("id", id);
+
+    toc.push({
+      id,
+      text,
+    });
+  });
+
+  return {
+    toc,
+    updatedHtml: $.html(),
+  };
+}
+
+function Post({ blogs, blogcat, authordetials, author }) {
   const router = useRouter();
 
   // SSR LOADING FIX
@@ -58,19 +120,21 @@ function Post({ blogs, blogcat, authordetials, author }) {
     ? parseImagesFromHtml(blogs[0].description)
     : [];
 
+  const { toc = [], updatedHtml = "" } = blogs?.[0]?.description
+    ? generateTOC(blogs[0].description)
+    : {};
+
   const [mounted, setMounted] = useState(false);
+  const [showAllToc, setShowAllToc] = useState(false);
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
   function formatDate(date) {
-
     if (!date) return "";
 
-    const parsedDate = new Date(
-      String(date).replace(/\.\d+Z$/, "Z")
-    );
+    const parsedDate = new Date(String(date).replace(/\.\d+Z$/, "Z"));
 
     if (isNaN(parsedDate)) return "";
 
@@ -91,10 +155,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
               <Head>
                 <title>{item.meta_title}</title>
 
-                <meta
-                  name="description"
-                  content={item.meta_description}
-                />
+                <meta name="description" content={item.meta_description} />
 
                 <link
                   rel="canonical"
@@ -102,61 +163,34 @@ function Post({ blogs, blogcat, authordetials, author }) {
                 />
 
                 {item.rank == 1 && (
-                  <meta
-                    name="robots"
-                    content="noindex, nofollow"
-                  />
+                  <meta name="robots" content="noindex, nofollow" />
                 )}
 
-                <meta
-                  property="og:title"
-                  content={item.meta_title}
-                />
+                <meta property="og:title" content={item.meta_title} />
 
-                <meta
-                  property="og:site_name"
-                  content="Dynamics Square"
-                />
+                <meta property="og:site_name" content="Dynamics Square" />
 
                 <meta
                   property="og:url"
                   content={`https://www.dynamicssquare.co.uk/blog/${cleanSlug(item.title_slug)}/`}
                 />
 
-                <meta
-                  property="og:description"
-                  content={item.meta_keyword}
-                />
+                <meta property="og:description" content={item.meta_description} />
 
-                <meta
-                  property="og:type"
-                  content="website"
-                />
+                <meta property="og:type" content="website" />
 
-                <meta
-                  property="og:image"
-                  content={`${item.meta_image}`}
-                />
+                <meta property="og:image" content={`${item.meta_image}`} />
 
-                <meta
-                  property="twitter:card"
-                  content="summary_large_image"
-                />
+                <meta property="twitter:card" content="summary_large_image" />
 
-                <meta
-                  property="twitter:title"
-                  content={item.meta_title}
-                />
+                <meta property="twitter:title" content={item.meta_title} />
 
                 <meta
                   property="twitter:description"
-                  content={item.meta_keyword}
+                  content={item.meta_description}
                 />
 
-                <meta
-                  property="twitter:image"
-                  content={`${item.meta_image}`}
-                />
+                <meta property="twitter:image" content={`${item.meta_image}`} />
 
                 {item.additional_script &&
                   item.additional_script.trim() !== "{}" && (
@@ -171,126 +205,86 @@ function Post({ blogs, blogcat, authordetials, author }) {
                 {item.additional_multiscript &&
                   (() => {
                     try {
-
-                      return JSON.parse(
-                        item.additional_multiscript
-                      ).map((scriptContent, index) => (
-                        <script
-                          key={index}
-                          type="application/ld+json"
-                          dangerouslySetInnerHTML={{
-                            __html: scriptContent,
-                          }}
-                        />
-                      ));
-
+                      return JSON.parse(item.additional_multiscript).map(
+                        (scriptContent, index) => (
+                          <script
+                            key={index}
+                            type="application/ld+json"
+                            dangerouslySetInnerHTML={{
+                              __html: scriptContent,
+                            }}
+                          />
+                        ),
+                      );
                     } catch (error) {
-
                       return null;
                     }
                   })()}
               </Head>
 
               <div className="container">
-
                 <div className="row">
-
                   <div className="col-lg-12">
-
                     <div className="blogs-breadcromb">
-
                       <nav aria-label="breadcrumb">
-
                         <ol className="breadcrumb">
-
                           <li className="breadcrumb-item">
-                            <Link href="/">
-                              Home
-                            </Link>
+                            <Link href="/">Home</Link>
                           </li>
 
                           <li className="breadcrumb-item">
-                            <Link href="/blog/">
-                              Blog
-                            </Link>
+                            <Link href="/blog/">Blog</Link>
                           </li>
 
                           <li className="breadcrumb-item active">
                             {item.title}
                           </li>
-
                         </ol>
-
                       </nav>
-
                     </div>
-
                   </div>
-
                 </div>
 
                 <BlogSearchinner />
 
-                <div className="row g-5">
-
+                <div className="row g-5 justify-content-center">
                   <div className="col-lg-8">
-
                     <div className="blogs-single-post-sec">
-
                       <div className="blogs-lates blogs-lates-top-head">
-
                         <h1>{item.title}</h1>
 
                         <div className="blogs-info-list">
-
                           <div className="left-list">
-
                             <span className="user">
-
                               <Link
                                 href={`/blog/author/${cleanSlug(
-  encodeURIComponent(
-    item.author.split(" ").join("-")
-  )
-)}/`}
+                                  encodeURIComponent(
+                                    item.author.split(" ").join("-"),
+                                  ),
+                                )}/`}
                               >
                                 {item.author}
                               </Link>
-
                             </span>
 
                             <>
                               {item.publish_date && (
                                 <span className="date">
                                   <a>
-                                    <i className="bi bi-calendar-event"></i>
-
-                                    {" "}
-                                    Published:{" "}
-                                    {formatDate(
-                                      item.publish_date
-                                    )}
+                                    <i className="bi bi-calendar-event"></i>{" "}
+                                    Published: {formatDate(item.publish_date)}
                                   </a>
                                 </span>
                               )}
 
                               {item.updated_at &&
                                 item.publish_date &&
-                                formatDate(
-                                  item.updated_at
-                                ) !==
-                                  formatDate(
-                                    item.publish_date
-                                  ) && (
+                                formatDate(item.updated_at) !==
+                                formatDate(item.publish_date) && (
                                   <span className="date">
                                     <a>
-                                      <i className="bi bi-arrow-repeat"></i>
-
-                                      {" "}
-                                      Updated:{" "}
-                                      {formatDate(
-                                        item.updated_at
-                                      )}
+                                      <i className="bi bi-arrow-repeat"></i>{" "}
+                                      Updated: {formatDate(item.updated_at)}
                                     </a>
                                   </span>
                                 )}
@@ -308,7 +302,6 @@ function Post({ blogs, blogcat, authordetials, author }) {
                             </span>
 
                             <span className="cate">
-
                               <Link
                                 href={`/blog/category/${cleanSlug(item.category_slug)}/`}
                               >
@@ -317,13 +310,10 @@ function Post({ blogs, blogcat, authordetials, author }) {
                                   {item.category}
                                 </span>
                               </Link>
-
                             </span>
-
                           </div>
 
                           <div className="sociallist">
-
                             {mounted && (
                               <>
                                 <FacebookShareButton
@@ -354,83 +344,88 @@ function Post({ blogs, blogcat, authordetials, author }) {
                                 </LinkedinShareButton>
                               </>
                             )}
-
                           </div>
-
                         </div>
-
                       </div>
 
                       <div className="blogs-content">
-
                         <div className="blogs-content-inner">
-
                           {mounted &&
-                            parse(item.description || "", {
-                              replace: (domNode) => {
+                            (() => {
+                              let tocInserted = false;
 
-                                if (
-                                  domNode.name === "img" &&
-                                  domNode.attribs?.src
-                                ) {
+                              return parse(
+                                updatedHtml || item.description || "",
+                                {
+                                  replace: (domNode) => {
+                                    if (domNode.name === "p" && !tocInserted) {
+                                      tocInserted = true;
 
-                                  const {
-                                    src,
-                                    alt,
-                                    width,
-                                    height,
-                                  } = domNode.attribs;
+                                      return (
+                                        <>
+                                          <p>
+                                            {domToReact(domNode.children || [])}
+                                          </p>
 
-                                  return (
-                                    <div
-                                      style={{
-                                        position: "relative",
-                                        width: "100%",
-                                        margin: "30px 0",
-                                      }}
-                                    >
-                                      <Image
-                                        src={src}
-                                        alt={
-                                          alt || "blog-image"
-                                        }
-                                        width={
-                                          Number(width) || 1200
-                                        }
-                                        height={
-                                          Number(height) || 700
-                                        }
-                                        sizes="(max-width: 768px) 100vw, 1200px"
-                                        style={{
-                                          width: "100%",
-                                          height: "auto",
-                                        }}
-                                        quality={75}
-                                        loading="lazy"
-                                      />
-                                    </div>
-                                  );
-                                }
+                                          <TableOfContents
+                                            toc={toc}
+                                            showAllToc={showAllToc}
+                                            setShowAllToc={setShowAllToc}
+                                          />
+                                        </>
+                                      );
+                                    }
 
-                                if (
-                                  domNode.name === "iframe"
-                                ) {
-                                  return (
-                                    <iframe
-                                      {...domNode.attribs}
-                                      loading="lazy"
-                                      style={{
-                                        width: "100%",
-                                        minHeight: "400px",
-                                      }}
-                                    />
-                                  );
-                                }
+                                    if (
+                                      domNode.name === "img" &&
+                                      domNode.attribs?.src
+                                    ) {
+                                      const { src, alt, width, height } =
+                                        domNode.attribs;
 
-                                return undefined;
-                              },
-                            })}
+                                      return (
+                                        <div
+                                          style={{
+                                            position: "relative",
+                                            width: "100%",
+                                            margin: "30px 0",
+                                          }}
+                                        >
+                                          <Image
+                                            src={src}
+                                            alt={alt || "blog-image"}
+                                            width={Number(width) || 1200}
+                                            height={Number(height) || 700}
+                                            sizes="(max-width:768px) 100vw,1200px"
+                                            style={{
+                                              width: "100%",
+                                              height: "auto",
+                                            }}
+                                            quality={75}
+                                            loading="lazy"
+                                          />
+                                        </div>
+                                      );
+                                    }
 
+                                    if (domNode.name === "iframe") {
+                                      return (
+                                        <iframe
+                                          {...domNode.attribs}
+                                          loading="lazy"
+                                          style={{
+                                            width: "100%",
+                                            minHeight: "400px",
+                                          }}
+                                        />
+                                      );
+                                    }
+
+                                    return undefined;
+                                  },
+                                },
+                              );
+                            })()}
                         </div>
 
                         <div className="sociallist sociallist-bott">
@@ -470,51 +465,40 @@ function Post({ blogs, blogcat, authordetials, author }) {
                         </div>
 
                         {authordetials &&
-                          authordetials.map(
-                            (author, i) => (
-                              <div
-                                className="author-side-head"
-                                key={i}
-                              >
-                                <div className="left">
-                                  <img
-                                    src={
-                                      author.profile_photo_path
-                                    }
-                                    alt="bg-pic"
-                                    width={74}
-                                    height={74}
-                                  />
+                          authordetials.map((author, i) => (
+                            <div className="author-side-head" key={i}>
+                              <div className="left">
+                                <img
+                                  src={author.profile_photo_path}
+                                  alt="bg-pic"
+                                  width={74}
+                                  height={74}
+                                />
 
-                                  <span className="link-din">
-                                    <a
-                                      href={
-                                        author.linkedin_url
-                                      }
-                                      target="_blank"
-                                      rel="noreferrer"
-                                    >
-                                      <i className="bi bi-linkedin"></i>
-                                    </a>
-                                  </span>
-                                </div>
-
-                                <div className="right">
-                                  <Link
-                                    href={`/blog/author/${author.name
-                                      .split(" ")
-                                      .join("-")}/`}
+                                <span className="link-din">
+                                  <a
+                                    href={author.linkedin_url}
+                                    target="_blank"
+                                    rel="noreferrer"
                                   >
-                                    <span>
-                                      {author.name}
-                                    </span>
-                                  </Link>
-
-                                  <p>{author.about}</p>
-                                </div>
+                                    <i className="bi bi-linkedin"></i>
+                                  </a>
+                                </span>
                               </div>
-                            )
-                          )}
+
+                              <div className="right">
+                                <Link
+                                  href={`/blog/author/${author.name
+                                    .split(" ")
+                                    .join("-")}/`}
+                                >
+                                  <span>{author.name}</span>
+                                </Link>
+
+                                <p>{author.about}</p>
+                              </div>
+                            </div>
+                          ))}
                       </div>
                     </div>
                   </div>
@@ -557,15 +541,9 @@ function Post({ blogs, blogcat, authordetials, author }) {
                 <div className="row pd-90">
                   {blogcat &&
                     blogcat.map((item, i) => {
-                      if (
-                        router.query.slug !=
-                        item.title_slug
-                      ) {
+                      if (router.query.slug != item.title_slug) {
                         return (
-                          <div
-                            className="col-lg-6"
-                            key={i}
-                          >
+                          <div className="col-lg-6" key={i}>
                             <div className="blogs-lates blogs-lates-repet">
                               <h3>
                                 <Link
@@ -591,34 +569,21 @@ function Post({ blogs, blogcat, authordetials, author }) {
                                   {item.publish_date && (
                                     <span className="date">
                                       <a>
-                                        <i className="bi bi-calendar-event"></i>
-
-                                        {" "}
+                                        <i className="bi bi-calendar-event"></i>{" "}
                                         Published:{" "}
-                                        {formatDate(
-                                          item.publish_date
-                                        )}
+                                        {formatDate(item.publish_date)}
                                       </a>
                                     </span>
                                   )}
 
                                   {item.updated_at &&
                                     item.publish_date &&
-                                    formatDate(
-                                      item.updated_at
-                                    ) !==
-                                      formatDate(
-                                        item.publish_date
-                                      ) && (
+                                    formatDate(item.updated_at) !==
+                                    formatDate(item.publish_date) && (
                                       <span className="date">
                                         <a>
-                                          <i className="bi bi-arrow-repeat"></i>
-
-                                          {" "}
-                                          Updated:{" "}
-                                          {formatDate(
-                                            item.updated_at
-                                          )}
+                                          <i className="bi bi-arrow-repeat"></i>{" "}
+                                          Updated: {formatDate(item.updated_at)}
                                         </a>
                                       </span>
                                     )}
@@ -648,19 +613,13 @@ function Post({ blogs, blogcat, authordetials, author }) {
                               </div>
 
                               <div className="b-card-info">
-                                <p>
-                                  {item.short_description.substring(
-                                    0,
-                                    60
-                                  )}
-                                </p>
+                                <p>{item.short_description.substring(0, 60)}</p>
 
                                 <div className="page-link-read">
                                   <a
                                     href={`/blog/${cleanSlug(item.title_slug)}/`}
                                   >
-                                    Read More{" "}
-                                    <span>{">"}</span>
+                                    Read More <span>{">"}</span>
                                   </a>
                                 </div>
                               </div>
@@ -683,23 +642,16 @@ function Post({ blogs, blogcat, authordetials, author }) {
 // ==========================
 
 export async function getServerSideProps(context) {
-
   /* =====================================
      CLEAN SLUG
   ===================================== */
   const cleanSlug = (slug = "") => {
-    return String(slug)
-      .replace(/^\/+/, "")
-      .replace(/\/+$/, "")
-      .trim();
+    return String(slug).replace(/^\/+/, "").replace(/\/+$/, "").trim();
   };
 
-  const slug = cleanSlug(
-    context?.params?.slug
-  );
+  const slug = cleanSlug(context?.params?.slug);
 
   try {
-
     // MAIN BLOG FETCH
     const blogRes = await fetch(
       `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blog_details/${slug}`,
@@ -707,7 +659,7 @@ export async function getServerSideProps(context) {
         headers: {
           Accept: "application/json",
         },
-      }
+      },
     );
 
     // REAL 404 ONLY
@@ -720,11 +672,7 @@ export async function getServerSideProps(context) {
     const blogsData = await blogRes.json();
 
     // EMPTY BLOG
-    if (
-      !blogsData ||
-      !Array.isArray(blogsData) ||
-      blogsData.length === 0
-    ) {
+    if (!blogsData || !Array.isArray(blogsData) || blogsData.length === 0) {
       return {
         notFound: true,
       };
@@ -736,34 +684,25 @@ export async function getServerSideProps(context) {
     const blogs = blogsData.map((blog) => ({
       ...blog,
 
-      title_slug: cleanSlug(
-        blog.title_slug
-      ),
+      title_slug: cleanSlug(blog.title_slug),
 
-      category_slug: cleanSlug(
-        blog.category_slug
-      ),
+      category_slug: cleanSlug(blog.category_slug),
     }));
 
-    const category =
-      cleanSlug(
-        blogs?.[0]?.category_slug
-      ) || "";
+    const category = cleanSlug(blogs?.[0]?.category_slug) || "";
 
-    const author =
-      blogs?.[0]?.author_email || "";
+    const author = blogs?.[0]?.author_email || "";
 
     // PARALLEL FETCH
-    const [relatedRes, authorRes] =
-      await Promise.allSettled([
-        fetch(
-          `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blog/related/${category}`
-        ),
+    const [relatedRes, authorRes] = await Promise.allSettled([
+      fetch(
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blog/related/${category}`,
+      ),
 
-        fetch(
-          `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blog/author/details/${author}`
-        ),
-      ]);
+      fetch(
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blog/author/details/${author}`,
+      ),
+    ]);
 
     let blogcat = [];
     let authordetials = [];
@@ -771,38 +710,23 @@ export async function getServerSideProps(context) {
     /* =====================================
        RELATED BLOGS
     ===================================== */
-    if (
-      relatedRes.status === "fulfilled" &&
-      relatedRes.value.ok
-    ) {
+    if (relatedRes.status === "fulfilled" && relatedRes.value.ok) {
+      const relatedData = await relatedRes.value.json();
 
-      const relatedData =
-        await relatedRes.value.json();
+      blogcat = relatedData.map((blog) => ({
+        ...blog,
 
-      blogcat = relatedData.map(
-        (blog) => ({
-          ...blog,
+        title_slug: cleanSlug(blog.title_slug),
 
-          title_slug: cleanSlug(
-            blog.title_slug
-          ),
-
-          category_slug: cleanSlug(
-            blog.category_slug
-          ),
-        })
-      );
+        category_slug: cleanSlug(blog.category_slug),
+      }));
     }
 
     /* =====================================
        AUTHOR DETAILS
     ===================================== */
-    if (
-      authorRes.status === "fulfilled" &&
-      authorRes.value.ok
-    ) {
-      authordetials =
-        await authorRes.value.json();
+    if (authorRes.status === "fulfilled" && authorRes.value.ok) {
+      authordetials = await authorRes.value.json();
     }
 
     return {
@@ -813,13 +737,8 @@ export async function getServerSideProps(context) {
         author,
       },
     };
-
   } catch (error) {
-
-    console.error(
-      "BLOG PAGE ERROR:",
-      error
-    );
+    console.error("BLOG PAGE ERROR:", error);
 
     return {
       notFound: true,

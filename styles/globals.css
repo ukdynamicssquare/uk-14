@@ -9354,7 +9354,7 @@ ul.checkmark li {
   font-size: 17px;
   line-height: 1.7;
   /* letter-spacing: 0.02px; */
-  color: #273266;
+color: #1d1c1d;
   margin-bottom: 20px;
 }
 .blogs-content h2 {
@@ -18340,6 +18340,57 @@ font-size: 18px;
     margin: 0 auto -46px auto;
     position: relative;
     z-index: 3;
+}
+/*table of content*/
+.blog-toc {
+  background: #f7f7f7;
+  padding: 25px;
+  border-radius: 12px;
+  margin: 20px 0px;
+}
+
+.blog-toc h3 {
+font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #4c6593;
+}
+
+.blog-toc ul {
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.blog-toc li {
+  margin-bottom: 2px !important;
+}
+.blogs-content h2 {
+  scroll-margin-top: 140px; /* adjust to navbar height */
+}
+
+.blog-toc li a {
+  text-decoration: none !important;
+    color: #27387a !important;
+  font-size: 15px !important;
+}
+
+.blog-toc li a:hover {
+  color: #b5101f !important;
+}
+.toc-load-more {
+  background: transparent;
+  border: none;
+  color: #1d3557;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  padding: 0;
+  font-size: 14px;
+}
+
+.toc-load-more:hover {
+  color: #b5101f;
 }
 @media (min-width: 1440px) and (max-width: 1700px) {
   .row-d .swiper-wrapper {
