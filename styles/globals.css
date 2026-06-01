@@ -9389,13 +9389,17 @@ color: #1d1c1d;
   margin-bottom: 20px;
 }
 .blogs-content ul li,
-.blogs-content ul li p,
+.blogs-content ul li p {
+  font-size: 17px;
+  /* letter-spacing: 0.02px; */
+  margin-bottom: 5px;
+  color: #1d1c1d;
+}
 .blogs-content ul li a,
 .blogs-content ul li p a {
   font-size: 17px;
   /* letter-spacing: 0.02px; */
   margin-bottom: 5px;
-  color: #1d1c1d;
 }
 .blogs-content h3 ol li,
 .blogs-content h3 ul li {
