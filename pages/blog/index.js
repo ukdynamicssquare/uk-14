@@ -426,20 +426,17 @@ function Blogshome({
 
                   <div className="blg-side-new">
                     <a
-                      href="https://www.forbes.com/councils/forbestechcouncil/2025/10/30/how-to-reimagine-erp-for-the-ai-era-of-business/"
+                      href="https://www.forbes.com/councils/forbestechcouncil/2026/06/01/what-companies-get-wrong-about-agentic-erp/"
                       target="_balnk"
                       rel="nofollow"
                     >
                       <img
-                        src="/img/fab-3.jpg"
+                        src="https://imageio.forbes.com/specials-images/imageserve/67fff87bde8b0dd11b74b7cc/0x0.jpg?format=jpg&width=440"
                         width={140}
                         alt="fob-ai"
                       />
 
-                      <h3>
-                        How To Reimagine ERP For
-                        The AI Era Of Business
-                      </h3>
+                      <h3>What Companies Get Wrong About Agentic ERP</h3>
                     </a>
 
                     <div className="user-grid">
@@ -456,7 +453,7 @@ function Blogshome({
                         <span className="date">
                           <a>
                             <i className="bi bi-calendar-event"></i>{" "}
-                            Oct 30, 2025
+                            Jun 1, 2026
                           </a>
                         </span>
                       </span>
@@ -465,21 +462,17 @@ function Blogshome({
 
                   <div className="blg-side-new">
                     <a
-                      href="https://www.forbes.com/councils/forbestechcouncil/2025/09/19/how-to-integrate-generative-ai-as-a-strategic-partner/"
+                      href="https://www.forbes.com/councils/forbestechcouncil/2026/04/21/the-cost-illusion-in-erp-why-companies-overspend/"
                       target="_balnk"
                       rel="nofollow"
                     >
                       <img
-                        src="/img/fob-ai.jpg"
+                        src="https://imageio.forbes.com/specials-images/imageserve/69e69cab17f71a1b7179d779/0x0.jpg?format=jpg&width=440"
                         width={140}
                         alt="fob-ai"
                       />
 
-                      <h3>
-                        How to integrate
-                        generative AI as a
-                        strategic partner
-                      </h3>
+                      <h3>The Cost Illusion In ERP: Why Companies Overspend</h3>
                     </a>
 
                     <div className="user-grid">
@@ -496,7 +489,7 @@ function Blogshome({
                         <span className="date">
                           <a>
                             <i className="bi bi-calendar-event"></i>{" "}
-                            Sep 19, 2025
+                            Apr 21, 2026
                           </a>
                         </span>
                       </span>
@@ -505,21 +498,17 @@ function Blogshome({
 
                   <div className="blg-side-new">
                     <a
-                      href="https://www.forbes.com/councils/forbestechcouncil/2025/08/29/how-to-address-or-avoid-negative-feedback-on-saas-ux-rollouts/"
+                      href="https://www.forbes.com/councils/forbestechcouncil/2026/03/20/why-erp-ecosystems-are-a-strategic-architecture-decision/"
                       target="_balnk"
                       rel="nofollow"
                     >
                       <img
-                        src="/img/saas-ux.jpg"
+                        src="https://imageio.forbes.com/specials-images/imageserve/6387545ea5db595e0ddb9778/0x0.jpg?format=jpg&width=440"
                         width={140}
                         alt="saas-ux"
                       />
 
-                      <h3>
-                        How To Address (Or Avoid)
-                        Negative Feedback On SaaS
-                        UX Rollouts
-                      </h3>
+                      <h3>Why ERP Ecosystems Are A Strategic Architecture Decision</h3>
                     </a>
                   </div>
 
