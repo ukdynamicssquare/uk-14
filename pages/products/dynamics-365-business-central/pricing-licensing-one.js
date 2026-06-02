@@ -3,11 +3,10 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 // import useGsapScrollCards from '../../../hooks/useGsapScrollCards';
-import faqData from '../../public/data/finance_faq.json';
-import useCardScrollEffect from "../../components/useCardScrollEffect";
-import BcPopPdf from '../../components/BCPdfPopup';
-import NavBar from '../../components/NavBar';
-import BlogFinanaceCard from '../../components/BlogFinanaceCard';
+import faqData from '../../../public/data/finance_faq.json';
+import useCardScrollEffect from "../../../components/useCardScrollEffect";
+import BcPopPdf from '../../../components/BCPdfPopup';
+import BlogFinanaceCard from '../../../components/BlogFinanaceCard';
 
 
 
@@ -41,11 +40,11 @@ const BusinessCentral = () => {
   return (
     <>
       <Head>
-        <title>Microsoft Dynamics 365 Finance Partner | Dynamics Square</title>
-                 <meta name="robots" content="noindex, nofollow" />
+        <title>Microsoft Dynamics 365 Business Central Pricing</title>
+        <meta name="robots" content="noindex, nofollow" />
         <meta
           name="description"
-          content="Boost your financial visibility and faster your financial decision making by implementing Microsoft Dynamics 365 Finance. Book a free consultation today."
+          content="Get a Clear & Transparent Pricing for Microsoft Dynamics 365 Business Central UK"
         />
         <link
           rel="canonical"
@@ -53,14 +52,14 @@ const BusinessCentral = () => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-finance/" />
-        <meta property="og:title" content="Microsoft Dynamics 365 Finance Partner | Dynamics Square" />
-        <meta property="og:description" content="Boost your financial visibility and faster your financial decision making by implementing Microsoft Dynamics 365 Finance. Book a free consultation today." />
+        <meta property="og:title" content="Microsoft Dynamics 365 Business Central Pricing" />
+        <meta property="og:description" content="Get a Clear & Transparent Pricing for Microsoft Dynamics 365 Business Central UK" />
         <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/Dynamics-365-Finance-Banner.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-finance/" />
-        <meta property="twitter:title" content="Microsoft Dynamics 365 Finance Partner | Dynamics Square" />
-        <meta property="twitter:description" content="Boost your financial visibility and faster your financial decision making by implementing Microsoft Dynamics 365 Finance. Book a free consultation today." />
+        <meta property="twitter:title" content="Microsoft Dynamics 365 Business Central Pricing" />
+        <meta property="twitter:description" content="Get a Clear & Transparent Pricing for Microsoft Dynamics 365 Business Central UK" />
         <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/Dynamics-365-Finance-Banner.png" />
 
       </Head>
@@ -69,15 +68,15 @@ const BusinessCentral = () => {
           <div className='row justify-content-center'>
             <div className='col-lg-8'>
               <div className='solution-new-banner-one-content'>
-                <h1>Microsoft Dynamics 365 Finance</h1>
-                <span className='large-heading'>Deploy AI-powered Dynamics 365 Finance with a proven 106 percent ROI in three years.</span>
-                <p>Boost your organisation's ability to develop, modify, and control budgets, while enabling faster financial decision-making with Microsoft Dynamics 365 Finance.</p>
+                <h1>Microsoft Dynamics 365 Business Central Pricing</h1>
+                <span className='large-heading'>Get a Clear & Transparent Pricing for Microsoft Dynamics 365 Business Central UK</span>
+                <p>Business Central pricing in the UK starts at £61.50 per user/month, with flexible licensing designed to scale with your business. Learn here what you will pay, how licensing works, and what influences your total investment, before you commit.</p>
                 <div className="text-center">
                   <Link
                     href="#exampleModal"
                     data-bs-toggle="modal"
                     className="btn-get-started scrollto">
-                    <span>Tell me more &nbsp;<i className="bi bi-arrow-right"></i></span>
+                    <span>Get Your Exact Pricing &nbsp;<i className="bi bi-arrow-right"></i></span>
                   </Link>
                 </div>
               </div>
@@ -86,65 +85,489 @@ const BusinessCentral = () => {
 
           </div>
         </div>
-        <div className="solution-new-banner-one-img solution-new-banner-one-img-f">
-          <Image src="/img/f-mobile-banner-one.png" alt="New Solution" width={1920} height={993} className="flot-1" />
-        </div>
-        <div className='container' id='section1'>
+      </div>
+      <section id='section8' className='solution-new-pricing col-ff3 '>
+        <div className='container'>
           <div className='row'>
-            <div className='col-lg-6'>
-              <div className='solution-new-banner-sub-head r-top-60'>
-                <h2>What is Dynamics 365 Finance?</h2>
-                <p>Microsoft Dynamics 365 Finance is an enterprise-grade ERP software solution that helps organisations achieve financial accuracy and transparency. Implementing Dynamics 365 Finance enables you to track and monitor your financial operations in real-time, predict financial outcomes, and manage global risks to drive agility while maximising growth in your business.</p>
-                <div className="text-lg-start">
+            <div className='col-lg-9'>
+              <div className='solution-new-banner-sub-head'>
+                <h2>Business Central Pricing: A Quick Insight</h2>
+                <p>Microsoft Dynamics 365 Business Central pricing based on official Microsoft plans are as follows:</p>
+              </div>
+            </div>
+          </div>
+
+          <div className='row g-3'>
+            <div className='col-lg-4 d-flex'>
+              <div className='solution-new-pricing-card col-ff4'>
+                <h3>Essentials
+                </h3>
+                <h4>£61.50<span>/user/month</span></h4>
+                <p>Begin a 30-day trial to see how finance, sales, service, and operations align within a single experience. Engage with the platform and see real results.</p>
+                <p className="disclm">*Excluding VAT</p>
+              </div>
+            </div>
+            <div className='col-lg-4 d-flex'>
+              <div className='solution-new-pricing-card col-ff4'>
+                <h3>Premium
+                </h3>
+                <h4>£61.50<span>/user/month</span></h4>
+                <p>Begin a 30-day trial to see how finance, sales, service, and operations align within a single experience. Engage with the platform and see real results.</p>
+                <p className="disclm">*Excluding VAT</p>
+              </div>
+            </div>
+            <div className='col-lg-4 d-flex'>
+              <div className='solution-new-pricing-card col-ff4'>
+                <h3>Team Members
+                </h3>
+                <h4>£61.50<span>/user/month</span></h4>
+                <p>Begin a 30-day trial to see how finance, sales, service, and operations align within a single experience. Engage with the platform and see real results.</p>
+                <p className="disclm">*Excluding VAT</p>
+              </div>
+            </div>
+          </div>
+          <div className="trial-banner">
+            <div className="row align-items-center g-0">
+
+              <div className="col-lg-4">
+                <div className="trial-title">
+                  Dynamics 365 Business Central
+                  <strong>Free Trial</strong>
+                </div>
+              </div>
+
+              <div className="col-lg-7">
+                <div className="trial-content">
+                  Dynamics Square offers a 30-day trial for <a href="#">Business Central ERP</a>  where you will get the full access to explore finance,
+                  sales, service, and operations in one system.
+                  We encourage you to explore the solution before you commit.
+                </div>
+              </div>
+
+              <div className="col-lg-1 text-center">
+                <a href="/products/dynamics-365-business-central/" className="trial-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="currentColor"
+                    viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                      d="M14 2.5a.5.5 0 0 0-.5-.5H8a.5.5 0 0 0 0 1h4.293L2.146 13.146a.5.5 0 1 0 .708.708L13 3.707V8a.5.5 0 0 0 1 0V2.5z" />
+                  </svg>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="container py-5">
+        <div className='row'>
+            <div className='col-lg-9'>
+              <div className='solution-new-banner-sub-head'>
+                <h2>Business Central Pricing: A Quick Insight</h2>
+                <p>Microsoft Dynamics 365 Business Central pricing based on official Microsoft plans are as follows:</p>
+              </div>
+            </div>
+          </div>
+        <div className="row g-4">
+
+          <div className="col-lg-4 col-md-6">
+            <div className="cost-card h-100">
+              <img src="images/licensing.png" alt="" className="card-icon" />
+
+              <h4>Licensing Costs</h4>
+
+              <p>
+                It is based on the number of users and the type of access required:
+              </p>
+
+              <ul>
+                <li>Full users (Essentials or Premium)</li>
+                <li>Additional users (Team Members)</li>
+                <li>Shared access via device licences</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="col-lg-4 col-md-6">
+            <div className="cost-card h-100">
+              <img src="images/implementation.png" alt="" className="card-icon" />
+
+              <h4>Implementation Costs</h4>
+
+              <p>
+                The final Business Central implementation cost includes everything required to get your system live:
+              </p>
+
+              <ul>
+                <li>System configuration</li>
+                <li>Data migration</li>
+                <li>Process alignment</li>
+                <li>User training</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="col-lg-4 col-md-6">
+            <div className="cost-card h-100">
+              <img src="images/ongoing.png" alt="" className="card-icon" />
+
+              <h4>Ongoing Costs</h4>
+
+              <p>
+                Post go-live of Business Central, organisations choose to invest in:
+              </p>
+
+              <ul>
+                <li>Support and maintenance</li>
+                <li>System enhancements</li>
+                <li>Additional storage or environments</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <section className="pricing-estimator-section py-5">
+        <div className="container">
+
+          <div className="row align-items-center">
+
+
+            <div className="col-lg-8">
+              <div className='row'>
+            <div className='col-lg-9'>
+              <div className='solution-new-banner-sub-head'>
+                <h2>Business Central Pricing: A Quick Insight</h2>
+                <p>Microsoft Dynamics 365 Business Central pricing based on official Microsoft plans are as follows:</p>
+              </div>
+            </div>
+          </div>
+
+              <div className="steps-wrapper">
+
+                <div className="timeline-line"></div>
+
+                <div className="row text-center">
+                  <div className="col-md-4">
+                    <div className="step-circle">1</div>
+
+                    <h5>Choose User Types</h5>
+
+                    <p>
+                      Determine who needs full functionality vs.
+                      light access.
+                    </p>
+                  </div>
+
+                  <div className="col-md-4">
+                    <div className="step-circle">2</div>
+
+                    <h5>Define Number of Users</h5>
+
+                    <p>
+                      Calculate how many seats your business currently
+                      requires.
+                    </p>
+                  </div>
+
+                  <div className="col-md-4">
+                    <div className="step-circle">3</div>
+
+                    <h5>Consider Additional Needs</h5>
+
+                    <p>
+                      Factor in integrations, customizations,
+                      and storage.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div className="col-lg-4">
+              <div className="calculator-card">
+
+                <p>
+                  Besides, you can also use our
+                  <a href="#">
+                    Dynamics 365 ERP Implementation Price Calculator
+                  </a>
+                  to get an estimated cost of ERP implementation.
+                </p>
+
+                <a href="#" className="calculator-btn">
+                  Calculate Now
+                  <span>→</span>
+                </a>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <section className='solution-new-cta slution-new-cta-two'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-lg-9'>
+              <div className='solution-new-cta-001'>
+                <h3>The Right Time for Smarter Finance Is Now</h3>
+                <p>Every day without an intelligent finance system means higher risks, delayed insights, and missed savings. Choose Dynamics 365 Finance ERP: The Smartest Cloud Finance Solution for Modern Enterprises.</p>
+                <p>Don’t Wait. Take the Step Toward Intelligent Finance. </p>
+                <div>
                   <Link
                     href="#exampleModal"
                     data-bs-toggle="modal"
                     className="btn-get-started scrollto">
-                    <span>See It in Action  &nbsp;<i className="bi bi-arrow-right"></i></span>
+                    <span>Try Dynamics 365 Finance Today  &nbsp;<i className="bi bi-arrow-right"></i></span>
                   </Link>
-
-
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className='row'>
-            <div className='col-lg-12'>
-              <div className='image-list-new'>
-                <p><b>Rated highly by leading tech platforms</b></p>
-                <div className="image-list-new-im">
-                  <div className='ii-pic-list'>
-                    <div className='s-widt-p'>
-                      <img src="/img/rartin-log-01.png" alt="rartin-log-01" width={140} height={54} />
-                    </div>
-                  </div>
-                  <div className='ii-pic-list'>
-                    <div className='s-widt-p'>
-                      <img src="/img/rartin-log-02.png" alt="rartin-log-01" width={204} height={54} />
-                    </div>
-                  </div>
-                  <div className='ii-pic-list'>
-                    <div className='s-widt-p'>
-                      <img src="/img/rartin-log-03.png" alt="rartin-log-01" width={130} height={54} />
-                    </div>
-                  </div>
-                  <div className='ii-pic-list'>
-                    <div className='s-widt-p'>
-                      <img src="/img/rartin-log-04.png" alt="rartin-log-01" width={129} height={54} />
-                    </div>
-                  </div>
-                  <div className='ii-pic-list'>
-                    <div className='s-widt-p'>
-                      <img src="/img/rartin-log-05.png" alt="rartin-log-01" width={155} height={54} />
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <NavBar />
+        <img src="/img/n-015.png" alt="n-015" />
+      </section>
+
+    <section className="license-section py-5">
+    <div className="container">
+
+        <div className="row g-4">
+
+            <div className="col-lg-6">
+                <div className="license-card h-100">
+
+                    <h3>Base Licensing Model</h3>
+
+                    <p>
+                        Every full-access user must have a base licence,
+                        which is the primary application they use.
+                    </p>
+
+                    <p className="mb-2">
+                        For Business Central, this includes:
+                    </p>
+
+                    <ul>
+                        <li>Essentials</li>
+                        <li>Premium</li>
+                    </ul>
+
+                    <p className="highlight-text">
+                        You choose on the basis of your operational requirements.
+                    </p>
+
+                    <p className="mb-2">
+                        The base licence determines:
+                    </p>
+
+                    <ul>
+                        <li>The level of functionality available</li>
+                        <li>The type of additional applications that can be attached</li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <div className="col-lg-6">
+                <div className="license-card h-100">
+
+                    <h3>Attach Licences (Cost Optimisation Opportunity)</h3>
+
+                    <p>
+                        If users require multiple Dynamics 365 applications,
+                        Microsoft offers attach licences at a discounted rate.
+                    </p>
+
+                    <p className="mb-2">
+                        For example:
+                    </p>
+
+                    <ul>
+                        <li>
+                            Users with a qualifying base licence can add applications
+                            like <a href="#">Dynamics 365 Sales</a>,
+                            <a href="#">Customer Service</a>, or
+                            <a href="#">Field Service</a>
+                            at a lower monthly cost.
+                        </li>
+                    </ul>
+
+                    <p className="highlight-text">
+                        Attach licences can be typically availed at one-third
+                        of the base licence pricing:
+                    </p>
+
+                    <ul>
+                        <li>
+                            £20 per user/month for apps like Dynamics 365 Sales
+                            or Customer Service
+                        </li>
+                        <li>
+                            £30 per user/month for apps like Dynamics 365 Finance
+                            or Supply Chain Management
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div className="insight-banner">
+
+            <div className="row align-items-center">
+
+                <div className="col-lg-8">
+                    <div className="insight-content">
+                        <h4>An Important Insight:</h4>
+
+                        <p>
+                            Attach licences do not include separate platform
+                            entitlements. They rely on the base licence,
+                            which is why choosing the right base licence
+                            is critical.
+                        </p>
+                    </div>
+                </div>
+
+                <div className="col-lg-4 text-lg-end text-center">
+                    <a href="#" className="insight-btn">
+                        Get Your Licensing Right
+                        <span>→</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section className="license-comparison-section py-5">
+    <div className="container">
+
+        <div className="table-responsive">
+
+            <table className="table comparison-table align-middle mb-0">
+
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Essentials</th>
+                        <th>Premium</th>
+                        <th>Team Members</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td><strong>Price (per user/month)</strong></td>
+                        <td>£61.50</td>
+                        <td>£84.60</td>
+                        <td>£6.20</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Access Level</strong></td>
+                        <td>Full</td>
+                        <td>Full</td>
+                        <td>Limited</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Financial Management</strong></td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td>View only</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Supply Chain Management</strong></td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td>Limited</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>CRM Capabilities</strong></td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td>Limited</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Project Management</strong></td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td>Limited</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Warehouse Management</strong></td>
+                        <td>Yes</td>
+                        <td>Yes</td>
+                        <td>No</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Service Management</strong></td>
+                        <td>No</td>
+                        <td>Yes</td>
+                        <td>No</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Manufacturing</strong></td>
+                        <td>No</td>
+                        <td>Yes</td>
+                        <td>No</td>
+                    </tr>
+
+                    <tr>
+                        <td><strong>Best For</strong></td>
+                        <td>SMEs with core operations</td>
+                        <td>Manufacturing & service-driven businesses</td>
+                        <td>Light users, approvals, reporting</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <div className="license-note mt-5">
+
+            <h3>Which Licence Should You Choose?</h3>
+
+            <ul>
+                <li>
+                    Choose Essentials if your focus is finance, sales, and operations
+                </li>
+
+                <li>
+                    Choose Premium if you require manufacturing or service management capabilities
+                </li>
+
+                <li>
+                    Use Team Members to extend access without increasing costs significantly
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+</section>
+
+
+
       <section id='section2' className="solution-new-banner-two">
         <div className='container'>
           {/* <div className='row'>
@@ -177,7 +600,7 @@ const BusinessCentral = () => {
                     href="#exampleModal"
                     data-bs-toggle="modal"
                     className="btn-get-started scrollto">
-                    <span>Schedule Your Finance Demo Now  &nbsp;<i className="bi bi-arrow-right"></i></span> 
+                    <span>Schedule Your Finance Demo Now  &nbsp;<i className="bi bi-arrow-right"></i></span>
                   </Link>
                 </div>
               </div>
@@ -331,8 +754,8 @@ const BusinessCentral = () => {
       </section>
       <section className='solution-new-cta'>
         <div className='asd' style={{
-  backgroundImage: "url('/img/Maskgrou12.png')"
-}}>
+          backgroundImage: "url('/img/Maskgrou12.png')"
+        }}>
           <div className='container'>
             <div className='row'>
               <div className='col-lg-10'>
@@ -674,7 +1097,7 @@ const BusinessCentral = () => {
 
           <div className='row g-3'>
             {/* <div className='col-lg-3 d-flex'>
-              <div className='solution-new-pricing-card col-ff3'>
+              <div className='solution-new-pricing-card col-ff4'>
                 <h3>Business Central<span>Free Trial</span>
                 </h3>
                 <p>Begin a 30-day trial to see how finance, sales, service, and operations align within a single experience. Engage with the platform and see real results.</p>
@@ -843,7 +1266,7 @@ const BusinessCentral = () => {
                   <li className="nav-item" role="presentation">
                     <button className="nav-link" id="pills-home-02-tab" data-bs-toggle="pill" data-bs-target="#pills-home-02" type="button" role="tab" aria-controls="pills-home-02" aria-selected="false">e-Books</button>
                   </li>
-                  
+
                   <li className="nav-item" role="presentation">
                     <button className="nav-link" id="pills-home-03-tab" data-bs-toggle="pill" data-bs-target="#pills-home-03" type="button" role="tab" aria-controls="pills-home-03" aria-selected="false">Podcasts</button>
                   </li>

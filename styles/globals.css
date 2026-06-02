@@ -16319,6 +16319,12 @@ margin: -30px 0px -80px;
 .col-ff3 {
   background-color: #e9e6f3;
 }
+.col-ff4{
+      background-color: #fff;
+}
+.col-ff4 p{
+margin: 15px 0px 0px;
+}
 .solution-new-pricing-card h3 {
   font-size: 16px;
   font-weight: bold;
@@ -18396,6 +18402,449 @@ font-size: 24px;
 
 .toc-load-more:hover {
   color: #b5101f;
+}
+.trial-banner {
+    background: linear-gradient(
+        90deg,
+        #b482d0 0%,
+        #b07acb 50%,
+        #b888d5 100%
+    );
+    border-radius: 8px;
+    padding: 18px 24px;
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.15);
+    margin-top:40px;
+    border: 1px solid #fff;
+}
+
+.trial-title {
+    color: #fff;
+    font-size: 17px;
+    text-align: center;
+    padding-right: 25px;
+    white-space: nowrap;
+}
+
+.trial-content {
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.7;
+    border-left: 2px solid rgba(255, 255, 255, 0.6);
+    padding-left: 24px;
+}
+
+.trial-content a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.trial-btn {
+    width: 42px;
+    height: 42px;
+    background: #fff;
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #b07acb;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.trial-btn svg {
+    width: 26px;
+    height: 26px;
+}
+.trial-btn:hover {
+    color: #a566c2;
+    transform: translateY(-2px);
+}
+
+.cost-card {
+    background: #f3f2f5;
+    border-radius: 8px;
+    padding: 32px 28px;
+    height: 100%;
+    transition: all .35s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,.04);
+}
+
+.cost-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 45px rgba(0,0,0,.15);
+}
+
+.card-icon {
+    width: 42px; /* change based on image size */
+    height: 42px;
+    object-fit: contain;
+    margin-bottom: 18px;
+}
+
+.cost-card h4 {
+    color: #4f4a72;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.cost-card p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 14px;
+}
+
+.cost-card ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+.cost-card ul li {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.8;
+}
+.pricing-estimator-section {
+    background: #f4f3f6;
+}
+
+.section-title {
+    color: #875b96;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+    max-width: 650px;
+    margin-bottom: 15px;
+}
+
+.section-desc {
+    color: #666;
+    font-size: 18px;
+    max-width: 700px;
+    margin-bottom: 50px;
+}
+
+/* Timeline */
+.steps-wrapper {
+    position: relative;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 20px;
+    left: 9%;
+    width: 82%;
+    border-top: 2px dashed #c694ff;
+    z-index: 1;
+}
+
+.timeline-line::before {
+    content: "";
+    position: absolute;
+    left: -12px;
+    top: -5px;
+    width: 8px;
+    height: 8px;
+    background: #c694ff;
+    border-radius: 50%;
+}
+
+.step-circle {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 25px;
+    background: #7858b5;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 0 0 2px #c694ff;
+}
+
+.steps-wrapper h5 {
+    color: #4d4a73;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.steps-wrapper p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 220px;
+    margin: auto;
+}
+
+/* CTA Card */
+.calculator-card {
+    background: linear-gradient(
+        135deg,
+        #b17dd1,
+        #a86cc8
+    );
+    padding: 28px;
+    border-radius: 8px;
+    color: #fff;
+    max-width: 320px;
+    margin-left: auto;
+}
+
+.calculator-card p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.calculator-card a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.calculator-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: #fff !important;
+    color: #4d4a73 !important;
+    text-decoration: none !important;
+    font-weight: 700;
+    font-size: 22px;
+    padding: 14px 20px;
+    border-radius: 6px;
+    width: 100%;
+}
+
+.calculator-btn span {
+    font-size: 24px;
+}
+.license-section {
+    background: #ffffff;
+}
+
+/* Top Cards */
+.license-card {
+    background: #f4f3f6;
+    border-radius: 8px;
+    padding: 28px 24px;
+}
+
+.license-card h3 {
+    color: #4d4a73;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.license-card p,
+.license-card li {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.license-card ul {
+    padding-left: 20px;
+    margin-bottom: 18px;
+}
+
+.license-card a {
+    color: #666;
+    text-decoration: underline;
+}
+
+.highlight-text {
+    font-weight: 700;
+    color: #444 !important;
+    margin: 20px 0;
+}
+
+/* Bottom Banner */
+.insight-banner {
+    margin-top: 28px;
+    background: linear-gradient(
+        90deg,
+        #b07bcf,
+        #a96dc8
+    );
+    border-radius: 8px;
+    padding: 16px 40px;
+}
+
+.insight-content h4 {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.insight-content p {
+    color: rgba(255,255,255,.95);
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+/* Button */
+.insight-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: #fff;
+    color: #4d4a73;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 16px 28px;
+    border-radius: 6px;
+    min-width: 300px;
+    justify-content: center;
+}
+
+.insight-btn:hover {
+    color: #4d4a73;
+}
+
+.insight-btn span {
+    font-size: 22px;
+}
+/* =========================
+   Business Central Table
+========================= */
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-family: Arial, sans-serif;
+}
+
+.comparison-table thead th {
+    background: linear-gradient(180deg, #5b4b84 0%, #40365f 100%);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: left;
+    padding: 10px 20px;
+    border: none;
+}
+
+.comparison-table tbody tr:nth-child(odd) {
+    background: #f7f7f7;
+}
+
+.comparison-table tbody tr:nth-child(even) {
+    background: #ececef;
+}
+
+.comparison-table tbody td {
+    padding: 8px 10px;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.35;
+    vertical-align: top;
+    border: none;
+}
+
+.comparison-table tbody td:first-child {
+    font-weight: 700;
+    color: #222;
+    width: 27%;
+}
+
+.comparison-table tbody td:nth-child(2),
+.comparison-table tbody td:nth-child(3),
+.comparison-table tbody td:nth-child(4) {
+    width: 24%;
+}
+
+/* Bottom Content */
+
+.license-note {
+    margin-top: 40px;
+}
+
+.license-note h3 {
+    color: #6f5a97;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.license-note ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.license-note li {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.4;
+    margin-bottom: 2px;
+}
+
+/* Responsive */
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+@media (max-width: 991px) {
+    .comparison-table {
+        min-width: 900px;
+    }
+}
+@media (max-width: 991px) {
+
+    .insight-banner {
+        padding: 25px;
+    }
+
+    .insight-btn {
+        margin-top: 20px;
+        min-width: 100%;
+    }
+}
+@media (max-width: 991px) {
+    .calculator-card {
+        margin: 40px auto 0;
+    }
+
+    .timeline-line {
+        display: none;
+    }
+
+    .step-circle {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 991px) {
+    .cost-card {
+        padding: 24px;
+    }
+}
+
+@media (max-width: 991px) {
+    .trial-title {
+        text-align: left;
+        margin-bottom: 15px;
+    }
+
+    .trial-content {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .trial-btn {
+        margin-top: 15px;
+    }
 }
 @media (min-width: 1440px) and (max-width: 1700px) {
   .row-d .swiper-wrapper {
