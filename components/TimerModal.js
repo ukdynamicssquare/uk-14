@@ -51,7 +51,7 @@ const TimerModal = () => {
               </button>
 
               {/* <a 
-                href="https://www.forbes.com/councils/forbestechcouncil/2026/04/21/the-cost-illusion-in-erp-why-companies-overspend/" 
+                href="https://www.forbes.com/councils/forbestechcouncil/2026/06/01/what-companies-get-wrong-about-agentic-erp/" 
                 target="_blank" 
                 rel="nofollow"
                 onClick={handleCloseModal}

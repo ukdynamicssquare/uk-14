@@ -511,7 +511,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
                           display: "block",
                         }}
                         rel="nofollow"
-                        href="https://www.forbes.com/councils/forbestechcouncil/2026/04/21/the-cost-illusion-in-erp-why-companies-overspend/"
+                        href="https://www.forbes.com/councils/forbestechcouncil/2026/06/01/what-companies-get-wrong-about-agentic-erp/"
                         target="_blank"
                       >
                         <Image
