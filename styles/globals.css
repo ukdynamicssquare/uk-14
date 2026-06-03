@@ -17560,7 +17560,7 @@ margin: 15px 0px 0px;
 }
 .acc-bc-ho .accordion-item .accordion-body ul li {
   font-size: 16px;
-  color: #212529;
+  color: #4a5056;
   margin-bottom: 3px;
 }
 .card-0-001 {
@@ -18482,7 +18482,7 @@ font-size: 24px;
 
 .cost-card h4 {
     color: #4f4a72;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 700;
     margin-bottom: 12px;
 }
@@ -18490,7 +18490,6 @@ font-size: 24px;
 .cost-card p {
     color: #666;
     font-size: 16px;
-    line-height: 1.7;
     margin-bottom: 14px;
 }
 
@@ -18597,12 +18596,11 @@ font-size: 24px;
 
 .calculator-card p {
     font-size: 16px;
-    line-height: 1.8;
     margin-bottom: 35px;
+    color: #fff;
 }
 
 .calculator-card a {
-    color: #fff;
     text-decoration: underline;
 }
 
@@ -18615,10 +18613,15 @@ font-size: 24px;
     color: #4d4a73 !important;
     text-decoration: none !important;
     font-weight: 700;
-    font-size: 22px;
+    font-size: 18px;
     padding: 14px 20px;
     border-radius: 6px;
     width: 100%;
+}
+.calculator-btn:hover{
+  background: #bb2b36 !important;
+    color: #ffffff !important;
+    transition:.4s ease
 }
 
 .calculator-btn span {
@@ -18637,8 +18640,8 @@ font-size: 24px;
 
 .license-card h3 {
     color: #4d4a73;
-    font-size: 22px;
-    font-weight: 700;
+    font-size: 18px;
+    font-weight: 600;
     margin-bottom: 20px;
 }
 
@@ -18655,7 +18658,6 @@ font-size: 24px;
 }
 
 .license-card a {
-    color: #666;
     text-decoration: underline;
 }
 
@@ -18679,8 +18681,8 @@ font-size: 24px;
 
 .insight-content h4 {
     color: #fff;
-    font-size: 28px;
-    font-weight: 700;
+    font-size: 18px;
+    font-weight: 600;
     margin-bottom: 8px;
 }
 
@@ -18707,8 +18709,13 @@ font-size: 24px;
     justify-content: center;
 }
 
-.insight-btn:hover {
+ {
     color: #4d4a73;
+}
+.calculator-btn:hover,.insight-btn:hover{
+  background: #bb2b36 !important;
+    color: #ffffff !important;
+    transition:.4s ease
 }
 
 .insight-btn span {
@@ -18771,7 +18778,7 @@ font-size: 24px;
 
 .license-note h3 {
     color: #6f5a97;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 700;
     margin-bottom: 15px;
 }
@@ -18793,7 +18800,22 @@ font-size: 24px;
 .table-responsive {
     overflow-x: auto;
 }
+.card-iconss{
+  width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+.d-flex-99{
+  display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.ss-tab-01{
 
+}
+.mycard__inner-bg-1{
+  background: #fff;
+}
 @media (max-width: 991px) {
     .comparison-table {
         min-width: 900px;
