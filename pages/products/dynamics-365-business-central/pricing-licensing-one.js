@@ -3,9 +3,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 // import useGsapScrollCards from '../../../hooks/useGsapScrollCards';
-import faqData from '../../../public/data/finance_faq.json';
+import faqData from '../../../public/data/bclicance.json';
 import useCardScrollEffect from "../../../components/useCardScrollEffect";
-import BcPopPdf from '../../../components/BCPdfPopup';
 import BlogFinanaceCard from '../../../components/BlogFinanaceCard';
 
 
@@ -923,7 +922,6 @@ const BusinessCentral = () => {
 
         </div>
       </section>
-      <BcPopPdf pdfType={pdfType} />
     </>
   );
 };

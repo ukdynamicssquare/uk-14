@@ -1,0 +1,88 @@
+[
+    {
+      "id": 1,
+      "question": "What is Dynamics 365 Business Central?",
+      "answer": "<p>The Dynamics 365 Business Central is a cloud-based ERP application built to ease the working of small to medium sized businesses. The employees of an organisation can manage all the processes and operations through the dashboard of Business Central. Due to its flexibility and customization, it becomes easy to streamline the business. It provides the opportunity to manage the entire business from one place.</p>"
+    },
+    {
+      "id": 2,
+      "question": "How much does Dynamics 365 Business Central cost in the UK?",
+      "answer": "<p>Business Central pricing UK starts from £61.50 per user/month for the Essentials licence, with Premium at £84.60 and Team Members at £6.20 per user/month, billed annually and excluding VAT.</p>"
+    },
+    {
+      "id": 3,
+      "question": "Is Business Central expensive?",
+      "answer": "<p>The cost depends on your business size, requirements, and implementation scope. While licensing is predictable, total cost varies based on customisation, integrations, and ongoing support.</p>"
+    },
+    {
+      "id": 4,
+      "question": "What is the difference between Essentials and Premium?",
+      "answer": "<p>Essentials covers core business functions such as finance, sales, and operations. Premium includes everything in Essentials, plus manufacturing and service management capabilities.</p>"
+    },
+    {
+      "id": 5,
+      "question": "Do all users need full licences?",
+      "answer": "<p>No. Many businesses use a mix of full users and Team Members to optimise cost while ensuring access where needed.</p>"
+    },
+    {
+      "id": 6,
+      "question": "How long does implementation take?",
+      "answer": "<p>Implementation timelines vary based on complexity but typically range from a few weeks for simple setups to several months for larger or more complex projects.</p>"
+    },
+    {
+      "id": 7,
+      "question": "Are Dynamics NAV and Business Central different?",
+      "answer": "<p>Dynamics NAV is the older version of Dynamics 365 Business Central. Dynamics NAV is not discontinued by Microsoft, but it is evolved into the form of 365 Business Central with lots of new features and benefits for the user.</p>"
+    },
+     {
+      "id": 8,
+      "question": "How to buy the Business Central Subscription?",
+      "answer": "<p>Microsoft doesn't sell the license or subscription of the Business Central directly to the end-users. If you want to buy the license, you need to contact the authorized vendor partner, like Dynamics Square. Also, the vendor partner is responsible for all support and services in case of need.</p>"
+    },
+     {
+      "id": 9,
+      "question": "Can I get a demo before actually purchasing it?",
+      "answer": "<p>Yes, you can try the <a href=\"http://localhost:3000/products/microsoft-dynamics-365/\">Dynamics 365 apps</a> like Business Central by logging in home.dynamcis.com portal using your Microsoft Account ID. Here, you will be allowed to see all the offerings ofo Business Central as a demo.</p>"
+    },
+     {
+      "id": 10,
+      "question": "Is customization available?",
+      "answer": "<p>The best part about working with D365 Business Central is the freedom to work with customizations as per the business needs. Different businesses have different kinds of conditions, and to deal with such modifications, you can contact a vendor partner like Dynamics Square to help you overcome any issue.</p>"
+    },
+     {
+      "id": 11,
+      "question": "What is the primary difference between NAV and Business Central?",
+      "answer": "<p>The basis difference between NAV and Business Central is NAV can only be operated and structured on-premises. At the same time, Business Central can be structured <a target=\"_blank\" href=\"/microsoft-dynamics-365-cloud-vs-on-premise/\">on-premises</a>, on the cloud, and in hybrid locations. Business Center provides the flexibility to operate and manage the business anytime and anywhere.</p>"
+    },
+     {
+      "id": 12,
+      "question": "Can I set up the Business Central on-premises?",
+      "answer": "<p>Yes, you can also deploy Business Central in SaaS ( public cloud), PaaS (private cloud), and on-premises. It depends on the user. Even you can deploy the Business Central in the cloud (Saas or PaaS) after using it on-premises.</p>"
+    },
+     {
+      "id": 13,
+      "question": "What are the capabilities of Dynamics 365 Business Central?",
+      "answer": "<p>D365 Business Central is capable of managing and streamlining your business from one platform. It makes all the processes and operations smooth and with minimal human interaction, making it easier to use and understand.</p>"
+    },
+     {
+      "id": 14,
+      "question": "How will customers updates to new versions of Dynamics 365 Business Central?",
+      "answer": "<p>Due to cloud computing, no user can manually update the version of Dynamics 365 Business Central. When there is a new update rolled out by Microsoft, it will automatically be updated after prior notification about updates. That's the best feature resulting in no financial and physical efforts.</p>"
+    },
+     {
+      "id": 15,
+      "question": "Is Dynamics 365 Business Central available on mobile devices?",
+      "answer": "<p>Yes, end users can view and operate the process using mobile devices. Not only from mobile devices but also using all such devices with an active internet connection and a supported browser.</p>"
+    },
+     {
+      "id": 16,
+      "question": "Does a customer need an Office 365 subscription to use Dynamics 365 Business Central?",
+      "answer": "<p>No, but for a seamless Dynamics 365 Business Central experience, Office 365 is a must app. Without Office, you can work at Business Central but with limited features and tools.</p>"
+    },
+     {
+      "id": 17,
+      "question": "Who can install/uninstall customized extensions of Dynamics 365 Business Central?",
+      "answer": "<p>Only the admin or the customer has the power to add or manage the extension of Business Central. If the customer wants any changes with its version of Business Central, they need to contact Dynamics Square to resolve all queries.</p><p>See also -</p><ul><li><a target=\"_blank\" href=\"/why-choose-microsoft-dynamics-365-business-central/\">Why Choose Microsoft Dynamics 365 Business Central? </a></li><li><a target=\"_blank\" href=\"/products/dynamics-365-business-central/advantages-capabilities/\">Business Central Advantages &amp; Capabilities </a></li><li><a target=\"_blank\" href=\"/dynamics-365-business-central-vs-sap-business-one/\">Business Central Vs SAP Business One </a></li><li><a target=\"_blank\" href=\"/dynamics-365-business-central-vs-netsuite/\">Business Central Vs NetSuite</a></li></ul>"
+    }
+  ]
+  
