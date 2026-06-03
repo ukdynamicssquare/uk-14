@@ -18720,48 +18720,47 @@ font-size: 24px;
 
 .comparison-table {
     width: 100%;
-    border-collapse: collapse;
-    border-spacing: 0;
-    font-family: Arial, sans-serif;
+    border-collapse: separate;
+    border-spacing: 0 4px; /* creates the white gaps */
 }
 
 .comparison-table thead th {
-    background: linear-gradient(180deg, #5b4b84 0%, #40365f 100%);
+    background: linear-gradient(
+        180deg,
+        #56457d 0%,
+        #3d335b 100%
+    );
     color: #fff;
-    font-size: 14px;
-    font-weight: 700;
-    text-align: left;
-    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 8px 20px;
     border: none;
 }
 
-.comparison-table tbody tr:nth-child(odd) {
-    background: #f7f7f7;
+.comparison-table tbody tr {
+    background: #f0f0f0;
 }
 
 .comparison-table tbody tr:nth-child(even) {
-    background: #ececef;
+    background: #e4e4e8;
 }
 
 .comparison-table tbody td {
     padding: 8px 10px;
-    font-size: 14px;
-    color: #333;
-    line-height: 1.35;
-    vertical-align: top;
     border: none;
+    color: #333;
+    font-size: 15px;
+    line-height: 1.35;
 }
 
 .comparison-table tbody td:first-child {
     font-weight: 700;
     color: #222;
     width: 27%;
+    padding:10px
 }
-
-.comparison-table tbody td:nth-child(2),
-.comparison-table tbody td:nth-child(3),
-.comparison-table tbody td:nth-child(4) {
-    width: 24%;
+.comparison-bg>td{
+  background-color: #f1f0f4;
 }
 
 /* Bottom Content */
