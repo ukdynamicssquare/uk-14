@@ -1,871 +1,1030 @@
-import Link from "next/link";
-import Head from "next/head";
-import Image from "next/image";
+import { useRef, useState } from 'react';
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+// import useGsapScrollCards from '../../../hooks/useGsapScrollCards';
+import faqData from '../../../public/data/bclicance.json';
+import useCardScrollEffect from "../../../components/useCardScrollEffect";
+import BlogFinanaceCard from '../../../components/BlogFinanaceCard';
 
-const BusinessCentralPricingLicensing = () => {
+
+
+// const StackedCards = dynamic(() => import("../../components/StackedCards"), {
+//     ssr: false,
+//   });
+
+const BusinessCentral = () => {
+  /*gsap card scroll*/
+  // const containerRef = useRef(null);
+  // useGsapScrollCards(containerRef);
+  /*gsap card scroll*/
+
+  useCardScrollEffect()
+
+  /*faq*/
+  const [visibleCount, setVisibleCount] = useState(5);
+
+  const handleLoadMore = () => {
+    setVisibleCount((prev) => prev + 3);
+  };
+
+  const [pdfType, setPdfType] = useState(null);
+  const handleOpenModal = (type) => {
+    setPdfType(type);
+    // Open modal manually (needed since you use Bootstrap)
+    const modal = new bootstrap.Modal(document.getElementById('pdfModel'));
+    modal.show();
+  };
+
   return (
     <>
       <Head>
-        <title>
-          Dynamics 365 Business Central Pricing & Licensing (2025 UK) | Dynamics Square
-        </title>
+        <title>Microsoft Dynamics 365 Business Central Pricing (2026) UK</title>
+
         <meta
           name="description"
-          content="Latest Dynamics 365 Business Central pricing and licensing guides that is specifically designed for SMBs. Packages includes team members, essentials & premium."
+          content="Microsoft Dynamics 365 Business Central UK pricing 2026: full GBP breakdown of Essentials and Premium licences, Team Member costs, setup, support and total cost guide."
         />
-          <link
+        <link
           rel="canonical"
           href="https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/pricing-licensing/"
         />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/pricing-licensing/" />
+        <meta property="og:title" content="Microsoft Dynamics 365 Business Central Pricing (2026) UK" />
+        <meta property="og:description" content="Microsoft Dynamics 365 Business Central UK pricing 2026: full GBP breakdown of Essentials and Premium licences, Team Member costs, setup, support and total cost guide." />
+        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/Dynamics-365-Finance-Banner.png" />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/pricing-licensing/" />
+        <meta property="twitter:title" content="Microsoft Dynamics 365 Business Central Pricing (2026) UK" />
+        <meta property="twitter:description" content="Microsoft Dynamics 365 Business Central UK pricing 2026: full GBP breakdown of Essentials and Premium licences, Team Member costs, setup, support and total cost guide." />
+        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/Dynamics-365-Finance-Banner.png" />
+
       </Head>
-      <section className="Solution-banner hero-1 hero">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-6 mobile-4 align-self-center">
-              <h1>Dynamics 365 Business Central Pricing & Licensing </h1>
-              <p>Meet your business needs within budget with Business Central Pricing (2025) </p>
-              <div>
-                <div className="text-center text-lg-start">
+      <div className='solution-new-banner-one'>
+        <div className='container'>
+          <div className='row justify-content-center'>
+            <div className='col-lg-8'>
+              <div className='solution-new-banner-one-content'>
+                <h1>Microsoft Dynamics 365 Business Central Pricing</h1>
+                <span className='large-heading'>Get a Clear & Transparent Pricing for Microsoft Dynamics 365 Business Central UK</span>
+                <p>Business Central pricing in the UK starts at £61.50 per user/month, with flexible licensing designed to scale with your business. Learn here what you will pay, how licensing works, and what influences your total investment, before you commit.</p>
+                <div className="text-center">
                   <Link
                     href="#exampleModal"
                     data-bs-toggle="modal"
                     className="btn-get-started scrollto">
-                    <span>Get Started Now!</span>
+                    <span>Get Your Exact Pricing &nbsp;<i className="bi bi-arrow-right"></i></span>
                   </Link>
                 </div>
               </div>
+
             </div>
-            <div className="col-lg-6 align-self-center text-center">
-              <Image
-                src="/img/MicrosoftTeams-image-20.png"
-                alt="MicrosoftTeams-image-20"
-                width={1024} height={586}
-                priority = {true}
-              />
-            </div>
+
           </div>
         </div>
-      </section>
-      <section className="busine_service_bottom custom001 custom003">
-        <div className="container">
-         
-          <div className="row justify-content-center">
-            
-            <div className="col-lg-9">
-            <header className="section-header">
-            <h2>Dynamics 365 Business Central Licensing: All you Need to Know</h2>
-          </header>
-              <div className="custom002">
-                <p>
-                Microsoft has simplified Business Central licencing while offering cost-effective plans for all businesses.</p> 
-                  <p>Not only is <Link href="/products/dynamics-365-business-central/" target="_blank">Business Central</Link> cost-effective, but it also offers flexibility, scalability, and agility to all businesses. These benefits are empowering businesses to choose BS over other ERP systems available on the market. </p>
-                  <p>Even Microsoft offers a simplified Business Central licencing guide so that businesses of all sizes and functionalities can opt for this powerful ERP solution. </p>
-                  <p><strong>Perpetual Licencing (no longer exists)</strong>: Also known as the Microsoft Open Licence Programme, businesses have to purchase the application and pay a lifetime fee at once. From January 1st, 2022, Microsoft has ended this licencing option and is not allowing to renew the existing licences. </p>
-                  <p><strong>Subscription Licencing</strong>: This licencing option is based on a monthly subscription fee for a particular solution based on per-user, per-month access. This licencing is cost-effective, flexible, and doesn’t come with a monthly maintenance fee.</p>
-              </div>
-            </div>
-
-           
-           
-            
-          </div>
-        </div>
-      </section>
-      <section style={{marginTop:"-30px",background:"#f7f7f7"}}>
-        <div className="container">
-          <div className="row justify-content-center">
-          <div className="col-lg-9" >
-            <header className="section-header">
-            <h3>Effects of Deployment Options on Business Central Licensing</h3>
-          </header>
-              <div className="custom002"> 
-                  <p>During the Business Central implementation process, the major concern of your implementation partner will be the type of hosting you choose. Hosting is the essential factor that determines the overall pricing of Business Central. </p>
-                  <p>Currently, Microsoft is offering three kinds of deployment options: </p>
-                  <p><strong>Cloud: </strong>: Your business data will be hosted on Azure (Microsoft cloud services), where you don’t have to pay anything other than monthly subscription fees. </p>
-                  <p><strong>On-premises</strong>: Your data will be hosted on your company's servers, where you have to manage the data servers using your own resources, which include all costs. </p>
-                  <p><strong>Hybrid</strong>:  Based on your requirements, you can opt for this deployment option. It is a mix of the other two deployment options, and you have to manage the cost as per your use, whether cloud or on-premises. </p>
-              </div>
-            </div>
-
-            <div className="col-lg-12">
-              <div>
-                <div className="text-center  bootom-boot">
-                  <p><strong>Want to know BC pricing based on your Business? </strong></p>
-                  <Link
-                    href="#exampleModal"
-                    data-bs-toggle="modal"
-                    className="btn-get-started scrollto">
-
-                    <span>Let's Discuss over a Call! </span>
-                  </Link>
-                </div>
+      </div>
+      <section id='section8' className='solution-new-pricing col-ff3 '>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-lg-9'>
+              <div className='solution-new-banner-sub-head'>
+                <h2>Business Central Pricing: A Quick Insight</h2>
+                <p>Microsoft Dynamics 365 Business Central pricing based on official Microsoft plans are as follows:</p>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section>
-        <div className="container">
-        <div className="row justify-content-center">
-          <div className="col-lg-9">
-          <header className="section-header">
-            <h2>Business Central Licences: Get More Clarity</h2>
-            <p>At first, you need to understand your business requirements before choosing any of the licencing plans. Because the Business Central licencing cost is different for each plan and choosing the wrong plan can have a considerable impact on your budget. </p>
-          </header>
-          </div>
-        </div>
-          <div className="row p-lg-6 justify-content-center">
-            <div
-              className="col-lg-8">
-              <div className="finace-acc">
-                <div className="accordion" id="accnew">
-                  <div className="accordion-item">
-                    <h3 className="accordion-header" id="headingTwo">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#fin1"
-                        aria-expanded="false"
-                        aria-controls="fin1"
-                      >
-                        <div className="wr-in">
-                          <img
-                            src="/img/icons-azure_cloud-embed.svg"
-                            alt="icons-azure_cloud-embed"
-                          />
-                        </div>
-                        <span>Team Member Plan</span>
-                      </button>
-                    </h3>
-                    <div
-                      id="fin1"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingTwo"
-                      data-bs-parent="#accnew"
-                    >
-                      <div className="accordion-body">
-                        <p>It is the cheapest licence available for Business Central. The users can:</p>
-                        <ul>
-                        <li>Access general business data</li>
 
-                        <li>Collect information from a different source</li> 
-
-                        <li>Share information with specific members </li>
-
-                        <li>Perform fundamental tasks </li>
-
-                        <li>Tasks like data entry, approvals, and more </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <hr />
-                  <div className="accordion-item">
-                    <h3 className="accordion-header" id="headingTwo">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#fin2"
-                        aria-expanded="false"
-                        aria-controls="fin2"
-                      >
-                        <div className="wr-in">
-                          <img
-                            src="/img/icons-azure_agile.svg"
-                            alt="icons-azure_agile"
-                          />
-                        </div>
-                        <span>Essential Plan</span>
-                      </button>
-                    </h3>
-                    <div
-                      id="fin2"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingTwo"
-                      data-bs-parent="#accnew"
-                    >
-                      <div className="accordion-body">
-                        <p>It is the Business Central plan that gives access to utilise <Link
-                          href="/products/dynamics-365-business-central/advantages-capabilities/"
-                          target="_blank">Business Central capabilities</Link>. The users can: </p>
-                        <ul>
-                        <li>Manage core operations</li> 
-
-                        <li>Make real-time decisions</li>  
-
-                        <li>Empowers team to get accurate insights</li>  
-
-                        <li>Streamline sales and delivery tasks</li>  
-
-                        <li>Tracks inventory and projects</li>  
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  <hr />
-                  <div className="accordion-item">
-                    <h3 className="accordion-header" id="headingTwo">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#fin3"
-                        aria-expanded="false"
-                        aria-controls="fin3"
-                      >
-                        <div className="wr-in">
-                          <img
-                            src="/img/icons-azure_project-management.svg"
-                            alt="icons-azure_project-management"
-                          />
-                        </div>
-                        <span>Premium Plan</span>
-                      </button>
-                    </h3>
-                    <div
-                      id="fin3"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingTwo"
-                      data-bs-parent="#accnew"
-                    >
-                      <div className="accordion-body">
-                        <p>It empowers users to access the full functionality of Business Central. The users can: </p>
-                        <ul>
-                        <li>This plan is for owners and decision makers </li>
-
-                        <li>Make informed decision </li>  
-
-                        <li>Operate entire business operations </li>  
-
-                        <li>Facilitate data collection without permission. </li>  
-
-                        <li>Manages entire manufacturing processes </li>  
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-12">
-              <div>
-                <div className="text-center  bootom-boot">
-                  <Link
-                    href="#exampleModal"
-                    data-bs-toggle="modal"
-                    className="btn-get-started scrollto">
-
-                    <span>Want more clarity on the above plans? Contact us Now!</span>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="leads-sect">
-        <div className="container">
-         <div className="row justify-content-center">
-          <div className="col-lg-9">
-          <header className="section-header">
-            <h2>Business Central Licence Types: Perfect Fit for All Businesses </h2>
-            <p>Once you decide on any of the licencing plans, whether Essentials or Premium, you can access them after opting for a Full User or Team Member Licence. Also, it would be great if you could compare Business Central Premium vs Essentials licence capabilities to get a deep understanding of both of these options.</p>
-          </header>
-          </div>
-         </div>
-          <div className="row justify-content-center">
-            <div className="col-lg-7">
-              <div className="parten-more">
-                <h3>Full-User Users</h3>
-                <p>These users can access the full capabilities of a particular licence. This includes users like financial controllers, managers, and finance employees. </p>
-              </div>
-              <div className="parten-more">
-                <h3>Team Member Users</h3>
-                <p>These users can access the limited capabilities of a licencing plan assigned by the admin user.</p>
-              </div>
-              
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="busine_service_bottom">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-4 align-self-center">
-              <div className="busine_service_bottom-left custom012 text-center">
-                <img
-                  src="/img/Implementation.svg"
-                  alt="Implementation"
-                />
-              </div>
-            </div>
-            <div className="col-lg-8 align-self-center">
-              <div className="side-heading-custom-01">
-                <h2>How to Implement Dynamics 365 Business Central? </h2>
-              </div>
-              <div className="custom-p-001">
-                <p>Business Central pricing is one of the major concerns for SMBs as they run low on budget. Once it is resolved, it's time to know about the <Link href="/dynamics-365-business-central-implementation/" target="_blank">Business Central implementation</Link> and its cost.</p> 
-                <p>The process of implementing this powerful ERP solution is simple. You need to find the right Microsoft Solutions Partner, like Dynamics Square, that understands your business needs and offers you the perfect solution for your business. </p>
-                <p>However, there is no fixed implantation cost as it varies from business to business and their unique requirements. To get the exact cost, you need to contact our certified Business Central consultants.</p>
-                <p>Just give us a call at 0207-193-2502, and one of us will guide you towards the right path of choosing the right licence and a suitable implementation strategy.</p>
-                <p>Also, if you want to upgrad your existing <Link href="/dynamics-nav-to-business-central/" target="_blank">NAV to Business Central</Link> cloud, book a call with us.</p>
-                <p>During the discovery call, we will understand your business needs and give you an accurate quote about set-up costs, implementation time, required customisation, needed business central integrations, and required resources. </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="call-to-action-center hero-4">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-9">
-              <div className="call-to-action-content">
-                <h3>Struggling with Outdated NAV? It's High Time you should Consider Upgrade </h3>
-                <p><Link href="/products/microsoft-dynamics-nav/" target="_blank">NAV</Link> has become outdated as Microsoft has stopped offering support and upgrade services for most of the NAV versions. If you are still using any of those versions, you should upgrade to Business Central Cloud, or any other version based on your requirements.</p> <p>Once you upgrade, you will get extraordinary features, including process automation, real-time insights, global connectivity, auto upgrades, and no maintenance cost. </p><p>So, are you ready to transform your business for enhanced growth and sustainable revenue? </p>
-                <div className="text-center m-o-t new-btn-nn">
-                  <Link
-                    href="#exampleModal"
-                    data-bs-toggle="modal"
-                    className="btn-get-started scrollto">
-
-                    <span>Schedule a Free Demo Today!</span>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="pricing" className="solution-new-pricing">
-        <div className="container">
-          <header className="section-header">
-            <h2>Dynamics 365 Business Central Pricing UK: Here it is!</h2>
-            <p>Check out the Business Central Licensing cost available below:</p>
-          </header>
-           <div className='row g-3'>
-            <div className='col-lg-3 d-flex'>
-              <div className='solution-new-pricing-card col-ff3'>
-                <h3>Business Central<span>Free Trial</span>
+          <div className='row g-3'>
+            <div className='col-lg-4 d-flex'>
+              <div className='solution-new-pricing-card col-ff4'>
+                <h3>Essentials
                 </h3>
-                <p>Begin a 30-day trial to see how finance, sales, service, and operations align within a single experience. Engage with the platform and see real results.</p>
-                <h4>£0.0*</h4>
-                <a href="#exampleModal" data-bs-toggle="modal" className="btn-dd-t btn-get-started" >Try for Free </a>
-                <p className='disclm'>*Get a 30-day free trial to see it for yourself.</p>
-              </div>
-            </div>
-            <div className='col-lg-3 d-flex'>
-              <div className='solution-new-pricing-card'>
-                <h3>Business Central<span>Essentials</span>
-                </h3>
-                <p>Handle finance, sales, and operations through one smart system. Built-in Copilot (Microsoft AI) helps you drive clarity, speed, and stronger outcomes.</p>
                 <h4>£61.50<span>/user/month</span></h4>
-                <a href="#exampleModal" data-bs-toggle="modal" className="btn-dd-t btn-get-started" >Contact us</a>
-                <p className='disclm'>*Excluding VAT</p>
+                <p>Core business management across finance, sales, and operations with Microsoft Copilot included.</p>
+                <p className="disclm">*Excluding VAT</p>
               </div>
             </div>
-            <div className='col-lg-3 d-flex'>
-              <div className='solution-new-pricing-card col-ff3'>
-                <h3>Business Central<span>Premium</span>
+            <div className='col-lg-4 d-flex'>
+              <div className='solution-new-pricing-card col-ff4'>
+                <h3>Premium
                 </h3>
-                <p>Access every feature from the Essentials plan, along with advanced tools for service and manufacturing. Designed for expanding teams seeking better clarity.</p>
                 <h4>£84.60<span>/user/month</span></h4>
-                <a href="#exampleModal" data-bs-toggle="modal" className="btn-dd-t btn-get-started" >Contact us</a>
-                <p className='disclm'>*Excluding VAT</p>
+                <p>Includes everything in Essentials, plus advanced capabilities for service management and manufacturing.</p>
+                <p className="disclm">*Excluding VAT</p>
               </div>
             </div>
-            <div className='col-lg-3 d-flex'>
-              <div className='solution-new-pricing-card'>
-                <h3>Business Central<span>Team Member</span>
+            <div className='col-lg-4 d-flex'>
+              <div className='solution-new-pricing-card col-ff4'>
+                <h3>Team Members
                 </h3>
-                <p>Gain access to view records, approve requests, and edit specific details. A perfect match for those supporting daily tasks across departments.</p>
-                <h4>£6.60<span>/user/month</span></h4>
-                <a href="#exampleModal" data-bs-toggle="modal" className="btn-dd-t btn-get-started" >Contact us</a>
-                <p className='disclm'>*Excluding VAT</p>
-              </div>
-            </div>
-
-          </div>
-          <div className="row gy-4">
-            <div className="col-lg-12 col-md-12">
-              <div className="price-btn d-flex justify-content-center">
-                <Link href="#exampleModal" data-bs-toggle="modal" className="btn-get-red">
-
-                  <span>Get Started Now</span>
-                </Link>
+                <h4>£6.20<span>/user/month</span></h4>
+                <p>Offers limited access for read, approvals, and light data updates.</p>
+                <p className="disclm">*Excluding VAT</p>
               </div>
             </div>
           </div>
-          {/* <div className="row gy-4">
-            <div className="col-lg-4">
-              <div className="box">
-                <h3>
-                  Business Central
-                  <br />
-                  Essentials
-                </h3>
-                <div className="price">
-                £57.50<span>Per-User/Per Month</span>
-                </div>
-                <ul>
-                  <li>
-                    <i className="bi bi-check-lg"></i> Financial Management
-                  </li>
-                  <li>
-                    <i className="bi bi-check-lg"></i> Inventory Management
-                  </li>
-                  <li>
-                    <i className="bi bi-check-lg"></i> Order Management
-                  </li>
-                  <li>
-                    <i className="bi bi-check-lg"></i> Purchase Order Management
-                  </li>
-                  <li>
-                    <i className="bi bi-check-lg"></i> Project Management
-                  </li>
-                  <li>
-                    <i className="bi bi-check-lg"></i> Additional Capabilities
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="col-lg-4">
-              <div className="box">
-                <h3>
-                  Business Central
-                  <br />
-                  Premium
-                </h3>
-                <div className="price">
-                £82.20<span>Per-User/Per Month</span>
-                </div>
-                <ul>
-                  <li>
-                    <i className="bi bi-check-lg"></i> Financial Management
-                  </li>
-                  <li>
-                    <i className="bi bi-check-lg"></i>Inventory Management
-                  </li>
-                  <li>
-                    <i className="bi bi-check-lg"></i>Sales Order Management
-                  </li>
-                  <li>
-                    <i className="bi bi-check-lg"></i>Purchase Order Management
-                  </li>
-                  <li>
-                    <i className="bi bi-check-lg"></i> Project Management
-                  </li>
-                  <li>
-                    <i className="bi bi-check-lg"></i>Additional Capabilities
-                  </li>
-                  <li>
-                    <i className="bi bi-check-lg"></i> Service Management
-                  </li>
-                  <li>
-                    <i className="bi bi-check-lg"></i> Manufacturing
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="col-lg-4">
-              <div className="box">
-                <h3>
-                  Business Central
-                  <br />
-                  Team Members
-                </h3>
-                <div className="price">
-                £6.60<span>Per-User/Per Month</span>
-                </div>
-                <ul>
-                  <li>
-                    <i className="bi bi-check-lg"></i> Read and Approve
-                  </li>
-                  <li>
-                    <i className="bi bi-check-lg"></i> Employee Self Serve
-                  </li>
-                  <li>
-                    <i className="bi bi-check-lg"></i> Run All Reports
-                  </li>
-                </ul>
-              </div>
-            </div>
+          <div className="trial-banner">
+            <div className="row align-items-center g-0">
 
-            
-          </div> */}
+              <div className="col-lg-4">
+                <div className="trial-title">
+                  Dynamics 365 Business Central <strong>Free Trial</strong>
+                </div>
+              </div>
+
+              <div className="col-lg-7">
+                <div className="trial-content">
+                  Dynamics Square offers a 30-day trial for <a style={{ color: '#50080e' }} href="/products/dynamics-365-business-central/">Business Central ERP</a>  where you will get the full access to explore finance,
+                  sales, service, and operations in one system. We encourage you to explore the solution before you commit.
+                </div>
+              </div>
+
+              <div className="col-lg-1 text-center">
+                <a
+                  href="/contact-us/"
+                  className="trial-btn"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="currentColor"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M14 2.5a.5.5 0 0 0-.5-.5H8a.5.5 0 0 0 0 1h4.293L2.146 13.146a.5.5 0 1 0 .708.708L13 3.707V8a.5.5 0 0 0 1 0V2.5z"
+                    />
+                  </svg>
+                </a>
+              </div>
+
+            </div>
+          </div>
         </div>
       </section>
-      <section className="solution-faq faq">
+
+      <section>
+        <div className="container py-5">
+          <div className='row'>
+            <div className='col-lg-7'>
+              <div className='solution-new-banner-sub-head'>
+                <h2>What All Costs Add Up to Dynamics 365 Business Central Pricing?</h2>
+                <p>Dynamics 365 Business Central license price is only one part of the total cost. Your actual investment depends on three key areas:</p>
+              </div>
+            </div>
+          </div>
+          <div className="row g-4">
+            <div className="col-lg-4 col-md-6">
+              <div className="cost-card h-100">
+                <Image src="/img/price-pic-03.png" alt="price-pic-03" className="card-icon" width={48} height={48} />
+                <h4>Licensing Costs</h4>
+                <p>
+                  It is based on the number of users and the type of access required:
+                </p>
+                <ul>
+                  <li>Full users (Essentials or Premium)</li>
+                  <li>Additional users (Team Members)</li>
+                  <li>Shared access via device licences</li>
+                </ul>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6">
+              <div className="cost-card h-100">
+                <Image src="/img/price-pic-04.png" alt="price-pic-04" className="card-icon" width={48} height={48} />
+                <h4>Implementation Costs</h4>
+                <p>
+                  The final Business Central implementation cost includes everything required to get your system live:
+                </p>
+                <ul>
+                  <li>System configuration</li>
+                  <li>Data migration</li>
+                  <li>Process alignment</li>
+                  <li>User training</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="col-lg-4 col-md-6">
+              <div className="cost-card h-100">
+                <Image src="/img/price-pic-05.png" alt="price-pic-05" className="card-icon" width={48} height={48} />
+
+                <h4>Ongoing Costs</h4>
+
+                <p>
+                  Post go-live of Business Central, organisations choose to invest in:
+                </p>
+
+                <ul>
+                  <li>Support and maintenance</li>
+                  <li>System enhancements</li>
+                  <li>Additional storage or environments</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section className="pricing-estimator-section py-5">
         <div className="container">
-          <header className="section-header">
-            <h2>
-              Have you got questions 
-              <br />
-               about Business Central?
-            </h2>
-            <p>Click through to our FAQ for the best answers!</p>
-          </header>
+          <div className="row align-items-center">
+            <div className="col-lg-8">
+              <div className='row'>
+                <div className='col-lg-9'>
+                  <div className='solution-new-banner-sub-head'>
+                    <h2>How to Estimate Your Microsoft Business Central Pricing?</h2>
+                    <p>You can use a simple estimation approach to understand your expected cost for Microsoft Dynamics 365 Business Central pricing.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="steps-wrapper">
+
+                <div className="timeline-line"></div>
+
+                <div className="row text-center">
+                  <div className="col-md-4">
+                    <div className="step-circle">1</div>
+
+                    <h5>Choose User Types</h5>
+
+                    <p>
+                      Determine who needs full functionality vs.
+                      light access.
+                    </p>
+                  </div>
+
+                  <div className="col-md-4">
+                    <div className="step-circle">2</div>
+
+                    <h5>Define Number of Users</h5>
+
+                    <p>
+                      Calculate how many seats your business currently
+                      requires.
+                    </p>
+                  </div>
+
+                  <div className="col-md-4">
+                    <div className="step-circle">3</div>
+
+                    <h5>Consider Additional Needs</h5>
+
+                    <p>
+                      Factor in integrations, customizations,
+                      and storage.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-4">
+              <div className="calculator-card">
+                <p>Besides, you can also use our  Dynamics 365 ERP Implementation Price Calculator to get an estimated cost of ERP implementation.</p>
+                <a href="/erp-implementation-cost-calculator/" className="calculator-btn">
+                  Calculate Now
+                  <span>→</span>
+                </a>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <section className='solution-new-cta slution-new-cta-two'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-lg-9'>
+              <div className='solution-new-cta-001'>
+                <h3>Want an Exact Dynamics 365 Business Central Pricing for Your Business?</h3>
+                <p>Every business has different requirements, workflows, and growth plans. A tailored estimate for Microsoft Business Central pricing gives you a far more accurate picture than standard pricing.</p>
+                <div>
+                  <Link
+                    href="#exampleModal"
+                    data-bs-toggle="modal"
+                    className="btn-get-started scrollto">
+                    <span>Get a Tailored Pricing Estimate &nbsp;<i className="bi bi-arrow-right"></i></span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img src="/img/n-015.png" alt="n-015" />
+      </section>
+
+      <section className="license-section py-5">
+        <div className="container">
+          <div className='row'>
+            <div className='col-lg-7'>
+              <div className='solution-new-banner-sub-head'>
+                <h2>How Business Central Pricing Works: Licensing Model and Attach Licenses</h2>
+                <p>Microsoft Dynamics 365 Business Central pricing follows a subscription-based pricing model, where businesses pay per user, per month, billed annually.</p>
+                <p>However, pricing is not just about choosing a plan, it is structured around how different users interact with the system. Let’s understand different licensing models right from the official Dynamics 365 Business Central Licensing guide.</p>
+              </div>
+            </div>
+          </div>
+          <div className="row g-4">
+
+            <div className="col-lg-6">
+              <div className="license-card h-100">
+                <h3>Base Licensing Model</h3>
+                <p>
+                  Every full-access user must have a base licence,
+                  which is the primary application they use.
+                </p>
+                <p className="mb-2">
+                  For Business Central, this includes:
+                </p>
+                <ul>
+                  <li>Essentials</li>
+                  <li>Premium</li>
+                </ul>
+                <p className="highlight-text">
+                  You choose on the basis of your operational requirements.
+                </p>
+                <p className="mb-2">
+                  The base licence determines:
+                </p>
+                <ul>
+                  <li>The level of functionality available</li>
+                  <li>The type of additional applications that can be attached</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="col-lg-6">
+              <div className="license-card h-100">
+                <h3>Attach Licences (Cost Optimisation Opportunity)</h3>
+                <p>
+                  If users require multiple Dynamics 365 applications,
+                  Microsoft offers attach licences at a discounted rate.
+                </p>
+                <p className="mb-2">
+                  For example:
+                </p>
+                <ul>
+                  <li>Users with a qualifying base licence can add applications like <a href="/products/microsoft-dynamics-365-sales/">Dynamics 365 Sales</a>, <a href="/products/microsoft-dynamics-365-customer-service/">Customer Service</a>, or <a href="/products/microsoft-dynamics-365-field-service/">Field Service</a> at a lower monthly cost.
+                  </li>
+                </ul>
+                <p className="highlight-text">
+                  Attach licences can be typically availed at one-third
+                  of the base licence pricing:
+                </p>
+                <ul>
+                  <li>
+                    £20 per user/month for apps like Dynamics 365 Sales
+                    or Customer Service
+                  </li>
+                  <li>
+                    £30 per user/month for apps like Dynamics 365 Finance
+                    or Supply Chain Management
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="insight-banner">
+            <div className="row align-items-center">
+              <div className="col-lg-8">
+                <div className="insight-content">
+                  <h4>An Important Insight:</h4>
+                  <p>
+                    Attach licences do not include separate platform
+                    entitlements. They rely on the base licence,
+                    which is why choosing the right base licence
+                    is critical.
+                  </p>
+                </div>
+              </div>
+              <div className="col-lg-4 text-lg-end text-center">
+                <a href="#exampleModal"
+                    data-bs-toggle="modal" className="insight-btn">
+                  Get Your Licensing Right
+                  <span>→</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id='section3' className='solution-new-banner-three' style={{ paddingBottom: '40px', backgroundColor: 'rgb(241 240 244)' }}>
+        {/* <div className="container" ref={containerRef}> */}
+        <div className="container">
+          <div className='row'>
+            <div className='col-lg-9'>
+              <div className='solution-new-banner-sub-head'>
+                <h2>Dynamics 365 Business Central Capabilities</h2>
+                <p>Microsoft Dynamics 365 Business Central capabilities make it a widely preferred choice by small and midsize businesses.</p>
+                <p>Is<a href="/blog/business-central-for-accounting/"> Business Central for Accounting</a>? Yes… and no. D365 BC is much more than just being accounting software. It supports companies across industries and keeps teams connected anywhere in the world.</p>
+                <p><b>Business Central comes with the following capabilities:</b></p>
+              </div>
+            </div>
+          </div>
+          <div className="row mar-top-7 justify-content-center" style={{ backgroundColor: 'rgb(241 240 244)', padding: '30px 0px' }}>
+            <div className="col-lg-12">
+              <div className="accordion accordion-flush acc-bc-ho" id="bclist1">
+                <div className="accordion-item">
+                  <div className="accordion-button bec-acc-bott collapsed" data-bs-toggle="collapse"
+                    data-bs-target="#bc-content-1">
+                    <div className='bec-acc'>
+                      <div className='d-flex-99'><Image src="/img/price-pic-06.png" alt="price-pic-08" className="card-iconss" width={48} height={48} /><h3>User Licenses</h3></div>
+                      <span>User licences are assigned to named individuals and allow access from any device. These are further classified into two subcategories: Full-Access User Licenses and Additional User Licenses.</span></div>
+                  </div>
+
+                  <div
+                    id="bc-content-1"
+                    className="accordion-collapse collapse"
+                    data-bs-parent="#bclist1"
+                  >
+                    <div className="accordion-body">
+                      <div></div>
+                      <div>
+                        <h4>1.1 Full-Access User Licences</h4>
+                        <p><b>Essentials Licence: £61.50/user/month</b></p>
+                        <p>It is meant for businesses that need core operational capabilities:</p>
+                        <ul>
+                          <li>Financial management (general ledger, budgets, multi-currency, etc.)</li>
+                          <li>Supply chain management (inventory, purchasing, order management, etc.)</li>
+                          <li>Customer relationship management (contacts, opportunities, etc.)</li>
+                          <li>Project management and time tracking</li>
+                          <li>Warehouse and inventory management</li>
+                          <li>Human resources capabilities</li>
+                          <li>AI-supported forecasting and Microsoft Copilot</li>
+                        </ul>
+                        <h4>Premium Licence: £84.60/user/month</h4>
+                        <p><b>It is everything that is there in Essentials, plus:</b></p>
+                        <ul>
+                          <li>Service order management (planning, dispatching, contracts, and more) </li>
+                          <li>Manufacturing capabilities (production orders, bills of materials, capacity planning, and more) </li>
+                        </ul>
+                        <p>A premium license is best suited for businesses with manufacturing or service operations.</p>
+                        <h4>1.2 Additional User Licences</h4>
+                        <p><b>Team Members Licence: £6.20/user/month</b></p>
+                        <p>Team Members Licence: £6.20/user/month</p>
+                        <ul>
+                          <li>Read access across Business Central data </li>
+                          <li>Limited write capabilities (update records, approve workflows) </li>
+                          <li>Create or edit quotes, update timesheets </li>
+                          <li>Approve or reject tasks </li>
+                        </ul>
+                        <p><b>Who uses Business Central Team Member License:</b></p>
+                        <ul>
+                          <li>Managers approving workflows </li>
+                          <li>Employees accessing reports </li>
+                          <li>Teams needing light interaction with the system </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="accordion-item">
+                  <div className="accordion-button bec-acc-bott collapsed" data-bs-toggle="collapse"
+                    data-bs-target="#bc-content-2">
+                    <div className='bec-acc'>
+                      <div className='d-flex-99'><Image src="/img/price-pic-07.png" alt="price-pic-07" className="card-iconss" width={48} height={48} /><h3>Device Licences</h3></div>
+                      <span>Device licences are assigned to a shared device, not an individual user.</span></div>
+                  </div>
+
+                  <div
+                    id="bc-content-2"
+                    className="accordion-collapse collapse"
+                    data-bs-parent="#bclist2"
+                  >
+                    <div className="accordion-body">
+                      <div></div>
+                      <div>
+                        <ul>
+                          <li>Multiple users can access Business Central through a single licensed device </li>
+                          <li>It is suitable for roles such as warehouse staff or shop floor teams </li>
+                          <li>It supports shared or individual logins without separate user licences </li>
+                        </ul>
+                        <p>It helps reduce licensing cost where multiple users share the same workstation. It shows the flexibility offered by Microsoft to keep licensing cost minimum for shared workspaces. Business Central Device license price starts at <b>£34.60</b> per device/month.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="accordion-item">
+                  <div className="accordion-button bec-acc-bott collapsed" data-bs-toggle="collapse"
+                    data-bs-target="#bc-content-3">
+                    <div className='bec-acc'>
+                      <div className='d-flex-99'><Image src="/img/price-pic-08.png" alt="price-pic-08" className="card-iconss" width={48} height={48} /><h3>Tenant-Level Licensing</h3></div>
+                      <span>A tenant licence in Microsoft Dynamics 365 Business Central is not assigned to a person or a device. Instead, it applies to your entire organisation (your system environment).</span></div>
+                  </div>
+
+                  <div
+                    id="bc-content-3"
+                    className="accordion-collapse collapse"
+                    data-bs-parent="#bclist3"
+                  >
+                    <div className="accordion-body">
+                      <div></div>
+                      <div>
+                        <p><b>So, in simple terms, you can think of your Business Central setup like a building:</b></p>
+                        <ul>
+                          <li>User licenses are like people working inside</li>
+                          <li>Device licenses are like shared machines in the building, and</li>
+                          <li>Tenant licences are like the building itself and its capacity (storage capacity)</li>
+                        </ul>
+                        <h4>Storage Capacity (How Much Data You Can Store)</h4>
+                        <ul>
+                          <li>80 GB included by default per tenant </li>
+                          <li>Additional storage:
+                            <ul>
+                              <li>+3 GB per Essentials user </li>
+                              <li>+5 GB per Premium user </li>
+                              <li>+1.5 GB per device licence </li>
+                            </ul>
+                          </li>
+                        </ul>
+                        <h4>Environments (Production and Sandbox Systems)</h4>
+                        <p><b>Each subscription includes:</b></p>
+                        <ul>
+                          <li>1 Production environment </li>
+                          <li>3 Sandbox (non-production) environments </li>
+                        </ul>
+                        <p>Additional environments and storage can be purchased as needed.</p>
+                        <h4>Additional Entitlements</h4>
+                        <ul>
+                          <li>Up to 3 External Accountant licences at no extra cost </li>
+                          <li>Microsoft Teams read-only access for licensed Microsoft 365 users </li>
+                          <li>Dual-use rights (cloud + on-premises deployment flexibility) </li>
+                          <li>Access to Copilot and AI agents, with additional Copilot credits available separately</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="license-comparison-section py-5">
+        <div className="container">
+          <div className='row'>
+            <div className='col-lg-9'>
+              <div className='solution-new-banner-sub-head'>
+                <h2>A Quick Comparison of Business Central Plans</h2>
+                <p>Choosing the right Dynamics 365 Business Central pricing plan depends on your business model, operations, and growth plans.</p>
+              </div>
+            </div>
+          </div>
+          <div className="table-responsive">
+            <table className="table comparison-table align-middle mb-0">
+
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Essentials</th>
+                  <th>Premium</th>
+                  <th>Team Members</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td><strong>Price (per user/month)</strong></td>
+                  <td>£61.50</td>
+                  <td>£84.60</td>
+                  <td>£6.20</td>
+                </tr>
+
+                <tr className='comparison-bg'>
+                  <td><strong>Access Level</strong></td>
+                  <td>Full</td>
+                  <td>Full</td>
+                  <td>Limited</td>
+                </tr>
+
+                <tr>
+                  <td><strong>Financial Management</strong></td>
+                  <td>Yes</td>
+                  <td>Yes</td>
+                  <td>View only</td>
+                </tr>
+
+                <tr className='comparison-bg'>
+                  <td><strong>Supply Chain Management</strong></td>
+                  <td>Yes</td>
+                  <td>Yes</td>
+                  <td>Limited</td>
+                </tr>
+
+                <tr>
+                  <td><strong>CRM Capabilities</strong></td>
+                  <td>Yes</td>
+                  <td>Yes</td>
+                  <td>Limited</td>
+                </tr>
+
+                <tr className='comparison-bg'>
+                  <td><strong>Project Management</strong></td>
+                  <td>Yes</td>
+                  <td>Yes</td>
+                  <td>Limited</td>
+                </tr>
+
+                <tr>
+                  <td><strong>Warehouse Management</strong></td>
+                  <td>Yes</td>
+                  <td>Yes</td>
+                  <td>No</td>
+                </tr>
+
+                <tr className='comparison-bg'>
+                  <td><strong>Service Management</strong></td>
+                  <td>No</td>
+                  <td>Yes</td>
+                  <td>No</td>
+                </tr>
+
+                <tr>
+                  <td><strong>Manufacturing</strong></td>
+                  <td>No</td>
+                  <td>Yes</td>
+                  <td>No</td>
+                </tr>
+
+                <tr className='comparison-bg'>
+                  <td><strong>Best For</strong></td>
+                  <td>SMEs with core operations</td>
+                  <td>Manufacturing & service-driven businesses</td>
+                  <td>Light users, approvals, reporting</td>
+                </tr>
+              </tbody>
+
+            </table>
+
+          </div>
+          <div className="license-note mt-5">
+            <h3>Which Licence Should You Choose?</h3>
+            <ul>
+              <li>
+                Choose Essentials if your focus is finance, sales, and operations
+              </li>
+
+              <li>
+                Choose Premium if you require manufacturing or service management capabilities
+              </li>
+
+              <li>
+                Use Team Members to extend access without increasing costs significantly
+              </li>
+            </ul>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <section id='section2' className="solution-new-banner-two">
+        <div className='container'>
+          <div className='row'>
+            <div className='col-lg-6 align-self-center'>
+              <div className='product-side-002-content'>
+                <div className='solution-new-banner-sub-head' style={{ paddingBottom: '0px' }}>
+                  <h2>What Increases the Cost of Business Central?</h2>
+                </div>
+                <p>Business Central price increases due to different cost drivers and knowing them helps you make informed decisions.</p>
+                <p style={{ color: '#443c68' }}><b>Factors That Lead to Business Central Price Increase:</b></p>
+                <ul className='ss-tab-01'>
+                  <li><Image src="/img/price-pic-14.png" width={24} height={24} alt="price-pic-14" /> <span>Heavy customisation beyond standard features</span></li>
+                  <li><Image src="/img/price-pic-15.png" width={24} height={24} alt="price-pic-14" /> <span>Complex or unstructured legacy data </span></li>
+                  <li><Image src="/img/price-pic-16.png" width={24} height={24} alt="price-pic-14" /> <span>Multiple entities or international operations </span></li>
+                  <li><Image src="/img/price-pic-17.png" width={24} height={24} alt="price-pic-14" /> <span>Extensive third-party integrations </span></li>
+                  <li><Image src="/img/price-pic-21.png" width={24} height={24} alt="price-pic-14" /> <span>Compressed implementation timelines </span></li>
+                </ul>
+                {/* <div className="text-lg-start">
+                  <Link
+                    href="#exampleModal"
+                    data-bs-toggle="modal"
+                    className="btn-get-started scrollto">
+                    <span>Schedule Your Finance Demo Now  &nbsp;<i className="bi bi-arrow-right"></i></span>
+                  </Link>
+                </div> */}
+              </div>
+            </div>
+            <div className='col-lg-6'>
+              <div className='product-side-001'>
+                <div className="flot-8">
+                  <Image src="/img/price-pic-09.png" width={580} height={456} alt="New Solution" />
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <section className="solution-new-banner-twoe">
+        <div className='container'>
+          <div className='row'>
+            <div className='col-lg-5 align-self-center'>
+              <div className='product-side-001'>
+                <div className="flot-8">
+                  <Image src="/img/price-pic-10.png" width={580} height={456} alt="New Solution" />
+                </div>
+
+              </div>
+            </div>
+            <div className='col-lg-1'></div>
+            <div className='col-lg-6 align-self-center'>
+              <div className='product-side-002-content'>
+                <div className='solution-new-banner-sub-head' style={{ paddingBottom: '0px' }}>
+                  <h2>What Keeps Business Central Costs Lower?</h2>
+                </div>
+                <p>Microsoft Dynamics 365 Business Central pricing is highly flexible for its cost optimisation with the right approach.</p>
+                <p style={{ color: '#443c68' }}><b>Factors That Reduce Cost:</b></p>
+                <ul className='ss-tab-01'>
+                  <li><i className="bi bi-check2"></i> <span>Using standard Business Central functionality</span></li>
+                  <li><i className="bi bi-check2"></i> <span>Cleaning and preparing data before migration </span></li>
+                  <li><i className="bi bi-check2"></i> <span>Phased implementation approach</span></li>
+                  <li><i className="bi bi-check2"></i> <span>Choosing the right mix of licences</span></li>
+                  <li><i className="bi bi-check2"></i> <span>Working with an experienced implementation partner</span></li>
+                </ul>
+                {/* <div className="text-lg-start">
+                  <Link
+                    href="#exampleModal"
+                    data-bs-toggle="modal"
+                    className="btn-get-started scrollto">
+                    <span>Schedule Your Finance Demo Now  &nbsp;<i className="bi bi-arrow-right"></i></span>
+                  </Link>
+                </div> */}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className='solution-new-banner-three' style={{ backgroundColor: '#f1f0f4' }}>
+        {/* <div className="container" ref={containerRef}> */}
+        <div className="container">
+          <div className='row'>
+            <div className='col-lg-7'>
+              <div className='solution-new-banner-sub-head'>
+                <h2>Microsoft Integrations and Their Impact on Pricing</h2>
+                <p>One of the biggest advantages of Microsoft Dynamics 365 Business Central is how seamlessly it connects with the broader Microsoft ecosystem. These integrations can improve productivity, but they also influence your overall setup and cost.</p>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-12">
+              <div className="stached-scroll-card">
+                <div className='mycard'>
+                  <div className='mycard__inner mycard__inner-bg-1'>
+                    <div className='mycard__inner-left'>
+                      <h3>Built-in Microsoft Integrations</h3>
+                      <p>Business Central integrates natively with:</p>
+                      <ul>
+                        <li><b>Microsoft Outlook</b> for customer interactions, quotes, and approvals. </li>
+                        <li><b>Microsoft Excel</b> for real-time data editing and analysis. </li>
+                        <li><b>Microsoft Word</b> for invoices, reports, and business documents. </li>
+                        <li><b>Microsoft Teams</b> for accessing BC data and collaborating efficiently.</li>
+                      </ul>
+                    </div>
+                    <div className='mycard__inner-right'>
+                      <Image src="/img/price-pic-12.png" width={580} height={456} alt="Built-in Microsoft Integrations" />
+                    </div>
+                  </div>
+                </div>
+                <div className='mycard'>
+                  <div className='mycard__inner  mycard__inner-bg-1'>
+                    <div className='mycard__inner-left'>
+                      <h3>Power Platform Integration</h3>
+                      <p>Business Central also connects with <a href="/products/microsoft-power-platform/"> Microsoft Power Platform</a>, which comprises of:</p>
+                      <ul>
+                        <li><b>Power BI</b> for reporting and analytics </li>
+                        <li><b>Power Automate</b> for workflow automation </li>
+                        <li><b>Power Apps</b> for custom applications</li>
+                        <li><b>Copilot Studio</b> to build enterprise-grade chatbots & custom copilots.</li>
+                      </ul>
+                    </div>
+                    <div className='mycard__inner-right'>
+                      <Image src="/img/price-pic-11.png" width={580} height={456} alt="Power Platform Integration" />
+                    </div>
+                  </div>
+                </div>
+                <div className='mycard'>
+                  <div className='mycard__inner  mycard__inner-bg-1'>
+                    <div className='mycard__inner-left'>
+                      <h3>Third-Party Integrations and Add-Ons</h3>
+                      <p>Businesses often extend functionality using ISV solutions and apps.</p>
+                      <ul>
+                        <li><b>Shopify</b> for e-commerce integration </li>
+                        <li><b>Continia</b> Document Capture for invoices</li>
+                        <li><b>Continia</b> Expense Management for managing expenses</li>
+                        <li><b>Tasklet Mobile</b> WMS for warehouse operations</li>
+                      </ul>
+                    </div>
+                    <div className='mycard__inner-right'>
+                      <Image src="/img/price-pic-13.png" width={580} height={456} alt="Third-Party Integrations and Add-Ons" />
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="solution-new-banner-twoe">
+        <div className='container'>
+          <div className='row'>
+            <div className='col-lg-5 align-self-center'>
+              <div className='product-side-002-content'>
+                <div className='solution-new-banner-sub-head' style={{ paddingBottom: '0px' }}>
+                  <h2>Why Your Microsoft Business Central Partner Matters</h2>
+                </div>
+                <p>Choosing the right Microsoft partner has a direct impact on both integration and implementation costs and long-term success.</p>
+                <div className="comparison-boxes">
+
+                  <div className="compare-card average-card">
+                    <h4 style={{ color: '#61518c' }}>Average Partner</h4>
+
+                    <ul>
+                      <li>• Lower Initial Cost</li>
+                      <li>• Excess Licensing</li>
+                      <li>• More Customisation</li>
+                      <li>• Faster Deployment</li>
+                      <li>• System Inefficiencies</li>
+                      <li>• Costly Rework</li>
+                    </ul>
+                  </div>
+
+                  <div className="vs-image">
+                    <img src="/img/price-pic-19.png" alt="VS" />
+                  </div>
+
+                  <div className="compare-card dynamics-card">
+                    <h4>Dynamics Square</h4>
+
+                    <ul>
+                      <li>• Strategic Planning</li>
+                      <li>• Optimised Licensing</li>
+                      <li>• Clean Migration</li>
+                      <li>• Process Alignment</li>
+                      <li>• Scalable Growth</li>
+                      <li>• Long-term Value</li>
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div className='col-lg-1 align-self-center'></div>
+            <div className='col-lg-6 align-self-end'>
+              <div className='product-side-001'>
+                <div className="flot-8">
+                  <Image src="/img/price-pic-20.png" width={697} height={401} alt="New Solution" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="bc-investment-section py-5">
+        <div className="container">
+          <div className="row align-items-center g-5">
+
+            <div className="col-lg-5">
+              <div className='product-side-002-content'>
+                <div className='solution-new-banner-sub-head' style={{ paddingBottom: '0px' }}>
+                  <h2>Plan Your Business Central Investment Properly</h2>
+                </div>
+                <p>Business Central is a long-term business investment. Planning your implementation carefully ensures:</p>
+              </div>
+
+              <ul className="bc-investment-benefits">
+                <li>Better cost control</li>
+                <li>Faster user adoption</li>
+                <li>Higher return on investment</li>
+                <li>Scalability as your business grows</li>
+              </ul>
+
+              <p className="bc-investment-note">
+                Don't delay it further. Take the call today. The right
+                decisions early on prevent unnecessary costs later.
+              </p>
+
+            </div>
+
+            <div className="col-lg-7">
+
+              <div className="bc-trial-card">
+
+                <h3 className="bc-trial-title">
+                  Try Business Central Before You Commit
+                </h3>
+
+                <p className="bc-trial-description">
+                  Validate your decision with zero upfront cost as
+                  Microsoft offers a free 30-day trial of
+                  Dynamics 365 Business Central.
+                </p>
+
+                <h5 className="bc-trial-subtitle">
+                  This allows you to:
+                </h5>
+
+                <ul className="bc-trial-list">
+                  <li>
+                    Explore core features across finance, sales,
+                    service, and operations
+                  </li>
+
+                  <li>
+                    Understand how the system fits your
+                    business processes
+                  </li>
+
+                  <li>
+                    Evaluate usability before making a
+                    financial commitment
+                  </li>
+                </ul>
+
+                <a href="/contact-us/" className="bc-trial-button">
+                  Claim Your Free Trial
+                  <span>→</span>
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <section className="solution-faq faq solution-faq-r">
+        <div className="container">
+          <div className="row justify-content-center">
+            <div className="col-lg-9 ">
+              <div className="solution-new-banner-sub-head text-center">
+                <h2>Have you got
+                  questions about Dynamics 365 Finance?</h2>
+                <p>Click through to our FAQ for the best answers!</p>
+              </div>
+            </div>
+          </div>
+
+
           <div className="row justify-content-center mar-top-7">
             <div className="col-lg-8">
               <div className="accordion accordion-flush" id="faqlist1">
-                <div className="accordion-item">
-                  <h3 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-content-1"
+                {faqData.slice(0, visibleCount).map((faq) => (
+                  <div className="accordion-item" key={faq.id}>
+                    <h3 className="accordion-header">
+                      <button
+                        className="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target={`#faq-content-${faq.id}`}
+                      >
+                        {faq.question}
+                      </button>
+                    </h3>
+                    <div
+                      id={`faq-content-${faq.id}`}
+                      className="accordion-collapse collapse"
+                      data-bs-parent="#faqlist1"
                     >
-                      What is Dynamics 365 Business Central?
-                    </button>
-                  </h3>
-                  <div
-                    id="faq-content-1"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#faqlist1"
-                  >
-                    <div className="accordion-body">
-                      <p>
-                        The Dynamics 365 Business Central is a cloud-based ERP
-                        application built to ease the working of small to medium
-                        sized businesses. The employees of an organisation can
-                        manage all the processes and operations through the
-                        dashboard of Business Central. Due to its flexibility
-                        and customization, it becomes easy to streamline the
-                        business. It provides the opportunity to manage the
-                        entire business from one place.
-                      </p>
+                      <div
+                        className="accordion-body"
+                        dangerouslySetInnerHTML={{ __html: faq.answer }}
+                      />
                     </div>
                   </div>
-                </div>
-                <div className="accordion-item">
-                  <h3 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-content-2"
-                    >
-                      Are Dynamics NAV and Business Central different?
-                    </button>
-                  </h3>
-                  <div
-                    id="faq-content-2"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#faqlist1"
-                  >
-                    <div className="accordion-body">
-                      <p>
-                        Dynamics NAV is the older version of Dynamics 365
-                        Business Central. Dynamics NAV is not discontinued by
-                        Microsoft, but it is evolved into the form of 365
-                        Business Central with lots of new features and benefits
-                        for the user.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <h3 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-content-3"
-                    >
-                      How to buy the Business Central Subscription?
-                    </button>
-                  </h3>
-                  <div
-                    id="faq-content-3"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#faqlist1"
-                  >
-                    <div className="accordion-body">
-                      <p>
-                        Microsoft doesn't sell the license or subscription of
-                        the Business Central directly to the end-users. If you
-                        want to buy the license, you need to contact the
-                        authorized vendor partner, like Dynamics Square. Also,
-                        the vendor partner is responsible for all support and
-                        services in case of need.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <h3 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-content-4"
-                    >
-                      Can I get a demo before actually purchasing it?
-                    </button>
-                  </h3>
-                  <div
-                    id="faq-content-4"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#faqlist1"
-                  >
-                    <div className="accordion-body">
-                      <p>
-                        Yes, you can try the <Link href="/products/microsoft-dynamics-365/" target="_blank">Dynamics 365 apps</Link> like Business
-                        Central by logging in home.dynamcis.com portal using
-                        your Microsoft Account ID. Here, you will be allowed to
-                        see all the offerings ofo Business Central as a demo.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <h3 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-content-5"
-                    >
-                      Is customization available?
-                    </button>
-                  </h3>
-                  <div
-                    id="faq-content-5"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#faqlist1"
-                  >
-                    <div className="accordion-body">
-                      <p>
-                        The best part about working with D365 Business
-                        Central is the freedom to work with customizations as
-                        per the business needs. Different businesses have
-                        different kinds of conditions, and to deal with such
-                        modifications, you can contact a vendor partner like
-                        Dynamics Square to help you overcome any issue.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <h3 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-content-6"
-                    >
-                      What is the primary difference between NAV and Business
-                      Central?
-                    </button>
-                  </h3>
-                  <div
-                    id="faq-content-6"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#faqlist1"
-                  >
-                    <div className="accordion-body">
-                      <p>
-                        The basis difference between NAV and Business Central is
-                        NAV can only be operated and structured <Link href="/microsoft-dynamics-365-cloud-vs-on-premise/" target="_blank">on-premises</Link>. At
-                        the same time, Business Central can be structured
-                        on-premises, on the cloud, and in hybrid locations.
-                        Business Center provides the flexibility to operate and
-                        manage the business anytime and anywhere.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <h3 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-content-7"
-                    >
-                      Can I set up the Business Central on-premises?
-                    </button>
-                  </h3>
-                  <div
-                    id="faq-content-7"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#faqlist1"
-                  >
-                    <div className="accordion-body">
-                      <p>
-                        Yes, you can also deploy Business Central in SaaS (
-                        public cloud), PaaS (private cloud), and on-premises. It
-                        depends on the user. Even you can deploy the Business
-                        Central in the cloud (Saas or PaaS) after using it
-                        on-premises.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <h3 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-content-8"
-                    >
-                      What are the capabilities of Dynamics 365 Business
-                      Central?
-                    </button>
-                  </h3>
-                  <div
-                    id="faq-content-8"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#faqlist1"
-                  >
-                    <div className="accordion-body">
-                      <p>
-                        D365 Business Central is capable of managing and
-                        streamlining your business from one platform. It makes
-                        all the processes and operations smooth and with minimal
-                        human interaction, making it easier to use and
-                        understand.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <h3 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-content-9"
-                    >
-                      How will customers updates to new versions of Dynamics 365
-                      Business Central?
-                    </button>
-                  </h3>
-                  <div
-                    id="faq-content-9"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#faqlist1"
-                  >
-                    <div className="accordion-body">
-                      <p>
-                        Due to cloud computing, no user can manually update the
-                        version of Dynamics 365 Business Central. When there is
-                        a new update rolled out by Microsoft, it will
-                        automatically be updated after prior notification about
-                        updates. That's the best feature resulting in no
-                        financial and physical efforts.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="accordion-item">
-                  <h3 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-content-11"
-                    >
-                      Is Dynamics 365 Business Central available on mobile
-                      devices?
-                    </button>
-                  </h3>
-                  <div
-                    id="faq-content-11"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#faqlist1"
-                  >
-                    <div className="accordion-body">
-                      <p>
-                        Yes, end users can view and operate the process using
-                        mobile devices. Not only from mobile devices but also
-                        using all such devices with an active internet
-                        connection and a supported browser.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <h3 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-content-12"
-                    >
-                      Does a customer need an Office 365 subscription to use
-                      Dynamics 365 Business Central?
-                    </button>
-                  </h3>
-                  <div
-                    id="faq-content-12"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#faqlist1"
-                  >
-                    <div className="accordion-body">
-                      <p>
-                        No, but for a seamless Dynamics 365 Business Central
-                        experience, Office 365 is a must app. Without Office,
-                        you can work at Business Central but with limited
-                        features and tools.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <h3 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-content-13"
-                    >
-                      Who can install/uninstall customized extensions of
-                      Dynamics 365 Business Central?
-                    </button>
-                  </h3>
-                  <div
-                    id="faq-content-13"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#faqlist1"
-                  >
-                    <div className="accordion-body">
-                      <p>
-                        Only the admin or the customer has the power to add or
-                        manage the extension of Business Central. If the
-                        customer wants any changes with its version of Business
-                        Central, they need to contact Dynamics Square to resolve
-                        all queries.</p><p>
-                        See also - 
-                      </p>
-                      <ul>
-                        <li><Link
-                          href="/why-choose-microsoft-dynamics-365-business-central/"
-                          target="_blank">Why Choose Microsoft Dynamics 365 Business Central? </Link></li>
-                        <li><Link
-                          href="/products/dynamics-365-business-central/advantages-capabilities/"
-                          target="_blank">Business Central Advantages & Capabilities </Link></li>
-                        <li><Link
-                          href="/dynamics-365-business-central-vs-sap-business-one/"
-                          target="_blank">Business Central Vs SAP Business One </Link></li>
-                        <li><Link href="/dynamics-365-business-central-vs-netsuite/" target="_blank">Business Central Vs NetSuite</Link></li>
-
-                        </ul>
-                    </div>
-                  </div>
-                </div>
+                ))}
               </div>
+
+              {visibleCount < faqData.length && (
+                <div className="text-center mt-4">
+                  <button className="btn faq-btn-l btn-get-started" onClick={handleLoadMore}>
+                    Load More <i className="bi bi-chevron-down"></i>
+                  </button>
+                </div>
+              )}
             </div>
           </div>
+
+
+
+
         </div>
       </section>
     </>
   );
 };
 
-export default BusinessCentralPricingLicensing;
+export default BusinessCentral;
