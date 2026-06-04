@@ -18816,6 +18816,138 @@ font-size: 24px;
 .mycard__inner-bg-1{
   background: #fff;
 }
+.comparison-boxes {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position:relative
+}
+
+.compare-card {
+    width: 100%;
+    min-height: 230px;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.average-card {
+    background: #f1eff4;
+}
+
+.dynamics-card {
+    background: #b27ad0;
+    color: #fff;
+}
+
+.compare-card h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    margin-left: 20px;
+}
+
+.compare-card ul {
+    margin: 0;
+    padding-left: 18px;
+    list-style:initial
+}
+
+.compare-card li {
+    font-size: 15px;
+    line-height: 1.45;
+    list-style:bullet
+}
+.vs-image{
+  position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.vs-image img {
+    width: 70px;
+    height: auto;
+}
+.bc-investment-section{
+  background-color: #f1f0f4;
+}
+.bc-investment-heading {
+    color: #915a8c;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.bc-investment-description {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.bc-investment-benefits {
+    list-style: none;
+    padding: 0;
+}
+
+.bc-investment-benefits li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+}
+
+.bc-investment-benefits li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #b27ad0;
+    font-weight: 700;
+}
+
+.bc-investment-note {
+    color: #666;
+    font-size: 15px;
+}
+
+.bc-trial-card {
+    background: linear-gradient(
+        90deg,
+        #b07bce,
+        #a56cc5
+    );
+    border-radius: 8px;
+    padding: 30px;
+    color: #fff;
+}
+
+.bc-trial-title {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.bc-trial-description {
+    color: rgba(255,255,255,.95);
+}
+
+.bc-trial-subtitle {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.bc-trial-list {
+    padding-left: 18px;
+}
+
+.bc-trial-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    color: #443d63;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    font-weight: 700;
+}
 @media (max-width: 991px) {
     .comparison-table {
         min-width: 900px;

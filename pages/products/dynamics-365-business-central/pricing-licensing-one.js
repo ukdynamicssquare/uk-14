@@ -742,16 +742,16 @@ const BusinessCentral = () => {
              <div className='col-lg-6 align-self-center'>
               <div className='product-side-002-content'>
                 <div className='solution-new-banner-sub-head' style={{ paddingBottom: '0px' }}>
-                  <h2>Dynamics 365 Finance Implementation: <br />Why Your Business Needs It</h2>
+                  <h2>What Keeps Business Central Costs Lower?</h2>
                 </div>
-                <p>Business Central price increases due to different cost drivers and knowing them helps you make informed decisions.</p>
-                <p style={{color:'#443c68'}}><b>Factors That Lead to Business Central Price Increase:</b></p>
+                <p>Microsoft Dynamics 365 Business Central pricing is highly flexible for its cost optimisation with the right approach.</p>
+                <p style={{color:'#443c68'}}><b>Factors That Reduce Cost:</b></p>
                 <ul className='ss-tab-01'>
-                  <li><i className="bi bi-check2"></i> <span>Heavy customisation beyond standard features</span></li>
-                  <li><i className="bi bi-check2"></i> <span>Complex or unstructured legacy data </span></li>
-                  <li><i className="bi bi-check2"></i> <span>Multiple entities or international operations </span></li>
-                  <li><i className="bi bi-check2"></i> <span>Extensive third-party integrations </span></li>
-                  <li><i className="bi bi-check2"></i> <span>Compressed implementation timelines </span></li>
+                  <li><i className="bi bi-check2"></i> <span>Using standard Business Central functionality</span></li>
+                  <li><i className="bi bi-check2"></i> <span>Cleaning and preparing data before migration </span></li>
+                  <li><i className="bi bi-check2"></i> <span>Phased implementation approach</span></li>
+                  <li><i className="bi bi-check2"></i> <span>Choosing the right mix of licences</span></li>
+                  <li><i className="bi bi-check2"></i> <span>Working with an experienced implementation partner</span></li>
                 </ul>
                 {/* <div className="text-lg-start">
                   <Link
@@ -865,6 +865,135 @@ const BusinessCentral = () => {
           </div>
         </div>
       </section>
+
+       <section className="solution-new-banner-twoe">
+        <div className='container'>
+          <div className='row'>
+             <div className='col-lg-5 align-self-center'>
+              <div className='product-side-002-content'>
+                <div className='solution-new-banner-sub-head' style={{ paddingBottom: '0px' }}>
+                  <h2>Why Your Microsoft Business Central Partner Matters</h2>
+                </div>
+                <p>Choosing the right Microsoft partner has a direct impact on both integration and implementation costs and long-term success.</p>
+                <div className="comparison-boxes">
+
+                    <div className="compare-card average-card">
+                        <h4 style={{color:'#61518c'}}>Average Partner</h4>
+
+                        <ul>
+                            <li>• Lower Initial Cost</li>
+                            <li>• Excess Licensing</li>
+                            <li>• More Customisation</li>
+                            <li>• Faster Deployment</li>
+                            <li>• System Inefficiencies</li>
+                            <li>• Costly Rework</li>
+                        </ul>
+                    </div>
+
+                    <div className="vs-image">
+                        <img src="/img/price-pic-19.png" alt="VS" />
+                    </div>
+
+                    <div className="compare-card dynamics-card">
+                        <h4>Dynamics Square</h4>
+
+                        <ul>
+                            <li>• Strategic Planning</li>
+                            <li>• Optimised Licensing</li>
+                            <li>• Clean Migration</li>
+                            <li>• Process Alignment</li>
+                            <li>• Scalable Growth</li>
+                            <li>• Long-term Value</li>
+                        </ul>
+                    </div>
+
+                </div>
+              </div>
+            </div>
+             <div className='col-lg-1 align-self-center'></div>
+            <div className='col-lg-6 align-self-end'>
+              <div className='product-side-001'>
+                <div className="flot-8">
+                  <Image src="/img/price-pic-20.png" width={697} height={401} alt="New Solution" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="bc-investment-section py-5">
+    <div className="container">
+        <div className="row align-items-center g-5">
+
+            <div className="col-lg-5">
+              <div className='product-side-002-content'>
+                <div className='solution-new-banner-sub-head' style={{ paddingBottom: '0px' }}>
+                  <h2>Why Your Microsoft Business Central Partner Matters</h2>
+                </div>
+                <p>Choosing the right Microsoft partner has a direct impact on both integration and implementation costs and long-term success.</p>
+                </div>
+
+                <ul className="bc-investment-benefits">
+                    <li>Better cost control</li>
+                    <li>Faster user adoption</li>
+                    <li>Higher return on investment</li>
+                    <li>Scalability as your business grows</li>
+                </ul>
+
+                <p className="bc-investment-note">
+                    Don't delay it further. Take the call today. The right
+                    decisions early on prevent unnecessary costs later.
+                </p>
+
+            </div>
+
+            <div className="col-lg-7">
+
+                <div className="bc-trial-card">
+
+                    <h3 className="bc-trial-title">
+                        Try Business Central Before You Commit
+                    </h3>
+
+                    <p className="bc-trial-description">
+                        Validate your decision with zero upfront cost as
+                        Microsoft offers a free 30-day trial of
+                        Dynamics 365 Business Central.
+                    </p>
+
+                    <h5 className="bc-trial-subtitle">
+                        This allows you to:
+                    </h5>
+
+                    <ul className="bc-trial-list">
+                        <li>
+                            Explore core features across finance, sales,
+                            service, and operations
+                        </li>
+
+                        <li>
+                            Understand how the system fits your
+                            business processes
+                        </li>
+
+                        <li>
+                            Evaluate usability before making a
+                            financial commitment
+                        </li>
+                    </ul>
+
+                    <a href="#" className="bc-trial-button">
+                        Claim Your Free Trial
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
       <section className="solution-faq faq solution-faq-r">
         <div className="container">
           <div className="row justify-content-center">
