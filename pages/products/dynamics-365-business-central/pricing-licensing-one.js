@@ -928,9 +928,9 @@ const BusinessCentral = () => {
             <div className="col-lg-5">
               <div className='product-side-002-content'>
                 <div className='solution-new-banner-sub-head' style={{ paddingBottom: '0px' }}>
-                  <h2>Why Your Microsoft Business Central Partner Matters</h2>
+                  <h2>Plan Your Business Central Investment Properly</h2>
                 </div>
-                <p>Choosing the right Microsoft partner has a direct impact on both integration and implementation costs and long-term success.</p>
+                <p>Business Central is a long-term business investment. Planning your implementation carefully ensures:</p>
                 </div>
 
                 <ul className="bc-investment-benefits">
@@ -982,7 +982,7 @@ const BusinessCentral = () => {
                         </li>
                     </ul>
 
-                    <a href="#" className="bc-trial-button">
+                    <a href="/contact-us/" className="bc-trial-button">
                         Claim Your Free Trial
                         <span>→</span>
                     </a>
