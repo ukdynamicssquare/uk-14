@@ -5,7 +5,7 @@ import parse, { domToReact } from "html-react-parser";
 import Image from "next/image";
 import * as cheerio from "cheerio";
 import { useRouter } from "next/router";
-
+import TimerModal from "../../components/TimerModal";
 import {
   FacebookShareButton,
   TwitterShareButton,
@@ -633,6 +633,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
             </div>
           ))}
       </section>
+        <TimerModal />
     </>
   );
 }

@@ -2,7 +2,7 @@ import Image from "next/image";
 import Head from "next/head";
 import Link from "next/link";
 import BlogSubscriberForm from "../../../components/BlogSubscriberForm";
-// import TimerModal from "../../../components/TimerModal";
+import TimerModal from "../../../components/TimerModal";
 
 export async function getStaticProps({ params }) {
   const slug = params?.slug || "";
@@ -103,7 +103,7 @@ function CategoryBlogs({ blogs, categoryblogs }) {
           </div>
         </div>
       </div>
-      {/* <TimerModal /> */}
+      <TimerModal />
     </div>
   );
 }

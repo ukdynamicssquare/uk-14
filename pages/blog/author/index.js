@@ -72,7 +72,7 @@ function AuthorsList({ blogs, authorslist, blgsbyauthorslist }) {
           </div>
         </div>
       </div>
-      {/* <TimerModal /> */}
+      <TimerModal />
     </div>
   );
 }

@@ -2,7 +2,7 @@ import Image from "next/image";
 import Head from "next/head";
 import { useState } from "react";
 import BlogSearch from "../../components/BlogSearch";
-// import TimerModal from "../../components/TimerModal";
+import TimerModal from "../../components/TimerModal";
 
 /* ===============================
    STATIC PROPS
@@ -823,7 +823,7 @@ function Blogshome({
         </div>
       </div>
 
-      {/* <TimerModal /> */}
+      <TimerModal />
     </>
   );
 }

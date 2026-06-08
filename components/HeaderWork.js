@@ -45,7 +45,7 @@ const HeaderWork = () => {
     "/products/dynamics-365-business-central/pricing-licensing": `${gname}`,
     "/book-a-demo": `${gname}`,
   };
-  const hide = ["/contact-us", "/thank-you"];
+  // const hide = ["/contact-us", "/thank-you"];
   const currentHeaderClass = headerClassMap[router.pathname] || "";
 
   const getLogoSrc = () => {
@@ -106,9 +106,9 @@ const HeaderWork = () => {
 
   return (
     <>
-      {!hide.some((p) => router.pathname.startsWith(p)) && (
+      {/* {!hide.some((p) => router.pathname.startsWith(p)) && (
         <TimerModal />
-      )}
+      )} */}
       <header
         id="header"
         className={`header ${isFixed ? "fixed-top" : ""} ${currentHeaderClass}`}
