@@ -46,7 +46,7 @@ const BusinessCentral = () => {
           name="description"
           content="Microsoft Dynamics 365 Business Central is an all-in-one cloud ERP for SMBs to manage finance, sales, inventory and operations efficiently with real-time insights and scalable growth."
         />
-        <meta name="keywords" content="Microsoft Dynamics 365 Business Central, Business Central UK, Microsoft Dynamics 365 Pricing, Business Central Team Member License, Business Dynamics 365, Dynamics 365 Business Central Essentials, ERP Microsoft Dynamics 365,Microsfot 365 Business, Microsoft Bc, Microsoft Business Central Pricing UK, Microsoft Business Central Partner, Business Central Integration, MS Dynamics Business Central, Business Central Support"></meta>
+        <meta name="keywords" content="Microsoft Dynamics 365 Business Central, Business Central UK, Microsoft Dynamics 365 Pricing, Business Central Team Member License, Business Dynamics 365, Dynamics 365 Business Central Essentials, ERP Microsoft Dynamics 365,Microsoft 365 Business, Microsoft Bc, Microsoft Business Central Pricing UK, Microsoft Business Central Partner, Business Central Integration, MS Dynamics Business Central, Business Central Support"></meta>
         <link
           rel="canonical"
           href="https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/"
