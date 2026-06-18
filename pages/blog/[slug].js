@@ -259,7 +259,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
                               <Link
                                 href={`/blog/author/${cleanSlug(
                                   encodeURIComponent(
-                                    item.author.split(" ").join("-"),
+                                    item.author?.toLowerCase().split(" ").join("-"),
                                   ),
                                 )}/`}
                               >
@@ -488,7 +488,8 @@ function Post({ blogs, blogcat, authordetials, author }) {
 
                               <div className="right">
                                 <Link
-                                  href={`/blog/author/${author.name
+                                  href={`/blog/author/${author?.name
+                                    .toLowerCase()
                                     .split(" ")
                                     .join("-")}/`}
                                 >
@@ -557,6 +558,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
                                 <span className="user">
                                   <Link
                                     href={`/blog/author/${item.author
+                                      ?.toLowerCase()
                                       .split(" ")
                                       .join("-")}/`}
                                   >

@@ -313,7 +313,8 @@ function Blogshome({
                     <span className="user">
                       <a
                         href={`/blog/author/${blogs[0].author
-                          ?.split(" ")
+                          ?.toLowerCase()
+                          .split(" ")
                           .join("-")}/`}
                       >
                         <i className="bi bi-person-circle"></i>{" "}
@@ -340,10 +341,10 @@ function Blogshome({
                         formatDate(
                           blogs[0].updated_at
                         ) !==
-                          formatDate(
-                            blogs[0]
-                              .publish_date
-                          ) && (
+                        formatDate(
+                          blogs[0]
+                            .publish_date
+                        ) && (
                           <span className="date ms-2">
                             <a>
                               <i className="bi bi-arrow-repeat"></i>
@@ -560,14 +561,15 @@ function Blogshome({
                     <span className="user">
                       <a
                         href={`/blog/author/${item.author
-                          ?.split(" ")
+                          ?.toLowerCase()
+                          .split(" ")
                           .join("-")}/`}
                       >
                         <i className="bi bi-person-circle"></i>{" "}
                         {item.author}
                       </a>
                     </span>
-                      <>
+                    <>
                       {item?.publish_date && (
                         <span className="date">
                           <a>
@@ -675,16 +677,15 @@ function Blogshome({
 
                           color:
                             categoryColors[
-                              i %
-                                categoryColors.length
+                            i %
+                            categoryColors.length
                             ],
 
-                          border: `1px solid ${
-                            categoryColors[
-                              i %
-                                categoryColors.length
+                          border: `1px solid ${categoryColors[
+                            i %
+                            categoryColors.length
                             ]
-                          }`,
+                            }`,
                         }}
                       >
                         {item.category_name}
@@ -706,9 +707,8 @@ function Blogshome({
                     className="blogs-lates blogs-lates-rept blog-fade-item"
                     key={`rnd-${i}`}
                     style={{
-                      animationDelay: `${
-                        i * 0.08
-                      }s`,
+                      animationDelay: `${i * 0.08
+                        }s`,
                     }}
                   >
                     <h3>
@@ -723,8 +723,9 @@ function Blogshome({
                       <span className="user">
                         <a
                           href={`/blog/author/${item.author
-                            ?.split(" ")
-                            .join("-")}/`}
+                            ?.toLowerCase()
+                          .split(" ")
+                          .join("-")}/`}
                         >
                           <i className="bi bi-person-circle"></i>{" "}
                           {item.author}
@@ -749,9 +750,9 @@ function Blogshome({
                           formatDate(
                             item.updated_at
                           ) !==
-                            formatDate(
-                              item.publish_date
-                            ) && (
+                          formatDate(
+                            item.publish_date
+                          ) && (
                             <span className="date ms-2">
                               <a>
                                 <i className="bi bi-arrow-repeat"></i>
@@ -807,17 +808,17 @@ function Blogshome({
               ================================ */}
               {visibleBlogs <
                 blograndomblogs.length && (
-                <div className="load-more-wrap">
-                  <button
-                    className="load-more-btn"
-                    onClick={handleLoadMore}
-                  >
-                    <span>
-                      Load More Articles
-                    </span>
-                  </button>
-                </div>
-              )}
+                  <div className="load-more-wrap">
+                    <button
+                      className="load-more-btn"
+                      onClick={handleLoadMore}
+                    >
+                      <span>
+                        Load More Articles
+                      </span>
+                    </button>
+                  </div>
+                )}
             </div>
           </div>
         </div>
