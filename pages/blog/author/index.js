@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Head from "next/head";
 import Link from "next/link";
-// import TimerModal from "../../../components/TimerModal";
+import TimerModal from "../../../components/TimerModal";
 // import BlogSubscriberForm from "../../../components/BlogSubscriberForm";
 
 export async function getServerSideProps(context) {
@@ -50,7 +50,7 @@ function AuthorsList({ blogs, authorslist, blgsbyauthorslist }) {
               </div>
             </div>
           </div>
-          <div className="row author-dc">
+          <div className="row author-dc g-3">
         
          <div className="author-title">
          <h1>Our Authors</h1>
@@ -59,9 +59,9 @@ function AuthorsList({ blogs, authorslist, blgsbyauthorslist }) {
                     authorslist.map((authorsitem, i) => (
                 <div className="col-lg-3">
                       <div className="author-list-card">
-                        <Link href={`/blog/author/${authorsitem.name.split(" ").join("-")}`}>
-                          <img src={authorsitem.profile_photo_path} alt={authorsitem.name} /> <span>{authorsitem.name}</span>
-                        </Link>
+                        <Link href={`/blog/author/${authorsitem.author_slug}`}>
+          <img src={authorsitem.profile_photo_path} alt={authorsitem.name} /> <span>{authorsitem.name}</span>
+        </Link>
                       </div>
                    
                 </div>
