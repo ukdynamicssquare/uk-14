@@ -98,7 +98,7 @@ function Authors({ authorslist, blgsbyauthorslist }) {
 
   const authorName = currentAuthor?.name || blgsbyauthorslist[0]?.author || "Author";
   const authorImage = currentAuthor?.profile_photo_path || "/images/default-author.webp";
-  const articleCount = String(blgsbyauthorslist.length).padStart(3, "0");
+  const articleCount = String(blgsbyauthorslist.length).padStart(3);
   const startIndex = (currentPage - 1) * PAGE_SIZE;
 
   const onPageChange = (page) => {
