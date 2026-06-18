@@ -109,7 +109,7 @@ function Authors({ authorslist, blgsbyauthorslist }) {
   return (
     <>
       <Head>
-        <title>{authorName} | Author at Dynamics Square Blog</title>
+        <title>{`${authorName} | Author at Dynamics Square Blog`}</title>
 
         <meta
           name="description"
