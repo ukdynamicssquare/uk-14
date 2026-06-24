@@ -167,6 +167,21 @@ function Authors({ authorslist, blgsbyauthorslist }) {
               <div className="row">
                 <div className="col-lg-3 text-center">
                   <img src={authorImage} alt={currentAuthor?.name} className="author-profile-img" />
+                  <div className="author-social-links">
+                    {SOCIAL_LINKS.map(({ key, icon, label }) =>
+                      isValidLink(currentAuthor?.[key]) ? (
+                        <a
+                          key={key}
+                          href={currentAuthor[key]}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={label}
+                        >
+                          <i className={`bi ${icon}`}></i>
+                        </a>
+                      ) : null
+                    )}
+                  </div>
                 </div>
 
                 <div className="col-lg-9">
@@ -183,7 +198,7 @@ function Authors({ authorslist, blgsbyauthorslist }) {
                   </div>
 
                   {/* Social links — only renders an icon when the API actually provides a real URL */}
-                  <div className="author-social-links">
+                  {/* <div className="author-social-links">
                     {SOCIAL_LINKS.map(({ key, icon, label }) =>
                       isValidLink(currentAuthor?.[key]) ? (
                         <a
@@ -198,12 +213,12 @@ function Authors({ authorslist, blgsbyauthorslist }) {
                       ) : null
                     )}
 
-                    {/* {isValidLink(currentAuthor?.email) && (
+                    {isValidLink(currentAuthor?.email) && (
                       <a href={`mailto:${currentAuthor.email}`} aria-label="Email">
                         <i className="bi bi-envelope-fill"></i>
                       </a>
-                    )} */}
-                  </div>
+                    )}
+                  </div> */}
                 </div>
               </div>
             </div>
@@ -451,6 +466,7 @@ function Authors({ authorslist, blgsbyauthorslist }) {
           display: flex;
           gap: 10px;
           margin-top: 24px;
+          justify-content: center;
         }
 
         .ds-author .author-social-links a {
@@ -887,6 +903,7 @@ function Authors({ authorslist, blgsbyauthorslist }) {
 
           .ds-author .author-social-links {
             justify-content: center;
+            margin: 0px 0px 20px;
           }
 
           .ds-author .author-sidebar {
