@@ -170,7 +170,8 @@ function Authors({ authorslist, blgsbyauthorslist }) {
                 </div>
 
                 <div className="col-lg-9">
-                  <span className="author-role">Content Writer &amp; Industry Expert</span>
+                  <span className="author-role"> {`${currentAuthor?.role_name || "Content Writer & Industry Expert"}`}</span>
+
                   <h1>{currentAuthor?.name}</h1>
                   <p className="author-bio">{currentAuthor?.about}</p>
 
@@ -409,7 +410,7 @@ function Authors({ authorslist, blgsbyauthorslist }) {
         .ds-author .author-bio {
           color: var(--surface);
           line-height: 1.75;
-          max-width: 640px;
+          // max-width: 640px;
           margin-bottom: 0;
         }
 
