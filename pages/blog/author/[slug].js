@@ -100,7 +100,8 @@ function Authors({ authorslist, blgsbyauthorslist }) {
   const authorImage = currentAuthor?.profile_photo_path || "/images/default-author.webp";
   const articleCount = String(blgsbyauthorslist.length).padStart(3);
   const startIndex = (currentPage - 1) * PAGE_SIZE;
-
+  const schema_script =
+    currentAuthor?.schema_script || blgsbyauthorslist[0]?.schema_script || null;
   const onPageChange = (page) => {
     setCurrentPage(page);
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -144,6 +145,19 @@ function Authors({ authorslist, blgsbyauthorslist }) {
         <meta name="twitter:title" content={`${authorName} | Dynamics Square Blog`} />
         <meta name="twitter:description" content={`Read all articles written by ${authorName}.`} />
         <meta name="twitter:image" content={authorImage} />
+        {schema_script && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html:
+                typeof schema_script === "string"
+                  ? schema_script
+                  : JSON.stringify(schema_script),
+            }}
+          />
+        )}
+
+
       </Head>
 
       <div className="ds-author">
@@ -316,7 +330,7 @@ function Authors({ authorslist, blgsbyauthorslist }) {
                               >
                                 <Link href={`/blog/author/${authorSlug}`}>
                                   <img src={author.profile_photo_path} alt={author.name} />
-                                  <span>{author.name}</span> 
+                                  <span>{author.name}</span>
                                 </Link>
                               </li>
                             );
