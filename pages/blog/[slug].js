@@ -398,7 +398,8 @@ function Post({ blogs, blogcat, authordetials, author }) {
                                             height={Number(height) || 700}
                                             sizes="(max-width:768px) 100vw,1200px"
                                             style={{
-                                              width: "100%",
+                                              maxWidth: "100%",
+                                              width: "auto",
                                               height: "auto",
                                             }}
                                             quality={75}
@@ -635,7 +636,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
             </div>
           ))}
       </section>
-        <TimerModal />
+      <TimerModal />
     </>
   );
 }
