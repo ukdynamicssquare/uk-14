@@ -9,7 +9,7 @@ const MobileMenu = () => {
             <a
               className="getstarted custtss"
               href="tel:+442037697689"
-              target="_self"
+              target="_self" aria-label="Call us at +44 20 3769 7689"
             >
               <i className="bi bi-telephone-fill"></i>
             </a>
