@@ -367,11 +367,11 @@ function Post({ blogs, blogcat, authordetials, author }) {
                                             {domToReact(domNode.children || [])}
                                           </p>
 
-                                          <TableOfContents
+                                          {/* <TableOfContents
                                             toc={toc}
                                             showAllToc={showAllToc}
                                             setShowAllToc={setShowAllToc}
-                                          />
+                                          /> */}
                                         </>
                                       );
                                     }
