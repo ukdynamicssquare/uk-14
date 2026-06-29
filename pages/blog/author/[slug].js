@@ -247,7 +247,7 @@ function Authors({ authorslist, blgsbyauthorslist }) {
                         <div className="col-lg-6 col-md-6 mb-4" key={item.title_slug}>
                           <div className="author-blog-grid-card">
                             <div className="blog-card-image">
-                              <Link href={`/blog/${item.title_slug}`}>
+                              <a href={`/blog/${item.title_slug}`}>
                                 <Image
                                   src={item.image || "/images/blog-placeholder.jpg"}
                                   alt={item.title}
@@ -255,7 +255,7 @@ function Authors({ authorslist, blgsbyauthorslist }) {
                                   height={350}
                                   className="blog-img"
                                 />
-                              </Link>
+                              </a>
                               <span className="blog-category-badge">{item.category}</span>
                               <span className="blog-entry-number">No. {entryNumber}</span>
                             </div>
@@ -285,7 +285,7 @@ function Authors({ authorslist, blgsbyauthorslist }) {
                               </div>
 
                               <h3>
-                                <Link href={`/blog/${item.title_slug}`}>{item.title}</Link>
+                                <a href={`/blog/${item.title_slug}`}>{item.title}</a>
                               </h3>
 
                               <p>{item.short_description?.slice(0, 120)}...</p>
@@ -344,10 +344,10 @@ function Authors({ authorslist, blgsbyauthorslist }) {
                                 key={author.id ?? authorSlug}
                                 className={router.query.slug === authorSlug ? "active" : ""}
                               >
-                                <Link href={`/blog/author/${authorSlug}`}>
+                                <a href={`/blog/author/${authorSlug}`}>
                                   <img src={author.profile_photo_path} alt={author.name} />
                                   <span>{author.name}</span>
-                                </Link>
+                                </a>
                               </li>
                             );
                           })}
