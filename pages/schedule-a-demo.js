@@ -19,8 +19,8 @@ const ScheduleDemoForm = () => {
           <div className="row justify-content-center">
             <div className="col-lg-12">
               <div className="pix-fixed">
-                  <img src="/img/mobile-pic.png" alt="Schedule A Demo" className="ds-hh" />
-                   <img src="/img/sec-bac-demo.png" alt="Schedule A Demo" className="ms-hh" />
+                  <img src="/img/sec-bac-demo.png" alt="Schedule A Demo" className="ds-hh" />
+                   <img src="/img/mobile-pic.png" alt="Schedule A Demo" className="ms-hh" />
               </div>
             </div>
             <div className="col-lg-12">
