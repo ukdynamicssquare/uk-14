@@ -12,6 +12,7 @@ const HeaderWork = () => {
   const headerClassMap = {
     "/": "specific-header",
     "/index-new": "specific-header",
+    "/the-ultimate-guide": "specific-header",
     "/products/dynamics-365-business-central/bc-support": `${gname}`,
     "/dynamics-365-business-central-implementation": `${gname}`,
     "/d365-business-central-support": `${gname}`,
@@ -52,6 +53,8 @@ const HeaderWork = () => {
     switch (router.pathname) {
       case "/":
         return "/img/dynamics_square_tm_logo_footer.svg";
+        case "/the-ultimate-guide":
+        return "/img/dynamics_square_tm_logo_footer.svg";
       case "/index-new":
         return "/img/dynamics_square_tm_logo_footer.svg";
       default:
@@ -62,6 +65,8 @@ const HeaderWork = () => {
   const getLogoSrctwo = () => {
     switch (router.pathname) {
       case "/":
+        return "/img/partner-logo-white-2.png";
+        case "/the-ultimate-guide":
         return "/img/partner-logo-white-2.png";
       case "/index-new":
         return "/img/partner-logo-white-2.png";

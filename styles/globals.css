@@ -18960,6 +18960,881 @@ font-size: 16px;
   background-color: #d73d3d;
   color: #fff;
 }
+.home-baner-head.home-baner-head-guid{
+width: 100%;
+    text-align: left;
+    padding-top: 0;
+}
+.home-baner-head-nepd{
+  padding:160px 0px 0px
+}
+.guide-side-b-pic{
+      padding-top: 30px;
+}
+.home-baner-head-nepd p{
+  font-size:1rem
+}
+/* ============================================
+   GUIDE ACCORDION STYLES
+   File: styles/guide-accordion.css
+   ============================================ */
+
+/* Wrapper */
+.guide-wrapper {
+  background: linear-gradient(135deg, #4a3b69 0%, #2d2640 100%);
+}
+
+
+
+/* Header */
+.guide-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.guide-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 520px;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.guide-divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin-bottom: 0;
+}
+
+/* ============================================
+   BOOTSTRAP ACCORDION OVERRIDES
+   ============================================ */
+
+.guide-wrapper .accordion-item {
+  background: transparent;
+  border: none;
+}
+
+.guide-wrapper .accordion-button {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 1.5rem 0;
+  color: white;
+}
+
+.guide-wrapper .accordion-button:focus {
+  box-shadow: none;
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.guide-wrapper .accordion-button:not(.collapsed) {
+  background-color: transparent;
+  color: white;
+  box-shadow: none;
+}
+
+.guide-wrapper .accordion-button::after {
+  filter: brightness(0) invert(1);
+  opacity: 0.6;
+}
+
+.guide-wrapper .accordion-button:not(.collapsed)::after {
+  opacity: 0.8;
+}
+
+.guide-wrapper .accordion-body {
+  background: transparent;
+  padding: 1rem 0 1.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* ============================================
+   MODULE TEXT STYLES
+   ============================================ */
+
+.module-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  display: block;
+}
+
+.module-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.module-desc {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.module-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.module-list li {
+  position: relative;
+  padding-left: 1.2rem;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.4;
+}
+
+.module-list li:last-child {
+  margin-bottom: 0;
+}
+
+.module-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #ffffff;
+  font-size: 1.2rem;
+  line-height: 0.8;
+}
+/* ============================================
+   CLARITY SECTION STYLES
+   File: styles/clarity-section.css
+   ============================================ */
+
+.clarity-section {
+  background-color: #f8f6f4;
+  padding: 5rem 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.clarity-section .container {
+  max-width: 1140px;
+}
+
+/* ============================================
+   LEFT COLUMN
+   ============================================ */
+
+.clarity-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #7a4e6e;
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+.clarity-text {
+  color: #555555;
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+}
+
+.clarity-subheading {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #333333;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.clarity-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.clarity-list li {
+  position: relative;
+  padding-left: 1.8rem;
+  margin-bottom: 0.7rem;
+font-size: 1rem;
+  color: #555555;
+  line-height: 1.5;
+}
+
+.clarity-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0.1rem;
+  color: #b07aa8;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.clarity-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================
+   RIGHT COLUMN - QUOTE CARD
+   ============================================ */
+
+.quote-card {
+  background: rgba(142, 68, 173, 0.7);
+background: linear-gradient(71.03deg, rgba(142, 68, 173, 0.7) -227.1%, rgba(142, 68, 173, 0.7) 130.18%);
+  border-radius: 12px;
+  padding: 1.8rem 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.quote-author-label {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.5;
+  margin-bottom: 1.2rem;
+}
+
+.quote-content {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.quote-avatar {
+  flex-shrink: 0;
+}
+
+.avatar-img {
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  object-fit: cover;
+}
+
+.quote-text {
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-style: italic;
+  color: #ffffff;
+  line-height: 1.5;
+  margin-bottom: 0;
+  border-left: none;
+  padding-left: 0;
+}
+
+/* Description below quote */
+.description-below {
+  margin-bottom: 1.5rem;
+}
+
+/* ============================================
+   CTA BUTTON
+   ============================================ */
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #FF5252;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.85rem 1.5rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: #e05a4e;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.cta-arrow {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+/* ============================================
+   WHY READ THIS GUIDE SECTION
+   File: styles/why-read-guide.css
+   ============================================ */
+
+.why-guide-section {
+  background-color: #f0f0f5;
+  padding: 4rem 0 5rem 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  overflow: hidden;
+}
+
+.why-guide-section .container {
+  max-width: 1140px;
+}
+
+/* ============================================
+   HEADER TEXT
+   ============================================ */
+
+.why-guide-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #7a4e6e;
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.01em;
+}
+
+.why-guide-lead {
+  font-weight: 600;
+  color: #333333;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  max-width: 480px;
+}
+
+.why-guide-text {
+  color: #555555;
+  line-height: 1.6;
+  margin-bottom: 0;
+  max-width: 480px;
+}
+
+/* ============================================
+   BOOK IMAGE
+   ============================================ */
+
+.book-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-image {
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15));
+  transform: perspective(800px) rotateY(-8deg) rotateX(2deg);
+  transition: transform 0.3s ease;
+}
+
+/* ============================================
+   CHECKLIST WITH DASHED BORDER
+   ============================================ */
+
+.checklist-wrapper {
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+/* The dashed vertical line */
+.checklist-border-line {
+  position: absolute;
+  left: 3.3rem;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  width: 0;
+  border-left: 2px dashed #b07aa8;
+  opacity: 0.6;
+}
+
+.checklist-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.checklist-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+/* Purple circle checkmark */
+.checkmark-circle {
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #744F81 0%, #744F81 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(176, 122, 168, 0.3);
+}
+
+/* Purple bubble */
+.checklist-bubble {
+background: linear-gradient(67.63deg, rgba(142, 68, 173, 0.7) -7.47%, rgba(142, 68, 173, 0.7) 105.46%);
+  color: #ffffff;
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 0.7rem 1.2rem;
+  border-radius: 6px;
+  box-shadow: 0 4px 15px rgba(176, 122, 168, 0.25);
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.checklist-bubble-auto {
+  width: fit-content;
+}
+
+.checklist-bubble-medium {
+  width: fit-content;
+}
+
+.checklist-bubble-wide {
+  width: fit-content;
+}
+
+/* ============================================
+   BOTTOM TEXT & CTA
+   ============================================ */
+
+.why-guide-bottom-text {
+  color: #555555;
+  line-height: 1.6;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  max-width: 480px;
+}
+
+.why-guide-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #FF5252;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0.9rem 1.6rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  box-shadow: 0 4px 15px rgba(232, 90, 79, 0.3);
+}
+
+.why-guide-cta:hover {
+  background-color: #d54a40;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.cta-arrow {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+/* ============================================
+   STATISTICS SECTION
+   File: styles/statistics.css
+   ============================================ */
+
+.stats-section {
+  background-color: #ffffff;
+  padding: 4rem 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.stats-section .container {
+  max-width: 1140px;
+}
+
+/* ============================================
+   HEADER
+   ============================================ */
+
+.stats-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #7a4e6e;
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.01em;
+}
+
+.stats-subtitle {
+  color: #555555;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  max-width: 520px;
+}
+
+/* ============================================
+   STAT CARDS
+   ============================================ */
+
+.stat-card {
+  background-color: #f0f0f5;
+  border-radius: 8px;
+  padding: 1.5rem;
+  height: 100%;
+}
+
+.stat-number {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #2d2640;
+  line-height: 1;
+  margin-bottom: 0.8rem;
+  letter-spacing: -0.02em;
+}
+
+.stat-text {
+  font-size: 0.92rem;
+  color: #555555;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+/* ============================================
+   CTA SECTION - LEFT CONTENT ONLY
+   File: styles/cta-section.css
+   ============================================ */
+
+.cta-section {
+  background: linear-gradient(135deg, #4a3b69 0%, #5a4a7a 50%, #3d3055 100%);
+  padding: 4rem 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  min-height: 400px;
+}
+
+.cta-section .container {
+  max-width: 1140px;
+}
+
+/* ============================================
+   LEFT CONTENT
+   ============================================ */
+
+.cta-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.cta-subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 1.2rem;
+}
+
+.cta-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.cta-list li {
+  position: relative;
+  padding-left: 1rem;
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.5;
+}
+
+.cta-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #ffffff;
+  font-size: 0.8rem;
+}
+
+.cta-list li:last-child {
+  margin-bottom: 0;
+}
+/* ============================================
+   DISCUSS SECTION
+   File: styles/discuss-section.css
+   ============================================ */
+
+.discuss-section {
+  background-color: #ffffff;
+  padding: 4rem 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.discuss-section .container {
+  max-width: 900px;
+}
+
+/* Title */
+.discuss-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #7a4e6e;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+/* Lead text */
+.discuss-lead {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #555555;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.discuss-lead strong {
+  font-weight: 700;
+  color: #333333;
+}
+
+/* Body text */
+.discuss-text {
+  font-size: 1rem;
+  color: #777777;
+  line-height: 1.6;
+  margin-bottom: 1.8rem;
+}
+
+/* CTA Button */
+.discuss-cta {
+  display: inline-block;
+  background-color: #FF5252;
+  color: #ffffff;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.85rem 2rem;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.discuss-cta:hover {
+  background-color: #d54a40;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+/* ============================================
+   FEATURED SECTION
+   File: styles/featured-section.css
+   ============================================ */
+
+.featured-section {
+  background-color: #f0f0f5;
+  padding: 3rem 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+.featured-section .container {
+  max-width: 1140px;
+}
+
+/* Title */
+.featured-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #7a4e6e;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  letter-spacing: -0.01em;
+}
+
+/* Logo wrapper */
+.featured-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  transition: opacity 0.2s ease;
+}
+
+
+.logo-img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 576px) {
+  .featured-section {
+    padding: 2rem 0;
+  }
+  
+  .featured-title {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .featured-logo {
+    padding: 0.5rem;
+  }
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 576px) {
+  .discuss-section {
+    padding: 3rem 0;
+  }
+  
+  .discuss-title {
+    font-size: 1.3rem;
+  }
+  
+  .discuss-cta {
+    width: 100%;
+  }
+}
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 991px) {
+  .cta-section {
+    padding: 3rem 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .cta-title {
+    font-size: 1.4rem;
+  }
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 991px) {
+  .stats-section {
+    padding: 3rem 0;
+  }
+  
+  .stat-number {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .stats-title {
+    font-size: 1.3rem;
+  }
+  
+  .stat-number {
+    font-size: 1.8rem;
+  }
+  
+  .stat-card {
+    padding: 1.2rem;
+  }
+}
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 991px) {
+  .why-guide-section {
+    padding: 3rem 0;
+  }
+  
+  .book-image {
+    transform: none;
+    max-width: 280px;
+  }
+  
+  .checklist-wrapper {
+    padding-left: 2rem;
+  }
+  
+  .checklist-border-line {
+    left: 0.75rem;
+  }
+  
+  .checkmark-circle {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+  }
+  
+  .checklist-bubble {
+    font-size: 0.78rem;
+    padding: 0.6rem 1rem;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 576px) {
+  .why-guide-title {
+    font-size: 1.4rem;
+  }
+  
+  .checklist-wrapper {
+    padding-left: 1.5rem;
+  }
+  
+  .checklist-border-line {
+    left: 0.55rem;
+  }
+  
+  .checkmark-circle {
+    width: 22px;
+    height: 22px;
+    min-width: 22px;
+  }
+  
+  .why-guide-cta {
+    width: 100%;
+    justify-content: center;
+  }
+}
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 991px) {
+  .clarity-section {
+    padding: 3rem 0;
+  }
+  
+  .quote-content {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .quote-text {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .clarity-title {
+    font-size: 1.5rem;
+  }
+  
+  .quote-card {
+    padding: 1.5rem;
+  }
+  
+  .cta-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (min-width: 768px) {
+  .module-label {
+    margin-bottom: 0;
+  }
+}
 @media (max-width: 991px) {
     .comparison-table {
         min-width: 900px;
