@@ -167,7 +167,7 @@ const fetchCountryCodeByIP = () => {
         phone: '',
       });
 
-      const redirectUrl = 'https://www.dynamicssquare.co.uk/pdf/Dynamics-365-Business-Central-User-Guide.pdf';
+      const redirectUrl = 'https://www.dynamicssquare.co.uk/pdf/The-Ultimate-Guide-Dynamics-365.pdf';
       setSuccessMessage('Thank you! Your download will start shortly.');
       setSubmitted(true);
 

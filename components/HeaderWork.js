@@ -12,7 +12,7 @@ const HeaderWork = () => {
   const headerClassMap = {
     "/": "specific-header",
     "/index-new": "specific-header",
-    "/the-ultimate-guide": "specific-header",
+    "/the-ultimate-guide-to-microsoft-dynamics-365": "specific-header",
     "/products/dynamics-365-business-central/bc-support": `${gname}`,
     "/dynamics-365-business-central-implementation": `${gname}`,
     "/d365-business-central-support": `${gname}`,
@@ -30,7 +30,6 @@ const HeaderWork = () => {
     "/products/dynamics-365-human-resources": `${gname}`,
     "/products/dynamics-365-project-operations": `${gname}`,
     "/continia-for-dynamics-365-business-central": `${gname}`,
-    "/the-ultimate-guide-to-microsoft-dynamics-365": `${gname}`,
     "/industries/professional-services": `${gname}`,
     "/continia-expense-management": `${gname}`,
     "/case-studies/business-central-reimplementation-for-food-trader": `${gname}`,
@@ -53,7 +52,7 @@ const HeaderWork = () => {
     switch (router.pathname) {
       case "/":
         return "/img/dynamics_square_tm_logo_footer.svg";
-        case "/the-ultimate-guide":
+        case "/the-ultimate-guide-to-microsoft-dynamics-365":
         return "/img/dynamics_square_tm_logo_footer.svg";
       case "/index-new":
         return "/img/dynamics_square_tm_logo_footer.svg";
@@ -66,7 +65,7 @@ const HeaderWork = () => {
     switch (router.pathname) {
       case "/":
         return "/img/partner-logo-white-2.png";
-        case "/the-ultimate-guide":
+        case "/the-ultimate-guide-to-microsoft-dynamics-365":
         return "/img/partner-logo-white-2.png";
       case "/index-new":
         return "/img/partner-logo-white-2.png";
