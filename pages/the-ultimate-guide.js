@@ -77,7 +77,7 @@ const logos = [
 
                                 <p style={{ margin: '20px 0px 30px' }}>The 60-Page guide is built from insights into real implementation experience, industry-specific solution architectures, migration projects, and practical business outcomes.</p>
 
-                                <a
+                                <a style={{fontSize:'16px !important'}}
                                     href="#powerBIModals" data-bs-toggle="modal"
                                     className="btn btn-home"
                                 >{" "} Download Free Dynamics 365 Guide{" "}
@@ -158,7 +158,7 @@ const logos = [
             </p>
 
             {/* CTA Button */}
-            <a href="#powerBIModals" data-bs-toggle="modal"className="cta-button">
+            <a href="#powerBIModals" data-bs-toggle="modal" className="cta-button">
               Download Free Dynamics 365 Guide
               <span className="cta-arrow">→</span>
             </a>
@@ -527,7 +527,7 @@ const logos = [
             </p>
 
             {/* CTA Button */}
-            <a href="#" className="why-guide-cta">
+            <a href="#powerBIModals" data-bs-toggle="modal" className="why-guide-cta">
               Download Free Dynamics 365 Guide
               <span className="cta-arrow">→</span>
             </a>

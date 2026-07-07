@@ -182,18 +182,19 @@ const FormUltimateGuideFormInner = () => {
 
   return (
     <>
-      <div className="main-form-wrper">
+      <div className="main-form-wrper main_form-wrper_contact">
 
         <form ref={form} onSubmit={sendEmail}>
-          <div className="mb-3">
+          <div className="mb-3 form-group">
             <input
               type="text"
               className="form-control"
-              placeholder="*Full Name"
+              placeholder=""
               name="name"
               value={formData.name}
               onChange={handleChange}
             />
+            <label htmlFor="name">*Name</label>
             {errors.name && <span className="error">{errors.name}</span>}
             <input
               type="hidden"
@@ -204,29 +205,31 @@ const FormUltimateGuideFormInner = () => {
             />
           </div>
 
-          <div className="mb-3">
+          <div className="mb-3 form-group">
             <input
               type="email"
               className="form-control"
-              placeholder="*Work Email"
+              placeholder=""
               name="email"
               value={formData.email}
               onChange={handleChange}
             />
+             <label htmlFor="email">*Work Email</label>
             {errors.email && <span className="error">{errors.email}</span>}
           </div>
-          <div className="mb-3">
+          <div className="mb-3 form-group">
             <input
               type="text"
               className="form-control"
-              placeholder="*Company Name"
+              placeholder=""
               name="company_name"
               value={formData.company_name}
               onChange={handleChange}
             />
+            <label htmlFor="company_name">*Company Name</label>
             {errors.company_name && <span className="error">{errors.company_name}</span>}
           </div>
-          <div className="mb-3">
+          <div className="mb-3 form-group">
             <PhoneInput inputStyle={{ width: '100%', height: 'auto' }}
               country={defaultCountryCode} // Set default country code
               value={formData.phone}
@@ -252,6 +255,7 @@ const FormUltimateGuideFormInner = () => {
               // onlyCountries={['us', 'ca', 'mx', 'gb']}
               excludeCountries={['pk']}
             />
+               <label htmlFor="phone"></label>
             {errors.phone && <span className="error">{errors.phone}</span>}
             {/* <input
                             type="tel"
@@ -292,7 +296,7 @@ const FormUltimateGuideFormInner = () => {
               className="btn btn-primary fomr-submit"
               disabled={display || submitted}
             >
-              {submitted ? 'Submitted' : display ? 'Submitting...' : 'Submit'}
+              {submitted ? 'Submitted' : display ? 'Submitting...' : 'Download Free Dynamics 365 Guide →'}
             </button>
 
             {display && (
@@ -309,7 +313,19 @@ const FormUltimateGuideFormInner = () => {
           )}
         </form>
       </div>
-
+        
+       <style jsx global>
+        {`
+        .main_form-wrper_contact{
+       background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+        }
+    .react-tel-input .form-control{
+    padding-left: 50px !important;
+    }
+        `}
+       </style>
 
 
     </>

@@ -205,7 +205,7 @@ const fetchCountryCodeByIP = () => {
                 <div className="modal-content">
                   <div className="modal-header">
                     <h4 className="modal-title" id="powerBIModalsLabel">
-                    Download as PDF
+                    Fill the Form
                     </h4>
                     <button
                       type="button"
@@ -213,11 +213,9 @@ const fetchCountryCodeByIP = () => {
                       data-bs-dismiss="modal"
                       aria-label="Close"
                     ></button>
-                    <p></p>
                   </div>
-                  <p>Get the guide in PDF format right in your inbox!</p>
                   <div className="modal-body">
-                    <div className="main-form-wrper">
+                    <div className="main-form-wrper main_form-wrper_contact main_form-wrper_contacts">
     
                     <form ref={form} onSubmit={sendEmail}>
                         <div className="mb-3">
@@ -327,7 +325,7 @@ const fetchCountryCodeByIP = () => {
                             className="btn btn-primary fomr-submit"
                             disabled={display || submitted}
                           >
-                            {submitted ? 'Submitted' : display ? 'Submitting...' : 'Submit'}
+                            {submitted ? 'Submitted' : display ? 'Submitting...' : 'Download Free Dynamics 365 Guide →'}
                           </button>
                           
                           {display && (
@@ -348,6 +346,15 @@ const fetchCountryCodeByIP = () => {
               </div>
             </div>
           )}
+           <style jsx global>
+        {`
+        .main_form-wrper_contacts{
+       background: #fff;
+    border-radius: 10px;
+    padding: 5px !important;
+        }
+        `}
+       </style>
     
     </>
   );

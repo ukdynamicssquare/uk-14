@@ -19233,9 +19233,9 @@ background: linear-gradient(71.03deg, rgba(142, 68, 173, 0.7) -227.1%, rgba(142,
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background-color: #FF5252;
+  background-color: #d73d3d;
   color: #ffffff;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
   padding: 0.85rem 1.5rem;
@@ -19405,9 +19405,9 @@ background: linear-gradient(67.63deg, rgba(142, 68, 173, 0.7) -7.47%, rgba(142, 
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background-color: #FF5252;
+  background-color: #d73d3d;
   color: #ffffff;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
   padding: 0.9rem 1.6rem;
@@ -19596,7 +19596,7 @@ background: linear-gradient(67.63deg, rgba(142, 68, 173, 0.7) -7.47%, rgba(142, 
 /* CTA Button */
 .discuss-cta {
   display: inline-block;
-  background-color: #FF5252;
+  background-color: #d73d3d;
   color: #ffffff;
   font-weight: 500;
   text-decoration: none;
@@ -20044,8 +20044,15 @@ margin-bottom: 10px;
   .bg-003 {
     margin-top: -50px;
   }
+  .guide-side-b-pic {
+    padding-top: 130px;
+}
+
 }
 @media (max-width: 992px) {
+  .home-baner-head-nepd {
+    padding: 110px 0px 0px;
+}
   .product-side-002-img001a {
         margin-bottom: 40px;
     }
