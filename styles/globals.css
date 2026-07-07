@@ -19262,7 +19262,6 @@ background: linear-gradient(71.03deg, rgba(142, 68, 173, 0.7) -227.1%, rgba(142,
 .why-guide-section {
   background-color: #f0f0f5;
   padding: 4rem 0 5rem 0;
-  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
   overflow: hidden;
 }
 
@@ -19303,17 +19302,16 @@ background: linear-gradient(71.03deg, rgba(142, 68, 173, 0.7) -227.1%, rgba(142,
 
 .book-wrapper {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    z-index: 2;
+    margin-bottom: -120px;
 }
 
 .book-image {
   max-width: 100%;
   height: auto;
-  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15));
+  /* filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15));
   transform: perspective(800px) rotateY(-8deg) rotateX(2deg);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease; */
 }
 
 /* ============================================
@@ -19322,18 +19320,21 @@ background: linear-gradient(71.03deg, rgba(142, 68, 173, 0.7) -227.1%, rgba(142,
 
 .checklist-wrapper {
   position: relative;
-  padding-left: 2.5rem;
+  padding-top: 70px;
+  /* padding-left: 2.5rem; */
 }
 
 /* The dashed vertical line */
 .checklist-border-line {
-  position: absolute;
-  left: 3.3rem;
-  top: 0.5rem;
-  bottom: 0.5rem;
-  width: 0;
-  border-left: 2px dashed #b07aa8;
-  opacity: 0.6;
+position: absolute;
+    left: -133px;
+    top: 4.0rem;
+    bottom: -1rem;
+    width: 150px;
+    border: 2px dashed #b07aa8;
+    opacity: 1;
+    z-index: 1;
+    border-radius: 10px;
 }
 
 .checklist-items {
@@ -19743,11 +19744,11 @@ background: linear-gradient(67.63deg, rgba(142, 68, 173, 0.7) -7.47%, rgba(142, 
   
   .book-image {
     transform: none;
-    max-width: 280px;
+    max-width: 600px;
   }
   
   .checklist-wrapper {
-    padding-left: 2rem;
+    /* padding-left: 2rem; */
   }
   
   .checklist-border-line {
@@ -19773,7 +19774,7 @@ background: linear-gradient(67.63deg, rgba(142, 68, 173, 0.7) -7.47%, rgba(142, 
   }
   
   .checklist-wrapper {
-    padding-left: 1.5rem;
+    /* padding-left: 1.5rem; */
   }
   
   .checklist-border-line {
@@ -20018,6 +20019,10 @@ margin-bottom: 10px;
   .product-side-002-img001a {
         margin-bottom: 0px;
     }
+    .book-wrapper {
+ 
+    margin-bottom: -171px;
+}
       .row-d .swiper-wrapper {
     margin-left: -280px;
 } 
@@ -20321,6 +20326,15 @@ position: relative;
 }
 }
 @media (max-width: 768px) {
+  .book-wrapper{
+    margin-bottom:0
+  }
+  .checklist-wrapper {
+    padding-top: 0;
+  }
+  .checklist-border-line{
+    display:none
+  }
   .achiv-desk-d{
     display:none !important
   }

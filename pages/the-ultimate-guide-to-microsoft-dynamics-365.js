@@ -507,7 +507,7 @@ const logos = [
         <div className="row g-5 align-items-center mt-2">
           
           {/* Left - Book Image */}
-          <div className="col-12 col-lg-5">
+          <div className="col-12 col-lg-6">
             <div className="book-wrapper">
               <Image
                 src="/img/guide-02.png"
@@ -521,7 +521,7 @@ const logos = [
           </div>
 
           {/* Right - Checklist with Dashed Border */}
-          <div className="col-12 col-lg-7">
+          <div className="col-12 col-lg-6">
             <div className="checklist-wrapper">
               
               {/* Dashed vertical line */}
