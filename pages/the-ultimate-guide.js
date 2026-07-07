@@ -226,7 +226,7 @@ const logos = [
                                             <div className="row g-4">
                                                 <div className="col-12 col-sm-6">
                                                     <ul className="module-list">
-                                                        <li>Where Business Central fits</li>
+                                                        <li>Where <a style={{color:"#ee3442"}} href="/products/dynamics-365-business-central/">Business Central</a> fits</li>
                                                         <li>When Finance becomes necessary</li>
                                                         <li>When Supply Chain Management delivers greater value</li>
                                                     </ul>
@@ -277,10 +277,24 @@ const logos = [
                                     <div className="row g-0">
                                         <div className="col-12 col-md-3"></div>
                                         <div className="col-12 col-md-9">
-                                            <p className="module-desc">
-                                                Discover how Dynamics 365 CRM applications streamline customer relationships,
-                                                sales automation, and marketing operations for modern enterprises.
-                                            </p>
+                                            <p className="module-desc">Understand how Microsoft's customer engagement applications support the complete customer lifecycle:</p>
+                                            <div className="row g-4">
+                                                <div className="col-12 col-sm-6">
+                                                    <ul className="module-list">
+                                                        <li><a style={{color:"#ee3442"}} href="/products/microsoft-dynamics-365-sales/">Dynamics 365 Sales</a></li>
+                                                        <li><a style={{color:"#ee3442"}} href="/products/microsoft-dynamics-365-customer-service/">Dynamics 365 Customer Service</a></li>
+                                                        
+                                                    </ul>
+                                                </div>
+                                                <div className="col-12 col-sm-6">
+                                                    <ul className="module-list">
+                                                        <li><a style={{color:"#ee3442"}} href="/products/microsoft-dynamics-365-field-service/">Dynamics 365 Field Service</a></li>
+                                                        <li><a style={{color:"#ee3442"}} href="/products/microsoft-dynamics-365-marketing/">Dynamics 365 Customer Insights</a></li>
+                                                    </ul>
+                                                </div>
+                                                <p className="module-desc">See how customer data, service operations, sales activity and business processes all come together in one platform.</p>
+                                            </div>
+                                             
                                         </div>
                                     </div>
                                 </div>
@@ -320,10 +334,23 @@ const logos = [
                                     <div className="row g-0">
                                         <div className="col-12 col-md-3"></div>
                                         <div className="col-12 col-md-9">
-                                            <p className="module-desc">
-                                                Explore the integration of Power Platform, Microsoft Copilot, and AI agents
-                                                to extend and enhance your Dynamics 365 capabilities.
-                                            </p>
+                                            <p className="module-desc">AI is transforming the way companies work. Inside the guide, you'll find practical coverage of:</p>
+                                            <div className="row g-4">
+                                                <div className="col-12 col-sm-6">
+                                                    <ul className="module-list">
+                                                        <li><a style={{color:"#ee3442"}} href="/products/microsoft-power-apps/">Power Apps</a></li>
+                                                        <li><a style={{color:"#ee3442"}} href="/products/microsoft-power-automate/">Power Automate</a></li>
+                                                        <li>Power Pages</li>
+                                                    </ul>
+                                                </div>
+                                                <div className="col-12 col-sm-6">
+                                                    <ul className="module-list">
+                                                        <li>Copilot Studio</li>
+                                                        <li>Microsoft's growing AI Agent workforce</li>
+                                                    </ul>
+                                                </div>
+                                                <p className="module-desc">This includes Sales Order Agent, Payables Agent, Bank Reconciliation Agent, Sales Qualification Agent, Scheduling Operations Agent, and other emerging capabilities designed to reduce manual effort and accelerate decision-making.</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -363,10 +390,24 @@ const logos = [
                                     <div className="row g-0">
                                         <div className="col-12 col-md-3"></div>
                                         <div className="col-12 col-md-9">
-                                            <p className="module-desc">
-                                                Tailored blueprints for manufacturing, retail, healthcare, and financial
-                                                services industries leveraging Dynamics 365.
-                                            </p>
+                                            <p className="module-desc">Explore how Dynamics 365 supports organisations across:</p>
+                                            <div className="row g-4">
+                                                <div className="col-12 col-sm-6">
+                                                    <ul className="module-list">
+                                                        <li>Manufacturing</li>
+                                                        <li>Wholesale & Distribution</li>
+                                                        <li>Retail & E-commerce</li>
+                                                    </ul>
+                                                </div>
+                                                <div className="col-12 col-sm-6">
+                                                    <ul className="module-list">
+                                                        <li>Professional Services</li>
+                                                        <li>Non-Profit Organisations</li>
+                                                        <li>Healthcare & Public Sector</li>
+                                                    </ul>
+                                                </div>
+                                                <p className="module-desc">This includes recommended solution architectures, common challenges, and practical deployment approaches.</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -406,59 +447,30 @@ const logos = [
                                     <div className="row g-0">
                                         <div className="col-12 col-md-3"></div>
                                         <div className="col-12 col-md-9">
-                                            <p className="module-desc">
-                                                Proven strategies and frameworks for migrating legacy systems to modern
-                                                Dynamics 365 cloud solutions.
-                                            </p>
+                                            <p className="module-desc">Planning a move from a legacy platform? The guide includes practical guidance covering:</p>
+                                            <div className="row g-4">
+                                                <div className="col-12 col-sm-6">
+                                                    <ul className="module-list">
+                                                        <li>NAV to Business Central migration</li>
+                                                        <li>Legacy ERP replacement</li>
+                                                        <li>On-premises to cloud transitions</li>
+                                                        <li>Data migration</li>
+                                                    </ul>
+                                                </div>
+                                                <div className="col-12 col-sm-6">
+                                                    <ul className="module-list">
+                                                        <li>Integrations</li>
+                                                        <li>User adoption</li>
+                                                        <li>Risk mitigation</li>
+                                                    </ul>
+                                                </div>
+                                               
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        {/* Module 06 */}
-                        <div className="accordion-item">
-                            <h3 className="accordion-header" id="headingSix">
-                                <button
-                                    className="accordion-button collapsed"
-                                    type="button"
-                                    data-bs-toggle="collapse"
-                                    data-bs-target="#collapseSix"
-                                    aria-expanded="false"
-                                    aria-controls="collapseSix"
-                                >
-                                    <div className="container px-0">
-                                        <div className="row g-0 align-items-start">
-                                            <div className="col-12 col-md-3">
-                                                <span className="module-label">Module 06</span>
-                                            </div>
-                                            <div className="col-12 col-md-9">
-                                                <span className="module-title">Real-World Case Studies</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </button>
-                            </h3>
-                            <div
-                                id="collapseSix"
-                                className="accordion-collapse collapse"
-                                aria-labelledby="headingSix"
-                                data-bs-parent="#guideAccordion"
-                            >
-                                <div className="accordion-body">
-                                    <div className="row g-0">
-                                        <div className="col-12 col-md-3"></div>
-                                        <div className="col-12 col-md-9">
-                                            <p className="module-desc">
-                                                In-depth case studies from organisations that have successfully implemented
-                                                and scaled Dynamics 365 solutions.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
                     </div>
                    </div>
