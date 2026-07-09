@@ -16217,8 +16217,7 @@ margin: -30px 0px -80px;
 }
 .solution-new-cta h3 {
   background-image: linear-gradient(to right, #f36789, #ede9ff);
-  font-family: Lato;
-  font-size: 48px;
+  font-size: 44px;
   font-weight: bold;
   -webkit-background-clip: text;
   background-clip: text;
@@ -16302,7 +16301,7 @@ margin: -30px 0px -80px;
   mix-blend-mode: luminosity;
 }
 .solution-new-cta.slution-new-cta-two p {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   color: #fff;
 }
@@ -18242,6 +18241,7 @@ display: inline-flex;
 }
 .solution-new-cta-0011 ul li{
     color: #fff !important;
+    margin-bottom: 5px;
 }
 .slution-new-cta-two0{
   padding:60px 0px !important
@@ -19651,8 +19651,294 @@ background: linear-gradient(67.63deg, rgba(142, 68, 173, 0.7) -7.47%, rgba(142, 
   height: auto;
   object-fit: contain;
 }
+.d-flexsolu{
+display: flex;
+}
+.i-pic{
+flex:0 0 20%
+}
+  .serv-card-666{
+    display:block;
+padding: 25px;
+    background:#f8f7fb;
+    border:2px solid transparent;
+    border-radius:20px;
+    overflow:hidden;
+    transition:.4s ease;
+    position:relative;
+}
+.serv-card-666-flex{
+  display:flex;
+  gap:10px
+}
+.serv-card-666:hover{
+    border-color:#b7afd6;
+    background:#fff;
+    transform:translateY(-5px);
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
+
+.serv-card-icon-666{
+    flex: 0 0 25%;
+    margin-bottom:25px;
+}
+
+.serv-card-title-666{
+        font-size: 16px;
+    line-height:1.2;
+    margin:0 0 25px;
+    color:#2d272c;
+}
+
+.serv-card-text-666{
+font-size: 15px;
+    line-height:1.6;
+    color:#544c7d;
+    margin-bottom: 30px;
+}
+
+.serv-card-footer-666{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    margin-top:0px;
+    position: absolute;
+    bottom: 15px;
+}
+
+.serv-card-btn-666{
+    color:#bb2b36;
+    font-size:14px;
+    font-weight:500;
+    opacity:0;
+    visibility:hidden;
+    transition:.35s ease;
+    display:none
+}
+
+.serv-card-arrow-666{
+    font-size: 16px;
+    color:#433768;
+    transition:.35s ease;
+    margin-top: 3px;
+}
+
+.serv-card-666:hover .serv-card-btn-666{
+    opacity:1;
+    display:block;
+     visibility:visible;
+}
+
+.serv-card-666:hover .serv-card-arrow-666{
+    transform:translateX(8px);
+}
+.ds-table-666 {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
+
+.ds-table-666 thead th {
+    background: linear-gradient(90deg, #3a2d5f, #5b4a8a);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border: 0;
+    padding: 14px 20px;
+}
 
 
+.ds-table-666 tbody tr {
+    transition: all .3s ease;
+}
+
+.ds-table-666 tbody tr:hover {
+    transform: translateY(-2px);
+}
+
+.ds-table-666 tbody td {
+    background: #ffffff;
+    border: 0;
+    padding: 16px 20px;
+    font-size: 15px;
+    color: #222;
+}
+.ds-table-666  .ds-table-bg td{
+  background: transparent;
+}
+.ds-table-666 tbody td:first-child {
+    font-weight: 600;
+}
+
+.ds-table-666 tbody td:last-child {
+    color: #444;
+}
+.product-side-002-ul ul li h4{
+  color: #444444;
+  font-size:16px
+}
+.solution-new-card-001-bg{
+  background: #F1F0F4;
+  padding:20px;
+  border-radius:8px;
+transition:.35s ease;
+margin-bottom:0
+}
+.solution-new-card-001-bg:hover{
+box-shadow: 30px 30px 90px 0px #736E8259;
+}
+.product-side-001-tbas p{
+  margin-bottom:30px
+}
+.bc-tags{
+  display: flex;
+    padding-left: 0;
+    gap: 10px;
+    list-style:none;
+    flex-wrap: wrap;
+}
+.bc-tags li{
+ border: 1px solid #B185DE;
+    color: #444444;
+    border-radius: 16px;
+    padding: 10px 15px;
+    font-size: 15px;
+}
+.cta-impl-666{
+    background: #b58bd0;
+    background: linear-gradient(67.63deg, rgba(142, 68, 173, 0.7) -7.47%, rgba(142, 68, 173, 0.7) 105.46%);
+ border-radius: 8px;
+    padding: 30px 40px;
+
+}
+
+.cta-content-666 h2{
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.cta-content-666 p{
+    color: rgba(255,255,255,0.9);
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+.cta-btn-666{
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    color: #2c2c2c;
+    text-decoration: none;
+    padding: 14px 24px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all .3s ease;
+    white-space: nowrap;
+}
+
+.cta-btn-666 i{
+    transition: transform .3s ease;
+}
+
+.cta-btn-666:hover{
+    color: #2c2c2c;
+    transform: translateY(-2px);
+}
+
+.cta-btn-666:hover i{
+    transform: translateX(5px);
+}
+.cta-box-666{
+    background: #b58cd2;
+    border-radius: 8px;
+    padding: 30px;
+        margin-top: 20px;
+}
+
+.cta-box-666 h3{
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.cta-box-666 p{
+    color: rgba(255,255,255,.95);
+       font-size: 16px;
+    line-height: 1.5;
+    max-width: 750px;
+    margin-bottom: 28px;
+}
+
+.cta-box-666  .cta-btn-6666{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px;
+    background: #fff;
+    color: #3d3553;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all .3s ease;
+}
+
+.cta-box-666  .cta-btn-6666:hover{
+    background: #f7f7f7;
+    color: #3d3553;
+    transform: translateY(-2px);
+}
+/* Responsive */
+
+@media(max-width:991px){
+
+    .cta-impl-666{
+        padding: 25px;
+        text-align: center;
+    }
+
+    .cta-content-666 h2{
+        font-size: 26px;
+    }
+
+    .cta-btn-666{
+        white-space: normal;
+        justify-content: center;
+    }
+}
+
+@media(max-width:575px){
+
+    .cta-content-666 h2{
+        font-size: 22px;
+    }
+
+    .cta-content-666 p{
+        font-size: 14px;
+    }
+
+    .cta-btn-666{
+        width: 100%;
+    }
+}
+@media (max-width: 767px) {
+
+    .ds-table-666 {
+        min-width: 700px;
+    }
+
+    .ds-table-666 tbody td,
+    .ds-table-666 thead th {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+}
 
 /* ============================================
    RESPONSIVE
