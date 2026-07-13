@@ -80,7 +80,7 @@ const Guides = () => {
                         <div className="card-body">
                           <h5 className="card-title">
                             <Link href="/the-ultimate-guide-to-microsoft-dynamics-365/">
-                          The Ultimate Guide to Dynamics 365
+                          Microsoft Dynamics 365: Complete Guide to CRM, ERP & Business Applications (2026)
                             </Link>
                           </h5>
                           <div className="btn-003 btn-009">
