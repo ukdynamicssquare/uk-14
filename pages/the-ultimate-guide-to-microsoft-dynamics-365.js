@@ -65,13 +65,13 @@ const logos = [
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/the-ultimate-guide-to-microsoft-dynamics-365/" />
         <meta property="og:title" content="The Ultimate Guide to Microsoft Dynamics 365 | Dynamics Square" />
         <meta property="og:description" content="Comprehensive guide to Microsoft Dynamics 365—features, benefits, modules and how it transforms modern business operations." />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/The-Ultimate-Guide-Dynamics-365-feature.png" />
+        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/the-ultmate-ai-guide-banner.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/the-ultimate-guide-to-microsoft-dynamics-365/" />
         <meta property="twitter:title" content="The Ultimate Guide to Microsoft Dynamics 365 | Dynamics Square" />
         <meta property="twitter:description" content="Comprehensive guide to Microsoft Dynamics 365—features, benefits, modules and how it transforms modern business operations." />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/The-Ultimate-Guide-Dynamics-365-feature.png" />
+        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/the-ultmate-ai-guide-banner.png" />
             </Head>
 
             <section className="home-baner-head-new home-baner-head-nepd">
