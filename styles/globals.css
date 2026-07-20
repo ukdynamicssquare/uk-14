@@ -15584,7 +15584,7 @@ margin: -30px 0px -80px;
   }
   .btn-home,
   .btn-red {
-    font-size: 16px;
+    font-size: 15px;
   }
   .new-title-heading h2 {
     font-size: 28px;
@@ -20775,5 +20775,11 @@ padding-right: 0;
   }
   .mine-77{
     margin-bottom: 0px !important;
+  }
+  .hh-150{
+    display: none;
+  }
+  .specialtitle span{
+    margin-top: 25px;
   }
 }
