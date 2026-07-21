@@ -1305,6 +1305,627 @@ const DeskstopMenu = () => {
             </li>
           </ul>
         </li>
+         {/* <li className="dropdown megamenu">
+                  <a href="#">
+                    <span>Resources</span>
+                    <i className="bi bi-chevron-down"></i>
+                  </a>
+                  <div className="megamenu-list megamenu-list-resource">
+                    <div className="left-list">
+                      <div className="d-flex align-items-start">
+                        <div
+                          className="nav flex-column nav-pills me-3"
+                          id="v-pills-tab-two"
+                          role="tablist"
+                          aria-orientation="vertical"
+                        >
+                          <div
+                            className="nav-link active"
+                            id="v-pills-res-one-tab"
+                            data-bs-toggle="pill"
+                            data-bs-target="#v-pills-res-one"
+                          >
+                            <a href="#">
+                              <img
+                                src="/img/menu-icons/res-meg-00.png"
+                                alt="Insights"
+                                width="24"
+                                height="24"
+                              /><span>Insights</span>
+                            </a>
+                          </div>
+                          <div
+                            className="nav-link"
+                            id="v-pills-res-two-tab"
+                            data-bs-toggle="pill"
+                            data-bs-target="#v-pills-res-two"
+                          >
+                            <a href="#">
+                              <img
+                                src="/img/menu-icons/res-meg-01.png"
+                                alt="Case Study"
+                                width="24"
+                                height="24"
+                              /><span>Case Study</span>
+                            </a>
+                          </div>
+                          <div
+                            className="nav-link"
+                            id="v-pills-res-three-tab"
+                            data-bs-toggle="pill"
+                            data-bs-target="#v-pills-res-three"
+                          >
+                            <a href="#">
+                              <img
+                                src="/img/menu-icons/res-meg-03.png"
+                                alt="Ebook"
+                                width="24"
+                                height="24"
+                              /><span>Ebook</span>
+                            </a>
+                          </div>
+                          <div
+                            className="nav-link"
+                            id="v-pills-res-four-tab"
+                            data-bs-toggle="pill"
+                            data-bs-target="#v-pills-res-four"
+                          >
+                            <a href="#">
+                              <img
+                                src="/img/menu-icons/res-meg-04.png"
+                                alt="Guides"
+                                width="24"
+                                height="24"
+                              /><span>Guides</span>
+                            </a>
+                          </div>
+                          <div
+                            className="nav-link"
+                            id="v-pills-res-five-tab"
+                            data-bs-toggle="pill"
+                            data-bs-target="#v-pills-res-five"
+                          >
+                            <a href="#">
+                              <img
+                                src="/img/menu-icons/res-meg-05.png"
+                                alt="Tools"
+                                width="24"
+                                height="24"
+                              /><span>Tools</span>
+                            </a>
+                          </div>
+                          <div
+                            className="nav-link"
+                            id="v-pills-res-six-tab"
+                            data-bs-toggle="pill"
+                            data-bs-target="#v-pills-res-six"
+                          >
+                            <a href="#">
+                              <img
+                                src="/img/menu-icons/res-meg-06.png"
+                                alt="Webinars"
+                                width="24"
+                                height="24"
+                              /><span>Webinars</span>
+                            </a>
+                          </div>
+
+                        </div>
+
+                        <div className="tab-content" id="v-pills-tabContent">
+                          <div
+                            className="tab-pane fade show active"
+                            id="v-pills-res-one"
+                          >
+                            <div className="container-fluid">
+                              <div className="row">
+                                <div className="col-lg-9 d-flex bg-0-gray-t">
+                                  <div className="row bg-0-gray">
+                                    <div className="col-lg-3">
+                                      <div className="mega-list-01">
+                                        <span>By product</span>
+                                        <ul>
+                                          <li><a href="">Business Central</a></li>
+                                          <li><a href="">Finance</a></li>
+                                          <li><a href="">Supply Chain</a></li>
+                                          <li><a href="">Sales</a></li>
+                                          <li><a href="">Field Service</a></li>
+                                          <li><a href="">Copilot</a></li>
+                                          <li><a href="">Customer Service</a></li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                    <div className="col-lg-3">
+                                      <div className="mega-list-01">
+                                        <span>By product</span>
+                                        <ul>
+                                          <li><a href="#manufacturing">Manufacturing</a></li>
+                                          <li><a href="#retail-ecommerce">Retail & Ecommerce</a></li>
+                                          <li><a href="#distribution">Distribution</a></li>
+                                          <li><a href="#professional-services">Professional Services</a></li>
+                                          <li><a href="#food-beverages">Food & Beverages</a></li>
+                                          <li><a href="#healthcare">Healthcare</a></li>
+                                          <li><a href="#education">Education</a></li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                    <div className="col-lg-6">
+                                      <div className="mega-list-01">
+                                        <span>By product</span>
+                                        <ul>
+                                          <li>
+                                            <a href="/business-central-implementation-methodology/">
+                                              Business Central Implementation Methodology
+                                            </a>
+                                          </li>
+                                          <li>
+                                            <a href="/quickbooks-to-microsoft-business-central-migration/">
+                                              QuickBooks to Microsoft Business Central Migration
+                                            </a>
+                                          </li>
+                                          <li>
+                                            <a href="/sage-to-microsoft-business-central-migration/">
+                                              Why Should You Consider Migrating from Sage to Microsoft Business Central?
+                                            </a>
+                                          </li>
+                                          <li>
+                                            <a href="/nav-upgrade-vs-d365-business-central-reimplementation/">
+                                              NAV Upgrade vs D365 Business Central Re-Implementation
+                                            </a>
+                                          </li>
+                                          <li>
+                                            <a href="/dynamics-365-business-central-vs-dynamics-365-crm/">
+                                              Dynamics 365 Business Central vs Dynamics 365 CRM
+                                            </a>
+                                          </li>
+                                          <li>
+                                            <a href="/business-central-vs-sage-200/">
+                                              Business Central vs Sage 200
+                                            </a>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="col-lg-3 d-flex">
+                                  <div className="right-resource">
+                                    <div className="res-top-co">
+                                      <span className="n-tag">Featured Article</span>
+                                      <span className="n-title">Business Central + Dynamics 365 Sales Integration</span>
+                                      <p>Learn how to unify ERP and CRM for better sales visibility.</p>
+                                      <div className="imag00"><img src="/img/menu-icons/pic-002.png" alt="Business Central" width={177} height={80} /></div>
+                                      <a href="">Read Article <i className="bi bi-arrow-right"></i></a>
+                                    </div>
+                                    <div className="res-top-bo">
+                                      <img src="/img/menu-icons/menu--ss.png" width={706} height={180} alt="AI" />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            className="tab-pane fade"
+                            id="v-pills-res-two"
+                          >
+                            <div className="container-fluid">
+                              <div className="row">
+                                <div className="col-lg-9 d-flex bg-0-gray-t">
+                                  <div className="row bg-0-gray">
+                                    <div className="col-lg-4">
+                                      <div className="mega-list-01">
+                                        <span>Browse by Service</span>
+                                        <ul className="res-st-oo1">
+                                          <li><a href="#">
+                                            <div className="ccc-img">
+
+                                              <i className="bi bi-gear"></i>
+                                            </div>
+                                            <div className="ccc-card">
+                                              <span>Implementation</span>
+                                              <p>Business Central | Finance</p>
+                                            </div>
+                                          </a></li>
+                                          <li><a href="#">
+                                            <div className="ccc-img">
+
+                                              <i className="bi bi-back"></i>
+                                            </div>
+                                            <div className="ccc-card">
+                                              <span>ERP Upgrade</span>
+                                              <p>Nav, GP, AX Upgrade</p>
+                                            </div>
+                                          </a></li>
+                                          <li><a href="#">
+                                            <div className="ccc-img">
+
+                                              <i className="bi bi-person-add"></i>
+                                            </div>
+                                            <div className="ccc-card">
+                                              <span>Managed Support</span>
+                                              <p>24×7 Support & Optimization</p>
+                                            </div>
+                                          </a></li>
+
+                                        </ul>
+                                      </div>
+                                    </div>
+                                    <div className="col-lg-2">
+                                      <div className="mega-list-01">
+                                        <span>By Industry</span>
+                                        <ul>
+                                          <li><a href="#manufacturing">Manufacturing</a></li>
+                                          <li><a href="#retail-ecommerce">Retail & Ecommerce</a></li>
+                                          <li><a href="#distribution">Distribution</a></li>
+                                          <li><a href="#professional-services">Professional Services</a></li>
+                                          <li><a href="#food-beverages">Food & Beverages</a></li>
+                                          <li><a href="#healthcare">Healthcare</a></li>
+                                          <li><a href="#education">Education</a></li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                    <div className="col-lg-6">
+                                      <div className="mega-list-01">
+                                        <span>Customer Success Highlights</span>
+                                        <ul>
+                                          <li>
+                                            <a style={{ color: '#8E44AD' }} href="/business-central-implementation-methodology/">80% Better Department Collaboration London College</a>
+                                          </li>
+                                          <li>
+                                            <a href="/quickbooks-to-microsoft-business-central-migration/">
+                                              30% Higher ROI through Custom Dynamics Solutions Classic Car Restoration Company
+                                            </a>
+                                          </li>
+                                          <li>
+                                            <a href="/sage-to-microsoft-business-central-migration/">
+                                              50% Operational Efficiency Improvement UK Defence Apparel Manufacturer
+                                            </a>
+                                          </li>
+                                          <li>
+                                            <a href="/nav-upgrade-vs-d365-business-central-reimplementation/">
+                                              Manufacturing ERP Transformation Production & Inventory Optimised
+                                            </a>
+                                          </li>
+
+                                        </ul>
+                                        <div className="extra-res-link">
+                                          <a href="/nav-upgrade-vs-d365-business-central-reimplementation/">Explore Customer Stories <i className="bi bi-arrow-right"></i></a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="col-lg-3 d-flex">
+                                  <div className="right-resource">
+                                    <div className="res-top-co">
+                                      <span className="n-tag">Featured Article</span>
+                                      <span className="n-title">60% More Operational Visibility with Dynamics 365</span>
+                                      <p>See how a medical device manufacturer transformed production planning, inventory and reporting.</p>
+                                      <div className="imag00"><img src="/img/menu-icons/pic-006.png" alt="Dynamics 365" width={106} height={90} /></div>
+                                      <a href="">Read Story <i className="bi bi-arrow-right"></i></a>
+                                    </div>
+                                    <div className="res-top-bo">
+                                      <img src="/img/menu-icons/menu--ss.png" width={706} height={180} alt="AI" />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            className="tab-pane fade"
+                            id="v-pills-res-three"
+                          >
+                            <div className="container-fluid">
+                              <div className="row">
+                                <div className="col-lg-3 d-flex  bg-0-gray-t">
+                                  <div className="res-card-99">
+                                    <span className="n-tags">Recommended</span>
+                                    <img className="n-tags-image" src="/img/Cover_Book_Moc.png" width={582} height={466} alt="Cover_Book_Moc" />
+                                    <span className="n-tag-title">Ultimate Guide to Choose the Right ERP For Your Business</span>
+                                    <p className="n-tag-para">Compare ERP solutions before making your investment.</p>
+                                    <a className="n-tag-link" href="">Get Free eBook <i className="bi bi-arrow-right"></i></a>
+                                  </div>
+                                </div>
+                                <div className="col-lg-9 bg-0-gray-t">
+                                  <div className="guide-cardwar">
+                                    <span className="pop-res-title">Popular eBooks</span>
+                                  </div>
+                                  <div className="res-flex-wrap">
+                                    <div className="guide-card-01">
+                                      <a href="#">
+                                        <div className="guide-card-imag">
+                                          <img width={980} height={578} src="/img/nav-guide-pic.png" alt="manufacturing" />
+                                        </div>
+                                        <div className="guide-card-inf">
+                                          <span className="guide-card-title">A Complete Guide to Dynamics 365 Finance</span>
+                                          <span className="guide-card-para">The Extensive Guide to Dynamics 365 Finance</span>
+                                        </div>
+                                      </a>
+                                    </div>
+                                    <div className="guide-card-01">
+                                      <a href="#">
+                                        <div className="guide-card-imag">
+                                          <img width={980} height={578} src="/img/Ebook-Nav-to-BC.png" alt="manufacturing" />
+                                        </div>
+                                        <div className="guide-card-inf">
+                                          <span className="guide-card-title">Dynamics NAV to Business Central</span>
+                                          <span className="guide-card-para">Upgrade From Dynamics NAV to Business Central</span>
+                                        </div>
+                                      </a>
+                                    </div>
+                                    <div className="guide-card-01">
+                                      <a href="#">
+                                        <div className="guide-card-imag">
+                                          <img width={980} height={578} src="/img/nav-guide-pic.png" alt="manufacturing" />
+                                        </div>
+                                        <div className="guide-card-inf">
+                                          <span className="guide-card-title">A Complete Guide to Dynamics 365 Finance</span>
+                                          <span className="guide-card-para">The Extensive Guide to Dynamics 365 Finance</span>
+                                        </div>
+                                      </a>
+                                    </div>
+                                    <div className="guide-card-01">
+                                      <a href="#">
+                                        <div className="guide-card-imag">
+                                          <img width={980} height={578} src="/img/ebooh-img.png" alt="manufacturing" />
+                                        </div>
+                                        <div className="guide-card-inf">
+                                          <span className="guide-card-title">Choose the Right ERP
+                                            For Your Business</span>
+                                          <span className="guide-card-para">Ultimate Guide to Choose the Right ERP For Your Business
+                                          </span>
+                                        </div>
+                                      </a>
+                                    </div>
+                                  </div>
+                                  <div className="comm-links-b">
+                                    <a className="n-tag-link" href="">View All eBooks <i className="bi bi-arrow-right"></i></a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            className="tab-pane fade"
+                            id="v-pills-res-four"
+                          >
+                            <div className="container-fluid">
+                              <div className="row">
+                                <div className="col-lg-9 d-flex bg-0-gray-t">
+                                  <div className="row bg-0-gray">
+                                    <div className="col-lg-6">
+                                      <div className="resor-bord">
+                                        <div className="guide-cardwar">
+                                          <span className="pop-res-title">Popular eBooks</span>
+                                          <p className="pop-res-title-p">Learn before you implement</p>
+                                        </div>
+                                        <div className="res-flex-wrap-one">
+                                          <div className="guide-card-01">
+                                            <a href="#">
+                                              <div className="guide-card-imag">
+                                                <img width={980} height={578} src="/img/why-bc-feature.jpg" alt="guide" />
+                                              </div>
+                                              <div className="guide-card-inf">
+                                                  <span className="guide-tags-rs">Guide</span>
+                                                <span className="guide-card-title">Microsoft Dynamics 365 Complete Guide</span>
+                                              </div>
+                                            </a>
+                                          </div>
+                                          <div className="guide-card-01">
+                                            <a href="#">
+                                              <div className="guide-card-imag">
+                                                <img width={980} height={578} src="/img/crm-guide-card-pic.png" alt="guide" />
+                                              </div>
+                                              <div className="guide-card-inf">
+                                                <span className="guide-tags-rs">Guide</span>
+                                                <span className="guide-card-title">Microsoft Dynamics 365 Complete Guide</span>
+                                              </div>
+                                            </a>
+                                          </div>
+                                        </div>
+                                        <div className="comm-links-b">
+                                          <a className="n-tag-link" href="">Explore All Guides <i className="bi bi-arrow-right"></i></a>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <div className="col-lg-6">
+                                      <div className="resor-bords">
+                                        <div className="guide-cardwar">
+                                          <span className="pop-res-title">Whitepapers</span>
+                                          <p className="pop-res-title-p">Strategic resources for decision makers</p>
+                                        </div>
+                                        <div className="res-flex-wrap-one">
+                                          <div className="guide-card-01">
+                                            <a href="/white-papers/micorosoft-copilot-for-transformation-in-your-business/">
+                                              <div className="guide-card-imag">
+                                                <img width={980} height={578} src="/img/crm-guide-card-pic.png" alt="guide" />
+                                              </div>
+                                              <div className="guide-card-inf">
+                                                  <span className="guide-tags-rs">Whitepapers</span>
+                                                <span className="guide-card-title">Microsoft Copilot: The Catalyst for Transformation in Your Business</span>
+                                              </div>
+                                            </a>
+                                          </div>
+                                          <div className="guide-card-01">
+                                            <a href="#">
+                                              <div className="guide-card-imag">
+                                                <img width={980} height={578} src="/img/crm-guide-card-pic.png" alt="guide" />
+                                              </div>
+                                              <div className="guide-card-inf">
+                                                <span className="guide-tags-rs">Whitepapers</span>
+                                                <span className="guide-card-title">Microsoft Dynamics 365 Complete Guide</span>
+                                              </div>
+                                            </a>
+                                          </div>
+                                        </div>
+                                        <div className="comm-links-b">
+                                          <a className="n-tag-link" href="">Explore All Guides <i className="bi bi-arrow-right"></i></a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="col-lg-3 d-flex">
+                                  <div className="right-resource">
+                                    <div className="res-top-co">
+                                      <span className="n-tag">Featured Article</span>
+                                      <span className="n-title">60% More Operational Visibility with Dynamics 365</span>
+                                      <p>See how a medical device manufacturer transformed production planning, inventory and reporting.</p>
+                                      <div className="imag00"><img src="/img/menu-icons/pic-006.png" alt="Dynamics 365" width={106} height={90} /></div>
+                                      <a href="">Read Story <i className="bi bi-arrow-right"></i></a>
+                                    </div>
+                                    <div className="res-top-bo">
+                                      <img src="/img/menu-icons/menu--ss.png" width={706} height={180} alt="AI" />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            className="tab-pane fade"
+                            id="v-pills-res-five"
+                          >
+                             <div className="container-fluid">
+                              <div className="row">
+                                <div className="col-lg-9 d-flex bg-0-gray-t">
+                                  <div className="row bg-0-gray">
+                                    <div className="col-lg-4">
+                                      <div className="resor-bord">
+                                        <div className="guide-cardwar">
+                                          <span className="pop-res-title">Popular eBooks</span>
+                                          <p className="pop-res-title-p">Learn before you implement</p>
+                                        </div>
+                                      
+                                      </div>
+                                    </div>
+
+                                    <div className="col-lg-8">
+                                      <div className="resor-bords">
+                                       
+                                        <div className="res-flex-wrap-one">
+                                          <div className="guide-card-01">
+                                            <a href="/white-papers/micorosoft-copilot-for-transformation-in-your-business/">
+                                              <div className="guide-card-imag">
+                                                <img width={980} height={578} src="/img/crm-guide-card-pic.png" alt="guide" />
+                                              </div>
+                                              <div className="guide-card-inf">
+                                                  <span className="guide-tags-rs">ERP Calculator</span>
+                                                <span className="guide-card-title">Estimate implementation costs in minutes.</span>
+                                                <a className="n-tag-link" href="">Calculate Now <i className="bi bi-arrow-right"></i></a>
+                                              </div>
+                                            </a>
+                                          </div>
+                                          <div className="guide-card-01">
+                                            <a href="#">
+                                              <div className="guide-card-imag">
+                                                <img width={980} height={578} src="/img/crm-guide-card-pic.png" alt="guide" />
+                                              </div>
+                                              <div className="guide-card-inf">
+                                                <span className="guide-tags-rs">ERP Comparison</span>
+                                                <span className="guide-card-title">Compare Dynamics 365 solutions side-by-side.</span>
+                                                <a className="n-tag-link" href="">Compare Now <i className="bi bi-arrow-right"></i></a>
+                                              </div>
+                                            </a>
+                                          </div>
+                                        </div>
+                                        <div className="comm-links-b">
+                                          
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div className="col-lg-3 d-flex">
+                                  <div className="right-resource">
+                                    <div className="res-top-co">
+                                      <span className="n-tag">Featured Article</span>
+                                      <span className="n-title">60% More Operational Visibility with Dynamics 365</span>
+                                      <p>See how a medical device manufacturer transformed production planning, inventory and reporting.</p>
+                                      <div className="imag00"><img src="/img/menu-icons/pic-006.png" alt="Dynamics 365" width={106} height={90} /></div>
+                                      <a href="">Read Story <i className="bi bi-arrow-right"></i></a>
+                                    </div>
+                                    <div className="res-top-bo">
+                                      <img src="/img/menu-icons/menu--ss.png" width={706} height={180} alt="AI" />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div
+                            className="tab-pane fade"
+                            id="v-pills-res-six"
+                          ><div className="container-fluid">
+                              <div className="row">
+                                <div className="col-lg-12 bg-0-gray-t">
+                                  <div className="guide-cardwar">
+                                    <span className="pop-res-title">Podcasts</span>
+                                    <p>your go-to source for expert insights on CRM, ERP, and business transformation powered by Microsoft Dynamics 365</p>
+                                  </div>
+                                  <div className="res-flex-wrap">
+                                    <div className="guide-card-01">
+                                      <a href="#">
+                                        <div className="guide-card-imag">
+                                          <img width={980} height={578} src="/img/nav-guide-pic.png" alt="manufacturing" />
+                                        </div>
+                                        <div className="guide-card-inf">
+                                          <span className="guide-card-title">A Complete Guide to Dynamics 365 Finance</span>
+                                          <span className="guide-card-para">The Extensive Guide to Dynamics 365 Finance</span>
+                                        </div>
+                                      </a>
+                                    </div>
+                                    <div className="guide-card-01">
+                                      <a href="#">
+                                        <div className="guide-card-imag">
+                                          <img width={980} height={578} src="/img/Ebook-Nav-to-BC.png" alt="manufacturing" />
+                                        </div>
+                                        <div className="guide-card-inf">
+                                          <span className="guide-card-title">Dynamics NAV to Business Central</span>
+                                          <span className="guide-card-para">Upgrade From Dynamics NAV to Business Central</span>
+                                        </div>
+                                      </a>
+                                    </div>
+                                    <div className="guide-card-01">
+                                      <a href="#">
+                                        <div className="guide-card-imag">
+                                          <img width={980} height={578} src="/img/nav-guide-pic.png" alt="manufacturing" />
+                                        </div>
+                                        <div className="guide-card-inf">
+                                          <span className="guide-card-title">A Complete Guide to Dynamics 365 Finance</span>
+                                          <span className="guide-card-para">The Extensive Guide to Dynamics 365 Finance</span>
+                                        </div>
+                                      </a>
+                                    </div>
+                                    <div className="guide-card-01">
+                                      <a href="#">
+                                        <div className="guide-card-imag">
+                                          <img width={980} height={578} src="/img/ebooh-img.png" alt="manufacturing" />
+                                        </div>
+                                        <div className="guide-card-inf">
+                                          <span className="guide-card-title">Choose the Right ERP
+                                            For Your Business</span>
+                                          <span className="guide-card-para">Ultimate Guide to Choose the Right ERP For Your Business
+                                          </span>
+                                        </div>
+                                      </a>
+                                    </div>
+                                  </div>
+                                  <div className="comm-links-b">
+                                    <a className="n-tag-link" href="">View All eBooks <i className="bi bi-arrow-right"></i></a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div></div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </li> */}
         <li className="dropdown">
           <a href="#">
             <span>Resources</span> <i className="bi bi-chevron-down"></i>

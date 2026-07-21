@@ -1,67 +1,137 @@
 [    
     {
       "id": 1,
-      "question": "1. Is Microsoft Dynamics 365 an ERP or CRM?",
-      "answer": "<p>Microsoft Dynamics 365 combines both ERP and CRM applications within one platform. You can choose individual applications based on your business requirements or deploy multiple applications together.</p>"
+      "question": "1. Is Dynamics 365 available on-premises?",
+      "answer": "<p>Dynamics 365 is a highly flexible business management software solution that offers organisations the choice of deploying servers on company premises, in the cloud, or as a hybrid environment. Companies can also move to the cloud or hybrid solutions after initially opting for <a target=\"_blank\" href=\"/microsoft-dynamics-365-cloud-vs-on-premise/\">on-premises</a> servers.</p>"
     },
     {
       "id": 2,
-      "question": "2. What is Microsoft Dynamics 365 used for?",
-      "answer": "<p>Microsoft Dynamics ERP is an enterprise resource management application capable of connecting almost all departments of a business and streamlining all operations for efficient business practices. It provides a centrally managed platform where all users of the organisation can interact, communicate, and share data in real-time without any restrictions. MS Dynamics ERP can successfully connect the supply chain, finance, operations, commerce, manufacturing, human resources, and reporting.</p>"
+      "question": "2. Is Microsoft Dynamics 365 the same for all industries?",
+      "answer": "<p>Microsoft Dynamics 365 is adaptable for all businesses, irrespective of their industry. MS <a href=\"/our-services/dynamics-365-implementation-services/\">Dynamics 365 implementation</a> partner will add or customise the features as per business requirements for a seamless workflow.</p>"
     },
     {
       "id": 3,
-      "question": "3. Which Dynamics 365 application is right for my business?",
-      "answer": "<p>The right application depends on your business goals. Some UK organisations begin with Business Central for ERP, while others require Finance, Supply Chain Management, Sales, or Customer Service. Our consultants can help you identify the best starting point.</p>"
+      "question": "3. Why should I use Microsoft Dynamics 365?",
+      "answer": "<p>If your business is growing and you're looking for a solution to help it run even more smoothly, Microsoft Dynamics 365 is the solution. Not only does it help with business management, but it also increases productivity and efficiency using AI, ML, and cloud computing. In other words, it's the right tool to help your business reach its fullest potential.</p>"
     },
     {
       "id": 4,
-      "question": "4. How much does Microsoft Dynamics 365 cost?",
-      "answer": "<p>Licensing costs depend on the applications you choose, the number of users, and your implementation requirements. We provide tailored licensing guidance to help you select the most cost-effective option.</p>"
+      "question": "4. Is Dynamics 365 scalable as per my business growth?",
+      "answer": "<p>Microsoft Dynamics 365 cloud enables businesses to scale processes or operations in response to changing business needs and organisational growth. The best part of the cloud is the ease of increasing the power and performance of servers without having to invest a lot of money, effort, and time.</p>"
     },
     {
       "id": 5,
-      "question": "5. How long does a Dynamics 365 implementation take?",
-      "answer": "<p>Implementation timelines vary depending on project scope, integrations, data migration, and user requirements. Smaller deployments may take a few months, while enterprise programmes are often delivered in phases.</p>"
+      "question": "5. Can I integrate native and third-party apps with Dynamics 365?",
+      "answer": "<p>Microsoft provides the ability to integrate Dynamics 365 with native as well as third-party apps using APIs to make the data processing a lot smoother. Users can supercharge their processes for ERP and CRM by connecting different apps for ease of usage.</p>"
     },
     {
       "id": 6,
-      "question": "6. Can Dynamics 365 integrate with my existing software?",
-      "answer": "<p>Yes, Dynamics 365 integrates with Microsoft 365, finance applications, payroll systems, warehouse solutions, eCommerce platforms, and UK-specific business applications.</p>"
+      "question": "6. What is the difference between Microsoft Dynamics NAV and 365?",
+      "answer": "<p><a target=\"_blank\" href=\"/products/microsoft-dynamics-nav/\">Dynamics NAV</a> is an ERP (Enterprise Resource Planning) solution capable of managing departments like finance, manufacturing, and more. Whereas Dynamics 365 is a set of 12 applications consisting of ERP and CRM to aid businesses with overall growth.</p>"
     },
     {
       "id": 7,
-      "question": "7. Why should I work with a Microsoft Dynamics 365 partner?",
-      "answer": "<p>An experienced implementation partner helps you choose the right applications, avoid costly mistakes, manage data migration, train users, and ensure your solution delivers measurable business value.</p>"
+      "question": "7. What is the difference between Microsoft Business Central and 365?",
+      "answer": "<p><a target=\"_blank\" href=\"/products/dynamics-365-business-central/\">Microsoft Business Central</a> is the evolved version of NAV and a part of the Dynamics 365 applications. Business Central is a modern ERP solution with more advanced features and capabilities than NAV.</p>"
     },
     {
       "id": 8,
-      "question": "8. Can Microsoft Dynamics 365 replace legacy ERP systems?",
-      "answer": "<p>Yes, Microsoft Dynamics 365 is commonly used to replace legacy ERP solutions such as Dynamics NAV, Dynamics GP, Sage, and other on-premises business systems. A phased implementation approach allows UK firms to modernise operations while minimising disruption and preserving important business data.</p>"
+      "question": "8. Can I customise Dynamics 365 based on my requirements?",
+      "answer": "<p>Yes, you can customise the features and functionalities of Dynamics 365 based on the kind of industry and specific business requirements. Your <a target=\"_blank\" href=\"/our-services/dynamics-365-support-services/\">Dynamics 365 support</a> partner will help you evaluate your specific needs and provide a better customisation option.</p>"
     },
     {
       "id": 9,
-      "question": "9. Is Microsoft Dynamics 365 cloud-based?",
-      "answer": "<p>Yes, Microsoft Dynamics 365 is a cloud-based platform hosted on Microsoft Azure. It provides secure access from virtually anywhere, supports automatic updates, and helps UK-based organisations scale without investing in on-premises infrastructure.</p>"
+      "question": "9. Is there a business intelligence tool in Dynamics 365?",
+      "answer": "<p>Yes, MS Dynamics 365 is an advanced solution for all the ERP and CRM needs of small and mid-sized organisations. It uses many technologies and intelligence tools, like Cortana, <a target=\"_blank\" href=\"/products/microsoft-power-bi/\">Power BI</a>, and Azure IoT, to help businesses with ease of operations.</p>"
     },
     {
       "id": 10,
-      "question": "10. Is Microsoft Dynamics 365 suitable for growing UK businesses?",
-      "answer": "<p>Absolutely! Microsoft Dynamics 365 includes applications designed for UK businesses of all sizes. Growing organisations in the UK often begin with Dynamics 365 Business Central, while larger enterprises may implement applications such as Finance, Supply Chain Management, Sales, or Customer Service based on their operational requirements.</p>"
+      "question": "10. How many users can Dynamics 365 support?",
+      "answer": "<p>There is no fixed number when it comes to the number of users of D365 support. It depends on the editions and type of deployment. With on-premises deployment, the number of users is limited, but with cloud deployment, the number of users can be increased or decreased with the performance of servers at any time.</p>"
     },
     {
       "id": 11,
-      "question": "11. Can I start with one Dynamics 365 application and add more later?",
-      "answer": "<p>Yes, one of the advantages of Microsoft Dynamics 365 is its modular design. Several UK organisations begin with a single application and expand over time as their business needs evolve, allowing them to adopt new capabilities without replacing their existing platform.</p>"
+      "question": "11. How much does Dynamics 365 implementation cost?",
+      "answer": "<p>The cost of implementation depends on various factors, like current ERP and<!-- --> <!-- --> <a target=\"_blank\" href=\"/products/microsoft-dynamics-crm/\">CRM solutions</a>, industry type, business requirements, integrations, customisations, deployment, and much more. Once an implementation partner evaluates all such factors, you will have the exact cost quotation.</p>"
     },
     {
       "id": 12,
-      "question": "12. Does Microsoft Dynamics 365 work with Microsoft 365?",
-      "answer": "<p>Yes, Dynamics 365 integrates with familiar Microsoft applications such as Outlook, Excel, Teams, SharePoint, and the Power Platform. This enables users to access business information, collaborate more effectively, and automate routine tasks without constantly switching between applications.</p>"
+      "question": "12. How much time will it take to implement Dynamics 365?",
+      "answer": "<p>The total time to implement Dynamics 365 is based on factors like the amount of data to be transferred, the current ERP solution, the complexity of customisations, and more. The D365 support partner will analyse such factors and calculate the total time of implementation.</p>"
     },
     {
       "id": 13,
-      "question": "13. Why should I choose Dynamics Square as my Microsoft Dynamics 365 partner?",
+      "question": "13. Does Microsoft Dynamics 365 come with support?",
+      "answer": "<p>Microsoft doesn't provide sales or support to the end customers. For this, there are certified partners, like Dynamics Square, who can help you install, implement, and <a target=\"_blank\" href=\"/our-services/dynamics-365-upgrade-services/\">upgrade Dynamics 365</a> or any of its applications with total accuracy.</p>"
+    },
+    {
+      "id": 14,
+      "question": "14. Can we integrate Microsoft Office with Dynamics 365?",
+      "answer": "<p>Yes, both are native Microsoft products and are compatible with each other's functionality. Organisations can integrate Office 365 applications, like Excel, Word, and other Microsoft business applications, making the data more convenient to use."
+    },
+    {
+      "id": 16,
+      "question": "16. Is Microsoft Dynamics 365 an ERP or CRM?",
+      "answer": "<p>Microsoft Dynamics 365 combines both ERP and CRM applications within one platform. You can choose individual applications based on your business requirements or deploy multiple applications together.</p>"
+    },
+    {
+      "id": 17,
+      "question": "17. What is Microsoft Dynamics 365 used for?",
+      "answer": "<p>Microsoft Dynamics ERP is an enterprise resource management application capable of connecting almost all departments of a business and streamlining all operations for efficient business practices. It provides a centrally managed platform where all users of the organisation can interact, communicate, and share data in real-time without any restrictions. MS Dynamics ERP can successfully connect the supply chain, finance, operations, commerce, manufacturing, human resources, and reporting.</p>"
+    },
+    {
+      "id": 18,
+      "question": "18. Which Dynamics 365 application is right for my business?",
+      "answer": "<p>The right application depends on your business goals. Some UK organisations begin with Business Central for ERP, while others require Finance, Supply Chain Management, Sales, or Customer Service. Our consultants can help you identify the best starting point.</p>"
+    },
+    {
+      "id": 19,
+      "question": "19. How much does Microsoft Dynamics 365 cost?",
+      "answer": "<p>Licensing costs depend on the applications you choose, the number of users, and your implementation requirements. We provide tailored licensing guidance to help you select the most cost-effective option.</p>"
+    },
+    {
+      "id": 20,
+      "question": "20. How long does a Dynamics 365 implementation take?",
+      "answer": "<p>Implementation timelines vary depending on project scope, integrations, <a href=\"/blog/dynamics-365-data-migration-step-by-step/\">data migration</a>, and user requirements. Smaller deployments may take a few months, while enterprise programmes are often delivered in phases.</p>"
+    },
+    {
+      "id": 21,
+      "question": "21. Can Dynamics 365 integrate with my existing software?",
+      "answer": "<p>Yes, Dynamics 365 integrates with Microsoft 365, finance applications, payroll systems, warehouse solutions, eCommerce platforms, and UK-specific business applications.</p>"
+    },
+    {
+      "id": 22,
+      "question": "22. Why should I work with a Microsoft Dynamics 365 partner?",
+      "answer": "<p>An experienced implementation partner helps you choose the right applications, avoid costly mistakes, manage data migration, train users, and ensure your solution delivers measurable business value.</p>"
+    },
+    {
+      "id": 23,
+      "question": "23. Can Microsoft Dynamics 365 replace legacy ERP systems?",
+      "answer": "<p>Yes, Microsoft Dynamics 365 is commonly used to replace legacy ERP solutions such as Dynamics NAV, <a href=\"/products/microsoft-dynamics-gp/\">Dynamics GP</a>, Sage, and other on-premises business systems. A phased implementation approach allows UK firms to modernise operations while minimising disruption and preserving important business data.</p>"
+    },
+    {
+      "id": 24,
+      "question": "24. Is Microsoft Dynamics 365 cloud-based?",
+      "answer": "<p>Yes, Microsoft Dynamics 365 is a cloud-based platform hosted on <a href=\"/products/microsoft-azure/\">Microsoft Azure</a>. It provides secure access from virtually anywhere, supports automatic updates, and helps UK-based organisations scale without investing in on-premises infrastructure.</p>"
+    },
+    {
+      "id": 25,
+      "question": "25. Is Microsoft Dynamics 365 suitable for growing UK businesses?",
+      "answer": "<p>Absolutely! Microsoft Dynamics 365 includes applications designed for UK businesses of all sizes. Growing organisations in the UK often begin with <a href=\"/products/dynamics-365-business-central/\">Dynamics 365 Business Central</a>, while larger enterprises may implement applications such as Finance, Supply Chain Management, Sales, or Customer Service based on their operational requirements.</p>"
+    },
+    {
+      "id": 26,
+      "question": "26. Can I start with one Dynamics 365 application and add more later?",
+      "answer": "<p>Yes, one of the advantages of Microsoft Dynamics 365 is its modular design. Several UK organisations begin with a single application and expand over time as their business needs evolve, allowing them to adopt new capabilities without replacing their existing platform.</p>"
+    },
+    {
+      "id": 27,
+      "question": "27. Does Microsoft Dynamics 365 work with Microsoft 365?",
+      "answer": "<p>Yes, Dynamics 365 integrates with familiar Microsoft applications such as Outlook, Excel, Teams, SharePoint, and the Power Platform. This enables users to access business information, collaborate more effectively, and automate routine tasks without constantly switching between applications.</p>"
+    },
+    {
+      "id": 28,
+      "question": "28. Why should I choose Dynamics Square as my Microsoft Dynamics 365 partner?",
       "answer": "<p>Choosing the right implementation partner is just as important as choosing the right technology. Dynamics Square combines Microsoft-certified expertise with practical industry experience to help organisations plan, implement, integrate, and support Dynamics 365 solutions that align with their business goals. From initial consultation through to ongoing optimisation, our team works closely with you to ensure your investment continues to deliver value long after go-live.</p>"
     }
   ]

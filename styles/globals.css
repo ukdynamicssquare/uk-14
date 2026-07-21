@@ -20789,3 +20789,299 @@ padding-right: 0;
     font-size: 16px;
   }
 }
+
+
+/*new mega menu*/
+.megamenu-list-resource{
+background-color: #ffffff !important;
+}
+.megamenu-list-resource .nav-link{
+  padding-right: 0;
+}
+.megamenu-list-resource .tab-content{
+   padding-left: 0 !important;
+    padding-top: 18px !important;
+}
+.megamenu-list-resource .nav-link a{
+  justify-content: unset;
+    gap: 15px;
+    transition:.4s ease;
+     border-radius: 5px 0px 0px 5px;
+}
+.megamenu-list-resource .nav-link a:hover,.megamenu-list-resource .nav-link.active a{
+  background-color: #F3F2F6;
+   
+}
+.mega-list-01 {
+
+}
+.navbar .dropdown .mega-list-01 ul{
+  position: relative !important;
+    visibility: visible;
+    opacity: 1;
+    top: inherit;
+    z-index: auto;
+    left: inherit;
+    padding: 0px 0px;
+    background: transparent;
+    box-shadow: none;
+    margin: 0px 0px;
+    border-radius: 0px;
+}
+.mega-list-01 span{
+display: block;
+    color: #000000;
+    font-weight: 600;
+    font-size: 14px;
+    margin: 12px 0px 15px;
+}
+.mega-list-01 ul li{
+  min-width: auto !important;
+    margin-bottom: auto !important;
+
+}
+.p-333{
+  padding: 5px 30px;
+}
+.mega-list-01 ul li a,.mega-list-01 ul li a:focus{
+  padding: 0px 0px 10px 0px !important;
+white-space: normal;
+    font-weight: 400 !important;
+        font-size: 14px;
+}
+.mega-list-01 ul li a:hover{
+
+}
+.navbar .dropdown.megamenu .megamenu-list.megamenu-list-resource .left-list{
+flex: 100%;
+    max-width: 100%;
+}
+.navbar .dropdown.megamenu .megamenu-list.megamenu-list-resource .tab-content{
+padding: 20px 10px 10px;
+}
+.navbar .dropdown.megamenu .megamenu-list.megamenu-list-resource .left-list .nav-pills{
+      flex: 0 0 18% !important;
+      max-width:18% !important
+}
+.bg-0-gray-t{  background: #f3f2f6 !important;margin-bottom: 10px;}
+.bg-0-gray{
+
+    /* min-height: 450px; */
+    border-radius: 0px 8px 8px 0px;
+    padding: 5px 15px;
+}
+.navbar .dropdown.megamenu .megamenu-list.megamenu-list-resource .tab-content{
+min-height:auto;
+padding: 8px 0px 0px !important;
+}
+.right-resource{
+padding-bottom: 10px;
+}
+.res-top-co{
+  background: #F3F2F6;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 8px;
+}
+.res-top-co .n-tag{
+  display: inline-block;
+    border: 1px solid #8E44AD;
+    padding: 8px 20px;
+    border-radius: 50px;
+    color: #8E44AD;
+    font-size: 14px;
+    margin: 10px 0px;
+}
+.res-top-co .n-title{
+ display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 10px;
+}
+.res-top-co p{
+      font-size: 14px;
+}
+.res-top-co .imag00{
+  text-align: right;
+}
+.res-top-co img{}
+.res-top-bo{}
+.res-top-bo img{}
+.res-top-co a,.res-top-co a:focus{
+  display: inline-flex;
+    padding: 10px 0px;
+    font-size: 14px;
+    text-decoration: underline;
+    color: #bb2b36;
+    font-weight: 500;
+}
+.res-top-co a:hover{
+  color:#44394f
+}
+.res-st-oo1{}
+.res-st-oo1 li{}
+.mega-list-01 .res-st-oo1 li a,.mega-list-01 .res-st-oo1 li a:focus{
+  gap: 15px;
+    margin-bottom: 5px;
+    padding: 10px !important;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    justify-content: normal;
+}
+.res-st-oo1 li a:hover{
+  background: #fff !important;
+}
+.res-st-oo1 li .ccc-card{}
+.res-st-oo1 li .ccc-card span{
+  display: block;
+    margin: 0px 0px;
+    margin: 0px 0px 5px;
+}
+.res-st-oo1 .ccc-img{
+border-radius: 8px;
+    background: #ffffff;
+    width: 48px;
+  height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 25%;
+}
+.res-st-oo1 .ccc-img .bi{
+  font-size: 20px;
+    margin: auto;
+}
+.res-st-oo1 li .ccc-card p{
+  font-size: 13px;
+    margin-bottom: 0;
+}
+.mega-list-01 .res-st-oo1 li a:hover{
+      border: 1px solid #8E44AD;
+}
+.mega-list-01 .res-st-oo1 li a:hover .ccc-img{
+  background: #8E44AD;
+ 
+}
+.mega-list-01 .res-st-oo1 li a:hover .ccc-img .bi{
+   color:#fff !important
+}
+.extra-res-link{}
+.extra-res-link a{
+  justify-content: normal;
+    padding: 10px 0px 0px;
+    color: #bb2b36;
+}
+.new-Prod {
+  padding: 0px 0px;
+}
+.res-card-99{
+  padding: 5px 10px;
+  border-right: 1px solid #dfcaf7;
+}
+.n-tags{
+  display: inline-block;
+    border: 1px solid #8E44AD;
+    padding: 8px 20px;
+    border-radius: 50px;
+    color: #8E44AD;
+    font-size: 14px;
+    margin: 10px 0px;
+}
+.n-tags-image{
+      width: 220px;
+    display: block;
+    margin-bottom: 10px;
+}
+.n-tag-title{
+  display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 10px;
+}
+.n-tag-para{
+  font-size: 14px;
+}
+.n-tag-link,.n-tag-link:focus{
+display: block !important;
+    padding: 0px 0px 10px !important;
+    font-size: 14px !important;
+    text-decoration: underline !important;
+    color: #bb2b36 !important;
+    font-weight: 600 !important;
+}
+.guide-card-01{
+  background: #fff;
+    border: 1px solid #a66dbe;
+    border-radius: 8px;
+}
+.guide-card-01 a,.guide-card-01 a:focus{
+  display: block;
+    white-space: normal;
+        padding: 0;
+}
+.guide-card-imag{
+background: #EDEDED;
+    margin: 5px;
+    border-radius: 8px;
+}
+.guide-card-inf{
+  padding:10px
+}
+.guide-card-01 a img{}
+.guide-card-title{
+  font-size: 13px;
+    display: block;
+    margin-bottom: 10px;
+}
+.guide-card-para{
+  font-size: 13px;
+    display: block;
+    font-weight: 400;
+    color: #60518C;
+}
+.pop-res-title{
+  display: block;
+    color: #000000;
+    font-weight: 600;
+    font-size: 14px;
+    margin: 12px 0px 15px;
+}
+.res-flex-wrap{
+      display: flex;
+    gap: 12px;
+}
+.comm-links-b{
+  display: block;
+    text-align: right;
+    margin-top: 20px;
+}
+.guide-tags-rs{
+display: block;
+    font-size: 12px;
+    color: #8E44AD;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+.resor-bord{
+
+}
+.pop-res-title-p{
+  color: #60518C;
+    font-size: 13px;
+    margin-top: -15px;
+}
+.res-flex-wrap-one{
+ display: flex;
+    gap: 10px;
+}
+.resor-bord{
+  border-right:1px solid #DFCAF7
+}
+@media (max-width:1400px){
+  .res-flex-wrap .guide-card-01:last-child {
+    display: none;
+  }
+}
+/*new mega menu*/
