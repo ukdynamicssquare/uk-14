@@ -109,9 +109,10 @@ const HomeOneNew = () => {
             <div className="row">
               <div className="col-lg-12">
                 <div className="home-floting-image text-center">
-                  <img
+                  <Image width={1388} height={318}
                     src="/img/new-home-banner.png"
                     alt="new-home-banner.png"
+                    priority
                   />
                 </div>
               </div>
@@ -169,7 +170,7 @@ const HomeOneNew = () => {
             </div>
           </div>
           <div className="client-home-new-list-btom">
-            <img src="/img/new-home-banner-1.png" alt="new-home-banner.png" />
+            <Image width={423} height={425} src="/img/new-home-banner-1.png" alt="new-home-banner.png" />
           </div>
         </section>
 
