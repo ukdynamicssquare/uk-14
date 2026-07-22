@@ -20788,6 +20788,12 @@ padding-right: 0;
   .home-baner-head p{
     font-size: 16px;
   }
+  .solution-new-cta.slution-new-cta-two img{
+    display:none
+  }
+  .solution-new-cta.slution-new-cta-two {
+        padding: 40px 0px;
+    }
 }
 
 
