@@ -1,17 +1,8 @@
-import React, { useRef, useState, useEffect } from 'react';
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { Swiper, SwiperSlide } from 'swiper/react';
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/free-mode';
-import 'swiper/css/navigation';
-import 'swiper/css/thumbs';
-import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 import FormNewUIndsustry from "../components/FormNewUIndsustry";
 const ERPTest = () => {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
   return (
     <>
       <Head>
