@@ -121,7 +121,7 @@ const ERPTest = () => {
             <div className="col-lg-6 mobile-1 align-self-center">
               <h1>Free ERP Readiness Assessment</h1>
               <h2>Free ERP Readiness Assessment: Find Out What Your Systems Are Really Costing You</h2>
-              <p>We spend 30 minutes reviewing how your business runs today, then give you a clear, honest picture of where <a href="/microsoft-dynamics-365/" style={{ color: '#fff', textDecoration: 'underline' }}>Microsoft Dynamics 365</a> fits and what it delivers. No sales script, just an ERP consultation from consultants who do this for a living.</p>
+              <p>We spend 30 minutes reviewing how your business runs today, then give you a clear, honest picture of where <a href="/products/microsoft-dynamics-365/" style={{ color: '#fff', textDecoration: 'underline' }}>Microsoft Dynamics 365</a> fits and what it delivers. No sales script, just an ERP consultation from consultants who do this for a living.</p>
               <ul>
                 <li><i className="bi bi-check-circle-fill"></i>  You get honest answers, not a sales script</li>
                 <li><i className="bi bi-check-circle-fill"></i>  Certified Dynamics 365 consultants run the assessments</li>
@@ -336,7 +336,7 @@ const ERPTest = () => {
                 <header className="section-header-two section-header-two-left">
                   <span>Why Dynamics Square</span>
                   <h2>A Microsoft partner focused on your ERP consultation outcome, not just your go-live</h2>
-                  <p>We guide UK businesses of every size through Dynamics 365, from the first ERP readiness assessment through <a href="/dynamics-365-business-central/" style={{textDecoration:"underline"}}>Business Central</a> and <a style={{textDecoration:"underline"}} href="/dynamics-365-finance-and-operations/">Finance &amp; Operations</a> implementation, and the years of support that follow. Our certified <a style={{textDecoration:"underline"}} href="/dynamics-365-consultant/">Dynamics 365 consultants</a> bring deep platform expertise and practical industry experience, so the recommendations you receive are grounded in what actually works.</p>
+                  <p>We guide UK businesses of every size through Dynamics 365, from the first ERP readiness assessment through <a href="/products/dynamics-365-business-central/" style={{textDecoration:"underline"}}>Business Central</a> and <a style={{textDecoration:"underline"}} href="/products/microsoft-dynamics-365-finance-operations/">Finance &amp; Operations</a> implementation, and the years of support that follow. Our certified <a style={{textDecoration:"underline"}} href="/our-services/dynamics-365-consultant/">Dynamics 365 consultants</a> bring deep platform expertise and practical industry experience, so the recommendations you receive are grounded in what actually works.</p>
                 </header>
               </div>
               <div className='col-lg-1'></div>
@@ -409,7 +409,7 @@ const ERPTest = () => {
                 </div>
                 <div className='card-faq-text'>
                   <h3>What happens after my ERP readiness assessment?</h3>
-                  <p>You receive a written roadmap covering scope, timeline and indicative cost, so you understand the likely <a  href="https://www.dynamicssquare.co.uk/erp-implementation-cost/" style={{textDecoration:"underline"}}>ERP implementation cost</a> before committing to anything. The decision to proceed is entirely yours, with no follow-up sales pressure.</p>
+                  <p>You receive a written roadmap covering scope, timeline and indicative cost, so you understand the likely <a  href="/free-erp-readiness-assessment/" style={{textDecoration:"underline"}}>ERP implementation cost</a> before committing to anything. The decision to proceed is entirely yours, with no follow-up sales pressure.</p>
                 </div>
                 <div className='card-faq-text'>
                   <h3>What is an ERP readiness assessment?</h3>
