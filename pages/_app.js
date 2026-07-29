@@ -171,7 +171,7 @@ function MyApp({ Component, pageProps }) {
                     "addressRegion": "London",
                     "addressCountry": "United Kingdom",
                     "postalCode": "EC1V 2NX",
-                    "telephone": "+44-207-193-2502, +44-747-927-3380",
+                    "telephone": "+ 44 203 769 7689",
                     "email": "info@dynamicssquare.co.uk"
                   },
                   "geo": {
