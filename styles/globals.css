@@ -86,7 +86,9 @@ body a:hover {
 p a,
 .faq ul li a {
 }
-
+.u-i{
+  text-decoration:underline
+}
 .about-banner h2,
 .extr-cont span a,
 .nav-to p,
@@ -16228,7 +16230,7 @@ margin: -30px 0px -80px;
 }
 .solution-new-card-001 h3 {
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 600;
   color: #443c68;
   display: flex;
   gap: 10px;
@@ -20108,6 +20110,58 @@ position: relative !important;
     color: rgb(84, 95, 113);
     line-height: 1.6;
     margin: 0px;
+}
+.slider-card-0001{
+background-color:#F1F0F4;
+  border-radius:8px 8px 0px 0px
+}
+.slider-card-0001 img{
+    border-radius:8px;
+}
+.slider-card-0001 p{
+  padding: 25px 20px;
+    margin-bottom: 0;
+    font-size: 17px;
+    font-weight: 600;
+}
+.p-top-5{
+  padding-top:40px
+}
+
+.bg-22-white{
+  overflow: hidden;
+}
+.solution-new-cta02{
+  background: #393053;
+    background-image: radial-gradient(circle at 50% -13%, #7865af, #393053 40%);
+    padding-bottom: 0;
+}
+.product-side-0022 ul li h3{
+  color:#444444
+}
+.product-side-002.product-side-0022 ul{
+  margin-bottom:0px;
+  height: 530px;
+}
+.bg-004sa{
+  background-color: #f1f0f4;
+}
+.solution-new-banner-six{
+  background-color:#F1F0F4;
+}
+.serv-card-666-1{
+  background: #ffffff;
+}
+.serv-card-666-1 .serv-card-666-flex{
+flex-direction: column;
+gap: 0;
+}
+.serv-card-666-1 .serv-card-666-flex h3{
+  color:#443C68;
+  margin-bottom: 15px;
+}
+.serv-card-666-1 .serv-card-text-666{
+  color:#444444
 }
 /* Responsive */
 
