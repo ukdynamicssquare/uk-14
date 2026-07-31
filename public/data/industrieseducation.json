@@ -1,0 +1,48 @@
+[
+    {
+      "id": 1,
+      "question": "What is Dynamics 365 for Education?",
+      "answer": "<p>Dynamics 365 for Education helps schools, colleges, and universities manage admissions, student records, accounts, communication, and daily work from one place.</p>"
+    },
+    {
+      "id": 2,
+      "question": "How can Dynamics 365 help educational institutions?",
+      "answer": "<p>It helps institutions save time, reduce manual work, keep data organised, and help teams work better together.</p>"
+    },
+    {
+      "id": 3,
+      "question": "Can Dynamics 365 manage student admissions and enquiries?",
+      "answer": "<p>Yes, it helps manage student enquiries, applications, admissions, enrolments, communication, and follow-ups in one system.</p>"
+    },
+    {
+      "id": 4,
+      "question": "Is Dynamics 365 suitable for universities and colleges?",
+      "answer": "<p>Yes, it can be used by universities, colleges, training institutes, and educational organisations of different sizes.</p>"
+    },
+    {
+      "id": 5,
+      "question": "Does Dynamics 365 integrate with Microsoft 365 applications?",
+      "answer": "<p>Yes, it works with Microsoft Teams, Outlook, Excel, other Microsoft tools, and even third-party applications.</p>"
+    },
+    {
+      "id": 6,
+      "question": "How does Microsoft Copilot support educational institutions?",
+      "answer": "<p>Microsoft Copilot helps staff create reports, summaries, emails, and updates with less manual effort.</p>"
+    },
+    {
+      "id": 7,
+      "question": "Can Dynamics 365 improve student engagement?",
+      "answer": "<p>Yes, institutions can keep track of student communication, send updates, and manage student support more easily.</p>"
+    },
+    {
+      "id": 8,
+      "question": "Is Dynamics 365 secure for the education sector?",
+      "answer": "<p>Yes, it includes Microsoft security features to help keep student and institutional data safe.</p>"
+    },
+    {
+      "id": 9,
+      "question": "Can Dynamics 365 support finance and reporting processes?",
+      "answer": "<p>Yes, educational bodies can manage accounts, budgets, approvals, reports, and daily financial work in one place.</p>"
+    }
+  ]
+  
