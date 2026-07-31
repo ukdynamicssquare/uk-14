@@ -43,6 +43,7 @@ const HeaderWork = () => {
     "/case-studies/dynamics-365-f&O-implementation-for-healthcare": `${gname}`,
     "/products/microsoft-dynamics-crm": `${gname}`,
     "/products/dynamics-365-business-central/pricing-licensing": `${gname}`,
+        "/industries/dynamics-365-for-education-new": `${gname}`,
     "/book-a-demo": `${gname}`,
   };
   // const hide = ["/contact-us", "/thank-you"];

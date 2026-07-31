@@ -20163,6 +20163,9 @@ gap: 0;
 .serv-card-666-1 .serv-card-text-666{
   color:#444444
 }
+.ct-padd{
+  padding: 100px 0px 120px;
+}
 /* Responsive */
 
 @media(max-width:991px){

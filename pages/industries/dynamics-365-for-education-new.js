@@ -43,7 +43,7 @@ const Education = () => {
         <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/Bc-Discrete-Manufacturing.png" />
 
       </Head>
-      <div className='solution-new-banner-one solution-new-banner-one-colo'>
+      <div className='solution-new-banner-one solution-new-banner-one-colo ct-padd'>
         <div className='container'>
           <div className='row justify-content-center'>
             <div className='col-lg-8'>
@@ -353,9 +353,9 @@ const Education = () => {
       <section className='solution-new-cta slution-new-cta-two pd-con-62'>
         <div className='container'>
           <div className='row'>
-            <div className='col-lg-6'>
+            <div className='col-lg-7'>
               <div className='solution-new-cta-001'>
-                <h3>Simplify Admissions, Communication, and Student Management</h3>
+                <h3 style={{fontSize:'32px'}}>Simplify Admissions, Communication, and Student Management</h3>
                 <p>Give your teams connected systems, real-time visibility, and AI-powered tools that help streamline processes and improve experiences across the entire student lifecycle.</p>
                 <div>
                   <Link
@@ -369,7 +369,7 @@ const Education = () => {
             </div>
           </div>
         </div>
-        <img src="/img/n-015.png" alt="n-015" />
+        <Image style={{mixBlendMode:"soft-light"}} width={903} height={444} src="/img/education-31.png" alt="education-31" />
       </section>
       <section id='section5' className='solution-new-banner-five'>
         <div className='container'>
