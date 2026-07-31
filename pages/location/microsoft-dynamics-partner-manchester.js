@@ -426,7 +426,7 @@ const MicrosoftDynamicsPartnerManchester = () => {
 
                     Some of the services we offer are: 
                     <ul>
-                      <li>NAV/ <Link href="/dynamics-365-business-central-support/">
+                      <li>NAV/ <Link href="/d365-business-central-support/">
                       Business Central Support</Link></li>
                       <li><Link href="/products/microsoft-dynamics-ax/">
                       AX Support</Link></li>
@@ -485,9 +485,9 @@ const MicrosoftDynamicsPartnerManchester = () => {
                 
                   <p>Being a top-notch Microsoft <Link href="/"> Dynamics 365 partner in the UK</Link>, we can help you with everything from <Link href="/dynamics-365-business-central-implementation/">implementing Business Central</Link> for SMBs to customising Dynamics Finance to meet your complex financial needs.</p>
                   <p>Our team is experienced enough to deliver best-in-class solutions for all industries, irrespective of the issue, such as a functional issue, lag issue, performance issue, system error, or even training to better understand a particular Dynamics 365 application. </p>
-                  <p>With 150+ certified Microsoft consultants serving 250 businesses around the globe, we can help you improve your business while maximising its growth potential. </p>
+                  <p>With 150+ certified Microsoft consultants serving 500+ businesses around the globe, we can help you improve your business while maximising its growth potential. </p>
                   <p>Currently, we are one of the top Microsoft Dynamics Gold Partners in Manchester, offering remote as well as field services to businesses situated near Manchester as well. In short, we are just a call away. </p>
-                  <p>Whenever you face any kind of issue related to Microsoft Dynamics 365 solutions, you need to pick up the phone and call us at <strong>+44-207-193-2502</strong>. </p>
+                  <p>Whenever you face any kind of issue related to Microsoft Dynamics 365 solutions, you need to pick up the phone and call us at <strong>+44 161 394 0487</strong>. </p>
                   
               </div>
             </div>

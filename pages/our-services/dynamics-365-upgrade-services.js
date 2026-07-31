@@ -7,7 +7,7 @@ const UpgradeServices = () => {
     <>
       <Head>
         <title>
-          Dynamics 365 Upgrade Solutions & Service UK | Trusted by 250+ Clients
+          Dynamics 365 Upgrade Solutions & Service UK | Trusted by 500+ Clients
         </title>
         <meta
           name="description"

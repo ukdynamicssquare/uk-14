@@ -9,7 +9,7 @@ const Inedex = () => {
   return (
     <>
       <Head>
-        <title>Microsoft Dynamics Services | Trusted by 300+ Clients</title>
+        <title>Microsoft Dynamics Services | Trusted by 500+ Clients</title>
         <meta
           name="description"
           content="Power your business by our unique Microsoft Dynamics Services that includes Implementation services, cloud migration, consulting services and upgrade."

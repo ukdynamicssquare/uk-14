@@ -467,7 +467,7 @@ const CustomerVoice = () => {
               <br /> <br />
               <h2 style={{color:'#1d3557',fontSize:'24px',marginBottom:'25px',fontWeight:'600'}}>What to do for Dynamics 365 Customer Voice implementation?</h2>
               <p>If you've been reading this page since the beginning, you'll understand how important it is to get responses from customers and how to do so effortlessly. As per the current market trends, customer voice in Dynamics 365 is the most popular, simple, and powerful tool for feedback management.</p>
-              <p>In the last 11 years, we have had a successful track record implementing any of the Dynamics 365 applications, whether it is Dynamics 365 Customer Voice or Dynamics 365 Marketing. Our implementation helps such businesses achieve more business while enhancing their existing ROI. You can enhance your revenue by understanding your customers better. If you want to achieve it, contact <b>Dynamics Square</b> while writing a mail to <Link href="mailto:info@dynamicssquare.co.uk">info@dynamicssquare.co.uk</Link> or call us on <b>+44-207-193-2502</b>.</p>
+              <p>In the last 11 years, we have had a successful track record implementing any of the Dynamics 365 applications, whether it is Dynamics 365 Customer Voice or Dynamics 365 Marketing. Our implementation helps such businesses achieve more business while enhancing their existing ROI. You can enhance your revenue by understanding your customers better. If you want to achieve it, contact <b>Dynamics Square</b> while writing a mail to <Link href="mailto:info@dynamicssquare.co.uk">info@dynamicssquare.co.uk</Link> or call us on <b>+ 44 203 769 7689</b>.</p>
             </div>
           </div>
         </div>

@@ -2855,7 +2855,7 @@ const BusinessCentral = () => {
                     enterprise with our seamless support services.
                   </p>
                   <div className="action-content">
-                    <Link href="/dynamics-365-business-central-support/">
+                    <Link href="/d365-business-central-support/">
                       Get Started
                     </Link>
                   </div>

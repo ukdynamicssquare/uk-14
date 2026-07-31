@@ -64,7 +64,7 @@ const MicrosoftDynamicsPartnerLiverpool = () => {
 
                 <p>When it comes to a promising solution capable of aligning with business needs and demands, no one is better than the applications of the Microsoft Dynamics suite. It matches its capabilities with the demands of the business so that it can accelerate performance. </p>
                 <p>To get your business back on track, Dynamics Square is available for you. We are a certified Microsoft Dynamics Gold Partner in Liverpool to help businesses drive growth, enhance productivity, and ensure future sustainability with growth-driven solutions.</p>
-                <p>We have a team of 150+ certified Microsoft consultants with a client base of 300+ growing businesses around the globe. These consultants not only resolve business issues but also offer exceptional support services.</p>
+                <p>We have a team of 150+ certified Microsoft consultants with a client base of 500+ growing businesses around the globe. These consultants not only resolve business issues but also offer exceptional support services.</p>
                 <p>Our reliable Dynamics 365 consultants are helping businesses deliver the desired business solutions that they need to grow and sustain fluctuating market conditions.</p>
                 <p>Yes, I Want to Grow My Business!</p>
               </div>
@@ -320,7 +320,7 @@ const MicrosoftDynamicsPartnerLiverpool = () => {
 
                 <li>150+ Microsoft Certified Consultants</li> 
 
-                <li>300+ Global Clients </li>
+                <li>500+ Global Clients </li>
 
                 <li>20+ years of Microsoft Product Expertise</li> 
 
@@ -357,7 +357,7 @@ const MicrosoftDynamicsPartnerLiverpool = () => {
             <div className="col-lg-7">
               <div className="parten-more">
                 <h3>Trustworthy Partner</h3>
-                <p>With 14+ years of experience serving businesses like yours, we have gained trust and faith among our 300+ global customers. This confidence lets us offer you the remarkable experience a business can have with collaboration.  </p>
+                <p>With 14+ years of experience serving businesses like yours, we have gained trust and faith among our 500+ global customers. This confidence lets us offer you the remarkable experience a business can have with collaboration.  </p>
               </div>
               <div className="parten-more">
                 <h3>Business-Specific Solution</h3>

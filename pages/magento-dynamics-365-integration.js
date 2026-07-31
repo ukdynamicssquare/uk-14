@@ -490,7 +490,7 @@ const WhyMigrade360 = () => {
 
                   <li>150+ Microsoft Certified Consultants </li>
 
-                  <li>300+ Global Clients </li>
+                  <li>500+ Global Clients </li>
 
                   <li>20+ Microsoft Product Expertise </li>
 

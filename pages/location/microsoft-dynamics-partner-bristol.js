@@ -113,7 +113,7 @@ If you require minor adjustments or have minor issues, our Microsoft-certified t
                       <div className="accordion-body">
                         <p>
                           Business Central is a{" "}
-                          <Link href="/products/erp/">powerful ERP</Link> to
+                          <Link href="/products/microsoft-dynamics-erp/">powerful ERP</Link> to
                           manage your end-to-end business practices. With
                           Business Central, we can enable you to simplify and
                           streamline your practices such as finance, sales &amp;

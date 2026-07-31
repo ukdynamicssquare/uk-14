@@ -10,18 +10,18 @@ const MicrosoftDynamicsAX = () => {
       <title>Microsoft Dynamics AX (Axapta) Support Partner UK</title>
         <link rel="canonical" href="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-ax/" />
         <meta name="description"
-          content="Looking for Microsoft Dynamics AX support partner in UK? Dynamics Square - trusted by over a 250+ clients in the UK. Contact us today to see how we can help you get the most out of your investment in Axapta!"
+          content="Looking for Microsoft Dynamics AX support partner in UK? Dynamics Square - trusted by over a 500+ clients in the UK. Contact us today to see how we can help you get the most out of your investment in Axapta!"
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-ax/" />
         <meta property="og:title" content="Microsoft Dynamics AX Support Partner UK" />
-        <meta property="og:description" content="Looking for Microsoft Dynamics AX support partner in UK? Dynamics Square - trusted by over a 250+ clients in the UK. Contact us today to see how we can help you get the most out of your investment in AX!" />
+        <meta property="og:description" content="Looking for Microsoft Dynamics AX support partner in UK? Dynamics Square - trusted by over a 500+ clients in the UK. Contact us today to see how we can help you get the most out of your investment in AX!" />
         <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/ax-feature1.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-ax/" />
         <meta property="twitter:title" content="Microsoft Dynamics AX Support Partner UK" />
-        <meta property="twitter:description" content="Looking for Microsoft Dynamics AX support partner in UK? Dynamics Square - trusted by over a 250+ clients in the UK. Contact us today to see how we can help you get the most out of your investment in AX!" />
+        <meta property="twitter:description" content="Looking for Microsoft Dynamics AX support partner in UK? Dynamics Square - trusted by over a 500+ clients in the UK. Contact us today to see how we can help you get the most out of your investment in AX!" />
         <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/ax-feature1.png" />
 
       </Head>

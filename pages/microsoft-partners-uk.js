@@ -172,7 +172,7 @@ const PartnerUK = () => {
                   <ul style={{textAlign:'left'}}>
                     <li>14+ years Partnership with Microsoft </li>
                     <li>150+ Microsoft Certified Consultants </li>
-                    <li>300+ Global Clients </li>
+                    <li>500+ Global Clients </li>
                     <li>20+ Microsoft Product Expertise </li>
                     <li>99% Customer Satisfaction </li>
                     <li>100+ Technical Consultants </li>

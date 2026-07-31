@@ -147,7 +147,7 @@ export default function HomeOld() {
                 "https://www.dynamicssquare.co.uk/img/dynamicssqure-logo.svg",
               alternateName:
                 "Dynamics Square software company in London, United Kingdom",
-              telephone: "+44-207-193-2502, +44-747-927-3380",
+              telephone: "+ 44 203 769 7689, +44-747-927-3380",
               email: "info@dynamicssquare.co.uk",
               address: {
                 "@type": "PostalAddress",

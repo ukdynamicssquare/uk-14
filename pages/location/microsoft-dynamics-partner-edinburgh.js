@@ -92,7 +92,7 @@ const MicrosoftDynamicsPartnerEdinburgh = () => {
                   <br />
                   <br />
                   Dynamics Square has been implementing ERP solutions for over a
-                  decade. We have a strong network of 250+ clients across the
+                  decade. We have a strong network of 500+ clients across the
                   globe for our tech-driven business-oriented solutions.
                   <br />
                   <br />

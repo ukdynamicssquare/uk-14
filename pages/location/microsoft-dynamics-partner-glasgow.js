@@ -75,7 +75,7 @@ const MicrosoftDynamicsPartnerGlasgow = () => {
                 </p>
                 <p>
                   We at Dynamics Square have a team of <strong>150+</strong>{" "}
-                  Microsoft consultants and a network of <strong>250+</strong>{" "}
+                  Microsoft consultants and a network of <strong>500+</strong>{" "}
                   clients worldwide, helping businesses scale their growth,
                   streamline their business operations, and drive maximum output
                   from their investments in the industry.

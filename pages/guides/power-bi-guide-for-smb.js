@@ -2776,7 +2776,7 @@ const PowerBIGuide = () => {
                 <p>
                   With a team of over{" "}
                   <b>150+ Microsoft Certified Professionals</b>, we are serving{" "}
-                  <Link href="/case-studies/">300+ happy clients</Link>{" "}
+                  <Link href="/case-studies/">500+ happy clients</Link>{" "}
                   across the globe to offer innovative and data-driven
                   solutions.{" "}
                 </p>
