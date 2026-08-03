@@ -483,7 +483,7 @@ const FieldService = () => {
             </div>
 
             <div className='col-lg-3 col-md-4 col-sm-6 d-flex'>
-              <a href="/products/microsoft-dynamics-365-sales/" className="serv-card-666 serv-card-666-1">
+              <a href="/our-services/dynamics-365-upgrade-services/" className="serv-card-666 serv-card-666-1">
                 <div className='serv-card-666-flex'>
                   <div className="serv-card-icon-666">
                     <Image src="/img/field-service-011.png" alt="Upgrade and Migration" width="40" height="40" />
@@ -498,7 +498,7 @@ const FieldService = () => {
               </a>
             </div>
              <div className='col-lg-3 col-md-4 col-sm-6 d-flex'>
-              <a href="/products/microsoft-dynamics-365-sales/" className="serv-card-666 serv-card-666-1">
+              <a href="/our-services/dynamics-365-support-services/" className="serv-card-666 serv-card-666-1">
                 <div className='serv-card-666-flex'>
                   <div className="serv-card-icon-666">
                     <Image src="/img/field-service-012.png" alt="Support" width="40" height="40" />
@@ -513,7 +513,7 @@ const FieldService = () => {
               </a>
             </div>
             <div className='col-lg-3 col-md-4 col-sm-6 d-flex'>
-              <a href="/products/microsoft-dynamics-365-customer-service/" className="serv-card-666 serv-card-666-1">
+              <a href="/our-services/dynamics-365-consultant/" className="serv-card-666 serv-card-666-1">
                 <div className='serv-card-666-flex'>
                   <div className="serv-card-icon-666">
                     <Image src="/img/field-service-013.png" alt="Consulting" width="40" height="40" />
