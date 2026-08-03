@@ -16196,6 +16196,9 @@ margin: -30px 0px -80px;
 .asd.asd4{
    background: url("/img/sales-new-09.png") no-repeat center right;
 }
+.asd.asd5{
+   background: url("/img/field-service-014.png") no-repeat center right;
+}
 .solution-new-cta::before {
   content: "";
   position: absolute;
@@ -20165,6 +20168,15 @@ gap: 0;
 }
 .ct-padd{
   padding: 100px 0px 120px;
+}
+.new-bg-001{
+  padding-bottom: 0 !important;
+}
+.drd-f p{
+  margin-top:15px
+}
+.drd-f p{
+margn-bottom:10px
 }
 /* Responsive */
 

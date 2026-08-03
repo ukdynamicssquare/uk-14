@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "question": "What is Dynamics 365 Field Service?",
+    "answer": "<p>Dynamics 365 Field Service is a smart service management solution from Microsoft. It helps companies manage work orders, scheduling, and service delivery with intelligent scheduling capabilities.</p>"
+  },
+  {
+    "id": 2,
+    "question": "What does Dynamics 365 Field Service do?",
+    "answer": "<p>It enables teams to create and manage work orders, optimise technician schedules, track service appointments, and support technicians with AI-powered assistance.</p>"
+  },
+  {
+    "id": 3,
+    "question": "How does scheduling work in Dynamics 365 Field Service?",
+    "answer": "<p>Scheduling is supported by AI-driven optimisation that considers factors like technician availability, priorities, travel time, and service windows to improve efficiency.</p>"
+  },
+  {
+    "id": 4,
+    "question": "What is the Scheduling Operations Agent in Dynamics 365 Field Service?",
+    "answer": "<p>It is an  <a class=\"u-i\" href=\"/blog/from-assistants-to-autonomous-the-rise-of-ai-agents-in-dynamics-365/\">AI agent</a> that helps dispatchers optimise technician schedules by adjusting bookings based on priorities, travel time, and changing conditions like delays or cancellations.</p>"
+  },
+  {
+    "id": 5,
+    "question": "How does Copilot help in Dynamics 365 Field Service?",
+    "answer": "<p>Copilot allows users to ask questions in natural language, generate work order summaries, update records, and access relevant information quickly during service tasks.</p>"
+  },
+  {
+    "id": 6,
+    "question": "Can technicians update work orders using Dynamics 365 Field Service?",
+    "answer": "<p>Yes, technicians can use natural language input in the mobile app to update work order details such as status, tasks, and time entries.</p>"
+  },
+  {
+    "id": 7,
+    "question": "Does Dynamics 365 Field Service support real-time visibility?",
+    "answer": "<p>Yes, it provides real-time visibility into appointments and service activities. This visibility helps teams track and manage ongoing service operations.</p>"
+  },
+  {
+    "id": 8,
+    "question": "Does Dynamics 365 Field Service integrate with other Microsoft applications?",
+    "answer": "<p>Yes, it integrates with applications like Microsoft Teams, Outlook, and Dynamics 365 Business Central to support communication and data flow.</p>"
+  },
+  {
+    "id": 9,
+    "question": "What is the price of Dynamics 365 Field Service?",
+    "answer": "<p>Dynamics 365 Field Service starts at £80.70 per user per month, billed yearly. Apart from it, a contractor licence is also available at £38.40 per user per month.</p>"
+  },
+  {
+    "id": 10,
+    "question": "Is Dynamics 365 Field Service suitable for small- and mid-sized businesses?",
+    "answer": "<p>Yes, it is a scalable solution that supports organisations of different sizes looking to manage service operations more efficiently.</p>"
+  }
+]
