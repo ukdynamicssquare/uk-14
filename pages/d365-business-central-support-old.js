@@ -68,7 +68,7 @@ const BusinessCentralSupport = () => {
                 With industry-specific experts, we have separate teams for different services, whether support, implementation, or a Business Central upgrade. Our sole mission is to deliver exceptional services to the customers while opening opportunities for growth, scalability, and high profitability.
                   .
                 </p>
-                <p>Irrespective of the size, whether a small or medium business, we offer dedicated and seamless services with a 99% satisfaction rate. Being a certified <Link href="/" target="_blank">Microsoft Gold Partner </Link> in the UK, our focus is to offer hassle-free services while offering enhanced results and maximising growth. </p>
+                <p>Irrespective of the size, whether a small or medium business, we offer dedicated and seamless services with a 99% satisfaction rate. Being a certified <Link href="/" target="_blank">Microsoft Solutions Partner </Link> in the UK, our focus is to offer hassle-free services while offering enhanced results and maximising growth. </p>
                 
               </header>
             </div>

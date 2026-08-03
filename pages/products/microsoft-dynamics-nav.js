@@ -127,7 +127,7 @@ const MicrosoftDynamicsNAV = () => {
                   Microsoft ERP is so flexible that it fits in all industries,
                   irrespective of the size and business requirements. You can
                   make this ERP solution personalised using your{" "}
-                  <Link href="/" target="_blank">Microsoft Gold Partner</Link>, resulting in
+                  <Link href="/" target="_blank">Microsoft Solutions Partner</Link>, resulting in
                   enhanced productivity and efficiency. One of the best parts of
                   using the Microsoft NAV software is its support for
                   multi-language and multi-currency to improve global

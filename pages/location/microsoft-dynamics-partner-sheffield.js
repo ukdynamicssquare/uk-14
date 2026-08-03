@@ -18,7 +18,7 @@ const MicrosoftDynamicsPartnerSheffield = () => {
           <div className="row">
             <div className="col-lg-6 mobile-1 align-self-center">
               <h1>Microsoft Dynamics 365 Partner in Sheffield UK </h1>
-              <p>Get your business a simple and powerful Microsoft business solution with Dynamics Square - an authorised Microsoft Dynamics Gold Partner in Sheffield, UK. </p>
+              <p>Get your business a simple and powerful Microsoft business solution with Dynamics Square - an authorised Microsoft Dynamics Solutions Partner in Sheffield, UK. </p>
               <div className="text-center text-lg-start">
                   <Link
                     href="#exampleModal"
@@ -287,7 +287,7 @@ const MicrosoftDynamicsPartnerSheffield = () => {
           <div className="row pad9x">
             <div className="col-lg-6 align-self-center">
               <div className="commen-rit-info">
-                <h3>Why Choose Dynamics Square as your Microsoft Gold Partner? </h3>
+                <h3>Why Choose Dynamics Square as your Microsoft Solutions Partner? </h3>
                 <p>There are various reasons to choose us, but reliability, trustworthiness, and cost-effectiveness are our core pillars of doing business. Being one of the top Microsoft Solutions Partners in the UK, we have gained the reputation of being the first choice for industry. </p>
                 <p>During the Dynamics 365 implementation, upgrade, or support service, we follow the Microsoft-certified methodology to complete the job. It lets us enhance business performance while eliminating data silos from the system.</p>
                 <p>Irrespective of the uniqueness of the business, we will offer you a personalised business solution capable of instantly powering up the business with existing resources.</p>
@@ -377,7 +377,7 @@ const MicrosoftDynamicsPartnerSheffield = () => {
                   </div>
                   <div className="cintent-right cintent-right-001">
                     <h3>On-Site Support </h3>
-                    <p>The team at Dynamics Square is working day and night to keep the business running and growing, considering all the fluctuations. As a Microsoft Gold Partner in Sheffield, UK, we provide remote and on-site support to businesses to eliminate complexity and redundancies from the system. Our highly trained Microsoft professionals are available to provide you with instant support to keep your business running. </p>
+                    <p>The team at Dynamics Square is working day and night to keep the business running and growing, considering all the fluctuations. As a Microsoft Solutions Partner in Sheffield, UK, we provide remote and on-site support to businesses to eliminate complexity and redundancies from the system. Our highly trained Microsoft professionals are available to provide you with instant support to keep your business running. </p>
                   </div>
                 </div>
               </div>

@@ -44,6 +44,7 @@ const HeaderWork = () => {
     "/products/microsoft-dynamics-crm": `${gname}`,
     "/products/dynamics-365-business-central/pricing-licensing": `${gname}`,
         "/industries/dynamics-365-for-education": `${gname}`,
+         "/products/microsoft-dynamics-365-field-service": `${gname}`,
     "/book-a-demo": `${gname}`,
   };
   // const hide = ["/contact-us", "/thank-you"];

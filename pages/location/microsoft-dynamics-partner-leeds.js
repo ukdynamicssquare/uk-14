@@ -48,7 +48,7 @@ const MicrosoftDynamicsPartnerLeeds = () => {
           <div className="row pad9x">
             <div className="col-lg-6 align-self-center">
               <div className="commen-rit-info">
-                <h2>Microsoft Gold Partner in Leeds</h2>
+                <h2>Microsoft Solutions Partner in Leeds</h2>
 
                 <p>
                   Dynamics Square is the prime Microsoft Partner in Leeds, UK.
@@ -519,7 +519,7 @@ const MicrosoftDynamicsPartnerLeeds = () => {
                   You Can Trust
                 </h3>
                 <p>
-                  We at Dynamics Square, certified Microsoft Gold Partner in
+                  We at Dynamics Square, certified Microsoft Solutions Partner in
                   Leeds offer 24x7 extensive customer support to our clients.
                   Our process flow and procedure are as follows:
                 </p>
@@ -631,7 +631,7 @@ const MicrosoftDynamicsPartnerLeeds = () => {
                   We provide proactive Microsoft Dynamics support to guarantee
                   that your business runs smoothly and continues to expand.
                   Through our highly dedicated support, Dynamics Square, as a
-                  Gold Partner in Leeds, UK, helps you focus more on your core
+                  Solutions Partner in Leeds, UK, helps you focus more on your core
                   operations and work toward the growth part of your business.
                 </p>
               </div>

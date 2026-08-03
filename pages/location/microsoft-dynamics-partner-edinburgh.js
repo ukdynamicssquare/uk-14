@@ -49,7 +49,7 @@ const MicrosoftDynamicsPartnerEdinburgh = () => {
           <div className="row justify-content-center">
             <div className="col-lg-9">
               <header className="section-header">
-                <h2>Microsoft Gold Partner in Edinburgh</h2>
+                <h2>Microsoft Solutions Partner in Edinburgh</h2>
 
                 <p>
                   Every business needs a certified partner or expert to help
@@ -106,7 +106,7 @@ const MicrosoftDynamicsPartnerEdinburgh = () => {
                   experience in streamlining business operations effectively and
                   providing 24x7 customer service support to level up your
                   customer service experience, making us an authorized Microsoft
-                  Gold Partner in Edinburgh.
+                  Solutions Partner in Edinburgh.
                   <br />
                   <br />
                   We aim to empower individuals and enterprises to achieve more
@@ -575,7 +575,7 @@ const MicrosoftDynamicsPartnerEdinburgh = () => {
                   We provide proactive Microsoft Dynamics support to guarantee
                   that your business runs smoothly and continues to expand.
                   Through our highly dedicated support, Dynamics Square, as a
-                  Gold Partner in Edinburgh, UK, helps you focus more on your
+                  Solutions Partner in Edinburgh, UK, helps you focus more on your
                   core operations and work toward the growth part of your
                   business.
                 </p>

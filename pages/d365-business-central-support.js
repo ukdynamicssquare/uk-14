@@ -65,7 +65,7 @@ const BcSupport = () => {
                                 <h2>Experience Reliable & Responsive Business Central Support</h2>
                                 <p>Do you use <a href="/products/dynamics-365-business-central/">Dynamics 365 Business Central</a> and require consistent support? Managing complicated customisations, troubleshooting to avoid disruptions, offering required user training, helping with optimisation, and controlling updates smoothly all depend on dependable Dynamics 365 ERP support.</p>
                                 <p>To solve operational problems and improve efficiency, Dynamics Square provides thorough Business Central implementation services. Our knowledgeable staff guarantees your ERP system changes with your company demands and fixes problems fast.</p>
-                                <p>As a certified Microsoft Gold Partner in the UK, we offer premium support, proactive diagnostics, and strategic growth solutions. Dynamics Square is your reliable Business Central support partner guaranteeing seamless operations and ongoing development whether you require ad-hoc assistance, prepaid hours, or annual support.</p>
+                                <p>As a certified Microsoft Solutions Partner in the UK, we offer premium support, proactive diagnostics, and strategic growth solutions. Dynamics Square is your reliable Business Central support partner guaranteeing seamless operations and ongoing development whether you require ad-hoc assistance, prepaid hours, or annual support.</p>
                                 <Link
                                     href="#exampleModal"
                                     data-bs-toggle="modal"

@@ -185,7 +185,7 @@ const HomeOneNew = () => {
                     been consistently delivering impactful solutions, earning
                     trust through innovation & commitment and empowering
                     businesses to achieve excellence, irrespective of the
-                    industry. Recognised as a trusted Microsoft Gold Partner and
+                    industry. Recognised as a trusted Microsoft Solutions Partner and
                     expert Microsoft Dynamics ERP partner, our team drives
                     successful digital transformations through industry-aligned
                     expertise and strategic execution.{" "}

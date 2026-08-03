@@ -677,7 +677,7 @@ const D360 = () => {
                 <p>Offering Microsoft Dynamics 365 implementation across the globe for the last 11+ years </p>
                 <p>In today's fast-paced world, businesses and their operations are constantly evolving, growing more intricate by the day. It's time to put an end to the chaos, and there's no better solution than implementing Microsoft Dynamics 365.</p>
                 <p>At Dynamics Square, we're dedicated to streamlining businesses all across UK by offering top-notch Dynamics 365 support, solidifying our reputation as a trusted D365 solution partner.</p>
-                <p>As a Microsoft Certified Gold Partner, we pride ourselves on our expertise, resources, and experience - all crucial elements to tackle any issue and simplify your business operations.</p>
+                <p>As a Microsoft Certified Solutions Partner, we pride ourselves on our expertise, resources, and experience - all crucial elements to tackle any issue and simplify your business operations.</p>
 
                 <p>Our team of highly skilled technical consultants is here to understand the challenges you're facing, providing personalised solutions in the blink of an eye. We're committed to keeping your business on track, no matter what hurdles come your way.</p>
 

@@ -677,7 +677,7 @@ const Wms = () => {
                     data-bs-parent="#faqlist1"
                   >
                     <div className="accordion-body">
-                      <p>Mobile WMS is an add-on that can be implemented with a <Link href="/products/microsoft-dynamics-erp/">Microsoft ERP solution</Link>. To implement it with your existing system, you need to search for the right <Link href="/">Microsoft Certified Gold Partner</Link> in UK. (Select a partner who offers implementation as well as support services to enable your solution to get going.) </p>
+                      <p>Mobile WMS is an add-on that can be implemented with a <Link href="/products/microsoft-dynamics-erp/">Microsoft ERP solution</Link>. To implement it with your existing system, you need to search for the right <Link href="/">Microsoft Certified Solutions Partner</Link> in UK. (Select a partner who offers implementation as well as support services to enable your solution to get going.) </p>
                       <p><b>Contact Dynamics Square for Mobile WMS support and implementation services.</b></p>
                     </div>
                   </div>

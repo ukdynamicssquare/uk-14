@@ -550,7 +550,7 @@ const ImplementationServices = () => {
                   <img src="/img/microsft-p-icons.svg" alt="microsft-p-icons" />
                   <h3>
                     Authorized Microsoft <br />
-                    Gold Partner
+                    Solutions Partner
                   </h3>
                 </div>
                 <div className="commen-boc-3-info">

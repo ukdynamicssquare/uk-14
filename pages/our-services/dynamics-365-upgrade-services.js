@@ -261,7 +261,7 @@ const UpgradeServices = () => {
                             alt="icons-upgrade-service_gold-partner"
                           />
                         </div>
-                        <span>Authorized Gold Partner</span>
+                        <span>Authorized Solutions Partner</span>
                       </button>
                     </h3>
                     <div

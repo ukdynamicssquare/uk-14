@@ -110,7 +110,7 @@ function MyApp({ Component, pageProps }) {
                   "@id": "https://www.dynamicssquare.co.uk/#website",
                   "url": "https://www.dynamicssquare.co.uk/",
                   "name": "Dynamics Square UK Ltd.",
-                  "alternateName": "Dynamics Square Microsoft Gold Partner company in London, UK",
+                  "alternateName": "Dynamics Square Microsoft Solutions Partner company in London, UK",
                   "description": "Dynamics Square™ is a trusted Dynamics 365 Partner in London, UK, offering expert Dynamics 365 solutions for Business Central, CRM, ERP & more. Contact us today!",
                   "publisher": { "@id": "https://www.dynamicssquare.co.uk/#organization" },
                   "potentialAction": [

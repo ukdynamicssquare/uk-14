@@ -161,7 +161,7 @@ const HomeOne = () => {
                             <div className='col-lg-8 col-md-12 col-sm-12'>
                                 <div className='new-title-heading'>
                                     <h2>Dynamics Square: Your Microsoft Solutions Partner</h2>
-                                    <p>As a Microsoft Dynamics 365 implementation partner, we have been consistently delivering impactful solutions, earning trust through innovation & commitment and empowering businesses to achieve excellence, irrespective of the industry. Recognised as a trusted Microsoft Gold Partner and expert Microsoft Dynamics ERP partner, our team drives successful digital transformations through industry-aligned expertise and strategic execution. </p>
+                                    <p>As a Microsoft Dynamics 365 implementation partner, we have been consistently delivering impactful solutions, earning trust through innovation & commitment and empowering businesses to achieve excellence, irrespective of the industry. Recognised as a trusted Microsoft Solutions Partner and expert Microsoft Dynamics ERP partner, our team drives successful digital transformations through industry-aligned expertise and strategic execution. </p>
                                 </div>
                             </div>
                         </div>

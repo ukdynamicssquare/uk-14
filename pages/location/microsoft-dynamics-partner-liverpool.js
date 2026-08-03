@@ -46,7 +46,7 @@ const MicrosoftDynamicsPartnerLiverpool = () => {
           <div className="row pad9x justify-content-center">
             <div className="col-lg-9 align-self-center">
               <div className="commen-rit-info">
-                <h2>Microsoft Certified Gold Partner in Liverpool: One-Stop Solution for all Microsoft Dynamics Issues </h2>
+                <h2>Microsoft Certified Solutions Partner in Liverpool: One-Stop Solution for all Microsoft Dynamics Issues </h2>
 
                 <p>Get all your Dynamics 365 issues fixed by a reliable, trustworthy, and cost-effective Microsoft Dynamics 365 partner based in Liverpool, UK. Being one of the major cities in the UK, various businesses from different industries are located here, providing a positive environment for growth. </p>
                 <p>As per our recent data, most of these businesses are utilizing Microsoft business applications to streamline all operations and processes with enhanced efficiency.</p>
@@ -63,7 +63,7 @@ const MicrosoftDynamicsPartnerLiverpool = () => {
                 <p>With the ease of doing business, there are some complexities with the Microsoft ERP or CRM solution that need to be resolved in the shortest time possible. </p> 
 
                 <p>When it comes to a promising solution capable of aligning with business needs and demands, no one is better than the applications of the Microsoft Dynamics suite. It matches its capabilities with the demands of the business so that it can accelerate performance. </p>
-                <p>To get your business back on track, Dynamics Square is available for you. We are a certified Microsoft Dynamics Gold Partner in Liverpool to help businesses drive growth, enhance productivity, and ensure future sustainability with growth-driven solutions.</p>
+                <p>To get your business back on track, Dynamics Square is available for you. We are a certified Microsoft Dynamics Solutions Partner in Liverpool to help businesses drive growth, enhance productivity, and ensure future sustainability with growth-driven solutions.</p>
                 <p>We have a team of 150+ certified Microsoft consultants with a client base of 500+ growing businesses around the globe. These consultants not only resolve business issues but also offer exceptional support services.</p>
                 <p>Our reliable Dynamics 365 consultants are helping businesses deliver the desired business solutions that they need to grow and sustain fluctuating market conditions.</p>
                 <p>Yes, I Want to Grow My Business!</p>

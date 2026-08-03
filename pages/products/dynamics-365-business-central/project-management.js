@@ -522,7 +522,7 @@ const ProjectManagemtNew = () => {
                 <div className='col-lg-6 d-flex '>
                   <div className='card557'>
                     <div className='card-233-body'>
-                      <h3><span><i className="bi bi-check2"></i></span>Microsoft Gold Partner with 500+ implementations</h3>
+                      <h3><span><i className="bi bi-check2"></i></span>Microsoft Solutions Partner with 500+ implementations</h3>
                     </div>
                   </div>
                 </div>

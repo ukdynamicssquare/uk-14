@@ -827,7 +827,7 @@ const ContiniaExpence = () => {
                 <ul>
                   <li><i className="bi bi-check"></i><span>14+ years of experience in Continia Business Central deployments </span></li>
                   <li><i className="bi bi-check"></i><span>UK-based support and implementation specialists </span></li>
-                  <li><i className="bi bi-check"></i><span>Microsoft Gold Partner and Continia-certified </span></li>
+                  <li><i className="bi bi-check"></i><span>Microsoft Solutions Partner and Continia-certified </span></li>
                   <li><i className="bi bi-check"></i><span>Tailored deployment, testing, and training plans </span></li>
                   <li><i className="bi bi-check"></i><span>Ongoing support and updates, not just a one-time install </span></li>
 

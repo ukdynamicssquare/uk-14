@@ -7,7 +7,7 @@ const BusinessCentralUpgrade = () => {
       <>
         <Head>
         <title>
-          Dynamics 365 Business Central Upgrade by Microsoft Gold Partner
+          Dynamics 365 Business Central Upgrade by Microsoft Solutions Partner
         </title>
         <meta
           name="description"

@@ -57,14 +57,14 @@ const MicrosoftDynamicsPartnerGlasgow = () => {
           <div className="row pad9x">
             <div className="col-lg-6 align-self-center">
               <div className="commen-rit-info">
-                <h2>Microsoft Gold Partner in Glasgow</h2>
+                <h2>Microsoft Solutions Partner in Glasgow</h2>
 
                 <p>
                   Looking for a Microsoft Dynamics partner Glasgow-based expert?
                   Dynamics Square will put an end to your quest. Dynamics Square
                   is a{" "}
                   <Link href="/" target="_blank">
-                    Microsoft Gold Partner in Glasgow
+                    Microsoft Solutions Partner in Glasgow
                   </Link>
                   .
                 </p>
@@ -566,7 +566,7 @@ const MicrosoftDynamicsPartnerGlasgow = () => {
                   We provide proactive Microsoft Dynamics support to guarantee
                   that your business runs smoothly and continues to expand.
                   Through our highly dedicated support, Dynamics Square, as a
-                  Gold Partner in Glasgow, UK, helps you focus more on your core
+                  Solutions Partner in Glasgow, UK, helps you focus more on your core
                   operations and work toward the growth part of your business.
                 </p>
               </div>

@@ -51,7 +51,7 @@ const PartnerUK = () => {
                     <ul>
                       <li>The best implementation service, the best support service, and the best system upgrade service from a renowned Microsoft Dynamics partner in the UK.</li>
                       <li>Dynamics Square is a certified Microsoft solution partner, offering its services to businesses in the UK and Europe. We are one of those Microsoft partners who have enough resources to get your business on track in no time while boosting its efficiency in all directions.</li>
-                      <li>Being a Microsoft Gold Partner, our motto is to offer the best results to our customers, offering value-for-money services to all businesses, whether small or large. However, Microsoft has reformed its partner programme and replaced the silver and gold partner titles with a single title: <strong>Microsoft Solution Partner</strong></li>
+                      <li>Being a Microsoft Solutions Partner, our motto is to offer the best results to our customers, offering value-for-money services to all businesses, whether small or large. However, Microsoft has reformed its partner programme and replaced the silver and gold partner titles with a single title: <strong>Microsoft Solution Partner</strong></li>
                     </ul>
                   </div>
                 </div>

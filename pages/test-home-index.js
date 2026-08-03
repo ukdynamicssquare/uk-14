@@ -213,7 +213,7 @@ export default function HomeOld() {
               "@type": "WebSite",
               name: "Dynamics Square UK Ltd.",
               alternateName:
-                "Dynamics Square Microsoft Gold Partner company in London, UK",
+                "Dynamics Square Microsoft Solutions Partner company in London, UK",
               url: "https://www.dynamicssquare.co.uk/",
             }),
           }}

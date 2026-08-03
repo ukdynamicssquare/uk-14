@@ -96,7 +96,7 @@ const FinanceImplementation = () => {
                 <p>
                   Experts at Dynamics Square - an authorized{" "}
                   <Link href="/">
-                    Microsoft Gold Partner
+                    Microsoft Solutions Partner
                   </Link>{" "}
                   have the proficiency to understand your complex business
                   requirement and undertake challenges involved to deliver

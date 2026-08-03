@@ -21,7 +21,7 @@ const MicrosoftDynamicsPartnerLiverpool = () => {
                 Partner Bristol 
               </h1>
               <p>
-              Dynamics Square is a certified Microsoft Gold Partner located in Bristol to support nearby businesses with Microsoft Business Solutions. </p>
+              Dynamics Square is a certified Microsoft Solutions Partner located in Bristol to support nearby businesses with Microsoft Business Solutions. </p>
               <div className="text-center text-lg-start">
                   <Link
                     href="#exampleModal"
@@ -152,7 +152,7 @@ If you require minor adjustments or have minor issues, our Microsoft-certified t
                       <div className="accordion-body">
                         <p>
                           If you are looking to simplify your financial
-                          capabilities, Dynamics Square - Microsoft Gold Partner
+                          capabilities, Dynamics Square - Microsoft Solutions Partner
                           in Bristol can assist. By configuring{" "}
                           <Link href="/products/microsoft-dynamics-365-finance/">
                             Dynamics 365 Finance
@@ -599,7 +599,7 @@ If you require minor adjustments or have minor issues, our Microsoft-certified t
               <div className="parten-more">
                 <h3>On-Site Support</h3>
                 <p>
-                At Dynamics Square, we're always working to help our clients keep their businesses running smoothly. As a Gold Partner in Bristol, UK, we provide off-hours support so that you can focus on your core operations and continue growing your business. Our highly dedicated support model is designed to provide you with the help you need, when you need it, and where you need it. 
+                At Dynamics Square, we're always working to help our clients keep their businesses running smoothly. As a Solutions Partner in Bristol, UK, we provide off-hours support so that you can focus on your core operations and continue growing your business. Our highly dedicated support model is designed to provide you with the help you need, when you need it, and where you need it. 
                 </p>
                 <p>If you're looking for a partner that can help you keep your business running smoothly, look no further than Dynamics Square. We're dedicated to helping our clients succeed, and we'll be there for you when you need us. </p>
               </div>

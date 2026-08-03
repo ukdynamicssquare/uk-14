@@ -1,17 +1,46 @@
-import React, { useState } from "react";
+import { useRef, useState } from 'react';
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+import useGsapScrollCards from '../../hooks/useGsapScrollCards';
+import faqData from '../../public/data/field-service.json';
+import useCardScrollEffect from "../../components/useCardScrollEffect";
+import NavBar from '../../components/NavBar';
+import BlogFinanaceCard from '../../components/BlogFinanaceCard';
+import dynamic from "next/dynamic";
 
-import Link from "next/link";
-import Head from "next/head";
-import Image from "next/image";
-// import ModalVideo from "react-modal-video";
-import Blog from "../../components/Blog";
+
+const StackedCards = dynamic(() => import("../../components/StackedCards"), {
+  ssr: false,
+});
+
 const FieldService = () => {
-  const [isOpen, setOpen] = useState(false);
-  const [open, setsOpen] = useState(false);
+  /*gsap card scroll*/
+  const containerRef = useRef(null);
+  useGsapScrollCards(containerRef);
+  /*gsap card scroll*/
+
+  useCardScrollEffect()
+
+  /*faq*/
+  const [visibleCount, setVisibleCount] = useState(5);
+
+  const handleLoadMore = () => {
+    setVisibleCount((prev) => prev + 3);
+  };
+
+  const [pdfType, setPdfType] = useState(null);
+  const handleOpenModal = (type) => {
+    setPdfType(type);
+    // Open modal manually (needed since you use Bootstrap)
+    const modal = new bootstrap.Modal(document.getElementById('pdfModel'));
+    modal.show();
+  };
+
   return (
     <>
       <Head>
-        <title>Microsoft Dynamics 365 Field Service - Dynamics Square UK</title>
+         <title>Microsoft Dynamics 365 Field Service - Dynamics Square UK</title>
         <meta
           name="description"
           content="Transform field operations with Dynamics 365 Field Service. UK experts for implementation, integration & support. Book your free consultation."
@@ -31,474 +60,147 @@ const FieldService = () => {
         <meta property="twitter:title" content="Microsoft Dynamics 365 Field Service - Dynamics Square UK" />
         <meta property="twitter:description" content="Transform field operations with Dynamics 365 Field Service. UK experts for implementation, integration & support. Book your free consultation." />
         <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/FieldServicebanner.png" />
-       
-      
       </Head>
-      {/* <ModalVideo
-        channel="youtube"
-        autoplay
-        isOpen={isOpen}
-        videoId="yCJ7C1KS-Jw"
-        onClose={() => setOpen(false)}
-      /> */}
-      <section className="Solution-banner hero-1 hero ">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-6 mobile-1 align-self-center">
-              <h1>
-                Dynamics 365
-                <br />
-                Field Service
-              </h1>
-              <p>
-                Streamline Your Field Operations & Optimize Your Resources
-                Leveraging Microsoft Dynamics 365 Field Service
-              </p>
-              <div>
-                <div className="text-center text-lg-start">
+      <div className='solution-new-banner-one'>
+        <div className='container'>
+          <div className='row justify-content-center'>
+            <div className='col-lg-8'>
+              <div className='solution-new-banner-one-content'>
+                <h1>Microsoft Dynamics 365 Field Service</h1>
+                <span className='large-heading'>Implement an agentic service solution trusted by service teams worldwide</span>
+                <p>Microsoft Dynamics 365 for Field Service is an agent-based service solution that joins service operations, work orders, and schedules in one place. It has smart schedule features that let companies provide service timely, operate efficiently, and make the customer experience better.</p>
+                <div className="text-center">
                   <Link
                     href="#exampleModal"
                     data-bs-toggle="modal"
                     className="btn-get-started scrollto">
+                    <span>Try for Free &nbsp;<i className="bi bi-arrow-right"></i></span>
+                  </Link>
+                </div>
+              </div>
+              {/* <div className='m-b-image'>
+                <Image src="/img/bc-mobile-banner.png" alt='bc-mobile-banner' width={1098} height={657} />
+              </div> */}
+            </div>
 
-                    <span>Schedule a Demo</span>
+          </div>
+          <div className='row justify-content-center'>
+            <div className='col-lg-10'>
+              <div className="solution-new-banner-one-imgs">
+                <Image src="/img/field-service-000.png" alt="Field Service" width={916} height={585} className="flot-1" priority />
+              </div>
+            </div>
+          </div>
+        </div>
 
+
+
+        <div className='container cust-pp'>
+          <div className='row'>
+            <div className='col-lg-12'>
+              <div className='flecx'>
+                <div className='left-fl'>
+                  <p>Dynamics Square helps small and medium businesses streamline field operations, improve service delivery, and achieve measurable results with the AI-powered Dynamics 365 Field Service CRM.</p>
+                </div>
+                <div className='left-rl'>
+                  <Image src="/img/partner-logo-black.png" width={193} height={55} alt="partner-logo-black" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div className='container' id='section1'>
+          <div className='row'>
+            <div className='col-lg-6'>
+              <div className='solution-new-banner-sub-head'>
+                <h2>What is Dynamics 365 Field Service?</h2>
+                <p>Service-based firms deploy Microsoft Dynamics 365 Field Service because it serves as an intelligent service management solution. The platform integrates service operations, technicians, and customer interactions on a single centralised platform which helps firms deliver a better service experience to customers. </p>
+                <p>As this agentic service solution employs AI, automation, IoT, and real-time data, it helps your workforce to handle work orders, improve schedules, and provide reliable, convenient, and efficient service without sweating it out.</p>
+                <p>Designed on a flexible, cloud-based platform, Dynamics 365 Field Service can adapt to different service models and industries. Firms can set up this CRM as per their operational goals and resource availability.</p>
+                <p><b>In short, Dynamics 365 Field Service is:</b></p>
+                <ul className='banner-sub-head-list'>
+                  <li><i className="bi bi-check2"></i> A connected platform for work orders, scheduling, and service delivery</li>
+                  <li><i className="bi bi-check2"></i> An agentic solution powered by Copilot and intelligent scheduling</li>
+                  <li><i className="bi bi-check2"></i> A scalable platform designed for modern, field-based service teams</li>
+                </ul>
+                <p>Ready to improve service delivery with a connected and intelligent solution?</p>
+                <div className="text-lg-start">
+                  <Link
+                    href="#exampleModal"
+                    data-bs-toggle="modal"
+                    className="btn-get-started scrollto">
+                    <span>Book Your Free Dynamics 365 Field Service Demo  &nbsp;<i className="bi bi-arrow-right"></i></span>
+                  </Link>
+
+
+                </div>
+              </div>
+            </div>
+            <div className='col-lg-6'>
+              <div className='dsa-minee'><Image src="/img/field-service-001.png" alt="What is Dynamics 365 Field Service" width={630} height={540} /></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <NavBar />
+      <section id='section2' className="solution-new-banner-two">
+        <div className='container'>
+          <div className='row'>
+            <div className='col-lg-6'>
+              <div className='solution-new-banner-sub-head'>
+                <h2>Business Challenges Solved by Dynamics 365 Field Service</h2>
+                <p>Dynamics 365 Field Service capabilities can resolve common/specific challenges encountered by service-based firms in various industries. Mentioned below are some of the most frequent challenges: </p>
+                <ul className='banner-sub-head-list'>
+                  <li><i className="bi bi-check2"></i> Manual scheduling with constant adjustments throughout the day</li>
+                  <li><i className="bi bi-check2"></i> Limited visibility into appointments, technician availability, and service status</li>
+                  <li><i className="bi bi-check2"></i> Inefficient routing that increases travel time and delays service delivery</li>
+                  <li><i className="bi bi-check2"></i> Delayed response to changing conditions such as cancellations or traffic</li>
+                  <li><i className="bi bi-check2"></i> Technicians wasting time searching manuals or lacking relevant information</li>
+                  <li><i className="bi bi-check2"></i> No sync in data across work orders, inventory, and financial systems</li>
+                  <li><i className="bi bi-check2"></i> Restricted ability to anticipate issues without connected devices and insights</li>
+                  <li><i className="bi bi-check2"></i> High administrative effort for dispatchers managing intricate schedules</li>
+                  <li><i className="bi bi-check2"></i> Unreliable service delivery across teams and service locations</li>
+                </ul>
+
+              </div>
+
+            </div>
+            <div className='col-lg-6'>
+              <div className='product-side-001'>
+                <div className="flot-8" style={{ textAlign: 'center' }}>
+                  <Image src="/img/field-service-002.png" width={630} height={256} alt="New Solution" />
+                </div>
+                <p style={{ paddingTop: '30px' }}>Microsoft Dynamics 365 for field service management is an agentic service solution that helps service teams optimise operations, respond faster to changes, and deliver reliable, high-quality service.</p>
+                <p>No matter the goal is to improve existing service processes or scale operations, <a className='u-i' href="/products/microsoft-dynamics-crm/">Dynamics 365 CRM</a> supports efficient service delivery with greater visibility and control.</p>
+                <div className="text-lg-start">
+                  <Link
+                    href="#exampleModal"
+                    data-bs-toggle="modal"
+                    className="btn-get-started scrollto">
+                    <span>Book Your Free Dynamics 365 Field Service Demo &nbsp;<i className="bi bi-arrow-right"></i></span>
                   </Link>
                 </div>
               </div>
             </div>
-            <div className="col-lg-6 align-self-center">
-              <Image
-                src="/img/FieldServicebanner.png"
-                alt="Dynamics 365 Field Service"
-                width={771}
-                height={478}
-                priority = {true}
-              />
-            </div>
           </div>
         </div>
       </section>
-      <section>
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-9">
-              <header className="section-header">
-                <h2>
-                  What is dynamics 365
-                  <br />
-                  Field Service?
-                </h2>
-                <p>
-                  Stimulate your field services, improve your customer
-                  engagement, and encourage your workforce collaboration by
-                  enabling them with the right information at right time.
-                  Empower your field executives with real-time data insights and
-                  enable them to make instant decisions to drive improved
-                  customer experience impacting your overall scalable growth.
-                  Here are the key capabilities of Dynamics 365 Field Service:
-                </p>
-              </header>
-            </div>
-          </div>
-
-          <div className="row p-lg-6">
-            <div className="col-lg-6">
-              <div className="finace-acc">
-                <div className="accordion" id="accnew">
-                  <div className="accordion-item">
-                    <h3 className="accordion-header" id="headingTwo">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#fin1"
-                        aria-expanded="false"
-                        aria-controls="fin1"
-                      >
-                        <div className="wr-in">
-                          <img
-                            src="/img/icons_customer-resolution.svg"
-                            alt="icons"
-                            width="36"
-                            height="36"
-                          />
-                        </div>
-                        <span>Streamline Customer Resolution</span>
-                      </button>
-                    </h3>
-                    <div
-                      id="fin1"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingTwo"
-                      data-bs-parent="#accnew"
-                    >
-                      <div className="accordion-body">
-                        Identify your customer requirement and provide instant
-                        technician support at the customer location. Empower
-                        your field executives to complete more service calls and
-                        fix more customer issues.
-                      </div>
-                    </div>
-                  </div>
-                  <hr />
-                  <div className="accordion-item">
-                    <h3 className="accordion-header" id="headingTwo">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#fin2"
-                        aria-expanded="false"
-                        aria-controls="fin2"
-                      >
-                        <div className="wr-in">
-                          <img
-                            src="/img/icons_resource-scheduling.svg"
-                            alt="icons"
-                            width="36"
-                            height="36"
-                          />
-                        </div>
-                        <span>Optimize Resource Scheduling</span>
-                      </button>
-                    </h3>
-                    <div
-                      id="fin2"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingTwo"
-                      data-bs-parent="#accnew"
-                    >
-                      <div className="accordion-body">
-                        Schedule visits suited to customer convenience and
-                        assign right task to the right technician. Enable your
-                        field executives to stay updated with schedule changes
-                        to efficiently navigate through.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-6">
-              <div className="finace-acc">
-                <hr className="mob-disp" />
-                <div className="accordion" id="accnews">
-                  <div className="accordion-item">
-                    <h3 className="accordion-header">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#cns3"
-                        aria-expanded="false"
-                        aria-controls="cns3"
-                      >
-                        <div className="wr-in">
-                          <img
-                            src="/img/icons_seamless-integration.svg"
-                            alt="icons"
-                            width="36"
-                            height="36"
-                          />
-                        </div>
-                        <span>Seamless Integration</span>
-                      </button>
-                    </h3>
-                    <div
-                      id="cns3"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingTwo"
-                      data-bs-parent="#accnews"
-                    >
-                      <div className="accordion-body">
-                        Addressing your specific business needs, you can
-                        integrate your Dynamics 365 Field Service with any of
-                        Microsoft's products or services to enrich your
-                        capabilities and maximize efficiency.
-                      </div>
-                    </div>
-                  </div>
-                  <hr />
-                  <div className="accordion-item">
-                    <h3 className="accordion-header">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#cns4"
-                        aria-expanded="false"
-                        aria-controls="cns4"
-                      >
-                        <div className="wr-in">
-                          <img
-                            src="/img/icons_real-time-insight.svg"
-                            alt="icons"
-                            width="36"
-                            height="36"
-                          />
-                        </div>
-                        <span>Real-Time Insights</span>
-                      </button>
-                    </h3>
-                    <div
-                      id="cns4"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingTwo"
-                      data-bs-parent="#accnews"
-                    >
-                      <div className="accordion-body">
-                        Empower your field technicians with actual and real-time
-                        information about customer issues, customer schedules,
-                        and routes as well as enable them to update customers
-                        with the status of the service calls.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="Solution-business-why">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-5 m--t align-self-center">
-              <div className="wy-sultion-left-head">
-                <h2>Microsoft Dynamics 365 Field Service Features</h2>
-                <h3>
-                  How Dynamics 365 Field Service Helps to Boost Your Field
-                  Service Performance
-                </h3>
-              </div>
-              <div className="m-o-t m-o-t-b">
-                {/* <Link href="#about" className="btn-get-started scrollto">
-                  <span>Know More</span>
-                </Link> */}
-              </div>
-              {/* <div className="downlad_guid">
-                        <Link href="#">
-                        <span>Download Microsoft Guide</span>
-                        </Link>
-                     </div> */}
-            </div>
-            <div className="col-lg-7">
-              <div className="row gx-4">
-                <div className="col-lg-6">
-                  <div className="why-solution-wrapper">
-                    <div className="why-solution-wrapper-inner">
-                      <h3>
-                        Create & Manage <br />
-                        Work Orders
-                      </h3>
-                      <div className="overlay">
-                        <p>
-                          Create and manage orders at customer locations.
-                          Identify their requirement and instantly support them
-                          by leveraging real-time customer data and updates.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="why-solution-wrapper-inner">
-                      <h3>
-                        Automate <br />
-                        Resource Scheduling
-                      </h3>
-                      <div className="overlay">
-                        <p>
-                          Manage resources and required equipment to fulfill
-                          customer service, get notified for on-site
-                          appointments, and manage service scheduling.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-6 top-m">
-                  <div className="why-solution-wrapper">
-                    <div className="why-solution-wrapper-inner">
-                      <h3>
-                        Connected <br />
-                        Field Service
-                      </h3>
-                      <div className="overlay">
-                        <p>
-                          Drive improved connected field service experience by
-                          enabling collaboration between field service
-                          technicians, customers, and stakeholders.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="why-solution-wrapper-inner">
-                      <h3>
-                        Key Reporting
-                        <br /> & Analytics
-                      </h3>
-                      <div className="overlay">
-                        <p>
-                          With AI-enabled insights and key customer data, access
-                          and manage work orders, scheduling activities, and
-                          drive engagement with customers.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="busnes-upgrade-serve-one">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-9">
-              <header className="section-header">
-                <h2>Dynamics 365 Field Service</h2>
-                <p>Enhance your field service experience and strengthen communication between executives through D365 Field Service implementation.</p>
-              </header>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-lg-3 d-flex">
-              <div className="upgrade-box-one d-flex-fil">
-                <Image src="/img/settings_b.png" alt="settings_b" width={48} height={48} />
-                <h3>Implementation</h3>
-                <p>Empower your field executives and improve field service experience by implementing D365 Field Service.</p>
-                <a href="/dynamics-365-field-service-implementation/">Get Started <i className="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-            <div className="col-lg-3 d-flex">
-              <div className="upgrade-box-one d-flex-fil">
-                <Image src="/img/outbound.png" alt="outbound" width={48} height={48} />
-                <h3>Upgrade</h3>
-                <p>Drive continuity in your processes and ensure continuous growth through our optimal support services.</p>
-                <a href="#exampleModal" data-bs-toggle="modal">Get Started <i className="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-
-            <div className="col-lg-3 d-flex">
-              <div className="upgrade-box-one d-flex-fil">
-                <Image src="/img/person_pin.png" alt="person_pin" width={48} height={48} />
-                <h3>Support</h3>
-                <p>Accelerate your processes by upgrading your current system capabilities with D365 Field Service.</p>
-                <a href="#exampleModal" data-bs-toggle="modal">Get Started <i className="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-
-            <div className="col-lg-3 d-flex">
-              <div className="upgrade-box-one d-flex-fil">
-                <img className="image-backx" src="/img/free-cons.png" alt="free-cons" />
-                <Image src="/img/forum.png" alt="forum" width={48} height={48} />
-                <h3>Consulting</h3>
-                <p>Get optimum D365 field service suited to your customised business needs.</p>
-                <a href="#exampleModal" data-bs-toggle="modal">Get Started <i className="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* <section className="busine_service_bottom">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-6 align-self-center">
-              <div className="busine_service_bottom-left">
-                <div className="busine_service_bottom-right">
-                  <Image
-                    src="/img/Fieldservicesidebanner2.png"
-                    className="fix-im"
-                    alt="Dynamics 365 Field Service"
-                    width={557}
-                    height={543}
-                  />
-                  <div className="video-ytube video-ytubes">
-                    <div className="popup-btn popup-btns">
-                      <Link href="#javascript:void(0)">
-                        <a onClick={() => setOpen(true)}>
-                          <img
-                            src="/img/Video-Field-Service.png"
-                            alt="Fieldservideo"
-                          />
-                          <span className="cente-icns">
-                            <img src="/img/play_icons.svg" alt="play_icons" />
-                          </span>
-                        </a>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6 align-self-center">
-              <div className="side-heading">
-                <h2>Dynamics 365 Field Service</h2>
-                <p>
-                  Enhance your field service experience and strengthen
-                  communication between executives through D365 Field Service
-                  implementation.
-                </p>
-              </div>
-              <div className="busine_service_bottom-right">
-                <div className="card_new_img">
-                  <img
-                    src="/img/Business-Central-Implementation-icons.svg"
-                    alt="Business-Central-Implementation-icons"
-                    width="64" height="64"
-                  />
-                </div>
-                <div className="card_new_content">
-                  <h3>Implementation</h3>
-                  <p>
-                    Empower your field executives and improve field service
-                    experience by implementing D365 Field Service.
-                  </p>
-                  <div className="action-content">
-                    <Link href="/dynamics-365-field-service-implementation/">
-                    <a target="_blank">Get Started</a>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-              <div className="busine_service_bottom-right">
-                <div className="card_new_img">
-                  <img
-                    src="/img/Business Central Upgrade-icons.svg"
-                    alt="Business Central Upgrade-icons"
-                    width="64" height="64"
-                  />
-                </div>
-                <div className="card_new_content">
-                  <h3>Upgrade</h3>
-                  <p>
-                    Drive continuity in your processes and ensure continuous
-                    growth through our optimal support services.
-                  </p>
-                  <div className="action-content">
-                    <Link data-bs-toggle="modal" href="#exampleModal">
-                      Get Started
-                    </Link>
-                  </div>
-                </div>
-              </div>
-              <div className="busine_service_bottom-right">
-                <div className="card_new_img">
-                  <img
-                    src="/img/Business-Central-Support-icons.svg"
-                    alt="Business-Central-Support-icons"
-                    width="64" height="64"
-                  />
-                </div>
-                <div className="card_new_content">
-                  <h3>Support</h3>
-                  <p>
-                    Accelerate your processes by upgrading your current system
-                    capabilities with D365 Field Service.
-                  </p>
-                  <div className="action-content">
-                    <Link data-bs-toggle="modal" href="#exampleModal">
-                      Get Started
+      <section className='solution-new-cta'>
+        <div className='asd asd5'>
+          <div className='container'>
+            <div className='row'>
+              <div className='col-lg-7'>
+                <div className='solution-new-cta-001'>
+                  <h3>Optimise Your Service Operations with AI-Driven Intelligent Solution</h3>
+                  <p>Adopt an intelligent CRM to improve service efficiency and response times.</p>
+                  <div>
+                    <Link href="#exampleModal"
+                      data-bs-toggle="modal" className="btn-get-started scrollto">
+                      <span>Book Your Free Demo &nbsp;<i className="bi bi-arrow-right"></i></span>
                     </Link>
                   </div>
                 </div>
@@ -506,557 +208,386 @@ const FieldService = () => {
             </div>
           </div>
         </div>
-      </section> */}
-      <section style={{paddingBottom:'0px'}}>
-       <div className="container">
-         <div className="row justify-content-center">
-           <div className="col-lg-9">
-           <header className="section-header">
-           <h2>Copilot in Dynamics 365 Field Service</h2>
-           <p>Copilot in Dynamics 365 Field Service is your helpful assistant, simplifying complex tasks and making field service operations smoother. With AI-driven suggestions and automation, it empowers teams to work smarter, not harder and deliver exceptional service every day.</p>
-         </header>
-           </div>
-         </div>
-         <div className="row">
-           <div className="col-lg-6">
-             <div className="style-grid-1 style-grid-09">
-               <div className="style-grid-icons">
-                   <div className="grid-i-tick">
-                     <i className="bi bi-check2"></i>
-                   </div>
-               </div>
-               <div className="style-grid-content">
-                 <h3>Proactive Work Order Suggestions</h3>
-                 <p>Copilot analyses patterns and customer history to recommend the next best actions for work orders, ensuring your team is always one step ahead.</p>
-               </div>
-             </div>
-             <div className="style-grid-1 style-grid-09">
-               <div className="style-grid-icons">
-                   <div className="grid-i-tick">
-                     <i className="bi bi-check2"></i>
-                   </div>
-               </div>
-               <div className="style-grid-content">
-                 <h3>Intelligent Scheduling Assistance</h3>
-                 <p>It helps schedule the right technician with the right skills at the right time, balancing workloads efficiently while keeping customer satisfaction high.</p>
-               </div>
-             </div>
-           </div>
-           <div className="col-lg-6">
-             <div className="style-grid-1 style-grid-09">
-               <div className="style-grid-icons">
-                   <div className="grid-i-tick">
-                     <i className="bi bi-check2"></i>
-                   </div>
-               </div>
-               <div className="style-grid-content">
-                 <h3>Automated Report Generation</h3>
-                 <p>Creating reports is hassle-free with Copilot. It quickly summarises field data into clear, professional reports, giving your team more time to focus on service.</p>
-               </div>
-             </div>
-             <div className="style-grid-1 style-grid-09">
-               <div className="style-grid-icons">
-                   <div className="grid-i-tick">
-                     <i className="bi bi-check2"></i>
-                   </div>
-               </div>
-               <div className="style-grid-content">
-                 <h3>On-the-Go Knowledge Sharing</h3>
-                 <p>Technicians can access AI-curated knowledge articles directly in the field, making troubleshooting faster and reducing downtime for customers.</p>
-               </div>
-             </div>
-           </div>
-         </div>
-       </div>
-     </section>
-      <section id="pricing" className="pricing">
+
+      </section>
+
+      <section id='section3' className='solution-new-banner-three'>
+        {/* <div className="container" ref={containerRef}> */}
         <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-9">
-              <header className="section-header">
+          <div className='row'>
+            <div className='col-lg-9'>
+              <div className='solution-new-banner-sub-head'>
+                <h2>Inside Dynamics 365 Field Service: What Powers Your Service Operations</h2>
+                <p>Dynamics 365 Field Service capabilities help UK-based service-oriented firms run and manage operations with higher levels of efficiency, visibility, and control. Now, get rid of manual scheduling effort, respond faster to service needs, and improve service outcomes with AI, Copilot, and intelligent optimisation.</p>
+                <p><b>Here is how this agentic service solution supports service teams:</b></p>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-12">
+              <div className="stached-scroll-card">
+                <div className='mycard'>
+                  <div className='mycard__inner'>
+                    <div className='mycard__inner-left'>
+                      <h3>Intelligent Scheduling and Dispatch Optimisation</h3>
+                      <p>Manual scheduling requires constant adjustments and effort throughout the day. With Dynamics 365 Field Service features, teams can:</p>
+                      <ul>
+                        <li>Optimise technicians' tasks with AI-driven scheduling features </li>
+                        <li>Update schedules quickly as conditions change, including delays or cancellations</li>
+                        <li>Minimise travel time while considering priorities and availability</li>
+                      </ul>
+                    </div>
+                    <div className='mycard__inner-right'>
+                      <Image src="/img/field-service-003.png" width={510} height={424} alt="Intelligent Scheduling and Dispatch Optimisation" />
+                    </div>
+                  </div>
+                </div>
+                <div className='mycard'>
+                  <div className='mycard__inner'>
+                    <div className='mycard__inner-left'>
+                      <h3>Connected Work Order and Service Management</h3>
+                      <p>Disconnected processes limit visibility across service operations. Dynamics 365 Field Service helps teams to:</p>
+                      <ul>
+                        <li>Manage work orders and service activities in one system</li>
+                        <li>Gain real-time visibility into appointments and service status</li>
+                        <li>Access scheduling and service information through a unified interface</li>
+                      </ul>
+                    </div>
+                    <div className='mycard__inner-right'>
+                      <Image src="/img/field-service-004.png" width={510} height={424} alt="Connected Work Order and Service Management" />
+                    </div>
+                  </div>
+                </div>
+                <div className='mycard'>
+                  <div className='mycard__inner'>
+                    <div className='mycard__inner-left'>
+                      <h3>AI-Assisted Technician Productivity</h3>
+                      <p>Technicians get AI assistance during service tasks. With Dynamics 365 Field Service, teams can:</p>
+                      <ul>
+                        <li>Use Copilot to get relevant product-related information/answers quickly</li>
+                        <li>Access key work order details directly within Microsoft Teams</li>
+                        <li>Stay focused on tasks without switching between tools</li>
+                      </ul>
+                    </div>
+                    <div className='mycard__inner-right'>
+                      <Image src="/img/field-service-005.png" width={510} height={424} alt="AI-Assisted Technician Productivity" />
+                    </div>
+                  </div>
+                </div>
+                <div className='mycard'>
+                  <div className='mycard__inner'>
+                    <div className='mycard__inner-left'>
+                      <h3>Service Insights with Connected Data</h3>
+                      <p>Limited visibility into service data slows decision-making. With Dynamics 365 Field Service, organisations can:</p>
+                      <ul>
+                        <li>Use IoT and service data to improve operational awareness</li>
+                        <li>Gain insights through AI-driven summaries and responses</li>
+                        <li>Track service performance with connected data across systems</li>
+                      </ul>
+                    </div>
+                    <div className='mycard__inner-right'>
+                      <Image src="/img/field-service-006.png" width={510} height={424} alt="Service Insights with Connected Data" />
+                    </div>
+                  </div>
+                </div>
+                <div className='mycard'>
+                  <div className='mycard__inner'>
+                    <div className='mycard__inner-left'>
+                      <h3>Integrated Operations with Business Applications</h3>
+                      <p>When systems operate in isolation, it reduces efficiency and control. Field Service in Dynamics 365 integrates with:</p>
+                      <ul>
+                        <li><a className='u-i' href="/products/dynamics-365-business-central/">Dynamics 365 Business Central</a> to unify financial and inventory data</li>
+                        <li>Microsoft Teams and Outlook to streamline communication</li>
+                        <li>Connected applications to support end-to-end service operations</li>
+                      </ul>
+                    </div>
+                    <div className='mycard__inner-right'>
+                      <Image src="/img/field-service-007.png" width={510} height={424} alt="Integrated Operations with Business Applications" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className='solution-new-banner-four'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-lg-9'>
+              <div className='solution-new-banner-sub-head'>
+                <h2>Dynamics 365 Field Service Benefits: The Advantage Emerging Service Firms Need</h2>
+                <p>Efficient service organisations share a common trait. They run service operations on systems that decrease manual effort, adapt to change, and support timely service delivery. Dynamics 365 Field Service provides visibility, optimisation, and control as an agentic service solution built for growing service teams.</p>
+              </div>
+            </div>
+          </div>
+          <div className='row'>
+            <div className='col-lg-6'>
+              <div className='product-side-002'>
+                <ul>
+                  <li>
+                    <h3>Deliver Timely Service with Optimised Scheduling</h3>
+                    <p>Service delays become a norm in your operations when you manage schedules manually. Dynamics 365 Field Service with AI-driven scheduling and optimisation helps dispatchers choose the right technician, minimise travel time, and respond to changing conditions.</p>
+                  </li>
+                  <li>
+                    <h3>Improve Visibility into Appointments and Service Activity</h3>
+                    <p>Limited visibility makes it difficult to manage daily service operations. With real-time appointment tracking and connected scheduling data, Dynamics 365 Field Service helps teams stay informed and maintain control.</p>
+                  </li>
+                  <li>
+                    <h3>Increase Technician Productivity with AI Assistance</h3>
+                    <p>Technicians can't waste time searching for information during service tasks. <a className='u-i' href="/products/dynamics-365-copilot/">Copilot in Dynamics 365 Field Service</a> let's them find relevant answers from manuals, access work order details, and complete tasks more efficiently within their workflow.</p>
+                  </li>
+                  <li>
+                    <h3>Support Better Customer Communication and Feedback</h3>
+                    <p>Customers feel valued when they are informed. Dynamics 365 Field Service has self-service scheduling, automated communication, and post-service surveys to keep customers informed and engaged.</p>
+                  </li>
+                  <li>
+                    <h3>Adjust Operations as Conditions Change</h3>
+                    <p>Service environments change throughout the day. Dynamics 365 Field Service helps dispatchers update schedules, manage priorities, and maintain service commitments using intelligent scheduling optimisation.</p>
+                  </li>
+                </ul>
+                <div className='product-side-002-ext'>
+                  <p style={{ fontSize: '16px' }}>Organisations using Dynamics 365 Field Service improve scheduling efficiency, reduce delays, and respond more effectively to service changes.</p>
+                  <div className="text-lg-start">
+                    <Link
+                      href="#exampleModal"
+                      data-bs-toggle="modal"
+                      className="btn-get-started scrollto">
+                      <span>Claim Your Free Dynamics 365 Field Service Consultation &nbsp;<i className="bi bi-arrow-right"></i></span>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className='col-lg-6 align-self-center'>
+              <div className='product-side-002-img001'>
+                <Image src="/img/field-service-008.png" width={592} height={680} alt="Card 6" />
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id='section4' className='solution-new-banner-four new-bg-00 new-bg-001'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-lg-5 align-self-end'>
+              <div className='product-side-002-im'>
+                <Image src="/img/group-3602s1.png" width={485} height={627} alt="Card 6" />
+
+              </div>
+            </div>
+            <div className='col-lg-7'>
+              <div className='row'>
+                <div className='col-lg-12'>
+                  <div className='solution-new-banner-sub-head new-bg-00-1'>
+                    <h2>Agents in Dynamics 365 Field Service</h2>
+                    <p><b>AI-Driven Scheduling and Assistance for Service Operations</b></p>
+                    <p>Dynamics 365 Field Service has AI capabilities which help with scheduling optimisation and work order management. These capabilities let dispatchers and technicians reduce manual effort, respond to changes, and work more efficiently with real-time data and natural language interaction. </p>
+                  </div>
+                </div>
+              </div>
+              <div className='row g-3'>
+                <div className='product-side-002 product-side-0022'>
+                  <ul>
+                    <li>
+                      <h3>Scheduling Operations Agent (Preview)</h3>
+                      <p>The Scheduling Operations Agent empowers dispatchers to optimise technician schedules by considering priorities, travel time, and promised service windows. It helps update schedules right away in response to cancellations, delays, or availability changes, decreasing the need for manual rescheduling.</p>
+                    </li>
+                    <li>
+                      <h3>Copilot Capabilities in Field Service</h3>
+                      <p>Copilot supports service teams with AI-powered assistance across daily workflows. Teams can:</p>
+                      <div className='drd-f'>
+                        <p>•	Ask questions in natural language to access system data and information</p>
+                        <p>•	Generate work order summaries with status, priority, and recommended actions</p>
+                        <p>•	Update work order details using natural language inputs in the mobile app</p>
+                        <p>•	Create inspection templates from uploaded documents and images</p>
+                      </div>
+                    </li>
+                    <li>
+                      <h3>AI-Assisted Work Order Management</h3>
+                      <p>In many service teams, a good amount of time still goes into writing updates, checking past job notes, or calling back and forth for missing information. Copilot in Dynamics 365 Field Service helps reduce that effort. Technicians can pull up job details faster, add service notes while work is happening, and keep work orders updated without stopping to handle paperwork later. <br /><br />For dispatchers and managers, it becomes easier to see what is pending, what has changed, and where delays are building up across service operations.</p>
+                    </li>
+                  </ul>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+      <section id='section8' className='solution-new-pricing'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-lg-9'>
+              <div className='solution-new-banner-sub-head'>
                 <h2>Dynamics 365 Field Service Pricing</h2>
-                <p>
-                  Optimise resources, furnish omni-channel experience, and
-                  empower your executives to provide superior customer
-                  experience through implementing Dynamics 365 Field Service.
-                </p>
-              </header>
+                <p>Choose a Microsoft Dynamics 365 Field Service pricing plan that aligns with your service operations, workforce model, and scheduling needs. Each option supports AI-driven service management, intelligent scheduling, and connected service delivery.</p>
+              </div>
             </div>
           </div>
 
-          <div className="row gy-4 p-9 justify-content-center">
-            <div className="col-lg-4 d-flex">
-              <div className="box box-22">
-                <h3>
-                  Dynamics 365 Field Service 
-                  <br />
-                  Free Trial
-                </h3>
-                <div className="price">
-                  £0<span></span>
-                </div>
-                <ul>
-                  <li className="">
-                  Deliver exceptional, proactive service that resolves customer issues the first time
-                  </li>
-                </ul>
-                <Link href="#exampleModal" data-bs-toggle="modal" className="btn btn-get-ress">
-
-                  <span>Try For Free</span>
-
-                </Link>
-              </div>
-            </div>
-            <div className="col-lg-4 d-flex">
-              <div className="box box-22">
+          <div className='row g-3'>
+            <div className='col-lg-6 d-flex'>
+              <div className='solution-new-pricing-card col-ff3'>
                 <h3>Dynamics 365 Field Service</h3>
-                <div className="price">
-                  £80.70<span>user/month, paid yearly</span>
-                </div>
-                <ul>
-                  <li className="text-center">
-                    Resolve service issues the first time, every time.
-                  </li>
-                </ul>
+                <p>Dynamics 365 Field Service provides comprehensive service management capabilities, including work order management, intelligent scheduling, and AI-powered assistance for technicians and dispatchers. It is designed for organisations managing end-to-end service operations.</p>
+                 <h4>£80.70<span> per user per month, paid yearly</span></h4>
+                <p className='disclm'>*Price excludes VAT</p>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6 d-flex">
-              <div className="box box-22">
+            <div className='col-lg-6 d-flex'>
+              <div className='solution-new-pricing-card'>
                 <h3>Dynamics 365 Field Service Contractor</h3>
-                <div className="price">
-                  £38.40<span>user/month, paid yearly</span>
-                </div>
-                <ul>
-                  <li className="text-center">
-                   Assign and manage external frontline technicians.
-                  </li>
-                </ul>
+                <p>Dynamics 365 Field Service Contractor supports organisations that need to manage and assign external or third-party technicians efficiently. This Dynamics 365 Field Service license enables coordination with contract-based service resources while maintaining visibility and control.</p>
+                <h4>£38.40<span> per user per month, paid yearly</span></h4>
+                <a href="#exampleModal" data-bs-toggle="modal" className="btn-dd-t btn-get-started" >Contact us</a>
+                <p className='disclm'>*Price excludes VAT</p>
               </div>
             </div>
-
-            <div className="col-lg-12 col-md-12">
-              <div className="price-btn price-btnasd d-flex justify-content-center">
-                <Link href="#exampleModal" data-bs-toggle="modal" className="btn-get-red">
-
-                  <span>Get Started Now</span>
-
-                </Link>
+            
+          </div>
+        </div>
+      </section>
+     <section className='solution-new-banner-six'>
+        <div className='container'>
+          <div className='row g-5'>
+            <div className='col-lg-12 align-self-center'>
+              <div className='product-side-002-content'>
+                <div className='solution-new-banner-sub-head' style={{ paddingBottom: '0px' }}>
+                  <h2>What Dynamics 365 Field Service Services Do We Offer?</h2>
+                  <p>Dynamics Square helps organisations strengthen service operations with Microsoft Dynamics 365 Field Service. As a Microsoft Solutions Partner in the UK, we help teams simplify scheduling, connect field and office operations, and reduce the gaps that slow service delivery. </p>
+                </div>
               </div>
+            </div>
+          </div>
+          <div className='row g-4 p-top-5'>
+            <div className='col-lg-3 col-md-4 col-sm-6 d-flex'>
+              <a href="/dynamics-365-field-service-implementation/" className="serv-card-666 serv-card-666-1">
+                <div className='serv-card-666-flex'>
+                  <div className="serv-card-icon-666">
+                    <Image src="/img/field-service-010.png" alt="Implementation" width="40" height="40" />
+                  </div>
+                  <h3 className="serv-card-title-666">Implementation</h3>
+                </div>
+                <p className="serv-card-text-666">Deliver a structured Dynamics 365 Field Service implementation aligned with your service workflows, scheduling needs, and resource planning. Our approach focuses on correct setup of work orders, scheduling logic, and technician processes to support daily service operations.</p>
+                <div className="serv-card-footer-666">
+                  <span className="serv-card-btn-666">Get Started</span>
+                  <span className="serv-card-arrow-666"><i className="bi bi-arrow-right"></i></span>
+                </div>
+
+              </a>
+            </div>
+
+            <div className='col-lg-3 col-md-4 col-sm-6 d-flex'>
+              <a href="/our-services/dynamics-365-upgrade-services/" className="serv-card-666 serv-card-666-1">
+                <div className='serv-card-666-flex'>
+                  <div className="serv-card-icon-666">
+                    <Image src="/img/field-service-011.png" alt="Upgrade and Migration" width="40" height="40" />
+                  </div>
+                  <h3 className="serv-card-title-666">Upgrade and Migration</h3>
+                </div>
+                <p className="serv-card-text-666">Move from legacy service systems to Dynamics 365 Field Service with clarity and control. We manage data migration, scheduling alignment, and system transition to ensure your teams can operate effectively from day one.</p>
+                <div className="serv-card-footer-666">
+                  <span className="serv-card-btn-666">Get Started</span>
+                  <span className="serv-card-arrow-666"><i className="bi bi-arrow-right"></i></span>
+                </div>
+              </a>
+            </div>
+             <div className='col-lg-3 col-md-4 col-sm-6 d-flex'>
+              <a href="/our-services/dynamics-365-support-services/" className="serv-card-666 serv-card-666-1">
+                <div className='serv-card-666-flex'>
+                  <div className="serv-card-icon-666">
+                    <Image src="/img/field-service-012.png" alt="Support" width="40" height="40" />
+                  </div>
+                  <h3 className="serv-card-title-666">Support</h3>
+                </div>
+                <p className="serv-card-text-666">Keep your field service system up and running with our Dynamics 365 Field Service support. Our team resolves issues, manages updates, and ensures schedules, work orders, and service processes continue without disruption.</p>
+                <div className="serv-card-footer-666">
+                  <span className="serv-card-btn-666">Get Started</span>
+                  <span className="serv-card-arrow-666"><i className="bi bi-arrow-right"></i></span>
+                </div>
+              </a>
+            </div>
+            <div className='col-lg-3 col-md-4 col-sm-6 d-flex'>
+              <a href="/our-services/dynamics-365-consultant/" className="serv-card-666 serv-card-666-1">
+                <div className='serv-card-666-flex'>
+                  <div className="serv-card-icon-666">
+                    <Image src="/img/field-service-013.png" alt="Consulting" width="40" height="40" />
+                  </div>
+                  <h3 className="serv-card-title-666">Consulting</h3>
+                </div>
+                <p className="serv-card-text-666">Get proven guidance on improving operational efficiency, technician productivity, and service visibility. Our certified consultants help you use Copilot, scheduling capabilities, and service insights in line with your operational goals.</p>
+                <div className="serv-card-footer-666">
+                  <span className="serv-card-btn-666">Get Started</span>
+                  <span className="serv-card-arrow-666"><i className="bi bi-arrow-right"></i></span>
+                </div>
+              </a>
             </div>
           </div>
         </div>
       </section>
-      <section className="call-to-action-center hero-4">
+
+      <section className="solution-faq faq solution-faq-r">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-lg-8">
-              <div className="call-to-action-content">
-                <h3>Maximize your business potentials</h3>
-                <p>
-                  Drive new business challenges by implementing Dynamics 365
-                  Field Service
-                </p>
-                <div className="text-center m-o-t new-btn-nn">
-                  <Link
-                    href="#exampleModal"
-                    data-bs-toggle="modal"
-                    className="btn-get-started scrollto">
-
-                    <span>Get Started Now</span>
-                  </Link>
-                </div>
+            <div className="col-lg-9 ">
+              <div className="solution-new-banner-sub-head text-center">
+                <h2>Have you got
+                  questions about Microsoft Dynamics 365 Field Service?</h2>
+                <p>Click through to our FAQ for the best answers!</p>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section className="solution-faq faq">
-        <div className="container">
-          <header className="section-header">
-            <h2>
-              Have you got
-              <br />
-              questions about Field Service?
-            </h2>
-            <p>Click through to our FAQ for the best answers!</p>
-          </header>
+
+
           <div className="row justify-content-center mar-top-7">
             <div className="col-lg-8">
               <div className="accordion accordion-flush" id="faqlist1">
-                <div className="accordion-item">
-                  <h3 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-content-1"
+                {faqData.slice(0, visibleCount).map((faq) => (
+                  <div className="accordion-item" key={faq.id}>
+                    <h3 className="accordion-header">
+                      <button
+                        className="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target={`#faq-content-${faq.id}`}
+                      >
+                        {faq.question}
+                      </button>
+                    </h3>
+                    <div
+                      id={`faq-content-${faq.id}`}
+                      className="accordion-collapse collapse"
+                      data-bs-parent="#faqlist1"
                     >
-                      What are the standard features of Microsoft Field Service?
-                    </button>
-                  </h3>
-                  <div
-                    id="faq-content-1"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#faqlist1"
-                  >
-                    <div className="accordion-body">
-                      Microsoft Dynamics 365 Field Service is designed to manage
-                      your end-to-end field service practices while saving time,
-                      cost, and efforts. It helps to improve and deliver onsite
-                      services to your customers to their locations. It empowers
-                      your field executives to work collaboratively leveraging
-                      onsite experience to fix customer issues in a seamless
-                      manner.
-                      <br />
-                      <br />
-                      <b>
-                        Here are the features involved in Microsoft Field
-                        Service:
-                      </b>
-                      <br />
-                      <ul>
-                        <li>
-                          Create and manage work orders seamlessly at customers’
-                          locations. By making effective use of scheduling and
-                          dispatch tools, manage your resources and equipment to
-                          improve your customer service, and optimise service
-                          schedules.
-                        </li>
-                        <li>
-                          Enhance communication and improve collaboration among
-                          customer service agents, field technicians,
-                          dispatchers, customers, and other stakeholders. Manage
-                          schedule change and service work in real-time.
-                        </li>
-                        <li>
-                          Manage your assets and enable preventive maintenance,
-                          stay updated with customer history and service status.
-                          Connect and engage them to deliver seamless field
-                          service with real-time efficiency.
-                        </li>
-                        <li>
-                          Seamlessly manage your stock levels, purchase order
-                          fulfillment, and product returns. Generate customer
-                          invoices, track resources, and more with Microsoft 365
-                          Field Service Automation.
-                        </li>
-                        <li>
-                          Develop key analytics and reports related to work
-                          order management, customer interactions & engagement,
-                          and other scheduling activities.
-                        </li>
-                      </ul>
+                      <div
+                        className="accordion-body"
+                        dangerouslySetInnerHTML={{ __html: faq.answer }}
+                      />
                     </div>
                   </div>
-                </div>
-                <div className="accordion-item">
-                  <h3 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-content-2"
-                    >
-                      Is Dynamics 365 Field Service available on-premise?
-                    </button>
-                  </h3>
-                  <div
-                    id="faq-content-2"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#faqlist1"
-                  >
-                    <div className="accordion-body">
-                      Yes, Dynamics 365 Field Service is available for
-                      on-premises installations. Users can enjoy both the cloud
-                      and{" "}
-                      <Link href="/microsoft-dynamics-365-cloud-vs-on-premise/" target="_blank">
-                      on-premises
-                      </Link>{" "}
-                      installations according to their specific data-driven
-                      needs and data-privacy concerns.
-                      <br />
-                      <br />
-                      To configure Microsoft Dynamics 365 Field Service
-                      automation for your field workforce, contact Dynamics
-                      Square. Our experts can help in implementing Dynamics 365
-                      Field Service for your on-premises systems.
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <h3 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-content-3"
-                    >
-                      How do I install field services in Dynamics 365?
-                    </button>
-                  </h3>
-                  <div
-                    id="faq-content-3"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#faqlist1"
-                  >
-                    <div className="accordion-body">
-                      Dynamics 365 Field Service can be installed whether for
-                      desktop browser, mobile, or tab devices. The installation
-                      process can take up to 30 minutes.
-                      <br />
-                      <br />
-                      All you need to go through your Microsoft 365 ‘Admin
-                      Center’ then, select ‘Billing’, then click on ‘Purchase
-                      Services’, and then Select Dynamics 365 Field Service to
-                      buy your plan.
-                      <br />
-                      <br />
-                      Once, your installation process gets completed, you will
-                      see your apps will appear on your screen – ‘Field Service’
-                      and ‘Field Service Mobile’.
-                      <br />
-                      <br />
-                      now, configure and set up your app for your frontline
-                      workers so as they can create, schedule, access, and
-                      complete work orders when they are in the field.
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <h3 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-content-4"
-                    >
-                      How Field Service mobile app is beneficial for
-                      enterprises?
-                    </button>
-                  </h3>
-                  <div
-                    id="faq-content-4"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#faqlist1"
-                  >
-                    <div className="accordion-body">
-                      Microsoft Field Service Management solution is designed to
-                      ensure smart scheduling and resource management using
-                      mobile devices while being in the field. Field Service
-                      mobile app empowers field executives or technicians to
-                      seamlessly access the information they need at customer
-                      location so as they can effortlessly and quickly complete
-                      the work orders.
-                      <br />
-                      <br />
-                      D365 Field Service helps your workforce to effectively
-                      communicate and collaborate with other co-workers and
-                      connect, engage, and serve improved experiences to the
-                      customers. Users can leverage this app to ensure work
-                      smarter from work order fulfilment to resource scheduling,
-                      seamless communication & collaboration to asset
-                      management, preventive maintenance to inventory
-                      management, and effortless billing to accurate analytics &
-                      reporting.
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <h3 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-content-5"
-                    >
-                      Can the Field Service Mobile app can be used even when not
-                      connected to the internet?
-                    </button>
-                  </h3>
-                  <div
-                    id="faq-content-5"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#faqlist1"
-                  >
-                    <div className="accordion-body">
-                      Yes, users can use the Field Service app whether online or
-                      offline as this app gets synchronized automatically
-                      whenever the new things or data gets updated or uploaded.
-                      Thus, if you are lacking with internet connection at any
-                      place, you can simply tap the offline option. While
-                      working offline, the information you use gets downloaded
-                      to your device only.
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <h3 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-content-6"
-                    >
-                      How much does it cost to implement a Dynamics 365 Field
-                      Service module?
-                    </button>
-                  </h3>
-                  <div
-                    id="faq-content-6"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#faqlist1"
-                  >
-                    <div className="accordion-body">
-                      Users can buy the Field Service app at £78.10 per user/per
-                      month applicable for First{" "}
-                      <Link href="/products/microsoft-dynamics-365/" target="_blank">
-                      Dynamics 365
-                      </Link>{" "}
-                      app. Further, 'Subsequent Qualifying Dynamics 365 App',
-                      users are required to pay £15.10 per user/per month.
-                      <br />
-                      <br /> To avail of more information for Microsoft Field
-                      Service Management licensing, connect with the experts at
-                      Dynamics Square.
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <h3 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-content-7"
-                    >
-                      What sort of key capabilities can be availed of after
-                      implementing Dynamics 365 Field Service?
-                    </button>
-                  </h3>
-                  <div
-                    id="faq-content-7"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#faqlist1"
-                  >
-                    <div className="accordion-body">
-                      Dynamics 365 Field Service offers a multitude of key capabilities
-                      to improve, automate, and streamline your field service
-                      operations:
-                      <br />
-                      <br />
-                      <ul>
-                        <li>Work Orders</li>
-                        <li>Scheduling &amp; Dispatch Tools</li>
-                        <li>Communication Tools</li>
-                        <li>Easy-to-use Mobile Application</li>
-                        <li>Asset Management</li>
-                        <li>Preventive Maintenance</li>
-                        <li>Inventory, Purchasing, &amp; Return</li>
-                        <li>Billing Management</li>
-                        <li>Time Tracking</li>
-                        <li>Analytics &amp; Reporting</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+                ))}
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="blogs-extra">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-9">
-              <header className="section-header">
-                <h2>Explore Our Recent Blogs & Resources</h2>
-                <p>
-                  Whether you are a start-up, an SMB, or an enterprise, the
-                  Dynamics Square blog is the best place to get inspired and
-                  learn more about Microsoft Business Applications.
-                </p>
-              </header>
+
+              {visibleCount < faqData.length && (
+                <div className="text-center mt-4">
+                  <button className="btn faq-btn-l btn-get-started" onClick={handleLoadMore}>
+                    Load More <i className="bi bi-chevron-down"></i>
+                  </button>
+                </div>
+              )}
             </div>
           </div>
 
-          <div className="row top-2 gx-5">
-            <Blog />
-            <div className="col-lg-6">
-              <div className="blogs-extra-title">
-                <h3>Documents</h3>
-              </div>
-              <div className="blogs-extra-right">
-                <ul>
-                  <li>
-                    <a
-                      target="_blank"
-                      href="/pdf/Remote-Service-Modernise-Your-Operations-with-Mixed-Reality.pdf"
-                    >
-                      <i className="bi bi-file-earmark-pdf"></i>Remote Service
-                      Modernise Your Operations with Mixed Reality
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      target="_blank"
-                      href="/pdf/Transform-your-field-service-with-IoT-AI-and-mixed-reality.pdf"
-                    >
-                      <i className="bi bi-file-earmark-pdf"></i>Transform Your
-                      Field Service With IoT, AI, and Mixed Reality
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      target="_blank"
-                      href="/pdf/Five-ways-to-know-if-connected-field-service-is-right-for-your-business.pdf"
-                    >
-                      <i className="bi bi-file-earmark-pdf"></i>Connected Field
-                      Service is Right for Your Business?
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      target="_blank"
-                      href="/pdf/5-innovative-ways-industry-leaders-modernize-their-field-service.pdf"
-                    >
-                      <i className="bi bi-file-earmark-pdf"></i>Innovative Ways
-                      Industry Leaders Modernize Their Field Service
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      target="_blank"
-                      href="/pdf/5-case-studies-from-manufacturing.pdf"
-                    >
-                      <i className="bi bi-file-earmark-pdf"></i>5 Case Studies
-                      From Manufacturing
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      target="_blank"
-                      href="/pdf/Dynamics_365_Enterprise_edition_Licensing_Guide-1-1.pdf"
-                    >
-                      <i className="bi bi-file-earmark-pdf"></i>Licensing Guide
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div className="blogs-extra-title">
-                        <h4>Learn More</h4>
-                     </div>
-                     <div className="blogs-extra-right">
-                     <ul>
-                           <li><Link
-                             href="/blog/dynamics-365-field-service-7-things-to-know-before-setting-up/"
-                             target="_blank"><i className="bi bi-box-arrow-up-right"></i>Dynamics 365 Field Service: Things To Know Before Setting Up!</Link></li>
-                         
-                        </ul>
-                     </div>
-            </div>
-          </div>
+
+
+
         </div>
       </section>
+
     </>
   );
 };
