@@ -1,51 +1,86 @@
 [
   {
     "id": 1,
+    "question": "What are the standard features of Microsoft Field Service?",
+    "answer": "<p>Microsoft Dynamics 365 Field Service is designed to manage your end-to-end field service practices while saving time, cost, and efforts. It helps to improve and deliver onsite services to your customers to their locations. It empowers your field executives to work collaboratively leveraging onsite experience to fix customer issues in a seamless manner.</p><p><b>Here are the features involved in Microsoft Field Service:</b></p><ul><li>Create and manage work orders seamlessly at customers’ locations. By making effective use of scheduling and dispatch tools, manage your resources and equipment to improve your customer service, and optimise service schedules.</li><li>Enhance communication and improve collaboration among customer service agents, field technicians, dispatchers, customers, and other stakeholders. Manage schedule change and service work in real-time.</li><li>Manage your assets and enable preventive maintenance, stay updated with customer history and service status. Connect and engage them to deliver seamless field service with real-time efficiency.</li><li>Seamlessly manage your stock levels, purchase order fulfillment, and product returns. Generate customer invoices, track resources, and more with Microsoft 365 Field Service Automation.</li><li>Develop key analytics and reports related to work order management, customer interactions &amp; engagement, and other scheduling activities.</li></ul>"
+  },
+  {
+    "id": 2,
+    "question": "Is Dynamics 365 Field Service available on-premise?",
+    "answer": "<p>Yes, Dynamics 365 Field Service is available for on-premises installations. Users can enjoy both the cloud and <a target=\"_blank\" href=\"/microsoft-dynamics-365-cloud-vs-on-premise/\">on-premises</a> installations according to their specific data-driven needs and data-privacy concerns.</p><p>To configure Microsoft Dynamics 365 Field Service automation for your field workforce, contact Dynamics Square. Our experts can help in implementing Dynamics 365 Field Service for your on-premises systems.</p>"
+  },
+  {
+    "id": 3,
+    "question": "How do I install field services in Dynamics 365?",
+    "answer": "<p>Dynamics 365 Field Service can be installed whether for desktop browser, mobile, or tab devices. The installation process can take up to 30 minutes.</p><p>All you need to go through your Microsoft 365 'Admin Center’ then, select 'Billing', then click on 'Purchase Services’, and then Select Dynamics 365 Field Service to buy your plan.</p><p>Once, your installation process gets completed, you will see your apps will appear on your screen – 'Field Service' and 'Field Service Mobile'.</p><p>Now, configure and set up your app for your frontline workers so as they can create, schedule, access, and complete work orders when they are in the field.</p>"
+  },
+  {
+    "id": 4,
+    "question": "How Field Service mobile app is beneficial for enterprises?",
+    "answer": "<p>Microsoft Field Service Management solution is designed to ensure smart scheduling and resource management using mobile devices while being in the field. Field Service mobile app empowers field executives or technicians to seamlessly access the information they need at customer location so as they can effortlessly and quickly complete the work orders.</p><p>D365 Field Service helps your workforce to effectively communicate and collaborate with other co-workers and connect, engage, and serve improved experiences to the customers. Users can leverage this app to ensure work smarter from work order fulfilment to resource scheduling, seamless communication & collaboration to asset management, preventive maintenance to inventory management, and effortless billing to accurate analytics & reporting.</p>"
+  },
+  {
+    "id": 5,
+    "question": "Can the Field Service Mobile app can be used even when not connected to the internet?",
+    "answer": "<p>Yes, users can use the Field Service app whether online or offline as this app gets synchronized automatically whenever the new things or data gets updated or uploaded. Thus, if you are lacking with internet connection at any place, you can simply tap the offline option. While working offline, the information you use gets downloaded to your device only.</p>"
+  },
+  {
+    "id": 6,
+    "question": "How much does it cost to implement a Dynamics 365 Field Service module?",
+    "answer": "<p>Users can buy the Field Service app at £78.10 per user/per month applicable for First <a target=\"_blank\" href=\"/products/microsoft-dynamics-365/\">Dynamics 365</a> app. Further, 'Subsequent Qualifying Dynamics 365 App', users are required to pay £15.10 per user/per month.</p><p>To avail of more information for Microsoft Field Service Management licensing, connect with the experts at Dynamics Square.</p>"
+  },
+  {
+    "id": 7,
+    "question": "What sort of key capabilities can be availed of after implementing Dynamics 365 Field Service?",
+    "answer": "<p>Dynamics 365 Field Service offers a multitude of key capabilities to improve, automate, and streamline your field service operations:</p><ul><li>Work Orders</li><li>Scheduling &amp; Dispatch Tools</li><li>Communication Tools</li><li>Easy-to-use Mobile Application</li><li>Asset Management</li><li>Preventive Maintenance</li><li>Inventory, Purchasing, &amp; Return</li><li>Billing Management</li><li>Time Tracking</li><li>Analytics &amp; Reporting</li></ul>"
+  },
+  {
+    "id": 8,
     "question": "What is Dynamics 365 Field Service?",
     "answer": "<p>Dynamics 365 Field Service is a smart service management solution from Microsoft. It helps companies manage work orders, scheduling, and service delivery with intelligent scheduling capabilities.</p>"
   },
   {
-    "id": 2,
+    "id": 9,
     "question": "What does Dynamics 365 Field Service do?",
     "answer": "<p>It enables teams to create and manage work orders, optimise technician schedules, track service appointments, and support technicians with AI-powered assistance.</p>"
   },
   {
-    "id": 3,
+    "id": 10,
     "question": "How does scheduling work in Dynamics 365 Field Service?",
     "answer": "<p>Scheduling is supported by AI-driven optimisation that considers factors like technician availability, priorities, travel time, and service windows to improve efficiency.</p>"
   },
   {
-    "id": 4,
+    "id": 11,
     "question": "What is the Scheduling Operations Agent in Dynamics 365 Field Service?",
     "answer": "<p>It is an  <a class=\"u-i\" href=\"/blog/from-assistants-to-autonomous-the-rise-of-ai-agents-in-dynamics-365/\">AI agent</a> that helps dispatchers optimise technician schedules by adjusting bookings based on priorities, travel time, and changing conditions like delays or cancellations.</p>"
   },
   {
-    "id": 5,
+    "id": 12,
     "question": "How does Copilot help in Dynamics 365 Field Service?",
     "answer": "<p>Copilot allows users to ask questions in natural language, generate work order summaries, update records, and access relevant information quickly during service tasks.</p>"
   },
   {
-    "id": 6,
+    "id": 13,
     "question": "Can technicians update work orders using Dynamics 365 Field Service?",
     "answer": "<p>Yes, technicians can use natural language input in the mobile app to update work order details such as status, tasks, and time entries.</p>"
   },
   {
-    "id": 7,
+    "id": 14,
     "question": "Does Dynamics 365 Field Service support real-time visibility?",
     "answer": "<p>Yes, it provides real-time visibility into appointments and service activities. This visibility helps teams track and manage ongoing service operations.</p>"
   },
   {
-    "id": 8,
+    "id": 15,
     "question": "Does Dynamics 365 Field Service integrate with other Microsoft applications?",
     "answer": "<p>Yes, it integrates with applications like Microsoft Teams, Outlook, and Dynamics 365 Business Central to support communication and data flow.</p>"
   },
   {
-    "id": 9,
+    "id": 16,
     "question": "What is the price of Dynamics 365 Field Service?",
     "answer": "<p>Dynamics 365 Field Service starts at £80.70 per user per month, billed yearly. Apart from it, a contractor licence is also available at £38.40 per user per month.</p>"
   },
   {
-    "id": 10,
+    "id": 17,
     "question": "Is Dynamics 365 Field Service suitable for small- and mid-sized businesses?",
     "answer": "<p>Yes, it is a scalable solution that supports organisations of different sizes looking to manage service operations more efficiently.</p>"
   }
