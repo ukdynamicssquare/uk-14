@@ -40,10 +40,10 @@ const FieldService = () => {
   return (
     <>
       <Head>
-        <title>Dynamics 365 Customer Service Partner UK | Dynamics Square</title>
+        <title>Microsoft Dynamics 365 Customer Service | Dynamics Square UK</title>
         <meta
           name="description"
-          content="Deliver exceptional customer experiences with a trusted Dynamics 365 Customer Service partner in the UK. Get expert implementation, support, and tailored solutions."
+          content="Transform customer support with Microsoft Dynamics 365 Customer Service. Manage cases, automate workflows and deliver personalised omnichannel support."
         />
         <link
           rel="canonical"
@@ -51,15 +51,190 @@ const FieldService = () => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-customer-service/" />
-        <meta property="og:title" content="Microsoft Dynamics 365 Customer Service Partner | Dynamics Square" />
-        <meta property="og:description" content="Deliver exceptional customer experiences with a trusted Dynamics 365 Customer Service partner in the UK. Get expert implementation, support, and tailored solutions." />
+        <meta property="og:title" content="Microsoft Dynamics 365 Customer Service | Dynamics Square UK" />
+        <meta property="og:description" content="Transform customer support with Microsoft Dynamics 365 Customer Service. Manage cases, automate workflows and deliver personalised omnichannel support." />
         <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/customer-service-001.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-customer-service/" />
-        <meta property="twitter:title" content="Microsoft Dynamics 365 Customer Service Partner | Dynamics Square" />
-        <meta property="twitter:description" content="Deliver exceptional customer experiences with a trusted Dynamics 365 Customer Service partner in the UK. Get expert implementation, support, and tailored solutions." />
+        <meta property="twitter:title" content="Microsoft Dynamics 365 Customer Service | Dynamics Square UK" />
+        <meta property="twitter:description" content="Transform customer support with Microsoft Dynamics 365 Customer Service. Manage cases, automate workflows and deliver personalised omnichannel support." />
         <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/customer-service-001.png" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "What is Dynamics 365 Customer Service?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Dynamics 365 Customer Service is an intelligent, agent-based service solution that helps businesses manage customer interactions, resolve cases, and deliver support across multiple channels."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "What does Dynamics 365 Customer Service help businesses achieve?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "It helps customer-focused businesses resolve issues faster, improve service representatives' productivity, and provide consistent, personalised support across voice, chat, email, and social channels."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "How does Dynamics 365 Customer Service improve response and resolution times?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Dynamics 365 Customer Service uses Copilot to help service representatives troubleshoot issues, draft responses, and find relevant knowledge articles. AI-based routing assigns cases to the most suitable representative, helping reduce delays."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "How does case management work in Dynamics 365 Customer Service?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Cases are managed within a unified platform where service representatives can track interactions, access customer history, and resolve issues efficiently with AI assistance and automation."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "What are AI agents in Dynamics 365 Customer Service?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "AI agents automate service functions such as case lifecycle management, knowledge updates, customer intent detection, and service quality monitoring to improve efficiency and consistency."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "How does Copilot support service representatives?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Copilot allows service representatives to interact with the system using natural language, generate contextual responses, receive knowledge recommendations, and troubleshoot issues faster during customer interactions."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Does Dynamics 365 Customer Service support self-service?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Yes. It provides AI-powered chatbots, conversational IVR, and community portals that allow customers to resolve common issues independently."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Can businesses manage customer interactions across multiple channels?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Yes. Dynamics 365 Customer Service supports omnichannel engagement, allowing organisations to manage interactions across voice, chat, email, and social channels within a unified platform."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Does Dynamics 365 Customer Service provide real-time insights?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Yes. It provides insights such as sentiment analysis, interaction analytics, and performance metrics to help organisations monitor and improve service quality."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Does Dynamics 365 Customer Service integrate with other Microsoft applications?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Yes. It integrates with Microsoft applications such as Teams and Outlook to support communication and collaboration across customer service workflows."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "What is the pricing of Dynamics 365 Customer Service?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Dynamics 365 Customer Service offers different licensing options based on the features and service capabilities an organisation requires. Businesses should check Microsoft's current pricing or consult a Dynamics 365 partner for an accurate quotation."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Is Dynamics 365 Customer Service suitable for growing businesses?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Yes. It is a scalable solution designed to support organisations of different sizes, helping them improve service efficiency, adapt to changing customer needs, and deliver consistent support experiences."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "What is Dynamics 365 Customer Service Insights?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Dynamics 365 Customer Service Insights provides actionable information related to customer interactions, operational performance, and service trends. These insights can help businesses make informed decisions, improve customer satisfaction, and increase operational efficiency."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "How do I install Dynamics 365 Customer Service?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "An administrator can install the relevant Dynamics 365 Customer Service application through the Power Platform admin centre. The administrator must select the appropriate environment, complete the installation process, and assign the required security roles and licences before users access the application."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "What are the key features of Dynamics 365 Customer Service?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Key features include case management, customer interaction tracking, knowledge management, queues and case routing, service-level agreements, entitlements, reports and dashboards, scheduling, chat, and omnichannel conversation management."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "What is the difference between Dynamics 365 Sales and Customer Service?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Dynamics 365 Sales helps businesses manage leads, opportunities, customer relationships, and sales activities. Dynamics 365 Customer Service focuses on managing cases, support interactions, knowledge, service levels, and after-sales customer experiences."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "What are the benefits of Dynamics 365 Customer Service?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Benefits include advanced reporting, self-service capabilities, omnichannel support, improved case management, AI-assisted productivity, Microsoft application integrations, scalability, and adaptability to changing business requirements."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "How does Dynamics 365 Customer Service CRM help improve customer service?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Dynamics 365 Customer Service CRM centralises customer information and support interactions, giving service representatives the context required to provide personalised, data-driven assistance. It also helps businesses manage after-sales service and strengthen customer retention."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Can Dynamics 365 Customer Service CRM be customised for specific business needs?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Yes. Dynamics 365 Customer Service can be customised using configurations, integrations, add-ons, Power Platform tools, and custom development to support an organisation's particular processes and requirements."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "What is the role of the knowledge base in Dynamics 365 Customer Service CRM?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "The knowledge base provides a central repository of approved articles, solutions, instructions, and troubleshooting information. Service representatives can use it to resolve cases consistently, while customers can access relevant articles through supported self-service channels."
+                    }
+                  }
+                ]
+              }
+
+            ),
+          }}
+        />
       </Head>
       <div className='solution-new-banner-one'>
         <div className='container'>
@@ -100,7 +275,7 @@ const FieldService = () => {
             <div className='col-lg-12'>
               <div className='flecx'>
                 <div className='left-fl'>
-                  <p>Dynamics Square helps small and medium businesses streamline field operations, improve service delivery, and achieve measurable results with the AI-powered Dynamics 365 Customer Service.</p>
+                  <p>Dynamics Square helps small and medium businesses streamline customer support, resolve cases faster, and deliver personalised experiences with the AI-powered Dynamics 365 Customer Service CRM.</p>
                 </div>
                 <div className='left-rl'>
                   <Image src="/img/partner-logo-black.png" width={193} height={55} alt="partner-logo-black" />

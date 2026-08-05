@@ -20,10 +20,10 @@ const Education = () => {
   return (
     <>
       <Head>
-        <title>Dynamics 365 for Education | Dynamics Square UK</title>
+        <title>Microsoft Dynamics 365 for Education | Dynamics Square UK</title>
         <meta
           name="description"
-          content="Microsoft Dynamics 365 for Education helps schools, colleges, and universities streamline admissions, finance, and operations. Partner with Dynamics Square UK."
+          content="Transform higher education with Microsoft Dynamics 365 for Education. Streamline admissions, student engagement & operations. Contact Dynamics Square UK."
         />
         <link
           rel="canonical"
@@ -31,14 +31,14 @@ const Education = () => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/industries/dynamics-365-for-education/" />
-        <meta property="og:title" content="Dynamics 365 for Education | Dynamics Square UK" />
-        <meta property="og:description" content="Microsoft Dynamics 365 for Education helps schools, colleges, and universities streamline admissions, finance, and operations. Partner with Dynamics Square UK." />
+        <meta property="og:title" content="Microsoft Dynamics 365 for Education | Dynamics Square UK" />
+        <meta property="og:description" content="Transform higher education with Microsoft Dynamics 365 for Education. Streamline admissions, student engagement & operations. Contact Dynamics Square UK." />
         <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/Bc-Discrete-Manufacturing.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/industries/dynamics-365-for-education/" />
-        <meta property="twitter:title" content="Dynamics 365 for Education | Dynamics Square UK" />
-        <meta property="twitter:description" content="Microsoft Dynamics 365 for Education helps schools, colleges, and universities streamline admissions, finance, and operations. Partner with Dynamics Square UK." />
+        <meta property="twitter:title" content="Microsoft Dynamics 365 for Education | Dynamics Square UK" />
+        <meta property="twitter:description" content="Transform higher education with Microsoft Dynamics 365 for Education. Streamline admissions, student engagement & operations. Contact Dynamics Square UK." />
         <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/Bc-Discrete-Manufacturing.png" />
 
       </Head>
