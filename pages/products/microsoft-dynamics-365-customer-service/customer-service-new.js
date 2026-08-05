@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import useGsapScrollCards from '../../../hooks/useGsapScrollCards';
-import faqData from '../../../public/data/field-service.json';
+import faqData from '../../../public/data/customer-service.json';
 import useCardScrollEffect from "../../../components/useCardScrollEffect";
 import NavBar from '../../../components/NavBar';
 import BlogFinanaceCard from '../../../components/BlogFinanaceCard';
@@ -54,13 +54,13 @@ const FieldService = () => {
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-customer-service/" />
         <meta property="og:title" content="Microsoft Dynamics 365 Customer Service Partner | Dynamics Square" />
         <meta property="og:description" content="Deliver exceptional customer experiences with a trusted Dynamics 365 Customer Service partner in the UK. Get expert implementation, support, and tailored solutions." />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/customer-service-banner.png" />
+        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/customer-service-001.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-customer-service/" />
         <meta property="twitter:title" content="Microsoft Dynamics 365 Customer Service Partner | Dynamics Square" />
         <meta property="twitter:description" content="Deliver exceptional customer experiences with a trusted Dynamics 365 Customer Service partner in the UK. Get expert implementation, support, and tailored solutions." />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/customer-service-banner.png" />
+        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/customer-service-001.png" />
       </Head>
       <div className='solution-new-banner-one'>
         <div className='container'>
@@ -88,7 +88,7 @@ const FieldService = () => {
           <div className='row justify-content-center'>
             <div className='col-lg-10'>
               <div className="solution-new-banner-one-imgs">
-                <Image src="/img/field-service-000.png" alt="Field Service" width={916} height={585} className="flot-1" priority />
+                <Image src="/img/customer-service-001.png" alt="Field Service" width={916} height={585} className="flot-1" priority />
               </div>
             </div>
           </div>
@@ -142,7 +142,7 @@ const FieldService = () => {
               </div>
             </div>
             <div className='col-lg-6 align-self-center'>
-              <div className='dsa-minee'><Image src="/img/field-service-001.png" alt="What is Dynamics 365 Field Service" width={630} height={540} /></div>
+              <div className='dsa-minee'><Image src="/img/customer-service-002.png" alt="Dynamics 365 Customer Service" width={630} height={540} /></div>
             </div>
           </div>
 
@@ -174,7 +174,7 @@ const FieldService = () => {
             <div className='col-lg-6'>
               <div className='product-side-001'>
                 <div className="flot-8" style={{ textAlign: 'center' }}>
-                  <Image src="/img/field-service-002.png" width={630} height={256} alt="New Solution" />
+                  <Image src="/img/customer-service-003.png" width={630} height={256} alt="Business Problems Solved by Dynamics 365 Customer Service" />
                 </div>
                 <p style={{ paddingTop: '30px' }}>Now resolve issues before they escalate. <a className='u-i' href="/blog/what-is-copilot-in-dynamics-365-customer-service/">Copilot in D365 Customer Service</a> helps with flagging problems early, automating case handling, and routing requests to the right agent based on context and customer sentiment.</p>
                 <p>The platform also has self-service options, a centralised knowledge base, and real-time dashboards. As a result, customers get consistent support across phone, email, chat, and other channels.</p>
@@ -193,7 +193,7 @@ const FieldService = () => {
         </div>
       </section>
       <section className='solution-new-cta'>
-        <div className='asd asd5'>
+        <div className='asd asd6'>
           <div className='container'>
             <div className='row'>
               <div className='col-lg-8'>
@@ -240,7 +240,7 @@ const FieldService = () => {
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/field-service-003.png" width={510} height={424} alt="Intelligent Case Routing and Resolution" />
+                      <Image src="/img/customer-service-006.png" width={510} height={424} alt="Intelligent Case Routing and Resolution" />
                     </div>
                   </div>
                 </div>
@@ -256,7 +256,7 @@ const FieldService = () => {
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/field-service-004.png" width={510} height={424} alt="Unified Case Management and Omnichannel Engagement" />
+                      <Image src="/img/customer-service-007.png" width={510} height={424} alt="Unified Case Management and Omnichannel Engagement" />
                     </div>
                   </div>
                 </div>
@@ -272,7 +272,7 @@ const FieldService = () => {
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/field-service-005.png" width={510} height={424} alt="AI-Assisted Service Representative Productivity" />
+                      <Image src="/img/customer-service-008.png" width={510} height={424} alt="AI-Assisted Service Representative Productivity" />
                     </div>
                   </div>
                 </div>
@@ -288,7 +288,7 @@ const FieldService = () => {
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/field-service-006.png" width={510} height={424} alt="Real-Time Insights and Service Analytics" />
+                      <Image src="/img/customer-service-009.png" width={510} height={424} alt="Real-Time Insights and Service Analytics" />
                     </div>
                   </div>
                 </div>
@@ -304,7 +304,7 @@ const FieldService = () => {
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/field-service-007.png" width={510} height={424} alt="Self-Service and Automation at Scale" />
+                      <Image src="/img/customer-service-010.png" width={510} height={424} alt="Self-Service and Automation at Scale" />
                     </div>
                   </div>
                 </div>
@@ -320,7 +320,7 @@ const FieldService = () => {
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/field-service-007.png" width={510} height={424} alt="Agentic AI Capabilities for Continuous Improvement" />
+                      <Image src="/img/customer-service-011.png" width={510} height={424} alt="Agentic AI Capabilities for Continuous Improvement" />
                     </div>
                   </div>
                 </div>
@@ -465,7 +465,7 @@ const FieldService = () => {
               <div className='solution-new-pricing-card col-ff3'>
                 <h3>Dynamics 365 Customer Service Professional</h3>
                 <p>Dynamics 365 Customer Service Professional provides core customer service capabilities, including case management, knowledge management, and basic self-service. It is suitable for organisations looking to establish structured and efficient support operations. </p>
-                <h4>£50.00<span> per user per month, paid yearlyy</span></h4>
+                <h4>£50.00<span> per user per month, paid yearly</span></h4>
                 <a href="#exampleModal" data-bs-toggle="modal" className="btn-dd-t btn-get-started" >Contact us</a>
                 <p className='disclm'>*Price excludes VAT</p>
               </div>
@@ -512,7 +512,7 @@ const FieldService = () => {
                   </div>
                   <h3 className="serv-card-title-666">Implementation</h3>
                 </div>
-                <p className="serv-card-text-666">We deploy a structured Dynamics 365 Customer Service aligned with your workflows, case management processes, and service goals. Our approach focuses on setting up case management, knowledge bases, omnichannel capabilities, and AI-driven features such as intelligent routing.</p>
+                <p className="serv-card-text-666">We deploy a structured Dynamics 365 Customer Service aligned with your workflows, case management processes, and service goals. Our approach focuses on setting up case management, knowledge bases, omnichannel capabilities, and AI-driven features such as intelligent routing. </p>
                 <div className="serv-card-footer-666">
                   <span className="serv-card-btn-666">Get Started</span>
                   <span className="serv-card-arrow-666"><i className="bi bi-arrow-right"></i></span>
@@ -529,7 +529,7 @@ const FieldService = () => {
                   </div>
                   <h3 className="serv-card-title-666">Upgrade and Migration</h3>
                 </div>
-                <p className="serv-card-text-666">Move from legacy service systems to Dynamics 365 Field Service with clarity and control. We manage data migration, scheduling alignment, and system transition to ensure your teams can operate effectively from day one.</p>
+                <p className="serv-card-text-666">Move from legacy support systems to Dynamics 365 Customer Service with clarity and control. We manage data migration, process alignment, and system transition to ensure service representatives can handle cases efficiently from day one.</p>
                 <div className="serv-card-footer-666">
                   <span className="serv-card-btn-666">Get Started</span>
                   <span className="serv-card-arrow-666"><i className="bi bi-arrow-right"></i></span>
@@ -544,7 +544,7 @@ const FieldService = () => {
                   </div>
                   <h3 className="serv-card-title-666">Support</h3>
                 </div>
-                <p className="serv-card-text-666">Keep your field service system up and running with our Dynamics 365 Field Service support. Our team resolves issues, manages updates, and ensures schedules, work orders, and service processes continue without disruption.</p>
+                <p className="serv-card-text-666">Our Dynamics 365 Customer Service support helps you keep your customer service environment up and running. Our team addresses issues, manages updates, and ensures case handling, automation, and customer interactions continue without disruption.</p>
                 <div className="serv-card-footer-666">
                   <span className="serv-card-btn-666">Get Started</span>
                   <span className="serv-card-arrow-666"><i className="bi bi-arrow-right"></i></span>
@@ -559,7 +559,7 @@ const FieldService = () => {
                   </div>
                   <h3 className="serv-card-title-666">Consulting</h3>
                 </div>
-                <p className="serv-card-text-666">Get proven guidance on improving operational efficiency, technician productivity, and service visibility. Our certified consultants help you use Copilot, scheduling capabilities, and service insights in line with your operational goals.</p>
+                <p className="serv-card-text-666">We offer the guidance you need to improve your service quality, response times, and customer satisfaction. Our consultants help you utilise AI, automation, and routing capabilities of the CRM to fulfil your service objectives.</p>
                 <div className="serv-card-footer-666">
                   <span className="serv-card-btn-666">Get Started</span>
                   <span className="serv-card-arrow-666"><i className="bi bi-arrow-right"></i></span>
