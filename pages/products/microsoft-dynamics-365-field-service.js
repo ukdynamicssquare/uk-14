@@ -5,7 +5,7 @@ import Link from 'next/link';
 import useGsapScrollCards from '../../hooks/useGsapScrollCards';
 import faqData from '../../public/data/field-service.json';
 import useCardScrollEffect from "../../components/useCardScrollEffect";
-import NavBar from '../../components/NavBar';
+// import NavBar from '../../components/NavBar';
 import BlogFinanaceCard from '../../components/BlogFinanaceCard';
 import dynamic from "next/dynamic";
 
@@ -146,7 +146,7 @@ const FieldService = () => {
 
         </div>
       </div>
-      <NavBar />
+      {/* <NavBar /> */}
       <section id='section2' className="solution-new-banner-two">
         <div className='container'>
           <div className='row'>
