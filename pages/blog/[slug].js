@@ -616,7 +616,7 @@ function Post({ blogs, blogcat, authordetials, author }) {
                               </div>
 
                               <div className="b-card-info">
-                                <p>{item.short_description.substring(0, 60)}</p>
+                                <p>{item.short_description.substring(0, 120)}...</p>
 
                                 <div className="page-link-read">
                                   <a
