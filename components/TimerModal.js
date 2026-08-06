@@ -51,12 +51,12 @@ const TimerModal = () => {
               </button>
 
               <a 
-                href="https://www.forbes.com/councils/forbestechcouncil/2026/06/01/what-companies-get-wrong-about-agentic-erp/" 
+                href="/the-ultimate-guide-to-microsoft-dynamics-365/" 
                 target="_blank" 
                 rel="nofollow"
                 onClick={handleCloseModal}
               >
-                <img src="/img/forber-03.png" alt="forber-03" />
+                <img src="/img/guidep-popp-banner.png" alt="guidep-popp-banner" />
               </a>
               {/* <a 
                 href="https://forms.reg.buzz/subcon-2026/?exhibitor-inviter=dynamics-square" 

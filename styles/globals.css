@@ -7126,7 +7126,7 @@ margin: 0px 0px 0px -30px;
   -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  width: 500px;
+  max-width: 600px;
 }
 
 .popup-cust .modal-content {
