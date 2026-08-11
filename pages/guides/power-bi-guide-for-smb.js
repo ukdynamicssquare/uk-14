@@ -34,10 +34,10 @@ const PowerBIGuide = () => {
   return (
     <>
       <Head>
-      <title>Power BI: The Definitive Guide For SMBs (2025)</title>
+      <title>Power BI: The Definitive Guide For SMBs (2026)</title>
         <meta
           name="description"
-          content="A complete guide to Power BI (2025) for SMBs. Learn how to transform your data into interactive reports that drive results."
+          content="A complete guide to Power BI (2026) for SMBs. Learn how to transform your data into interactive reports that drive results."
         />
         <meta
           name="keywords"
@@ -223,7 +223,7 @@ const PowerBIGuide = () => {
           <div className="row justify-content-center g-4">
             <div className="col-lg-12">
               <div className="cont-table-inner">
-                <h2>The Ultimate Power BI Guide for SMBs (2025)</h2>
+                <h2>The Ultimate Power BI Guide for SMBs (2026)</h2>
                 <p>
                   Data is everywhere, but you need the right tool to extract it.
                 </p>
@@ -2238,9 +2238,9 @@ const PowerBIGuide = () => {
                     <h3>Power BI Pro</h3>
                   </div>
                   <div className="body-in">
-                    <h4>Per User/Month </h4>
+                    <h4>user/month, paid yearly</h4>
                     <p>
-                      <span>$13.70</span>
+                      <span>£10.80</span>
                     </p>
                     <p>
                     license Power BI Pro individual for modern analytics with data visualizations. 
@@ -2266,9 +2266,9 @@ const PowerBIGuide = () => {
                     <h3>Power BI Premium</h3>
                   </div>
                   <div className="body-in">
-                    <h4>Per User/Month</h4>
+                    <h4>user/month, paid yearly</h4>
                     <p>
-                      <span>$27.50</span>
+                      <span>£18.50</span>
                     </p>
                     <p>
                       Licence Power BI Premium (Per User) to accelerate data
@@ -2282,7 +2282,7 @@ const PowerBIGuide = () => {
                     </ul>
                   </div>
                 </div>
-                <div className="new-Pricing">
+                {/* <div className="new-Pricing">
                   <div className="head">
                     <h3>Power BI Premium Per Capacity</h3>
                   </div>
@@ -2310,7 +2310,7 @@ const PowerBIGuide = () => {
                       </li>
                     </ul>
                   </div>
-                </div>
+                </div> */}
               </div>
               <br />
               <div className="cont-table-inner">

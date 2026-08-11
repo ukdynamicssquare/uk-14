@@ -6425,7 +6425,6 @@ margin: 0px 0px 0px -30px;
 .new-Pricing-wrp {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   width: 79%;
   margin: 0 auto;
 }
@@ -18720,9 +18719,6 @@ font-size: 24px;
     justify-content: center;
 }
 
- {
-    color: #4d4a73;
-}
 .calculator-btn:hover,.insight-btn:hover{
   background: #bb2b36 !important;
     color: #ffffff !important;
