@@ -122,7 +122,7 @@ const CommonEbookForm = () => {
             '/ebook/dynamics-365-finance/': 'https://www.dynamicssquare.co.uk/guides/download/Pdf-guide-finance/',
             '/ebook/dynamics-crm/': 'https://www.dynamicssquare.co.uk/guides/download/Pdf-dynamics-crm/',
             '/ebook/gp-to-bc-migration/': 'https://www.dynamicssquare.co.uk/guides/download/Pdf-dynamics-gp-to-bc/',
-            '/ebook/how-to-choose-right-erp/': 'https://www.dynamicssquare.co.uk/thank-you/how-to-choose-right-erp/',
+            '/ebook/how-to-choose-right-erp/': 'https://www.dynamicssquare.co.uk/download/how-to-choose-right-erp/',
             '/ebook/upgrade-nav-to-business-central/': 'https://www.dynamicssquare.co.uk/thank-you-for-registration/'
           };
 

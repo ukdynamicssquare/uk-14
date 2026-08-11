@@ -13,7 +13,7 @@ const ThankYouHowToChooseRightErp = () => {
         />
         <link
           rel="canonical"
-          href="https://www.dynamicssquare.co.uk/thank-you/how-to-choose-right-erp/"
+          href="https://www.dynamicssquare.co.uk/download/how-to-choose-right-erp/"
         />
       </Head>
       <section className="Solution-banner hero-1 hero hero-demo-form">

@@ -84,6 +84,11 @@
       "source": "/white-papers/download/pdf-micorosoft-finance/",
       "destination": "/white-papers/download/pdf-microsoft-finance/",
       "statusCode": 301
+    },
+     {
+      "source": "/thank-you/how-to-choose-right-erp/",
+      "destination": "/download/how-to-choose-right-erp/",
+      "statusCode": 301
     }
   ]
 }
