@@ -1,7 +1,27 @@
+import { useEffect, useRef } from 'react';
 import Head from 'next/head';
 import Link from "next/link";
 import FooterHide from '../../components/FooterHide';
 const ThankYou = () => {
+const conversionSent = useRef(false);
+  useEffect(() => {
+    // Prevent duplicate event
+    if (conversionSent.current) {
+      return;
+    }
+
+    conversionSent.current = true;
+
+    // Send successful form event to Google Tag Manager
+    window.dataLayer = window.dataLayer || [];
+
+    window.dataLayer.push({
+      event: 'contact_form_success',
+    });
+
+    console.log('GTM: contact_form_success');
+  }, []);
+
 
   return (
     <>
