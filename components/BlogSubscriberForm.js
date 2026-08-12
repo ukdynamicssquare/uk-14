@@ -18,7 +18,8 @@ const BlogSubscriberForm = () => {
      
       setTimeout(function() {
         e.target.reset();
-        router.push("/thank-you/");
+        // router.push("/thank-you/");
+        window.location.href = '/thank-you/';
       }, 500);
       
   };

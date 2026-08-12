@@ -4,6 +4,7 @@ const OldIndex = () => {
   return (
     <div>
       <Head>
+               <meta name="robots" content="noindex, nofollow" />
      <title>Best Microsoft Dynamics 365 Blogs | Dynamics Square - Dynamics 365 Blogs</title>
       </Head>
 

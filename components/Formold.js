@@ -23,8 +23,9 @@ const Formold = () => {
         e.target.remove();
         Cookies.set('popupModalShown', true, { expires: 1 });
         setShowModal(false);
-        router.push("/thank-you/");
-      }, 1000);
+        // router.push("/thank-you/");
+        window.location.href = '/thank-you/';
+      }, 300);
       
   };
 

@@ -63,8 +63,9 @@ const TestFormWorkingcopy = () => {
         
         // Redirect to thank you page after submission
         setTimeout(function() {
-          router.push("/thank-you/");
-        }, 1000);
+          // router.push("/thank-you/");
+           window.location.href = '/thank-you/';
+        }, 500);
       } else {
         console.error('Form submission failed');
       }

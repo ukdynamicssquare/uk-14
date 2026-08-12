@@ -152,7 +152,8 @@ const FooterZohoFinalCopy = () => {
 
         console.log('Form submitted successfully!');
         setTimeout(() => {
-          router.push("/thank-you/");
+          // router.push("/thank-you/");
+          window.location.href = '/thank-you/';
         }, 300); // Redirect to thank-you page after 5 seconds
       } catch (error) {
         console.error('Error sending form:', error);

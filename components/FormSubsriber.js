@@ -20,7 +20,8 @@ const FormSubsriber = () => {
      
       setTimeout(function() {
         e.target.reset();
-        router.push("/thank-you/email-subscriber/");
+        // router.push("/thank-you/email-subscriber/");
+        window.location.href = '/thank-you/email-subscriber/';
       }, 500);
       
   };
