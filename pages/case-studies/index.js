@@ -99,6 +99,7 @@ const CategoryList = () => {
                   >
                     <div className="commen-box-2 commen-box-9 h-100">
                       <div className="icons icons-0102">
+                        <Link href={item.slug}>
                         <Image
                           src={item.image}
                           alt={item.alt}
@@ -106,6 +107,7 @@ const CategoryList = () => {
                           height={350}
                           className="img-fluid"
                         />
+                        </Link>
                       </div>
 
                       <div className="commen-boc-2-info">
