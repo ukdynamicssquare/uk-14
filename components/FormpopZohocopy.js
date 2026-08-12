@@ -62,7 +62,8 @@ const FormpopZohocopy = () => {
               event.target.remove();
               Cookies.set('popupModalShown', true, { expires: 1 });
               setShowModal(false);
-              router.push("/thank-you/");
+              // router.push("/thank-you/");
+                window.location.href = '/thank-you/';
             }, 1000);
         } else {
             console.error('Failed to submit form:', response.statusText);

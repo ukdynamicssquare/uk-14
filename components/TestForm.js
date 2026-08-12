@@ -90,7 +90,8 @@ const TestForm = () => {
             formtag: 'Footer Form'
           });
           setTimeout(() => {
-            router.push('/thank-you/');
+            // router.push('/thank-you/');
+              window.location.href = '/thank-you/';
           }, 1000);
         } else {
           console.error('Form submission failed');

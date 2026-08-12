@@ -55,7 +55,8 @@ const FormZOhoFinal = () => {
               // Redirect to thank you page after 4 seconds
               setTimeout(() => {
                 event.target.reset();
-                  router.push('/thank-you/');
+                  // router.push('/thank-you/');
+                    window.location.href = '/thank-you/';
               }, 100);
           } else {
               console.error('Failed to submit form:', response.statusText);

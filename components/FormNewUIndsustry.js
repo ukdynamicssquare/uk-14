@@ -130,7 +130,8 @@ const FormNewUIndsustry = () => {
             formtag: ''
           });
           setTimeout(() => {
-            router.push('/thank-you/');
+            // router.push('/thank-you/');
+              window.location.href = '/thank-you/';
           }, 500);
         } else {
           console.error('Form submission failed');
