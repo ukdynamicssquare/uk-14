@@ -92,7 +92,7 @@ const TestForm = () => {
           setTimeout(() => {
             // router.push('/thank-you/');
               window.location.href = '/thank-you/';
-          }, 1000);
+          }, 500);
         } else {
           console.error('Form submission failed');
         }

@@ -64,7 +64,7 @@ const FormpopZohocopy = () => {
               setShowModal(false);
               // router.push("/thank-you/");
                 window.location.href = '/thank-you/';
-            }, 1000);
+            }, 300);
         } else {
             console.error('Failed to submit form:', response.statusText);
         }
