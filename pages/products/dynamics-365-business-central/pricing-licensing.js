@@ -39,7 +39,7 @@ const BusinessCentral = () => {
   return (
     <>
       <Head>
-        <title>Microsoft Dynamics 365 Business Central Pricing (2026) UK</title>
+        <title>Dynamics 365 Business Central Pricing UK (2026)</title>
 
         <meta
           name="description"
@@ -51,13 +51,13 @@ const BusinessCentral = () => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/pricing-licensing/" />
-        <meta property="og:title" content="Microsoft Dynamics 365 Business Central Pricing (2026) UK" />
+        <meta property="og:title" content="Dynamics 365 Business Central Pricing UK (2026)" />
         <meta property="og:description" content="Microsoft Dynamics 365 Business Central UK pricing 2026: full GBP breakdown of Essentials and Premium licences, Team Member costs, setup, support and total cost guide." />
         <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/Dynamics-365-Finance-Banner.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/pricing-licensing/" />
-        <meta property="twitter:title" content="Microsoft Dynamics 365 Business Central Pricing (2026) UK" />
+        <meta property="twitter:title" content="Dynamics 365 Business Central Pricing UK (2026)" />
         <meta property="twitter:description" content="Microsoft Dynamics 365 Business Central UK pricing 2026: full GBP breakdown of Essentials and Premium licences, Team Member costs, setup, support and total cost guide." />
         <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/Dynamics-365-Finance-Banner.png" />
 
