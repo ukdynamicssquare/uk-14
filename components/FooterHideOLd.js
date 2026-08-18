@@ -169,12 +169,7 @@ const FooterHideOLd = () =>{
                     width={230} height={81}
                   />
                 </Link>
-                <p>
-                  Dynamics Square is UK's leading Microsoft Gold Certified
-                  Partner that caters to the needs of organisations who can
-                  source next-gen Microsoft Business Apps from our highly
-                  skilled Microsoft consultants.
-                </p>
+                <p>Dynamics Square is UK's leading Microsoft Solutions Partner that caters to the needs of organisations who can source next-gen Microsoft Business Apps from our highly skilled Microsoft consultants.</p>
                 <Image
                   src="/img/microsoft-partner-footer.png"
                   alt="microsoft-partner"
