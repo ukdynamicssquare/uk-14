@@ -71,7 +71,7 @@ const AboutUs = () => {
                 <h3>We’re Microsoft <br />Solutions Partner  </h3>
               </div>
               <div className="right-content">
-                <p>As a Microsoft Solutions Partner or Microsoft Solutions Partner, we are trusted by 500+ global clients for our reliable and smooth Dynamics 365 solutions. Our team of 150+ Microsoft consultants is proactively delivering cloud technology, high-tech innovations, effective training, and consistent support to ensure substantial growth for your organisation. </p>
+                <p>As a Microsoft Solutions Partner, we are trusted by 500+ global clients for our reliable and smooth Dynamics 365 solutions. Our team of 150+ Microsoft consultants is proactively delivering cloud technology, high-tech innovations, effective training, and consistent support to ensure substantial growth for your organisation. </p>
               </div>
             </div>
           </div>
