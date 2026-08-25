@@ -126,7 +126,7 @@ function Authors({ authorslist, blgsbyauthorslist }) {
 
         <link
           rel="canonical"
-          href={`https://blognew.dynamicssquare.co.uk/blog/author/${router.query.slug}`}
+          href={`https://www.dynamicssquare.co.uk/blog/author/${router.query.slug}/`}
         />
 
         {/* Open Graph */}
@@ -135,7 +135,7 @@ function Authors({ authorslist, blgsbyauthorslist }) {
         <meta property="og:description" content={`Explore all blog posts written by ${authorName}.`} />
         <meta
           property="og:url"
-          content={`https://blognew.dynamicssquare.co.uk/blog/author/${router.query.slug}`}
+          content={`https://www.dynamicssquare.co.uk/blog/author/${router.query.slug}/`}
         />
         <meta property="og:site_name" content="Dynamics Square Blog" />
         <meta property="og:image" content={authorImage} />
