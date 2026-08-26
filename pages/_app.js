@@ -50,6 +50,7 @@ function MyApp({ Component, pageProps }) {
     "/thank-you-for-registration",
     "/not-for-profit-fundrasing-engagenment",
     "/schedule-a-demo",
+    "/products/microsoft-dynamics-365-finance-old",
     "/test-form",
     "/erp-implementation-cost-calculator",
   ];

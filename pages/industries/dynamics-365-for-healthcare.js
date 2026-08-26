@@ -19,7 +19,7 @@ const HealthCheck = () => {
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Dyanamics 365 for Healthcare | Dynamics Square UK" />
         <meta property="og:description" content="Choose the cloud Microsoft Dynamics 365 for Healthcare industry to get a 360-degree view of your clinic while accelerating the business towards growth." />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/industries/microsoft-cloud-for-financial-services/" />
+        <meta property="og:url" content="https://www.dynamicssquare.co.uk/industries/dynamics-365-for-healthcare/" />
         <meta property="og:site_name" content="Dynamics Square UK" />
         <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/Dynamics-365-for-Healthcare.png" />
         <meta property="og:image:width" content="200" />

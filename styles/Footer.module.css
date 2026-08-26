@@ -1,0 +1,472 @@
+/* ==========================================================================
+   TOKENS
+   ========================================================================== */
+.footer {
+  --ds-ink: #2a1f4a;
+  --ds-ink-2: #372a5e;
+  --ds-lift: #43356f;
+  --ds-lift-2: #4e3e80;
+
+  --ds-red: #e4262e;
+  --ds-red-hover: #c51f26;
+
+  --ds-white: #ffffff;
+  --ds-text: #dcd5f0;
+  --ds-label: #a99bd4;
+  --ds-faint: #8e80bc;
+
+  --ds-rule: rgba(255, 255, 255, 0.1);
+  --ds-rule-2: rgba(255, 255, 255, 0.16);
+
+  /* background: linear-gradient(180deg, var(--ds-ink-2) 0%, var(--ds-ink) 100%); */
+  background-image: radial-gradient(circle at 50% -36%, #312455, #393053 62%);
+  color: var(--ds-text);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.footer :global(a) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer :global(a:focus-visible),
+.footer :global(button:focus-visible) {
+  outline: 2px solid var(--ds-red);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* ==========================================================================
+   TIER 1 — CONVERSION BAND
+   ========================================================================== */
+.convert {
+  border-bottom: 1px solid var(--ds-rule);
+  background: radial-gradient(120% 180% at 85% 0%, rgba(228, 38, 46, 0.16) 0%, transparent 58%),
+    var(--ds-lift);
+}
+.eyebrow {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ds-red);
+  margin-bottom: 0.5rem;
+}
+.convertTitle {
+  margin: 0 0 0.4rem;
+  font-size: clamp(1.25rem, 2.4vw, 1.65rem);
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--ds-white);
+  letter-spacing: -0.01em;
+}
+.convertSub {
+  margin: 0;
+  font-size: 14.5px;
+  color: var(--ds-text);
+  max-width: 46ch;
+}
+
+.btnPrimary,
+.btnGhost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 1.5rem;
+  border-radius: 4px;
+  font-size: 14.5px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: background-color 0.18s ease, border-color 0.18s ease;
+}
+.btnPrimary {
+  background: var(--ds-red);
+  color: var(--ds-white);
+  border: 1px solid var(--ds-red);
+}
+.btnPrimary:hover {
+  background: var(--ds-red-hover);
+  border-color: var(--ds-red-hover);
+  color: var(--ds-white);
+}
+.btnGhost {
+  background: transparent;
+  color: var(--ds-white);
+  border: 1px solid var(--ds-rule-2);
+}
+.btnGhost:hover {
+  border-color: var(--ds-white);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--ds-white);
+}
+
+/* ==========================================================================
+   BRAND BLOCK
+   ========================================================================== */
+.brandLogo {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  font-size: clamp(1.3rem, 2vw, 1.55rem);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: var(--ds-white);
+  margin-bottom: 1rem;
+}
+.brandLogo b {
+  color: var(--ds-red);
+  font-weight: 800;
+}
+.brandLogo sup {
+  font-size: 0.42em;
+  font-weight: 600;
+  top: -0.9em;
+}
+.brandPitch {
+  margin: 0 0 1.5rem;
+  font-size: 14.5px;
+  max-width: 34ch;
+  color: var(--ds-text);
+}
+
+.contact {
+  display: grid;
+  gap: 0.55rem;
+  margin-bottom: 1.5rem;
+}
+.contact :global(a) {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 32px;
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--ds-white);
+}
+.contact :global(a:hover) {
+  color: var(--ds-red);
+}
+.contact i {
+  flex: none;
+  font-size: 16px;
+  opacity: 0.75;
+}
+
+.creds {
+  /* display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem; */
+}
+.creds img {
+  display: block;
+  height: 180px;
+  width: auto;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+.credChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.7rem;
+  border: 1px solid var(--ds-rule-2);
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ds-white);
+  background: rgba(255, 255, 255, 0.04);
+}
+.credChip i {
+  color: var(--ds-red);
+}
+
+/* ==========================================================================
+   NAV COLUMNS (accordion on mobile, static on lg+)
+   ========================================================================== */
+.colHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 48px;
+  padding-block: 0.5rem;
+  border-bottom: 1px solid var(--ds-rule);
+  background: none;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  cursor: pointer;
+  text-align: left;
+  padding-left:0
+}
+.colHead {
+  display: block;
+  margin: 0;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--ds-label);
+}
+.chevron {
+  transition: transform 0.2s ease;
+  color: var(--ds-label);
+}
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+.colBody {
+  display: none;
+  padding-block: 0.5rem 1rem;
+}
+.colBodyOpen {
+  display: block;
+}
+
+.colLinks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.colLinks li + li {
+  margin-top: 0.15rem;
+}
+.colLinks :global(a) {
+  display: block;
+  padding-block: 0.42rem;
+  font-size: 13px;
+  color: var(--ds-text);
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+.colLinks :global(a:hover) {
+  color: var(--ds-white);
+  transform: translateX(3px);
+}
+.isKey {
+  color: var(--ds-white) !important;
+  font-weight: 600;
+}
+.isKey::after {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin-left: 0.5rem;
+  border-radius: 50%;
+  background: var(--ds-red);
+  vertical-align: middle;
+}
+
+@media (min-width: 992px) {
+  .colHeader {
+    border-bottom: 0;
+    min-height: 0;
+    padding-block: 0;
+    cursor: default;
+    pointer-events: none;
+  }
+  .colBody {
+    display: block;
+    padding-block: 0;
+  }
+}
+
+/* ==========================================================================
+   LOCATIONS
+   ========================================================================== */
+.locations {
+  border-top: 1px solid var(--ds-rule);
+  padding-block: clamp(1.75rem, 3vw, 2.25rem);
+}
+.locCard {
+  display: block;
+  height: 100%;
+  padding: 1.1rem 1.25rem;
+  border: 1px solid var(--ds-rule);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.03);
+  transition: border-color 0.18s ease, background-color 0.18s ease;
+}
+.locCard:hover {
+  border-color: var(--ds-rule-2);
+  background: rgba(255, 255, 255, 0.06);
+}
+.locRegion {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ds-red);
+  margin-bottom: 0.5rem;
+}
+.locAddr {
+  font-size: 14px;
+  color: var(--ds-text);
+  font-style: normal;
+}
+.locAddr strong {
+  display: block;
+  color: var(--ds-white);
+  font-weight: 600;
+  margin-bottom: 0.15rem;
+}
+.locTel,.email {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 14px;
+  color: var(--ds-white);
+  font-weight: 500;
+}
+.locCard .locTel:hover,.email:hover  {
+  color: var(--ds-red);
+}
+.regionCode {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 0.15rem 0.35rem;
+  border: 1px solid var(--ds-rule-2);
+  border-radius: 2px;
+}
+
+/* ==========================================================================
+   TRUST RIBBON + LEGAL
+   ========================================================================== */
+.trust {
+  border-top: 1px solid var(--ds-rule);
+  background: rgba(0, 0, 0, 0.16);
+}
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  font-size: 12.5px;
+  color: var(--ds-faint);
+}
+.facts b {
+  color: var(--ds-text);
+  font-weight: 600;
+}
+
+.social {
+  display: flex;
+  gap: 0.4rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.social :global(a) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--ds-rule);
+  border-radius: 4px;
+  color: var(--ds-text);
+  transition: border-color 0.18s ease, color 0.18s ease, background-color 0.18s ease;
+  font-size: 17px;
+}
+.social :global(a:hover) {
+  color: var(--ds-white);
+  border-color: var(--ds-rule-2);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.legal {
+  border-top: 1px solid var(--ds-rule);
+  font-size: 12.5px;
+  color: var(--ds-faint);
+}
+.legalLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.25rem;
+}
+.legalLinks :global(a) {
+  color: var(--ds-faint);
+  min-height: 24px;
+  display: inline-flex;
+  align-items: center;
+}
+.legalLinks :global(a:hover) {
+  color: var(--ds-white);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.copyright {
+  white-space: nowrap;
+}
+
+/* Region switcher */
+.region {
+  position: relative;
+}
+.regionToggle {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 40px;
+  padding: 0 0.85rem;
+  border: 1px solid var(--ds-rule-2);
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ds-white);
+  background: none;
+}
+.regionMenu {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 0;
+  z-index: 20;
+  min-width: 180px;
+  padding: 0.35rem;
+  background: var(--ds-lift-2);
+  border: 1px solid var(--ds-rule-2);
+  border-radius: 5px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+  display: flex;
+  flex-direction: column;
+}
+.regionMenu a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 40px;
+  padding: 0 0.7rem;
+  border-radius: 3px;
+  font-size: 13px;
+  color: var(--ds-text);
+}
+.regionMenu a:hover {
+  background: rgba(255, 255, 255, 0.09);
+  color: var(--ds-white);
+}
+.regionMenu a[aria-current="true"] {
+  color: var(--ds-white);
+  font-weight: 600;
+}
+
+.topLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 40px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--ds-text);
+}
+.topLink:hover {
+  color: var(--ds-white);
+}

@@ -382,7 +382,7 @@ const ContactUs = () => {
           </div>
         </section>
 
-        <section className="hero-bgs">
+        <section className="hero-bgs" id='contscroll'>
           <div className="container">
             <header className="section-header">
               <h2>Our offices around the world</h2>

@@ -1498,7 +1498,7 @@ const DeskstopMenu = () => {
                                       <a href="">Read Article <i className="bi bi-arrow-right"></i></a>
                                     </div>
                                     <div className="res-top-bo">
-                                      <img src="/img/menu-icons/menu--ss.png" width={706} height={180} alt="AI" />
+                                      <a href="#"><img src="/img/menu--ss.png" width={706} height={180} alt="AI" /></a>
                                     </div>
                                   </div>
                                 </div>
@@ -1606,7 +1606,7 @@ const DeskstopMenu = () => {
                                       <a href="">Read Story <i className="bi bi-arrow-right"></i></a>
                                     </div>
                                     <div className="res-top-bo">
-                                      <img src="/img/menu-icons/menu--ss.png" width={706} height={180} alt="AI" />
+                                      <img src="/img/menu--ss.png" width={706} height={180} alt="AI" />
                                     </div>
                                   </div>
                                 </div>
@@ -1625,7 +1625,7 @@ const DeskstopMenu = () => {
                                     <img className="n-tags-image" src="/img/Cover_Book_Moc.png" width={582} height={466} alt="Cover_Book_Moc" />
                                     <span className="n-tag-title">Ultimate Guide to Choose the Right ERP For Your Business</span>
                                     <p className="n-tag-para">Compare ERP solutions before making your investment.</p>
-                                    <a className="n-tag-link" href="">Get Free eBook <i className="bi bi-arrow-right"></i></a>
+                                    <a className="n-tag-link" href="/the-ultimate-guide-to-microsoft-dynamics-365/">Get Free eBook <i className="bi bi-arrow-right"></i></a>
                                   </div>
                                 </div>
                                 <div className="col-lg-9 bg-0-gray-t">
@@ -1639,7 +1639,7 @@ const DeskstopMenu = () => {
                                           <img width={980} height={578} src="/img/nav-guide-pic.png" alt="manufacturing" />
                                         </div>
                                         <div className="guide-card-inf">
-                                          <span className="guide-card-title">A Complete Guide to Dynamics 365 Finance</span>
+                                          <span className="guide-card-title">A Complete Guide to Dynamics GP to BC</span>
                                           <span className="guide-card-para">The Extensive Guide to Dynamics 365 Finance</span>
                                         </div>
                                       </a>
@@ -1698,35 +1698,35 @@ const DeskstopMenu = () => {
                                     <div className="col-lg-6">
                                       <div className="resor-bord">
                                         <div className="guide-cardwar">
-                                          <span className="pop-res-title">Popular eBooks</span>
+                                          <span className="pop-res-title">Guides</span>
                                           <p className="pop-res-title-p">Learn before you implement</p>
                                         </div>
                                         <div className="res-flex-wrap-one">
                                           <div className="guide-card-01">
-                                            <a href="#">
+                                            <a href="/ebook/gp-to-bc-migration/">
                                               <div className="guide-card-imag">
-                                                <img width={980} height={578} src="/img/why-bc-feature.jpg" alt="guide" />
+                                                <img width={980} height={578} src="/img/dynamics-GP-BC-Ebook-featured-image.png" alt="guide" />
                                               </div>
                                               <div className="guide-card-inf">
                                                   <span className="guide-tags-rs">Guide</span>
-                                                <span className="guide-card-title">Microsoft Dynamics 365 Complete Guide</span>
+                                                <span className="guide-card-title">A Complete Guide to Dynamics GP to BC</span>
                                               </div>
                                             </a>
                                           </div>
                                           <div className="guide-card-01">
-                                            <a href="#">
+                                            <a href="/ebook/d365-supply-chain-management/">
                                               <div className="guide-card-imag">
-                                                <img width={980} height={578} src="/img/crm-guide-card-pic.png" alt="guide" />
+                                                <img width={980} height={578} src="/img/dynamics-SCM-Ebook-featured-image.png" alt="guide" />
                                               </div>
                                               <div className="guide-card-inf">
                                                 <span className="guide-tags-rs">Guide</span>
-                                                <span className="guide-card-title">Microsoft Dynamics 365 Complete Guide</span>
+                                                <span className="guide-card-title">A Complete Guide to Dynamics SCM</span>
                                               </div>
                                             </a>
                                           </div>
                                         </div>
                                         <div className="comm-links-b">
-                                          <a className="n-tag-link" href="">Explore All Guides <i className="bi bi-arrow-right"></i></a>
+                                          <a className="n-tag-link" href="/ebook/">Explore All eBooks <i className="bi bi-arrow-right"></i></a>
                                         </div>
                                       </div>
                                     </div>
@@ -1739,9 +1739,9 @@ const DeskstopMenu = () => {
                                         </div>
                                         <div className="res-flex-wrap-one">
                                           <div className="guide-card-01">
-                                            <a href="/white-papers/micorosoft-copilot-for-transformation-in-your-business/">
+                                            <a href="/white-papers/microsoft-copilot/">
                                               <div className="guide-card-imag">
-                                                <img width={980} height={578} src="/img/crm-guide-card-pic.png" alt="guide" />
+                                                <img width={980} height={578} src="/img/white-p-one.png" alt="guide" />
                                               </div>
                                               <div className="guide-card-inf">
                                                   <span className="guide-tags-rs">Whitepapers</span>
@@ -1750,19 +1750,19 @@ const DeskstopMenu = () => {
                                             </a>
                                           </div>
                                           <div className="guide-card-01">
-                                            <a href="#">
+                                            <a href="/white-papers/microsoft-finance/">
                                               <div className="guide-card-imag">
-                                                <img width={980} height={578} src="/img/crm-guide-card-pic.png" alt="guide" />
+                                                <img width={980} height={578} src="/img/finacne-white-paper-category.png" alt="guide" />
                                               </div>
                                               <div className="guide-card-inf">
                                                 <span className="guide-tags-rs">Whitepapers</span>
-                                                <span className="guide-card-title">Microsoft Dynamics 365 Complete Guide</span>
+                                                <span className="guide-card-title">Dynamics 365 Finance with Copilot WhitePaper</span>
                                               </div>
                                             </a>
                                           </div>
                                         </div>
                                         <div className="comm-links-b">
-                                          <a className="n-tag-link" href="">Explore All Guides <i className="bi bi-arrow-right"></i></a>
+                                          <a className="n-tag-link" href="/white-papers/">Explore All Guides <i className="bi bi-arrow-right"></i></a>
                                         </div>
                                       </div>
                                     </div>
@@ -1774,11 +1774,14 @@ const DeskstopMenu = () => {
                                       <span className="n-tag">Featured Article</span>
                                       <span className="n-title">60% More Operational Visibility with Dynamics 365</span>
                                       <p>See how a medical device manufacturer transformed production planning, inventory and reporting.</p>
-                                      <div className="imag00"><img src="/img/menu-icons/pic-006.png" alt="Dynamics 365" width={106} height={90} /></div>
+                                      <div className="imag00">
+                                        <img src="/img/menu-icons/pic-006.png" alt="Dynamics 365" width={106} height={90} />
+                                        
+                                        </div>
                                       <a href="">Read Story <i className="bi bi-arrow-right"></i></a>
                                     </div>
                                     <div className="res-top-bo">
-                                      <img src="/img/menu-icons/menu--ss.png" width={706} height={180} alt="AI" />
+                                      <img src="/img/menu--ss.png" width={706} height={180} alt="AI" />
                                     </div>
                                   </div>
                                 </div>
@@ -1796,8 +1799,8 @@ const DeskstopMenu = () => {
                                     <div className="col-lg-4">
                                       <div className="resor-bord">
                                         <div className="guide-cardwar">
-                                          <span className="pop-res-title">Popular eBooks</span>
-                                          <p className="pop-res-title-p">Learn before you implement</p>
+                                          <span className="pop-res-title">TOOLS</span>
+                                          <p className="pop-res-title-p">Estimate costs, compare solutions, and choose the right Microsoft Dynamics 365 platform with confidence.</p>
                                         </div>
                                       
                                       </div>
@@ -1808,26 +1811,26 @@ const DeskstopMenu = () => {
                                        
                                         <div className="res-flex-wrap-one">
                                           <div className="guide-card-01">
-                                            <a href="/white-papers/micorosoft-copilot-for-transformation-in-your-business/">
+                                            <a href="/erp-implementation-cost-calculator/">
                                               <div className="guide-card-imag">
-                                                <img width={980} height={578} src="/img/crm-guide-card-pic.png" alt="guide" />
+                                                <img width={980} height={578} src="/img/tools-one.png" alt="guide" />
                                               </div>
                                               <div className="guide-card-inf">
                                                   <span className="guide-tags-rs">ERP Calculator</span>
                                                 <span className="guide-card-title">Estimate implementation costs in minutes.</span>
-                                                <a className="n-tag-link" href="">Calculate Now <i className="bi bi-arrow-right"></i></a>
+                                                <a className="n-tag-link" href="/erp-implementation-cost-calculator/">Calculate Now <i className="bi bi-arrow-right"></i></a>
                                               </div>
                                             </a>
                                           </div>
                                           <div className="guide-card-01">
-                                            <a href="#">
+                                            <a href="/top-erp-systems-comparison/">
                                               <div className="guide-card-imag">
-                                                <img width={980} height={578} src="/img/crm-guide-card-pic.png" alt="guide" />
+                                                <img width={980} height={578} src="/img/tools-two.png" alt="guide" />
                                               </div>
                                               <div className="guide-card-inf">
                                                 <span className="guide-tags-rs">ERP Comparison</span>
                                                 <span className="guide-card-title">Compare Dynamics 365 solutions side-by-side.</span>
-                                                <a className="n-tag-link" href="">Compare Now <i className="bi bi-arrow-right"></i></a>
+                                                <a className="n-tag-link" href="/top-erp-systems-comparison/">Compare Now <i className="bi bi-arrow-right"></i></a>
                                               </div>
                                             </a>
                                           </div>
@@ -1845,11 +1848,15 @@ const DeskstopMenu = () => {
                                       <span className="n-tag">Featured Article</span>
                                       <span className="n-title">60% More Operational Visibility with Dynamics 365</span>
                                       <p>See how a medical device manufacturer transformed production planning, inventory and reporting.</p>
-                                      <div className="imag00"><img src="/img/menu-icons/pic-006.png" alt="Dynamics 365" width={106} height={90} /></div>
+                                      <div className="imag00">
+                                        
+                                        <img src="/img/menu-icons/pic-006.png" alt="Dynamics 365" width={106} height={90} />
+                                        
+                                        </div>
                                       <a href="">Read Story <i className="bi bi-arrow-right"></i></a>
                                     </div>
                                     <div className="res-top-bo">
-                                      <img src="/img/menu-icons/menu--ss.png" width={706} height={180} alt="AI" />
+                                      <a href="#"><img src="/img/menu--ss.png" width={706} height={180} alt="AI" /></a>
                                     </div>
                                   </div>
                                 </div>
@@ -1868,54 +1875,53 @@ const DeskstopMenu = () => {
                                   </div>
                                   <div className="res-flex-wrap">
                                     <div className="guide-card-01">
-                                      <a href="#">
+                                      <a target="_blank" href="https://www.youtube.com/watch?v=44hqw-S27D0">
                                         <div className="guide-card-imag">
-                                          <img width={980} height={578} src="/img/nav-guide-pic.png" alt="manufacturing" />
+                                          <img width={411} height={216} src="/img/bc-8-20.png" alt="potcast" />
                                         </div>
                                         <div className="guide-card-inf">
-                                          <span className="guide-card-title">A Complete Guide to Dynamics 365 Finance</span>
-                                          <span className="guide-card-para">The Extensive Guide to Dynamics 365 Finance</span>
+                                          <span className="guide-card-title">Is Your Business Ready for an ERP System?</span>
+                                          <span className="guide-card-para">Explore key signs, benefits, and steps to ERP readiness</span>
                                         </div>
                                       </a>
                                     </div>
                                     <div className="guide-card-01">
-                                      <a href="#">
+                                      <a target="_blank" href="https://youtu.be/hUPT5DejiR0?si=p_hlO_BdCj_gbWwh">
                                         <div className="guide-card-imag">
-                                          <img width={980} height={578} src="/img/Ebook-Nav-to-BC.png" alt="manufacturing" />
+                                          <img width={411} height={216} src="/img/bc-8-21.png" alt="potcast" />
                                         </div>
                                         <div className="guide-card-inf">
-                                          <span className="guide-card-title">Dynamics NAV to Business Central</span>
-                                          <span className="guide-card-para">Upgrade From Dynamics NAV to Business Central</span>
+                                          <span className="guide-card-title">Unpacking Microsoft Dynamics 365 Business Central for Growth</span>
+                                          <span className="guide-card-para">Learn how Business Central helps streamline operations and scale growth in this expert-driven podcast episode.</span>
                                         </div>
                                       </a>
                                     </div>
                                     <div className="guide-card-01">
-                                      <a href="#">
+                                      <a target="_blank" href="https://youtu.be/Of8upj7BtGo?si=Lsf5SCwBtIpSU1ST">
                                         <div className="guide-card-imag">
-                                          <img width={980} height={578} src="/img/nav-guide-pic.png" alt="manufacturing" />
+                                          <img width={411} height={216} src="/img/bc-8-22.png" alt="potcast" />
                                         </div>
                                         <div className="guide-card-inf">
-                                          <span className="guide-card-title">A Complete Guide to Dynamics 365 Finance</span>
-                                          <span className="guide-card-para">The Extensive Guide to Dynamics 365 Finance</span>
+                                          <span className="guide-card-title">Signs Your Business Is Ready for an ERP System</span>
+                                          <span className="guide-card-para">Understand when to adopt ERP, its benefits, and how Dynamics 365 drives business transformation.</span>
                                         </div>
                                       </a>
                                     </div>
                                     <div className="guide-card-01">
-                                      <a href="#">
+                                      <a target="_blank" href="https://www.youtube.com/watch?v=44hqw-S27D0">
                                         <div className="guide-card-imag">
-                                          <img width={980} height={578} src="/img/ebooh-img.png" alt="manufacturing" />
+                                          <img width={411} height={216} src="/img/bc-8-20.png" alt="potcast" />
                                         </div>
                                         <div className="guide-card-inf">
-                                          <span className="guide-card-title">Choose the Right ERP
-                                            For Your Business</span>
-                                          <span className="guide-card-para">Ultimate Guide to Choose the Right ERP For Your Business
-                                          </span>
+                                          <span className="guide-card-title">Is Your Business Ready for an ERP System?</span>
+                                          <span className="guide-card-para">Explore key signs, benefits, and steps to ERP readiness</span>
                                         </div>
                                       </a>
                                     </div>
+                                 
                                   </div>
                                   <div className="comm-links-b">
-                                    <a className="n-tag-link" href="">View All eBooks <i className="bi bi-arrow-right"></i></a>
+                                    <a className="n-tag-link" target="_blank" href="https://www.youtube.com/@DynamicsSquare">View All Podcasts <i className="bi bi-arrow-right"></i></a>
                                   </div>
                                 </div>
                               </div>
@@ -1925,7 +1931,7 @@ const DeskstopMenu = () => {
                     </div>
 
                   </div>
-                </li> */}
+                </li>  */}
         <li className="dropdown">
           <a href="#">
             <span>Resources</span> <i className="bi bi-chevron-down"></i>

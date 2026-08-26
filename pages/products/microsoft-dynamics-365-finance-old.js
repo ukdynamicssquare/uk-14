@@ -4,7 +4,8 @@ import Image from 'next/image';
 // import ModalVideo from "react-modal-video";
 import Link from "next/link";
 import Blog from "../../components/Blog";
-const Finance = () => {
+import FootComo from "../../components/FootComo";
+const FinanceOld = () => {
   const [isOpen, setOpen] = useState(false);
   const [open, setsOpen] = useState(false);
 
@@ -1057,8 +1058,10 @@ const Finance = () => {
           </div>
         </div>
       </section>
+      <FootComo />
     </>
   );
 };
-
-export default Finance;
+FinanceOld.noHeader = true;
+FinanceOld.noFooter = true;
+export default FinanceOld;

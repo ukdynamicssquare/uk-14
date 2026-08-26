@@ -2762,6 +2762,45 @@ section {
   color: #ffada7;
   text-decoration: underline;
 }
+.trust-bar {
+    color: #fff;
+    font-size: 0.8rem;
+    margin-top:30px
+}
+.me-1 {
+    margin-right: .25rem !important;
+}
+.trust-bar .legal-sep {
+    color: rgba(255, 255, 255, 0.25);
+    margin: 0 .5rem;
+}
+
+.trust-bar a {
+    color: #ffffff;
+}
+.site-footer a {
+    color: #7c86a2;
+    text-decoration: none;
+    transition: color .15s ease;
+}
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border-soft);
+    margin-left: .4rem;
+    color: #fff !important;
+    font-size: .85rem;
+}
+.social-icons a:hover {
+    background: #ad3916;
+    border-color: #e65428;
+}
+
 .section-bg {
   background: url(/img/intro-bg.jpg) center/cover no-repeat fixed;
   position: relative;
@@ -20713,7 +20752,24 @@ padding: 0px 0px 0px;
 
 /*new mega menu*/
 .megamenu-list-resource{
+  
 background-color: #ffffff !important;
+display: flex;
+    opacity: 0;
+    top: 100%;
+    visibility: hidden;
+    position: absolute;
+    top: calc(100% + 30px);
+    width: 100%;
+    left: 0;
+    z-index: 99;
+    box-shadow: 0 0 30px rgb(127 137 161 / 25%);
+    -moz-box-shadow: 0 0 30px rgb(127 137 161 / 25%);
+    -webkit-box-shadow: 0 0 30px rgb(127 137 161 / 25%);
+    border-radius: 4px;
+    overflow: hidden;
+    background: #f6f6f6;
+    padding: 0;
 }
 .megamenu-list-resource .nav-link{
   padding-right: 0;
@@ -20730,6 +20786,7 @@ background-color: #ffffff !important;
 }
 .megamenu-list-resource .nav-link a:hover,.megamenu-list-resource .nav-link.active a{
   background-color: #F3F2F6;
+  color: #bb2b36 !important;
    
 }
 .navbar .dropdown .mega-list-01 ul{
@@ -20765,6 +20822,9 @@ display: block;
 white-space: normal;
     font-weight: 400 !important;
         font-size: 14px;
+}
+.mega-list-01 ul li a:focus,.mega-list-01 ul li a:hover{
+        color: #b10817 !important;
 }
 .navbar .dropdown.megamenu .megamenu-list.megamenu-list-resource .left-list{
 flex: 100%;
@@ -20920,6 +20980,7 @@ display: block !important;
   background: #fff;
     border: 1px solid #a66dbe;
     border-radius: 8px;
+    flex: 1 1 25%;
 }
 .guide-card-01 a,.guide-card-01 a:focus{
   display: block;
@@ -20978,7 +21039,8 @@ display: block;
     gap: 10px;
 }
 .resor-bord{
-  border-right:1px solid #DFCAF7
+  border-right:1px solid #DFCAF7;
+  padding-right: 15px;
 }
 @media (max-width:1400px){
   .res-flex-wrap .guide-card-01:last-child {

@@ -4,12 +4,12 @@ import HeaderWork from "./HeaderWork";
 import FooterNew from "./FooterNew";
 
 const Layouts = ({children }) => {
-
+ const noHeader = children.type?.noHeader;
 const noFooter = children.type?.noFooter;
 
 return(
 <>
-<HeaderWork />
+ {!noHeader && <HeaderWork />}
     {/* <Header /> */}
     {/* <Footer /> */}
     {children}
