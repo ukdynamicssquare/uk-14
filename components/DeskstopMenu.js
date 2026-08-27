@@ -1437,7 +1437,7 @@ const DeskstopMenu = () => {
                                     </div>
                                     <div className="col-lg-3">
                                       <div className="mega-list-01">
-                                        <span>By product</span>
+                                        <span>By Industry</span>
                                         <ul>
                                           <li><a href="#manufacturing">Manufacturing</a></li>
                                           <li><a href="#retail-ecommerce">Retail & Ecommerce</a></li>
@@ -1451,7 +1451,7 @@ const DeskstopMenu = () => {
                                     </div>
                                     <div className="col-lg-6">
                                       <div className="mega-list-01">
-                                        <span>By product</span>
+                                        <span>Editor's Picks</span>
                                         <ul>
                                           <li>
                                             <a href="/business-central-implementation-methodology/">
