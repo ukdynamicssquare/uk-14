@@ -1328,10 +1328,10 @@ const DeskstopMenu = () => {
                             <a href="#">
                               <img
                                 src="/img/menu-icons/res-meg-00.png"
-                                alt="Insights"
+                                alt="Blogs"
                                 width="24"
                                 height="24"
-                              /><span>Insights</span>
+                              /><span>Blogs</span>
                             </a>
                           </div>
                           <div
@@ -1358,10 +1358,10 @@ const DeskstopMenu = () => {
                             <a href="#">
                               <img
                                 src="/img/menu-icons/res-meg-03.png"
-                                alt="Ebook"
+                                alt="eBooks"
                                 width="24"
                                 height="24"
-                              /><span>Ebook</span>
+                              /><span>eBooks</span>
                             </a>
                           </div>
                           <div
@@ -1403,10 +1403,10 @@ const DeskstopMenu = () => {
                             <a href="#">
                               <img
                                 src="/img/menu-icons/res-meg-06.png"
-                                alt="Webinars"
+                                alt="Webcasts"
                                 width="24"
                                 height="24"
-                              /><span>Webinars</span>
+                              /><span>Webcasts</span>
                             </a>
                           </div>
 
@@ -1870,8 +1870,8 @@ const DeskstopMenu = () => {
                               <div className="row">
                                 <div className="col-lg-12 bg-0-gray-t">
                                   <div className="guide-cardwar">
-                                    <span className="pop-res-title">Podcasts</span>
-                                    <p>your go-to source for expert insights on CRM, ERP, and business transformation powered by Microsoft Dynamics 365</p>
+                                    <span className="pop-res-title">Webcasts</span>
+                                    <p>Your go-to source for expert insights on CRM, ERP, and business transformation powered by Microsoft Dynamics 365</p>
                                   </div>
                                   <div className="res-flex-wrap">
                                     <div className="guide-card-01">
