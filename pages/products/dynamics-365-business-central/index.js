@@ -8,6 +8,7 @@ import useCardScrollEffect from "../../../components/useCardScrollEffect";
 import BcPopPdf from '../../../components/BCPdfPopup';
 import NavBar from '../../../components/NavBar';
 import BlogFinanaceCard from '../../../components/BlogFinanaceCard';
+import CaseStudies from '../../../components/CaseStudies';
 
 
 
@@ -41,7 +42,7 @@ const BusinessCentral = () => {
   return (
     <>
       <Head>
-        <title>Microsoft Dynamics 365 Business Central - Dynamics Square</title>
+        <title>Microsoft Dynamics 365 Business Central - Dynamics Square UK</title>
         <meta
           name="description"
           content="Microsoft Dynamics 365 Business Central is an all-in-one cloud ERP for SMBs to manage finance, sales, inventory and operations efficiently with real-time insights and scalable growth."
@@ -53,13 +54,13 @@ const BusinessCentral = () => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/" />
-        <meta property="og:title" content="Microsoft Dynamics 365 Business Central - Dynamics Square" />
+        <meta property="og:title" content="Microsoft Dynamics 365 Business Central - Dynamics Square UK" />
         <meta property="og:description" content="Microsoft Dynamics 365 Business Central is an all-in-one cloud ERP for SMBs to manage finance, sales, inventory and operations efficiently with real-time insights and scalable growth." />
         <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/business-center-new-banner.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/" />
-        <meta property="twitter:title" content="Microsoft Dynamics 365 Business Central - Dynamics Square" />
+        <meta property="twitter:title" content="Microsoft Dynamics 365 Business Central - Dynamics Square UK" />
         <meta property="twitter:description" content="Microsoft Dynamics 365 Business Central is an all-in-one cloud ERP for SMBs to manage finance, sales, inventory and operations efficiently with real-time insights and scalable growth." />
         <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/business-center-new-banner.png" />
 
@@ -180,7 +181,7 @@ const BusinessCentral = () => {
             <div className='col-lg-12'>
               <div className='flecx'>
                 <div className='left-fl'>
-                  <p>Dynamics Square helps small and medium businesses simplify processes, boost productivity, and achieve measurable results with the AI-powered Dynamics 365 Business Central ERP.</p>
+                  <p>Dynamics Square helps small and medium sized UK businesses simplify processes, boost productivity, and achieve measurable results with the AI-powered Dynamics 365 Business Central ERP.</p>
                 </div>
                 <div className='left-rl'>
                   <Image src="/img/partner-logo-black.png" width={193} height={55} alt="partner-logo-black" />
@@ -198,9 +199,7 @@ const BusinessCentral = () => {
               <div className='solution-new-banner-sub-head'>
                 <h2>What is Dynamics 365 Business Central?</h2>
                 <p>Microsoft Dynamics 365 Business Central ties together your finance, operations, sales, customer service, project management and more to deliver a 360-degree business management system through AI, automation, and real-time insights.</p>
-                <p>D365 Business Central brings your teams and business processes in sync to help your company scale and thrive with precision and efficiency. Microsoft Business Central serves as one smart system which helps you stay steady, save time, and make better decisions to take your business into the right direction.</p>
-
-                <p>Due to its modular structure and cloud-based deployment, Dynamics 365 Business Central is highly flexible in terms of customisation. Businesses can add/remove Business Central functionalities based on their requirements. This means Business Central ERP can be <a href="/products/dynamics-365-business-central/customisation/">customised</a> to cater to different industries and operations.</p>
+                <p>D365 Business Central brings your teams and business processes in sync and serves as one smart system. This helps you stay steady, save time, and make better decisions to take your business into the right direction. With the option of <a className='u-i' href="/products/dynamics-365-business-central/customisation/">Businesses Central customisation</a>, companies can add/remove Business Central functionalities cater to their operational requirements.</p>
                 <p><b>In short, Microsoft Business Central is:</b></p>
                 <ul className='banner-sub-head-list'>
                   <li><i className="bi bi-check2"></i> All-in-one system for finance and operations</li>
@@ -234,7 +233,7 @@ const BusinessCentral = () => {
             <div className='col-lg-8'>
               <div className='solution-new-banner-sub-head'>
                 <h2>Business Challenges Solved by Business Central</h2>
-                <p><a href="/products/dynamics-365-business-central/advantages-capabilities/">Dynamics 365 Business Central capabilities</a> address challenges that a modern business can potentially face. Some of the most certain challenges include:</p>
+                <p><a href="/products/dynamics-365-business-central/advantages-capabilities/">Dynamics 365 Business Central capabilities</a> address challenges that a modern UK business can potentially face. Some of the most certain challenges include:</p>
               </div>
             </div>
           </div>
@@ -254,11 +253,12 @@ const BusinessCentral = () => {
                   <li><i className="bi bi-check2"></i> Disconnected systems (no single source of truth)</li>
                   <li><i className="bi bi-check2"></i> Reduced productivity due to repetitive manual tasks</li>
                   <li><i className="bi bi-check2"></i> Issues navigating complex processes or data-heavy systems</li>
+                  <li><i className="bi bi-check2"></i> Difficulty meeting HMRC reporting requirements and staying compliant with Making Tax Digital (MTD) regulations</li>
                   <li><i className="bi bi-check2"></i> Financial close cycles take too long, causing reporting delays</li>
                   <li><i className="bi bi-check2"></i> Poor forecasting due to fragmented data & manual entries</li>
                   <li><i className="bi bi-check2"></i> No multi-site capabilities, resulting in errors and duplication</li>
                   <li><i className="bi bi-check2"></i> Bank reconciliations wasting hours and remain prone to human error</li>
-                  <li><i className="bi bi-check2"></i> Difficulty staying compliant with local tax and reporting laws</li>
+                  
                 </ul>
                 <p>And the list goes on…</p>
                 <p>Business Central ERP is an integrated system that addresses all these aforementioned problems and beyond. It helps future-proof your business whether you are a startup that has just kicked off its operations or a promising growing business.</p>
@@ -268,7 +268,7 @@ const BusinessCentral = () => {
                     href="#exampleModal"
                     data-bs-toggle="modal"
                     className="btn-get-started scrollto">
-                    <span>Book Your Free Demo!  &nbsp;<i className="bi bi-arrow-right"></i></span> 
+                    <span>Book Your Free Demo!  &nbsp;<i className="bi bi-arrow-right"></i></span>
                   </Link>
                 </div>
               </div>
@@ -285,7 +285,7 @@ const BusinessCentral = () => {
             <div className='col-lg-9'>
               <div className='solution-new-banner-sub-head'>
                 <h2>Dynamics 365 Business Central Capabilities</h2>
-                <p>Microsoft Dynamics 365 Business Central capabilities make it a widely preferred choice by small and midsize businesses.</p>
+                <p>Microsoft Dynamics 365 Business Central capabilities make it a widely preferred choice by small and midsize UK businesses.</p>
                 <p>Is<a href="/blog/business-central-for-accounting/"> Business Central for Accounting</a>? Yes… and no. D365 BC is much more than just being accounting software. It supports companies across industries and keeps teams connected anywhere in the world.</p>
                 <p><b>Business Central comes with the following capabilities:</b></p>
               </div>
@@ -1069,6 +1069,7 @@ const BusinessCentral = () => {
           </div>
         </div>
       </section>
+      <CaseStudies />
       <section id='section5' className='solution-new-banner-five'>
         <div className='container'>
           <div className='row'>
@@ -1154,7 +1155,7 @@ const BusinessCentral = () => {
                     data-bs-toggle="modal"
                     className="btn-get-started scrollto"
                     style={{ display: 'inline-block', color: '#fff' }}>
-                    <span>Talk to Our Experts &nbsp;<i className="bi bi-arrow-right"></i></span> 
+                    <span>Talk to Our Experts &nbsp;<i className="bi bi-arrow-right"></i></span>
                   </Link>
                 </div>
               </div>
@@ -1184,13 +1185,14 @@ const BusinessCentral = () => {
         </div>
 
       </section>
+     
       <section className='solution-new-banner-four'>
         <div className='container'>
           <div className='row'>
             <div className='col-lg-9'>
               <div className='solution-new-banner-sub-head'>
-                <h2>Why Dynamics Square</h2>
-                <p>Dynamics Square is a trusted <a href="/our-services/dynamics-365-implementation-services/">Microsoft Dynamics 365 implementation partner</a> in the UK. We help small and mid-sized businesses manage finance, supply chain, sales, service, and projects with Microsoft Dynamics 365 Business Central. Our team focuses on steady results, clear guidance, and strong support. Businesses choose Dynamics Square as their Business Central implementation partner because we are:</p>
+                <h2>Why Businesses Choose Dynamics Square</h2>
+                <p>Dynamics Square is a trusted <a href="/our-services/dynamics-365-implementation-services/">Microsoft Dynamics 365 implementation partner</a> in the UK. We help small and mid-sized UK businesses manage finance, supply chain, sales, service, and projects with Microsoft Dynamics 365 Business Central. Our team focuses on steady results, clear guidance, and strong support. UK Businesses choose Dynamics Square as their Business Central implementation partner because we are:</p>
               </div>
             </div>
           </div>
@@ -1354,7 +1356,7 @@ const BusinessCentral = () => {
                     href="#exampleModal"
                     data-bs-toggle="modal"
                     className="btn-get-started scrollto">
-                    <span>Explore the Solution&nbsp;<i className="bi bi-arrow-right"></i></span> 
+                    <span>Explore the Solution&nbsp;<i className="bi bi-arrow-right"></i></span>
                   </Link>
                 </div>
               </div>

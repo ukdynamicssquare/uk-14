@@ -19909,6 +19909,412 @@ gap: 0;
 .drd-f p{
 margin-bottom:10px
 }
+/* =========================================
+   DYNAMICS 365 SUPPORT PROCESS
+========================================= */
+
+.support-process {
+  width: 100%;
+  padding: 60px 0;
+background: #393053;
+    background-image: radial-gradient(circle at 50% -13%, #7865af, #393053 40%);
+}
+
+.support-process .container {
+  max-width: 1040px;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.support-process-header {
+  margin-bottom: 34px;
+}
+
+.support-process-header h2 {
+  position: relative;
+  display: inline-block;
+
+  margin: 0 0 16px;
+
+  color: #fff;
+
+font-family: Lato;
+    font-size: 32px;
+    font-weight: bold;
+  line-height: 1.25;
+}
+
+/* Blue underline */
+
+
+.support-process-header p {
+  max-width: 700px;
+  margin: 0;
+  color: #fff;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+
+/* =========================================
+   TIMELINE
+========================================= */
+
+.process-timeline {
+  position: relative;
+  width: 100%;
+  margin-top: 100px;
+}
+
+
+/* Center vertical line */
+
+.process-timeline::before {
+  content: "";
+
+  position: absolute;
+
+  top: -10px;
+  bottom: 0;
+
+  left: 50%;
+
+  width: 1px;
+
+  background: #5968b5;
+
+  transform: translateX(-50%);
+}
+
+
+/* =========================================
+   ROW
+========================================= */
+
+.process-row {
+  position: relative;
+
+  display: grid;
+
+  /*
+     SMALL CENTER GAP
+     Screenshot is approximately:
+     card | 28px | circle | 28px | card
+  */
+
+  grid-template-columns: 1fr 55px 1fr;
+
+  align-items: center;
+
+  min-height: 118px;
+      margin-top: -56px;
+}
+
+
+/* =========================================
+   CARDS
+========================================= */
+
+.process-card {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  min-height: 106px;
+
+  padding: 18px 16px;
+
+  border-radius: 6px;
+
+  background: #ffffff;
+}
+
+
+/* Left card */
+
+.process-card-left {
+  grid-column: 1;
+}
+
+
+/* Right card */
+
+.process-card-right {
+  grid-column: 3;
+}
+
+
+/* Empty side */
+
+.empty-card {
+  visibility: hidden;
+}
+
+
+/* =========================================
+   CONNECTING LINES
+========================================= */
+
+/*
+   Left card -> number
+*/
+
+.process-card-left::after {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  right: -28px;
+
+  width: 28px;
+  height: 1px;
+
+  background: #5968b5;
+
+  transform: translateY(-50%);
+}
+
+
+/*
+   Number -> right card
+*/
+
+.process-card-right::before {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  left: -28px;
+
+  width: 28px;
+  height: 1px;
+
+  background: #5968b5;
+
+  transform: translateY(-50%);
+}
+
+
+/* =========================================
+   NUMBER CIRCLE
+========================================= */
+
+.process-number {
+  position: relative;
+
+  z-index: 5;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  grid-column: 2;
+  grid-row: 1;
+
+  justify-self: center;
+
+  width: 37px;
+  height: 37px;
+
+  border-radius: 50%;
+
+color: #ffffff;
+    background-color: #AE7BC5;
+
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+
+  line-height: 1;
+}
+
+
+/* =========================================
+   CARD CONTENT
+========================================= */
+
+.process-card h3 {
+  margin: 0 0 12px;
+
+  color: #454545;
+
+ 
+
+  font-size: 16px;
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+.process-card p {
+  margin: 0;
+
+  color: #4b4b4b;
+  font-weight: 400;
+
+  line-height: 1.4;
+}
+
+.process-card p u {
+  text-underline-offset: 2px;
+}
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+  .support-process {
+    padding: 45px 15px;
+  }
+
+
+  /* Heading */
+
+  .support-process-header {
+    margin-bottom: 30px;
+  }
+
+  .support-process-header h2 {
+    font-size: 22px;
+  }
+
+  .support-process-header p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+
+  /* Timeline */
+
+  .process-timeline::before {
+    left: 20px;
+
+    top: 0;
+    bottom: 0;
+  }
+
+
+  /* Rows */
+
+  .process-row {
+    display: block;
+
+    min-height: auto;
+
+    padding-left: 55px;
+
+    margin-bottom: 70px;
+  }
+
+
+  /* Number */
+
+  .process-number {
+    position: absolute;
+
+    left: 0;
+    top: 50%;
+
+    width: 40px;
+    height: 40px;
+
+    transform: translateY(-50%);
+  }
+
+
+  /* Cards */
+
+  .process-card {
+    min-height: auto;
+
+    padding: 18px 16px;
+  }
+
+
+  /*
+     Hide the empty cards
+  */
+
+  .process-card.empty-card {
+    display: none;
+  }
+
+
+  /*
+     Show actual card
+  */
+
+  .process-card-left,
+  .process-card-right {
+    width: 100%;
+  }
+
+
+  /*
+     Remove desktop connecting lines
+  */
+
+  .process-card-left::after,
+  .process-card-right::before {
+    display: none;
+  }
+
+
+  /* Text */
+
+  .process-card h3 {
+    font-size: 16px;
+
+    margin-bottom: 10px;
+  }
+
+  .process-card p {
+    font-size: 16px;
+
+    line-height: 1.4;
+  }
+}
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+
+  .support-process {
+    padding: 50px 20px;
+  }
+
+  .support-process .container {
+    max-width: 900px;
+  }
+
+  .process-row {
+    grid-template-columns: 1fr 55px 1fr;
+  }
+
+  .process-card-left::after {
+    right: -28px;
+    width: 28px;
+  }
+
+  .process-card-right::before {
+    left: -28px;
+    width: 28px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
 /* Responsive */
 
 @media(max-width:991px){

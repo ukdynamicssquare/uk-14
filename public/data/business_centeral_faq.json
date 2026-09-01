@@ -358,5 +358,15 @@
     "id": 97,
     "question": "How reliable is Business Central for long-term business growth?",
     "answer": "<p>D365 BC is known for its dependability factor. It grows with your business and adapts to change.</p>"
+  },
+  {
+    "id": 98,
+    "question": "How much does Business Central cost in the UK?",
+    "answer": "<p>Business Central licensing costs in the UK are based on the plan you choose, while implementation costs are likely to vary according to users, complexity, integrations, and migration requirements.</p>"
+  },
+  {
+    "id": 99,
+    "question": "What is the difference between Business Central Essentials and Premium?",
+    "answer": "<p>The Business Central Essentials licence includes finance, sales, purchasing, inventory, and project management functionality. The Business Central Premium includes all Essentials capabilities plus manufacturing and service management features.</p>"
   }
 ]
