@@ -57,6 +57,7 @@ export default function LicenceRateCard({ source = "licence-rate-card", initialC
   const [sent, setSent] = useState(false);
   const [unlockToken, setUnlockToken] = useState(null);
   const [showLeadModal, setShowLeadModal] = useState(false);
+  const [showQuotedPreview, setShowQuotedPreview] = useState(false);
 
   const p = currency ? catalog?.pricing?.[currency] : null;
   const locked = !!catalog?.gated;
@@ -99,14 +100,29 @@ export default function LicenceRateCard({ source = "licence-rate-card", initialC
     return calculate(catalog, p, input, lead);
   }, [catalog, p, locked, caps, entities, countries, revenue, fullUsers, teamUsers, deviceUsers, activityUsers, lead]);
 
+  useEffect(() => {
+    if (!model?.extensionCount) setShowQuotedPreview(false);
+  }, [model?.extensionCount]);
+
   const handleSubmit = useCallback(async (event) => {
     event?.preventDefault();
-    if (!lead.name.trim() || !lead.email.trim() || sending) return;
+    if (!lead.name.trim() || !lead.email.trim() || !lead.phone.trim() || sending) return;
     setSending(true);
     setSendError("");
     try {
       const res = await sendLead({
         ...lead,
+        name: lead.name.trim(),
+        email: lead.email.trim(),
+        company: lead.company.trim(),
+        company_name: lead.company.trim(),
+        companyname: lead.company.trim(),
+        phone: lead.phone.trim(),
+        phone_number: lead.phone.trim(),
+        telephone: lead.phone.trim(),
+        mobile: lead.phone.trim(),
+        renewal: lead.renewal.trim(),
+        renewal_month: lead.renewal.trim(),
         source,
         currency,
         capabilities: [...caps],
@@ -180,6 +196,48 @@ export default function LicenceRateCard({ source = "licence-rate-card", initialC
   const visible = (f) => !f.showWhen || f.showWhen !== "platform:fo" || model.platform === "fo";
 
   const annual = model.annual;
+  const previewSymbol = currency === "GBP" ? "£" : currency === "CAD" ? "C$" : "$";
+  const previewFullRate = model.platform === "fo" ? 148 : model.tier === "premium" ? 75 : 55;
+  const previewTeamRate = model.platform === "fo" ? 6.6 : 6;
+  const previewDeviceRate = model.platform === "fo" ? 75 : 30;
+  const previewActivityRate = 50;
+  const lockedMainPreviewLines = [
+    fullUsers > 0 && {
+      k: "full-preview",
+      qty: fullUsers,
+      label: model.platform === "fo" ? "Dynamics 365 Finance" : model.platformLabel,
+      sub: "Full user",
+      rate: previewFullRate,
+    },
+  ].filter(Boolean);
+  const lockedQuotedPreviewLines = [
+    teamUsers > 0 && {
+      k: "team-preview",
+      qty: teamUsers,
+      label: "Team Members",
+      sub: "Read, approve, time and expense",
+      rate: previewTeamRate,
+    },
+    deviceUsers > 0 && {
+      k: "device-preview",
+      qty: deviceUsers,
+      label: model.platform === "fo" ? "Operations Device" : "Device licence",
+      sub: "Shared terminal, unlimited users",
+      rate: previewDeviceRate,
+    },
+    model.platform === "fo" &&
+      activityUsers > 0 && {
+        k: "activity-preview",
+        qty: activityUsers,
+        label: "Operations Activity",
+        sub: "Single-function operational access",
+        rate: previewActivityRate,
+      },
+  ].filter(Boolean);
+  const lockedPreviewLines = showQuotedPreview
+    ? [...lockedMainPreviewLines, ...lockedQuotedPreviewLines]
+    : lockedMainPreviewLines;
+  const lockedPreviewMonthly = lockedPreviewLines.reduce((sum, line) => sum + line.qty * line.rate, 0);
 
   return (
     <div className="rc">
@@ -224,10 +282,10 @@ export default function LicenceRateCard({ source = "licence-rate-card", initialC
                 </button>
               ))}
             </div>
-            <div className="billing-tabs" aria-label="Billing period">
+            {/* <div className="billing-tabs" aria-label="Billing period">
               <span className="billing-tab on">Monthly</span>
               <span className="billing-tab">Annual</span>
-            </div>
+            </div> */}
           </div>
           {CAP_GROUPS.map(({ name: g, id: gid, sub, collapsible, group: inGroup }) => {
             const isOpen = !collapsible || open.has(g);
@@ -365,17 +423,67 @@ export default function LicenceRateCard({ source = "licence-rate-card", initialC
                   <ul className="lock-counts">
                     <li><b>{model.capabilityCount}</b> {C.locked.capabilitiesSuffix}</li>
                     {model.moduleCount > 0 && <li><b>{model.moduleCount}</b> {C.locked.modulesSuffix}</li>}
-                    {model.extensionCount > 0 && <li><b>{model.extensionCount}</b> {C.locked.extensionsSuffix}</li>}
+                    {model.extensionCount > 0 && (
+                      <li className="quoted-count">
+                        <button
+                          type="button"
+                          className={showQuotedPreview ? "is-on" : ""}
+                          onClick={() => setShowQuotedPreview((current) => !current)}
+                          aria-pressed={showQuotedPreview}
+                        >
+                          <b>{model.extensionCount}</b> {C.locked.extensionsSuffix}
+                        </button>
+                      </li>
+                    )}
                   </ul>
                 </div>
 
-                <div className="lock-rows" aria-hidden="true">
-                  {[64, 82, 48].map((w, i) => (
-                    <div className="lock-row" key={i}>
-                      <span className="lock-bar" style={{ width: `${w}%` }} />
-                      <span className="lock-chip" />
+                <div className="locked-preview">
+                  <div className="locked-preview-data" aria-hidden="true">
+                    <table className="stmt-table is-blurred">
+                    <tbody>
+                      {lockedPreviewLines.map((line) => (
+                        <tr key={line.k}>
+                          <td className="q">{line.qty}<span>×</span></td>
+                          <td className="d">
+                            <span className="d-label">{line.label}</span>
+                            <span className="d-sub">{line.sub}</span>
+                          </td>
+                          <td className="v">
+                            <span className="v-rate locked-value">{previewSymbol}{fmt(line.rate)}</span>
+                            <span className="v-line locked-value">{previewSymbol}{fmt(line.qty * line.rate)}</span>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                    </table>
+
+                    <div className="stmt-totals is-blurred">
+                      <div className="tot">
+                        <span>{C.statement.perMonth}</span>
+                        <b className="locked-value">{previewSymbol}{fmt(lockedPreviewMonthly)}</b>
+                      </div>
+                      <div className="tot lead">
+                        <span>{C.statement.perYear}</span>
+                        <b className="locked-value">{previewSymbol}{fmt(lockedPreviewMonthly * 12)}</b>
+                      </div>
+                      <div className="tot">
+                        <span>{C.statement.perThreeYears}</span>
+                        <b className="locked-value">{previewSymbol}{fmt(lockedPreviewMonthly * 36)}</b>
+                      </div>
                     </div>
-                  ))}
+                  </div>
+                  <button
+                    type="button"
+                    className="unlock-overlay-btn"
+                    onClick={() => {
+                      setSent(false);
+                      setSendError("");
+                      setShowLeadModal(true);
+                    }}
+                  >
+                    Unlock pricing
+                  </button>
                 </div>
 
                 <p className="lock-cta">
@@ -484,6 +592,7 @@ export default function LicenceRateCard({ source = "licence-rate-card", initialC
                 <p>{locked ? C.form.lockedBody : C.form.body}</p>
                 <input
                   className="inp"
+                  name="name"
                   placeholder={C.form.namePlaceholder}
                   value={lead.name}
                   onChange={(e) => setLead({ ...lead, name: e.target.value })}
@@ -491,6 +600,7 @@ export default function LicenceRateCard({ source = "licence-rate-card", initialC
                 />
                 <input
                   className="inp"
+                  name="email"
                   type="email"
                   placeholder={C.form.emailPlaceholder}
                   value={lead.email}
@@ -499,16 +609,19 @@ export default function LicenceRateCard({ source = "licence-rate-card", initialC
                 />
                 <input
                   className="inp"
+                  name="company"
                   placeholder={C.form.companyPlaceholder}
                   value={lead.company}
                   onChange={(e) => setLead({ ...lead, company: e.target.value })}
                 />
                 <input
                   className="inp"
+                  name="phone"
                   type="tel"
                   placeholder="Phone"
                   value={lead.phone}
                   onChange={(e) => setLead({ ...lead, phone: e.target.value })}
+                  required
                 />
                 <label className="inp-label" htmlFor="rc-renewal">
                   {C.form.renewalLabel}
@@ -516,6 +629,7 @@ export default function LicenceRateCard({ source = "licence-rate-card", initialC
                 <input
                   id="rc-renewal"
                   className="inp"
+                  name="renewal"
                   placeholder={C.form.renewalPlaceholder}
                   value={lead.renewal}
                   onChange={(e) => setLead({ ...lead, renewal: e.target.value })}
@@ -524,7 +638,7 @@ export default function LicenceRateCard({ source = "licence-rate-card", initialC
                 <button
                   type="submit"
                   className="cta"
-                  disabled={!lead.name.trim() || !lead.email.trim() || sending}
+                  disabled={!lead.name.trim() || !lead.email.trim() || !lead.phone.trim() || sending}
                 >
                   {sending ? C.form.sendingLabel : locked ? C.form.lockedCtaLabel : C.form.ctaLabel}
                 </button>
@@ -702,12 +816,22 @@ font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;col
 .lock-answer{font-size:15px;line-height:1.45;margin:0 0 14px;color:rgba(255,255,255,.82);font-weight:500}
 .lock-answer b{font-weight:600;color:#fff}
 .lock-counts{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
-.lock-counts li{font-size:12px;font-weight:600;color:#fff;background:rgba(255,255,255,.14);padding:5px 11px;border-radius:5px}
+.lock-counts li,.lock-counts button{font-size:12px;font-weight:600;color:#fff;background:rgba(255,255,255,.14);padding:5px 11px;border-radius:5px}
+.lock-counts .quoted-count{padding:0;background:transparent}
+.lock-counts button{border:0;cursor:pointer;font-family:inherit}
+.lock-counts button:hover,.lock-counts button.is-on{background:rgba(255,255,255,.24)}
 .lock-counts b{font-family:var(--mono);color:#fff}
-.lock-rows{margin:22px 0 18px;display:flex;flex-direction:column;gap:11px}
-.lock-row{display:flex;align-items:center;justify-content:space-between;gap:14px}
-.lock-bar,.lock-chip{height:9px;border-radius:2px;background:repeating-linear-gradient(115deg,rgba(255,255,255,.16) 0 7px,rgba(255,255,255,.06) 7px 14px)}
-.lock-chip{width:52px;flex:none}
+.locked-preview{position:relative;margin:20px 0 18px}
+.locked-preview:after{content:"";position:absolute;inset:-8px;border-radius:8px;z-index:1;
+background:linear-gradient(180deg,rgba(59,47,88,0),rgba(59,47,88,.28));pointer-events:none}
+.locked-preview-data{position:relative}
+.is-blurred .locked-value{display:inline-block;filter:blur(5px);opacity:.72;user-select:none}
+.is-blurred .d-label,.is-blurred .d-sub,.is-blurred .q{opacity:.86}
+.stmt-table.is-blurred,.stmt-totals.is-blurred{position:relative}
+.unlock-overlay-btn{position:absolute;left:50%;top:57%;z-index:2;transform:translate(-50%,-50%);border:1px solid rgba(255,255,255,.28);
+background:rgba(255,255,255,.16);backdrop-filter:blur(8px);color:#fff;border-radius:7px;padding:10px 16px;font-size:13px;font-weight:600;
+box-shadow:0 12px 30px rgba(20,14,34,.24);cursor:pointer}
+.unlock-overlay-btn:hover{background:rgba(255,255,255,.25)}
 .lock-cta{display:flex;gap:9px;font-size:13px;line-height:1.5;color:rgba(255,255,255,.74);margin:0;padding-top:15px;border-top:1px solid rgba(255,255,255,.16)}
 .lock-icon{flex:none;font-size:13px;line-height:1.4}
 
