@@ -27,6 +27,11 @@ const nextConfig = {
       },
       {
         protocol: "https",
+        hostname: "blogdsukapi.onrender.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
         hostname: "cdn.gemsroot.com",
         pathname: "/**",
       },
