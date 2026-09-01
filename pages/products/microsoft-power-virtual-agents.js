@@ -714,7 +714,7 @@ const PowerVirtualAgents = () => {
             </p>
           </header>
           <div className="row top-2 gx-5">
-            <Blog />
+            <Blog category={"power-platform"} />
             <div className="col-lg-6">
               <div className="blogs-extra-title">
                 <h3>Important Power BI Links:</h3>

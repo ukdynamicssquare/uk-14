@@ -980,7 +980,7 @@ const PowerApps = () => {
             </div>
           </div>
           <div className="row top-2 gx-5">
-            <Blog />
+            <Blog category={"power-apps"} />
             <div className="col-lg-6">
               <div className="blogs-extra-title">
                 <h4>Important Power BI Links:</h4>

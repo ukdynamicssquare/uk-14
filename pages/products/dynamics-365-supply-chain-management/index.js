@@ -1168,7 +1168,7 @@ const Index = () => {
             </div>
           </div>
           <div className="row top-2 gx-5">
-            <Blog />
+            <Blog category={"dynamics-365-fo"} />
             <div className="col-lg-6">
               <div className="blogs-extra-title">
                 <h3>Documents</h3>
