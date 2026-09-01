@@ -1,7 +1,26 @@
 "use client";
 
 import { useState, useEffect, useMemo, useCallback } from "react";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 import { calculate, resolveVerdict, fmt } from "./licensingEngine";
+
+const PERSONAL_EMAIL_DOMAINS = [
+  "gmail.com",
+  "yahoo.com",
+  "hotmail.com",
+  "outlook.com",
+  "live.com",
+  "icloud.com",
+  "aol.com",
+  "msn.com",
+  "protonmail.com",
+  "zoho.com",
+  "gmx.com",
+  "mail.com",
+  "yandex.com",
+  "yeah.net",
+];
 
 const API = process.env.NEXT_PUBLIC_LICENSING_API_URL || "/api/licensing";
 
@@ -52,6 +71,8 @@ export default function LicenceRateCard({ source = "licence-rate-card", initialC
   const [deviceUsers, setDeviceUsers] = useState(0);
   const [activityUsers, setActivityUsers] = useState(0);
   const [lead, setLead] = useState({ name: "", email: "", phone: "", company: "", renewal: "" });
+  const [defaultPhoneCountry, setDefaultPhoneCountry] = useState("gb");
+  const [formErrors, setFormErrors] = useState({});
   const [sending, setSending] = useState(false);
   const [sendError, setSendError] = useState("");
   const [sent, setSent] = useState(false);
@@ -85,6 +106,22 @@ export default function LicenceRateCard({ source = "licence-rate-card", initialC
     if (!locked) setShowLeadModal(false);
   }, [locked]);
 
+  useEffect(() => {
+    const detectPhoneCountry = async () => {
+      try {
+        const res = await fetch("https://api.ipdata.co?api-key=00163619f1de9b2adebdc3a316b8958c4864bcc38ca547a8fd081d6e");
+        if (!res.ok) throw new Error("IP detection failed");
+        const data = await res.json();
+        const countryCode = (data?.country_code || "gb").toLowerCase();
+        setDefaultPhoneCountry(countryCode || "gb");
+      } catch {
+        setDefaultPhoneCountry("gb");
+      }
+    };
+
+    detectPhoneCountry();
+  }, []);
+
   const toggle = (id) =>
     setCaps((prev) => {
       const next = new Set(prev);
@@ -104,9 +141,69 @@ export default function LicenceRateCard({ source = "licence-rate-card", initialC
     if (!model?.extensionCount) setShowQuotedPreview(false);
   }, [model?.extensionCount]);
 
+  const isValidBusinessEmail = useCallback((email) => {
+    const value = (email || "").trim().toLowerCase();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+    if (!emailRegex.test(value)) return false;
+
+    const domain = value.split("@")[1];
+    const isPersonalDomain =
+      PERSONAL_EMAIL_DOMAINS.includes(domain) ||
+      domain.endsWith("gmail.com") ||
+      domain.endsWith("yahoo.com") ||
+      domain.endsWith("hotmail.com") ||
+      domain.endsWith("outlook.com") ||
+      domain.endsWith("live.com") ||
+      domain.endsWith("icloud.com");
+
+    return !isPersonalDomain;
+  }, []);
+
+  const isValidPhoneNumber = useCallback((phone) => {
+    const digitsOnly = (phone || "").replace(/\D/g, "");
+    return digitsOnly.length >= 8 && digitsOnly.length <= 15;
+  }, []);
+
+  const validateLeadForm = useCallback((nextLead) => {
+    const errors = {};
+
+    if (!nextLead.name.trim()) errors.name = "Name is required";
+    if (!nextLead.email.trim()) {
+      errors.email = "Email is required";
+    } else if (!isValidBusinessEmail(nextLead.email)) {
+      errors.email = "Please enter a valid company email address";
+    }
+    if (!nextLead.phone.trim()) {
+      errors.phone = "Phone number is required";
+    } else if (!isValidPhoneNumber(nextLead.phone)) {
+      errors.phone = "Please enter a valid phone number";
+    }
+
+    return errors;
+  }, [isValidBusinessEmail, isValidPhoneNumber]);
+
+  const validateField = useCallback((field, value) => {
+    if (field === "name") return value.trim() ? "" : "Name is required";
+    if (field === "email") {
+      if (!value.trim()) return "Email is required";
+      return isValidBusinessEmail(value) ? "" : "Please enter a valid company email address";
+    }
+    if (field === "phone") {
+      if (!value.trim()) return "Phone number is required";
+      return isValidPhoneNumber(value) ? "" : "Please enter a valid phone number";
+    }
+    return "";
+  }, [isValidBusinessEmail, isValidPhoneNumber]);
+
   const handleSubmit = useCallback(async (event) => {
     event?.preventDefault();
-    if (!lead.name.trim() || !lead.email.trim() || !lead.phone.trim() || sending) return;
+
+    const errors = validateLeadForm(lead);
+    setFormErrors(errors);
+
+    if (Object.keys(errors).length > 0 || sending) return;
+
     setSending(true);
     setSendError("");
     try {
@@ -592,44 +689,87 @@ export default function LicenceRateCard({ source = "licence-rate-card", initialC
                 <p>{locked ? C.form.lockedBody : C.form.body}</p>
                 <input
                   className="inp"
-                  name="name"
                   placeholder={C.form.namePlaceholder}
                   value={lead.name}
-                  onChange={(e) => setLead({ ...lead, name: e.target.value })}
+                  onChange={(e) => {
+                    const value = e.target.value;
+                    setLead({ ...lead, name: value });
+                    setFormErrors((prev) => ({ ...prev, name: validateField("name", value) }));
+                  }}
                   required
                 />
+                {formErrors.name && <p className="err">{formErrors.name}</p>}
                 <input
                   className="inp"
-                  name="email"
                   type="email"
                   placeholder={C.form.emailPlaceholder}
                   value={lead.email}
-                  onChange={(e) => setLead({ ...lead, email: e.target.value })}
+                  onChange={(e) => {
+                    const value = e.target.value;
+                    setLead({ ...lead, email: value });
+                    setFormErrors((prev) => ({ ...prev, email: validateField("email", value) }));
+                  }}
                   required
                 />
+                {formErrors.email && <p className="err">{formErrors.email}</p>}
                 <input
                   className="inp"
-                  name="company"
                   placeholder={C.form.companyPlaceholder}
                   value={lead.company}
                   onChange={(e) => setLead({ ...lead, company: e.target.value })}
                 />
-                <input
-                  className="inp"
-                  name="phone"
-                  type="tel"
-                  placeholder="Phone"
+                <PhoneInput
+                  country={defaultPhoneCountry || "gb"}
                   value={lead.phone}
-                  onChange={(e) => setLead({ ...lead, phone: e.target.value })}
-                  required
+                  onChange={(value) => {
+                    const nextPhone = value || "";
+                    setLead({ ...lead, phone: nextPhone });
+                    setFormErrors((prev) => ({ ...prev, phone: validateField("phone", nextPhone) }));
+                  }}
+                  inputProps={{
+                    name: "phone",
+                    required: true,
+                    "aria-label": "Phone number",
+                    autoComplete: "tel",
+                  }}
+                  inputClass="inp"
+                  containerStyle={{ width: "100%", marginBottom: "9px" }}
+                  inputStyle={{
+                    width: "100%",
+                    height: "42px",
+                    border: "1px solid #d9d4e3",
+                    borderLeft: "0",
+                    borderRadius: "0 6px 6px 0",
+                    fontSize: "14px",
+                    color: "#24163d",
+                    background: "#fff",
+                    boxShadow: "none",
+                    paddingLeft: "48px",
+                  }}
+                  buttonStyle={{
+                    width: "46px",
+                    height: "42px",
+                    border: "1px solid #d9d4e3",
+                    borderRight: "0",
+                    borderRadius: "6px 0 0 6px",
+                    background: "#fff",
+                  }}
+                  dropdownStyle={{
+                    border: "1px solid #d9d4e3",
+                    borderRadius: "6px",
+                    boxShadow: "0 12px 30px rgba(22,16,35,0.14)",
+                  }}
+                  countryCodeEditable={false}
+                  disableSearchIcon
+                  excludeCountries={["pk"]}
                 />
+                {formErrors.phone && <p className="err">{formErrors.phone}</p>}
                 <label className="inp-label" htmlFor="rc-renewal">
                   {C.form.renewalLabel}
                 </label>
                 <input
                   id="rc-renewal"
                   className="inp"
-                  name="renewal"
                   placeholder={C.form.renewalPlaceholder}
                   value={lead.renewal}
                   onChange={(e) => setLead({ ...lead, renewal: e.target.value })}
@@ -638,7 +778,13 @@ export default function LicenceRateCard({ source = "licence-rate-card", initialC
                 <button
                   type="submit"
                   className="cta"
-                  disabled={!lead.name.trim() || !lead.email.trim() || !lead.phone.trim() || sending}
+                  disabled={
+                    !lead.name.trim() ||
+                    !isValidBusinessEmail(lead.email) ||
+                    !lead.phone.trim() ||
+                    !isValidPhoneNumber(lead.phone) ||
+                    sending
+                  }
                 >
                   {sending ? C.form.sendingLabel : locked ? C.form.lockedCtaLabel : C.form.ctaLabel}
                 </button>
@@ -845,6 +991,12 @@ box-shadow:0 12px 30px rgba(20,14,34,.24);cursor:pointer}
 .modal-close:disabled{opacity:.55;cursor:not-allowed}
 .modal-card h3,.modal-card p{padding-right:34px}
 .inp{width:100%;padding:11px 12px;border:1px solid #d9d4e3;border-radius:6px;font-size:14px;font-family:inherit;margin-bottom:9px;background:#fff;color:var(--ink)}
+.react-tel-input{width:100%}
+.react-tel-input .form-control{width:100%;height:42px;padding-left:48px;border:1px solid #d9d4e3;border-left:0;border-radius:0 6px 6px 0;background:#fff;color:var(--ink);font-size:14px;box-shadow:none}
+.react-tel-input .form-control:focus{border-color:#8b79ba;box-shadow:0 0 0 3px rgba(93,80,132,.12);outline:none}
+.react-tel-input .selected-flag{height:42px;border:1px solid #d9d4e3;border-right:0;border-radius:6px 0 0 6px;background:#fff;padding:0 0 0 10px}
+.react-tel-input .selected-flag:hover,.react-tel-input .selected-flag:focus,.react-tel-input .selected-flag.open{background:#fff}
+.react-tel-input .country-list{border:1px solid #d9d4e3;border-radius:6px;box-shadow:0 12px 30px rgba(22,16,35,.14);margin-top:6px}
 .inp-label{display:block;font-size:12px;color:var(--ink-2);margin:8px 0 5px}
 .rc .err{font-size:12px;color:var(--clay);margin:4px 0 0}
 .cta{width:100%;margin-top:8px;padding:12px;background:var(--purple-dark);color:#fff;border:0;border-radius:6px;font-size:14px;font-weight:600;cursor:pointer}
