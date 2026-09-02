@@ -798,16 +798,18 @@ export default function LicenceRateCard({ source = "licence-rate-card", initialC
           </div>
         </div>
       )}
-      {!showLeadModal && (
+{!showLeadModal && (
   <div className="rc-mobile-bar">
-    {/* <div className="rc-mobile-bar-price">
+    <div className={`rc-mobile-bar-price ${locked ? "is-locked" : "is-unlocked"}`}>
       <span>{C.statement.perMonth}</span>
+
       <b>
         {locked
           ? `${previewSymbol}${fmt(lockedPreviewMonthly)}`
           : `${model.symbol}${fmt(model.monthly)}`}
       </b>
-    </div> */}
+    </div>
+
     <button
       type="button"
       className="rc-mobile-bar-cta"
@@ -1079,7 +1081,7 @@ box-shadow:0 12px 30px rgba(20,14,34,.24);cursor:pointer,text-transform: capital
 @media (max-width:720px){
   .rc-mobile-bar{
     display:flex;align-items:center;justify-content:space-between;gap:14px;
-    position:fixed;left:0;right:0;bottom:0;z-index:40;
+    position:fixed;left:0;right:0;bottom:0;z-index: 2147483647 !important;
     background:var(--purple-dark);color:#fff;
     padding:12px 16px calc(12px + env(safe-area-inset-bottom));
     box-shadow:0 -8px 24px rgba(22,16,35,.22);
@@ -1091,8 +1093,38 @@ box-shadow:0 12px 30px rgba(20,14,34,.24);cursor:pointer,text-transform: capital
     flex:none;background:rgb(215 61 61);color:#fff;border:0;border-radius:6px;
     padding:11px 18px;font-size:14px;font-weight:600;cursor:pointer
   }
-    .unlock-overlay-btn {
-    width: 100%;}
+   .zsiq_custommain,
+  .zsiq_floatmain {
+    z-index: 1 !important;
+  } 
+    .rc-mobile-bar-price {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+  }
+
+  .rc-mobile-bar-price span {
+    font-size: 11px;
+    color: rgba(255,255,255,.65);
+  }
+
+  .rc-mobile-bar-price b {
+    font-family: var(--mono);
+    font-size: 19px;
+    font-variant-numeric: tabular-nums;
+
+    /* Blur price until form is submitted */
+    filter: blur(6px);
+    user-select: none;
+    opacity: .7;
+    transition: filter .25s ease, opacity .25s ease;
+  }
+
+  /* Show real price after form submission */
+  .rc-mobile-bar-price.is-unlocked b {
+    filter: blur(0);
+    opacity: 1;
+  }  
 }
 @media (prefers-reduced-motion:reduce){.rc *{transition:none!important}}
 `;
