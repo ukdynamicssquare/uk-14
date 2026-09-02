@@ -1764,7 +1764,7 @@ const DeskstopMenu = () => {
                                           </div>
                                         </div>
                                         <div className="comm-links-b">
-                                          <a className="n-tag-link" href="/white-papers/">Explore All Guides <i className="bi bi-arrow-right"></i></a>
+                                          <a className="n-tag-link" href="/white-papers/">Explore All Whitepapers <i className="bi bi-arrow-right"></i></a>
                                         </div>
                                       </div>
                                     </div>
