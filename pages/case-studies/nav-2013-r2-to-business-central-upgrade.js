@@ -21,7 +21,6 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           name="description"
           content="UK's leading fragrance supplier worked with Dynamics Square to Dynamics NAV 2013 R2 to Business Central Upgrade. Read the case story to gain insights."
         />
-        <meta name="robots" content="noindex, nofollow" />
         <link
           rel="canonical"
           href="https://www.dynamicssquare.co.uk/case-studies/nav-2013-r2-to-business-central-upgrade/"

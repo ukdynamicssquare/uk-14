@@ -93,7 +93,7 @@ const Guides = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="col-lg-6">
+                    {/* <div className="col-lg-6">
                       <div className="card card-custom-1 p-3">
                         <Link
                           href="/the-ultimate-guide-to-microsoft-dynamics-365/"
@@ -120,7 +120,7 @@ const Guides = () => {
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> */}
                     <div className="col-lg-6">
                       <div className="card card-custom-1 p-3">
                         <Link

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -12,9 +12,53 @@ const tabs = [
   "Support",
 ];
 
+// const CategoryList = () => {
+//   const [activeTab, setActiveTab] = useState("All");
+
+//   const filteredData =
+//     activeTab === "All"
+//       ? caseStudies
+//       : caseStudies.filter(
+//           (item) => item.category === activeTab
+//         );
 const CategoryList = () => {
   const [activeTab, setActiveTab] = useState("All");
 
+  // ==========================================
+  // SELECT TAB FROM URL HASH
+  // ==========================================
+  useEffect(() => {
+    const handleHashChange = () => {
+      // Get hash from URL
+      // Example: #Upgrade -> Upgrade
+      const hash = window.location.hash.substring(1);
+
+      // Check if hash matches one of our tabs
+      if (tabs.includes(hash)) {
+        setActiveTab(hash);
+      } else {
+        setActiveTab("All");
+      }
+    };
+
+    // Run when page first loads
+    handleHashChange();
+
+    // Run whenever URL hash changes
+    window.addEventListener("hashchange", handleHashChange);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener(
+        "hashchange",
+        handleHashChange
+      );
+    };
+  }, []);
+
+  // ==========================================
+  // FILTER CASE STUDIES
+  // ==========================================
   const filteredData =
     activeTab === "All"
       ? caseStudies
@@ -22,6 +66,28 @@ const CategoryList = () => {
           (item) => item.category === activeTab
         );
 
+  // ==========================================
+  // TAB CLICK
+  // ==========================================
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
+
+    if (tab === "All") {
+      // Remove hash from URL
+      window.history.replaceState(
+        null,
+        "",
+        window.location.pathname
+      );
+    } else {
+      // Add selected tab to URL
+      window.history.replaceState(
+        null,
+        "",
+        `${window.location.pathname}#${tab}`
+      );
+    }
+  };
   return (
     <>
       <Head>
@@ -69,10 +135,9 @@ const CategoryList = () => {
       </section>
 
       {/* CASE STUDY SECTION */}
-      <section>
+      {/* <section>
         <div className="container">
           <div className="row">
-            {/* SIDEBAR */}
             <div className="col-lg-3">
               <div className="nav flex-column nav-pills me-3 side-bar-common-tabs m-stickks">
                 {tabs.map((tab) => (
@@ -89,7 +154,6 @@ const CategoryList = () => {
               </div>
             </div>
 
-            {/* CONTENT */}
             <div className="col-lg-9">
               <div className="row">
                 {filteredData?.map((item) => (
@@ -135,6 +199,96 @@ const CategoryList = () => {
                 )}
               </div>
             </div>
+          </div>
+        </div>
+      </section> */}
+       <section>
+        <div className="container">
+          <div className="row">
+
+            {/* ==========================================
+                SIDEBAR
+            ========================================== */}
+            <div className="col-lg-3">
+              <div className="nav flex-column nav-pills me-3 side-bar-common-tabs m-stickks">
+
+                {tabs.map((tab) => (
+                  <button
+                    key={tab}
+                    type="button"
+                    className={`nav-link ${
+                      activeTab === tab ? "active" : ""
+                    }`}
+                    onClick={() =>
+                      handleTabChange(tab)
+                    }
+                  >
+                    {tab}
+                  </button>
+                ))}
+
+              </div>
+            </div>
+
+            {/* ==========================================
+                CONTENT
+            ========================================== */}
+            <div className="col-lg-9">
+              <div className="row">
+
+                {filteredData?.map((item) => (
+                  <div
+                    className="col-lg-6 mb-4"
+                    key={item.id}
+                  >
+                    <div className="commen-box-2 commen-box-9 h-100">
+
+                      {/* IMAGE */}
+                      <div className="icons icons-0102">
+                        <Link href={item.slug}>
+                          <Image
+                            src={item.image}
+                            alt={item.alt}
+                            width={563}
+                            height={350}
+                            className="img-fluid"
+                          />
+                        </Link>
+                      </div>
+
+                      {/* TITLE */}
+                      <div className="commen-boc-2-info">
+                        <p>{item.title}</p>
+                      </div>
+
+                      {/* BUTTON */}
+                      <div className="btn-003">
+                        <Link
+                          href={item.slug}
+                          className="btn btn md btn-danger"
+                        >
+                          Read Case Study
+                        </Link>
+                      </div>
+
+                    </div>
+                  </div>
+                ))}
+
+                {/* NO DATA */}
+                {filteredData.length === 0 && (
+                  <div className="col-12">
+                    <div className="text-center py-5">
+                      <h4>
+                        No Case Studies Found
+                      </h4>
+                    </div>
+                  </div>
+                )}
+
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
