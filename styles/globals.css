@@ -21345,7 +21345,10 @@ padding-bottom: 10px;
       font-size: 14px;
 }
 .res-top-co .imag00{
-  text-align: right;
+text-align: right;
+    position: absolute;
+    top: 16px;
+    right: 21px;
 }
 .res-top-co a,.res-top-co a:focus{
   display: inline-flex;

@@ -1516,7 +1516,7 @@ const DeskstopMenu = () => {
                                       <div className="mega-list-01">
                                         <span>Browse by Service</span>
                                         <ul className="res-st-oo1">
-                                          <li><a href="/case-studies/#Upgrade">
+                                          <li><a href="/case-studies/#Implementation">
                                             <div className="ccc-img">
 
                                               <i className="bi bi-gear"></i>
@@ -1526,7 +1526,7 @@ const DeskstopMenu = () => {
                                               <p>Business Central | Finance</p>
                                             </div>
                                           </a></li>
-                                          <li><a href="/case-studies/#Implementation">
+                                          <li><a href="/case-studies/#Upgrade">
                                             <div className="ccc-img">
 
                                               <i className="bi bi-back"></i>

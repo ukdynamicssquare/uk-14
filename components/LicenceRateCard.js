@@ -918,7 +918,7 @@ border-radius:6px;color:#39485b}
 .stmt-heading-row{display:flex;align-items:flex-start;justify-content:space-between;gap:14px}
 .stmt-platform{font-size:28px;line-height:1.1;font-weight:600;letter-spacing:0}
 .stmt-platform.is-fo{color:#f7cbc4}
-.unlock-btn{flex:none;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.13);color:#fff;
+.unlock-btn{flex:none;border:1px solid rgba(255,255,255,.18);background: rgb(215 61 61);color:#fff;
 border-radius:6px;padding:9px 14px;font-size:13px;font-weight:600;cursor:pointer}
 .unlock-btn:hover{background:rgba(255,255,255,.2)}
 .stmt-table{width:100%;border-collapse:collapse;margin:8px 0 0}
@@ -975,8 +975,8 @@ background:linear-gradient(180deg,rgba(59,47,88,0),rgba(59,47,88,.28));pointer-e
 .is-blurred .d-label,.is-blurred .d-sub,.is-blurred .q{opacity:.86}
 .stmt-table.is-blurred,.stmt-totals.is-blurred{position:relative}
 .unlock-overlay-btn{position:absolute;left:50%;top:57%;z-index:2;transform:translate(-50%,-50%);border:1px solid rgba(255,255,255,.28);
-background:rgba(255,255,255,.16);backdrop-filter:blur(8px);color:#fff;border-radius:7px;padding:10px 16px;font-size:13px;font-weight:600;
-box-shadow:0 12px 30px rgba(20,14,34,.24);cursor:pointer}
+background:rgb(215 61 61);backdrop-filter:blur(8px);color:#fff;border-radius:7px;padding:10px 16px;font-size:13px;font-weight:600;
+box-shadow:0 12px 30px rgba(20,14,34,.24);cursor:pointer,text-transform: capitalize;}
 .unlock-overlay-btn:hover{background:rgba(255,255,255,.25)}
 .lock-cta{display:flex;gap:9px;font-size:13px;line-height:1.5;color:rgba(255,255,255,.74);margin:0;padding-top:15px;border-top:1px solid rgba(255,255,255,.16)}
 .lock-icon{flex:none;font-size:13px;line-height:1.4}
@@ -999,7 +999,7 @@ box-shadow:0 12px 30px rgba(20,14,34,.24);cursor:pointer}
 .react-tel-input .country-list{border:1px solid #d9d4e3;border-radius:6px;box-shadow:0 12px 30px rgba(22,16,35,.14);margin-top:6px}
 .inp-label{display:block;font-size:12px;color:var(--ink-2);margin:8px 0 5px}
 .rc .err{font-size:12px;color:var(--clay);margin:4px 0 0}
-.cta{width:100%;margin-top:8px;padding:12px;background:var(--purple-dark);color:#fff;border:0;border-radius:6px;font-size:14px;font-weight:600;cursor:pointer}
+.cta{width:100%;margin-top:8px;padding:12px;background:var(--purple-dark);color:#fff;border:0;border-radius:6px;font-size:14px;font-weight:600;cursor:pointer,text-transform: capitalize;}
 .cta:disabled{background:#d9d4e3;color:#6f6a78;cursor:not-allowed}
 .done h3{color:var(--jade)}
 
