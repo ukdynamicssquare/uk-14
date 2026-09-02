@@ -864,7 +864,7 @@ background:#fff;color:#39485b;border-radius:5px}
 .rc .chip{cursor:pointer}
 .rc .chip.on,.billing-tab.on{background:var(--purple-dark);border-color:var(--purple-dark);color:#fff}
 
-.rc .block{border-top:1px solid var(--rule);padding-top:28px;margin-bottom:32px}
+.rc .block{border-top:1px solid var(--rule);padding-top:28px;margin-bottom:32px;padding-bottom: 0;}
 .rc .block:first-of-type{border-top:0;padding-top:0}
 .block-title{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;
 font-weight:700;margin:0 0 10px;color:#5c4d8d}
@@ -923,6 +923,7 @@ border-radius:6px;padding:9px 14px;font-size:13px;font-weight:600;cursor:pointer
 .unlock-btn:hover{background:rgba(255,255,255,.2)}
 .stmt-table{width:100%;border-collapse:collapse;margin:8px 0 0}
 .stmt-table tr{border-bottom:1px solid rgba(255,255,255,.10)}
+.stmt-table tr:last-child{border:none}
 .stmt-table td{padding:13px 0;vertical-align:top}
 .stmt-table .q{font-family:var(--mono);font-size:13px;width:44px;color:#fff;font-variant-numeric:tabular-nums}
 .stmt-table .q span{color:rgba(255,255,255,.45);margin-left:2px}
