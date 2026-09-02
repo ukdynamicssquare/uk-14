@@ -798,6 +798,29 @@ export default function LicenceRateCard({ source = "licence-rate-card", initialC
           </div>
         </div>
       )}
+      {!showLeadModal && (
+  <div className="rc-mobile-bar">
+    {/* <div className="rc-mobile-bar-price">
+      <span>{C.statement.perMonth}</span>
+      <b>
+        {locked
+          ? `${previewSymbol}${fmt(lockedPreviewMonthly)}`
+          : `${model.symbol}${fmt(model.monthly)}`}
+      </b>
+    </div> */}
+    <button
+      type="button"
+      className="rc-mobile-bar-cta"
+      onClick={() => {
+        setSent(false);
+        setSendError("");
+        setShowLeadModal(true);
+      }}
+    >
+      {locked ? "Unlock pricing" : "Get this quote"}
+    </button>
+  </div>
+)}
     </div>
   );
 }
@@ -985,7 +1008,7 @@ box-shadow:0 12px 30px rgba(20,14,34,.24);cursor:pointer,text-transform: capital
 .capture{margin-top:0;border:1px solid var(--rule);border-radius:8px;padding:24px;background:#fff}
 .capture h3{font-size:22px;line-height:1.2;margin:0 0 8px;font-weight:600;color:var(--ink)}
 .capture p{font-size:14px;color:var(--ink-2);margin:0 0 17px;line-height:1.5}
-.modal-backdrop{position:fixed;inset:0;z-index:90;display:flex;align-items:center;justify-content:center;padding:22px;background:rgba(36,22,61,.64)}
+.modal-backdrop{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;padding:22px;background:rgba(36,22,61,.64)}
 .modal-card{position:relative;width:min(100%,430px);max-height:calc(100vh - 44px);overflow:auto;box-shadow:0 28px 90px rgba(22,16,35,.28)}
 .modal-close{position:absolute;top:12px;right:12px;width:32px;height:32px;border:1px solid var(--rule);background:var(--paper);color:var(--ink-2);border-radius:6px;cursor:pointer;font-size:16px;line-height:1}
 .modal-close:hover{color:var(--ink);border-color:#b9b1ca}
@@ -1008,12 +1031,32 @@ box-shadow:0 12px 30px rgba(20,14,34,.24);cursor:pointer,text-transform: capital
   .rc-grid{grid-template-columns:minmax(0,1fr);gap:24px}
   .rc-statement{position:static;order:-1}
 }
+// @media (max-width:720px){
+//   .rc{padding:0 16px 48px;background:linear-gradient(180deg,var(--purple) 0 560px,var(--paper) 560px 100%)}
+//   .rc-head{padding:42px 0 104px}
+//   .rc-head h1{font-size:40px;line-height:1.1}
+//   .rc-dek{font-size:17px}
+//   .rc-stats{grid-template-columns:1fr;gap:18px;margin-top:32px}
+//   .rc-grid{margin-top:-64px}
+//   .rc-inputs,.stmt{padding:24px}
+//   .rc-toolbar{align-items:flex-start;flex-direction:column}
+//   .cap{align-items:flex-start}
+//   .rc .tag{margin-left:auto}
+//   .stp{align-items:flex-start;flex-direction:column}
+//   .stp-ctl{align-self:flex-end}
+//   .stmt-heading-row{align-items:flex-start;flex-direction:column}
+// }
 @media (max-width:720px){
-  .rc{padding:0 16px 48px;background:linear-gradient(180deg,var(--purple) 0 560px,var(--paper) 560px 100%)}
+  .rc{padding:0 16px 108px;background:linear-gradient(180deg,var(--purple) 0 560px,var(--paper) 560px 100%)}
   .rc-head{padding:42px 0 104px}
   .rc-head h1{font-size:40px;line-height:1.1}
   .rc-dek{font-size:17px}
-  .rc-stats{grid-template-columns:1fr;gap:18px;margin-top:32px}
+
+  /* 3-up compact stat row instead of stacked full-width rows */
+  .rc-stats{grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+  .rc-stats dt{font-size:22px}
+  .rc-stats dd{font-size:11px;line-height:1.3}
+
   .rc-grid{margin-top:-64px}
   .rc-inputs,.stmt{padding:24px}
   .rc-toolbar{align-items:flex-start;flex-direction:column}
@@ -1022,6 +1065,34 @@ box-shadow:0 12px 30px rgba(20,14,34,.24);cursor:pointer,text-transform: capital
   .stp{align-items:flex-start;flex-direction:column}
   .stp-ctl{align-self:flex-end}
   .stmt-heading-row{align-items:flex-start;flex-direction:column}
+
+  /* sticky bar now owns the primary CTA on mobile */
+  .stmt-heading-row .unlock-btn{display:none}
+
+  /* modal becomes a bottom sheet */
+  .modal-backdrop{align-items:flex-end;padding:0}
+  .modal-card{width:100%;max-width:100%;border-radius:16px 16px 0 0;max-height:88vh}
+}
+
+/* sticky mobile summary/CTA bar */
+.rc-mobile-bar{display:none}
+@media (max-width:720px){
+  .rc-mobile-bar{
+    display:flex;align-items:center;justify-content:space-between;gap:14px;
+    position:fixed;left:0;right:0;bottom:0;z-index:40;
+    background:var(--purple-dark);color:#fff;
+    padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+    box-shadow:0 -8px 24px rgba(22,16,35,.22);
+  }
+  .rc-mobile-bar-price{display:flex;flex-direction:column;line-height:1.15}
+  .rc-mobile-bar-price span{font-size:11px;color:rgba(255,255,255,.65)}
+  .rc-mobile-bar-price b{font-family:var(--mono);font-size:19px;font-variant-numeric:tabular-nums}
+  .rc-mobile-bar-cta{
+    flex:none;background:rgb(215 61 61);color:#fff;border:0;border-radius:6px;
+    padding:11px 18px;font-size:14px;font-weight:600;cursor:pointer
+  }
+    .unlock-overlay-btn {
+    width: 100%;}
 }
 @media (prefers-reduced-motion:reduce){.rc *{transition:none!important}}
 `;
