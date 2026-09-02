@@ -1305,7 +1305,7 @@ const DeskstopMenu = () => {
             </li>
           </ul>
         </li>
-         {/* <li className="dropdown megamenu">
+         <li className="dropdown megamenu">
                   <a href="#">
                     <span>Resources</span>
                     <i className="bi bi-chevron-down"></i>
@@ -1419,19 +1419,19 @@ const DeskstopMenu = () => {
                           >
                             <div className="container-fluid">
                               <div className="row">
-                                <div className="col-lg-9 d-flex bg-0-gray-t">
+                                <div className="col-lg-9 bg-0-gray-t">
                                   <div className="row bg-0-gray">
                                     <div className="col-lg-3">
                                       <div className="mega-list-01">
                                         <span>By product</span>
                                         <ul>
-                                          <li><a href="">Business Central</a></li>
-                                          <li><a href="">Finance</a></li>
-                                          <li><a href="">Supply Chain</a></li>
-                                          <li><a href="">Sales</a></li>
-                                          <li><a href="">Field Service</a></li>
-                                          <li><a href="">Copilot</a></li>
-                                          <li><a href="">Customer Service</a></li>
+                                          <li><a href="/blog/category/business-central/">Business Central</a></li>
+                                          <li><a href="/blog/category/dynamics-365-fo/">Finance</a></li>
+                                          <li><a href="/blog/category/dynamics-365-scm/">Supply Chain</a></li>
+                                          <li><a href="/blog/category/dynamics-365-crm/">Sales</a></li>
+                                          <li><a href="/blog/category/field-service/">Field Service</a></li>
+                                          <li><a href="/blog/category/microsoft-dynamics-365/">Copilot</a></li>
+                                          <li><a href="/blog/category/dynamics-365-crm/">Customer Service</a></li>
                                         </ul>
                                       </div>
                                     </div>
@@ -1439,13 +1439,13 @@ const DeskstopMenu = () => {
                                       <div className="mega-list-01">
                                         <span>By Industry</span>
                                         <ul>
-                                          <li><a href="#manufacturing">Manufacturing</a></li>
-                                          <li><a href="#retail-ecommerce">Retail & Ecommerce</a></li>
-                                          <li><a href="#distribution">Distribution</a></li>
-                                          <li><a href="#professional-services">Professional Services</a></li>
-                                          <li><a href="#food-beverages">Food & Beverages</a></li>
-                                          <li><a href="#healthcare">Healthcare</a></li>
-                                          <li><a href="#education">Education</a></li>
+                                          <li><a href="/blog/tag/Manufacturing">Manufacturing</a></li>
+                                          <li><a href="/blog/tag/Retail/">Retail & Ecommerce</a></li>
+                                          <li><a href="/blog/tag/Distribution/">Distribution</a></li>
+                                          <li><a href="/blog/tag/Professional-Services/">Professional Services</a></li>
+                                          <li><a href="/blog/tag/Food-and-Beverages/">Food & Beverages</a></li>
+                                          <li><a href="/blog/tag/Healthcare">Healthcare</a></li>
+                                          <li><a href="/blog/tag/Education">Education</a></li>
                                         </ul>
                                       </div>
                                     </div>
@@ -1454,33 +1454,28 @@ const DeskstopMenu = () => {
                                         <span>Editor's Picks</span>
                                         <ul>
                                           <li>
-                                            <a href="/business-central-implementation-methodology/">
-                                              Business Central Implementation Methodology
+                                            <a href="/blog/what-is-business-central-implementation-methodology/">
+                                              What is Business Central Implementation Methodology?
                                             </a>
                                           </li>
                                           <li>
-                                            <a href="/quickbooks-to-microsoft-business-central-migration/">
-                                              QuickBooks to Microsoft Business Central Migration
+                                            <a href="/blog/quickbooks-to-microsoft-business-central-migration/">
+                                              QuickBooks to Dynamics 365 Business Central Migration
                                             </a>
                                           </li>
                                           <li>
-                                            <a href="/sage-to-microsoft-business-central-migration/">
-                                              Why Should You Consider Migrating from Sage to Microsoft Business Central?
+                                            <a href="/blog/sage-to-business-central-migration/">
+                                            Sage to Business Central Migration
                                             </a>
                                           </li>
                                           <li>
-                                            <a href="/nav-upgrade-vs-d365-business-central-reimplementation/">
-                                              NAV Upgrade vs D365 Business Central Re-Implementation
+                                            <a href="/dynamics-nav-to-business-central/">
+                                              NAV to Business Central Upgrade - Dynamics Square UK
                                             </a>
                                           </li>
                                           <li>
-                                            <a href="/dynamics-365-business-central-vs-dynamics-365-crm/">
+                                            <a href="/gp-to-business-central-migration/">
                                               Dynamics 365 Business Central vs Dynamics 365 CRM
-                                            </a>
-                                          </li>
-                                          <li>
-                                            <a href="/business-central-vs-sage-200/">
-                                              Business Central vs Sage 200
                                             </a>
                                           </li>
                                         </ul>
@@ -1492,13 +1487,17 @@ const DeskstopMenu = () => {
                                   <div className="right-resource">
                                     <div className="res-top-co">
                                       <span className="n-tag">Featured Article</span>
-                                      <span className="n-title">Business Central + Dynamics 365 Sales Integration</span>
-                                      <p>Learn how to unify ERP and CRM for better sales visibility.</p>
-                                      <div className="imag00"><img src="/img/menu-icons/pic-002.png" alt="Business Central" width={177} height={80} /></div>
-                                      <a href="">Read Article <i className="bi bi-arrow-right"></i></a>
+                                      <span className="n-title">How Much Time Can Copilot Save in Dynamics 365 Business Central?</span>
+                                      <p>Discover how much time Copilot saves in Dynamics 365 Business Central by automating...</p>
+                                      <div className="imag00">
+                                        
+                                        <img src="/img/menu-icons/pic-006.png" alt="Dynamics 365" width={106} height={90} />
+                                        
+                                        </div>
+                                      <a href="/blog/copilot-business-central-time-savings/">Read Article <i className="bi bi-arrow-right"></i></a>
                                     </div>
                                     <div className="res-top-bo">
-                                      <a href="#"><img src="/img/menu--ss.png" width={706} height={180} alt="AI" /></a>
+                                     <a style={{padding:'0px'}} href="/products/dynamics-365-copilot/"><img src="/img/menu--ss.png" width={706} height={180} alt="AI" /></a>
                                     </div>
                                   </div>
                                 </div>
@@ -1511,13 +1510,13 @@ const DeskstopMenu = () => {
                           >
                             <div className="container-fluid">
                               <div className="row">
-                                <div className="col-lg-9 d-flex bg-0-gray-t">
+                                <div className="col-lg-9 bg-0-gray-t">
                                   <div className="row bg-0-gray">
                                     <div className="col-lg-4">
                                       <div className="mega-list-01">
                                         <span>Browse by Service</span>
                                         <ul className="res-st-oo1">
-                                          <li><a href="#">
+                                          <li><a href="/case-studies/#Upgrade">
                                             <div className="ccc-img">
 
                                               <i className="bi bi-gear"></i>
@@ -1527,7 +1526,7 @@ const DeskstopMenu = () => {
                                               <p>Business Central | Finance</p>
                                             </div>
                                           </a></li>
-                                          <li><a href="#">
+                                          <li><a href="/case-studies/#Implementation">
                                             <div className="ccc-img">
 
                                               <i className="bi bi-back"></i>
@@ -1537,7 +1536,7 @@ const DeskstopMenu = () => {
                                               <p>Nav, GP, AX Upgrade</p>
                                             </div>
                                           </a></li>
-                                          <li><a href="#">
+                                          <li><a href="/case-studies/#Support">
                                             <div className="ccc-img">
 
                                               <i className="bi bi-person-add"></i>
@@ -1551,7 +1550,7 @@ const DeskstopMenu = () => {
                                         </ul>
                                       </div>
                                     </div>
-                                    <div className="col-lg-2">
+                                    {/* <div className="col-lg-2">
                                       <div className="mega-list-01">
                                         <span>By Industry</span>
                                         <ul>
@@ -1564,33 +1563,33 @@ const DeskstopMenu = () => {
                                           <li><a href="#education">Education</a></li>
                                         </ul>
                                       </div>
-                                    </div>
+                                    </div> */}
                                     <div className="col-lg-6">
                                       <div className="mega-list-01">
                                         <span>Customer Success Highlights</span>
                                         <ul>
                                           <li>
-                                            <a style={{ color: '#8E44AD' }} href="/business-central-implementation-methodology/">80% Better Department Collaboration London College</a>
+                                            <a style={{ color: '#8E44AD' }} href="/case-studies/dynamics-365-finance-for-logistic-uk-multi-entity/">Stronger Financial Control for Global Rollout | Global Logistics Business</a>
                                           </li>
                                           <li>
-                                            <a href="/quickbooks-to-microsoft-business-central-migration/">
-                                              30% Higher ROI through Custom Dynamics Solutions Classic Car Restoration Company
+                                            <a href="/case-studies/business-central-with-crm-implement-for-equestrian-manufacturing/">162% Projected ROI with 8% Efficiency Gain | UK Manufacturer</a>
+                                          </li>
+                                          <li>
+                                            <a href="/business-central-reimplementation-for-retail-market/">
+                                              Digitally Synchronized Warehouse Operations | Northern Ireland Saddlery Business
                                             </a>
                                           </li>
                                           <li>
-                                            <a href="/sage-to-microsoft-business-central-migration/">
-                                              50% Operational Efficiency Improvement UK Defence Apparel Manufacturer
-                                            </a>
+                                            <a href="/case-studies/business-central-reimplementation-for-food-trader/">162% Projected ROI and £32K+ Savings | Food Trading Startup</a>
                                           </li>
                                           <li>
-                                            <a href="/nav-upgrade-vs-d365-business-central-reimplementation/">
-                                              Manufacturing ERP Transformation Production & Inventory Optimised
-                                            </a>
+                                            <a href="/case-studies/nav-2013-r2-to-business-central-upgrade/">Improved Efficiency and Real-Time Visibility | UK Orthodontic Supplier</a>
                                           </li>
+
 
                                         </ul>
                                         <div className="extra-res-link">
-                                          <a href="/nav-upgrade-vs-d365-business-central-reimplementation/">Explore Customer Stories <i className="bi bi-arrow-right"></i></a>
+                                          <a href="/case-studies/">Explore Customer Stories <i className="bi bi-arrow-right"></i></a>
                                         </div>
                                       </div>
                                     </div>
@@ -1600,13 +1599,17 @@ const DeskstopMenu = () => {
                                   <div className="right-resource">
                                     <div className="res-top-co">
                                       <span className="n-tag">Featured Article</span>
-                                      <span className="n-title">60% More Operational Visibility with Dynamics 365</span>
-                                      <p>See how a medical device manufacturer transformed production planning, inventory and reporting.</p>
-                                      <div className="imag00"><img src="/img/menu-icons/pic-006.png" alt="Dynamics 365" width={106} height={90} /></div>
-                                      <a href="">Read Story <i className="bi bi-arrow-right"></i></a>
+                                      <span className="n-title">How Much Time Can Copilot Save in Dynamics 365 Business Central?</span>
+                                      <p>Discover how much time Copilot saves in Dynamics 365 Business Central by automating...</p>
+                                      <div className="imag00">
+                                        
+                                        <img src="/img/menu-icons/pic-006.png" alt="Dynamics 365" width={106} height={90} />
+                                        
+                                        </div>
+                                      <a href="/blog/copilot-business-central-time-savings/">Read Article <i className="bi bi-arrow-right"></i></a>
                                     </div>
                                     <div className="res-top-bo">
-                                      <img src="/img/menu--ss.png" width={706} height={180} alt="AI" />
+                                     <a style={{padding:'0px'}} href="/products/dynamics-365-copilot/"><img src="/img/menu--ss.png" width={706} height={180} alt="AI" /></a>
                                     </div>
                                   </div>
                                 </div>
@@ -1622,10 +1625,10 @@ const DeskstopMenu = () => {
                                 <div className="col-lg-3 d-flex  bg-0-gray-t">
                                   <div className="res-card-99">
                                     <span className="n-tags">Recommended</span>
-                                    <img className="n-tags-image" src="/img/Cover_Book_Moc.png" width={582} height={466} alt="Cover_Book_Moc" />
+                                     <a className="n-tag-link" href="/ebook/how-to-choose-right-erp/"><img className="n-tags-image" src="/img/Cover_Book_Moc.png" width={582} height={466} alt="Cover_Book_Moc" /></a>
                                     <span className="n-tag-title">Ultimate Guide to Choose the Right ERP For Your Business</span>
                                     <p className="n-tag-para">Compare ERP solutions before making your investment.</p>
-                                    <a className="n-tag-link" href="/the-ultimate-guide-to-microsoft-dynamics-365/">Get Free eBook <i className="bi bi-arrow-right"></i></a>
+                                    <a className="n-tag-link" href="/ebook/how-to-choose-right-erp/">Get Free eBook <i className="bi bi-arrow-right"></i></a>
                                   </div>
                                 </div>
                                 <div className="col-lg-9 bg-0-gray-t">
@@ -1634,54 +1637,53 @@ const DeskstopMenu = () => {
                                   </div>
                                   <div className="res-flex-wrap">
                                     <div className="guide-card-01">
-                                      <a href="#">
+                                      <a href="/ebook/gp-to-bc-migration/">
                                         <div className="guide-card-imag">
-                                          <img width={980} height={578} src="/img/nav-guide-pic.png" alt="manufacturing" />
+                                          <img width={980} height={578} src="/img/dynamics-GP-BC-Ebook-featured-image.png" alt="dynamics-GP-BC-Ebook-featured-image" />
                                         </div>
                                         <div className="guide-card-inf">
                                           <span className="guide-card-title">A Complete Guide to Dynamics GP to BC</span>
-                                          <span className="guide-card-para">The Extensive Guide to Dynamics 365 Finance</span>
+                                          <span className="guide-card-para">A Complete Guide for Microsoft Dynamics GP (Great Plains) to Business Central Migration</span>
                                         </div>
                                       </a>
                                     </div>
                                     <div className="guide-card-01">
-                                      <a href="#">
+                                      <a href="/ebook/d365-supply-chain-management/">
                                         <div className="guide-card-imag">
-                                          <img width={980} height={578} src="/img/Ebook-Nav-to-BC.png" alt="manufacturing" />
+                                          <img width={980} height={578} src="/img/dynamics-SCM-Ebook-featured-image.png" alt="dynamics-SCM-Ebook" />
                                         </div>
                                         <div className="guide-card-inf">
-                                          <span className="guide-card-title">Dynamics NAV to Business Central</span>
-                                          <span className="guide-card-para">Upgrade From Dynamics NAV to Business Central</span>
+                                          <span className="guide-card-title">A Complete Guide to Dynamics SCM</span>
+                                          <span className="guide-card-para">A Complete Guide to Dynamics 365 Supply Chain Management</span>
                                         </div>
                                       </a>
                                     </div>
                                     <div className="guide-card-01">
-                                      <a href="#">
+                                      <a href="/ebook/dynamics-crm/">
+                                        <div className="guide-card-imag">
+                                          <img width={980} height={578} src="/img/dynamics-CRM-Ebook-featured-image.jpg" alt="dynamics-CRM-Ebook" />
+                                        </div>
+                                        <div className="guide-card-inf">
+                                          <span className="guide-card-title">A Complete Guide to Dynamics CRM</span>
+                                          <span className="guide-card-para">Microsoft Dynamics CRM is a simple yet powerful tool that can help businesses streamline</span>
+                                        </div>
+                                      </a>
+                                    </div>
+                                    <div className="guide-card-01">
+                                      <a href="/ebook/dynamics-365-finance/">
                                         <div className="guide-card-imag">
                                           <img width={980} height={578} src="/img/nav-guide-pic.png" alt="manufacturing" />
                                         </div>
                                         <div className="guide-card-inf">
-                                          <span className="guide-card-title">A Complete Guide to Dynamics 365 Finance</span>
-                                          <span className="guide-card-para">The Extensive Guide to Dynamics 365 Finance</span>
-                                        </div>
-                                      </a>
-                                    </div>
-                                    <div className="guide-card-01">
-                                      <a href="#">
-                                        <div className="guide-card-imag">
-                                          <img width={980} height={578} src="/img/ebooh-img.png" alt="manufacturing" />
-                                        </div>
-                                        <div className="guide-card-inf">
-                                          <span className="guide-card-title">Choose the Right ERP
-                                            For Your Business</span>
-                                          <span className="guide-card-para">Ultimate Guide to Choose the Right ERP For Your Business
+                                          <span className="guide-card-title">The Extensive Guide to Dynamics 365 Finance</span>
+                                          <span className="guide-card-para">D365 Finance is an intelligent ERP (Enterprise Resource Planning) solution
                                           </span>
                                         </div>
                                       </a>
                                     </div>
                                   </div>
                                   <div className="comm-links-b">
-                                    <a className="n-tag-link" href="">View All eBooks <i className="bi bi-arrow-right"></i></a>
+                                    <a className="n-tag-link" href="/ebook/">View All eBooks <i className="bi bi-arrow-right"></i></a>
                                   </div>
                                 </div>
                               </div>
@@ -1703,30 +1705,30 @@ const DeskstopMenu = () => {
                                         </div>
                                         <div className="res-flex-wrap-one">
                                           <div className="guide-card-01">
-                                            <a href="/ebook/gp-to-bc-migration/">
+                                            <a href="/the-ultimate-guide-to-microsoft-dynamics-365/">
                                               <div className="guide-card-imag">
-                                                <img width={980} height={578} src="/img/dynamics-GP-BC-Ebook-featured-image.png" alt="guide" />
+                                                <img width={1200} height={628} src="/img/the-ultmate-ai-guide-banner.png" alt="the-ultmate-ai-guide" />
                                               </div>
                                               <div className="guide-card-inf">
-                                                  <span className="guide-tags-rs">Guide</span>
-                                                <span className="guide-card-title">A Complete Guide to Dynamics GP to BC</span>
+                                                  <span className="guide-tags-rss">Guide</span>
+                                                <span className="guide-card-title">Microsoft Dynamics 365: Complete Guide to CRM, ERP & Business Applications (2026)</span>
                                               </div>
                                             </a>
                                           </div>
                                           <div className="guide-card-01">
-                                            <a href="/ebook/d365-supply-chain-management/">
+                                            <a href="/guides/business-central-guide-for-smb/">
                                               <div className="guide-card-imag">
-                                                <img width={980} height={578} src="/img/dynamics-SCM-Ebook-featured-image.png" alt="guide" />
+                                                 <img width={1200} height={628} src="/img/chapter5-5.png" alt="guide" />
                                               </div>
                                               <div className="guide-card-inf">
-                                                <span className="guide-tags-rs">Guide</span>
-                                                <span className="guide-card-title">A Complete Guide to Dynamics SCM</span>
+                                                <span className="guide-tags-rss">Guide</span>
+                                                <span className="guide-card-title">Business Central: The Definitive Guide For SMBs</span>
                                               </div>
                                             </a>
                                           </div>
                                         </div>
                                         <div className="comm-links-b">
-                                          <a className="n-tag-link" href="/ebook/">Explore All eBooks <i className="bi bi-arrow-right"></i></a>
+                                          <a className="n-tag-link" href="/guides/">Explore All Guides <i className="bi bi-arrow-right"></i></a>
                                         </div>
                                       </div>
                                     </div>
@@ -1744,7 +1746,7 @@ const DeskstopMenu = () => {
                                                 <img width={980} height={578} src="/img/white-p-one.png" alt="guide" />
                                               </div>
                                               <div className="guide-card-inf">
-                                                  <span className="guide-tags-rs">Whitepapers</span>
+                                                  <span className="guide-tags-rss">Whitepapers</span>
                                                 <span className="guide-card-title">Microsoft Copilot: The Catalyst for Transformation in Your Business</span>
                                               </div>
                                             </a>
@@ -1755,7 +1757,7 @@ const DeskstopMenu = () => {
                                                 <img width={980} height={578} src="/img/finacne-white-paper-category.png" alt="guide" />
                                               </div>
                                               <div className="guide-card-inf">
-                                                <span className="guide-tags-rs">Whitepapers</span>
+                                                <span className="guide-tags-rss">Whitepapers</span>
                                                 <span className="guide-card-title">Dynamics 365 Finance with Copilot WhitePaper</span>
                                               </div>
                                             </a>
@@ -1772,16 +1774,17 @@ const DeskstopMenu = () => {
                                   <div className="right-resource">
                                     <div className="res-top-co">
                                       <span className="n-tag">Featured Article</span>
-                                      <span className="n-title">60% More Operational Visibility with Dynamics 365</span>
-                                      <p>See how a medical device manufacturer transformed production planning, inventory and reporting.</p>
+                                      <span className="n-title">How Much Time Can Copilot Save in Dynamics 365 Business Central?</span>
+                                      <p>Discover how much time Copilot saves in Dynamics 365 Business Central by automating...</p>
                                       <div className="imag00">
+                                        
                                         <img src="/img/menu-icons/pic-006.png" alt="Dynamics 365" width={106} height={90} />
                                         
                                         </div>
-                                      <a href="">Read Story <i className="bi bi-arrow-right"></i></a>
+                                      <a href="/blog/copilot-business-central-time-savings/">Read Article <i className="bi bi-arrow-right"></i></a>
                                     </div>
                                     <div className="res-top-bo">
-                                      <img src="/img/menu--ss.png" width={706} height={180} alt="AI" />
+                                      <a style={{padding:'0px'}} href="/products/dynamics-365-copilot/"><img src="/img/menu--ss.png" width={706} height={180} alt="AI" /></a>
                                     </div>
                                   </div>
                                 </div>
@@ -1816,7 +1819,7 @@ const DeskstopMenu = () => {
                                                 <img width={980} height={578} src="/img/tools-one.png" alt="guide" />
                                               </div>
                                               <div className="guide-card-inf">
-                                                  <span className="guide-tags-rs">ERP Calculator</span>
+                                                  <span className="guide-tags-rss">ERP Calculator</span>
                                                 <span className="guide-card-title">Estimate implementation costs in minutes.</span>
                                                 <a className="n-tag-link" href="/erp-implementation-cost-calculator/">Calculate Now <i className="bi bi-arrow-right"></i></a>
                                               </div>
@@ -1828,15 +1831,12 @@ const DeskstopMenu = () => {
                                                 <img width={980} height={578} src="/img/tools-two.png" alt="guide" />
                                               </div>
                                               <div className="guide-card-inf">
-                                                <span className="guide-tags-rs">ERP Comparison</span>
+                                                <span className="guide-tags-rss">ERP Comparison</span>
                                                 <span className="guide-card-title">Compare Dynamics 365 solutions side-by-side.</span>
                                                 <a className="n-tag-link" href="/top-erp-systems-comparison/">Compare Now <i className="bi bi-arrow-right"></i></a>
                                               </div>
                                             </a>
                                           </div>
-                                        </div>
-                                        <div className="comm-links-b">
-                                          
                                         </div>
                                       </div>
                                     </div>
@@ -1846,17 +1846,17 @@ const DeskstopMenu = () => {
                                   <div className="right-resource">
                                     <div className="res-top-co">
                                       <span className="n-tag">Featured Article</span>
-                                      <span className="n-title">60% More Operational Visibility with Dynamics 365</span>
-                                      <p>See how a medical device manufacturer transformed production planning, inventory and reporting.</p>
+                                      <span className="n-title">How Much Time Can Copilot Save in Dynamics 365 Business Central?</span>
+                                      <p>Discover how much time Copilot saves in Dynamics 365 Business Central by automating...</p>
                                       <div className="imag00">
                                         
                                         <img src="/img/menu-icons/pic-006.png" alt="Dynamics 365" width={106} height={90} />
                                         
                                         </div>
-                                      <a href="">Read Story <i className="bi bi-arrow-right"></i></a>
+                                      <a href="/blog/copilot-business-central-time-savings/">Read Article <i className="bi bi-arrow-right"></i></a>
                                     </div>
                                     <div className="res-top-bo">
-                                      <a href="#"><img src="/img/menu--ss.png" width={706} height={180} alt="AI" /></a>
+                                      <a style={{padding:'0px'}} href="/products/dynamics-365-copilot/"><img src="/img/menu--ss.png" width={706} height={180} alt="AI" /></a>
                                     </div>
                                   </div>
                                 </div>
@@ -1908,13 +1908,13 @@ const DeskstopMenu = () => {
                                       </a>
                                     </div>
                                     <div className="guide-card-01">
-                                      <a target="_blank" href="https://www.youtube.com/watch?v=44hqw-S27D0">
+                                      <a target="_blank" href="https://www.youtube.com/watch?v=rAHE2BiaPkc">
                                         <div className="guide-card-imag">
-                                          <img width={411} height={216} src="/img/bc-8-20.png" alt="potcast" />
+                                          <img width={411} height={216} src="/img/New-pic-Project.png" alt="potcast" />
                                         </div>
                                         <div className="guide-card-inf">
-                                          <span className="guide-card-title">Is Your Business Ready for an ERP System?</span>
-                                          <span className="guide-card-para">Explore key signs, benefits, and steps to ERP readiness</span>
+                                          <span className="guide-card-title">CRM EXPLAINED! Why Your Business Might Fail Without It </span>
+                                          <span className="guide-card-para">What really is a CRM—and why does every growing business keep talking about it?</span>
                                         </div>
                                       </a>
                                     </div>
@@ -1931,8 +1931,8 @@ const DeskstopMenu = () => {
                     </div>
 
                   </div>
-                </li>  */}
-        <li className="dropdown">
+                </li> 
+        {/* <li className="dropdown">
           <a href="#">
             <span>Resources</span> <i className="bi bi-chevron-down"></i>
           </a>
@@ -1979,7 +1979,7 @@ const DeskstopMenu = () => {
             </li>
             
           </ul>
-        </li>
+        </li> */}
         <li>
           <PulseButton />
         </li>

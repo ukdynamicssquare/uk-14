@@ -26,11 +26,19 @@ export async function getServerSideProps(context) {
   }
   
 }
+const categoryColors = [
+  '#01808a',
+  '#cd9e1b',
+  '#3e4f8a',
+  '#000000',
+  '#b52c36',
+  '#273266',
+];
 
 function TagBlogs({ blogs,alltags}) {
   const router = useRouter();
   const [currentPage, setCurrentPage] = useState(1);
-  const pageSize = 2;
+  const pageSize = 6;
  
   const onPageChange = (page) => {
     setCurrentPage(page);
@@ -82,25 +90,40 @@ function TagBlogs({ blogs,alltags}) {
               <div className="blogs-ex-side-cate">
                 <h3>Explore by Tag</h3>
                 <ul>
-                {alltags && alltags.map((item2,i) => (
+  {alltags
+    ?.flatMap((item) =>
+      item.meta_tags?.split(",").map((tag) => tag.trim()) || []
+    )
+    .map((tag, index) => {
+      const color = categoryColors[index % categoryColors.length];
 
-                           <>
-                            {item2.meta_tags?.split(',').map((item3,i) => {
-                            if(router.query.slug == router.query.slug)
-                            {
-                               return (
-                                 <li key={i}>
-                                  
-                                  <Link href={`/blog/tag/${item3.split(" ").join("-")}`} key={i}><span className="blog-tagged">{item3.charAt(0).toUpperCase() + item3.slice(1)}</span></Link>
-                                  </li>
-                               );
-                            }
-                          
-                           })}
-                           </>
+      const currentTag = router.query.slug
+        ?.split("-")
+        .join(" ")
+        .toLowerCase();
 
-                          ))}
-                </ul>
+      const isActive = tag.toLowerCase() === currentTag;
+
+      return (
+        <li key={`${tag}-${index}`}>
+          <Link
+            className={`blog-tag-link ${isActive ? "active" : ""}`}
+            href={`/blog/tag/${tag.split(" ").join("-")}`}
+            style={{
+              "--tag-color": color,
+              color: isActive ? "#fff" : color,
+              backgroundColor: isActive ? color : "transparent",
+              border: `1px solid ${color}`,
+            }}
+          >
+            <span className="blog-tagged">
+              {tag.charAt(0).toUpperCase() + tag.slice(1)}
+            </span>
+          </Link>
+        </li>
+      );
+    })}
+</ul>
               </div>
             </div>
             <div className="col-lg-9">
@@ -214,6 +237,9 @@ function TagBlogs({ blogs,alltags}) {
           </div>
         </div>
       </div>
+
+                <style jsx global>{` .blogs-ex-side-cate ul { padding: 0; margin: 0; list-style: none; } .blogs-ex-side-cate li { display: inline-block; margin: 0 8px 10px 0; } .blog-tag-link { display: inline-block; padding: 7px 14px; border-radius: 4px; text-decoration: none !important; transition: all 0.3s ease; } /* Normal tag */ .blog-tag-link { color: var(--tag-color); background-color: transparent; } /* Hover */ .blog-tag-link:hover { color: #fff !important; background-color: var(--tag-color) !important; border-color: var(--tag-color) !important; text-decoration: none !important; } /* Active tag */ .blog-tag-link.active { color: #fff !important; background-color: var(--tag-color) !important; border-color: var(--tag-color) !important; } /* Active + hover */ .blog-tag-link.active:hover { color: #fff !important; background-color: var(--tag-color) !important; border-color: var(--tag-color) !important; } .blog-tagged { display: inline-block; } `}</style>
+
     </div>
   );
 }
