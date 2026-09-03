@@ -438,15 +438,15 @@ const DynamicsNavToBusinessCentral = () => {
               <div className="call-to-action-content call-to-action-content">
                 <h3>Business Growth is About Taking the Next Innovative Step</h3>
                 <p>See how we can help you succeed with D365 Business Central easily, at a cost-effective price.</p>
-                <div className="text-center m-o-b">
-                  <Link
+                <div className="text-center">
+                  <a
                     href="/case-studies/"
                     target='_blank'
                     className="btn-get-started scrollto">
 
                     <span>Read More Case Stories <i className="bi bi-arrow-right"></i></span>
 
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>

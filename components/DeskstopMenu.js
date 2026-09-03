@@ -1443,7 +1443,7 @@ const DeskstopMenu = () => {
                                           <li><a href="/blog/tag/Retail/">Retail & Ecommerce</a></li>
                                           <li><a href="/blog/tag/Distribution/">Distribution</a></li>
                                           <li><a href="/blog/tag/Professional-Services/">Professional Services</a></li>
-                                          <li><a href="/blog/tag/Food-and-Beverages/">Food & Beverages</a></li>
+                                          {/* <li><a href="/blog/tag/Food-and-Beverages/">Food & Beverages</a></li> */}
                                           <li><a href="/blog/tag/Healthcare">Healthcare</a></li>
                                           <li><a href="/blog/tag/Education">Education</a></li>
                                         </ul>
@@ -1455,12 +1455,12 @@ const DeskstopMenu = () => {
                                         <ul>
                                           <li>
                                             <a href="/blog/what-is-business-central-implementation-methodology/">
-                                              What is Business Central Implementation Methodology?
+                                              Business Central Implementation Methodology
                                             </a>
                                           </li>
                                           <li>
                                             <a href="/blog/quickbooks-to-microsoft-business-central-migration/">
-                                              QuickBooks to Dynamics 365 Business Central Migration
+                                              QuickBooks to Business Central Migration
                                             </a>
                                           </li>
                                           <li>
@@ -1470,12 +1470,17 @@ const DeskstopMenu = () => {
                                           </li>
                                           <li>
                                             <a href="/dynamics-nav-to-business-central/">
-                                              NAV to Business Central Upgrade - Dynamics Square UK
+                                            NAV to Business Central Upgrade
                                             </a>
                                           </li>
                                           <li>
                                             <a href="/gp-to-business-central-migration/">
-                                              Dynamics 365 Business Central vs Dynamics 365 CRM
+                                              Dynamics GP to Business Central Migration
+                                            </a>
+                                          </li>
+                                          <li>
+                                            <a href="/blog/xero-to-business-central-migration/">
+                                             Xero to Business Central Migration
                                             </a>
                                           </li>
                                         </ul>
