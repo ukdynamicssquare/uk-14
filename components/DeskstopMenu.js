@@ -1486,6 +1486,9 @@ const DeskstopMenu = () => {
                                         </ul>
                                       </div>
                                     </div>
+                                    <div className="col-lg-12">
+                                      <a style={{padding:'10px 0px !important'}} className="n-tag-link" href="/blog/">View All Blog <i className="bi bi-arrow-right"></i></a>
+                                    </div>
                                   </div>
                                 </div>
                                 <div className="col-lg-3 d-flex">

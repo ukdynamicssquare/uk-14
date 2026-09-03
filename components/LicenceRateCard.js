@@ -1000,9 +1000,8 @@ background:linear-gradient(180deg,rgba(59,47,88,0),rgba(59,47,88,.28));pointer-e
 .is-blurred .locked-value{display:inline-block;filter:blur(5px);opacity:.72;user-select:none}
 .is-blurred .d-label,.is-blurred .d-sub,.is-blurred .q{opacity:.86}
 .stmt-table.is-blurred,.stmt-totals.is-blurred{position:relative}
-.unlock-overlay-btn{position:absolute;left:50%;top:57%;z-index:2;transform:translate(-50%,-50%);border:1px solid rgba(255,255,255,.28);
-background:rgb(215 61 61);backdrop-filter:blur(8px);color:#fff;border-radius:7px;padding:10px 16px;font-size:13px;font-weight:600;
-box-shadow:0 12px 30px rgba(20,14,34,.24);cursor:pointer,text-transform: capitalize;}
+.unlock-overlay-btn{position:absolute;left:50%;top:57%;z-index:2;transform:translate(-50%,-50%);border:1px solid rgba(255,255,255,.28);background:rgb(215 61 61);backdrop-filter:blur(8px);color:#fff;border-radius:7px;padding:10px 16px;font-size:13px;font-weight:600;
+box-shadow:0 12px 30px rgba(20,14,34,.24);cursor:pointer;text-transform: capitalize;}
 .unlock-overlay-btn:hover{background:rgba(255,255,255,.25)}
 .lock-cta{display:flex;gap:9px;font-size:13px;line-height:1.5;color:rgba(255,255,255,.74);margin:0;padding-top:15px;border-top:1px solid rgba(255,255,255,.16)}
 .lock-icon{flex:none;font-size:13px;line-height:1.4}
@@ -1091,7 +1090,7 @@ box-shadow:0 12px 30px rgba(20,14,34,.24);cursor:pointer,text-transform: capital
   .rc-mobile-bar-price b{font-family:var(--mono);font-size:19px;font-variant-numeric:tabular-nums}
   .rc-mobile-bar-cta{
     flex:none;background:rgb(215 61 61);color:#fff;border:0;border-radius:6px;
-    padding:11px 18px;font-size:14px;font-weight:600;cursor:pointer
+    padding:11px 18px;font-size:14px;font-weight:600;cursor:pointer;text-transform: capitalize;
   }
    .zsiq_custommain,
   .zsiq_floatmain {
