@@ -419,13 +419,13 @@ export default function FootComo() {
               Company No. <b>10462699</b>
             </span>
             <span>
-              VAT No. <b>[FILL]</b>
+              VAT No. <b></b>
             </span>
             <span>
-              Microsoft Partner ID <b>[FILL]</b>
+              Microsoft Partner ID <b></b>
             </span>
             <span>
-              ISO 27001 &amp; 9001 certified <b>[FILL — remove if not held]</b>
+              ISO 27001 &amp; 9001 certified <b></b>
             </span>
           </div>
           <ul className={styles.social} aria-label="Dynamics Square on social media">

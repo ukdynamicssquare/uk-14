@@ -288,9 +288,9 @@
   display: block;
   height: 100%;
   padding: 1.1rem 1.25rem;
-  border: 1px solid var(--ds-rule);
+  border: 1px solid rgb(65 55 94);
   border-radius: 5px;
-  background: rgba(255, 255, 255, 0.03);
+  /* background: rgba(255, 255, 255, 0.03); */
   transition: border-color 0.18s ease, background-color 0.18s ease;
 }
 .locCard:hover {

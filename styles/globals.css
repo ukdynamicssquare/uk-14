@@ -6214,7 +6214,7 @@ margin: 0px 0px 0px -30px;
   -webkit-box-shadow: 0 0 32px #00000026;
   color: #000 !important;
   background: #fff !important;
-  z-index: 999 !important;
+ z-index: 2147483647 !important;
   padding: 15px;
 }
 /* .CookieConsent button {

@@ -1124,7 +1124,14 @@ box-shadow:0 12px 30px rgba(20,14,34,.24);cursor:pointer,text-transform: capital
   .rc-mobile-bar-price.is-unlocked b {
     filter: blur(0);
     opacity: 1;
-  }  
+  }
+    .siq_bR {
+    bottom: 80px;
+    right: 10px;
+}
+    .fixed-button {
+    bottom: 130px;
+}
 }
 @media (prefers-reduced-motion:reduce){.rc *{transition:none!important}}
 `;
