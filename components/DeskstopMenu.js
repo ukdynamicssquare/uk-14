@@ -1885,17 +1885,7 @@ const DeskstopMenu = () => {
                                         </div>
                                       </a>
                                     </div>
-                                    <div className="guide-card-01">
-                                      <a target="_blank" href="https://youtu.be/hUPT5DejiR0?si=p_hlO_BdCj_gbWwh">
-                                        <div className="guide-card-imag">
-                                          <img width={411} height={216} src="/img/bc-8-21.png" alt="potcast" />
-                                        </div>
-                                        <div className="guide-card-inf">
-                                          <span className="guide-card-title">Unpacking Microsoft Dynamics 365 Business Central for Growth</span>
-                                          <span className="guide-card-para">Learn how Business Central helps streamline operations and scale growth in this expert-driven podcast episode.</span>
-                                        </div>
-                                      </a>
-                                    </div>
+                                    
                                     <div className="guide-card-01">
                                       <a target="_blank" href="https://youtu.be/Of8upj7BtGo?si=Lsf5SCwBtIpSU1ST">
                                         <div className="guide-card-imag">
@@ -1904,6 +1894,17 @@ const DeskstopMenu = () => {
                                         <div className="guide-card-inf">
                                           <span className="guide-card-title">Signs Your Business Is Ready for an ERP System</span>
                                           <span className="guide-card-para">Understand when to adopt ERP, its benefits, and how Dynamics 365 drives business transformation.</span>
+                                        </div>
+                                      </a>
+                                    </div>
+                                    <div className="guide-card-01">
+                                      <a target="_blank" href="https://youtu.be/hUPT5DejiR0?si=p_hlO_BdCj_gbWwh">
+                                        <div className="guide-card-imag">
+                                          <img width={411} height={216} src="/img/bc-8-21.png" alt="potcast" />
+                                        </div>
+                                        <div className="guide-card-inf">
+                                          <span className="guide-card-title">Unpacking Microsoft Dynamics 365 Business Central for Growth</span>
+                                          <span className="guide-card-para">Learn how Business Central helps streamline operations and scale growth in this expert-driven podcast episode.</span>
                                         </div>
                                       </a>
                                     </div>
