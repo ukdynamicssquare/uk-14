@@ -73,7 +73,7 @@ const NAV_COLUMNS = [
       { label: "Our Partners", href: "/partner//" },
       { label: "Careers", href: "/careers/" },
       { label: "Contact Us", href: "/contact-us/" },
-      { label: "Existing client support", href: "/support/", isKey: true },
+      { label: "Existing client support", href: "https://support.dynamicssquare.com/portal/en/home", isKey: true },
     //   { label: "Raise a ticket", href: "/support/raise-a-ticket/" },
     ],
   },
@@ -292,9 +292,9 @@ export default function FootComo() {
                 loading="lazy"
               />
               {/* [FILL] Swap for your live review platform + real counts */}
-              <Link href="/reviews/" className={styles.credChip}>
+              {/* <Link href="/reviews/" className={styles.credChip}>
                 <i className="bi bi-star-fill" aria-hidden="true" /> 4.9/5 &middot; Full reviews
-              </Link>
+              </Link> */}
             </div>
           </div>
 
@@ -332,6 +332,7 @@ export default function FootComo() {
                           {link.label}
                         </Link>
                       </li>
+                      
                     ))}
                   </ul>
                 </nav>
