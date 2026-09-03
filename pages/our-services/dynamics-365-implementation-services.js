@@ -840,7 +840,7 @@ const ImplementationServices = () => {
                       <p>
                         Dynamics Square is one of the leading implementation
                         support partners in the UK and has been providing its
-                        services for the last 14 years. Our team is an expert in
+                        services for the last 14 years. Our team is an expert in{' '}
                         <a href="/our-services/dynamics-365-consultant/">consulting</a>, implementing, upgrade, and providing support
                         for modules of Dynamics Square.
                       </p>
