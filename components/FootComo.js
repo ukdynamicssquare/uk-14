@@ -62,7 +62,7 @@ const NAV_COLUMNS = [
       { label: "Business Central vs SAP B1", href: "/dynamics-365-business-central-vs-sap-business-one/" },
       { label: "Business Central vs Sage", href: "/blog/business-central-vs-sage-50/" },
       { label: "Case Studies", href: "/case-studies/" },
-      { label: "Blog", href: "/blog/" },
+      { label: "Blogs", href: "/blog/" },
     ],
   },
   {
@@ -255,9 +255,9 @@ export default function FootComo() {
           {/* Brand block */}
           <div className="col-12 col-lg-3">
             <Link href="/" className={styles.brandLogo} aria-label="Dynamics Square home">
-              DYNAMICS <b>SQUARE</b>
-              <sup aria-hidden="true">&trade;</sup>
+            <img src="/img/dynamics_square_tm_logo_footer.svg" alt="Dynamics Square TM Logo" width={310} height={21} />
             </Link>
+            
             <p className={styles.brandPitch}>
               A Microsoft Solutions Partner delivering Dynamics 365, Business Central and Copilot
               across the UK, United States and Canada.

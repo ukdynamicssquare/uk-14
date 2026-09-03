@@ -1346,7 +1346,7 @@ const DeskstopMenu = () => {
                                 alt="Case Study"
                                 width="24"
                                 height="24"
-                              /><span>Case Study</span>
+                              /><span>Case Studies</span>
                             </a>
                           </div>
                           <div
@@ -1487,7 +1487,7 @@ const DeskstopMenu = () => {
                                       </div>
                                     </div>
                                     <div className="col-lg-12">
-                                      <a style={{padding:'10px 0px !important'}} className="n-tag-link" href="/blog/">View All Blog <i className="bi bi-arrow-right"></i></a>
+                                      <a style={{padding:'10px 0px !important'}} className="n-tag-link" href="/blog/">View All Blogs <i className="bi bi-arrow-right"></i></a>
                                     </div>
                                   </div>
                                 </div>
