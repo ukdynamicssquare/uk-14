@@ -300,7 +300,7 @@ export default function FootComo() {
 
           {/* Nav columns */}
           {NAV_COLUMNS.map((col) => (
-            <div className="col-6 col-md-4 col-lg" key={col.id}>
+            <div className="col-md-4 col-lg" key={col.id}>
               <button
                 type="button"
                 className={styles.colHeader}

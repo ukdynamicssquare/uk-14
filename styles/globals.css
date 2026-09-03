@@ -15454,7 +15454,7 @@ margin: -30px 0px -80px;
     padding-top: 30px;
   }
   .award-ss {
-    justify-content: left;
+    justify-content: left !important;
   }
   .foot-tag-head {
     padding-left: 10px;
