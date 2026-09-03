@@ -11,7 +11,7 @@ import FormNewUIFooter from './FormNewUIFooter';
 const NAV_COLUMNS = [
   {
     id: "products",
-    title: "Dynamics 365 Products",
+    title: "Solutions",
     links: [
       { label: "Business Central", href: "/products/dynamics-365-business-central/" },
       { label: "Finance", href: "/products/microsoft-dynamics-365-finance/" },
@@ -58,7 +58,7 @@ const NAV_COLUMNS = [
       { label: "Business Central Pricing", href: "/products/dynamics-365-business-central/pricing-licensing/", isKey: true },
       { label: "Dynamics 365 Guide", href: "/the-ultimate-guide-to-microsoft-dynamics-365/", isKey: true },
       { label: "ERP Cost Calculator", href: "/erp-implementation-cost-calculator/", isKey: true },
-       {label: "EERP Comparison", href: "/top-erp-systems-comparison/", isKey: true },
+       {label: "ERP Comparison", href: "/top-erp-systems-comparison/", isKey: true },
       { label: "Business Central vs SAP B1", href: "/dynamics-365-business-central-vs-sap-business-one/" },
       { label: "Business Central vs Sage", href: "/blog/business-central-vs-sage-50/" },
       { label: "Case Studies", href: "/case-studies/" },
