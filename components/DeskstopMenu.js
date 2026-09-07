@@ -1583,7 +1583,7 @@ const DeskstopMenu = () => {
                                             <a href="/case-studies/business-central-with-crm-implement-for-equestrian-manufacturing/">162% Projected ROI with 8% Efficiency Gain | UK Manufacturer</a>
                                           </li>
                                           <li>
-                                            <a href="/business-central-reimplementation-for-retail-market/">
+                                            <a href="/case-studies/business-central-reimplementation-for-retail-market/">
                                               Digitally Synchronized Warehouse Operations | Northern Ireland Saddlery Business
                                             </a>
                                           </li>
