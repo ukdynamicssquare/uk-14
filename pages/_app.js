@@ -53,6 +53,7 @@ function MyApp({ Component, pageProps }) {
     "/products/microsoft-dynamics-365-finance-old",
     "/test-form",
     "/erp-implementation-cost-calculator",
+        "/microsoft-dynamics-pricing-calculator",
   ];
 
   const isLandingPage = landingRoutes.includes(pathname);

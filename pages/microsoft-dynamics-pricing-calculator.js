@@ -1,5 +1,6 @@
 import Head from "next/head";
 import LicenceRateCard from "../components/LicenceRateCard";
+import FooterHideNew from "../components/FooterHide";
 
 
 export const metadata = {
@@ -35,6 +36,7 @@ export default function LicenceCalculatorPage() {
         <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/pricing-cal.png" />
       </Head>
       <LicenceRateCard />
+      <FooterHideNew />
       </>
 
 
