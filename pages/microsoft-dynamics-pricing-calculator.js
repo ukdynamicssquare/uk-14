@@ -24,7 +24,7 @@ export default function LicenceCalculatorPage() {
         <meta property="og:description" content="Use our Dynamics 365 pricing calculator to estimate licence costs for your UK business and understand the potential cost of your Microsoft Dynamics 365 solution" />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/erp-implementation-cost-calculator/" />
         <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/erp-shared-pic.png" />
+        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/pricing-cal.png" />
         <meta property="og:image:width" content="200" />
         <meta property="og:image:height" content="200" />
         <meta property="og:image:type" content="image/png" />
@@ -32,7 +32,7 @@ export default function LicenceCalculatorPage() {
         <meta name="twitter:site" content="@dsquare_uk" />
         <meta name="twitter:title" content="Dynamics 365 Licensing & Pricing Calculator" />
         <meta name="twitter:description" content="Calculate your ERP implementation pricing with our easy-to-use calculator. Get accurate estimates tailored to your business needs. Start planning today!" />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/erp-shared-pic.png" />
+        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/pricing-cal.png" />
       </Head>
       <LicenceRateCard />
       </>
