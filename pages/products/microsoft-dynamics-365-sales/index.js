@@ -41,7 +41,7 @@ const SalesNew = () => {
   return (
     <>
       <Head>
-        <title>Microsoft Dynamics 365 Sales Software UK | Free Demo</title>
+        <title>Dynamics 365 Sales Partner UK | Dynamics Square UK</title>
         <meta
           name="description"
           content="Transform your sales operations with Microsoft Dynamics 365 Sales Software in the UK. Automate workflows and improve customer engagement."
@@ -52,13 +52,13 @@ const SalesNew = () => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-sales/" />
-        <meta property="og:title" content="Microsoft Dynamics 365 Sales Software UK | Free Demo" />
+        <meta property="og:title" content="Dynamics 365 Sales Partner UK | Dynamics Square UK" />
         <meta property="og:description" content="Transform your sales operations with Microsoft Dynamics 365 Sales Software in the UK. Automate workflows and improve customer engagement." />
         <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/sales-new-01.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-sales/" />
-        <meta property="twitter:title" content="Microsoft Dynamics 365 Sales Software UK | Free Demo" />
+        <meta property="twitter:title" content="Dynamics 365 Sales Partner UK | Dynamics Square UK" />
         <meta property="twitter:description" content="Transform your sales operations with Microsoft Dynamics 365 Sales Software in the UK. Automate workflows and improve customer engagement." />
         <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/sales-new-01.png" />
 
@@ -68,7 +68,7 @@ const SalesNew = () => {
           <div className='row justify-content-center'>
             <div className='col-lg-8'>
               <div className='solution-new-banner-one-content'>
-                <h1>Microsoft Dynamics 365 Sales</h1>
+                <h1>Dynamics 365 Sales</h1>
                 <span className='large-heading'>Deploy a trusted agentic CRM solution used by sales teams across the world</span>
                 <p>Microsoft Dynamics 365 Sales brings pipeline, customer data, and seller actions into one connected system. Dynamics 365 for Sales is an agentic CRM solution with built-in AI and Copilot support that help sales professionals to close deals faster and improve daily productivity with guided, data-led selling.</p>
                 <div className="text-center">
@@ -99,7 +99,7 @@ const SalesNew = () => {
             <div className='col-lg-12'>
               <div className='flecx'>
                 <div className='left-fl'>
-                  <p>Dynamics Square helps businesses manage leads, strengthen customer relationships, and close deals faster with the AI-powered Dynamics 365 Sales CRM.</p>
+                  <p>As a trusted Dynamics 365 Sales partner in the UK, Dynamics Square helps businesses manage leads, strengthen customer relationships, and close deals faster with the AI-powered Dynamics 365 Sales CRM.</p>
                 </div>
                 <div className='left-rl'>
                   <Image src="/img/partner-logo-black.png" width={193} height={55} alt="partner-logo-black" />

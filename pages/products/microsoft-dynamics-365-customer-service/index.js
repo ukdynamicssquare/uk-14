@@ -40,10 +40,10 @@ const FieldService = () => {
   return (
     <>
       <Head>
-        <title>Microsoft Dynamics 365 Customer Service | Dynamics Square UK</title>
+        <title>Dynamics 365 Customer Service Partner | Dynamics Square UK</title>
         <meta
           name="description"
-          content="Transform customer support with Microsoft Dynamics 365 Customer Service. Manage cases, automate workflows and deliver personalised omnichannel support."
+          content="Transform customer support with AI-powered Dynamics 365 Customer Service from Dynamics Square UK. Manage cases, automate workflows and deliver personalised omnichannel support."
         />
         <link
           rel="canonical"
@@ -51,14 +51,14 @@ const FieldService = () => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-customer-service/" />
-        <meta property="og:title" content="Microsoft Dynamics 365 Customer Service | Dynamics Square UK" />
-        <meta property="og:description" content="Transform customer support with Microsoft Dynamics 365 Customer Service. Manage cases, automate workflows and deliver personalised omnichannel support." />
+        <meta property="og:title" content="Dynamics 365 Customer Service Partner | Dynamics Square UK" />
+        <meta property="og:description" content="Transform customer support with AI-powered Dynamics 365 Customer Service from Dynamics Square UK. Manage cases, automate workflows and deliver personalised omnichannel support." />
         <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/customer-service-001.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-customer-service/" />
-        <meta property="twitter:title" content="Microsoft Dynamics 365 Customer Service | Dynamics Square UK" />
-        <meta property="twitter:description" content="Transform customer support with Microsoft Dynamics 365 Customer Service. Manage cases, automate workflows and deliver personalised omnichannel support." />
+        <meta property="twitter:title" content="Dynamics 365 Customer Service Partner | Dynamics Square UK" />
+        <meta property="twitter:description" content="Transform customer support with AI-powered Dynamics 365 Customer Service from Dynamics Square UK. Manage cases, automate workflows and deliver personalised omnichannel support." />
         <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/customer-service-001.png" />
 
         <script
@@ -241,9 +241,9 @@ const FieldService = () => {
           <div className='row justify-content-center'>
             <div className='col-lg-8'>
               <div className='solution-new-banner-one-content'>
-                <h1>Microsoft Dynamics 365 Customer Service</h1>
+                <h1>Dynamics 365 Customer Service</h1>
                 <span className='large-heading'>Implement an agentic service solution trusted by support teams worldwide </span>
-                <p>Set up Microsoft Dynamics 365 Customer Service for unified operations. Companies use this agent-based CRM solution to diagnose & address issues, automate responses, and resolve cases in a much faster way.</p>
+                <p>Set up Microsoft Dynamics 365 Customer Service for unified operations with a trusted partner in the UK. Companies use this agent-based CRM solution to diagnose and address issues, automate responses, and resolve cases faster.</p>
                 <div className="text-center">
                   <Link
                     href="#exampleModal"

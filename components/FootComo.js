@@ -193,61 +193,9 @@ export default function FootComo() {
 
   return (
     <>
-      <section id="services" className="services mo-top-30">
-        <div className="container" data-aos="fade-up">
-          <div className='row justify-content-center'>
-            <div className='col-lg-10'>
-              <div className="row bbb-colooer">
-                <div className='col-lg-5 align-self-center'>
-                  <div className='foot-tag-head'>
-                    <h3>Let’s build the future of your business—together!</h3>
-                    <p>The right technology can change everything, and Dynamics Square ensures your business gets the tools it needs to succeed. Take the first step towards smarter solutions now!</p>
-                  </div>
-                </div>
-                <div className='col-lg-7'>
-                  <div className='fg-custom'>
-                    <FormNewUIFooter />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
     <footer className={styles.footer} role="contentinfo">
-      {/* ---------- TIER 1: CONVERSION BAND ---------- */}
-      <section className={styles.convert} aria-labelledby="ds-convert-title">
-        <div className="container">
-          <div className="row align-items-center gy-4 py-4 py-lg-5">
-            <div className="col-12 col-lg-7">
-              <span className={styles.eyebrow}>No cost, no obligation</span>
-              <h2 className={styles.convertTitle} id="ds-convert-title">
-                Still weighing up whether Dynamics 365 fits your business?
-              </h2>
-              <p className={styles.convertSub}>
-                Spend 30 minutes with a certified consultant. You&rsquo;ll leave with a licence
-                estimate, an implementation range, and a straight answer on fit.
-              </p>
-            </div>
-            <div className="col-12 col-lg-5 d-flex flex-wrap gap-3 justify-content-lg-end">
-              <Link
-                href="/book-assessment/"
-                className={`btn ${styles.btnPrimary}`}
-                onClick={() => trackFooterLink("cta-assessment", "Book a free 30-min assessment", "/book-assessment/")}
-              >
-                Book a free 30-min assessment
-              </Link>
-              <Link
-                href="/dynamics-365-business-central/pricing/"
-                className={`btn ${styles.btnGhost}`}
-                onClick={() => trackFooterLink("cta-pricing", "See Business Central pricing", "/dynamics-365-business-central/pricing/")}
-              >
-                See Business Central pricing
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+  
 
       {/* ---------- TIER 2: LINK GRID ---------- */}
       <div className="container">
@@ -415,7 +363,7 @@ export default function FootComo() {
       {/* ---------- TIER 3: TRUST RIBBON ---------- */}
       <div className={styles.trust}>
         <div className="container d-flex flex-wrap align-items-center justify-content-between gap-3 py-3">
-          <div className={styles.facts}>
+          {/* <div className={styles.facts}>
             <span>
               Company No. <b>10462699</b>
             </span>
@@ -428,7 +376,7 @@ export default function FootComo() {
             <span>
               ISO 27001 &amp; 9001 certified <b></b>
             </span>
-          </div>
+          </div> */}
           <ul className={styles.social} aria-label="Dynamics Square on social media">
             {SOCIAL_LINKS.map((s) => (
               <li key={s.label}>

@@ -40,7 +40,7 @@ const FieldService = () => {
   return (
     <>
       <Head>
-         <title>Microsoft Dynamics 365 Field Service - Dynamics Square UK</title>
+         <title>Dynamics 365 Field Service Partner | Dynamics Square UK</title>
         <meta
           name="description"
           content="Transform field operations with Dynamics 365 Field Service. UK experts for implementation, integration & support. Book your free consultation."
@@ -51,13 +51,13 @@ const FieldService = () => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-field-service/" />
-        <meta property="og:title" content="Microsoft Dynamics 365 Field Service - Dynamics Square UK" />
+        <meta property="og:title" content="Dynamics 365 Field Service Partner | Dynamics Square UK" />
         <meta property="og:description" content="Transform field operations with Dynamics 365 Field Service. UK experts for implementation, integration & support. Book your free consultation." />
         <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/FieldServicebanner.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-field-service/" />
-        <meta property="twitter:title" content="Microsoft Dynamics 365 Field Service - Dynamics Square UK" />
+        <meta property="twitter:title" content="Dynamics 365 Field Service Partner | Dynamics Square UK" />
         <meta property="twitter:description" content="Transform field operations with Dynamics 365 Field Service. UK experts for implementation, integration & support. Book your free consultation." />
         <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/FieldServicebanner.png" />
       </Head>
@@ -66,7 +66,7 @@ const FieldService = () => {
           <div className='row justify-content-center'>
             <div className='col-lg-8'>
               <div className='solution-new-banner-one-content'>
-                <h1>Microsoft Dynamics 365 Field Service</h1>
+                <h1>Dynamics 365 Field Service</h1>
                 <span className='large-heading'>Implement an agentic service solution trusted by service teams worldwide</span>
                 <p>Microsoft Dynamics 365 for Field Service is an agent-based service solution that joins service operations, work orders, and schedules in one place. It has smart schedule features that let companies provide service timely, operate efficiently, and make the customer experience better.</p>
                 <div className="text-center">
@@ -100,7 +100,7 @@ const FieldService = () => {
             <div className='col-lg-12'>
               <div className='flecx'>
                 <div className='left-fl'>
-                  <p>Dynamics Square helps small and medium businesses streamline field operations, improve service delivery, and achieve measurable results with the AI-powered Dynamics 365 Field Service CRM.</p>
+                  <p>As a trusted Dynamics 365 Field Service partner in the UK, Dynamics Square helps small and medium businesses streamline field operations, improve service delivery, and achieve measurable results with an AI-powered CRM.</p>
                 </div>
                 <div className='left-rl'>
                   <Image src="/img/partner-logo-black.png" width={193} height={55} alt="partner-logo-black" />

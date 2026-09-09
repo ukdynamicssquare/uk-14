@@ -489,11 +489,27 @@ export default function LicenceRateCard({ source = "licence-rate-card", initialC
                       ))}
                     </div>
                   </div>
+                  
                 ))}
+                
               </section>
+              
             );
+            
           })}
-
+           <div className="mm-hide">
+                   {locked && (
+                  <button
+                    type="button"
+                    className="unlock-btn mm-hide-new"
+                    onClick={() => {
+                      setSent(false);
+                      setSendError("");
+                      setShowLeadModal(true);
+                    }}
+                  >Unlock pricing</button>
+                )}
+                </div>
         </div>
 
         {/* ----------------------------- STATEMENT ----------------------------- */}
@@ -1073,12 +1089,24 @@ box-shadow:0 12px 30px rgba(20,14,34,.24);cursor:pointer;text-transform: capital
 .cta{width:100%;margin-top:8px;padding:12px;background:var(--purple-dark);color:#fff;border:0;border-radius:6px;font-size:14px;font-weight:600;cursor:pointer,text-transform: capitalize;}
 .cta:disabled{background:#d9d4e3;color:#6f6a78;cursor:not-allowed}
 .done h3{color:var(--jade)}
+.mm-hide{
+text-align:center;
+padding:40px 0px
+}
+.mm-hide .mm-hide-new{
+padding: 13px 60px;
+    font-size: 18px;
 
+    background: #3b2f58;
+}
+.mm-hide .mm-hide-new:hover{
+    background: #d73d3d;
+}
 @media (max-width:1100px){
   .rc-grid{grid-template-columns:minmax(0,1fr);gap:24px}
   .rc-statement{position:static;order:2}
 }
-// @media (max-width:720px){
+// @media (max-width:992px){
 //   .rc{padding:0 16px 48px;background:linear-gradient(180deg,var(--purple) 0 560px,var(--paper) 560px 100%)}
 //   .rc-head{padding:42px 0 104px}
 //   .rc-head h1{font-size:40px;line-height:1.1}
@@ -1093,7 +1121,7 @@ box-shadow:0 12px 30px rgba(20,14,34,.24);cursor:pointer;text-transform: capital
 //   .stp-ctl{align-self:flex-end}
 //   .stmt-heading-row{align-items:flex-start;flex-direction:column}
 // }
-@media (max-width:720px){
+@media (max-width:992px){
   .rc{padding:0 16px 108px;background:linear-gradient(180deg,var(--purple) 0 560px,var(--paper) 560px 100%)}
   .rc-head{padding:42px 0 104px}
   .rc-head h1{font-size:40px;line-height:1.1}
@@ -1123,7 +1151,7 @@ box-shadow:0 12px 30px rgba(20,14,34,.24);cursor:pointer;text-transform: capital
 
 /* sticky mobile summary/CTA bar */
 .rc-mobile-bar{display:none}
-@media (max-width:720px){
+@media (max-width:992px){
   .rc-mobile-bar{
     display:flex;align-items:center;justify-content:space-between;gap:14px;
     position:fixed;left:0;right:0;bottom:0;z-index: 2147483647 !important;
@@ -1173,9 +1201,11 @@ box-shadow:0 12px 30px rgba(20,14,34,.24);cursor:pointer;text-transform: capital
     .siq_bR {
     bottom: 80px;
     right: 10px;
+    display:none !important
 }
-    .fixed-button {
+    .fixed-button,.mm-hide {
     bottom: 130px;
+    display:none
 }
 }
 @media (prefers-reduced-motion:reduce){.rc *{transition:none!important}}

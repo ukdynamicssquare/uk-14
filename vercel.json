@@ -94,6 +94,11 @@
       "source": "/blog/top-platforms-to-integrate-with-dynamics-365/",
       "destination": "/blog/dynamics-365-integration-guide/",
       "statusCode": 301
+    },
+     {
+      "source": "/microsoft-dynamics-pricing-calculator/",
+      "destination": "/tools/microsoft-dynamics-licensing-calculator/",
+      "statusCode": 301
     }
   ]
 }

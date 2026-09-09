@@ -41,7 +41,7 @@ const BusinessCentral = () => {
   return (
     <>
       <Head>
-        <title>Microsoft Dynamics 365 Finance Partner | Dynamics Square</title>
+        <title>Dynamics 365 Finance Partner | Dynamics Square UK</title>
         <meta
           name="description"
           content="Boost your financial visibility and faster your financial decision making by implementing Microsoft Dynamics 365 Finance. Book a free consultation today."
@@ -52,13 +52,13 @@ const BusinessCentral = () => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-finance/" />
-        <meta property="og:title" content="Microsoft Dynamics 365 Finance Partner | Dynamics Square" />
+        <meta property="og:title" content="Dynamics 365 Finance Partner | Dynamics Square UK" />
         <meta property="og:description" content="Boost your financial visibility and faster your financial decision making by implementing Microsoft Dynamics 365 Finance. Book a free consultation today." />
         <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/Dynamics-365-Finance-Banner.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-finance/" />
-        <meta property="twitter:title" content="Microsoft Dynamics 365 Finance Partner | Dynamics Square" />
+        <meta property="twitter:title" content="Dynamics 365 Finance Partner | Dynamics Square UK" />
         <meta property="twitter:description" content="Boost your financial visibility and faster your financial decision making by implementing Microsoft Dynamics 365 Finance. Book a free consultation today." />
         <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/Dynamics-365-Finance-Banner.png" />
 
@@ -68,7 +68,7 @@ const BusinessCentral = () => {
           <div className='row justify-content-center'>
             <div className='col-lg-8'>
               <div className='solution-new-banner-one-content'>
-                <h1>Microsoft Dynamics 365 Finance</h1>
+                <h1>Dynamics 365 Finance</h1>
                 <span className='large-heading'>Deploy AI-powered Dynamics 365 Finance with a proven 106 percent ROI in three years.</span>
                 <p>Boost your organisation's ability to develop, modify, and control budgets, while enabling faster financial decision-making with Microsoft Dynamics 365 Finance.</p>
                 <div className="text-center">
