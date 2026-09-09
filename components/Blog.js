@@ -65,6 +65,30 @@ const Blog = ({ category }) => {
   };
 
   // ==========================================
+  // EXTRACT POSTS FROM API RESPONSE
+  // ==========================================
+
+  const extractPosts = (data) => {
+    if (Array.isArray(data)) {
+      return data;
+    }
+
+    if (Array.isArray(data?.blogs)) {
+      return data.blogs;
+    }
+
+    if (Array.isArray(data?.data)) {
+      return data.data;
+    }
+
+    if (Array.isArray(data?.posts)) {
+      return data.posts;
+    }
+
+    return [];
+  };
+
+  // ==========================================
   // FETCH BLOGS
   // ==========================================
 
@@ -75,70 +99,93 @@ const Blog = ({ category }) => {
       try {
         setLoading(true);
 
-        let data = [];
+        let posts = [];
 
         // ======================================
         // CATEGORY SELECTED
         // ======================================
 
         if (category) {
-          data = await BlogService.getBlogsByCategory(
-            category,
-            3
+          console.log(
+            "BLOG: Loading category:",
+            category
           );
+
+          const categoryData =
+            await BlogService.getBlogsByCategory(
+              category,
+              3
+            );
+
+          posts = extractPosts(categoryData);
+
+          console.log(
+            "BLOG: Category posts:",
+            posts
+          );
+
+          // ====================================
+          // CATEGORY HAS NO POSTS
+          // GET LATEST 3 BLOGS
+          // ====================================
+
+          if (posts.length === 0) {
+            console.log(
+              "BLOG: Category empty, loading latest blogs"
+            );
+
+            const latestData =
+              await BlogService.getBlogs(3);
+
+            posts = extractPosts(latestData);
+
+            console.log(
+              "BLOG: Latest posts:",
+              posts
+            );
+          }
         }
 
         // ======================================
         // NO CATEGORY
-        // SHOW LATEST BLOGS
+        // GET LATEST 3 BLOGS
         // ======================================
 
         else {
-          data = await BlogService.getBlogs(1000);
+          console.log(
+            "BLOG: No category, loading latest blogs"
+          );
+
+          const latestData =
+            await BlogService.getBlogs(3);
+
+          posts = extractPosts(latestData);
         }
 
         if (!isMounted) return;
 
-        console.log("BLOG CATEGORY:", category);
-        console.log("BLOG API DATA:", data);
-
         // ======================================
-        // HANDLE DIFFERENT RESPONSE FORMATS
-        // ======================================
-
-        let posts = [];
-
-        if (Array.isArray(data)) {
-          posts = data;
-        } else if (Array.isArray(data?.blogs)) {
-          posts = data.blogs;
-        } else if (Array.isArray(data?.data)) {
-          posts = data.data;
-        } else if (Array.isArray(data?.posts)) {
-          posts = data.posts;
-        }
-
-        // ======================================
-        // IF NO CATEGORY
         // SORT BY LATEST DATE
         // ======================================
 
-        if (!category) {
-          posts = [...posts].sort((a, b) => {
-            const dateA = new Date(
-              getPostDate(a)
-            ).getTime();
+        posts = [...posts].sort((a, b) => {
+          const dateA = new Date(
+            getPostDate(a)
+          ).getTime();
 
-            const dateB = new Date(
-              getPostDate(b)
-            ).getTime();
+          const dateB = new Date(
+            getPostDate(b)
+          ).getTime();
 
-            return dateB - dateA;
-          });
-        }
+          // Keep valid dates first
+          if (Number.isNaN(dateA)) return 1;
+          if (Number.isNaN(dateB)) return -1;
+
+          return dateB - dateA;
+        });
 
         // ======================================
-        // ONLY 3 BLOGS
+        // ONLY SHOW 3
         // ======================================
 
         setBlogPosts(posts.slice(0, 3));
@@ -152,7 +199,6 @@ const Blog = ({ category }) => {
         if (isMounted) {
           setBlogPosts([]);
         }
-
       } finally {
         if (isMounted) {
           setLoading(false);
@@ -174,38 +220,29 @@ const Blog = ({ category }) => {
   if (loading) {
     return (
       <div className="col-lg-6">
-
         <div className="blogs-extra-title">
           <h3>Articles</h3>
         </div>
 
         <div className="blog-list">
-
           {[1, 2, 3].map((item) => (
             <div
               className="blogs-extra-left"
               key={item}
             >
-
               <div className="blogs-extra-left-img">
                 <div className="blog-skeleton-image" />
               </div>
 
               <div className="blogs-extra-left-content">
-
                 <div className="blog-skeleton-title" />
-
                 <div className="blog-skeleton-date" />
-
               </div>
-
             </div>
           ))}
-
         </div>
 
         <BlogStyles />
-
       </div>
     );
   }
@@ -216,22 +253,17 @@ const Blog = ({ category }) => {
 
   return (
     <div className="col-lg-6">
-
       {/* TITLE */}
 
       <div className="blogs-extra-title">
         <h3>Articles</h3>
       </div>
 
-
       {/* BLOGS */}
 
       {blogPosts.length > 0 ? (
-
         <div className="blog-list">
-
           {blogPosts.map((post, index) => {
-
             // ==================================
             // SLUG
             // ==================================
@@ -242,7 +274,6 @@ const Blog = ({ category }) => {
               post?.url_slug ||
               "";
 
-
             // ==================================
             // TITLE
             // ==================================
@@ -252,7 +283,6 @@ const Blog = ({ category }) => {
               post?.name ||
               "Blog Article";
 
-
             // ==================================
             // IMAGE
             // ==================================
@@ -261,17 +291,13 @@ const Blog = ({ category }) => {
               post?.image ||
               post?.featured_image ||
               post?.featuredImage?.url ||
-              (
-                typeof post?.featuredImage ===
-                "string"
-                  ? post.featuredImage
-                  : ""
-              ) ||
+              (typeof post?.featuredImage === "string"
+                ? post.featuredImage
+                : "") ||
               "";
 
             const imageUrl =
               getImageUrl(rawImage);
-
 
             // ==================================
             // DATE
@@ -283,6 +309,13 @@ const Blog = ({ category }) => {
             const formattedDate =
               formatDate(rawDate);
 
+            // ==================================
+            // BLOG URL
+            // ==================================
+
+            const blogUrl = slug
+              ? `/blog/${slug}/`
+              : "/blog/";
 
             return (
               <div
@@ -294,96 +327,62 @@ const Blog = ({ category }) => {
                   index
                 }
               >
-
                 {/* IMAGE */}
 
                 <div className="blogs-extra-left-img">
-
-                  <Link
-                    href={
-                      slug
-                        ? `/blog/${slug}/`
-                        : "/blog/"
-                    }
-                  >
-
+                  <Link href={blogUrl}>
                     <Image
                       src={imageUrl}
                       alt={title}
                       width={180}
                       height={100}
-                      sizes="180px"
+                      sizes="(max-width: 767px) 120px, 180px"
                       priority={index === 0}
                       className="blog-card-image"
                     />
-
                   </Link>
-
                 </div>
-
 
                 {/* CONTENT */}
 
                 <div className="blogs-extra-left-content">
-
                   <h4>
-
-                    <Link
-                      href={
-                        slug
-                          ? `/blog/${slug}/`
-                          : "/blog/"
-                      }
-                    >
+                    <Link href={blogUrl}>
                       {title}
                     </Link>
-
                   </h4>
-
 
                   {formattedDate && (
                     <span className="blog-date">
                       {formattedDate}
                     </span>
                   )}
-
                 </div>
-
               </div>
             );
           })}
-
         </div>
-
       ) : (
-
         <div className="blog-no-data">
           No articles found.
         </div>
-
       )}
-
 
       {/* READ MORE */}
 
       <div className="blog-read-more">
-
         <Link
           href="/blog/"
           className="bby-btn"
         >
           Read More Articles
         </Link>
-
       </div>
 
-
       <BlogStyles />
-
     </div>
   );
 };
-
 
 // ==================================================
 // STYLES
@@ -391,7 +390,6 @@ const Blog = ({ category }) => {
 
 const BlogStyles = () => (
   <style jsx global>{`
-
     .blog-list {
       width: 100%;
     }
@@ -507,7 +505,6 @@ const BlogStyles = () => (
     }
 
     @media (max-width: 767px) {
-
       .blogs-extra-left {
         gap: 12px;
       }
@@ -535,11 +532,8 @@ const BlogStyles = () => (
       .blog-skeleton-date {
         width: 80px;
       }
-
     }
-
-  `}
-  </style>
+  `}</style>
 );
 
 export default Blog;
