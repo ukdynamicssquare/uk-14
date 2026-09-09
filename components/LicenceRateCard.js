@@ -61,17 +61,18 @@ export default function LicenceRateCard({ source = "licence-rate-card", initialC
   const [currency, setCurrency] = useState(
     initialCatalog?.defaultCurrency || initialCatalog?.currencies?.[0] || null
   );
-  const [caps, setCaps] = useState(() => new Set(["fin", "sales", "purch", "inv"]));
+  const [caps, setCaps] = useState(() => new Set());
   const [open, setOpen] = useState(() => new Set());
   const [entities, setEntities] = useState(1);
   const [countries, setCountries] = useState(1);
   const [revenue, setRevenue] = useState("5_25");
-  const [fullUsers, setFullUsers] = useState(15);
+  const [fullUsers, setFullUsers] = useState(1);
   const [teamUsers, setTeamUsers] = useState(0);
   const [deviceUsers, setDeviceUsers] = useState(0);
   const [activityUsers, setActivityUsers] = useState(0);
   const [lead, setLead] = useState({ name: "", email: "", phone: "", company: "", renewal: "" });
   const [defaultPhoneCountry, setDefaultPhoneCountry] = useState("gb");
+  const [phoneDialCode, setPhoneDialCode] = useState("");
   const [formErrors, setFormErrors] = useState({});
   const [sending, setSending] = useState(false);
   const [sendError, setSendError] = useState("");
@@ -165,6 +166,13 @@ export default function LicenceRateCard({ source = "licence-rate-card", initialC
     return digitsOnly.length >= 8 && digitsOnly.length <= 15;
   }, []);
 
+  // The widget seeds the field with a dial code, so that alone is not an entry.
+  const phoneProvided = useCallback((phone, dial) => {
+    const digits = (phone || "").replace(/\D/g, "");
+    const code = ((dial ?? phoneDialCode) || "").replace(/\D/g, "");
+    return !!digits && digits !== code;
+  }, [phoneDialCode]);
+
   const validateLeadForm = useCallback((nextLead) => {
     const errors = {};
 
@@ -174,27 +182,26 @@ export default function LicenceRateCard({ source = "licence-rate-card", initialC
     } else if (!isValidBusinessEmail(nextLead.email)) {
       errors.email = "Please enter a valid company email address";
     }
-    if (!nextLead.phone.trim()) {
-      errors.phone = "Phone number is required";
-    } else if (!isValidPhoneNumber(nextLead.phone)) {
+    // Optional, but a number that is typed still has to be a real one.
+    if (phoneProvided(nextLead.phone) && !isValidPhoneNumber(nextLead.phone)) {
       errors.phone = "Please enter a valid phone number";
     }
 
     return errors;
-  }, [isValidBusinessEmail, isValidPhoneNumber]);
+  }, [isValidBusinessEmail, isValidPhoneNumber, phoneProvided]);
 
-  const validateField = useCallback((field, value) => {
+  const validateField = useCallback((field, value, dial) => {
     if (field === "name") return value.trim() ? "" : "Name is required";
     if (field === "email") {
       if (!value.trim()) return "Email is required";
       return isValidBusinessEmail(value) ? "" : "Please enter a valid company email address";
     }
     if (field === "phone") {
-      if (!value.trim()) return "Phone number is required";
+      if (!phoneProvided(value, dial)) return "";
       return isValidPhoneNumber(value) ? "" : "Please enter a valid phone number";
     }
     return "";
-  }, [isValidBusinessEmail, isValidPhoneNumber]);
+  }, [isValidBusinessEmail, isValidPhoneNumber, phoneProvided]);
 
   const handleSubmit = useCallback(async (event) => {
     event?.preventDefault();
@@ -251,7 +258,7 @@ export default function LicenceRateCard({ source = "licence-rate-card", initialC
     } finally {
       setSending(false);
     }
-  }, [lead, sending, source, currency, caps, entities, countries, revenue, fullUsers, teamUsers, deviceUsers, activityUsers]);
+  }, [lead, sending, source, currency, caps, entities, countries, revenue, fullUsers, teamUsers, deviceUsers, activityUsers, validateLeadForm]);
 
   if (loadError) {
     return (
@@ -298,12 +305,16 @@ export default function LicenceRateCard({ source = "licence-rate-card", initialC
   const previewTeamRate = model.platform === "fo" ? 6.6 : 6;
   const previewDeviceRate = model.platform === "fo" ? 75 : 30;
   const previewActivityRate = 50;
+  // the floor applies before pricing, so the blurred preview counts seats the same way
+  const billedFullUsers = model.billedFullUsers ?? fullUsers;
   const lockedMainPreviewLines = [
     fullUsers > 0 && {
       k: "full-preview",
-      qty: fullUsers,
+      qty: billedFullUsers,
       label: model.platform === "fo" ? "Dynamics 365 Finance" : model.platformLabel,
-      sub: "Full user",
+      sub: model.foMinimumApplied
+        ? `${model.foMinSeats} full-user minimum (you entered ${fullUsers})`
+        : "Full user",
       rate: previewFullRate,
     },
   ].filter(Boolean);
@@ -583,6 +594,14 @@ export default function LicenceRateCard({ source = "licence-rate-card", initialC
                   </button>
                 </div>
 
+                {model.foMinimumApplied && (
+                  <p className="stmt-min">
+                    Microsoft sells the primary Finance &amp; Operations application with a{" "}
+                    {model.foMinSeats} full-user minimum, and it cannot be split across core
+                    applications. The statement is priced at that floor.
+                  </p>
+                )}
+
                 <p className="lock-cta">
                   <span className="lock-icon" aria-hidden="true">🔒</span>
                   {C.locked.ctaText}
@@ -610,7 +629,13 @@ export default function LicenceRateCard({ source = "licence-rate-card", initialC
                 ))}
               </tbody>
             </table>
-
+{model.foMinimumApplied && (
+<p className="stmt-min">
+    Microsoft sells the primary Finance &amp; Operations application with a{" "}
+    {model.foMinSeats} full-user minimum, and it cannot be split across core
+    applications. The statement is priced at that floor.
+</p>
+)}
             <div className="stmt-totals">
               <div className="tot"><span>{C.statement.perMonth}</span><b>{model.symbol}{fmt(model.monthly)}</b></div>
               <div className="tot lead"><span>{C.statement.perYear}</span><b>{model.symbol}{fmt(annual)}</b></div>
@@ -721,15 +746,16 @@ export default function LicenceRateCard({ source = "licence-rate-card", initialC
                 <PhoneInput
                   country={defaultPhoneCountry || "gb"}
                   value={lead.phone}
-                  onChange={(value) => {
+                  onChange={(value, country) => {
                     const nextPhone = value || "";
+                    const dial = country?.dialCode || "";
+                    setPhoneDialCode(dial);
                     setLead({ ...lead, phone: nextPhone });
-                    setFormErrors((prev) => ({ ...prev, phone: validateField("phone", nextPhone) }));
+                    setFormErrors((prev) => ({ ...prev, phone: validateField("phone", nextPhone, dial) }));
                   }}
                   inputProps={{
                     name: "phone",
-                    required: true,
-                    "aria-label": "Phone number",
+                    "aria-label": "Phone number (optional)",
                     autoComplete: "tel",
                   }}
                   inputClass="inp"
@@ -781,8 +807,7 @@ export default function LicenceRateCard({ source = "licence-rate-card", initialC
                   disabled={
                     !lead.name.trim() ||
                     !isValidBusinessEmail(lead.email) ||
-                    !lead.phone.trim() ||
-                    !isValidPhoneNumber(lead.phone) ||
+                    // (phoneProvided(lead.phone) && !isValidPhoneNumber(lead.phone)) ||
                     sending
                   }
                 >
@@ -936,7 +961,8 @@ text-align:center;font-family:var(--mono);font-size:15px;font-weight:600;backgro
 border-radius:6px;color:#39485b}
 .seg.on{background:var(--purple-dark);border-color:var(--purple-dark);color:#fff}
 
-.rc-statement{position:sticky;top:124px}
+.rc-statement{position:sticky;top:124px;height: 500px;
+    overflow-y: scroll;}
 .stmt{background:var(--purple-dark);color:#fff;padding:28px 28px 24px;border-radius:8px;box-shadow:0 22px 60px rgba(43,35,66,.16)}
 .stmt-top{display:flex;flex-direction:column;gap:8px;padding-bottom:18px;border-bottom:1px solid rgba(255,255,255,.16)}
 .stmt-kicker{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5)}
@@ -981,6 +1007,8 @@ font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;col
 .ext-list li span{font-size:13px;line-height:1.35}
 .ext-list li em{flex:none;font-family:var(--mono);font-style:normal;font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.48)}
 .ext-note{font-size:12px;line-height:1.45;color:rgba(255,255,255,.56);margin:11px 0 0}
+.stmt-min{font-size:11.5px;line-height:1.45;color:#F2B8AE;margin:14px 0 0;
+padding:10px 12px;background:rgba(242,184,174,.09);border-left:2px solid rgba(242,184,174,.5);border-radius:2px}
 .stmt-foot{font-size:12px;line-height:1.45;color:rgba(255,255,255,.52);margin:16px 0 0}
 
 .lockbox{padding:18px 0 2px}
