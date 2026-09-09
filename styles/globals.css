@@ -9324,7 +9324,7 @@ ul.checkmark li {
   text-align: right;
 }
 .sociallist a {
-  color: #fff;
+  color: #000000;
   background: #ddd;
   border-radius: 50%;
   margin-right: 10px;
@@ -9338,6 +9338,11 @@ ul.checkmark li {
 .sociallist a:hover {
   background: #1d3557;
 }
+.blogs-single-post-sec p ul li,.blogs-single-post-sec p ol li,.blogs-single-post-sec ul li,.blogs-single-post-sec ol li{
+  font-size: 17px;
+    margin-bottom: 8px;
+}
+
 .sociallist a:hover i {
   color: #fff;
 }
@@ -21515,9 +21520,24 @@ display: block;
   border-right:1px solid #DFCAF7;
   padding-right: 15px;
 }
+.tt-pico{
+  margin-bottom:30px
+}
+.blog-dynamic-image img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
 @media (max-width:1400px){
   .res-flex-wrap .guide-card-01:last-child {
     /* display: none; */
   }
 }
+@media (max-width: 1400px) {
+    .blog-content img,.blog-content p img{
+      width: 100% !important;
+      max-width: 100% !important;
+      height: auto !important;
+    }
+  }
 /*new mega menu*/

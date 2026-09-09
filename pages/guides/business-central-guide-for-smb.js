@@ -346,7 +346,7 @@ const PowerBIGuide = () => {
                   is a business intelligence application that allows
                   organisations to{" "}
                   <a
-                    href="https://www.dynamicssquare.com/blog/how-to-generate-interactive-reports-in-power-bi/"
+                    href="https://www.dynamicssquare.co.uk/blog/how-to-generate-interactive-reports-in-power-bi/"
                     rel=""
                     target="_self"
                   >
@@ -372,7 +372,7 @@ const PowerBIGuide = () => {
                 <p>
                   If yes, this{" "}
                   <a
-                    href="https://www.dynamicssquare.com/blog/an-introduction-to-microsoft-power-bi/"
+                    href="https://www.dynamicssquare.co.uk/blog/an-introduction-to-microsoft-power-bi/"
                     target="_self"
                     rel=""
                   >

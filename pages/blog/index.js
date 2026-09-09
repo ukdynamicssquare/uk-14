@@ -1,103 +1,78 @@
 import Image from "next/image";
 import Head from "next/head";
-import { useState } from "react";
-import BlogSearch from "../../components/BlogSearch";
+import { useState, useEffect, useRef } from "react";
+import Pagination from "../../components/Pagination";
+import { paginate } from "../../helpers/paginate";
 import TimerModal from "../../components/TimerModal";
 
-/* ===============================
-   STATIC PROPS
-================================ */
+import { BlogService, BACKEND_URL } from "../../helpers/blogApi";
+
 export async function getStaticProps() {
-  const backend = process.env.NEXT_PUBLIC_BACKEND_URL;
-
-  const urls = {
-    blogs: `${backend}/api/allblog`,
-    businesscentral: `${backend}/api/blog/category/Business/business-central`,
-    categoryblogs: `${backend}/api/blog/category`,
-    blograndomblogs: `${backend}/api/random/allblog`,
-    blogtranding: `${backend}/api/blog/most/trending`,
+  const [blogsRaw, businesscentralRaw, categoryblogs, allBlogsRaw, blogtrandingRaw] =
+    await Promise.all([
+      BlogService.getLatestBlog(),
+      BlogService.getBlogsByCategory("business-central"),
+      BlogService.getCategories(),
+      BlogService.getBlogs(), 
+      BlogService.getTrendingBlogs(),
+    ]);
+ 
+  const extractArray = (data) => {
+    if (Array.isArray(data)) return data;
+    if (data?.data && Array.isArray(data.data)) return data.data;
+    if (data?.blogs && Array.isArray(data.blogs)) return data.blogs;
+    if (data?.posts && Array.isArray(data.posts)) return data.posts;
+    if (data && typeof data === 'object') return [data];
+    return [];
   };
 
-  const fetchSafeJson = async (label, url) => {
-    try {
-      const res = await fetch(url);
+  const blogs = extractArray(blogsRaw);
+  const businesscentral = extractArray(businesscentralRaw);
+  
+  const allBlogsArray = extractArray(allBlogsRaw);
+  
+  const blograndomblogs = allBlogsArray.length > 1 ? allBlogsArray.slice(1) : allBlogsArray;
+ 
+  const blogtranding = extractArray(blogtrandingRaw).slice(0, 1);
 
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-
-      return await res.json();
-    } catch (err) {
-      console.error(
-        `Failed to fetch [${label}] from ${url}:`,
-        err.message
-      );
-
-      return [];
-    }
+  const extractStr = (val) => {
+    if (!val) return "";
+    if (typeof val === 'string') return val;
+    if (Array.isArray(val)) return val.length > 0 ? extractStr(val[0]) : "";
+    if (typeof val === 'object') return val.name || val.title || "";
+    return String(val);
   };
-
-  const [
-    blogs,
-    businesscentral,
-    categoryblogs,
-    blograndomblogs,
-    blogtranding,
-  ] = await Promise.all([
-    fetchSafeJson("blogs", urls.blogs),
-    fetchSafeJson("businesscentral", urls.businesscentral),
-    fetchSafeJson("categoryblogs", urls.categoryblogs),
-    fetchSafeJson("blograndomblogs", urls.blograndomblogs),
-    fetchSafeJson("blogtranding", urls.blogtranding),
-  ]);
-
-  /* ===============================
-     OPTIMIZED BLOG OBJECT
-  ================================ */
-  const slimBlog = (post) => ({
-    id: post.id,
-    title: post.title,
-    title_slug: post.title_slug,
-    short_description:
-      post.short_description?.substring(0, 180) || "",
-    image: post.image,
-    publish_date: post.publish_date,
-    updated_at: post.updated_at,
-    read_time: post.read_time,
-    author: post.author,
-    category: post.category,
-    category_slug: post.category_slug,
-  });
+ 
+  const slim = (items) =>
+    items.map((b) => ({
+      title: extractStr(b.title),
+      title_slug: extractStr(b.slug || b.title_slug),
+      author: extractStr(b.author) || "Author",
+      publish_date: b.publishedAt || b.publish_date || null,
+      read_time: extractStr(b.readingTimeMinutes || b.read_time),
+      updated_at: b.updatedAt || b.updated_at || null,
+      category: extractStr(b.category) || "Category",
+      category_slug: extractStr(b.category?.slug || b.category_slug),
+      short_description: extractStr(b.excerpt || b.short_description),
+      image: extractStr(b.featuredImage?.url || b.image),
+    }));
 
   return {
     props: {
-      blogs: blogs.map(slimBlog),
-
-      businesscentral: businesscentral.map(slimBlog),
-
-      /* =====================================
-         IMPORTANT PERFORMANCE OPTIMIZATION
-         ONLY SEND 30 BLOGS
-      ===================================== */
-      blograndomblogs: blograndomblogs
-        .slice(0, 30)
-        .map(slimBlog),
-
-      blogtranding: blogtranding.map(slimBlog),
-
-      categoryblogs,
+      blogs: slim(blogs),
+      businesscentral: slim(businesscentral),
+      categoryblogs: (Array.isArray(categoryblogs) ? categoryblogs : []).map(c => ({
+        ...c,
+        category_name: c.name || c.category_name,
+        category_slug: c.slug || c.category_slug
+      })), // categories are small enough
+      blograndomblogs: slim(blograndomblogs),
+      blogtranding: slim(blogtranding),
     },
-
-    revalidate: 60,
+    revalidate: 14400,
   };
 }
 
-const categoryColors = [
-  "#01808a",
-  "#cd9e1b",
-  "#3e4f8a",
-  "#000000",
-  "#b52c36",
-  "#273266",
-];
 
 function formatDate(date) {
   if (!date) return "";
@@ -116,416 +91,192 @@ function formatDate(date) {
   });
 }
 
-function Blogshome({
-  blogs,
-  businesscentral,
-  categoryblogs,
-  blograndomblogs,
-  blogtranding,
-}) {
-  /* =====================================
-     LOAD MORE STATE
-  ===================================== */
-  const [visibleBlogs, setVisibleBlogs] =
-    useState(6);
 
-  const handleLoadMore = () => {
-    setVisibleBlogs((prev) => prev + 6);
-  };
+const categoryColors = ["#01808a", "#cd9e1b", "#3e4f8a", "#000000", "#b52c36", "#273266"];
+
+function Blogshome({ blogs, businesscentral, categoryblogs, blograndomblogs, blogtranding }) {
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const blogListRef = useRef(null);
+
+  const pageSize = 6;
+
+  const paginatedPosts = paginate(blograndomblogs, currentPage, pageSize);
+
+ useEffect(() => {
+  if (currentPage > 1 && blogListRef.current) {
+    const y =
+      blogListRef.current.getBoundingClientRect().top +
+      window.pageYOffset -
+      160;
+
+    window.scrollTo({
+      top: y,
+      behavior: "smooth",
+    });
+  }
+}, [currentPage]);
+
 
   return (
-    <>
+    <div>
       <Head>
         <title>
-          Best Microsoft Dynamics 365 Blogs |
-          Dynamics Square - Dynamics 365 Blogs
+          Best Microsoft Dynamics 365 Blogs | Dynamics Square - Dynamics 365 Blogs
         </title>
-
-        <meta
-          name="description"
-          content="Dynamics 365 Blogs"
-        />
-
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/blog/"
-        />
-
-        <meta
-          property="og:locale"
-          content="en_GB"
-        />
-
-        <meta
-          property="og:type"
-          content="website"
-        />
-
+        <meta name="description" content="Dynamics 365 Blogs" />
+        <link rel="canonical" href="https://www.dynamicssquare.co.uk/blog/" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
         <meta
           property="og:title"
           content="Best Microsoft Dynamics 365 Blogs | Dynamics Square - Dynamics 365 Blogs"
         />
-
-        <meta
-          property="og:description"
-          content="Dynamics 365 Blogs"
-        />
-
-        <meta
-          property="og:url"
-          content="https://www.dynamicssquare.co.uk/blog/"
-        />
-
+        <meta property="og:description" content="Dynamics 365 Blogs" />
+        <meta property="og:url" content="https://www.dynamicssquare.co.uk/blog/" />
         <meta
           property="og:site_name"
           content="Best Microsoft Dynamics 365 Blogs | Dynamics Square"
         />
-
-        <meta
-          name="twitter:card"
-          content="summary_large_image"
-        />
-
+        <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
           content="Best Microsoft Dynamics 365 Blogs | Dynamics Square - Dynamics 365 Blogs"
         />
-
-        <meta
-          name="twitter:description"
-          content="Dynamics 365 Blogs"
-        />
+        <meta name="twitter:description" content="Dynamics 365 Blogs" />
       </Head>
 
-      {/* ===============================
-          PAGE CSS
-      ================================ */}
-      <style jsx>{`
-        .blog-fade-item {
-          opacity: 0;
-          transform: translateY(35px);
-          animation: fadeBlogUp 0.7s ease forwards;
-        }
-
-        @keyframes fadeBlogUp {
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        .load-more-wrap {
-          text-align: center;
-          margin-top: 45px;
-        }
-
-        .load-more-btn {
-          background: linear-gradient(
-            135deg,
-            #273266,
-            #01808a
-          );
-
-          color: #fff;
-
-          border: none;
-
-          padding: 15px 38px;
-
-          border-radius: 60px;
-
-          font-size: 16px;
-
-          font-weight: 700;
-
-          cursor: pointer;
-
-          position: relative;
-
-          overflow: hidden;
-
-          transition: all 0.4s ease;
-
-          letter-spacing: 0.5px;
-        }
-
-        .load-more-btn:hover {
-          transform: translateY(-5px);
-
-          box-shadow: 0 18px 35px
-            rgba(39, 50, 102, 0.28);
-        }
-
-        .load-more-btn::before {
-          content: "";
-
-          position: absolute;
-
-          top: 0;
-
-          left: -120%;
-
-          width: 100%;
-
-          height: 100%;
-
-          background: rgba(255, 255, 255, 0.25);
-
-          transform: skewX(-20deg);
-
-          transition: all 0.7s ease;
-        }
-
-        .load-more-btn:hover::before {
-          left: 120%;
-        }
-
-        .load-more-btn span {
-          position: relative;
-          z-index: 2;
-        }
-      `}</style>
-
-      {/* ===============================
-          MAIN LATEST SECTION
-      ================================ */}
-      <BlogSearch />
-
+      {/* ✅ Latest Section */}
       {blogs.length > 0 && (
         <div className="blogs-main">
           <div className="container">
             <div className="row">
+              {/* Left: Latest Blog */}
               <div className="col-lg-6">
                 <div className="blogs-lates">
                   <div className="blog-sian">
                     <span>Latest</span>
                   </div>
-
                   <h1>
-                    <a
-                      href={`/blog/${blogs[0].title_slug}/`}
-                    >
-                      {blogs[0].title}
-                    </a>
+                    <a href={`/blog/${blogs[0].title_slug}/`}>{blogs[0].title}</a>
                   </h1>
-
                   <div className="blogs-info-list">
                     <span className="user">
-                      <a
-                        href={`/blog/author/${blogs[0].author
-                          ?.toLowerCase()
-                          .split(" ")
-                          .join("-")}/`}
-                      >
-                        <i className="bi bi-person-circle"></i>{" "}
-                        {blogs[0].author}
+                      <a href={`/blog/author/${blogs[0].author?.toLowerCase().split(" ").join("-")}/`}>
+                        <i className="bi bi-person-circle"></i> {blogs[0].author}
                       </a>
                     </span>
-
-                    <>
+                     <>
                       {blogs?.[0]?.publish_date && (
                         <span className="date">
                           <a>
                             <i className="bi bi-calendar-event"></i>
-                            {" "}Published:{" "}
-                            {formatDate(
-                              blogs[0].publish_date
-                            )}
+                            {" "}Published: {formatDate(blogs[0].publish_date)}
                           </a>
                         </span>
                       )}
 
                       {blogs?.[0]?.updated_at &&
-                        blogs?.[0]
-                          ?.publish_date &&
-                        formatDate(
-                          blogs[0].updated_at
-                        ) !==
-                        formatDate(
-                          blogs[0]
-                            .publish_date
-                        ) && (
+                        blogs?.[0]?.publish_date &&
+                        formatDate(blogs[0].updated_at) !== formatDate(blogs[0].publish_date) && (
                           <span className="date ms-2">
                             <a>
                               <i className="bi bi-arrow-repeat"></i>
-                              {" "}Updated:{" "}
-                              {formatDate(
-                                blogs[0]
-                                  .updated_at
-                              )}
+                              {" "}Updated: {formatDate(blogs[0].updated_at)}
                             </a>
                           </span>
                         )}
                     </>
-
                     <span className="time">
-                      <a>
-                        <i className="bi bi-clock"></i>{" "}
-                        {blogs[0].read_time}
-                      </a>
+                      <a><i className="bi bi-clock"></i> {blogs[0].read_time} mins read</a>
                     </span>
-
                     <span className="cate">
-                      <a
-                        href={`/blog/category/${blogs[0].category_slug}/`}
-                      >
-                        <i className="bi bi-collection"></i>{" "}
-                        {blogs[0].category}
+                      <a href={`/blog/category/${blogs[0].category_slug}/`}>
+                        <i className="bi bi-collection"></i> {blogs[0].category}
                       </a>
                     </span>
                   </div>
-
                   <div className="b-card-info">
-                    <p>
-                      {blogs[0]
-                        .short_description?.substring(
-                          0,
-                          180
-                        )}
-                      ...
-                    </p>
-
+                    <p>{blogs[0].short_description?.substring(0, 180)}...</p>
                     <div className="page-link-read">
-                      <a
-                        href={`/blog/${blogs[0].title_slug}/`}
-                      >
-                        Read More{" "}
-                        <span>{">"}</span>
+                      <a href={`/blog/${blogs[0].title_slug}/`}>
+                        Read More <span>{">"}</span>
                       </a>
                     </div>
                   </div>
                 </div>
-
-                <div className="prom-bann">
-                  <a
-                    href={`/blog/${blogs[0].title_slug}/`}
-                  >
-                    <img
-                      src={blogs[0].image}
-                      alt={blogs[0].title}
-                    />
-                  </a>
-                </div>
+                {blogs[0].image && (
+                  <div className="prom-bann">
+                    <a href={`/blog/${blogs[0].title_slug}/`}>
+                      <Image
+                        src={blogs[0].image.startsWith("http") ? blogs[0].image : `${BACKEND_URL}${blogs[0].image}`}
+                        alt={blogs[0].title}
+                        width={1200}
+                        height={628}
+                        placeholder="blur"
+                        blurDataURL="/img/placeholder.png"
+                      />
+                    </a>
+                  </div>
+                )}
               </div>
 
-              {/* ===============================
-                  BUSINESS CENTRAL SIDE
-              ================================ */}
+              {/* Right: Business Central Section */}
               <div className="col-lg-6">
                 <div className="blogs-side">
-                  <div
-                    className="blog-sian"
-                    style={{
-                      marginBottom: "30px",
-                    }}
-                  >
-                    <span>
-                      Insights from Forbes
-                      Technology Council
-                    </span>
+                  {/* <div className="blog-side-head">
+                    <div className="left">
+                      <img src="/img/business-center-logo.svg" alt="bg-pic" />
+                    </div>
+                    <div className="right">
+                      Dynamics 365 <br />
+                      <span>Business Central</span>
+                    </div>
+                  </div> */}
+                  <div className="tt-pico">
+                    <a href="https://councils.forbes.com/profile/Manish-Goyal-Co-founder-Dynamics-Square/1e25d5c2-1d98-46cd-834b-70d335b73b35" target="_balnk" rel="nofollow"><img src="/img/forber-01.png" alt="menu--ss" /></a>
                   </div>
-
-                  <div className="blg-side-new">
-                    <a
-                      href="https://www.forbes.com/councils/forbestechcouncil/2026/06/01/what-companies-get-wrong-about-agentic-erp/"
-                      target="_balnk"
-                      rel="nofollow"
-                    >
-                      <img
-                        src="https://imageio.forbes.com/specials-images/imageserve/67fff87bde8b0dd11b74b7cc/0x0.jpg?format=jpg&width=440"
-                        width={140}
-                        alt="fob-ai"
-                      />
-
-                      <h3>What Companies Get Wrong About Agentic ERP</h3>
-                    </a>
-
-                    <div className="user-grid">
+                  {businesscentral.slice(0,4).map((item, i) => (
+                    <div className="blogs-info-list blogs-info-list-side" key={`bc-${i}`}>
+                      <h3>
+                        <a href={`/blog/${item.title_slug}/`}>{item.title}</a>
+                      </h3>
                       <span className="user">
-                        <a
-                          href="https://www.forbes.com/councils/forbestechcouncil/people/manishgoyal/"
-                          target="_balnk"
-                          rel="nofollow"
-                        >
-                          <i className="bi bi-person-circle"></i>{" "}
-                          Manish Goyal
+                        <a href={`/blog/author/${item.author?.toLowerCase().split(" ").join("-")}/`}>
+                          <i className="bi bi-person-circle"></i> {item.author}
                         </a>
-
+                      </span>
+                              <>
+                      {item?.publish_date && (
                         <span className="date">
                           <a>
-                            <i className="bi bi-calendar-event"></i>{" "}
-                            Jun 1, 2026
+                            <i className="bi bi-calendar-event"></i>
+                            {" "}Published: {formatDate(item.publish_date)}
                           </a>
                         </span>
+                      )}
+
+                      {item?.updated_at &&
+                        item?.publish_date &&
+                        formatDate(item.updated_at) !== formatDate(item.publish_date) && (
+                          <span className="date ms-2">
+                            <a>
+                              <i className="bi bi-arrow-repeat"></i>
+                              {" "}Updated: {formatDate(item.updated_at)}
+                            </a>
+                          </span>
+                        )}
+                    </>
+                      <span className="time">
+                        <a><i className="bi bi-clock"></i> {item.read_time} mins read</a>
                       </span>
-                    </div>
-                  </div>
-
-                  <div className="blg-side-new">
-                    <a
-                      href="https://www.forbes.com/councils/forbestechcouncil/2026/04/21/the-cost-illusion-in-erp-why-companies-overspend/"
-                      target="_balnk"
-                      rel="nofollow"
-                    >
-                      <img
-                        src="https://imageio.forbes.com/specials-images/imageserve/69e69cab17f71a1b7179d779/0x0.jpg?format=jpg&width=440"
-                        width={140}
-                        alt="fob-ai"
-                      />
-
-                      <h3>The Cost Illusion In ERP: Why Companies Overspend</h3>
-                    </a>
-
-                    <div className="user-grid">
-                      <span className="user">
-                        <a
-                          href="https://www.forbes.com/councils/forbestechcouncil/people/manishgoyal/"
-                          target="_balnk"
-                          rel="nofollow"
-                        >
-                          <i className="bi bi-person-circle"></i>{" "}
-                          Manish Goyal
+                      <span className="cate">
+                        <a href={`/blog/category/${item.category_slug}/`}>
+                          <i className="bi bi-collection"></i> {item.category}
                         </a>
-
-                        <span className="date">
-                          <a>
-                            <i className="bi bi-calendar-event"></i>{" "}
-                            Apr 21, 2026
-                          </a>
-                        </span>
                       </span>
                     </div>
-                  </div>
-
-                  <div className="blg-side-new">
-                    <a
-                      href="https://www.forbes.com/councils/forbestechcouncil/2026/03/20/why-erp-ecosystems-are-a-strategic-architecture-decision/"
-                      target="_balnk"
-                      rel="nofollow"
-                    >
-                      <img
-                        src="https://imageio.forbes.com/specials-images/imageserve/6387545ea5db595e0ddb9778/0x0.jpg?format=jpg&width=440"
-                        width={140}
-                        alt="saas-ux"
-                      />
-
-                      <h3>Why ERP Ecosystems Are A Strategic Architecture Decision</h3>
-                    </a>
-                  </div>
-
-                  <div className="nxx-image">
-                    <a
-                      href="https://councils.forbes.com/profile/Manish-Goyal-Co-founder-Dynamics-Square/1e25d5c2-1d98-46cd-834b-70d335b73b35"
-                      target="_balnk"
-                      rel="nofollow"
-                    >
-                      <img
-                        src="/img/forber-01.png"
-                        alt="menu--ss"
-                        width={400}
-                      />
-                    </a>
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -533,43 +284,26 @@ function Blogshome({
         </div>
       )}
 
-      {/* ===============================
-          TRENDING SECTION
-      ================================ */}
+      {/* ✅ Trending Section */}
       <div className="mid-sec">
         <div className="container">
           <div className="row">
             <div className="col-lg-6 align-self-center">
               {blogtranding.map((item, i) => (
-                <div
-                  className="blogs-lates"
-                  key={`tr-${i}`}
-                >
+                <div className="blogs-lates" key={`tr-${i}`}>
                   <div className="blog-sian">
                     <span>Most Trending</span>
                   </div>
-
                   <h2>
-                    <a
-                      href={`/blog/${item.title_slug}/`}
-                    >
-                      {item.title}
-                    </a>
+                    <a href={`/blog/${item.title_slug}/`}>{item.title}</a>
                   </h2>
-
                   <div className="blogs-info-list">
                     <span className="user">
-                      <a
-                        href={`/blog/author/${item.author
-                          ?.toLowerCase()
-                          .split(" ")
-                          .join("-")}/`}
-                      >
-                        <i className="bi bi-person-circle"></i>{" "}
-                        {item.author}
+                      <a href={`/blog/author/${item.author?.toLowerCase().split(" ").join("-")}/`}>
+                        <i className="bi bi-person-circle"></i> {item.author}
                       </a>
                     </span>
-                    <>
+                            <>
                       {item?.publish_date && (
                         <span className="date">
                           <a>
@@ -591,28 +325,19 @@ function Blogshome({
                         )}
                     </>
                     <span className="time">
-                      <a>
-                        <i className="bi bi-clock"></i>{" "}
-                        {item.read_time}
+                      <a><i className="bi bi-clock"></i> {item.read_time} mins read</a>
+                    </span>
+                    <span className="cate">
+                      <a href={`/blog/category/${item.category_slug}/`}>
+                        <i className="bi bi-collection"></i> {item.category}
                       </a>
                     </span>
                   </div>
-
                   <div className="b-card-info">
-                    <p>
-                      {item.short_description?.substring(
-                        0,
-                        180
-                      )}
-                      ...
-                    </p>
-
+                    <p>{item.short_description?.substring(0, 180)}...</p>
                     <div className="page-link-read">
-                      <a
-                        href={`/blog/${item.title_slug}/`}
-                      >
-                        Read More{" "}
-                        <span>{">"}</span>
+                      <a href={`/blog/${item.title_slug}/`}>
+                        Read More <span>{">"}</span>
                       </a>
                     </div>
                   </div>
@@ -621,19 +346,11 @@ function Blogshome({
             </div>
 
             <div className="col-lg-6">
-              <div
-                className="prom-bann"
-                style={{
-                  textAlign: "center",
-                }}
-              >
+              <div className="prom-bann" style={{ textAlign: "center" }}>
                 <a
                   href="/schedule-a-demo/"
                   target="_blank"
-                  style={{
-                    marginBottom: "20px",
-                    display: "block",
-                  }}
+                  style={{ marginBottom: "20px", display: "block" }}
                 >
                   <Image
                     src="/img/blog-side-pic-top.png"
@@ -648,44 +365,24 @@ function Blogshome({
         </div>
       </div>
 
-      {/* ===============================
-          RANDOM BLOGS + CATEGORIES
-      ================================ */}
+      {/* ✅ Random Blogs + Categories */}
       <div className="blogs-extra-new">
         <div className="container">
           <div className="row">
-            {/* ===============================
-                CATEGORY
-            ================================ */}
+            {/* Categories */}
             <div className="col-lg-3">
               <div className="blogs-ex-side-cate">
                 <h3>Explore by Topic</h3>
-
+                
                 <ul>
                   {categoryblogs.map((item, i) => (
-                    <li
-                      key={`cat-${i}`}
-                      style={{
-                        listStyle: "none",
-                        margin: "5px 0",
-                      }}
-                    >
+                    <li key={`cat-${i}`} style={{ listStyle: "none", margin: "5px 0" }}>
                       <a
                         href={`/blog/category/${item.category_slug}/`}
                         style={{
                           textDecoration: "none",
-
-                          color:
-                            categoryColors[
-                            i %
-                            categoryColors.length
-                            ],
-
-                          border: `1px solid ${categoryColors[
-                            i %
-                            categoryColors.length
-                            ]
-                            }`,
+                          color: categoryColors[i % categoryColors.length],
+                          border: `1px solid ${categoryColors[i % categoryColors.length]}`,
                         }}
                       >
                         {item.category_name}
@@ -696,136 +393,72 @@ function Blogshome({
               </div>
             </div>
 
-            {/* ===============================
-                BLOG LIST
-            ================================ */}
-            <div className="col-lg-9">
-              {blograndomblogs
-                .slice(0, visibleBlogs)
-                .map((item, i) => (
-                  <div
-                    className="blogs-lates blogs-lates-rept blog-fade-item"
-                    key={`rnd-${i}`}
-                    style={{
-                      animationDelay: `${i * 0.08
-                        }s`,
-                    }}
-                  >
-                    <h3>
-                      <a
-                        href={`/blog/${item.title_slug}/`}
-                      >
-                        {item.title}
+            {/* Random blogs with pagination */}
+            <div className="col-lg-9" ref={blogListRef}>
+              {paginatedPosts.map((item, i) => (
+                <div className="blogs-lates blogs-lates-rept" key={`rnd-${i}`}>
+                  <h3>
+                    <a href={`/blog/${item.title_slug}/`}>{item.title}</a>
+                  </h3>
+                  <div className="blogs-info-list">
+                    <span className="user">
+                      <a href={`/blog/author/${item.author?.toLowerCase().split(" ").join("-")}/`}>
+                        <i className="bi bi-person-circle"></i> {item.author}
                       </a>
-                    </h3>
+                    </span>
+                            <>
+                      {item?.publish_date && (
+                        <span className="date">
+                          <a>
+                            <i className="bi bi-calendar-event"></i>
+                            {" "}Published: {formatDate(item.publish_date)}
+                          </a>
+                        </span>
+                      )}
 
-                    <div className="blogs-info-list">
-                      <span className="user">
-                        <a
-                          href={`/blog/author/${item.author
-                            ?.toLowerCase()
-                          .split(" ")
-                          .join("-")}/`}
-                        >
-                          <i className="bi bi-person-circle"></i>{" "}
-                          {item.author}
-                        </a>
-                      </span>
-
-                      <>
-                        {item?.publish_date && (
-                          <span className="date">
+                      {item?.updated_at &&
+                        item?.publish_date &&
+                        formatDate(item.updated_at) !== formatDate(item.publish_date) && (
+                          <span className="date ms-2">
                             <a>
-                              <i className="bi bi-calendar-event"></i>
-                              {" "}Published:{" "}
-                              {formatDate(
-                                item.publish_date
-                              )}
+                              <i className="bi bi-arrow-repeat"></i>
+                              {" "}Updated: {formatDate(item.updated_at)}
                             </a>
                           </span>
                         )}
-
-                        {item?.updated_at &&
-                          item?.publish_date &&
-                          formatDate(
-                            item.updated_at
-                          ) !==
-                          formatDate(
-                            item.publish_date
-                          ) && (
-                            <span className="date ms-2">
-                              <a>
-                                <i className="bi bi-arrow-repeat"></i>
-                                {" "}Updated:{" "}
-                                {formatDate(
-                                  item.updated_at
-                                )}
-                              </a>
-                            </span>
-                          )}
-                      </>
-
-                      <span className="time">
-                        <a>
-                          <i className="bi bi-clock"></i>{" "}
-                          {item.read_time}
-                        </a>
-                      </span>
-
-                      <span className="cate">
-                        <a
-                          href={`/blog/category/${item.category_slug}/`}
-                        >
-                          <i className="bi bi-collection"></i>{" "}
-                          {item.category}
-                        </a>
-                      </span>
-                    </div>
-
-                    <div className="b-card-info">
-                      <p>
-                        {item.short_description?.substring(
-                          0,
-                          180
-                        )}
-                        ...
-                      </p>
-
-                      <div className="page-link-read">
-                        <a
-                          href={`/blog/${item.title_slug}/`}
-                        >
-                          Read More{" "}
-                          <span>{">"}</span>
-                        </a>
-                      </div>
+                    </>
+                    <span className="time">
+                      <a><i className="bi bi-clock"></i> {item.read_time} mins read</a>
+                    </span>
+                    <span className="cate">
+                      <a href={`/blog/category/${item.category_slug}/`}>
+                        <i className="bi bi-collection"></i> {item.category}
+                      </a>
+                    </span>
+                  </div>
+                  <div className="b-card-info">
+                    <p>{item.short_description?.substring(0, 180)}...</p>
+                    <div className="page-link-read">
+                      <a href={`/blog/${item.title_slug}/`}>
+                        Read More <span>{">"}</span>
+                      </a>
                     </div>
                   </div>
-                ))}
-
-              {/* ===============================
-                  LOAD MORE BUTTON
-              ================================ */}
-              {visibleBlogs <
-                blograndomblogs.length && (
-                  <div className="load-more-wrap">
-                    <button
-                      className="load-more-btn"
-                      onClick={handleLoadMore}
-                    >
-                      <span>
-                        Load More Articles
-                      </span>
-                    </button>
-                  </div>
-                )}
+                </div>
+              ))}
+              <Pagination
+  items={blograndomblogs.length}
+  currentPage={currentPage}
+  pageSize={pageSize}
+  onPageChange={setCurrentPage}
+  pageLimit={5}
+/>
             </div>
           </div>
         </div>
       </div>
-
       <TimerModal />
-    </>
+    </div>
   );
 }
 

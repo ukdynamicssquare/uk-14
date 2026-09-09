@@ -4,23 +4,51 @@ import Link from "next/link";
 import BlogSubscriberForm from "../../../components/BlogSubscriberForm";
 import TimerModal from "../../../components/TimerModal";
 
+import { BlogService } from "../../../helpers/blogApi";
+
 export async function getStaticProps({ params }) {
   const slug = params?.slug || "";
 
   try {
-    const [blogsRes, categoryRes] = await Promise.all([
-      fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blog/category/${slug}`),
-      fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blog/category`),
+    const [blogsRaw, categoryResRaw] = await Promise.all([
+      slug ? BlogService.getBlogsByCategory(slug) : BlogService.getLatestBlog(), // If there's no slug, fallback (though index.js shouldn't have slug)
+      BlogService.getCategories(),
     ]);
 
-    if (!blogsRes.ok || !categoryRes.ok) {
-      throw new Error("Failed to fetch data from backend");
-    }
+    const extractStr = (val) => {
+      if (!val) return "";
+      if (typeof val === 'string') return val;
+      if (Array.isArray(val)) return val.length > 0 ? extractStr(val[0]) : "";
+      if (typeof val === 'object') return val.name || val.title || "";
+      return String(val);
+    };
 
-    const [blogs, categoryblogs] = await Promise.all([
-      blogsRes.json(),
-      categoryRes.json(),
-    ]);
+    const mapBlog = b => ({
+      ...b,
+      title: extractStr(b.title),
+      title_slug: extractStr(b.slug || b.title_slug),
+      author: extractStr(b.author) || "Author",
+      publish_date: b.publishedAt || b.publish_date || null,
+      read_time: extractStr(b.readingTimeMinutes || b.read_time),
+      updated_at: b.updatedAt || b.updated_at || null,
+      short_description: extractStr(b.excerpt || b.short_description),
+      category: extractStr(b.category) || "Category",
+      category_slug: extractStr(b.category?.slug || b.category_slug),
+    });
+
+    let blogsExtracted = [];
+    if (Array.isArray(blogsRaw)) blogsExtracted = blogsRaw;
+    else if (blogsRaw?.data && Array.isArray(blogsRaw.data)) blogsExtracted = blogsRaw.data;
+    else if (blogsRaw?.blogs && Array.isArray(blogsRaw.blogs)) blogsExtracted = blogsRaw.blogs;
+    else if (blogsRaw?.posts && Array.isArray(blogsRaw.posts)) blogsExtracted = blogsRaw.posts;
+
+    const blogs = blogsExtracted.map(mapBlog);
+    
+    const categoryblogs = (Array.isArray(categoryResRaw) ? categoryResRaw : (categoryResRaw?.data || [])).map(c => ({
+      ...c,
+      category_name: c.name || c.category_name,
+      category_slug: c.slug || c.category_slug
+    }));
 
     return {
       props: {
@@ -50,6 +78,8 @@ const categoryColors = [
   '#b52c36',
   '#273266',
 ];
+
+
 
 function CategoryBlogs({ blogs, categoryblogs }) {
   return (
@@ -93,7 +123,7 @@ function CategoryBlogs({ blogs, categoryblogs }) {
                           textDecoration: 'none',
                           color: categoryColors[i % categoryColors.length],
                           border: `1px solid ${categoryColors[i % categoryColors.length]}`,
-                        }} href={`/blog/category/${cateitem.category_slug}`}>{cateitem.category_name}</a>
+                        }} href={`/blog/category/${cateitem.category_slug}/`}>{cateitem.category_name}</a>
                       </li>
                     ))}
                 </ul>

@@ -1,102 +1,236 @@
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
+import React, { useEffect, useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { BlogService, BACKEND_URL } from "../helpers/blogApi";
 
 const BlogFinanaceCard = ({ categorySlug }) => {
   const [blogPosts, setBlogPosts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
+  const getImageUrl = (image) => {
+    if (!image) {
+      return "/images/blog-placeholder.jpg";
+    }
+
+    // API already returns full URL
+    if (
+      image.startsWith("http://") ||
+      image.startsWith("https://")
+    ) {
+      return image;
+    }
+
+    // API returns /uploads/blog/xxxxx.png
+    return `${BACKEND_URL.replace(/\/$/, "")}/${image.replace(
+      /^\//,
+      ""
+    )}`;
+  };
+
   useEffect(() => {
+    let isMounted = true;
+
     const fetchBlogPosts = async () => {
-      if (!categorySlug) return; // prevent empty calls
+      if (!categorySlug) {
+        setBlogPosts([]);
+        setLoading(false);
+        return;
+      }
 
       try {
         setLoading(true);
+        setError(false);
 
-        // if categorySlug is "all", fetch all blogs
-        const endpoint =
-          categorySlug === "all"
-            ? `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blog/category`
-            : `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/blog/category/${categorySlug}`;
+        let data;
 
-        const response = await fetch(endpoint);
-
-        if (!response.ok) {
-          throw new Error('Failed to fetch');
+        if (categorySlug === "all") {
+          data = await BlogService.getBlogs(1000);
+        } else {
+          data = await BlogService.getBlogsByCategory(
+            categorySlug,
+            1000
+          );
         }
 
-        const data = await response.json();
-        setBlogPosts(data);
-      } catch (error) {
-        console.error(error);
-        setError(true);
+        if (!isMounted) return;
+
+        if (Array.isArray(data)) {
+          setBlogPosts(data);
+        } else if (Array.isArray(data?.blogs)) {
+          setBlogPosts(data.blogs);
+        } else if (Array.isArray(data?.data)) {
+          setBlogPosts(data.data);
+        } else {
+          setBlogPosts([]);
+        }
+      } catch (err) {
+        console.error("Failed to load blog posts:", err);
+
+        if (isMounted) {
+          setError(true);
+          setBlogPosts([]);
+        }
       } finally {
-        setLoading(false);
+        if (isMounted) {
+          setLoading(false);
+        }
       }
     };
 
     fetchBlogPosts();
-  }, [categorySlug]); // refetch when slug changes
+
+    return () => {
+      isMounted = false;
+    };
+  }, [categorySlug]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return (
+      <div className="blog-loading">
+        Loading...
+      </div>
+    );
   }
 
   if (error) {
     return (
-      <div className="col-lg-6 align-self-center" style={{ color: "var(--color-red)", fontWeight: '600' }}>
+      <div
+        className="col-lg-6 align-self-center"
+        style={{
+          color: "var(--color-red)",
+          fontWeight: "600",
+        }}
+      >
         Failed to load blog posts. Please try again later.
+      </div>
+    );
+  }
+
+  if (!blogPosts.length) {
+    return (
+      <div className="blog-empty">
+        No blog posts found.
       </div>
     );
   }
 
   return (
     <>
-      {blogPosts.slice(0, 3).map((post, index) => (
-        <div key={index} className='col-lg-4 col-md-4 col-sm-6 d-flex'>
-          <div className='card0-01 card0-02 card-044'>
-            <a href={`/blog/${post.title_slug}`}>
-              <Image src={post.image} alt={post.title} width={600} height={300} />
-              <h3 style={{ marginTop: '15px' }}>{post.title}</h3>
-              <p>{post.excerpt || "A maturity model designed to strengthen people, processes, and technology."}</p>
-              <div className='ct--a'>
-                <span>View more</span>
+      <div className="row">
+        {blogPosts.slice(0, 3).map((post) => {
+          const imageSrc = getImageUrl(
+            post?.image ||
+            post?.featuredImage?.url ||
+            post?.featured_image
+          );
+
+          console.log("Finance card image:", imageSrc);
+
+          return (
+            <div
+              key={
+                post._id ||
+                post.id ||
+                post.title_slug ||
+                post.slug
+              }
+              className="col-lg-4 col-md-4 col-sm-6 d-flex"
+            >
+              <div className="card0-01 card0-02 card-044">
+                <Link
+                  href={`/blog/${
+                    post.title_slug || post.slug
+                  }/`}
+                >
+                  <div className="blog-image-wrapper">
+                    <Image
+                      src={imageSrc}
+                      alt={post.title || "Blog image"}
+                      width={600}
+                      height={300}
+                      sizes="(max-width: 576px) 100vw, (max-width: 992px) 50vw, 33vw"
+                      className="blog-card-image"
+                    />
+                  </div>
+
+                  <h3 style={{ marginTop: "15px" }}>
+                    {post.title}
+                  </h3>
+
+                  <p>
+                    {post.excerpt ||
+                      post.short_description ||
+                      "A maturity model designed to strengthen people, processes, and technology."}
+                  </p>
+
+                  <div className="ct--a">
+                    <span>View more</span>
+                  </div>
+                </Link>
               </div>
-            </a>
-          </div>
-        </div>
-      ))}
-      <div style={{ textAlign: 'center' }}>
-        <a
-          className="bby-btn"
-          href={categorySlug && categorySlug !== "all" ? `/blog/category/${categorySlug}` : "/blog/"}
-        >
-          {categorySlug && categorySlug !== "all"
-            ? `Read More Articles`
-            : "Read More Articles"}
-        </a>
+            </div>
+          );
+        })}
       </div>
-      <style jsx>
-        {`
-          .bby-btn {
-            background: #494392;
-            display: inline-block;
-            color: #fff;
-            padding: 7px 14px;
-            border-radius: 5px;
-            box-shadow: 1px 3px 18px #49439291;
-            font-size: 16px;
-            margin-top:40px
+
+      <div className="read-more-wrapper">
+        <Link
+          className="bby-btn"
+          href={
+            categorySlug && categorySlug !== "all"
+              ? `/blog/category/${categorySlug}/`
+              : "/blog/"
           }
-          .bby-btn:hover {
-            background: #bb2b36 !important;
-          }
-          .card0-044 img{
-            width:100% !important;
-          }
-        `}
-      </style>
+        >
+          Read More Articles
+        </Link>
+      </div>
+
+      <style jsx global>{`
+        .blog-loading,
+        .blog-empty {
+          width: 100%;
+          text-align: center;
+          padding: 30px 15px;
+        }
+
+        .blog-image-wrapper {
+          position: relative;
+          width: 100%;
+          overflow: hidden;
+          line-height: 0;
+        }
+
+        .blog-card-image {
+          width: 100% !important;
+          height: auto !important;
+          display: block;
+          object-fit: contain;
+        }
+
+        .read-more-wrapper {
+          width: 100%;
+          text-align: center;
+        }
+
+        .bby-btn {
+          background: #494392;
+          display: inline-block;
+          color: #fff;
+          padding: 7px 14px;
+          border-radius: 5px;
+          box-shadow: 1px 3px 18px #49439291;
+          font-size: 16px;
+          margin-top: 40px;
+          text-decoration: none;
+        }
+
+        .bby-btn:hover {
+          background: #bb2b36 !important;
+          color: #fff;
+        }
+      `}</style>
     </>
   );
 };

@@ -65,7 +65,7 @@ const LeadCaptureForm = () => {
                 <input type='hidden' name='zc_gad' id='zc_gad' value='' />
                 <input type='text' style={{ display: 'none' }} name='xmIwtLD' value='e796a731d2e1ae89ac28f80b1f8635a5fa37b81e9971b3340992e22b732b788abdb5e20be6bfdbf637e0fdf024ea748d' />
                 <input type='text' style={{ display: 'none' }} name='actionType' value='TGVhZHM=' />
-                <input type='text' style={{ display: 'none' }} name='returnURL' value='https://dynamicssquare.co.uk/thank-you/' />
+                <input type='text' style={{ display: 'none' }} name='returnURL' value='https://www.dynamicssquare.co.uk/thank-you/' />
                 <div className='zcwf_title'>CTA Pop-up Test</div>
                 <div className='zcwf_row'>
                     <div className='zcwf_col_lab'><label htmlFor='Last_Name'>Full Name<span style={{ color: 'red' }}>*</span></label></div>

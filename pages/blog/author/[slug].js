@@ -8,32 +8,22 @@ import TimerModal from "../../../components/TimerModal";
 import { paginate } from "../../../helpers/paginate";
 
 const PAGE_SIZE = 12;
-
-// Data-driven list instead of repeating near-identical JSX blocks
 const SOCIAL_LINKS = [
   { key: "linkedin_url", icon: "bi-linkedin", label: "LinkedIn" },
-  // { key: "twitter_url", icon: "bi-twitter-x", label: "Twitter" },
-  // { key: "facebook_url", icon: "bi-facebook", label: "Facebook" },
-  // { key: "instagram_url", icon: "bi-instagram", label: "Instagram" },
+ 
 ];
 
 const slugify = (name = "") => name.toLowerCase().trim().replace(/\s+/g, "-");
 
-// Prefer the slug the API already gives us; only fall back to deriving one
-// from the name if author_slug is missing for some record.
 const getAuthorSlug = (author) => author?.author_slug || slugify(author?.name);
 
-// Treats missing, blank, or API placeholder values ("NA", "N/A", "-", null, undefined)
-// as "no link" — the icon only renders when the API sends back a real URL.
 const isValidLink = (value) => {
   if (!value || typeof value !== "string") return false;
   const normalized = value.trim().toLowerCase();
   return normalized !== "" && normalized !== "na" && normalized !== "n/a" && normalized !== "-";
 };
 
-// Some backend timestamps carry malformed fractional seconds before the "Z"
-// (more digits than valid milliseconds), which makes `new Date()` choke.
-// Normalize that, then format for display. Returns "" for anything unparseable.
+
 function formatDate(date) {
   if (!date) return "";
   const parsedDate = new Date(String(date).replace(/\.\d+Z$/, "Z"));
@@ -46,31 +36,72 @@ function formatDate(date) {
   });
 }
 
-export async function getServerSideProps(context) {
-  const slug = context.query.slug;
-  const baseUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
+import { BlogService, BACKEND_URL } from "../../../helpers/blogApi";
 
-  // These two requests don't depend on each other, so fetch them in parallel
-  const [authorsRes, blogsRes] = await Promise.all([
-    fetch(`${baseUrl}/api/allauthor`),
-    fetch(`${baseUrl}/api/blog/author/${slug.split("-").join(" ")}`),
+export async function getStaticPaths() {
+  try {
+    const authorsRaw = await BlogService.getAuthors();
+    const authors = Array.isArray(authorsRaw) ? authorsRaw : (authorsRaw?.data || []);
+
+    const paths = authors
+      .map((a) => a.authorSlug || (a.name ? a.name.toLowerCase().trim().replace(/\s+/g, "-") : null))
+      .filter(Boolean)
+      .map((slug) => ({ params: { slug } }));
+
+    return { paths, fallback: "blocking" };
+  } catch (e) {
+    console.error("Error fetching author slugs:", e);
+    return { paths: [], fallback: "blocking" };
+  }
+}
+
+export async function getStaticProps({ params }) {
+  const slug = params?.slug || "";
+
+  const [authorslistRaw, blgsbyauthorslistRawRaw] = await Promise.all([
+    BlogService.getAuthors(),
+    BlogService.getBlogsByAuthor(slug),
   ]);
 
-  const [authorslist, blgsbyauthorslistRaw] = await Promise.all([
-    authorsRes.json().catch(() => []),
-    blogsRes.json().catch(() => []),
-  ]);
+  const authorslist = Array.isArray(authorslistRaw) ? authorslistRaw : (authorslistRaw?.data || []);
+  const extractStr = (val) => {
+    if (!val) return "";
+    if (typeof val === 'string') return val;
+    if (Array.isArray(val)) return val.length > 0 ? extractStr(val[0]) : "";
+    if (typeof val === 'object') return val.name || val.title || "";
+    return String(val);
+  };
 
-  // The blog-by-author endpoint can come back as a non-array (e.g. a 404 body
-  // like { message: "..." }) when an author has zero posts — guard against that
-  // instead of letting `.length` blow up.
-  const blgsbyauthorslist = Array.isArray(blgsbyauthorslistRaw) ? blgsbyauthorslistRaw : [];
+  let blgsbyauthorslistRaw = [];
+  let fetchedAuthor = null;
 
-  const authorExists = Array.isArray(authorslist) && authorslist.some((item) => getAuthorSlug(item) === slug);
+  if (Array.isArray(blgsbyauthorslistRawRaw)) {
+    blgsbyauthorslistRaw = blgsbyauthorslistRawRaw;
+  } else if (blgsbyauthorslistRawRaw?.blogs && Array.isArray(blgsbyauthorslistRawRaw.blogs)) {
+    blgsbyauthorslistRaw = blgsbyauthorslistRawRaw.blogs;
+    fetchedAuthor = blgsbyauthorslistRawRaw.author || null;
+  } else if (blgsbyauthorslistRawRaw?.posts && Array.isArray(blgsbyauthorslistRawRaw.posts)) {
+    blgsbyauthorslistRaw = blgsbyauthorslistRawRaw.posts;
+    fetchedAuthor = blgsbyauthorslistRawRaw.author || null;
+  } else if (blgsbyauthorslistRawRaw?.data && Array.isArray(blgsbyauthorslistRawRaw.data)) {
+    blgsbyauthorslistRaw = blgsbyauthorslistRawRaw.data;
+  }
 
-  // Only 404 when the author themselves doesn't exist. An author who exists
-  // but simply has no articles yet should still render the page.
-  if (!authorExists) {
+  const blgsbyauthorslist = blgsbyauthorslistRaw.map(b => ({
+    ...b,
+    title: extractStr(b.title),
+    title_slug: extractStr(b.slug || b.title_slug),
+    author: extractStr(b.author) || "Author",
+    publish_date: b.publishedAt || b.publish_date || null,
+    read_time: extractStr(b.readingTimeMinutes || b.read_time),
+    updated_at: b.updatedAt || b.updated_at || null,
+    short_description: extractStr(b.excerpt || b.short_description),
+    category: extractStr(b.category) || "Category",
+    category_slug: extractStr(b.category?.slug || b.category_slug),
+    image: extractStr(b.featuredImage?.url || b.image),
+  }));
+
+  if (blgsbyauthorslist.length === 0 && !fetchedAuthor) {
     return { notFound: true };
   }
 
@@ -78,30 +109,39 @@ export async function getServerSideProps(context) {
     props: {
       authorslist,
       blgsbyauthorslist,
+      fetchedAuthor, 
     },
+    revalidate: 14400,
   };
 }
 
-function Authors({ authorslist, blgsbyauthorslist }) {
+function Authors({ authorslist, blgsbyauthorslist, fetchedAuthor }) {
   const router = useRouter();
   const [currentPage, setCurrentPage] = useState(1);
 
-  const currentAuthor = useMemo(
-    () => authorslist.find((item) => getAuthorSlug(item) === router.query.slug),
-    [authorslist, router.query.slug]
-  );
+  const currentAuthor = useMemo(() => {
+
+    if (fetchedAuthor) return fetchedAuthor;
+
+    return authorslist.find((item) => getAuthorSlug(item) === router.query.slug);
+  }, [authorslist, router.query.slug, fetchedAuthor]);
 
   const paginatedPosts = useMemo(
     () => paginate(blgsbyauthorslist, currentPage, PAGE_SIZE),
     [blgsbyauthorslist, currentPage]
   );
 
+
   const authorName = currentAuthor?.name || blgsbyauthorslist[0]?.author || "Author";
-  const authorImage = currentAuthor?.profile_photo_path || "/images/default-author.webp";
-  const articleCount = String(blgsbyauthorslist.length).padStart(3);
+  const rawAuthorImage = currentAuthor?.avatarUrl || currentAuthor?.profile_photo_path || "/images/default-author.webp";
+  const authorImage = rawAuthorImage.startsWith("http") ? rawAuthorImage : `${BACKEND_URL}${rawAuthorImage}`;
+ 
+  const authorDescription = currentAuthor?.about || currentAuthor?.description || "A writer and contributor.";
+  
+  const articleCount = String(blgsbyauthorslist.length).padStart(3, '0');
   const startIndex = (currentPage - 1) * PAGE_SIZE;
-  const schema_script =
-    currentAuthor?.schema_script || blgsbyauthorslist[0]?.schema_script || null;
+  const schema_script = currentAuthor?.schemaMarkup || blgsbyauthorslist[0]?.schemaMarkup || null;
+
   const onPageChange = (page) => {
     setCurrentPage(page);
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -135,7 +175,7 @@ function Authors({ authorslist, blgsbyauthorslist }) {
         <meta property="og:description" content={`Explore all blog posts written by ${authorName}.`} />
         <meta
           property="og:url"
-          content={`https://www.dynamicssquare.co.uk/blog/author/${router.query.slug}/`}
+          content={`https://www.dynamicssquare.co.uk/blog/author/${router.query.slug}`}
         />
         <meta property="og:site_name" content="Dynamics Square Blog" />
         <meta property="og:image" content={authorImage} />
@@ -146,18 +186,25 @@ function Authors({ authorslist, blgsbyauthorslist }) {
         <meta name="twitter:description" content={`Read all articles written by ${authorName}.`} />
         <meta name="twitter:image" content={authorImage} />
         {schema_script && (
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{
-              __html:
-                typeof schema_script === "string"
-                  ? schema_script
-                  : JSON.stringify(schema_script),
-            }}
-          />
+          Array.isArray(schema_script) ? (
+            schema_script.map((scriptItem, idx) => (
+              <script
+                key={idx}
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                  __html: scriptItem.json || JSON.stringify(scriptItem)
+                }}
+              />
+            ))
+          ) : (
+            <script
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{
+                __html: typeof schema_script === "string" ? schema_script : JSON.stringify(schema_script)
+              }}
+            />
+          )
         )}
-
-
       </Head>
 
       <div className="ds-author">
@@ -166,7 +213,7 @@ function Authors({ authorslist, blgsbyauthorslist }) {
             <div className="author-profile-card">
               <div className="row">
                 <div className="col-lg-3 text-center">
-                  <img src={authorImage} alt={currentAuthor?.name} className="author-profile-img" />
+                  <img src={authorImage} alt={authorName} className="author-profile-img" />
                   <div className="author-social-links">
                     {SOCIAL_LINKS.map(({ key, icon, label }) =>
                       isValidLink(currentAuthor?.[key]) ? (
@@ -181,18 +228,23 @@ function Authors({ authorslist, blgsbyauthorslist }) {
                         </a>
                       ) : null
                     )}
+
+                    {/* {isValidLink(currentAuthor?.email) && (
+                      <a href={`mailto:${currentAuthor.email}`} aria-label="Email">
+                        <i className="bi bi-envelope-fill"></i>
+                      </a>
+                    )} */}
                   </div>
                 </div>
 
                 <div className="col-lg-9">
-                  <span className="author-role"> {`${currentAuthor?.role_name || "Content Writer & Industry Expert"}`}</span>
-
-                  <h1>{currentAuthor?.name}</h1>
-                  <p className="author-bio">{currentAuthor?.about}</p>
+                  <span className="author-role"> {`${currentAuthor?.designation || currentAuthor?.role_name || "Content Writer & Industry Expert"}`}</span>
+                  <h1>{authorName}</h1>
+                  <p className="author-bio">{authorDescription}</p>
 
                   <div className="author-statline">
                     <div className="stat-chip">
-                      <span className="stat-value">{articleCount}</span>
+                      <span className="stat-value">{articleCount?.replace(/^0+/, "") || "0"}</span>
                       <span className="stat-label">Articles</span>
                     </div>
                   </div>
@@ -247,9 +299,13 @@ function Authors({ authorslist, blgsbyauthorslist }) {
                         <div className="col-lg-6 col-md-6 mb-4" key={item.title_slug}>
                           <div className="author-blog-grid-card">
                             <div className="blog-card-image">
-                              <a href={`/blog/${item.title_slug}`}>
+                              <a href={`/blog/${item.title_slug}/`}>
                                 <Image
-                                  src={item.image || "/images/blog-placeholder.jpg"}
+                                  src={
+                                    item.image
+                                      ? (item.image.startsWith("http") ? item.image : `${BACKEND_URL}${item.image}`)
+                                      : "/images/blog-placeholder.jpg"
+                                  }
                                   alt={item.title}
                                   width={600}
                                   height={350}
@@ -285,7 +341,7 @@ function Authors({ authorslist, blgsbyauthorslist }) {
                               </div>
 
                               <h3>
-                                <a href={`/blog/${item.title_slug}`}>{item.title}</a>
+                                <a href={`/blog/${item.title_slug}/`}>{item.title}</a>
                               </h3>
 
                               <p>{item.short_description?.slice(0, 120)}...</p>
@@ -296,9 +352,9 @@ function Authors({ authorslist, blgsbyauthorslist }) {
                                   <span>{item.author}</span>
                                 </div>
 
-                                <Link href={`/blog/${item.title_slug}`} className="read-link">
+                                <a href={`/blog/${item.title_slug}/`} className="read-link">
                                   Read article
-                                </Link>
+                                </a>
                               </div>
                             </div>
                           </div>
@@ -336,7 +392,7 @@ function Authors({ authorslist, blgsbyauthorslist }) {
                     <div className="sidebar-scroll">
                       <ul className="author-list">
                         {[...authorslist]
-                          .sort((a, b) => a.name.localeCompare(b.name))
+                          // .sort((a, b) => a.name.localeCompare(b.name))
                           .map((author) => {
                             const authorSlug = getAuthorSlug(author);
                             return (
@@ -344,10 +400,17 @@ function Authors({ authorslist, blgsbyauthorslist }) {
                                 key={author.id ?? authorSlug}
                                 className={router.query.slug === authorSlug ? "active" : ""}
                               >
-                                <a href={`/blog/author/${authorSlug}`}>
-                                  <img src={author.profile_photo_path} alt={author.name} />
-                                  <span>{author.name}</span>
-                                </a>
+                                  <a href={`/blog/author/${authorSlug}/`}>
+                                    <img 
+                                      src={
+                                        (author.avatarUrl || author.profile_photo_path || "").startsWith("http") 
+                                          ? (author.avatarUrl || author.profile_photo_path) 
+                                          : `${BACKEND_URL}${author.avatarUrl || author.profile_photo_path}`
+                                      } 
+                                      alt={author.name} 
+                                    />
+                                    <span>{author.name}</span> 
+                                  </a>
                               </li>
                             );
                           })}
@@ -668,7 +731,7 @@ function Authors({ authorslist, blgsbyauthorslist }) {
 
         .ds-author .blog-card-image img {
           width: 100%;
-          height: 240px;
+          height: 100%;
           object-fit: cover;
           transition: transform 0.5s ease;
         }
@@ -903,7 +966,7 @@ function Authors({ authorslist, blgsbyauthorslist }) {
 
           .ds-author .author-social-links {
             justify-content: center;
-            margin: 0px 0px 20px;
+              margin: 0px 0px 30px;
           }
 
           .ds-author .author-sidebar {
@@ -914,6 +977,7 @@ function Authors({ authorslist, blgsbyauthorslist }) {
           .ds-author .sidebar-scroll {
             max-height: 320px;
           }
+            
         }
 
         @media (max-width: 767px) {

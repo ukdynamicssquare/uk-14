@@ -20,11 +20,11 @@ const FinanceOld = () => {
         />
         <link
           rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-finance/"
+          href="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-finance-old/"
         />
         <meta
           property="og:url"
-          content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-finance/"
+          content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-finance-old/"
         />
 
       </Head>

@@ -1,246 +1,907 @@
-import Image from "next/image";
 import Head from "next/head";
 import Link from "next/link";
-// import BlogSubscriberForm from "../../../components/BlogSubscriberForm";
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
+import { useState } from "react";
+
 import Pagination from "../../../components/Pagination";
 import { paginate } from "../../../helpers/paginate";
-import { useState } from "react";
-export async function getServerSideProps(context) {
-  let slug = context.query.slug;
-  console.log(slug)
-  const alltag = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}`+"/api/all/blogs/tag");
-  const alltags = await alltag.json();
-  const res = await fetch(process.env.NEXT_PUBLIC_BACKEND_URL + "/api/blog/tagged/" + slug.split("-").join(" ")
-  );
-  const blogs = await res.json();
-  const bloglength = blogs.length;
-  if(bloglength >=1)
-  {
-    return { props: { blogs,alltags} };
-  }
-  else{
-    return{
-      notFound:true,
-     };
-  }
-  
-}
-const categoryColors = [
-  '#01808a',
-  '#cd9e1b',
-  '#3e4f8a',
-  '#000000',
-  '#b52c36',
-  '#273266',
-];
+import { BlogService } from "../../../helpers/blogApi";
 
-function TagBlogs({ blogs,alltags}) {
+export async function getServerSideProps(context) {
+  const slug = context.query.slug;
+
+  try {
+    /*
+     * Fetch current tag blogs + all tags
+     */
+    const [blogsRaw, tagsRaw] = await Promise.all([
+      BlogService.getBlogsByTag(
+        slug.split("-").join(" ")
+      ),
+      BlogService.getTags(),
+    ]);
+
+    console.log("BLOGS RESPONSE:", blogsRaw);
+    console.log("TAGS RESPONSE:", tagsRaw);
+
+    /*
+     * ---------------------------------------
+     * Extract blogs
+     * ---------------------------------------
+     */
+
+    let blogsExtracted = [];
+
+    if (Array.isArray(blogsRaw)) {
+      blogsExtracted = blogsRaw;
+    } else if (Array.isArray(blogsRaw?.data)) {
+      blogsExtracted = blogsRaw.data;
+    } else if (Array.isArray(blogsRaw?.blogs)) {
+      blogsExtracted = blogsRaw.blogs;
+    } else if (Array.isArray(blogsRaw?.posts)) {
+      blogsExtracted = blogsRaw.posts;
+    }
+
+    /*
+     * ---------------------------------------
+     * Extract tags
+     * ---------------------------------------
+     */
+
+    let tagsExtracted = [];
+
+    if (Array.isArray(tagsRaw)) {
+      tagsExtracted = tagsRaw;
+    } else if (Array.isArray(tagsRaw?.data)) {
+      tagsExtracted = tagsRaw.data;
+    } else if (Array.isArray(tagsRaw?.tags)) {
+      tagsExtracted = tagsRaw.tags;
+    } else if (Array.isArray(tagsRaw?.data?.tags)) {
+      tagsExtracted = tagsRaw.data.tags;
+    }
+
+    /*
+     * ---------------------------------------
+     * Extract string helper
+     * ---------------------------------------
+     */
+
+    const extractString = (value) => {
+      if (value === null || value === undefined) {
+        return "";
+      }
+
+      if (typeof value === "string") {
+        return value.trim();
+      }
+
+      if (typeof value === "number") {
+        return String(value);
+      }
+
+      if (Array.isArray(value)) {
+        return value.length
+          ? extractString(value[0])
+          : "";
+      }
+
+      if (typeof value === "object") {
+        return (
+          value.name ||
+          value.title ||
+          value.tag ||
+          value.slug ||
+          ""
+        )
+          .toString()
+          .trim();
+      }
+
+      return String(value);
+    };
+
+    /*
+     * ---------------------------------------
+     * Format blogs
+     * ---------------------------------------
+     */
+
+    const blogs = blogsExtracted.map((blog) => ({
+      ...blog,
+
+      title: extractString(blog.title),
+
+      title_slug: extractString(
+        blog.slug || blog.title_slug
+      ),
+
+      author:
+        extractString(blog.author) || "Author",
+
+      publish_date:
+        blog.publishedAt ||
+        blog.publish_date ||
+        blog.createdAt ||
+        null,
+
+      read_time: blog.readingTimeMinutes
+        ? `${blog.readingTimeMinutes} min read`
+        : extractString(blog.read_time),
+
+      short_description: extractString(
+        blog.excerpt ||
+          blog.short_description
+      ),
+
+      category:
+        extractString(blog.category) ||
+        "Category",
+
+      category_slug: extractString(
+        blog.category?.slug ||
+          blog.category_slug
+      ),
+    }));
+
+    /*
+     * ---------------------------------------
+     * Normalize all tags
+     * ---------------------------------------
+     */
+
+    const alltags = tagsExtracted
+      .map((tag) => {
+        if (typeof tag === "string") {
+          return tag.trim();
+        }
+
+        if (tag && typeof tag === "object") {
+          return (
+            tag.name ||
+            tag.title ||
+            tag.tag ||
+            tag.slug ||
+            ""
+          )
+            .toString()
+            .trim();
+        }
+
+        return "";
+      })
+      .filter(Boolean)
+      .filter(
+        (tag, index, array) =>
+          array.findIndex(
+            (item) =>
+              item.toLowerCase() ===
+              tag.toLowerCase()
+          ) === index
+      );
+
+    /*
+     * ---------------------------------------
+     * No blogs
+     * ---------------------------------------
+     */
+
+    if (blogs.length === 0) {
+      return {
+        notFound: true,
+      };
+    }
+
+    return {
+      props: {
+        blogs,
+        alltags,
+        currentTag: slug,
+      },
+    };
+  } catch (error) {
+    console.error("TAG PAGE ERROR:", error);
+
+    return {
+      notFound: true,
+    };
+  }
+}
+
+function TagBlogs({
+  blogs,
+  alltags,
+  currentTag,
+}) {
   const router = useRouter();
-  const [currentPage, setCurrentPage] = useState(1);
+
+  const [currentPage, setCurrentPage] =
+    useState(1);
+
   const pageSize = 6;
- 
+
+  /*
+   * ---------------------------------------
+   * Tag colors
+   * ---------------------------------------
+   */
+
+  const tagColors = [
+    "#D99A00",
+    "#4A5FA8",
+    "#222222",
+    "#E53935",
+    "#24436F",
+    "#00897B",
+    "#7B1FA2",
+    "#1976D2",
+    "#F57C00",
+    "#388E3C",
+    "#C2185B",
+    "#5D4037",
+  ];
+
+  const getTagColor = (index) => {
+    return tagColors[index % tagColors.length];
+  };
+
+  /*
+   * ---------------------------------------
+   * Tag slug
+   * ---------------------------------------
+   */
+
+  const getTagSlug = (tag) => {
+    return String(tag)
+      .toLowerCase()
+      .trim()
+      .replace(/\s+/g, "-")
+      .replace(/[^\w-]/g, "");
+  };
+
+  /*
+   * ---------------------------------------
+   * Tag name
+   * ---------------------------------------
+   */
+
+  const formatTagName = (tag) => {
+    if (!tag) return "";
+
+    return String(tag)
+      .split(" ")
+      .map(
+        (word) =>
+          word.charAt(0).toUpperCase() +
+          word.slice(1)
+      )
+      .join(" ");
+  };
+
+  /*
+   * ---------------------------------------
+   * Date format
+   * ---------------------------------------
+   */
+
+  const formatDate = (date) => {
+    if (!date) return "";
+
+    const parsedDate = new Date(date);
+
+    if (
+      Number.isNaN(
+        parsedDate.getTime()
+      )
+    ) {
+      return String(date);
+    }
+
+    return parsedDate.toLocaleDateString(
+      "en-GB",
+      {
+        day: "2-digit",
+        month: "short",
+        year: "numeric",
+      }
+    );
+  };
+
+  /*
+   * ---------------------------------------
+   * Pagination
+   * ---------------------------------------
+   */
+
   const onPageChange = (page) => {
     setCurrentPage(page);
+
+    if (typeof window !== "undefined") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
   };
-  const paginatedPosts = paginate(blogs, currentPage, pageSize);
+
+  const paginatedPosts = paginate(
+    blogs,
+    currentPage,
+    pageSize
+  );
+
   return (
-    <div>
+    <>
       <Head>
-        <title>Blog System</title>
+        <title>
+          {formatTagName(
+            String(currentTag).replace(
+              /-/g,
+              " "
+            )
+          )}{" "}
+          | Blog
+        </title>
+
         <meta
           name="description"
-          content="All Modern Stylish Product Men|Female"
+          content={`Explore blogs about ${String(
+            currentTag
+          ).replace(
+            /-/g,
+            " "
+          )}.`}
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1"
+        />
+
+        <link
+          rel="icon"
+          href="/favicon.ico"
+        />
       </Head>
+
       <div className="blogs-extra-new">
         <div className="container">
+
+          {/* ===============================
+              BREADCRUMB
+          =============================== */}
+
           <div className="row">
             <div className="col-lg-12">
+
               <div className="blogs-breadcromb">
+
                 <nav aria-label="breadcrumb">
+
                   <ol className="breadcrumb">
+
                     <li className="breadcrumb-item">
                       <Link href="/">
                         Home
                       </Link>
                     </li>
+
                     <li className="breadcrumb-item">
                       <Link href="/blog/">
                         Blog
                       </Link>
                     </li>
+
                     <li className="breadcrumb-item">
                       <Link href="/blog/tag/">
                         Tag
                       </Link>
                     </li>
-                   
-                    <li className="breadcrumb-item active">{router.query.slug}</li>
-              
+
+                    <li className="breadcrumb-item active">
+                      {formatTagName(
+                        String(
+                          currentTag
+                        ).replace(
+                          /-/g,
+                          " "
+                        )
+                      )}
+                    </li>
+
                   </ol>
+
                 </nav>
+
               </div>
+
             </div>
           </div>
+
+          {/* ===============================
+              MAIN CONTENT
+          =============================== */}
+
           <div className="row">
+
+            {/* ===============================
+                TAG SIDEBAR
+            =============================== */}
+
             <div className="col-lg-3">
-              <div className="blogs-ex-side-cate">
-                <h3>Explore by Tag</h3>
+
+              <div className="blogs-ex-side-cates">
+
+                <h3>
+                  Explore by Tag
+                </h3>
+
                 <ul>
-  {alltags
-    ?.flatMap((item) =>
-      item.meta_tags?.split(",").map((tag) => tag.trim()) || []
-    )
-    .map((tag, index) => {
-      const color = categoryColors[index % categoryColors.length];
 
-      const currentTag = router.query.slug
-        ?.split("-")
-        .join(" ")
-        .toLowerCase();
+                  {alltags &&
+                  alltags.length > 0 ? (
 
-      const isActive = tag.toLowerCase() === currentTag;
+                    alltags.map(
+                      (tag, index) => {
 
-      return (
-        <li key={`${tag}-${index}`}>
-          <Link
-            className={`blog-tag-link ${isActive ? "active" : ""}`}
-            href={`/blog/tag/${tag.split(" ").join("-")}`}
-            style={{
-              "--tag-color": color,
-              color: isActive ? "#fff" : color,
-              backgroundColor: isActive ? color : "transparent",
-              border: `1px solid ${color}`,
-            }}
-          >
-            <span className="blog-tagged">
-              {tag.charAt(0).toUpperCase() + tag.slice(1)}
-            </span>
-          </Link>
-        </li>
-      );
-    })}
-</ul>
+                        const tagName =
+                          String(tag).trim();
+
+                        const tagSlug =
+                          getTagSlug(
+                            tagName
+                          );
+
+                        const currentSlug =
+                          String(
+                            currentTag
+                          ).toLowerCase();
+
+                        const isActive =
+                          tagSlug ===
+                          currentSlug;
+
+                        const color =
+                          getTagColor(index);
+
+                        return (
+                          <li
+                            key={`${tagSlug}-${index}`}
+                            className={
+                              isActive
+                                ? "active"
+                                : ""
+                            }
+                          >
+
+                            <Link
+                              href={`/blog/tag/${tagSlug}`}
+                            >
+
+                              <span
+                                className="blog-tagged"
+                                style={{
+                                  color: isActive
+                                    ? "#fff"
+                                    : color,
+
+                                  borderColor:
+                                    color,
+
+                                  backgroundColor:
+                                    isActive
+                                      ? color
+                                      : "transparent",
+
+                                  "--tag-color":
+                                    color,
+                                }}
+                              >
+
+                                {formatTagName(
+                                  tagName
+                                )}
+
+                              </span>
+
+                            </Link>
+
+                          </li>
+                        );
+                      }
+                    )
+
+                  ) : (
+
+                    <li>
+                      <span className="blog-tagged no-tags">
+                        No tags available
+                      </span>
+                    </li>
+
+                  )}
+
+                </ul>
+
               </div>
+
             </div>
+
+            {/* ===============================
+                BLOG LIST
+            =============================== */}
+
             <div className="col-lg-9">
-              {
-                paginatedPosts.map((item, i) => (
-                  <div className="blogs-lates blogs-lates-rept" key={i}>
-                    <h3>
-                      <Link href={`/blog/${item.title_slug}`}>
-                        {item.title}
-                      </Link>
-                    </h3>
-                    <div className="blogs-info-list">
-                      <span className="user">
-                        <a href={`/blog/author/${item.author?.toLowerCase().split(" ").join("-")}`}>
-                          <i className="bi bi-person-circle"></i>
-                          {item.author}
-                        </a>
-                      </span>
-                      <span className="date">
-                        <a>
-                          <i className="bi bi-calendar-event"></i>
-                          {item.publish_date}
-                        </a>
-                      </span>
-                      <span className="time">
-                        <a>
-                          <i className="bi bi-clock"></i>
-                          {item.read_time}
-                        </a>
-                      </span>
-                      <span className="cate">
-                      <Link href={`/blog/category/${item.category_slug}`}>
-                        <i className="bi bi-collection"></i> {item.category}
-                      </Link>
-                      </span>
-                    </div>
-                    <div className="b-card-info">
-                      <p>{item.short_description}</p>
-                      <div className="page-link-read">
-                        <Link href={`/blog/${item.title_slug}`}>
-                          Read More <span>{">"}</span>
 
+              {paginatedPosts &&
+              paginatedPosts.length > 0 ? (
+
+                paginatedPosts.map(
+                  (item, index) => (
+
+                    <div
+                      className="blogs-lates blogs-lates-rept"
+                      key={
+                        item._id ||
+                        item.id ||
+                        index
+                      }
+                    >
+
+                      {/* BLOG TITLE */}
+
+                      <h3>
+
+                        <Link
+                          href={`/blog/${item.title_slug}`}
+                        >
+                          {item.title}
                         </Link>
+
+                      </h3>
+
+                      {/* BLOG INFORMATION */}
+
+                      <div className="blogs-info-list">
+
+                        {/* AUTHOR */}
+
+                        <span className="user">
+
+                          <Link
+                            href={`/blog/author/${String(
+                              item.author ||
+                                ""
+                            )
+                              .toLowerCase()
+                              .trim()
+                              .replace(
+                                /\s+/g,
+                                "-"
+                              )}`}
+                          >
+
+                            <i className="bi bi-person-circle"></i>{" "}
+
+                            {item.author}
+
+                          </Link>
+
+                        </span>
+
+                        {/* DATE */}
+
+                        <span className="date">
+
+                          <a>
+
+                            <i className="bi bi-calendar"></i>{" "}
+
+                            {formatDate(
+                              item.publish_date
+                            )}
+
+                          </a>
+
+                        </span>
+
+                        {/* READ TIME */}
+
+                        <span className="time">
+
+                          <a>
+
+                            <i className="bi bi-clock"></i>{" "}
+
+                            {item.read_time}
+
+                          </a>
+
+                        </span>
+
+                        {/* CATEGORY */}
+
+                        <span className="cate">
+
+                          <Link
+                            href={`/blog/category/${item.category_slug}`}
+                          >
+
+                            <i className="bi bi-collection"></i>{" "}
+
+                            {item.category}
+
+                          </Link>
+
+                        </span>
+
                       </div>
+
+                      {/* DESCRIPTION */}
+
+                      <div className="b-card-info">
+
+                        <p>
+                          {
+                            item.short_description
+                          }
+                        </p>
+
+                        {/* READ MORE */}
+
+                        <div className="page-link-read">
+
+                          <Link
+                            href={`/blog/${item.title_slug}`}
+                          >
+                            Read More{" "}
+                            <span>
+                              &gt;
+                            </span>
+                          </Link>
+
+                        </div>
+
+                      </div>
+
                     </div>
-                  </div>
-                ))}
-                   
-                   <Pagination
-                          items={blogs.length}  
-                           currentPage={currentPage}  
-                          pageSize={pageSize}
-                          onPageChange={onPageChange}
-                          />
-              {/* <div className="pagination-main">
-                <nav aria-label="Page navigation example">
-                  <ul className="pagination">
-                    <li className="page-item">
-                      <a className="page-link" href="#">
-                        {"<"}
-                      </a>
-                    </li>
-                    <li className="page-item">
-                      <a className="page-link" href="#">
-                        1
-                      </a>
-                    </li>
-                    <li className="page-item">
-                      <a className="page-link" href="#">
-                        2
-                      </a>
-                    </li>
-                    <li className="page-item">
-                      <a className="page-link" href="#">
-                        3
-                      </a>
-                    </li>
-                    <li className="page-item">
-                      <a className="page-link" href="#">
-                        ...
-                      </a>
-                    </li>
-                    <li className="page-item">
-                      <a className="page-link" href="#">
-                        {">"}
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-              </div> */}
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="bootom-blogs-sub">
-        <div className="container">
-          <div className="row justify-content-center row-bg">
-            <div className="col-lg-6">
-              {/* <div className="form-subscriber-card">
-                <div className="sub-head">
-                  <h3>Join our newsletter</h3>
-                  <p>
-                    Engaging stories and exclusive data, designed for our best
-                    customers. We only send one issue each month, so we try to
-                    make it useful.
-                  </p>
+
+                  )
+                )
+
+              ) : (
+
+                <div className="blogs-lates">
+
+                  <h3>
+                    No blogs found
+                  </h3>
+
                 </div>
-                <BlogSubscriberForm />
-              </div> */}
+
+              )}
+
+              {/* ===============================
+                  PAGINATION
+              =============================== */}
+
+              {blogs.length > pageSize && (
+
+                <Pagination
+                  items={blogs.length}
+                  currentPage={
+                    currentPage
+                  }
+                  pageSize={pageSize}
+                  onPageChange={
+                    onPageChange
+                  }
+                />
+
+              )}
+
             </div>
+
           </div>
+
         </div>
       </div>
 
-                <style jsx global>{` .blogs-ex-side-cate ul { padding: 0; margin: 0; list-style: none; } .blogs-ex-side-cate li { display: inline-block; margin: 0 8px 10px 0; } .blog-tag-link { display: inline-block; padding: 7px 14px; border-radius: 4px; text-decoration: none !important; transition: all 0.3s ease; } /* Normal tag */ .blog-tag-link { color: var(--tag-color); background-color: transparent; } /* Hover */ .blog-tag-link:hover { color: #fff !important; background-color: var(--tag-color) !important; border-color: var(--tag-color) !important; text-decoration: none !important; } /* Active tag */ .blog-tag-link.active { color: #fff !important; background-color: var(--tag-color) !important; border-color: var(--tag-color) !important; } /* Active + hover */ .blog-tag-link.active:hover { color: #fff !important; background-color: var(--tag-color) !important; border-color: var(--tag-color) !important; } .blog-tagged { display: inline-block; } `}</style>
+      {/* ======================================
+          PAGE CSS
+      ====================================== */}
 
-    </div>
+      <style jsx global>{`
+
+  /* =====================================
+     TAG SIDEBAR
+  ===================================== */
+
+  .blogs-ex-side-cates {
+    width: 100%;
+    padding: 24px 20px;
+    background: #f8f9fb;
+    border: 1px solid #e7e9ee;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+      position: sticky;
+  top: 7rem;
+  display: block;
+  overflow: hidden;
+  }
+
+  .blogs-ex-side-cates h3 {
+    margin: 0 0 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e1e3e8;
+
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #20242a;
+  }
+  .blogs-ex-side-cates ul {
+    display: flex;
+    flex-direction: column;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+height: 300px;
+    overflow-y: scroll;
+    gap: 5px;
+  }
+
+  .blogs-ex-side-cates ul li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .blogs-ex-side-cates ul li a {
+    display: inline-block;
+    text-decoration: none;
+    border:none;
+    padding:0px
+  }
+
+  /* =====================================
+     TAG
+  ===================================== */
+
+  .blog-tagged {
+    display: block;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 9px 14px;
+
+    border: 1px solid;
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+
+    transition:
+      all 0.25s ease;
+
+    cursor: pointer;
+  }
+
+  /* =====================================
+     HOVER
+  ===================================== */
+
+  // .blog-tagged:hover {
+  //   color: #ffffff !important;
+
+  //   background-color: var(--tag-color) !important;
+  //   border-color: var(--tag-color) !important;
+
+  //   transform: translateX(5px);
+
+  //   box-shadow:
+  //     0 4px 10px rgba(0, 0, 0, 0.10);
+  // }
+
+  /* =====================================
+     ACTIVE TAG
+  ===================================== */
+
+  .blogs-ex-side-cates
+    ul
+    li.active
+    .blog-tagged {
+
+    color: #ffffff !important;
+
+    font-weight: 600;
+
+    box-shadow:
+      0 4px 10px rgba(0, 0, 0, 0.12);
+  }
+
+  /* =====================================
+     NO TAGS
+  ===================================== */
+
+  .blog-tagged.no-tags {
+    color: #777 !important;
+
+    border-color: #ddd;
+
+    background: #fff;
+
+    cursor: default;
+  }
+
+  .blog-tagged.no-tags:hover {
+    color: #777 !important;
+
+    background: #fff !important;
+
+    border-color: #ddd !important;
+
+    transform: none;
+
+    box-shadow: none;
+  }
+
+  /* =====================================
+     TABLET
+  ===================================== */
+
+  @media (max-width: 991px) {
+
+    .blogs-ex-side-cates {
+      margin-bottom: 30px;
+    }
+
+    .blogs-ex-side-cates ul {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .blogs-ex-side-cates ul li {
+      width: auto;
+    }
+
+    .blog-tagged {
+      width: auto;
+      display: inline-block;
+    }
+
+  }
+
+  /* =====================================
+     MOBILE
+  ===================================== */
+
+  @media (max-width: 575px) {
+
+    .blogs-ex-side-cates {
+      padding: 18px 15px;
+      border-radius: 10px;
+    }
+
+    .blogs-ex-side-cates h3 {
+      font-size: 19px;
+      margin-bottom: 15px;
+    }
+
+    .blog-tagged {
+      padding: 7px 12px;
+      font-size: 13px;
+    }
+
+  }
+
+`}</style>
+    </>
   );
 }
 

@@ -128,7 +128,7 @@ const fetchCountryCodeByIP = () => {
 
 
 
-      // router.push("https://www.dynamicssquare.com/guides/download/power-guide-pdf/");
+      // router.push("https://www.dynamicssquare.co.uk/guides/download/power-guide-pdf/");
     } catch (error) {
       console.error(error.text);
     } finally {
