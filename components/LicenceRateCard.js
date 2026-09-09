@@ -962,7 +962,26 @@ border-radius:6px;color:#39485b}
 .seg.on{background:var(--purple-dark);border-color:var(--purple-dark);color:#fff}
 
 .rc-statement{position:sticky;top:124px;height: 500px;
-    overflow-y: scroll;}
+    overflow-y: scroll;scrollbar-width: thin;
+  scrollbar-color: #999 #f1f1f1;
+    /* Chrome, Edge, Safari */
+.rc-statement::-webkit-scrollbar {
+  width: 8px;
+}
+
+.rc-statement::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.rc-statement::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 10px;
+}
+
+.rc-statement::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
 .stmt{background:var(--purple-dark);color:#fff;padding:28px 28px 24px;border-radius:8px;box-shadow:0 22px 60px rgba(43,35,66,.16)}
 .stmt-top{display:flex;flex-direction:column;gap:8px;padding-bottom:18px;border-bottom:1px solid rgba(255,255,255,.16)}
 .stmt-kicker{font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.5)}
@@ -1058,7 +1077,7 @@ box-shadow:0 12px 30px rgba(20,14,34,.24);cursor:pointer;text-transform: capital
 
 @media (max-width:1100px){
   .rc-grid{grid-template-columns:minmax(0,1fr);gap:24px}
-  .rc-statement{position:static;order:-1}
+  .rc-statement{position:static;order:2}
 }
 // @media (max-width:720px){
 //   .rc{padding:0 16px 48px;background:linear-gradient(180deg,var(--purple) 0 560px,var(--paper) 560px 100%)}
