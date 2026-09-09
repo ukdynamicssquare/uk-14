@@ -1577,7 +1577,7 @@ const DeskstopMenu = () => {
                                         <span>Customer Success Highlights</span>
                                         <ul>
                                           <li>
-                                            <a style={{ color: '#8E44AD' }} href="/case-studies/dynamics-365-finance-for-logistic-uk-multi-entity/">Stronger Financial Control for Global Rollout | Global Logistics Business</a>
+                                            <a href="/case-studies/dynamics-365-finance-for-logistic-uk-multi-entity/">Stronger Financial Control for Global Rollout | Global Logistics Business</a>
                                           </li>
                                           <li>
                                             <a href="/case-studies/business-central-with-crm-implement-for-equestrian-manufacturing/">162% Projected ROI with 8% Efficiency Gain | UK Manufacturer</a>

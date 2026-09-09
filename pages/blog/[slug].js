@@ -139,14 +139,30 @@ function SafeHTML({ html, tocList, handleTocClick }) {
          FIX STYLE ATTRIBUTE
       ===================================================== */
 
+      // if (
+      //   domNode.type === "tag" &&
+      //   domNode.attribs?.style
+      // ) {
+      //   domNode.attribs.style = convertStyle(
+      //     domNode.attribs.style
+      //   );
+      // }
+
       if (
-        domNode.type === "tag" &&
-        domNode.attribs?.style
-      ) {
-        domNode.attribs.style = convertStyle(
-          domNode.attribs.style
-        );
-      }
+  domNode.type === "tag" &&
+  domNode.attribs
+) {
+  const style = domNode.attribs.style;
+
+  if (typeof style === "string") {
+    domNode.attribs.style = convertStyle(style);
+  } else if (
+    style != null &&
+    typeof style !== "object"
+  ) {
+    delete domNode.attribs.style;
+  }
+}
 
        // ==========================================
       // ADD THIS — DYNAMIC BLOG ANCHOR TAGS
