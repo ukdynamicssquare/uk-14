@@ -69,7 +69,7 @@ export async function getStaticProps() {
       blograndomblogs: slim(blograndomblogs),
       blogtranding: slim(blogtranding),
     },
-    revalidate: 14400,
+    revalidate: 60,
   };
 }
 
