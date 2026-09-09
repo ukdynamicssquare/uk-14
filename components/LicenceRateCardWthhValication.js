@@ -1057,7 +1057,7 @@ box-shadow:0 12px 30px rgba(20,14,34,.24);cursor:pointer;text-transform: capital
 
 @media (max-width:1100px){
   .rc-grid{grid-template-columns:minmax(0,1fr);gap:24px}
-  .rc-statement{position:static;order:-1}
+  .rc-statement{position:static;order:2
 }
 // @media (max-width:720px){
 //   .rc{padding:0 16px 48px;background:linear-gradient(180deg,var(--purple) 0 560px,var(--paper) 560px 100%)}
