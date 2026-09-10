@@ -11,7 +11,7 @@ const BlogSeo = ({
   additional_script,
   additional_multiscript,
 }) => {
-  const siteName = "Dynamics Square USA";
+  const siteName = "Dynamics Square UK";
 
   const absoluteImage = meta_image 
     ? (meta_image.startsWith("http") ? meta_image : `${BACKEND_URL}${meta_image}`)

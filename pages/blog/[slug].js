@@ -474,7 +474,7 @@ function Post({
     <div>
       <section>
         {blogs.map((item) => {
-          const canonicalUrl = `https://www.dynamicssquare.com/blog/${item.title_slug}/`;
+          const canonicalUrl = `https://www.dynamicssquare.co.uk/blog/${item.title_slug}/`;
 
           return (
             <article
@@ -1735,9 +1735,9 @@ export async function getStaticProps({
       },
 
       /*
-       * Revalidate every 4 hours.
+       * Revalidate every 60 sec.
        */
-      revalidate: 14400,
+      revalidate: 60,
     };
   } catch (error) {
     console.error(
