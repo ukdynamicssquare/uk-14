@@ -44,7 +44,7 @@ const nextConfig = {
   // env: {
   //   NEXT_PUBLIC_BACKEND_URL: "https://blognew.dynamicssquare.co.uk",
   // },
- NEXT_PUBLIC_BACKEND_URL: "https://blogdsukapi.onrender.com",
+//  NEXT_PUBLIC_BACKEND_URL: "https://blogdsukapi.onrender.com",
   // Security headers (production safe)
   async headers() {
     return [

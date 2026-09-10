@@ -13,15 +13,16 @@ const NAV_COLUMNS = [
     id: "products",
     title: "Solutions",
     links: [
+      { label: "Copilot & AI Agents", href: "/products/dynamics-365-copilot/" },
       { label: "Business Central", href: "/products/dynamics-365-business-central/" },
       { label: "Finance", href: "/products/microsoft-dynamics-365-finance/" },
-      { label: "Supply Chain Management", href: "/products/dynamics-365-supply-chain-management/" },
+      { label: "Supply Chain", href: "/products/dynamics-365-supply-chain-management/" },
       { label: "Sales (CRM)", href: "/products/microsoft-dynamics-365-sales/" },
       { label: "Customer Service", href: "/products/microsoft-dynamics-365-customer-service/" },
       { label: "Field Service", href: "/products/microsoft-dynamics-365-field-service/" },
-      { label: "Customer Insights", href: "/blog/dynamics-365-customer-insights-journeys/" },
-      { label: "Power Platform", href: "/products/microsoft-power-platform/" },
-      { label: "Copilot & AI Agents", href: "/products/dynamics-365-copilot/" },
+      // { label: "Customer Insights", href: "/blog/dynamics-365-customer-insights-journeys/" },
+      // { label: "Power Platform", href: "/products/microsoft-power-platform/" },
+
     ],
   },
   {
@@ -30,25 +31,25 @@ const NAV_COLUMNS = [
     links: [
       { label: "Implementation", href: "/our-services/dynamics-365-implementation-services/" },
       { label: "Migration & Upgrade", href: "/our-services/dynamics-365-upgrade-services/" },
-      { label: "Support & Managed Services", href: "/our-services/dynamics-365-support-services/" },
+      { label: "Support", href: "/our-services/dynamics-365-support-services/" },
       { label: "Consulting", href: "/our-services/dynamics-365-consultant/" },
     //   { label: "Licensing & CSP", href: "/products/dynamics-365-business-central/pricing-licensing/" },
       { label: "Training", href: "/our-services/dynamics-365-training/" },
-      { label: "Free D365 Health Check", href: "/free-dynamics-365-system-health-check/", isKey: true },
+      { label: "Free health check", href: "/free-dynamics-365-system-health-check/", isKey: true },
     ],
   },
   {
     id: "industries",
     title: "Industries",
     links: [
+      { label: "Distribution", href: "/industries/dynamics-365-for-distribution/" },
       { label: "Manufacturing", href: "/industries/microsoft-cloud-for-manufacturing/" },
-      { label: "Wholesale & Distribution", href: "/industries/dynamics-365-for-distribution/" },
-      { label: "Retail", href: "/industries/dynamics-365-for-retail/" },
-      { label: "Financial Services", href: "/industries/microsoft-cloud-for-financial-services/" },
+      { label: "Education", href: "/industries/dynamics-365-for-education/" },
+      { label: "Ecommerce", href: "/industries/ecommerce/" },
       { label: "Professional Services", href: "/industries/professional-services/" },
+      { label: "Food & Beverages", href: "/industries/food-and-beverages/" },
       { label: "Healthcare", href: "/industries/dynamics-365-for-healthcare/" },
-      { label: "Food & Beverage", href: "/industries/food-and-beverages/" },
-      { label: "Not-for-Profit", href: "/industries/non-profits/" },
+      { label: "Retail", href: "/industries/dynamics-365-for-retail/" }
     ],
   },
   {
@@ -70,10 +71,10 @@ const NAV_COLUMNS = [
     title: "Company & Support",
     links: [
       { label: "About Us", href: "/about-us/" },
-      { label: "Our Partners", href: "/partner//" },
+      { label: "Partners", href: "/partner/" },
       { label: "Careers", href: "/careers/" },
       { label: "Contact Us", href: "/contact-us/" },
-      { label: "Existing client support", href: "https://support.dynamicssquare.com/portal/en/home", isKey: true },
+      { label: "Support Portal", href: "https://support.dynamicssquare.com/portal/en/home", target:"_blank", isKey: true },
     //   { label: "Raise a ticket", href: "/support/raise-a-ticket/" },
     ],
   },
@@ -83,7 +84,7 @@ const LOCATIONS = [
   {
     code: "UK",
     name: "United Kingdom",
-    href: "/locations/united-kingdom/",
+    href: "",
     city: "London",
     address: ["Kemp House, 124 City Road,", "London EC1V 2NX"],
     tel: "+44 203 769 7689",
@@ -92,7 +93,7 @@ const LOCATIONS = [
   {
     code: "US",
     name: "United States",
-    href: "/locations/united-states/",
+    href: "",
     city: "California",
     address: ["2372 Morse Ave, Ste.,", "310 Irvine, CA 92614"],
     tel: "+1 213 784 0845",
@@ -101,7 +102,7 @@ const LOCATIONS = [
   {
     code: "CA",
     name: "Canada",
-    href: "/locations/canada/",
+    href: "",
     city: "Ontario",
     address: ["800 Steeles Ave. W. #B10155 Thornhill,", "ON. L4J 7L2"],
     tel: "+1 289 807 0740",
@@ -119,8 +120,8 @@ const SOCIAL_LINKS = [
   { label: "LinkedIn", href: "https://www.linkedin.com/showcase/dynamics-square-uk/", icon: "bi-linkedin" },
   { label: "YouTube", href: "https://www.youtube.com/@DynamicsSquare", icon: "bi-youtube" },
   { label: "X, formerly Twitter", href: "https://x.com/dsquare_uk", icon: "bi-twitter-x" },
-  { label: "Facebook", href: "https://www.facebook.com/dynamicssquareuk/", icon: "bi-facebook" },
-  { label: "Instagram", href: "https://www.instagram.com/dynamicssquareuk/", icon: "bi-instagram" },
+  // { label: "Facebook", href: "https://www.facebook.com/dynamicssquareuk/", icon: "bi-facebook" },
+  // { label: "Instagram", href: "https://www.instagram.com/dynamicssquareuk/", icon: "bi-instagram" },
 ];
 
 const LEGAL_LINKS = [
@@ -275,6 +276,7 @@ export default function FootComo() {
                         <Link
                           href={link.href}
                           className={link.isKey ? styles.isKey : undefined}
+                          target={link.target}
                           onClick={() => trackFooterLink(`${col.id}-${link.label}`, link.label, link.href)}
                         >
                           {link.label}
@@ -339,7 +341,7 @@ export default function FootComo() {
         <div className="row gy-3">
           {LOCATIONS.map((loc) => (
             <div className="col-12 col-md-4" key={loc.code}>
-              <Link href={loc.href} className={styles.locCard}>
+              <div  className={styles.locCard}>
                 <span className={styles.locRegion}>
                   <span className={styles.regionCode}>{loc.code}</span> {loc.name}
                 </span>
@@ -354,7 +356,7 @@ export default function FootComo() {
                   <span className={styles.locTel}>{loc.tel}</span>
                 <span className={styles.email}>{loc.email}</span>
                 </address>
-              </Link>
+              </div>
             </div>
           ))}
         </div>
@@ -385,7 +387,7 @@ export default function FootComo() {
                   aria-label={`Dynamics Square on ${s.label}`}
                   rel="noopener"
                   target="_blank"
-                  onClick={() => trackFooterLink(`social-${s.label}`, s.label, s.href)}
+                  onClick={() => trackFooterLink(`social-${s.label}`, s.label, s.href ,s.target)}
                 >
                   <i className={`bi ${s.icon}`} aria-hidden="true" />
                 </a>
@@ -415,7 +417,7 @@ export default function FootComo() {
             {regionOpen && (
               <div className={styles.regionMenu}>
                 {REGIONS.map((r) => (
-                  <a key={r.code} href={r.href} aria-current={r.current || undefined}>
+                  <a target="_blank" key={r.code} href={r.href} aria-current={r.current || undefined}>
                     <span className={styles.regionCode}>{r.code}</span> {r.name}
                   </a>
                 ))}
