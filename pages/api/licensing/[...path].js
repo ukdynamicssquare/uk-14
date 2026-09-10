@@ -1,5 +1,5 @@
 const UPSTREAM_API =
-  process.env.LICENSING_API_URL || "https://blogdsukapi.onrender.com/api";
+  process.env.LICENSING_API_URL;
 
 const allowedMethods = new Set(["GET", "POST"]);
 
