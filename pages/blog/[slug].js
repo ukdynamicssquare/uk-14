@@ -132,7 +132,7 @@ function createHeadingSlug(text, usedSlugs) {
 function SafeHTML({ html, tocList, handleTocClick }) {
   let pCount = 0;
 
-  const parsed = parse(html || "", {
+  const options = {
     replace: (domNode) => {
 
        /* =====================================================
@@ -184,21 +184,68 @@ function SafeHTML({ html, tocList, handleTocClick }) {
       {...restAttribs}
       className={`u-i ${existingClass || ""}`.trim()}
     >
-      {domToReact(domNode.children)}
+      {domToReact(domNode.children, options)}
     </a>
   );
 }
-
-         // ==========================================
+// ==========================================
       // ADD THIS — DYNAMIC BLOG ANCHOR TAGS
       // ==
-
-
-      /* =====================================================
-         IMAGES
+/* =====================================================
+         TABLES → WRAP IN .table-responsive + ADD CLASSES
       ===================================================== */
 
       if (
+        domNode.type === "tag" &&
+        domNode.name === "table"
+      ) {
+        const attribs = domNode.attribs || {};
+        const existingClass = attribs.class || "";
+
+        const classes = new Set(
+          existingClass.split(/\s+/).filter(Boolean)
+        );
+
+        ["table", "table-bordered", "table-striped"].forEach(
+          (c) => classes.add(c)
+        );
+
+        const { class: _omit, ...restAttribs } = attribs;
+
+        const tableElement = (
+          <table
+            {...restAttribs}
+            className={Array.from(classes).join(" ")}
+          >
+            {domToReact(domNode.children, options)}
+          </table>
+        );
+
+        const parent = domNode.parent;
+        const parentClass = parent?.attribs?.class || "";
+
+        const alreadyWrapped =
+          parent &&
+          parent.type === "tag" &&
+          parent.name === "div" &&
+          parentClass.split(/\s+/).includes("table-responsive");
+
+        if (alreadyWrapped) {
+          return tableElement;
+        }
+
+        return (
+          <div className="table-responsive">
+            {tableElement}
+          </div>
+        );
+      }
+
+    /* =====================================================
+   IMAGES
+===================================================== */
+
+if (
   domNode.type === "tag" &&
   domNode.name === "img"
 ) {
@@ -217,7 +264,9 @@ function SafeHTML({ html, tocList, handleTocClick }) {
   const width = Number(attribs.width);
   const height = Number(attribs.height);
 
-  // Images that already have dimensions
+  // Images WITH real dimensions from the CMS
+  // → target width = the image's own natural width,
+  //   shrinks only if the container is smaller than that.
   if (width > 0 && height > 0) {
     return (
       <Image
@@ -225,9 +274,10 @@ function SafeHTML({ html, tocList, handleTocClick }) {
         alt={alt}
         width={width}
         height={height}
-        sizes="(max-width: 991px) 100vw, 66.666vw"
+        quality={90}
+        sizes="(max-width: 991px) 100vw, 88.666vw"
         style={{
-          width: "auto",
+          width: `${width}px`,
           maxWidth: "100%",
           height: "auto",
           display: "block",
@@ -237,14 +287,17 @@ function SafeHTML({ html, tocList, handleTocClick }) {
     );
   }
 
-  // Images without dimensions
+  // Images WITHOUT dimensions from the CMS
+  // → no real target size to use, so fetch a reasonable
+  //   resolution and let it fill the column responsively.
   return (
     <Image
       src={src}
       alt={alt}
-      width={1}
-      height={1}
-      sizes="(max-width: 991px) 100vw, 66.666vw"
+      width={1200}
+      height={800}
+      quality={90}
+      sizes="(max-width: 991px) 100vw, 88.666vw"
       style={{
         width: "auto",
         maxWidth: "100%",
@@ -266,7 +319,7 @@ function SafeHTML({ html, tocList, handleTocClick }) {
           return (
             <>
               <p {...domNode.attribs}>
-                {domToReact(domNode.children)}
+                {domToReact(domNode.children, options)}
               </p>
 
               {/* <div
@@ -337,9 +390,9 @@ function SafeHTML({ html, tocList, handleTocClick }) {
       }
 
       return undefined;
-    },
-  });
-
+   },
+  };
+ const parsed = parse(html || "", options);
   return <div>{parsed}</div>;
 }
 
