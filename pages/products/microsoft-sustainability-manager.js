@@ -58,7 +58,7 @@ const Microsoftsustainabilitymanager = () => {
                   <header className="section-header">
                     <h2>What is Microsoft Cloud for Sustainability? </h2>
                     <p>
-                      <Link href="/blog//microsoft-cloud-for-sustainability/" target="_blank">Microsoft Cloud for Sustainability
+                      <Link href="/blog/microsoft-cloud-for-sustainability/" target="_blank">Microsoft Cloud for Sustainability
                     </Link> is the latest launched application to help organisations
                       simplify their sustainability process by offering many
                       data insights to accelerate the environment sustainability
