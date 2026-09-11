@@ -8,14 +8,16 @@ import TimerModal from "../../components/TimerModal";
 import { BlogService, BACKEND_URL } from "../../helpers/blogApi";
 
 export async function getStaticProps() {
-  const [blogsRaw, businesscentralRaw, categoryblogs, allBlogsRaw, blogtrandingRaw] =
-    await Promise.all([
-      BlogService.getLatestBlog(),
-      BlogService.getBlogsByCategory("business-central"),
-      BlogService.getCategories(),
-      BlogService.getBlogs(), 
-      BlogService.getTrendingBlogs(),
-    ]);
+  try {
+    const [blogsRaw, businesscentralRaw, categoryblogs, allBlogsRaw, blogtrandingRaw] =
+      await Promise.all([
+        BlogService.getLatestBlog(),
+        BlogService.getBlogsByCategory("business-central"),
+        BlogService.getCategories(),
+        BlogService.getBlogs(),
+        BlogService.getTrendingBlogs(),
+      ]);
+
  
   const extractArray = (data) => {
     if (Array.isArray(data)) return data;
@@ -58,19 +60,33 @@ export async function getStaticProps() {
     }));
 
   return {
-    props: {
-      blogs: slim(blogs),
-      businesscentral: slim(businesscentral),
-      categoryblogs: (Array.isArray(categoryblogs) ? categoryblogs : []).map(c => ({
-        ...c,
-        category_name: c.name || c.category_name,
-        category_slug: c.slug || c.category_slug
-      })), // categories are small enough
-      blograndomblogs: slim(blograndomblogs),
-      blogtranding: slim(blogtranding),
-    },
-    revalidate: 60,
-  };
+      props: {
+        blogs: slim(blogs),
+        businesscentral: slim(businesscentral),
+        categoryblogs: (Array.isArray(categoryblogs) ? categoryblogs : []).map(c => ({
+          ...c,
+          category_name: c.name || c.category_name,
+          category_slug: c.slug || c.category_slug
+        })),
+        blograndomblogs: slim(blograndomblogs),
+        blogtranding: slim(blogtranding),
+      },
+      revalidate: 60,
+    };
+  } catch (error) {
+    console.error("Error in blog homepage getStaticProps:", error);
+
+    return {
+      props: {
+        blogs: [],
+        businesscentral: [],
+        categoryblogs: [],
+        blograndomblogs: [],
+        blogtranding: [],
+      },
+      revalidate: 60,
+    };
+  }
 }
 
 
@@ -270,7 +286,7 @@ function Blogshome({ blogs, businesscentral, categoryblogs, blograndomblogs, blo
                     </div>
                   </div> */}
                   <div className="tt-pico">
-                    <a href="https://councils.forbes.com/profile/Manish-Goyal-Co-founder-Dynamics-Square/1e25d5c2-1d98-46cd-834b-70d335b73b35" target="_balnk" rel="nofollow"><img src="/img/forber-01.png" alt="menu--ss" /></a>
+                    <a href="https://councils.forbes.com/profile/Manish-Goyal-Co-founder-Dynamics-Square/1e25d5c2-1d98-46cd-834b-70d335b73b35" target="_blank" rel="nofollow"><img src="/img/forber-01.png" alt="menu--ss" /></a>
                   </div>
                   {businesscentral.slice(0,4).map((item, i) => (
                     <div className="blogs-info-list blogs-info-list-side" key={`bc-${i}`}>
@@ -306,11 +322,13 @@ function Blogshome({ blogs, businesscentral, categoryblogs, blograndomblogs, blo
                       <span className="time">
                         <a><i className="bi bi-clock"></i> {item.read_time} mins read</a>
                       </span>
-                      <span className="cate">
-                        <a href={`/blog/category/${item.category_slug}/`}>
-                          <i className="bi bi-collection"></i> {item.category}
-                        </a>
-                      </span>
+                      {item.category_slug && (
+  <span className="cate">
+    <a href={`/blog/category/${item.category_slug}/`}>
+      <i className="bi bi-collection"></i> {item.category}
+    </a>
+  </span>
+)}
                     </div>
                   ))}
                 </div>
@@ -363,11 +381,13 @@ function Blogshome({ blogs, businesscentral, categoryblogs, blograndomblogs, blo
                     <span className="time">
                       <a><i className="bi bi-clock"></i> {item.read_time} mins read</a>
                     </span>
-                    <span className="cate">
-                      <a href={`/blog/category/${item.category_slug}/`}>
-                        <i className="bi bi-collection"></i> {item.category}
-                      </a>
-                    </span>
+                    {item.category_slug && (
+  <span className="cate">
+    <a href={`/blog/category/${item.category_slug}/`}>
+      <i className="bi bi-collection"></i> {item.category}
+    </a>
+  </span>
+)}
                   </div>
                   <div className="b-card-info">
                     <p>{item.short_description?.substring(0, 180)}...</p>
@@ -466,11 +486,13 @@ function Blogshome({ blogs, businesscentral, categoryblogs, blograndomblogs, blo
                     <span className="time">
                       <a><i className="bi bi-clock"></i> {item.read_time} mins read</a>
                     </span>
-                    <span className="cate">
-                      <a href={`/blog/category/${item.category_slug}/`}>
-                        <i className="bi bi-collection"></i> {item.category}
-                      </a>
-                    </span>
+                    {item.category_slug && (
+  <span className="cate">
+    <a href={`/blog/category/${item.category_slug}/`}>
+      <i className="bi bi-collection"></i> {item.category}
+    </a>
+  </span>
+)}
                   </div>
                   <div className="b-card-info">
                     <p>{item.short_description?.substring(0, 180)}...</p>
