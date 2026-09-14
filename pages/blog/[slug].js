@@ -135,9 +135,9 @@ function SafeHTML({ html, tocList, handleTocClick }) {
   const options = {
     replace: (domNode) => {
 
-       /* =====================================================
-         FIX STYLE ATTRIBUTE
-      ===================================================== */
+      /* =====================================================
+        FIX STYLE ATTRIBUTE
+     ===================================================== */
 
       if (
         domNode.type === "tag" &&
@@ -180,13 +180,14 @@ function SafeHTML({ html, tocList, handleTocClick }) {
         );
       }
 
-      /* =====================================================
+           /* =====================================================
          TABLES → WRAP IN .table-responsive + ADD CLASSES
+         THEAD → ADD table-dark CLASS
       ===================================================== */
 
       if (
         domNode.type === "tag" &&
-        domNode.name === "table"
+        (domNode.name === "table" || domNode.name === "thead")
       ) {
         const attribs = domNode.attribs || {};
         const existingClass = attribs.class || "";
@@ -195,11 +196,36 @@ function SafeHTML({ html, tocList, handleTocClick }) {
           existingClass.split(/\s+/).filter(Boolean)
         );
 
-        ["table", "table-bordered", "table-striped"].forEach(
-          (c) => classes.add(c)
-        );
+        if (domNode.name === "table") {
+          ["table", "table-bordered", "table-striped"].forEach(
+            (c) => classes.add(c)
+          );
+        }
+
+        if (domNode.name === "thead") {
+          classes.add("table-dark");
+        }
 
         const { class: _omit, ...restAttribs } = attribs;
+
+        /* =====================================================
+           THEAD → return directly, no wrapping needed
+        ===================================================== */
+
+        if (domNode.name === "thead") {
+          return (
+            <thead
+              {...restAttribs}
+              className={Array.from(classes).join(" ")}
+            >
+              {domToReact(domNode.children, options)}
+            </thead>
+          );
+        }
+
+        /* =====================================================
+           TABLE → wrap in .table-responsive
+        ===================================================== */
 
         const tableElement = (
           <table
@@ -322,9 +348,9 @@ function SafeHTML({ html, tocList, handleTocClick }) {
       }
 
       return undefined;
-   },
+    },
   };
- const parsed = parse(html || "", options);
+  const parsed = parse(html || "", options);
   return <div>{parsed}</div>;
 }
 
@@ -367,9 +393,8 @@ function TocList({ tocList, handleTocClick }) {
 
       {hasMore && (
         <div
-          className={`toc-collapsible ${
-            expanded ? "toc-collapsible--open" : ""
-          }`}
+          className={`toc-collapsible ${expanded ? "toc-collapsible--open" : ""
+            }`}
         >
           <ul className="toc-list toc-list--hidden">
             {hiddenList.map(renderItem)}
@@ -401,7 +426,7 @@ function TocList({ tocList, handleTocClick }) {
         .toc-wrapper {
           background-color: #f8f9fa;
           border-radius: 8px;
-          border-left: 2px solid #301b54;
+          border: 1px solid #301b54;
           margin-top: 2rem;
         }
 
@@ -453,7 +478,7 @@ color: #301b54 !important;
         }
 
         .toc-collapsible:not(.toc-collapsible--open) {
-          max-height: 90px;
+          max-height: 40px;
         }
 
         .toc-list--hidden {
@@ -513,8 +538,33 @@ function FaqAccordion({ faqs, articleSlug }) {
 
   const accordionId = `faq-accordion-${articleSlug}`;
 
+  /*
+   * Same anchor-tag handling as SafeHTML:
+   * adds the "u-i" class to every link inside FAQ answers.
+   */
+  const faqAnswerOptions = {
+    replace: (domNode) => {
+      if (domNode.type === "tag" && domNode.name === "a") {
+        const attribs = domNode.attribs || {};
+
+        const { class: existingClass, ...restAttribs } = attribs;
+
+        return (
+          <a
+            {...restAttribs}
+            className={`u-i ${existingClass || ""}`.trim()}
+          >
+            {domToReact(domNode.children, faqAnswerOptions)}
+          </a>
+        );
+      }
+
+      return undefined;
+    },
+  };
+
   return (
-    <div className="faq-accordion-wrapper mt-5 mb-5">
+    <div className="faq-accordion-wrapper mt-5 mb-5" id="faqs-section">
       <h2 className="faq-accordion-title mb-4">
         Frequently Asked Questions
       </h2>
@@ -530,9 +580,8 @@ function FaqAccordion({ faqs, articleSlug }) {
             <div className="faq-accordion-item accordion-item" key={faqId}>
               <h3 className="accordion-header" id={headingId}>
                 <button
-                  className={`faq-accordion-button accordion-button ${
-                    isFirst ? "" : "collapsed"
-                  }`}
+                  className={`faq-accordion-button accordion-button ${isFirst ? "" : "collapsed"
+                    }`}
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target={`#${collapseId}`}
@@ -552,18 +601,13 @@ function FaqAccordion({ faqs, articleSlug }) {
 
               <div
                 id={collapseId}
-                className={`accordion-collapse collapse ${
-                  isFirst ? "show" : ""
-                }`}
+                className={`accordion-collapse collapse ${isFirst ? "show" : ""
+                  }`}
                 aria-labelledby={headingId}
                 data-bs-parent={`#${accordionId}`}
               >
                 <div className="faq-accordion-body accordion-body">
-                  <div
-                    dangerouslySetInnerHTML={{
-                      __html: faq.answer || "",
-                    }}
-                  />
+                  {parse(faq.answer || "", faqAnswerOptions)}
                 </div>
               </div>
             </div>
@@ -694,6 +738,16 @@ function FaqAccordion({ faqs, articleSlug }) {
 
         .faq-accordion-body :global(p:last-child) {
           margin-bottom: 0;
+        }
+
+        .faq-accordion-body :global(a.u-i) {
+          color: #c22221;
+          text-decoration: underline;
+          font-weight: 500;
+        }
+
+        .faq-accordion-body :global(a.u-i:hover) {
+          text-decoration: none;
         }
       `}</style>
     </div>
@@ -965,9 +1019,9 @@ function Post({
                               formatDate(
                                 item.updated_at
                               ) !==
-                                formatDate(
-                                  item.publish_date
-                                ) && (
+                              formatDate(
+                                item.publish_date
+                              ) && (
                                 <span className="date">
                                   <a>
                                     <i className="bi bi-arrow-repeat" />
@@ -1065,7 +1119,7 @@ function Post({
                         itemProp="articleBody"
                       >
                         <div className="blogs-content-inner">
-                          <SafeHTML
+                          {/* <SafeHTML
                             html={
                               item.description || ""
                             }
@@ -1073,7 +1127,20 @@ function Post({
                             handleTocClick={
                               handleTocClick
                             }
+                          /> */}
+                          <SafeHTML
+                            html={item.description || ""}
+                            tocList={
+                              item.faqs?.length > 0
+                                ? [
+                                  ...(item.tocList || []),
+                                  { text: "Frequently Asked Questions", slug: "faqs-section" },
+                                ]
+                                : item.tocList
+                            }
+                            handleTocClick={handleTocClick}
                           />
+
 
                           <FaqAccordion
                             faqs={item.faqs}
@@ -1102,20 +1169,20 @@ function Post({
 
                               const visibleAuthorAbout =
                                 isAuthorExpanded ||
-                                !shouldShowAuthorToggle
+                                  !shouldShowAuthorToggle
                                   ? authorAbout
                                   : `${authorAbout
-                                      .slice(
-                                        0,
-                                        AUTHOR_ABOUT_PREVIEW_LENGTH
-                                      )
-                                      .trim()}...`;
+                                    .slice(
+                                      0,
+                                      AUTHOR_ABOUT_PREVIEW_LENGTH
+                                    )
+                                    .trim()}...`;
 
                               const authorImage =
                                 author.profile_photo_path
                                   ? getImageUrl(
-                                      author.profile_photo_path
-                                    )
+                                    author.profile_photo_path
+                                  )
                                   : "/img/default-author.png";
 
                               const authorSlug =
@@ -1311,7 +1378,7 @@ function Post({
                       </h2>
                     </div>
 
-                    {blogcat.slice(0,2).map((item1) => {
+                    {blogcat.slice(0, 2).map((item1) => {
                       const authorSlug =
                         item1.author
                           ?.toLowerCase()
@@ -1366,9 +1433,9 @@ function Post({
                                 formatDate(
                                   item1.updated_at
                                 ) !==
-                                  formatDate(
-                                    item1.publish_date
-                                  ) && (
+                                formatDate(
+                                  item1.publish_date
+                                ) && (
                                   <span className="date">
                                     <a>
                                       <i className="bi bi-arrow-repeat" />{" "}
@@ -1431,7 +1498,7 @@ function Post({
           );
         })}
       </section>
-<style jsx global>{`
+      <style jsx global>{`
   @media (max-width: 1400px) {
     .blog-content img,.blog-content p img{
       width: 100% !important;
@@ -1460,20 +1527,20 @@ export async function getStaticPaths() {
 
     const paths = Array.isArray(allBlogs)
       ? allBlogs
-          .map(
-            (b) =>
-              b.title_slug || b.slug
-          )
-          .filter(
-            (slug) =>
-              typeof slug === "string" &&
-              slug.trim() !== ""
-          )
-          .map((slug) => ({
-            params: {
-              slug,
-            },
-          }))
+        .map(
+          (b) =>
+            b.title_slug || b.slug
+        )
+        .filter(
+          (slug) =>
+            typeof slug === "string" &&
+            slug.trim() !== ""
+        )
+        .map((slug) => ({
+          params: {
+            slug,
+          },
+        }))
       : [];
 
     return {
@@ -1596,22 +1663,22 @@ export async function getStaticProps({
 
       meta_title: extractStr(
         b.seo?.metaTitle ||
-          b.meta_title
+        b.meta_title
       ),
 
       meta_description: extractStr(
         b.seo?.metaDescription ||
-          b.meta_description
+        b.meta_description
       ),
 
       meta_image: extractStr(
         b.featuredImage?.url ||
-          b.meta_image
+        b.meta_image
       ),
 
       meta_keyword: extractStr(
         b.seo?.focusKeyword ||
-          b.meta_keyword
+        b.meta_keyword
       ),
 
       publish_date:
@@ -1626,7 +1693,7 @@ export async function getStaticProps({
 
       read_time: extractStr(
         b.readingTimeMinutes ||
-          b.read_time
+        b.read_time
       ),
 
       author:
@@ -1635,7 +1702,7 @@ export async function getStaticProps({
 
       author_email: extractStr(
         b.author?.email ||
-          b.author_email
+        b.author_email
       ),
 
       category:
@@ -1644,14 +1711,14 @@ export async function getStaticProps({
 
       category_slug: extractStr(
         b.category?.slug ||
-          b.category_slug
+        b.category_slug
       ),
 
       rank: b.rank || 0,
 
       short_description: extractStr(
         b.excerpt ||
-          b.short_description
+        b.short_description
       ),
 
       additional_script: null,
@@ -1677,23 +1744,23 @@ export async function getStaticProps({
             ) {
               const parsed =
                 typeof b.additional_multiscript ===
-                "string"
+                  "string"
                   ? JSON.parse(
-                      b.additional_multiscript
-                    )
+                    b.additional_multiscript
+                  )
                   : b.additional_multiscript;
 
               return Array.isArray(
                 parsed
               )
                 ? parsed.map((item) =>
-                    typeof item ===
+                  typeof item ===
                     "string"
-                      ? item
-                      : JSON.stringify(
-                          item
-                        )
-                  )
+                    ? item
+                    : JSON.stringify(
+                      item
+                    )
+                )
                 : [];
             }
 
@@ -1736,7 +1803,7 @@ export async function getStaticProps({
         ) => {
           const level =
             tag.toLowerCase() ===
-            "h2"
+              "h2"
               ? 2
               : 3;
 
@@ -1774,9 +1841,8 @@ export async function getStaticProps({
           }
 
           if (!textContent) {
-            textContent = `Section ${
-              headings.length + 1
-            }`;
+            textContent = `Section ${headings.length + 1
+              }`;
           }
 
           /*
@@ -1866,7 +1932,7 @@ export async function getStaticProps({
             (blog) =>
               extractStr(
                 blog.slug ||
-                  blog.title_slug
+                blog.title_slug
               ) !== currentSlug
           );
 
@@ -1885,7 +1951,7 @@ export async function getStaticProps({
               title_slug:
                 extractStr(
                   c.slug ||
-                    c.title_slug
+                  c.title_slug
                 ),
 
               author:
@@ -1906,7 +1972,7 @@ export async function getStaticProps({
               read_time:
                 extractStr(
                   c.readingTimeMinutes ||
-                    c.read_time
+                  c.read_time
                 ),
 
               category:
@@ -1917,13 +1983,13 @@ export async function getStaticProps({
               category_slug:
                 extractStr(
                   c.category?.slug ||
-                    c.category_slug
+                  c.category_slug
                 ),
 
               short_description:
                 extractStr(
                   c.excerpt ||
-                    c.short_description
+                  c.short_description
                 ),
             }));
       }
@@ -1951,7 +2017,7 @@ export async function getStaticProps({
       if (
         rawAuthor &&
         typeof rawAuthor ===
-          "object"
+        "object"
       ) {
         authordetials = [
           {
@@ -2030,8 +2096,8 @@ export async function getStaticProps({
             )
               ? authorDataRaw
               : authorDataRaw
-              ? [authorDataRaw]
-              : [];
+                ? [authorDataRaw]
+                : [];
 
           authordetials =
             authorData.map(
