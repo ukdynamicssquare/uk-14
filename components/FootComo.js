@@ -35,7 +35,7 @@ const NAV_COLUMNS = [
       { label: "Consulting", href: "/our-services/dynamics-365-consultant/" },
     //   { label: "Licensing & CSP", href: "/products/dynamics-365-business-central/pricing-licensing/" },
       { label: "Training", href: "/our-services/dynamics-365-training/" },
-      { label: "Free health check", href: "/free-dynamics-365-system-health-check/", isKey: true },
+      { label: "Free Health Check", href: "/free-dynamics-365-system-health-check/", isKey: true },
     ],
   },
   {
