@@ -111,7 +111,7 @@ export async function getStaticProps({ params }) {
       blgsbyauthorslist,
       fetchedAuthor, 
     },
-    revalidate: 14400,
+    revalidate: 60,
   };
 }
 

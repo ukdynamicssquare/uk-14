@@ -472,7 +472,7 @@ color: #301b54 !important;
 
         .toc-collapsible {
           position: relative;
-          max-height: 500px;
+          max-height: 650px;
           overflow: hidden;
           transition: max-height 0.35s ease;
         }
@@ -650,8 +650,11 @@ function FaqAccordion({ faqs, articleSlug }) {
 
         .faq-accordion-item h3 {
           margin-bottom: 0px;
+          font-size: 17px !important;
         }
-
+.accordion-header .accordion-button {
+        font-size: 17px !important;
+    }
         .faq-accordion-button {
           display: flex;
           align-items: center;

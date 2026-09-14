@@ -20,7 +20,7 @@ export async function getStaticProps() {
 
   return { 
     props: { authorslist },
-    revalidate: 14400
+    revalidate: 60
   };
 }
 

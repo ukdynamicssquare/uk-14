@@ -77,7 +77,7 @@ export async function getStaticProps({ params }) {
       blogs: trimmedBlogs,
       categoryblogs,
     },
-    revalidate: 14400, // regenerate page every 60s if updated
+    revalidate: 60, // regenerate page every 60s if updated
   };
 }
 
