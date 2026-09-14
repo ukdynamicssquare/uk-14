@@ -9071,7 +9071,7 @@ ul.checkmark li {
 .blogs-info-list {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap !important;
   margin-bottom: 20px;
 }
 .blogs-info-list .user a,
@@ -20761,6 +20761,12 @@ margin-bottom: 10px;
 
 }
 @media (max-width: 992px) {
+  .blogs-content h2 {
+    font-size: 24px;
+  }
+  .blogs-content h3 {
+    font-size: 18px;
+  }
   .home-baner-head-nepd {
     padding: 110px 0px 0px;
 }
