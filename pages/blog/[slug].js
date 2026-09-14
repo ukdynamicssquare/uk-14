@@ -472,7 +472,6 @@ color: #301b54 !important;
 
         .toc-collapsible {
           position: relative;
-          max-height: 650px;
           overflow: hidden;
           transition: max-height 0.35s ease;
         }
