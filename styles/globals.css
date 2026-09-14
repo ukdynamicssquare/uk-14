@@ -21547,3 +21547,452 @@ display: block;
     }
   }
 /*new mega menu*/
+
+/* ============================================
+   NEW: Partner trust strip (stats + Microsoft partner badge)
+   Added for pages/industries/dynamics-365-for-pharmaceutical-manufacturing.js
+   ============================================ */
+.partner-trust-strip {
+  background: linear-gradient(135deg, #4a3b69 0%, #2d2640 100%);
+  padding: 40px 0;
+}
+.partner-trust-strip__stats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+.partner-trust-strip__label {
+  color: #fff;
+  font-size: 15px;
+  max-width: 170px;
+}
+.partner-trust-strip__item {
+  text-align: center;
+}
+.partner-trust-strip__item h3 {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.partner-trust-strip__item p {
+  color: #d8cdea;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+.partner-trust-strip__badge {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+}
+@media (max-width: 991px) {
+  .partner-trust-strip__stats {
+    justify-content: center;
+    text-align: center;
+  }
+  .partner-trust-strip__label {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+/* ============================================
+   NEW: "What Pharmaceutical Manufacturers Expect From an ERP" cards
+   Added for pages/industries/dynamics-365-for-pharmaceutical-manufacturing.js
+   ============================================ */
+.erp-expect-section {
+  padding: 60px 0;
+}
+.erp-expect-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(20, 10, 40, 0.08);
+  padding: 28px;
+  width: 100%;
+}
+.erp-expect-card__head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+.erp-expect-card__head img {
+  flex-shrink: 0;
+}
+.erp-expect-card__head h4 {
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #2d2640;
+}
+.erp-expect-card p {
+  margin-bottom: 0;
+  color: #5b5768;
+}
+.erp-expect-footnote {
+  margin-bottom: 20px;
+}
+
+/* ============================================
+   NEW: pharma "Core Capabilities" section
+   Added for pages/industries/dynamics-365-for-pharmaceutical-manufacturing.js
+   Reuses the existing .mycard / .mycard__inner / .mycard__inner-left card
+   structure as-is (unrenamed) — these classes only add the purple section
+   background, a single-column variant of .mycard__inner, the new icon-item
+   row inside .mycard__inner-left, and the CTA spacing below the card.
+   ============================================ */
+.pharma-purple-bg {
+  background: linear-gradient(135deg, #4a3b69 0%, #2d2640 100%);
+}
+.pharma-sub-head-light h2,
+.pharma-sub-head-light h3 {
+  background-image: none;
+  -webkit-text-fill-color: #fff;
+  color: #fff;
+}
+.mycard__inner--single {
+  grid-template-columns: 1fr;
+}
+.pharma-capability-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 20px;
+}
+.pharma-capability-item {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 14px rgba(20, 10, 40, 0.08);
+  flex: 1 1 200px;
+}
+.pharma-capability-item img {
+  margin-bottom: 12px;
+}
+.pharma-capability-item p {
+  margin-bottom: 0;
+  color: #5b5768;
+  font-size: 14px;
+}
+.pharma-capability-cta {
+  margin-top: 20px;
+}
+@media (max-width: 767px) {
+  .pharma-capability-items {
+    flex-direction: column;
+  }
+}
+
+/* ============================================
+   NEW: "UK Regulatory Environment" panel (pharma page)
+   Added for pages/industries/dynamics-365-for-pharmaceutical-manufacturing.js
+   ============================================ */
+.uk-reg-section {
+  padding: 60px 0;
+}
+.uk-reg-panel {
+  background: #f2eff7;
+  border-radius: 16px;
+  padding: 10px 30px;
+  box-shadow: 0 20px 40px rgba(96, 81, 140, 0.15);
+  margin-top: 30px;
+  border: 1px solid rgba(142, 68, 173, 0.2);
+  border-bottom: 3px solid #8e44ad;
+}
+.uk-reg-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(96, 81, 140, 0.15);
+}
+.uk-reg-row:last-child {
+  border-bottom: none;
+}
+.uk-reg-row__icon {
+  flex: 0 0 auto;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: #e7dbf2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.uk-reg-row__title {
+  flex: 0 0 240px;
+}
+.uk-reg-row__title h4 {
+  color: #60518c;
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+.uk-reg-row__desc {
+  flex: 1 1 auto;
+}
+.uk-reg-row__desc p {
+  color: #5b5768;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+@media (max-width: 991px) {
+  .uk-reg-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .uk-reg-row__title {
+    flex: 0 0 auto;
+  }
+}
+
+/* ============================================
+   NEW: "Which One to Choose" comparison section (pharma page)
+   Added for pages/industries/dynamics-365-for-pharmaceutical-manufacturing.js
+   ============================================ */
+.pharma-compare-section {
+  padding: 60px 0;
+}
+.pharma-compare-card {
+  background: #f0edf7;
+  border-radius: 12px;
+  padding: 30px;
+  width: 100%;
+}
+.pharma-compare-card--alt {
+  background: #e9e2f3;
+}
+.pharma-compare-card h4 {
+  color: #60518c;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.pharma-compare-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.pharma-compare-card ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.pharma-compare-card ul li:last-child {
+  margin-bottom: 0;
+}
+.pharma-compare-card ul li .bi {
+  color: #8e44ad;
+  font-size: 18px;
+  margin-top: 2px;
+}
+.pharma-compare-table {
+  margin-top: 40px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(45, 38, 64, 0.12);
+}
+.pharma-compare-table .table {
+  margin-bottom: 0;
+}
+.pharma-compare-table .table thead th {
+  background: linear-gradient(135deg, #4a3b69 0%, #2d2640 100%);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  padding: 16px 24px;
+}
+.pharma-compare-table .table tbody td {
+  padding: 16px 24px;
+  border: none;
+  vertical-align: top;
+}
+.pharma-compare-table .table tbody tr:nth-child(odd) {
+  background: #f6f4fa;
+}
+.pharma-compare-footnote {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #5b5768;
+}
+
+/* ============================================
+   NEW: "How Dynamics Square Implement" step timeline (pharma page)
+   Added for pages/industries/dynamics-365-for-pharmaceutical-manufacturing.js
+   ============================================ */
+.pharma-timeline-section {
+  background: linear-gradient(135deg, #4a3b69 0%, #2d2640 100%);
+  padding: 70px 0;
+}
+.pharma-timeline-head h2 {
+  color: #fff;
+  font-family: Lato;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.pharma-timeline-head p {
+  color: #d8cdea;
+  margin-bottom: 0;
+}
+.pharma-timeline {
+  position: relative;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.pharma-timeline__line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateX(-50%);
+  z-index: 0;
+}
+.pharma-timeline__row {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 60px 1fr;
+  align-items: center;
+  gap: 20px;
+  z-index: 1;
+}
+.pharma-timeline__card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 22px 26px;
+  box-shadow: 0 10px 30px rgba(15, 8, 30, 0.25);
+}
+.pharma-timeline__card h4 {
+  color: #2d2640;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.pharma-timeline__card p {
+  color: #5b5768;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+.pharma-timeline__card ul {
+  margin: 0;
+  padding-left: 18px;
+  color: #5b5768;
+  font-size: 14px;
+}
+.pharma-timeline__card ul li {
+  margin-bottom: 10px;
+}
+.pharma-timeline__card ul li:last-child {
+  margin-bottom: 0;
+}
+.pharma-timeline__dot {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #a569bd 0%, #8e44ad 100%);
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  box-shadow: 0 4px 14px rgba(142, 68, 173, 0.5);
+}
+.pharma-timeline__cta {
+  margin-top: 40px;
+}
+@media (max-width: 767px) {
+  .pharma-timeline__row {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .pharma-timeline__spacer {
+    display: none;
+  }
+  .pharma-timeline__dot {
+    order: 1;
+    flex: 0 0 auto;
+  }
+  .pharma-timeline__card {
+    order: 2;
+    flex: 1 1 auto;
+  }
+  .pharma-timeline__line {
+    left: 22px;
+  }
+}
+
+/* ============================================
+   NEW: "Dynamics 365 Pricing" cards (pharma page)
+   Added for pages/industries/dynamics-365-for-pharmaceutical-manufacturing.js
+   ============================================ */
+.pharma-pricing-section {
+  padding: 60px 0;
+}
+.pharma-pricing-group-title {
+  color: #2d2640;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 30px 0 20px;
+}
+.pharma-pricing-card {
+  background: #f4f2f8;
+  border-radius: 12px;
+  padding: 26px;
+  width: 100%;
+}
+.pharma-pricing-card--highlight {
+  background: #e6e0f2;
+}
+.pharma-pricing-card__tier {
+  display: block;
+  color: #2d2640;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+.pharma-pricing-card__price {
+  color: #7a5fc2;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+.pharma-pricing-card__price span {
+  color: #7a5fc2;
+  font-size: 14px;
+  font-weight: 400;
+}
+.pharma-pricing-card p {
+  color: #5b5768;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+.pharma-pricing-footnote {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  color: #5b5768;
+}
+
+/* ============================================
+   NEW: mobile font-size reduction for pharma-page h2/h3 headings
+   Matches the existing .supprt-header-new-one h2/h3 mobile pattern
+   (24px at max-width: 768px) for the new headings added on
+   pages/industries/dynamics-365-for-pharmaceutical-manufacturing.js
+   that didn't already have one.
+   ============================================ */
+@media (max-width: 768px) {
+  .pharma-timeline-head h2 {
+    font-size: 24px;
+  }
+  .partner-trust-strip__item h3 {
+    font-size: 24px;
+  }
+}
