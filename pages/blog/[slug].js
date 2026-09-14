@@ -139,59 +139,48 @@ function SafeHTML({ html, tocList, handleTocClick }) {
          FIX STYLE ATTRIBUTE
       ===================================================== */
 
-      // if (
-      //   domNode.type === "tag" &&
-      //   domNode.attribs?.style
-      // ) {
-      //   domNode.attribs.style = convertStyle(
-      //     domNode.attribs.style
-      //   );
-      // }
-
       if (
-  domNode.type === "tag" &&
-  domNode.attribs
-) {
-  const style = domNode.attribs.style;
+        domNode.type === "tag" &&
+        domNode.attribs
+      ) {
+        const style = domNode.attribs.style;
 
-  if (typeof style === "string") {
-    domNode.attribs.style = convertStyle(style);
-  } else if (
-    style != null &&
-    typeof style !== "object"
-  ) {
-    delete domNode.attribs.style;
-  }
-}
+        if (typeof style === "string") {
+          domNode.attribs.style = convertStyle(style);
+        } else if (
+          style != null &&
+          typeof style !== "object"
+        ) {
+          delete domNode.attribs.style;
+        }
+      }
 
-       // ==========================================
-      // ADD THIS — DYNAMIC BLOG ANCHOR TAGS
+      // ==========================================
+      // DYNAMIC BLOG ANCHOR TAGS
       // ==========================================
 
-     if (
-  domNode.type === "tag" &&
-  domNode.name === "a"
-) {
-  const attribs = domNode.attribs || {};
+      if (
+        domNode.type === "tag" &&
+        domNode.name === "a"
+      ) {
+        const attribs = domNode.attribs || {};
 
-  const {
-    class: existingClass,
-    ...restAttribs
-  } = attribs;
+        const {
+          class: existingClass,
+          ...restAttribs
+        } = attribs;
 
-  return (
-    <a
-      {...restAttribs}
-      className={`u-i ${existingClass || ""}`.trim()}
-    >
-      {domToReact(domNode.children, options)}
-    </a>
-  );
-}
-// ==========================================
-      // ADD THIS — DYNAMIC BLOG ANCHOR TAGS
-      // ==
-/* =====================================================
+        return (
+          <a
+            {...restAttribs}
+            className={`u-i ${existingClass || ""}`.trim()}
+          >
+            {domToReact(domNode.children, options)}
+          </a>
+        );
+      }
+
+      /* =====================================================
          TABLES → WRAP IN .table-responsive + ADD CLASSES
       ===================================================== */
 
@@ -241,73 +230,74 @@ function SafeHTML({ html, tocList, handleTocClick }) {
         );
       }
 
-    /* =====================================================
-   IMAGES
-===================================================== */
+      /* =====================================================
+         IMAGES
+      ===================================================== */
 
-if (
-  domNode.type === "tag" &&
-  domNode.name === "img"
-) {
-  const attribs = domNode.attribs || {};
-  const src = getImageUrl(attribs.src || "");
+      if (
+        domNode.type === "tag" &&
+        domNode.name === "img"
+      ) {
+        const attribs = domNode.attribs || {};
+        const src = getImageUrl(attribs.src || "");
 
-  if (!src) {
-    return null;
-  }
+        if (!src) {
+          return null;
+        }
 
-  const alt =
-    attribs.alt?.trim() ||
-    attribs.title?.trim() ||
-    "Blog image";
+        const alt =
+          attribs.alt?.trim() ||
+          attribs.title?.trim() ||
+          "Blog image";
 
-  const width = Number(attribs.width);
-  const height = Number(attribs.height);
+        const width = Number(attribs.width);
+        const height = Number(attribs.height);
 
-  // Images WITH real dimensions from the CMS
-  // → target width = the image's own natural width,
-  //   shrinks only if the container is smaller than that.
-  if (width > 0 && height > 0) {
-    return (
-      <Image
-        src={src}
-        alt={alt}
-        width={width}
-        height={height}
-        quality={90}
-        sizes="(max-width: 991px) 100vw, 88.666vw"
-        style={{
-          width: `${width}px`,
-          maxWidth: "100%",
-          height: "auto",
-          display: "block",
-          margin: "30px 0",
-        }}
-      />
-    );
-  }
+        // Images WITH real dimensions from the CMS
+        // → target width = the image's own natural width,
+        //   shrinks only if the container is smaller than that.
+        if (width > 0 && height > 0) {
+          return (
+            <Image
+              src={src}
+              alt={alt}
+              width={width}
+              height={height}
+              quality={90}
+              sizes="(max-width: 991px) 100vw, 88.666vw"
+              style={{
+                width: `${width}px`,
+                maxWidth: "100%",
+                height: "auto",
+                display: "block",
+                margin: "30px 0",
+              }}
+            />
+          );
+        }
 
-  // Images WITHOUT dimensions from the CMS
-  // → no real target size to use, so fetch a reasonable
-  //   resolution and let it fill the column responsively.
-  return (
-    <Image
-      src={src}
-      alt={alt}
-      width={1200}
-      height={800}
-      quality={90}
-      sizes="(max-width: 991px) 100vw, 88.666vw"
-      style={{
-        width: "auto",
-        maxWidth: "100%",
-        height: "auto",
-        display: "block",
-        margin: "30px 0",
-      }}
-    />
-  );
-}
+        // Images WITHOUT dimensions from the CMS
+        // → no real target size to use, so fetch a reasonable
+        //   resolution and let it fill the column responsively.
+        return (
+          <Image
+            src={src}
+            alt={alt}
+            width={1200}
+            height={800}
+            quality={90}
+            sizes="(max-width: 991px) 100vw, 88.666vw"
+            style={{
+              width: "auto",
+              maxWidth: "100%",
+              height: "auto",
+              display: "block",
+              margin: "30px 0",
+            }}
+          />
+        );
+      }
+
       /* =====================================================
          PARAGRAPH + TOC
       ===================================================== */
@@ -322,68 +312,10 @@ if (
                 {domToReact(domNode.children, options)}
               </p>
 
-              {/* <div
-                className="toc-wrapper mb-5 p-4"
-                style={{
-                  backgroundColor: "#f8f9fa",
-                  borderRadius: "8px",
-                  borderLeft: "4px solid #c22221",
-                  marginTop: "2rem",
-                }}
-              >
-                <h2
-                  style={{
-                    fontSize: "20px",
-                    fontWeight: 600,
-                    marginBottom: "15px",
-                  }}
-                >
-                  Table of Contents
-                </h2>
-
-                <ul
-                  style={{
-                    listStyleType: "none",
-                    paddingLeft: 0,
-                    margin: 0,
-                  }}
-                >
-                  {tocList.map((toc) => (
-                    <li
-                      key={toc.slug}
-                      style={{
-                        marginBottom: "10px",
-                      }}
-                    >
-                      <a
-                        href={`#${toc.slug}`}
-                        onClick={(e) =>
-                          handleTocClick?.(e, toc.slug)
-                        }
-                        style={{
-                          color: "#333",
-                          textDecoration: "none",
-                          fontSize: "16px",
-                          display: "flex",
-                          alignItems: "flex-start",
-                        }}
-                      >
-                        <i
-                          className="bi bi-chevron-right"
-                          style={{
-                            fontSize: "12px",
-                            marginTop: "4px",
-                            marginRight: "8px",
-                            color: "#c22221",
-                          }}
-                        />
-
-                        {toc.text}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div> */}
+              <TocList
+                tocList={tocList}
+                handleTocClick={handleTocClick}
+              />
             </>
           );
         }
@@ -394,6 +326,378 @@ if (
   };
  const parsed = parse(html || "", options);
   return <div>{parsed}</div>;
+}
+
+/* =========================================================
+   TABLE OF CONTENTS (collapsible with blur teaser)
+========================================================= */
+
+function TocList({ tocList, handleTocClick }) {
+  const [expanded, setExpanded] = useState(false);
+
+  if (!Array.isArray(tocList) || tocList.length === 0) {
+    return null;
+  }
+
+  const INITIAL_COUNT = 3;
+  const hasMore = tocList.length > INITIAL_COUNT;
+  const visibleList = tocList.slice(0, INITIAL_COUNT);
+  const hiddenList = hasMore ? tocList.slice(INITIAL_COUNT) : [];
+
+  const renderItem = (toc) => (
+    <li key={toc.slug} className="toc-item">
+      <a
+        href={`#${toc.slug}`}
+        onClick={(e) => handleTocClick?.(e, toc.slug)}
+        className="toc-link"
+      >
+        <i className="bi bi-chevron-right toc-chevron" />
+        {toc.text}
+      </a>
+    </li>
+  );
+
+  return (
+    <div className="toc-wrapper mb-5 p-4">
+      <h2 className="toc-title">Table of Contents</h2>
+
+      <ul className="toc-list">
+        {visibleList.map(renderItem)}
+      </ul>
+
+      {hasMore && (
+        <div
+          className={`toc-collapsible ${
+            expanded ? "toc-collapsible--open" : ""
+          }`}
+        >
+          <ul className="toc-list toc-list--hidden">
+            {hiddenList.map(renderItem)}
+          </ul>
+
+          {!expanded && <div className="toc-fade-overlay" />}
+        </div>
+      )}
+
+      {hasMore && (
+        <button
+          type="button"
+          className="toc-toggle-btn"
+          onClick={() => setExpanded((e) => !e)}
+        >
+          {expanded ? (
+            <>
+              Show less <i className="bi bi-chevron-up" />
+            </>
+          ) : (
+            <>
+              Show all ({tocList.length}) <i className="bi bi-chevron-down" />
+            </>
+          )}
+        </button>
+      )}
+
+      <style jsx global>{`
+        .toc-wrapper {
+          background-color: #f8f9fa;
+          border-radius: 8px;
+          border-left: 2px solid #301b54;
+          margin-top: 2rem;
+        }
+
+        .toc-title {
+          font-size: 20px;
+          font-weight: 600;
+          margin-bottom: 15px;
+        }
+
+        .toc-list {
+          list-style-type: none;
+          padding-left: 0;
+          margin: 0 !important;
+        }
+
+        .toc-item {
+          margin-bottom: 10px;
+        }
+.toc-item a{
+color: #301b54 !important;
+    font-size: 15px !important;
+}
+        .toc-link {
+          color: #333;
+          text-decoration: none;
+          font-size: 16px;
+          display: flex;
+          align-items: flex-start;
+          transition: color 0.15s ease;
+        }
+
+        .toc-link:hover {
+          color: #c22221 !important;
+        }
+
+        .toc-chevron {
+          font-size: 12px;
+          margin-top: 4px;
+          margin-right: 8px;
+          color: #301b54;
+          flex-shrink: 0;
+        }
+
+        .toc-collapsible {
+          position: relative;
+          max-height: 500px;
+          overflow: hidden;
+          transition: max-height 0.35s ease;
+        }
+
+        .toc-collapsible:not(.toc-collapsible--open) {
+          max-height: 90px;
+        }
+
+        .toc-list--hidden {
+          margin-top: 10px;
+        }
+
+        .toc-collapsible:not(.toc-collapsible--open) .toc-list--hidden {
+          filter: blur(3px);
+          user-select: none;
+          pointer-events: none;
+        }
+
+        .toc-fade-overlay {
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          height: 60px;
+          background: linear-gradient(
+            to bottom,
+            rgba(248, 249, 250, 0) 0%,
+            rgba(248, 249, 250, 0.95) 80%
+          );
+          pointer-events: none;
+        }
+
+        .toc-toggle-btn {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          margin-top: 14px;
+          padding: 0;
+          border: none;
+          background: transparent;
+          color: #1b1848;
+          font-size: 14px;
+          font-weight: 600;
+          cursor: pointer;
+        }
+
+        .toc-toggle-btn:hover {
+          text-decoration: underline;
+        }
+      `}</style>
+    </div>
+  );
+}
+
+/* =========================================================
+   FAQ ACCORDION (Bootstrap + custom styling)
+========================================================= */
+
+function FaqAccordion({ faqs, articleSlug }) {
+  if (!Array.isArray(faqs) || faqs.length === 0) {
+    return null;
+  }
+
+  const accordionId = `faq-accordion-${articleSlug}`;
+
+  return (
+    <div className="faq-accordion-wrapper mt-5 mb-5">
+      <h2 className="faq-accordion-title mb-4">
+        Frequently Asked Questions
+      </h2>
+
+      <div className="faq-accordion accordion" id={accordionId}>
+        {faqs.map((faq, index) => {
+          const faqId = faq._id || index;
+          const headingId = `faq-heading-${faqId}`;
+          const collapseId = `faq-collapse-${faqId}`;
+          const isFirst = index === 0;
+
+          return (
+            <div className="faq-accordion-item accordion-item" key={faqId}>
+              <h3 className="accordion-header" id={headingId}>
+                <button
+                  className={`faq-accordion-button accordion-button ${
+                    isFirst ? "" : "collapsed"
+                  }`}
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target={`#${collapseId}`}
+                  aria-expanded={isFirst ? "true" : "false"}
+                  aria-controls={collapseId}
+                >
+                  <span className="faq-question-text">
+                    {faq.question}
+                  </span>
+
+                  <span className="faq-icon" aria-hidden="true">
+                    <span className="faq-icon-line faq-icon-line--h" />
+                    <span className="faq-icon-line faq-icon-line--v" />
+                  </span>
+                </button>
+              </h3>
+
+              <div
+                id={collapseId}
+                className={`accordion-collapse collapse ${
+                  isFirst ? "show" : ""
+                }`}
+                aria-labelledby={headingId}
+                data-bs-parent={`#${accordionId}`}
+              >
+                <div className="faq-accordion-body accordion-body">
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: faq.answer || "",
+                    }}
+                  />
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
+      <style jsx>{`
+        .faq-accordion-title {
+          font-size: 26px;
+          font-weight: 700;
+          color: #1a1a1a;
+          position: relative;
+          padding-left: 16px;
+        }
+
+        .faq-accordion-title::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 4px;
+          bottom: 4px;
+          width: 4px;
+          background: #c22221;
+          border-radius: 2px;
+        }
+
+        .faq-accordion-item {
+          border: 1px solid #e9e9ec;
+          border-radius: 10px !important;
+          margin-bottom: 14px;
+          overflow: hidden;
+          transition: box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+
+        .faq-accordion-item:hover {
+          border-color: #d8d8dc;
+          box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+        }
+
+        .faq-accordion-item h3 {
+          margin-bottom: 0px;
+        }
+
+        .faq-accordion-button {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 16px;
+          width: 100%;
+          padding: 18px 22px;
+          font-size: 16px;
+          font-weight: 600;
+          color: #1a1a1a;
+          background: #ffffff;
+          border: none;
+          text-align: left;
+          box-shadow: none !important;
+        }
+
+        .faq-accordion-button:not(.collapsed) {
+          color: #c22221;
+          background: #fdf5f5;
+        }
+
+        .faq-accordion-button::after {
+          display: none !important;
+        }
+
+        .faq-question-text {
+          flex: 1;
+        }
+
+        .faq-icon {
+          position: relative;
+          flex-shrink: 0;
+          width: 22px;
+          height: 22px;
+          border-radius: 50%;
+          background: #f1f1f3;
+        }
+
+        .faq-accordion-button:not(.collapsed) .faq-icon {
+          background: #c22221;
+        }
+
+        .faq-icon-line {
+          position: absolute;
+          background: #6b6b6b;
+          border-radius: 2px;
+          transition: transform 0.25s ease, background 0.25s ease;
+        }
+
+        .faq-accordion-button:not(.collapsed) .faq-icon-line {
+          background: #ffffff;
+        }
+
+        .faq-icon-line--h {
+          top: 50%;
+          left: 50%;
+          width: 10px;
+          height: 2px;
+          transform: translate(-50%, -50%);
+        }
+
+        .faq-icon-line--v {
+          top: 50%;
+          left: 50%;
+          width: 2px;
+          height: 10px;
+          transform: translate(-50%, -50%);
+        }
+
+        .faq-accordion-button:not(.collapsed) .faq-icon-line--v {
+          transform: translate(-50%, -50%) rotate(90deg) scaleY(0);
+        }
+
+        .faq-accordion-body {
+          padding: 4px 22px 20px 22px;
+          font-size: 15px;
+          line-height: 1.7;
+          color: #4a4a4a;
+        }
+
+        .faq-accordion-body :global(p) {
+          margin-bottom: 10px;
+        }
+
+        .faq-accordion-body :global(p:last-child) {
+          margin-bottom: 0;
+        }
+      `}</style>
+    </div>
+  );
 }
 
 /* =========================================================
@@ -769,6 +1073,11 @@ function Post({
                             handleTocClick={
                               handleTocClick
                             }
+                          />
+
+                          <FaqAccordion
+                            faqs={item.faqs}
+                            articleSlug={item.title_slug}
                           />
                         </div>
 
@@ -1280,7 +1589,7 @@ export async function getStaticProps({
       title_slug: extractStr(
         b.slug || b.title_slug
       ),
-
+      faqs: Array.isArray(b.faqs) ? b.faqs : [],
       description: extractStr(
         b.content || b.description
       ),
