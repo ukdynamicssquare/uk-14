@@ -36,7 +36,8 @@ function formatDate(date) {
   });
 }
 
-import { BlogService, BACKEND_URL } from "../../../helpers/blogApi";
+import { BlogService } from "../../../helpers/blogApi";
+import { BACKEND_URL } from "../../../helpers/blogClient";
 
 export async function getStaticPaths() {
   try {

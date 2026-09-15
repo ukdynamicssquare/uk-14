@@ -13,7 +13,8 @@ import {
 
 import TimerModal from "../../components/TimerModal";
 import BlogSeo from "../../components/BlogSeo";
-import { BlogService, BACKEND_URL } from "../../helpers/blogApi";
+import { BlogService } from "../../helpers/blogApi";
+import { BACKEND_URL } from "../../helpers/blogClient";
 
 const AUTHOR_ABOUT_PREVIEW_LENGTH = 1000;
 

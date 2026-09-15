@@ -1,7 +1,13 @@
 
 const API_BASE_URL = process.env.MERN_API_URL || "https://blogdsukapi.onrender.com";
-const API_KEY = process.env.MERN_API_KEY || "asdlsm2423kq0@ssdo53403asdalm!@1434354";
- 
+const API_KEY = process.env.MERN_API_KEY;
+
+if (!API_KEY && typeof window === "undefined") {
+  console.error(
+    "MERN_API_KEY is not set. Blog API requests will be rejected by the upstream server."
+  );
+}
+
 export const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "https://blogdsukapi.onrender.com"; 
 export async function fetchBlogApi(endpoint) {
   try {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { BlogService, BACKEND_URL } from "../helpers/blogApi";
+import { BlogClient, BACKEND_URL } from "../helpers/blogClient";
 
 const BlogFinanaceCard = ({ categorySlug }) => {
   const [blogPosts, setBlogPosts] = useState([]);
@@ -45,9 +45,9 @@ const BlogFinanaceCard = ({ categorySlug }) => {
         let data;
 
         if (categorySlug === "all") {
-          data = await BlogService.getBlogs(1000);
+          data = await BlogClient.getBlogs(1000);
         } else {
-          data = await BlogService.getBlogsByCategory(
+          data = await BlogClient.getBlogsByCategory(
             categorySlug,
             1000
           );

@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { BlogService, BACKEND_URL } from "../helpers/blogApi";
+import { BlogClient, BACKEND_URL } from "../helpers/blogClient";
 
 const Blog = ({ category }) => {
   const [blogPosts, setBlogPosts] = useState([]);
@@ -112,7 +112,7 @@ const Blog = ({ category }) => {
           );
 
           const categoryData =
-            await BlogService.getBlogsByCategory(
+            await BlogClient.getBlogsByCategory(
               category,
               3
             );
@@ -135,7 +135,7 @@ const Blog = ({ category }) => {
             );
 
             const latestData =
-              await BlogService.getBlogs(3);
+              await BlogClient.getBlogs(3);
 
             posts = extractPosts(latestData);
 
@@ -157,7 +157,7 @@ const Blog = ({ category }) => {
           );
 
           const latestData =
-            await BlogService.getBlogs(3);
+            await BlogClient.getBlogs(3);
 
           posts = extractPosts(latestData);
         }

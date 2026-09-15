@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { BACKEND_URL } from "../helpers/blogApi";
+import { BACKEND_URL } from "../helpers/blogClient";
 
 const BlogSeo = ({
   meta_title,

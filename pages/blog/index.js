@@ -5,7 +5,8 @@ import Pagination from "../../components/Pagination";
 import { paginate } from "../../helpers/paginate";
 import TimerModal from "../../components/TimerModal";
 
-import { BlogService, BACKEND_URL } from "../../helpers/blogApi";
+import { BlogService } from "../../helpers/blogApi";
+import { BACKEND_URL } from "../../helpers/blogClient";
 
 export async function getStaticProps() {
   try {

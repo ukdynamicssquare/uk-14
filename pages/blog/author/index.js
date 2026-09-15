@@ -1,6 +1,7 @@
 import Head from "next/head";
 import TimerModal from "../../../components/TimerModal";
-import { BlogService, BACKEND_URL } from "../../../helpers/blogApi";
+import { BlogService } from "../../../helpers/blogApi";
+import { BACKEND_URL } from "../../../helpers/blogClient";
 import Link from "next/link";
 const SITE_URL = "https://www.dynamicsstream.co.uk"; const PAGE_URL = `${SITE_URL}/blog/author/`;
 export async function getStaticProps() {
