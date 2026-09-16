@@ -20,7 +20,7 @@ export async function getStaticProps() {
       BlogService.getLatestBlog(),
       BlogService.getBlogsByCategory("business-central"),
       BlogService.getCategories(),
-      BlogService.getBlogs(),
+      BlogService.getAllBlogs(),
       BlogService.getTrendingBlogs(),
     ]);
 

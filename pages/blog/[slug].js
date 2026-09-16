@@ -1524,14 +1524,14 @@ export async function getStaticPaths() {
   // of silently pre-rendering zero blog posts (which would ship a site with
   // every blog URL 404-ing). See helpers/blogApi.js for the error/not-found
   // distinction.
-  const allBlogsRaw = await BlogService.getBlogs();
+  const allBlogsRaw = await BlogService.getAllBlogs();
 
-  // BlogService.getBlogs() actually resolves to { blogs: [...], pagination }
-  // (see helpers/blogApi.js) — it does NOT wrap results under `.data`. That
-  // mismatch used to make this silently resolve to an empty array, so ZERO
-  // blog posts were ever pre-rendered at build time and none showed up in
-  // the sitemap even though the posts existed and rendered fine on-demand
-  // via the `fallback: "blocking"` path.
+  // BlogService.getAllBlogs() resolves to { blogs: [...] }, walking every
+  // page since the upstream API caps a single request at 100 blogs (see
+  // helpers/blogApi.js). Using getBlogs() here used to pre-render only the
+  // first 100 blog posts at build time, so every blog past #100 never
+  // appeared in the sitemap even though it rendered fine on-demand via the
+  // `fallback: "blocking"` path.
   const allBlogs = Array.isArray(allBlogsRaw)
     ? allBlogsRaw
     : allBlogsRaw?.blogs || allBlogsRaw?.data || [];

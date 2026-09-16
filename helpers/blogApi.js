@@ -45,10 +45,31 @@ export async function fetchBlogApi(endpoint) {
 }
  
 export const BlogService = {
-  // Fetch paginated published blogs 
-  async getBlogs(limit = 1000) {
-    const data = await fetchBlogApi(`/api/public/blogs?limit=${limit}`);
+  // Fetch one page of published blogs. NOTE: the upstream API silently caps
+  // `limit` at 100 per page no matter what's requested here — asking for
+  // limit=1000 still only returns 100 blogs plus a `pagination` object
+  // (page/limit/totalPages/totalBlogs). Use getAllBlogs() below when every
+  // blog is needed (sitemap, getStaticPaths, blog listing), not this method.
+  async getBlogs(limit = 1000, page = 1) {
+    const data = await fetchBlogApi(`/api/public/blogs?limit=${limit}&page=${page}`);
     return data || [];
+  },
+
+  // Walk every page and return the full blog list. Needed anywhere "all
+  // blogs" is required, since getBlogs() only ever returns the first 100
+  // (see note above).
+  async getAllBlogs() {
+    const first = await this.getBlogs(100, 1);
+    const blogs = Array.isArray(first) ? [...first] : Array.isArray(first?.blogs) ? [...first.blogs] : [];
+    const totalPages = first?.pagination?.totalPages || 1;
+
+    for (let page = 2; page <= totalPages; page++) {
+      const next = await this.getBlogs(100, page);
+      const nextBlogs = Array.isArray(next) ? next : Array.isArray(next?.blogs) ? next.blogs : [];
+      blogs.push(...nextBlogs);
+    }
+
+    return { blogs };
   },
 
   // Fetch a single blog by its URL slug

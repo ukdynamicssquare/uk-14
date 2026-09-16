@@ -89,19 +89,33 @@ async function getBlogNoindexExcludes() {
   const apiBaseUrl = process.env.MERN_API_URL || 'https://blogdsukapi.onrender.com';
   const apiKey = process.env.MERN_API_KEY;
 
-  const response = await fetch(`${apiBaseUrl}/api/public/blogs?limit=5000`, {
-    headers: {
-      'x-api-key': apiKey,
-      'Content-Type': 'application/json',
-    },
-  });
+  // The API silently caps `limit` at 100 per page no matter what's
+  // requested, returning a `pagination` object alongside the page of
+  // results. A single request (even with limit=5000) only ever sees the
+  // first 100 blogs, so this walks every page to check rank on all of them.
+  const blogs = [];
+  let page = 1;
+  let totalPages = 1;
 
-  if (!response.ok) {
-    throw new Error(`Blog API HTTP ${response.status} while building sitemap excludes`);
-  }
+  do {
+    const response = await fetch(`${apiBaseUrl}/api/public/blogs?limit=100&page=${page}`, {
+      headers: {
+        'x-api-key': apiKey,
+        'Content-Type': 'application/json',
+      },
+    });
 
-  const data = await response.json();
-  const blogs = Array.isArray(data) ? data : data?.data || data?.blogs || [];
+    if (!response.ok) {
+      throw new Error(`Blog API HTTP ${response.status} while building sitemap excludes`);
+    }
+
+    const data = await response.json();
+    const pageBlogs = Array.isArray(data) ? data : data?.data || data?.blogs || [];
+    blogs.push(...pageBlogs);
+
+    totalPages = data?.pagination?.totalPages || 1;
+    page += 1;
+  } while (page <= totalPages);
 
   return blogs
     .filter((b) => b?.rank === 1)
