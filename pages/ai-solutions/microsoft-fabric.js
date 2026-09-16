@@ -51,7 +51,7 @@ const Fabric = () => {
           <div className='row justify-content-center'>
             <div className='col-lg-8'>
               <div className='solution-new-banner-one-content'>
-                <h1>Microsoft Fabric Partner in the UK</h1>
+                <h1>Microsoft Fabric Partner</h1>
                 <span className='large-heading'>Tired of disparate data scattered across systems?</span>
                 <p>Time to turn to Microsoft Fabric. Dynamics Square helps UK businesses use Microsoft Fabric to bring their data together, so you can make sense of it, get clearer insights, and make better business decisions.</p>
                 <div className="text-center">
