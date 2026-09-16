@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "question": "What does a Microsoft Fabric partner do?",
+    "answer": "<p>A Microsoft Fabric partner helps a business plan, implement, integrate, and support Microsoft Fabric, covering everything from initial assessment and workspace setup to connecting Fabric with existing systems and training internal teams.</p>"
+  },
+  {
+    "id": 2,
+    "question": "What is a Microsoft Fabric implementation partner?",
+    "answer": "<p>A <strong>Microsoft Fabric implementation partner</strong> is a certified Microsoft partner that configures Fabric workloads, sets up OneLake, builds data pipelines, and connects Fabric to a business's existing systems, managing the full rollout from design through go-live.</p>"
+  },
+  {
+    "id": 3,
+    "question": "Why choose Dynamics Square for Microsoft Fabric consulting in the UK?",
+    "answer": "<p>Dynamics Square is a Microsoft Gold Certified Solutions Partner with direct experience across Dynamics 365, Business Central, Power Platform, and Azure. That ecosystem knowledge means Fabric implementations are built around how a business already uses its Microsoft systems, not designed in isolation.</p>"
+  },
+  {
+    "id": 4,
+    "question": "What do Microsoft Fabric integration services include?",
+    "answer": "<p>Integration services connect Fabric to a business's existing systems, such as Dynamics 365, Business Central, or third-party applications, so data flows into OneLake automatically.</p>"
+  },
+  {
+    "id": 5,
+    "question": "What does Microsoft Fabric migration involve?",
+    "answer": "<p>Migration moves data and reporting from legacy BI tools, on-premises warehouses, or fragmented systems into Microsoft Fabric, including data mapping, pipeline setup, and validation against existing reports before cutover.</p>"
+  },
+  {
+    "id": 6,
+    "question": "Can Microsoft Fabric connect with Business Central?",
+    "answer": "<p>Yes, Fabric connects to Business Central data through OneLake, allowing finance and operations teams to build consolidated reporting across multiple companies, combine ERP data with other business data, and use Copilot in Fabric for AI-assisted analysis.</p>"
+  },
+  {
+    "id": 7,
+    "question": "How does Microsoft Fabric work with Dynamics 365?",
+    "answer": "<p>Fabric brings Dynamics 365 data into OneLake, where it can be combined with data from other systems and analysed using Fabric's Data Warehouse, Data Engineering, and Power BI workloads, giving teams one governed reporting layer above the CRM or ERP itself.</p>"
+  },
+  {
+    "id": 8,
+    "question": "What is Microsoft Fabric Data Warehouse used for?",
+    "answer": "<p>Fabric Data Warehouse provides SQL-based analytics with compute and storage scaled independently, storing data in the open Delta Lake format, and is typically used for structured reporting and business intelligence at scale.</p>"
+  },
+  {
+    "id": 9,
+    "question": "What does Microsoft Fabric Data Engineering do?",
+    "answer": "<p>Fabric Data Engineering runs on Apache Spark and provides the notebooks, pipelines, and scheduling tools needed to transform raw data from multiple sources into clean, analysis-ready datasets.</p>"
+  },
+  {
+    "id": 10,
+    "question": "What AI capabilities does Microsoft Fabric include?",
+    "answer": "<p>Microsoft Fabric includes Copilot, which assists with authoring queries and pipelines, generating summaries, and accelerating data preparation and analysis directly within Fabric workloads.</p>"
+  },
+  {
+    "id": 11,
+    "question": "How much does Microsoft Fabric cost?",
+    "answer": "<p>Microsoft Fabric is priced through capacity-based licensing via Azure, where a business selects a capacity size that powers all Fabric workloads. Actual cost depends on data volume, user count, and workload usage, so Dynamics Square provides a tailored estimate based on business requirements.</p>"
+  },
+  {
+    "id": 12,
+    "question": "How can Dynamics Square help with Microsoft Fabric?",
+    "answer": "<p>Dynamics Square helps with every stage of a Microsoft Fabric rollout, including consulting, implementation, integration with Dynamics 365 and Business Central, data migration, and ongoing support, backed by Microsoft Gold Certified Partner status.</p>"
+  }
+]

@@ -46,6 +46,8 @@ const HeaderWork = () => {
         "/industries/dynamics-365-for-education": `${gname}`,
          "/products/microsoft-dynamics-365-field-service": `${gname}`,
          "/products/microsoft-dynamics-365-customer-service": `${gname}`,
+          "/ai-solutions": `${gname}`,
+           "/ai-solutions/microsoft-fabric": `${gname}`,
     "/book-a-demo": `${gname}`,
   };
   // const hide = ["/contact-us", "/thank-you"];
