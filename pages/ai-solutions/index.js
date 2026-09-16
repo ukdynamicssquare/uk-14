@@ -5,19 +5,23 @@ const Index = () => {
     return (
         <>
             <Head>
-                <title>AI Solutions for Business | AI Consulting Services</title>
-                  <link
-        rel="canonical"
-        href="https://www.dynamicssquare.co.uk/ai-solutions/"
-    />   
+                <title>
+                    Microsoft Dynamics 365 AI Business Solutions | AI Consulting
+                </title>
+
+                <link
+                    rel="canonical"
+                    href="https://www.dynamicssquare.co.uk/ai-solutions/"
+                />
+
                 <meta
                     name="description"
-                    content="Explore AI solutions and consulting services designed to help businesses automate processes, improve decision-making, and unlock new opportunities."
+                    content="Discover Microsoft Dynamics 365 AI business solutions designed to automate processes, improve productivity, analyse business data, and support smarter decision-making."
                 />
 
                 <meta
                     name="keywords"
-                    content="AI solutions, AI consulting, artificial intelligence services, business AI solutions"
+                    content="Microsoft Dynamics 365 AI business solutions, Dynamics 365 AI solutions, Dynamics 365 Copilot, Microsoft AI solutions, AI business solutions, Dynamics 365 AI consulting, AI automation"
                 />
             </Head>
 
@@ -33,18 +37,18 @@ const Index = () => {
 
                                     <span className="ai-eyebrow">
                                         <i className="bi bi-stars"></i>
-                                        &nbsp;AI Solutions
+                                        &nbsp;Microsoft Dynamics 365 AI Solutions
                                     </span>
 
                                     <h1>
-                                        AI Solutions for Smarter Business
+                                        Microsoft Dynamics 365 AI Business Solutions
                                     </h1>
 
                                     <p>
-                                        Transform the way your business works with
-                                        practical AI solutions designed to automate
-                                        processes, uncover insights, and support
-                                        better decision-making.
+                                        Transform your business with Microsoft Dynamics 365 AI
+                                        business solutions designed to automate processes,
+                                        improve productivity, unlock valuable business insights,
+                                        and support smarter decision-making.
                                     </p>
 
                                     <div className="mt-4">
@@ -54,7 +58,7 @@ const Index = () => {
                                             className="btn-get-started"
                                         >
                                             <span>
-                                                Get Started
+                                                Explore AI Solutions
                                                 &nbsp;
                                                 <i className="bi bi-arrow-right"></i>
                                             </span>
@@ -68,7 +72,7 @@ const Index = () => {
                                 <div className="ai-solutions-banner-img">
                                     <img
                                         src="/img/AI-Banner.png"
-                                        alt="AI Solutions"
+                                        alt="Microsoft Dynamics 365 AI Business Solutions"
                                     />
                                 </div>
                             </div>
@@ -88,17 +92,23 @@ const Index = () => {
                                 <div className="solution-new-banner-sub-head text-center">
 
                                     <h2>
-                                        AI Solutions Built Around Your Business
+                                        AI-Powered Business Solutions with Microsoft Dynamics 365
                                     </h2>
 
                                     <p>
-                                        AI can help businesses simplify repetitive
-                                        work, make sense of large volumes of data,
-                                        and give teams faster access to useful
-                                        information. Our AI solutions focus on
-                                        practical business applications that can
-                                        integrate with your existing systems and
-                                        processes.
+                                        Microsoft Dynamics 365 AI business solutions help
+                                        organisations bring intelligence into everyday business
+                                        operations. By combining Dynamics 365 applications with
+                                        AI capabilities, businesses can automate repetitive work,
+                                        understand customer and operational data, improve
+                                        productivity, and make more informed decisions.
+                                    </p>
+
+                                    <p>
+                                        From Dynamics 365 Copilot and AI-powered automation to
+                                        intelligent analytics and connected business workflows,
+                                        our solutions are designed to work with your existing
+                                        Microsoft business applications and processes.
                                     </p>
 
                                 </div>
@@ -120,17 +130,17 @@ const Index = () => {
                                 <div className="solution-new-banner-sub-head text-center">
 
                                     <span className="ai-eyebrow ai-eyebrow-center">
-                                        Our Solutions
+                                        Our AI Solutions
                                     </span>
 
                                     <h2>
-                                        Our AI Solutions
+                                        Microsoft Dynamics 365 AI Business Solutions
                                     </h2>
 
                                     <p>
-                                        From intelligent automation to AI-powered
-                                        analytics, explore solutions that can
-                                        support different areas of your business.
+                                        Explore AI-powered solutions that can help your business
+                                        automate workflows, improve productivity, analyse data,
+                                        and get more value from Microsoft Dynamics 365.
                                     </p>
 
                                 </div>
@@ -148,17 +158,19 @@ const Index = () => {
                                     <div className="ai-service-icon">
                                         <img
                                             src="/img/icons-azure_machine-learning.svg"
-                                            alt=""
+                                            alt="Microsoft AI consulting"
                                         />
                                     </div>
 
-                                    <h3>AI Consulting</h3>
+                                    <h3>
+                                        Dynamics 365 AI Consulting
+                                    </h3>
 
                                     <p>
-                                        Identify practical opportunities for AI
-                                        across your business and develop a clear
-                                        strategy based on your existing systems,
-                                        processes, and objectives.
+                                        Identify practical AI opportunities across your
+                                        organisation and create a clear strategy for using
+                                        Microsoft Dynamics 365 AI capabilities to support your
+                                        business goals, processes, and technology environment.
                                     </p>
 
                                 </div>
@@ -172,17 +184,19 @@ const Index = () => {
                                     <div className="ai-service-icon">
                                         <img
                                             src="/img/automated_workflows.png"
-                                            alt=""
+                                            alt="Dynamics 365 AI automation"
                                         />
                                     </div>
 
-                                    <h3>AI Automation</h3>
+                                    <h3>
+                                        Dynamics 365 AI Automation
+                                    </h3>
 
                                     <p>
-                                        Reduce repetitive manual tasks by using
-                                        intelligent automation to streamline
-                                        workflows and help teams spend more time
-                                        on higher-value activities.
+                                        Automate repetitive business processes with AI and
+                                        Microsoft Power Platform capabilities. Connect Dynamics
+                                        365 workflows and business data to reduce manual work
+                                        and improve operational efficiency.
                                     </p>
 
                                 </div>
@@ -196,17 +210,19 @@ const Index = () => {
                                     <div className="ai-service-icon">
                                         <img
                                             src="/img/reporting-and-analytics.png"
-                                            alt=""
+                                            alt="Dynamics 365 AI analytics"
                                         />
                                     </div>
 
-                                    <h3>AI-Powered Analytics</h3>
+                                    <h3>
+                                        Dynamics 365 AI Analytics
+                                    </h3>
 
                                     <p>
-                                        Turn business data into useful insights
-                                        with AI-assisted analysis, helping teams
-                                        identify patterns and make informed
-                                        decisions.
+                                        Turn Dynamics 365 and business data into useful insights
+                                        with AI-powered analytics. Identify trends, understand
+                                        business performance, and support data-driven
+                                        decision-making across your organisation.
                                     </p>
 
                                 </div>
@@ -220,17 +236,19 @@ const Index = () => {
                                     <div className="ai-service-icon">
                                         <img
                                             src="/img/icons-power-apps_Enhancing-Capabilities.svg"
-                                            alt=""
+                                            alt="Dynamics 365 Copilot solutions"
                                         />
                                     </div>
 
-                                    <h3>Copilot Solutions</h3>
+                                    <h3>
+                                        Dynamics 365 Copilot Solutions
+                                    </h3>
 
                                     <p>
-                                        Give employees AI assistance within their
-                                        existing business environment to help
-                                        find information, generate content, and
-                                        complete everyday tasks.
+                                        Use Microsoft Dynamics 365 Copilot capabilities to give
+                                        employees AI assistance within their everyday business
+                                        applications. Help teams access information, generate
+                                        content, and complete routine tasks more efficiently.
                                     </p>
 
                                 </div>
@@ -244,16 +262,20 @@ const Index = () => {
                                     <div className="ai-service-icon">
                                         <img
                                             src="/img/seamless-integration.png"
-                                            alt=""
+                                            alt="Dynamics 365 AI integration"
                                         />
                                     </div>
 
-                                    <h3>AI Integration</h3>
+                                    <h3>
+                                        Dynamics 365 AI Integration
+                                    </h3>
 
                                     <p>
-                                        Connect AI capabilities with your existing
-                                        applications and business data to create
-                                        connected and intelligent workflows.
+                                        Connect Microsoft Dynamics 365 with AI services,
+                                        business applications, and data sources to create
+                                        connected workflows. Integrate AI into existing
+                                        processes without disrupting your wider technology
+                                        environment.
                                     </p>
 
                                 </div>
@@ -267,17 +289,19 @@ const Index = () => {
                                     <div className="ai-service-icon">
                                         <img
                                             src="/img/icons-power-automate_AI-Support.svg"
-                                            alt=""
+                                            alt="Dynamics 365 AI support and optimisation"
                                         />
                                     </div>
 
-                                    <h3>AI Support & Optimisation</h3>
+                                    <h3>
+                                        Dynamics 365 AI Support & Optimisation
+                                    </h3>
 
                                     <p>
-                                        Continue improving your AI environment
-                                        with ongoing support, optimisation, and
-                                        guidance as your business requirements
-                                        evolve.
+                                        Get ongoing support and optimisation for your Dynamics
+                                        365 AI environment. Continuously improve AI-enabled
+                                        workflows, integrations, automation, and business
+                                        processes as your requirements evolve.
                                     </p>
 
                                 </div>
@@ -300,51 +324,66 @@ const Index = () => {
                                 <div className="ai-business-content">
 
                                     <span className="ai-eyebrow">
-                                        Why AI
+                                        Why Dynamics 365 AI
                                     </span>
 
                                     <h2>
-                                        How AI Can Support Your Business
+                                        How Microsoft Dynamics 365 AI Can Support Your Business
                                     </h2>
 
                                     <p>
-                                        AI can be applied across different business
-                                        functions to help teams work with data,
-                                        automate routine activities, and access
-                                        information more efficiently.
+                                        Microsoft Dynamics 365 AI solutions can bring
+                                        intelligence and automation into different areas of
+                                        your business. By combining Dynamics 365 applications,
+                                        AI, automation, and business data, organisations can
+                                        improve everyday processes and give teams faster access
+                                        to relevant information.
                                     </p>
 
                                     <ul>
+
                                         <li>
-                                            <span className="ai-li-icon"><i className="bi bi-check-lg"></i></span>
-                                            Automate repetitive business processes
+                                            <span className="ai-li-icon">
+                                                <i className="bi bi-check-lg"></i>
+                                            </span>
+                                            Automate repetitive Dynamics 365 business processes
                                         </li>
 
                                         <li>
-                                            <span className="ai-li-icon"><i className="bi bi-check-lg"></i></span>
-                                            Improve access to business information
+                                            <span className="ai-li-icon">
+                                                <i className="bi bi-check-lg"></i>
+                                            </span>
+                                            Improve employee productivity with AI assistance
                                         </li>
 
                                         <li>
-                                            <span className="ai-li-icon"><i className="bi bi-check-lg"></i></span>
-                                            Analyse large volumes of business data
+                                            <span className="ai-li-icon">
+                                                <i className="bi bi-check-lg"></i>
+                                            </span>
+                                            Analyse Dynamics 365 and business data more efficiently
                                         </li>
 
                                         <li>
-                                            <span className="ai-li-icon"><i className="bi bi-check-lg"></i></span>
-                                            Support faster decision-making
+                                            <span className="ai-li-icon">
+                                                <i className="bi bi-check-lg"></i>
+                                            </span>
+                                            Support faster and more informed decision-making
                                         </li>
 
                                         <li>
-                                            <span className="ai-li-icon"><i className="bi bi-check-lg"></i></span>
-                                            Improve employee productivity
+                                            <span className="ai-li-icon">
+                                                <i className="bi bi-check-lg"></i>
+                                            </span>
+                                            Reduce manual tasks and improve workflow efficiency
                                         </li>
 
                                         <li>
-                                            <span className="ai-li-icon"><i className="bi bi-check-lg"></i></span>
-                                            Connect AI capabilities with existing
-                                            business applications
+                                            <span className="ai-li-icon">
+                                                <i className="bi bi-check-lg"></i>
+                                            </span>
+                                            Connect AI with Microsoft Dynamics 365 and Power Platform
                                         </li>
+
                                     </ul>
 
                                 </div>
@@ -357,7 +396,7 @@ const Index = () => {
                                 <div className="ai-business-image">
                                     <img
                                         src="/img/bc-copilote-side-pic.png"
-                                        alt="AI business solutions"
+                                        alt="Microsoft Dynamics 365 AI business solutions"
                                     />
                                 </div>
 
@@ -383,13 +422,14 @@ const Index = () => {
                                     </span>
 
                                     <h2>
-                                        Ready to Explore AI for Your Business?
+                                        Explore Microsoft Dynamics 365 AI Business Solutions
                                     </h2>
 
                                     <p>
-                                        Discover where AI can fit into your existing
-                                        business processes and technology
-                                        environment.
+                                        Discover how Microsoft Dynamics 365 AI, Copilot,
+                                        automation, analytics, and intelligent integrations
+                                        can support your business processes and help your teams
+                                        work more efficiently.
                                     </p>
 
                                     <div className="mt-4">
@@ -399,7 +439,7 @@ const Index = () => {
                                             className="btn-get-started"
                                         >
                                             <span>
-                                                Claim Your Free Consultation!
+                                                Get Your Free Consultation!
                                                 &nbsp;
                                                 <i className="bi bi-arrow-right"></i>
                                             </span>

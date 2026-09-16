@@ -186,14 +186,14 @@ const ProductsList = () => {
         <meta property="og:url" content={pageUrl} />
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/logo.png" />
+        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/business-new-banner.png" />
         <meta property="og:site_name" content="Dynamics Square" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content={pageUrl} />
         <meta property="twitter:title" content={pageTitle} />
         <meta property="twitter:description" content={pageDescription} />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/logo.png" />
+        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/business-new-banner.png" />
 
         <script
           type="application/ld+json"

@@ -20,24 +20,24 @@ const AiERP = () => {
   return (
     <>
       <Head>
-        <title>Microsoft Dynamics 365: AI-Powered ERP & CRM Solutions | Dynamics Square UK</title>
+        <title>Microsoft Dynamics 365: AI-Powered Solutions | Dynamics Square UK</title>
         <meta
           name="description"
           content="Transform your business with Microsoft Dynamics 365 ERP & CRM solutions. Dynamics Square UK delivers implementation, support, migration, AI & Copilot expertise."
         />
         <link
           rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-erp/"
+          href="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365/"
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-erp/" />
-        <meta property="og:title" content="Microsoft Dynamics 365: AI-Powered ERP & CRM Solutions | Dynamics Square UK" />
+        <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365/" />
+        <meta property="og:title" content="Microsoft Dynamics 365: AI-Powered Solutions | Dynamics Square UK" />
         <meta property="og:description" content="Transform your business with Microsoft Dynamics 365 ERP & CRM solutions. Dynamics Square UK delivers implementation, support, migration, AI & Copilot expertise." />
         <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/d360-banner.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-erp/" />
-        <meta property="twitter:title" content="Microsoft Dynamics 365: AI-Powered ERP & CRM Solutions | Dynamics Square UK" />
+        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365/" />
+        <meta property="twitter:title" content="Microsoft Dynamics 365: AI-Powered Solutions | Dynamics Square UK" />
         <meta property="twitter:description" content="Transform your business with Microsoft Dynamics 365 ERP & CRM solutions. Dynamics Square UK delivers implementation, support, migration, AI & Copilot expertise." />
         <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/d360-banner.png" />
 
