@@ -1647,6 +1647,34 @@ export async function getStaticProps({
     };
 
     /* =====================================================
+       STRIP BASE64 IMAGES FROM JSON-LD
+       CMS schema markup sometimes embeds a base64 data URI
+       in `image`, which can bloat the page payload by 100s
+       of KB. Swap it for the real (tiny) image URL instead.
+    ===================================================== */
+
+    const sanitizeSchemaJson = (jsonStr, fallbackImage) => {
+      if (typeof jsonStr !== "string") {
+        return jsonStr;
+      }
+
+      try {
+        const parsed = JSON.parse(jsonStr);
+
+        if (
+          typeof parsed?.image === "string" &&
+          parsed.image.startsWith("data:")
+        ) {
+          parsed.image = fallbackImage || "";
+        }
+
+        return JSON.stringify(parsed);
+      } catch (error) {
+        return jsonStr;
+      }
+    };
+
+    /* =====================================================
        NORMALIZE BLOG DATA
     ===================================================== */
 
@@ -1734,8 +1762,11 @@ export async function getStaticProps({
             ) {
               return b.schemaMarkup.map(
                 (schema) =>
-                  schema.json ||
-                  JSON.stringify(schema)
+                  sanitizeSchemaJson(
+                    schema.json ||
+                      JSON.stringify(schema),
+                    b.featuredImage?.url
+                  )
               );
             }
 
@@ -1754,12 +1785,15 @@ export async function getStaticProps({
                 parsed
               )
                 ? parsed.map((item) =>
-                  typeof item ===
-                    "string"
-                    ? item
-                    : JSON.stringify(
-                      item
-                    )
+                  sanitizeSchemaJson(
+                    typeof item ===
+                      "string"
+                      ? item
+                      : JSON.stringify(
+                        item
+                      ),
+                    b.featuredImage?.url
+                  )
                 )
                 : [];
             }
