@@ -1520,47 +1520,44 @@ function Post({
 ========================================================= */
 
 export async function getStaticPaths() {
-  try {
-    const allBlogsRaw =
-      await BlogService.getBlogs();
+  // Let a real API/network failure throw here so `next build` fails instead
+  // of silently pre-rendering zero blog posts (which would ship a site with
+  // every blog URL 404-ing). See helpers/blogApi.js for the error/not-found
+  // distinction.
+  const allBlogsRaw = await BlogService.getBlogs();
 
-    const allBlogs = Array.isArray(allBlogsRaw)
-      ? allBlogsRaw
-      : allBlogsRaw?.data || [];
+  // BlogService.getBlogs() actually resolves to { blogs: [...], pagination }
+  // (see helpers/blogApi.js) — it does NOT wrap results under `.data`. That
+  // mismatch used to make this silently resolve to an empty array, so ZERO
+  // blog posts were ever pre-rendered at build time and none showed up in
+  // the sitemap even though the posts existed and rendered fine on-demand
+  // via the `fallback: "blocking"` path.
+  const allBlogs = Array.isArray(allBlogsRaw)
+    ? allBlogsRaw
+    : allBlogsRaw?.blogs || allBlogsRaw?.data || [];
 
-    const paths = Array.isArray(allBlogs)
-      ? allBlogs
-        .map(
-          (b) =>
-            b.title_slug || b.slug
-        )
-        .filter(
-          (slug) =>
-            typeof slug === "string" &&
-            slug.trim() !== ""
-        )
-        .map((slug) => ({
-          params: {
-            slug,
-          },
-        }))
-      : [];
+  const paths = Array.isArray(allBlogs)
+    ? allBlogs
+      .map(
+        (b) =>
+          b.title_slug || b.slug
+      )
+      .filter(
+        (slug) =>
+          typeof slug === "string" &&
+          slug.trim() !== ""
+      )
+      .map((slug) => ({
+        params: {
+          slug,
+        },
+      }))
+    : [];
 
-    return {
-      paths,
-      fallback: "blocking",
-    };
-  } catch (error) {
-    console.error(
-      "Error fetching slugs:",
-      error
-    );
-
-    return {
-      paths: [],
-      fallback: "blocking",
-    };
-  }
+  return {
+    paths,
+    fallback: "blocking",
+  };
 }
 
 /* =========================================================
@@ -2176,10 +2173,13 @@ export async function getStaticProps({
       error
     );
 
-    return {
-      notFound: true,
-      revalidate: 60,
-    };
+    // Do NOT return notFound here — a genuine 404 already returned above.
+    // Reaching this catch means the API call itself failed (network error,
+    // 5xx, etc.) or the data-shaping logic broke. Rethrowing fails the build
+    // (so Vercel keeps the last good deployment) or, during ISR background
+    // revalidation, keeps serving the last successfully generated page
+    // instead of 404-ing a post that is actually still live.
+    throw error;
   }
 }
 

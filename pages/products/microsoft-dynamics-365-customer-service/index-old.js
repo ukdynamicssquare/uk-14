@@ -11,7 +11,7 @@ const CustomerService = () => {
   return (
     <>
       <Head>
-        What is Microsoft Dynamics Customer Service?
+    <meta name="robots" content="noindex, nofollow" />
         <title>Dynamics 365 Customer Service Partner UK | Dynamics Square</title>
         <meta
           name="description"

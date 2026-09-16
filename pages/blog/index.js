@@ -9,17 +9,21 @@ import { BlogService } from "../../helpers/blogApi";
 import { BACKEND_URL } from "../../helpers/blogClient";
 
 export async function getStaticProps() {
-  try {
-    const [blogsRaw, businesscentralRaw, categoryblogs, allBlogsRaw, blogtrandingRaw] =
-      await Promise.all([
-        BlogService.getLatestBlog(),
-        BlogService.getBlogsByCategory("business-central"),
-        BlogService.getCategories(),
-        BlogService.getBlogs(),
-        BlogService.getTrendingBlogs(),
-      ]);
+  // Data-fetch failures (network error, API down, non-2xx) must propagate
+  // instead of being caught here. If this throws during `next build`, the
+  // build fails and Vercel keeps serving the last good deployment. If it
+  // throws during an ISR background revalidation, Next.js keeps serving the
+  // last successfully generated page instead of replacing it with an empty
+  // one. See helpers/blogApi.js for the error/not-found distinction.
+  const [blogsRaw, businesscentralRaw, categoryblogs, allBlogsRaw, blogtrandingRaw] =
+    await Promise.all([
+      BlogService.getLatestBlog(),
+      BlogService.getBlogsByCategory("business-central"),
+      BlogService.getCategories(),
+      BlogService.getBlogs(),
+      BlogService.getTrendingBlogs(),
+    ]);
 
- 
   const extractArray = (data) => {
     if (Array.isArray(data)) return data;
     if (data?.data && Array.isArray(data.data)) return data.data;
@@ -61,33 +65,19 @@ export async function getStaticProps() {
     }));
 
   return {
-      props: {
-        blogs: slim(blogs),
-        businesscentral: slim(businesscentral),
-        categoryblogs: (Array.isArray(categoryblogs) ? categoryblogs : []).map(c => ({
-          ...c,
-          category_name: c.name || c.category_name,
-          category_slug: c.slug || c.category_slug
-        })),
-        blograndomblogs: slim(blograndomblogs),
-        blogtranding: slim(blogtranding),
-      },
-      revalidate: 60,
-    };
-  } catch (error) {
-    console.error("Error in blog homepage getStaticProps:", error);
-
-    return {
-      props: {
-        blogs: [],
-        businesscentral: [],
-        categoryblogs: [],
-        blograndomblogs: [],
-        blogtranding: [],
-      },
-      revalidate: 60,
-    };
-  }
+    props: {
+      blogs: slim(blogs),
+      businesscentral: slim(businesscentral),
+      categoryblogs: (Array.isArray(categoryblogs) ? categoryblogs : []).map(c => ({
+        ...c,
+        category_name: c.name || c.category_name,
+        category_slug: c.slug || c.category_slug
+      })),
+      blograndomblogs: slim(blograndomblogs),
+      blogtranding: slim(blogtranding),
+    },
+    revalidate: 60,
+  };
 }
 
 

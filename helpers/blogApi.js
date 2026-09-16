@@ -9,25 +9,38 @@ if (!API_KEY && typeof window === "undefined") {
 }
 
 export const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "https://blogdsukapi.onrender.com"; 
+// Returns null only for a genuine "not found" (404) response from the API.
+// Any other failure (network error, timeout, 5xx, auth error, bad JSON) is
+// thrown so callers can tell "no data" apart from "API is broken" — the
+// latter must never be treated as an empty result (see getStaticProps in
+// pages/blog/index.js and pages/blog/[slug].js).
 export async function fetchBlogApi(endpoint) {
+  const url = `${API_BASE_URL}${endpoint}`;
+
+  let response;
   try {
-    const url = `${API_BASE_URL}${endpoint}`;
-    const response = await fetch(url, {
+    response = await fetch(url, {
       headers: {
         "x-api-key": API_KEY,
         "Content-Type": "application/json",
       },
     });
+  } catch (error) {
+    throw new Error(`Blog API network error [${endpoint}]: ${error.message}`);
+  }
 
-    if (!response.ok) {
-      console.warn(`HTTP ${response.status}: Failed to fetch ${url}`);
-      return null;
-    }
+  if (response.status === 404) {
+    return null;
+  }
 
+  if (!response.ok) {
+    throw new Error(`Blog API HTTP ${response.status} [${endpoint}]`);
+  }
+
+  try {
     return await response.json();
   } catch (error) {
-    console.error(`Blog API Error [${endpoint}]:`, error.message);
-    return null;
+    throw new Error(`Blog API invalid JSON [${endpoint}]: ${error.message}`);
   }
 }
  
