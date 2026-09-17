@@ -21606,6 +21606,7 @@ letter-spacing:3px
    ============================================ */
 .erp-expect-section {
   padding: 60px 0;
+  background-color: #F1F0F4;
 }
 .erp-expect-card {
   background: #fff;
@@ -21634,7 +21635,7 @@ letter-spacing:3px
   color: #5b5768;
 }
 .erp-expect-footnote {
-  margin-bottom: 20px;
+  margin: 30px 0px 0px;
 }
 
 /* ============================================
@@ -21661,7 +21662,7 @@ letter-spacing:3px
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  margin-top: 20px;
+  margin: 20px;
 }
 .pharma-capability-item {
   background: #fff;
@@ -21676,7 +21677,6 @@ letter-spacing:3px
 .pharma-capability-item p {
   margin-bottom: 0;
   color: #5b5768;
-  font-size: 14px;
 }
 .pharma-capability-cta {
   margin-top: 20px;
@@ -21702,6 +21702,7 @@ letter-spacing:3px
   margin-top: 30px;
   border: 1px solid rgba(142, 68, 173, 0.2);
   border-bottom: 3px solid #8e44ad;
+      margin-bottom: 30px;
 }
 .uk-reg-row {
   display: flex;
@@ -21737,7 +21738,6 @@ letter-spacing:3px
 }
 .uk-reg-row__desc p {
   color: #5b5768;
-  font-size: 14px;
   margin-bottom: 0;
 }
 @media (max-width: 991px) {
@@ -21795,7 +21795,7 @@ letter-spacing:3px
   margin-top: 40px;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 15px 40px rgba(45, 38, 64, 0.12);
+  /* box-shadow: 0 15px 40px rgba(45, 38, 64, 0.12); */
 }
 .pharma-compare-table .table {
   margin-bottom: 0;

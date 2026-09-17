@@ -1,0 +1,42 @@
+[
+    {
+      "id": 1,
+      "question": "Is Business Central suitable for pharmaceutical manufacturing?",
+      "answer": "<p>In most cases, yes, if your operation sits in the smaller-to-mid bracket. Formulation houses, tableting lines and packaging businesses working from fixed recipes are squarely in Business Central Premium's target zone. Once you're manufacturing APIs or biologics at scale, Supply Chain Management becomes the stronger option.</p>"
+    },
+    {
+      "id": 2,
+      "question": "Can Business Central track pharmaceutical batches?",
+      "answer": "<p>It does, as standard. Every batch or lot gets its own reference number the moment it's received or produced, and that number stays attached to the stock through production, testing and dispatch. Pulling up a batch's full history, from raw material to finished pack, takes one lookup.</p>"
+    },
+    {
+      "id": 3,
+      "question": "Does Business Central support expiry-date tracking?",
+      "answer": "<p>It does. Any item can be set to require an expiry date the moment it enters stock, and the system enforces First-Expired-First-Out picking on its own, so ageing stock always moves before fresher stock.</p>"
+    },
+    {
+      "id": 4,
+      "question": "Is Business Central GMP compliant?",
+      "answer": "<p>GMP compliance is awarded to your organisation, based on the validated processes MHRA inspectors review during a site visit. Business Central's contribution is the underlying traceability, plus the native Quality Management module introduced in 2026, which gives inspectors clean records to review during that visit.</p>"
+    },
+    {
+      "id": 5,
+      "question": "Can Business Central manage pharmaceutical quality control?",
+      "answer": "<p>It handles the essentials well: inspection templates, pass or fail grading and quarantine are built into the core product. Where you need documented CAPA workflows or statistical sampling plans, that level of complexity generally points towards Supply Chain Management or a specialist QMS instead.</p>"
+    },
+    {
+      "id": 6,
+      "question": "What is the best Dynamics 365 ERP for pharmaceutical manufacturing?",
+      "answer": "<p>Whichever platform your production process actually calls for. A tableting operation and an API manufacturer need very different things from their ERP, which is exactly why the comparison further up this page exists.</p>"
+    },
+    {
+      "id": 7,
+      "question": "How much does pharmaceutical ERP implementation cost in the UK?",
+      "answer": "<p>It scales with the platform and how much validation work your process needs. See the pricing breakdown above for where Business Central and Supply Chain Management typically start; a Business Central pharma rollout tends to sit at the lower end, while a multi-site Supply Chain Management project usually climbs well past it. We'll turn that into a specific number once we understand your operation.</p>"
+    },
+    {
+      "id": 8,
+      "question": "Does Dynamics 365 handle UK VAT and Making Tax Digital?",
+      "answer": "<p>Yes, Business Central includes native Making Tax Digital support for VAT, with digital record-keeping and direct submission to HMRC built in, so no bridging software is required.</p>"
+    }
+  ]

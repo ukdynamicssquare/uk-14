@@ -13,9 +13,11 @@
    rather than hand-editing both places.
 
    Excluded on purpose: Bootstrap/utility classes (container, row, col-*,
-   d-flex, bi bi-*, table, etc.) - the target project is assumed to already
-   have Bootstrap + Bootstrap Icons available. Also excluded: classes used
-   on this page that have no CSS rule at all in globals.css (im-two,
+   d-flex, bi bi-*, table, accordion*, btn, collapse/collapsed, g-4, gy-4,
+   order-*, justify-content-center, align-items-center, align-self-center,
+   text-center, text-lg-end, mt-4, etc.) - the target project is assumed to
+   already have Bootstrap + Bootstrap Icons available. Also excluded: classes
+   used on this page that have no CSS rule at all in globals.css (im-two,
    pd-con-62, scrollto, solution-new-banner-one-colo, stached-scroll-card,
    whole-image, pharma-timeline__card--left/--right) - they are pure JS
    hooks or unstyled markers, nothing to copy.
@@ -943,4 +945,72 @@
   .partner-trust-strip__item h3 {
     font-size: 24px;
   }
+}
+
+/* ============================================================================
+   FAQ accordion section (.solution-faq, .solution-faq-r, .faq, .faq-btn-l)
+   and .mar-top-7 spacing helper - used by this page's FAQ section but were
+   missing from this export. Pulled as-is from styles/globals.css.
+   ============================================================================ */
+
+.mar-top-7 {
+  padding: 0;
+}
+
+.faq .accordion-collapse {
+  border: 0;
+}
+
+.faq .accordion-button {
+  padding: 15px 15px 20px 0;
+  font-weight: 500;
+  border: 0;
+  line-height: 28px;
+  color: var(--color-blue);
+  text-align: left;
+}
+
+.faq .accordion-button:focus {
+  box-shadow: none;
+}
+
+.faq .accordion-button:not(.collapsed) {
+  background: 0 0;
+  color: #bb2b36;
+  border-bottom: 0;
+}
+
+.faq .accordion-body {
+  padding: 15px 0 25px;
+  border: 0;
+  font-size: 16px;
+}
+
+.faq .accordion-body ul li {
+  color: #444;
+  margin-bottom: 7px;
+}
+
+.solution-faq .accordion-header {
+  color: var(--color-blue);
+}
+
+.solution-faq-r.faq .accordion-button {
+  color: #443c68;
+  font-size: 16px !important;
+}
+
+.faq-btn-l {
+  padding: 8px 30px;
+}
+
+.faq-btn-l:hover {
+  border-color: #1d3557;
+}
+
+.faq-btn-l:active,
+.faq-btn-l:focus {
+  background-color: #884d76 !important;
+  border-color: #884d76 !important;
+  color: #fff !important;
 }

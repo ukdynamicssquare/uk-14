@@ -1,12 +1,17 @@
+import React, { useRef, useState, useEffect } from 'react';
 import Head from "next/head";
 import Image from "next/image";
-import Script from "next/script";
 import Link from "next/link";
 import useCardScrollEffect from "../../components/useCardScrollEffect";
-
-const DManu = () => {
+import faqData from '../../public/data/industriespharmaceutical.json';
+const INDDD = () => {
 
   useCardScrollEffect()
+      const [visibleCount, setVisibleCount] = useState(5);
+  
+    const handleLoadMore = () => {
+      setVisibleCount((prev) => prev + 3);
+    };
 
   return (
     <>
@@ -23,7 +28,7 @@ const DManu = () => {
         />
         <meta property="og:locale" content="GB" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content=" Dynamics 365 ERP for Pharmaceutical Manufacturing | Dynamics Square UK " />
+        <meta property="og:title" content="Dynamics 365 ERP for Pharmaceutical Manufacturing | Dynamics Square UK " />
         <meta property="og:description" content="Batch traceability, expiry control and MHRA-ready quality management in one system. Compare Business Central and Supply Chain Management for UK pharmaceutical manufacturers." />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/industries/dynamics-365-for-pharmaceutical-manufacturing/" />
         <meta property="og:site_name" content="Dynamics Square UK" />
@@ -37,21 +42,20 @@ const DManu = () => {
         <meta name="twitter:description" content="Batch traceability, expiry control and MHRA-ready quality management in one system. Compare Business Central and Supply Chain Management for UK pharmaceutical manufacturers." />
         <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/wholesale-pic-01.png" />
       </Head>
-      <div className='solution-new-banner-one solution-new-banner-one-colo'>
+     <div className='solution-new-banner-one solution-new-banner-one-colo'>
         <div className='container'>
           <div className='row justify-content-center'>
             <div className='col-lg-8'>
               <div className='solution-new-banner-one-content'>
-                <h1>Dynamics 365 for Wholesale and Distribution</h1>
+                <h1>Dynamics 365 ERP for Pharmaceutical Manufacturing</h1>
                 <span className='large-heading'>Every Process Connected. Every Decision Profitable</span>
-                <p>Dynamics 365 for Wholesale and Distribution is built for distributors who want their data, processes, people, and systems aligned.
-                  Invest in a solution that connects every process so that every decision creates profit.</p>
+                <p>Traceable batches, controlled expiry dates and audit-ready quality management, delivered by a Microsoft solutions partner that understands MHRA-regulated manufacturing.</p>
                 <div className="text-center">
                   <Link
                     href="#exampleModal"
                     data-bs-toggle="modal"
                     className="btn-get-started scrollto">
-                    <span>Start Your Distribution Transformation &nbsp;<i className="bi bi-arrow-right"></i></span>
+                    <span>Request a Free Consultation &nbsp;<i className="bi bi-arrow-right"></i></span>
                   </Link>
                 </div>
               </div>
@@ -115,7 +119,7 @@ const DManu = () => {
               </div>
               <p>A pharmaceutical manufacturer needs more than software that counts stock. It needs a system that can answer, on demand, which raw material lot went into which batch, who tested it, what the result was and where every finished unit ended up.</p>
               <p>Dynamics 365 ERP for Pharmaceutical Manufacturing builds that answer into the data model itself, so a lot number picked up at goods-in follows the product all the way through production, quality release and dispatch.</p>
-              <p><b>Microsoft answers this differently depending on scale, through two distinct products, and the choice between them shapes everything that follows on this page.</b></p>
+              <p style={{marginBottom:'40px'}}><b>Microsoft answers this differently depending on scale, through two distinct products, and the choice between them shapes everything that follows on this page.</b></p>
             </div>
           </div>
           <div className="row g-4">
@@ -125,7 +129,7 @@ const DManu = () => {
                   <Image src="/img/menu-icons/dynamics-365-businesscentral.svg" alt="Dynamics 365 Business Central" width={48} height={48} />
                   <h4>Dynamics 365 Business Central</h4>
                 </div>
-                <p>It suits formulation houses, tabletting and packaging operations, nutraceutical producers and contract manufacturers running fixed recipes at small to mid-sized scale.</p>
+                <p>It suits formulation houses, tableting and packaging operations, nutraceutical producers and contract manufacturers running fixed recipes at small to mid-sized scale.</p>
               </div>
             </div>
             <div className="col-lg-6 d-flex">
@@ -196,6 +200,13 @@ const DManu = () => {
               </div>
             </div>
           </div>
+          <div className="row">
+            <div className="col-lg-8">
+              <div>
+                <p>UK manufacturers currently have flexibility on packaging technology, alongside a consistent level of pressure on batch documentation, quality records and MHRA inspection readiness.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <section className='solution-new-banner-three pd-con-63 pharma-purple-bg'>
@@ -208,7 +219,6 @@ const DManu = () => {
               </div>
             </div>
           </div>
-          {/* One capability group below — copy this whole .mycard block again for each additional group (e.g. Quality Management, Expiry Control, MHRA Compliance) */}
           <div className="row">
             <div className="col-12">
               <div className="stached-scroll-card">
@@ -236,19 +246,19 @@ const DManu = () => {
                 <div className='mycard'>
                   <div className='mycard__inner mycard__inner--single'>
                     <div className='mycard__inner-left'>
-                      <h3>Traceability and batch genealogy</h3>
+                      <h3>Expiry and shelf-life control</h3>
                       <div className="pharma-capability-items">
                         <div className="pharma-capability-item">
                           <Image src="/img/wholesale-pic-04.png" alt="wholesale-pic-04" width={40} height={36} />
-                          <p>Lot and batch numbers assigned automatically the moment stock arrives or is produced</p>
+                          <p>Mandatory expiry date capture on any item flagged for tracking</p>
                         </div>
                         <div className="pharma-capability-item">
                           <Image src="/img/wholesale-pic-04.png" alt="wholesale-pic-04" width={40} height={36} />
-                          <p>A finished pack traced back to its raw materials, and any raw material lot traced forward to every pack that used it, in one lookup</p>
+                          <p>First-Expired-First-Out (FEFO) picking, so warehouse teams and automated logic always clear ageing stock before it turns over into fresher batches</p>
                         </div>
                         <div className="pharma-capability-item">
                           <Image src="/img/wholesale-pic-04.png" alt="wholesale-pic-04" width={40} height={36} />
-                          <p>A recall scoped in minutes, straight from the system</p>
+                          <p>Advance alerts as shelf-life deadlines approach, rather than discovering them at the point of sale</p>
                         </div>
                       </div>
                     </div>
@@ -257,19 +267,40 @@ const DManu = () => {
                 <div className='mycard'>
                   <div className='mycard__inner mycard__inner--single'>
                     <div className='mycard__inner-left'>
-                      <h3>Traceability and batch genealogy</h3>
+                      <h3>Quality management</h3>
                       <div className="pharma-capability-items">
                         <div className="pharma-capability-item">
                           <Image src="/img/wholesale-pic-04.png" alt="wholesale-pic-04" width={40} height={36} />
-                          <p>Lot and batch numbers assigned automatically the moment stock arrives or is produced</p>
+                          <p>Business Central&apos;s native Quality Management module (added in the 2026 release wave): inspection templates, pass/fail grading and quarantine, built into the core product</p>
                         </div>
                         <div className="pharma-capability-item">
                           <Image src="/img/wholesale-pic-04.png" alt="wholesale-pic-04" width={40} height={36} />
-                          <p>A finished pack traced back to its raw materials, and any raw material lot traced forward to every pack that used it, in one lookup</p>
+                          <p>Supply Chain Management&apos;s advanced quality orders, non-conformance management, CAPA workflows and statistical sampling for higher-complexity operations</p>
                         </div>
                         <div className="pharma-capability-item">
                           <Image src="/img/wholesale-pic-04.png" alt="wholesale-pic-04" width={40} height={36} />
-                          <p>A recall scoped in minutes, straight from the system</p>
+                          <p>Quality holds recorded against the batch itself, visible to anyone looking at that stock</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className='mycard'>
+                  <div className='mycard__inner mycard__inner--single'>
+                    <div className='mycard__inner-left'>
+                      <h3>Production and planning</h3>
+                      <div className="pharma-capability-items">
+                        <div className="pharma-capability-item">
+                          <Image src="/img/wholesale-pic-04.png" alt="wholesale-pic-04" width={40} height={36} />
+                          <p>Demand-driven production scheduling through MRP and MPS, weighed against the capacity you actually have</p>
+                        </div>
+                        <div className="pharma-capability-item">
+                          <Image src="/img/wholesale-pic-04.png" alt="wholesale-pic-04" width={40} height={36} />
+                          <p>Formula-based planning in Supply Chain Management that adjusts ingredient quantities automatically for potency and yield variance</p>
+                        </div>
+                        <div className="pharma-capability-item">
+                          <Image src="/img/wholesale-pic-04.png" alt="wholesale-pic-04" width={40} height={36} />
+                          <p>Bin-level inventory, temperature-sensitive storage zones and consumption-based reorder points</p>
                         </div>
                       </div>
                     </div>
@@ -280,7 +311,7 @@ const DManu = () => {
                 href="#exampleModal"
                 data-bs-toggle="modal"
                 className="btn-get-started scrollto pharma-capability-cta">
-                <span>Speak to Our Expert Get Started &nbsp;<i className="bi bi-arrow-right"></i></span>
+                <span>Talk to Us About Your Production Process &nbsp;<i className="bi bi-arrow-right"></i></span>
               </Link>
             </div>
           </div>
@@ -323,12 +354,12 @@ const DManu = () => {
             <div className="col-lg-12">
               <div className="pharma-compare-table">
               <div className="table-responsive">
-                <table className="table">
+                <table className="table table-striped">
                   <thead>
                     <tr>
-                      <th>Feature</th>
-                      <th>Essentials</th>
-                      <th>Team Members</th>
+                      <th>Aspects/Parameters</th>
+                      <th>Business Central</th>
+                      <th>Supply Chain Management</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -375,100 +406,13 @@ const DManu = () => {
                 href="#exampleModal"
                 data-bs-toggle="modal"
                 className="btn-get-started scrollto">
-                <span>Speak to Our Expert Get Started &nbsp;<i className="bi bi-arrow-right"></i></span>
+                <span>Get a Platform Recommendation &nbsp;<i className="bi bi-arrow-right"></i></span>
               </Link>
             </div>
           </div>
         </div>
       </section>
-      <section className='bg-003-023'>
-        <div className="container my-float-i">
-          <div className="row">
-            <div className="col-lg-5 align-self-center">
-              <div className="whole-image">
-                <Image src="/img/wholesale-pic-27.png" alt="wholesale-pic-27" width={383} height={487} />
-              </div>
-            </div>
-            <div className="col-lg-7">
-              <div className="row g-3 ">
-                <div className="col-lg-12">
-                  <div className="supprt-header-new-one">
-                    <h2>Why Dynamics 365 is the Best ERP for Wholesale and Distribution Industry?</h2>
-                  </div>
-                </div>
-                <div className="col-lg-6 d-flex">
-                  <div className="card-712">
-                    <h4>Connected Operations</h4>
-                    <p>Finance, sales, inventory, and logistics operate in one space, improving communication and decision-making.</p>
-                  </div>
-                </div>
-                <div className="col-lg-6 d-flex">
-                  <div className="card-712">
-                    <h4>Scalable Platform</h4>
-                    <p>Suitable for small, medium, and large distributors with flexible modules that grow with business needs.</p>
-                  </div>
-                </div>
-                <div className="col-lg-6 d-flex">
-                  <div className="card-712">
-                    <h4>Automation Built-In</h4>
-                    <p>Reduces manual work while improving data accuracy and productivity.</p>
-                  </div>
-                </div>
-                <div className="col-lg-6 d-flex">
-                  <div className="card-712">
-                    <h4>Cloud-Powered Security</h4>
-                    <p>Keeps business data safe and accessible anywhere.</p>
-                  </div>
-                </div>
-                <div className="col-lg-6 d-flex">
-                  <div className="card-712">
-                    <h4>AI and Insights</h4>
-                    <p>Transforms raw data into meaningful predictions that drive performance.</p>
-                  </div>
-                </div>
-                <div className="col-lg-6 d-flex">
-                  <div className="card-712">
-                    <h4>Tailored for the UK Market</h4>
-                    <p>Perfect fit for businesses seeking ERP for wholesale distribution in the UK with compliance-ready modules and localisation support.</p>
-                  </div>
-                </div>
-                <div className="col-lg-12 align-self-center">
-                  <div className="card-700-bot">
-                    <Link
-                      href="#exampleModal"
-                      data-bs-toggle="modal"
-                      className="btn-get-started scrollto">
-                      <span>Connect now  <i className="bi bi-arrow-right"></i></span>
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
-      <section className='solution-new-cta slution-new-cta-two pd-con-62'>
-        <div className='container'>
-          <div className='row'>
-            <div className='col-lg-6'>
-              <div className='solution-new-cta-001'>
-                <h3>Improve Your Distribution Cycle with the Right ERP</h3>
-                <p>Deploy Dynamics 365 for your distribution business to keep your process aligned end-to-end.</p>
-                <div>
-                  <Link
-                    href="#exampleModal"
-                    data-bs-toggle="modal"
-                    className="btn-get-started scrollto">
-                    <span>Get Started Now  &nbsp;<i className="bi bi-arrow-right"></i></span>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <img src="/img/n-015.png" alt="n-015" />
-      </section>
+      
       <section className='bg-003s pd-con-66'>
         <div className="container my-float-i">
           <div className="row">
@@ -480,138 +424,124 @@ const DManu = () => {
             <div className="col-lg-1 order-2"></div>
             <div className="col-lg-6 order-1">
               <div className="supprt-header-new-one supprt-header-new-one-ul">
-                <h2>Partnering with Dynamics Square, UK</h2>
-                <p>Implementing wholesale and distribution ERP solutions works best with a trusted partner who understands your industry inside out.  </p>
-                <p>Dynamics Square in the UK has helped several reputed trade and distribution businesses adopt Microsoft Dynamics 365 for the wholesale industry with smooth <a href="/our-services/dynamics-365-implementation-services/">implementation</a>, training, and support.</p>
-                <p>As a Microsoft Dynamics 365 Partner in the UK, Dynamics Square brings certified expertise and hands-on guidance to help your business realise value faster.</p>
-                <p>Whether you need automation, reporting, or warehouse visibility, our Dynamics 365 experts for wholesale distribution in the UK ensure your system delivers measurable results from day one.</p>
+                <h2>What Is the Best Dynamics 365 ERP for Pharmaceutical Manufacturing? </h2>
+                <p>The best ERP for pharmaceutical manufacturing is the one that matches your actual production process, and that&apos;s a different answer for a formulation house than it is for an API manufacturer. Buying more platform than your operation needs adds cost and complexity for little real benefit; buying less means outgrowing the system before the implementation has even paid for itself.</p>
+                <p>We run a fit assessment with every pharmaceutical enquiry before recommending a platform, covering your production style, batch complexity, site count and compliance obligations.</p>
 
                 <Link
                   href="#exampleModal"
                   data-bs-toggle="modal"
                   className="btn-get-started scrollto">
-                  <span>Transform Your Business &nbsp;<i className="bi bi-arrow-right"></i></span>
+                  <span>Book Your Free Fit Assessment &nbsp;<i className="bi bi-arrow-right"></i></span>
                 </Link>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-      <section className='bg-003s pd-con-67'>
-        <div className="container my-float-i">
-          <div className="row">
-            <div className="col-lg-5 align-self-center">
-              <div className='img-backs-sid-two text-center'>
-                <Image src="/img/wholesale-pic-29.png" alt="wholesale-pic-29" width={400} height={450} className='im-two' />
-              </div>
-            </div>
-            <div className="col-lg-1"></div>
-            <div className="col-lg-6">
-              <div className="supprt-header-new-one supprt-header-new-one-ul">
-                <h3>The Outcomes to Expect with Dynamics 365 For Wholesale and Distribution Industry</h3>
-                <ul>
-                  <li><i className="bi bi-check"></i><span>Inventory accuracy above 95 per cent</span></li>
-                  <li><i className="bi bi-check"></i><span>40 per cent faster order-to-cash cycle</span></li>
-                  <li><i className="bi bi-check"></i><span>Clear margin insights across all channels</span></li>
-                  <li><i className="bi bi-check"></i><span>Complete supplier and shipment traceability</span></li>
-                  <li><i className="bi bi-check"></i><span>Single dashboard for all business data</span></li>
-
-                </ul>
-                <p>These are proven outcomes achieved by businesses already running Dynamics 365 Distribution Management through Dynamics Square, UK.</p>
-                <Link
-                  href="#exampleModal"
-                  data-bs-toggle="modal"
-                  className="btn-get-started scrollto">
-                  <span>Schedule A Free Consultation Today <i className="bi bi-arrow-right"></i></span>
-                </Link>
-              </div>
-            </div>
-
-
-
-
           </div>
         </div>
       </section>
       <section className="pharma-timeline-section">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-8">
-              <div className="pharma-timeline-head">
-                <h2>How Dynamics Square Implement: Step by Step</h2>
-                <p>Every pharmaceutical engagement runs through Microsoft&apos;s Success by Design framework. Validation and documentation get built into the plan from the outset, as working parts of it from day one.</p>
-              </div>
-            </div>
-          </div>
-          <div className="pharma-timeline">
-            <div className="pharma-timeline__line"></div>
-
-            <div className="pharma-timeline__row">
-              <div className="pharma-timeline__card pharma-timeline__card--left">
-                <h4>Assessment &amp; Readiness Check</h4>
-                <p>We audit your current NAV environment, which includes version, customizations, integrations, and data volume, to scope the upgrade accurately before a single line of code moves.</p>
-              </div>
-              <div className="pharma-timeline__dot">1</div>
-              <div className="pharma-timeline__spacer"></div>
-            </div>
-
-            <div className="pharma-timeline__row">
-              <div className="pharma-timeline__spacer"></div>
-              <div className="pharma-timeline__dot">2</div>
-              <div className="pharma-timeline__card pharma-timeline__card--right">
-                <h4>Choose Your Path: Upgrade or Reimplementation</h4>
-                <ul>
-                  <li>Direct Upgrade: It is best if your NAV setup is lightly customised. Your processes, workflows, and historical data move into Business Central largely as-is.</li>
-                  <li>Reimplementation: It is best if you want to modernise. We rebuild your configuration around current best practices while retaining historical NAV data for reference.</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="pharma-timeline__row">
-              <div className="pharma-timeline__card pharma-timeline__card--left">
-                <h4>Data Migration &amp; Customisation Review</h4>
-                <p>We review your existing <a href="/our-services/dynamics-365-implementation-services/">Dynamics 365 implementation</a>, business processes, integrations, and operational priorities to understand your support requirements.</p>
-              </div>
-              <div className="pharma-timeline__dot">3</div>
-              <div className="pharma-timeline__spacer"></div>
-            </div>
-
-            <div className="pharma-timeline__row">
-              <div className="pharma-timeline__spacer"></div>
-              <div className="pharma-timeline__dot">4</div>
-              <div className="pharma-timeline__card pharma-timeline__card--right">
-                <h4>Testing &amp; Validation</h4>
-                <p>We review your existing <a href="/our-services/dynamics-365-implementation-services/">Dynamics 365 implementation</a>, business processes, integrations, and operational priorities to understand your support requirements.</p>
-              </div>
-            </div>
-
-            <div className="pharma-timeline__row">
-              <div className="pharma-timeline__card pharma-timeline__card--left">
-                <h4>Go-Live &amp; Hypercare Support</h4>
-                <p>We review your existing <a href="/our-services/dynamics-365-implementation-services/">Dynamics 365 implementation</a>, business processes, integrations, and operational priorities to understand your support requirements.</p>
-              </div>
-              <div className="pharma-timeline__dot">5</div>
-              <div className="pharma-timeline__spacer"></div>
-            </div>
-
-            <div className="pharma-timeline__row">
-              <div className="pharma-timeline__spacer"></div>
-              <div className="pharma-timeline__dot">6</div>
-              <div className="pharma-timeline__card pharma-timeline__card--right">
-                <h4>Continuous Improvement &amp; Compliance Reviews</h4>
-                <p>Once you are live, we keep checking in on performance, user adoption, and any new MHRA guidance, then tune workflows and reports so your system keeps pace with the business.</p>
-              </div>
-            </div>
-          </div>
-          <Link
-            href="#exampleModal"
-            data-bs-toggle="modal"
-            className="btn-get-started scrollto pharma-timeline__cta">
-            <span>Get Your Free Migration Assessment &nbsp;<i className="bi bi-arrow-right"></i></span>
-          </Link>
+  <div className="container">
+    <div className="row">
+      <div className="col-lg-8">
+        <div className="pharma-timeline-head">
+          <h2>How Dynamics Square Implement: Step by Step</h2>
+          <p>
+            Every pharmaceutical engagement runs through Microsoft&apos;s
+            Success by Design framework. Validation and documentation get
+            built into the plan from the outset, as working parts of it from
+            day one.
+          </p>
         </div>
-      </section>
-      <section className="pharma-pricing-section">
+      </div>
+    </div>
+
+    <div className="pharma-timeline">
+      <div className="pharma-timeline__line"></div>
+
+      <div className="pharma-timeline__row">
+        <div className="pharma-timeline__card pharma-timeline__card--left">
+          <h4>Discover</h4>
+          <p>
+            We sit down with your production and quality teams to understand
+            how batches move through your facility today.
+          </p>
+        </div>
+
+        <div className="pharma-timeline__dot">1</div>
+
+        <div className="pharma-timeline__spacer"></div>
+      </div>
+
+      <div className="pharma-timeline__row">
+        <div className="pharma-timeline__spacer"></div>
+
+        <div className="pharma-timeline__dot">2</div>
+
+        <div className="pharma-timeline__card pharma-timeline__card--right">
+          <h4>Initiate</h4>
+          <p>
+            We lock down scope, decide on the platform and agree how the
+            project will be governed.
+          </p>
+        </div>
+      </div>
+
+      <div className="pharma-timeline__row">
+        <div className="pharma-timeline__card pharma-timeline__card--left">
+          <h4>Implement</h4>
+          <p>
+            The system takes shape and validation paperwork gets written in
+            parallel with it.
+          </p>
+        </div>
+
+        <div className="pharma-timeline__dot">3</div>
+
+        <div className="pharma-timeline__spacer"></div>
+      </div>
+
+      <div className="pharma-timeline__row">
+        <div className="pharma-timeline__spacer"></div>
+
+        <div className="pharma-timeline__dot">4</div>
+
+        <div className="pharma-timeline__card pharma-timeline__card--right">
+          <h4>Prepare</h4>
+          <p>
+            Your team tests the system against real scenarios and trains on
+            it before go-live.
+          </p>
+        </div>
+      </div>
+
+      <div className="pharma-timeline__row">
+        <div className="pharma-timeline__card pharma-timeline__card--left">
+          <h4>Operate</h4>
+          <p>
+            We stay involved through the first audits and the process tweaks
+            that inevitably follow.
+          </p>
+        </div>
+
+        <div className="pharma-timeline__dot">5</div>
+
+        <div className="pharma-timeline__spacer"></div>
+      </div>
+    </div>
+
+    <Link
+      href="#exampleModal"
+      data-bs-toggle="modal"
+      className="btn-get-started scrollto pharma-timeline__cta"
+    >
+      <span>
+        Get Your Free Migration Assessment&nbsp;
+        <i className="bi bi-arrow-right"></i>
+      </span>
+    </Link>
+  </div>
+</section>
+       <section className="pharma-pricing-section">
         <div className="container">
           <div className="row">
             <div className="col-lg-9">
@@ -626,22 +556,22 @@ const DManu = () => {
             <div className="col-lg-4 d-flex">
               <div className="pharma-pricing-card">
                 <span className="pharma-pricing-card__tier">Essentials</span>
-                <div className="pharma-pricing-card__price">£61.50<span>/user/month</span></div>
-                <p>Handle enquiries, applications, admissions, and approvals from one place without long manual processes.</p>
+                <div className="pharma-pricing-card__price">from £61.50<span>/user/month</span></div>
+                <p>It covers core financials, sales, purchasing and inventory</p>
               </div>
             </div>
             <div className="col-lg-4 d-flex">
               <div className="pharma-pricing-card pharma-pricing-card--highlight">
                 <span className="pharma-pricing-card__tier">Premium</span>
-                <div className="pharma-pricing-card__price">£84.60<span>/user/month</span></div>
-                <p>Stay connected with students, track interactions, and send updates based on their journey and needs</p>
+                <div className="pharma-pricing-card__price">from £84.60<span>/user/month</span></div>
+                <p>It adds production orders, BOMs, routings, MRP, MPS and native Quality Management module</p>
               </div>
             </div>
             <div className="col-lg-4 d-flex">
               <div className="pharma-pricing-card">
-                <span className="pharma-pricing-card__tier">Team Member</span>
-                <div className="pharma-pricing-card__price">£6.20<span>/user/month</span></div>
-                <p>See admissions, accounts, reports, and communication updates clearly through one connected dashboard.</p>
+                <span className="pharma-pricing-card__tier">Team Members</span>
+                <div className="pharma-pricing-card__price">from £6.20<span>/user/month</span></div>
+                <p>It offers read, approve and light self-service access</p>
               </div>
             </div>
           </div>
@@ -650,15 +580,15 @@ const DManu = () => {
             <div className="col-lg-4 d-flex">
               <div className="pharma-pricing-card">
                 <span className="pharma-pricing-card__tier">Standard</span>
-                <div className="pharma-pricing-card__price">£61.50<span>/user/month</span></div>
-                <p>Handle enquiries, applications, admissions, and approvals from one place without long manual processes.</p>
+                <div className="pharma-pricing-card__price">from approximately £165<span>/user/month</span></div>
+                <p>It offers full process manufacturing engine, formula management and advanced quality management tools</p>
               </div>
             </div>
             <div className="col-lg-4 d-flex">
               <div className="pharma-pricing-card pharma-pricing-card--highlight">
                 <span className="pharma-pricing-card__tier">Premium</span>
-                <div className="pharma-pricing-card__price">£84.60<span>/user/month</span></div>
-                <p>Stay connected with students, track interactions, and send updates based on their journey and needs</p>
+                <div className="pharma-pricing-card__price">from approximately £235<span>/user/month</span></div>
+                <p>It offers layers in advanced analytics and financial planning capability</p>
               </div>
             </div>
           </div>
@@ -675,8 +605,110 @@ const DManu = () => {
           </div>
         </div>
       </section>
+      <section className='bg-003s pd-con-66'>
+        <div className="container my-float-i">
+          <div className="row">
+            <div className="col-lg-5 align-self-center order-3">
+              <div className='img-backs-sid-two text-center'>
+                <Image src="/img/wholesale-pic-28.png" alt="wholesale-pic-28" width={401} height={455} className='im-two' />
+              </div>
+            </div>
+            <div className="col-lg-1 order-2"></div>
+            <div className="col-lg-6 order-1">
+              <div className="supprt-header-new-one supprt-header-new-one-ul">
+                <h2>Why UK Pharmaceutical Manufacturers Work with Dynamics Square</h2>
+                <p>Regulated manufacturing sits at the centre of how we scope a project from our very first conversation with you. Traceable batches, documented quality decisions and audit-ready validation records all get planned in from day one.</p>
+                <p>Dynamics Square recommends platforms honestly. Where Business Central fits, we say so; where Supply Chain Management makes more sense for your operation, we say that instead, because matching the tool to your operation matters more than which product we happen to sell more of.</p>
+                <p>Cross-product certification runs deep on our team, spanning both Business Central and Supply Chain Management, so you&apos;re getting a genuine comparison rather than a pitch angled towards whichever platform we know best.</p>
+                <p>Go-live is where the relationship really begins. We stay close through the audits that follow, the change requests that come up, and the process refinements your operation needs as it grows.</p>
+                <p>In an industry where the margin for error is measured in patient safety, we work as a genuine partner inside your quality culture.</p>
+
+                <Link
+                  href="#exampleModal"
+                  data-bs-toggle="modal"
+                  className="btn-get-started scrollto">
+                  <span>Speak to a Pharma ERP Specialist &nbsp;<i className="bi bi-arrow-right"></i></span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+       <section className="solution-faq faq solution-faq-r">
+              <div className="container">
+                <div className="row justify-content-center">
+                  <div className="col-lg-9 ">
+                    <div className="solution-new-banner-sub-head text-center">
+                      <h2>Have you got
+                        questions about Dynamics 365 for Pharmaceutical Manufacturing?</h2>
+                      <p>Click through to our FAQ for the best answers!</p>
+                    </div>
+                  </div>
+                </div>
+      
+      
+                <div className="row justify-content-center mar-top-7">
+                  <div className="col-lg-8">
+                    <div className="accordion accordion-flush" id="faqlist1">
+                      {faqData.slice(0, visibleCount).map((faq) => (
+                        <div className="accordion-item" key={faq.id}>
+                          <h3 className="accordion-header">
+                            <button
+                              className="accordion-button collapsed"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target={`#faq-content-${faq.id}`}
+                            >
+                              {faq.question}
+                            </button>
+                          </h3>
+                          <div
+                            id={`faq-content-${faq.id}`}
+                            className="accordion-collapse collapse"
+                            data-bs-parent="#faqlist1"
+                          >
+                            <div
+                              className="accordion-body"
+                              dangerouslySetInnerHTML={{ __html: faq.answer }}
+                            />
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+      
+                    {visibleCount < faqData.length && (
+                      <div className="text-center mt-4">
+                        <button className="btn faq-btn-l btn-get-started" onClick={handleLoadMore}>
+                          Load More <i className="bi bi-chevron-down"></i>
+                        </button>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </section>
+      <section className='solution-new-cta slution-new-cta-two pd-con-62'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-lg-7'>
+              <div className='solution-new-cta-001'>
+                <h3 style={{fontSize:'32px'}}>Get an ERP That Fits How Your Facility Runs</h3>
+                <p>Get the batch traceability, expiry control and quality workflow your team needs to manufacture confidently and face an MHRA inspection with real composure.</p>
+                <div>
+                  <Link
+                    href="#exampleModal"
+                    data-bs-toggle="modal"
+                    className="btn-get-started scrollto">
+                    <span>Request a Free Consultation Today &nbsp;<i className="bi bi-arrow-right"></i></span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 };
 
-export default DManu;
+export default INDDD;
