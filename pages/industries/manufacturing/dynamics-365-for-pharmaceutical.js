@@ -431,7 +431,7 @@ const INDDD = () => {
             <div className="col-lg-6 align-self-center order-1">
               <div className="supprt-header-new-one supprt-header-new-one-ul">
                 <h2>What Is the Best Dynamics 365 ERP for Pharmaceutical Manufacturing? </h2>
-                <p>The best <a href="/industries/manufacturing/" className='u-i'>ERP for Pharmaceutical Manufacturing</a> is the one that matches your actual production process, and that&apos;s a different answer for a formulation house than it is for an API manufacturer. Buying more platform than your operation needs adds cost and complexity for little real benefit; buying less means outgrowing the system before the implementation has even paid for itself.</p>
+                <p>The best ERP for Pharmaceutical Manufacturing is the one that matches your actual production process, and that&apos;s a different answer for a formulation house than it is for an API manufacturer. Buying more platform than your operation needs adds cost and complexity for little real benefit; buying less means outgrowing the system before the implementation has even paid for itself.</p>
                 <p>We run a fit assessment with every pharmaceutical enquiry before recommending a platform, covering your production style, batch complexity, site count and compliance obligations.</p>
 
                 <Link

@@ -1,6 +1,6 @@
 /* ============================================================================
    Standalone stylesheet export for:
-   pages/industries/dynamics-365-for-pharmaceutical-manufacturing.js
+   pages/industries/manufacturing/dynamics-365-for-pharmaceutical.js
 
    Purpose: portable copy of every custom (non-Bootstrap) class this page
    uses, pulled from styles/globals.css, so the page + this one file can be
@@ -18,14 +18,18 @@
    text-center, text-lg-end, mt-4, etc.) - the target project is assumed to
    already have Bootstrap + Bootstrap Icons available. Also excluded: classes
    used on this page that have no CSS rule at all in globals.css (im-two,
-   pd-con-62, scrollto, solution-new-banner-one-colo, stached-scroll-card,
-   whole-image, pharma-timeline__card--left/--right) - they are pure JS
-   hooks or unstyled markers, nothing to copy.
+   pd-con-62, scrollto, stached-scroll-card, whole-image,
+   pharma-timeline__card--left/--right) - they are pure JS hooks or
+   unstyled markers, nothing to copy.
    ============================================================================ */
 
 :root {
   --color-red: #bb2b36;
   --color-blue: #1d3557;
+}
+
+.u-i {
+  text-decoration: underline;
 }
 
 .btn-get-started:hover {
@@ -344,6 +348,29 @@
   text-align: center;
   margin-bottom: -250px;
   margin-top: -80px;
+}
+
+@media (max-width: 768px) {
+  .m-b-image-nnn.m-b-image-nna {
+    margin-bottom: -150px;
+    margin-top: -120px;
+  }
+}
+
+@media (max-width: 991px) {
+  .m-b-image-nnn.m-b-image-nna {
+    margin: -80px 0px -60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .m-b-image-nnn.m-b-image-nna {
+    margin: -20px 0px -40px;
+  }
+
+  .solution-new-banner-one-colos {
+    padding-bottom: 0px !important;
+  }
 }
 
 .bg-003-023 {
