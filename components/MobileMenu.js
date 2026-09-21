@@ -198,6 +198,25 @@ const MobileMenu = () => {
     return () => el.removeEventListener("hidden.bs.offcanvas", resetAccordions);
   }, []);
 
+  // The Zoho SalesIQ chat bubble is injected into document.body by its own
+  // script with a high z-index, so it visually floats on top of (and looks
+  // "inside") the offcanvas sidebar. Hide it for as long as the sidebar is
+  // open, via a body class, instead of touching Zoho's own DOM/script.
+  useEffect(() => {
+    const el = document.getElementById("offcanvasWithBothOptions");
+    if (!el) return;
+
+    const addHideClass = () => document.body.classList.add("dsq-mobile-nav-open");
+    const removeHideClass = () => document.body.classList.remove("dsq-mobile-nav-open");
+
+    el.addEventListener("show.bs.offcanvas", addHideClass);
+    el.addEventListener("hidden.bs.offcanvas", removeHideClass);
+    return () => {
+      el.removeEventListener("show.bs.offcanvas", addHideClass);
+      el.removeEventListener("hidden.bs.offcanvas", removeHideClass);
+    };
+  }, []);
+
   return (
     <>
       <div className="mobile-menu-section-wr">
@@ -407,6 +426,21 @@ const MobileMenu = () => {
       </div>
 
       <style jsx global>{`
+        /* Zoho SalesIQ injects its floating chat bubble into document.body
+           with its own high z-index, so it visually sits on top of (and
+           looks "inside") the offcanvas sidebar. Hide anything it renders
+           while the sidebar is open (the .dsq-mobile-nav-open body class
+           is toggled in the useEffect above). Covers the known SalesIQ
+           container ids/classes without touching Zoho's own script/DOM. */
+        body.dsq-mobile-nav-open [id^="zsiq"],
+        body.dsq-mobile-nav-open [class*="zsiq"],
+        body.dsq-mobile-nav-open #zsiqbtn,
+        body.dsq-mobile-nav-open #zsiqwidget {
+          display: none !important;
+          visibility: hidden !important;
+          pointer-events: none !important;
+        }
+
         /* All rules below are anchored to #mobile-toggle-nav so they win
            the cascade over the older, higher-specificity class rule in
            globals.css (.mobile-new-nav .accordion-item .accordion-body
