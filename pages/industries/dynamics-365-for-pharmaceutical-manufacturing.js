@@ -32,7 +32,7 @@ const INDDD = () => {
         <meta property="og:description" content="Batch traceability, expiry control and MHRA-ready quality management in one system. Compare Business Central and Supply Chain Management for UK pharmaceutical manufacturers." />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/industries/dynamics-365-for-pharmaceutical-manufacturing/" />
         <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/wholesale-pic-01.png" />
+        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/pharmaceutica-00.png" />
         <meta property="og:image:width" content="200" />
         <meta property="og:image:height" content="200" />
         <meta property="og:image:type" content="image/png" />
@@ -40,7 +40,7 @@ const INDDD = () => {
         <meta name="twitter:site" content="@dsquare_uk" />
         <meta name="twitter:title" content="Dynamics 365 ERP for Pharmaceutical Manufacturing | Dynamics Square UK" />
         <meta name="twitter:description" content="Batch traceability, expiry control and MHRA-ready quality management in one system. Compare Business Central and Supply Chain Management for UK pharmaceutical manufacturers." />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/wholesale-pic-01.png" />
+        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/pharmaceutica-00.png" />
       </Head>
      <div className='solution-new-banner-one solution-new-banner-one-colos'>
         <div className='container'>

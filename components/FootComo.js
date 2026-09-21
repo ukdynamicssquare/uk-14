@@ -72,7 +72,7 @@ const NAV_COLUMNS = [
     links: [
       { label: "About Us", href: "/about-us/" },
       { label: "Partners", href: "/partner/" },
-      { label: "Careers", href: "/careers/" },
+      { label: "Careers", href: "/career/" },
       { label: "Contact Us", href: "/contact-us/" },
       { label: "Support Portal", href: "https://support.dynamicssquare.com/portal/en/home", target:"_blank", isKey: true },
     //   { label: "Raise a ticket", href: "/support/raise-a-ticket/" },

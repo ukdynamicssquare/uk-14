@@ -7520,8 +7520,8 @@ margin: 0px 0px 0px -30px;
     font-size: 15px;
     font-weight: 600;
     color: var(--color-blue);
-    padding-left: 14px;
-    padding-top: 10px;
+    /* padding-left: 14px;
+    padding-top: 10px; */
   }
   .mobile-nav-toggle,
   .navbar-mobile ul {
