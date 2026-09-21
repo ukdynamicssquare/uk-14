@@ -104,7 +104,7 @@ const RESOURCE_TABS = [
 
 const BLOG_BY_PRODUCT = [
   { href: "/blog/category/business-central/", label: "Business Central" },
-  { href: "/blog/category/dynamics-365-fo/", label: "Finance" },
+  { href: "/blog/category/dynamics-365-fando/", label: "Finance" },
   { href: "/blog/category/dynamics-365-scm/", label: "Supply Chain" },
   { href: "/blog/category/dynamics-365-crm/", label: "Sales" },
   { href: "/blog/category/field-service/", label: "Field Service" },
@@ -152,13 +152,13 @@ const POPULAR_EBOOKS = [
 ];
 
 const GUIDES = [
-  { href: "/the-ultimate-guide-to-microsoft-dynamics-365/", img: "/img/the-ultmate-ai-guide-banner.png", alt: "the-ultmate-ai-guide", tag: "Guide", title: "Microsoft Dynamics 365: Complete Guide to CRM, ERP & Business Applications (2026)" },
-  { href: "/guides/business-central-guide-for-smb/", img: "/img/chapter5-5.png", alt: "guide", tag: "Guide", title: "Business Central: The Definitive Guide For SMBs" },
+  { href: "/the-ultimate-guide-to-microsoft-dynamics-365/", img: "/img/the-ultmate-ai-guide-banner.png", alt: "the-ultmate-ai-guide", tag: "Guide", title: "Dynamics 365: CRM, ERP & Apps Guide (2026)" },
+  { href: "/guides/business-central-guide-for-smb/", img: "/img/chapter5-5.png", alt: "guide", tag: "Guide", title: "Business Central Guide for SMBs" },
 ];
 
 const WHITEPAPERS = [
-  { href: "/white-papers/microsoft-copilot/", img: "/img/white-p-one.png", alt: "guide", tag: "Whitepapers", title: "Microsoft Copilot: The Catalyst for Transformation in Your Business" },
-  { href: "/white-papers/microsoft-finance/", img: "/img/finacne-white-paper-category.png", alt: "guide", tag: "Whitepapers", title: "Dynamics 365 Finance with Copilot WhitePaper" },
+  { href: "/white-papers/microsoft-copilot/", img: "/img/white-p-one.png", alt: "guide", tag: "Whitepapers", title: "Microsoft Copilot for Business Transformation" },
+  { href: "/white-papers/microsoft-finance/", img: "/img/finacne-white-paper-category.png", alt: "guide", tag: "Whitepapers", title: "Dynamics 365 Finance with Copilot" },
 ];
 
 const TOOLS = [
@@ -167,8 +167,8 @@ const TOOLS = [
 ];
 
 const WEBCASTS = [
-  { href: "https://www.youtube.com/watch?v=44hqw-S27D0", img: "/img/bc-8-20.png", title: "Is Your Business Ready for an ERP System?", desc: "Explore key signs, benefits, and steps to ERP readiness" },
-  { href: "https://youtu.be/Of8upj7BtGo?si=Lsf5SCwBtIpSU1ST", img: "/img/bc-8-22.png", title: "Signs Your Business Is Ready for an ERP System", desc: "Understand when to adopt ERP, its benefits, and how Dynamics 365 drives business transformation." },
+  { href: "https://www.youtube.com/watch?v=44hqw-S27D0", img: "/img/bc-8-20.png", title: "Is Your Business ERP-Ready?", desc: "Key signs and steps to readiness" },
+  { href: "https://youtu.be/Of8upj7BtGo?si=Lsf5SCwBtIpSU1ST", img: "/img/bc-8-22.png", title: "Signs You Need an ERP", desc: "When and why to adopt Dynamics 365" },
   { href: "https://youtu.be/hUPT5DejiR0?si=p_hlO_BdCj_gbWwh", img: "/img/bc-8-21.png", title: "Unpacking Microsoft Dynamics 365 Business Central for Growth", desc: "Learn how Business Central helps streamline operations and scale growth in this expert-driven podcast episode." },
   { href: "https://www.youtube.com/watch?v=rAHE2BiaPkc", img: "/img/New-pic-Project.png", title: "CRM EXPLAINED! Why Your Business Might Fail Without It ", desc: "What really is a CRM—and why does every growing business keep talking about it?" },
 ];
