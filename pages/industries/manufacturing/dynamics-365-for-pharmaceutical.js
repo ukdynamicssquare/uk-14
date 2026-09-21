@@ -693,7 +693,7 @@ const INDDD = () => {
                 </div>
               </div>
             </section>
-      <section className='solution-new-cta slution-new-cta-two pd-con-62'>
+      {/* <section className='solution-new-cta slution-new-cta-two pd-con-62'>
         <div className='container'>
           <div className='row'>
             <div className='col-lg-7'>
@@ -712,7 +712,7 @@ const INDDD = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 };
