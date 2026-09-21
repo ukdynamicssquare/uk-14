@@ -17553,6 +17553,10 @@ padding-top: 160px;
       margin-bottom: -250px;
       margin-top: -80px
     }
+    .m-b-image-nnn.m-b-image-nna{
+       margin-bottom: -150px;
+      margin-top: -120px
+    }
     .col-whole-card h4{
       font-size:18px;
       margin-bottom:30px
@@ -20314,6 +20318,9 @@ color: #ffffff;
     left: -28px;
     width: 28px;
   }
+  .m-b-image-nnn.m-b-image-nna{
+margin: -80px 0px -60px;
+  }
 }
 
 
@@ -20363,6 +20370,12 @@ color: #ffffff;
     .ds-table-666 thead th {
         padding: 12px 15px;
         font-size: 14px;
+    }
+        .m-b-image-nnn.m-b-image-nna {
+       margin: -20px 0px -40px;
+    }
+    .solution-new-banner-one-colos{
+    padding-bottom:0px !important
     }
 }
 

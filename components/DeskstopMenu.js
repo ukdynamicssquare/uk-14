@@ -12,11 +12,12 @@ import PulseButton from "./PulseButton";
 
 const SOLUTION_TABS = [
   { id: "home", target: "v-pills-home", label: "Company By Size", active: true },
-  { id: "addon", target: "v-pills-addon", label: "ERP" },
-  { id: "CRM", target: "v-pills-CRM", label: "CRM" },
+  { id: "addon", target: "v-pills-addon", label: "AI-Powered ERP" },
+  { id: "CRM", target: "v-pills-CRM", label: "AI-Powered CRM" },
   { id: "settingss", target: "v-pills-settingss", label: "Integrations", href: "#" },
-  { id: "profile", target: "v-pills-profile", label: "Power Platform" },
+  { id: "profile", target: "v-pills-profile", label: "Data & AI Solutions" },
   { id: "settings", target: "v-pills-settings", label: "Legacy Dynamics", href: "#" },
+  { id: "power", target: "v-pills-power", label: "AI-Intelligent Apps", href: "#" },
 ];
 
 const SOLUTION_PANELS = {
@@ -42,10 +43,10 @@ const SOLUTION_PANELS = {
     { href: "/products/dynamics-365-customer-engagement/", img: "/img/menu-icons/dynamics-365-customer-engagement.svg", alt: "dynamics-365-customer-engagement", title: "Customer Engagement", desc: "Transform Your Marketing Operations" },
   ],
   profile: [
+     { href: "/ai-solutions/microsoft-fabric/", img: "/img/menu-icons/microsoft-fabric.png", alt: "microsoft-fabric", title: "Microsoft Fabric", desc: "Transform Data with Microsoft Fabric Solutions" },
     { href: "/products/microsoft-power-bi/", img: "/img/menu-icons/power-bi.svg", alt: "power-bi", title: "Power BI", desc: "Create powerful visual insights, analytics" },
-    { href: "/products/microsoft-power-apps/", img: "/img/menu-icons/power-apps.svg", alt: "power-apps", title: "Power Apps", desc: "Build web & mobile apps with zero or minimal code" },
-    { href: "/products/microsoft-power-automate/", img: "/img/menu-icons/power-automate.svg", alt: "power-automate", title: "Power Automate", desc: "Automate your processes to improve workflows" },
-    { href: "/products/microsoft-power-virtual-agents/", img: "/img/menu-icons/virtual agent.svg", alt: "virtual agent", title: "Power Virtual Agents", desc: "Create powerful AI Bots to maximize productivity" },
+     { href: "/products/dynamics-365-copilot/", img: "/img/menu-icons/copilate-small.png", alt: "D365 Copilot", title: "D365 Copilot", desc: "AI-powered assistance to automate tasks and improve decisions" },
+     { href: "products/azure-machine-learning/", img: "/img/menu-icons/machine-learning.svg", alt: "Machine Learning / Azure", title: "Machine Learning / Azure", desc: "Build scalable enterprise-grade Machine Learning solutions" },
   ],
   settings: [
     { href: "/products/microsoft-dynamics-nav/", img: "/img/menu-icons/NAV.png", alt: "NAV", title: "Dynamics NAV", desc: "A flexible ERP solution for SMBs" },
@@ -64,6 +65,11 @@ const SOLUTION_PANELS = {
     { href: "/continia-expense-management/", img: "/img/menu-icons/continia.png", alt: "Sana_Commerce", title: "Continia Expense Management ", desc: "Monitor corporate expenses, eliminate manual errors with Continia" },
     { href: "/shopify-connector-business-central/", img: "/img/menu-icons/shopify-integration-logo.svg", alt: "shopify-integration-logo", title: "Shopify Connector", desc: "Synchronize orders, inventory, and customers across platforms" },
     { href: "/yavrio-integration-with-business-central/", img: "/img/menu-icons/image-541.png", alt: "yavrio-integration-logo", title: "Yavrio Integration", desc: "Connect banking data to ERP for automated workflows" },
+  ],
+    power: [
+     { href: "/products/microsoft-power-apps/", img: "/img/menu-icons/power-apps.svg", alt: "power-apps", title: "Power Apps", desc: "Build web & mobile apps with zero or minimal code" },
+    { href: "/products/microsoft-power-automate/", img: "/img/menu-icons/power-automate.svg", alt: "power-automate", title: "Power Automate", desc: "Automate your processes to improve workflows" },
+    { href: "/products/microsoft-power-virtual-agents/", img: "/img/menu-icons/virtual agent.svg", alt: "virtual agent", title: "Power Virtual Agents", desc: "Create powerful AI Bots to maximize productivity" },
   ],
 };
 
@@ -145,10 +151,10 @@ const CASE_STUDY_HIGHLIGHTS = [
 ];
 
 const POPULAR_EBOOKS = [
-  { href: "/ebook/gp-to-bc-migration/", img: "/img/dynamics-GP-BC-Ebook-featured-image.png", alt: "dynamics-GP-BC-Ebook-featured-image", title: "A Complete Guide to Dynamics GP to BC", desc: "A Complete Guide for Microsoft Dynamics GP (Great Plains) to Business Central Migration" },
-  { href: "/ebook/d365-supply-chain-management/", img: "/img/dynamics-SCM-Ebook-featured-image.png", alt: "dynamics-SCM-Ebook", title: "A Complete Guide to Dynamics SCM", desc: "A Complete Guide to Dynamics 365 Supply Chain Management" },
-  { href: "/ebook/dynamics-crm/", img: "/img/dynamics-CRM-Ebook-featured-image.jpg", alt: "dynamics-CRM-Ebook", title: "A Complete Guide to Dynamics CRM", desc: "Microsoft Dynamics CRM is a simple yet powerful tool that can help businesses streamline" },
-  { href: "/ebook/dynamics-365-finance/", img: "/img/nav-guide-pic.png", alt: "manufacturing", title: "The Extensive Guide to Dynamics 365 Finance", desc: "D365 Finance is an intelligent ERP (Enterprise Resource Planning) solution" },
+  { href: "/ebook/gp-to-bc-migration/", img: "/img/dynamics-GP-BC-Ebook-featured-image.png", alt: "dynamics-GP-BC-Ebook-featured-image", title: "Dynamics GP to BC Guide", desc: "GP to Business Central migration guide" },
+  { href: "/ebook/d365-supply-chain-management/", img: "/img/dynamics-SCM-Ebook-featured-image.png", alt: "dynamics-SCM-Ebook", title: "Dynamics 365 SCM Guide", desc: "Guide to Supply Chain Management" },
+  { href: "/ebook/dynamics-crm/", img: "/img/dynamics-CRM-Ebook-featured-image.jpg", alt: "dynamics-CRM-Ebook", title: "Dynamics 365 CRM Guide", desc: "Streamline your business with Dynamics CRM" },
+  { href: "/ebook/dynamics-365-finance/", img: "/img/nav-guide-pic.png", alt: "manufacturing", title: "Dynamics 365 Finance Guide", desc: "Intelligent ERP solution for finance" },
 ];
 
 const GUIDES = [
@@ -169,8 +175,8 @@ const TOOLS = [
 const WEBCASTS = [
   { href: "https://www.youtube.com/watch?v=44hqw-S27D0", img: "/img/bc-8-20.png", title: "Is Your Business ERP-Ready?", desc: "Key signs and steps to readiness" },
   { href: "https://youtu.be/Of8upj7BtGo?si=Lsf5SCwBtIpSU1ST", img: "/img/bc-8-22.png", title: "Signs You Need an ERP", desc: "When and why to adopt Dynamics 365" },
-  { href: "https://youtu.be/hUPT5DejiR0?si=p_hlO_BdCj_gbWwh", img: "/img/bc-8-21.png", title: "Unpacking Microsoft Dynamics 365 Business Central for Growth", desc: "Learn how Business Central helps streamline operations and scale growth in this expert-driven podcast episode." },
-  { href: "https://www.youtube.com/watch?v=rAHE2BiaPkc", img: "/img/New-pic-Project.png", title: "CRM EXPLAINED! Why Your Business Might Fail Without It ", desc: "What really is a CRM—and why does every growing business keep talking about it?" },
+  { href: "https://youtu.be/hUPT5DejiR0?si=p_hlO_BdCj_gbWwh", img: "/img/bc-8-21.png", title: "Business Central for Growth", desc: "How BC streamlines and scales operations" },
+  { href: "https://www.youtube.com/watch?v=rAHE2BiaPkc", img: "/img/New-pic-Project.png", title: "CRM Explained", desc: "Why every business needs a CRM" },
 ];
 
 /* ===================== small shared renderers ===================== */
@@ -481,8 +487,8 @@ const DeskstopMenu = () => {
                             <Link className="n-tag-link" href="/ebook/how-to-choose-right-erp/">
                               <img className="n-tags-image" src="/img/Cover_Book_Moc.png" width={582} height={466} alt="Cover_Book_Moc" />
                             </Link>
-                            <span className="n-tag-title">Ultimate Guide to Choose the Right ERP For Your Business</span>
-                            <p className="n-tag-para">Compare ERP solutions before making your investment.</p>
+                            <span className="n-tag-title">Ultimate ERP Guide for Your Business</span>
+                            <p className="n-tag-para">Compare ERP solutions before investing</p>
                             <Link className="n-tag-link" href="/ebook/how-to-choose-right-erp/">Get Free eBook <i className="bi bi-arrow-right"></i></Link>
                           </div>
                         </div>

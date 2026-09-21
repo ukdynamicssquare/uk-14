@@ -42,7 +42,7 @@ const INDDD = () => {
         <meta name="twitter:description" content="Batch traceability, expiry control and MHRA-ready quality management in one system. Compare Business Central and Supply Chain Management for UK pharmaceutical manufacturers." />
         <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/wholesale-pic-01.png" />
       </Head>
-     <div className='solution-new-banner-one solution-new-banner-one-colo'>
+     <div className='solution-new-banner-one solution-new-banner-one-colos'>
         <div className='container'>
           <div className='row justify-content-center'>
             <div className='col-lg-8'>
@@ -69,8 +69,15 @@ const INDDD = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-12">
-              <div className='m-b-image-nnn'>
-                <Image src="/img/wholesale-pic-01.png" alt='bc-support-banner' width={1097} height={656} />
+              <div className='m-b-image-nnn m-b-image-nna'>
+                <Image
+                  src="/img/pharmaceutica-00.png"
+                  alt='Dynamics 365 ERP for Pharmaceutical Manufacturing'
+                  width={1097}
+                  height={656}
+                  priority
+                  sizes="(max-width: 768px) 100vw, 1097px"
+                />
               </div>
             </div>
           </div>
@@ -168,7 +175,7 @@ const INDDD = () => {
           <div className="uk-reg-panel">
             <div className="uk-reg-row">
               <div className="uk-reg-row__icon">
-                <Image src="/img/wholesale-pic-04.png" alt="wholesale-pic-04" width={40} height={36} />
+                <Image src="/img/pharmaceutica-01.png" alt="UK GMP, enforced by the MHRA" width={40} height={36} />
               </div>
               <div className="uk-reg-row__title">
                 <h4>UK GMP, enforced by the MHRA</h4>
@@ -179,7 +186,7 @@ const INDDD = () => {
             </div>
             <div className="uk-reg-row">
               <div className="uk-reg-row__icon">
-                <Image src="/img/wholesale-pic-04.png" alt="wholesale-pic-04" width={40} height={36} />
+                <Image src="/img/pharmaceutica-02.png" alt="Good Distribution Practice, for anyone moving product" width={40} height={36} />
               </div>
               <div className="uk-reg-row__title">
                 <h4>Good Distribution Practice, for anyone moving product</h4>
@@ -190,7 +197,7 @@ const INDDD = () => {
             </div>
             <div className="uk-reg-row">
               <div className="uk-reg-row__icon">
-                <Image src="/img/wholesale-pic-04.png" alt="wholesale-pic-04" width={40} height={36} />
+                <Image src="/img/pharmaceutica-03.png" alt="Post-Brexit labelling and the falsified medicines position" width={40} height={36} />
               </div>
               <div className="uk-reg-row__title">
                 <h4>Post-Brexit labelling and the falsified medicines position</h4>
@@ -228,15 +235,15 @@ const INDDD = () => {
                       <h3>Traceability and batch genealogy</h3>
                       <div className="pharma-capability-items">
                         <div className="pharma-capability-item">
-                          <Image src="/img/wholesale-pic-04.png" alt="wholesale-pic-04" width={40} height={36} />
+                          <Image src="/img/pharmaceutica-04.png" alt="Automatic lot and batch number assignment on goods receipt or production" width={40} height={36} />
                           <p>Lot and batch numbers assigned automatically the moment stock arrives or is produced</p>
                         </div>
                         <div className="pharma-capability-item">
-                          <Image src="/img/wholesale-pic-04.png" alt="wholesale-pic-04" width={40} height={36} />
+                          <Image src="/img/pharmaceutica-05.png" alt="Full forward and backward batch genealogy traceability lookup" width={40} height={36} />
                           <p>A finished pack traced back to its raw materials, and any raw material lot traced forward to every pack that used it, in one lookup</p>
                         </div>
                         <div className="pharma-capability-item">
-                          <Image src="/img/wholesale-pic-04.png" alt="wholesale-pic-04" width={40} height={36} />
+                          <Image src="/img/pharmaceutica-06.png" alt="Fast product recall scoping directly from the ERP system" width={40} height={36} />
                           <p>A recall scoped in minutes, straight from the system</p>
                         </div>
                       </div>
@@ -249,15 +256,15 @@ const INDDD = () => {
                       <h3>Expiry and shelf-life control</h3>
                       <div className="pharma-capability-items">
                         <div className="pharma-capability-item">
-                          <Image src="/img/wholesale-pic-04.png" alt="wholesale-pic-04" width={40} height={36} />
+                          <Image src="/img/pharmaceutica-07.png" alt="Mandatory expiry date capture for tracked pharmaceutical items" width={40} height={36} />
                           <p>Mandatory expiry date capture on any item flagged for tracking</p>
                         </div>
                         <div className="pharma-capability-item">
-                          <Image src="/img/wholesale-pic-04.png" alt="wholesale-pic-04" width={40} height={36} />
+                          <Image src="/img/pharmaceutica-08.png" alt="First-Expired-First-Out FEFO picking for warehouse stock rotation" width={40} height={36} />
                           <p>First-Expired-First-Out (FEFO) picking, so warehouse teams and automated logic always clear ageing stock before it turns over into fresher batches</p>
                         </div>
                         <div className="pharma-capability-item">
-                          <Image src="/img/wholesale-pic-04.png" alt="wholesale-pic-04" width={40} height={36} />
+                          <Image src="/img/pharmaceutica-09.png" alt="Advance alerts for approaching shelf-life and expiry deadlines" width={40} height={36} />
                           <p>Advance alerts as shelf-life deadlines approach, rather than discovering them at the point of sale</p>
                         </div>
                       </div>
@@ -270,15 +277,15 @@ const INDDD = () => {
                       <h3>Quality management</h3>
                       <div className="pharma-capability-items">
                         <div className="pharma-capability-item">
-                          <Image src="/img/wholesale-pic-04.png" alt="wholesale-pic-04" width={40} height={36} />
+                          <Image src="/img/pharmaceutica-10.png" alt="Business Central native Quality Management module with inspection templates" width={40} height={36} />
                           <p>Business Central&apos;s native Quality Management module (added in the 2026 release wave): inspection templates, pass/fail grading and quarantine, built into the core product</p>
                         </div>
                         <div className="pharma-capability-item">
-                          <Image src="/img/wholesale-pic-04.png" alt="wholesale-pic-04" width={40} height={36} />
+                          <Image src="/img/pharmaceutica-11.png" alt="Supply Chain Management advanced quality orders and CAPA workflows" width={40} height={36} />
                           <p>Supply Chain Management&apos;s advanced quality orders, non-conformance management, CAPA workflows and statistical sampling for higher-complexity operations</p>
                         </div>
                         <div className="pharma-capability-item">
-                          <Image src="/img/wholesale-pic-04.png" alt="wholesale-pic-04" width={40} height={36} />
+                          <Image src="/img/pharmaceutica-12.png" alt="Quality holds recorded directly against the batch record" width={40} height={36} />
                           <p>Quality holds recorded against the batch itself, visible to anyone looking at that stock</p>
                         </div>
                       </div>
@@ -291,15 +298,15 @@ const INDDD = () => {
                       <h3>Production and planning</h3>
                       <div className="pharma-capability-items">
                         <div className="pharma-capability-item">
-                          <Image src="/img/wholesale-pic-04.png" alt="wholesale-pic-04" width={40} height={36} />
+                          <Image src="/img/pharmaceutica-13.png" alt="Demand-driven production scheduling through MRP and MPS" width={40} height={36} />
                           <p>Demand-driven production scheduling through MRP and MPS, weighed against the capacity you actually have</p>
                         </div>
                         <div className="pharma-capability-item">
-                          <Image src="/img/wholesale-pic-04.png" alt="wholesale-pic-04" width={40} height={36} />
+                          <Image src="/img/pharmaceutica-14.png" alt="Formula-based planning that adjusts ingredient quantities for potency and yield" width={40} height={36} />
                           <p>Formula-based planning in Supply Chain Management that adjusts ingredient quantities automatically for potency and yield variance</p>
                         </div>
                         <div className="pharma-capability-item">
-                          <Image src="/img/wholesale-pic-04.png" alt="wholesale-pic-04" width={40} height={36} />
+                          <Image src="/img/pharmaceutica-15.png" alt="Bin-level inventory with temperature-sensitive storage zones" width={40} height={36} />
                           <p>Bin-level inventory, temperature-sensitive storage zones and consumption-based reorder points</p>
                         </div>
                       </div>
@@ -418,11 +425,11 @@ const INDDD = () => {
           <div className="row">
             <div className="col-lg-5 align-self-center order-3">
               <div className='img-backs-sid-two text-center'>
-                <Image src="/img/wholesale-pic-28.png" alt="wholesale-pic-28" width={401} height={455} className='im-two' />
+                <Image src="/img/pharmaceutica-16.png" alt="Best Dynamics 365 ERP for pharmaceutical manufacturing fit assessment" width={540} height={630} className='im-two' />
               </div>
             </div>
             <div className="col-lg-1 order-2"></div>
-            <div className="col-lg-6 order-1">
+            <div className="col-lg-6 align-self-center order-1">
               <div className="supprt-header-new-one supprt-header-new-one-ul">
                 <h2>What Is the Best Dynamics 365 ERP for Pharmaceutical Manufacturing? </h2>
                 <p>The best ERP for pharmaceutical manufacturing is the one that matches your actual production process, and that&apos;s a different answer for a formulation house than it is for an API manufacturer. Buying more platform than your operation needs adds cost and complexity for little real benefit; buying less means outgrowing the system before the implementation has even paid for itself.</p>
@@ -610,7 +617,7 @@ const INDDD = () => {
           <div className="row">
             <div className="col-lg-5 align-self-center order-3">
               <div className='img-backs-sid-two text-center'>
-                <Image src="/img/wholesale-pic-28.png" alt="wholesale-pic-28" width={401} height={455} className='im-two' />
+                <Image src="/img/pharmaceutica-17.png" alt="UK pharmaceutical manufacturers working with Dynamics Square" width={540} height={536} className='im-two' />
               </div>
             </div>
             <div className="col-lg-1 order-2"></div>
