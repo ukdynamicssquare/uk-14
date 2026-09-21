@@ -2,8 +2,8 @@ import React, { useRef, useState, useEffect } from 'react';
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import useCardScrollEffect from "../../components/useCardScrollEffect";
-import faqData from '../../public/data/industriespharmaceutical.json';
+import useCardScrollEffect from "../../../components/useCardScrollEffect";
+import faqData from '../../../public/data/industriespharmaceutical.json';
 const INDDD = () => {
 
   useCardScrollEffect()
@@ -16,21 +16,20 @@ const INDDD = () => {
   return (
     <>
       <Head>
-        <title>Dynamics 365 ERP for Pharmaceutical Manufacturing | Dynamics Square UK</title>
-        <meta name="robots" content="noindex, nofollow" />
+        <title>Dynamics 365 ERP for Pharmaceutical Manufacturing</title>
         <meta
           name="description"
-          content="Batch traceability, expiry control and MHRA-ready quality management in one system. Compare Business Central and Supply Chain Management for UK pharmaceutical manufacturers."
+          content="Optimise pharmaceutical manufacturing with Dynamics 365 ERP. Manage production, quality, compliance, inventory and supply chains with a scalable cloud ERP."
         />
         <link
           rel="canonical"
-          href="https://www.dynamicssquare.co.uk/industries/dynamics-365-for-pharmaceutical-manufacturing/"
+          href="https://www.dynamicssquare.co.uk/industries/manufacturing/dynamics-365-for-pharmaceutical/"
         />
         <meta property="og:locale" content="GB" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Dynamics 365 ERP for Pharmaceutical Manufacturing | Dynamics Square UK " />
-        <meta property="og:description" content="Batch traceability, expiry control and MHRA-ready quality management in one system. Compare Business Central and Supply Chain Management for UK pharmaceutical manufacturers." />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/industries/dynamics-365-for-pharmaceutical-manufacturing/" />
+        <meta property="og:title" content="Dynamics 365 ERP for Pharmaceutical Manufacturing " />
+        <meta property="og:description" content="Optimise pharmaceutical manufacturing with Dynamics 365 ERP. Manage production, quality, compliance, inventory and supply chains with a scalable cloud ERP." />
+        <meta property="og:url" content="https://www.dynamicssquare.co.uk/industries/manufacturing/dynamics-365-for-pharmaceutical/" />
         <meta property="og:site_name" content="Dynamics Square UK" />
         <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/pharmaceutica-00.png" />
         <meta property="og:image:width" content="200" />
@@ -38,8 +37,8 @@ const INDDD = () => {
         <meta property="og:image:type" content="image/png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="Dynamics 365 ERP for Pharmaceutical Manufacturing | Dynamics Square UK" />
-        <meta name="twitter:description" content="Batch traceability, expiry control and MHRA-ready quality management in one system. Compare Business Central and Supply Chain Management for UK pharmaceutical manufacturers." />
+        <meta name="twitter:title" content="Dynamics 365 ERP for Pharmaceutical Manufacturing" />
+        <meta name="twitter:description" content="Optimise pharmaceutical manufacturing with Dynamics 365 ERP. Manage production, quality, compliance, inventory and supply chains with a scalable cloud ERP." />
         <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/pharmaceutica-00.png" />
       </Head>
      <div className='solution-new-banner-one solution-new-banner-one-colos'>
@@ -408,7 +407,7 @@ const INDDD = () => {
           </div>
           <div className="row">
             <div className="col-lg-9">
-              <p className="pharma-compare-footnote">For manufacturers working under strict electronic signature requirements, most implementations pair Dynamics 365 with a dedicated electronic batch record (eBR) or quality management system (QMS). Dynamics 365 holds the materials, costing and production data; the eBR or QMS holds the validated batch record itself. We&apos;ll flag it early in discovery if your compliance position calls for that pairing.</p>
+              <p className="pharma-compare-footnote">For manufacturers working under strict electronic signature requirements, most implementations pair Dynamics 365 with a dedicated electronic batch record (eBR) or quality management system (QMS). <a href="/products/microsoft-dynamics-365/" className='u-i'>Dynamics 365</a> holds the materials, costing and production data; the eBR or QMS holds the validated batch record itself. We&apos;ll flag it early in discovery if your compliance position calls for that pairing.</p>
               <Link
                 href="#exampleModal"
                 data-bs-toggle="modal"
@@ -432,7 +431,7 @@ const INDDD = () => {
             <div className="col-lg-6 align-self-center order-1">
               <div className="supprt-header-new-one supprt-header-new-one-ul">
                 <h2>What Is the Best Dynamics 365 ERP for Pharmaceutical Manufacturing? </h2>
-                <p>The best ERP for pharmaceutical manufacturing is the one that matches your actual production process, and that&apos;s a different answer for a formulation house than it is for an API manufacturer. Buying more platform than your operation needs adds cost and complexity for little real benefit; buying less means outgrowing the system before the implementation has even paid for itself.</p>
+                <p>The best <a href="/industries/manufacturing/" className='u-i'>ERP for Pharmaceutical Manufacturing</a> is the one that matches your actual production process, and that&apos;s a different answer for a formulation house than it is for an API manufacturer. Buying more platform than your operation needs adds cost and complexity for little real benefit; buying less means outgrowing the system before the implementation has even paid for itself.</p>
                 <p>We run a fit assessment with every pharmaceutical enquiry before recommending a platform, covering your production style, batch complexity, site count and compliance obligations.</p>
 
                 <Link
@@ -601,7 +600,7 @@ const INDDD = () => {
           </div>
           <div className="row">
             <div className="col-lg-9">
-              <p className="pharma-pricing-footnote">A focused Business Central rollout for a pharma manufacturer in the UK generally costs somewhere between ten and thirty thousand pounds once implementation is added to licensing. A Supply Chain Management project spanning several sites, with validation work and compliance extensions layered in, climbs into six figures.</p>
+              <p className="pharma-pricing-footnote">A focused <a href="/products/dynamics-365-business-central/">Business Central</a> rollout for a pharma manufacturer in the UK generally costs somewhere between ten and thirty thousand pounds once implementation is added to licensing. A Supply Chain Management project spanning several sites, with validation work and compliance extensions layered in, climbs into six figures.</p>
               <Link
                 href="#exampleModal"
                 data-bs-toggle="modal"

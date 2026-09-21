@@ -54,6 +54,7 @@ const HeaderWork = () => {
          "/products/microsoft-dynamics-365-customer-service": `${gname}`,
           "/ai-solutions": `${gname}`,
            "/ai-solutions/microsoft-fabric": `${gname}`,
+           "/industries/manufacturing/dynamics-365-for-pharmaceutical": `${gname}`,
            "/products": `${gname}`,
     "/book-a-demo": `${gname}`,
   };

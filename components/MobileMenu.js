@@ -134,8 +134,8 @@ const SubAccordion = ({ id, tabs, renderBody }) => (
 const LinkList = ({ items }) => (
   <div className="iner-list">
     <ul>
-      {items.map((item) => (
-        <li key={item.href}>
+      {items.map((item, i) => (
+        <li key={`${item.href}-${item.title || item.label || i}`}>
           {item.external ? (
             <a href={item.href} target="_blank" rel="noreferrer" onClick={closeMobileNav}>
               {item.title}

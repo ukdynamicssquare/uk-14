@@ -8,10 +8,6 @@ import TimerModal from "../../../components/TimerModal";
 import { paginate } from "../../../helpers/paginate";
 
 const PAGE_SIZE = 12;
-const SOCIAL_LINKS = [
-  { key: "linkedin_url", icon: "bi-linkedin", label: "LinkedIn" },
- 
-];
 
 const slugify = (name = "") => name.toLowerCase().trim().replace(/\s+/g, "-");
 
@@ -22,6 +18,8 @@ const isValidLink = (value) => {
   const normalized = value.trim().toLowerCase();
   return normalized !== "" && normalized !== "na" && normalized !== "n/a" && normalized !== "-";
 };
+
+const getLinkedInUrl = (author) => author?.socialLinks?.linkedin || author?.linkedin_url || "";
 
 
 function formatDate(date) {
@@ -215,32 +213,36 @@ function Authors({ authorslist, blgsbyauthorslist, fetchedAuthor }) {
               <div className="row">
                 <div className="col-lg-3 text-center">
                   <img src={authorImage} alt={authorName} className="author-profile-img" />
-                  <div className="author-social-links">
-                    {SOCIAL_LINKS.map(({ key, icon, label }) =>
-                      isValidLink(currentAuthor?.[key]) ? (
-                        <a
-                          key={key}
-                          href={currentAuthor[key]}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label={label}
-                        >
-                          <i className={`bi ${icon}`}></i>
-                        </a>
-                      ) : null
-                    )}
-
-                    {/* {isValidLink(currentAuthor?.email) && (
-                      <a href={`mailto:${currentAuthor.email}`} aria-label="Email">
-                        <i className="bi bi-envelope-fill"></i>
+                  {/* <div className="author-social-links">
+                    {isValidLink(getLinkedInUrl(currentAuthor)) && (
+                      <a
+                        href={getLinkedInUrl(currentAuthor)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="LinkedIn"
+                      >
+                        <i className="bi bi-linkedin"></i>
                       </a>
-                    )} */}
-                  </div>
+                    )}
+                  </div> */}
                 </div>
 
                 <div className="col-lg-9">
                   <span className="author-role"> {`${currentAuthor?.designation || currentAuthor?.role_name || "Content Writer & Industry Expert"}`}</span>
-                  <h1>{authorName}</h1>
+                  <h1 className="author-name-heading">
+                    {authorName}
+                    {isValidLink(getLinkedInUrl(currentAuthor)) && (
+                      <a
+                        href={getLinkedInUrl(currentAuthor)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${authorName} on LinkedIn`}
+                        className="author-name-linkedin"
+                      >
+                        <i className="bi bi-linkedin"></i>
+                      </a>
+                    )}
+                  </h1>
                   <p className="author-bio">{authorDescription}</p>
 
                   <div className="author-statline">
@@ -484,6 +486,33 @@ function Authors({ authorslist, blgsbyauthorslist, fetchedAuthor }) {
           letter-spacing: -0.01em;
           color: var(--surface);
           margin-bottom: 14px;
+        }
+
+        .ds-author .author-name-heading {
+          display: flex;
+          align-items: center;
+          gap: 14px;
+          flex-wrap: wrap;
+        }
+
+        .ds-author .author-name-linkedin {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 34px;
+          height: 34px;
+          border-radius: 50%;
+          background: var(--surface);
+          color: #0a66c2;
+          font-size: 17px;
+          flex-shrink: 0;
+          transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        .ds-author .author-name-linkedin:hover {
+          transform: translateY(-2px);
+          background: #0a66c2;
+          color: var(--surface);
         }
 
         .ds-author .author-bio {
@@ -968,6 +997,10 @@ function Authors({ authorslist, blgsbyauthorslist, fetchedAuthor }) {
           .ds-author .author-social-links {
             justify-content: center;
               margin: 0px 0px 30px;
+          }
+
+          .ds-author .author-name-heading {
+            justify-content: center;
           }
 
           .ds-author .author-sidebar {

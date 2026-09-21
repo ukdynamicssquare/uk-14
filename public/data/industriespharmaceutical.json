@@ -37,6 +37,6 @@
     {
       "id": 8,
       "question": "Does Dynamics 365 handle UK VAT and Making Tax Digital?",
-      "answer": "<p>Yes, Business Central includes native Making Tax Digital support for VAT, with digital record-keeping and direct submission to HMRC built in, so no bridging software is required.</p>"
+      "answer": "<p>Yes, Business Central includes native <a class=\"u-i\" href=\"/blog/making-tax-digital-business-central-and-hmrc-integration/\">Making Tax Digital support for VAT</a>, with digital record-keeping and direct submission to HMRC built in, so no bridging software is required.</p>"
     }
   ]
