@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import DeskstopMenu from "./DeskstopMenu";
 import MobileMenu from "./MobileMenu";
 import { useRouter } from "next/router";
@@ -7,6 +8,11 @@ import TimerModal from "./TimerModal";
 
 const HeaderWork = () => {
   const [isFixed, setIsFixed] = useState(false);
+  // Open megamenus/dropdowns are pure CSS :hover, so clicking a Link inside
+  // one (client-side navigation, no full page reload) can leave the panel
+  // visually open through the transition. This closes it the moment a
+  // route change starts.
+  const [navClosing, setNavClosing] = useState(false);
   const router = useRouter();
   const gname = "services-header"
   const headerClassMap = {
@@ -89,17 +95,6 @@ const HeaderWork = () => {
       }
     };
 
-
-    // Handle hover tab switching
-    const navLinks = document.querySelectorAll(".megamenus .nav-links");
-        // const navLinks = document.querySelectorAll(".megamenu .nav-link");
-    navLinks.forEach((link) => {
-      link.addEventListener("mouseenter", (event) => {
-        const targetTab = new bootstrap.Tab(event.target);
-        targetTab.show();
-      });
-    });
-
     window.addEventListener("scroll", handleScroll);
 
     // Scroll to top on component mount
@@ -108,11 +103,23 @@ const HeaderWork = () => {
     // Clean up on component unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      navLinks.forEach((link) => {
-        link.removeEventListener("mouseenter", () => { });
-      });
     };
   }, []);
+
+  useEffect(() => {
+    const closeOpenMenus = () => setNavClosing(true);
+    const reopenAllowed = () => setNavClosing(false);
+
+    router.events.on("routeChangeStart", closeOpenMenus);
+    router.events.on("routeChangeComplete", reopenAllowed);
+    router.events.on("routeChangeError", reopenAllowed);
+
+    return () => {
+      router.events.off("routeChangeStart", closeOpenMenus);
+      router.events.off("routeChangeComplete", reopenAllowed);
+      router.events.off("routeChangeError", reopenAllowed);
+    };
+  }, [router]);
 
 
   return (
@@ -133,9 +140,9 @@ const HeaderWork = () => {
           </a>
         </div>
         <div className="container-fluid">
-          <nav id="navbar" className="navbar">
+          <nav id="navbar" className={`navbar${navClosing ? " dsq-nav-closing" : ""}`}>
             <div className="left-logo">
-              <a href="/" className="logo">
+              <Link href="/" className="logo">
                 <div className="logo-wrapper">
                   <Image
                     src={getLogoSrc()}
@@ -144,11 +151,11 @@ const HeaderWork = () => {
                     width={301}
                     height={21}
                   />
-                  <Image className="log-part" src={getLogoSrctwo()} alt="" width="141"
-                    height="40" priority />
+                  <Image className="log-part" src={getLogoSrctwo()} alt="" width={141}
+                    height={40} style={{ height: "auto" }} priority />
                 </div>
 
-              </a>
+              </Link>
             </div>
             <div className="right-nav">
               <DeskstopMenu />
@@ -157,6 +164,18 @@ const HeaderWork = () => {
           <MobileMenu />
         </div>
       </header>
+
+      <style jsx global>{`
+        /* Dropdowns/megamenus are CSS :hover-driven; force them closed the
+           instant a route change starts so a Link click doesn't leave the
+           panel visually open through the client-side transition. */
+        .navbar.dsq-nav-closing .dropdown .megamenu-list,
+        .navbar.dsq-nav-closing .dropdown > ul {
+          opacity: 0 !important;
+          visibility: hidden !important;
+          pointer-events: none !important;
+        }
+      `}</style>
     </>
   );
 };

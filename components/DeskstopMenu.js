@@ -1,10 +1,222 @@
 import React from "react";
+import Link from "next/link";
 import PulseButton from "./PulseButton";
+
+/*
+  Same markup, classes, and Bootstrap data-bs-* attributes as before —
+  only the repetitive list items are now generated from data arrays
+  instead of hand-written JSX, so adding/editing a nav entry means
+  editing one line of data instead of a whole card block. No visual or
+  behavioral change: output HTML is the same as the previous version.
+*/
+
+const SOLUTION_TABS = [
+  { id: "home", target: "v-pills-home", label: "Company By Size", active: true },
+  { id: "addon", target: "v-pills-addon", label: "ERP" },
+  { id: "CRM", target: "v-pills-CRM", label: "CRM" },
+  { id: "settingss", target: "v-pills-settingss", label: "Integrations", href: "#" },
+  { id: "profile", target: "v-pills-profile", label: "Power Platform" },
+  { id: "settings", target: "v-pills-settings", label: "Legacy Dynamics", href: "#" },
+];
+
+const SOLUTION_PANELS = {
+  home: [
+    { href: "/erp-for-startups/", img: "/img/menu-icons/store.png", alt: "azure", title: "Startup", desc: "Smart ERP solutions to kickstart your growth" },
+    { href: "/dynamics-365-for-small-businesses/", img: "/img/menu-icons/storefront.png", alt: "mixed-Reality-icons", title: "Small Business", desc: "Simplifying business for small, ambitious teams" },
+    { href: "/dynamics-365-for-medium-businesses/", img: "/img/menu-icons/group-3535.png", alt: "AI", title: "Mid Size", desc: "Powering growth for mid-sized businesses." },
+    { href: "/dynamics-365-for-large-businesses/", img: "/img/menu-icons/factory.png", alt: "AI", title: "Enterprise", desc: "Advanced ERP solutions for large, global enterprises" },
+  ],
+  addon: [
+    { href: "/products/dynamics-365-business-central/", img: "/img/menu-icons/dynamics-365-businesscentral.svg", alt: "dynamics-365-businesscentral", title: "Business Central", desc: "All-in-one solution for all your business practices" },
+    { href: "/products/microsoft-dynamics-365-finance/", img: "/img/menu-icons/dynamics-365-finance.svg", alt: "dynamics-365-finance", title: "Finance", desc: "Improve your finance practices" },
+    { href: "/products/dynamics-365-supply-chain-management/", img: "/img/menu-icons/dynamics-365-supplychainmanagement.svg", alt: "dynamics-365-supplychainmanagement", title: "Supply Chain", desc: "Optimize operations and drive agile Supply Chain" },
+    { href: "/products/dynamics-365-human-resources/", img: "/img/menu-icons/dynamics-365-HRM.svg", alt: "dynamics-365-HRM", title: "Human Resource", desc: "Optimize Your Resource Utilization" },
+    { href: "/products/microsoft-dynamics-365-commerce/", img: "/img/menu-icons/dynamics-365-commerce.svg", alt: "dynamics-365-commerce", title: "Commerce", desc: "Unify Your Back-Office, In-Store, And Digital Experience" },
+    { href: "/products/dynamics-365-project-operations/", img: "/img/menu-icons/dynamics-365-project-management.svg", alt: "dynamics-365-project-management", title: "Project Operations", desc: "Automate and streamline your projects" },
+  ],
+  CRM: [
+    { href: "/products/microsoft-dynamics-365-sales/", img: "/img/menu-icons/dynamics-365-sales.svg", alt: "dynamics-365-sales", title: "Sales", desc: "Drive end-to-end sales practices" },
+    { href: "/products/microsoft-dynamics-365-marketing/", img: "/img/menu-icons/dynamics-365-marketing.svg", alt: "dynamics-365-marketing", title: "Marketing", desc: "Maximize ROI with integrated Marketing" },
+    { href: "/products/microsoft-dynamics-365-field-service/", img: "/img/menu-icons/dynamics-365-fieldservice.svg", alt: "dynamics-365-fieldservice", title: "Field Service", desc: "Drive connected and collaborated field service" },
+    { href: "/products/microsoft-dynamics-365-customer-service/", img: "/img/menu-icons/dynamics-365-customer-service.svg", alt: "dynamics-365-customer-service", title: "Customer Service", desc: "Drive omnichannel customer experience" },
+    { href: "/products/dynamics-365-customer-engagement/", img: "/img/menu-icons/dynamics-365-customer-engagement.svg", alt: "dynamics-365-customer-engagement", title: "Customer Engagement", desc: "Transform Your Marketing Operations" },
+  ],
+  profile: [
+    { href: "/products/microsoft-power-bi/", img: "/img/menu-icons/power-bi.svg", alt: "power-bi", title: "Power BI", desc: "Create powerful visual insights, analytics" },
+    { href: "/products/microsoft-power-apps/", img: "/img/menu-icons/power-apps.svg", alt: "power-apps", title: "Power Apps", desc: "Build web & mobile apps with zero or minimal code" },
+    { href: "/products/microsoft-power-automate/", img: "/img/menu-icons/power-automate.svg", alt: "power-automate", title: "Power Automate", desc: "Automate your processes to improve workflows" },
+    { href: "/products/microsoft-power-virtual-agents/", img: "/img/menu-icons/virtual agent.svg", alt: "virtual agent", title: "Power Virtual Agents", desc: "Create powerful AI Bots to maximize productivity" },
+  ],
+  settings: [
+    { href: "/products/microsoft-dynamics-nav/", img: "/img/menu-icons/NAV.png", alt: "NAV", title: "Dynamics NAV", desc: "A flexible ERP solution for SMBs" },
+    { href: "/products/microsoft-dynamics-crm/", img: "/img/menu-icons/CRM.png", alt: "CRM", title: "Dynamics CRM", desc: "Increase Revenue and Customer Satisfaction" },
+    { href: "/products/microsoft-dynamics-ax/", img: "/img/menu-icons/AX.png", alt: "AX", title: "Dynamics AX", desc: "The Most Complete, Agile And Powerful ERP" },
+    { href: "/products/microsoft-dynamics-gp/", img: "/img/menu-icons/GP.png", alt: "GP", title: "Dynamics GP", desc: "Accounting software designed for SMEs" },
+    { href: "/products/microsoft-dynamics-erp/", img: "/img/menu-icons/ERP.png", alt: "GP", title: "Dynamics ERP", desc: "Streamline Entire Business Management with Ease" },
+    { href: "/products/microsoft-dynamics-365-finance-operations/", img: "/img/menu-icons/F&Q.png", alt: "GP", title: "Dynamics F&O", desc: "Accelerate your Finance and Inventory more Efficiently" },
+  ],
+  settingss: [
+    { href: "/continia-for-dynamics-365-business-central/", img: "/img/menu-icons/continia.png", alt: "continia", title: "Continia integration", desc: "Scan, analyse, and process documents with optimum quality" },
+    { href: "/insights-works-for-dynamics-365-business-central/", img: "/img/menu-icons/Insight_Work.png", alt: "Insight_Work", title: "Insight Works", desc: "Optimise your inventory and distribution operations effortlessly" },
+    { href: "/sana-commerce-for-dynamics-365-business-central/", img: "/img/menu-icons/Sana_Commerce.png", alt: "Sana_Commerce", title: "Sana Commerce", desc: "Avail a cloud e-commerce solution to supercharge your online store" },
+    { href: "/wms-for-business-central/", img: "/img/menu-icons/taskley-logo-im.png", alt: "Sana_Commerce", title: "Tasklet's Mobile WMS", desc: "Optimize warehouse operations, simplify inventory, boost profits" },
+    { href: "/continia-document-capture-with-business-central/", img: "/img/menu-icons/continia.png", alt: "Sana_Commerce", title: "Continia OCR", desc: "Transform document management, streamline processing, manage easily" },
+    { href: "/continia-expense-management/", img: "/img/menu-icons/continia.png", alt: "Sana_Commerce", title: "Continia Expense Management ", desc: "Monitor corporate expenses, eliminate manual errors with Continia" },
+    { href: "/shopify-connector-business-central/", img: "/img/menu-icons/shopify-integration-logo.svg", alt: "shopify-integration-logo", title: "Shopify Connector", desc: "Synchronize orders, inventory, and customers across platforms" },
+    { href: "/yavrio-integration-with-business-central/", img: "/img/menu-icons/image-541.png", alt: "yavrio-integration-logo", title: "Yavrio Integration", desc: "Connect banking data to ERP for automated workflows" },
+  ],
+};
+
+const INDUSTRIES = [
+  { href: "/industries/dynamics-365-for-distribution/", img: "/img/menu-icons/distribution-truck.png", alt: "MAnufacturing", title: "Distribution", desc: "Drive seamless supply flow with connected operations " },
+  { href: "/industries/microsoft-cloud-for-manufacturing/", img: "/img/menu-icons/MAnufacturing.png", alt: "MAnufacturing", title: "Manufacturing", desc: "Connect your people and operations to drive profitability" },
+  { href: "/industries/dynamics-365-for-education/", img: "/img/menu-icons/education.png", alt: "education", title: "Education", desc: "Effectively manage students and staff for overall growth" },
+  { href: "/industries/ecommerce/", img: "/img/menu-icons/E-commerce.png", alt: "E-commerce", title: "Ecommerce", desc: "Optimise E-commerce processes with real-time stocks" },
+  { href: "/industries/professional-services/", img: "/img/menu-icons/Professional-ervice.png", alt: "Professional-ervice", title: "Professional Services", desc: "Streamline administration processes leveraging automation" },
+  { href: "/industries/food-and-beverages/", img: "/img/menu-icons/Food.png", alt: "Food", title: "Food & Beverages", desc: "Manage supply and inventory processes with real-time data" },
+  { href: "/industries/dynamics-365-for-healthcare/", img: "/img/menu-icons/healthcare.png", alt: "healthcare", title: "Healthcare", desc: "Track clinical operations while enhancing patient experience" },
+  { href: "/industries/dynamics-365-for-retail/", img: "/img/menu-icons/retail-icon.png", alt: "retail-icon", title: "Retail", desc: "Optimize retail operations with seamless user experience" },
+];
+
+const OUR_SERVICES = [
+  { href: "/our-services/dynamics-365-implementation-services/", label: "Implementation Services" },
+  { href: "/our-services/dynamics-365-support-services/", label: "Support Services" },
+  { href: "/our-services/dynamics-365-upgrade-services/", label: "Upgrade Services" },
+  { href: "/our-services/dynamics-365-training/", label: "Dynamics 365 Training" },
+  { href: "/our-services/dynamics-365-consultant/", label: "Dynamics 365 Consultants" },
+];
+
+const COMPANY_LINKS = [
+  { href: "/about-us/", label: "About Us" },
+  { href: "/why-us/", label: "Why Us" },
+  { href: "/partner/", label: "Partners" },
+  { href: "/career/", label: "Careers" },
+];
+
+const RESOURCE_TABS = [
+  { id: "res-one", target: "v-pills-res-one", label: "Blogs", icon: "/img/menu-icons/res-meg-00.png", active: true },
+  { id: "res-two", target: "v-pills-res-two", label: "Case Studies", icon: "/img/menu-icons/res-meg-01.png" },
+  { id: "res-three", target: "v-pills-res-three", label: "eBooks", icon: "/img/menu-icons/res-meg-03.png" },
+  { id: "res-four", target: "v-pills-res-four", label: "Guides", icon: "/img/menu-icons/res-meg-04.png" },
+  { id: "res-five", target: "v-pills-res-five", label: "Tools", icon: "/img/menu-icons/res-meg-05.png" },
+  { id: "res-six", target: "v-pills-res-six", label: "Webcasts", icon: "/img/menu-icons/res-meg-06.png" },
+];
+
+const BLOG_BY_PRODUCT = [
+  { href: "/blog/category/business-central/", label: "Business Central" },
+  { href: "/blog/category/dynamics-365-fo/", label: "Finance" },
+  { href: "/blog/category/dynamics-365-scm/", label: "Supply Chain" },
+  { href: "/blog/category/dynamics-365-crm/", label: "Sales" },
+  { href: "/blog/category/field-service/", label: "Field Service" },
+  { href: "/blog/category/microsoft-dynamics-365/", label: "Copilot" },
+  { href: "/blog/category/dynamics-365-crm/", label: "Customer Service" },
+];
+
+const BLOG_BY_INDUSTRY = [
+  { href: "/blog/tag/Manufacturing", label: "Manufacturing" },
+  { href: "/blog/tag/Retail/", label: "Retail & Ecommerce" },
+  { href: "/blog/tag/Distribution/", label: "Distribution" },
+  { href: "/blog/tag/Professional-Services/", label: "Professional Services" },
+  { href: "/blog/tag/Healthcare", label: "Healthcare" },
+  { href: "/blog/tag/Education", label: "Education" },
+];
+
+const BLOG_EDITORS_PICKS = [
+  { href: "/blog/what-is-business-central-implementation-methodology/", label: "Business Central Implementation Methodology" },
+  { href: "/blog/quickbooks-to-microsoft-business-central-migration/", label: "QuickBooks to Business Central Migration" },
+  { href: "/blog/sage-to-business-central-migration/", label: "Sage to Business Central Migration" },
+  { href: "/dynamics-nav-to-business-central/", label: "NAV to Business Central Upgrade" },
+  { href: "/gp-to-business-central-migration/", label: "Dynamics GP to Business Central Migration" },
+  { href: "/blog/xero-to-business-central-migration/", label: "Xero to Business Central Migration" },
+];
+
+const CASE_STUDY_SERVICES = [
+  { href: "/case-studies/#Implementation", icon: "bi-gear", title: "Implementation", desc: "Business Central | Finance" },
+  { href: "/case-studies/#Upgrade", icon: "bi-back", title: "ERP Upgrade", desc: "Nav, GP, AX Upgrade" },
+  { href: "/case-studies/#Support", icon: "bi-person-add", title: "Managed Support", desc: "24×7 Support & Optimization" },
+];
+
+const CASE_STUDY_HIGHLIGHTS = [
+  { href: "/case-studies/dynamics-365-finance-for-logistic-uk-multi-entity/", label: "Stronger Financial Control for Global Rollout | Global Logistics Business" },
+  { href: "/case-studies/business-central-with-crm-implement-for-equestrian-manufacturing/", label: "162% Projected ROI with 8% Efficiency Gain | UK Manufacturer" },
+  { href: "/case-studies/business-central-reimplementation-for-retail-market/", label: "Digitally Synchronized Warehouse Operations | Northern Ireland Saddlery Business" },
+  { href: "/case-studies/business-central-reimplementation-for-food-trader/", label: "162% Projected ROI and £32K+ Savings | Food Trading Startup" },
+  { href: "/case-studies/nav-2013-r2-to-business-central-upgrade/", label: "Improved Efficiency and Real-Time Visibility | UK Orthodontic Supplier" },
+];
+
+const POPULAR_EBOOKS = [
+  { href: "/ebook/gp-to-bc-migration/", img: "/img/dynamics-GP-BC-Ebook-featured-image.png", alt: "dynamics-GP-BC-Ebook-featured-image", title: "A Complete Guide to Dynamics GP to BC", desc: "A Complete Guide for Microsoft Dynamics GP (Great Plains) to Business Central Migration" },
+  { href: "/ebook/d365-supply-chain-management/", img: "/img/dynamics-SCM-Ebook-featured-image.png", alt: "dynamics-SCM-Ebook", title: "A Complete Guide to Dynamics SCM", desc: "A Complete Guide to Dynamics 365 Supply Chain Management" },
+  { href: "/ebook/dynamics-crm/", img: "/img/dynamics-CRM-Ebook-featured-image.jpg", alt: "dynamics-CRM-Ebook", title: "A Complete Guide to Dynamics CRM", desc: "Microsoft Dynamics CRM is a simple yet powerful tool that can help businesses streamline" },
+  { href: "/ebook/dynamics-365-finance/", img: "/img/nav-guide-pic.png", alt: "manufacturing", title: "The Extensive Guide to Dynamics 365 Finance", desc: "D365 Finance is an intelligent ERP (Enterprise Resource Planning) solution" },
+];
+
+const GUIDES = [
+  { href: "/the-ultimate-guide-to-microsoft-dynamics-365/", img: "/img/the-ultmate-ai-guide-banner.png", alt: "the-ultmate-ai-guide", tag: "Guide", title: "Microsoft Dynamics 365: Complete Guide to CRM, ERP & Business Applications (2026)" },
+  { href: "/guides/business-central-guide-for-smb/", img: "/img/chapter5-5.png", alt: "guide", tag: "Guide", title: "Business Central: The Definitive Guide For SMBs" },
+];
+
+const WHITEPAPERS = [
+  { href: "/white-papers/microsoft-copilot/", img: "/img/white-p-one.png", alt: "guide", tag: "Whitepapers", title: "Microsoft Copilot: The Catalyst for Transformation in Your Business" },
+  { href: "/white-papers/microsoft-finance/", img: "/img/finacne-white-paper-category.png", alt: "guide", tag: "Whitepapers", title: "Dynamics 365 Finance with Copilot WhitePaper" },
+];
+
+const TOOLS = [
+  { href: "/erp-implementation-cost-calculator/", img: "/img/tools-one.png", tag: "ERP Calculator", title: "Estimate implementation costs in minutes.", cta: "Calculate Now" },
+  { href: "/top-erp-systems-comparison/", img: "/img/tools-two.png", tag: "ERP Comparison", title: "Compare Dynamics 365 solutions side-by-side.", cta: "Compare Now" },
+];
+
+const WEBCASTS = [
+  { href: "https://www.youtube.com/watch?v=44hqw-S27D0", img: "/img/bc-8-20.png", title: "Is Your Business Ready for an ERP System?", desc: "Explore key signs, benefits, and steps to ERP readiness" },
+  { href: "https://youtu.be/Of8upj7BtGo?si=Lsf5SCwBtIpSU1ST", img: "/img/bc-8-22.png", title: "Signs Your Business Is Ready for an ERP System", desc: "Understand when to adopt ERP, its benefits, and how Dynamics 365 drives business transformation." },
+  { href: "https://youtu.be/hUPT5DejiR0?si=p_hlO_BdCj_gbWwh", img: "/img/bc-8-21.png", title: "Unpacking Microsoft Dynamics 365 Business Central for Growth", desc: "Learn how Business Central helps streamline operations and scale growth in this expert-driven podcast episode." },
+  { href: "https://www.youtube.com/watch?v=rAHE2BiaPkc", img: "/img/New-pic-Project.png", title: "CRM EXPLAINED! Why Your Business Might Fail Without It ", desc: "What really is a CRM—and why does every growing business keep talking about it?" },
+];
+
+/* ===================== small shared renderers ===================== */
+
+function ItemCard({ item, small }) {
+  return (
+    <div className={`list-itmes-maga-menu${small ? " list-itmes-maga-menu-small" : ""}`}>
+      <Link href={item.href}>
+        <div className="pic">
+          <img src={item.img} alt={item.alt} width="48" height="48" />
+        </div>
+        <div className="content">
+          <span>{item.title}</span>
+          <p>{item.desc}</p>
+        </div>
+      </Link>
+    </div>
+  );
+}
+
+function FeaturedArticle() {
+  return (
+    <div className="right-resource">
+      <div className="res-top-co">
+        <span className="n-tag">Featured Article</span>
+        <span className="n-title">How Much Time Can Copilot Save in Dynamics 365 Business Central?</span>
+        <p>Discover how much time Copilot saves in Dynamics 365 Business Central by automating...</p>
+        <div className="imag00">
+          <img src="/img/menu-icons/pic-006.png" alt="Dynamics 365" width={106} height={90} />
+        </div>
+        <Link href="/blog/copilot-business-central-time-savings/">Read Article <i className="bi bi-arrow-right"></i></Link>
+      </div>
+      <div className="res-top-bo">
+        <Link style={{ padding: "0px" }} href="/products/dynamics-365-copilot/">
+          <img src="/img/menu--ss.png" width={706} height={180} alt="AI" />
+        </Link>
+      </div>
+    </div>
+  );
+}
 
 const DeskstopMenu = () => {
   return (
     <>
       <ul>
+        {/* ===================== SOLUTION ===================== */}
         <li className="dropdown megamenu megamenu-new">
           <a href="#">
             <span>Solution</span>
@@ -19,955 +231,39 @@ const DeskstopMenu = () => {
                   role="tablist"
                   aria-orientation="vertical"
                 >
-                  <div
-                    className="nav-link active"
-                    id="v-pills-home-tab"
-                    data-bs-toggle="pill"
-                    data-bs-target="#v-pills-home"
-                  >
-                    <a>
-                      <span>Company By Size</span>
-                    </a>
-                  </div>
-                  <div
-                    className="nav-link"
-                    id="v-pills-addon-tab"
-                    data-bs-toggle="pill"
-                    data-bs-target="#v-pills-addon"
-                    aria-selected="false"
-                  >
-                    <a>
-                      <span>ERP</span>
-                    </a>
-                  </div>
-                  <div
-                    className="nav-link"
-                    id="v-pills-CRM-tab"
-                    data-bs-toggle="pill"
-                    data-bs-target="#v-pills-CRM"
-                    aria-selected="false"
-                  >
-                    <a>
-                      <span>CRM</span>
-                    </a>
-                  </div>
-                  <div
-                    className="nav-link"
-                    id="v-pills-settingss-tab"
-                    data-bs-toggle="pill"
-                    data-bs-target="#v-pills-settingss"
-                    aria-selected="false"
-                  >
-                    <a href="#">
-                      <span>Integrations</span>
-                    </a>
-                  </div>
-                  <div
-                    className="nav-link"
-                    id="v-pills-profile-tab"
-                    data-bs-toggle="pill"
-                    data-bs-target="#v-pills-profile"
-                    aria-selected="false"
-                  >
-                    <a>
-                      <span>Power Platform</span>
-                    </a>
-                  </div>
-                  {/* <div
-                    className="nav-link"
-                    id="v-pills-messages-tab"
-                    data-bs-toggle="pill"
-                    data-bs-target="#v-pills-messages"
-                    aria-selected="false"
-                  >
-                    <a href="#">
-                      <span>Power Platform</span>
-                    </a>
-                  </div> */}
-                  <div
-                    className="nav-link"
-                    id="v-pills-settings-tab"
-                    data-bs-toggle="pill"
-                    data-bs-target="#v-pills-settings"
-                    aria-selected="false"
-                  >
-                    <a href="#">
-                      <span>Legacy Dynamics</span>
-                    </a>
-                  </div>
+                  {SOLUTION_TABS.map((tab) => (
+                    <div
+                      key={tab.id}
+                      className={`nav-link${tab.active ? " active" : ""}`}
+                      id={`${tab.target}-tab`}
+                      data-bs-toggle="pill"
+                      data-bs-target={`#${tab.target}`}
+                      {...(!tab.active ? { "aria-selected": "false" } : {})}
+                    >
+                      <a href={tab.href}>
+                        <span>{tab.label}</span>
+                      </a>
+                    </div>
+                  ))}
                 </div>
                 <div className="tab-content" id="v-pills-tabContent">
-                  <div className="tab-pane fade show active" id="v-pills-home">
-                    <div className="container">
-                      <div className="row">
-                        <div className="col-md-6">
-                          <div className="list-itmes-maga-menu">
-                            <a href="/erp-for-startups/">
-                              <div className="pic">
-                                <img
-                                  src="/img/menu-icons/store.png"
-                                  alt="azure"
-                                  width="48"
-                                  height="48"
-                                />
-                              </div>
-                              <div className="content">
-                                <span>Startup</span>
-                                <p>
-                                  Smart ERP solutions to kickstart your growth
-                                </p>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="col-md-6">
-                          <div className="list-itmes-maga-menu">
-                            <a href="/dynamics-365-for-small-businesses/">
-                              <div className="pic">
-                                <img
-                                  src="/img/menu-icons/storefront.png"
-                                  alt="mixed-Reality-icons"
-                                  width="48"
-                                  height="48"
-                                />
-                              </div>
-                              <div className="content">
-                                <span>Small Business</span>
-                                <p>
-                                  Simplifying business for small, ambitious
-                                  teams
-                                </p>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="col-md-6">
-                          <div className="list-itmes-maga-menu">
-                            <a href="/dynamics-365-for-medium-businesses/">
-                              <div className="pic">
-                                <img
-                                  src="/img/menu-icons/group-3535.png"
-                                  alt="AI"
-                                  width="48"
-                                  height="48"
-                                />
-                              </div>
-                              <div className="content">
-                                <span>Mid Size</span>
-                                <p>Powering growth for mid-sized businesses.</p>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="col-md-6">
-                          <div className="list-itmes-maga-menu">
-                            <a href="/dynamics-365-for-large-businesses/">
-                              <div className="pic">
-                                <img
-                                  src="/img/menu-icons/factory.png"
-                                  alt="AI"
-                                  width="48"
-                                  height="48"
-                                />
-                              </div>
-                              <div className="content">
-                                <span>Enterprise</span>
-                                <p>
-                                  Advanced ERP solutions for large, global
-                                  enterprises
-                                </p>
-                              </div>
-                            </a>
-                          </div>
+                  {SOLUTION_TABS.map((tab) => (
+                    <div
+                      key={tab.id}
+                      className={`tab-pane${tab.id === "addon" || tab.id === "CRM" ? " cc-height" : ""} fade${tab.active ? " show active" : ""}`}
+                      id={tab.target}
+                    >
+                      <div className="container">
+                        <div className="row g-1">
+                          {SOLUTION_PANELS[tab.id].map((item) => (
+                            <div className="col-md-6" key={item.href}>
+                              <ItemCard item={item} />
+                            </div>
+                          ))}
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="tab-pane cc-height fade" id="v-pills-addon">
-                    <div className="container">
-                      <div className="row g-1">
-                        {/* <div className='col-lg-12'>
-                          <div className='mm-title'>
-                            <p>ERP</p>
-                          </div>
-                        </div> */}
-                        <div className="col-md-6">
-                          <div className="list-itmes-maga-menu">
-                            <a href="/products/dynamics-365-business-central/">
-                              <div className="pic">
-                                <img
-                                  src="/img/menu-icons/dynamics-365-businesscentral.svg"
-                                  alt="dynamics-365-businesscentral"
-                                  width="48"
-                                  height="48"
-                                />
-                              </div>
-                              <div className="content">
-                                <span>Business Central</span>
-                                <p>
-                                  All-in-one solution for all your business
-                                  practices
-                                </p>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="col-md-6">
-                          <div className="list-itmes-maga-menu">
-                            <a href="/products/microsoft-dynamics-365-finance/">
-                              <div className="pic">
-                                <img
-                                  src="/img/menu-icons/dynamics-365-finance.svg"
-                                  alt="dynamics-365-finance"
-                                  width="48"
-                                  height="48"
-                                />
-                              </div>
-                              <div className="content">
-                                <span>Finance</span>
-                                <p>Improve your finance practices</p>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="col-md-6">
-                          <div className="list-itmes-maga-menu">
-                            <a href="/products/dynamics-365-supply-chain-management/">
-                              <div className="pic">
-                                <img
-                                  src="/img/menu-icons/dynamics-365-supplychainmanagement.svg"
-                                  alt="dynamics-365-supplychainmanagement"
-                                  width="48"
-                                  height="48"
-                                />
-                              </div>
-                              <div className="content">
-                                <span>Supply Chain</span>
-                                <p>
-                                  Optimize operations and drive agile Supply
-                                  Chain
-                                </p>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="col-md-6">
-                          <div className="list-itmes-maga-menu">
-                            <a href="/products/dynamics-365-human-resources/">
-                              <div className="pic">
-                                <img
-                                  src="/img/menu-icons/dynamics-365-HRM.svg"
-                                  alt="dynamics-365-HRM"
-                                  width="48"
-                                  height="48"
-                                />
-                              </div>
-                              <div className="content">
-                                <span>Human Resource</span>
-                                <p>Optimize Your Resource Utilization</p>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="col-md-6">
-                          <div className="list-itmes-maga-menu">
-                            <a href="/products/microsoft-dynamics-365-commerce/">
-                              <div className="pic">
-                                <img
-                                  src="/img/menu-icons/dynamics-365-commerce.svg"
-                                  alt="dynamics-365-commerce"
-                                  width="48"
-                                  height="48"
-                                />
-                              </div>
-                              <div className="content">
-                                <span>Commerce</span>
-                                <p>
-                                  Unify Your Back-Office, In-Store, And Digital
-                                  Experience
-                                </p>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="col-md-6">
-                          <div className="list-itmes-maga-menu">
-                            <a href="/products/dynamics-365-project-operations/">
-                              <div className="pic">
-                                <img
-                                  src="/img/menu-icons/dynamics-365-project-management.svg"
-                                  alt="dynamics-365-project-management"
-                                  width="48"
-                                  height="48"
-                                />
-                              </div>
-                              <div className="content">
-                                <span>Project Operations</span>
-                                <p>Automate and streamline your projects</p>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="tab-pane cc-height fade" id="v-pills-CRM">
-                    <div className="container">
-                      <div className="row g-1">
-                        {/* <div className='col-lg-12'>
-                          <div className='mm-title'>
-                            <p>CRM-Customer Engagement</p>
-                          </div>
-                        </div> */}
-                        <div className="col-md-6">
-                          <div className="list-itmes-maga-menu">
-                            <a href="/products/microsoft-dynamics-365-sales/">
-                              <div className="pic">
-                                <img
-                                  src="/img/menu-icons/dynamics-365-sales.svg"
-                                  alt="dynamics-365-sales"
-                                  width="48"
-                                  height="48"
-                                />
-                              </div>
-                              <div className="content">
-                                <span>Sales</span>
-                                <p>Drive end-to-end sales practices</p>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="col-md-6">
-                          <div className="list-itmes-maga-menu">
-                            <a href="/products/microsoft-dynamics-365-marketing/">
-                              <div className="pic">
-                                <img
-                                  src="/img/menu-icons/dynamics-365-marketing.svg"
-                                  alt="dynamics-365-marketing"
-                                  width="48"
-                                  height="48"
-                                />
-                              </div>
-                              <div className="content">
-                                <span>Marketing</span>
-                                <p>Maximize ROI with integrated Marketing</p>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="col-md-6">
-                          <div className="list-itmes-maga-menu">
-                            <a href="/products/microsoft-dynamics-365-field-service/">
-                              <div className="pic">
-                                <img
-                                  src="/img/menu-icons/dynamics-365-fieldservice.svg"
-                                  alt="dynamics-365-fieldservice"
-                                  width="48"
-                                  height="48"
-                                />
-                              </div>
-                              <div className="content">
-                                <span>Field Service</span>
-                                <p>
-                                  Drive connected and collaborated field service
-                                </p>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-
-                        {/* <div className="col-md-6">
-                          <div className="list-itmes-maga-menu">
-                            <a href="/products/dynamics-365-human-resources/">
-                              <div className="pic">
-                                <img
-                                  src="/img/menu-icons/dynamics-365-HRM.svg"
-                                  alt="dynamics-365-HRM"
-                                  width="48" height="48"
-                                />
-                              </div>
-                              <div className="content">
-                                <span>Human Resource</span>
-                                <p>
-                                  Optimize Your Resource Utilization
-                                </p>
-                              </div>
-                            </a>
-                          </div>
-                        </div> */}
-                        <div className="col-md-6">
-                          <div className="list-itmes-maga-menu">
-                            <a href="/products/microsoft-dynamics-365-customer-service/">
-                              <div className="pic">
-                                <img
-                                  src="/img/menu-icons/dynamics-365-customer-service.svg"
-                                  alt="dynamics-365-customer-service"
-                                  width="48"
-                                  height="48"
-                                />
-                              </div>
-                              <div className="content">
-                                <span>Customer Service</span>
-                                <p>Drive omnichannel customer experience</p>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                        {/* <div className="col-md-6">
-                          <div className="list-itmes-maga-menu">
-                            <a href="/products/microsoft-dynamics-365/">
-                              <div className="pic">
-                                <img
-                                  src="/img/menu-icons/d365-icon.png"
-                                  alt="d365-icon"
-                                  width="48" height="48"
-                                />
-                              </div>
-                              <div className="content">
-                                <span>Dynamics 365 Suite</span>
-                                <p>Empower the Business with a suite of Advanced Solutions </p>
-                              </div>
-                            </a>
-                          </div>
-                        </div> */}
-                        <div className="col-md-6">
-                          <div className="list-itmes-maga-menu">
-                            <a href="/products/dynamics-365-customer-engagement/">
-                              <div className="pic">
-                                <img
-                                  src="/img/menu-icons/dynamics-365-customer-engagement.svg"
-                                  alt="dynamics-365-customer-engagement"
-                                  width="48"
-                                  height="48"
-                                />
-                              </div>
-                              <div className="content">
-                                <span>Customer Engagement</span>
-                                <p>Transform Your Marketing Operations</p>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="tab-pane fade" id="v-pills-profile">
-                    <div className="container">
-                      <div className="row">
-                        <div className="col-md-6">
-                          <div className="list-itmes-maga-menu">
-                            <a href="/products/microsoft-power-bi/">
-                              <div className="pic">
-                                <img
-                                  src="/img/menu-icons/power-bi.svg"
-                                  alt="power-bi"
-                                  width="48"
-                                  height="48"
-                                />
-                              </div>
-                              <div className="content">
-                                <span>Power BI</span>
-                                <p>
-                                  Create powerful visual insights, analytics
-                                </p>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="col-md-6">
-                          <div className="list-itmes-maga-menu">
-                            <a href="/products/microsoft-power-apps/">
-                              <div className="pic">
-                                <img
-                                  src="/img/menu-icons/power-apps.svg"
-                                  alt="power-apps"
-                                  width="48"
-                                  height="48"
-                                />
-                              </div>
-                              <div className="content">
-                                <span>Power Apps</span>
-                                <p>
-                                  Build web & mobile apps with zero or minimal
-                                  code
-                                </p>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="col-md-6">
-                          <div className="list-itmes-maga-menu">
-                            <a href="/products/microsoft-power-automate/">
-                              <div className="pic">
-                                <img
-                                  src="/img/menu-icons/power-automate.svg"
-                                  alt="power-automate"
-                                  width="48"
-                                  height="48"
-                                />
-                              </div>
-                              <div className="content">
-                                <span>Power Automate</span>
-                                <p>
-                                  Automate your processes to improve workflows
-                                </p>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="col-md-6">
-                          <div className="list-itmes-maga-menu">
-                            <a href="/products/microsoft-power-virtual-agents/">
-                              <div className="pic">
-                                <img
-                                  src="/img/menu-icons/virtual agent.svg"
-                                  alt="virtual agent"
-                                  width="48"
-                                  height="48"
-                                />
-                              </div>
-                              <div className="content">
-                                <span>Power Virtual Agents</span>
-                                <p>
-                                  Create powerful AI Bots to maximize
-                                  productivity
-                                </p>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="tab-pane fade" id="v-pills-settings">
-                    <div className="container">
-                      <div className="row">
-                        <div className="col-md-6">
-                          <div className="list-itmes-maga-menu">
-                            <a href="/products/microsoft-dynamics-nav/">
-                              <div className="pic">
-                                <img
-                                  src="/img/menu-icons/NAV.png"
-                                  alt="NAV"
-                                  width="48"
-                                  height="48"
-                                />
-                              </div>
-                              <div className="content">
-                                <span>Dynamics NAV</span>
-                                <p>A flexible ERP solution for SMBs</p>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="col-md-6">
-                          <div className="list-itmes-maga-menu">
-                            <a href="/products/microsoft-dynamics-crm/">
-                              <div className="pic">
-                                <img
-                                  src="/img/menu-icons/CRM.png"
-                                  alt="CRM"
-                                  width="48"
-                                  height="48"
-                                />
-                              </div>
-                              <div className="content">
-                                <span>Dynamics CRM</span>
-                                <p>
-                                  Increase Revenue and Customer Satisfaction
-                                </p>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="col-md-6">
-                          <div className="list-itmes-maga-menu">
-                            <a href="/products/microsoft-dynamics-ax/">
-                              <div className="pic">
-                                <img
-                                  src="/img/menu-icons/AX.png"
-                                  alt="AX"
-                                  width="48"
-                                  height="48"
-                                />
-                              </div>
-                              <div className="content">
-                                <span>Dynamics AX</span>
-                                <p>The Most Complete, Agile And Powerful ERP</p>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="col-md-6">
-                          <div className="list-itmes-maga-menu">
-                            <a href="/products/microsoft-dynamics-gp/">
-                              <div className="pic">
-                                <img
-                                  src="/img/menu-icons/GP.png"
-                                  alt="GP"
-                                  width="48"
-                                  height="48"
-                                />
-                              </div>
-                              <div className="content">
-                                <span>Dynamics GP</span>
-                                <p>Accounting software designed for SMEs</p>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="col-md-6">
-                          <div className="list-itmes-maga-menu">
-                            <a href="/products/microsoft-dynamics-erp/">
-                              <div className="pic">
-                                <img
-                                  src="/img/menu-icons/ERP.png"
-                                  alt="GP"
-                                  width="48"
-                                  height="48"
-                                />
-                              </div>
-                              <div className="content">
-                                <span>Dynamics ERP</span>
-                                <p>
-                                  Streamline Entire Business Management with
-                                  Ease
-                                </p>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="col-md-6">
-                          <div className="list-itmes-maga-menu">
-                            <a href="/products/microsoft-dynamics-365-finance-operations/">
-                              <div className="pic">
-                                <img
-                                  src="/img/menu-icons/F&Q.png"
-                                  alt="GP"
-                                  width="48"
-                                  height="48"
-                                />
-                              </div>
-                              <div className="content">
-                                <span>Dynamics F&O</span>
-                                <p>
-                                  Accelerate your Finance and Inventory more
-                                  Efficiently
-                                </p>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  {/* <div
-                    className="tab-pane fade"
-                    id="v-pills-settingss"
-                  >
-                    <div className="container">
-                      <div className="row">
-                        <div className="col-md-6">
-                          <div className="list-itmes-maga-menu">
-                            <a href="/products/microsoft-azure/">
-                              <div className="pic">
-                                <img
-                                  src="/img/menu-icons/azure.svg"
-                                  alt="azure"
-                                  width="48" height="48"
-                                />
-                              </div>
-                              <div className="content">
-                                <span>Microsoft Azure</span>
-                                <p>
-                                  Create secure, future-ready cloud
-                                  solutions
-                                </p>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="col-md-6">
-                          <div className="list-itmes-maga-menu">
-                            <a href="/products/microsoft-dynamics-365/mixed-reality/">
-                              <div className="pic">
-                                <img
-                                  src="/img/menu-icons/mixed-Reality-icons.svg"
-                                  alt="mixed-Reality-icons"
-                                  width="48" height="48"
-                                />
-                              </div>
-                              <div className="content">
-                                <span>Mixed Reality</span>
-                                <p>
-                                  Technology that modernises your
-                                  workforce
-                                </p>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="col-md-6">
-                          <div className="list-itmes-maga-menu">
-                            <a href="/products/microsoft-dynamics-365-ai/">
-                              <div className="pic">
-                                <img
-                                  src="/img/menu-icons/AI.svg"
-                                  alt="AI"
-                                  width="48" height="48"
-                                />
-                              </div>
-                              <div className="content">
-                                <span>Artificial Intelligence</span>
-                                <p>
-                                  Leverage Microsoft's deep learning
-                                  technology
-                                </p>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="col-md-6">
-                          <div className="list-itmes-maga-menu">
-                            <a href="/products/microsoft-sustainability-manager/">
-                              <div className="pic">
-                                <img
-                                  src="/img/menu-icons/Sustainability-Manager.png"
-                                  alt="AI"
-                                  width="48" height="48"
-                                />
-                              </div>
-                              <div className="content">
-                                <span>Sustainability Manager</span>
-                                <p>
-                                  Record, report, and reduce the environmental impact
-                                </p>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="col-md-6">
-                          <div className="list-itmes-maga-menu">
-                            <a href="/dynamics-nav-to-business-central/">
-                              <div className="pic">
-                                <img
-                                  src="/img/menu-icons/NAV.png"
-                                  alt="NAV Upgrade"
-                                  width="48" height="48"
-                                />
-                              </div>
-                              <div className="content">
-                                <span>Nav Upgrade</span>
-                                <p>
-                                  Let us help you with a smoother and stress-free NAV upgrade process
-                                </p>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="col-md-6">
-                          <div className="list-itmes-maga-menu">
-                            <a href="/products/dynamics-365-non-profit-accelerator/">
-                              <div className="pic">
-                                <img
-                                  src="/img/menu-icons/non-profit.png"
-                                  alt="NAV Upgrade"
-                                  width="48" height="48"
-                                />
-                              </div>
-                              <div className="content">
-                                <span>Non-profits Accelerator</span>
-                                <p>Supercharge Non-profits with AI</p>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="col-md-6">
-                          <div className="list-itmes-maga-menu">
-                            <a href="/products/dynamics-365-business-central/customisation/">
-                              <div className="pic">
-                                <img
-                                  src="/img/menu-icons/dynamics-365-businesscentral.svg"
-                                  alt="businesscentral"
-                                  width="48" height="48"
-                                />
-                              </div>
-                              <div className="content">
-                                <span>Business Central Customisations</span>
-                                <p>Personalise Business Central to meet unique customer needs and boost ROI</p>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div> */}
-                  <div className="tab-pane fade" id="v-pills-settingss">
-                    <div className="container">
-                      <div className="row">
-                        <div className="col-md-6">
-                          <div className="list-itmes-maga-menu">
-                            <a href="/continia-for-dynamics-365-business-central/">
-                              <div className="pic">
-                                <img
-                                  src="/img/menu-icons/continia.png"
-                                  alt="continia"
-                                  width="48"
-                                  height="48"
-                                />
-                              </div>
-                              <div className="content">
-                                <span>Continia integration</span>
-                                <p>
-                                  Scan, analyse, and process documents with
-                                  optimum quality
-                                </p>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="col-md-6">
-                          <div className="list-itmes-maga-menu">
-                            <a href="/insights-works-for-dynamics-365-business-central/">
-                              <div className="pic">
-                                <img
-                                  src="/img/menu-icons/Insight_Work.png"
-                                  alt="Insight_Work"
-                                  width="48"
-                                  height="48"
-                                />
-                              </div>
-                              <div className="content">
-                                <span>Insight Works</span>
-                                <p>
-                                  Optimise your inventory and distribution
-                                  operations effortlessly
-                                </p>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="col-md-6">
-                          <div className="list-itmes-maga-menu">
-                            <a href="/sana-commerce-for-dynamics-365-business-central/">
-                              <div className="pic">
-                                <img
-                                  src="/img/menu-icons/Sana_Commerce.png"
-                                  alt="Sana_Commerce"
-                                  width="48"
-                                  height="48"
-                                />
-                              </div>
-                              <div className="content">
-                                <span>Sana Commerce</span>
-                                <p>
-                                  Avail a cloud e-commerce solution to
-                                  supercharge your online store
-                                </p>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="col-md-6">
-                          <div className="list-itmes-maga-menu">
-                            <a href="/wms-for-business-central/">
-                              <div className="pic">
-                                <img
-                                  src="/img/menu-icons/taskley-logo-im.png"
-                                  alt="Sana_Commerce"
-                                  width="48"
-                                  height="48"
-                                />
-                              </div>
-                              <div className="content">
-                                <span>Tasklet's Mobile WMS</span>
-                                <p>
-                                  Optimize warehouse operations, simplify
-                                  inventory, boost profits
-                                </p>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="col-md-6">
-                          <div className="list-itmes-maga-menu">
-                            <a href="/continia-document-capture-with-business-central/">
-                              <div className="pic">
-                                <img
-                                  src="/img/menu-icons/continia.png"
-                                  alt="Sana_Commerce"
-                                  width="48"
-                                  height="48"
-                                />
-                              </div>
-                              <div className="content">
-                                <span>Continia OCR</span>
-                                <p>
-                                  Transform document management, streamline
-                                  processing, manage easily
-                                </p>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="col-md-6">
-                          <div className="list-itmes-maga-menu">
-                            <a href="/continia-expense-management/">
-                              <div className="pic">
-                                <img
-                                  src="/img/menu-icons/continia.png"
-                                  alt="Sana_Commerce"
-                                  width="48"
-                                  height="48"
-                                />
-                              </div>
-                              <div className="content">
-                                <span>Continia Expense Management </span>
-                                <p>
-                                  Monitor corporate expenses, eliminate manual
-                                  errors with Continia
-                                </p>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="col-md-6">
-                          <div className="list-itmes-maga-menu">
-                            <a href="/shopify-connector-business-central/">
-                              <div className="pic">
-                                <img
-                                  src="/img/menu-icons/shopify-integration-logo.svg"
-                                  alt="shopify-integration-logo"
-                                  width="48" height="48"
-                                />
-                              </div>
-                              <div className="content">
-                                <span>Shopify Connector</span>
-                                <p>Synchronize orders, inventory, and customers across platforms</p>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                        <div className="col-md-6">
-                          <div className="list-itmes-maga-menu">
-                            <a href="/yavrio-integration-with-business-central/">
-                              <div className="pic">
-                                <img
-                                  src="/img/menu-icons/image-541.png"
-                                  alt="yavrio-integration-logo"
-                                  width="48" height="48"
-                                />
-                              </div>
-                              <div className="content">
-                                <span>Yavrio Integration</span>
-                                <p>Connect banking data to ERP for automated workflows</p>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -976,7 +272,7 @@ const DeskstopMenu = () => {
                 <p>Essential Tool</p>
                 <ul>
                   <li>
-                    <a href="/erp-implementation-cost-calculator/">
+                    <Link href="/erp-implementation-cost-calculator/">
                       <span className="menu-title-new">
                         Get Your ERP Cost Estimate
                       </span>
@@ -986,1009 +282,384 @@ const DeskstopMenu = () => {
                       <span className="menu-title-link">
                         Check Now <i className="bi bi-arrow-right"></i>
                       </span>
-                    </a>
+                    </Link>
                   </li>
-                  {/* <li>
-                    <a href="/dynamics-nav-to-business-central/">
-                      <span className="menu-title-new">
-                        Dynamics NAV To Business Central Upgrade
-                      </span>
-                      <span className="menu-title-para">
-                        Ensure a smoother transition for you, without costing a
-                        million bucks!
-                      </span>
-                      <span className="menu-title-link">
-                        Read more <i className="bi bi-arrow-right"></i>
-                      </span>
-                    </a>
-                  </li> */}
                 </ul>
-                  <div className="pp-absol" style={{ marginTop: "2px" }}>
+                <div className="pp-absol" style={{ marginTop: "2px" }}>
                   <a rel="nofollow" href="https://councils.forbes.com/profile/Manish-Goyal-Co-founder-Dynamics-Square/1e25d5c2-1d98-46cd-834b-70d335b73b35" target="_blank">
-                    <img
-                      src="/img/forber-01.png"
-                      width={771}
-                      height={282}
-                      alt="menu--ss"
-                    />
+                    <img src="/img/forber-01.png" width={771} height={282} alt="menu--ss" />
                   </a>
                 </div>
                 <div className="pp-absol" style={{ marginTop: "2px" }}>
-                  <a href="/products/dynamics-365-copilot/">
-                    <img
-                      src="/img/menu--ss.png"
-                      width={706}
-                      height={180}
-                      alt="menu--ss"
-                    />
-                  </a>
+                  <Link href="/products/dynamics-365-copilot/">
+                    <img src="/img/menu--ss.png" width={706} height={180} alt="menu--ss" />
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
         </li>
 
+        {/* ===================== INDUSTRIES ===================== */}
         <li className="dropdown dropdown-smal-mega">
-          <a href="/industries/">
+          <Link href="/industries/">
             <span>Industries</span> <i className="bi bi-chevron-down"></i>
-          </a>
+          </Link>
           <ul>
-            {/* <li>
-              <div className="list-itmes-maga-menu list-itmes-maga-menu-small">
-                <a href="/industries/startups/">
-                  <div className="pic">
-                    <img
-                      src="/img/menu-icons/Startup.png"
-                      alt="Startup"
-                      width="48"
-                      height="48"
-                    />
-                  </div>
-                  <div className="content">
-                    <span>Startups</span>
-                    <p>
-                      Support your startup ideation and maximise your growth
-                    </p>
-                  </div>
-                </a>
-              </div>
-            </li> */}
-            {/* <li>
-              <div className="list-itmes-maga-menu list-itmes-maga-menu-small">
-                <a href="/industries/microsoft-cloud-for-nonprofit/">
-                  <div className="pic">
-                    <img
-                      src="/img/menu-icons/Not-FOr-Profit.png"
-                      alt="Not FOr Profit"
-                      width="48"
-                      height="48"
-                    />
-                  </div>
-                  <div className="content">
-                    <span>Not for Profit (Microsoft Cloud)</span>
-                    <p>
-                      Carry out mission-critical Challenges with perfect tools
-                    </p>
-                  </div>
-                </a>
-              </div>
-            </li> */}
-             <li>
-              <div className="list-itmes-maga-menu list-itmes-maga-menu-small">
-                <a href="/industries/dynamics-365-for-distribution/">
-                  <div className="pic">
-                    <img
-                      src="/img/menu-icons/distribution-truck.png"
-                      alt="MAnufacturing"
-                      width="48"
-                      height="48"
-                    />
-                  </div>
-                  <div className="content">
-                    <span>Distribution</span>
-                    <p>Drive seamless supply flow with connected operations </p>
-                  </div>
-                </a>
-              </div>
-            </li>
-              <li>
-              <div className="list-itmes-maga-menu list-itmes-maga-menu-small">
-                <a href="/industries/microsoft-cloud-for-manufacturing/">
-                  <div className="pic">
-                    <img
-                      src="/img/menu-icons/MAnufacturing.png"
-                      alt="MAnufacturing"
-                      width="48"
-                      height="48"
-                    />
-                  </div>
-                  <div className="content">
-                    <span>Manufacturing</span>
-                    <p>
-                      Connect your people and operations to drive profitability
-                    </p>
-                  </div>
-                </a>
-              </div>
-            </li>
-            <li>
-              <div className="list-itmes-maga-menu list-itmes-maga-menu-small">
-                <a href="/industries/dynamics-365-for-education/">
-                  <div className="pic">
-                    <img
-                      src="/img/menu-icons/education.png"
-                      alt="education"
-                      width="48"
-                      height="48"
-                    />
-                  </div>
-                  <div className="content">
-                    <span>Education</span>
-                    <p>
-                      Effectively manage students and staff for overall growth
-                    </p>
-                  </div>
-                </a>
-              </div>
-            </li>
-            <li>
-              <div className="list-itmes-maga-menu list-itmes-maga-menu-small">
-                <a href="/industries/ecommerce/">
-                  <div className="pic">
-                    <img
-                      src="/img/menu-icons/E-commerce.png"
-                      alt="E-commerce"
-                      width="48"
-                      height="48"
-                    />
-                  </div>
-                  <div className="content">
-                    <span>Ecommerce</span>
-                    <p>Optimise E-commerce processes with real-time stocks</p>
-                  </div>
-                </a>
-              </div>
-            </li>
-          
-            <li>
-              <div className="list-itmes-maga-menu list-itmes-maga-menu-small">
-                <a href="/industries/professional-services/">
-                  <div className="pic">
-                    <img
-                      src="/img/menu-icons/Professional-ervice.png"
-                      alt="Professional-ervice"
-                      width="48"
-                      height="48"
-                    />
-                  </div>
-                  <div className="content">
-                    <span>Professional Services</span>
-                    <p>
-                      Streamline administration processes leveraging automation
-                    </p>
-                  </div>
-                </a>
-              </div>
-            </li>
-            <li>
-              <div className="list-itmes-maga-menu list-itmes-maga-menu-small">
-                <a href="/industries/food-and-beverages/">
-                  <div className="pic">
-                    <img
-                      src="/img/menu-icons/Food.png"
-                      alt="Food"
-                      width="48"
-                      height="48"
-                    />
-                  </div>
-                  <div className="content">
-                    <span>Food & Beverages</span>
-                    <p>
-                      Manage supply and inventory processes with real-time data
-                    </p>
-                  </div>
-                </a>
-              </div>
-            </li>
-            <li>
-              <div className="list-itmes-maga-menu list-itmes-maga-menu-small">
-                <a href="/industries/dynamics-365-for-healthcare/">
-                  <div className="pic">
-                    <img
-                      src="/img/menu-icons/healthcare.png"
-                      alt="healthcare"
-                      width="48"
-                      height="48"
-                    />
-                  </div>
-                  <div className="content">
-                    <span>Healthcare</span>
-                    <p>
-                      Track clinical operations while enhancing patient
-                      experience
-                    </p>
-                  </div>
-                </a>
-              </div>
-            </li>
-            {/* <li>
-              <div className="list-itmes-maga-menu list-itmes-maga-menu-small">
-                <a href="/industries/dynamics-365-automotive-accelerator/">
-                  <div className="pic">
-                    <img
-                      src="/img/menu-icons/automaotive.png"
-                      alt="automaotive"
-                      width="48"
-                      height="48"
-                    />
-                  </div>
-                  <div className="content">
-                    <span>Automotive Accelerator</span>
-                    <p>
-                      Maintain, manage, and streamline an automotive business
-                    </p>
-                  </div>
-                </a>
-              </div>
-            </li> */}
-            <li>
-              <div className="list-itmes-maga-menu list-itmes-maga-menu-small">
-                <a href="/industries/dynamics-365-for-retail/">
-                  <div className="pic">
-                    <img
-                      src="/img/menu-icons/retail-icon.png"
-                      alt="retail-icon"
-                      width="48"
-                      height="48"
-                    />
-                  </div>
-                  <div className="content">
-                    <span>Retail</span>
-                    <p>
-                      Optimize retail operations with seamless user experience
-                    </p>
-                  </div>
-                </a>
-              </div>
-            </li>
+            {INDUSTRIES.map((item) => (
+              <li key={item.href}>
+                <ItemCard item={item} small />
+              </li>
+            ))}
           </ul>
         </li>
+
+        {/* ===================== OUR SERVICES ===================== */}
         <li className="dropdown">
-          <a href="/our-services/">
+          <Link href="/our-services/">
             <span>Our Services</span>
             <i className="bi bi-chevron-down"></i>
-          </a>
+          </Link>
           <ul>
-            <li>
-              <a href="/our-services/dynamics-365-implementation-services/">
-                Implementation Services
-              </a>
-            </li>
-            <li>
-              <a href="/our-services/dynamics-365-support-services/">
-                Support Services
-              </a>
-            </li>
-            <li>
-              <a href="/our-services/dynamics-365-upgrade-services/">
-                Upgrade Services
-              </a>
-            </li>
-            <li>
-              <a href="/our-services/dynamics-365-training/">
-                Dynamics 365 Training
-              </a>
-            </li>
-            <li>
-              <a href="/our-services/dynamics-365-consultant/">
-                Dynamics 365 Consultants
-              </a>
-            </li>
+            {OUR_SERVICES.map((item) => (
+              <li key={item.href}>
+                <Link href={item.href}>{item.label}</Link>
+              </li>
+            ))}
           </ul>
         </li>
+
+        {/* ===================== COMPANY ===================== */}
         <li className="dropdown">
           <a href="#">
             <span>Company</span> <i className="bi bi-chevron-down"></i>
           </a>
           <ul>
-            <li>
-              <a href="/about-us/">About Us</a>
-            </li>
-            <li>
-              <a href="/why-us/">Why Us</a>
-            </li>
-            <li>
-              <a href="/partner/">Partners</a>
-            </li>
-            <li>
-              <a href="/career/">Careers</a>
-            </li>
+            {COMPANY_LINKS.map((item) => (
+              <li key={item.href}>
+                <Link href={item.href}>{item.label}</Link>
+              </li>
+            ))}
           </ul>
         </li>
-         <li className="dropdown megamenu">
-                  <a href="#">
-                    <span>Resources</span>
-                    <i className="bi bi-chevron-down"></i>
-                  </a>
-                  <div className="megamenu-list megamenu-list-resource">
-                    <div className="left-list">
-                      <div className="d-flex align-items-start">
-                        <div
-                          className="nav flex-column nav-pills me-3"
-                          id="v-pills-tab-two"
-                          role="tablist"
-                          aria-orientation="vertical"
-                        >
-                          <div
-                            className="nav-link active"
-                            id="v-pills-res-one-tab"
-                            data-bs-toggle="pill"
-                            data-bs-target="#v-pills-res-one"
-                          >
-                            <a href="#">
-                              <img
-                                src="/img/menu-icons/res-meg-00.png"
-                                alt="Blogs"
-                                width="24"
-                                height="24"
-                              /><span>Blogs</span>
-                            </a>
-                          </div>
-                          <div
-                            className="nav-link"
-                            id="v-pills-res-two-tab"
-                            data-bs-toggle="pill"
-                            data-bs-target="#v-pills-res-two"
-                          >
-                            <a href="#">
-                              <img
-                                src="/img/menu-icons/res-meg-01.png"
-                                alt="Case Study"
-                                width="24"
-                                height="24"
-                              /><span>Case Studies</span>
-                            </a>
-                          </div>
-                          <div
-                            className="nav-link"
-                            id="v-pills-res-three-tab"
-                            data-bs-toggle="pill"
-                            data-bs-target="#v-pills-res-three"
-                          >
-                            <a href="#">
-                              <img
-                                src="/img/menu-icons/res-meg-03.png"
-                                alt="eBooks"
-                                width="24"
-                                height="24"
-                              /><span>eBooks</span>
-                            </a>
-                          </div>
-                          <div
-                            className="nav-link"
-                            id="v-pills-res-four-tab"
-                            data-bs-toggle="pill"
-                            data-bs-target="#v-pills-res-four"
-                          >
-                            <a href="#">
-                              <img
-                                src="/img/menu-icons/res-meg-04.png"
-                                alt="Guides"
-                                width="24"
-                                height="24"
-                              /><span>Guides</span>
-                            </a>
-                          </div>
-                          <div
-                            className="nav-link"
-                            id="v-pills-res-five-tab"
-                            data-bs-toggle="pill"
-                            data-bs-target="#v-pills-res-five"
-                          >
-                            <a href="#">
-                              <img
-                                src="/img/menu-icons/res-meg-05.png"
-                                alt="Tools"
-                                width="24"
-                                height="24"
-                              /><span>Tools</span>
-                            </a>
-                          </div>
-                          <div
-                            className="nav-link"
-                            id="v-pills-res-six-tab"
-                            data-bs-toggle="pill"
-                            data-bs-target="#v-pills-res-six"
-                          >
-                            <a href="#">
-                              <img
-                                src="/img/menu-icons/res-meg-06.png"
-                                alt="Webcasts"
-                                width="24"
-                                height="24"
-                              /><span>Webcasts</span>
-                            </a>
-                          </div>
 
+        {/* ===================== RESOURCES ===================== */}
+        <li className="dropdown megamenu">
+          <a href="#">
+            <span>Resources</span>
+            <i className="bi bi-chevron-down"></i>
+          </a>
+          <div className="megamenu-list megamenu-list-resource">
+            <div className="left-list">
+              <div className="d-flex align-items-start">
+                <div
+                  className="nav flex-column nav-pills me-3"
+                  id="v-pills-tab-two"
+                  role="tablist"
+                  aria-orientation="vertical"
+                >
+                  {RESOURCE_TABS.map((tab) => (
+                    <div
+                      key={tab.id}
+                      className={`nav-link${tab.active ? " active" : ""}`}
+                      id={`${tab.target}-tab`}
+                      data-bs-toggle="pill"
+                      data-bs-target={`#${tab.target}`}
+                    >
+                      <a href="#">
+                        <img src={tab.icon} alt={tab.label} width="24" height="24" />
+                        <span>{tab.label}</span>
+                      </a>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="tab-content" id="v-pills-tabContent">
+                  {/* ---------- Blogs ---------- */}
+                  <div className="tab-pane fade show active" id="v-pills-res-one">
+                    <div className="container-fluid">
+                      <div className="row">
+                        <div className="col-lg-9 bg-0-gray-t">
+                          <div className="row bg-0-gray">
+                            <div className="col-lg-3">
+                              <div className="mega-list-01">
+                                <span>By product</span>
+                                <ul>
+                                  {BLOG_BY_PRODUCT.map((l, i) => (
+                                    <li key={i}><Link href={l.href}>{l.label}</Link></li>
+                                  ))}
+                                </ul>
+                              </div>
+                            </div>
+                            <div className="col-lg-3">
+                              <div className="mega-list-01">
+                                <span>By Industry</span>
+                                <ul>
+                                  {BLOG_BY_INDUSTRY.map((l, i) => (
+                                    <li key={i}><Link href={l.href}>{l.label}</Link></li>
+                                  ))}
+                                </ul>
+                              </div>
+                            </div>
+                            <div className="col-lg-6">
+                              <div className="mega-list-01">
+                                <span>Editor's Picks</span>
+                                <ul>
+                                  {BLOG_EDITORS_PICKS.map((l, i) => (
+                                    <li key={i}><Link href={l.href}>{l.label}</Link></li>
+                                  ))}
+                                </ul>
+                              </div>
+                            </div>
+                            <div className="col-lg-12">
+                              <Link style={{ padding: "10px 0px !important" }} className="n-tag-link" href="/blog/">View All Blogs <i className="bi bi-arrow-right"></i></Link>
+                            </div>
+                          </div>
                         </div>
-
-                        <div className="tab-content" id="v-pills-tabContent">
-                          <div
-                            className="tab-pane fade show active"
-                            id="v-pills-res-one"
-                          >
-                            <div className="container-fluid">
-                              <div className="row">
-                                <div className="col-lg-9 bg-0-gray-t">
-                                  <div className="row bg-0-gray">
-                                    <div className="col-lg-3">
-                                      <div className="mega-list-01">
-                                        <span>By product</span>
-                                        <ul>
-                                          <li><a href="/blog/category/business-central/">Business Central</a></li>
-                                          <li><a href="/blog/category/dynamics-365-fo/">Finance</a></li>
-                                          <li><a href="/blog/category/dynamics-365-scm/">Supply Chain</a></li>
-                                          <li><a href="/blog/category/dynamics-365-crm/">Sales</a></li>
-                                          <li><a href="/blog/category/field-service/">Field Service</a></li>
-                                          <li><a href="/blog/category/microsoft-dynamics-365/">Copilot</a></li>
-                                          <li><a href="/blog/category/dynamics-365-crm/">Customer Service</a></li>
-                                        </ul>
-                                      </div>
-                                    </div>
-                                    <div className="col-lg-3">
-                                      <div className="mega-list-01">
-                                        <span>By Industry</span>
-                                        <ul>
-                                          <li><a href="/blog/tag/Manufacturing">Manufacturing</a></li>
-                                          <li><a href="/blog/tag/Retail/">Retail & Ecommerce</a></li>
-                                          <li><a href="/blog/tag/Distribution/">Distribution</a></li>
-                                          <li><a href="/blog/tag/Professional-Services/">Professional Services</a></li>
-                                          {/* <li><a href="/blog/tag/Food-and-Beverages/">Food & Beverages</a></li> */}
-                                          <li><a href="/blog/tag/Healthcare">Healthcare</a></li>
-                                          <li><a href="/blog/tag/Education">Education</a></li>
-                                        </ul>
-                                      </div>
-                                    </div>
-                                    <div className="col-lg-6">
-                                      <div className="mega-list-01">
-                                        <span>Editor's Picks</span>
-                                        <ul>
-                                          <li>
-                                            <a href="/blog/what-is-business-central-implementation-methodology/">
-                                              Business Central Implementation Methodology
-                                            </a>
-                                          </li>
-                                          <li>
-                                            <a href="/blog/quickbooks-to-microsoft-business-central-migration/">
-                                              QuickBooks to Business Central Migration
-                                            </a>
-                                          </li>
-                                          <li>
-                                            <a href="/blog/sage-to-business-central-migration/">
-                                            Sage to Business Central Migration
-                                            </a>
-                                          </li>
-                                          <li>
-                                            <a href="/dynamics-nav-to-business-central/">
-                                            NAV to Business Central Upgrade
-                                            </a>
-                                          </li>
-                                          <li>
-                                            <a href="/gp-to-business-central-migration/">
-                                              Dynamics GP to Business Central Migration
-                                            </a>
-                                          </li>
-                                          <li>
-                                            <a href="/blog/xero-to-business-central-migration/">
-                                             Xero to Business Central Migration
-                                            </a>
-                                          </li>
-                                        </ul>
-                                      </div>
-                                    </div>
-                                    <div className="col-lg-12">
-                                      <a style={{padding:'10px 0px !important'}} className="n-tag-link" href="/blog/">View All Blogs <i className="bi bi-arrow-right"></i></a>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div className="col-lg-3 d-flex">
-                                  <div className="right-resource">
-                                    <div className="res-top-co">
-                                      <span className="n-tag">Featured Article</span>
-                                      <span className="n-title">How Much Time Can Copilot Save in Dynamics 365 Business Central?</span>
-                                      <p>Discover how much time Copilot saves in Dynamics 365 Business Central by automating...</p>
-                                      <div className="imag00">
-                                        
-                                        <img src="/img/menu-icons/pic-006.png" alt="Dynamics 365" width={106} height={90} />
-                                        
-                                        </div>
-                                      <a href="/blog/copilot-business-central-time-savings/">Read Article <i className="bi bi-arrow-right"></i></a>
-                                    </div>
-                                    <div className="res-top-bo">
-                                     <a style={{padding:'0px'}} href="/products/dynamics-365-copilot/"><img src="/img/menu--ss.png" width={706} height={180} alt="AI" /></a>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            className="tab-pane fade"
-                            id="v-pills-res-two"
-                          >
-                            <div className="container-fluid">
-                              <div className="row">
-                                <div className="col-lg-9 bg-0-gray-t">
-                                  <div className="row bg-0-gray">
-                                    <div className="col-lg-4">
-                                      <div className="mega-list-01">
-                                        <span>Browse by Service</span>
-                                        <ul className="res-st-oo1">
-                                          <li><a href="/case-studies/#Implementation">
-                                            <div className="ccc-img">
-
-                                              <i className="bi bi-gear"></i>
-                                            </div>
-                                            <div className="ccc-card">
-                                              <span>Implementation</span>
-                                              <p>Business Central | Finance</p>
-                                            </div>
-                                          </a></li>
-                                          <li><a href="/case-studies/#Upgrade">
-                                            <div className="ccc-img">
-
-                                              <i className="bi bi-back"></i>
-                                            </div>
-                                            <div className="ccc-card">
-                                              <span>ERP Upgrade</span>
-                                              <p>Nav, GP, AX Upgrade</p>
-                                            </div>
-                                          </a></li>
-                                          <li><a href="/case-studies/#Support">
-                                            <div className="ccc-img">
-
-                                              <i className="bi bi-person-add"></i>
-                                            </div>
-                                            <div className="ccc-card">
-                                              <span>Managed Support</span>
-                                              <p>24×7 Support & Optimization</p>
-                                            </div>
-                                          </a></li>
-
-                                        </ul>
-                                      </div>
-                                    </div>
-                                    {/* <div className="col-lg-2">
-                                      <div className="mega-list-01">
-                                        <span>By Industry</span>
-                                        <ul>
-                                          <li><a href="#manufacturing">Manufacturing</a></li>
-                                          <li><a href="#retail-ecommerce">Retail & Ecommerce</a></li>
-                                          <li><a href="#distribution">Distribution</a></li>
-                                          <li><a href="#professional-services">Professional Services</a></li>
-                                          <li><a href="#food-beverages">Food & Beverages</a></li>
-                                          <li><a href="#healthcare">Healthcare</a></li>
-                                          <li><a href="#education">Education</a></li>
-                                        </ul>
-                                      </div>
-                                    </div> */}
-                                    <div className="col-lg-6">
-                                      <div className="mega-list-01">
-                                        <span>Customer Success Highlights</span>
-                                        <ul>
-                                          <li>
-                                            <a href="/case-studies/dynamics-365-finance-for-logistic-uk-multi-entity/">Stronger Financial Control for Global Rollout | Global Logistics Business</a>
-                                          </li>
-                                          <li>
-                                            <a href="/case-studies/business-central-with-crm-implement-for-equestrian-manufacturing/">162% Projected ROI with 8% Efficiency Gain | UK Manufacturer</a>
-                                          </li>
-                                          <li>
-                                            <a href="/case-studies/business-central-reimplementation-for-retail-market/">
-                                              Digitally Synchronized Warehouse Operations | Northern Ireland Saddlery Business
-                                            </a>
-                                          </li>
-                                          <li>
-                                            <a href="/case-studies/business-central-reimplementation-for-food-trader/">162% Projected ROI and £32K+ Savings | Food Trading Startup</a>
-                                          </li>
-                                          <li>
-                                            <a href="/case-studies/nav-2013-r2-to-business-central-upgrade/">Improved Efficiency and Real-Time Visibility | UK Orthodontic Supplier</a>
-                                          </li>
-
-
-                                        </ul>
-                                        <div className="extra-res-link">
-                                          <a href="/case-studies/">Explore Customer Stories <i className="bi bi-arrow-right"></i></a>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div className="col-lg-3 d-flex">
-                                  <div className="right-resource">
-                                    <div className="res-top-co">
-                                      <span className="n-tag">Featured Article</span>
-                                      <span className="n-title">How Much Time Can Copilot Save in Dynamics 365 Business Central?</span>
-                                      <p>Discover how much time Copilot saves in Dynamics 365 Business Central by automating...</p>
-                                      <div className="imag00">
-                                        
-                                        <img src="/img/menu-icons/pic-006.png" alt="Dynamics 365" width={106} height={90} />
-                                        
-                                        </div>
-                                      <a href="/blog/copilot-business-central-time-savings/">Read Article <i className="bi bi-arrow-right"></i></a>
-                                    </div>
-                                    <div className="res-top-bo">
-                                     <a style={{padding:'0px'}} href="/products/dynamics-365-copilot/"><img src="/img/menu--ss.png" width={706} height={180} alt="AI" /></a>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            className="tab-pane fade"
-                            id="v-pills-res-three"
-                          >
-                            <div className="container-fluid">
-                              <div className="row">
-                                <div className="col-lg-3 d-flex  bg-0-gray-t">
-                                  <div className="res-card-99">
-                                    <span className="n-tags">Recommended</span>
-                                     <a className="n-tag-link" href="/ebook/how-to-choose-right-erp/"><img className="n-tags-image" src="/img/Cover_Book_Moc.png" width={582} height={466} alt="Cover_Book_Moc" /></a>
-                                    <span className="n-tag-title">Ultimate Guide to Choose the Right ERP For Your Business</span>
-                                    <p className="n-tag-para">Compare ERP solutions before making your investment.</p>
-                                    <a className="n-tag-link" href="/ebook/how-to-choose-right-erp/">Get Free eBook <i className="bi bi-arrow-right"></i></a>
-                                  </div>
-                                </div>
-                                <div className="col-lg-9 bg-0-gray-t">
-                                  <div className="guide-cardwar">
-                                    <span className="pop-res-title">Popular eBooks</span>
-                                  </div>
-                                  <div className="res-flex-wrap">
-                                    <div className="guide-card-01">
-                                      <a href="/ebook/gp-to-bc-migration/">
-                                        <div className="guide-card-imag">
-                                          <img width={980} height={578} src="/img/dynamics-GP-BC-Ebook-featured-image.png" alt="dynamics-GP-BC-Ebook-featured-image" />
-                                        </div>
-                                        <div className="guide-card-inf">
-                                          <span className="guide-card-title">A Complete Guide to Dynamics GP to BC</span>
-                                          <span className="guide-card-para">A Complete Guide for Microsoft Dynamics GP (Great Plains) to Business Central Migration</span>
-                                        </div>
-                                      </a>
-                                    </div>
-                                    <div className="guide-card-01">
-                                      <a href="/ebook/d365-supply-chain-management/">
-                                        <div className="guide-card-imag">
-                                          <img width={980} height={578} src="/img/dynamics-SCM-Ebook-featured-image.png" alt="dynamics-SCM-Ebook" />
-                                        </div>
-                                        <div className="guide-card-inf">
-                                          <span className="guide-card-title">A Complete Guide to Dynamics SCM</span>
-                                          <span className="guide-card-para">A Complete Guide to Dynamics 365 Supply Chain Management</span>
-                                        </div>
-                                      </a>
-                                    </div>
-                                    <div className="guide-card-01">
-                                      <a href="/ebook/dynamics-crm/">
-                                        <div className="guide-card-imag">
-                                          <img width={980} height={578} src="/img/dynamics-CRM-Ebook-featured-image.jpg" alt="dynamics-CRM-Ebook" />
-                                        </div>
-                                        <div className="guide-card-inf">
-                                          <span className="guide-card-title">A Complete Guide to Dynamics CRM</span>
-                                          <span className="guide-card-para">Microsoft Dynamics CRM is a simple yet powerful tool that can help businesses streamline</span>
-                                        </div>
-                                      </a>
-                                    </div>
-                                    <div className="guide-card-01">
-                                      <a href="/ebook/dynamics-365-finance/">
-                                        <div className="guide-card-imag">
-                                          <img width={980} height={578} src="/img/nav-guide-pic.png" alt="manufacturing" />
-                                        </div>
-                                        <div className="guide-card-inf">
-                                          <span className="guide-card-title">The Extensive Guide to Dynamics 365 Finance</span>
-                                          <span className="guide-card-para">D365 Finance is an intelligent ERP (Enterprise Resource Planning) solution
-                                          </span>
-                                        </div>
-                                      </a>
-                                    </div>
-                                  </div>
-                                  <div className="comm-links-b">
-                                    <a className="n-tag-link" href="/ebook/">View All eBooks <i className="bi bi-arrow-right"></i></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            className="tab-pane fade"
-                            id="v-pills-res-four"
-                          >
-                            <div className="container-fluid">
-                              <div className="row">
-                                <div className="col-lg-9 d-flex bg-0-gray-t">
-                                  <div className="row bg-0-gray">
-                                    <div className="col-lg-6">
-                                      <div className="resor-bord">
-                                        <div className="guide-cardwar">
-                                          <span className="pop-res-title">Guides</span>
-                                          <p className="pop-res-title-p">Learn before you implement</p>
-                                        </div>
-                                        <div className="res-flex-wrap-one">
-                                          <div className="guide-card-01">
-                                            <a href="/the-ultimate-guide-to-microsoft-dynamics-365/">
-                                              <div className="guide-card-imag">
-                                                <img width={1200} height={628} src="/img/the-ultmate-ai-guide-banner.png" alt="the-ultmate-ai-guide" />
-                                              </div>
-                                              <div className="guide-card-inf">
-                                                  <span className="guide-tags-rss">Guide</span>
-                                                <span className="guide-card-title">Microsoft Dynamics 365: Complete Guide to CRM, ERP & Business Applications (2026)</span>
-                                              </div>
-                                            </a>
-                                          </div>
-                                          <div className="guide-card-01">
-                                            <a href="/guides/business-central-guide-for-smb/">
-                                              <div className="guide-card-imag">
-                                                 <img width={1200} height={628} src="/img/chapter5-5.png" alt="guide" />
-                                              </div>
-                                              <div className="guide-card-inf">
-                                                <span className="guide-tags-rss">Guide</span>
-                                                <span className="guide-card-title">Business Central: The Definitive Guide For SMBs</span>
-                                              </div>
-                                            </a>
-                                          </div>
-                                        </div>
-                                        <div className="comm-links-b">
-                                          <a className="n-tag-link" href="/guides/">Explore All Guides <i className="bi bi-arrow-right"></i></a>
-                                        </div>
-                                      </div>
-                                    </div>
-
-                                    <div className="col-lg-6">
-                                      <div className="resor-bords">
-                                        <div className="guide-cardwar">
-                                          <span className="pop-res-title">Whitepapers</span>
-                                          <p className="pop-res-title-p">Strategic resources for decision makers</p>
-                                        </div>
-                                        <div className="res-flex-wrap-one">
-                                          <div className="guide-card-01">
-                                            <a href="/white-papers/microsoft-copilot/">
-                                              <div className="guide-card-imag">
-                                                <img width={980} height={578} src="/img/white-p-one.png" alt="guide" />
-                                              </div>
-                                              <div className="guide-card-inf">
-                                                  <span className="guide-tags-rss">Whitepapers</span>
-                                                <span className="guide-card-title">Microsoft Copilot: The Catalyst for Transformation in Your Business</span>
-                                              </div>
-                                            </a>
-                                          </div>
-                                          <div className="guide-card-01">
-                                            <a href="/white-papers/microsoft-finance/">
-                                              <div className="guide-card-imag">
-                                                <img width={980} height={578} src="/img/finacne-white-paper-category.png" alt="guide" />
-                                              </div>
-                                              <div className="guide-card-inf">
-                                                <span className="guide-tags-rss">Whitepapers</span>
-                                                <span className="guide-card-title">Dynamics 365 Finance with Copilot WhitePaper</span>
-                                              </div>
-                                            </a>
-                                          </div>
-                                        </div>
-                                        <div className="comm-links-b">
-                                          <a className="n-tag-link" href="/white-papers/">Explore All Whitepapers <i className="bi bi-arrow-right"></i></a>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div className="col-lg-3 d-flex">
-                                  <div className="right-resource">
-                                    <div className="res-top-co">
-                                      <span className="n-tag">Featured Article</span>
-                                      <span className="n-title">How Much Time Can Copilot Save in Dynamics 365 Business Central?</span>
-                                      <p>Discover how much time Copilot saves in Dynamics 365 Business Central by automating...</p>
-                                      <div className="imag00">
-                                        
-                                        <img src="/img/menu-icons/pic-006.png" alt="Dynamics 365" width={106} height={90} />
-                                        
-                                        </div>
-                                      <a href="/blog/copilot-business-central-time-savings/">Read Article <i className="bi bi-arrow-right"></i></a>
-                                    </div>
-                                    <div className="res-top-bo">
-                                      <a style={{padding:'0px'}} href="/products/dynamics-365-copilot/"><img src="/img/menu--ss.png" width={706} height={180} alt="AI" /></a>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            className="tab-pane fade"
-                            id="v-pills-res-five"
-                          >
-                             <div className="container-fluid">
-                              <div className="row">
-                                <div className="col-lg-9 d-flex bg-0-gray-t">
-                                  <div className="row bg-0-gray">
-                                    <div className="col-lg-4">
-                                      <div className="resor-bord">
-                                        <div className="guide-cardwar">
-                                          <span className="pop-res-title">TOOLS</span>
-                                          <p className="pop-res-title-p">Estimate costs, compare solutions, and choose the right Microsoft Dynamics 365 platform with confidence.</p>
-                                        </div>
-                                      
-                                      </div>
-                                    </div>
-
-                                    <div className="col-lg-8">
-                                      <div className="resor-bords">
-                                       
-                                        <div className="res-flex-wrap-one">
-                                          <div className="guide-card-01">
-                                            <a href="/erp-implementation-cost-calculator/">
-                                              <div className="guide-card-imag">
-                                                <img width={980} height={578} src="/img/tools-one.png" alt="guide" />
-                                              </div>
-                                              <div className="guide-card-inf">
-                                                  <span className="guide-tags-rss">ERP Calculator</span>
-                                                <span className="guide-card-title">Estimate implementation costs in minutes.</span>
-                                                <a className="n-tag-link" href="/erp-implementation-cost-calculator/">Calculate Now <i className="bi bi-arrow-right"></i></a>
-                                              </div>
-                                            </a>
-                                          </div>
-                                          <div className="guide-card-01">
-                                            <a href="/top-erp-systems-comparison/">
-                                              <div className="guide-card-imag">
-                                                <img width={980} height={578} src="/img/tools-two.png" alt="guide" />
-                                              </div>
-                                              <div className="guide-card-inf">
-                                                <span className="guide-tags-rss">ERP Comparison</span>
-                                                <span className="guide-card-title">Compare Dynamics 365 solutions side-by-side.</span>
-                                                <a className="n-tag-link" href="/top-erp-systems-comparison/">Compare Now <i className="bi bi-arrow-right"></i></a>
-                                              </div>
-                                            </a>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div className="col-lg-3 d-flex">
-                                  <div className="right-resource">
-                                    <div className="res-top-co">
-                                      <span className="n-tag">Featured Article</span>
-                                      <span className="n-title">How Much Time Can Copilot Save in Dynamics 365 Business Central?</span>
-                                      <p>Discover how much time Copilot saves in Dynamics 365 Business Central by automating...</p>
-                                      <div className="imag00">
-                                        
-                                        <img src="/img/menu-icons/pic-006.png" alt="Dynamics 365" width={106} height={90} />
-                                        
-                                        </div>
-                                      <a href="/blog/copilot-business-central-time-savings/">Read Article <i className="bi bi-arrow-right"></i></a>
-                                    </div>
-                                    <div className="res-top-bo">
-                                      <a style={{padding:'0px'}} href="/products/dynamics-365-copilot/"><img src="/img/menu--ss.png" width={706} height={180} alt="AI" /></a>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div
-                            className="tab-pane fade"
-                            id="v-pills-res-six"
-                          ><div className="container-fluid">
-                              <div className="row">
-                                <div className="col-lg-12 bg-0-gray-t">
-                                  <div className="guide-cardwar">
-                                    <span className="pop-res-title">Webcasts</span>
-                                    <p>Your go-to source for expert insights on CRM, ERP, and business transformation powered by Microsoft Dynamics 365</p>
-                                  </div>
-                                  <div className="res-flex-wrap">
-                                    <div className="guide-card-01">
-                                      <a target="_blank" href="https://www.youtube.com/watch?v=44hqw-S27D0">
-                                        <div className="guide-card-imag">
-                                          <img width={411} height={216} src="/img/bc-8-20.png" alt="potcast" />
-                                        </div>
-                                        <div className="guide-card-inf">
-                                          <span className="guide-card-title">Is Your Business Ready for an ERP System?</span>
-                                          <span className="guide-card-para">Explore key signs, benefits, and steps to ERP readiness</span>
-                                        </div>
-                                      </a>
-                                    </div>
-                                    
-                                    <div className="guide-card-01">
-                                      <a target="_blank" href="https://youtu.be/Of8upj7BtGo?si=Lsf5SCwBtIpSU1ST">
-                                        <div className="guide-card-imag">
-                                          <img width={411} height={216} src="/img/bc-8-22.png" alt="potcast" />
-                                        </div>
-                                        <div className="guide-card-inf">
-                                          <span className="guide-card-title">Signs Your Business Is Ready for an ERP System</span>
-                                          <span className="guide-card-para">Understand when to adopt ERP, its benefits, and how Dynamics 365 drives business transformation.</span>
-                                        </div>
-                                      </a>
-                                    </div>
-                                    <div className="guide-card-01">
-                                      <a target="_blank" href="https://youtu.be/hUPT5DejiR0?si=p_hlO_BdCj_gbWwh">
-                                        <div className="guide-card-imag">
-                                          <img width={411} height={216} src="/img/bc-8-21.png" alt="potcast" />
-                                        </div>
-                                        <div className="guide-card-inf">
-                                          <span className="guide-card-title">Unpacking Microsoft Dynamics 365 Business Central for Growth</span>
-                                          <span className="guide-card-para">Learn how Business Central helps streamline operations and scale growth in this expert-driven podcast episode.</span>
-                                        </div>
-                                      </a>
-                                    </div>
-                                    <div className="guide-card-01">
-                                      <a target="_blank" href="https://www.youtube.com/watch?v=rAHE2BiaPkc">
-                                        <div className="guide-card-imag">
-                                          <img width={411} height={216} src="/img/New-pic-Project.png" alt="potcast" />
-                                        </div>
-                                        <div className="guide-card-inf">
-                                          <span className="guide-card-title">CRM EXPLAINED! Why Your Business Might Fail Without It </span>
-                                          <span className="guide-card-para">What really is a CRM—and why does every growing business keep talking about it?</span>
-                                        </div>
-                                      </a>
-                                    </div>
-                                 
-                                  </div>
-                                  <div className="comm-links-b">
-                                    <a className="n-tag-link" target="_blank" href="https://www.youtube.com/@DynamicsSquare">View All Podcasts <i className="bi bi-arrow-right"></i></a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div></div>
+                        <div className="col-lg-3 d-flex">
+                          <FeaturedArticle />
                         </div>
                       </div>
                     </div>
-
                   </div>
-                </li> 
-        {/* <li className="dropdown">
-          <a href="#">
-            <span>Resources</span> <i className="bi bi-chevron-down"></i>
-          </a>
-          <ul>
-            <li>
-              <a href="/blog/" target="_self">
-                Blogs
-              </a>
-            </li>
-            
-            <li>
-              <a href="/case-studies/">Case Studies</a>
-            </li>
-            <li>
-              <a href="/ebook/">eBooks</a>
-            </li>
 
-            <li>
-              <a href="/guides/">Guides</a>
-            </li>
-            <li>
-              <a href="/white-papers/">White Papers</a>
-            </li>
-            <li className="dropdown dropdown-s">
-              <a href="">
-                Tools <sub className="s-dd">new!</sub>
-                <i className="bi bi-chevron-right"></i>
-              </a>
-              <ul>
-                <li>
-                  <a href="/erp-implementation-cost-calculator/" target="_self">
-                    ERP Calculator
-                  </a>
-                </li>
-                <li>
-                  <a href="/top-erp-systems-comparison/" target="_self">
-                    ERP Comparison
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="/webinars/">Webinars</a>
-            </li>
-            
-          </ul>
-        </li> */}
+                  {/* ---------- Case Studies ---------- */}
+                  <div className="tab-pane fade" id="v-pills-res-two">
+                    <div className="container-fluid">
+                      <div className="row">
+                        <div className="col-lg-9 bg-0-gray-t">
+                          <div className="row bg-0-gray">
+                            <div className="col-lg-4">
+                              <div className="mega-list-01">
+                                <span>Browse by Service</span>
+                                <ul className="res-st-oo1">
+                                  {CASE_STUDY_SERVICES.map((s) => (
+                                    <li key={s.href}>
+                                      <Link href={s.href}>
+                                        <div className="ccc-img">
+                                          <i className={`bi ${s.icon}`}></i>
+                                        </div>
+                                        <div className="ccc-card">
+                                          <span>{s.title}</span>
+                                          <p>{s.desc}</p>
+                                        </div>
+                                      </Link>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            </div>
+                            <div className="col-lg-6">
+                              <div className="mega-list-01">
+                                <span>Customer Success Highlights</span>
+                                <ul>
+                                  {CASE_STUDY_HIGHLIGHTS.map((l) => (
+                                    <li key={l.href}><Link href={l.href}>{l.label}</Link></li>
+                                  ))}
+                                </ul>
+                                <div className="extra-res-link">
+                                  <Link href="/case-studies/">Explore Customer Stories <i className="bi bi-arrow-right"></i></Link>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="col-lg-3 d-flex">
+                          <FeaturedArticle />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* ---------- eBooks ---------- */}
+                  <div className="tab-pane fade" id="v-pills-res-three">
+                    <div className="container-fluid">
+                      <div className="row">
+                        <div className="col-lg-3 d-flex  bg-0-gray-t">
+                          <div className="res-card-99">
+                            <span className="n-tags">Recommended</span>
+                            <Link className="n-tag-link" href="/ebook/how-to-choose-right-erp/">
+                              <img className="n-tags-image" src="/img/Cover_Book_Moc.png" width={582} height={466} alt="Cover_Book_Moc" />
+                            </Link>
+                            <span className="n-tag-title">Ultimate Guide to Choose the Right ERP For Your Business</span>
+                            <p className="n-tag-para">Compare ERP solutions before making your investment.</p>
+                            <Link className="n-tag-link" href="/ebook/how-to-choose-right-erp/">Get Free eBook <i className="bi bi-arrow-right"></i></Link>
+                          </div>
+                        </div>
+                        <div className="col-lg-9 bg-0-gray-t">
+                          <div className="guide-cardwar">
+                            <span className="pop-res-title">Popular eBooks</span>
+                          </div>
+                          <div className="res-flex-wrap">
+                            {POPULAR_EBOOKS.map((b) => (
+                              <div className="guide-card-01" key={b.href}>
+                                <Link href={b.href}>
+                                  <div className="guide-card-imag">
+                                    <img width={980} height={578} src={b.img} alt={b.alt} />
+                                  </div>
+                                  <div className="guide-card-inf">
+                                    <span className="guide-card-title">{b.title}</span>
+                                    <span className="guide-card-para">{b.desc}</span>
+                                  </div>
+                                </Link>
+                              </div>
+                            ))}
+                          </div>
+                          <div className="comm-links-b">
+                            <Link className="n-tag-link" href="/ebook/">View All eBooks <i className="bi bi-arrow-right"></i></Link>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* ---------- Guides ---------- */}
+                  <div className="tab-pane fade" id="v-pills-res-four">
+                    <div className="container-fluid">
+                      <div className="row">
+                        <div className="col-lg-9 d-flex bg-0-gray-t">
+                          <div className="row bg-0-gray">
+                            <div className="col-lg-6">
+                              <div className="resor-bord">
+                                <div className="guide-cardwar">
+                                  <span className="pop-res-title">Guides</span>
+                                  <p className="pop-res-title-p">Learn before you implement</p>
+                                </div>
+                                <div className="res-flex-wrap-one">
+                                  {GUIDES.map((g) => (
+                                    <div className="guide-card-01" key={g.href}>
+                                      <Link href={g.href}>
+                                        <div className="guide-card-imag">
+                                          <img width={1200} height={628} src={g.img} alt={g.alt} />
+                                        </div>
+                                        <div className="guide-card-inf">
+                                          {/* <span className="guide-tags-rss">{g.tag}</span> */}
+                                          <span className="guide-card-title">{g.title}</span>
+                                        </div>
+                                      </Link>
+                                    </div>
+                                  ))}
+                                </div>
+                                <div className="comm-links-b">
+                                  <Link className="n-tag-link" href="/guides/">Explore All Guides <i className="bi bi-arrow-right"></i></Link>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="col-lg-6">
+                              <div className="resor-bords">
+                                <div className="guide-cardwar">
+                                  <span className="pop-res-title">Whitepapers</span>
+                                  <p className="pop-res-title-p">Strategic resources for decision makers</p>
+                                </div>
+                                <div className="res-flex-wrap-one">
+                                  {WHITEPAPERS.map((w) => (
+                                    <div className="guide-card-01" key={w.href}>
+                                      <Link href={w.href}>
+                                        <div className="guide-card-imag">
+                                          <img width={980} height={578} src={w.img} alt={w.alt} />
+                                        </div>
+                                        <div className="guide-card-inf">
+                                          {/* <span className="guide-tags-rss">{w.tag}</span> */}
+                                          <span className="guide-card-title">{w.title}</span>
+                                        </div>
+                                      </Link>
+                                    </div>
+                                  ))}
+                                </div>
+                                <div className="comm-links-b">
+                                  <Link className="n-tag-link" href="/white-papers/">Explore All Whitepapers <i className="bi bi-arrow-right"></i></Link>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="col-lg-3 d-flex">
+                          <FeaturedArticle />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* ---------- Tools ---------- */}
+                  <div className="tab-pane fade" id="v-pills-res-five">
+                    <div className="container-fluid">
+                      <div className="row">
+                        <div className="col-lg-9 d-flex bg-0-gray-t">
+                          <div className="row bg-0-gray">
+                            <div className="col-lg-4">
+                              <div className="resor-bord">
+                                <div className="guide-cardwar">
+                                  <span className="pop-res-title">TOOLS</span>
+                                  <p className="pop-res-title-p">Estimate costs, compare solutions, and choose the right Microsoft Dynamics 365 platform with confidence.</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div className="col-lg-8">
+                              <div className="resor-bords">
+                                <div className="res-flex-wrap-one">
+                                  {TOOLS.map((t) => (
+                                    <div className="guide-card-01" key={t.href}>
+                                      <Link href={t.href}>
+                                        <div className="guide-card-imag">
+                                          <img width={980} height={578} src={t.img} alt="guide" />
+                                        </div>
+                                        <div className="guide-card-inf">
+                                          <span className="guide-tags-rss">{t.tag}</span>
+                                          <span className="guide-card-title">{t.title}</span>
+                                          <span className="n-tag-link">{t.cta} <i className="bi bi-arrow-right"></i></span>
+                                        </div>
+                                      </Link>
+                                    </div>
+                                  ))}
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="col-lg-3 d-flex">
+                          <FeaturedArticle />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* ---------- Webcasts ---------- */}
+                  <div className="tab-pane fade" id="v-pills-res-six">
+                    <div className="container-fluid">
+                      <div className="row">
+                        <div className="col-lg-12 bg-0-gray-t">
+                          <div className="guide-cardwar">
+                            <span className="pop-res-title">Webcasts</span>
+                            <p>Your go-to source for expert insights on CRM, ERP, and business transformation powered by Microsoft Dynamics 365</p>
+                          </div>
+                          <div className="res-flex-wrap">
+                            {WEBCASTS.map((w) => (
+                              <div className="guide-card-01" key={w.href}>
+                                <a target="_blank" href={w.href} rel="noreferrer">
+                                  <div className="guide-card-imag">
+                                    <img width={411} height={216} src={w.img} alt="potcast" />
+                                  </div>
+                                  <div className="guide-card-inf">
+                                    <span className="guide-card-title">{w.title}</span>
+                                    <span className="guide-card-para">{w.desc}</span>
+                                  </div>
+                                </a>
+                              </div>
+                            ))}
+                          </div>
+                          <div className="comm-links-b">
+                            <a className="n-tag-link" target="_blank" href="https://www.youtube.com/@DynamicsSquare" rel="noreferrer">View All Podcasts <i className="bi bi-arrow-right"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+
         <li>
           <PulseButton />
         </li>

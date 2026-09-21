@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import Link from 'next/link';
 
 const PulseButton = () => {
   useEffect(() => {
@@ -25,7 +26,7 @@ const PulseButton = () => {
     // Your component JSX
     <div className="button-new custtsss" id="button-2">
     <div id="slide"></div>
-    <a href="/contact-us/">Contact Us</a>
+    <Link href="/contact-us/">Contact Us</Link>
   </div>
   );
 };

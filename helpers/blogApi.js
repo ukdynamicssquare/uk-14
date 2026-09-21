@@ -9,6 +9,13 @@ if (!API_KEY && typeof window === "undefined") {
 }
 
 export const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "https://blogdsukapi.onrender.com"; 
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+// 429 is a transient rate-limit, not a real outage — worth a few retries
+// before giving up. Everything else (network error, 5xx, bad JSON) still
+// fails immediately; only this specific status gets the backoff treatment.
+const MAX_429_RETRIES = 3;
+
 // Returns null only for a genuine "not found" (404) response from the API.
 // Any other failure (network error, timeout, 5xx, auth error, bad JSON) is
 // thrown so callers can tell "no data" apart from "API is broken" — the
@@ -17,30 +24,46 @@ export const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || "https://blogd
 export async function fetchBlogApi(endpoint) {
   const url = `${API_BASE_URL}${endpoint}`;
 
-  let response;
-  try {
-    response = await fetch(url, {
-      headers: {
-        "x-api-key": API_KEY,
-        "Content-Type": "application/json",
-      },
-    });
-  } catch (error) {
-    throw new Error(`Blog API network error [${endpoint}]: ${error.message}`);
-  }
+  for (let attempt = 0; attempt <= MAX_429_RETRIES; attempt++) {
+    let response;
+    try {
+      response = await fetch(url, {
+        headers: {
+          "x-api-key": API_KEY,
+          "Content-Type": "application/json",
+        },
+      });
+    } catch (error) {
+      throw new Error(`Blog API network error [${endpoint}]: ${error.message}`);
+    }
 
-  if (response.status === 404) {
-    return null;
-  }
+    if (response.status === 429) {
+      if (attempt === MAX_429_RETRIES) {
+        throw new Error(`Blog API HTTP 429 [${endpoint}]`);
+      }
 
-  if (!response.ok) {
-    throw new Error(`Blog API HTTP ${response.status} [${endpoint}]`);
-  }
+      const retryAfterHeader = Number(response.headers.get("retry-after"));
+      const delayMs = Number.isFinite(retryAfterHeader) && retryAfterHeader > 0
+        ? retryAfterHeader * 1000
+        : 500 * 2 ** attempt; // 500ms, 1s, 2s
 
-  try {
-    return await response.json();
-  } catch (error) {
-    throw new Error(`Blog API invalid JSON [${endpoint}]: ${error.message}`);
+      await sleep(delayMs);
+      continue;
+    }
+
+    if (response.status === 404) {
+      return null;
+    }
+
+    if (!response.ok) {
+      throw new Error(`Blog API HTTP ${response.status} [${endpoint}]`);
+    }
+
+    try {
+      return await response.json();
+    } catch (error) {
+      throw new Error(`Blog API invalid JSON [${endpoint}]: ${error.message}`);
+    }
   }
 }
  
