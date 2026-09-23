@@ -354,8 +354,8 @@ export default function LicenceRateCard({ source = "licence-rate-card", initialC
       <header className="rc-head">
         <div className="rc-head-inner">
           <div className="rc-eyebrow">{C.header.eyebrow}</div>
-          <h1>{C.header.heading}</h1>
-          <p className="rc-dek">{C.header.dek}</p>
+          <h1>Know Your Dynamics 365 Licensing Cost in Minutes</h1>
+          <p className="rc-dek">Select the capabilities your business needs and get an instant, itemised estimate — built on real Microsoft pricing, not guesswork.</p>
           <dl className="rc-stats">
             <div>
               <dt>2 min</dt>

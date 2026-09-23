@@ -99,6 +99,11 @@
       "source": "/microsoft-dynamics-pricing-calculator/",
       "destination": "/tools/microsoft-dynamics-licensing-calculator/",
       "statusCode": 301
+    },
+    {
+      "source": "/blog/qad-erp-to-dynamics-365-finance-migration-a-complete-guide-for-uk-manufacturers/",
+      "destination": "/blog/qad-erp-to-dynamics-365-finance-migration/",
+      "statusCode": 301
     }
   ]
 }

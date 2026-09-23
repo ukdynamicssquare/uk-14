@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "question": "What does the Microsoft Dynamics 365 Licensing Calculator do?",
+    "answer": "<p>Our <a href=\"/tools/microsoft-dynamics-licensing-calculator/\">Dynamics 365 Licensing Calculator</a> lets you quickly estimate the monthly and annual cost of licensing Dynamics 365 applications, such as Business Central, Sales, and Customer Service, based on the number of users and licence types you select. It gives you a fast, indicative price so you can budget for your ERP or CRM project before speaking to our team.</p>"
+  },
+  {
+    "id": 2,
+    "question": "How accurate are the prices shown by the licensing calculator?",
+    "answer": "<p>The calculator uses current Microsoft list prices to give you a reliable estimate, but your final cost may vary depending on volume discounts, existing Microsoft agreements, add-on modules, and any promotional offers available at the time of purchase. For an exact, tailored quote, <a href=\"/contact-us/\">contact our licensing specialists</a> at Dynamics Square.</p>"
+  },
+  {
+    "id": 3,
+    "question": "What information do I need to use the licensing calculator?",
+    "answer": "<p>You simply need to know which Dynamics 365 application you are interested in, how many full users and Team Member users you require, and whether you need Essentials or Premium functionality. Once entered, the calculator instantly generates an estimated licence cost for your business.</p>"
+  },
+  {
+    "id": 4,
+    "question": "Can the calculator estimate costs for multiple Dynamics 365 applications together?",
+    "answer": "<p>Yes, you can use the calculator to price licences for different Dynamics 365 applications, such as combining Business Central with Sales or Customer Service, to see a combined estimate for your organisation. This is useful if you are planning a multi-app rollout and want a single view of the total licensing investment.</p>"
+  },
+  {
+    "id": 5,
+    "question": "What should I do after getting my licensing estimate?",
+    "answer": "<p>Once you have your estimate from the calculator, we recommend <a href=\"/contact-us/\">speaking with our Dynamics 365 experts</a> to confirm the exact licences you need, review any available discounts, and plan your implementation. Our team can turn your estimate into a formal quote and help you get started with confidence.</p>"
+  },
+  {
+    "id": 6,
+    "question": "How can Dynamics Square help with my Dynamics 365 licensing?",
+    "answer": "<p>As a Microsoft Solutions Partner, <a href=\"/contact-us/\">Dynamics Square</a> helps you choose the right mix of Dynamics 365 licences for your business, secure any available discounts, and avoid overpaying for functionality you don't need. Beyond licensing, our team supports you through implementation, customisation, integration, and ongoing support, so you get a solution that is correctly licensed and properly set up from day one. <a href=\"/contact-us/\">Get in touch with our experts</a> for a free, no-obligation licensing consultation.</p>"
+  }
+]
