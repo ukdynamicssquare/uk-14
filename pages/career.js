@@ -13,7 +13,41 @@ const Career = () => {
           content="Our effective leaders knows- their company's success depends upon not just a vision or product, but the people who carry out the vision and build the product"
         />
         <link rel="canonical" href="https://www.dynamicssquare.co.uk/career/"/>
-          
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.dynamicssquare.co.uk/career/" />
+        <meta property="og:title" content="Career | Dynamics Square" />
+        <meta property="og:description" content="Our effective leaders knows- their company's success depends upon not just a vision or product, but the people who carry out the vision and build the product" />
+        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/carrer-banner.png" />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/career/" />
+        <meta property="twitter:title" content="Career | Dynamics Square" />
+        <meta property="twitter:description" content="Our effective leaders knows- their company's success depends upon not just a vision or product, but the people who carry out the vision and build the product" />
+        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/carrer-banner.png" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "BreadcrumbList",
+                  "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dynamicssquare.co.uk/" },
+                    { "@type": "ListItem", "position": 2, "name": "Career", "item": "https://www.dynamicssquare.co.uk/career/" }
+                  ]
+                },
+                {
+                  "@type": "Organization",
+                  "name": "Dynamics Square UK",
+                  "url": "https://www.dynamicssquare.co.uk",
+                  "email": "info@dynamicssquare.co.uk"
+                }
+              ]
+            })
+          }}
+        />
         </Head>
         <section className="Solution-banner hero-1 hero about-banner carrer-into">
           <div className="container">
@@ -97,9 +131,7 @@ const Career = () => {
                           <i className="bi bi-check-lg"></i> There's no <br />
                           inner circle.
                         </h3>
-                        <div className="overlay">
-                          <p></p>
-                        </div>
+                        <div className="overlay" />
                       </div>
                       <div className="why-solution-wrapper-inner why-solution-wrapper-new">
                         <h3>
@@ -108,9 +140,7 @@ const Career = () => {
                           <br />
                           to work autonomously.
                         </h3>
-                        <div className="overlay">
-                          <p></p>
-                        </div>
+                        <div className="overlay" />
                       </div>
                     </div>
                   </div>
@@ -122,9 +152,7 @@ const Career = () => {
                           perspectives <br />
                           are celebrated.
                         </h3>
-                        <div className="overlay">
-                          <p></p>
-                        </div>
+                        <div className="overlay" />
                       </div>
                       <div className="why-solution-wrapper-inner why-solution-wrapper-new">
                         <h3>
@@ -133,9 +161,7 @@ const Career = () => {
                           <br />
                           people, not line items.
                         </h3>
-                        <div className="overlay">
-                          <p></p>
-                        </div>
+                        <div className="overlay" />
                       </div>
                     </div>
                   </div>
@@ -163,18 +189,18 @@ const Career = () => {
             <div className="row  justify-content-center">
               <div className="col-lg-9">
                 <div className="row nn-od justify-content-center">
-                  {/* <div className="col-lg-6">
+                  <div className="col-lg-6">
                     <div className="leftinf">
                       <h4>Browse our open positions.</h4>
-                      <NavLink
-                    data-bs-toggle="modal"
-                    to="#exampleModal"
-                    className="btn btn-lg  bt-cust112"
-                  >
-                    <span>Apply Now</span>
-                  </NavLink>
+                      <Link
+                        href="#exampleModal"
+                        data-bs-toggle="modal"
+                        className="btn btn-lg  bt-cust112"
+                      >
+                        <span>Apply Now</span>
+                      </Link>
                     </div>
-                  </div> */}
+                  </div>
                   <div className="col-lg-6">
                     <div className="rightinfa text-center">
                       <span>Send us your CV at: </span> <br />

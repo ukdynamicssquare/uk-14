@@ -16,6 +16,47 @@ const Startup = () => {
           rel="canonical"
           href="https://www.dynamicssquare.co.uk/bespoke-crm-system/"
         />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.dynamicssquare.co.uk/bespoke-crm-system/" />
+        <meta property="og:title" content="Bespoke CRM | Microsoft Partner - Dynamics Square UK" />
+        <meta property="og:description" content="Implement a bespoke CRM system solution to boost customer experience, achieve maximum customer satisfaction, and generate more sales. Implement Dynamics 365 CRM today! " />
+        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/CRM-header-banner.png" />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/bespoke-crm-system/" />
+        <meta property="twitter:title" content="Bespoke CRM | Microsoft Partner - Dynamics Square UK" />
+        <meta property="twitter:description" content="Implement a bespoke CRM system solution to boost customer experience, achieve maximum customer satisfaction, and generate more sales. Implement Dynamics 365 CRM today! " />
+        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/CRM-header-banner.png" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "BreadcrumbList",
+                  "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dynamicssquare.co.uk/" },
+                    { "@type": "ListItem", "position": 2, "name": "Bespoke CRM System", "item": "https://www.dynamicssquare.co.uk/bespoke-crm-system/" }
+                  ]
+                },
+                {
+                  "@type": "Service",
+                  "name": "Bespoke CRM System Implementation",
+                  "serviceType": "Bespoke Microsoft Dynamics 365 CRM customisation and implementation",
+                  "provider": {
+                    "@type": "Organization",
+                    "name": "Dynamics Square UK",
+                    "url": "https://www.dynamicssquare.co.uk"
+                  },
+                  "areaServed": { "@type": "Country", "name": "United Kingdom" },
+                  "description": "Implement a bespoke CRM system solution to boost customer experience, achieve maximum customer satisfaction, and generate more sales with Dynamics 365 CRM."
+                }
+              ]
+            })
+          }}
+        />
       </Head>
         <section className="Solution-banner hero-1 hero">
           <div className="container">
@@ -241,7 +282,7 @@ const Startup = () => {
             </div>
           </div>
         </section>
-        <section className="new-style-bg" style={{backgroundColor:'#fdfdfd'}}>
+        <section className="new-style-bg new-style-bg--off-white">
         <div className="container">
           <div className='row justify-content-center'>
             <div className='col-lg-9'>

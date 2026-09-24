@@ -1,4 +1,3 @@
-// import { useEffect, useState } from "react";
 import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
@@ -7,47 +6,9 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Autoplay, FreeMode, Pagination } from "swiper/modules";
-import FormCaseScroll from "../../components/FormCaseScroll";
 
 
 const AccessDimensionErpToBusinessCentralMigration = () => {
-
-  // const [showPopup, setShowPopup] = useState(false);
-  // const [scrollPosition, setScrollPosition] = useState(0);
-
-  // useEffect(() => {
-  //   const formSubmittedState = localStorage.getItem('formSubmitted') === 'true';
-  //   if (formSubmittedState) {
-  //     setShowPopup(false);
-  //     return; 
-  //   }
-
-  //   const handleScroll = () => {
-  //     const position = window.scrollY;
-  //     const scrollHeight = document.documentElement.scrollHeight;
-  //     const clientHeight = document.documentElement.clientHeight;
-  //     const scrolledPercentage = (position / (scrollHeight - clientHeight)) * 100;
-
-  //     setScrollPosition(scrolledPercentage);
-
-  //     if (scrolledPercentage > 10 && !showPopup) {
-  //       setShowPopup(true);
-  //     }
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //     document.body.style.overflow = "auto";
-  //   };
-  // }, [scrollPosition, showPopup]);
-
-  // const handlePopupClose = () => {
-  //   setShowPopup(false); 
-  //   localStorage.setItem('formSubmitted', 'true'); 
-  // };
-
 
   return (
     <>
@@ -61,8 +22,48 @@ const AccessDimensionErpToBusinessCentralMigration = () => {
           rel="canonical"
           href="https://www.dynamicssquare.co.uk/case-studies/access-dimension-erp-to-business-central-migration/"
         />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://www.dynamicssquare.co.uk/case-studies/access-dimension-erp-to-business-central-migration/" />
+        <meta property="og:title" content="Access Dimension ERP to Business Central Migration" />
+        <meta property="og:description" content="Explore the process of migrating from Access Dimension ERP to Business Central with our thoroughly case study, which highlights improved capabilities and business growth." />
+        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/cast-stu-pic.png" />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/case-studies/access-dimension-erp-to-business-central-migration/" />
+        <meta property="twitter:title" content="Access Dimension ERP to Business Central Migration" />
+        <meta property="twitter:description" content="Explore the process of migrating from Access Dimension ERP to Business Central with our thoroughly case study, which highlights improved capabilities and business growth." />
+        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/cast-stu-pic.png" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "BreadcrumbList",
+                  "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dynamicssquare.co.uk/" },
+                    { "@type": "ListItem", "position": 2, "name": "Case Studies", "item": "https://www.dynamicssquare.co.uk/case-studies/" },
+                    { "@type": "ListItem", "position": 3, "name": "Access Dimension ERP to Business Central Migration", "item": "https://www.dynamicssquare.co.uk/case-studies/access-dimension-erp-to-business-central-migration/" }
+                  ]
+                },
+                {
+                  "@type": "Article",
+                  "headline": "Access Dimension ERP to Business Central Upgrade",
+                  "description": "Explore the process of migrating from Access Dimension ERP to Business Central with our thoroughly case study, which highlights improved capabilities and business growth.",
+                  "image": "https://www.dynamicssquare.co.uk/img/cast-stu-pic.png",
+                  "publisher": {
+                    "@type": "Organization",
+                    "name": "Dynamics Square UK",
+                    "url": "https://www.dynamicssquare.co.uk"
+                  }
+                }
+              ]
+            })
+          }}
+        />
       </Head>
-      {/* <div className={showPopup ? "blur-content" : ""}> */}
       <div>
         <section className="hero-1 hero">
           <div className="container">
@@ -78,9 +79,12 @@ const AccessDimensionErpToBusinessCentralMigration = () => {
               </div>
               <div className="col-lg-6 align-self-center">
                 <div className="sider-over">
-                  <img
+                  <Image
                     src="/img/business-central-implementation-banner-1.svg"
                     alt="business-central-implementation-banner"
+                    width={1024}
+                    height={586}
+                    priority
                   />
                 </div>
               </div>
@@ -94,9 +98,11 @@ const AccessDimensionErpToBusinessCentralMigration = () => {
               <div className="col-lg-10">
                 <div className="row bg-case">
                   <div className="col-lg-3 align-self-center text-center">
-                    <img
+                    <Image
                       src="/img/casestudy-pic.png"
                       alt="casestudy-pic"
+                      width={200}
+                      height={200}
                     />
                   </div>
                   <div className="col-lg-9 align-self-center">
@@ -220,9 +226,11 @@ const AccessDimensionErpToBusinessCentralMigration = () => {
                         <div className="swiper-slide">
                           <div className="industries-list-more">
                             <div className="img-wrp">
-                              <img
+                              <Image
                                 src="/img/material-lightbulb-outline.svg"
                                 alt="Food-and-beverage"
+                                width={21}
+                                height={30}
                               />
                             </div>
                             <div className="text-wrp-content">
@@ -236,9 +244,11 @@ const AccessDimensionErpToBusinessCentralMigration = () => {
                           <div className="swiper-slide">
                             <div className="industries-list-more">
                               <div className="img-wrp">
-                                <img
+                                <Image
                                   src="/img/material-lightbulb-outline.svg"
                                   alt="NotforProfit"
+                                  width={21}
+                                  height={30}
                                 />
                               </div>
                               <div className="text-wrp-content">
@@ -253,9 +263,11 @@ const AccessDimensionErpToBusinessCentralMigration = () => {
                           <div className="swiper-slide">
                             <div className="industries-list-more">
                               <div className="img-wrp">
-                                <img
+                                <Image
                                   src="/img/material-lightbulb-outline.svg"
                                   alt="Ecommerce"
+                                  width={21}
+                                  height={30}
                                 />
                               </div>
                               <div className="text-wrp-content">
@@ -270,9 +282,11 @@ const AccessDimensionErpToBusinessCentralMigration = () => {
                           <div className="swiper-slide">
                             <div className="industries-list-more">
                               <div className="img-wrp">
-                                <img
+                                <Image
                                   src="/img/material-lightbulb-outline.svg"
                                   alt="Ecommerce"
+                                  width={21}
+                                  height={30}
                                 />
                               </div>
                               <div className="text-wrp-content">
@@ -349,32 +363,12 @@ const AccessDimensionErpToBusinessCentralMigration = () => {
           </div>
         </section>
 
-        {/* <section className="case-clent">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-12">
-              <div className="case-clent-test">
-                <p>
-                  We worked with Nitesh to further customise our Microsoft
-                  Dynamics Package. He provided us a top level service with well
-                  trained staff as well as excellent support when needed.
-                  Dynamics Square is a very professional and trustworth. Will
-                  surely recommend to everyone
-                </p>
-                <h4>Terence Turner</h4>
-                <span>General Manager</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-
         <section className="call_to_action call_to_action-height pd-404">
           <div className="container">
             <div className="row">
               <div className="col-lg-5">
                 <div className="call_to_action-right over-img">
-                  <img src="/img/MaskGroup8.png" alt="image" />
+                  <Image src="/img/MaskGroup8.png" alt="image" width={339} height={483} />
                 </div>
               </div>
               <div className="col-lg-7 align-self-center">
@@ -401,14 +395,6 @@ const AccessDimensionErpToBusinessCentralMigration = () => {
         </section>
 
       </div>
-      {/* Pop-up Form */}
-      {/* {showPopup && <FormCaseScroll onClose={handlePopupClose} />}
-      <style jsx>{`
-        .blur-content {
-          filter: blur(7px);
-          transition: filter 0.3s ease;
-        }
-      `}</style> */}
     </>
   );
 };

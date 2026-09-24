@@ -12,6 +12,7 @@ class MyDocument extends Document {
     return (
       <Html lang='en-GB'>
         <Head>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link href="/favicon.png" rel="icon" />
           <link href="/favicon.png" rel="apple-touch-icon" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />

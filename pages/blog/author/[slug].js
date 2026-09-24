@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import { useMemo, useState } from "react";
 import Image from "next/image";
 import Pagination from "../../../components/Pagination";
@@ -108,22 +107,22 @@ export async function getStaticProps({ params }) {
     props: {
       authorslist,
       blgsbyauthorslist,
-      fetchedAuthor, 
+      fetchedAuthor,
+      authorSlug: slug,
     },
     revalidate: 60,
   };
 }
 
-function Authors({ authorslist, blgsbyauthorslist, fetchedAuthor }) {
-  const router = useRouter();
+function Authors({ authorslist, blgsbyauthorslist, fetchedAuthor, authorSlug }) {
   const [currentPage, setCurrentPage] = useState(1);
 
   const currentAuthor = useMemo(() => {
 
     if (fetchedAuthor) return fetchedAuthor;
 
-    return authorslist.find((item) => getAuthorSlug(item) === router.query.slug);
-  }, [authorslist, router.query.slug, fetchedAuthor]);
+    return authorslist.find((item) => getAuthorSlug(item) === authorSlug);
+  }, [authorslist, authorSlug, fetchedAuthor]);
 
   const paginatedPosts = useMemo(
     () => paginate(blgsbyauthorslist, currentPage, PAGE_SIZE),
@@ -165,7 +164,7 @@ function Authors({ authorslist, blgsbyauthorslist, fetchedAuthor }) {
 
         <link
           rel="canonical"
-          href={`https://www.dynamicssquare.co.uk/blog/author/${router.query.slug}/`}
+          href={`https://www.dynamicssquare.co.uk/blog/author/${authorSlug}/`}
         />
 
         {/* Open Graph */}
@@ -174,7 +173,7 @@ function Authors({ authorslist, blgsbyauthorslist, fetchedAuthor }) {
         <meta property="og:description" content={`Explore all blog posts written by ${authorName}.`} />
         <meta
           property="og:url"
-          content={`https://www.dynamicssquare.co.uk/blog/author/${router.query.slug}`}
+          content={`https://www.dynamicssquare.co.uk/blog/author/${authorSlug}/`}
         />
         <meta property="og:site_name" content="Dynamics Square Blog" />
         <meta property="og:image" content={authorImage} />
@@ -212,19 +211,13 @@ function Authors({ authorslist, blgsbyauthorslist, fetchedAuthor }) {
             <div className="author-profile-card">
               <div className="row">
                 <div className="col-lg-3 text-center">
-                  <img src={authorImage} alt={authorName} className="author-profile-img" />
-                  {/* <div className="author-social-links">
-                    {isValidLink(getLinkedInUrl(currentAuthor)) && (
-                      <a
-                        href={getLinkedInUrl(currentAuthor)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="LinkedIn"
-                      >
-                        <i className="bi bi-linkedin"></i>
-                      </a>
-                    )}
-                  </div> */}
+                  <Image
+                    src={authorImage}
+                    alt={authorName}
+                    className="author-profile-img"
+                    width={168}
+                    height={168}
+                  />
                 </div>
 
                 <div className="col-lg-9">
@@ -252,28 +245,6 @@ function Authors({ authorslist, blgsbyauthorslist, fetchedAuthor }) {
                     </div>
                   </div>
 
-                  {/* Social links — only renders an icon when the API actually provides a real URL */}
-                  {/* <div className="author-social-links">
-                    {SOCIAL_LINKS.map(({ key, icon, label }) =>
-                      isValidLink(currentAuthor?.[key]) ? (
-                        <a
-                          key={key}
-                          href={currentAuthor[key]}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          aria-label={label}
-                        >
-                          <i className={`bi ${icon}`}></i>
-                        </a>
-                      ) : null
-                    )}
-
-                    {isValidLink(currentAuthor?.email) && (
-                      <a href={`mailto:${currentAuthor.email}`} aria-label="Email">
-                        <i className="bi bi-envelope-fill"></i>
-                      </a>
-                    )}
-                  </div> */}
                 </div>
               </div>
             </div>
@@ -351,7 +322,7 @@ function Authors({ authorslist, blgsbyauthorslist, fetchedAuthor }) {
 
                               <div className="blog-author-footer">
                                 <div className="author-info">
-                                  <img src={authorImage} alt={item.author} />
+                                  <Image src={authorImage} alt={item.author} width={32} height={32} />
                                   <span>{item.author}</span>
                                 </div>
 
@@ -397,22 +368,24 @@ function Authors({ authorslist, blgsbyauthorslist, fetchedAuthor }) {
                         {[...authorslist]
                           // .sort((a, b) => a.name.localeCompare(b.name))
                           .map((author) => {
-                            const authorSlug = getAuthorSlug(author);
+                            const itemSlug = getAuthorSlug(author);
                             return (
                               <li
-                                key={author.id ?? authorSlug}
-                                className={router.query.slug === authorSlug ? "active" : ""}
+                                key={author.id ?? itemSlug}
+                                className={itemSlug === authorSlug ? "active" : ""}
                               >
-                                  <a href={`/blog/author/${authorSlug}/`}>
-                                    <img 
+                                  <a href={`/blog/author/${itemSlug}/`}>
+                                    <Image
                                       src={
-                                        (author.avatarUrl || author.profile_photo_path || "").startsWith("http") 
-                                          ? (author.avatarUrl || author.profile_photo_path) 
+                                        (author.avatarUrl || author.profile_photo_path || "").startsWith("http")
+                                          ? (author.avatarUrl || author.profile_photo_path)
                                           : `${BACKEND_URL}${author.avatarUrl || author.profile_photo_path}`
-                                      } 
-                                      alt={author.name} 
+                                      }
+                                      alt={author.name}
+                                      width={38}
+                                      height={38}
                                     />
-                                    <span>{author.name}</span> 
+                                    <span>{author.name}</span>
                                   </a>
                               </li>
                             );

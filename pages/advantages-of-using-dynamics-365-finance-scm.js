@@ -9,6 +9,57 @@ const AdvantagesfinanceScm = () => {
         <title>Dynamics 365 Finance & Supply Chain Management Advantages</title>
 <meta name="description" content="Check out some advantage of Dynamics 365 Finance & Supply Chain management. Optimize financials, inventory, production & more to streamline operations & drive growth."/>
 <link rel="canonical" href="https://www.dynamicssquare.co.uk/advantages-of-using-dynamics-365-finance-scm/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.dynamicssquare.co.uk/advantages-of-using-dynamics-365-finance-scm/" />
+        <meta property="og:title" content="Dynamics 365 Finance & Supply Chain Management Advantages" />
+        <meta property="og:description" content="Check out some advantage of Dynamics 365 Finance & Supply Chain management. Optimize financials, inventory, production & more to streamline operations & drive growth." />
+        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/why-migart.png" />
+
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/advantages-of-using-dynamics-365-finance-scm/" />
+        <meta property="twitter:title" content="Dynamics 365 Finance & Supply Chain Management Advantages" />
+        <meta property="twitter:description" content="Check out some advantage of Dynamics 365 Finance & Supply Chain management. Optimize financials, inventory, production & more to streamline operations & drive growth." />
+        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/why-migart.png" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "BreadcrumbList",
+                  "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dynamicssquare.co.uk/" },
+                    { "@type": "ListItem", "position": 2, "name": "Advantages of Using Dynamics 365 Finance & SCM", "item": "https://www.dynamicssquare.co.uk/advantages-of-using-dynamics-365-finance-scm/" }
+                  ]
+                },
+                {
+                  "@type": "ItemList",
+                  "name": "Dynamics 365 Finance Advantages",
+                  "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Simplify Financial Operations" },
+                    { "@type": "ListItem", "position": 2, "name": "Assets Management" },
+                    { "@type": "ListItem", "position": 3, "name": "Profit Tracking" },
+                    { "@type": "ListItem", "position": 4, "name": "Multi-Currency Management" },
+                    { "@type": "ListItem", "position": 5, "name": "Tax Management" }
+                  ]
+                },
+                {
+                  "@type": "ItemList",
+                  "name": "Dynamics 365 Supply Chain Management Advantages",
+                  "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Demand Management" },
+                    { "@type": "ListItem", "position": 2, "name": "Track Production Needs" },
+                    { "@type": "ListItem", "position": 3, "name": "Transparent Supply Chain" },
+                    { "@type": "ListItem", "position": 4, "name": "Workflow Automation" },
+                    { "@type": "ListItem", "position": 5, "name": "Lowered Operational Cost" }
+                  ]
+                }
+              ]
+            })
+          }}
+        />
         </Head>
         <section className="Solution-banner hero-1 hero">
         <div className="container">
@@ -57,7 +108,7 @@ const AdvantagesfinanceScm = () => {
             </div>
             <div className="row g-5 pad2xyr">
               <div className="col-lg-6">
-                <h3 style={{marginBottom:'20px'}}>Dynamics 365 Finance </h3>
+                <h3>Dynamics 365 Finance </h3>
                 <div className="style-grid-1">
                   <div className="style-grid-content">
                     <h3>Simplify Financial Operations </h3>
@@ -96,7 +147,7 @@ const AdvantagesfinanceScm = () => {
               </div>
 
               <div className="col-lg-6">
-                <h3 style={{marginBottom:'20px'}}>Dynamics 365 Supply Chain Management </h3>
+                <h3>Dynamics 365 Supply Chain Management </h3>
                 <div className="style-grid-1">
                   <div className="style-grid-content">
                     <h3>Demand Management </h3>

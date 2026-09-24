@@ -1,4 +1,6 @@
 import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const Index = () => {
@@ -22,6 +24,102 @@ const Index = () => {
                 <meta
                     name="keywords"
                     content="Microsoft Dynamics 365 AI business solutions, Dynamics 365 AI solutions, Dynamics 365 Copilot, Microsoft AI solutions, AI business solutions, Dynamics 365 AI consulting, AI automation"
+                />
+
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://www.dynamicssquare.co.uk/ai-solutions/" />
+                <meta property="og:title" content="Microsoft Dynamics 365 AI Business Solutions | AI Consulting" />
+                <meta property="og:description" content="Discover Microsoft Dynamics 365 AI business solutions designed to automate processes, improve productivity, analyse business data, and support smarter decision-making." />
+                <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/AI-Banner.png" />
+
+                <meta property="twitter:card" content="summary_large_image" />
+                <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/ai-solutions/" />
+                <meta property="twitter:title" content="Microsoft Dynamics 365 AI Business Solutions | AI Consulting" />
+                <meta property="twitter:description" content="Discover Microsoft Dynamics 365 AI business solutions designed to automate processes, improve productivity, analyse business data, and support smarter decision-making." />
+                <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/AI-Banner.png" />
+
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@graph": [
+                                {
+                                    "@type": "BreadcrumbList",
+                                    "itemListElement": [
+                                        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dynamicssquare.co.uk/" },
+                                        { "@type": "ListItem", "position": 2, "name": "AI Solutions", "item": "https://www.dynamicssquare.co.uk/ai-solutions/" }
+                                    ]
+                                },
+                                {
+                                    "@type": "ItemList",
+                                    "name": "Microsoft Dynamics 365 AI Business Solutions",
+                                    "itemListElement": [
+                                        {
+                                            "@type": "ListItem",
+                                            "position": 1,
+                                            "item": {
+                                                "@type": "Service",
+                                                "name": "Dynamics 365 AI Consulting",
+                                                "description": "Identify practical AI opportunities across your organisation and create a clear strategy for using Microsoft Dynamics 365 AI capabilities.",
+                                                "provider": { "@type": "Organization", "name": "Dynamics Square UK" }
+                                            }
+                                        },
+                                        {
+                                            "@type": "ListItem",
+                                            "position": 2,
+                                            "item": {
+                                                "@type": "Service",
+                                                "name": "Dynamics 365 AI Automation",
+                                                "description": "Automate repetitive business processes with AI and Microsoft Power Platform capabilities.",
+                                                "provider": { "@type": "Organization", "name": "Dynamics Square UK" }
+                                            }
+                                        },
+                                        {
+                                            "@type": "ListItem",
+                                            "position": 3,
+                                            "item": {
+                                                "@type": "Service",
+                                                "name": "Dynamics 365 AI Analytics",
+                                                "description": "Turn Dynamics 365 and business data into useful insights with AI-powered analytics.",
+                                                "provider": { "@type": "Organization", "name": "Dynamics Square UK" }
+                                            }
+                                        },
+                                        {
+                                            "@type": "ListItem",
+                                            "position": 4,
+                                            "item": {
+                                                "@type": "Service",
+                                                "name": "Dynamics 365 Copilot Solutions",
+                                                "description": "Use Microsoft Dynamics 365 Copilot capabilities to give employees AI assistance within their everyday business applications.",
+                                                "provider": { "@type": "Organization", "name": "Dynamics Square UK" }
+                                            }
+                                        },
+                                        {
+                                            "@type": "ListItem",
+                                            "position": 5,
+                                            "item": {
+                                                "@type": "Service",
+                                                "name": "Dynamics 365 AI Integration",
+                                                "description": "Connect Microsoft Dynamics 365 with AI services, business applications, and data sources to create connected workflows.",
+                                                "provider": { "@type": "Organization", "name": "Dynamics Square UK" }
+                                            }
+                                        },
+                                        {
+                                            "@type": "ListItem",
+                                            "position": 6,
+                                            "item": {
+                                                "@type": "Service",
+                                                "name": "Dynamics 365 AI Support & Optimisation",
+                                                "description": "Get ongoing support and optimisation for your Dynamics 365 AI environment.",
+                                                "provider": { "@type": "Organization", "name": "Dynamics Square UK" }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        })
+                    }}
                 />
             </Head>
 
@@ -52,7 +150,7 @@ const Index = () => {
                                     </p>
 
                                     <div className="mt-4">
-                                        <a
+                                        <Link
                                             href="#exampleModal"
                                             data-bs-toggle="modal"
                                             className="btn-get-started"
@@ -62,7 +160,7 @@ const Index = () => {
                                                 &nbsp;
                                                 <i className="bi bi-arrow-right"></i>
                                             </span>
-                                        </a>
+                                        </Link>
                                     </div>
 
                                 </div>
@@ -70,9 +168,12 @@ const Index = () => {
 
                             <div className="col-lg-5">
                                 <div className="ai-solutions-banner-img">
-                                    <img
+                                    <Image
                                         src="/img/AI-Banner.png"
                                         alt="Microsoft Dynamics 365 AI Business Solutions"
+                                        width={790}
+                                        height={470}
+                                        priority
                                     />
                                 </div>
                             </div>
@@ -156,9 +257,11 @@ const Index = () => {
                                 <div className="ai-service-card">
 
                                     <div className="ai-service-icon">
-                                        <img
+                                        <Image
                                             src="/img/icons-azure_machine-learning.svg"
                                             alt="Microsoft AI consulting"
+                                            width={48}
+                                            height={48}
                                         />
                                     </div>
 
@@ -182,9 +285,11 @@ const Index = () => {
                                 <div className="ai-service-card">
 
                                     <div className="ai-service-icon">
-                                        <img
+                                        <Image
                                             src="/img/automated_workflows.png"
                                             alt="Dynamics 365 AI automation"
+                                            width={48}
+                                            height={48}
                                         />
                                     </div>
 
@@ -208,9 +313,11 @@ const Index = () => {
                                 <div className="ai-service-card">
 
                                     <div className="ai-service-icon">
-                                        <img
+                                        <Image
                                             src="/img/reporting-and-analytics.png"
                                             alt="Dynamics 365 AI analytics"
+                                            width={36}
+                                            height={36}
                                         />
                                     </div>
 
@@ -234,9 +341,11 @@ const Index = () => {
                                 <div className="ai-service-card">
 
                                     <div className="ai-service-icon">
-                                        <img
+                                        <Image
                                             src="/img/icons-power-apps_Enhancing-Capabilities.svg"
                                             alt="Dynamics 365 Copilot solutions"
+                                            width={48}
+                                            height={48}
                                         />
                                     </div>
 
@@ -260,9 +369,11 @@ const Index = () => {
                                 <div className="ai-service-card">
 
                                     <div className="ai-service-icon">
-                                        <img
+                                        <Image
                                             src="/img/seamless-integration.png"
                                             alt="Dynamics 365 AI integration"
+                                            width={48}
+                                            height={48}
                                         />
                                     </div>
 
@@ -287,9 +398,11 @@ const Index = () => {
                                 <div className="ai-service-card">
 
                                     <div className="ai-service-icon">
-                                        <img
+                                        <Image
                                             src="/img/icons-power-automate_AI-Support.svg"
                                             alt="Dynamics 365 AI support and optimisation"
+                                            width={48}
+                                            height={48}
                                         />
                                     </div>
 
@@ -394,9 +507,11 @@ const Index = () => {
                             <div className="col-lg-6">
 
                                 <div className="ai-business-image">
-                                    <img
+                                    <Image
                                         src="/img/bc-copilote-side-pic.png"
                                         alt="Microsoft Dynamics 365 AI business solutions"
+                                        width={630}
+                                        height={440}
                                     />
                                 </div>
 
@@ -433,7 +548,7 @@ const Index = () => {
                                     </p>
 
                                     <div className="mt-4">
-                                        <a
+                                        <Link
                                             href="#exampleModal"
                                             data-bs-toggle="modal"
                                             className="btn-get-started"
@@ -443,7 +558,7 @@ const Index = () => {
                                                 &nbsp;
                                                 <i className="bi bi-arrow-right"></i>
                                             </span>
-                                        </a>
+                                        </Link>
                                     </div>
 
                                 </div>

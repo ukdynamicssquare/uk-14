@@ -3,7 +3,58 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import faqData from '../../public/data/fabric.json';
+import { sanitizeHtml } from '../../helpers/sanitizeHtml';
 
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dynamicssquare.co.uk/" },
+        { "@type": "ListItem", "position": 2, "name": "AI Solutions", "item": "https://www.dynamicssquare.co.uk/ai-solutions/" },
+        { "@type": "ListItem", "position": 3, "name": "Microsoft Fabric", "item": "https://www.dynamicssquare.co.uk/ai-solutions/microsoft-fabric/" }
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "Microsoft Fabric Partner Services",
+      "serviceType": "Microsoft Fabric consulting, implementation, integration, migration and support",
+      "provider": {
+        "@type": "Organization",
+        "name": "Dynamics Square UK",
+        "url": "https://www.dynamicssquare.co.uk"
+      },
+      "areaServed": { "@type": "Country", "name": "United Kingdom" },
+      "description": "Dynamics Square UK is a Microsoft Fabric partner offering implementation, analytics, Power BI integration and support to help businesses unlock data insights.",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Microsoft Fabric Services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Microsoft Fabric Consulting" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Microsoft Fabric Implementation" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Microsoft Fabric Integration Services" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Microsoft Fabric Migration Services" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Microsoft Fabric Data Warehouse Setup" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Microsoft Fabric Data Engineering" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Microsoft Fabric AI Enablement" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Ongoing Support" } }
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqData.map((faq) => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer.replace(/<[^>]+>/g, "").trim(),
+        },
+      })),
+    },
+  ],
+};
 
 const Fabric = () => {
 
@@ -11,14 +62,6 @@ const Fabric = () => {
 
   const handleLoadMore = () => {
     setVisibleCount((prev) => prev + 3);
-  };
-
-  const [pdfType, setPdfType] = useState(null);
-  const handleOpenModal = (type) => {
-    setPdfType(type);
-    // Open modal manually (needed since you use Bootstrap)
-    const modal = new bootstrap.Modal(document.getElementById('pdfModel'));
-    modal.show();
   };
 
   return (
@@ -45,6 +88,10 @@ const Fabric = () => {
         <meta property="twitter:description" content="Dynamics Square UK is a Microsoft Fabric partner offering implementation, analytics, Power BI integration and support to help businesses unlock data insights." />
         <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/febric-00.png" />
 
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
+        />
       </Head>
       <div className='solution-new-banner-one'>
         <div className='container'>
@@ -770,7 +817,7 @@ const Fabric = () => {
                     >
                       <div
                         className="accordion-body"
-                        dangerouslySetInnerHTML={{ __html: faq.answer }}
+                        dangerouslySetInnerHTML={{ __html: sanitizeHtml(faq.answer) }}
                       />
                     </div>
                   </div>
