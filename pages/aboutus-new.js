@@ -74,19 +74,34 @@ const techGroups = [
   },
 ];
 
-const methodologies = [
-  { icon: "/img/aboutus-new/method-agile-icon.png", title: "Agile", text: "Built for businesses whose requirements evolve as the project progresses. We work in short, focused sprints, so you see working functionality early and can adjust direction based on real feedback as the project unfolds." },
-  { icon: "/img/aboutus-new/method-surestep-icon.png", title: "Sure Step", text: "Best suited to organisations with clearly defined, stable requirements from the outset. This structured, phase-based methodology gives you predictable milestones and tight control over scope, budget, and timeline." },
-  { icon: "/img/aboutus-new/method-success-icon.png", title: "Success by Design", text: "Microsoft's own framework for Dynamics 365 cloud implementations. We use this approach when a project calls for strict alignment with Microsoft's recommended architecture, environment strategy, and application lifecycle management practices from day one." },
+const services = [
+  { icon: "/img/aboutus-new/forum.png", title: "Advisory and Consulting", text: "We work with a consultative approach that studies your business, industry, and goals. The guidance you receive is practical, structured, and easy to follow." },
+  { icon: "/img/aboutus-new/settings_b_roll.png", title: "Dynamics 365 Implementation", text: "We ensure every stage of implementation stays consistent through detailed scoping, configuration, data migration, and testing. Every step is explained with clarity so your team stays confident." },
+  { icon: "/img/aboutus-new/emoji_objects.png", title: "Solutioning", text: "We study your workflows and customer journeys carefully so that we can design systems that support efficiency and scalability." },
+  { icon: "/img/aboutus-new/cloud_upload.png", title: "Upgrade", text: "Our upgrade services include careful planning, structured communication, and minimal functional disruption." },
+  { icon: "/img/aboutus-new/co_present.png", title: "Training", text: "Our training programmes are role-based and hands on. Each session empowers your team to feel confident and comfortable with the system." },
+  { icon: "/img/aboutus-new/simulation.png", title: "Dedicated Support", text: "Support remains proactive, responsive, and handled by real people who understand your business. Every interaction stays human and helpful." },
 ];
 
-const services = [
-  { icon: "bi-chat-square-text-fill", title: "Advisory and Consulting", text: "We work with a consultative approach that studies your business, industry, and goals. The guidance you receive is practical, structured, and easy to follow." },
-  { icon: "bi-gear-fill", title: "Dynamics 365 Implementation", text: "We ensure every stage of implementation stays consistent through detailed scoping, configuration, data migration, and testing. Every step is explained with clarity so your team stays confident." },
-  { icon: "bi-lightbulb-fill", title: "Solutioning", text: "We study your workflows and customer journeys carefully so that we can design systems that support efficiency and scalability." },
-  { icon: "bi-cloud-arrow-up-fill", title: "Upgrade", text: "Our upgrade services include careful planning, structured communication, and minimal functional disruption." },
-  { icon: "bi-person-video3", title: "Training", text: "Our training programmes are role-based and hands on. Each session empowers your team to feel confident and comfortable with the system." },
-  { icon: "bi-headset", title: "Dedicated Support", text: "Support remains proactive, responsive, and handled by real people who understand your business. Every interaction stays human and helpful." },
+const methodologies = [
+  {
+    title: "Agile",
+    icon: "/img/aboutus-new/method-agile-icon.png",
+    description:
+      "Built for businesses whose requirements evolve as the project progresses. We work in short, focused sprints, so you see working functionality early and can adjust direction based on real feedback as the project unfolds.",
+  },
+  {
+    title: "Sure Step",
+    icon: "/img/aboutus-new/method-surestep-icon.png",
+    description:
+      "Best suited to organisations with clearly defined, stable requirements from the outset. This structured, phase-based methodology gives you predictable milestones and tight control over scope, budget, and timeline.",
+  },
+  {
+    title: "Success by Design",
+    icon: "/img/aboutus-new/method-success-icon.png",
+    description:
+      "Microsoft's own framework for Dynamics 365 cloud implementations. We use this approach when a project calls for strict alignment with Microsoft's recommended architecture, environment strategy, and application lifecycle management practices from day one.",
+  },
 ];
 
 const choices = [
@@ -429,7 +444,7 @@ const AboutUsNew = () => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6">
-              <h4>What We Deliver</h4>
+              <h2>What We Deliver</h2>
               <h5>Complete Microsoft Business Solutions</h5>
               <p>
                 We provide a wide ecosystem of solutions that bring structure into business operations. Our
@@ -469,16 +484,16 @@ const AboutUsNew = () => {
       {/* CTA 1 */}
       <section className={styles.ctaBanner}>
         <Image
-          src="/img/aboutus-new/cta-bg-1.png"
+          src="/img/aboutus-new/Mask%20group.png"
           alt=""
-          width={820}
-          height={330}
+          width={863}
+          height={424}
           className={styles.ctaBannerPhoto}
           aria-hidden="true"
         />
         <div className="container">
           <div className="row align-items-center">
-            <div className="col-lg-8">
+            <div className="col-lg-10">
               <h2>Start Your Journey with Dynamics Square</h2>
               <p>You deserve a partner who listens, guides, builds, and stays with you throughout your journey.</p>
               <Link href="#exampleModal" data-bs-toggle="modal" className={styles.btnRed}>
@@ -490,62 +505,98 @@ const AboutUsNew = () => {
       </section>
 
       {/* Methodology */}
-      <section className={styles.methodSection}>
+      <section className={styles.aboutMethodology}>
         <div className="container">
-          <div className={styles.methodTop}>
-            <div className={styles.methodIntro}>
-              <h2>How Do We Implement: Our Methodology</h2>
-              <p>
-                The right implementation method depends on your requirements, your timeline, and how your
-                organisation operates. We match the method to your business.
-              </p>
-              <p>
-                Before we recommend a methodology, we study your business model, the complexity of your
-                requirements, and how much flexibility your project timeline allows for. We work across three
-                proven implementation methodologies and choose the one that fits your situation.
-              </p>
+          <div className={`row align-items-center ${styles.aboutMethodologyIntro}`}>
+            <div className="col-lg-6">
+              <div className={styles.aboutMethodologyContent}>
+                <h2 className={styles.aboutMethodologyTitle}>
+                  How Do We Implement:
+                  <span> Our Methodology</span>
+                </h2>
+                <p className={styles.aboutMethodologyIntroText}>
+                  The right implementation method depends on your requirements, your timeline, and how your
+                  organisation operates. We match the method to your business.
+                </p>
+                <p>
+                  Before we recommend a methodology, we study your business model, the complexity of your
+                  requirements, and how much flexibility your project timeline allows for. We work across three
+                  proven implementation methodologies and choose the one that fits your situation.
+                </p>
+              </div>
             </div>
-            <div className={styles.methodChevronCol}>
-              <div className={styles.chevronTrack}>
-                <div className={styles.chevron}></div>
-                <div className={styles.chevron}></div>
-                <div className={styles.chevron}></div>
-                <div className={styles.chevron}>
-                  <i className="bi bi-check-lg"></i>
+
+            <div className="col-lg-6">
+              <div className={styles.aboutMethodologyArrows}>
+                <div className={`${styles.aboutMethodologyArrow} ${styles.aboutMethodologyArrowOne}`} />
+                <div className={`${styles.aboutMethodologyArrow} ${styles.aboutMethodologyArrowTwo}`} />
+                <div className={`${styles.aboutMethodologyArrow} ${styles.aboutMethodologyArrowThree}`} />
+                <div className={`${styles.aboutMethodologyArrow} ${styles.aboutMethodologyArrowFour}`}>
+                  <span>✓</span>
                 </div>
               </div>
-              <span className={styles.methodStemDown}></span>
             </div>
           </div>
 
-          <div className={styles.methodFrame}>
-            <span className={`${styles.methodFrameLine} ${styles.methodFrameLineTop}`}></span>
-            <span className={`${styles.methodFrameLine} ${styles.methodFrameLineBottom}`}></span>
-            <div className="row g-4">
-              {methodologies.map((m) => (
-                <div className={`col-md-4 ${styles.methodCol}`} key={m.title}>
-                  <div className={styles.methodCard}>
-                    <Image src={m.icon} alt="" width={40} height={40} aria-hidden="true" />
-                    <h5>{m.title}</h5>
-                    <p>{m.text}</p>
+          <div className={styles.aboutMethodologyTopConnector}>
+            <div className={styles.aboutMethodologyTopVertical}></div>
+            <div className={`${styles.aboutMethodologyTopLine} ${styles.aboutMethodologyTopLineOne}`}>
+              <span></span>
+            </div>
+            <div className={`${styles.aboutMethodologyTopLine} ${styles.aboutMethodologyTopLineTwo}`}>
+              <span></span>
+            </div>
+            <div className={`${styles.aboutMethodologyTopLine} ${styles.aboutMethodologyTopLineThree}`}>
+              <span></span>
+            </div>
+          </div>
+
+          <div className={`row ${styles.aboutMethodologyCards}`}>
+            {methodologies.map((item, index) => (
+              <div className="col-lg-4 d-flex" key={item.title}>
+                <div className={styles.aboutMethodologyCard}>
+                  <div
+                    className={`${styles.aboutMethodologyIcon} ${styles[`aboutMethodologyIcon${index + 1}`]}`}
+                  >
+                    <Image
+                      src={item.icon}
+                      alt=""
+                      width={48}
+                      height={48}
+                      className={styles.aboutMethodologyIconImg}
+                    />
+
                   </div>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
 
-          <div className={styles.methodNote}>
-            <span className={styles.methodStemUp}></span>
-            <div className={styles.methodCheckBubble}>
-              <i className="bi bi-check-lg"></i>
+          <div className={styles.aboutMethodologyBottomConnector}>
+            <div className={styles.aboutMethodologyBottomLine}></div>
+            <div className={styles.aboutMethodologyBottomVertical}></div>
+            <div className={styles.aboutMethodologyBottomVerticalTwo}></div>
+            <div className={styles.aboutMethodologyBottomVerticalThree}></div>
+            <div className={styles.aboutMethodologyBottomCheck}>✓</div>
+          </div>
+
+          <div className={`row align-items-center ${styles.aboutMethodologyBottom}`}>
+            <div className="col-lg-7">
+              <div className={styles.aboutMethodologyDescription}>
+                We walk you through which methodology fits your situation before the project begins, and we
+                explain the reasoning in plain terms, so your team understands exactly what to expect at each
+                stage.
+              </div>
             </div>
-            <p>
-              We walk you through which methodology fits your situation before the project begins, and we explain
-              the reasoning in plain terms, so your team understands exactly what to expect at each stage.
-            </p>
-            <Link href="#exampleModal" data-bs-toggle="modal" className={styles.btnRed}>
-              Speak To Our Expert Today <i className="bi bi-arrow-right"></i>
-            </Link>
+            <div className="col-lg-5">
+              <div className={styles.aboutMethodologyButtonWrapper}>
+                <Link href="#exampleModal" data-bs-toggle="modal" className={styles.btnRed}>
+                  Speak To Our Expert Today <i className="bi bi-arrow-right"></i>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -567,7 +618,7 @@ const AboutUsNew = () => {
             {services.map((s) => (
               <div className="col-md-6 col-lg-4" key={s.title}>
                 <div className={styles.serviceCard}>
-                  <i className={`bi ${s.icon}`}></i>
+                  <Image src={s.icon} alt="" width={48} height={48} className={styles.serviceIconImg} />
                   <h5>{s.title}</h5>
                   <p>{s.text}</p>
                 </div>
@@ -589,7 +640,7 @@ const AboutUsNew = () => {
         />
         <div className="container">
           <div className="row align-items-center">
-            <div className="col-lg-8">
+            <div className="col-lg-10">
               <h2>Start Your Journey with Dynamics Square</h2>
               <p>
                 You deserve a partner who listens, guides, builds, and stays with you well past go-live. That is
@@ -773,6 +824,9 @@ const AboutUsNew = () => {
     </div>
   </div>
 </section>
+
+
+
 
     </div>
   );
