@@ -19,6 +19,7 @@
   --h1-font-size-mobile: clamp(28px, 8vw, 32px);
   --h2-font-size-mobile: 24px;
   overflow-x: hidden;
+  overflow-x: clip; /* clip (not hidden) so position: sticky works inside the page */
 }
 
 /* Common gradient headings for every h1 / h2 on this page */
@@ -2643,5 +2644,43 @@ top: -168px;
   .locationLabel {
     font-size: 12px;
     padding: 3px 7px;
+  }
+}
+
+/* GPU hints for the elements GSAP moves the most */
+.hero img,
+.ringWrap img,
+.serviceIconImg,
+.aboutMethodologyIconImg {
+  will-change: transform;
+}
+
+/* =========================================
+   MOBILE: no animations
+   (GSAP is disabled below 768px in the page; this switches off the CSS map animation)
+========================================= */
+
+@media (max-width: 767px) {
+  .globalMap .pinBody,
+  .globalMap .pinIcon,
+  .globalMap .locationLabel {
+    opacity: 1;
+  }
+
+  .mapIn .pinBody,
+  .mapIn .pinIcon,
+  .mapIn .locationPin,
+  .mapIn .locationLabel,
+  .mapIn .locationPin::after {
+    animation: none;
+  }
+
+  .locationPin::after {
+    display: none;
+  }
+
+  .pinBody,
+  .locationPin {
+    transition: none;
   }
 }

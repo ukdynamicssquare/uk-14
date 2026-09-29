@@ -1,4 +1,7 @@
 import { useEffect, useRef, useState } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Lenis from "lenis";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
@@ -7,6 +10,10 @@ import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import styles from "../styles/about.module.css";
+import AboutJourney from "../components/AboutJourney";
+
+// true = timeline built in code (SVG road + animated pins); false = the original flat image version
+const USE_CODE_JOURNEY = true;
 
 const team = [
   { img: "/img/aboutus-new/team-gourav-goyal-new.png", name: "Gourav Goyal", role: "Co-Founder, Dynamics Square", quote: "Nurturing people and investing in their capabilities to build a resilient organisation." },
@@ -175,10 +182,7 @@ const AboutUsNew = () => {
     }
     const io = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setMapIn(true);
-          io.disconnect();
-        }
+        setMapIn(entry.isIntersecting);
       },
       { threshold: 0.25 }
     );
@@ -186,8 +190,463 @@ const AboutUsNew = () => {
     return () => io.disconnect();
   }, []);
 
+  const pageRef = useRef(null);
+
+  // Modern GSAP motion: masked headline reveals, split-line text, clip-path image
+  // wipes, parallax, magnetic buttons, card tilt and a scroll progress bar.
+  useEffect(() => {
+    const root = pageRef.current;
+    if (!root) return undefined;
+
+    gsap.registerPlugin(ScrollTrigger);
+    ScrollTrigger.config({ ignoreMobileResize: true });
+    gsap.defaults({ force3D: true });
+    const mm = gsap.matchMedia();
+
+    // desktop / tablet only: no GSAP, smooth scroll or progress bar on phones
+    mm.add("(min-width: 768px) and (prefers-reduced-motion: no-preference)", () => {
+      const cls = (name) => `.${styles[name]}`;
+      const all = (sel) => gsap.utils.toArray(sel, root);
+      const trig = (el, start = "top 78%") => ({
+        trigger: el,
+        start,
+        toggleActions: "play none none reverse", // scrolling back up plays the animation in reverse
+      });
+      const EXPO = "power4.out"; // softer than expo, so the motion does not feel rushed
+      const SLOW = 1.7; // global speed factor: raise to slow all animations down, lower to speed up
+
+      // ---------- Smooth scrolling (Lenis) ----------
+      const lenis = new Lenis({
+        lerp: 0.085,
+        smoothWheel: true,
+        // let modals (contact form) scroll natively
+        prevent: (node) => !!node.closest && !!node.closest(".modal"),
+      });
+      window.__lenis = lenis; // used by the journey section to reposition scroll after its pin ends
+      // stop the browser's own smooth scrolling (globals.css) from fighting Lenis; restored on cleanup
+      const htmlEl = document.documentElement;
+      const prevScrollBehavior = htmlEl.style.scrollBehavior;
+      htmlEl.style.scrollBehavior = "auto";
+      lenis.on("scroll", ScrollTrigger.update);
+      const tick = (time) => lenis.raf(time * 1000);
+      gsap.ticker.add(tick);
+      gsap.ticker.lagSmoothing(0);
+
+      // ---------- Scroll progress bar ----------
+      const bar = document.createElement("div");
+      Object.assign(bar.style, {
+        position: "fixed",
+        top: "0",
+        left: "0",
+        width: "100%",
+        height: "3px",
+        background: "linear-gradient(90deg,#984b6e,#9b5cc0,#60518c)",
+        transformOrigin: "0 50%",
+        transform: "scaleX(0)",
+        zIndex: "99999",
+        pointerEvents: "none",
+      });
+      document.body.appendChild(bar);
+      gsap.to(bar, {
+        scaleX: 1,
+        ease: "none",
+        scrollTrigger: { trigger: root, start: "top top", end: "bottom bottom", scrub: 0.3 },
+      });
+
+      // ---------- Headline: masked rise (works with gradient text) ----------
+      const headline = (el, delay = 0, onLoad = false) =>
+        gsap.fromTo(
+          el,
+          { yPercent: 60, opacity: 0 },
+          {
+            yPercent: 0,
+            opacity: 1,
+            duration: 1.3 * SLOW,
+            ease: EXPO,
+            delay,
+            scrollTrigger: onLoad ? undefined : trig(el, "top 78%"),
+          }
+        );
+
+      // ---------- Paragraph: soft rise + fade ----------
+      // (kept as one block: splitting into masked lines cut off text and wrapped single words)
+      const lines = (el, onLoad = false, delay = 0) =>
+        gsap.from(el, {
+          y: 30,
+          opacity: 0,
+          duration: 1.1 * SLOW,
+          ease: EXPO,
+          delay,
+          scrollTrigger: onLoad ? undefined : trig(el, "top 78%"),
+        });
+
+      // ---------- Image: clip-path wipe with a slow zoom settle ----------
+      const imageWipe = (el, from = "inset(0 0 100% 0)", start = "top 78%") =>
+        gsap.fromTo(
+          el,
+          { clipPath: from, scale: 1.08 },
+          {
+            clipPath: "inset(0 0 0% 0)",
+            scale: 1,
+            duration: 1.5 * SLOW,
+            ease: "expo.inOut",
+            scrollTrigger: trig(el, start),
+          }
+        );
+
+      // ---------- Parallax on scroll ----------
+      const parallax = (el, amount = 60, trigger = el) =>
+        gsap.fromTo(
+          el,
+          { y: amount },
+          {
+            y: -amount,
+            ease: "none",
+            scrollTrigger: { trigger, start: "top bottom", end: "bottom top", scrub: 1 },
+          }
+        );
+
+      // ---------- Group reveal (cards etc.) ----------
+      const stagger = (sel, from = {}, each = 0.1, start = "top 78%") => {
+        const items = all(sel);
+        if (!items.length) return;
+        const hidden = { opacity: 0, y: 70, ...from };
+        gsap.set(items, hidden);
+        ScrollTrigger.batch(items, {
+          start,
+          onLeaveBack: (batch) =>
+            gsap.to(batch, {
+              ...hidden,
+              duration: 0.7,
+              ease: "power2.inOut",
+              stagger: { each: 0.05, from: "end" },
+              overwrite: true,
+            }),
+          onEnter: (batch) =>
+            gsap.to(batch, {
+              opacity: 1,
+              x: 0,
+              y: 0,
+              scale: 1,
+              rotation: 0,
+              duration: 1.2 * SLOW,
+              ease: EXPO,
+              stagger: each * SLOW,
+              overwrite: true,
+            }),
+        });
+      };
+
+      const fade = (sel, from = {}, start) =>
+        all(sel).forEach((el) =>
+          gsap.from(el, {
+            y: 40,
+            opacity: 0,
+            duration: 1.1 * SLOW,
+            ease: EXPO,
+            ...from,
+            scrollTrigger: trig(el, start),
+          })
+        );
+
+      // ================= HERO (on load) =================
+      const eyebrow = root.querySelector(cls("eyebrow"));
+      const heroTitle = root.querySelector(cls("heroTitle"));
+      const heroImg = root.querySelector(`${cls("heroImageWrap")} img`);
+      if (eyebrow) gsap.from(eyebrow, { y: 20, opacity: 0, duration: 0.9 * SLOW, ease: EXPO });
+      if (heroTitle) headline(heroTitle, 0.15, true);
+      all(`${cls("heroText")}, ${cls("heroSubText")}`).forEach((p, i) => lines(p, true, (0.55 + i * 0.15) * SLOW));
+      if (heroImg) {
+        gsap.from(heroImg, { y: 90, opacity: 0, scale: 0.92, duration: 1.6 * SLOW, delay: 0.5 * SLOW, ease: EXPO });
+        gsap.to(heroImg, {
+          y: -50,
+          ease: "none",
+          scrollTrigger: { trigger: cls("hero"), start: "top top", end: "bottom top", scrub: 1 },
+        });
+      }
+
+      // ================= PARTNER STRIP =================
+      all(`${cls("partnerSection")} h3`).forEach((h) => headline(h));
+      all(`${cls("partnerSection")} > .container p`).forEach((p) => lines(p));
+      stagger(`${cls("statRow")} > div`, { y: 40 }, 0.15);
+      all(`${cls("statRow")} h4`).forEach((h) => {
+        // remember the real value so a re-run (React StrictMode) never reads "0+"
+        const original = h.dataset.count || h.textContent;
+        h.dataset.count = original;
+        const m = original.match(/^(\d+)(.*)$/);
+        if (!m) return;
+        const end = parseInt(m[1], 10);
+        const suffix = m[2];
+        const counter = { v: 0 };
+        h.textContent = `0${suffix}`;
+        gsap.to(counter, {
+          v: end,
+          duration: 2.2 * SLOW,
+          ease: "power3.out",
+          scrollTrigger: trig(h, "top 78%"),
+          onUpdate: () => {
+            h.textContent = `${Math.round(counter.v)}${suffix}`;
+          },
+        });
+      });
+      all(cls("partnerBadge")).forEach((b) => {
+        gsap.from(b, {
+          scale: 0.6,
+          rotation: -12,
+          opacity: 0,
+          duration: 1.6 * SLOW,
+          ease: "elastic.out(1, 0.6)",
+          scrollTrigger: trig(b),
+        });
+      });
+
+      // ================= MISSION & VISION =================
+      all(`${cls("trustedSection")} h2`).forEach((h) => headline(h));
+      all(`${cls("trustedSection")} > .container > .row > div > p, ${cls("trustedSection")} > .container p:not(.x)`)
+        .filter((p) => !p.closest(cls("mvCard")))
+        .forEach((p) => lines(p));
+      stagger(cls("mvCard"), { y: 80, rotation: 2 }, 0.2);
+
+      // ================= JOURNEY =================
+      all(`${cls("journeyImageWrap")} img`).forEach((img) => gsap.from(img, { opacity: 0, y: 60, duration: 1.4 * SLOW, ease: EXPO, scrollTrigger: trig(img, "top 78%") }));
+      all(cls("journeyHeading")).forEach((h) => headline(h, 0.5 * SLOW));
+      all(cls("journeyQuote")).forEach((q) => fade(q, { y: 40, delay: 0.9 * SLOW }, "top 78%"));
+
+      // ================= TEAM =================
+      all(`${cls("teamSection")} h2`).forEach((h) => headline(h));
+      all(`${cls("teamSection")} > .container > p`).forEach((p) => lines(p));
+      stagger(cls("teamCard"), { y: 90, scale: 0.92 }, 0.12, "top 78%");
+      fade(cls("teamCallout"), { y: 40 });
+
+      // ================= TECH GRID =================
+      all(`${cls("techSection")} h2`).forEach((h) => headline(h));
+      stagger(cls("techCard"), { y: 80 }, 0.18);
+      stagger(cls("techItem"), { y: 20, scale: 0.9 }, 0.05, "top 78%");
+
+      // ================= WHAT WE DELIVER =================
+      all(`${cls("deliverSection")} h2`).forEach((h) => headline(h));
+      all(`${cls("deliverSection")} > .container > .row > div > p`).forEach((p) => lines(p));
+      stagger(`${cls("deliverSection")} h5, ${cls("deliverSection")} li`, { y: 24 }, 0.07, "top 78%");
+      all(cls("ringWrap")).forEach((wrap) => {
+        gsap.from(wrap, {
+          scale: 0.5,
+          rotation: -40,
+          opacity: 0,
+          duration: 1.8 * SLOW,
+          ease: "expo.out",
+          scrollTrigger: trig(wrap, "top 78%"),
+        });
+        const img = wrap.querySelector("img");
+        if (img) {
+          gsap.to(img, { y: -16, duration: 3.2 * SLOW, ease: "sine.inOut", repeat: -1, yoyo: true });
+          gsap.to(img, {
+            rotation: 6,
+            ease: "none",
+            scrollTrigger: { trigger: wrap, start: "top bottom", end: "bottom top", scrub: 0.8 },
+          });
+        }
+      });
+
+      // ================= CTA BANNERS =================
+      all(cls("ctaBanner")).forEach((banner) => {
+        const h2 = banner.querySelector("h2");
+        const p = banner.querySelector("p");
+        const btn = banner.querySelector("a");
+        const photo = banner.querySelector(cls("ctaBannerPhoto"));
+        if (h2) headline(h2);
+        if (p) lines(p);
+        if (btn) {
+          gsap.from(btn, {
+            y: 30,
+            opacity: 0,
+            scale: 0.85,
+            duration: 1.2 * SLOW,
+            delay: 0.5 * SLOW,
+            ease: "back.out(1.8)",
+            scrollTrigger: trig(banner, "top 78%"),
+          });
+        }
+        if (photo) {
+          gsap.from(photo, {
+            xPercent: 20,
+            opacity: 0,
+            duration: 1.6 * SLOW,
+            ease: EXPO,
+            scrollTrigger: trig(banner, "top 78%"),
+          });
+        }
+      });
+
+      // ================= METHODOLOGY =================
+      all(`${cls("aboutMethodologyTitle")}`).forEach((h) => headline(h));
+      all(`${cls("aboutMethodologyContent")} p`).forEach((p) => lines(p));
+      stagger(cls("aboutMethodologyArrow"), { y: 0, x: -60 }, 0.2);
+      stagger(`${cls("aboutMethodologyCards")} > div`, { y: 90 }, 0.2);
+      all(cls("aboutMethodologyIconImg")).forEach((icon) =>
+        gsap.from(icon, {
+          scale: 0,
+          rotation: -120,
+          duration: 1.2 * SLOW,
+          ease: "back.out(2.2)",
+          scrollTrigger: trig(icon, "top 78%"),
+        })
+      );
+      fade(cls("aboutMethodologyBottom"), { y: 40 });
+
+      // ---------- Methodology connector borders: drawn while scrolling (scrubbed, reverses on scroll up) ----------
+      const FULL = "inset(-60px -60px -60px -60px)";
+      const DOWN = "inset(-60px -60px 100% -60px)"; // hidden -> reveals top to bottom
+      const RIGHT_TO_LEFT = "inset(-60px -60px -60px 100%)";
+      const LEFT_TO_RIGHT = "inset(-60px 100% -60px -60px)";
+      const draw = (tl, sel, from, at, duration = 1) =>
+        all(sel).forEach((el) => tl.fromTo(el, { clipPath: from }, { clipPath: FULL, duration, ease: "none" }, at));
+
+      const topConn = root.querySelector(cls("aboutMethodologyTopConnector"));
+      if (topConn) {
+        const tl = gsap.timeline({
+          scrollTrigger: { trigger: topConn, start: "top 95%", end: "top 45%", scrub: 1 },
+        });
+        draw(tl, cls("aboutMethodologyTopVertical"), DOWN, 0, 1);
+        draw(tl, cls("aboutMethodologyTopLineThree"), RIGHT_TO_LEFT, 1, 1);
+        draw(tl, cls("aboutMethodologyTopLineTwo"), RIGHT_TO_LEFT, 2, 1);
+        draw(tl, cls("aboutMethodologyTopLineOne"), RIGHT_TO_LEFT, 3, 1);
+      }
+
+      const bottomConn = root.querySelector(cls("aboutMethodologyBottomConnector"));
+      if (bottomConn) {
+        const tl = gsap.timeline({
+          scrollTrigger: { trigger: bottomConn, start: "top 92%", end: "top 45%", scrub: 1 },
+        });
+        draw(tl, cls("aboutMethodologyBottomVerticalThree"), DOWN, 0, 0.6);
+        draw(tl, cls("aboutMethodologyBottomVerticalTwo"), DOWN, 0.6, 0.6);
+        draw(tl, cls("aboutMethodologyBottomLine"), RIGHT_TO_LEFT, 1.2, 1.4);
+        draw(tl, cls("aboutMethodologyBottomVertical"), DOWN, 2.6, 0.7);
+        all(cls("aboutMethodologyBottomCheck")).forEach((el) =>
+          tl.fromTo(el, { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "back.out(2)" }, 3.3)
+        );
+      }
+
+      // ================= SERVICES =================
+      all(`${cls("servicesSection")} h2`).forEach((h) => headline(h));
+      all(`${cls("servicesSection")} > .container > .row:first-child p`).forEach((p) => lines(p));
+      stagger(cls("serviceCard"), { y: 60 }, 0.12);
+      all(cls("serviceIconImg")).forEach((icon) =>
+        gsap.from(icon, {
+          scale: 0,
+          rotation: 90,
+          duration: 1 * SLOW,
+          ease: "back.out(2.4)",
+          scrollTrigger: trig(icon, "top 78%"),
+        })
+      );
+
+      // ================= PREFERRED CHOICE =================
+      all(`${cls("choiceHead")} h2`).forEach((h) => headline(h));
+      all(`${cls("choiceHead")} p`).forEach((p) => lines(p));
+      stagger(cls("choiceCard"), { y: 40 }, 0.09, "top 78%");
+      all(`${cls("choiceImageWrap")} img`).forEach((img) => {
+        imageWipe(img, "inset(0 0 0 100%)", "top 78%");
+      });
+
+      // ================= GLOBAL PRESENCE =================
+      all(`${cls("globalPresence")} h2`).forEach((h) => headline(h));
+      all(`${cls("globalPresence")} p`).forEach((p) => lines(p));
+      all(cls("globalMap")).forEach((map) =>
+        gsap.from(map, {
+          opacity: 0,
+          duration: 1.4 * SLOW,
+          ease: EXPO,
+          scrollTrigger: trig(map, "top 78%"),
+        })
+      );
+
+      // ================= HOVER: magnetic buttons + card tilt (mouse devices only) =================
+      const cleanups = [];
+      if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+        all(cls("btnRed")).forEach((btn) => {
+          const xTo = gsap.quickTo(btn, "x", { duration: 0.5, ease: "power3.out" });
+          const yTo = gsap.quickTo(btn, "y", { duration: 0.5, ease: "power3.out" });
+          const move = (e) => {
+            const r = btn.getBoundingClientRect();
+            xTo((e.clientX - (r.left + r.width / 2)) * 0.35);
+            yTo((e.clientY - (r.top + r.height / 2)) * 0.5);
+          };
+          const leave = () => {
+            gsap.to(btn, { x: 0, y: 0, duration: 1, ease: "elastic.out(1, 0.4)", overwrite: "auto" });
+          };
+          btn.addEventListener("mousemove", move);
+          btn.addEventListener("mouseleave", leave);
+          cleanups.push(() => {
+            btn.removeEventListener("mousemove", move);
+            btn.removeEventListener("mouseleave", leave);
+          });
+        });
+
+        all(`${cls("mvCard")}, ${cls("techCard")}, ${cls("aboutMethodologyCard")}`).forEach((card) => {
+          const move = (e) => {
+            const r = card.getBoundingClientRect();
+            const px = (e.clientX - r.left) / r.width - 0.5;
+            const py = (e.clientY - r.top) / r.height - 0.5;
+            gsap.to(card, {
+              rotationY: px * 8,
+              rotationX: -py * 8,
+              transformPerspective: 900,
+              duration: 0.5,
+              ease: "power2.out",
+              overwrite: "auto",
+            });
+          };
+          const leave = () =>
+            gsap.to(card, { rotationX: 0, rotationY: 0, duration: 0.9, ease: "power3.out", overwrite: "auto" });
+          card.addEventListener("mousemove", move);
+          card.addEventListener("mouseleave", leave);
+          cleanups.push(() => {
+            card.removeEventListener("mousemove", move);
+            card.removeEventListener("mouseleave", leave);
+          });
+        });
+      }
+
+      // Keep trigger positions correct when the layout height changes
+      // (Swiper, fonts and lazy images can shift sections after the first measurement)
+      let refreshTimer;
+      const scheduleRefresh = () => {
+        clearTimeout(refreshTimer);
+        refreshTimer = setTimeout(() => ScrollTrigger.refresh(), 200);
+      };
+      let ro;
+      if (typeof ResizeObserver !== "undefined") {
+        ro = new ResizeObserver(scheduleRefresh);
+        ro.observe(root);
+      }
+      [600, 1800].forEach((ms) => setTimeout(scheduleRefresh, ms));
+
+      // Recalculate trigger positions once images/fonts have loaded
+      const refresh = () => ScrollTrigger.refresh();
+      window.addEventListener("load", refresh);
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(refresh);
+
+      return () => {
+        window.removeEventListener("load", refresh);
+        clearTimeout(refreshTimer);
+        if (ro) ro.disconnect();
+        gsap.ticker.remove(tick);
+        if (window.__lenis === lenis) delete window.__lenis;
+        lenis.destroy();
+        htmlEl.style.scrollBehavior = prevScrollBehavior;
+        cleanups.forEach((fn) => fn());
+        all(`${cls("statRow")} h4`).forEach((h) => {
+          if (h.dataset.count) h.textContent = h.dataset.count;
+        });
+        bar.remove();
+      };
+    });
+
+    return () => mm.revert();
+  }, []);
+
   return (
-    <div className={styles.page}>
+    <div ref={pageRef} className={styles.page}>
       <Head>
         <title>About Dynamics Square | Dynamics 365 Business Central Partner</title>
         <meta
@@ -321,28 +780,32 @@ const AboutUsNew = () => {
       </section>
 
       {/* Journey timeline */}
-      <section className={styles.journeySection}>
-        <div className="container-fluid g-0">
-          <div className={styles.journeyImageWrap}>
-            <Image
-              src="/img/aboutus-new-05.png"
-              alt="Our Journey So Far - Dynamics Square timeline from 2011 to 2025"
-              width={1920}
-              height={900}
-              sizes="100vw"
-            />
-            <div className={`container ${styles.journeyOverlay}`}>
-              <h2 className={styles.journeyHeading}>Our Journey So Far</h2>
-              <blockquote className={styles.journeyQuote}>
-                <span className={styles.journeyQuoteMark} aria-hidden="true">&ldquo;</span>
-                We never aimed to work as just another technology provider. Our intention has always
-                centred around careful understanding, honest guidance, and steady partnership.
-                <span className={styles.journeyQuoteMark} aria-hidden="true">&rdquo;</span>
-              </blockquote>
+      {USE_CODE_JOURNEY ? (
+        <AboutJourney />
+      ) : (
+        <section className={styles.journeySection}>
+          <div className="container-fluid g-0">
+            <div className={styles.journeyImageWrap}>
+              <Image
+                src="/img/aboutus-new-05.png"
+                alt="Our Journey So Far - Dynamics Square timeline from 2011 to 2025"
+                width={1920}
+                height={900}
+                sizes="100vw"
+              />
+              <div className={`container ${styles.journeyOverlay}`}>
+                <h2 className={styles.journeyHeading}>Our Journey So Far</h2>
+                <blockquote className={styles.journeyQuote}>
+                  <span className={styles.journeyQuoteMark} aria-hidden="true">&ldquo;</span>
+                  We never aimed to work as just another technology provider. Our intention has always
+                  centred around careful understanding, honest guidance, and steady partnership.
+                  <span className={styles.journeyQuoteMark} aria-hidden="true">&rdquo;</span>
+                </blockquote>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
       {/* Team */}
       <section className={styles.teamSection}>
         <div className="container">
