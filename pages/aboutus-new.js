@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
@@ -162,6 +163,29 @@ const locations = [
 
 
 const AboutUsNew = () => {
+  const mapRef = useRef(null);
+  const [mapIn, setMapIn] = useState(false);
+
+  useEffect(() => {
+    const el = mapRef.current;
+    if (!el) return undefined;
+    if (typeof IntersectionObserver === "undefined") {
+      setMapIn(true);
+      return undefined;
+    }
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setMapIn(true);
+          io.disconnect();
+        }
+      },
+      { threshold: 0.25 }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
   return (
     <div className={styles.page}>
       <Head>
@@ -663,7 +687,7 @@ const AboutUsNew = () => {
                   </div>
                 </div>
                 {choices.map((c) => (
-                  <div className="col-lg-6 d-flex" key={c.title}>
+                  <div className="col-sm-6 d-flex" key={c.title}>
                     <div className={styles.choiceCard}>
                       <div className={styles.choiceCardBody}>
                         <h3><span><i className="bi bi-check2"></i></span>{c.title}</h3>
@@ -696,7 +720,7 @@ const AboutUsNew = () => {
   </div>
   <div className="container px-0">
 
-    <div className={styles.globalMap}>
+    <div ref={mapRef} className={`${styles.globalMap} ${mapIn ? styles.mapIn : ""}`}>
 
       {/* Canada */}
       <a
@@ -712,6 +736,7 @@ const AboutUsNew = () => {
             />
           </div>
         </div>
+      <span className={styles.locationLabel}>Canada</span>
       </a>
 
 
@@ -729,6 +754,7 @@ const AboutUsNew = () => {
             />
           </div>
         </div>
+      <span className={styles.locationLabel}>USA</span>
       </a>
 
 
@@ -746,6 +772,7 @@ const AboutUsNew = () => {
             />
           </div>
         </div>
+      <span className={styles.locationLabel}>United Kingdom</span>
       </a>
 
 
@@ -763,6 +790,7 @@ const AboutUsNew = () => {
             />
           </div>
         </div>
+      <span className={styles.locationLabel}>Netherlands</span>
       </a>
 
 
@@ -775,11 +803,12 @@ const AboutUsNew = () => {
         <div className={styles.pinBody}>
           <div className={styles.pinIcon}>
             <img
-              src="/images/locations/india.svg"
+              src="/img/aboutus-new/flag-india.png"
               alt="India"
             />
           </div>
         </div>
+      <span className={styles.locationLabel}>India</span>
       </a>
 
 
@@ -797,6 +826,7 @@ const AboutUsNew = () => {
             />
           </div>
         </div>
+      <span className={styles.locationLabel}>Singapore</span>
       </a>
 
 
@@ -814,6 +844,7 @@ const AboutUsNew = () => {
             />
           </div>
         </div>
+      <span className={styles.locationLabel}>Australia</span>
       </a>
 
     </div>

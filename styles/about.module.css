@@ -14,9 +14,9 @@
   --heading-gradient: linear-gradient(to right, var(--heading-gradient-start), var(--heading-gradient-end) 100%);
   --heading-font-family: Lato, sans-serif;
   --heading-font-weight: bold;
-  --h1-font-size: 48px;
-  --h2-font-size: 32px;
-  --h1-font-size-mobile: 32px;
+  --h1-font-size: clamp(30px, 2.4rem + 0.8vw, 48px);
+  --h2-font-size: clamp(24px, 1.4rem + 0.9vw, 32px);
+  --h1-font-size-mobile: clamp(28px, 8vw, 32px);
   --h2-font-size-mobile: 24px;
   overflow-x: hidden;
 }
@@ -674,7 +674,7 @@ color: var(--about-heading);
 .choiceHead h2 {
   background-image: linear-gradient(to right, #984b6e, #60518c 100%);
   font-family: Lato;
-  font-size: 32px;
+  font-size: var(--h2-font-size);
   font-weight: bold;
   -webkit-background-clip: text;
   background-clip: text;
@@ -725,10 +725,6 @@ color: var(--about-heading);
 }
 
 @media (max-width: 768px) {
-  .choiceHead h2 {
-    font-size: 24px;
-  }
-
   .choiceHead {
     padding-bottom: 0px;
   }
@@ -800,6 +796,10 @@ color: var(--about-heading);
 
   cursor: pointer;
 
+  /* smaller pin, anchored at its tip so the map position stays the same */
+  scale: var(--pin-scale, 0.78);
+  transform-origin: 50% 100%;
+
   /*
     Smooth hover animation
   */
@@ -812,7 +812,7 @@ color: var(--about-heading);
 /* Hover */
 
 .locationPin:hover {
-  transform: translateY(-7px) scale(1.06);
+  transform: translateY(-7px) scale(1.1);
 
   filter:
     drop-shadow(0 10px 8px rgba(0, 0, 0, 0.15));
@@ -2083,3 +2083,565 @@ top: -168px;
 
 
 
+
+/* =========================================================
+   FULL RESPONSIVE LAYER
+   Fluid type, section spacing and column gaps for every
+   device width. Kept last so it wins over the base rules.
+   Breakpoints: 1199 / 991 / 767 / 575 / 400
+========================================================= */
+
+/* ---------- Fluid type & spacing (all widths) ---------- */
+.statRow h4 {
+  font-size: clamp(28px, 3vw + 12px, 40px);
+  letter-spacing: clamp(1px, 0.3vw, 4px);
+}
+
+.ctaBanner h2 {
+  font-size: clamp(28px, 2rem + 1.2vw, 48px);
+  line-height: 1.2;
+}
+
+.journeyQuote {
+  font-size: clamp(16px, 0.9rem + 0.4vw, 19px);
+}
+
+.trustedSection,
+.partnerSection,
+.teamSection,
+.techSection,
+.deliverSection,
+.servicesSection,
+.choiceSection {
+  padding-top: clamp(40px, 6vw, 70px);
+  padding-bottom: clamp(40px, 6vw, 70px);
+}
+
+.ctaBanner {
+  padding-top: clamp(40px, 7vw, 80px);
+  padding-bottom: clamp(40px, 7vw, 80px);
+}
+
+.partnerSection h3,
+.techSection h2,
+.servicesSection h2,
+.teamSection h2,
+.deliverSection h2,
+.trustedSection h2,
+.globalPresence h2 {
+  font-size: var(--h2-font-size);
+  line-height: 1.25;
+}
+
+/* ---------- Large desktop / laptop ---------- */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .aboutMethodologyArrows {
+    padding-right: 30px;
+  }
+
+  .aboutMethodologyCard {
+    padding: 26px 22px;
+  }
+}
+
+/* ---------- Tablet and below: stacked columns need a gap ---------- */
+@media (max-width: 991px) {
+  .partnerBadge {
+    margin-top: 30px;
+  }
+
+  .ringWrap {
+    margin-top: 10px;
+  }
+
+  .deliverSection .btnRed,
+  .teamCallout .btnRed {
+    margin-top: 6px;
+  }
+
+  .ctaBannerPhoto {
+    width: 100%;
+    opacity: 0.35;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 55%);
+    mask-image: linear-gradient(90deg, transparent 0%, #000 55%);
+  }
+
+  .ctaBanner {
+    text-align: left;
+  }
+
+  .heroText,
+  .heroSubText {
+    max-width: 100%;
+  }
+
+  .teamSection p {
+    max-width: 100%;
+  }
+
+  .teamCard .quote {
+    font-size: 15px;
+  }
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 767px) {
+  .hero {
+    padding-top: 40px;
+  }
+
+  .mvCard {
+    padding: 20px;
+  }
+
+  .techCard {
+    padding: 16px;
+  }
+
+  .techItem {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .teamSlider {
+    padding: 0;
+  }
+
+  .teamSection > .container > p {
+    margin-bottom: 28px;
+  }
+
+  .teamCallout {
+    margin-top: 50px;
+    gap: 16px;
+  }
+
+  .serviceCard {
+    padding: 12px 0;
+    margin-bottom: 8px;
+  }
+
+  .choiceCard {
+    padding: 8px 0;
+  }
+
+  .choiceImageWrap {
+    text-align: center;
+  }
+
+  .ringWrap img,
+  .choiceImage,
+  .partnerBadge img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* ---------- Small mobile ---------- */
+@media (max-width: 575px) {
+  .btnRed {
+    white-space: normal;
+    text-align: left;
+    padding: 12px 18px;
+    font-size: 15px;
+  }
+
+  .eyebrow {
+    font-size: 14px;
+  }
+
+  .partnerSection p,
+  .trustedSection p,
+  .deliverSection > .container > .row > div > p,
+  .deliverSection ul li {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .statRow {
+    gap: 12px;
+  }
+
+  .aboutMethodologyCard,
+  .aboutMethodologyCard p {
+    font-size: 15px;
+  }
+
+  .aboutMethodologyBottom {
+    text-align: left;
+  }
+
+  .aboutMethodologyButtonWrapper {
+    justify-content: flex-start;
+  }
+}
+
+/* ---------- Very small phones (320-400px) ---------- */
+@media (max-width: 400px) {
+  .techItemsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .techItemFull {
+    justify-content: flex-start;
+  }
+
+  .aboutMethodology {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .aboutMethodologyArrows {
+    transform: scale(0.5);
+    margin-left: -90px;
+    margin-right: -90px;
+  }
+}
+
+/* =========================================
+   MAP PIN ANIMATION
+   - pins drop in one by one when the map scrolls into view
+   - the flag pops in, then each pin floats gently
+========================================= */
+
+.globalMap .pinBody,
+.globalMap .pinIcon {
+  opacity: 0;
+}
+
+.globalMap .locationPin:nth-child(1) { --i: 0; }
+.globalMap .locationPin:nth-child(2) { --i: 1; }
+.globalMap .locationPin:nth-child(3) { --i: 2; }
+.globalMap .locationPin:nth-child(4) { --i: 3; }
+.globalMap .locationPin:nth-child(5) { --i: 4; }
+.globalMap .locationPin:nth-child(6) { --i: 5; }
+.globalMap .locationPin:nth-child(7) { --i: 6; }
+
+.mapIn .pinBody {
+  animation: pinDrop 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  animation-delay: calc(var(--i, 0) * 0.15s);
+}
+
+.mapIn .pinIcon {
+  animation: pinPop 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  animation-delay: calc(var(--i, 0) * 0.15s + 0.4s);
+}
+
+.mapIn .locationPin {
+  animation: pinFloat 3.2s ease-in-out infinite;
+  animation-delay: calc(var(--i, 0) * 0.15s + 1.2s);
+}
+
+@keyframes pinDrop {
+  from {
+    opacity: 0;
+    translate: 0 -60px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes pinPop {
+  from {
+    opacity: 0;
+    scale: 0.2;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes pinFloat {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -6px;
+  }
+}
+
+@media (max-width: 767px) {
+  .locationPin {
+    --pin-scale: 0.9;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .globalMap .pinBody,
+  .globalMap .pinIcon {
+    opacity: 1;
+  }
+
+  .mapIn .pinBody,
+  .mapIn .pinIcon,
+  .mapIn .locationPin {
+    animation: none;
+  }
+}
+
+/* =========================================
+   MAP PIN NAME LABELS + IMPROVED ANIMATION
+   (overrides the simpler animation above)
+========================================= */
+
+/* --- name label: always visible under each pin --- */
+.locationLabel {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  top: calc(100% + 2px);
+  padding: 5px 11px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #4a3f6d;
+  pointer-events: none;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.locationPin:hover .locationLabel {
+  color: #ffffff;
+  background: var(--about-purple);
+}
+
+.globalMap .locationLabel {
+  opacity: 0;
+}
+
+.mapIn .locationLabel {
+  animation: labelRise 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: calc(var(--i, 0) * 0.18s + 0.75s);
+}
+
+/* --- drop with squash & bounce, then flag pops in --- */
+.mapIn .pinBody {
+  animation: pinDropBounce 0.95s cubic-bezier(0.33, 1, 0.68, 1) both;
+  animation-delay: calc(var(--i, 0) * 0.18s);
+}
+
+.mapIn .pinIcon {
+  animation: pinPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  animation-delay: calc(var(--i, 0) * 0.18s + 0.55s);
+}
+
+.mapIn .locationPin {
+  animation: pinFloat 3.4s ease-in-out infinite;
+  animation-delay: calc(var(--i, 0) * 0.18s + 1.5s);
+}
+
+/* --- ripple ring on the map where the pin lands --- */
+.locationPin::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 6px;
+  width: 46px;
+  height: 16px;
+  margin-left: -23px;
+  border: 2px solid rgba(163, 107, 192, 0.65);
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.mapIn .locationPin::after {
+  animation: pinRipple 2.6s ease-out infinite;
+  animation-delay: calc(var(--i, 0) * 0.18s + 0.9s);
+}
+
+/* --- hover: pin tilts slightly (transition, so the drop never replays) --- */
+.pinBody {
+  transition: rotate 0.3s ease;
+}
+
+.locationPin:hover .pinBody {
+  rotate: -8deg;
+}
+
+@keyframes pinDropBounce {
+  0% {
+    opacity: 0;
+    translate: 0 -110px;
+    scale: 1 1;
+  }
+  45% {
+    opacity: 1;
+    translate: 0 0;
+    scale: 1 1;
+  }
+  58% {
+    translate: 0 0;
+    scale: 1.1 0.86;
+  }
+  74% {
+    translate: 0 -16px;
+    scale: 0.96 1.05;
+  }
+  88% {
+    translate: 0 0;
+    scale: 1.03 0.97;
+  }
+  100% {
+    opacity: 1;
+    translate: 0 0;
+    scale: 1 1;
+  }
+}
+
+@keyframes labelRise {
+  from {
+    opacity: 0;
+    translate: 0 8px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+@keyframes pinRipple {
+  0% {
+    opacity: 0.7;
+    scale: 0.3;
+  }
+  70%,
+  100% {
+    opacity: 0;
+    scale: 2.4;
+  }
+}
+
+@media (max-width: 767px) {
+  .locationLabel {
+    display: block;
+    padding: 4px 8px;
+    font-size: 15px;
+  }
+
+  .locationPin::after {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .globalMap .locationLabel {
+    opacity: 1;
+  }
+
+  .mapIn .pinBody,
+  .mapIn .pinIcon,
+  .mapIn .locationPin,
+  .mapIn .locationLabel,
+  .mapIn .locationPin::after {
+    animation: none;
+  }
+
+  .locationPin::after {
+    display: none;
+  }
+}
+
+/* --- side labels for pins that sit close to a neighbour --- */
+.canada .locationLabel,
+.uk .locationLabel {
+  left: auto;
+  right: 100%;
+  top: 34px;
+  margin-right: -6px;
+  transform: none;
+}
+
+.netherlands .locationLabel,
+.singapore .locationLabel {
+  left: 100%;
+  right: auto;
+  top: 34px;
+  margin-left: -6px;
+  transform: none;
+}
+
+/* =========================================
+   MAP PIN POSITIONS - FINAL (tip-anchored, fully fluid)
+
+   - The map is a size container, so every pin size is a % of the
+     map width (cqw) and stays in proportion at every screen size.
+   - left / top now mark the TIP of each pin on the map image
+     (1949 x 807), so pins stay on the right country in all versions.
+========================================= */
+
+.globalMap {
+  container-type: inline-size;
+  aspect-ratio: 1949 / 807;
+  --pin-w: clamp(44px, 4.6cqw, 88px);
+}
+
+.locationPin {
+  width: var(--pin-w);
+  height: calc(var(--pin-w) * 1.395);
+
+  /* move the box so the pin tip (86.5% down the box) sits on left/top */
+  margin-left: calc(var(--pin-w) * -0.5);
+  margin-top: calc(var(--pin-w) * -1.207);
+
+  scale: 1;
+  transform-origin: 50% 86.5%;
+}
+
+.pinBody {
+  width: var(--pin-w);
+  height: var(--pin-w);
+}
+
+.pinIcon {
+  width: calc(var(--pin-w) * 0.7);
+  height: calc(var(--pin-w) * 0.7);
+  border-width: calc(var(--pin-w) * 0.058);
+}
+
+.pinShadow {
+  width: calc(var(--pin-w) * 0.64);
+  height: calc(var(--pin-w) * 0.14);
+}
+
+.locationPin::after {
+  width: calc(var(--pin-w) * 0.55);
+  height: calc(var(--pin-w) * 0.19);
+  margin-left: calc(var(--pin-w) * -0.275);
+  bottom: calc(var(--pin-w) * 0.1);
+}
+
+.locationLabel {
+  font-size: clamp(12px, 1.05cqw, 16px);
+  padding: 0.35em 0.75em;
+}
+
+.canada    { left: 17.7%; top: 35.3%; }
+.usa       { left: 16.9%; top: 56.4%; }
+.uk        { left: 44.9%; top: 21.3%; }
+.netherlands { left: 49.3%; top: 22.9%; }
+.india     { left: 69.0%; top: 44.0%; }
+.singapore { left: 75.8%; top: 62.0%; }
+.australia { left: 79.0%; top: 84.3%; }
+
+/* side labels: sit beside the pin, level with the flag */
+.canada .locationLabel,
+.uk .locationLabel,
+.netherlands .locationLabel,
+.singapore .locationLabel {
+  top: calc(var(--pin-w) * 0.3);
+}
+
+@media (max-width: 767px) {
+  .globalMap {
+    --pin-w: 36px;
+  }
+
+  .locationLabel {
+    font-size: 12px;
+    padding: 3px 7px;
+  }
+}
