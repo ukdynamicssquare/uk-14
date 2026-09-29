@@ -44,7 +44,7 @@ const DynamicsNavSupportEndingSoon = () => {
                       <i className="bi bi-chevron-double-right"></i>
                     </div>
                     <div className="right">
-                      <p>99.99% Uptime SLA’s by moving to D365 BC Cloud</p>
+                      <p>99.9% Uptime SLA’s by moving to D365 BC Cloud</p>
                     </div>
                   </div>
                   <div className="ineer-div">
@@ -272,43 +272,43 @@ const DynamicsNavSupportEndingSoon = () => {
                       <td>
                         <strong>Dynamics NAV 4.0	</strong>
                       </td>
-                      <td>1/12/2010	</td>
+                      <td>12/01/2010	</td>
                       <td className="red">No</td>
                     </tr>
                     <tr>
                       <td>
                         <strong>Dynamics NAV 5.0</strong>
                       </td>
-                      <td>4/10/2012</td>
-                      <td className="red">4/11/2017</td>
+                      <td>10/04/2012</td>
+                      <td className="red">11/04/2017</td>
                     </tr>
                     <tr>
                       <td>
                         <strong>Dynamics NAV 2009</strong>
                       </td>
-                      <td>1/13/2015	</td>
-                      <td className="red">1/14/2020</td>
+                      <td>13/01/2015	</td>
+                      <td className="red">14/01/2020</td>
                     </tr>
                     <tr>
                       <td>
                         <strong>Dynamics NAV 2009 R2</strong>
                       </td>
-                      <td>1/13/2015	</td>
-                      <td className="red">1/14/2020</td>
+                      <td>13/01/2015	</td>
+                      <td className="red">14/01/2020</td>
                     </tr>
                     <tr>
                       <td>
                         <strong>Dynamics NAV 2013</strong>
                       </td>
-                      <td>1/9/2018</td>
-                      <td className="red">1/10/2023</td>
+                      <td>09/01/2018</td>
+                      <td className="red">10/01/2023</td>
                     </tr>
                     <tr>
                       <td>
                         <strong>Dynamics NAV 2013 R2</strong>
                       </td>
-                      <td>1/9/2018</td>
-                      <td className="red">1/10/2023</td>
+                      <td>09/01/2018</td>
+                      <td className="red">10/01/2023</td>
                     </tr>
                     <tr>
                       <td>
@@ -335,7 +335,7 @@ const DynamicsNavSupportEndingSoon = () => {
                       <td>
                         <strong>Dynamics NAV 2018</strong>
                       </td>
-                      <td>10/12/2023</td>
+                      <td>10/01/2023</td>
                       <td className="green"><strong>11/01/2028</strong></td>
                     </tr>
                   </tbody>

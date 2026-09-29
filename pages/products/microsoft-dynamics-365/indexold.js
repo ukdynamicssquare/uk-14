@@ -653,7 +653,7 @@ const D360 = () => {
               <div className="call-to-action-content">
                 <h3>Utilise Dynamics 365 Capabilities Now!</h3>
                 <p>
-                  Let Dynamics Square be your reliable Microsoft Dynamics 365 Gold partner as we improve your business by offering you the right custom-built Dynamics 365 solutions to fit with your business needs.
+                  Let Dynamics Square be your reliable Microsoft Dynamics 365 Solutions Partner as we improve your business by offering you the right custom-built Dynamics 365 solutions to fit with your business needs.
                 </p>
                 <div className="text-center m-o-t new-btn-nn">
                   <Link
@@ -1017,7 +1017,7 @@ const D360 = () => {
                 <h2>
                   Get Dynamics 365 Services With Dynamics Square
                 </h2>
-                <p>As a Microsoft Gold Certified Partner UK, we provide you with a seamless experience in upgrading or implementing Dynamics 365 without disturbing your existing work process. </p>
+                <p>As a Microsoft Solutions Partner UK, we provide you with a seamless experience in upgrading or implementing Dynamics 365 without disturbing your existing work process. </p>
               </header>
             </div>
           </div>
@@ -1030,7 +1030,7 @@ const D360 = () => {
                 <div className="commen-boc-2-info">
                   <h3>Trustworthy Partner</h3>
                   <p>
-                    Dynamics Square is Microsoft's gold partner. So far, we have delivered <b>70+</b> implementation projects and serving <b>500+</b> clients globally.
+                    Dynamics Square is Microsoft's Microsoft Solutions Partner. So far, we have delivered <b>70+</b> implementation projects and serving <b>500+</b> clients globally.
                   </p>
                 </div>
               </div>

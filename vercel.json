@@ -85,7 +85,7 @@
       "destination": "/white-papers/download/pdf-microsoft-finance/",
       "statusCode": 301
     },
-     {
+    {
       "source": "/thank-you/how-to-choose-right-erp/",
       "destination": "/download/how-to-choose-right-erp/",
       "statusCode": 301
@@ -95,7 +95,7 @@
       "destination": "/blog/dynamics-365-integration-guide/",
       "statusCode": 301
     },
-     {
+    {
       "source": "/microsoft-dynamics-pricing-calculator/",
       "destination": "/tools/microsoft-dynamics-licensing-calculator/",
       "statusCode": 301
@@ -113,6 +113,21 @@
     {
       "source": "/blog/business-central-for-discrete-manufacturing/",
       "destination": "/industries/business-central-for-discrete-manufacturing/",
+      "statusCode": 301
+    },
+    {
+      "source": "/dynamics-nav-is-now-dynamics-365-business-central/",
+      "destination": "/dynamics-nav-to-business-central/",
+      "statusCode": 301
+    },
+    {
+      "source": "/dynamics-365-customer-voice/",
+      "destination": "/products/microsoft-dynamics-365-customer-service/",
+      "statusCode": 301
+    },
+    {
+      "source": "/products/microsoft-dynamics-365-mixed-reality/",
+      "destination": "/products/microsoft-dynamics-365-field-service/",
       "statusCode": 301
     }
   ]

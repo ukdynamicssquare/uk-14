@@ -771,8 +771,8 @@ const MicrosoftCloudForNonpro = () => {
                       data-bs-parent="#faqlist1"
                     >
                       <div className="accordion-body">
-                        <p>Sales Professional starts at around <b>£50.40user/month</b>, paid yearly, while Business Central</p>
-                        <p>Essentials starts at around <b>£57.50/user/month</b>. Microsoft often offers bundled pricing or partner discounts for SMBs.</p>
+                        <p>Sales Professional starts at around <b>£50.00/user/month</b>, paid yearly, while Business Central</p>
+                        <p>Essentials starts at around <b>£61.50/user/month</b>. Microsoft often offers bundled pricing or partner discounts for SMBs.</p>
                       </div>
                     </div>
                   </div>

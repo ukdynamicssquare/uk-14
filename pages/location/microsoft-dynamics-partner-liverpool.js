@@ -20,7 +20,7 @@ const MicrosoftDynamicsPartnerLiverpool = () => {
                 <br />
                 Partner Liverpool
               </h1>
-              <p>Accelerate growth and get your business on track by leveraging the resources of a renowned Microsoft solutions Partner, Dynamics Square, Liverpool (UK). </p>
+              <p>Accelerate growth and get your business on track by leveraging the resources of a renowned Microsoft Solutions Partner, Dynamics Square, Liverpool (UK). </p>
               <div className="text-center text-lg-start">
                   <Link
                     href="#exampleModal"

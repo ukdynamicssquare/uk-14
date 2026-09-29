@@ -125,7 +125,7 @@ const BusinessCentral = () => {
                   "name": "How do I get ongoing support for Dynamics 365 Business Central?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "You will get direct support from Dynamics Square as we are a gold partner for Microsoft's products with existence in the UK market and other global locations with a well-equipped support system. Our support system includes end-user training, technical assistance, and off-hours support whenever required. If you are seeking professional and trustworthy support services, selecting Dynamics Square - a trustworthy Business Central Support Partner in the UK can help."
+                    "text": "You will get direct support from Dynamics Square as we are a Microsoft Solutions Partner for Microsoft's products with existence in the UK market and other global locations with a well-equipped support system. Our support system includes end-user training, technical assistance, and off-hours support whenever required. If you are seeking professional and trustworthy support services, selecting Dynamics Square - a trustworthy Business Central Support Partner in the UK can help."
                   }
                 }, {
                   "@type": "Question",

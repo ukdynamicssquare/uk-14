@@ -779,7 +779,7 @@ const ImplementationSales = () => {
                     data-bs-toggle="modal"
                     className="btn-get-started scrollto">
 
-                    <span>Speak to a Certified Gold Microsoft Partner</span>
+                    <span>Speak to a Certified Microsoft Solutions Partner</span>
                   </Link>
                 </div>
               </div>

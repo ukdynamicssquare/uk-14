@@ -172,7 +172,7 @@ const BusinessCentralVSFinance = () => {
                     <tr>
                       <td><strong>Pricing</strong></td>
                       <td>
-                        <p>&pound;57.50/&ndash;&pound;82.20 per user/month</p>
+                        <p>&pound;61.50/&ndash;&pound;84.60 per user/month</p>
                       </td>
                       <td>
                         <p>&pound;161.50&ndash;&pound;230.70 per user/month</p>
@@ -211,7 +211,7 @@ const BusinessCentralVSFinance = () => {
                     <tr>
                       <td><strong>Total Cost of Ownership</strong></td>
                       <td>
-                        <p>Predictable per-seat at &pound;57.50/&ndash;&pound;82.20/mo</p>
+                        <p>Predictable per-seat at &pound;61.50/&ndash;&pound;84.60/mo</p>
                       </td>
                       <td>
                         <p>Modular, higher licensing (&pound;161.50&ndash;&pound;230.70/mo) with flexible scale</p>

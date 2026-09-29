@@ -3386,7 +3386,7 @@ const BusinessCentral = () => {
                     <div className="accordion-body">
                       <p>
                         You will get direct support from Dynamics Square as we
-                        are a gold partner for Microsoft's products with
+                        are a Microsoft Solutions Partner for Microsoft's products with
                         existence in the UK market and other global locations
                         with a well-equipped support system. Our support system
                         includes end-user training, technical assistance, and

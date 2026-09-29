@@ -729,49 +729,37 @@ It is always a great idea to try a system before investing in it. This will help
                   >
                     <div className="accordion-body">
                       <p>
-                        The latest version was released in 2017 with the name
-                        Dynamics GP 2018. Still, businesses are using older
-                        versions, like 2013, 2015, and 2016. Microsoft is
-                        providing support for these versions only, and there are
-                        no updates or support available for other versions by
-                        Microsoft.
+                        Dynamics GP now follows Microsoft's Modern Lifecycle Policy, and the current release is Dynamics GP 18.x. Older fixed-lifecycle versions (2013, 2015, 2016 and 2018) have reached or are reaching the end of their support dates.
                       </p>
                       <p>
-                        Does Dynamics GP is going to expire from the market?
+                        Is Dynamics GP going to expire from the market?
                       </p>
                       <p>
-                        In October 2019, Microsoft announced the discontinuation
-                        of Dynamics GP from the market. But the current users of
-                        the following versions will keep getting support.
+                        In September 2024, Microsoft announced the end-of-sale timeline for Dynamics GP. Existing customers keep getting support in line with the dates below.
                       </p>
                       <table className="table table-bordered table-responsive">
                         <thead>
                           <tr>
-                            <th>Version</th>
-                            <th>Mainstream Support</th>
-                            <th>Extended Support</th>
+                            <th>Milestone</th>
+                            <th>Date</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td>Dynamics GP 2013 and R2</td>
-                            <td>Ended on April 4, 2018</td>
-                            <td>Ends on April 11 2023</td>
+                            <td>New perpetual licences end</td>
+                            <td>1 April 2025</td>
                           </tr>
                           <tr>
-                            <td>Dynamics GP 2015 and R2</td>
-                            <td>Ended on April 14, 2020</td>
-                            <td>Ends on April 8, 20025</td>
+                            <td>New subscriptions end</td>
+                            <td>1 April 2026</td>
                           </tr>
                           <tr>
-                            <td>Dynamics GP 2016 and R2</td>
-                            <td>Ended on July 13, 2021</td>
-                            <td>Ends on July 14, 2026</td>
+                            <td>Enhancements and regulatory updates end</td>
+                            <td>31 December 2029</td>
                           </tr>
                           <tr>
-                            <td>Dynamics GP 2018 and R2</td>
-                            <td>Ends on January 10, 2023</td>
-                            <td>Ends on January 11, 2028</td>
+                            <td>Security patches end</td>
+                            <td>30 April 2031</td>
                           </tr>
                         </tbody>
                       </table>

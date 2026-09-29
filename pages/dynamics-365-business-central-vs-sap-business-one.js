@@ -272,7 +272,7 @@ const BCvsSap = () => {
                   <h3>Pricing</h3>
                   <ul style={{ padding: '10px 20px' }}>
                     <li><b>Business Central</b>
-                      <p>Business Central pricing is very cost effective and starts at £6.60 per user/month for Team Members Plans, £57.50 per user/month for Essentials Plans, and £82.20 per user/month for Premium Plans.</p>
+                      <p>Business Central pricing is very cost effective and starts at £6.20 per user/month for Team Members Plans, £61.50 per user/month for Essentials Plans, and £84.60 per user/month for Premium Plans.</p>
                     </li>
                     <li><b>SAP Business One</b>
                       <p>It offers customised pricing plans that vary from one business to another based on their complexity.</p>

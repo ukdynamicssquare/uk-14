@@ -21,7 +21,7 @@ const MicrosoftDynamicsPartnerLeeds = () => {
                 Partner Leeds
               </h1>
               <p>
-              We offer a comprehensive range of services and solutions to help your business succeed as experienced Microsoft Gold Partners in Leeds.
+              We offer a comprehensive range of services and solutions to help your business succeed as experienced Microsoft Solutions Partners in Leeds.
               </p>
               <div className="text-center text-lg-start">
                   <Link
@@ -99,7 +99,7 @@ const MicrosoftDynamicsPartnerLeeds = () => {
               <div className="commen-rit-info">
                 <h3>Why should you choose Dynamics 365 for your Leeds-based company?</h3>
                 <p>
-                  We are not just partners; we are authorized Microsoft Gold
+                  We are not just partners; we are authorized Microsoft Solutions
                   Partner in Leeds having domain expertise in key areas as
                   follows -
                 </p>
@@ -578,7 +578,7 @@ const MicrosoftDynamicsPartnerLeeds = () => {
       <section className="leads-sect">
         <div className="container">
           <header className="section-header">
-            <h2>Leeds Based Microsoft Gold Partners</h2>
+            <h2>Leeds Based Microsoft Solutions Partners</h2>
           </header>
           <div className="row justify-content-center">
             <div className="col-lg-7">

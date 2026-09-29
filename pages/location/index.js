@@ -9,7 +9,7 @@ const Locations = () => {
     <>
       <Head>
       <title>Microsoft Dynamics 365 Partner By Location | Dynamics Square</title>
-<meta name="description" content="Find a gold Mircosoft CRM partner or Microsoft Dynamics 365 partner by location like Leeds, Manchester, Liverpool, Bristol, Cardiff and much more."/>
+<meta name="description" content="Find a Microsoft CRM Solutions Partner or Microsoft Dynamics 365 partner by location like Leeds, Manchester, Liverpool, Bristol, Cardiff and much more."/>
 <link rel="canonical" href="https://www.dynamicssquare.co.uk/location/" />
       </Head>
       <section className="Solution-banner hero-1 hero">

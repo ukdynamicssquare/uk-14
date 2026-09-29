@@ -50,7 +50,7 @@ const MicrosoftDynamicsPartnerLiverpool = () => {
 
                 <p>
                 If so, stop your search here; we have got your back. For the past 14+ years Dynamics Square is a{" "} <Link href="/">
-                    Microsoft Gold Certified Partner in Bristol
+                    Microsoft Solutions Partner in Bristol
                   </Link> , we have been delivering our expertise and innovative solutions to businesses like yours in order to increase revenue and build a sustainable business. </p>
                 <p>
                 We tailor our solutions to your specific needs and problems, allowing you to make the most of your limited resources. Irrespective of the issue you encounter, whether simple or complex, we are available to resolve it using minimum resources to get you a maximised ROI. 
@@ -60,7 +60,7 @@ If you require minor adjustments or have minor issues, our Microsoft-certified t
                 <p>
                 We offer a wide range of personalised services to the businesses of Bristol and nearby, including implementation, upgrade, and support. We are committed to providing you with the highest quality of service because of our efficient and productive solutions. 
                 </p>
-                <p>As a Microsoft Gold Certified Partner, we have access to the latest Microsoft technologies and resources to make your business tech-enabled for accelerated growth and profitability. We are constantly working to stay ahead of the curve and provide our clients with the best possible solutions. </p>
+                <p>As a Microsoft Solutions Partner, we have access to the latest Microsoft technologies and resources to make your business tech-enabled for accelerated growth and profitability. We are constantly working to stay ahead of the curve and provide our clients with the best possible solutions. </p>
                 <div className="cltt-actt">
                   <Link target="_blank" href="/about-us/">
                     Learn More About Us
@@ -567,7 +567,7 @@ If you require minor adjustments or have minor issues, our Microsoft-certified t
           <header className="section-header">
             <h2>
             Bristol Based <br />
-              Microsoft Gold Partners
+              Microsoft Solutions Partners
             </h2>
           </header>
           <div className="row justify-content-center">

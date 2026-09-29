@@ -318,7 +318,7 @@ const AboutUs = () => {
                 <SwiperSlide>
                   <div className="inner-slider-cont">
                     <h4>2018</h4>
-                    <p>Became Microsoft Gold Certified Partner</p>
+                    <p>Became Microsoft Solutions Partner</p>
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>

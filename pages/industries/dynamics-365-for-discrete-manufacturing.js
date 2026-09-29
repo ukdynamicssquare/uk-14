@@ -18,13 +18,13 @@ const Dynamics365ForDiscreteManufacturing = () => {
         />
         <link
           rel="canonical"
-          href="https://www.dynamicssquare.co.uk/dynamics-365-for-discrete-manufacturing/"
+          href="https://www.dynamicssquare.co.uk/industries/dynamics-365-for-discrete-manufacturing/"
         />
         <meta property="og:locale" content="GB" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content=" Dynamics 365 For Discrete Manufacturing " />
         <meta property="og:description" content="Dynamics 365 for Discrete Manufacturing helps UK manufacturers streamline production, BOMs, inventory, and operations with real-time insights." />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/dynamics-365-for-discrete-manufacturing/" />
+        <meta property="og:url" content="https://www.dynamicssquare.co.uk/industries/dynamics-365-for-discrete-manufacturing/" />
         <meta property="og:site_name" content="Dynamics Square UK" />
         <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/discrete-01.png" />
         <meta property="og:image:width" content="200" />

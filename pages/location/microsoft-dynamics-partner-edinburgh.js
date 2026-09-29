@@ -22,7 +22,7 @@ const MicrosoftDynamicsPartnerEdinburgh = () => {
                 Partner Edinburgh
               </h1>
               <p>
-                We are experienced Microsoft Gold Partners based in Edinburgh,
+                We are experienced Microsoft Solutions Partners based in Edinburgh,
                 UK.
               </p>
               <div className="text-center text-lg-start">
@@ -500,7 +500,7 @@ const MicrosoftDynamicsPartnerEdinburgh = () => {
       <section className="leads-sect">
         <div className="container">
           <header className="section-header">
-            <h2>Edinburgh Based Microsoft Gold Partners</h2>
+            <h2>Edinburgh Based Microsoft Solutions Partners</h2>
             <p>
               We recognise that your company is distinct, and you require
               solutions that represent your values. We can assist you in

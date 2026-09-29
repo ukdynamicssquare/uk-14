@@ -147,7 +147,7 @@ const PowerBiSupport = () => {
                 </h2>
                 <p>
                   If you are looking for a{" "}
-                  <Link href="/">Microsoft Gold Certified Partner</Link> that
+                  <Link href="/">Microsoft Solutions Partner</Link> that
                   offers cost-effective, efficient, powerful, sustainable, and
                   personalised solutions as well as services, we are the right
                   match for your business.

@@ -20,13 +20,13 @@ export default function HomeOld() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/" />
         <meta property="og:title" content="Trusted Microsoft Dynamics 365 Partner UK | Business Central Partner - Dynamics Square™" />
-        <meta property="og:description" content="Dynamics Square is UK's leading Gold Microsoft Dynamics 365 Partner helping businesses to achieve desired results with Dynamics 365 apps and services." />
+        <meta property="og:description" content="Dynamics Square is UK's leading Microsoft Dynamics 365 Solutions Partner helping businesses to achieve desired results with Dynamics 365 apps and services." />
         <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/home-page-og.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/" />
         <meta property="twitter:title" content="Trusted Microsoft Dynamics 365 Partner UK | Business Central Partner - Dynamics Square™" />
-        <meta property="twitter:description" content="Dynamics Square is UK's leading Gold Microsoft Dynamics 365 Partner helping businesses to achieve desired results with Dynamics 365 apps and services." />
+        <meta property="twitter:description" content="Dynamics Square is UK's leading Microsoft Dynamics 365 Solutions Partner helping businesses to achieve desired results with Dynamics 365 apps and services." />
         <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/home-page-og.png" />
 
         <script
@@ -952,7 +952,7 @@ export default function HomeOld() {
               </div>
               <div className="custom-p-001 custom-p-009">
                 <p>
-                  As a Gold Microsoft Dynamics Partner, we can help you
+                  As a Microsoft Dynamics Solutions Partner, we can help you
                   revolutionise your business processes and operations while
                   leveraging the power of the cloud, AI, and ML.
                 </p>

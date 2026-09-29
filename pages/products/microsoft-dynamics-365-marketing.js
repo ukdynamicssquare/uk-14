@@ -793,7 +793,7 @@ const Marketing = () => {
                     data-bs-parent="#faqlist1"
                   >
                     <div className="accordion-body">
-                    The cost of Dynamics 365 Marketing totally depends on the complexity of the business and its unique requirements. However, if you want to use it as a standalone application, you have to pay £1,232.90 per tenant/month, and if you are using one of the Dynamics 365 apps, you have to pay £616.50 per tenant/month as an additional amount. 
+                    The cost of Dynamics 365 Marketing totally depends on the complexity of the business and its unique requirements. However, if you want to use it as a standalone application, you have to pay £1,307.20 per tenant/month, and if you are using one of the Dynamics 365 apps, you have to pay £769.00 per tenant/month as an additional amount. 
                     </div>
                   </div>
                 </div>

@@ -467,9 +467,11 @@ const BusinessCentralUpgrade = () => {
                         <a href="https://www.dynamicssquare.co.uk/blog/dynamics-365-business-central-wave-2/">
                           Dynamics 365 Business Central Wave 2
                         </a>
-                        ; version 19 released in October 2021 is the latest
-                        version of Business Central primarily a cloud-based
-                        platform.
+                        ; the latest release is Business Central 2026 release wave 2
+                        (version 29, October 2026). Microsoft ships two major
+                        releases a year, in April (wave 1) and October (wave 2),
+                        so the latest version changes twice a year. Business Central
+                        is primarily a cloud-based platform.
                       </div>
                     </div>
                   </div>

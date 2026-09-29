@@ -20,7 +20,7 @@ const Startup = () => {
         </title>
         <meta
           name="description"
-          content="Dynamics 365 for Startups - ERP, CRM, and business intelligence powered by Dynamics 365 and enabled by Dynamics Square, gold certified Industry Partner."
+          content="Dynamics 365 for Startups - ERP, CRM, and business intelligence powered by Dynamics 365 and enabled by Dynamics Square, Solutions Partner."
         />
         <link
           rel="canonical"

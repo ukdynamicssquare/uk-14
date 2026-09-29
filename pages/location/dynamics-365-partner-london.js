@@ -35,7 +35,7 @@ export default function HomeOld() {
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/" />
         <meta property="twitter:title" content="Dynamics 365 Partner in London UK | Dynamics Square™" />
-        <meta property="twitter:description" content="Dynamics Square™ is UK's leading Gold Microsoft Dynamics 365 Partner helping businesses to achieve desired results with Dynamics 365 apps and services." />
+        <meta property="twitter:description" content="Dynamics Square™ is UK's leading Microsoft Dynamics 365 Solutions Partner helping businesses to achieve desired results with Dynamics 365 apps and services." />
         <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/home-page-og.png" />
 
         
@@ -954,7 +954,7 @@ export default function HomeOld() {
               <div className="col-lg-6">
                 <div className="achive-left">
                   <h3>About Dynamics Square</h3>
-                  <p>As a Gold Microsoft Dynamics Partner, we can help you revolutionise your business processes and operations while leveraging the power of the cloud, AI, and ML.</p>
+                  <p>As a Microsoft Dynamics Solutions Partner, we can help you revolutionise your business processes and operations while leveraging the power of the cloud, AI, and ML.</p>
 
                   <p>Since 2011, we have been serving our global customers, enabling them to make more profits by implementing tech-driven cloud solutions.</p>
                   <p>We are one of the trusted dynamics consultants and certified Microsoft CRM & ERP partners, helping businesses like yours to achieve exponential growth while resolving critical business problems with 100% user satisfaction</p>

@@ -109,7 +109,7 @@ const ImplementationServices = () => {
               </div>
               <div className="custom-p-001">
                 <p>
-                  Experts at Dynamics Square - an authorized Microsoft Gold
+                  Experts at Dynamics Square - an authorized Microsoft Solutions
                   Partner have the proficiency to understand your complex
                   business requirement and undertake challenges involved to
                   deliver highly customized, process-integrated, and
@@ -555,7 +555,7 @@ const ImplementationServices = () => {
                 </div>
                 <div className="commen-boc-3-info">
                   <p>
-                    Dynamics Square is an authorized gold Microsoft Partner that
+                    Dynamics Square is an authorized Microsoft Solutions Partner that
                     delivers trustworthy Microsoft Dynamics 365 implementation
                     services followed by standard practices, specialized with
                     modernized methodologies, and strategized with high-end post
@@ -933,7 +933,7 @@ const ImplementationServices = () => {
                         </Link>{" "}
                         is a part of Dynamics 365 and comes together in the
                         package. However, you need to pay an extra licensing fee
-                        starting from £71.60 per user/month to avail the
+                        starting from £50.00 per user/month (Sales Professional) or £80.70 per user/month (Sales Enterprise) to avail the
                         features and capabilities of Sales.
                       </p>
                     </div>
@@ -964,7 +964,7 @@ const ImplementationServices = () => {
                           D365 Supply Chain Management services
                         </Link>
                         , users have to pay a subscription fee starting from
-                        £172.60 per user per month.
+                        £161.50 per user per month.
                       </p>
                     </div>
                   </div>

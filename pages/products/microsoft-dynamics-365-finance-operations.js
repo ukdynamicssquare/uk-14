@@ -32,7 +32,7 @@ const FinanceOperations = () => {
     {
       id: "faq4",
       title: "4. How much is Dynamics 365 F&O?",
-      content: "<p>Generally, the full user license cost is £180/user/month. This isn't fixed for all users. The accurate cost depends on a few factors, like license type, number of users, app type, team member license, and more. However, the team at Dynamics Square can help you get an accurate amount of cost.</p>"
+      content: "<p>Generally, the full user license cost is £161.50/user/month (Premium: £230.70/user/month). This isn't fixed for all users. The accurate cost depends on a few factors, like license type, number of users, app type, team member license, and more. However, the team at Dynamics Square can help you get an accurate amount of cost.</p>"
     },
     {
       id: "faq5",
@@ -53,7 +53,7 @@ const FinanceOperations = () => {
       id: "faq8",
       title:
         "8. Can I upgrade my Dynamics AX to D365 F&O?",
-      content: "<p>Yes, you can easily upgrade to D365 F&amp;O. The Dynamics 365 Finance and Operations is evolved from <a target='_blank' href='/products/microsoft-dynamics-ax/'>Dynamics AX</a> (the old version) with added functionalities to cope with the ways of modern businesses. You can contact any <a target='_blank' href='/'>Microsoft-certified gold partner</a>, like Dynamics Square, to upgrade your Dynamics AX.</p>"
+      content: "<p>Yes, you can easily upgrade to D365 F&amp;O. The Dynamics 365 Finance and Operations is evolved from <a target='_blank' href='/products/microsoft-dynamics-ax/'>Dynamics AX</a> (the old version) with added functionalities to cope with the ways of modern businesses. You can contact any <a target='_blank' href='/'>Microsoft Solutions Partner</a>, like Dynamics Square, to upgrade your Dynamics AX.</p>"
     },
     {
       id: "faq9",
@@ -1124,7 +1124,7 @@ const FinanceOperations = () => {
                   >
                     <div className="accordion-body">
                       <p>
-                      Generally, the full user license cost is £180/user/month. This isn't fixed for all users. The accurate cost depends on a few factors, like license type, number of users, app type, team member license, and more. However, the team at Dynamics Square can help you get an accurate amount of cost.</p>
+                      Generally, the full user license cost is £161.50/user/month (Premium: £230.70/user/month). This isn't fixed for all users. The accurate cost depends on a few factors, like license type, number of users, app type, team member license, and more. However, the team at Dynamics Square can help you get an accurate amount of cost.</p>
                     </div>
                   </div>
                 </div>
@@ -1208,7 +1208,7 @@ const FinanceOperations = () => {
                     data-bs-parent="#faqlist1"
                   >
                     <div className="accordion-body">
-                      <p>Yes, you can easily upgrade to D365 F&O. The Dynamics 365 Finance and Operations is evolved from <Link href="/products/microsoft-dynamics-ax/"><a target="_blank">Dynamics AX</a></Link> (the old version) with added functionalities to cope with the ways of modern businesses. You can contact any <Link href="/"><a target="_blank">Microsoft-certified gold partner</a></Link>, like Dynamics Square, to upgrade your Dynamics AX.</p>
+                      <p>Yes, you can easily upgrade to D365 F&O. The Dynamics 365 Finance and Operations is evolved from <Link href="/products/microsoft-dynamics-ax/"><a target="_blank">Dynamics AX</a></Link> (the old version) with added functionalities to cope with the ways of modern businesses. You can contact any <Link href="/"><a target="_blank">Microsoft Solutions Partner</a></Link>, like Dynamics Square, to upgrade your Dynamics AX.</p>
                     </div>
                   </div>
                 </div>

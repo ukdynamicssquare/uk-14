@@ -53,7 +53,7 @@ const MicrosoftDynamicsPartnerManchester = () => {
                 <p>
                 Enabling an ERP to work for a business isn't an easy task. It requires continuous support from a partner, timely maintenance, the installation of updates, upgrading the system for better functionality, streamlining data servers, and much more that should be done on time. </p>
                 <p>
-                Mostly, organisations with great future planning avoid putting direct efforts toward streamlining an ERP system because they want to focus on top growth opportunities and building great businesses. To do so, businesses hire Microsoft Certified Gold Partners, like Dynamics Square, to do all such tasks in the background and let the organisation concentrate on becoming a market leader. </p>
+                Mostly, organisations with great future planning avoid putting direct efforts toward streamlining an ERP system because they want to focus on top growth opportunities and building great businesses. To do so, businesses hire Microsoft Solutions Partners, like Dynamics Square, to do all such tasks in the background and let the organisation concentrate on becoming a market leader. </p>
                 <p> 
                 You made a wise decision by choosing the <Link href="/products/microsoft-dynamics-365/">
                 Microsoft Dynamics 365</Link> partner in Manchester, business solution for your business because it offers a simple user interface yet possesses powerful capabilities to manage entire business operations smoothly while strengthening your relationships with customers.                 </p>
@@ -486,7 +486,7 @@ const MicrosoftDynamicsPartnerManchester = () => {
                   <p>Being a top-notch Microsoft <Link href="/"> Dynamics 365 partner in the UK</Link>, we can help you with everything from <Link href="/dynamics-365-business-central-implementation/">implementing Business Central</Link> for SMBs to customising Dynamics Finance to meet your complex financial needs.</p>
                   <p>Our team is experienced enough to deliver best-in-class solutions for all industries, irrespective of the issue, such as a functional issue, lag issue, performance issue, system error, or even training to better understand a particular Dynamics 365 application. </p>
                   <p>With 150+ certified Microsoft consultants serving 500+ businesses around the globe, we can help you improve your business while maximising its growth potential. </p>
-                  <p>Currently, we are one of the top Microsoft Dynamics Gold Partners in Manchester, offering remote as well as field services to businesses situated near Manchester as well. In short, we are just a call away. </p>
+                  <p>Currently, we are one of the top Microsoft Dynamics Solutions Partners in Manchester, offering remote as well as field services to businesses situated near Manchester as well. In short, we are just a call away. </p>
                   <p>Whenever you face any kind of issue related to Microsoft Dynamics 365 solutions, you need to pick up the phone and call us at <strong>+44 161 394 0487</strong>. </p>
                   
               </div>

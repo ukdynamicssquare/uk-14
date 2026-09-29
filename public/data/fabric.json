@@ -12,7 +12,7 @@
   {
     "id": 3,
     "question": "Why choose Dynamics Square for Microsoft Fabric consulting in the UK?",
-    "answer": "<p>Dynamics Square is a Microsoft Gold Certified Solutions Partner with direct experience across Dynamics 365, Business Central, Power Platform, and Azure. That ecosystem knowledge means Fabric implementations are built around how a business already uses its Microsoft systems, not designed in isolation.</p>"
+    "answer": "<p>Dynamics Square is a Microsoft Solutions Partner with direct experience across Dynamics 365, Business Central, Power Platform, and Azure. That ecosystem knowledge means Fabric implementations are built around how a business already uses its Microsoft systems, not designed in isolation.</p>"
   },
   {
     "id": 4,
@@ -57,6 +57,6 @@
   {
     "id": 12,
     "question": "How can Dynamics Square help with Microsoft Fabric?",
-    "answer": "<p>Dynamics Square helps with every stage of a Microsoft Fabric rollout, including consulting, implementation, integration with Dynamics 365 and Business Central, data migration, and ongoing support, backed by Microsoft Gold Certified Partner status.</p>"
+    "answer": "<p>Dynamics Square helps with every stage of a Microsoft Fabric rollout, including consulting, implementation, integration with Dynamics 365 and Business Central, data migration, and ongoing support, backed by Microsoft Solutions Partner status.</p>"
   }
 ]

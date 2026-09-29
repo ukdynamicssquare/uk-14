@@ -888,7 +888,7 @@ const HumanResource = () => {
                         business. With the individualised demands and increased
                         need for customisation, it would not be right to give
                         you exact data. However, you can contact a certified
-                        gold support partner like{" "}
+                        Solutions Partner for support like{" "}
                         <Link href="/" target="_blank">Dynamics Square</Link> to discuss your
                         needs. Once our expert consultants understand your
                         needs, we will give you an estimate of the time and cost

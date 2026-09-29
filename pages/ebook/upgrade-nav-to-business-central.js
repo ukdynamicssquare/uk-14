@@ -276,9 +276,7 @@ const StartGuide = () => {
                     >
                       <div className="accordion-body">
                         <p>
-                          Business Central 2022 Wave 1 (BC 20) is the latest
-                          version. And D365 Business Central 2022 Wave 2 (BC21)
-                          is an upcoming version. Profitable growth begins with
+                          The latest release is Business Central 2026 release wave 2 (v29). Microsoft ships two major releases a year, in April and October. Profitable growth begins with
                           effectively managing the revenue. Hence, the key
                           benefits of making an upgrade from NAV to Business
                           Central are:

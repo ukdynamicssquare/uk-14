@@ -133,13 +133,13 @@ const D365VSDynamicsAX = () => {
                   <tbody>
                     <tr>
                       <td>
-                        <p>Dynamics AX 2009 </p>
+                        <p>Dynamics AX 2009 SP1</p>
                       </td>
                       <td>
                         <p>09-Oct-18</p>
                       </td>
                       <td>
-                        <p>12-Apr-22 </p>
+                        <p>12-Oct-21</p>
                       </td>
                     </tr>
                     <tr>
@@ -150,7 +150,7 @@ const D365VSDynamicsAX = () => {
                         <p>09-Oct-18</p>
                       </td>
                       <td>
-                        <p>12-Apr-22 </p>
+                        <p>12-Oct-21</p>
                       </td>
                     </tr>
                     <tr>
@@ -161,7 +161,7 @@ const D365VSDynamicsAX = () => {
                         <p>09-Oct-18</p>
                       </td>
                       <td>
-                        <p>12-Apr-22 </p>
+                        <p>12-Oct-21</p>
                       </td>
                     </tr>
                     <tr>
@@ -169,7 +169,7 @@ const D365VSDynamicsAX = () => {
                         <p>Dynamics AX 2012 R3</p>
                       </td>
                       <td>
-                        <p>09-Oct-24</p>
+                        <p>12-Oct-21</p>
                       </td>
                       <td>
                         <p>10-Jan-23</p>

@@ -35,7 +35,7 @@ const PowerBIGuide = () => {
   return (
     <>
       <Head>
-        <title>Dynamics 365 Business Central For Small Business [Guide 2025]</title>
+        <title>Dynamics 365 Business Central For Small Business [Guide 2026]</title>
         <meta
           name="description"
           content="Learn how Dynamics 365 Business Central helps for small businesses streamline operations, boost productivity, and drive growth efficiently."
@@ -169,7 +169,7 @@ const PowerBIGuide = () => {
                     alt="Future Scope of Business Central"
                   />
                   <h3>Chapter 7</h3>
-                  <p>What's new in Business Central 2025? </p>
+                  <p>What's new in Business Central 2026? </p>
                 </a>
               </div>
             </div>
@@ -222,7 +222,7 @@ const PowerBIGuide = () => {
           <div className="row justify-content-center g-4">
             <div className="col-lg-12">
               <div className="cont-table-inner">
-                <h2>The Ultimate Business Central Guide for SMBs (2025)</h2>
+                <h2>The Ultimate Business Central Guide for SMBs (2026)</h2>
                 <p>
                   Data is everywhere, but you need the right tool to extract it.
                 </p>
@@ -2415,7 +2415,7 @@ const PowerBIGuide = () => {
             <div className="col-lg-8">
               <header className="section-header section-header-tabless">
                 <h2>
-                  <strong>Chapter 7</strong>What's new in Business Central 2025?
+                  <strong>Chapter 7</strong>What's new in Business Central 2026?
                 </h2>
                 <p>
                   In this chapter, we will get to know the most recent changes
@@ -2577,7 +2577,7 @@ const PowerBIGuide = () => {
                 </p>
                 <ul>
                   <li>
-                    With the Business Central 21.1 version (latest version), the
+                    With Business Central (the latest release being 2026 release wave 2, v29), the
                     users of Microsoft Teams can access the Business Central
                     data without owning a Business Central license.
                   </li>
@@ -2824,7 +2824,7 @@ const PowerBIGuide = () => {
                 <p>
                   At Dynamics Square, we have been providing seamless Business
                   Central support and services to businesses for the past ten
-                  years. As a certified Gold partner in the UK, we have the
+                  years. As a certified Microsoft Solutions Partner in the UK, we have the
                   resources and expertise needed to provide you with the best
                   possible solution for any issue you may be facing. We have a
                   dedicated team of consultants who are experienced in ERP, CRM,

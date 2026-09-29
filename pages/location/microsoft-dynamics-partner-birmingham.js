@@ -7,7 +7,7 @@ const MicrosoftDynamicsPartnerBirmingham = () => {
     <>
       <Head>
       <title>Microsoft Dynamics Partner in Birmingham, UK</title>
-<meta name="description" content="Looking for a trusted Microsoft Dynamics gold partner in Birmingham, UK? We provide implementation, customization, and support solution. Contact us today!"/>
+<meta name="description" content="Looking for a trusted Microsoft Dynamics Solutions Partner in Birmingham, UK? We provide implementation, customization, and support solution. Contact us today!"/>
 <link rel="canonical" href="https://www.dynamicssquare.co.uk/location/microsoft-dynamics-partner-birmingham/" />
 
       </Head>

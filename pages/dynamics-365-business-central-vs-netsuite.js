@@ -193,7 +193,7 @@ const BcNetSuite = () => {
                     </tr>
                     <tr>
                       <td>Pricing</td>
-                      <td>Starts from £57.50 /user/month </td>
+                      <td>Starts from £61.50 /user/month </td>
                       <td>Custom pricing model </td>
                     </tr>
                     <tr>

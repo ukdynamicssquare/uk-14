@@ -1316,7 +1316,7 @@ Microsoft Dynamics 365 Business Central Partner UK | Dynamics Square
                   Dynamics Square is poised to help you manoeuvre the
                   complexities of the digital transformation by building
                   intuitive, robust business solutions that add value to your
-                  people, processes, and data. Being a certified Business Central <Link href="/" target="_blank">Microsoft Gold partner</Link> UK, we worked with clients across domains including
+                  people, processes, and data. Being a certified Business Central <Link href="/" target="_blank">Microsoft Solutions Partner</Link> UK, we worked with clients across domains including
                   Finance, Sales, Customer Service, and Manufacturing.
                 </p>
                 <p style={{ color: "var(--color-blue)", fontSize: "18px" }}>
@@ -2132,7 +2132,7 @@ Microsoft Dynamics 365 Business Central Partner UK | Dynamics Square
                     <div className="accordion-body">
                       <p>
                         You will get direct support from Dynamics Square as we
-                        are a gold partner for Microsoft's products with
+                        are a Microsoft Solutions Partner for Microsoft's products with
                         existence in the UK market and other global locations
                         with a well-equipped support system. Our support system
                         includes end-user training, technical assistance, and

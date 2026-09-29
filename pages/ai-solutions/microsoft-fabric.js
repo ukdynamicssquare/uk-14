@@ -651,7 +651,7 @@ const Fabric = () => {
                   <h2>Why Dynamics Square as Your Microsoft Fabric Partner</h2>
                 </div>
                 <p>Fear no data chaos. Dynamics Square exists to turn scattered systems into one clear, usable source of truth, and Microsoft Fabric is the platform we use to make that happen.</p>
-                <p>We are a Microsoft Gold Certified Solutions Partner with over a decade of hands-on Microsoft ecosystem experience, spanning Dynamics 365, Business Central, Power Platform, Azure, and now Fabric. That combination matters. A Fabric implementation built by a team that also understands your ERP and CRM will always fit your business better than one built in isolation.</p>
+                <p>We are a Microsoft Solutions Partner with over a decade of hands-on Microsoft ecosystem experience, spanning Dynamics 365, Business Central, Power Platform, Azure, and now Fabric. That combination matters. A Fabric implementation built by a team that also understands your ERP and CRM will always fit your business better than one built in isolation.</p>
                 <p>We treat Fabric as an extension of the systems you already run. Every implementation starts with your existing systems, your reporting pain points, and your team's day-to-day workflows, and builds outward from there. The result is a data platform your team opens and uses every day.</p>
                 <div className="text-lg-start">
                   <Link

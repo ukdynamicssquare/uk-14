@@ -1105,7 +1105,7 @@ const Index = () => {
                   >
                     <div className="accordion-body">
                       When it comes to Dynamics 365 Supply Chain Management
-                      solutions, businesses are required to pay 135.70 pounds
+                      solutions, businesses are required to pay 161.50 pounds
                       (approx.) per user/per month. Rest depends on your number
                       of users; it will be calculated accordingly.
                     </div>

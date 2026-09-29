@@ -258,7 +258,7 @@ const UpgradeServices = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-upgrade-service_gold-partner.svg"
-                            alt="icons-upgrade-service_gold-partner"
+                            alt="Microsoft Solutions Partner"
                           />
                         </div>
                         <span>Authorized Solutions Partner</span>
@@ -272,7 +272,7 @@ const UpgradeServices = () => {
                     >
                       <div className="accordion-body">
                         Comprising extensive expertise along with years of
-                        proficiency, we are an authorized gold partner for
+                        proficiency, we are an authorized Microsoft Solutions Partner for
                         Microsoft products and services. From seamless{" "}
                         <Link href="/our-services/dynamics-365-implementation-services/">
                           Dynamics 365 implementation

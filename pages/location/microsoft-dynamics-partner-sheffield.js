@@ -45,7 +45,7 @@ const MicrosoftDynamicsPartnerSheffield = () => {
             <div className="col-lg-6 align-self-center">
               <div className="commen-rit-info">
                 <h2>Dynamics Square - A Trusted Microsoft Dynamics Partner in Sheffield (UK)</h2>
-                <p>With 14+ years of experience empowering businesses to achieve their goals and accelerate business growth, Dynamics Square is here—with you and for you. As a certified <Link href="/">Microsoft Dynamics solutions partner</Link>, we are helping businesses scale and grow at a fast pace by utilising innovative and powerful Microsoft business solutions. </p>
+                <p>With 14+ years of experience empowering businesses to achieve their goals and accelerate business growth, Dynamics Square is here—with you and for you. As a certified <Link href="/">Microsoft Dynamics Solutions Partner</Link>, we are helping businesses scale and grow at a fast pace by utilising innovative and powerful Microsoft business solutions. </p>
                 <p>Currently, we are one of the best choices for small and medium businesses to avail upgrade, support, and implementation services for Dynamics 365. And 600+ growing businesses around the globe support the above statement as fact. Managing and offering such an exceptional service isn't easy at all, but with 150+ Microsoft-certified Dynamics 365 consultants, we have become the best choice for growing organisations.</p>
                 <p>Irrespective of the business efficiency, whether they are dealing with a low level of resources or inadequate technologies, we understand the specific requirements to offer a tailored solution perfect for your business. We are committed to offering personalised Microsoft Dynamics 365 services in Sheffield, UK, while offering the best customer experience to native businesses. </p>
                 <p>We do understand that unique businesses consist of different complex operations that drive growth and revenue. The good part is that Microsoft understands such requirements and offers various business solutions under the <Link href="/products/microsoft-dynamics-365/">Microsoft Dynamics 365 ecosystem</Link>. These solutions are so powerful that they align with the business needs and transform the business to achieve maximum efficiency, revenue, and productivity. </p>
@@ -311,7 +311,7 @@ const MicrosoftDynamicsPartnerSheffield = () => {
         <div className='row justify-content-center'>
             <div className='col-lg-9'>
             <header className="section-header">
-            <h2>Sheffield Based Microsoft Gold Partners </h2>
+            <h2>Sheffield Based Microsoft Solutions Partners </h2>
           </header>
             </div>
           </div>

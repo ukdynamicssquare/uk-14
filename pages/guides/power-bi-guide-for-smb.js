@@ -2736,7 +2736,7 @@ const PowerBIGuide = () => {
                 </p>
                 <p>
                   We are a certified{" "}
-                  <Link href="/">Microsoft gold partner</Link> and a leading{" "}
+                  <Link href="/">Microsoft Solutions Partner</Link> and a leading{" "}
                   <b>Power BI consultant</b> in the UK, working for the last{" "}
                   <b>14+ years</b> to help organisations get data-driven results
                   for high-impact growth.

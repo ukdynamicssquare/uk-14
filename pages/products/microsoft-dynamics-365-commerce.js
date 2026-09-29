@@ -799,7 +799,7 @@ const Commerce = () => {
                         determines the cost of implementation is the complexity
                         of the solution and the business requirements. To get an
                         accurate estimate, you need to contact a
-                        Microsoft-certified gold partner like Dynamics Square.
+                        Microsoft Solutions Partner like Dynamics Square.
                       </p>
                     </div>
                   </div>

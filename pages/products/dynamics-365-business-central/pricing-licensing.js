@@ -323,7 +323,7 @@ const BusinessCentral = () => {
           <div className='row'>
             <div className='col-lg-7'>
               <div className='solution-new-banner-sub-head'>
-                <h2>How Business Central Pricing Works: Licensing Model and Attach Licenses</h2>
+                <h2>How Business Central Pricing Works: Licensing Model</h2>
                 <p>Microsoft Dynamics 365 Business Central pricing follows a subscription-based pricing model, where businesses pay per user, per month, billed annually.</p>
                 <p>However, pricing is not just about choosing a plan, it is structured around how different users interact with the system. Let’s understand different licensing models right from the official Dynamics 365 Business Central Licensing guide.</p>
               </div>
@@ -353,38 +353,6 @@ const BusinessCentral = () => {
                 </p>
                 <ul>
                   <li>The level of functionality available</li>
-                  <li>The type of additional applications that can be attached</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="col-lg-6">
-              <div className="license-card h-100">
-                <h3>Attach Licences (Cost Optimisation Opportunity)</h3>
-                <p>
-                  If users require multiple Dynamics 365 applications,
-                  Microsoft offers attach licences at a discounted rate.
-                </p>
-                <p className="mb-2">
-                  For example:
-                </p>
-                <ul>
-                  <li>Users with a qualifying base licence can add applications like <a href="/products/microsoft-dynamics-365-sales/">Dynamics 365 Sales</a>, <a href="/products/microsoft-dynamics-365-customer-service/">Customer Service</a>, or <a href="/products/microsoft-dynamics-365-field-service/">Field Service</a> at a lower monthly cost.
-                  </li>
-                </ul>
-                <p className="highlight-text">
-                  Attach licences can be typically availed at one-third
-                  of the base licence pricing:
-                </p>
-                <ul>
-                  <li>
-                    £20 per user/month for apps like Dynamics 365 Sales
-                    or Customer Service
-                  </li>
-                  <li>
-                    £30 per user/month for apps like Dynamics 365 Finance
-                    or Supply Chain Management
-                  </li>
                 </ul>
               </div>
             </div>
@@ -396,8 +364,7 @@ const BusinessCentral = () => {
                 <div className="insight-content">
                   <h4>An Important Insight:</h4>
                   <p>
-                    Attach licences do not include separate platform
-                    entitlements. They rely on the base licence,
+                    Your base licence determines the functionality available to each user,
                     which is why choosing the right base licence
                     is critical.
                   </p>

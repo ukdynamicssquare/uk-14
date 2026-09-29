@@ -1061,7 +1061,7 @@ const MicrosoftDynamicsNAV = () => {
                   >
                     <div className="accordion-body">
                       <p>
-                        Dynamics Square is a Microsoft Gold Certified Partner
+                        Dynamics Square is a Microsoft Solutions Partner
                         and has been providing Microsoft Dynamics NAV support
                         since 2013. With a team of over 130+ highly skilled and
                         certified consultants, we are one of the leading

@@ -30,7 +30,7 @@ const MicrosoftDynamicsPartnerGlasgow = () => {
               </h1>
               <p>
                 Get cloud solution for SMBs. We are experienced and trusted
-                Microsoft Gold Partners based in Glasgow, Scotland, UK.
+                Microsoft Solutions Partners based in Glasgow, Scotland, UK.
               </p>
               <div className="text-center text-lg-start">
                 <Link
@@ -513,7 +513,7 @@ const MicrosoftDynamicsPartnerGlasgow = () => {
       <section className="leads-sect">
         <div className="container">
           <header className="section-header">
-            <h2>Glasgow Based Microsoft Gold Partners</h2>
+            <h2>Glasgow Based Microsoft Solutions Partners</h2>
           </header>
           <div className="row justify-content-center">
             <div className="col-lg-7">
