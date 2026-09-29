@@ -11,8 +11,8 @@ const team = [
   { img: "/img/aboutus-new/team-gourav-goyal-new.png", name: "Gourav Goyal", role: "Co-Founder, Dynamics Square", quote: "Nurturing people and investing in their capabilities to build a resilient organisation." },
   { img: "/img/aboutus-new/team-manish-goyal-new.png", name: "Manish Goyal", role: "Co-Founder, Dynamics Square", quote: "As a tech company, we believe technology is meant to simplify, not complicate." },
   { img: "/img/aboutus-new/team-felton-lean-new.png", name: "Dr. Felton Lean", role: "The People Person", quote: "Helping employees and organisations achieve more through learning and development." },
-  { img: "/img/aboutus-new/team-nitesh-sharma-new.png", name: "Nitesh Sharma", role: "Head of Business Development", quote: "Every successful implementation begins with listening before launching." },
-  { img: "/img/aboutus-new/team-nitesh-sharma-new.png", name: "Nitesh Sharma", role: "Head of Business Development", quote: "Every successful implementation begins with listening before launching." },
+  { img: "/img/aboutus-new/team-nitesh-sharma-new.png", name: "Nitesh Sharma", role: "Head of Business Development", quote: "Every business has a story, and I learn about it before supporting its transformation." },
+  { img: "/img/aboutus-new/team-nitesh-sharma-new.png", name: "Balaji Ravindran", role: "Solution Architect", quote: "Every successful implementation begins with listening before launching." },
 ];
 
 const techGroups = [
@@ -75,12 +75,12 @@ const techGroups = [
 ];
 
 const services = [
-  { icon: "/img/aboutus-new/forum.png", title: "Advisory and Consulting", text: "We work with a consultative approach that studies your business, industry, and goals. The guidance you receive is practical, structured, and easy to follow." },
-  { icon: "/img/aboutus-new/settings_b_roll.png", title: "Dynamics 365 Implementation", text: "We ensure every stage of implementation stays consistent through detailed scoping, configuration, data migration, and testing. Every step is explained with clarity so your team stays confident." },
-  { icon: "/img/aboutus-new/emoji_objects.png", title: "Solutioning", text: "We study your workflows and customer journeys carefully so that we can design systems that support efficiency and scalability." },
-  { icon: "/img/aboutus-new/cloud_upload.png", title: "Upgrade", text: "Our upgrade services include careful planning, structured communication, and minimal functional disruption." },
-  { icon: "/img/aboutus-new/co_present.png", title: "Training", text: "Our training programmes are role-based and hands on. Each session empowers your team to feel confident and comfortable with the system." },
-  { icon: "/img/aboutus-new/simulation.png", title: "Dedicated Support", text: "Support remains proactive, responsive, and handled by real people who understand your business. Every interaction stays human and helpful." },
+  { icon: "/img/aboutus-new/forum.png", title: "Advisory and Consulting", text: "We study your business, industry, and goals first, then build guidance that is practical and easy for your team to act on." },
+  { icon: "/img/aboutus-new/settings_b_roll.png", title: "Dynamics 365 Implementation", text: "We keep every stage of implementation consistent through detailed scoping, configuration, data migration, and testing, explaining each step clearly so your team stays confident throughout." },
+  { icon: "/img/aboutus-new/emoji_objects.png", title: "Solutioning", text: "We study your workflows and customer journeys closely, so the systems we design deliver real efficiency and room to scale." },
+  { icon: "/img/aboutus-new/cloud_upload.png", title: "Upgrade", text: "Our upgrade services combine careful planning, structured communication, and minimal disruption to your day-to-day operations." },
+  { icon: "/img/aboutus-new/co_present.png", title: "Training", text: "Our training programmes are role-based and hands-on, built to leave your team genuinely confident and comfortable working in the system." },
+  { icon: "/img/aboutus-new/simulation.png", title: "Dedicated Support", text: "Support stays proactive and responsive, delivered by people who understand your business. Every interaction stays human." },
 ];
 
 const methodologies = [
@@ -607,11 +607,7 @@ const AboutUsNew = () => {
           <div className="row">
             <div className="col-lg-8">
               <h2>Services That Support Every Stage of Your Growth</h2>
-              <p>
-                As a leading Dynamics 365 consultants, our services are designed to guide your transformation with
-                care and structure. Every engagement stays transparent, collaborative, and aligned with your
-                expectations.
-              </p>
+              <p>We take a consultative approach that studies your business, your industry, and your goals before recommending anything. The guidance you get is practical, structured, and built for your team to actually use.</p>
             </div>
           </div>
           <div className="row">

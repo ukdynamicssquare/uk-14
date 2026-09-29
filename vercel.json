@@ -104,6 +104,16 @@
       "source": "/blog/qad-erp-to-dynamics-365-finance-migration-a-complete-guide-for-uk-manufacturers/",
       "destination": "/blog/qad-erp-to-dynamics-365-finance-migration/",
       "statusCode": 301
+    },
+    {
+      "source": "/blog/benefits-of-using-microsoft-copilot-in-dynamics-crm/",
+      "destination": "/blog/top-benefits-of-microsoft-copilot-in-dynamics-365-crm/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/business-central-for-discrete-manufacturing/",
+      "destination": "/industries/business-central-for-discrete-manufacturing/",
+      "statusCode": 301
     }
   ]
 }
