@@ -358,11 +358,6 @@ const AboutUsNew = () => {
       all(`${cls("heroText")}, ${cls("heroSubText")}`).forEach((p, i) => lines(p, true, (0.55 + i * 0.15) * SLOW));
       if (heroImg) {
         gsap.from(heroImg, { y: 90, opacity: 0, scale: 0.92, duration: 1.6 * SLOW, delay: 0.5 * SLOW, ease: EXPO });
-        gsap.to(heroImg, {
-          y: -50,
-          ease: "none",
-          scrollTrigger: { trigger: cls("hero"), start: "top top", end: "bottom top", scrub: 1 },
-        });
       }
 
       // ================= PARTNER STRIP =================

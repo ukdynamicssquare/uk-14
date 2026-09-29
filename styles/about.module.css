@@ -2684,3 +2684,12 @@ top: -168px;
     transition: none;
   }
 }
+
+/* Journey quote: keep clear of the 2024 timeline text on ~1200-1600px screens */
+@media (min-width: 992px) and (max-width: 1600px) {
+  .journeyQuote {
+    left: 52%;
+    right: 30px;
+    bottom: 5%;
+  }
+}

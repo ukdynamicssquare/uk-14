@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import DeskstopMenu from "./DeskstopMenu";
@@ -87,6 +87,21 @@ const HeaderWork = () => {
     }
   };
 
+  // Header leaves the document flow when it becomes fixed; keep its height
+  // reserved so the content below doesn't jump up.
+  const headerRef = useRef(null);
+  const [headerHeight, setHeaderHeight] = useState(0);
+
+  useEffect(() => {
+    const measure = () => {
+      const el = headerRef.current;
+      if (el && !el.classList.contains("fixed-top")) setHeaderHeight(el.offsetHeight);
+    };
+    measure();
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
+  }, [router.pathname]);
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 170) {
@@ -128,8 +143,10 @@ const HeaderWork = () => {
       {/* {!hide.some((p) => router.pathname.startsWith(p)) && (
         <TimerModal />
       )} */}
+      <div style={{ minHeight: headerHeight || undefined }}>
       <header
         id="header"
+        ref={headerRef}
         className={`header ${isFixed ? "fixed-top" : ""} ${currentHeaderClass}`}
       >
         <div className="top-header-sec">
@@ -165,6 +182,7 @@ const HeaderWork = () => {
           <MobileMenu />
         </div>
       </header>
+      </div>
 
       <style jsx global>{`
         /* Dropdowns/megamenus are CSS :hover-driven; force them closed the

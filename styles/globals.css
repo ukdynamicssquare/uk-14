@@ -344,11 +344,27 @@ section {
   /* transition: 0.5s all ease; */
   z-index: 997;
  min-height: 72px;
-  transition:
-    background-color 0.3s ease,
-    box-shadow 0.3s ease,
-    opacity 0.3s ease;
+  transition: none;
   /* padding: 15px 30px; */
+}
+/* smooth slide-down when the header becomes fixed on scroll */
+.header.fixed-top {
+  animation: headerSlideDown 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+@keyframes headerSlideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .header.fixed-top {
+    animation: none;
+  }
 }
 .logo-wrapper{
  width: 282px;
