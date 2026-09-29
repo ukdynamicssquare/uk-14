@@ -123,52 +123,6 @@ const choices = [
   { title: "Strong Client Relationships", text: "Clients stay with us for more than 5 years on average." },
 ];
 
-const locations = [
-    {
-        name: "Canada",
-        url: "/canada",
-        className: "canada",
-        flag: "/images/canada-flag.png",
-    },
-    {
-        name: "USA",
-        url: "/usa",
-        className: "usa",
-        flag: "/images/usa-flag.png",
-    },
-    {
-        name: "United Kingdom",
-        url: "/uk",
-        className: "uk",
-        flag: "/images/uk-flag.png",
-    },
-    {
-        name: "Netherlands",
-        url: "/netherlands",
-        className: "netherlands",
-        flag: "/images/netherlands-flag.png",
-    },
-    {
-        name: "India",
-        url: "/india",
-        className: "india",
-        flag: "/images/india-flag.png",
-    },
-    {
-        name: "Singapore",
-        url: "/singapore",
-        className: "singapore",
-        flag: "/images/singapore-flag.png",
-    },
-    {
-        name: "Australia",
-        url: "/australia",
-        className: "australia",
-        flag: "/images/australia-flag.png",
-    },
-];
-
-
 const AboutUsNew = () => {
   const mapRef = useRef(null);
   const [mapIn, setMapIn] = useState(false);
@@ -1182,7 +1136,7 @@ const AboutUsNew = () => {
 
       {/* Canada */}
       <a
-        href="/canada"
+        href="/contact-us/"
         className={`${styles.locationPin} ${styles.canada}`}
         aria-label="Canada"
       >
@@ -1200,7 +1154,7 @@ const AboutUsNew = () => {
 
       {/* USA */}
       <a
-        href="/usa"
+        href="/contact-us/"
         className={`${styles.locationPin} ${styles.usa}`}
         aria-label="USA"
       >
@@ -1218,7 +1172,7 @@ const AboutUsNew = () => {
 
       {/* UK */}
       <a
-        href="/uk"
+        href="/contact-us/"
         className={`${styles.locationPin} ${styles.uk}`}
         aria-label="United Kingdom"
       >
@@ -1236,7 +1190,7 @@ const AboutUsNew = () => {
 
       {/* Netherlands */}
       <a
-        href="/netherlands"
+        href="/contact-us/"
         className={`${styles.locationPin} ${styles.netherlands}`}
         aria-label="Netherlands"
       >
@@ -1254,7 +1208,7 @@ const AboutUsNew = () => {
 
       {/* India */}
       <a
-        href="/india"
+        href="/contact-us/"
         className={`${styles.locationPin} ${styles.india}`}
         aria-label="India"
       >
@@ -1272,7 +1226,7 @@ const AboutUsNew = () => {
 
       {/* Singapore */}
       <a
-        href="/singapore"
+        href="/contact-us/"
         className={`${styles.locationPin} ${styles.singapore}`}
         aria-label="Singapore"
       >
@@ -1290,7 +1244,7 @@ const AboutUsNew = () => {
 
       {/* Australia */}
       <a
-        href="/australia"
+        href="/contact-us/"
         className={`${styles.locationPin} ${styles.australia}`}
         aria-label="Australia"
       >
