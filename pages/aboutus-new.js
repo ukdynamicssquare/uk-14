@@ -658,35 +658,34 @@ const AboutUsNew = () => {
       <section className={styles.choiceSection}>
         <div className="container">
           <div className="row">
-            <div className="col-lg-6">
-              <h2>What Makes Dynamics Square a Preferred Choice</h2>
-              <p>Businesses across sectors choose Dynamics Square for reasons that go beyond price.</p>
+            <div className="col-lg-7 order-1 align-self-center">
               <div className="row">
+                <div className="col-lg-12">
+                  <div className={styles.choiceHead}>
+                    <h2>What Makes Dynamics Square a Preferred Choice</h2>
+                    <p>Businesses across sectors choose Dynamics Square for reasons that go beyond price.</p>
+                  </div>
+                </div>
                 {choices.map((c) => (
-                  <div className="col-sm-6" key={c.title}>
-                    <div className={styles.checkItem}>
-                      <i className="bi bi-check-circle-fill"></i>
-                      <div>
-                        <h6>{c.title}</h6>
+                  <div className="col-lg-6 d-flex" key={c.title}>
+                    <div className={styles.choiceCard}>
+                      <div className={styles.choiceCardBody}>
+                        <h3><span><i className="bi bi-check2"></i></span>{c.title}</h3>
                         <p>{c.text}</p>
                       </div>
                     </div>
                   </div>
                 ))}
+                <div className="col-lg-12">
+                  <Link href="/contact-us" className={styles.btnRed}>
+                    Let&apos;s Get You Started <i className="bi bi-arrow-right"></i>
+                  </Link>
+                </div>
               </div>
-              <Link href="/contact-us" className={styles.btnRed}>
-                Let&apos;s Get You Started <i className="bi bi-arrow-right"></i>
-              </Link>
             </div>
-            <div className="col-lg-6 mt-5 mt-lg-0">
+            <div className="col-lg-5 order-2 align-self-center">
               <div className={styles.choiceImageWrap}>
-                <Image
-                  src="/img/aboutus-new/team-celebrating.png"
-                  alt="Dynamics Square team celebrating"
-                  width={420}
-                  height={520}
-                  style={{ width: "100%", height: "auto", borderRadius: "12px" }}
-                />
+                <Image src="/img/n-016.png" alt="Dynamics Square team celebrating" width={401} height={455} className={styles.choiceImage} />
               </div>
             </div>
           </div>
