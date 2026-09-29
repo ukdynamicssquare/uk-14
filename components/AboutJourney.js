@@ -56,12 +56,12 @@ const Crown = () => (
 const milestones = [
   {
     year: "2011",
-    x: 335,
-    y: 748,
+    x: 295,
+    y: 737,
     dir: "up",
     icon: <i className="bi bi-briefcase-fill" />,
     text: "Our company began with a mission to simplify ERP complexity for businesses.",
-    tx: -3.5,
+    tx: -6.5,
     tw: 8.5,
     cl: 2.8,
   },
@@ -190,12 +190,11 @@ const AboutJourney = () => {
       sizeTrack();
       ScrollTrigger.addEventListener("refreshInit", sizeTrack);
 
-      // Forward only: scrolling back up never rewinds the animation. The timeline follows the furthest
-      // scroll position reached so far, with a little smoothing.
-      let furthest = 0;
+      // The timeline follows the scroll position with a little smoothing, so scrolling back up before the
+      // road is finished rewinds it (pins and text are removed again). Once the hold ends (onLeave below)
+      // the finished state is locked in.
       const follow = (progress) => {
-        furthest = Math.max(furthest, progress);
-        gsap.to(tl, { progress: furthest, duration: 0.8, ease: "power1.out", overwrite: true });
+        gsap.to(tl, { progress, duration: 0.8, ease: "power1.out", overwrite: true });
       };
 
       const tl = gsap.timeline({
@@ -207,10 +206,12 @@ const AboutJourney = () => {
           trigger: track,
           start: `top ${TOP_OFFSET}px`,
           end: () => `bottom top+=${TOP_OFFSET + sticky.offsetHeight}`,
+          // progress is driven only by scroll via follow(); without this GSAP's default "play" would auto-run the timeline
+          toggleActions: "none none none none",
           onUpdate: (self) => follow(self.progress),
           invalidateOnRefresh: true,
-          // Plays once, on the way down. When the hold ends the timeline stays in its finished state and the
-          // extra scroll space is removed, so scrolling back up neither re-holds nor reverses it.
+          // While the map is held, scrolling up rewinds the animation. When the hold ends the timeline stays in
+          // its finished state and the extra scroll space is removed, so scrolling back up neither re-holds nor reverses it.
           onLeave: (self) => {
             const distance = self.end - self.start;
             gsap.killTweensOf(tl);
