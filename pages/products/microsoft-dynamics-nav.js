@@ -384,7 +384,7 @@ const MicrosoftDynamicsNAV = () => {
                     >
                       <div className="accordion-body">
                         <p>
-                          Using Micrsoft Navision, businesses can make a big
+                          Using Microsoft Navision, businesses can make a big
                           difference to the level of customer service they
                           provide. Eventually, it will be more likely to win
                           over new customers and keep their existing ones coming

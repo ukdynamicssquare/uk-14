@@ -820,7 +820,7 @@ const PowerBI = () => {
                       The very first benefit of Power BI over a traditional one
                       is - Power BI can be configured for on-premises as well as
                       on-cloud i.e., Software as a Service (SaaS). Users can
-                      access their data (hosted on Microsof's Azure Server)
+                      access their data (hosted on Microsoft's Azure Server)
                       simply using their browser. Cloud-based Power BI solution
                       eliminates the upfront cost, hardware investment, and
                       lowers the license pricing.

@@ -207,7 +207,7 @@ const WhyUs = () => {
                         <span>Flexible Engagement Model</span>
                       </h3>
                       <p>
-                        At Dynamic Square, our services feature a remarkable
+                        At Dynamics Square, our services feature a remarkable
                         degree of flexibility. We’ll be there when you need us
                         to keep your project on schedule and ensure its success.
                       </p>

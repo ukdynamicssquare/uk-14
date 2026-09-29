@@ -76,7 +76,7 @@ const Startup = () => {
               <h2>
                 kickstart your startup
                 <br />
-                with microsoft dynamics 365
+                with Microsoft Dynamics 365
               </h2>
               <p>
                 {" "}

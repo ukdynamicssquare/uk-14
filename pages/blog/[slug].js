@@ -907,15 +907,8 @@ function Post({
                 meta_keyword={item.meta_keyword}
                 canonicalUrl={canonicalUrl}
 
-                /*
-                 * IMPORTANT:
-                 * Only use noindex when rank=1 really means
-                 * "do not index".
-                 *
-                 * If rank=1 means your BEST blog, change this.
-                 */
                 robots={
-                  item.rank === 1
+                  item.noIndex || item.rank === 1
                     ? "noindex, nofollow"
                     : null
                 }
@@ -1743,6 +1736,8 @@ export async function getStaticProps({
       ),
 
       rank: b.rank || 0,
+
+      noIndex: b.seo?.noIndex === true,
 
       short_description: extractStr(
         b.excerpt ||

@@ -14,10 +14,10 @@ const MarketingImplementation = () => {
   return (
     <>
       <Head>
-        <title>Dynamics 365 Marketing Implementation | Dynamics Square UK</title>
+        <title>Dynamics 365 Customer Insights – Journeys Implementation | Dynamics Square UK</title>
         <meta
           name="description"
-          content="Dynamics 365 Marketing implementation services by Dynamics Square UK. Drive smarter campaigns, real-time insights, and improved customer engagement."
+          content="Dynamics 365 Customer Insights – Journeys implementation services by Dynamics Square UK. Drive smarter campaigns, real-time insights, and improved customer engagement."
         />
         <link
           rel="canonical"
@@ -30,16 +30,16 @@ const MarketingImplementation = () => {
             <div className="col-lg-6 mobile-1">
               <h1>
                 Dynamics 365 <br />
-                Marketing <br /> Implementation
+                Customer Insights – Journeys <br /> Implementation
               </h1>
               <p>
                 Centralises customer information, utilize marketing automation,
                 and enhance overall marketing performance through implementing
-                Dynamics 365 Marketing.
+                Dynamics 365 Customer Insights – Journeys.
                 <br />
                 <br />
                 <b>
-                  Learn how Dynamics 365 Marketing implementation can help you
+                  Learn how Dynamics 365 Customer Insights – Journeys implementation can help you
                   transform the potential prospects into more recurring
                   customers while build strong relationship.
                 </b>
@@ -75,16 +75,16 @@ const MarketingImplementation = () => {
             <div className="col-lg-9">
               <header className="section-header">
                 <h2>
-                  How can Dynamic 365 Marketing can help you accelerate your
+                  How can Dynamics 365 Customer Insights – Journeys can help you accelerate your
                   marketing performance while engaging customers in real-time?
                 </h2>
                 <p>
-                  Dynamics 365 Marketing is a powerful automation application
+                  Dynamics 365 Customer Insights – Journeys is a powerful automation application
                   that can help you streamline all your marketing campaigns in a
                   more efficient and profitable manner. With the help of AI and
                   BI, it designs, predicts, and delivers accurate marketing
                   practises to the right audience for the sake of better ROI.
-                  Dynamics 365 Marketing implementation enables you to
+                  Dynamics 365 Customer Insights – Journeys implementation enables you to
                   communicate with your audience using the right set of
                   marketing channels, content, customer segments, and more,
                   resulting in a seamless customer journey from the beginning.
@@ -118,7 +118,7 @@ const MarketingImplementation = () => {
                       <div className="accordion-body">
                         <p>
                           <Link href="/products/microsoft-dynamics-365-marketing/" target="_blank">
-                            Dynamics 365 Marketing
+                            Dynamics 365 Customer Insights – Journeys
                           </Link>{" "}
                           allows the users to collaborate and share all kinds of
                           marketing data in real-time, ensuring a smooth
@@ -191,7 +191,7 @@ const MarketingImplementation = () => {
                     >
                       <div className="accordion-body">
                         <p>
-                          D365 Marketing is a practical tool that allows you to
+                          D365 Customer Insights – Journeys is a practical tool that allows you to
                           consume the automated in-built tools, ensuring smooth
                           flow of all marketing processes, including email,
                           social media, and event management. These different
@@ -227,7 +227,7 @@ const MarketingImplementation = () => {
                           Understanding the customer's needs is one of the most
                           important tasks for an organisation that must be
                           followed for sustainable growth. Dynamics 365
-                          Marketing comes with inbuilt forms features that
+                          Customer Insights – Journeys comes with inbuilt forms features that
                           enable you to conduct surveys to determine exactly
                           what your customers want from you. And, the best part
                           about forms feedback is that they can be integrated
@@ -270,7 +270,7 @@ const MarketingImplementation = () => {
                           customer, the customer journey must be engaging so
                           that customers stay hooked with the organisation.
                           There is no need for the team to directly interact
-                          with customers because Dynamics 365 Marketing
+                          with customers because Dynamics 365 Customer Insights – Journeys
                           implementation would make your system proficient
                           enough to automate such manual and recurring tasks.
                         </p>
@@ -334,7 +334,7 @@ const MarketingImplementation = () => {
                           We are living in a digital world where customers are
                           spread across different marketing channels as per
                           their choice. It lets you run marketing campaigns
-                          based on targeted customers. Dynamics 365 Marketing
+                          based on targeted customers. Dynamics 365 Customer Insights – Journeys
                           accepts this change and allows you to communicate with
                           your customers using various marketing channels and
                           different marketing modes, including SMS integration,
@@ -365,7 +365,7 @@ const MarketingImplementation = () => {
                     >
                       <div className="accordion-body">
                         <p>
-                          D365 Marketing is a cloud-based solution that collects
+                          D365 Customer Insights – Journeys is a cloud-based solution that collects
                           and records all customer data and shares it with the
                           concerned user whenever there is a need. You can
                           access this data from anywhere and anytime using any
@@ -390,7 +390,7 @@ const MarketingImplementation = () => {
                   Implementation!
                 </h3>
                 <p>
-                  Join hands with a cost-effective D365 Marketing implementation
+                  Join hands with a cost-effective D365 Customer Insights – Journeys implementation
                   partner today and avail support beyond it.
                 </p>
                 <div className="text-center m-o-t new-btn-nn">
@@ -421,7 +421,7 @@ const MarketingImplementation = () => {
               <div className="box-6">
                 <div className="box-6-top-head">
                   <h2>
-                    Our Simple yet Powerful D365 Marketing Implementation
+                    Our Simple yet Powerful D365 Customer Insights – Journeys Implementation
                     Methodology
                   </h2>
                   <p>
@@ -471,7 +471,7 @@ const MarketingImplementation = () => {
                           <h4>Development Phase</h4>
                           <p>
                             Our team will then start working on developing a
-                            tailored and suitable Dynamics 365 Marketing
+                            tailored and suitable Dynamics 365 Customer Insights – Journeys
                             solution that comprehends your objectives and helps
                             you achieve maximum growth with greater
                             profitability.
@@ -598,7 +598,7 @@ const MarketingImplementation = () => {
               <header className="section-header">
                 <h2>
                   Why Choose Dynamics Square as Your Trusted Dynamics 365
-                  Marketing Implementation Partner?
+                  Customer Insights – Journeys Implementation Partner?
                 </h2>
                 <p>
                   Our only objective is to comprehend your business processes,
@@ -676,7 +676,7 @@ const MarketingImplementation = () => {
                     <p>
                       Without relying on the complexity of the operations and
                       processes, we follow a quick, distinct, and seamless
-                      Dynamics 365 Marketing setup method to keep your
+                      Dynamics 365 Customer Insights – Journeys setup method to keep your
                       organisation operating effectively.
                     </p>
                   </div>
@@ -723,13 +723,13 @@ const MarketingImplementation = () => {
       <section id="pricing" className="pricing">
         <div className="container">
           <header className="section-header">
-            <h2>Dynamics 365 Marketing Pricing</h2>
+            <h2>Dynamics 365 Customer Insights – Journeys Pricing</h2>
           </header>
           <div className="row gy-4 p-9 justify-content-center">
             <div className="col-lg-6 col-md-6">
               <div className="box box-22">
                 <h3>
-                Dynamics 365 Marketing  <br /> (Dynamics 365 Insights – Journey)
+                Dynamics 365 Customer Insights – Journeys  <br /> (Dynamics 365 Insights – Journey)
                 </h3>
                 <p><b>New Customer</b></p>
                 <div className="price">
@@ -743,7 +743,7 @@ const MarketingImplementation = () => {
             <div className="col-lg-6 col-md-6">
               <div className="box box-22">
                 <h3>
-                Dynamics 365 Marketing Attach <br /> (Dynamics 365 Insights – Journey)
+                Dynamics 365 Customer Insights – Journeys Attach <br /> (Dynamics 365 Insights – Journey)
                 </h3>
                 <p><b>Existing Customer</b></p>
                 <div className="price">
@@ -815,7 +815,7 @@ const MarketingImplementation = () => {
             <h2>
               Have you got questions
               <br />
-              about Dynamics 365 Marketing Implementation?
+              about Dynamics 365 Customer Insights – Journeys Implementation?
             </h2>
             <p>Click through to our FAQ for the best answers!</p>
           </header>
@@ -871,7 +871,7 @@ const MarketingImplementation = () => {
                   >
                     <div className="accordion-body">
                       <p>
-                        In order for us to develop a proper D365 Marketing
+                        In order for us to develop a proper D365 Customer Insights – Journeys
                         implementation solution for you, your only
                         responsibility will be to provide correct information to
                         your Dynamics 365 installation partner regarding the
@@ -948,7 +948,7 @@ const MarketingImplementation = () => {
                       data-bs-toggle="collapse"
                       data-bs-target="#faq-content-5"
                     >
-                      What is the accurate cost of D365 Marketing
+                      What is the accurate cost of D365 Customer Insights – Journeys
                       implementation?
                     </button>
                   </h3>
@@ -962,7 +962,7 @@ const MarketingImplementation = () => {
                         The exact cost of implementation is determined by a
                         number of factors. To receive a precise price for the
                         implementation process, you may just phone us or
-                        complete the Contact Form, and one of our executive will
+                        complete the Contact Form, and one of our executives will
                         contact you soon.
                       </p>
                       <p>

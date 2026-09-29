@@ -71,7 +71,7 @@ const Bccontinia = () => {
             <div className='col-lg-9'>
               <header className="section-header">
                 <h2>Modernise your Expense Management Practices </h2>
-                <p>Get a real-time overview of all spending, upload receipts in real-time, and quickly process all expenses for approval. These are the few features of Contina Expense Management. More powerful features are listed below: </p>
+                <p>Get a real-time overview of all spending, upload receipts in real-time, and quickly process all expenses for approval. These are the few features of Continia Expense Management. More powerful features are listed below: </p>
               </header>
             </div>
           </div>
@@ -80,14 +80,14 @@ const Bccontinia = () => {
               <div className="style-grid-1">
                 <div className="style-grid-content">
                   <h3>Credit Card Transactions </h3>
-                  <p>Contina has a tie-up with a major credit card provider that enables submitting automatic card transactions with Contina Online Expense Management. In the event of a missing receipt, the system automatically generates an incomplete expense report and sends it to the user. </p>
+                  <p>Continia has a tie-up with a major credit card provider that enables submitting automatic card transactions with Continia Online Expense Management. In the event of a missing receipt, the system automatically generates an incomplete expense report and sends it to the user. </p>
                 </div>
               </div>
 
               <div className="style-grid-1">
                 <div className="style-grid-content">
                   <h3>Per Dim</h3>
-                  <p>Contina lets you calculate and monitor all your daily travel expenses, which include travel, food, and accommodation. You can easily submit all reports in real-time using the Continia Mobile Expense App or web portal to claim your expenses. </p>
+                  <p>Continia lets you calculate and monitor all your daily travel expenses, which include travel, food, and accommodation. You can easily submit all reports in real-time using the Continia Mobile Expense App or web portal to claim your expenses. </p>
                 </div>
               </div>
 
@@ -164,7 +164,7 @@ const Bccontinia = () => {
             </div>
             <div className="col-lg-6 align-self-center">
               <div className="side-heading-custom-01">
-                <h2>Contina Expense Management Pricing - Cost-Effective and Simple </h2>
+                <h2>Continia Expense Management Pricing - Cost-Effective and Simple </h2>
               </div>
               <div className="custom-p-001">
                 <p>Continia Expense Management is an integration for Business Central, which means you need to purchase a <Link href="/dynamics-365-business-central-pricing-licensing/" target="_blank">Business Central licence</Link> before purchasing access to Continia. However, the licencing terms of both solutions are based on per user. Also, the Continia pricing structure is based on various factors that include modules, the number of users, organisational requirements, and more. </p>

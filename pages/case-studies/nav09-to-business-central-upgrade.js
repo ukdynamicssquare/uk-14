@@ -419,7 +419,7 @@ const CaseStudyPasante = () => {
                   our stall. We can already see the growth in production brought
                   by our new system and we're only one and a half months in.
                   Thanks again to the team of Dynamics Square for all the
-                  support and hardwork.
+                  support and hard work.
                 </p>
                 <h4>Nicolas Hopwood</h4>
                 <span> IT and Facilities Manager</span>

@@ -117,11 +117,49 @@ async function getBlogNoindexExcludes() {
     page += 1;
   } while (page <= totalPages);
 
-  return blogs
-    .filter((b) => b?.rank === 1)
-    .map((b) => b.title_slug || b.slug)
-    .filter((slug) => typeof slug === 'string' && slug.trim() !== '')
-    .map((slug) => `/blog/${slug}`);
+  const slugOf = (b) => b?.title_slug || b?.slug;
+  const isValidSlug = (slug) => typeof slug === 'string' && slug.trim() !== '';
+
+  // The list endpoint does not return the `seo` object, so `seo.noIndex` can
+  // only be read from each blog's detail endpoint. Fetch them in small
+  // batches, retrying on 429, and throw on any other failure so a broken API
+  // never silently produces a sitemap that includes noindex blogs.
+  const fetchDetail = async (slug) => {
+    for (let attempt = 0; attempt < 5; attempt++) {
+      const response = await fetch(
+        `${apiBaseUrl}/api/public/blogs/slug/${encodeURIComponent(slug)}`,
+        { headers: { 'x-api-key': apiKey, 'Content-Type': 'application/json' } }
+      );
+      if (response.status === 429) {
+        await new Promise((resolve) => setTimeout(resolve, 1000 * (attempt + 1)));
+        continue;
+      }
+      if (response.status === 404) return null;
+      if (!response.ok) {
+        throw new Error(`Blog API HTTP ${response.status} for ${slug} while building sitemap excludes`);
+      }
+      return response.json();
+    }
+    throw new Error(`Blog API HTTP 429 for ${slug} while building sitemap excludes`);
+  };
+
+  const noindexSlugs = new Set(
+    blogs.filter((b) => b?.rank === 1).map(slugOf).filter(isValidSlug)
+  );
+
+  const slugs = blogs.map(slugOf).filter(isValidSlug);
+  const BATCH_SIZE = 8;
+  for (let i = 0; i < slugs.length; i += BATCH_SIZE) {
+    await Promise.all(
+      slugs.slice(i, i + BATCH_SIZE).map(async (slug) => {
+        const detail = await fetchDetail(slug);
+        const blog = detail?.blog || detail;
+        if (blog?.seo?.noIndex === true) noindexSlugs.add(slug);
+      })
+    );
+  }
+
+  return [...noindexSlugs].map((slug) => `/blog/${slug}`);
 }
 
 /** @type {import('next-sitemap').IConfig} */

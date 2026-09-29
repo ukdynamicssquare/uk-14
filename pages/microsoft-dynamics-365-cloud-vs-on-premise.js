@@ -551,7 +551,7 @@ const CloudvsOnpremise = () => {
                     <tr>
                       <td>Flexibility</td>
                       <td>Higher flexibility through integrated redundancy capabilities </td>
-                      <td>Hardware dependent and its expensive to install redundant server for back-up</td>
+                      <td>Hardware dependent and it's expensive to install redundant server for back-up</td>
                     </tr>
                     <tr>
                       <td>Data Visualisation </td>

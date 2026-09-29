@@ -58,7 +58,7 @@ const PowerPlatform = () => {
               Power Platform is a set of Microsoft solutions that enables you to
               build intelligent, scalable, and automated applications for
               multiple devices with little to no code. Power BI, Power Apps,
-              Power Automate, and Power Virtual Agents are based on Common Data
+              Power Automate, and Microsoft Copilot Studio are based on Common Data
               Service, which stores all the business data and facilitates its
               security and uses in the different applications.
             </p>
@@ -158,14 +158,14 @@ const PowerPlatform = () => {
           <div className="row pad9x pad11x">
             <div className="col-lg-8 align-self-center">
               <div className="commen-rit-info">
-                <h3>Power Virtual Agents</h3>
+                <h3>Microsoft Copilot Studio</h3>
                 <p>
                   <strong>
                     Tool to create intelligent chatbots. No Codes Required
                   </strong>
                 </p>
                 <p>
-                  Power Virtual Agents is a tool designed to create
+                  Microsoft Copilot Studio is a tool designed to create
                   conversational experiences (chatbots) that offer support by
                   easily creating and maintaining virtual agents, without the
                   need for coding, using a guided graphical interface without

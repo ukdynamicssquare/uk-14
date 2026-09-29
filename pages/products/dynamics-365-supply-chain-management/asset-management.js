@@ -151,7 +151,7 @@ const AssetManagement = () => {
                         <div className="wr-in">
                           <img src="/img/Warehouse-Picks.png" alt="Warehouse-Picks" />
                         </div>
-                        <span>Manage Maintenane/Servicing</span>
+                        <span>Manage Maintenance/Servicing</span>
                       </button>
                     </h3>
                     <div
@@ -236,7 +236,7 @@ const AssetManagement = () => {
                     <p>
                     <ul>
                     <li>Asset master data management</li>
-                    <li>Funcitonal location management</li>
+                    <li>Functional location management</li>
                     <li>Asset hierarchy management</li>
                     <li>Work order management</li>
                     <li>Maintenance scheduling</li>

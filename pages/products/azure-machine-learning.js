@@ -83,7 +83,7 @@ const AzureMachineLearning = () => {
                   team to seamlessly prepare data sets, efficiently develop
                   Machine Learning models, bring innovation in your critical
                   business practices wrapped with enterprise-grade security and
-                  reliability. Streamline your entire Machine Leaning models
+                  reliability. Streamline your entire Machine Learning models
                   deployment whether on-premises, on-cloud, or at{" "}
                   <Link href="/products/azure-iot-edge/" target="_blank">Azure IoT Edge</Link>.
                 </p>

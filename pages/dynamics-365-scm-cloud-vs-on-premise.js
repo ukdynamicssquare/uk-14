@@ -509,7 +509,7 @@ const ScmCloudvsonPremise = () => {
                   <span>Years of Expertise</span>
                 </h4>
                 <p>
-                  Our years of expertise helps us to align ourselves with our
+                  Our years of expertise help us to align ourselves with our
                   customer's business needs, expectations with Microsoft
                   Business Solutions.
                 </p>

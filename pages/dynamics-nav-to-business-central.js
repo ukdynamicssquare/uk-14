@@ -739,7 +739,7 @@ const DynamicsNavToBusinessCentral = () => {
 
                 <p>Each new version of ERP brings forth new functionalities that can grow the business, amplify the performance, and protect your data like never before. Moreover, advanced cloud capabilities in newer versions have more refined interfaces and integrations that make everything easy and quick. </p>
 
-                <p>So, are you ready to do more with less hassles or no hassles at all?</p>
+                <p>So, are you ready to do more with fewer hassles or no hassles at all?</p>
 
                 <div className="text-center text-lg-start">
                   <Link
@@ -747,7 +747,7 @@ const DynamicsNavToBusinessCentral = () => {
                     data-bs-toggle="modal"
                     className="btn-get-started scrollto">
 
-                    <span>See how Dynamics Sqaure offers best Upgrade in the market <i className="bi bi-arrow-right"></i></span>
+                    <span>See how Dynamics Square offers best Upgrade in the market <i className="bi bi-arrow-right"></i></span>
 
                   </Link>
                 </div>
@@ -859,8 +859,8 @@ const DynamicsNavToBusinessCentral = () => {
             <div className='col-lg-4 top-margn-top-120'>
               <div className='callto-prpmo-offer'>
                 <div className='toe'>
-                  <h3>SAVE UPTO <span>40%</span></h3>
-                  <p className='coloor'>on licensing cost upto 3 years </p>
+                  <h3>SAVE UP TO <span>40%</span></h3>
+                  <p className='coloor'>on licensing cost up to 3 years </p>
                 </div>
                 <h4>We assure you the Best Rate in the Industry</h4>
                 <p>At Dynamics Square, we make sure you can save up to 40% on your NAV to Dynamics 365 Business Central upgrade.</p>

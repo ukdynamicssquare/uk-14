@@ -120,7 +120,7 @@ const Bcinsights = () => {
                       data-bs-parent="#accnew"
                     >
                       <div className="accordion-body">
-                        <p>Once you integrate Sana Commerce with Business Central ERP, you can access any kind of data in real-time from anywhere and anytime using any device. It unifies all data sources and provides a centralised platform when it comes to accessing data. Even so, it updates the database in real-stime, enabling users to make informed decisions instantly.</p>
+                        <p>Once you integrate Sana Commerce with Business Central ERP, you can access any kind of data in real-time from anywhere and anytime using any device. It unifies all data sources and provides a centralised platform when it comes to accessing data. Even so, it updates the database in real-time, enabling users to make informed decisions instantly.</p>
                       </div>
                     </div>
                   </div>

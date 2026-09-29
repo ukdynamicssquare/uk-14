@@ -283,11 +283,11 @@ Microsoft Dynamics 365 AI | Artificial intelligence
                       <br />
                       <ul>
                         <li>
-                          Offers a detail on the type of effiective
+                          Offers a detail on the type of effective
                           communication methods with the customers
                         </li>
                         <li>
-                          Priorotizes the leads that are more likely to convert
+                          Prioritises the leads that are more likely to convert
                           into potential customers
                         </li>
                         <li>Real-time notifications</li>
@@ -317,13 +317,13 @@ Microsoft Dynamics 365 AI | Artificial intelligence
                   >
                     <div className="accordion-body">
                       <ul>
-                        <li>Helps you understand the customer suport score</li>
+                        <li>Helps you understand the customer support score</li>
                         <li>
                           Points out the problems areas and shows options to
                           resolve them
                         </li>
                         <li>
-                          Ensures a boost in customer satisacion by highlighting
+                          Ensures a boost in customer satisfaction by highlighting
                           areas of improvement
                         </li>
                         <li>

@@ -484,7 +484,7 @@ const WhyMigrade360 = () => {
                 <br />
 
                 <h3 style={{fontSize:"18px",fontWeight:"500"}}>Boost Productivity - 2x your Revenue </h3>
-                <p>Dusiness Central simplifies the existing processes, promotes collaboration, and accelerates growth while enhancing overall productivity. </p>
+                <p>Business Central simplifies the existing processes, promotes collaboration, and accelerates growth while enhancing overall productivity. </p>
                 <p>Check out the video comparing financial reporting tools between Dynamics GP and Business Central.</p>
                 <br />
                 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/TlYBumCmTeA?start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>

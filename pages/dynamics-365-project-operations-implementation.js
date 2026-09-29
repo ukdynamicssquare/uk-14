@@ -76,7 +76,7 @@ const ProjectOperationImplementation = () => {
             <div className="col-lg-9">
               <header className="section-header">
                 <h2>
-                  How can Dynamic 365 Project Operations can help you accelerate
+                  How can Dynamics 365 Project Operations can help you accelerate
                   project deliveries while assuring optimum quality?
                 </h2>
                 <p>

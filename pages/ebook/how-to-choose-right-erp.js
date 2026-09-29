@@ -322,7 +322,7 @@ const Howtochooserighterp = () => {
                           <li>Improve the decision-making process</li>
                           <li>Data security</li>
                           <li>Modularity and Scalability</li>
-                          <li>Task Automation and much mor</li>
+                          <li>Task Automation and much more</li>
                         </ol>
                       </div>
                     </div>
@@ -394,7 +394,7 @@ const Howtochooserighterp = () => {
                           <br />
                           <br />
                           We ask for your information in exchange for a valuable
-                          resource in order to a improve your browsing
+                          resource in order to improve your browsing
                           experience by personalizing the Dynamics Square site
                           to your needs; b send information to you that we think
                           may be of interest to you by email or other means; You

@@ -132,7 +132,7 @@ const ContiniaExpence = () => {
             <div className='col-lg-8'>
               <div className='solution-new-cta-001'>
                 <h3>Missing receipts or late claims? Don't let these gaps become a norm</h3>
-                <p>Your ERP deserves a productivity engine. Choose Conitina to upgrade your expense management process. Because it can only get fixed with Continia. </p>
+                <p>Your ERP deserves a productivity engine. Choose Continia to upgrade your expense management process. Because it can only get fixed with Continia. </p>
                 <div>
                   <Link
                     href="#exampleModal"
@@ -767,7 +767,7 @@ const ContiniaExpence = () => {
                       <div className="row">
                         <div className="col-lg-6 d-flex">
                           <div className="inner-con-div-card">
-                            <p>Scanner or or <a href="/continia-document-capture-with-business-central/">Continia OCR</a> reads and maps receipt fields automatically </p>
+                            <p>Scanner or <a href="/continia-document-capture-with-business-central/">Continia OCR</a> reads and maps receipt fields automatically </p>
                           </div>
                         </div>
                         <div className="col-lg-6 d-flex">
@@ -949,7 +949,7 @@ const ContiniaExpence = () => {
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#faq-content-5"
-                    >What is Contina Expense Management pricing like?</button>
+                    >What is Continia Expense Management pricing like?</button>
                   </h3>
                   <div
                     id="faq-content-5"
@@ -957,7 +957,7 @@ const ContiniaExpence = () => {
                     data-bs-parent="#faqlist1"
                   >
                     <div className="accordion-body">
-                      <p>Contina Expense Management pricing is based on flat licence models, not per-user charges. It scales affordably with your growth. </p>
+                      <p>Continia Expense Management pricing is based on flat licence models, not per-user charges. It scales affordably with your growth. </p>
                     </div>
                   </div>
                 </div>

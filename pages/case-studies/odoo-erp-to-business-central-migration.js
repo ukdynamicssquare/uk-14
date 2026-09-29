@@ -182,7 +182,7 @@ const OdooErpToBusinessCentralMigration = () => {
                             />
                           </div>
                           <div className="text-wrp-content">
-                            <p>Oddo was replaced with Business Central Cloud to offer automation, smooth business functioning, and real-time process management.</p>
+                            <p>Odoo was replaced with Business Central Cloud to offer automation, smooth business functioning, and real-time process management.</p>
                           </div>
                         </div>
                       </div>
@@ -262,7 +262,7 @@ const OdooErpToBusinessCentralMigration = () => {
                     </div>
                   </div>
                   <div className="cintent-right">
-                    <p>The migration from odoo to Business Central results in cost savings, improved customer satisfaction, and overall business growth.</p>
+                    <p>The migration from Odoo to Business Central results in cost savings, improved customer satisfaction, and overall business growth.</p>
                   </div>
                 </div>
 
@@ -314,7 +314,7 @@ const OdooErpToBusinessCentralMigration = () => {
                   We worked with Nitesh to further customise our Microsoft
                   Dynamics Package. He provided us a top level service with well
                   trained staff as well as excellent support when needed.
-                  Dynamics Square is a very professional and trustworth. Will
+                  Dynamics Square is a very professional and trustworthy. Will
                   surely recommend to everyone
                 </p>
                 <h4>Terence Turner</h4>

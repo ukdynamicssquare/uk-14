@@ -1624,7 +1624,7 @@ const PowerBIGuide = () => {
                   <b className="h3">Sales Dashboard</b>
                 </p>
                 <p>
-                  The Powe BI Sales dashboard is for users, like sales managers,
+                  The Power BI Sales dashboard is for users, like sales managers,
                   who have to visualize the data based on sales data, count,
                   opportunity, and more.
                   <br className="mrg" /> The purpose of the sales dashboard is
@@ -1636,7 +1636,7 @@ const PowerBIGuide = () => {
               <div className="iner-pp">
                 <Image
                   src="/img/group-2304.png"
-                  alt="Powe BI Sales dashboard"
+                  alt="Power BI Sales dashboard"
                   width={1050}
                   height={586}
                 />
@@ -1915,7 +1915,7 @@ const PowerBIGuide = () => {
                   <li>
                     The combination of these two powerful applications enhances
                     the functionality of business intelligence and helps
-                    users implement informed decisionsbased on true data insights. Both Microsoft applications improve operational speeds, reduce the likelihood of errors, enhance the customer experience, and provide valuable insights to the sales team.
+                    users implement informed decisions based on true data insights. Both Microsoft applications improve operational speeds, reduce the likelihood of errors, enhance the customer experience, and provide valuable insights to the sales team.
                   </li>
                   <li>
                     It allows users to create real-time reports to make
@@ -2643,7 +2643,7 @@ const PowerBIGuide = () => {
                 </h2>
                 <p>
                   In this chapter, you will get to know the future scope of
-                  Power BI and how it will transform the ways of data data
+                  Power BI and how it will transform the ways of data
                   visualisations.
                 </p>
                 <div className="balnde-imge-mode">

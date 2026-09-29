@@ -108,8 +108,8 @@ const productCategories = [
       {
         href: "/products/microsoft-power-virtual-agents/",
         icon: "/img/menu-icons/virtual-agent.svg",
-        title: "Power Virtual Agents",
-        desc: "Create powerful AI Copilot bots to maximize productivity",
+        title: "Microsoft Copilot Studio",
+        desc: "Build AI agents and copilots to maximise productivity",
       },
     ],
   },

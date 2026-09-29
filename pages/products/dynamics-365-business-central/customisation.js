@@ -336,7 +336,7 @@ const Customisation = () => {
               <div className="col-lg-6 d-flex align-items-center">
                 <div className="side-heading">
                   <h2>Why Trust Dynamics Square for Business Central Customisation? </h2>
-                  <p>Dynamic Square has been in business for 14+ years, offering seamless and reliable services to global businesses. With years of experience and expertise, we understand how a business works and what it requires to grow, outshining all competition. </p>
+                  <p>Dynamics Square has been in business for 14+ years, offering seamless and reliable services to global businesses. With years of experience and expertise, we understand how a business works and what it requires to grow, outshining all competition. </p>
                   <p>Customising Business Central is the key to achieving exponential growth and maximising results. It is so flexible that we can customise it from zero to one to make it a perfect Microsoft ERP solution. </p>
                   <p>We have done over 200 <Link href="/dynamics-365-business-central-implementation/">Business Central implementations</Link> around the globe, considering unique business requirements. These successful implementations are boosting business operations, eliminating redundancies from the system, and enhancing profitability. </p>
                   <p>If you want to make your business stand out from the crowd and enhance its overall performance, you are just a call away. What you need to do is write us an email at <strong>info@dynamicssquare.co.uk</strong> with all your requirements, and one of our experts will get back to you in no time. Also, you can call us directly at <strong>0207 193 2502</strong> for instant support. </p>

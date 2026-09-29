@@ -351,7 +351,7 @@ With Dynamics 365 Solutions </h2>
               <div className="col-lg-12">
                 <div className="call-to-action-content">
                   <h3>Implement Technology to <br /> Make a Significant Impact on society. </h3>
-                  <p>Management of charity processes isn't an easy task as it requires less resources, less manpower, and less funds. With the scarcity of resources, there remains pressure on charities to perform better than expected. </p>
+                  <p>Management of charity processes isn't an easy task as it requires fewer resources, less manpower, and fewer funds. With the scarcity of resources, there remains pressure on charities to perform better than expected. </p>
                   <p>The <Link href="/our-services/dynamics-365-implementation-services/"></Link> of modern solutions, like Dynamics 365, can empower you to leverage the power of technology for your nonprofit's growth. It lets you manage your charity, NFP accounts, financial grants, global payments, promote collaboration, track expenses, monitor staff activities, and more crucial activities. </p>
                   <p>Leverage the trust of Microsoft Dynamics 365 to make a remarkable impact on society.</p>
                   <div className="text-center m-o-t m-o-t-hv">

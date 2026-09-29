@@ -73,7 +73,7 @@ const CustomerServiceImplementation = () => {
               <div className="col-lg-9">
                 <header className="section-header">
                   <h2>
-                    How can Dynamic 365 Customer Service help you maximise your
+                    How can Dynamics 365 Customer Service help you maximise your
                     sales by offering world-class customer support?{" "}
                   </h2>
                   <p>
@@ -886,7 +886,7 @@ const CustomerServiceImplementation = () => {
               <div className="price-btn price-btnasd d-flex justify-content-center">
                 <Link href="#exampleModal" data-bs-toggle="modal" className="btn-get-red">
 
-                  <span>Get Personlised Pricing Now! </span>
+                  <span>Get Personalised Pricing Now! </span>
 
                 </Link>
                 {/* <Link href="#about" className="btn-get-whit">

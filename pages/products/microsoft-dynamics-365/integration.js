@@ -215,7 +215,7 @@ const Integration = () => {
                                                 <div className="wr-in">
                                                     <span className="number-st">1</span>
                                                 </div>
-                                                <span>Continia Integrationy</span>
+                                                <span>Continia Integration</span>
                                             </button>
                                         </h3>
                                         <div

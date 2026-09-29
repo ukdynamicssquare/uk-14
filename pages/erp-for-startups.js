@@ -180,7 +180,7 @@ const ErpMicrosoftCloudFor = () => {
               <div className="col-lg-12">
                 <div className="new-cta-one">
                   <div className="new-cta-one-body">
-                    <h2> <span>Save upto 40%</span> on deployment and upgrade costs!</h2>
+                    <h2> <span>Save up to 40%</span> on deployment and upgrade costs!</h2>
                     <a href="#exampleModal" data-bs-toggle="modal" className="btn-get-star">See How It Works for Your Startup?</a>
                   </div>
                 </div>

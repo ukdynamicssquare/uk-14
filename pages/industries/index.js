@@ -93,7 +93,7 @@ const IndustriesList = () => {
                     <ul>
                       <li>Personalised Customer Experiences </li>
                       <li>Optimised Inventory Management </li>
-                      <li>RSeamless Omnichannel Retailing </li>
+                      <li>Seamless Omnichannel Retailing </li>
                     </ul>
                     <span>Learn More</span>
                   </div>
@@ -281,7 +281,7 @@ const IndustriesList = () => {
                   <div className="pic-body">
                     <h4>Build Customer Trust <br/>Increase Team Efficiency </h4>
                     <ul>
-                      <li>Streamined Customer Service </li>
+                      <li>Streamlined Customer Service </li>
                       <li>Optimised Inventory Control </li>
                       <li>Efficient Service Operations </li>
                     </ul>

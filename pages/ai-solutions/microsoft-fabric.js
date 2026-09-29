@@ -788,7 +788,7 @@ const Fabric = () => {
             <div className="col-lg-9 ">
               <div className="solution-new-banner-sub-head text-center">
                 <h2>Have you got
-                  questions about Microsoft Fabri?</h2>
+                  questions about Microsoft Fabric?</h2>
                 <p>Click through to our FAQ for the best answers!</p>
               </div>
             </div>

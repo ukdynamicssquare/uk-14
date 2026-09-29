@@ -119,7 +119,7 @@ const DynamicsNavSupportEndingSoon = () => {
           <header className="section-header">
             <h2>
               More Reasons to Upgrade from <br />
-              NAV to Busines Central
+              NAV to Business Central
             </h2>
           </header>
           <div className="row pad10x">
@@ -194,7 +194,7 @@ const DynamicsNavSupportEndingSoon = () => {
                   </h3>
                   <p>
                     You can easily integrate Power BI or any other Microsoft
-                    Apps like outlook, teams, office 365 and more.
+                    Apps like outlook, teams, Office 365 and more.
                   </p>
                 </div>
               </div>

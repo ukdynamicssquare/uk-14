@@ -397,7 +397,7 @@ const INDDD = () => {
                     <tr>
                       <td><b>Starting licence (UK)</b></td>
                       <td>Premium: £84.60/user/month</td>
-                      <td>Standard: approximately £165/user/month</td>
+                      <td>Standard: £161.50/user/month</td>
                     </tr>
                   </tbody>
                 </table>
@@ -586,14 +586,14 @@ const INDDD = () => {
             <div className="col-lg-4 d-flex">
               <div className="pharma-pricing-card">
                 <span className="pharma-pricing-card__tier">Standard</span>
-                <div className="pharma-pricing-card__price">from approximately £165<span>/user/month</span></div>
+                <div className="pharma-pricing-card__price">from £161.50<span>/user/month</span></div>
                 <p>It offers full process manufacturing engine, formula management and advanced quality management tools</p>
               </div>
             </div>
             <div className="col-lg-4 d-flex">
               <div className="pharma-pricing-card pharma-pricing-card--highlight">
                 <span className="pharma-pricing-card__tier">Premium</span>
-                <div className="pharma-pricing-card__price">from approximately £235<span>/user/month</span></div>
+                <div className="pharma-pricing-card__price">from £230.70<span>/user/month</span></div>
                 <p>It offers layers in advanced analytics and financial planning capability</p>
               </div>
             </div>

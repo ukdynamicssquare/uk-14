@@ -467,7 +467,7 @@ const MicrosoftCloudForNonpro = () => {
               <div className="col-lg-12">
                 <div className="new-cta-one">
                   <div className="new-cta-one-body">
-                    <h2>You can <span>save upto 40%</span> on deployment and upgrade costs!</h2>
+                    <h2>You can <span>save up to 40%</span> on deployment and upgrade costs!</h2>
                     <a href="#exampleModal" data-bs-toggle="modal" className="btn-get-star">See how it addresses your business challenges and accelerates growth</a>
                   </div>
                 </div>

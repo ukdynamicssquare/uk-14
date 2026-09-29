@@ -624,7 +624,7 @@ const SupportServices = () => {
                     data-bs-parent="#faqlist1"
                   >
                     <div className="accordion-body">
-                      <p>Microsoft offers different business management applications to help streamline their entire business while simplifying existing operations. These applications are supposed to be maintained, updated, and upgraded over time to meet customer as well as market demands. For this, we have certified Microsoft partners who offer support services, as Microsoft doesn,t provide such services directly to businesses. If you own any of the Microsoft Dynamics 365 solutions, you will need an efficient Dynamics 365 support partner for effective business operations.</p>
+                      <p>Microsoft offers different business management applications to help streamline their entire business while simplifying existing operations. These applications are supposed to be maintained, updated, and upgraded over time to meet customer as well as market demands. For this, we have certified Microsoft partners who offer support services, as Microsoft doesn't provide such services directly to businesses. If you own any of the Microsoft Dynamics 365 solutions, you will need an efficient Dynamics 365 support partner for effective business operations.</p>
                     </div>
                   </div>
                 </div>

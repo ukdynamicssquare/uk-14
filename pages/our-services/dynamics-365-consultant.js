@@ -45,7 +45,7 @@ const Dynamics365Consultant = () => {
                   </div>
 
                   <div className="domain-Expertise-list domain-Expertise-list-p">
-                    <p>With a team of 150+ certified Microsoft dynamics 365 consultants from different domains, Dynamics Square can offer you the best possible support to get your business back on track. Being a Microsoft certified solution partner, we have been helping businesses like yours to resolve even complex issues with minimal time and resources. It makes us stand out while offering cost-effective and trustworthy services.</p>
+                    <p>With a team of 150+ certified Microsoft Dynamics 365 consultants from different domains, Dynamics Square can offer you the best possible support to get your business back on track. Being a Microsoft certified solution partner, we have been helping businesses like yours to resolve even complex issues with minimal time and resources. It makes us stand out while offering cost-effective and trustworthy services.</p>
                     <p>Our 14+ years of extensive experience in offering <Link href="/products/microsoft-dynamics-erp/">Dynamics 365 ERP</Link> and CRM solutions in the UK has helped us build a brand you can rely on. This trust in us can supercharge your business operations, minimise complexities from the system, utilise the resources, and accelerate the business towards steep growth.</p>
                     <p>Microsoft has entitled us a UK's top Microsoft Solutions Partner to offer all businesses best-in-class <Link href="/our-services/dynamics-365-implementation-services/">Dynamics 365 implementation</Link>, support, and upgrade services. However, Microsoft has transformed the partner programme and replaced this title (Microsoft Solutions Partner) with a unified designation: Microsoft Solution Partner.</p>
                   </div>
@@ -130,7 +130,7 @@ const Dynamics365Consultant = () => {
               <div className="col-lg-7 align-self-center">
                 <div className="call_to_action-left" style={{marginTop:'-30px'}}>
                   <h3>Want to achieve great heights of your business while optimizing the processes? </h3>
-                  <p>Sel Dynamics 365 consultants can take your business to the next level (of growth and success).</p>
+                  <p>Our Dynamics 365 consultants can take your business to the next level (of growth and success).</p>
                   <div className="m-o-t m-o-t-inde">
                     <Link
                       href="#exampleModal"

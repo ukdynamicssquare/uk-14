@@ -5,7 +5,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
   return (
     <>
       <Head>
-        <title>Business Central Implementation for Food Trader | Dynamics Sqaure UK</title>
+        <title>Business Central Implementation for Food Trader | Dynamics Square UK</title>
         <meta
           name="description"
           content="Business Central for food Trader: A case study on transforming operations, reducing waste, and enhancing efficiency for better profitability."
@@ -16,7 +16,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
         />
         <meta property="og:locale" content="GB" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Business Central Implementation for Food Trader | Dynamics Sqaure UK" />
+        <meta property="og:title" content="Business Central Implementation for Food Trader | Dynamics Square UK" />
         <meta property="og:description" content="Business Central for food Trader: A case study on transforming operations, reducing waste, and enhancing efficiency for better profitability." />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/case-studies/business-central-reimplementation-for-food-trader/" />
         <meta property="og:site_name" content="Dynamics Square UK" />
@@ -26,7 +26,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
         <meta property="og:image:type" content="image/png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="Business Central Implementation for Food Industry | Dynamics Sqaure UK" />
+        <meta name="twitter:title" content="Business Central Implementation for Food Industry | Dynamics Square UK" />
         <meta name="twitter:description" content="Business Central for food Trader: A case study on transforming operations, reducing waste, and enhancing efficiency for better profitability." />
         <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/mgg-food-feautre.jpg" />
       </Head>
@@ -363,7 +363,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
             <div className="col-lg-4 d-flex">
               <div className="card-929">
                 <p>
-                  Identify areas of operational growth through better reportin
+                  Identify areas of operational growth through better reporting
                 </p>
               </div>
             </div>

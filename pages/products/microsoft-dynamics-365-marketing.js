@@ -125,7 +125,7 @@ const Marketing = () => {
                         team members, it definitely saves a lot of time. When
                         time is saved and the information is available at one
                         single place, the operations of the organisation
-                        continues to happen much smoothly and efficiently.
+                        continue to happen much smoothly and efficiently.
                       </div>
                     </div>
                   </div>
@@ -288,7 +288,7 @@ const Marketing = () => {
                         to collect feedback from the customers in order to
                         understand whether the product or service marketed is
                         gaining likes from the customers or not. Based on this
-                        feedback survey, teh organisations can either continue
+                        feedback survey, the organisations can either continue
                         with the product or may think of making any changes in
                         it.
                       </div>
@@ -448,7 +448,7 @@ const Marketing = () => {
                       <div className="accordion-body">
                         This particular function is something that allows the
                         users to create online forms for the purpose of
-                        marketing. Users can make use of thisparticular function
+                        marketing. Users can make use of this particular function
                         to create forms not just for direct marketing but also
                         for other functions such as surveys, and others.
                       </div>

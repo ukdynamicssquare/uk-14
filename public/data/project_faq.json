@@ -12,7 +12,7 @@
     {
       "id": 3,
       "question": "3. How do I install Project Operations in Dynamics 365?",
-      "answer": "<p>When installing project operations from <a href=\"/products/microsoft-dynamics-365/\">microsoft dynamics 365</a>, there are several installation options available. You have two options to start the installation:</p><ul><li>Using the existing CDS environment</li><li>Using a new CDS environment</li></ul><p>You must have access to Power Platform Administrator and a Project Operations to install project operations in a new environment.</p><p>In case, you have to create a new CDS environment using the Power Platform admin.</p><p>In the case of an existing CDS, you must have access to a <a href=\"/products/microsoft-power-platform/\">Power Platform</a> Administrator with a licence for Project Operations. Using <a href=\"/products/microsoft-power-bi/\">Power BI</a>, you have to locate the environment using the Power Platform admin center.</p>"
+      "answer": "<p>When installing project operations from <a href=\"/products/microsoft-dynamics-365/\">Microsoft Dynamics 365</a>, there are several installation options available. You have two options to start the installation:</p><ul><li>Using the existing CDS environment</li><li>Using a new CDS environment</li></ul><p>You must have access to Power Platform Administrator and a Project Operation to install project operations in a new environment.</p><p>In case, you have to create a new CDS environment using the Power Platform admin.</p><p>In the case of an existing CDS, you must have access to a <a href=\"/products/microsoft-power-platform/\">Power Platform</a> Administrator with a licence for Project Operations. Using <a href=\"/products/microsoft-power-bi/\">Power BI</a>, you have to locate the environment using the Power Platform admin center.</p>"
     },
     {
       "id": 4,
@@ -36,7 +36,7 @@
     },
     {
       "id": 8,
-      "question": "8. What are the core functions of Dynamic 365 Project Operations?",
+      "question": "8. What are the core functions of Dynamics 365 Project Operations?",
       "answer": "<p>Project Operations covers a lot of areas of a business, resulting in overall growth of almost all departments. Some of the areas are listed below:</p><ul><li>Project Planning</li><li>Project Sales</li><li>Invoicing</li><li>Revenue management</li><li>Ledger management</li><li>Project allocation</li><li>Management of project finances</li></ul>"
     },
     {

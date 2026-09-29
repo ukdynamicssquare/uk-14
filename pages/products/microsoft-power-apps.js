@@ -855,7 +855,7 @@ const PowerApps = () => {
                         You can connect an unlimited number of data sources,
                         apps, and services with Power Apps to make the whole
                         system work together and enhance the growth of the
-                        organsation. You can avail yourself of a library of
+                        organisation. You can avail yourself of a library of
                         Microsoft Dataverse and connectors to connect various
                         data sources together. Not only data sources, but you
                         can also integrate some other applications too,
@@ -931,7 +931,7 @@ const PowerApps = () => {
                       </p>
                       <ul>
                         <li>£4.10 per user/app/month </li>
-                        <li>£16.40 per user/month</li>
+                        <li>£15.40 per user/month</li>
                       </ul>
                       <p>
                         The pay-as-you-go plan is £8.20 per active

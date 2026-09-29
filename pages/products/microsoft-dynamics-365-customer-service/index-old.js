@@ -618,7 +618,7 @@ const CustomerService = () => {
               <div className="price-btn price-btnasd d-flex justify-content-center">
                 <Link href="#exampleModal" data-bs-toggle="modal" className="btn-get-red">
 
-                  <span>Get Personlised Pricing Now! </span>
+                  <span>Get Personalised Pricing Now! </span>
 
                 </Link>
                 {/* <Link href="#about" className="btn-get-whit">

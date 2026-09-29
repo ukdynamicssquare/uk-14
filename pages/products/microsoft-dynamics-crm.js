@@ -787,7 +787,7 @@ const MicrosoftDynamicsCrm = () => {
                       data-bs-toggle="collapse"
                       data-bs-target="#faq-content-5"
                     >
-                      What is Dynamics CRM known for in 2022?
+                      What is Dynamics CRM known for today?
                     </button>
                   </h3>
                   <div

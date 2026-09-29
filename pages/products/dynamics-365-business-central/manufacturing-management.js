@@ -67,7 +67,7 @@ const ManufacturingManagement = () => {
           <div className="row justify-content-center">
             <div className="col-lg-10">
               <header className="section-header">
-                <h2>What is Dynamis 365 Business Central for Manufacturing?</h2>
+                <h2>What is Dynamics 365 Business Central for Manufacturing?</h2>
                 <p>Microsoft Dynamics 365 Business Central for Manufacturing controls and manages the entire business while simplifying the various complex processes.</p>
                 <p>With the changing scenario around the globe, the manufacturing industry is becoming more and more complex due to various factors that include getting raw materials, higher competition, reducing margins, and more.</p>
                 <p>Regardless of such business complexities, customers require high-quality products at low prices along with on-time delivery. Even the tax regulations and norms are increasingly critical to follow.</p>

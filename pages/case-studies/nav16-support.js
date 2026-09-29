@@ -354,7 +354,7 @@ const CaseStudyGlobalTea = () => {
                 <div className="row">
                     <div className="col-md-12">
                         <div className="case-clent-test">
-                            <p>We worked with Nitesh to further customise our Microsoft Dynamics Package. He provided us a top level service with well trained staff as well as excellent support when needed. Dynamics Square is a very professional and trustworth. Will surely recommend to everyone</p>
+                            <p>We worked with Nitesh to further customise our Microsoft Dynamics Package. He provided us a top level service with well trained staff as well as excellent support when needed. Dynamics Square is a very professional and trustworthy. Will surely recommend to everyone</p>
                             <h4>Terence Turner</h4>
                             <span>General Manager | Arteak Limited</span>
                         </div>

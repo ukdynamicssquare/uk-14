@@ -105,7 +105,7 @@ const StartGuideOne = () => {
                  </div>
                  <div className="left-let">
                    <h3>
-                   Capabilities of Dynamic 365 Finance
+                   Capabilities of Dynamics 365 Finance
                    </h3>
                  </div>
                </div>
@@ -119,7 +119,7 @@ const StartGuideOne = () => {
                <div className="inner-l">
                  <div className="left-rit">
                    <h3>
-                   Top Benefits of Dynamic 365 Finance
+                   Top Benefits of Dynamics 365 Finance
                    </h3>
                    <div className="shape-l"></div>
                  </div>

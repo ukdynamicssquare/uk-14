@@ -669,7 +669,7 @@ const ImplementationServices = () => {
             <div className="col-md-8">
               <header className="section-header">
                 <h2>
-                  Have you got questions about Dynamic 365 Implementation
+                  Have you got questions about Dynamics 365 Implementation
                   Service?
                 </h2>
                 <p>Click through to our FAQ for the best answers!</p>

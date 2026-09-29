@@ -228,7 +228,7 @@ const MigrateFandSC = () => {
                           Customers running previous versions* of Dynamics 365
                           for Supply Chain Management can now take advantage of
                           new standard functionality that could reduce
-                          customization. Many common customization are now
+                          customization. Many common customizations are now
                           available as new standard functionality. This decrease
                           set up time and allows teams to spend less time coding
                           and more time enjoying the benefits.
@@ -552,7 +552,7 @@ const MigrateFandSC = () => {
                   <span>Years of Expertise</span>
                 </h3>
                 <p>
-                  Our years of expertise helps us to align ourselves with our
+                  Our years of expertise help us to align ourselves with our
                   customer's business needs, expectations with Microsoft
                   Business Solutions.
                 </p>

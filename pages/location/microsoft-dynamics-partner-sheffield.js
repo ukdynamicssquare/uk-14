@@ -255,7 +255,7 @@ const MicrosoftDynamicsPartnerSheffield = () => {
                 </div>
                 <div className="style-grid-content">
                   <h3>Microsoft Power Platform</h3>
-                  <p>Empower the business with data-driven insights. The Power Platform consists of five solutions that include Power BI, Power Apps, Power Pages, Power Automate, and Power Virtual Agents. These solutions offer different capabilities to deal with different complex operations. A <Link href="/power-bi-implementation/">Power BI implementation</Link> can enable your business to analyse and visualise the data without any hassle.</p>
+                  <p>Empower the business with data-driven insights. The Power Platform consists of five solutions that include Power BI, Power Apps, Power Pages, Power Automate, and Microsoft Copilot Studio. These solutions offer different capabilities to deal with different complex operations. A <Link href="/power-bi-implementation/">Power BI implementation</Link> can enable your business to analyse and visualise the data without any hassle.</p>
                 </div>
               </div>
             </div>

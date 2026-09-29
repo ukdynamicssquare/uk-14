@@ -12,7 +12,7 @@ const PowerVirtualAgents = () => {
     <>
       <Head>
         <title>
-          Microsoft Power Virtual Agents: Demo & Pricing UK | Dynamics Sqaure</title>
+          Microsoft Power Virtual Agents: Demo & Pricing UK | Dynamics Square</title>
         <meta
           name="description"
           content="Enhance customer experience and boost sales using AI enabled chatbots built with Microsoft Power Virtual Agents. Schedule a free demo today!"
@@ -270,7 +270,7 @@ const PowerVirtualAgents = () => {
                         The best thing is that if you are already using
                         Microsoft Office 365, you will already get this tool
                         integrated into it. The existence of power virtual
-                        agents for office 365 is a great thing that will allow
+                        agents for Office 365 is a great thing that will allow
                         the users to make use of the tool without the
                         requirement of downloading any extra tool on the
                         systems.
@@ -345,7 +345,7 @@ const PowerVirtualAgents = () => {
                       </h3>
                       <div className="overlay">
                         <p>
-                          Easily automate the most common common queries thanks
+                          Easily automate the most common queries thanks
                           to the Power Virtual Agent chatbot.
                         </p>
                       </div>

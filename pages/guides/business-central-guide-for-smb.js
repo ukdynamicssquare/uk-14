@@ -1420,7 +1420,7 @@ const PowerBIGuide = () => {
                     boosting reporting.
                   </li>
                   <li>
-                    Access the General Ledger moidule to accelerate financial
+                    Access the General Ledger module to accelerate financial
                     and accounting performance.
                   </li>
                   <li>
@@ -1913,7 +1913,7 @@ const PowerBIGuide = () => {
                     upload receipts online.
                   </li>
                   <li>
-                    It cross-check the transactions with the receipts and
+                    It cross-checks the transactions with the receipts and
                     notifies the user about any missing or flagged receipts.
                   </li>
                   <li>

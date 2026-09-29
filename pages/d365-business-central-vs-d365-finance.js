@@ -133,7 +133,7 @@ const BCvsFinance = () => {
                     </tr>
                     <tr>
                       <td>Financial Dimensions</td>
-                      <td>Available (Upto 8 Dimension)</td>
+                      <td>Available (Up to 8 Dimension)</td>
                       <td>Available (Unlimited)</td>
                     </tr>
                     <tr>

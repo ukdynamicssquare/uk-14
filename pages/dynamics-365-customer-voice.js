@@ -118,7 +118,7 @@ const CustomerVoice = () => {
                 <ul>
                   <li>A set of questions.</li>
                   <li>Images and videos for branding purposes.</li>
-                  <li>Personlised questions to trigger a particular motive.</li>
+                  <li>Personalised questions to trigger a particular motive.</li>
                   <li>Smooth navigation of the survey.</li>
                 </ul>
                 <br />
@@ -175,7 +175,7 @@ const CustomerVoice = () => {
                 <h3>Satisfaction Metric Report</h3>
                 <p>The satisfaction metric data is available just below the Reports section on the left. It is created automatically based on the related questions. You can analyse the data using charts and bars, including net promoter score, sentiment, CSAT, and a custom score.</p>
                 <br />
-                <h3>Survey Reponses</h3>
+                <h3>Survey Responses</h3>
                 <p>You can view the responses of all attendants or customers after a successful submission of the survey. All these results are available under the Reports section. However, you need to select a specific survey from a project to view the responses using a graphical representation.</p>
               </div>
             </div>
@@ -188,7 +188,7 @@ const CustomerVoice = () => {
             <div className="col-lg-9">
               <header className="section-header">
                 <h2>Microsoft Dynamics 365 Customer Voice Features to Let you Hear your Customers Clear </h2>
-                <p>MS Dynamic 365 Customer Voice offers various features to help you understand the exact customer needs through responses or feedback. Below, some of the top features of this solution are listed:</p>
+                <p>MS Dynamics 365 Customer Voice offers various features to help you understand the exact customer needs through responses or feedback. Below, some of the top features of this solution are listed:</p>
               </header>
             </div>
           </div>

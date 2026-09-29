@@ -521,7 +521,7 @@ const NewSolution = () => {
               <div className='solution-new-pricing-card'>
                 <h3>Business Central<span>Team Member</span>
                 </h3>
-                <h4>£6.60<span>/user/month</span></h4>
+                <h4>£6.20<span>/user/month</span></h4>
               </div>
             </div>
             <div className='col-lg-7 d-flex'>

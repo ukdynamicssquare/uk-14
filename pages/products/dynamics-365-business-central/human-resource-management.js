@@ -237,7 +237,7 @@ const HumanResourceManagements = () => {
                     <p>
                     <ul>
                     <li>Task Management</li>
-                    <li>Employe profile</li>
+                    <li>Employee profile</li>
                     <li>Jobs and Position Management</li>
                     <li>Training and Certification</li>
                     <li>Employee Development</li>

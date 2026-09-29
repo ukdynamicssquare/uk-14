@@ -12,7 +12,7 @@ const AssetManagement = () => {
   ];
 
   const column2Items = [
-    { id: 4, title: "Manage Maintenane/Servicing", content: "Evaluate the assets to schedule preventive maintenance and servicing activities to avoid any kind of fault or breakdown, and track work orders. Item 3", imageUrl: "/img/Warehouse-Picks.png" },
+    { id: 4, title: "Manage Maintenance/Servicing", content: "Evaluate the assets to schedule preventive maintenance and servicing activities to avoid any kind of fault or breakdown, and track work orders. Item 3", imageUrl: "/img/Warehouse-Picks.png" },
     { id: 5, title: "Mobile Accessibility", content: "Evaluate the assets to schedule preventive maintenance and servicing activities to avoid any kind of fault or breakdown, and track work orders. Item 4", imageUrl: "/img/Movement-Worksheet.png" },
   ];
 
@@ -184,7 +184,7 @@ const AssetManagement = () => {
                         <div className="wr-in">
                           <img src="/img/Warehouse-Picks.png" alt="Warehouse-Picks" />
                         </div>
-                        <span>Manage Maintenane/Servicing</span>
+                        <span>Manage Maintenance/Servicing</span>
                       </button>
                     </h3>
                     <div
@@ -269,7 +269,7 @@ const AssetManagement = () => {
                     <p>
                     <ul>
                     <li>Asset master data management</li>
-                    <li>Funcitonal location management</li>
+                    <li>Functional location management</li>
                     <li>Asset hierarchy management</li>
                     <li>Work order management</li>
                     <li>Maintenance scheduling</li>

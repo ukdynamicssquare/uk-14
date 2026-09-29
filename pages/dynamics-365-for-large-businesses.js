@@ -248,26 +248,6 @@ const MicrosoftCloudForNonpro = () => {
                 <div className="card-44">
                   <a href="#" style={{pointerEvents:'none'}}>
                     <p className='tags-strip'>
-                    Remote Assist 
-                    </p>
-                    <div className="card-head">
-                      <img src="/img/menu-icons/Dynamics-365-Remote.png" alt="customer_insights" width={48} height={48} />
-                      <h3>Dynamics 365  <br/>
-                      Remote Assist  </h3>
-                    </div>
-                    <div className="card-body">
-                      <p>Helps empower remote teams with real-time collaboration tools for faster problem-solving. </p>
-                      <div className='cat-float'>
-                        <span>Get Started</span>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <div className='col-lg-3 col-md-6 d-flex'>
-                <div className="card-44">
-                  <a href="#" style={{pointerEvents:'none'}}>
-                    <p className='tags-strip'>
                     For Data-Driven Insights
                     </p>
                     <div className="card-head">

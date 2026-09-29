@@ -578,7 +578,7 @@ const ImplementationSales = () => {
             <div className="col-md-8">
               <header className="section-header">
                 <h2>
-                  Wy choose Dynamics Square as Your Trusted Implementation
+                  Why choose Dynamics Square as Your Trusted Implementation
                   Partner?
                 </h2>
                 <p>

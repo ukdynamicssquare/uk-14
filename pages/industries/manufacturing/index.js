@@ -276,7 +276,7 @@ const Startup = () => {
                   <div className="card_new_content">
                     <h3>Distribution & Delivery </h3>
                     <p>
-                      Track inventory levels, manage warehousing, and ful fill
+                      Track inventory levels, manage warehousing, and fulfil
                       orders effectively using real-time data. Enable seamless
                       distribution through Dynamics 365 for Distribution.{" "}
                     </p>

@@ -304,7 +304,7 @@ const MicrosoftPowerBiImplementation = () => {
                   We worked with Nitesh to further customise our Microsoft
                   Dynamics Package. He provided us a top level service with well
                   trained staff as well as excellent support when needed.
-                  Dynamics Square is a very professional and trustworth. Will
+                  Dynamics Square is a very professional and trustworthy. Will
                   surely recommend to everyone
                 </p>
                 <h4>Terence Turner</h4>

@@ -850,7 +850,7 @@ Read to test the waters with D365 Project Operations? </p>
                       <p>
                         When installing project operations from{" "}
                         <Link href="/products/microsoft-dynamics-365/" target="_blank">
-                          microsoft dynamics 365
+                          Microsoft Dynamics 365
                         </Link>
                         , there are several installation options available. You
                         have two options to start the installation:
@@ -1029,7 +1029,7 @@ Read to test the waters with D365 Project Operations? </p>
                       data-bs-toggle="collapse"
                       data-bs-target="#faq-content-8"
                     >
-                      What are the core functions of Dynamic 365 Project
+                      What are the core functions of Dynamics 365 Project
                       Operations?
                     </button>
                   </h3>

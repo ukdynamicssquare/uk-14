@@ -6,7 +6,7 @@ const HealthCheck = () => {
   return (
     <>
       <Head>
-        <title>Dyanamics 365 for Healthcare | Dynamics Square UK</title>
+        <title>Dynamics 365 for Healthcare | Dynamics Square UK</title>
         <meta
           name="description"
           content="Choose the cloud Microsoft Dynamics 365 for Healthcare industry to get a 360-degree view of your clinic while accelerating the business towards growth."
@@ -17,7 +17,7 @@ const HealthCheck = () => {
         />
         <meta property="og:locale" content="GB" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Dyanamics 365 for Healthcare | Dynamics Square UK" />
+        <meta property="og:title" content="Dynamics 365 for Healthcare | Dynamics Square UK" />
         <meta property="og:description" content="Choose the cloud Microsoft Dynamics 365 for Healthcare industry to get a 360-degree view of your clinic while accelerating the business towards growth." />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/industries/dynamics-365-for-healthcare/" />
         <meta property="og:site_name" content="Dynamics Square UK" />
@@ -27,7 +27,7 @@ const HealthCheck = () => {
         <meta property="og:image:type" content="image/png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="Dyanamics 365 for Healthcare | Dynamics Square UK" />
+        <meta name="twitter:title" content="Dynamics 365 for Healthcare | Dynamics Square UK" />
         <meta name="twitter:description" content="Choose the cloud Microsoft Dynamics 365 for Healthcare industry to get a 360-degree view of your clinic while accelerating the business towards growth." />
         <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/Dynamics-365-for-Healthcare.png" />
       </Head>
@@ -35,7 +35,7 @@ const HealthCheck = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-6 mobile-4 align-self-center">
-              <h1>Dyanamics 365 <br />for Healthcare</h1>
+              <h1>Dynamics 365 <br />for Healthcare</h1>
               <p>Streamline your entire clinical operations and enhance the patient experience while opting Microsoft cloud for Healthcare Industry</p>
               <div>
                 <div className="text-center text-lg-start">
@@ -104,8 +104,8 @@ const HealthCheck = () => {
             <div className="col-lg-10">
             <header className="section-header">
             <h2>What is the need of Dynamics 365 <br /> for healthcare?</h2>
-            <p>We are going through an era where building foolproof healthcare systems must be the priority. In the past few years, we have witnessed the loss of millions of lives due to various reasons, and among them, the global healthcare system is the major one. There can be various suitable and effective solutions to improve the existing healthcare system across various verticals among which Dynamics 365 for healtchare is the popular one. When we think about it in a technical way, implementing Dynamics 365 for healthcare accelerator can streamline and connect the operations of the entire system while leveraging the power of automation. </p>
-            <p>Dynamic 365 for healthcare industry is the right solution to manage the administrative processes of a business while also offering a comprehensive and clinical treatment system. It offers flawless features, including an interactive patient experience, medical records tracking, patient data management, patient communication management, and centralised clinical data. Such features allow the healthcare business to offer </p>
+            <p>We are going through an era where building foolproof healthcare systems must be the priority. In the past few years, we have witnessed the loss of millions of lives due to various reasons, and among them, the global healthcare system is the major one. There can be various suitable and effective solutions to improve the existing healthcare system across various verticals among which Dynamics 365 for healthcare is the popular one. When we think about it in a technical way, implementing Dynamics 365 for healthcare accelerator can streamline and connect the operations of the entire system while leveraging the power of automation. </p>
+            <p>Dynamics 365 for healthcare industry is the right solution to manage the administrative processes of a business while also offering a comprehensive and clinical treatment system. It offers flawless features, including an interactive patient experience, medical records tracking, patient data management, patient communication management, and centralised clinical data. Such features allow the healthcare business to offer </p>
           </header>
             </div>
           </div>
@@ -237,7 +237,7 @@ const HealthCheck = () => {
                 <h3>Conclusion</h3>
                 <p>As per the market reports, implementing Dynamics 365 in the healthcare industry has enhanced operational efficiency by 40%, resulting in a 25% increase in ROI. No doubt, it is a powerful solution that helps healthcare organisations improve patient care, streamline operations, and drive business growth. Its ability to integrate with other native and third-party systems, like EHRs (electronic health records), is remarkable. This allows healthcare providers to access patient information in real-time, reducing the risk of errors and improving patient care. It also includes a range of security and compliance features for the protection of patient data. </p>
                 <p>Overall, Microsoft Dynamics 365 for healthcare is an excellent solution for such organisations that are looking to improve the patient journey, simplify existing operations, and accelerate business growth.</p>
-                <p>Perhaps it is time to implement Dynamics 365 for Healthcare in your organisation because you, too, want to simplify operations, increase revenue, and focus more on growing the business rather than resolving day-to-day issues. For <Link href="https://blog.dynamicssquare.co.uk/dynamics-365-pricing-and-licensing/">Dynamics 365 pricing</Link> and Microsoft cloud for healthcare licensing, contact Dynamic Square, the UK's <Link href="/">Microsoft Certified Solutions Partner</Link>. You can send us an email at <b>info@dynamicssquare.co.uk</b> or call us at 0207-193-2502 to get immediate answers to all of your questions.</p>
+                <p>Perhaps it is time to implement Dynamics 365 for Healthcare in your organisation because you, too, want to simplify operations, increase revenue, and focus more on growing the business rather than resolving day-to-day issues. For <Link href="https://blog.dynamicssquare.co.uk/dynamics-365-pricing-and-licensing/">Dynamics 365 pricing</Link> and Microsoft cloud for healthcare licensing, contact Dynamics Square, the UK's <Link href="/">Microsoft Certified Solutions Partner</Link>. You can send us an email at <b>info@dynamicssquare.co.uk</b> or call us at 0207-193-2502 to get immediate answers to all of your questions.</p>
               </div>
             </div>
           </div>

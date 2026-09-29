@@ -499,12 +499,12 @@ const BcSupport = () => {
                                             <p>
                                                 The D365 Business Central versions before April 2019
                                                 followed the <b>Fixed Lifecycle Policy</b>, which
-                                                includes ten years of continuous support from the date
-                                                of implementation and five years of Mainstream Support
-                                                with an additional five years of Extended Support. The{" "}
-                                                <b>Modern Lifecycle Policy</b> covers the asset till the
-                                                customer has a license to use a particular product or
-                                                service.
+                                                includes five years of Mainstream Support followed by five
+                                                years of Extended Support, counted from the product release
+                                                date. The{" "}
+                                                <b>Modern Lifecycle Policy</b> has no fixed end date:
+                                                support continues as long as you stay current by
+                                                installing the latest updates.
                                             </p>
                                         </div>
                                     </div>
@@ -681,7 +681,7 @@ const BcSupport = () => {
                                                 to a company's website where the Business Central
                                                 support services are available. The support request can
                                                 be for a specific module or a function of Business
-                                                Central, and the team of Dynamic Square will resolve any
+                                                Central, and the team of Dynamics Square will resolve any
                                                 query with quality services.
                                             </p>
                                         </div>

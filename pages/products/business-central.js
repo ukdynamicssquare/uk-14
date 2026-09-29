@@ -3422,7 +3422,7 @@ const BusinessCentral = () => {
                         you want advancement in your reporting &amp; analytics
                         terms, seamless integration with Power BI can be done as
                         both are Microsoft's products, hence, Power BI fits well
-                        with Dynamic 365 Business Central. Power BI can enable
+                        with Dynamics 365 Business Central. Power BI can enable
                         visualization in your reporting, key metrics, and your
                         entire business analytics. You can create your own
                         business reports and dashboards leveraging standard

@@ -970,7 +970,7 @@ const SalesOrderManagement = () => {
                         to a company's website where the Business Central
                         support services are available. The support request can
                         be for a specific module or a function of Business
-                        Central, and the team of Dynamic Square will resolve any
+                        Central, and the team of Dynamics Square will resolve any
                         query with quality services.
                       </p>
                     </div>

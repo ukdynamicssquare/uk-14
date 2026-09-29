@@ -129,6 +129,11 @@
       "source": "/products/microsoft-dynamics-365-mixed-reality/",
       "destination": "/products/microsoft-dynamics-365-field-service/",
       "statusCode": 301
+    },
+    {
+      "source": "/dynamics-365-sales-insights-an-overview/",
+      "destination": "/products/microsoft-dynamics-365-sales/",
+      "statusCode": 301
     }
   ]
 }

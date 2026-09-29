@@ -147,7 +147,7 @@ const AboutUs = () => {
                   <Image src="/img/approch-new.png" alt="approch" className="wsd" width={158} height={158} />
                   <h3>Approach</h3>
                   <p>
-                    We strive to build long-term relationships by making cloud techology accessible. We nurture fundamental values - "customer centricity" and "value proposition". Our clients are at our "central focus" for all our actions - engaging, informing, and adding value to their Vision.
+                    We strive to build long-term relationships by making cloud technology accessible. We nurture fundamental values - "customer centricity" and "value proposition". Our clients are at our "central focus" for all our actions - engaging, informing, and adding value to their Vision.
                   </p>
                 </div>
               </div>

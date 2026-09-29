@@ -1585,7 +1585,7 @@ Microsoft Dynamics 365 Business Central Partner UK | Dynamics Square
                   Team Members
                 </h3>
                 <div className="price">
-                  £6.60<span>Per-User/Per Month</span>
+                  £6.20<span>Per-User/Per Month</span>
                 </div>
                 <ul>
                   <li>
@@ -2167,7 +2167,7 @@ Microsoft Dynamics 365 Business Central Partner UK | Dynamics Square
                         Business Central is an all-in-one ERP solution. In case
                         you want advancement in your reporting &amp; analytics
                         terms, seamless integration with <Link href="/products/microsoft-power-bi/" target="_blank">Power BI</Link> can be done as both are Microsoft's products, hence, Power BI fits well
-                        with Dynamic 365 Business Central. Power BI can enable
+                        with Dynamics 365 Business Central. Power BI can enable
                         visualization in your reporting, key metrics, and your
                         entire business analytics. You can create your own
                         business reports and dashboards leveraging standard

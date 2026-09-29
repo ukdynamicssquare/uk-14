@@ -273,7 +273,7 @@ const Dynamics365ForConstruction = () => {
                     />
                   </div>
                   <div className="card_new_content">
-                    <h3>Bulit-in Automation</h3>
+                    <h3>Built-in Automation</h3>
                     <p>With AI and BI capabilities, you can automate most of the recurring and manual tasks in the system to boost system efficiency and user productivity. Also, you can automate core construction processes, data sharing between departments, and automated reporting.</p>
                   </div>
                 </div>

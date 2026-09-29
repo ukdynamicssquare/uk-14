@@ -149,7 +149,7 @@ const UpgradeServices = () => {
           <div className="row justify-content-center">
             <div className="col-lg-9">
             <header className="section-header">
-            <h2>Top Issues you Possibly Facing with your Microsoft Partner?</h2>
+            <h2>Top Issues you're Possibly Facing with your Microsoft Partner?</h2>
             <p>Based on the uniqueness of your business, there can be diverse reasons you should consider switching to a better partner. Some of the reasons are:</p>
           </header>
             </div>

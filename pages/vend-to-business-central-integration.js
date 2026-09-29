@@ -113,9 +113,9 @@ const Finance = () => {
                 <h3>Connecting through iPaaS </h3>
                 <p>In the market, there are various iPaaS (integration platform as a service) solutions available that enable an easy connection between these two applications. Once you establish a connection, you will be able to get a complete, holistic view of all retail operations along with a unified data centre. In this method, we are using Alumio iPaaS as an example.</p>
                 <ul>
-                  <li>Open the Alumino iPaaS user interface and enter the APIs of Business Central as well as Vend to connect them together. </li>
+                  <li>Open the Alumio iPaaS user interface and enter the APIs of Business Central as well as Vend to connect them together. </li>
                   <li>Customise the options, tools, and functions to send the data from Vend to Business Central or vice versa. </li>
-                  <li>Alumino does provide a monitoring system to find and rectify errors on time. </li>
+                  <li>Alumio does provide a monitoring system to find and rectify errors on time. </li>
                   <li>Also, you can install hundreds of solutions with Business Central using this method.</li>
                 </ul>
               </div>

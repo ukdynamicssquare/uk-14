@@ -227,7 +227,7 @@ export default function HomeOld() {
               "@type": "localBusiness",
               name: "Dynamics Square UK Ltd.",
               description:
-                "As a Dynamics 365 partner, we assist your business in scaling up by giving unbiased advise on the best Microsoft dynamics ERP and CRM solutions.",
+                "As a Dynamics 365 partner, we assist your business in scaling up by giving unbiased advise on the best Microsoft Dynamics ERP and CRM solutions.",
               image:
                 "https://www.dynamicssquare.co.uk/img/dynamicssqure-logo.svg",
               alternateName: "Dynamics Square Software company in London, UK",

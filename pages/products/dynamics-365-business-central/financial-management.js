@@ -49,7 +49,7 @@ const MicrosoftDynamics365Ai = () => {
                     href="#exampleModal"
                     data-bs-toggle="modal"
                     className="btn-get-started scrollto">
-                    <span>Let,s Connect &nbsp;<i className="bi bi-arrow-right"></i></span>
+                    <span>Let's Connect &nbsp;<i className="bi bi-arrow-right"></i></span>
                   </Link>
                 </div>
               </div>
@@ -973,7 +973,7 @@ const MicrosoftDynamics365Ai = () => {
                         to a company's website where the Business Central
                         support services are available. The support request can
                         be for a specific module or a function of Business
-                        Central, and the team of Dynamic Square will resolve any
+                        Central, and the team of Dynamics Square will resolve any
                         query with quality services.
                       </p>
                     </div>

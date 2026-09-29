@@ -71,7 +71,7 @@ const FinancevsSapErp = () => {
                   </b>
                   <br />
                   <br />
-                  Transitioning from a startup to a mid or a large- size
+                  Transitioning from a startup to a mid or a large-size
                   organisation demands the operational heads to stay focused and
                   systematic for efficiently managing the fast altering business
                   operations. Most businesses, therefore, look for comprehensive
@@ -115,13 +115,13 @@ const FinancevsSapErp = () => {
                   </b>
                 </p>
                 <p>
-                  Team Dynamics Square has identified two market- leading{" "}
+                  Team Dynamics Square has identified two market-leading{" "}
                   <Link href="/products/microsoft-dynamics-erp/" target="_blank">
                   ERP solutions
                   </Link>
-                  for medium and large- size organisations - Microsoft Dynamics
+                  for medium and large-size organisations - Microsoft Dynamics
                   365 Finance and Operations (or D365 F&O), and SAP ERP. The
-                  team deep- dived into the notable features of both these smart
+                  team deep-dived into the notable features of both these smart
                   ERP platforms to assist enterprises in evaluating and picking
                   the most appropriate solution for their business.
                 </p>
@@ -150,7 +150,7 @@ const FinancevsSapErp = () => {
                   comparatively lower implementation costs and seamless
                   integration with other Microsoft business applications. D365
                   F&O ensures a shorter training and learning curve due to its
-                  user- friendly and interactive interface that makes it the
+                  user-friendly and interactive interface that makes it the
                   primary purchasing criteria for most organisations.
                 </p>
               </div>
@@ -160,11 +160,11 @@ const FinancevsSapErp = () => {
                 <img src="/img/sap-erp.png" alt="sap-erp" />
                 <p>
                   SAP ERP has a strong market foothold, but it seems to be ideal
-                  'only' for multinational organisations and small- size
+                  'only' for multinational organisations and small-size
                   enterprises. SAP ERP usually promises to deliver on most
                   business aspects, however, costs comparatively higher than
                   other ERP variants. Basic customizations, primarily using
-                  third- party solutions, and simple implementation, make SAP
+                  third-party solutions, and simple implementation, make SAP
                   ERP a good option for businesses looking for consistency.
                 </p>
               </div>
@@ -200,7 +200,7 @@ const FinancevsSapErp = () => {
                         </p>
                       </td>
                       <td>
-                        <p>Integration requires third- party applications</p>
+                        <p>Integration requires third-party applications</p>
                       </td>
                     </tr>
                     <tr>
@@ -220,7 +220,7 @@ const FinancevsSapErp = () => {
                       </td>
                       <td>
                         <p>
-                          Possible through in- house talent or through an
+                          Possible through in-house talent or through an
                           extensive network of technology vendors
                         </p>
                       </td>
@@ -321,7 +321,7 @@ const FinancevsSapErp = () => {
                     Enables quick transfer of critical information across the
                     enterprise
                   </li>
-                  <li>User- friendly features assure ease of operation</li>
+                  <li>User-friendly features assure ease of operation</li>
                   <li>Takes the shortest time for implementation</li>
                   <li>Ensures visibility across functionalities</li>
                   <li>Helps in streamlining the project management</li>
@@ -343,8 +343,8 @@ const FinancevsSapErp = () => {
                     variants
                   </li>
                   <li>
-                    Limited cross- platform support restricts its integration
-                    with third- party platforms
+                    Limited cross-platform support restricts its integration
+                    with third-party platforms
                   </li>
                 </ul>
               </div>
@@ -363,7 +363,7 @@ const FinancevsSapErp = () => {
                 <h3>Pros</h3>
                 <ul>
                   <li>
-                    Ideal for both large and small- size businesses for its
+                    Ideal for both large and small-size businesses for its
                     scalability and flexibility
                   </li>
                   <li>
@@ -389,7 +389,7 @@ const FinancevsSapErp = () => {
                   <li>Learning SAP can be time taking for new users</li>
                   <li>
                     Prices may vary depending on the selected features, making
-                    it more expensive for small and medium- size enterprises
+                    it more expensive for small and medium-size enterprises
                     with limited technology budgets
                   </li>
                   <li>

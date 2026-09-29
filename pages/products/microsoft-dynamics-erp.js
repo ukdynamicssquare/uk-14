@@ -564,7 +564,7 @@ const SalesNew = () => {
                   </li>
                   <li>
                     <h3>Native Microsoft Ecosystem Integration</h3>
-                    <p>Most organisations already use Microsoft 365, Teams, and <a href="/products/microsoft-power-bi/">Power BI</a>. Microsoft Dynamics ERP software integrates natively across this ecosystem, reducing friction, improving adoption, and minimising custom integration layers. That translates to faster value realisation which brings the peace of mind and keep things running smoothly.</p>
+                    <p>Most organisations already use Microsoft 365, Teams, and <a href="/products/microsoft-power-bi/">Power BI</a>. Microsoft Dynamics ERP software integrates natively across this ecosystem, reducing friction, improving adoption, and minimising custom integration layers. That translates to faster value realisation which brings the peace of mind and keeps things running smoothly.</p>
                   </li>
                   <li>
                     <h3>AI Embedded at the Core</h3>

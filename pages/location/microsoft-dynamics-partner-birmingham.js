@@ -65,7 +65,7 @@ const MicrosoftDynamicsPartnerBirmingham = () => {
           <div className="row justify-content-center">
             <div className="col-lg-9">
             <header className="section-header">
-            <h2>You Deserves a Smart Solution and a Skillful Dynamics Partner</h2>
+            <h2>You Deserve a Smart Solution and a Skillful Dynamics Partner</h2>
           <p>You are putting a lot of effort into making your business grow and generating more revenue day by day. However, you can achieve the same results with less effort and by leveraging the power of Microsoft dynamic solutions.Such solutions simplify and automate most of the core processes that hinder the growth and development of organizations. You too believe that nothing is perfect in this world. What if you encounter an issue that hampers your existing processes? Such scenarios can cost you a huge amount.</p>
           <p>But, with the help of Microsoft Dynamics support in Birmingham, all your queries can be resolved in a matter of a few minutes. Irrespective of the issue you encounter or the level of complexity, we are just a call away to get your business back on track with enhanced performance.</p>
           <p>As a Microsoft Dynamics 365 partner in the UK, we have a team of expert professionals capable of resolving any kind of issue related to any <Link href="/products/microsoft-dynamics-365/">Microsoft Dynamics 365 application</Link>. Some of the apps are:</p>
@@ -423,7 +423,7 @@ const MicrosoftDynamicsPartnerBirmingham = () => {
             <div className="col-lg-6 align-self-center">
               <div className="commen-rit-info">
                 <h3>Drive Growth and Innovation with Dynamics Square's Microsoft Business App Expertise</h3>
-                <p>From the last few years, its been a roller coaster ride for all businesses and owners while sustaining the revenue and core operations. It's not easy at all, but we have been helping our clients to run the successful business in tough times too.</p>
+                <p>From the last few years, it's been a roller coaster ride for all businesses and owners while sustaining the revenue and core operations. It's not easy at all, but we have been helping our clients to run the successful business in tough times too.</p>
                 <p>We are helping the businesses like yours to manage and optimise all operations using a top-notch Microsoft business solution based on your requirement. From the last 11 years, we are serving our superior support services to all business regardless of size, type, and the industry. Our team of expert consultants has years of experience working with businesses to identify pain points, design custom solutions, and implement best-in-class technologies to drive results. From Dynamics 365 Finance and Supply Chain to Business Central support, we have deep expertise in all areas of Microsoft Business Apps and can help you transform the way you works</p>
                 <p>With our comprehensive solutions, you can streamline your operations, gain valuable insights, and make informed decisions to drive growth and innovation. Whether you're looking to improve your financial management, optimise your supply chain, or enhance your customer engagement, we have the expertise and resources to help you achieve your goals.</p>
                 <p>Don't let your business fall behind - partner with Dynamics Square today to unlock your full potential.</p>

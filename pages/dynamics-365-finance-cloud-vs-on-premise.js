@@ -325,7 +325,7 @@ const FinanceCloudvsOnpremise = () => {
                       <td>Yes</td>
                       <td>
                         Yes (either internet connectivity is required or custom
-                        endpoints must be implemented to send/recieve business
+                        endpoints must be implemented to send/receive business
                         events within intranet)
                       </td>
                     </tr>

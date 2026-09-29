@@ -145,7 +145,7 @@ function MyApp({ Component, pageProps }) {
                       "target": ["https://www.dynamicssquare.co.uk/"]
                     }
                   ],
-                  "headline": "As a Dynamics 365 partner, we assist your business in scaling up by giving unbiased advise on the best Microsoft dynamics ERP and CRM solutions.",
+                  "headline": "As a Dynamics 365 partner, we assist your business in scaling up by giving unbiased advise on the best Microsoft Dynamics ERP and CRM solutions.",
                   "keywords": [
                     "dynamics 365 partner uk",
                     "erp consultants UK",

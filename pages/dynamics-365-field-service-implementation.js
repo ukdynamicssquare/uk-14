@@ -74,7 +74,7 @@ const FieldServicesImplementation = () => {
             <div className="col-lg-9">
               <header className="section-header">
                 <h2>
-                  How can Dynamic 365 Field Service help you enhance customer
+                  How can Dynamics 365 Field Service help you enhance customer
                   engagement while empowering field executives?
                 </h2>
                 <p>

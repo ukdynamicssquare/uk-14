@@ -72,7 +72,7 @@ const HumanResourceImplementation = () => {
             <div className="col-lg-9">
               <header className="section-header">
                 <h2>
-                  How can Dynamic 365 Human Resources can help you accelerate
+                  How can Dynamics 365 Human Resources can help you accelerate
                   recruitment process with enhanced employee engagement?
                 </h2>
                 <p>
@@ -393,7 +393,7 @@ const HumanResourceImplementation = () => {
                   Implementation!
                 </h3>
                 <p>
-                  JJoin hands with a cost-effective D365 Human Resources
+                  Join hands with a cost-effective D365 Human Resources
                   implementation partner today and avail support beyond it.
                 </p>
                 <div className="text-center m-o-t new-btn-nn">
@@ -672,7 +672,7 @@ const HumanResourceImplementation = () => {
                   </h3>
                   <div className="overlay">
                     <p>
-                      OWe have experts with extensive knowledge and experience
+                      We have experts with extensive knowledge and experience
                       in different industries who can cater to all types and
                       sizes of businesses
                     </p>

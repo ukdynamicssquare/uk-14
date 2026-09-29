@@ -821,7 +821,7 @@ const BusinessCentralOld = () => {
                 <h3>Business Central<span>Team Member</span>
                 </h3>
                 <p>Gain access to view records, approve requests, and edit specific details. A perfect match for those supporting daily tasks across departments.</p>
-                <h4>£6.60<span>/user/month</span></h4>
+                <h4>£6.20<span>/user/month</span></h4>
                 <a href="#exampleModal" data-bs-toggle="modal" className="btn-dd-t btn-get-started" >Contact us</a>
                 <p className='disclm'>*Excluding VAT</p>
               </div>

@@ -218,7 +218,7 @@ const CaseStudyArteak = () => {
                             <div className="text-wrp-content">
                               <p>
                                 Business Central Cloud enables the employees of
-                                the companyto run and manage the entire
+                                the company to run and manage the entire
                                 business from anywhere and anytime.
                               </p>
                             </div>
@@ -370,7 +370,7 @@ const CaseStudyArteak = () => {
                     </div>
                   </div>
                   <div className="cintent-right">
-                    <p>After the implementation of new ERP, they posses complete control and safety over ERP data due to the server deployment on Microsoft Azure.</p>
+                    <p>After the implementation of new ERP, they possess complete control and safety over ERP data due to the server deployment on Microsoft Azure.</p>
                   </div>
                 </div>
                 <div className="content-inner-moil-1">
@@ -410,7 +410,7 @@ const CaseStudyArteak = () => {
                   We worked with Nitesh to further customise our Microsoft
                   Dynamics Package. He provided us a top level service with well
                   trained staff as well as excellent support when needed.
-                  Dynamics Square is a very professional and trustworth. Will
+                  Dynamics Square is a very professional and trustworthy. Will
                   surely recommend to everyone
                 </p>
                 <h4>Terence Turner</h4>

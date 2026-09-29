@@ -358,7 +358,7 @@ const BusinessCentralFeatures = () => {
                   Business Central enables a multitude of functionalities to
                   bring smoother and efficient flow across warehousing practices
                   from managing shipment, ensuring bin-wise inventories,
-                  seamless purchase order creation to switching between
+                  seamless purchase order creation to switch between
                   languages, and more. It allows enterprises to automate their
                   warehousing data, enable real-time synchronization, and allows
                   them to gain real-time insights into their business processes.

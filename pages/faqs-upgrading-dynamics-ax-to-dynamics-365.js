@@ -117,7 +117,7 @@ const FaqsUgradingDynamics = () => {
                       <td>Microsoft Dynamics AX 2012 R3</td>
                       <td>1 Aug. 2014</td>
                       <td>12 Oct. 2021</td>
-                      <td>12 Jan. 2023</td>
+                      <td>10 Jan. 2023</td>
                     </tr>
                   </tbody>
                 </table>
@@ -530,7 +530,7 @@ const FaqsUgradingDynamics = () => {
                   <span>Years of Expertise</span>
                 </h3>
                 <p>
-                  Our years of expertise helps us to align ourselves with our
+                  Our years of expertise help us to align ourselves with our
                   customer's business needs, expectations with Microsoft
                   Business Solutions.
                 </p>

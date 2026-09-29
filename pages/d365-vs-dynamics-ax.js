@@ -94,7 +94,7 @@ const D365VSDynamicsAX = () => {
             </div>
             <div className="col-lg-6 align-self-center">
               <div className="side-heading-custom-01">
-                <h2>Is there really a comparison between Dynamics AX and Dynamis 365?</h2>
+                <h2>Is there really a comparison between Dynamics AX and Dynamics 365?</h2>
               </div>
               <div className="custom-p-001">
                 <p>There is no comparison between these two because comparison takes place when two things are on the same level. If you want to compare Dynamics AX with other ERP solutions from Dynamics 365, you can do so with Business Central, Dynamics 365 Finance, Dynamics CRM, Dynamics f&o, or Dynamics NAV. In general, Dynamics 365 contains 12 major business solutions that are widely popular among growing businesses.</p>

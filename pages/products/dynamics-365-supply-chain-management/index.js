@@ -621,7 +621,7 @@ const Index = () => {
           <header className="section-header">
             <h2>Dynamics 365 Supply Chain Management Pricing</h2>
             <p>
-              Check out the flexible, cost-effective, and effective Dynamic 365
+              Check out the flexible, cost-effective, and effective Dynamics 365
               Supply Chain Management Pricing.
             </p>
           </header>
@@ -850,7 +850,7 @@ const Index = () => {
               <p>
                 The D365 Supply Chain Management possess more useful modules,
                 including Master planning, Inventory visibility, Retail
-                headquarter management, Production control, Procurement and
+                headquarters management, Production control, Procurement and
                 sourcing, Service management, Cost allocation, Sales and
                 marketing, Questionnaire, Project management and accounting,
                 Vendor collaboration, Time and attendance,{" "}

@@ -129,7 +129,7 @@ const AzureIoTCentral = () => {
                       data-bs-parent="#accnew"
                     >
                       <div className="accordion-body">
-                        Bridge gap between your IoT apps and business data to
+                        Bridge gaps between your IoT apps and business data to
                         drive smoother data flow and get notified with any
                         event, activity, or end-to-end device performance in
                         real-time to ensure continuity and drive productivity.

@@ -180,7 +180,7 @@ const PartnerUK = () => {
                   </ul>
                   <p style={{textAlign:'left',paddingTop:'20px'}}><strong>Transparency </strong></p>
                   <p style={{textAlign:'left'}}>We are obliged to offer full transparency during the entire implementation or support services so that you can know the status of the issue in real-time. This will enable you to support or accelerate the entire process. </p>
-                  <p style={{textAlign:'left'}}><strong>Specilisations </strong></p>
+                  <p style={{textAlign:'left'}}><strong>Specialisations </strong></p>
                   <p style={{textAlign:'left'}}>Being a top Microsoft Dynamics Partner in the UK, we are specialised in resolving even complex issues in no time with minimal resources. With our team of Microsoft certified consultants from different domains, we can resolve any issue, regardless of your industry. </p>
                   <p style={{textAlign:'left'}}><strong>Client Satisfaction</strong></p>
                   <p style={{textAlign:'left'}}>From the beginning, we have had the motto to offer top-notch customer satisfaction across all our services. This is our USP and makes us stand out from the crowd. That's why we have more than 200 recurring clients (happy and satisfied) across the world. </p>
