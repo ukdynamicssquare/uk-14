@@ -20,7 +20,8 @@ const team = [
   { img: "/img/aboutus-new/team-manish-goyal-new.png", name: "Manish Goyal", role: "Co-Founder, Dynamics Square", quote: "As a tech company, we believe technology is meant to simplify, not complicate." },
   { img: "/img/aboutus-new/team-felton-lean-new.png", name: "Dr. Felton Lean", role: "The People Person", quote: "Helping employees and organisations achieve more through learning and development." },
   { img: "/img/aboutus-new/team-nitesh-sharma-new.png", name: "Nitesh Sharma", role: "Head of Business Development", quote: "Every business has a story, and I learn about it before supporting its transformation." },
-  { img: "/img/aboutus-new/team-nitesh-sharma-new.png", name: "Balaji Ravindran", role: "Solution Architect", quote: "Every successful implementation begins with listening before launching." },
+  { img: "/img/aboutus-new/Darsan.png", name: "Darshan Mungekar", role: "Principal Solution Architect", quote: "Every successful implementation begins with listening before launching." },
+  { img: "/img/aboutus-new/Balaji.png", name: "Balaji Ravindran", role: "Solution Architect", quote: "Great solutions are designed around how people actually work, not the other way round." },
 ];
 
 const techGroups = [
@@ -455,7 +456,8 @@ const AboutUsNew = () => {
         const tl = gsap.timeline({
           scrollTrigger: { trigger: topConn, start: "top 95%", end: "top 45%", scrub: 1 },
         });
-        draw(tl, cls("aboutMethodologyTopVertical"), DOWN, 0, 1);
+        draw(tl, cls("aboutMethodologyArrowsLine"), DOWN, 0, 0.8);
+        draw(tl, cls("aboutMethodologyTopVertical"), DOWN, 0.8, 0.2);
         draw(tl, cls("aboutMethodologyTopLineThree"), RIGHT_TO_LEFT, 1, 1);
         draw(tl, cls("aboutMethodologyTopLineTwo"), RIGHT_TO_LEFT, 2, 1);
         draw(tl, cls("aboutMethodologyTopLineOne"), RIGHT_TO_LEFT, 3, 1);
@@ -468,10 +470,11 @@ const AboutUsNew = () => {
         });
         draw(tl, cls("aboutMethodologyBottomVerticalThree"), DOWN, 0, 0.6);
         draw(tl, cls("aboutMethodologyBottomVerticalTwo"), DOWN, 0.6, 0.6);
-        draw(tl, cls("aboutMethodologyBottomLine"), RIGHT_TO_LEFT, 1.2, 1.4);
-        draw(tl, cls("aboutMethodologyBottomVertical"), DOWN, 2.6, 0.7);
+        draw(tl, cls("aboutMethodologyBottomVerticalOne"), DOWN, 1.2, 0.6);
+        draw(tl, cls("aboutMethodologyBottomLine"), RIGHT_TO_LEFT, 1.8, 1.4);
+        draw(tl, cls("aboutMethodologyBottomVertical"), DOWN, 3.2, 0.7);
         all(cls("aboutMethodologyBottomCheck")).forEach((el) =>
-          tl.fromTo(el, { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "back.out(2)" }, 3.3)
+          tl.fromTo(el, { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "back.out(2)" }, 3.9)
         );
       }
 
@@ -618,7 +621,7 @@ const AboutUsNew = () => {
             compete on their own terms.
           </p>
           <p className={styles.heroSubText}>
-            We build the kind of partnership that earns trust project after project, year after year.
+           <quote>"We build the kind of partnership that earns trust project after project, year after year."</quote>
           </p>
           <div className={styles.heroImageWrap}>
             <Image
@@ -962,7 +965,8 @@ const AboutUsNew = () => {
               </div>
             </div>
 
-            <div className="col-lg-6">
+            <div className={`col-lg-6 ${styles.aboutMethodologyArrowsCol}`}>
+              <div className={styles.aboutMethodologyArrowsLine}></div>
               <div className={styles.aboutMethodologyArrows}>
                 <div className={`${styles.aboutMethodologyArrow} ${styles.aboutMethodologyArrowOne}`} />
                 <div className={`${styles.aboutMethodologyArrow} ${styles.aboutMethodologyArrowTwo}`} />
@@ -1013,6 +1017,7 @@ const AboutUsNew = () => {
           <div className={styles.aboutMethodologyBottomConnector}>
             <div className={styles.aboutMethodologyBottomLine}></div>
             <div className={styles.aboutMethodologyBottomVertical}></div>
+            <div className={styles.aboutMethodologyBottomVerticalOne}></div>
             <div className={styles.aboutMethodologyBottomVerticalTwo}></div>
             <div className={styles.aboutMethodologyBottomVerticalThree}></div>
             <div className={styles.aboutMethodologyBottomCheck}>✓</div>
@@ -1128,7 +1133,7 @@ const AboutUsNew = () => {
       <section className={styles.globalPresence}>
   <div className="container">
     <h2>Our Presence Worldwide</h2>
-    <p>Delivering Microsoft-led transformation across border, helping businesses grow globally.</p>
+    <p>Delivering Microsoft-led transformation across borders, helping businesses grow globally.</p>
   </div>
   <div className="container px-0">
 

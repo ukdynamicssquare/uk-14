@@ -56,23 +56,25 @@
 .heroTitle {
   font-weight: var(--heading-font-weight);
   font-size: var(--h1-font-size);
-  max-width: 820px;
+  max-width: 920px;
   margin: 0 auto 18px;
   line-height: 1.25;
 }
 
 .heroText {
-  max-width: 640px;
+  max-width: 860px;
   margin: 0 auto 8px;
   color: #444444;
   font-size: 16px;
 }
 
 .heroSubText {
-  max-width: 640px;
+  max-width: 860px;
   margin: 6px auto 30px;
   color: #444444;
   font-size: 16px;
+    font-style: italic;
+    font-weight: 500;
 }
 
 .heroImageWrap {
@@ -366,16 +368,23 @@ content: '';
 }
 
 .teamMeta {
-  background: linear-gradient(90deg, #a866c9 0%, #8748ab 100%);
+  background: linear-gradient(90deg, rgba(168, 102, 201, 0.75) 0%, rgba(135, 72, 171, 0.75) 100%);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
   color: #fff;
   text-align: center;
-  padding: 10px 8px;
-  border-radius: 5px;
+  padding: 12px 8px;
+  border-radius: 6px;
+  margin: -10px 0px 0;
+  position: relative;
+  z-index: 1;
 }
 
 .teamMeta h4 {
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 600;
   margin: 0;
 }
 
@@ -386,8 +395,8 @@ content: '';
 
 .teamCard .quote {
   padding: 14px 12px;
-  font-size: 16px;
-  color: #ffffff;
+  font-size: 14px;
+  color: #e5e0f6;
   text-align: center;
   margin: 0;
 }
@@ -1100,6 +1109,26 @@ color: var(--about-heading);
    ARROW PROCESS
 ========================================================= */
 
+.aboutMethodologyArrowsCol {
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Line drops from under the second arrow down to the connector below */
+.aboutMethodologyArrowsLine {
+  position: absolute;
+  top: calc(50% + 25px);
+  right: calc(var(--bs-gutter-x, 1.5rem) * 0.5 + 340px);
+  width: 2px;
+  height: 100%;
+  background: #ad6fc4;
+  z-index: 1;
+}
+
 .aboutMethodologyArrows {
   display: flex;
   justify-content: flex-end;
@@ -1110,60 +1139,20 @@ color: var(--about-heading);
 
   position: relative;
   z-index: 3;
-}
-
-.aboutMethodologyArrow {
-  position: relative;
-
-  width: 92px;
-  height: 64px;
-
-  margin-right: 10px;
 
   filter: drop-shadow(4px 4px 3px rgba(0, 0, 0, 0.13));
 }
 
+/* Chevron: 92px body + 30px tip, with a 30px notch cut on the left */
+.aboutMethodologyArrow {
+  position: relative;
 
-/* Arrow shape */
+  width: 122px;
+  height: 64px;
 
-.aboutMethodologyArrow::after {
-  content: "";
+  margin-right: -20px;
 
-  position: absolute;
-
-  top: 0;
-  right: -30px;
-
-  width: 0;
-  height: 0;
-
-  border-top: 32px solid transparent;
-  border-bottom: 32px solid transparent;
-  border-left: 30px solid;
-
-  z-index: 2;
-}
-
-
-/* Left cut */
-
-.aboutMethodologyArrow::before {
-  content: "";
-
-  position: absolute;
-
-  left: -1px;
-  top: 0;
-
-  width: 0;
-  height: 0;
-
-  border-top: 32px solid transparent;
-  border-bottom: 32px solid transparent;
-
-  border-left: 30px solid #f4f3f7;
-
-  z-index: 3;
+  clip-path: polygon(0 0, 92px 0, 100% 50%, 92px 100%, 0 100%, 30px 50%);
 }
 
 
@@ -1177,9 +1166,6 @@ color: var(--about-heading);
   );
 }
 
-.aboutMethodologyArrowOne::after {
-  border-left-color: #bd70d1;
-}
 
 
 /* Arrow 2 */
@@ -1192,9 +1178,6 @@ color: var(--about-heading);
   );
 }
 
-.aboutMethodologyArrowTwo::after {
-  border-left-color: #a25bb8;
-}
 
 
 /* Arrow 3 */
@@ -1207,9 +1190,6 @@ color: var(--about-heading);
   );
 }
 
-.aboutMethodologyArrowThree::after {
-  border-left-color: #8d50a4;
-}
 
 
 /* Arrow 4 */
@@ -1222,9 +1202,6 @@ color: var(--about-heading);
   );
 }
 
-.aboutMethodologyArrowFour::after {
-  border-left-color: #74408c;
-}
 
 
 /* Check */
@@ -1233,9 +1210,7 @@ color: var(--about-heading);
   position: absolute;
 
   top: 10px;
-  right: 19px;
-
-  z-index: 10;
+  right: 49px;
 
   color: #fff;
 
@@ -1260,11 +1235,13 @@ color: var(--about-heading);
 /* Main vertical */
 
 .aboutMethodologyTopVertical {
+  /* short bridge from the arrow column's line to the dashed line;
+     right offset = arrow column line offset (340px) */
   position: absolute;
-top: -168px;
-    left: 71%;
-    width: 2px;
-    height: 170px;
+  top: -2px;
+  right: 340px;
+  width: 2px;
+  height: 4px;
   background: #ad6fc4;
 }
 
@@ -1282,27 +1259,29 @@ top: -168px;
 }
 
 
-/* First */
+/* Branch points (same as bottom connector): 9.3%, 46.8%, 84.6% */
+
+/* First: branch at 9.3% */
 
 .aboutMethodologyTopLineOne {
-  left: 9%;
-  width: 23%;
+  left: 9.3%;
+  width: 18.75%;
 }
 
 
-/* Second */
+/* Second: 28.05% -> 65.55%, branch in the middle (46.8%) */
 
 .aboutMethodologyTopLineTwo {
-  left: 32%;
-  width: 23%;
+  left: 28.05%;
+  width: 37.5%;
 }
 
 
-/* Third */
+/* Third: branch at 84.6% */
 
 .aboutMethodologyTopLineThree {
-  left: 55%;
-  width: 23%;
+  left: 65.55%;
+  width: 19.05%;
 }
 
 
@@ -1582,8 +1561,8 @@ top: -168px;
 .aboutMethodologyBottomLine {
   position: absolute;
 
-  left: 8%;
-  right: 14%;
+  left: 9.3%;
+  right: 15.4%;
   top: 25px;
 
   border-top: 2px dashed #b777cf;
@@ -1592,16 +1571,32 @@ top: -168px;
 
 /* Left vertical */
 
+/* Solid L: from the dashed line at 9.3% left to 5.2%, then down to the check */
 .aboutMethodologyBottomVertical {
   position: absolute;
 
-  left: 8%;
+  left: 5.2%;
   top: 25px;
 
-  width: 2px;
+  width: 4.1%;
   height: 42px;
 
-  background: #ad6fc4;
+  border-top: 2px solid #ad6fc4;
+  border-left: 2px solid #ad6fc4;
+}
+
+
+/* Card 1 vertical */
+
+.aboutMethodologyBottomVerticalOne {
+  position: absolute;
+
+  left: 9.3%;
+  top: -3px;
+
+  height: 30px;
+
+  border-left: 2px dashed #b777cf;
 }
 
 
@@ -1610,8 +1605,8 @@ top: -168px;
 .aboutMethodologyBottomVerticalTwo {
   position: absolute;
 
-  left: 41.6%;
-    top: -3px;
+  left: 46.8%;
+  top: -3px;
 
   height: 30px;
 
@@ -1624,8 +1619,8 @@ top: -168px;
 .aboutMethodologyBottomVerticalThree {
   position: absolute;
 
-  left: 75%;
-    top: -3px;
+  left: 84.6%;
+  top: -3px;
 
   height: 30px;
 
@@ -1638,7 +1633,7 @@ top: -168px;
 .aboutMethodologyBottomCheck {
   position: absolute;
 
-  left: calc(8% - 11px);
+  left: calc(5.2% - 12.5px);
   top: 64px;
 
   width: 27px;
@@ -1740,7 +1735,8 @@ top: -168px;
   }
 
   .aboutMethodologyTopConnector,
-  .aboutMethodologyBottomConnector {
+  .aboutMethodologyBottomConnector,
+  .aboutMethodologyArrowsLine {
     display: none;
   }
 
@@ -2138,6 +2134,14 @@ top: -168px;
 @media (min-width: 992px) and (max-width: 1199px) {
   .aboutMethodologyArrows {
     padding-right: 30px;
+  }
+
+  .aboutMethodologyArrowsLine {
+    right: calc(var(--bs-gutter-x, 1.5rem) * 0.5 + 290px);
+  }
+
+  .aboutMethodologyTopVertical {
+    right: 290px;
   }
 
   .aboutMethodologyCard {
@@ -2577,7 +2581,51 @@ top: -168px;
 .globalMap {
   container-type: inline-size;
   aspect-ratio: 1949 / 807;
-  --pin-w: clamp(44px, 4.6cqw, 88px);
+  --pin-w: clamp(36px, 3.5cqw, 66px);
+
+  /* map image moves to ::before so its edges can be faded without fading the pins */
+  background-image: none;
+}
+
+/* Map image with soft faded edges, so no hard box shows around it */
+.globalMap::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+
+  background-image: url("/img/aboutus-new/world-map-pins-one.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+
+  -webkit-mask-image:
+    linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%),
+    linear-gradient(to bottom, #000 0%, #000 78%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to right, transparent 0%, #000 12%, #000 88%, transparent 100%),
+    linear-gradient(to bottom, #000 0%, #000 78%, transparent 100%);
+  mask-composite: intersect;
+}
+
+/* Pin flag ring: thin purple outline so flags read crisply on the white */
+.pinIcon {
+  box-shadow: 0 0 0 1px rgba(122, 63, 160, 0.15), 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+/* Name labels: lighter, tidier pills */
+.locationLabel {
+  border: 1px solid rgba(122, 63, 160, 0.12);
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(74, 63, 109, 0.12);
+  letter-spacing: 0.01em;
+}
+
+/* Softer landing ring under each pin */
+.locationPin::after {
+  border-color: rgba(163, 107, 192, 0.4);
 }
 
 .locationPin {

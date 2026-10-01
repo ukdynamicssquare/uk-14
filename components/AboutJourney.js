@@ -52,18 +52,19 @@ const Crown = () => (
 );
 
 // dir: "up" = text above the pin, "down" = text below the road
-// tx / cx / tw are in cqw (1cqw = 1% of the map width)
+// tx = text left offset from the pin centre, tw = text width,
+// cl = connector line length, cx = line offset for "down" milestones; all in cqw (1cqw = 1% of the map width)
 const milestones = [
   {
     year: "2011",
-    x: 295,
-    y: 737,
+    x: 150,
+    y: 722,
     dir: "up",
     icon: <i className="bi bi-briefcase-fill" />,
     text: "Our company began with a mission to simplify ERP complexity for businesses.",
-    tx: -6.5,
-    tw: 8.5,
-    cl: 2.8,
+    tx: -2.3,
+    tw: 8.6,
+    cl: 2.4,
   },
   {
     year: "2015",
@@ -72,10 +73,10 @@ const milestones = [
     dir: "down",
     icon: <i className="bi bi-flag-fill" />,
     text: "We expanded across the UK, US, Canada, and Australia through a consistent demand for practical and reliable support.",
-    tx: -1.3,
+    tx: -1.35,
     cx: 1.7,
-    tw: 15,
-    cl: 3.6,
+    tw: 14,
+    cl: 2.4,
   },
   {
     year: "2023",
@@ -84,9 +85,9 @@ const milestones = [
     dir: "up",
     icon: <Crown />,
     text: "We supported more than 500 customers with solutions designed around real-world needs.",
-    tx: -5,
-    tw: 13.5,
-    cl: 3.3,
+    tx: -4.2,
+    tw: 12.2,
+    cl: 2.2,
   },
   {
     year: "2024",
@@ -95,10 +96,10 @@ const milestones = [
     dir: "down",
     icon: <i className="bi bi-award-fill" />,
     text: "We reached a team strength of 150 certified experts across global offices.",
-    tx: -1.3,
+    tx: 0.15,
     cx: 1.7,
-    tw: 13,
-    cl: 3.6,
+    tw: 12.5,
+    cl: 3.4,
   },
   {
     year: "2025",
@@ -107,9 +108,9 @@ const milestones = [
     dir: "up",
     icon: <i className="bi bi-cpu-fill" />,
     text: "We stepped into a future shaped by AI led transformation and sustainability focussed progress.",
-    tx: -5.9,
-    tw: 12.6,
-    cl: 4.3,
+    tx: -6.8,
+    tw: 11.8,
+    cl: 2.2,
   },
 ];
 
@@ -340,14 +341,14 @@ const AboutJourney = () => {
 
           <g mask="url(#journeyRoadMask)">
             {/* soft ground shadow */}
-            <path d={ROAD_D} fill="none" stroke="rgba(60,40,90,0.14)" strokeWidth="128" strokeLinejoin="round" transform="translate(0 12)" />
-            {/* white edge lines */}
-            <path d={ROAD_D} fill="none" stroke="#ffffff" strokeWidth="112" strokeLinejoin="round" />
-            <path d={ROAD_D} fill="none" stroke="#c9c9cf" strokeWidth="106" strokeLinejoin="round" />
+            <path d={ROAD_D} fill="none" stroke="rgba(60,40,90,0.08)" strokeWidth="124" strokeLinejoin="round" transform="translate(0 6)" />
+            {/* grey outer edge + thin white inner edge */}
+            <path d={ROAD_D} fill="none" stroke="#b4b4b8" strokeWidth="116" strokeLinejoin="round" />
+            <path d={ROAD_D} fill="none" stroke="#ffffff" strokeWidth="106" strokeLinejoin="round" />
             {/* asphalt */}
-            <path ref={roadRef} d={ROAD_D} fill="none" stroke="#333335" strokeWidth="96" strokeLinejoin="round" />
+            <path ref={roadRef} d={ROAD_D} fill="none" stroke="#505052" strokeWidth="100" strokeLinejoin="round" />
             {/* centre dashes */}
-            <path d={ROAD_D} fill="none" stroke="#ffffff" strokeWidth="5" strokeDasharray="30 26" strokeLinecap="round" />
+            <path d={ROAD_D} fill="none" stroke="#ffffff" strokeWidth="4" strokeDasharray="24 34" strokeLinecap="round" />
           </g>
 
           {/* light that travels along the road while you scroll */}
@@ -363,8 +364,8 @@ const AboutJourney = () => {
               left: `${(m.x / VB_W) * 100}%`,
               top: `${(m.y / VB_H) * 100}%`,
               "--tx": `${m.tx}cqw`,
-              "--cx": `${m.cx || 0}cqw`,
-              "--tw": `${m.tw}cqw`,
+            "--cx": `${m.cx || 0}cqw`,
+                "--tw": `${m.tw}cqw`,
               "--cl": `${m.cl}cqw`,
             }}
           >
@@ -372,8 +373,8 @@ const AboutJourney = () => {
               <svg viewBox="0 0 100 115" className={s.pinShape} aria-hidden="true">
                 <defs>
                   <linearGradient id={`pinGrad${i}`} x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="#a866c9" />
-                    <stop offset="100%" stopColor="#7a2f9f" />
+                    <stop offset="0%" stopColor="#b97bd8" />
+                    <stop offset="100%" stopColor="#8646b0" />
                   </linearGradient>
                 </defs>
                 <path
@@ -397,8 +398,8 @@ const AboutJourney = () => {
 
         <blockquote className={s.quote}>
           <span className={s.quoteMark} aria-hidden="true">&ldquo;</span>
-          {QUOTE}
-          <span className={s.quoteMark} aria-hidden="true">&rdquo;</span>
+          <span className={s.quoteText}>{QUOTE}</span>
+          <span className={`${s.quoteMark} ${s.quoteMarkEnd}`} aria-hidden="true">&rdquo;</span>
         </blockquote>
       </div>
 
