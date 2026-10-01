@@ -108,7 +108,7 @@ const MicrosoftDynamicsGP = () => {
             <div className="style-grid-1">
                 <div className="style-grid-content">
                   <h3>Sales and Service</h3>
-                  <p>Dynamics GP Implementation in your business operations ensures that you carry on your sales and service in an even better way. The tool offers functions and features such as automating your sales process so that you can provide an enhanced service to your customers. Also, this will help you control your invoicing well and minimize the costs for shipping and labor for the entire process.</p>
+                  <p>Dynamics GP Implementation in your business operations ensures that you carry on your sales and service in an even better way. The tool offers functions and features such as automating your sales process so that you can provide an enhanced service to your customers. Also, this will help you control your invoicing well and minimize the costs for shipping and labour for the entire process.</p>
                 </div>
               </div>
             <div className="style-grid-1">
@@ -215,7 +215,7 @@ const MicrosoftDynamicsGP = () => {
                       such as automating your sales process so that you can
                       provide an enhanced service to your customers. Also, this
                       will help you control your invoicing well and minimize the
-                      costs for shipping and labor for the entire process.
+                      costs for shipping and labour for the entire process.
                     </p>
                   </div>
                 </div>

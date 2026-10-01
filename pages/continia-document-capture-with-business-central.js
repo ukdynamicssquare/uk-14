@@ -89,7 +89,7 @@ const Wms = () => {
               <div className="custom-p-001">
                 <p>After integrating Continia OCR with <Link href="/products/dynamics-365-business-central/" target="_blank">Business Central</Link>, you have a reliable and strong solution to manage all documents. Being a powerful document capturing solution, it saves a lot of time and effort when it comes to fetching numbers and values from a document. Because a minor mistake can lead you into complex and critical situations that no one wants to face.</p>
                 <p>Like, it is so powerful that it can automate most of the accounting operations, including invoice processing, quote management, electronic invoicing, streamlining disrupted operations, and much more.</p>
-                <p>It accurately fetches the data from the scanned documents, analyzes the entire document, and places the values in the preferred fields of Microsoft Dynamics 365 Business Central. Also, you can view the entire activity of previously scanned documents using digital archive storage and access the required data whenever needed. This makes the Continia OCR solution efficient, user-friendly, and business-oriented for all businesses, whether small or large. </p>
+                <p>It accurately fetches the data from the scanned documents, analyses the entire document, and places the values in the preferred fields of Microsoft Dynamics 365 Business Central. Also, you can view the entire activity of previously scanned documents using digital archive storage and access the required data whenever needed. This makes the Continia OCR solution efficient, user-friendly, and business-oriented for all businesses, whether small or large. </p>
               </div>
             </div>
           </div>

@@ -784,7 +784,7 @@ As a leading Microsoft Solutions Partner in the UK, we help organisations adopt 
                           <a href="https://www.youtube.com/watch?v=UNk4-k1_g4U" target='_blank'>
                             <img src="/img/project-vid-02.jpg" width={273} height={192} alt="bc-8-21" />
                             <h3>Deep dive: Finance, human resources and project operations with Dynamics 365</h3>
-                            <p>Watch a demo of the new 2023 release wave 1 features and highlights—featuring capabilities like business...</p>
+                            <p>Watch a demo of Finance, human resources and project operations capabilities in Dynamics 365...</p>
                             <div className='ct--a'>
                               <span>Watch now</span>
                             </div>

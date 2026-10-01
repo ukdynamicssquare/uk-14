@@ -378,7 +378,7 @@ const PowerApps = () => {
                       </h3>
                       <div className="overlay">
                         <p>
-                          Take advantage of more than 200+ connectors to
+                          Take advantage of more than 200 connectors to
                           integrate data and systems you already use. Extend
                           Power Apps further as a professional developer with
                           custom connectors and logic.

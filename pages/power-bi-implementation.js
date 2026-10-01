@@ -504,7 +504,7 @@ const PowerBIImplementation = () => {
                   <p>
                     Since Power BI is a Microsoft product, it enables users to
                     create and share reporting visuals across their own global
-                    data centers to ensure secure and reliable data analytics.
+                    data centres to ensure secure and reliable data analytics.
                     It also ensures enterprises' seamless compliance and
                     regulation needs.
                   </p>
@@ -594,7 +594,7 @@ const PowerBIImplementation = () => {
                     Users familiar with Microsoft 365 navigation can
                     effortlessly and promptly apply excel queries, create data
                     models, and prepare reports being exhibited on Power BI
-                    Dashboards. It opens new potentials of analyzing,
+                    Dashboards. It opens new potentials of analysing,
                     publishing, and sharing Excel-like data.
                   </p>
                 </div>

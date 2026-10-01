@@ -57,7 +57,7 @@ const UpgradingToDynamics365BusinessCentral = () => {
                   />
                 </div>
                 <div className="col-lg-9 align-self-center">
-                  <p>The business is a UK's leading manufacturer and supplier of orthopedic implants and instruments. Established in 2006, they've built a reputation for delivering high-quality products and outstanding customer service. They offer a wide range of products for joint replacement, trauma surgery, spine surgery, and sports medicine. They are committed to sustainability and support charitable organizations that work to improve access to healthcare and education.</p>
+                  <p>The business is a UK's leading manufacturer and supplier of orthopaedic implants and instruments. Established in 2006, they've built a reputation for delivering high-quality products and outstanding customer service. They offer a wide range of products for joint replacement, trauma surgery, spine surgery, and sports medicine. They are committed to sustainability and support charitable organizations that work to improve access to healthcare and education.</p>
                 </div>
               </div>
             </div>

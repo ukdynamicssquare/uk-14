@@ -285,7 +285,7 @@ const DynamicsNavnowBusinessCentral = () => {
               </p>
               <p>
                 When planning to upgrade from Microsoft Dynamics NAV to Business
-                Central ensure that you are up to date with your Business Ready
+                Central ensure that you are up-to-date with your Business Ready
                 Enhancement Plan (BREP) payments because only that will make you
                 eligible for the above offers. If not, a simple calculation can
                 help you know how much you owe - add 3% penalty to 16% of the

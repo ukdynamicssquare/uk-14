@@ -20,7 +20,7 @@ const PdfCRMDownload = () => {
         <div className="container">
           <div className="row justify-content-center ">
             <div className="col-lg-7 align-self-center text-center custom0004">
-              <h1>A Complete Guide to Dynamics Supply Chain Management Pdf</h1>
+              <h1>A Complete Guide to Dynamics Supply Chain Management PDF</h1>
               <div className="text-center">
                 <div className="">
                   <a

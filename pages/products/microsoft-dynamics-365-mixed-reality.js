@@ -591,7 +591,7 @@ const MicrosoftDynamics365MixedReality = () => {
                           during the process.{" "}
                         </li>
                         <li>
-                          Reduce downtime and eliminate the traveling need.
+                          Reduce downtime and eliminate the travelling need.
                         </li>
                         <li>
                           Collaborate in real-time and proactively solve the

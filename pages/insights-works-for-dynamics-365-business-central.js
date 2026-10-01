@@ -11,7 +11,7 @@ const Bcinsights = () => {
         <title>Insight Works for Dynamics 365 Business Central</title>
         <meta
           name="description"
-          content="Integrate Insights Works with Business Central to optimise your entire order fulfillment process along with streamlining warehouse operations."
+          content="Integrate Insights Works with Business Central to optimise your entire order fulfilment process along with streamlining warehouse operations."
         />
         <link
           rel="canonical"

@@ -244,7 +244,7 @@ const MigrateFandSC = () => {
                           <li>
                             Faster implementations and faster time-to-value
                           </li>
-                          <li>Reduces labor investment</li>
+                          <li>Reduces labour investment</li>
                         </ul>
                       </div>
                     </div>

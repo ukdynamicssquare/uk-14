@@ -978,7 +978,7 @@ const HomeOneNew = () => {
                         height={592}
                       />
                       <p>
-                        Strategic advancements led an orthopedic implant
+                        Strategic advancements led an orthopaedic implant
                         manufacturer to 60% more visibility.
                       </p>
                     </div>
@@ -1245,7 +1245,7 @@ const HomeOneNew = () => {
                         <div className="d-colomn">
                           <figure>
                             <img src="/img/multi-channel-campaign.png" alt="multi-channel-campaign" />
-                            <span>Data transformation and modeling</span>
+                            <span>Data transformation and modelling</span>
                           </figure>
                         </div>
                         <div className="d-colomn">
@@ -1324,7 +1324,7 @@ const HomeOneNew = () => {
                         <div className="d-colomn">
                           <figure>
                             <img src="/img/minimise-downtime.png" alt="minimise-downtime" />
-                            <span>Optimized Warehouse & Fulfillment</span>
+                            <span>Optimized Warehouse & Fulfilment</span>
                           </figure>
                         </div>
                         <div className="bnn">
@@ -1572,7 +1572,7 @@ const HomeOneNew = () => {
                   <span>Operations Manager</span>
                   <p>
                     Dynamics Square has been a solid partner for 4 years,
-                    skillfully upgrading our Microsoft Dynamics NAV to Dynamics
+                    skilfully upgrading our Microsoft Dynamics NAV to Dynamics
                     365 Business Central. They offer great value and
                     professionalism.
                   </p>

@@ -65,7 +65,7 @@ const MicrosoftDynamicsPartnerBirmingham = () => {
           <div className="row justify-content-center">
             <div className="col-lg-9">
             <header className="section-header">
-            <h2>You Deserve a Smart Solution and a Skillful Dynamics Partner</h2>
+            <h2>You Deserve a Smart Solution and a Skilful Dynamics Partner</h2>
           <p>You are putting a lot of effort into making your business grow and generating more revenue day by day. However, you can achieve the same results with less effort and by leveraging the power of Microsoft dynamic solutions.Such solutions simplify and automate most of the core processes that hinder the growth and development of organizations. You too believe that nothing is perfect in this world. What if you encounter an issue that hampers your existing processes? Such scenarios can cost you a huge amount.</p>
           <p>But, with the help of Microsoft Dynamics support in Birmingham, all your queries can be resolved in a matter of a few minutes. Irrespective of the issue you encounter or the level of complexity, we are just a call away to get your business back on track with enhanced performance.</p>
           <p>As a Microsoft Dynamics 365 partner in the UK, we have a team of expert professionals capable of resolving any kind of issue related to any <Link href="/products/microsoft-dynamics-365/">Microsoft Dynamics 365 application</Link>. Some of the apps are:</p>

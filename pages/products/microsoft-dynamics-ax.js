@@ -641,7 +641,7 @@ const MicrosoftDynamicsAX = () => {
               <div className="style-grid-1">
                 <div className="style-grid-content">
                   <h3>Modern Interface</h3>
-                  <p>The latest interface of the tool is modern and is even more simpler in looks as well as use. Thus, a lot of time and money is saved as the organisations do not have to invest in training of the employees for the tool. The interface is easy to understand so that the employees can go through it to understand it and just a minor knowledge can help them in starting with the operations too.</p>
+                  <p>The latest interface of the tool is modern and is even simpler in looks as well as use. Thus, a lot of time and money is saved as the organisations do not have to invest in training of the employees for the tool. The interface is easy to understand so that the employees can go through it to understand it and just a minor knowledge can help them in starting with the operations too.</p>
                   </div>
                 </div>
             </div>

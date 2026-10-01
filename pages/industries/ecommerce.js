@@ -224,7 +224,7 @@ const Ecommerce = () => {
                   <div className="card_new_content">
                     <h3>Order Management</h3>
                     <p>
-                      Track, manage, and fulfill your orders seamlessly and
+                      Track, manage, and fulfil your orders seamlessly and
                       efficiently by upgrading your e-commerce system or
                       implementing Dynamics 365 for Ecommerce businesses.
                     </p>

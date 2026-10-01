@@ -309,7 +309,7 @@ const FieldService = () => {
                       </h3>
                       <div className="overlay">
                         <p>
-                          Manage resources and required equipment to fulfill
+                          Manage resources and required equipment to fulfil
                           customer service, get notified for on-site
                           appointments, and manage service scheduling.
                         </p>
@@ -737,7 +737,7 @@ const FieldService = () => {
                         </li>
                         <li>
                           Seamlessly manage your stock levels, purchase order
-                          fulfillment, and product returns. Generate customer
+                          fulfilment, and product returns. Generate customer
                           invoices, track resources, and more with Microsoft 365
                           Field Service Automation.
                         </li>
@@ -807,7 +807,7 @@ const FieldService = () => {
                       <br />
                       <br />
                       All you need to go through your Microsoft 365 ‘Admin
-                      Center’ then, select ‘Billing’, then click on ‘Purchase
+                      Centre’ then, select ‘Billing’, then click on ‘Purchase
                       Services’, and then Select Dynamics 365 Field Service to
                       buy your plan.
                       <br />

@@ -388,7 +388,7 @@ export default function HomeOld() {
                         <div className="d-colomn">
                           <figure>
                             <img src="/img/multi-channel-campaign.png" alt="multi-channel-campaign" />
-                            <span>Data transformation and modeling</span>
+                            <span>Data transformation and modelling</span>
                           </figure>
                         </div>
                         <div className="d-colomn">
@@ -467,7 +467,7 @@ export default function HomeOld() {
                         <div className="d-colomn">
                           <figure>
                             <img src="/img/minimise-downtime.png" alt="minimise-downtime" />
-                            <span>Optimized Warehouse & Fulfillment</span>
+                            <span>Optimized Warehouse & Fulfilment</span>
                           </figure>
                         </div>
                         <div className="bnn">
@@ -1191,7 +1191,7 @@ export default function HomeOld() {
                           <div className='test-s-info'>
                             <figure>
                               <Image src="/img/avatar.png" alt="avatar" width={84} height={84} />
-                              <p>Dynamics Square has been a solid partner for 4 years, skillfully upgrading us from NAV2018 to Business Central. They offer great value and professionalism.</p>
+                              <p>Dynamics Square has been a solid partner for 4 years, skilfully upgrading us from NAV2018 to Business Central. They offer great value and professionalism.</p>
                               <h5>Mark Shaxted</h5>
                               <span>Operations Manager</span>
                             </figure>

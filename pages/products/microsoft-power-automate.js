@@ -195,7 +195,7 @@ const PowerAutomate = () => {
                         to create new flows on the basis of models that are
                         existing already. The platform can detect texts and
                         images to help you in creating your flow or even help
-                        you in analyzing data.
+                        you in analysing data.
                         <br />
                         <br />
                         Another great thing about Power Automate is that it is
@@ -206,7 +206,7 @@ const PowerAutomate = () => {
                         to create new flows on the basis of models that are
                         existing already. The platform can detect texts and
                         images to help you in creating your flow or even help
-                        you in analyzing data.
+                        you in analysing data.
                       </div>
                     </div>
                   </div>

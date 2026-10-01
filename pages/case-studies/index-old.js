@@ -364,7 +364,7 @@ const CategoryListOld = () => {
                           <img src="/img/Leda-Ortho.jpg" alt="Leda-Ortho" />
                         </div>
                         <div className="commen-boc-2-info">
-                          <p>UK’s leading manufacturer of orthopedic implants has gained 80% more visibility with a Business Central implementation.  </p>
+                          <p>UK’s leading manufacturer of orthopaedic implants has gained 80% more visibility with a Business Central implementation.  </p>
                         </div>
                         <div className="btn-003">
                           <a
@@ -651,7 +651,7 @@ const CategoryListOld = () => {
                           <img src="/img/Leda-Ortho.jpg" alt="Leda-Ortho" />
                         </div>
                         <div className="commen-boc-2-info">
-                          <p>UK’s leading manufacturer of orthopedic implants has gained 80% more visibility with a Business Central implementation.  </p>
+                          <p>UK’s leading manufacturer of orthopaedic implants has gained 80% more visibility with a Business Central implementation.  </p>
                         </div>
                         <div className="btn-003">
                           <a

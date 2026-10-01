@@ -242,7 +242,7 @@ const HumanResourceManagements = () => {
                     <li>Training and Certification</li>
                     <li>Employee Development</li>
                     <li>Performance management</li>
-                    <li>Employee enrollment</li>
+                    <li>Employee enrolment</li>
                     </ul>
                     </p>
                     </div>

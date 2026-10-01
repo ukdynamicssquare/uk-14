@@ -383,12 +383,12 @@ const WarehouseManagement = () => {
                   <div className='mycard__inner'>
                     <div className='mycard__inner-left mycard__inner-left-p'>
                       <h3>True Inventory Visibility</h3>
-                      <p>With real-time inventory snapshots, batch-wise aging insights, and cross-location clarity, Business Central gives you total visibility, right down to the last bin.</p>
+                      <p>With real-time inventory snapshots, batch-wise ageing insights, and cross-location clarity, Business Central gives you total visibility, right down to the last bin.</p>
                       <p><b>Key aspects:</b></p>
                       <ul>
                         <li>Live inventory snapshots</li>
                         <li>Multi-location coordination</li>
-                        <li>Aging reports by batch or bin</li>
+                        <li>Ageing reports by batch or bin</li>
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
@@ -399,7 +399,7 @@ const WarehouseManagement = () => {
                 <div className='mycard'>
                   <div className='mycard__inner'>
                     <div className='mycard__inner-left mycard__inner-left-p'>
-                      <h3>Labor Efficiency</h3>
+                      <h3>Labour Efficiency</h3>
                       <p>With task-based assignments and automated job queues, your workforce operates with purpose, not repetition. It helps minimise lag and maximise throughput.</p>
                       <p><b>Key aspects:</b></p>
                       <ul>

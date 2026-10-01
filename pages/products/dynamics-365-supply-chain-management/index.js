@@ -148,7 +148,7 @@ const Index = () => {
                             alt="Demand-Analysis-Fulfillment"
                           />
                         </div>
-                        <span>Demand Analysis & Fulfillment</span>
+                        <span>Demand Analysis & Fulfilment</span>
                       </button>
                     </h3>
                     <div

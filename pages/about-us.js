@@ -568,7 +568,7 @@ const AboutUs = () => {
                 <div className="col-lg-6 align-self-center">
                   <div className="slider-new-com">
                     <h3>Integrate Microsoft Business Apps with Power Platform for Impactful Solutions </h3>
-                    <p>Make informed decision by connecting apps with Azure cloud and develop end-to-end business solutions for effectively analyzing data, building solutions, automating processes, and creating virtual agents.</p>
+                    <p>Make informed decision by connecting apps with Azure cloud and develop end-to-end business solutions for effectively analysing data, building solutions, automating processes, and creating virtual agents.</p>
                     <ul className="new-com-listss">
                       <li className="icon-box001">
                         <Link href="/products/microsoft-power-bi/">

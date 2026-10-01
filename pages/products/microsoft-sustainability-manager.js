@@ -204,7 +204,7 @@ const Microsoftsustainabilitymanager = () => {
                     >
                       <div className="accordion-body">
                         <p>
-                          It manages, visualizes, analyzes, and reports the
+                          It manages, visualizes, analyses, and reports the
                           consumption of resources, their impact on the
                           environment, and real-time sustainability progress.
                           <br />
@@ -212,7 +212,7 @@ const Microsoftsustainabilitymanager = () => {
                           <ul>
                             <li>Simplify the reporting </li>
                             <li>
-                              Analyze the impact of resources on the environment
+                              Analyse the impact of resources on the environment
                             </li>
                             <li>Track sustainability progress in real-time</li>
                           </ul>

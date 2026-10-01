@@ -308,7 +308,7 @@ const ScmCloudvsonPremise = () => {
                     <tr>
                       <td>&nbsp;</td>
                       <td>
-                        Punch-out to external catalog from purchase requisition
+                        Punch-out to external catalogue from purchase requisition
                       </td>
                       <td>Yes</td>
                       <td>No</td>

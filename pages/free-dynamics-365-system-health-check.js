@@ -332,7 +332,7 @@ const SystemHealth = () => {
           <div className="row pad9x">
             <div className="col-lg-5 align-self-center">
               <div className="commen-rit-info">
-                <h3>Analyzing Licensing Needs</h3>
+                <h3>Analysing Licensing Needs</h3>
                 <p>
                   Depending on the different set of practices you involve, your
                   licensing need could be different even from your competitor.

@@ -90,7 +90,7 @@ const MicrosoftCloudForNonpro = () => {
               </div>
               <div className="col-lg-4 align-self-center">
                 <div className="card-21">
-                  <h3><span>46% </span>of medium business leaders face labor shortages</h3>
+                  <h3><span>46% </span>of medium business leaders face labour shortages</h3>
                 </div>
               </div>
               <div className="col-lg-4">
@@ -657,7 +657,7 @@ const MicrosoftCloudForNonpro = () => {
                           <div className='test-s-info'>
                             <figure>
                               <Image src="/img/avatar.png" alt="avatar" width={84} height={84} />
-                              <p>Dynamics Square has been a solid partner for 4 years, skillfully upgrading us from NAV2018 to Business Central. They offer great value and professionalism.</p>
+                              <p>Dynamics Square has been a solid partner for 4 years, skilfully upgrading us from NAV2018 to Business Central. They offer great value and professionalism.</p>
                               <h5>Mark Shaxted</h5>
                               <span>Operations Manager</span>
                             </figure>

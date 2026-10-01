@@ -265,8 +265,7 @@ const Dynamics365vsSalesForce = () => {
                       </td>
                       <td>
                         <p>
-                          User friendly interface, easy to use for non-
-                          technical staff
+                          User friendly interface, easy to use for non-technical staff
                         </p>
                       </td>
                       <td>

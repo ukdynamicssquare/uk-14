@@ -1703,7 +1703,7 @@ const BusinessCentral = () => {
                       <div className='card0-01 card0-02'>
                         <a href="/guides/business-central-guide-for-smb/">
                           <Image src="/img/chapter5-5.png" width={992} height={499} alt="bc-8-17" />
-                          <h3>Comprehensive Business Central Guide for SMBs in 2025</h3>
+                          <h3>Comprehensive Business Central Guide for SMBs in 2026</h3>
                           <p>A detailed guide helping SMBs automate operations, improve scalability, and prepare for long-term digital growth.</p>
                           <div className='ct--a'>
                             <span>View this Guide</span>

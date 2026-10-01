@@ -199,7 +199,7 @@ const Inedex = () => {
                 <img src="/img/avatar.png" alt="card-669-01" width={126} height={126} />
                 <h3>Mark Shaxted</h3>
                 <span>Operations Manager</span>
-                <p>Dynamics Square has been a solid partner for 4 years, skillfully upgrading our Microsoft Dynamics NAV to Dynamics 365 Business Central. They offer great value and professionalism.</p>
+                <p>Dynamics Square has been a solid partner for 4 years, skilfully upgrading our Microsoft Dynamics NAV to Dynamics 365 Business Central. They offer great value and professionalism.</p>
               </div>
             </div>
 

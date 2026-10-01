@@ -559,7 +559,7 @@ const WhyMigrade360 = () => {
             <div className="col-lg-6">
               <div className="custom-p-001">
                 <h3>Competitive Edge</h3>
-                <p>Microsoft Dynamics 365 empowers small businesses with the same advanced technology used by larger companies, leveling the playing field and enabling you to compete on an equal footing. With this, you can optimise your operations, streamline processes, and deliver exceptional customer experiences, giving you the edge, you need to succeed in today's market.</p>
+                <p>Microsoft Dynamics 365 empowers small businesses with the same advanced technology used by larger companies, levelling the playing field and enabling you to compete on an equal footing. With this, you can optimise your operations, streamline processes, and deliver exceptional customer experiences, giving you the edge, you need to succeed in today's market.</p>
                 <br />
             
               </div>

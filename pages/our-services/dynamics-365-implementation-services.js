@@ -203,7 +203,7 @@ const ImplementationServices = () => {
                   <h3>Field Service</h3>
                   <p>
                     Bring acceleration in your service part comprising customer
-                    management, field service, and remote assist. We implement
+                    management and field service. We implement
                     highly configured, connected, and integrated solutions
                     simplified with AI, IoT, and{" "}
                     <Link href="/products/microsoft-azure/">
@@ -387,7 +387,7 @@ const ImplementationServices = () => {
                           <p>
                             When it comes to developing your project, we involve
                             custom coding, strategic & custom interface
-                            designing, system integration, data modeling, and
+                            designing, system integration, data modelling, and
                             migration. During data migration, we gradually and
                             strategically migrate your data from your previous
                             system or software solution to the newly implemented
@@ -414,7 +414,7 @@ const ImplementationServices = () => {
                           <h4>POST-GO-LIVE SUPPORT</h4>
                           <p>
                             Once your project is ready to go live, we ensure all
-                            the final changes are made, your system is molded as
+                            the final changes are made, your system is moulded as
                             per your expectation, and user training is performed
                             so that your end-users can quickly and seamlessly
                             adapt the newly configured and implemented features

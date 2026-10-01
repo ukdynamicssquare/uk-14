@@ -485,7 +485,7 @@ const SalesOrderManagement = () => {
                 <div className='mycard'>
                   <div className='mycard__inner'>
                     <div className='mycard__inner-left mycard__inner-left-p'>
-                      <h3>Fewer Errors & Smoother Fulfillment</h3>
+                      <h3>Fewer Errors & Smoother Fulfilment</h3>
                       <p>Real-time inventory sync ensures what's promised is what gets shipped. This is because missed shipments cost more than revenue. They kill trust.</p>
                       <p><b>Key highlights:</b></p>
                       <ul>
@@ -508,7 +508,7 @@ const SalesOrderManagement = () => {
                       <ul>
                         <li>Automated order status updates via email and portal</li>
                         <li>Tracking information is sent without being asked</li>
-                        <li>Sales, support, and fulfillment teams work off the same data</li>
+                        <li>Sales, support, and fulfilment teams work off the same data</li>
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>

@@ -137,7 +137,7 @@ const MicrosoftDynamicsPartnerLiverpool = () => {
                     >
                       <div className="accordion-body">
                         <p>Managing the finances of a business is an essential task to follow and <Link href="/products/microsoft-dynamics-365-finance/">Dynamics 365 Finance</Link> can act as a perfect fit for your business. </p>
-                        <p>D365 Finance can help you improve your company's financial analytics, statistical modeling, smart budgeting, automated invoicing, global compliance, and regulations.</p>
+                        <p>D365 Finance can help you improve your company's financial analytics, statistical modelling, smart budgeting, automated invoicing, global compliance, and regulations.</p>
                       </div>
                     </div>
                   </div>

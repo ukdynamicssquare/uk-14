@@ -590,7 +590,7 @@ const CustomerService = () => {
                 </div>
                 <ul>
                   <li>
-                    <i className="bi bi-check-lg"></i> Transform customer engagement with an integrated contact center and CRM service solution all powered by generative AI.
+                    <i className="bi bi-check-lg"></i> Transform customer engagement with an integrated contact centre and CRM service solution all powered by generative AI.
                   </li>
                   <li>
                     <i className="bi bi-check-lg"></i> All features of the
@@ -748,7 +748,7 @@ const CustomerService = () => {
                       <ul>
                         <li>
                           Administrators are needed to sign in Power Platform
-                          administration center.
+                          administration centre.
                         </li>
                         <li>
                           Now, go through the drop-down list of “Resources”, and

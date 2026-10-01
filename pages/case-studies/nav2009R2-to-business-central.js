@@ -58,7 +58,7 @@ const CaseStudyCqc = () => {
                   />
                 </div>
                 <div className="col-lg-9">
-                  <p>The company was established in 1948 and is currently a world-leading manufacturer of textile products mainly for the defense market. The company is known for its world-class high quality and robust military products serving the UK Ministry of Defence and other international military agencies. They are working to establish itself as one of the UK experts in designing and manufacturing CBRN clothing.</p>
+                  <p>The company was established in 1948 and is currently a world-leading manufacturer of textile products mainly for the defence market. The company is known for its world-class high quality and robust military products serving the UK Ministry of Defence and other international military agencies. They are working to establish itself as one of the UK experts in designing and manufacturing CBRN clothing.</p>
                 </div>
               </div>
             </div>

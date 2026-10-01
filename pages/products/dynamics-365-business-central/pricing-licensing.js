@@ -768,7 +768,7 @@ const BusinessCentral = () => {
                   <div className='mycard__inner  mycard__inner-bg-1'>
                     <div className='mycard__inner-left'>
                       <h3>Power Platform Integration</h3>
-                      <p>Business Central also connects with <a href="/products/microsoft-power-platform/"> Microsoft Power Platform</a>, which comprises of:</p>
+                      <p>Business Central also connects with <a href="/products/microsoft-power-platform/"> Microsoft Power Platform</a>, which comprises:</p>
                       <ul>
                         <li><b>Power BI</b> for reporting and analytics </li>
                         <li><b>Power Automate</b> for workflow automation </li>

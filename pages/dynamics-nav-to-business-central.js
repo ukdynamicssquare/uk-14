@@ -764,7 +764,7 @@ const DynamicsNavToBusinessCentral = () => {
             <div className="col-lg-6">
               <div className="commen-rit-info commen-rit-info-nav">
                 <h2>What are the available pathways to Dynamics 365 Business Central?</h2>
-                <p>Dynamics Square upgrade brings agility to your business! Our consultants, after analyzing your business goals, can advise you on the right path. There are 3 ways to Upgrade Business Central.</p>
+                <p>Dynamics Square upgrade brings agility to your business! Our consultants, after analysing your business goals, can advise you on the right path. There are 3 ways to Upgrade Business Central.</p>
               </div>
             </div>
           </div>
@@ -960,7 +960,7 @@ const DynamicsNavToBusinessCentral = () => {
             </div>
 
             <div className="col-lg-12">
-              <p className="nav-bg-p-white">Thinking to Decide? Analyze the differences between Dynamics NAV & and Dynamics 365 Business Central & then <span>GO AHEAD</span>.</p>
+              <p className="nav-bg-p-white">Thinking to Decide? Analyse the differences between Dynamics NAV & and Dynamics 365 Business Central & then <span>GO AHEAD</span>.</p>
             </div>
           </div>
         </div>

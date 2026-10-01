@@ -85,7 +85,7 @@ const productCategories = [
   {
     id: "power-platform",
     title: "Microsoft Power Platform",
-    subtitle: "Analyze data, automate workflows, and build AI-powered apps with low code.",
+    subtitle: "Analyse data, automate workflows, and build AI-powered apps with low code.",
     products: [
       {
         href: "/products/microsoft-power-bi/",

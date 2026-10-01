@@ -447,7 +447,7 @@ const SupportServices = () => {
                     We embrace different support models suited to specific
                     individuals' needs. Whether you need goes for an annual
                     support model, independent support, or prepaid hour support,
-                    we are here to serve and fulfill your specific business
+                    we are here to serve and fulfil your specific business
                     needs in your terms and suited to your budget constraints
                     too.
                   </p>

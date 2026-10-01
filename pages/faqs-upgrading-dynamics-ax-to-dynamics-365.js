@@ -67,7 +67,7 @@ const FaqsUgradingDynamics = () => {
               Nearly, as both MS Dynamics AX and MS Dynamics 365 have embedded
               outstanding BI capabilities, offering an exceptional user
               experience, and enabling businesses to develop interactive
-              dashboards through high- end reporting features.
+              dashboards through high-end reporting features.
             </p>
           </header>
           <div className="row">

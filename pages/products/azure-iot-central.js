@@ -387,8 +387,7 @@ const AzureIoTCentral = () => {
                     <div className="accordion-body">
                       The term SLA refers to Service Level Agreement for
                       Microsoft online services defined as a part of Microsoft
-                      volume licensing agreement. SLA for Azure IoT Central was
-                      last updated on September 2018. Through this SLA,
+                      volume licensing agreement. Through this SLA,
                       Microsoft commits that Azure IoT Central will be available
                       at least 99 percent of the overall time.
                       <br />

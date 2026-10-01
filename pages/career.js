@@ -10,19 +10,19 @@ const Career = () => {
         <title>Career | Dynamics Square</title>
         <meta
           name="description"
-          content="Our effective leaders knows- their company's success depends upon not just a vision or product, but the people who carry out the vision and build the product"
+          content="Our effective leaders knows their company's success depends upon not just a vision or product, but the people who carry out the vision and build the product"
         />
         <link rel="canonical" href="https://www.dynamicssquare.co.uk/career/"/>
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/career/" />
         <meta property="og:title" content="Career | Dynamics Square" />
-        <meta property="og:description" content="Our effective leaders knows- their company's success depends upon not just a vision or product, but the people who carry out the vision and build the product" />
+        <meta property="og:description" content="Our effective leaders knows their company's success depends upon not just a vision or product, but the people who carry out the vision and build the product" />
         <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/carrer-banner.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/career/" />
         <meta property="twitter:title" content="Career | Dynamics Square" />
-        <meta property="twitter:description" content="Our effective leaders knows- their company's success depends upon not just a vision or product, but the people who carry out the vision and build the product" />
+        <meta property="twitter:description" content="Our effective leaders knows their company's success depends upon not just a vision or product, but the people who carry out the vision and build the product" />
         <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/carrer-banner.png" />
 
         <script
@@ -91,7 +91,7 @@ const Career = () => {
                     through Microsoft Business Applications.
                     <br />
                     <br />
-                    Our effective leaders knows- their company’s success depends
+                    Our effective leaders knows their company’s success depends
                     upon not just a vision or product, but the people who carry
                     out the vision and build the product day in and day out –
                     their employees

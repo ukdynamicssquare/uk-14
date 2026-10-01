@@ -62,10 +62,10 @@ const Partner = () => {
           <div className="col-lg-8 align-self-center">
               <div className="custom002">
                 <p>
-                Anveo is a trade mark of conion media GmbH located in Hamburg, Germany. Conion media GmbH was founded in 2005 to build business software with Microsoft Dynamics NAV.
+                Anveo is a trademark of conion media GmbH located in Hamburg, Germany. Conion media GmbH was founded in 2005 to build business software with Microsoft Dynamics NAV.
                 </p>
                 <p>Our passion is to build horizontal solutions as add-ons for Microsoft Dynamics NAV. These add-ons, the Anveo product family, is highly optimized to be implemented by other Microsoft Dynamics NAV partners on their own.</p>
-                <p>Anveo is sold world wide via more than 200 Anveo partners</p>
+                <p>Anveo is sold worldwide via more than 200 Anveo partners</p>
                 <a href="https://www.anveonav.com/en/" target="_blank" rel='no-follow'>
                 www.anveonav.com
                 </a>

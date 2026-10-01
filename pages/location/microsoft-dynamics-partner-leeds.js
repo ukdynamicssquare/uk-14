@@ -75,7 +75,7 @@ const MicrosoftDynamicsPartnerLeeds = () => {
                 <p>
                   The collaboration also allows us to deliver Microsoft
                   consulting services to local Leeds businesses and access the
-                  24-hour Microsoft Support service in their favor, ensuring
+                  24-hour Microsoft Support service in their favour, ensuring
                   that our clients always receive staunch customer service.
                   We've consistently performed outstandingly in several
                   examinations and demonstrated our abilities in various fields.
@@ -117,8 +117,7 @@ const MicrosoftDynamicsPartnerLeeds = () => {
                   Let your search for the{" "}
                   <Link href="/"> best Dynamics 365 partner in Leeds</Link> end
                   with us because we have a global network of <b>500+</b>{" "}
-                  clients and <b>14+</b> years of experience. We are healthy-
-                  aware of your pain points and focus on removing them
+                  clients and <b>14+</b> years of experience. We are healthy-aware of your pain points and focus on removing them
                   seamlessly, streamlining your enterprise operations in
                   alignment with Microsoft business applications.
                 </p>

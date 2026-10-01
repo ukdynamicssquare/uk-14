@@ -164,7 +164,7 @@ const MicrosoftDynamicsCrm = () => {
             <div className="col-lg-4 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
                 <h3>Sales Pipeline Management</h3>
-                <p>Your sales teams can manage leads, opportunities, follow ups, and customer interactions through a structured sales pipeline.</p>
+                <p>Your sales teams can manage leads, opportunities, follow-ups, and customer interactions through a structured sales pipeline.</p>
               </div>
             </div>
             <div className="col-lg-4 d-flex">
@@ -188,7 +188,7 @@ const MicrosoftDynamicsCrm = () => {
             <div className="col-lg-4 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
                 <h3>Workflow and Task Automation</h3>
-                <p>The system can automatically handle small daily tasks like reminders, follow ups, and updates. This saves time and reduces manual work. </p>
+                <p>The system can automatically handle small daily tasks like reminders, follow-ups, and updates. This saves time and reduces manual work. </p>
               </div>
             </div>
             <div className="col-lg-4 d-flex">

@@ -1778,7 +1778,7 @@ const PowerBIGuide = () => {
                     different items to different vendors.
                   </li>
                   <li>
-                    Classify items based on category, size, type, color, and
+                    Classify items based on category, size, type, colour, and
                     other parameters to effectively manage the receiving and
                     storage of items.
                   </li>

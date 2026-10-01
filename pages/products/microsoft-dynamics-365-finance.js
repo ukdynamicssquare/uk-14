@@ -246,7 +246,7 @@ const BusinessCentral = () => {
                       <ul>
                         <li>Monitor cash flow with predictive analytics.</li>
                         <li>Automate collections with rules and AI based reminders.</li>
-                        <li>Reduce write offs and improve payment timelines.</li>
+                        <li>Reduce write-offs and improve payment timelines.</li>
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
@@ -397,7 +397,7 @@ const BusinessCentral = () => {
                   </li>
                   <li>
                     <h3>Automate Collections & Protect Margins</h3>
-                    <p>Chasing payments drains resources. With Copilot, automate collections, predict customer payment behaviour, and cut write offs while improving on time payments.</p>
+                    <p>Chasing payments drains resources. With Copilot, automate collections, predict customer payment behaviour, and cut write-offs while improving on time payments.</p>
                   </li>
                   <li>
                     <h3>Plan with Confidence, Not Guesswork</h3>

@@ -10,7 +10,7 @@ const PowerPlatform = () => {
         <title>Microsoft Power Platform Partner UK | Dynamics Square</title>
         <meta
           name="description"
-          content="Analyze data, create solutions, automate processes and create virtual agents with Microsoft Power Platform. Schedule a free power platform demo today."
+          content="Analyse data, create solutions, automate processes and create virtual agents with Microsoft Power Platform. Schedule a free power platform demo today."
         />
         <link
           rel="canonical"
@@ -26,7 +26,7 @@ const PowerPlatform = () => {
                 Platform
               </h1>
               <p>
-                Analyze data, create solutions, automate processes and create
+                Analyse data, create solutions, automate processes and create
                 virtual agents with Microsoft Power Platform. Power Platform
                 brings together the power of Power BI, Power Apps and Power
                 Automate (Flow).
@@ -243,7 +243,7 @@ const PowerPlatform = () => {
                     Business Central
                   </h3>
                   <p>
-                    The reporting center role is embedded with Power BI. Through
+                    The reporting centre role is embedded with Power BI. Through
                     the Web Service connector, you can integrate the ERP data
                     automatically.
                   </p>

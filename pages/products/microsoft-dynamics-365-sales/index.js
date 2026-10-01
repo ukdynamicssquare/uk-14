@@ -205,7 +205,7 @@ const SalesNew = () => {
             <div className='col-lg-9'>
               <div className='solution-new-banner-sub-head'>
                 <h2>Inside Dynamics 365 Sales: What Powers Your Sales Teams</h2>
-                <p><b>Dynamics 365 Sales features</b> let you run sales operations with total control and confidence. Replace manual follow ups with AI driven actions, reduce delays through intelligent guidance, and improve deal outcomes with real time visibility. Here is how this agentic CRM solution transforms selling for modern organisations:</p>
+                <p><b>Dynamics 365 Sales features</b> let you run sales operations with total control and confidence. Replace manual follow-ups with AI driven actions, reduce delays through intelligent guidance, and improve deal outcomes with real time visibility. Here is how this agentic CRM solution transforms selling for modern organisations:</p>
               </div>
             </div>
           </div>

@@ -293,7 +293,7 @@ const Erp = () => {
                         hubs to streamline their business communication and
                         automate their daily data practices leveraging robotic
                         process automation. It enables manufacturing firms to
-                        fulfill the customers' needs in a timely manner while
+                        fulfil the customers' needs in a timely manner while
                         managing real-time resources, optimizing services,
                         managing costs, and production planning.
                       </div>

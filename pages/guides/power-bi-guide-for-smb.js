@@ -2796,7 +2796,7 @@ const PowerBIGuide = () => {
                 </p>
                 <p>
                   Power BI will assist businesses in simplifying difficult data,
-                  analyzing large amounts of data with ease, and providing users
+                  analysing large amounts of data with ease, and providing users
                   with accurate visualisation, making the entire data
                   utilization process simple.
                 </p>

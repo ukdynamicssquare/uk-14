@@ -352,7 +352,7 @@ const BusinessCentralFeatures = () => {
                   dependent or directly related to warehousing. To drive a
                   seamless and transparent flow across your warehousing unit,
                   you need a customized solution to effortlessly manage your
-                  inventory levels, shipments, and fulfillment.
+                  inventory levels, shipments, and fulfilment.
                 </p>
                 <p>
                   Business Central enables a multitude of functionalities to
@@ -372,7 +372,7 @@ const BusinessCentralFeatures = () => {
               <div className="commen-rit-info">
                 <h3>Service Management Features</h3>
                 <p>
-                  Customer fulfillment and success depends on how effectively
+                  Customer fulfilment and success depends on how effectively
                   you handle your service part. To ensure so, enterprises are
                   required to configure their system to ensure planning,
                   dispatching, adequate estimation, contract management, and

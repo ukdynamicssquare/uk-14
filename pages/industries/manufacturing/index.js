@@ -126,7 +126,7 @@ const Startup = () => {
                         quality, safety, and quality training practices across
                         your manufacturing unit. Effectively plan and drive
                         seamless distribution. Even you can re-plan production
-                        and distribution to fulfill the continuously changing
+                        and distribution to fulfil the continuously changing
                         customer demands with timely effect.
                       </p>
                     </div>

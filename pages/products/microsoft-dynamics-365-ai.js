@@ -327,7 +327,7 @@ Microsoft Dynamics 365 AI | Artificial intelligence
                           areas of improvement
                         </li>
                         <li>
-                          Analyzes dashboards of customer satisfaction,
+                          Analyses dashboards of customer satisfaction,
                           resolutions, and cases
                         </li>
                         <li>

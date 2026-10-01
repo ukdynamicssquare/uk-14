@@ -147,7 +147,7 @@ const Startup = () => {
                         Drive seamless ordering and delivery model by
                         implementing Dynamics 365 for Food and Beverages
                         industry. With improved insights into the warehousing
-                        pipeline, instantly respond to fulfill timely changing
+                        pipeline, instantly respond to fulfil timely changing
                         demands and customer anticipations.
                       </p>
                     </div>

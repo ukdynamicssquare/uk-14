@@ -59,7 +59,7 @@ const AzureDigitalTwins = () => {
             <p>
               Azure Digital Twins is an IoT platform that allows you to create a
               digital representation of IoT-connected infrastructure. Leveraging
-              open modeling language, you can model real-world things, people,
+              open modelling language, you can model real-world things, people,
               processes, places, etc. Now, you can transform these digital twins
               into real-life objects by applying dynamic business logic and data
               processing methods.

@@ -153,7 +153,7 @@ const SupplyChainManagements = () => {
                 <p><b>Inventory Control</b></p>
                 <ul>
                   <li>Live view of inventory across all sites and bins</li>
-                  <li>Stock aging analysis to reduce waste and obsolescence</li>
+                  <li>Stock ageing analysis to reduce waste and obsolescence</li>
                   <li>Traceability using batch and serial numbers</li>
                 </ul>
               </div>

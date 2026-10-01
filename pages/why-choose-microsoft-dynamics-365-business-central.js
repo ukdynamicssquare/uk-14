@@ -344,7 +344,7 @@ const WhyChooseBc = () => {
                       data-bs-parent="#accnew"
                     >
                       <div className="accordion-body">
-                        Facilitates easy look ups for relevant pages and reports
+                        Facilitates easy look-ups for relevant pages and reports
                         through an integrated simplified wizard, assisting users
                         to quickly and precisely find what they need.
                       </div>

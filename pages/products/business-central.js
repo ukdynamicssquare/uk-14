@@ -1057,7 +1057,7 @@ const BusinessCentral = () => {
                               <div className="content">
                                 <h4>Project Budget Management</h4>
                                 <p>
-                                  Analyze and compare the distribution of the
+                                  Analyse and compare the distribution of the
                                   budget across various projects to check the
                                   quality, cost, and efficiency.
                                 </p>
@@ -2278,7 +2278,7 @@ const BusinessCentral = () => {
                         <div className="content">
                           <h4>Project Budget Management</h4>
                           <p>
-                            Analyze and compare the distribution of the budget
+                            Analyse and compare the distribution of the budget
                             across various projects to check the quality, cost,
                             and efficiency.
                           </p>

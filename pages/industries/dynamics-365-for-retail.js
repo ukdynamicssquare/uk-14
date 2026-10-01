@@ -61,7 +61,7 @@ const MicrosoftCloudForNonprofit = () => {
             <header className="section-header">
               <h2>Unify your Diverse Retail Business with Dynamics 365 for Retail </h2>
               <p>Microsoft Cloud for Retail industry unifies digital and onsite stores to help you streamline the operations of your multi-channel business. It comes with multi-outlet management, POS (point-of-sale), streamlining online and offline store operations, merchandising management, and more capabilities as well. </p>
-              <p>Dynamics 365 for Retail comes with an interactive and responsive interface fueled with advanced tools to eliminate complexity for retailers. With the set of required tools, it will help you manage back-end processes so that you can focus on expanding your business. </p>
+              <p>Dynamics 365 for Retail comes with an interactive and responsive interface fuelled with advanced tools to eliminate complexity for retailers. With the set of required tools, it will help you manage back-end processes so that you can focus on expanding your business. </p>
             </header>
             </div>
            </div>

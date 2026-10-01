@@ -224,7 +224,7 @@ const ErpMicrosoftCloudFor = () => {
                       <div className='card-233-body'>
                         <h3><span><i className="bi bi-check2"></i></span>Financial Accuracy</h3>
                       </div>
-                      <p>Helps with budgeting and forecasting by analyzing historical data.</p>
+                      <p>Helps with budgeting and forecasting by analysing historical data.</p>
 
                     </div>
                   </div>
@@ -340,7 +340,7 @@ const ErpMicrosoftCloudFor = () => {
                           <li><i className="bi bi-check2"></i><span>Real-time suggestions for resolving customer issues more effectively.</span></li>
                           <li><i className="bi bi-check2"></i><span>Helps provide AI-driven templates for faster, personalized responses.</span></li>
                           <li><i className="bi bi-check2"></i><span>Assists with case management by forecasting resolution times and next best actions</span></li>
-                          <li><i className="bi bi-check2"></i><span>Improves the level of service by keeping track of performance and analyzing feedback.</span></li>
+                          <li><i className="bi bi-check2"></i><span>Improves the level of service by keeping track of performance and analysing feedback.</span></li>
                         </ul>
                       </div>
                       <div className='text-al'>
@@ -409,7 +409,7 @@ const ErpMicrosoftCloudFor = () => {
                         <h3>Dynamics 365 Commerce</h3>
                         <ul>
                           <li><i className="bi bi-check2"></i><span>Personalizes shopping experiences with AI-driven product recommendations.</span></li>
-                          <li><i className="bi bi-check2"></i><span>Analyzes how customers act to make sales and marketing plans better.  </span></li>
+                          <li><i className="bi bi-check2"></i><span>Analyses how customers act to make sales and marketing plans better.  </span></li>
                           <li><i className="bi bi-check2"></i><span>Automates order management and tracking.</span></li>
                           <li><i className="bi bi-check2"></i><span>Enhances in-store and online integration for unified commerce.</span></li>
                         </ul>

@@ -10,7 +10,7 @@ const MicrosoftAzure = () => {
         <title>Microsoft Azure | Microsoft Azure Cloud Services</title>
         <meta
           name="description"
-          content="Microsoft Azure is referred to cloud computing service owned and operated by Microsoft to manage hosted applications via its Microsoft-managed data centers."
+          content="Microsoft Azure is referred to cloud computing service owned and operated by Microsoft to manage hosted applications via its Microsoft-managed data centres."
         />
         <link
           rel="canonical"
@@ -21,7 +21,7 @@ const MicrosoftAzure = () => {
         <meta property="og:title" content="
 Microsoft Azure | Microsoft Azure Cloud Services
 " />
-        <meta property="og:description" content="Microsoft Azure is referred to cloud computing service owned and operated by Microsoft to manage hosted applications via its Microsoft-managed data centers." />
+        <meta property="og:description" content="Microsoft Azure is referred to cloud computing service owned and operated by Microsoft to manage hosted applications via its Microsoft-managed data centres." />
         <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/azurebanner.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
@@ -29,7 +29,7 @@ Microsoft Azure | Microsoft Azure Cloud Services
         <meta property="twitter:title" content="
 Microsoft Azure | Microsoft Azure Cloud Services
 " />
-        <meta property="twitter:description" content="Microsoft Azure is referred to cloud computing service owned and operated by Microsoft to manage hosted applications via its Microsoft-managed data centers." />
+        <meta property="twitter:description" content="Microsoft Azure is referred to cloud computing service owned and operated by Microsoft to manage hosted applications via its Microsoft-managed data centres." />
         <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/azurebanner.png" />
       </Head>
       <section className="Solution-banner hero-1 hero">
@@ -70,7 +70,7 @@ Microsoft Azure | Microsoft Azure Cloud Services
             <p>
               Microsoft Azure is referred to cloud computing service owned and
               operated by Microsoft to manage hosted applications via its
-              Microsoft-managed data centers. Microsoft Azure solutions involve
+              Microsoft-managed data centres. Microsoft Azure solutions involve
               Software as a Service (SaaS), Platform as a Service (PaaS), and
               Infrastructure as a Service (IaaS). With Microsoft Azure,
               enterprises can implement a highly secured next-generation
@@ -440,7 +440,7 @@ Microsoft Azure | Microsoft Azure Cloud Services
                     <p>
                       Ensure highly secured business model with Microsoft Azure
                       fundamentals embedded with multi-layer security provided
-                      and rolled out across Microsoft data centers,
+                      and rolled out across Microsoft data centres,
                       infrastructure, and connected operations covered by
                       security experts to protect your business assets and data
                       you drive over the cloud network.
@@ -522,7 +522,7 @@ Microsoft Azure | Microsoft Azure Cloud Services
                     <p>
                       Transform your raw data into real-time actionable insights
                       and key analytics by building modernized cloud-based key
-                      analytics solutions to address and fulfill your AI
+                      analytics solutions to address and fulfil your AI
                       (artificial intelligence), data warehousing, and advanced
                       analytics needs. With Azure cloud services, enable secure
                       data distribution across your distribution network.

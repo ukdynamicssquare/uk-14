@@ -167,7 +167,7 @@ const Dynamics365ForDistribution = () => {
               <div className="col-lg-9">
                 <header className="section-header">
                   <h2>Dynamics 365 for Trade and Distribution: Core Benefits of Growth!</h2>
-                  <p>It is a powerful business solution capable of fueling your business growth. Some of the core benefits are:</p>
+                  <p>It is a powerful business solution capable of fuelling your business growth. Some of the core benefits are:</p>
                 </header>
               </div>
             </div>

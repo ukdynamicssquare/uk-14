@@ -116,7 +116,7 @@ const MicrosoftCloudForNonprofit = () => {
                   fundraising & engagement, and drive a smoother constituent
                   marketing journey. This non-profit industry solution helps to
                   effectively ensure their volunteer management, volunteer
-                  engagement, volunteer center management, and more.
+                  engagement, volunteer centre management, and more.
                 </p>
               </div>
               <div className="col-lg-6 align-self-center">
@@ -131,7 +131,7 @@ const MicrosoftCloudForNonprofit = () => {
                       <p>
                         Considering your specific mission-critical needs, your
                         non-profit solution can be configured and customized to
-                        fulfill your foundational needs and can serve the
+                        fulfil your foundational needs and can serve the
                         purpose. The non-profit sector can drive unified
                         fundraising, ensure centralized data comprising both the
                         back office and frontline.

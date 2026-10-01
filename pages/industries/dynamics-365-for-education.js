@@ -446,7 +446,7 @@ const Education = () => {
               <div className='product-side-002-content'>
                 <div className='solution-new-banner-sub-head' style={{ paddingBottom: '0px' }}>
                   <h2>Dynamics 365 Applications for Education</h2>
-                  <p>Educational bodies require a connected set up where everything works in tandem to manage everyday operations. Microsoft Dynamics 365 provides a flexible ecosystem of applications that support different areas of the education sector.</p>
+                  <p>Educational bodies require a connected set-up where everything works in tandem to manage everyday operations. Microsoft Dynamics 365 provides a flexible ecosystem of applications that support different areas of the education sector.</p>
                 </div>
               </div>
             </div>

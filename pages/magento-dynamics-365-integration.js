@@ -55,7 +55,7 @@ const WhyMigrade360 = () => {
             <div className="col-lg-12">
               <header className="section-header">
                 <h2>Why Migrate to Microsoft Dynamics 365 Cloud?</h2>
-                <p>As per 2023 statistics, Magento 1 has 168,000+ and Magento 2 has 100,000+ active e-commerce sites over the web, with over 350,000+ worldwide developers who are helping businesses sell online.</p>
+                <p>Adobe Commerce (formerly Magento) is one of the most widely used e-commerce platforms. Magento 1 reached end-of-life in June 2020, so businesses still running it need to move to Adobe Commerce or another supported platform, and connecting that store to Dynamics 365 keeps orders, stock and customer data in sync.</p>
               </header>
             </div>
           </div>

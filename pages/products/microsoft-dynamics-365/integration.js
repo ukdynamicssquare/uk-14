@@ -428,7 +428,7 @@ const Integration = () => {
                                             data-bs-parent="#accnew"
                                         >
                                             <div className="accordion-body">
-                                                <p>Provides robust business intelligence tools for analyzing and visualizing Dynamics 365 data, enabling businesses to gain deeper insights into their operations and make informed decisions. </p>
+                                                <p>Provides robust business intelligence tools for analysing and visualizing Dynamics 365 data, enabling businesses to gain deeper insights into their operations and make informed decisions. </p>
                                             </div>
                                         </div>
                                     </div>

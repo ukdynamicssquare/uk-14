@@ -340,7 +340,7 @@ const CaseStudyArteak = () => {
                     </div>
                   </div>
                   <div className="cintent-right">
-                    <p>The hectic task of analyzing the business income over expenditure become simple.</p>
+                    <p>The hectic task of analysing the business income over expenditure become simple.</p>
                   </div>
                 </div>
                 <div className="content-inner-moil-1">
