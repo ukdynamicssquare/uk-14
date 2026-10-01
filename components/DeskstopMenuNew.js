@@ -253,16 +253,16 @@ const ToolsTabContent = ({ tab }) => (
   <div className="container-fluid">
     <div className="row">
       <div className="col-lg-9 d-flex bg-0-gray-t">
-        <div className="row bg-0-gray">
-          <div className="col-lg-4">
-            <div className="resor-bord">
+        <div className="row bg-0-gray align-content-start">
+          <div className="col-12">
+            <div className="resor-bord tools-head">
               <div className="guide-cardwar">
                 <span className="pop-res-title">{tab.heading}</span>
                 <p className="pop-res-title-p">{tab.subheading}</p>
               </div>
             </div>
           </div>
-          <div className="col-lg-8">
+          <div className="col-12">
             <div className="resor-bords">
               <div className="res-flex-wrap-one">
                 {tab.items.map((item) => (
@@ -297,7 +297,7 @@ const WebcastsTabContent = ({ tab }) => (
       <div className="col-lg-12 bg-0-gray-t">
         <div className="guide-cardwar">
           <span className="pop-res-title">{tab.heading}</span>
-          <p>{tab.subheading}</p>
+          <p className="pop-res-title-p">{tab.subheading}</p>
         </div>
         <div className="res-flex-wrap">
           {tab.items.map((item) => (

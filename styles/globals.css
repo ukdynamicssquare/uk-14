@@ -21568,6 +21568,16 @@ display: block;
   border-right:1px solid #DFCAF7;
   padding-right: 15px;
 }
+/* Tools tab: heading sits on top, cards in a row below */
+.resor-bord.tools-head{
+  border-right: 0;
+  padding-right: 0;
+  margin-bottom: 16px;
+}
+.resor-bord.tools-head .pop-res-title-p{
+  max-width: none;
+  margin-bottom: 0;
+}
 .tt-pico{
   margin-bottom:30px
 }

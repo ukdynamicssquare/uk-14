@@ -263,7 +263,7 @@ export default function LicenceRateCardWthhValication({ source = "licence-rate-c
   if (loadError) {
     return (
       <div className="rc">
-        <style>{CSS}</style>
+        <style dangerouslySetInnerHTML={{ __html: CSS }} />
         <div className="rc-load rc-load-error">{loadError}</div>
       </div>
     );
@@ -272,7 +272,7 @@ export default function LicenceRateCardWthhValication({ source = "licence-rate-c
   if (!catalog || !model || !currency) {
     return (
       <div className="rc">
-        <style>{CSS}</style>
+        <style dangerouslySetInnerHTML={{ __html: CSS }} />
         <div className="rc-load">Loading the rate card…</div>
       </div>
     );
@@ -349,7 +349,7 @@ export default function LicenceRateCardWthhValication({ source = "licence-rate-c
 
   return (
     <div className="rc">
-      <style>{CSS}</style>
+      <style dangerouslySetInnerHTML={{ __html: CSS }} />
 
       <header className="rc-head">
         <div className="rc-head-inner">
@@ -879,8 +879,8 @@ const CSS = `
 .rc{--paper:#f7f8fc;--panel:#fff;--ink:#24163d;--ink-2:#516073;--purple:#5d5084;
 --purple-dark:#3b2f58;--purple-mid:#4c406b;--purple-soft:#efedf5;--rule:#e6e2ed;--rule-2:#f1eff6;
 --blue:#0B5FA5;--blue-soft:#E8F0F7;--clay:#c83242;--clay-soft:#fff0f2;--jade:#0E6E4F;--jade-soft:#E9F2EE;
-// --mono:"IBM Plex Mono","SF Mono",ui-monospace,Menlo,monospace;
-// --sans:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+/* --mono:"IBM Plex Mono","SF Mono",ui-monospace,Menlo,monospace; */
+/* --sans:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; */
 min-height:100vh;background:linear-gradient(180deg,var(--purple) 0 504px,var(--paper) 504px 100%);
 color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.5;padding:0 24px 80px;
 -webkit-font-smoothing:antialiased}
@@ -1059,21 +1059,21 @@ box-shadow:0 12px 30px rgba(20,14,34,.24);cursor:pointer;text-transform: capital
   .rc-grid{grid-template-columns:minmax(0,1fr);gap:24px}
   .rc-statement{position:static;order:2
 }
-// @media (max-width:720px){
-//   .rc{padding:0 16px 48px;background:linear-gradient(180deg,var(--purple) 0 560px,var(--paper) 560px 100%)}
-//   .rc-head{padding:42px 0 104px}
-//   .rc-head h1{font-size:40px;line-height:1.1}
-//   .rc-dek{font-size:17px}
-//   .rc-stats{grid-template-columns:1fr;gap:18px;margin-top:32px}
-//   .rc-grid{margin-top:-64px}
-//   .rc-inputs,.stmt{padding:24px}
-//   .rc-toolbar{align-items:flex-start;flex-direction:column}
-//   .cap{align-items:flex-start}
-//   .rc .tag{margin-left:auto}
-//   .stp{align-items:flex-start;flex-direction:column}
-//   .stp-ctl{align-self:flex-end}
-//   .stmt-heading-row{align-items:flex-start;flex-direction:column}
-// }
+/* @media (max-width:720px){ */
+/*   .rc{padding:0 16px 48px;background:linear-gradient(180deg,var(--purple) 0 560px,var(--paper) 560px 100%)} */
+/*   .rc-head{padding:42px 0 104px} */
+/*   .rc-head h1{font-size:40px;line-height:1.1} */
+/*   .rc-dek{font-size:17px} */
+/*   .rc-stats{grid-template-columns:1fr;gap:18px;margin-top:32px} */
+/*   .rc-grid{margin-top:-64px} */
+/*   .rc-inputs,.stmt{padding:24px} */
+/*   .rc-toolbar{align-items:flex-start;flex-direction:column} */
+/*   .cap{align-items:flex-start} */
+/*   .rc .tag{margin-left:auto} */
+/*   .stp{align-items:flex-start;flex-direction:column} */
+/*   .stp-ctl{align-self:flex-end} */
+/*   .stmt-heading-row{align-items:flex-start;flex-direction:column} */
+/* } */
 @media (max-width:720px){
   .rc{padding:0 16px 108px;background:linear-gradient(180deg,var(--purple) 0 560px,var(--paper) 560px 100%)}
   .rc-head{padding:42px 0 104px}

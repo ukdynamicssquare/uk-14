@@ -469,6 +469,7 @@ export const resourcesMenu = {
       heading: "TOOLS",
       subheading: "Estimate costs, compare solutions, and choose the right Microsoft Dynamics 365 platform with confidence.",
       items: [
+        { href: "/tools/microsoft-dynamics-licensing-calculator/", image: "/img/tools-three.png", tag: "Licensing Calculator", title: "Calculate your Dynamics 365 licensing costs.", cta: "Calculate Now" },
         { href: "/erp-implementation-cost-calculator/", image: "/img/tools-one.png", tag: "ERP Calculator", title: "Estimate implementation costs in minutes.", cta: "Calculate Now" },
         { href: "/top-erp-systems-comparison/", image: "/img/tools-two.png", tag: "ERP Comparison", title: "Compare Dynamics 365 solutions side-by-side.", cta: "Compare Now" },
       ],
@@ -478,7 +479,7 @@ export const resourcesMenu = {
       label: "Webcasts",
       icon: "/img/menu-icons/res-meg-06.png",
       type: "webcasts",
-      heading: "Webcasts",
+      heading: "WEBCASTS",
       subheading: "Your go-to source for expert insights on CRM, ERP, and business transformation powered by Microsoft Dynamics 365",
       items: [
         { href: "https://www.youtube.com/watch?v=44hqw-S27D0", image: "/img/bc-8-20.png", title: "Is Your Business Ready for an ERP System?", desc: "Explore key signs, benefits, and steps to ERP readiness" },
@@ -655,6 +656,7 @@ export const WHITEPAPERS = [
 ];
 
 export const TOOLS = [
+  { href: "/tools/microsoft-dynamics-licensing-calculator/", img: "/img/tools-three.png", tag: "Licensing Calculator", title: "Calculate your Dynamics 365 licensing costs.", cta: "Calculate Now" },
   { href: "/erp-implementation-cost-calculator/", img: "/img/tools-one.png", tag: "ERP Calculator", title: "Estimate implementation costs in minutes.", cta: "Calculate Now" },
   { href: "/top-erp-systems-comparison/", img: "/img/tools-two.png", tag: "ERP Comparison", title: "Compare Dynamics 365 solutions side-by-side.", cta: "Compare Now" },
 ];

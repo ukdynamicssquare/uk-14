@@ -440,16 +440,16 @@ const DeskstopMenu = () => {
                     <div className="container-fluid">
                       <div className="row">
                         <div className="col-lg-9 d-flex bg-0-gray-t">
-                          <div className="row bg-0-gray">
-                            <div className="col-lg-4">
-                              <div className="resor-bord">
+                          <div className="row bg-0-gray align-content-start">
+                            <div className="col-12">
+                              <div className="resor-bord tools-head">
                                 <div className="guide-cardwar">
                                   <span className="pop-res-title">TOOLS</span>
                                   <p className="pop-res-title-p">Estimate costs, compare solutions, and choose the right Microsoft Dynamics 365 platform with confidence.</p>
                                 </div>
                               </div>
                             </div>
-                            <div className="col-lg-8">
+                            <div className="col-12">
                               <div className="resor-bords">
                                 <div className="res-flex-wrap-one">
                                   {TOOLS.map((t) => (
@@ -484,8 +484,8 @@ const DeskstopMenu = () => {
                       <div className="row">
                         <div className="col-lg-12 bg-0-gray-t">
                           <div className="guide-cardwar">
-                            <span className="pop-res-title">Webcasts</span>
-                            <p>Your go-to source for expert insights on CRM, ERP, and business transformation powered by Microsoft Dynamics 365</p>
+                            <span className="pop-res-title">WEBCASTS</span>
+                            <p className="pop-res-title-p">Your go-to source for expert insights on CRM, ERP, and business transformation powered by Microsoft Dynamics 365</p>
                           </div>
                           <div className="res-flex-wrap">
                             {WEBCASTS.map((w) => (
