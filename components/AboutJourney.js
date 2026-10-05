@@ -13,7 +13,6 @@ import s from "../styles/aboutJourney.module.css";
   To go back to the old image version, set USE_CODE_JOURNEY to false in pages/aboutus-new.js.
 */
 
-const TOP_OFFSET = 90; // px kept clear for the fixed site header while the map is held
 const VB_W = 1781;
 const VB_H = 883;
 
@@ -63,7 +62,7 @@ const milestones = [
     icon: <i className="bi bi-briefcase-fill" />,
     text: "Our company began with a mission to simplify ERP complexity for businesses.",
     tx: -2.3,
-    tw: 8.6,
+    tw: 11,
     cl: 2.4,
   },
   {
@@ -74,8 +73,8 @@ const milestones = [
     icon: <i className="bi bi-flag-fill" />,
     text: "We expanded across the UK, US, Canada, and Australia through a consistent demand for practical and reliable support.",
     tx: -1.35,
-    cx: 1.7,
-    tw: 14,
+    cx: 0,
+    tw: 15,
     cl: 2.4,
   },
   {
@@ -85,8 +84,8 @@ const milestones = [
     dir: "up",
     icon: <Crown />,
     text: "We supported more than 500 customers with solutions designed around real-world needs.",
-    tx: -4.2,
-    tw: 12.2,
+    tx: -5,
+    tw: 13,
     cl: 2.2,
   },
   {
@@ -97,8 +96,8 @@ const milestones = [
     icon: <i className="bi bi-award-fill" />,
     text: "We reached a team strength of 150 certified experts across global offices.",
     tx: 0.15,
-    cx: 1.7,
-    tw: 12.5,
+    cx: 0,
+    tw: 13.5,
     cl: 3.4,
   },
   {
@@ -108,8 +107,8 @@ const milestones = [
     dir: "up",
     icon: <i className="bi bi-cpu-fill" />,
     text: "We stepped into a future shaped by AI led transformation and sustainability focussed progress.",
-    tx: -6.8,
-    tw: 11.8,
+    tx: -9.8,
+    tw: 14.3,
     cl: 2.2,
   },
 ];
@@ -205,8 +204,9 @@ const AboutJourney = () => {
         // so the whole animation finishes before the next section scrolls in.
         scrollTrigger: {
           trigger: track,
-          start: `top ${TOP_OFFSET}px`,
-          end: () => `bottom top+=${TOP_OFFSET + sticky.offsetHeight}`,
+          // the sticky top (space kept clear for the fixed header) comes from CSS, so it can change per breakpoint
+          start: () => `top ${parseFloat(getComputedStyle(sticky).top) || 0}px`,
+          end: () => `bottom top+=${(parseFloat(getComputedStyle(sticky).top) || 0) + sticky.offsetHeight}`,
           // progress is driven only by scroll via follow(); without this GSAP's default "play" would auto-run the timeline
           toggleActions: "none none none none",
           onUpdate: (self) => follow(self.progress),
@@ -257,8 +257,8 @@ const AboutJourney = () => {
       // 3. heading
       tl.from(`.${s.title}`, { y: 40, opacity: 0, duration: 1 }, 0);
 
-      // 3b. closing quote appears once the road is finished
-      tl.fromTo(`.${s.quote}`, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 1.2, ease: "power3.out" }, T - 1.6);
+      // 3b. quote sits under the heading, so it comes in right after it
+      tl.fromTo(`.${s.quote}`, { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: "power3.out" }, 0.4);
 
       // 4. each milestone: pin drops, connector grows, dot pops, text rises
       milestones.forEach((m, i) => {
@@ -308,8 +308,13 @@ const AboutJourney = () => {
     <section ref={sectionRef} className={s.journey} aria-label="Our journey so far">
       <div ref={trackRef} className={s.track}>
         <div ref={stickyRef} className={s.sticky}>
-      <div className="container">
+      <div className={`container ${s.titleWrap}`}>
         <h2 className={s.title}>Our Journey So Far</h2>
+        <blockquote className={s.quote}>
+          <span className={s.quoteMark} aria-hidden="true">&ldquo;</span>
+          <span className={s.quoteText}>{QUOTE}</span>
+          <span className={`${s.quoteMark} ${s.quoteMarkEnd}`} aria-hidden="true">&rdquo;</span>
+        </blockquote>
       </div>
 
       <div ref={stageRef} className={s.stage}>
@@ -395,12 +400,6 @@ const AboutJourney = () => {
             </div>
           </div>
         ))}
-
-        <blockquote className={s.quote}>
-          <span className={s.quoteMark} aria-hidden="true">&ldquo;</span>
-          <span className={s.quoteText}>{QUOTE}</span>
-          <span className={`${s.quoteMark} ${s.quoteMarkEnd}`} aria-hidden="true">&rdquo;</span>
-        </blockquote>
       </div>
 
         </div>
