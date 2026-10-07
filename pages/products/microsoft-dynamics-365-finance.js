@@ -897,7 +897,7 @@ const BusinessCentral = () => {
                           <a href='/case-studies/dynamics-365-finance-for-logistic-uk-multi-entity/'>
                             <img src="/img/logistic-uk.jpg" width={273} height={192} alt="bc-8-17" />
                             <h3>Dynamics 365 Finance for Logistic UK Multi Entity</h3>
-                            <p>How a Global Logistics Business Strengthened Financial Control and Prepared for Multi-Entity Rollout with Microsoft Dynamics 365...</p>
+                            <p>How Bertling Group Strengthened Financial Control and Prepared for a Multi-Entity Rollout with Microsoft Dynamics 365...</p>
                             <div className='ct--a'>
                               <span>Read More</span>
                             </div>

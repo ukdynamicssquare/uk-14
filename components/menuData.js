@@ -402,10 +402,10 @@ export const resourcesMenu = {
       highlights: {
         heading: "Customer Success Highlights",
         links: [
-          { href: "/case-studies/dynamics-365-finance-for-logistic-uk-multi-entity/", label: "Stronger Financial Control for Global Rollout | Global Logistics Business", highlighted: true },
+          { href: "/case-studies/dynamics-365-finance-for-logistic-uk-multi-entity/", label: "Stronger Financial Control for Global Rollout | Bertling Group", highlighted: true },
           { href: "/case-studies/business-central-with-crm-implement-for-equestrian-manufacturing/", label: "162% Projected ROI with 8% Efficiency Gain | UK Manufacturer" },
           { href: "/business-central-reimplementation-for-retail-market/", label: "Digitally Synchronized Warehouse Operations | Northern Ireland Saddlery Business" },
-          { href: "/case-studies/business-central-reimplementation-for-food-trader/", label: "162% Projected ROI and £32K+ Savings | Food Trading Startup" },
+          { href: "/case-studies/business-central-reimplementation-for-food-trader/", label: "162% Projected ROI and £32K+ Savings | World Food Trading" },
           { href: "/case-studies/nav-2013-r2-to-business-central-upgrade/", label: "Improved Efficiency and Real-Time Visibility | UK Orthodontic Supplier" },
         ],
         exploreHref: "/case-studies/",
@@ -631,10 +631,10 @@ export const CASE_STUDY_SERVICES = [
 ];
 
 export const CASE_STUDY_HIGHLIGHTS = [
-  { href: "/case-studies/dynamics-365-finance-for-logistic-uk-multi-entity/", label: "Stronger Financial Control for Global Rollout | Global Logistics Business" },
+  { href: "/case-studies/dynamics-365-finance-for-logistic-uk-multi-entity/", label: "Stronger Financial Control for Global Rollout | Bertling Group" },
   { href: "/case-studies/business-central-with-crm-implement-for-equestrian-manufacturing/", label: "162% Projected ROI with 8% Efficiency Gain | UK Manufacturer" },
   { href: "/case-studies/business-central-reimplementation-for-retail-market/", label: "Digitally Synchronized Warehouse Operations | Northern Ireland Saddlery Business" },
-  { href: "/case-studies/business-central-reimplementation-for-food-trader/", label: "162% Projected ROI and £32K+ Savings | Food Trading Startup" },
+  { href: "/case-studies/business-central-reimplementation-for-food-trader/", label: "162% Projected ROI and £32K+ Savings | World Food Trading" },
   { href: "/case-studies/nav-2013-r2-to-business-central-upgrade/", label: "Improved Efficiency and Real-Time Visibility | UK Orthodontic Supplier" },
 ];
 

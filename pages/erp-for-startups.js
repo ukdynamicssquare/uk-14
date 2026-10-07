@@ -462,7 +462,7 @@ const ErpMicrosoftCloudFor = () => {
                   </div>
                   <div className="commen-boc-2-info">
                     <p>
-                      UK's top personal care brand boosted operational efficiency up to 4X by upgrading from Dynamics NAV 2009 to Dynamics NAV 2018.
+                      CRM Trading boosted operational efficiency up to 4X by upgrading from Dynamics NAV 2009 to Dynamics NAV 2018.
                     </p>
                   </div>
                   <div className="btn-003">
@@ -485,7 +485,7 @@ const ErpMicrosoftCloudFor = () => {
                   </div>
                   <div className="commen-boc-2-info">
                     <p>
-                      UK's top sexual wellness brand improved productivity by up to 68% by upgrading to Business Central On-premise from Dynamics NAV.
+                      Pasante Healthcare improved productivity by up to 68% by upgrading to Business Central On-premise from Dynamics NAV.
                     </p>
                   </div>
                   <div className="btn-003">

@@ -1,7 +1,7 @@
 [
       {
     "id": 22,
-    "title": "How a Global Logistics Business Strengthened Financial Control and Prepared for Multi-Entity Rollout with Microsoft Dynamics 365",
+    "title": "How Bertling Group Strengthened Financial Control and Prepared for a Multi-Entity Rollout with Microsoft Dynamics 365",
     "image": "/img/logistic-uk.jpg",
     "alt": "logistic-uk",
     "slug": "/case-studies/dynamics-365-finance-for-logistic-uk-multi-entity/",
@@ -9,7 +9,7 @@
   },
         {
     "id": 23,
-    "title": "How a Tooling and Distribution Business Restored Compliance and Rebuilt Trust with Microsoft Dynamics 365",
+    "title": "How Rolson Tools Restored Compliance and Rebuilt Trust with Microsoft Dynamics 365",
     "image": "/img/tool-manufacturing-company.jpg",
     "alt": "tool-manufacturing-company",
     "slug": "/case-studies/business-central-for-tool-manufacturing-company/",
@@ -49,7 +49,7 @@
   },
   {
     "id": 2,
-    "title": "Emerging European food trader boosted operational control by 162% ROI in 3 years by adopting Business Central from scratch with Dynamics Square",
+    "title": "World Food Trading boosted operational control by 162% ROI in 3 years by adopting Business Central from scratch with Dynamics Square",
     "image": "/img/mgg-food-feautre.jpg",
     "alt": "mgg-food-feautre",
     "slug": "/case-studies/business-central-reimplementation-for-food-trader/",
@@ -57,7 +57,7 @@
   },
   {
     "id": 3,
-    "title": "A specialist in plastic automation simplified its complex buy-sell operations and strengthened project control using Microsoft Dynamics 365 Business Central.",
+    "title": "Summit Systems, a specialist in plastic automation, simplified its complex buy-sell operations and strengthened project control using Microsoft Dynamics 365 Business Central.",
     "image": "/img/Summit-Systems.png",
     "alt": "Summit-Systems",
     "slug": "/case-studies/business-central-reimplementation-for-recycling-industry/",
@@ -73,7 +73,7 @@
   },
   {
     "id": 5,
-    "title": "UK's top personal care brand boosted operational efficiency up to 4X by upgrading from Dynamics NAV 2009 to Dynamics NAV 2018.",
+    "title": "CRM Trading boosted operational efficiency up to 4X by upgrading from Dynamics NAV 2009 to Dynamics NAV 2018.",
     "image": "/img/case-studies-1.jpg",
     "alt": "crm-trading",
     "slug": "/case-studies/nav2009-nav18-upgrade/",
@@ -81,7 +81,7 @@
   },
   {
     "id": 6,
-    "title": "UK's top sexual wellness brand improved productivity by up to 68% by upgrading to Business Central On-premise from Dynamics NAV.",
+    "title": "Pasante Healthcare improved productivity by up to 68% by upgrading to Business Central On-premise from Dynamics NAV.",
     "image": "/img/case-studies-2.jpg",
     "alt": "case-studies-2",
     "slug": "/case-studies/nav09-to-business-central-upgrade/",
@@ -97,7 +97,7 @@
   },
   {
     "id": 8,
-    "title": "A UK's leading defence apparel manufacturer increased efficiency and accuracy by up to 50% by implementing Microsoft Dynamics 365 Business Central online.",
+    "title": "CQC Ltd, a leading UK defence apparel manufacturer, increased efficiency and accuracy by up to 50% by implementing Microsoft Dynamics 365 Business Central online.",
     "image": "/img/case-studies-4.jpg",
     "alt": "cqc-logo",
     "slug": "/case-studies/nav2009R2-to-business-central/",
@@ -105,7 +105,7 @@
   },
   {
     "id": 9,
-    "title": "Learn how an HSSE consulting firm improved overall accounting and financial processes by implementing Dynamics 365 Business Central.",
+    "title": "Learn how Arteak Ltd, an HSSE consulting firm, improved overall accounting and financial processes by implementing Dynamics 365 Business Central.",
     "image": "/img/case-studies-5.jpg",
     "alt": "arteak-logo",
     "slug": "/case-studies/migrate-nav9-to-business-central/",
@@ -113,7 +113,7 @@
   },
   {
     "id": 10,
-    "title": "A UK-based paper and forest product manufacturer doubled its sales volume and customers with dedicated support from Dynamics Square.",
+    "title": "Wiper Supply doubled its sales volume and customers with dedicated support from Dynamics Square.",
     "image": "/img/case-studies-6.jpg",
     "alt": "wipersupplywide",
     "slug": "/case-studies/nav-2016-support-services/",
@@ -137,7 +137,7 @@
   },
   {
     "id": 13,
-    "title": "A leading college in London has improved the department collaboration by 80% with the Business Central upgrade.",
+    "title": "BSix Sixth Form College in London improved department collaboration by 80% with the Business Central upgrade.",
     "image": "/img/BSix.jpg",
     "alt": "BSix",
     "slug": "/case-studies/upgrade-from-nav09-to-business-central/",
@@ -169,7 +169,7 @@
   },
   {
     "id": 17,
-    "title": "A leading car restoration and customization company has enhanced their ROI by 30% with Business Central implementation.",
+    "title": "Omicron Engineering, a leading car restoration and customisation company, enhanced its ROI by 30% with Business Central implementation.",
     "image": "/img/Omicron-Engineering.jpg",
     "alt": "Omicron-Engineering",
     "slug": "/case-studies/access-dimension-erp-to-business-central-migration/",
@@ -193,7 +193,7 @@
   },
   {
     "id": 20,
-    "title": "A UK’s leading melamine food display manufacturing and supply company has achieved enhanced productivity by 50% with Business Central cloud re-implementation.",
+    "title": "Dalebrook Supplies, a leading UK melamine food display manufacturer, achieved enhanced productivity by 50% with Business Central cloud re-implementation.",
     "image": "/img/Dalebrook-Supplies.jpg",
     "alt": "Dalebrook-Supplies",
     "slug": "/case-studies/migrate-on-premises-to-business-central-cloud/",

@@ -22676,3 +22676,119 @@ letter-spacing:3px
   background-color: #0d47a1;
   transform: translateY(-1px);
 }
+/* Case study: client crux card with logo */
+.crux-client-card {
+  display: flex;
+  align-items: stretch;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px 0 rgb(22 92 196 / 16%);
+}
+.crux-client-brand {
+  flex: 0 0 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  padding: 36px 30px;
+  background: linear-gradient(160deg, #f4f7fc 0%, #e9eef8 100%);
+  border-right: 1px solid #e3e8f2;
+}
+.crux-client-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 110px;
+  padding: 20px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgb(22 92 196 / 10%);
+}
+.crux-client-logo img {
+  max-width: 100%;
+  max-height: 70px;
+  object-fit: contain;
+}
+.crux-client-wordmark {
+  display: none;
+  font-size: 22px;
+  font-weight: 800;
+  color: #1b2f50;
+  text-align: center;
+  letter-spacing: 0.3px;
+}
+.crux-client-meta {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.crux-client-meta li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: #1b2f50;
+  border-bottom: 1px dashed #d4dbe8;
+}
+.crux-client-meta li:last-child {
+  border-bottom: 0;
+}
+.crux-client-meta li i {
+  color: #b10817;
+  font-size: 17px;
+}
+.crux-client-body {
+  flex: 1;
+  padding: 40px 44px;
+  text-align: left;
+}
+.crux-client-eyebrow {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 4px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #b10817;
+  background: rgb(177 8 23 / 8%);
+  border-radius: 20px;
+}
+.crux-client-body h2 {
+  margin-bottom: 16px;
+  font-size: 34px;
+  font-weight: 700;
+  color: #1b2f50;
+}
+.crux-client-body p {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.7;
+  color: #444;
+}
+.crux-client-body p strong {
+  color: #1b2f50;
+}
+@media (max-width: 991px) {
+  .crux-client-card {
+    flex-direction: column;
+  }
+  .crux-client-brand {
+    flex-basis: auto;
+    border-right: 0;
+    border-bottom: 1px solid #e3e8f2;
+    padding: 28px 20px;
+  }
+  .crux-client-body {
+    padding: 28px 20px;
+  }
+  .crux-client-body h2 {
+    font-size: 26px;
+  }
+  .crux-client-body p {
+    font-size: 16px;
+  }
+}

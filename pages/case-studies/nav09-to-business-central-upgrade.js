@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
+import CaseStudyClientCard from "../../components/CaseStudyClientCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -13,15 +14,33 @@ const CaseStudyPasante = () => {
   return (
     <>
       <Head>
-        <title>Dynamics NAV 2009 to Business Central On-Premise Upgrade</title>
+        <title>Pasante Healthcare: NAV 2009 to Business Central On-Premises Case Study | Dynamics Square</title>
         <meta
           name="description"
-          content="A sexual wellness brand collaborated with Dynamics Square to enhance their system from Dynamics NAV 2009 to Business Central on-premises. Explore the case study to discover valuable insights. "
+          content="How Pasante Healthcare upgraded from Dynamics NAV 2009 to Business Central on-premises with Dynamics Square to improve productivity across its operations."
         />
         <link
           rel="canonical"
           href="https://www.dynamicssquare.co.uk/case-studies/nav09-to-business-central-upgrade/"
         />
+        <meta property="og:locale" content="en_GB" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Pasante Healthcare: NAV 2009 to Business Central On-Premises Case Study | Dynamics Square" />
+        <meta property="og:description" content="How Pasante Healthcare upgraded from Dynamics NAV 2009 to Business Central on-premises with Dynamics Square to improve productivity across its operations." />
+        <meta property="og:url" content="https://www.dynamicssquare.co.uk/case-studies/nav09-to-business-central-upgrade/" />
+        <meta property="og:site_name" content="Dynamics Square UK" />
+        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/case-studies-2.jpg" />
+        <meta property="og:image:secure_url" content="https://www.dynamicssquare.co.uk/img/case-studies-2.jpg" />
+        <meta property="og:image:width" content="850" />
+        <meta property="og:image:height" content="410" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:alt" content="Pasante Healthcare case study – Dynamics Square" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@dsquare_uk" />
+        <meta name="twitter:title" content="Pasante Healthcare: NAV 2009 to Business Central On-Premises Case Study | Dynamics Square" />
+        <meta name="twitter:description" content="How Pasante Healthcare upgraded from Dynamics NAV 2009 to Business Central on-premises with Dynamics Square to improve productivity across its operations." />
+        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/case-studies-2.jpg" />
+        <meta name="twitter:image:alt" content="Pasante Healthcare case study – Dynamics Square" />
       </Head>
       <section className="hero-1 hero">
         <div className="container">
@@ -31,7 +50,7 @@ const CaseStudyPasante = () => {
                 <div className="top-se">
                   <span className="date-ti">Case Study</span>
                   <h1>Dynamics NAV 2009 to Business Central On-Premises</h1>
-                  <p>NAV 2009 to Dynamics 365 Business Central On-Premises Upgrade</p>
+                  <p>How Pasante Healthcare upgraded from NAV 2009 to Dynamics 365 Business Central On-Premises</p>
                 </div>
               </div>
             </div>
@@ -39,7 +58,7 @@ const CaseStudyPasante = () => {
               <div className="sider-over">
                 <Image
                   src="/img/Dynamics-365-Business-Central.png"
-                  alt="business centeral implementation"
+                  alt="Pasante Healthcare Dynamics 365 Business Central case study"
                   width={1024} height={597} priority={true}
                 />
               </div>
@@ -51,17 +70,18 @@ const CaseStudyPasante = () => {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-10">
-              <div className="row bg-case">
-                <div className="col-lg-3 align-self-center">
-                  <img
-                    src="/img/casestudy-pic.png"
-                    alt="casestudy-pic"
-                  />
-                </div>
-                <div className="col-lg-9">
-                  <p>The company was established in 1992 and world's leading condom manufacturing British brand, fully established in 2000 to manufacture sexual health products. They provide the best sexual health products to consumers and inspire them to make better choices for their health. Also, they are in partnership with NHS (National Health Services) and NPOs (Non-profit organizations) to provide safe products to the mass. The generally exports its products to more than 45 countries globally. Even, it is the largest condom supplier to NHS and for many charity organizations.</p>
-                </div>
-              </div>
+              <CaseStudyClientCard
+                clientName="Pasante Healthcare"
+                logo="/img/case-study-logos/pasante-healthcare-logo.png"
+                meta={[
+                  { icon: "bi-heart-pulse", label: "Sexual Health Products" },
+                  { icon: "bi-geo-alt", label: "United Kingdom" },
+                  { icon: "bi-arrow-up-circle", label: "NAV 2009 → Business Central" },
+                ]}
+                title="About Pasante Healthcare"
+              >
+                <p><strong>Pasante Healthcare</strong> was established in 1992 and world's leading condom manufacturing British brand, fully established in 2000 to manufacture sexual health products. They provide the best sexual health products to consumers and inspire them to make better choices for their health. Also, they are in partnership with NHS (National Health Services) and NPOs (Non-profit organizations) to provide safe products to the mass. The generally exports its products to more than 45 countries globally. Even, it is the largest condom supplier to NHS and for many charity organizations.</p>
+              </CaseStudyClientCard>
             </div>
           </div>
         </div>
@@ -76,7 +96,7 @@ const CaseStudyPasante = () => {
           </header>
           <div className="row gx-5">
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/cast-stu-pic.png" alt="cast-stu-pic" width={484} height={407} />
+              <Image src="/img/cast-stu-pic.png" alt="Pasante Healthcare business challenges" width={484} height={407} />
             </div>
             <div className="col-lg-6">
               <div className="content-icons-modil-1">
@@ -401,7 +421,7 @@ const CaseStudyPasante = () => {
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/Group1435.png" alt="Group1435" width={640} height={598} />
+              <Image src="/img/Group1435.png" alt="Pasante Healthcare benefits with Dynamics Square" width={640} height={598} />
             </div>
           </div>
         </div>

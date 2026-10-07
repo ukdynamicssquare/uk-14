@@ -1016,16 +1016,19 @@ const handleTabChange = (tab) => {
         .case-card-featured {
           grid-column: span 2;
           display: grid;
-          grid-template-columns: 1.15fr .85fr;
+          grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
         }
 
         .case-card-featured .case-image {
           height: 100%;
           min-height: 380px;
+          min-width: 0;
+          aspect-ratio: auto;
         }
 
         .case-card-featured .case-card-content {
           justify-content: center;
+          min-width: 0;
           padding: 45px;
         }
 

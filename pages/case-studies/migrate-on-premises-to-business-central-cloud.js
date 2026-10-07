@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
+import CaseStudyClientCard from "../../components/CaseStudyClientCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -13,15 +14,33 @@ const MigrateOnPremisesToBusinessCentralCloud = () => {
   return (
     <>
       <Head>
-        <title>Migrate On-premises to Business Central Cloud - Case Study</title>
+        <title>Dalebrook Supplies: On-Premises to Business Central Cloud Case Study | Dynamics Square</title>
         <meta
           name="description"
-          content="Migrate On-premises to Business Central Cloud Case Study: We simplified business processes with increased efficiency and productivity."
+          content="How Dalebrook Supplies, a melamine food display manufacturer, migrated from on-premises to Business Central cloud to simplify processes and boost productivity."
         />
         <link
           rel="canonical"
           href="https://www.dynamicssquare.co.uk/case-studies/migrate-on-premises-to-business-central-cloud/"
         />
+        <meta property="og:locale" content="en_GB" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Dalebrook Supplies: On-Premises to Business Central Cloud Case Study | Dynamics Square" />
+        <meta property="og:description" content="How Dalebrook Supplies, a melamine food display manufacturer, migrated from on-premises to Business Central cloud to simplify processes and boost productivity." />
+        <meta property="og:url" content="https://www.dynamicssquare.co.uk/case-studies/migrate-on-premises-to-business-central-cloud/" />
+        <meta property="og:site_name" content="Dynamics Square UK" />
+        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/Dalebrook-Supplies.jpg" />
+        <meta property="og:image:secure_url" content="https://www.dynamicssquare.co.uk/img/Dalebrook-Supplies.jpg" />
+        <meta property="og:image:width" content="851" />
+        <meta property="og:image:height" content="410" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:alt" content="Dalebrook Supplies case study – Dynamics Square" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@dsquare_uk" />
+        <meta name="twitter:title" content="Dalebrook Supplies: On-Premises to Business Central Cloud Case Study | Dynamics Square" />
+        <meta name="twitter:description" content="How Dalebrook Supplies, a melamine food display manufacturer, migrated from on-premises to Business Central cloud to simplify processes and boost productivity." />
+        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/Dalebrook-Supplies.jpg" />
+        <meta name="twitter:image:alt" content="Dalebrook Supplies case study – Dynamics Square" />
       </Head>
       <section className="hero-1 hero">
         <div className="container">
@@ -31,7 +50,7 @@ const MigrateOnPremisesToBusinessCentralCloud = () => {
                 <div className="top-se">
                   <span className="date-ti">Case Study</span>
                   <h1>On-premises to Business Central Cloud Migrate</h1>
-                  <p>Simplified business processes with increased efficiency and productivity.</p>
+                  <p>How Dalebrook Supplies simplified business processes with increased efficiency and productivity</p>
                 </div>
               </div>
             </div>
@@ -39,7 +58,7 @@ const MigrateOnPremisesToBusinessCentralCloud = () => {
               <div className="sider-over">
                 <img
                   src="/img/business-central-implementation-banner-1.svg"
-                  alt="business-central-implementation-banner"
+                  alt="Dalebrook Supplies Dynamics 365 Business Central case study"
                 />
               </div>
             </div>
@@ -50,17 +69,18 @@ const MigrateOnPremisesToBusinessCentralCloud = () => {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-10">
-              <div className="row bg-case">
-                <div className="col-lg-3 align-self-center text-center">
-                  <img
-                    src="/img/casestudy-pic.png"
-                    alt="casestudy-pic"
-                  />
-                </div>
-                <div className="col-lg-9 align-self-center">
-                  <p>Founded in 1995, the business is a world leader in designing and manufacturing melamine food display solutions. Starting from a butcher shop display to selling food display products in more than 70 countries, the company has come a long way. It was one of the first companies to introduce melamine food display products to the catering industry. With the changes in customer and market demands, the business has adapted the latest innovations in technologies to cater bespoke display products to the market. With distribution centres in the UK and China, it is offering high-quality products to global businesses. Such display solutions are generally used in the food industry, retail and merchandise sectors, hotels, catering services, supermarkets, fine dining, cafes, and more.</p>
-                </div>
-              </div>
+              <CaseStudyClientCard
+                clientName="Dalebrook Supplies"
+                logo="/img/case-study-logos/dalebrook-supplies-logo.png"
+                meta={[
+                  { icon: "bi-shop", label: "Melamine Food Display" },
+                  { icon: "bi-globe", label: "Sold in 70+ Countries" },
+                  { icon: "bi-cloud-arrow-up", label: "On-Premises → BC Cloud" },
+                ]}
+                title="About Dalebrook Supplies"
+              >
+                <p>Founded in 1995, <strong>Dalebrook Supplies</strong> is a world leader in designing and manufacturing melamine food display solutions. Starting from a butcher shop display to selling food display products in more than 70 countries, the company has come a long way. It was one of the first companies to introduce melamine food display products to the catering industry. With the changes in customer and market demands, the business has adapted the latest innovations in technologies to cater bespoke display products to the market. With distribution centres in the UK and China, it is offering high-quality products to global businesses. Such display solutions are generally used in the food industry, retail and merchandise sectors, hotels, catering services, supermarkets, fine dining, cafes, and more.</p>
+              </CaseStudyClientCard>
             </div>
           </div>
         </div>
@@ -75,7 +95,7 @@ const MigrateOnPremisesToBusinessCentralCloud = () => {
           </header>
           <div className="row gx-5">
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/cast-stu-pic.png" alt="Case studies Dynamicsquare" width={487} height={404} />
+              <Image src="/img/cast-stu-pic.png" alt="Dalebrook Supplies business challenges" width={487} height={404} />
             </div>
             <div className="col-lg-6">
               <div className="content-icons-modil-1">
@@ -291,7 +311,7 @@ const MigrateOnPremisesToBusinessCentralCloud = () => {
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/Group1435.png" alt="Dynamics square casestudy" width={640} height={598} />
+              <Image src="/img/Group1435.png" alt="Dalebrook Supplies benefits with Dynamics Square" width={640} height={598} />
             </div>
           </div>
         </div>

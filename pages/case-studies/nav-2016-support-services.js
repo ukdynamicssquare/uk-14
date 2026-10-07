@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
+import CaseStudyClientCard from "../../components/CaseStudyClientCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -15,15 +16,33 @@ const CaseStudyWiper = () => {
   return (
     <>
       <Head>
-        <title>Microsoft NAV 2016 Support - Case Study</title>
+        <title>Wiper Supply: Dynamics NAV 2016 Support Case Study | Dynamics Square</title>
         <meta
           name="description"
-          content="A UK based hygienic disposable cleaning and wiping wholesaler collaborated with Dynamics Square to enhance their existing system NAV 2016 support service. Explore this case study!"
+          content="How Wiper Supply, a UK hygienic wipes wholesaler, kept its Dynamics NAV 2016 system running smoothly with dedicated support from Dynamics Square."
         />
         <link
           rel="canonical"
           href="https://www.dynamicssquare.co.uk/case-studies/nav-2016-support-services/"
         />
+        <meta property="og:locale" content="en_GB" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Wiper Supply: Dynamics NAV 2016 Support Case Study | Dynamics Square" />
+        <meta property="og:description" content="How Wiper Supply, a UK hygienic wipes wholesaler, kept its Dynamics NAV 2016 system running smoothly with dedicated support from Dynamics Square." />
+        <meta property="og:url" content="https://www.dynamicssquare.co.uk/case-studies/nav-2016-support-services/" />
+        <meta property="og:site_name" content="Dynamics Square UK" />
+        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/case-studies-6.jpg" />
+        <meta property="og:image:secure_url" content="https://www.dynamicssquare.co.uk/img/case-studies-6.jpg" />
+        <meta property="og:image:width" content="850" />
+        <meta property="og:image:height" content="410" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:alt" content="Wiper Supply case study – Dynamics Square" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@dsquare_uk" />
+        <meta name="twitter:title" content="Wiper Supply: Dynamics NAV 2016 Support Case Study | Dynamics Square" />
+        <meta name="twitter:description" content="How Wiper Supply, a UK hygienic wipes wholesaler, kept its Dynamics NAV 2016 system running smoothly with dedicated support from Dynamics Square." />
+        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/case-studies-6.jpg" />
+        <meta name="twitter:image:alt" content="Wiper Supply case study – Dynamics Square" />
       </Head>
       <section className="hero-1 hero">
         <div className="container">
@@ -35,7 +54,7 @@ const CaseStudyWiper = () => {
                     Case Study
                   </span>
                   <h1>Microsoft NAV 2016 Support - Case Study</h1>
-                  <p>Providing Support with their Existing System</p>
+                  <p>How Dynamics Square supported Wiper Supply with their existing NAV 2016 system</p>
                 </div>
               </div>
             </div>
@@ -43,7 +62,7 @@ const CaseStudyWiper = () => {
               <div className="sider-over">
                 <Image
                   src="/img/business-central-implementation-banner-1.svg"
-                  alt="business-central-implementation-banner"
+                  alt="Wiper Supply Dynamics 365 Business Central case study"
                   width={1024} height={586}
                 />
               </div>
@@ -55,17 +74,18 @@ const CaseStudyWiper = () => {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-10">
-              <div className="row bg-case">
-                <div className="col-lg-3 align-self-center">
-                  <img
-                    src="/img/casestudy-pic.png"
-                    alt="casestudy-pic"
-                  />
-                </div>
-                <div className="col-lg-9">
-                  <p>The company is established in 1993 and a British-based wholesaler of hygienic disposable cleaning and wiping products. They deliver their products to national as well as international clients of restaurants, hotels, manufacturing industries, and more. They specialize in manufacturing and supplying 70 GSM heavy-duty color-coded wipes and disposable non-woven wiping products to different industries.</p>
-                </div>
-              </div>
+              <CaseStudyClientCard
+                clientName="Wiper Supply"
+                logo="/img/case-study-logos/wiper-supply-logo.png"
+                meta={[
+                  { icon: "bi-box-seam", label: "Hygienic Wipes Wholesale" },
+                  { icon: "bi-calendar-check", label: "Established 1993" },
+                  { icon: "bi-life-preserver", label: "NAV 2016 Support" },
+                ]}
+                title="About Wiper Supply"
+              >
+                <p><strong>Wiper Supply</strong> was established in 1993 and is a British-based wholesaler of hygienic disposable cleaning and wiping products. They deliver their products to national as well as international clients of restaurants, hotels, manufacturing industries, and more. They specialize in manufacturing and supplying 70 GSM heavy-duty color-coded wipes and disposable non-woven wiping products to different industries.</p>
+              </CaseStudyClientCard>
             </div>
           </div>
         </div>
@@ -80,7 +100,7 @@ const CaseStudyWiper = () => {
           </header>
           <div className="row gx-5">
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/cast-stu-pic.png" alt="cast-stu-pic"
+              <Image src="/img/cast-stu-pic.png" alt="Wiper Supply business challenges"
                 width={484} height={407} />
             </div>
             <div className="col-lg-6">
@@ -392,7 +412,7 @@ const CaseStudyWiper = () => {
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/Group1435.png" alt="Group1435" width={640} height={598} />
+              <Image src="/img/Group1435.png" alt="Wiper Supply benefits with Dynamics Square" width={640} height={598} />
             </div>
           </div>
         </div>

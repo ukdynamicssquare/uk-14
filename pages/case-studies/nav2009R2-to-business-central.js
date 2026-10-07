@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
+import CaseStudyClientCard from "../../components/CaseStudyClientCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -12,15 +13,33 @@ const CaseStudyCqc = () => {
   return (
     <>
       <Head>
-        <title>NAV 9 R2 to Dynamics 365 Business Central Upgrade</title>
+        <title>CQC Ltd: NAV 9 R2 to Business Central Upgrade Case Study | Dynamics Square</title>
         <meta
           name="description"
-          content="Dynamics Square worked with a leading UK military textile products provider to upgrade their system from Dynamics NAV 9 R2 to Dynamics 365 Business Central Upgrade. Explore this case study!"
+          content="How CQC Ltd, a UK defence textile manufacturer, upgraded from Dynamics NAV 9 R2 to Dynamics 365 Business Central with Dynamics Square."
         />
         <link
           rel="canonical"
           href="https://www.dynamicssquare.co.uk/case-studies/nav2009R2-to-business-central/"
         />
+        <meta property="og:locale" content="en_GB" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="CQC Ltd: NAV 9 R2 to Business Central Upgrade Case Study | Dynamics Square" />
+        <meta property="og:description" content="How CQC Ltd, a UK defence textile manufacturer, upgraded from Dynamics NAV 9 R2 to Dynamics 365 Business Central with Dynamics Square." />
+        <meta property="og:url" content="https://www.dynamicssquare.co.uk/case-studies/nav2009R2-to-business-central/" />
+        <meta property="og:site_name" content="Dynamics Square UK" />
+        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/case-studies-4.jpg" />
+        <meta property="og:image:secure_url" content="https://www.dynamicssquare.co.uk/img/case-studies-4.jpg" />
+        <meta property="og:image:width" content="850" />
+        <meta property="og:image:height" content="410" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:alt" content="CQC Ltd case study – Dynamics Square" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@dsquare_uk" />
+        <meta name="twitter:title" content="CQC Ltd: NAV 9 R2 to Business Central Upgrade Case Study | Dynamics Square" />
+        <meta name="twitter:description" content="How CQC Ltd, a UK defence textile manufacturer, upgraded from Dynamics NAV 9 R2 to Dynamics 365 Business Central with Dynamics Square." />
+        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/case-studies-4.jpg" />
+        <meta name="twitter:image:alt" content="CQC Ltd case study – Dynamics Square" />
 
       </Head>
       <section className="hero-1 hero">
@@ -31,7 +50,7 @@ const CaseStudyCqc = () => {
                 <div className="top-se">
                   <span className="date-ti">Case Study</span>
                   <h1>NAV 9 R2 to Dynamics 365 Business Central Upgrade</h1>
-                  <p>Implementation of Dynamics 365 Business Central Cloud</p>
+                  <p>How CQC Ltd implemented Dynamics 365 Business Central Cloud</p>
                 </div>
               </div>
             </div>
@@ -39,7 +58,7 @@ const CaseStudyCqc = () => {
               <div className="sider-over">
                 <img
                   src="/img/business-central-implementation-banner-1.svg"
-                  alt="business-central-implementation-banner"
+                  alt="CQC Ltd Dynamics 365 Business Central case study"
                 />
               </div>
             </div>
@@ -50,17 +69,18 @@ const CaseStudyCqc = () => {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-10">
-              <div className="row bg-case">
-                <div className="col-lg-3 align-self-center">
-                  <img
-                    src="/img/casestudy-pic.png"
-                    alt="casestudy-pic"
-                  />
-                </div>
-                <div className="col-lg-9">
-                  <p>The company was established in 1948 and is currently a world-leading manufacturer of textile products mainly for the defence market. The company is known for its world-class high quality and robust military products serving the UK Ministry of Defence and other international military agencies. They are working to establish itself as one of the UK experts in designing and manufacturing CBRN clothing.</p>
-                </div>
-              </div>
+              <CaseStudyClientCard
+                clientName="CQC Ltd"
+                logo="/img/case-study-logos/cqc-ltd-logo.png"
+                meta={[
+                  { icon: "bi-shield-check", label: "Defence Textiles" },
+                  { icon: "bi-calendar-check", label: "Established 1948" },
+                  { icon: "bi-arrow-up-circle", label: "NAV 9 R2 → Business Central" },
+                ]}
+                title="About CQC Ltd"
+              >
+                <p><strong>CQC Ltd</strong> was established in 1948 and is currently a world-leading manufacturer of textile products mainly for the defence market. The company is known for its world-class high quality and robust military products serving the UK Ministry of Defence and other international military agencies. They are working to establish itself as one of the UK experts in designing and manufacturing CBRN clothing.</p>
+              </CaseStudyClientCard>
             </div>
           </div>
         </div>
@@ -75,7 +95,7 @@ const CaseStudyCqc = () => {
           </header>
           <div className="row gx-5">
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/cast-stu-pic.png" alt="cast-stu-pic" width={487} height={407} />
+              <Image src="/img/cast-stu-pic.png" alt="CQC Ltd business challenges" width={487} height={407} />
             </div>
             <div className="col-lg-6">
               <div className="content-icons-modil-1">
@@ -403,7 +423,7 @@ const CaseStudyCqc = () => {
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/Group1435.png" alt="Group1435" width={640} height={598} />
+              <Image src="/img/Group1435.png" alt="CQC Ltd benefits with Dynamics Square" width={640} height={598} />
             </div>
           </div>
         </div>

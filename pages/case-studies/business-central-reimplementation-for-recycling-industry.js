@@ -1,36 +1,40 @@
 import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
+import CaseStudyClientCard from "../../components/CaseStudyClientCard";
 const DynamicsNav2013BusinessCentralUpgrade = () => {
 
 
   return (
     <>
       <Head>
-        <title>Business Central Reimplementation for Recycling Industry</title>
+        <title>Summit Systems: Business Central Reimplementation Case Study | Dynamics Square</title>
         <meta
           name="description"
-          content="Explore our case study on Business Central reimplementation for the recycling industry—enhancing efficiency, compliance, and profitability."
+          content="How Summit Systems, a plastic automation and recycling specialist, reimplemented Business Central to simplify buy-sell operations and project control."
         />
         <link
           rel="canonical"
           href="https://www.dynamicssquare.co.uk/case-studies/business-central-reimplementation-for-recycling-industry/"
         />
-        <meta property="og:locale" content="GB" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Business Central Reimplementation for Recycling Industry" />
-        <meta property="og:description" content="Explore our case study on Business Central reimplementation for the recycling industry—enhancing efficiency, compliance, and profitability." />
+        <meta property="og:locale" content="en_GB" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Summit Systems: Business Central Reimplementation Case Study | Dynamics Square" />
+        <meta property="og:description" content="How Summit Systems, a plastic automation and recycling specialist, reimplemented Business Central to simplify buy-sell operations and project control." />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/case-studies/business-central-reimplementation-for-recycling-industry/" />
         <meta property="og:site_name" content="Dynamics Square UK" />
         <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/Summit-Systems.png" />
-        <meta property="og:image:width" content="200" />
-        <meta property="og:image:height" content="200" />
+        <meta property="og:image:secure_url" content="https://www.dynamicssquare.co.uk/img/Summit-Systems.png" />
+        <meta property="og:image:width" content="850" />
+        <meta property="og:image:height" content="410" />
         <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:alt" content="Summit Systems case study – Dynamics Square" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="Business Central Reimplementation for Recycling Industry" />
-        <meta name="twitter:description" content="Explore our case study on Business Central reimplementation for the recycling industry—enhancing efficiency, compliance, and profitability." />
+        <meta name="twitter:title" content="Summit Systems: Business Central Reimplementation Case Study | Dynamics Square" />
+        <meta name="twitter:description" content="How Summit Systems, a plastic automation and recycling specialist, reimplemented Business Central to simplify buy-sell operations and project control." />
         <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/Summit-Systems.png" />
+        <meta name="twitter:image:alt" content="Summit Systems case study – Dynamics Square" />
       </Head>
       <section className="hero hero-new-bg">
         <div className="container">
@@ -40,7 +44,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
                 <div className="top-se">
                   <span className="date-ti">Case Study</span>
                   <h1>Microsoft Business Central Implementation</h1>
-                  <p>A specialist in plastic automation simplified its complex buy-sell operations and strengthened project control using Microsoft Dynamics 365 Business Central.</p>
+                  <p>How Summit Systems, a specialist in plastic automation, simplified its complex buy-sell operations and strengthened project control using Microsoft Dynamics 365 Business Central.</p>
                 </div>
               </div>
             </div>
@@ -50,15 +54,19 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
       <section className="cast-studi-into minr">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-lg-9">
-              <div className="bg-case bg-case-cent">
-                <div className="side-heading-custom-01">
-                  <h2>A Reset That Brought Clarity and Control</h2>
-                </div>
-                <div className="custom-p-001">
-                  <p>After struggling with a poorly fitted system and scattered processes, this fast-adapting business found clarity, control, and confidence through a clean reimplementation of Business Central with support from Dynamics Square. </p>
-                </div>
-              </div>
+            <div className="col-lg-10">
+              <CaseStudyClientCard
+                clientName="Summit Systems"
+                logo="/img/case-study-logos/summit-systems-logo.png"
+                meta={[
+                  { icon: "bi-gear-wide-connected", label: "Plastic Automation" },
+                  { icon: "bi-recycle", label: "Recycling Materials" },
+                  { icon: "bi-award", label: "30+ Years Experience" },
+                ]}
+                title="A Reset That Brought Clarity and Control"
+              >
+                  <p>After struggling with a poorly fitted system and scattered processes, <strong>Summit Systems</strong> found clarity, control, and confidence through a clean reimplementation of Business Central with support from Dynamics Square. </p>
+              </CaseStudyClientCard>
             </div>
           </div>
         </div>
@@ -71,7 +79,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
                 <h2>Business Overview</h2>
               </div>
               <div className="custom-p-001">
-                <p>With over three decades of experience, this enterprise has built its foundation on plastic automation. Recently, it entered the recycling materials space, marking a shift towards sustainable practices. The team had grown, and so had the ambitions. Change had begun to take shape. A long-standing culture of traditional operations started giving way to digital-first thinking, showing readiness for fresh tools and modern ways of working. </p>
+                <p>With over three decades of experience, <b>Summit Systems</b> has built its foundation on plastic automation. Recently, it entered the recycling materials space, marking a shift towards sustainable practices. The team had grown, and so had the ambitions. Change had begun to take shape. A long-standing culture of traditional operations started giving way to digital-first thinking, showing readiness for fresh tools and modern ways of working. </p>
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
@@ -79,7 +87,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
                 <Image
                   src="/img/case-s-05.png"
                   className="fix-im"
-                  alt="case-s-02"
+                  alt="Summit Systems plastic automation business overview"
                   width={400} height={450}
                 />
               </div>
@@ -102,7 +110,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           </div>
           <div className="row gx-5">
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/cast-stu-pic.png" alt="cast-stu-pic" width={484} height={407} />
+              <Image src="/img/cast-stu-pic.png" alt="Summit Systems business challenges" width={484} height={407} />
             </div>
             <div className="col-lg-6">
               <div className="content-icons-modil-1">
@@ -187,7 +195,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           </div>
           <div className="row gx-5">
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/case-s-06.png" alt="case-s-06" width={633} height={561} />
+              <Image src="/img/case-s-06.png" alt="Summit Systems Business Central requirements" width={633} height={561} />
             </div>
             <div className="col-lg-6 align-self-center">
               <div className="ms-c-po">
@@ -264,7 +272,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="ce-image-cee">
-                <img src="/img/case-s-07.png" alt="Case Study" className="img-fluid" />
+                <img src="/img/case-s-07.png" alt="Summit Systems Business Central reimplementation" className="img-fluid" />
               </div>
             </div>
           </div>
@@ -467,12 +475,12 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
               <div className="content-icons-modil-1">
                 <p>This project is proof that a well-executed reimplementation can be far more effective than forcing a poor setup to work. The client’s patience, clarity in needs, and openness to revisit choices made all the difference. They stayed focused on building a simple, scalable setup without chasing features. Dynamics Square’s clear process, grounded documentation, and solutioning mindset brought the entire piece together. </p>
                 <p>Future steps include bringing HubSpot CRM into closer sync with Business Central, further closing the gap between sales and operations. The foundation laid here can support that integration without needing any major change to the existing system. </p>
-                <p>This project reflects what happens when a business starts embracing change with steady intent and the right partner by its side.</p>
+                <p>This project reflects what happens when a business like Summit Systems starts embracing change with steady intent and the right partner by its side.</p>
               </div>
             </div>
             <div className="col-lg-6">
               <div className="text-center">
-                              <Image src="/img/case-s-04.png" alt="Group1435" width={485} height={450} />
+                              <Image src="/img/case-s-04.png" alt="Summit Systems future prospects with Business Central" width={485} height={450} />
                              </div>
             </div>
           </div>

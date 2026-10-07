@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
+import CaseStudyClientCard from "../../components/CaseStudyClientCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -13,27 +14,33 @@ const AccessDimensionErpToBusinessCentralMigration = () => {
   return (
     <>
       <Head>
-        <title>Access Dimension ERP to Business Central Migration </title>
+        <title>Omicron Engineering: Access Dimensions to Business Central Case Study | Dynamics Square</title>
         <meta
           name="description"
-          content="Explore the process of migrating from Access Dimension ERP to Business Central with our thoroughly case study, which highlights improved capabilities and business growth."
+          content="How Omicron Engineering, a classic Lancia restoration specialist, moved from Access Dimensions to Business Central to simplify costing and margins."
         />
         <link
           rel="canonical"
           href="https://www.dynamicssquare.co.uk/case-studies/access-dimension-erp-to-business-central-migration/"
         />
+        <meta property="og:locale" content="en_GB" />
         <meta property="og:type" content="article" />
+        <meta property="og:title" content="Omicron Engineering: Access Dimensions to Business Central Case Study | Dynamics Square" />
+        <meta property="og:description" content="How Omicron Engineering, a classic Lancia restoration specialist, moved from Access Dimensions to Business Central to simplify costing and margins." />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/case-studies/access-dimension-erp-to-business-central-migration/" />
-        <meta property="og:title" content="Access Dimension ERP to Business Central Migration" />
-        <meta property="og:description" content="Explore the process of migrating from Access Dimension ERP to Business Central with our thoroughly case study, which highlights improved capabilities and business growth." />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/cast-stu-pic.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/case-studies/access-dimension-erp-to-business-central-migration/" />
-        <meta property="twitter:title" content="Access Dimension ERP to Business Central Migration" />
-        <meta property="twitter:description" content="Explore the process of migrating from Access Dimension ERP to Business Central with our thoroughly case study, which highlights improved capabilities and business growth." />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/cast-stu-pic.png" />
-
+        <meta property="og:site_name" content="Dynamics Square UK" />
+        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/Omicron-Engineering.jpg" />
+        <meta property="og:image:secure_url" content="https://www.dynamicssquare.co.uk/img/Omicron-Engineering.jpg" />
+        <meta property="og:image:width" content="851" />
+        <meta property="og:image:height" content="410" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:alt" content="Omicron Engineering case study – Dynamics Square" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@dsquare_uk" />
+        <meta name="twitter:title" content="Omicron Engineering: Access Dimensions to Business Central Case Study | Dynamics Square" />
+        <meta name="twitter:description" content="How Omicron Engineering, a classic Lancia restoration specialist, moved from Access Dimensions to Business Central to simplify costing and margins." />
+        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/Omicron-Engineering.jpg" />
+        <meta name="twitter:image:alt" content="Omicron Engineering case study – Dynamics Square" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -45,14 +52,14 @@ const AccessDimensionErpToBusinessCentralMigration = () => {
                   "itemListElement": [
                     { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dynamicssquare.co.uk/" },
                     { "@type": "ListItem", "position": 2, "name": "Case Studies", "item": "https://www.dynamicssquare.co.uk/case-studies/" },
-                    { "@type": "ListItem", "position": 3, "name": "Access Dimension ERP to Business Central Migration", "item": "https://www.dynamicssquare.co.uk/case-studies/access-dimension-erp-to-business-central-migration/" }
+                    { "@type": "ListItem", "position": 3, "name": "Omicron Engineering: Access Dimensions to Business Central", "item": "https://www.dynamicssquare.co.uk/case-studies/access-dimension-erp-to-business-central-migration/" }
                   ]
                 },
                 {
                   "@type": "Article",
-                  "headline": "Access Dimension ERP to Business Central Upgrade",
-                  "description": "Explore the process of migrating from Access Dimension ERP to Business Central with our thoroughly case study, which highlights improved capabilities and business growth.",
-                  "image": "https://www.dynamicssquare.co.uk/img/cast-stu-pic.png",
+                  "headline": "Omicron Engineering: Access Dimensions to Business Central Case Study | Dynamics Square",
+                  "description": "How Omicron Engineering, a classic Lancia restoration specialist, moved from Access Dimensions to Business Central to simplify costing and margins.",
+                  "image": "https://www.dynamicssquare.co.uk/img/Omicron-Engineering.jpg",
                   "publisher": {
                     "@type": "Organization",
                     "name": "Dynamics Square UK",
@@ -73,7 +80,7 @@ const AccessDimensionErpToBusinessCentralMigration = () => {
                   <div className="top-se">
                     <span className="date-ti">Case Study</span>
                     <h1>Access Dimension ERP to Business Central Upgrade </h1>
-                    <p>Simplified the processes of calculating cost and predicting profit margins.</p>
+                    <p>How Omicron Engineering simplified the processes of calculating cost and predicting profit margins</p>
                   </div>
                 </div>
               </div>
@@ -81,7 +88,7 @@ const AccessDimensionErpToBusinessCentralMigration = () => {
                 <div className="sider-over">
                   <Image
                     src="/img/business-central-implementation-banner-1.svg"
-                    alt="business-central-implementation-banner"
+                    alt="Omicron Engineering Dynamics 365 Business Central case study"
                     width={1024}
                     height={586}
                     priority
@@ -96,19 +103,18 @@ const AccessDimensionErpToBusinessCentralMigration = () => {
           <div className="container">
             <div className="row justify-content-center">
               <div className="col-lg-10">
-                <div className="row bg-case">
-                  <div className="col-lg-3 align-self-center text-center">
-                    <Image
-                      src="/img/casestudy-pic.png"
-                      alt="casestudy-pic"
-                      width={200}
-                      height={200}
-                    />
-                  </div>
-                  <div className="col-lg-9 align-self-center">
-                    <p>The business is a leading car restoration and customization company in the UK, specializes in classic Lancia vehicles. They also offer spare parts for classic and antique cars, with a vast inventory of over 11,000 parts available for global delivery. With their exceptional services, they have built a client base spanning over 70 countries. Their fully equipped workshop provides partial and full restorations, along with modifications such as trim, bodywork, engine enhancements, gearbox rebuilds, performance upgrades, and servicing.</p>
-                  </div>
-                </div>
+                <CaseStudyClientCard
+                  clientName="Omicron Engineering"
+                  logo="/img/case-study-logos/omicron-engineering-logo.png"
+                  meta={[
+                    { icon: "bi-car-front", label: "Classic Car Restoration" },
+                    { icon: "bi-globe", label: "Clients in 70+ Countries" },
+                    { icon: "bi-arrow-up-circle", label: "Access Dimensions → Business Central" },
+                  ]}
+                  title="About Omicron Engineering"
+                >
+                  <p><strong>Omicron Engineering</strong> is a leading car restoration and customization company in the UK, specializes in classic Lancia vehicles. They also offer spare parts for classic and antique cars, with a vast inventory of over 11,000 parts available for global delivery. With their exceptional services, they have built a client base spanning over 70 countries. Their fully equipped workshop provides partial and full restorations, along with modifications such as trim, bodywork, engine enhancements, gearbox rebuilds, performance upgrades, and servicing.</p>
+                </CaseStudyClientCard>
               </div>
             </div>
           </div>
@@ -124,7 +130,7 @@ const AccessDimensionErpToBusinessCentralMigration = () => {
             </header>
             <div className="row gx-5">
               <div className="col-lg-6 align-self-center">
-                <Image src="/img/cast-stu-pic.png" alt="Case studies Dynamicsquare" width={487} height={404} />
+                <Image src="/img/cast-stu-pic.png" alt="Omicron Engineering business challenges" width={487} height={404} />
               </div>
               <div className="col-lg-6">
                 <div className="content-icons-modil-1">
@@ -357,7 +363,7 @@ const AccessDimensionErpToBusinessCentralMigration = () => {
                 </div>
               </div>
               <div className="col-lg-6 align-self-center">
-                <Image src="/img/Group1435.png" alt="Dynamics square casestudy" width={640} height={598} />
+                <Image src="/img/Group1435.png" alt="Omicron Engineering benefits with Dynamics Square" width={640} height={598} />
               </div>
             </div>
           </div>

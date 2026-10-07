@@ -1,37 +1,40 @@
 import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
+import CaseStudyClientCard from "../../components/CaseStudyClientCard";
 const DynamicsNav2013BusinessCentralUpgrade = () => {
 
 
   return (
     <>
       <Head>
-              <meta name="robots" content="noindex, nofollow" />
-        <title>Microsoft Business Central for Tool Manufacturing | Case Study</title>
+        <title>Rolson Tools: NAV 2016 to Business Central Upgrade Case Study | Dynamics Square</title>
         <meta
           name="description"
-          content="How Business Central empowered a tool manufacturer with smarter inventory management, streamlined workflows, and scalable business growth."
+          content="How Rolson Tools moved from NAV 2016 to Business Central, restored VAT compliance and rebuilt its tooling-specific customisations on a supported platform."
         />
         <link
           rel="canonical"
           href="https://www.dynamicssquare.co.uk/case-studies/business-central-for-tool-manufacturing-company/"
         />
-        <meta property="og:locale" content="GB" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Microsoft Business Central for Tool Manufacturing | Case Study" />
-        <meta property="og:description" content="How Business Central empowered a tool manufacturer with smarter inventory management, streamlined workflows, and scalable business growth." />
+        <meta property="og:locale" content="en_GB" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Rolson Tools: NAV 2016 to Business Central Upgrade Case Study | Dynamics Square" />
+        <meta property="og:description" content="How Rolson Tools moved from NAV 2016 to Business Central, restored VAT compliance and rebuilt its tooling-specific customisations on a supported platform." />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/case-studies/business-central-for-tool-manufacturing-company/" />
         <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/case-v-05.png" />
-        <meta property="og:image:width" content="200" />
-        <meta property="og:image:height" content="200" />
-        <meta property="og:image:type" content="image/jpg" />
+        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/tool-manufacturing-company.jpg" />
+        <meta property="og:image:secure_url" content="https://www.dynamicssquare.co.uk/img/tool-manufacturing-company.jpg" />
+        <meta property="og:image:width" content="850" />
+        <meta property="og:image:height" content="410" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:alt" content="Rolson Tools case study – Dynamics Square" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="Microsoft Business Central for Tool Manufacturing | Case Study" />
-        <meta name="twitter:description" content="How Business Central empowered a tool manufacturer with smarter inventory management, streamlined workflows, and scalable business growth." />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/case-v-05.png" />
+        <meta name="twitter:title" content="Rolson Tools: NAV 2016 to Business Central Upgrade Case Study | Dynamics Square" />
+        <meta name="twitter:description" content="How Rolson Tools moved from NAV 2016 to Business Central, restored VAT compliance and rebuilt its tooling-specific customisations on a supported platform." />
+        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/tool-manufacturing-company.jpg" />
+        <meta name="twitter:image:alt" content="Rolson Tools case study – Dynamics Square" />
       </Head>
       <section className="hero hero-new-bg">
         <div className="container">
@@ -41,7 +44,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
                 <div className="top-se">
                   <span className="date-ti">Case Study</span>
                   <h1>Microsoft Dynamics NAV 2016 to Dynamics 365 Business Central Upgrade</h1>
-                  <p>How a Tooling and Distribution Business Restored Compliance and Rebuilt Trust with Microsoft Dynamics 365</p>
+                  <p>How Rolson Tools Restored Compliance and Rebuilt Trust with Microsoft Dynamics 365</p>
                 </div>
               </div>
             </div>
@@ -51,16 +54,20 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
       <section className="cast-studi-into minr">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-lg-9">
-              <div className="bg-case bg-case-cent">
-                <div className="side-heading-custom-01">
-                  <h2>A Crux of the Case Story</h2>
-                </div>
-                <div className="custom-p-001">
-                  <p>This case story reflects how a long-established tooling and distribution business found itself at a critical breaking point—unable to submit VAT returns for the first time in nearly four decades. What began as a regulatory disruption quickly exposed deeper issues across infrastructure, partnerships, and system dependencies. </p>
+            <div className="col-lg-10">
+              <CaseStudyClientCard
+                clientName="Rolson Tools"
+                logo="/img/case-study-logos/rolson-tools-logo.png"
+                meta={[
+                  { icon: "bi-tools", label: "Tooling & Distribution" },
+                  { icon: "bi-geo-alt", label: "United Kingdom" },
+                  { icon: "bi-arrow-up-circle", label: "NAV 2016 → Business Central" },
+                ]}
+                title="A Crux of the Case Story"
+              >
+                  <p>This case story reflects how <strong>Rolson Tools</strong>, a long-established tooling and distribution business, found itself at a critical breaking point—unable to submit VAT returns for the first time in nearly four decades. What began as a regulatory disruption quickly exposed deeper issues across infrastructure, partnerships, and system dependencies. </p>
                   <p>By working with Dynamics Square, the business not only resolved its immediate compliance crisis but also rebuilt its operational foundation through a carefully managed transition to <a href="/products/dynamics-365-business-central/">Microsoft Dynamics 365 Business Central</a>.</p>
-                </div>
-              </div>
+              </CaseStudyClientCard>
             </div>
           </div>
         </div>
@@ -73,7 +80,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
                 <h2>Business Overview</h2>
               </div>
               <div className="custom-p-001">
-                <p>This organisation operates within the tooling and construction supply ecosystem, managing a complex distribution model supported by international sourcing and specialised product handling. A significant portion of its inventory is imported, with approximately 80% sourced from China and the remaining 20% from India, creating a supply chain that requires careful coordination, landed cost tracking, and inventory accuracy.</p>
+                <p><b>Rolson Tools</b> operates within the tooling and construction supply ecosystem, managing a complex distribution model supported by international sourcing and specialised product handling. A significant portion of its inventory is imported, with approximately 80% sourced from China and the remaining 20% from India, creating a supply chain that requires careful coordination, landed cost tracking, and inventory accuracy.</p>
                 <p>Over the years, the business had developed a system environment tailored to its needs. It relied on a legacy ERP platform supported by bespoke add-ons designed specifically for the tooling and construction industry. These customisations played a critical role in managing day-to-day operations, from inventory handling to supply chain costing.</p>
                 <p>The system was hosted on-premises and had been in place for several years. While it had supported the business effectively in the past, both the technology and the surrounding infrastructure had begun to age. At the same time, the business had undergone changes in its support structure, including a shift in implementation partners that affected continuity and system knowledge.</p>
                 <p>This combination of legacy dependency, infrastructure limitations, and partner disruption set the stage for a deeper operational challenge.</p>
@@ -84,7 +91,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
                 <Image
                   src="/img/case-v-03.png"
                   className="fix-im"
-                  alt="case-v-03"
+                  alt="Rolson Tools tooling and distribution business overview"
                   width={400} height={450}
                 />
               </div>
@@ -246,7 +253,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           </div>
           <div className="row gx-5">
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/case-v-04.png" alt="case-v-04" width={633} height={561} />
+              <Image src="/img/case-v-04.png" alt="Rolson Tools Business Central upgrade requirements" width={633} height={561} />
             </div>
             <div className="col-lg-6 align-self-center">
               <div className="ms-c-po">
@@ -314,7 +321,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="ce-image-ce">
-                <Image src="/img/case-v-05.png" alt="case-v-05" width={872} height={519} className="img-fluid" />
+                <Image src="/img/case-v-05.png" alt="Rolson Tools NAV 2016 to Business Central upgrade" width={872} height={519} className="img-fluid" />
               </div>
             </div>
           </div>
@@ -480,7 +487,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
               </div>
               <div className="content-icons-modil-1">
                 <p>This case highlights a situation that many long-standing businesses eventually face. Systems that once supported growth begin to limit it, especially when external factors such as regulatory changes accelerate the need for transformation</p>
-                <p>In this instance, the organisation was not simply operating on outdated software. Over time, it had accumulated significant technical debt. This included ageing infrastructure, unsupported operating systems, undocumented customisations, and dependency on unavailable expertise. That debt remained manageable until HMRC’s regulatory changes exposed it all at once, turning a gradual issue into an immediate operational and compliance risk.</p>
+                <p>In this instance, Rolson Tools was not simply operating on outdated software. Over time, it had accumulated significant technical debt. This included ageing infrastructure, unsupported operating systems, undocumented customisations, and dependency on unavailable expertise. That debt remained manageable until HMRC’s regulatory changes exposed it all at once, turning a gradual issue into an immediate operational and compliance risk.</p>
                 <p>Rather than approaching this as a standard upgrade, Dynamics Square effectively refinanced that technical debt into a modern, supported system. This meant stabilising what existed, rebuilding what was critical, and restructuring the system in a way that could be sustained long term.</p>
               </div>
             </div>

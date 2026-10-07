@@ -1,37 +1,39 @@
 import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
+import CaseStudyClientCard from "../../components/CaseStudyClientCard";
 const DynamicsNav2013BusinessCentralUpgrade = () => {
-
 
   return (
     <>
       <Head>
-        <meta name="robots" content="noindex, nofollow" />
-        <title>Dynamics 365 Finance for UK Logistics: Transforming Multi-Entity Operations | Case Study | Case Study</title>
+        <title>Bertling Group: Dynamics 365 Finance Multi-Entity Case Study | Dynamics Square</title>
         <meta
           name="description"
-          content="Dynamics 365 Finance streamlined multi-entity logistics operations in the UK, improving financial visibility, automating processes, and enabling scalable, compliant growth."
+          content="How Bertling Group stabilised its UK finance function on Dynamics 365 Finance and built a blueprint for rolling out across 30 legal entities, including the US and Indonesia."
         />
         <link
           rel="canonical"
           href="https://www.dynamicssquare.co.uk/case-studies/dynamics-365-finance-for-logistic-uk-multi-entity/"
         />
-        <meta property="og:locale" content="GB" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Dynamics 365 Finance for UK Logistics: Transforming Multi-Entity Operations | Case Study | Case Study" />
-        <meta property="og:description" content="Dynamics 365 Finance streamlined multi-entity logistics operations in the UK, improving financial visibility, automating processes, and enabling scalable, compliant growth." />
+        <meta property="og:locale" content="en_GB" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Bertling Group: Dynamics 365 Finance Multi-Entity Case Study | Dynamics Square" />
+        <meta property="og:description" content="How Bertling Group stabilised its UK finance function on Dynamics 365 Finance and built a blueprint for rolling out across 30 legal entities, including the US and Indonesia." />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/case-studies/dynamics-365-finance-for-logistic-uk-multi-entity/" />
         <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/case-v-02.png" />
-        <meta property="og:image:width" content="200" />
-        <meta property="og:image:height" content="200" />
-        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/logistic-uk.jpg" />
+        <meta property="og:image:secure_url" content="https://www.dynamicssquare.co.uk/img/logistic-uk.jpg" />
+        <meta property="og:image:width" content="850" />
+        <meta property="og:image:height" content="410" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:alt" content="Bertling Group case study – Dynamics Square" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="Dynamics 365 Finance for UK Logistics: Transforming Multi-Entity Operations | Case Study | Case Study" />
-        <meta name="twitter:description" content="Dynamics 365 Finance streamlined multi-entity logistics operations in the UK, improving financial visibility, automating processes, and enabling scalable, compliant growth." />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/case-v-02.png" />
+        <meta name="twitter:title" content="Bertling Group: Dynamics 365 Finance Multi-Entity Case Study | Dynamics Square" />
+        <meta name="twitter:description" content="How Bertling Group stabilised its UK finance function on Dynamics 365 Finance and built a blueprint for rolling out across 30 legal entities, including the US and Indonesia." />
+        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/logistic-uk.jpg" />
+        <meta name="twitter:image:alt" content="Bertling Group case study – Dynamics Square" />
       </Head>
       <section className="hero hero-new-bg">
         <div className="container">
@@ -41,7 +43,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
                 <div className="top-se">
                   <span className="date-ti">Case Study</span>
                   <h1>Microsoft Dynamics 365 Finance Implementation Optimisation</h1>
-                  <p>How a Global Logistics Business Strengthened Financial Control and Prepared for Multi-Entity Rollout with Microsoft Dynamics 365</p>
+                  <p>How Bertling Group Strengthened Financial Control and Prepared for a Multi-Entity Rollout with Microsoft Dynamics 365 Finance</p>
                 </div>
               </div>
             </div>
@@ -51,15 +53,19 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
       <section className="cast-studi-into minr">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-lg-9">
-              <div className="bg-case bg-case-cent">
-                <div className="side-heading-custom-01">
-                  <h2>A Crux of the Case Story</h2>
-                </div>
-                <div className="custom-p-001">
-                  <p>This case story shows the challenges encountered by a global logistics organisation, already operating on Microsoft Dynamics 365 Finance. These challenges included user adoption, reporting, and configuration. With growing pressure to standardise operations across entities, the business took a structured approach to stabilise its UK finance function first. By focusing on correct implementation, localisation, and training, it began building a reliable foundation for broader global rollout.</p>
-                </div>
-              </div>
+            <div className="col-lg-10">
+              <CaseStudyClientCard
+                clientName="Bertling Group"
+                logo="/img/bertling-group-logo.png"
+                meta={[
+                  { icon: "bi-truck", label: "Global Logistics" },
+                  { icon: "bi-geo-alt", label: "HQ: Germany" },
+                  { icon: "bi-diagram-3", label: "30 Legal Entities" },
+                ]}
+                title="A Crux of the Case Story"
+              >
+                  <p>This case story shows the challenges encountered by <strong>Bertling Group</strong>, a global logistics organisation already operating on Microsoft Dynamics 365 Finance. These challenges included user adoption, reporting, and configuration. With growing pressure to standardise operations across entities, the business took a structured approach to stabilise its UK finance function first. By focusing on correct implementation, localisation, and training, it began building a reliable foundation for broader global rollout.</p>
+              </CaseStudyClientCard>
             </div>
           </div>
         </div>
@@ -72,7 +78,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
                 <h2>Business Overview</h2>
               </div>
               <div className="custom-p-001">
-                <p>This organisation is a global logistics business with its headquarters in Germany. It is responsible for the management of a vast network of 30 legal entities covering multiple regions. It necessitates a high degree of consistency and accuracy in financial processes, as its operations encompass international transport, coordination, and financial administration across multiple geographies.</p>
+                <p><b>Bertling Group</b> is a global logistics business headquartered in Germany, managing a network of 30 legal entities covering multiple regions. It necessitates a high degree of consistency and accuracy in financial processes, as its operations encompass international transport, coordination, and financial administration across multiple geographies.</p>
                 <p>The organisation had already <a href="/products/microsoft-dynamics-365-finance/">implemented Microsoft Dynamics 365 Finance</a> through its internal technical team, which was situated in Germany. Despite the fact it provided a central system, the implementation did not completely meet operational expectations, particularly in areas such as user adoption, configuration, and reporting.</p>
                 <p>The organisation utilised a variety of supporting applications in addition to its ERP system. These consisted of an in-house transport management system, document management tools for accounts payable automation, expense management software, and tax filing solutions. Internally, these systems were integrated.</p>
                 <p>The necessity of a more structured and consistent distribution approach became apparent as the business continued to expand, beginning with the UK entity.</p>
@@ -83,7 +89,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
                 <Image
                   src="/img/case-v-00.png"
                   className="fix-im"
-                  alt="case-s-01"
+                  alt="Bertling Group global logistics business overview"
                   width={400} height={450}
                 />
               </div>
@@ -211,7 +217,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           </div>
           <div className="row gx-5">
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/case-v-01.png" alt="case-v-01" width={633} height={651} />
+              <Image src="/img/case-v-01.png" alt="Bertling Group Dynamics 365 Finance UK implementation requirements" width={633} height={651} />
             </div>
             <div className="col-lg-6 align-self-center">
               <div className="ms-c-po">
@@ -285,7 +291,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="ce-image-ce">
-                <Image src="/img/case-v-02.png" alt="Case Study" width={863} height={597} className="img-fluid" />
+                <Image src="/img/case-v-02.png" alt="Bertling Group Dynamics 365 Finance UK implementation" width={863} height={597} className="img-fluid" />
               </div>
             </div>
           </div>
@@ -440,7 +446,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
               </div>
               <div className="content-icons-modil-1">
                 <p>This case study highlights an often-overlooked reality. Implementing an ERP system is only one part of the journey. Ensuring it is configured correctly, adopted by users, and aligned with business needs is what determines success.</p>
-                <p>In this instance, the organisation recognised the gaps in its initial implementation and chose to address them with a structured approach. By focusing on one entity first, it created a controlled environment to correct issues, build confidence, and establish best practices.</p>
+                <p>In this instance, Bertling Group recognised the gaps in its initial implementation and chose to address them with a structured approach. By focusing on one entity first, it created a controlled environment to correct issues, build confidence, and establish best practices.</p>
               </div>
             </div>
             <div className="col-lg-6 align-self-center">

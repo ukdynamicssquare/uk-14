@@ -1,34 +1,38 @@
 import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
+import CaseStudyClientCard from "../../components/CaseStudyClientCard";
 const DynamicsNav2013BusinessCentralUpgrade = () => {
   return (
     <>
       <Head>
-        <title>Business Central Implementation for Food Trader | Dynamics Square UK</title>
+        <title>World Food Trading: Business Central Implementation Case Study | Dynamics Square</title>
         <meta
           name="description"
-          content="Business Central for food Trader: A case study on transforming operations, reducing waste, and enhancing efficiency for better profitability."
+          content="How World Food Trading implemented Business Central across its UK and Danish entities to gain financial control before scaling, with a projected 162% ROI."
         />
         <link
           rel="canonical"
           href="https://www.dynamicssquare.co.uk/case-studies/business-central-reimplementation-for-food-trader/"
         />
-        <meta property="og:locale" content="GB" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Business Central Implementation for Food Trader | Dynamics Square UK" />
-        <meta property="og:description" content="Business Central for food Trader: A case study on transforming operations, reducing waste, and enhancing efficiency for better profitability." />
+        <meta property="og:locale" content="en_GB" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="World Food Trading: Business Central Implementation Case Study | Dynamics Square" />
+        <meta property="og:description" content="How World Food Trading implemented Business Central across its UK and Danish entities to gain financial control before scaling, with a projected 162% ROI." />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/case-studies/business-central-reimplementation-for-food-trader/" />
         <meta property="og:site_name" content="Dynamics Square UK" />
         <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/mgg-food-feautre.jpg" />
-        <meta property="og:image:width" content="200" />
-        <meta property="og:image:height" content="200" />
-        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:secure_url" content="https://www.dynamicssquare.co.uk/img/mgg-food-feautre.jpg" />
+        <meta property="og:image:width" content="850" />
+        <meta property="og:image:height" content="410" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:alt" content="World Food Trading case study – Dynamics Square" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="Business Central Implementation for Food Industry | Dynamics Square UK" />
-        <meta name="twitter:description" content="Business Central for food Trader: A case study on transforming operations, reducing waste, and enhancing efficiency for better profitability." />
+        <meta name="twitter:title" content="World Food Trading: Business Central Implementation Case Study | Dynamics Square" />
+        <meta name="twitter:description" content="How World Food Trading implemented Business Central across its UK and Danish entities to gain financial control before scaling, with a projected 162% ROI." />
         <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/mgg-food-feautre.jpg" />
+        <meta name="twitter:image:alt" content="World Food Trading case study – Dynamics Square" />
       </Head>
       <section className="hero hero-new-bg">
         <div className="container">
@@ -38,7 +42,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
                 <div className="top-se">
                   <span className="date-ti">Case Study</span>
                   <h1>Microsoft Business Central Implementation</h1>
-                  <p>A growing food trader built a solid digital core with Dynamics 365 Business Central to streamline and scale operations.</p>
+                  <p>How World Food Trading built a solid digital core with Dynamics 365 Business Central to streamline and scale operations.</p>
                 </div>
               </div>
             </div>
@@ -48,16 +52,19 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
       <section className="cast-studi-into minr">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-lg-9">
-              <div className="bg-case bg-case-cent">
-                <div className="side-heading-custom-01">
-                  <h2>A Crux of the Case Story: How a Startup Gained Control Before Growth</h2>
-                </div>
-                <div className="custom-p-001">
-                  <p>A newly registered European trading firm, dealing in cross-border food products, found itself at the starting line with fast-moving operations but without a reliable system to hold it all together. </p>
+            <div className="col-lg-10">
+              <CaseStudyClientCard
+                clientName="World Food Trading"
+                meta={[
+                  { icon: "bi-basket", label: "Food Trading" },
+                  { icon: "bi-geo-alt", label: "UK & Denmark" },
+                  { icon: "bi-diagram-3", label: "3 Legal Entities" },
+                ]}
+                title="A Crux of the Case Story: How a Startup Gained Control Before Growth"
+              >
+                  <p><strong>World Food Trading</strong>, a newly registered European trading firm dealing in cross-border food products, found itself at the starting line with fast-moving operations but without a reliable system to hold it all together. </p>
                   <p>It had bold ambitions but limited internal structure. Through a collaborative effort with Dynamics Square, it traded manual guesswork for measurable accuracy, aligning processes and financial control before scaling. </p>
-                </div>
-              </div>
+              </CaseStudyClientCard>
             </div>
           </div>
         </div>
@@ -71,7 +78,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
               </div>
               <div className="custom-p-001">
                 <p>
-                  The client is a startup trading company focused on food
+                  <b>World Food Trading</b> is a startup trading company focused on food
                   products. Its primary operations take place across Europe,
                   with key management based out of the United Kingdom. The
                   business was set up to work through multiple legal entities.
@@ -94,7 +101,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
                 <Image
                   src="/img/case-s-08.png"
                   className="fix-im"
-                  alt="case-s-02"
+                  alt="World Food Trading food trading business overview"
                   width={400} height={450}
                 />
               </div>
@@ -126,7 +133,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
             <div className="col-lg-6 align-self-center">
               <Image
                 src="/img/cast-stu-pic.png"
-                alt="cast-stu-pic"
+                alt="World Food Trading business challenges"
                 width={484}
                 height={407}
               />
@@ -250,7 +257,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           </div>
           <div className="row gx-5">
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/case-s-09.png" alt="case-s-06" width={633} height={561} />
+              <Image src="/img/case-s-09.png" alt="World Food Trading Business Central requirements" width={633} height={561} />
             </div>
             <div className="col-lg-6 align-self-center">
               <div className="ms-c-po">
@@ -390,7 +397,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="ce-image-cee">
-                <img src="/img/case-s-07.png" alt="Case Study" className="img-fluid" />
+                <img src="/img/case-s-07.png" alt="World Food Trading Business Central implementation" className="img-fluid" />
               </div>
             </div>
           </div>
@@ -689,12 +696,12 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
               </div>
               <div className="content-icons-modil-1">
                 <p>This story stands as a clear example of how a startup, when supported with the right technology and guidance, can build clarity before complexity takes over. It reflects how businesses with small teams and big goals can unlock their full potential when their systems work for them, rather than around them. </p>
-                <p>Phase Two will include the addition of a Turkish legal entity and expansion of features like HR add-ons and extended analytics. For now, the business has made its first strong step, one that balances structure with flexibility and speed with stability.</p>
+                <p>Phase Two will include the addition of a Turkish legal entity and expansion of features like HR add-ons and extended analytics. For now, World Food Trading has made its first strong step, one that balances structure with flexibility and speed with stability.</p>
               </div>
             </div>
             <div className="col-lg-6">
                <div className="text-center">
-                <Image src="/img/case-s-04.png" alt="Group1435" width={485} height={450} />
+                <Image src="/img/case-s-04.png" alt="World Food Trading future prospects with Business Central" width={485} height={450} />
                </div>
             </div>
           </div>

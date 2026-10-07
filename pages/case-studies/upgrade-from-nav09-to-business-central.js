@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
+import CaseStudyClientCard from "../../components/CaseStudyClientCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -13,15 +14,33 @@ const UpgradeFromNav09ToBusinessCentral = () => {
   return (
     <>
       <Head>
-        <title>Upgrade from Dynamics NAV 2009 to Microsoft Business Central </title>
+        <title>BSix Sixth Form College: NAV 2009 to Business Central Case Study | Dynamics Square</title>
         <meta
           name="description"
-          content="Check out our case study to learn how upgrade from Dynamics NAV 2009 to Microsoft Business Central improves company growth and productivity."
+          content="How BSix Sixth Form College upgraded from Dynamics NAV 2009 to Business Central to manage college operations and improve department collaboration."
         />
         <link
           rel="canonical"
           href="https://www.dynamicssquare.co.uk/case-studies/upgrade-from-nav09-to-business-central/"
         />
+        <meta property="og:locale" content="en_GB" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="BSix Sixth Form College: NAV 2009 to Business Central Case Study | Dynamics Square" />
+        <meta property="og:description" content="How BSix Sixth Form College upgraded from Dynamics NAV 2009 to Business Central to manage college operations and improve department collaboration." />
+        <meta property="og:url" content="https://www.dynamicssquare.co.uk/case-studies/upgrade-from-nav09-to-business-central/" />
+        <meta property="og:site_name" content="Dynamics Square UK" />
+        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/BSix.jpg" />
+        <meta property="og:image:secure_url" content="https://www.dynamicssquare.co.uk/img/BSix.jpg" />
+        <meta property="og:image:width" content="850" />
+        <meta property="og:image:height" content="410" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:alt" content="BSix Sixth Form College case study – Dynamics Square" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@dsquare_uk" />
+        <meta name="twitter:title" content="BSix Sixth Form College: NAV 2009 to Business Central Case Study | Dynamics Square" />
+        <meta name="twitter:description" content="How BSix Sixth Form College upgraded from Dynamics NAV 2009 to Business Central to manage college operations and improve department collaboration." />
+        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/BSix.jpg" />
+        <meta name="twitter:image:alt" content="BSix Sixth Form College case study – Dynamics Square" />
       </Head>
       <section className="hero-1 hero">
         <div className="container">
@@ -31,7 +50,7 @@ const UpgradeFromNav09ToBusinessCentral = () => {
                 <div className="top-se">
                   <span className="date-ti">Case Study</span>
                   <h1>Dynamics NAV 2009 to Business Central Upgrade </h1>
-                  <p>Managed extensive college operations with Dynamics 365 Business Central</p>
+                  <p>How BSix Sixth Form College managed extensive college operations with Dynamics 365 Business Central</p>
                 </div>
               </div>
             </div>
@@ -39,7 +58,7 @@ const UpgradeFromNav09ToBusinessCentral = () => {
               <div className="sider-over">
                 <img
                   src="/img/business-central-implementation-banner-1.svg"
-                  alt="business-central-implementation-banner"
+                  alt="BSix Sixth Form College Dynamics 365 Business Central case study"
                 />
               </div>
             </div>
@@ -50,17 +69,18 @@ const UpgradeFromNav09ToBusinessCentral = () => {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-10">
-              <div className="row bg-case">
-                <div className="col-lg-3 align-self-center text-center">
-                  <img
-                    src="/img/casestudy-pic.png"
-                    alt="casestudy-pic"
-                  />
-                </div>
-                <div className="col-lg-9 align-self-center">
-                  <p>The college was founded in 2002 and situated in Clapton, London, offering world-class education to international students. It is one of the few colleges that provide courses at all levels, from entry to advanced, as well as vocational courses to assist students in discovering their passion. With their well-qualified, approachable, and friendly staff, they work around the clock to help students choose the best path to success. They accept international students in all courses, resulting in a diverse and positive environment for students that allows them to better understand the world. </p>
-                </div>
-              </div>
+              <CaseStudyClientCard
+                clientName="BSix Sixth Form College"
+                logo="/img/case-study-logos/bsix-sixth-form-college-logo.png"
+                meta={[
+                  { icon: "bi-mortarboard", label: "Education" },
+                  { icon: "bi-geo-alt", label: "Clapton, London" },
+                  { icon: "bi-arrow-up-circle", label: "NAV 2009 → Business Central" },
+                ]}
+                title="About BSix Sixth Form College"
+              >
+                <p><strong>BSix Sixth Form College</strong> was founded in 2002 and situated in Clapton, London, offering world-class education to international students. It is one of the few colleges that provide courses at all levels, from entry to advanced, as well as vocational courses to assist students in discovering their passion. With their well-qualified, approachable, and friendly staff, they work around the clock to help students choose the best path to success. They accept international students in all courses, resulting in a diverse and positive environment for students that allows them to better understand the world. </p>
+              </CaseStudyClientCard>
             </div>
           </div>
         </div>
@@ -75,7 +95,7 @@ const UpgradeFromNav09ToBusinessCentral = () => {
           </header>
           <div className="row gx-5">
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/cast-stu-pic.png" alt="Case studies Dynamicsquare" width={487} height={404} />
+              <Image src="/img/cast-stu-pic.png" alt="BSix Sixth Form College business challenges" width={487} height={404} />
             </div>
             <div className="col-lg-6">
               <div className="content-icons-modil-1">
@@ -290,7 +310,7 @@ const UpgradeFromNav09ToBusinessCentral = () => {
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/Group1435.png" alt="Dynamics square casestudy" width={640} height={598} />
+              <Image src="/img/Group1435.png" alt="BSix Sixth Form College benefits with Dynamics Square" width={640} height={598} />
             </div>
           </div>
         </div>

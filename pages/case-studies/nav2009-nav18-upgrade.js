@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
+import CaseStudyClientCard from "../../components/CaseStudyClientCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -12,15 +13,33 @@ const CrmTrading = () => {
   return (
     <>
       <Head>
-        <title>Dynamics NAV 2009 to NAV 2018 Upgrade | Case Study</title>
+        <title>CRM Trading: Dynamics NAV 2009 to NAV 2018 Upgrade Case Study | Dynamics Square</title>
         <meta
           name="description"
-          content="UK's leading fragrance supplier worked with Dynamics Square to upgrade from Dynamics NAV 2009 to Dynamics NAV 2018. Read the case story to gain insights."
+          content="How CRM Trading, a UK fragrance and cosmetics wholesaler, upgraded from Dynamics NAV 2009 to NAV 2018 with Dynamics Square to boost operational efficiency."
         />
         <link
           rel="canonical"
           href="https://www.dynamicssquare.co.uk/case-studies/nav2009-nav18-upgrade/"
         />
+        <meta property="og:locale" content="en_GB" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="CRM Trading: Dynamics NAV 2009 to NAV 2018 Upgrade Case Study | Dynamics Square" />
+        <meta property="og:description" content="How CRM Trading, a UK fragrance and cosmetics wholesaler, upgraded from Dynamics NAV 2009 to NAV 2018 with Dynamics Square to boost operational efficiency." />
+        <meta property="og:url" content="https://www.dynamicssquare.co.uk/case-studies/nav2009-nav18-upgrade/" />
+        <meta property="og:site_name" content="Dynamics Square UK" />
+        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/case-studies-1.jpg" />
+        <meta property="og:image:secure_url" content="https://www.dynamicssquare.co.uk/img/case-studies-1.jpg" />
+        <meta property="og:image:width" content="850" />
+        <meta property="og:image:height" content="410" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:alt" content="CRM Trading case study – Dynamics Square" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@dsquare_uk" />
+        <meta name="twitter:title" content="CRM Trading: Dynamics NAV 2009 to NAV 2018 Upgrade Case Study | Dynamics Square" />
+        <meta name="twitter:description" content="How CRM Trading, a UK fragrance and cosmetics wholesaler, upgraded from Dynamics NAV 2009 to NAV 2018 with Dynamics Square to boost operational efficiency." />
+        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/case-studies-1.jpg" />
+        <meta name="twitter:image:alt" content="CRM Trading case study – Dynamics Square" />
       </Head>
       <section className="hero-1 hero">
         <div className="container">
@@ -30,7 +49,7 @@ const CrmTrading = () => {
                 <div className="top-se">
                   <span className="date-ti">Case Study</span>
                   <h1>Dynamics NAV 2009 to NAV 2018 Upgrade</h1>
-                  <p>Boost up the operational efficiency with Microsoft Dynamics NAV 2018</p>
+                  <p>How CRM Trading boosted operational efficiency with Microsoft Dynamics NAV 2018</p>
                 </div>
               </div>
             </div>
@@ -38,7 +57,7 @@ const CrmTrading = () => {
               <div className="sider-over">
                 <Image
                   src="/img/Dynamics-365-Business-Central.png"
-                  alt="Business central casestudy"
+                  alt="CRM Trading Dynamics 365 Business Central case study"
                   width={1024} height={597}
                   priority={true}
                 />
@@ -51,17 +70,18 @@ const CrmTrading = () => {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-10">
-              <div className="row bg-case">
-                <div className="col-lg-3 align-self-center">
-                  <div> <div><img
-                    src="/img/casestudy-pic.png"
-                    alt="casestudy-pic"
-                  /></div>
-                  </div></div>
-                <div className="col-lg-9">
-                  <p>CRM Trading is a leading wholesaler of fragrance, skincare, hair-care, and cosmetics has decided for NAV 2009 to NAV 2018 upgrade for enhancing their overall operational efficiency. They were having 35 years of experience in the beauty industry and serving their products to a number of brands like Calvin Klein, Davidoff, Vera Wang, Marc Jacobs, and Sarah Jessica Parker. With a warehouse based in the UK, they are ready to source any products and deliver them to the destination within the UK and abroad. Also, they are available in trade shows like Spring and Autumn Fairs at NEC Birmingham, Cosmoprof in Bologna, and the TFWA show in Cannes to showcase their wide variety of premium products.</p>
-                </div>
-              </div>
+              <CaseStudyClientCard
+                clientName="CRM Trading"
+                logo="/img/case-study-logos/crm-trading-logo.png"
+                meta={[
+                  { icon: "bi-bag", label: "Fragrance & Cosmetics Wholesale" },
+                  { icon: "bi-geo-alt", label: "United Kingdom" },
+                  { icon: "bi-arrow-up-circle", label: "NAV 2009 → NAV 2018" },
+                ]}
+                title="About CRM Trading"
+              >
+                <p><strong>CRM Trading</strong> is a leading wholesaler of fragrance, skincare, hair-care, and cosmetics has decided for NAV 2009 to NAV 2018 upgrade for enhancing their overall operational efficiency. They were having 35 years of experience in the beauty industry and serving their products to a number of brands like Calvin Klein, Davidoff, Vera Wang, Marc Jacobs, and Sarah Jessica Parker. With a warehouse based in the UK, they are ready to source any products and deliver them to the destination within the UK and abroad. Also, they are available in trade shows like Spring and Autumn Fairs at NEC Birmingham, Cosmoprof in Bologna, and the TFWA show in Cannes to showcase their wide variety of premium products.</p>
+              </CaseStudyClientCard>
             </div>
           </div>
         </div>
@@ -76,7 +96,7 @@ const CrmTrading = () => {
           </header>
           <div className="row gx-5">
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/cast-stu-pic.png" alt="cast-stu-pic" width={484} height={407} />
+              <Image src="/img/cast-stu-pic.png" alt="CRM Trading business challenges" width={484} height={407} />
             </div>
             <div className="col-lg-6">
               <div className="content-icons-modil-1">
@@ -354,7 +374,7 @@ const CrmTrading = () => {
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/Group1435.png" alt="Group1435" width={640} height={598} />
+              <Image src="/img/Group1435.png" alt="CRM Trading benefits with Dynamics Square" width={640} height={598} />
             </div>
           </div>
         </div>
