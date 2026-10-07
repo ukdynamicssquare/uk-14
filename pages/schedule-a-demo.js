@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
+import styles from "../styles/scheduleDemo.module.css";
 
 
 const ScheduleDemoForm = () => {
@@ -49,54 +50,85 @@ const ScheduleDemoForm = () => {
           }}
         />
       </Head>
-  
 
-         
-      <section className="sp-top">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-9 text-center">
-              <h1>Schedule a Dynamics 365 Demo</h1>
-              <p>
-                Book a free, no-obligation demo with our Dynamics 365 experts. We will walk you through the
-                Dynamics 365 Business Central, Sales, Customer Service, Finance and Supply Chain apps
-                that fit your business, and answer your questions on features, licensing and implementation.
-              </p>
-              <ul style={{listStyle:'none',padding:0}}>
-                <li>Live walkthrough tailored to your industry and processes</li>
-                <li>Guidance on the right Dynamics 365 apps and licences</li>
-                <li>Clear next steps, timelines and pricing for the UK</li>
-              </ul>
-              <p>Pick a time that suits you below.</p>
-            </div>
+      <div className={styles.page}>
+        <section className={styles.hero}>
+          <div className="container">
+            <span className={styles.eyebrow}>Free &amp; no-obligation</span>
+            <h1 className={styles.heroTitle}>Schedule a Dynamics 365 Demo</h1>
+            <p className={styles.heroText}>
+              Book a free, no-obligation demo with our Dynamics 365 experts. We will walk you through the
+              Dynamics 365 Business Central, Sales, Customer Service, Finance and Supply Chain apps
+              that fit your business, and answer your questions on features, licensing and implementation.
+            </p>
+            <ul className={styles.benefits}>
+              {[
+                "Live walkthrough tailored to your industry and processes",
+                "Guidance on the right Dynamics 365 apps and licences",
+                "Clear next steps, timelines and pricing for the UK",
+              ].map((item) => (
+                <li key={item}>
+                  <span className={styles.tick} aria-hidden="true">
+                    <svg viewBox="0 0 12 12" fill="none">
+                      <path d="M2.5 6.2 5 8.5l4.5-5" stroke="#fff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <a href="#book-demo" className={styles.heroCta}>
+              Pick a time that suits you
+              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M8 3v10m0 0 4-4m-4 4-4-4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </a>
           </div>
-        </div>
-      </section>
-      <section className="sp-top">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-9">
+        </section>
+
+        <section className={styles.details}>
+          <div className="container">
+            <div className={styles.sectionHead}>
               <h2>What You Will See in Your Dynamics 365 Demo</h2>
-              <ul>
-                <li><Link href="/products/dynamics-365-business-central/">Dynamics 365 Business Central</Link> for finance, sales, inventory and operations</li>
-                <li><Link href="/products/microsoft-dynamics-365-sales/">Dynamics 365 Sales</Link> and <Link href="/products/microsoft-dynamics-365-customer-service/">Customer Service</Link> for CRM</li>
-                <li><Link href="/products/microsoft-dynamics-365-finance-operations/">Finance and Operations</Link> and <Link href="/products/dynamics-365-supply-chain-management/">Supply Chain Management</Link> for larger enterprises</li>
-              </ul>
+              <p>We tailor every session to the apps that matter to your business.</p>
+            </div>
+            <ul className={styles.productGrid}>
+              <li className={styles.productCard}>
+                <span className={styles.productLabel}>ERP for SMBs</span>
+                <p><Link href="/products/dynamics-365-business-central/">Dynamics 365 Business Central</Link> for finance, sales, inventory and operations</p>
+              </li>
+              <li className={styles.productCard}>
+                <span className={styles.productLabel}>CRM</span>
+                <p><Link href="/products/microsoft-dynamics-365-sales/">Dynamics 365 Sales</Link> and <Link href="/products/microsoft-dynamics-365-customer-service/">Customer Service</Link> for CRM</p>
+              </li>
+              <li className={styles.productCard}>
+                <span className={styles.productLabel}>Enterprise ERP</span>
+                <p><Link href="/products/microsoft-dynamics-365-finance-operations/">Finance and Operations</Link> and <Link href="/products/dynamics-365-supply-chain-management/">Supply Chain Management</Link> for larger enterprises</p>
+              </li>
+            </ul>
+
+            <div className={styles.sectionHead}>
               <h2>How It Works</h2>
-              <ol>
-                <li>Choose a convenient date and time in the calendar below.</li>
-                <li>Tell us about your business and what you want to achieve.</li>
-                <li>Meet our Dynamics 365 consultants for a tailored walkthrough and Q&amp;A.</li>
-              </ol>
+              <p>Three simple steps from booking to your personalised walkthrough.</p>
+            </div>
+            <ol className={styles.steps}>
+              <li className={styles.step}>Choose a convenient date and time in the calendar below.</li>
+              <li className={styles.step}>Tell us about your business and what you want to achieve.</li>
+              <li className={styles.step}>Meet our Dynamics 365 consultants for a tailored walkthrough and Q&amp;A.</li>
+            </ol>
+
+            {/* <div className={styles.contactStrip}>
               <p>
                 Prefer to talk first? <Link href="/contact-us/">Contact our team</Link> or explore our{" "}
                 <Link href="/our-services/dynamics-365-implementation-services/">Dynamics 365 implementation services</Link>.
               </p>
-            </div>
+              <Link href="/contact-us/" className={styles.contactBtn}>Contact us</Link>
+            </div> */}
           </div>
-        </div>
-      </section>
-      <section className="custom-sed-demp-wraperaa">
+        </section>
+      </div>
+
+      <section className="custom-sed-demp-wraperaa" id="book-demo">
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-12">
