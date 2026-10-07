@@ -20970,7 +20970,7 @@ margin-bottom: 10px;
   }
   .supprt-header-new-one,
   .img-backs-sid-two {
-    padding-bottom: 40px;
+    padding-bottom: 0px;
   }
   .foot-tag-head {
     padding-top: 40px;
@@ -22522,6 +22522,173 @@ letter-spacing:3px
   }
   .partner-trust-strip__item h3 {
     font-size: 24px;
+  }
+}
+
+/* ============================================
+   NEW: Medical device manufacturing page
+   pages/industries/manufacturing/dynamics-365-for-medical-device.js
+   Reuses the pharma page classes; below are only the sections the
+   pharma design didn't have (At a Glance, Case Studies, final CTA).
+   ============================================ */
+.erp-expect-card__head h4 a {
+  color: inherit;
+}
+.erp-expect-card__head h4 a:hover {
+  color: #8e44ad;
+}
+.md-light-link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.md-compare-intro {
+  margin-bottom: 30px;
+}
+
+/* At a Glance strip */
+.md-glance__title {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.md-glance__grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px 32px;
+}
+.md-glance__grid li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #d8cdea;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.md-glance__num {
+  color: #fff;
+  font-family: Anton;
+  font-size: 36px;
+  letter-spacing: 2px;
+  line-height: 1;
+  min-width: 78px;
+}
+.md-glance__grid li .bi {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 22px;
+  margin-right: 34px;
+}
+
+/* Case studies */
+.md-case-section {
+  padding: 60px 0;
+  background-color: #F1F0F4;
+}
+.md-case-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-bottom: 3px solid #8e44ad;
+}
+.md-case-card__img img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+.md-case-card__body {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.md-case-card__body h3 {
+  color: #2d2640;
+  font-size: 21px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+.md-case-card__body p {
+  color: #5b5768;
+}
+.md-case-card__result {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  background: #f2eff7;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin: 6px 0 20px;
+}
+.md-case-card__result .bi {
+  color: #8e44ad;
+  font-size: 22px;
+}
+.md-case-card__result p {
+  margin: 0;
+  color: #2d2640;
+}
+.md-case-card__link {
+  margin-top: auto;
+  color: #8e44ad;
+  font-weight: 700;
+}
+.md-case-card__link:hover {
+  color: #60518c;
+}
+
+/* Final CTA */
+.md-final-cta {
+  background: linear-gradient(135deg, #4a3b69 0%, #2d2640 100%);
+  padding: 70px 0;
+}
+.md-final-cta h2 {
+  color: #fff;
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+.md-final-cta p {
+  color: #d8cdea;
+  font-size: 16px;
+  margin-bottom: 26px;
+}
+
+@media (max-width: 991px) {
+  .md-glance__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 768px) {
+  .md-glance__grid {
+    grid-template-columns: 1fr;
+  }
+  .md-glance__num {
+    font-size: 26px;
+  }
+  .md-glance__grid li .bi {
+    margin-right: 22px;
+  }
+  .md-final-cta h2 {
+    font-size: 24px;
+  }
+  .md-case-card__body h3 {
+    font-size: 19px;
   }
 }
 

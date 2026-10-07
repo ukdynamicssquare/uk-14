@@ -1,0 +1,47 @@
+[
+    {
+      "id": 1,
+      "question": "Is Dynamics 365 a good fit for medical device manufacturing?",
+      "answer": "<p>Yes, across a wide range of scale, provided the platform matches how complex your build actually is. <a href=\"/products/dynamics-365-business-central/\" class=\"u-i\">Business Central</a> handles single-site and contract manufacturers well; larger, multi-site operations generally need <a href=\"/products/dynamics-365-supply-chain-management/\" class=\"u-i\">Supply Chain Management</a>'s deeper capability.</p>"
+    },
+    {
+      "id": 2,
+      "question": "Which Dynamics 365 platform works best for medical device manufacturers?",
+      "answer": "<p>It comes down to your operation's complexity above all else. Dynamics 365 Business Central suits a single facility with a workable BOM. Dynamics 365 Supply Chain Management suits multiple sites, frequent engineering changes, or quality processes that need CAPA and statistical sampling as standard.</p>"
+    },
+    {
+      "id": 3,
+      "question": "Does Dynamics 365 track medical devices by lot and serial number?",
+      "answer": "<p>Yes, every lot or serial number gets tagged at the point of receipt or production, and that tag travels with the stock through every step that follows, right through to the finished device that shipped.</p>"
+    },
+    {
+      "id": 4,
+      "question": "Can Dynamics 365 handle medical device quality management?",
+      "answer": "<p>Yes, Business Central's Quality Management module covers inspection setup, pass or fail grading and quarantine natively. For larger quality operations, Supply Chain Management adds formal non-conformance investigation, CAPA and statistical sampling on top of that.</p>"
+    },
+    {
+      "id": 5,
+      "question": "Does Dynamics 365 support device history records?",
+      "answer": "<p>Yes, as production happens, inspection results and disposition decisions build up automatically against each unit or batch, giving you a build history that's ready whenever it needs reviewing.</p>"
+    },
+    {
+      "id": 6,
+      "question": "Can Dynamics 365 help manage medical device recalls?",
+      "answer": "<p>An FSCA depends on knowing exactly which units are involved, what components sit inside them, and who received them, and that's precisely the data both platforms hold. The FSCA and FSN process itself runs through your quality team's own procedure; Dynamics 365 supplies the traceability that procedure relies on.</p>"
+    },
+    {
+      "id": 7,
+      "question": "Is Dynamics 365 compliant with UK medical device regulations?",
+      "answer": "<p>UKCA marking and MHRA registration apply to your device and your quality system. Compliance is demonstrated through your organisation's validated processes, and Dynamics 365 supports that demonstration with traceability, documentation and quality records that sit alongside the regulatory work itself.</p>"
+    },
+    {
+      "id": 8,
+      "question": "How much does medical device ERP implementation cost in the UK?",
+      "answer": "<p>It depends on platform choice and how much validation and quality configuration your build needs. A <a href=\"/dynamics-365-business-central-implementation/\" class=\"u-i\">Business Central project</a> for a single site typically starts in the tens of thousands of pounds; a multi-site <a href=\"/d365-supply-chain-management-implementation/\" class=\"u-i\">Supply Chain Management build</a> often runs into six figures. A discovery call turns that range into a specific number for your operation.</p>"
+    },
+    {
+      "id": 9,
+      "question": "Do medical device manufacturers need a separate quality system alongside Dynamics 365?",
+      "answer": "<p>When design history file obligations are substantial, usually yes. The typical setup keeps Dynamics 365 running production, inventory and the device history record, while a dedicated eQMS takes on design controls and validated electronic signatures. We'll be direct about whether your operation genuinely needs that second system.</p>"
+    }
+]

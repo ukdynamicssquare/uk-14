@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
-import useCardScrollEffect from "../../components/useCardScrollEffect";
+import useCardScrollEffect from "../../../components/useCardScrollEffect";
 
 const Dynamics365ForDiscreteManufacturing = () => {
 
@@ -18,13 +18,13 @@ const Dynamics365ForDiscreteManufacturing = () => {
         />
         <link
           rel="canonical"
-          href="https://www.dynamicssquare.co.uk/industries/dynamics-365-for-discrete-manufacturing/"
+          href="https://www.dynamicssquare.co.uk/industries/manufacturing/dynamics-365-for-discrete/"
         />
         <meta property="og:locale" content="GB" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content=" Dynamics 365 For Discrete Manufacturing " />
         <meta property="og:description" content="Dynamics 365 for Discrete Manufacturing helps UK manufacturers streamline production, BOMs, inventory, and operations with real-time insights." />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/industries/dynamics-365-for-discrete-manufacturing/" />
+        <meta property="og:url" content="https://www.dynamicssquare.co.uk/industries/manufacturing/dynamics-365-for-discrete/" />
         <meta property="og:site_name" content="Dynamics Square UK" />
         <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/discrete-01.png" />
         <meta property="og:image:width" content="200" />

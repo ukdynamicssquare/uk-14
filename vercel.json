@@ -134,6 +134,11 @@
       "source": "/dynamics-365-sales-insights-an-overview/",
       "destination": "/products/microsoft-dynamics-365-sales/",
       "statusCode": 301
+    },
+    {
+      "source": "/industries/dynamics-365-for-discrete-manufacturing/",
+      "destination": "/industries/manufacturing/dynamics-365-for-discrete/",
+      "statusCode": 301
     }
   ]
 }

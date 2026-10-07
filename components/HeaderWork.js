@@ -40,7 +40,7 @@ const HeaderWork = () => {
     "/continia-expense-management": `${gname}`,
     "/case-studies/business-central-reimplementation-for-food-trader": `${gname}`,
     "/case-studies/business-central-reimplementation-for-recycling-industry": `${gname}`,
-    "/industries/dynamics-365-for-discrete-manufacturing": `${gname}`,
+    "/industries/manufacturing/dynamics-365-for-discrete": `${gname}`,
     "/industries/dynamics-365-for-distribution": `${gname}`,
     "/case-studies/business-central-for-tool-manufacturing-company": `${gname}`,
     "/case-studies/dynamics-365-finance-for-logistic-uk-multi-entity": `${gname}`,
@@ -55,6 +55,7 @@ const HeaderWork = () => {
           "/ai-solutions": `${gname}`,
            "/ai-solutions/microsoft-fabric": `${gname}`,
            "/industries/manufacturing/dynamics-365-for-pharmaceutical": `${gname}`,
+           "/industries/manufacturing/dynamics-365-for-medical-device": `${gname}`,
            "/products": `${gname}`,
     "/book-a-demo": `${gname}`,
   };
