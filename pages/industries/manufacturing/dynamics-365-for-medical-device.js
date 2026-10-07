@@ -61,7 +61,7 @@ const pageSchema = {
     {
       "@type": "HowTo",
       "name": "How Dynamics Square Implement Dynamics 365 for Medical Device Manufacturing",
-      "description": "We deliver every medical device build using Microsoft's Success by Design methodology, five stages that keep validation planning woven into the project from the very outset.",
+      "description": "Dynamics Square delivers every medical device build using Microsoft's Success by Design methodology, five stages that keep validation planning woven into the project from the very outset.",
       "step": [
         { "@type": "HowToStep", "position": 1, "name": "Discover", "text": "We spend time on your shop floor understanding your BOM, your routings and how close your quality processes already sit to MHRA expectations" },
         { "@type": "HowToStep", "position": 2, "name": "Initiate", "text": "Platform choice, scope and project governance get agreed before configuration begins" },
@@ -193,7 +193,7 @@ const MedicalDevice = () => {
                 <h2>Why Dynamics 365 Matters for Medical Device Manufacturing</h2>
               </div>
               <p>When you build a medical device, an inspector can ask at any point which batch of parts went into a specific unit, who signed off on it, and where it shipped. Dynamics 365 for medical device manufacturing puts that answer on screen in seconds, straight from the same system that runs your production floor, and the inspection stays calm and moves on quickly. Manufacturers still relying on paper files and scattered spreadsheets often spend hours digging for that same answer, turning a routine visit into a stressful scramble.</p>
-              <p style={{ marginBottom: '40px' }}><b>Microsoft offers two products built for this job. Which one you need depends less on how big your company is, and more on how complicated your production actually is.</b></p>
+              <p style={{ marginBottom: '40px' }}><b>Dynamics Square recommends two products built for this job. Which one you need depends less on how big your company is, and more on how complicated your production actually is.</b></p>
             </div>
           </div>
           <div className="row g-4">
@@ -528,7 +528,7 @@ const MedicalDevice = () => {
               <div className="pharma-timeline-head">
                 <h2>How Dynamics Square Implement: Step by Step</h2>
                 <p>
-                  We deliver every medical device build using Microsoft&apos;s{" "}
+                  Dynamics Square delivers every medical device build using Microsoft&apos;s{" "}
                   <Link href="/our-services/dynamics-365-implementation-services/" className="md-light-link">Success by Design methodology</Link>,
                   five stages that keep validation planning woven into the project from the very outset.
                 </p>
@@ -626,14 +626,14 @@ const MedicalDevice = () => {
             <div className="col-lg-4 d-flex">
               <div className="pharma-pricing-card">
                 <span className="pharma-pricing-card__tier">Standard</span>
-                <div className="pharma-pricing-card__price">from approximately £165<span>/user/month</span></div>
+                <div className="pharma-pricing-card__price">from £161.50<span>/user/month</span></div>
                 <p>Full discrete manufacturing, advanced quality management and warehouse management.</p>
               </div>
             </div>
             <div className="col-lg-4 d-flex">
               <div className="pharma-pricing-card pharma-pricing-card--highlight">
                 <span className="pharma-pricing-card__tier">Premium</span>
-                <div className="pharma-pricing-card__price">from approximately £235<span>/user/month</span></div>
+                <div className="pharma-pricing-card__price">from £230.70<span>/user/month</span></div>
                 <p>Adds advanced analytics and financial planning.</p>
               </div>
             </div>
