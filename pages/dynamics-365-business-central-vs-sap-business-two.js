@@ -10,7 +10,7 @@ const PAGE_TITLE = "Business Central vs SAP Business One: 2026 UK ERP Comparison
 const PAGE_DESC = "Compare Dynamics 365 Business Central vs SAP Business One on deployment, pricing, AI, Microsoft 365 integration and implementation time to pick the right ERP.";
 const OG_IMAGE = "https://www.dynamicssquare.co.uk/img/bc-vs-sap.png";
 
-const { faqs, faqsMore } = faqContent;
+const { faqsMore } = faqContent;
 
 const toFaqEntity = (faq) => ({
   "@type": "Question",
@@ -83,7 +83,7 @@ const pageSchema = {
     },
     {
       "@type": "FAQPage",
-      "mainEntity": [...faqs, ...faqsMore].map(toFaqEntity),
+      "mainEntity": faqsMore.map(toFaqEntity),
     },
   ],
 };
@@ -208,12 +208,15 @@ const getVerdict = (bc, sap) => {
 
 const FaqList = ({ items }) => {
   const [openFaq, setOpenFaq] = useState(items[0].id);
+  const [visibleCount, setVisibleCount] = useState(5);
   return (
+    <>
     <div className={styles.faqList}>
-      {items.map((faq) => {
+      {items.map((faq, i) => {
         const open = openFaq === faq.id;
+        // Items past visibleCount stay in the HTML (hidden) so every answer is crawlable
         return (
-          <div className={`${styles.faqItem} ${open ? styles.faqOpen : ""}`} key={faq.id}>
+          <div className={`${styles.faqItem} ${open ? styles.faqOpen : ""}${i < visibleCount ? "" : " d-none"}`} key={faq.id}>
             <h3>
               <button
                 type="button"
@@ -234,6 +237,14 @@ const FaqList = ({ items }) => {
         );
       })}
     </div>
+    {visibleCount < items.length && (
+      <div className="text-center mt-4">
+        <button className="btn faq-btn-l btn-get-started" onClick={() => setVisibleCount((prev) => prev + 3)}>
+          Load More <i className="bi bi-chevron-down"></i>
+        </button>
+      </div>
+    )}
+    </>
   );
 };
 
@@ -594,28 +605,6 @@ const BCvsSapTwo = () => {
         </div>
       </section>
 
-      {/* ===== Frequently Asked Questions ===== */}
-      <section id="faqs" className={`${styles.block} ${styles.blockTint} ${styles.anchor}`}>
-        <div className="container">
-          <div className="row gy-5">
-            <div className="col-lg-4">
-              <div className={styles.faqAside}>
-                <h2 className={styles.h2}>Frequently Asked Questions</h2>
-                <div className={styles.askCard}>
-                  <i className="bi bi-chat-square-text"></i>
-                  <div>
-                    <Link href="/contact-us/">Connect with Our Experts to Learn More <i className="bi bi-arrow-right"></i></Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-8">
-              <FaqList items={faqs} />
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ===== Ready to compare ===== */}
       <section className={styles.finalWrap}>
         <div className="container">
@@ -631,13 +620,26 @@ const BCvsSapTwo = () => {
         </div>
       </section>
 
-      {/* ===== Faqs ===== */}
-      <section className={`${styles.block} ${styles.blockTint}`}>
+      {/* ===== Frequently Asked Questions ===== */}
+      <section id="faqs" className={`${styles.block} ${styles.blockTint} ${styles.anchor}`}>
         <div className="container">
           <div className="row gy-5">
             <div className="col-lg-4">
               <div className={styles.faqAside}>
-                <h2 className={styles.h2}>Faqs</h2>
+                <h2 className={styles.h2}>Frequently Asked Questions</h2>
+                <div className={styles.faqCtaCard}>
+                  <Image
+                    src="/img/bc-vs-sap.png"
+                    alt="Microsoft Dynamics 365 Business Central versus SAP Business One"
+                    width={602}
+                    height={315}
+                    sizes="(max-width: 991px) 100vw, 360px"
+                  />
+                  <p>Dynamics Square helps you pick the right solution after analysing your day-to-day operations, so you have a solution you can count on for your growth and future plans.</p>
+                  <Link href="#exampleModal" data-bs-toggle="modal" className="btn-get-started scrollto">
+                    <span>Talk to Our Solutions Expert &nbsp;<i className="bi bi-arrow-right"></i></span>
+                  </Link>
+                </div>
               </div>
             </div>
             <div className="col-lg-8">

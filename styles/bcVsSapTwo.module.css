@@ -952,6 +952,37 @@
 .faqAside p {
   color: #5b5768;
 }
+/* consultation card in the second FAQ column */
+.faqCtaCard {
+  margin-top: 8px;
+  padding: 22px;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid #ebe6f2;
+  box-shadow: 0 16px 36px rgba(45, 38, 64, 0.07);
+}
+.faqCtaCard img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  background: #f6f4f9;
+  margin-bottom: 16px;
+}
+.faqCtaCard p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+.faqCtaCard :global(.btn-get-started) {
+  margin-top: 18px;
+  display: block;
+  text-align: center;
+}
+@media (max-width: 991px) {
+  .faqCtaCard {
+    display: none;
+  }
+}
 .askCard {
   display: flex;
   align-items: center;
