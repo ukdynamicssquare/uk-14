@@ -1,0 +1,81 @@
+{
+  "faqs": [
+    {
+      "id": 1,
+      "question": "What is the difference between Business Central and SAP Business One?",
+      "answer": "<p><a href=\"/products/dynamics-365-business-central/\" class=\"u-i\">Business Central</a> comes from Microsoft and connects closely with everyday tools like Outlook and Excel. SAP Business One comes from SAP and is well known for manufacturing. Both do a similar job, running your finance, sales, and stock in one place, just built by two different companies.</p>"
+    },
+    {
+      "id": 2,
+      "question": "Which is cheaper, Business Central or SAP Business One?",
+      "answer": "<p>Business Central is usually simpler to budget for, since you pay one clear fee per user, per month. SAP Business One costs more to pin down, since the price changes based on the licence type you pick.</p><p><a href=\"/contact-us/\" class=\"u-i\">Ask us for a quote</a> so you can compare the two fairly.</p>"
+    },
+    {
+      "id": 3,
+      "question": "Is SAP Business One cloud-based?",
+      "answer": "<p>Yes, SAP Business One can run in the cloud, on your own servers, or a mix of both. Business Central is built for the cloud from the ground up, so it is ready to use as soon as you sign up.</p>"
+    },
+    {
+      "id": 4,
+      "question": "Does Business Central work better with Microsoft tools than SAP Business One?",
+      "answer": "<p>Yes, Business Central connects directly with Outlook, Excel, and Teams, because Microsoft builds all of them together. SAP Business One can communicate with these tools too, but this usually needs extra add-ons to set up.</p>"
+    },
+    {
+      "id": 5,
+      "question": "Can I move from SAP Business One to Business Central?",
+      "answer": "<p>Yes, Business Central comes with built-in tools to help bring your data across from SAP Business One. A <a href=\"/our-services/dynamics-365-consultant/\" class=\"u-i\">Dynamics 365 expert</a> can plan the move for you, so your records stay safe and accurate.</p>"
+    },
+    {
+      "id": 6,
+      "question": "Which system is quicker to set up?",
+      "answer": "<p>Business Central is usually the quicker option, often ready to use within a few weeks. SAP Business One can take longer to set up, especially for businesses with detailed manufacturing needs.</p>"
+    }
+  ],
+  "faqsMore": [
+    {
+      "id": 101,
+      "question": "1. Which is better for a growing business, Microsoft Dynamics 365 Business Central or SAP Business One?",
+      "answer": "<p>Microsoft Dynamics 365 Business Central is generally a strong choice for growing businesses that want a cloud-first ERP, Microsoft 365 integration, built-in Copilot capabilities, and flexible scalability. SAP Business One can be a better fit for businesses that already use SAP or need specific manufacturing and distribution capabilities.</p>"
+    },
+    {
+      "id": 102,
+      "question": "2. What are the main advantages of Business Central over SAP Business One?",
+      "answer": "<p>Business Central offers native integration with Microsoft 365, built-in <a href=\"/products/dynamics-365-copilot/\" class=\"u-i\">Microsoft Copilot</a> and AI capabilities, cloud-first deployment, flexible <a href=\"/products/dynamics-365-business-central/customisation/\" class=\"u-i\">customisation</a>, and access to the wider Microsoft ecosystem. It is particularly suitable for businesses already using tools such as Excel, Outlook, Teams, <a href=\"/products/microsoft-power-bi/\" class=\"u-i\">Power BI</a> and <a href=\"/products/microsoft-power-platform/\" class=\"u-i\">Power Platform</a>.</p>"
+    },
+    {
+      "id": 103,
+      "question": "3. What are the main advantages of SAP Business One over Business Central?",
+      "answer": "<p>SAP Business One offers flexible deployment options, including on-premises environments, and has a long-established presence in manufacturing, wholesale and distribution. It can also suit businesses that already operate within the SAP ecosystem and want to extend their existing technology environment.</p>"
+    },
+    {
+      "id": 104,
+      "question": "4. Is Business Central easier to implement than SAP Business One?",
+      "answer": "<p>Business Central can be quicker to implement because it is designed as a cloud-first SaaS ERP with standardised functionality and Microsoft 365 integration. However, the actual <a href=\"/dynamics-365-business-central-implementation/\" class=\"u-i\">implementation</a> time for either ERP depends on business processes, data migration, integrations, customisation and the complexity of the deployment.</p>"
+    },
+    {
+      "id": 105,
+      "question": "5. Which ERP is better for manufacturing: Business Central or SAP Business One?",
+      "answer": "<p>Both Business Central and SAP Business One support manufacturing processes. Business Central provides <a href=\"/products/dynamics-365-business-central/manufacturing-management/\" class=\"u-i\">manufacturing</a>, inventory, supply chain and financial management within the Microsoft ecosystem, while SAP Business One has a strong track record in manufacturing and distribution. The better option depends on the complexity of your production processes and existing technology.</p>"
+    },
+    {
+      "id": 106,
+      "question": "6. Can SAP Business One data be migrated to Microsoft Dynamics 365 Business Central?",
+      "answer": "<p>Yes, businesses can migrate data from SAP Business One to Business Central. A structured migration typically involves assessing existing data, mapping fields, cleansing records, configuring Business Central, testing the migration and validating the final data before go-live.</p>"
+    },
+    {
+      "id": 107,
+      "question": "7. Which ERP has better AI capabilities, Business Central or SAP Business One?",
+      "answer": "<p>Business Central has a strong advantage for businesses looking for Microsoft-native AI because Microsoft Copilot and AI-powered capabilities are integrated into the Dynamics 365 ecosystem. SAP Business One can also benefit from SAP's wider AI and Business AI capabilities, depending on the solution architecture and integrations used.</p>"
+    },
+    {
+      "id": 108,
+      "question": "8. Can Business Central replace SAP Business One?",
+      "answer": "<p>Yes. Business Central can replace SAP Business One for businesses that need integrated financial management, sales, purchasing, inventory, supply chain and other ERP capabilities, particularly when they want a Microsoft-centric cloud platform. The suitability should be assessed against the company's existing SAP integrations, manufacturing requirements, data and custom processes.</p>"
+    },
+    {
+      "id": 109,
+      "question": "9. How can Dynamics Square help me choose between Business Central and SAP Business One?",
+      "answer": "<p>Dynamics Square can assess your existing systems, business processes, industry requirements, growth plans and integration needs to help you determine whether Microsoft Dynamics 365 Business Central is the right fit for your organisation.</p>"
+    }
+  ]
+}
