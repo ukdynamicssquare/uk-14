@@ -1,420 +1,443 @@
-import Link from "next/link";
+import React from "react";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
+import styles from "../styles/bcVsSapTwo.module.css";
+import SectionNav, { useSectionNav } from "../components/bcTwo/SectionNav";
+import FaqList, { faqSchema } from "../components/bcTwo/FaqList";
+import faqs from "../public/data/navvsbusinesscentral.json";
 
-const BCvsFinance = () => {
+const PAGE_URL = "https://www.dynamicssquare.co.uk/dynamics-nav-vs-business-central/";
+const PAGE_TITLE = "Dynamics NAV vs Business Central: Compare & Plan Your Upgrade";
+const PAGE_DESC = "Compare Microsoft Dynamics NAV vs Business Central: support end dates, licensing, customisation, AI and what a NAV to Business Central migration involves.";
+const OG_IMAGE = "https://www.dynamicssquare.co.uk/img/Microsoft-Dynamics-NAV-and-Business-Central.jpg";
+
+const comparisonRows = [
+  { icon: "bi-activity", factor: "Current status", nav: "Legacy, in extended (security-only) support", bc: "Microsoft's actively developed SMB ERP" },
+  { icon: "bi-cloud-check", factor: "Deployment", nav: "On-premises, Windows client", bc: "Cloud SaaS, browser-based, with on-premises options" },
+  {
+    icon: "bi-receipt",
+    factor: "Licensing",
+    nav: "Perpetual licence plus an annual enhancement plan",
+    bc: <>Subscription, per user, per month, see <Link href="/products/dynamics-365-business-central/pricing-licensing/" className="u-i">subscription and licensing details</Link></>,
+  },
+  {
+    icon: "bi-sliders",
+    factor: "Customisation",
+    nav: "Modifications typically written into the core code",
+    bc: <><Link href="/products/dynamics-365-business-central/customisation/" className="u-i">Extension-based customisation</Link>, kept separate from the base system</>,
+  },
+  { icon: "bi-arrow-repeat", factor: "Updates", nav: "None, NAV 2018 was the final release", bc: "Two major update waves every year" },
+  { icon: "bi-stars", factor: "AI and Copilot", nav: "Unavailable in any NAV version", bc: "Included as standard" },
+  { icon: "bi-bar-chart-line", factor: "Reporting and BI", nav: "Built-in reports, limited without add-ons", bc: "Native Power BI, 400+ reports, 110+ dashboards" },
+  { icon: "bi-microsoft", factor: "Microsoft 365 integration", nav: "Limited, mostly add-on based", bc: "Native integration with Outlook, Excel, and Teams" },
+  { icon: "bi-calendar-x", factor: "Support outlook", nav: "Extended support ends 11 January 2028 for the final NAV version", bc: "Ongoing Microsoft investment and development" },
+];
+
+const moveReasons = [
+  { icon: "bi-alarm", title: "NAV's clock is running down", text: "Microsoft's development on Dynamics NAV stopped with the 2018 release. Every NAV version is now either fully out of support or running on security updates only, with no new features, design changes, or guaranteed regulatory updates coming." },
+  { icon: "bi-shield-exclamation", title: "Compliance risk grows every year", text: "Tax rules, VAT reporting, and payroll requirements change regularly. A system stuck on security-only updates carries real risk of falling behind on the regulatory changes that keep a UK business compliant." },
+  { icon: "bi-cloud-check", title: "Cloud access, anywhere", text: "Business Central runs in the cloud, so your team can work from a laptop, tablet, or phone, without being tied to the NAV Windows client on a specific machine." },
+  { icon: "bi-stars", title: "AI that actually does the work", text: <>Business Central includes <Link href="/products/dynamics-365-copilot/" className="u-i">Microsoft Copilot and AI agents</Link> built in, handling tasks like turning emails into sales orders or matching bank transactions during reconciliation, well beyond anything Dynamics NAV was originally built to do.</> },
+  { icon: "bi-arrow-up-circle", title: "Safer, easier updates going forward", text: "NAV customisations often changed the core system directly, which made every future upgrade a bigger, costlier project. Business Central's extension model keeps customisations separate, so updates are far less likely to break what you have built." },
+  { icon: "bi-wallet2", title: "Predictable monthly cost", text: "NAV licensing usually meant a large upfront cost plus an annual enhancement fee. Business Central runs on a simple per-user, per-month subscription, making budgeting more straightforward." },
+];
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": PAGE_URL,
+      "url": PAGE_URL,
+      "name": PAGE_TITLE,
+      "description": PAGE_DESC,
+      "inLanguage": "en-GB",
+      "primaryImageOfPage": { "@type": "ImageObject", "url": OG_IMAGE, "width": 2048, "height": 1070 },
+      "isPartOf": { "@id": "https://www.dynamicssquare.co.uk/#website" },
+      "publisher": { "@id": "https://www.dynamicssquare.co.uk/#organization" },
+      "breadcrumb": { "@id": PAGE_URL + "#breadcrumb" },
+      "about": [
+        { "@id": PAGE_URL + "#dynamics-nav" },
+        { "@id": PAGE_URL + "#business-central" }
+      ],
+      "mainEntity": { "@id": PAGE_URL + "#comparison" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": PAGE_URL + "#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dynamicssquare.co.uk/" },
+        { "@type": "ListItem", "position": 2, "name": "Business Central", "item": "https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/" },
+        { "@type": "ListItem", "position": 3, "name": "Dynamics NAV vs Business Central", "item": PAGE_URL }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": PAGE_URL + "#comparison",
+      "name": "Dynamics NAV vs Business Central",
+      "numberOfItems": 2,
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "item": { "@id": PAGE_URL + "#dynamics-nav" } },
+        { "@type": "ListItem", "position": 2, "item": { "@id": PAGE_URL + "#business-central" } }
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": PAGE_URL + "#dynamics-nav",
+      "name": "Microsoft Dynamics NAV",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Enterprise Resource Planning (ERP)",
+      "operatingSystem": "Windows",
+      "softwareVersion": "2018",
+      "url": "https://www.dynamicssquare.co.uk/products/microsoft-dynamics-nav/",
+      "author": { "@type": "Organization", "name": "Microsoft" },
+      "description": "Dynamics NAV was Microsoft's on-premises ERP system for small and mid-sized businesses."
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": PAGE_URL + "#business-central",
+      "name": "Microsoft Dynamics 365 Business Central",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Enterprise Resource Planning (ERP)",
+      "operatingSystem": "Web, Windows, iOS, Android",
+      "url": "https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/",
+      "author": { "@type": "Organization", "name": "Microsoft" },
+      "description": "Business Central is Microsoft's actively developed replacement, built on much of the same foundation but delivered as a modern cloud service."
+    },
+    faqSchema(faqs),
+  ],
+};
+
+const sections = [
+  { id: "overview", label: "Overview" },
+  { id: "facts", label: "Facts" },
+  { id: "comparison", label: "Full Comparison" },
+  { id: "why-move", label: "Why Move" },
+  { id: "migration", label: "Migration" },
+  { id: "case-studies", label: "Case Studies" },
+  { id: "faqs", label: "FAQs" },
+];
+
+const relatedPages = [
+  { href: "/dynamics-nav-to-business-central/", title: "Dynamics NAV to Business Central", icon: "bi-arrow-repeat" },
+  { href: "/dynamics-365-business-central-upgrade/", title: "Business Central Upgrade", icon: "bi-arrow-up-circle" },
+  { href: "/dynamics-365-business-central-implementation/", title: "Business Central Implementation", icon: "bi-rocket-takeoff" },
+  { href: "/why-choose-microsoft-dynamics-365-business-central/", title: "Why Choose Microsoft Dynamics 365 Business Central", icon: "bi-patch-check" },
+  { href: "/dynamics-365-business-central-vs-finance-operations/", title: "Business Central vs Finance & Operations", icon: "bi-arrow-left-right" },
+];
+
+const NavVsBCTwo = () => {
+  const { active, navTop } = useSectionNav(sections);
+
   return (
     <>
       <Head>
-        <title>Microsoft Dynamics NAV vs Business Central (2025) | Dynamics Square UK</title>
-        <meta
-          name="description"
-          content="Dynamics NAV is an established ERP solution. Business Central: a cloud-based, modernised version with enhanced features for SMBs. Choose based on your needs."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/dynamics-nav-vs-business-central/"
-        />
-       <meta property="og:locale" content="GB" />
+        <title>{PAGE_TITLE}</title>
+        <meta name="description" content={PAGE_DESC} />
+        <link rel="canonical" href={PAGE_URL} />
+        <meta property="og:locale" content="en_GB" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Microsoft Dynamics NAV vs Business Central (2025) | Dynamics Square UK" />
-        <meta property="og:description" content="Dynamics NAV is an established ERP solution. Business Central: a cloud-based, modernised version with enhanced features for SMBs. Choose based on your needs." />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-customer-service/case-management/" />
+        <meta property="og:title" content={PAGE_TITLE} />
+        <meta property="og:description" content={PAGE_DESC} />
+        <meta property="og:url" content={PAGE_URL} />
         <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/nav-vs-business-central.png" />
-        <meta property="og:image:width" content="200" />
-        <meta property="og:image:height" content="200" />
-        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image" content={OG_IMAGE} />
+        <meta property="og:image:width" content="2048" />
+        <meta property="og:image:height" content="1070" />
+        <meta property="og:image:alt" content="Difference between Microsoft Dynamics NAV and Dynamics 365 Business Central" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="Microsoft Dynamics NAV vs Business Central (2025) | Dynamics Square UK" />
-        <meta name="twitter:description" content="Dynamics NAV is an established ERP solution. Business Central: a cloud-based, modernised version with enhanced features for SMBs. Choose based on your needs." />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/nav-vs-business-central.png" />
+        <meta name="twitter:title" content={PAGE_TITLE} />
+        <meta name="twitter:description" content={PAGE_DESC} />
+        <meta name="twitter:image" content={OG_IMAGE} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
       </Head>
-      <section className="Solution-banner hero-1 hero">
+
+      {/* ===== Hero ===== */}
+      <section className={styles.hero}>
+        <div className="container">
+          <nav aria-label="breadcrumb" className={styles.crumbs}>
+            <Link href="/">Home</Link>
+            <i className="bi bi-chevron-right"></i>
+            <Link href="/products/dynamics-365-business-central/">Business Central</Link>
+            <i className="bi bi-chevron-right"></i>
+            <span>Dynamics NAV vs Business Central</span>
+          </nav>
+          <div className="row justify-content-center">
+            <div className="col-lg-9 text-center">
+              <h1 className={styles.heroTitle}>
+                Dynamics NAV <span className={styles.heroVs}>vs</span> Business Central
+              </h1>
+              <p className={styles.heroLead}>Still running Dynamics NAV? Microsoft has moved on, and support is running out.</p>
+              <p className={styles.heroLead}>Talk to our experts to understand how exactly Dynamics NAV compares to Business Central, and what staying on NAV could cost your business.</p>
+            </div>
+          </div>
+
+          <div className={styles.versus}>
+            <div className={styles.contender}>
+              <div className={`${styles.contenderLogo} ${styles.iconLogo}`}>
+                <Image src="/img/menu-icons/NAV.png" alt="Microsoft Dynamics NAV" width={48} height={48} priority />
+                <span><small>Microsoft</small><strong>Dynamics NAV</strong></span>
+              </div>
+            </div>
+            <div className={styles.vsBadge} aria-hidden="true">VS</div>
+            <div className={styles.contender}>
+              <div className={styles.contenderLogo}>
+                <Image src="/img/businescentrallogo.png" alt="Microsoft Dynamics 365 Business Central" width={268} height={66} priority />
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.heroActions}>
+            <Link href="#exampleModal" data-bs-toggle="modal" className="btn-get-started scrollto">
+              <span>Book a Free Consultation &nbsp;<i className="bi bi-arrow-right"></i></span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <SectionNav sections={sections} active={active} navTop={navTop} />
+
+      {/* ===== Overview ===== */}
+      <section id="overview" className={`${styles.block} ${styles.anchor}`}>
         <div className="container">
           <div className="row">
-            <div className="col-lg-6 mobile-4 align-self-center">
-              <h1>Dynamics NAV vs <br />Business Central</h1>
-              <p>Compare a successful conventional ERP solution with a modern solution and decide what’s best for you: continue using NAV or move to Business Central.</p>
+            <div className="col-lg-10">
+              <h2 className={styles.h2}>You’re Running Out of Time. Upgrade to Business Central Today!</h2>
+              <p className={styles.lead}><strong>Dynamics NAV was Microsoft&apos;s on-premises ERP system for small and mid-sized businesses, and Business Central is its cloud-based successor.</strong></p>
+            </div>
+          </div>
+          <div className={`row g-4 ${styles.profileRow} mt-0`}>
+            <div className="col-lg-6 d-flex">
+              <article className={styles.profile}>
+                <span className={`${styles.profileTag} ${styles.profileTagSap}`}>NAV 2018</span>
+                <h3>Dynamics NAV</h3>
+                <p><Link href="/products/microsoft-dynamics-nav/" className="u-i">Dynamics NAV</Link> development ended with NAV 2018, its final release, which moved into extended, security-only support on 10 January 2023.</p>
+              </article>
+            </div>
+            <div className="col-lg-6 d-flex">
+              <article className={styles.profile}>
+                <span className={`${styles.profileTag} ${styles.profileTagBc}`}>Microsoft</span>
+                <h3>Business Central</h3>
+                <p><Link href="/products/dynamics-365-business-central/" className="u-i">Business Central</Link> is Microsoft&apos;s actively developed replacement, built on much of the same foundation but delivered as a modern cloud service.</p>
+              </article>
+            </div>
+          </div>
+          <div className={styles.callout}>
+            <p>The clock is ticking on Dynamics NAV. This page covers what has changed, what your options are, and what moving to Business Central actually involves, while you still have time to plan it properly.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== Facts ===== */}
+      <section id="facts" className={`${styles.block} ${styles.blockTint} ${styles.anchor}`}>
+        <div className="container">
+          <h2 className={styles.h2}>Dynamics NAV vs Business Central: Facts Worth Knowing</h2>
+          <div className={styles.bento}>
+            <div className={`${styles.bentoCard} ${styles.bentoHero}`}>
+              <i className="bi bi-calendar-x"></i>
+              <span className={styles.bentoNum} aria-hidden="true">2028</span>
+              <p>Dynamics NAV 2018, the final release, moved out of mainstream support in January 2023 and Microsoft&apos;s own lifecycle policy has its extended, security-only support ending on 11 January 2028</p>
+            </div>
+            <div className={styles.bentoCard}>
+              <i className="bi bi-buildings"></i>
+              <span className={styles.bentoNum} aria-hidden="true">55,000+</span>
+              <p>Microsoft reports that Business Central now runs over <strong>55,000 businesses</strong> worldwide, with continued investment and two major update releases every year</p>
+            </div>
+            <div className={styles.bentoCard}>
+              <i className="bi bi-stars"></i>
+              <span className={styles.bentoWord} aria-hidden="true">Copilot</span>
+              <p>Business Central includes Microsoft Copilot and AI agents as standard, something no version of Dynamics NAV was ever built with</p>
+            </div>
+            <div className={`${styles.bentoCard} ${styles.bentoWide}`}>
+              <i className="bi bi-puzzle"></i>
               <div>
-                <div className="text-center text-lg-start">
-                  <Link
-                    href="#exampleModal"
-                    data-bs-toggle="modal"
-                    className="btn-get-started scrollto">
+                <span className={styles.bentoWord} aria-hidden="true">Extensions</span>
+                <p>NAV customisations were typically written directly into the core system, while Business Central uses separate extensions, built to survive future updates</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                    <span>Schedule a Demo</span>
+      {/* ===== Full comparison ===== */}
+      <section id="comparison" className={`${styles.block} ${styles.anchor}`}>
+        <div className="container">
+          <div className="text-center">
+            <h2 className={`${styles.h2} mx-auto`}>Dynamics NAV vs Business Central: Full Comparison</h2>
+          </div>
+          <div className={styles.board}>
+            <div className={styles.boardHead}>
+              <div className={styles.boardSideBc}>
+                <Image src="/img/menu-icons/dynamics-365-businesscentral.svg" alt="" width={30} height={30} />
+                Business Central
+              </div>
+              <div className={styles.boardMid}>Factor</div>
+              <div className={styles.boardSideSap}>Dynamics NAV</div>
+            </div>
+            {comparisonRows.map((row) => (
+              <div className={styles.boardRow} key={row.factor}>
+                <div className={`${styles.boardCell} ${styles.boardCellBc}`}>
+                  <span className={styles.cellLabel}>Business Central</span>
+                  {row.bc}
+                </div>
+                <div className={styles.boardFactor}>
+                  <i className={`bi ${row.icon}`}></i>
+                  <span>{row.factor}</span>
+                </div>
+                <div className={`${styles.boardCell} ${styles.boardCellSap}`}>
+                  <span className={styles.cellLabel}>Dynamics NAV</span>
+                  {row.nav}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
+      {/* ===== Why move ===== */}
+      <section id="why-move" className={`${styles.block} ${styles.blockTint} ${styles.anchor}`}>
+        <div className="container">
+          <h2 className={styles.h2}>Why Businesses Are Moving from NAV to Business Central</h2>
+          <div className={`${styles.reasonGrid} ${styles.reasonGrid3}`}>
+            {moveReasons.map((r) => (
+              <article className={styles.reasonCard} key={r.title}>
+                <div className={styles.reasonHead}>
+                  <span className={styles.reasonBadge}><i className={`bi ${r.icon}`}></i></span>
+                  <h3>{r.title}</h3>
+                </div>
+                <p>{r.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== Migration ===== */}
+      <section id="migration" className={`${styles.block} ${styles.anchor}`}>
+        <div className="container">
+          <div className="row align-items-center gy-5">
+            <div className={`col-lg-6 ${styles.helpText}`}>
+              <h2 className={styles.h2}>What a NAV to Business Central Migration Actually Involves</h2>
+              <p>A move from NAV to Business Central is a structured project, not a simple software update as many might think. It typically covers three things: bringing your financial and operational data across, rebuilding any custom NAV modifications as Business Central extensions, and testing everything against your real business processes before go-live.</p>
+              <p>The amount of work depends heavily on how customised your current NAV system is. A fairly standard NAV setup can move across in a matter of weeks. A heavily customised system, built up over many years, takes longer, since those customisations need proper rebuilding to work in the new system. Our <Link href="/dynamics-365-business-central-implementation/" className="u-i">Business Central implementation</Link> service is built around exactly this kind of project.</p>
+            </div>
+            <div className="col-lg-6">
+              <div className={styles.mediaCard}>
+                <Image src="/img/Group-nav.png" alt="Moving from Microsoft Dynamics NAV to Business Central by upgrade or re-implementation" width={729} height={192} sizes="(max-width: 991px) 100vw, 560px" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== Case studies ===== */}
+      <section id="case-studies" className={`${styles.block} ${styles.blockTint} ${styles.anchor}`}>
+        <div className="container">
+          <h2 className={styles.h2}>Businesses Like Yours Have Trusted Us with NAV to BC Upgrade & Migration</h2>
+          <div className={`row g-4 ${styles.caseGrid}`}>
+            <div className="col-lg-6 d-flex">
+              <article className="md-case-card">
+                <div className="md-case-card__img">
+                  <Image src="/img/tool-manufacturing-company.jpg" alt="UK tooling and distribution business upgraded from Dynamics NAV 2016 to Business Central" width={850} height={410} sizes="(max-width: 991px) 100vw, 600px" />
+                </div>
+                <div className={`md-case-card__body ${styles.caseBody}`}>
+                  <span className={styles.caseTag}>Case study 1</span>
+                  <p>A UK tooling and distribution business found out the hard way what an unsupported NAV system can cost.</p>
+                  <p>Running Dynamics NAV 2016 on ageing on-premises infrastructure, the business found itself unable to submit VAT returns for the first time in 39 years, after HMRC withdrew support for the outdated server behind its Making Tax Digital setup.</p>
+                  <p>Dynamics Square rebuilt the business&apos;s custom tooling and distribution add-ons as modern Business Central extensions, restored full HMRC compliance, and fixed the landed-cost tracking on its China and India import lines, which had become unreliable on the failing legacy system.</p>
+                  <p className="md-case-card__link-wrap">Read the <Link href="/case-studies/business-central-for-tool-manufacturing-company/" className="md-case-card__link">full case study <i className="bi bi-arrow-right"></i></Link></p>
+                </div>
+              </article>
+            </div>
+            <div className="col-lg-6 d-flex">
+              <article className="md-case-card">
+                <div className="md-case-card__img">
+                  <Image src="/img/orth-care.png" alt="UK orthodontic products supplier upgraded from Dynamics NAV 2013 R2 to Business Central" width={850} height={410} sizes="(max-width: 991px) 100vw, 600px" />
+                </div>
+                <div className={`md-case-card__body ${styles.caseBody}`}>
+                  <span className={styles.caseTag}>Case study 2</span>
+                  <p>A UK orthodontic products supplier faced a different problem, an older Dynamics NAV 2013 R2 system that had fallen behind its growth, with manual processes, limited real-time visibility, and a struggle to connect its warehouse and mobile systems.</p>
+                  <p>Moving to Business Central brought finance, sales, and inventory together, added warehouse management and document automation, and gave the team mobile access and live reporting for the first time.</p>
+                  <p className="md-case-card__link-wrap">Read the <Link href="/case-studies/nav-2013-r2-to-business-central-upgrade/" className="md-case-card__link">full case study <i className="bi bi-arrow-right"></i></Link></p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <p className={`${styles.closingLine} ${styles.closingLineDark}`}>Two very different businesses, one common thread: staying on an unsupported system eventually becomes a bigger risk than the migration itself.</p>
+          <Link href="/case-studies/" className={styles.caseMore}>Read more upgrade case stories here <i className="bi bi-arrow-right"></i></Link>
+        </div>
+      </section>
+
+      {/* ===== How we help ===== */}
+      <section id="how-we-help" className={`${styles.block} ${styles.anchor}`}>
+        <div className="container">
+          <div className="row align-items-center gy-4">
+            <div className={`col-lg-8 ${styles.helpText}`}>
+              <h2 className={styles.h2}>How Dynamics Square Helps You Move on from NAV</h2>
+              <p>Migrating off a system your business has run on for years is a big decision, and it deserves a plan built around your actual data and processes.</p>
+              <p>Our <Link href="/our-services/dynamics-365-consultant/" className="u-i">Dynamics 365 consultants</Link> have taken businesses through this exact move, from assessing how customised your current NAV system is, through data migration, to getting your team confident on Business Central. We plan the project around your live operations, so your business keeps running while the move happens in the background.</p>
+              <Link href="#exampleModal" data-bs-toggle="modal" className="btn-get-started scrollto">
+                <span>Talk to a Dynamics Square Consultant &nbsp;<i className="bi bi-arrow-right"></i></span>
+              </Link>
+            </div>
+            <div className="col-lg-4 text-lg-end text-center">
+              <Image src="/img/microsoft-partner-footer.png" alt="Microsoft Solutions Partner for Business Applications" width={180} height={165} className={styles.partnerBadge} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== FAQs ===== */}
+      <section id="faqs" className={`${styles.block} ${styles.blockTint} ${styles.anchor}`}>
+        <div className="container">
+          <div className="row gy-5">
+            <div className="col-lg-4">
+              <div className={styles.faqAside}>
+                <h2 className={styles.h2}>Frequently Asked Questions</h2>
+                <div className={styles.faqCtaCard}>
+                  <Image src="/img/Microsoft-Dynamics-NAV-and-Business-Central.jpg" alt="Difference between Microsoft Dynamics NAV and Dynamics 365 Business Central" width={2048} height={1070} sizes="(max-width: 991px) 100vw, 360px" />
+                  <p>Talk to our experts to understand how exactly Dynamics NAV compares to Business Central, and what staying on NAV could cost your business.</p>
+                  <Link href="#exampleModal" data-bs-toggle="modal" className="btn-get-started scrollto">
+                    <span>Book a Free Consultation &nbsp;<i className="bi bi-arrow-right"></i></span>
                   </Link>
                 </div>
               </div>
             </div>
-            <div className="col-lg-6 align-self-center">
-              <Image src="/img/nav-vs-business-central.png" alt="nav-vs-business-central" width={624} height={255} priority={true} />
+            <div className="col-lg-8">
+              <FaqList items={faqs} />
             </div>
           </div>
         </div>
       </section>
-      <section>
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-10">
-              <header className="section-header">
-                <h2>Overview</h2>
-                <p>Dynamics NAV is one of the greatest ERP solutions Microsoft has ever developed. It can manage different operations while accelerating the business towards profitability. However, modern business challenges and unstable customer demands made <Link href="/products/microsoft-dynamics-nav/">Dynamics NAV</Link> insufficient to tackle complex business scenarios. </p>
-                <p>This led Microsoft to develop a flexible and powerful ERP solution that can be personalised to meet unique business demands. Here comes Microsoft Dynamics 365 Business Central, an upgraded version of Dynamics NAV or Navision with advanced capabilities to deal with complex business operations. </p>
-                <p>Here is the real question: If NAV in an organisation is working fine, then why should someone upgrade to Business Central? </p>
-                <p>If so, you need to compare the capabilities and functionalities of Dynamics NAV with Business Central to decide the best solution for your business. </p>
-                <p>Maybe you are missing out on some of the advanced functions that can automate and simplify your business. Also, you might require cutting-edge technologies to supercharge your different functions. </p>
-                <p>Check out the comparison of Dynamics NAV vs Business Central to see what these solutions have to offer for you. </p>
-              </header>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section style={{ marginTop: '-60px' }}>
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-9">
-              <header className="section-header">
-                <h2>Dynamics NAV vs Dynamics 365 Business Central </h2>
-                <p>In this section, we are going to compare the core tools and capabilities of both solutions based on different parameters. Check out the table below for a comprehensive comparison. </p>
-              </header>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="tabls-cloud table-responsive">
-                <table className="table table-striped align-middle ">
-                  <thead>
-                    <tr>
-                      <th>Parameters </th>
-                      <th>Dynamics NAV</th>
-                      <th>Dynamics 365 Business Central</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Deployment</td>
-                      <td>On-premises</td>
-                      <td>On-premises, cloud, and Hybrid</td>
-                    </tr>
-                    <tr>
-                      <td>Licensing</td>
-                      <td>Perpetual model</td>
-                      <td>Subscription based</td>
-                    </tr>
-                    <tr>
-                      <td>User-Interface</td>
-                      <td>Outdated</td>
-                      <td>Modern and interactive</td>
-                    </tr>
-                    <tr>
-                      <td>Customisations</td>
-                      <td>Complex (through coding)</td>
-                      <td>Simple (through extension)</td>
-                    </tr>
-                    <tr>
-                      <td>Integration</td>
-                      <td>Complex (through coding)</td>
-                      <td>Simple with native tools and through APIs</td>
-                    </tr>
-                    <tr>
-                      <td>Support</td>
-                      <td>By Microsoft (mainstream ended)</td>
-                      <td>Free and automatic updates from Microsoft</td>
-                    </tr>
-                    <tr>
-                      <td>Implementation Cost and Time</td>
-                      <td>High cost and lengthy process</td>
-                      <td>Low and faster implementation</td>
-                    </tr>
-                    <tr>
-                      <td>Target Businesses</td>
-                      <td>Medium to Large sized</td>
-                      <td>Small to Medium sized</td>
-                    </tr>
-                    <tr>
-                      <td>Cost Efficiency</td>
-                      <td>High due to maintenance, licensing, and customization cost.</td>
-                      <td>Low due to lower upfront cost, reduced IT cost, zero maintenance cost.</td>
-                    </tr>
-                    <tr>
-                      <td>Scalability</td>
-                      <td>A bit difficult</td>
-                      <td>Easy to scale with cloud</td>
-                    </tr>
-                    <tr>
-                      <td>Ease of Use</td>
-                      <td>Requires proper training to properly utilize NAV</td>
-                      <td>Comes with simple, modern and user-friendly interface</td>
-                    </tr>
-                    <tr>
-                      <td>Data Security</td>
-                      <td>Less strong because of high-end encryption</td>
-                      <td>Strong due to Microsoft’s robust IT infrastructure</td>
-                    </tr>
-                    <tr>
-                      <td>Maintenance</td>
-                      <td>Rely on vendor and high cost</td>
-                      <td>Microsoft ensure automatic maintenance</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="call_to_action call_to_action-height pd-405">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-5">
-              <div className="call_to_action-right over-img">
-                <img src="/img/MaskGroup8.png" alt="image" />
-              </div>
-            </div>
-            <div className="col-lg-7 align-self-center">
-              <div className="call_to_action-left">
-                <h3>Still confused about which one is the best solution for your growing business? </h3>
-                <p>Our certified Microsoft Business Central experts are available to help you understand the difference between these two solutions based on your business requirements. </p>
-                <div className="m-o-t m-o-t-inde">
-                  <Link
-                    href="#exampleModal"
-                    data-bs-toggle="modal"
-                    className="btn-get-started scrollto">
 
-                    <span>Let's Talk</span>
-
-                  </Link>
-                </div>
-              </div>
+      {/* ===== Final CTA ===== */}
+      <section className={styles.finalWrap}>
+        <div className="container">
+          <div className={styles.final}>
+            <div className={styles.finalText}>
+              <h2>Ready to Plan Your Move Off Dynamics NAV?</h2>
+              <p>Talk to a Dynamics Square consultant about what a NAV to Business Central migration would look like for your business, with no obligation.</p>
+              <Link href="#exampleModal" data-bs-toggle="modal" className="btn-get-started scrollto">
+                <span>Request a Free Consultation &nbsp;<i className="bi bi-arrow-right"></i></span>
+              </Link>
             </div>
           </div>
         </div>
       </section>
-      <section className="fsfs">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-10">
-              <div className="com-sec-info">
-                <h3>Deployment Option: Accessing the System</h3>
-                <div className="cl-l">
-                  <div className="col-l6 col-l6-p">
-                    <p>NAV or Navision offers on-premises deployment options that bind you to work from the company premises only. It will restrict you from managing your business across boundaries and hinder scalability. </p>
-                  </div>
-                  <div className="cen-d">
-                    <img src="/img/Deployment-Option.png" alt="Deployment-Option" />
-                  </div>
-                  <div className="col-l6">
-                    <p><Link href="/products/dynamics-365-business-central/">Business Central</Link> offers extreme flexibility to businesses so that they can choose from cloud, on-premises, and hybrid development options. The choice among the options depends on the business and its nature of dealing with different operations. </p>
-                  </div>
-                </div>
-              </div>
-              <div className="com-sec-info">
-                <h3>Licencing terms: Managing the Core Cost </h3>
-                <div className="cl-l">
-                  <div className="col-l6 col-l6-p">
-                    <p>You need to buy the perpetual licence of NAV from Microsoft based on your business requirements, which leads to a high upfront cost. As of now, Microsoft has stopped offering this type of licence after the major update released in 2018. </p>
-                  </div>
-                  <div className="cen-d">
-                    <img src="/img/Licencing-terms.png" alt="Licencing-terms" />
-                  </div>
-                  <div className="col-l6">
-                    <p>In the case of Business Central, you can choose Team Member, Essentials, and Premium licencing as per the required capabilities. After purchasing at least one full user licence (<Link href="/blog/business-central-essentials-vs-premium/">Essentials or Premium</Link>), you can buy as many as possible team-member licences. </p>
-                  </div>
-                </div>
-              </div>
-              <div className="com-sec-info">
-                <h3>User-Interface: Working with the System </h3>
-                <div className="cl-l">
-                  <div className="col-l6 col-l6-p">
-                    <p>NAV comes with a complex interface that can only be accessed through a desktop computer. To properly utilise the solution, you need to get intense training from Navision experts to understand navigation and tool accessibility. </p>
-                  </div>
-                  <div className="cen-d">
-                    <img src="/img/User-Interface.png" alt="User-Interface" />
-                  </div>
-                  <div className="col-l6">
-                    <p>Dynamics 365 Business Central comes with a modern and intuitive user interface that is easy to understand. Even a beginner user can employ the tools and functionalities of Dynamics 365 Business Central without any hassle. </p>
-                  </div>
-                </div>
-              </div>
-              <div className="com-sec-info">
-                <h3>Customisations: Tailoring the System to Meet Unique Needs </h3>
-                <div className="cl-l">
-                  <div className="col-l6 col-l6-p">
-                    <p>Navision requires extensive coding to customise the solution as per unique business needs. Also, the cost of customisations is high and comes with a set of complicated processes that’s typical to manage for a small business. </p>
-                  </div>
-                  <div className="cen-d">
-                    <img src="/img/Customisations-bc-vs.png" alt="Customisations-bc-vs" />
-                  </div>
-                  <div className="col-l6">
-                    <p>Business Central comes with a lot of pre-built features and templates that eliminate the need to customise it through coding. Your Business Central partner will do the <Link href="/products/dynamics-365-business-central/customisation/">customisation</Link> as per requirements at a lower cost as compared to NAV customisation. </p>
-                  </div>
-                </div>
-              </div>
-              <div className="com-sec-info">
-                <h3>Integration: Connecting Different Systems </h3>
-                <div className="cl-l">
-                  <div className="col-l6 col-l6-p">
-                    <p>Connecting different systems with NAV is a complex and complicated process. To establish a connection for data flow, you need to code the connection from the back end of both solutions. Also, you need to test the integration to ensure data certainty. </p>
-                  </div>
-                  <div className="cen-d">
-                    <img src="/img/Integration-bc-vs.png" alt="Integration-bc-vs" />
-                  </div>
-                  <div className="col-l6">
-                    <p>Connecting native or third-party applications with Business Central is a simple process. Microsoft offers Extension Technology to integrate any solution with Business Central, which allows users to connect solutions with a few clicks. </p>
-                  </div>
-                </div>
-              </div>
-              <div className="com-sec-info">
-                <h3>Implementation Cost and Time: Starting Up and Running </h3>
-                <div className="cl-l">
-                  <div className="col-l6 col-l6-p">
-                    <p>The time and cost of NAV implementation are higher as the entire process consists of different complicated milestones. The implementation is almost manual, where the NAV implementation partner will personalise different operations for maximum output. </p>
-                  </div>
-                  <div className="cen-d">
-                    <img src="/img/Implementation-Cost-and-Time.png" alt="Implementation-Cost-and-Time" />
-                  </div>
-                  <div className="col-l6">
-                    <p>The total cost of <Link href="/dynamics-365-business-central-implementation/">Business Central implementation</Link> is way less as compared to NAV. Most of the required capabilities and functionalities in BC come as standard, which saves a lot of time and overall cost. Even most small businesses are going for a one-month standard implementation from Microsoft Solutions Partners. </p>
-                  </div>
-                </div>
-              </div>
-              <div className="com-sec-info">
-                <h3>Maintenance: Ensuring your System up to date </h3>
-                <div className="cl-l">
-                  <div className="col-l6 col-l6-p">
-                    <p>You need to have special IT infrastructure and hire <Link href="/our-services/dynamics-365-consultant/">Dynamics 365 consultants</Link> to take care of your NAV system and ensure its 24x7 working. Also, the business needs to manage everything by itself in case of any unexpected complexity. That’s why the cost of maintaining NAV is too high. </p>
-                  </div>
-                  <div className="cen-d">
-                    <img src="/img/Maintenance-Ensuring-your-System.png" alt="Maintenance-Ensuring-your-System" />
-                  </div>
-                  <div className="col-l6">
-                    <p>There is no need for the organisation to maintain Dynamics 365 Business Central, as Microsoft will take care of it without any cost or concern. That’s the core benefit of owning a system that runs on clouds. </p>
-                  </div>
-                </div>
-              </div>
-              <div className="com-sec-info">
-                <h3>Target Businesses: Who Benefits the Most? </h3>
-                <div className="cl-l">
-                  <div className="col-l6 col-l6-p">
-                    <p>NAV can be implemented in small, medium, and large businesses to meet standard ERP requirements. However, established businesses with a certain set of customisation requirements go with NAV. </p>
-                  </div>
-                  <div className="cen-d">
-                    <img src="/img/Target-Businesses.png" alt="Target-Businesses" />
-                  </div>
-                  <div className="col-l6">
-                    <p>D365 Business Central is specifically built for small and medium-sized businesses to meet advanced ERP requirements. Also, it comes with basic CRM capabilities to provide an all-in-one business solution. </p>
-                  </div>
-                </div>
-              </div>
-              <div className="com-sec-info">
-                <h3>Cost Efficiency: Long-Term Value </h3>
-                <div className="cl-l">
-                  <div className="col-l6 col-l6-p">
-                    <p>When we consider the upfront, implementation, licencing, and maintenance costs, Dynamics NAV has a higher number. For long-term goals, you need to invest a lot of money to get your system going, based on its initial performance. </p>
-                  </div>
-                  <div className="cen-d">
-                    <img src="/img/Cost-Efficiency-new.png" alt="Cost-Efficiency-new" />
-                  </div>
-                  <div className="col-l6">
-                    <p>Business Central eliminates most of the cost by choosing cloud deployments and <Link href="/dynamics-365-business-central-pricing-licensing/">subscription licensing</Link>. If you are considering BC for the long term, it is a better option due to its maintenance-free and lower cost of ownership approach. </p>
-                  </div>
-                </div>
-              </div>
-              <div className="com-sec-info">
-                <h3>Scalability: Adapting to your Growth </h3>
-                <div className="cl-l">
-                  <div className="col-l6 col-l6-p">
-                    <p>NAV needs a considerable amount of investment when it comes to scaling systems along with the business. You need to invest money in purchasing hardware, software and hire IT experts to expand your system's performance. </p>
-                  </div>
-                  <div className="cen-d">
-                    <img src="/img/Scalability-new-vs.png" alt="Scalability-new-vs" />
-                  </div>
-                  <div className="col-l6">
-                    <p>With Business Central, there is no need to invest in purchasing hardware and software, as you can subscribe to the desired requirements from your Dynamics partner. It lets you focus on growing business rather than maintaining and managing the system. </p>
-                  </div>
-                </div>
-              </div>
-              <div className="com-sec-info">
-                <h3>Ease of Use: Working without Hassle </h3>
-                <div className="cl-l">
-                  <div className="col-l6 col-l6-p">
-                    <p>You can access NAV using Desktop only, as data access is restricted due to on-premises server deployment. You cannot view, operate, and manage data outside the business premises, unless you change the deployment or move to the hybrid option. </p>
-                  </div>
-                  <div className="cen-d">
-                    <img src="/img/Ease-of-Use.png" alt="Ease-of-Use" />
-                  </div>
-                  <div className="col-l6">
-                    <p>With D365 Business Central, you can access the data using mobile, web, and desktop devices regardless of your location and time. Based on your requirements, you can choose the deployment and work accordingly. </p>
-                  </div>
-                </div>
-              </div>
-              <div className="com-sec-info">
-                <h3>Data Security: Keeping your Data Safe </h3>
-                <div className="cl-l">
-                  <div className="col-l6 col-l6-p">
-                    <p>Microsoft offers robust data security for all its business solutions, whether NAV or Business Central. However, you cannot restrict data access or usage among the users, as there are no role centres or distributed accessibility. </p>
-                  </div>
-                  <div className="cen-d">
-                    <img src="/img/Data-Security-n.png" alt="Data-Security-n" />
-                  </div>
-                  <div className="col-l6">
-                    <p>With Business Central, you can set the data access among different users. It means a user with a data entry role can only access similar tasks. Such users cannot view financial or confidential information that’s not meant for them. </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="busine_service_bottom">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-6 align-self-center">
-              <div className="side-heading-custom-02">
-                <h2>Which Solution Suits you Best? </h2>
-                <p>Choosing the best solution is a three-step formula.</p>
-              </div>
-            </div>
-            <div className="col-lg-6 align-self-center">
-              <div className="content-icons-modil-1">
-                <div className="content-inner-moil-1">
-                  <div className="icons-left">
-                    <div className="ext-bord">
-                      <i className="bi bi-check2"></i>
-                    </div>
-                  </div>
-                  <div className="cintent-right cintent-right-001">
-                    <p>Analyse your Existing Business Requirements: Evaluate your business and its processes to understand the true business requirements. </p>
-                  </div>
-                </div>
 
-                <div className="content-inner-moil-1">
-                  <div className="icons-left">
-                    <div className="ext-bord">
-                      <i className="bi bi-check2"></i>
-                    </div>
-                  </div>
-                  <div className="cintent-right cintent-right-001">
-                    <p>Prioritising your Needs: Find out the crucial and out-of-box capabilities for your business growth. </p>
-                  </div>
-                </div>
-
-                <div className="content-inner-moil-1">
-                  <div className="icons-left">
-                    <div className="ext-bord">
-                      <i className="bi bi-check2"></i>
-                    </div>
-                  </div>
-                  <div className="cintent-right cintent-right-001">
-                    <p>Choose a Reliable and Trustworthy Partner: Find a reliable business-centric partner that understands your business and its requirements, like Dynamics Square. </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+      {/* ===== Related (internal links) ===== */}
+      <section className={styles.related}>
+        <div className="container">
+          <div className={styles.relatedRail}>
+            {relatedPages.map((item) => (
+              <Link href={item.href} className={styles.relatedCard} key={item.href}>
+                <i className={`bi ${item.icon}`}></i>
+                <span>{item.title}</span>
+                <i className={`bi bi-arrow-right ${styles.relatedArrow}`}></i>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
@@ -422,4 +445,4 @@ const BCvsFinance = () => {
   );
 };
 
-export default BCvsFinance;
+export default NavVsBCTwo;
