@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "question": "What is the difference between Business Central and Finance & Operations?",
+    "answer": "<p><a href=\"/products/dynamics-365-business-central/\" class=\"u-i\">Business Central</a> is for small and mid-sized companies that need finance, sales, stock, and service in one, unified platform. Finance & Operations, now <a href=\"/products/microsoft-dynamics-365-finance/\" class=\"u-i\">Dynamics 365 Finance</a> and <a href=\"/products/dynamics-365-supply-chain-management/\" class=\"u-i\">Dynamics 365 Supply Chain Management</a>, is designed keeping in mind multi-entity and multi-country operations for larger and more complex organisations.</p>"
+  },
+  {
+    "id": 2,
+    "question": "Which is cheaper, Business Central or Finance & Operations?",
+    "answer": "<p>It's not about which is cheaper, but which solution best fits your business. However, Business Central is comparatively an affordable option, with <a href=\"/products/dynamics-365-business-central/pricing-licensing/\" class=\"u-i\">per-user, per-month licensing</a>. Finance & Operations is also priced per user based on the specific applications and modules a business needs, and typically represents a larger investment given its enterprise scope.</p>"
+  },
+  {
+    "id": 3,
+    "question": "Is Finance & Operations the same as Dynamics 365 Finance?",
+    "answer": "<p>Finance & Operations was Microsoft's earlier combined name for what is now two separate products, Dynamics 365 Finance and Dynamics 365 Supply Chain Management. Many businesses and consultants still refer to them together as Finance & Operations or F&O out of habit.</p>"
+  },
+  {
+    "id": 4,
+    "question": "Can a business start on Business Central and move to Finance & Operations later?",
+    "answer": "<p>Yes, it is common for a growing business to start on Business Central, then move to Finance & Operations once its size and complexity outgrow what Business Central can support. Microsoft designed the two platforms to make that transition achievable when the time comes.</p>"
+  },
+  {
+    "id": 5,
+    "question": "How long does it take to implement each system?",
+    "answer": "<p>A <a href=\"/dynamics-365-business-central-implementation/\" class=\"u-i\">Business Central implementation</a> in general takes a matter of weeks to a few months. A <a href=\"/dynamics-365-finance-implementation/\" class=\"u-i\">Finance & Operations implementation</a> is a larger undertaking, often several months to over a year, depending on the number of entities, countries, and integrations involved.</p>"
+  },
+  {
+    "id": 6,
+    "question": "Which Microsoft ERP is right for my industry?",
+    "answer": "<p>Both Microsoft ERP platforms support distribution, manufacturing, professional services, and retail businesses. The deciding factor is generally the size and complexity of your business, more than your industry alone, so it is important to discuss your specific setup with a <a href=\"/our-services/dynamics-365-consultant/\" class=\"u-i\">consultant</a>.</p>"
+  },
+  {
+    "id": 7,
+    "question": "How can Dynamics Square help me choose between Business Central and Finance & Operations?",
+    "answer": "<p>Dynamics Square helps businesses assess their size, operational complexity, industry requirements, existing systems and growth plans before recommending an ERP. As a Microsoft Solutions Partner in the UK, our consultants can help you compare Business Central and Finance & Operations, identify the right fit, plan implementation and provide ongoing support.</p>"
+  }
+]

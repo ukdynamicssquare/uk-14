@@ -137,7 +137,7 @@
   -webkit-text-fill-color: transparent;
 }
 .heroLead {
-  font-size: 19px;
+  font-size: 16px;
   line-height: 1.6;
   color: #e4dcf0;
   margin: 0 auto;
@@ -1203,6 +1203,11 @@
 /* =====================================================================
    Responsive
    ===================================================================== */
+   @media (min-width: 1200px) and (max-width: 1400px)  {
+    .heroTitle {
+    font-size: 40px !important;
+  }
+   }
 @media (max-width: 1199px) {
   .relatedRail {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1397,5 +1402,456 @@
   .contender,
   .relatedCard {
     transition: none;
+  }
+}
+
+
+/* =====================================================================
+   SHARED SECTIONS for the other "-two" Business Central pages
+   (BC vs F&O, Why Choose BC, NAV vs BC, BC Advantages & Capabilities).
+   Section types the SAP template above does not have, same palette.
+   ===================================================================== */
+
+
+/* =====================================================================
+   SECTION: Hero variants
+   ===================================================================== */
+/* Split hero (text left, image right) for non-comparison pages */
+.heroSplit {
+  text-align: left;
+}
+.heroSplit p {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+.heroSub {
+  color: #fff !important;
+  font-family: Lato, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+.heroImageCard {
+  position: relative;
+  border-radius: 22px;
+  background: #fff;
+  padding: 18px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+}
+.heroImageCard img {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+}
+.heroActionsLeft {
+  justify-content: flex-start !important;
+}
+/* stack of paragraphs inside the template's .callout banner */
+.calloutStack {
+  flex: 1 1 380px;
+}
+.calloutStack p {
+  flex: none !important;
+}
+.calloutStack p + p {
+  margin-top: 10px !important;
+}
+.heroNoteLeft {
+  text-align: left !important;
+  margin-left: 0 !important;
+}
+
+/* Logo built from a product icon + product name (for products without a
+   standalone logo image, e.g. NAV and Finance & Operations) */
+.iconLogo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.iconLogo img {
+  width: 48px !important;
+  height: 48px !important;
+  max-height: none !important;
+}
+.iconLogo span {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+  font-family: Lato, sans-serif;
+}
+.iconLogo small {
+  font-size: 14px;
+  font-weight: 600;
+  color: #463d52;
+}
+.iconLogo strong {
+  font-size: 20px;
+  font-weight: 800;
+  color: #1d3557;
+}
+
+
+/* =====================================================================
+   SECTION: Process list (chips with icons)
+   ===================================================================== */
+.processIntro {
+  font-weight: 600;
+  color: #2d2640;
+  margin: 26px 0 16px;
+}
+.processGrid {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 12px;
+}
+.processGrid li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid #ebe6f2;
+  font-size: 15px;
+  font-weight: 600;
+  color: #2d2640;
+  transition: border-color 0.25s, transform 0.25s;
+}
+.processGrid li:hover {
+  border-color: #c9b6e0;
+  transform: translateY(-3px);
+}
+.processGrid li i {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #984b6e, #60518c);
+  color: #fff;
+  font-size: 16px;
+}
+.twoCol {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.infoCard {
+  display: flex;
+  gap: 16px;
+  padding: 24px;
+  border-radius: 16px;
+  background: #f6f4f9;
+}
+.infoCard > i {
+  flex: 0 0 auto;
+  font-size: 24px;
+  color: #8e44ad;
+}
+.infoCard p {
+  margin: 0;
+  font-size: 16px;
+  color: #463d52;
+}
+
+
+/* =====================================================================
+   SECTION: Reason / advantage cards
+   ===================================================================== */
+.introCol p {
+  color: #463d52;
+}
+.reasonGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 30px;
+}
+.reasonGrid3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.reasonCard {
+  position: relative;
+  padding: 28px 26px;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid #ebe6f2;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+.reasonCard:hover {
+  transform: translateY(-5px);
+  border-color: #c9b6e0;
+  box-shadow: 0 20px 40px rgba(45, 38, 64, 0.09);
+}
+.reasonHead {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+.reasonBadge {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #984b6e, #60518c);
+  color: #fff;
+  font-size: 20px;
+}
+.reasonHead h3 {
+  margin: 0;
+  font-family: Lato, sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: #2d2640;
+}
+.reasonCard p {
+  margin: 0;
+  font-size: 16px;
+  color: #5b5768;
+}
+.reasonCard p a {
+  color: #8e44ad;
+}
+
+
+/* =====================================================================
+   SECTION: Results cards (big % figures)
+   ===================================================================== */
+.resultGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 30px;
+}
+.resultCard {
+  padding: 28px 24px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+.resultNum {
+  display: block;
+  font-family: Anton, sans-serif;
+  font-size: 48px;
+  letter-spacing: 2px;
+  line-height: 1;
+  margin-bottom: 14px;
+  background-image: linear-gradient(to right, #f0c4dc, #b9a3e3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.resultCard p {
+  margin: 0;
+  color: #e4dcf0;
+  font-size: 15px;
+  line-height: 1.55;
+}
+.lightText {
+  color: #d8cdea;
+}
+.closingLine {
+  margin: 30px 0 0;
+  padding-left: 18px;
+  border-left: 3px solid #e7a6c4;
+  font-size: 17px;
+  font-style: italic;
+}
+.closingLineDark {
+  border-left-color: #8e44ad;
+  color: #2d2640;
+}
+
+
+/* =====================================================================
+   SECTION: Capability grid
+   ===================================================================== */
+.capGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 30px;
+}
+.capCard {
+  display: flex;
+  flex-direction: column;
+  padding: 26px 24px;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid #ebe6f2;
+  border-top: 4px solid transparent;
+  border-image: none;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.capCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(to right, #984b6e, #60518c);
+}
+.capCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(45, 38, 64, 0.09);
+}
+.capCard > i {
+  font-size: 28px;
+  color: #8e44ad;
+  margin-bottom: 14px;
+}
+.capCard h3 {
+  font-family: Lato, sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: #2d2640;
+  margin-bottom: 10px;
+}
+.capCard p {
+  margin: 0;
+  font-size: 15px;
+  color: #5b5768;
+}
+.capCard p a {
+  color: #8e44ad;
+}
+
+
+/* =====================================================================
+   SECTION: Split text + media
+   ===================================================================== */
+.mediaCard {
+  border-radius: 20px;
+  background: #fff;
+  padding: 26px;
+  border: 1px solid #ebe6f2;
+  box-shadow: 0 20px 44px rgba(45, 38, 64, 0.08);
+}
+.mediaCard img {
+  width: 100%;
+  height: auto;
+}
+
+
+/* =====================================================================
+   SECTION: Case studies
+   ===================================================================== */
+.caseGrid {
+  margin-top: 30px;
+}
+.caseTag {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: #ece3f5;
+  color: #8e44ad;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.caseBody p a {
+  color: #8e44ad;
+}
+.caseMore {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 22px;
+  font-weight: 700;
+  color: #8e44ad !important;
+}
+.caseMore:hover {
+  color: #60518c !important;
+}
+
+
+/* =====================================================================
+   SECTION: Help / CTA helpers
+   ===================================================================== */
+.helpText p a {
+  color: #8e44ad;
+}
+.ctaRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 18px;
+}
+.ctaGhost {
+  margin-top: 30px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  border: 1px solid #8e44ad;
+  color: #8e44ad !important;
+  font-size: 16px;
+  transition: background 0.3s, color 0.3s;
+}
+.ctaGhost:hover {
+  background: #8e44ad;
+  color: #fff !important;
+}
+.boardCellLinks a {
+  color: #8e44ad;
+}
+
+
+/* =====================================================================
+   Responsive
+   ===================================================================== */
+@media (max-width: 1199px) {
+  .resultGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 991px) {
+  .reasonGrid3,
+  .capGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .heroSplit {
+    text-align: center;
+  }
+  .heroActionsLeft {
+    justify-content: center !important;
+  }
+  .heroNoteLeft {
+    text-align: center !important;
+  }
+}
+@media (max-width: 768px) {
+  .reasonGrid,
+  .reasonGrid3,
+  .capGrid,
+  .twoCol,
+  .resultGrid {
+    grid-template-columns: 1fr;
+  }
+  .heroSub {
+    font-size: 20px;
+  }
+  .reasonCard,
+  .capCard {
+    padding: 22px 20px;
+  }
+  .resultNum {
+    font-size: 40px;
   }
 }

@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "question": "What are the main benefits of Business Central?",
+    "answer": "<p>The main benefits are having one connected system for finance, sales, stock, and service, built-in AI that automates routine work, ready-made reports and dashboards, and a subscription cost that is easy to plan for. It also works closely with Outlook, Excel, and Teams.</p>"
+  },
+  {
+    "id": 2,
+    "question": "Is Business Central only for large companies?",
+    "answer": "<p>No, Business Central is built specifically for small and mid-sized businesses. It scales with a growing company, so you can add users and functionality as you need them, without paying for capacity you do not use yet.</p>"
+  },
+  {
+    "id": 3,
+    "question": "How much does Business Central cost?",
+    "answer": "<p>Microsoft prices Business Central per user, per month, on a yearly subscription. There are three licence types: <a href=\"/products/dynamics-365-business-central/pricing-licensing/\" class=\"u-i\">Essentials, Premium</a> (which adds service management and manufacturing capabilities), and Team Members for limited, read-only style access.</p><p>Your final cost depends on how many users you need and which licence fits your business, so it is worth getting a tailored quote.</p>"
+  },
+  {
+    "id": 4,
+    "question": "How long does a Business Central implementation take?",
+    "answer": "<p>A standard <a href=\"/dynamics-365-business-central-implementation/\" class=\"u-i\">implementation</a> can take a matter of weeks. A more complex project with custom integrations or data migration from an older system can take a few months. Your Dynamics Square consultant will give you a realistic timeline based on your specific requirements.</p>"
+  },
+  {
+    "id": 5,
+    "question": "Can Business Central replace my current accounting software or older ERP system?",
+    "answer": "<p>Yes, Business Central includes built-in migration tools for moving data across from common accounting packages, <a href=\"/dynamics-nav-to-business-central/\" class=\"u-i\">Dynamics NAV</a>, <a href=\"/gp-to-business-central-migration/\" class=\"u-i\">Dynamics GP</a>, and other ERP systems, so you keep your financial history intact when you switch.</p>"
+  }
+]

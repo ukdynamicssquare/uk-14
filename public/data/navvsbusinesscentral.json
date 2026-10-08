@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "question": "Is Dynamics NAV still supported?",
+    "answer": "<p>Only partly. The final version, NAV 2018, is in extended support, which means Microsoft still issues security updates, while new features and guaranteed regulatory updates have stopped. Extended support for NAV 2018 is set to end on 11 January 2028, after which even security updates will stop.</p>"
+  },
+  {
+    "id": 2,
+    "question": "What happens if I keep using Dynamics NAV after support ends?",
+    "answer": "<p>Your system keeps working, but it stops receiving any updates at all, including the security patches that protect it. Over time, this raises both security risk and the chance of falling out of step with UK tax and compliance requirements.</p>"
+  },
+  {
+    "id": 3,
+    "question": "How long does it take to migrate from Dynamics NAV to Business Central?",
+    "answer": "<p>A fairly standard NAV setup can move across in a matter of weeks. A heavily customised system usually takes longer, often a few months, since custom modifications need to be rebuilt as Business Central extensions to work properly in the new system.</p>"
+  },
+  {
+    "id": 4,
+    "question": "Will I lose my customisations when moving from NAV to Business Central?",
+    "answer": "<p>No functionality has to be lost. Custom NAV modifications are rebuilt as <a href=\"/products/dynamics-365-business-central/customisation/\" class=\"u-i\">Business Central extensions</a> during the migration project, so the specific processes your business relies on can carry across, just built in a more update-friendly way.</p>"
+  },
+  {
+    "id": 5,
+    "question": "How much does it cost to move from Dynamics NAV to Business Central?",
+    "answer": "<p>Cost depends on your data volumes, how customised your current NAV system is, and which Business Central licence fits your business. Our <a href=\"/blog/business-central-essentials-vs-premium/\" class=\"u-i\">Essentials vs Premium guide</a> is a useful starting point, and a Dynamics Square consultant can give you a tailored quote based on your setup.</p>"
+  },
+  {
+    "id": 6,
+    "question": "Is Business Central just a new version of Dynamics NAV?",
+    "answer": "<p>Not quite. Business Central shares its roots with Dynamics NAV, but it was rebuilt as a cloud-first product with a different update model, licensing structure, and customisation approach, alongside new capabilities such as Copilot and native Power BI that arrived only with Business Central.</p>"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "question": "What are the capabilities of a Business Central Team Member?",
+    "answer": "<p>A <a href=\"/products/dynamics-365-business-central/pricing-licensing/\" class=\"u-i\">Team Member licence</a> gives light access to Business Central. People with this licence can view records across the system, handle simple tasks like approvals and time registration, and update limited details such as personal information, without needing a full Essentials or Premium licence. It is a cost-effective option for staff who only need occasional, light-touch access.</p>"
+  },
+  {
+    "id": 2,
+    "question": "What is the capacity of Business Central?",
+    "answer": "<p>Business Central provides <strong>80 GB of default database storage per tenant</strong>, plus <strong>2 GB per Essentials licence and 3 GB per Premium licence</strong>. Storage is shared across environments, and businesses can purchase additional capacity when required. Each Essentials or Premium subscription also includes <strong>one production environment and three sandbox environments</strong>.</p>"
+  },
+  {
+    "id": 3,
+    "question": "Can Business Central handle multi-currency and multi-company operations?",
+    "answer": "<p>Yes, Business Central supports <a href=\"/blog/multi-entity-multi-currency-consolidation-in-business-central/\" class=\"u-i\">multi-currency transactions, exchange rate management, and consolidated</a> financial reporting across multiple companies or subsidiaries, making it ideal for global and multi-entity organisations. This makes it a solid fit for UK businesses trading internationally or managing several legal entities.</p>"
+  },
+  {
+    "id": 4,
+    "question": "What is the functionality of Business Central?",
+    "answer": "<p>Business Central covers finance and accounting, sales, purchasing, inventory, manufacturing, project management, and service management in one connected system. Other than these core areas, it includes built-in reporting, Microsoft Copilot and AI agents, and close integration with Outlook, Excel, and Teams.</p>"
+  },
+  {
+    "id": 5,
+    "question": "What are the benefits of Business Central?",
+    "answer": "<p>The biggest benefit is that every part of your business, finance, sales, stock, and service, works from the same live figures, kept in sync automatically. Other key benefits include cloud-based access, seamless <a href=\"/products/microsoft-dynamics-365/integration/\" class=\"u-i\">Microsoft integration</a>, real-time analytics, strong security, customizable workflows, and scalability. In addition, Business Central adds built-in AI to cut down admin, ready-made reports for faster decisions, and predictable monthly pricing that keeps budgeting simple.</p>"
+  },
+  {
+    "id": 6,
+    "question": "Does Business Central support inventory and warehouse management?",
+    "answer": "<p>Yes, Business Central includes robust <a href=\"/products/dynamics-365-business-central/warehouse-management/\" class=\"u-i\">inventory and warehouse management</a> features like stock tracking, bin management, cycle counting, and demand forecasting to optimise supply chain operations.</p>"
+  },
+  {
+    "id": 7,
+    "question": "Can Business Central be customised for specific industries?",
+    "answer": "<p>Yes, Business Central can be extended through Microsoft AppSource, the Power Platform, and open APIs, so a partner like Dynamics Square can tailor it to specific industries such as manufacturing, distribution, retail, and professional services, on top of the standard functionality.</p>"
+  },
+  {
+    "id": 8,
+    "question": "Is Business Central suitable for small and medium-sized businesses?",
+    "answer": "<p>Yes, Business Central is built specifically with small and medium-sized businesses in mind, covering finance, sales, stock, and service without the cost or complexity of a large enterprise system. You can start with what you need today and add capability as your business grows.</p>"
+  },
+  {
+    "id": 9,
+    "question": "What kind of reporting and analytics features are available in Business Central?",
+    "answer": "<p>Business Central includes over 400 ready-made reports and more than 110 Power BI dashboards, covering areas like finance, sales, and inventory. You can also build your own reports without any coding, and pull live figures straight into Excel if that is how your team prefers to work.</p>"
+  },
+  {
+    "id": 10,
+    "question": "What is the difference between Microsoft Dynamics 365 and Business Central?",
+    "answer": "<p><a href=\"/products/microsoft-dynamics-365/\" class=\"u-i\">Dynamics 365</a> is Microsoft's overall family of business applications, covering everything from sales and customer service to finance and supply chain. Business Central is one specific application within that family, built as the all-in-one ERP system for small and mid-sized businesses.</p>"
+  },
+  {
+    "id": 11,
+    "question": "Is Business Central any good?",
+    "answer": "<p>Yes. More than 55,000 companies worldwide already run their business on Business Central, and independent research points to a strong return on investment for businesses that adopt it properly. Like any system, the real results depend on how well it is set up around your specific business, which is where the right implementation partner matters.</p>"
+  },
+  {
+    "id": 12,
+    "question": "Does Business Central include AI tools?",
+    "answer": "<p>Yes. Business Central includes Microsoft Copilot and AI agents such as Payables Agent, Sales Order Agent, and Expense Agent as standard, covering tasks such as cash flow forecasting, bank reconciliation, and turning customer emails into sales orders, so your team spends less time on manual admin.</p>"
+  }
+]
