@@ -23,14 +23,16 @@ const AUTHOR_ABOUT_PREVIEW_LENGTH = 1000;
 const displayFont = Plus_Jakarta_Sans({
   subsets: ["latin"],
   weight: ["600", "700", "800"],
-  display: "swap",
+  // optional: no late font swap, so no layout shift (CLS)
+  display: "optional",
   variable: "--font-bp-display",
 });
 
 const sansFont = DM_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  display: "swap",
+  // optional: no late font swap, so no layout shift (CLS)
+  display: "optional",
   variable: "--font-bp-sans",
 });
 
@@ -1257,8 +1259,8 @@ function Post({
                             width={1200}
                             height={750}
                             priority
-                            quality={85}
-                            sizes="(max-width: 991px) 100vw, 50vw"
+                            quality={75}
+                            sizes="(max-width: 991px) 100vw, 640px"
                             unoptimized={!isOptimizableImage(heroImage)}
                             className="bp-hero-img"
                           />
@@ -1736,7 +1738,7 @@ function Post({
         }
 
         .bp-title {
-          font-size: clamp(32px, 4.4vw, 52px) !important;
+          font-size: clamp(32px, 4.4vw, 42px) !important;
           line-height: 1.1 !important;
           font-weight: 800;
           letter-spacing: -0.03em;
@@ -1938,7 +1940,10 @@ function Post({
           line-height: 1.7;
         }
 
-        .bp-content a.u-i {
+        /* Plain text links only (SafeHTML gives them exactly class="u-i").
+           CMS links with their own class or inline style (buttons, CTA
+           boxes) keep their own styling. */
+        .bp-content a[class="u-i"]:not([style]) {
           color: var(--bp-red);
           font-weight: 600;
           text-decoration: none;
@@ -1949,8 +1954,55 @@ function Post({
           transition: background-size 0.2s ease;
         }
 
-        .bp-content a.u-i:hover {
+        .bp-content a[class="u-i"]:not([style]):hover {
           background-size: 100% 90%;
+        }
+
+        /* CMS call-to-action box, recoloured to the page palette */
+        .bp-content .blog-cta {
+          margin: 40px 0;
+          padding: 28px 32px;
+          background: var(--bp-bg);
+          border-left: 5px solid var(--bp-red);
+          border-radius: 0 20px 20px 0;
+        }
+
+        .bp-content .blog-cta h4,
+        .bp-content .blog-cta .blog-cta__title {
+          margin: 0 0 10px;
+          font-size: 22px;
+          font-weight: 800;
+          color: var(--bp-ink);
+        }
+
+        .bp-content .blog-cta .blog-cta__desc,
+        .bp-content .blog-cta .blog-cta__desc p {
+          margin-bottom: 18px;
+          font-size: 16px !important;
+          line-height: 1.7;
+        }
+
+        .bp-content .blog-cta p:last-child {
+          margin-bottom: 0;
+        }
+
+        .bp-content .blog-cta .blog-cta__btn {
+          display: inline-flex;
+          align-items: center;
+          padding: 12px 24px;
+          font-size: 15px;
+          font-weight: 700;
+          line-height: 1.3;
+          color: #fff !important;
+          background: var(--bp-red);
+          border-radius: 999px;
+          text-decoration: none !important;
+          transition: background 0.2s ease, transform 0.2s ease;
+        }
+
+        .bp-content .blog-cta .blog-cta__btn:hover {
+          background: var(--bp-red-dark);
+          transform: translateY(-2px);
         }
 
         .bp-content img {
