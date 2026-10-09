@@ -11,8 +11,6 @@ import {
   LinkedinShareButton,
 } from "react-share";
 
-import { Plus_Jakarta_Sans, DM_Sans } from "next/font/google";
-
 import TimerModal from "../../components/TimerModal";
 import BlogSeo from "../../components/BlogSeo";
 import { BlogService } from "../../helpers/blogApi";
@@ -20,21 +18,21 @@ import { BACKEND_URL } from "../../helpers/blogClient";
 
 const AUTHOR_ABOUT_PREVIEW_LENGTH = 1000;
 
-const displayFont = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  weight: ["600", "700", "800"],
-  // optional: no late font swap, so no layout shift (CLS)
-  display: "optional",
-  variable: "--font-bp-display",
-});
-
-const sansFont = DM_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  // optional: no late font swap, so no layout shift (CLS)
-  display: "optional",
-  variable: "--font-bp-sans",
-});
+/*
+ * Blog fonts are self-hosted from /public/fonts instead of next/font.
+ * Reason: in the Next 14 pages router, next/font looks up preloads by the
+ * real URL (/blog/some-post) while its manifest is keyed by the route
+ * (/blog/[slug]), so dynamic pages never get the font preloaded. The text
+ * then renders in the fallback first and visibly switches on load.
+ * Fixed URLs let us preload them ourselves (see <Head> in Post).
+ * Both files are the Latin subset of the variable fonts (all weights in
+ * one file). Rename the -vN suffix if the files ever change: they are
+ * served with a 1-year immutable cache (next.config.js).
+ */
+const BLOG_FONT_FILES = [
+  "/fonts/plus-jakarta-sans-latin-var-v1.woff2",
+  "/fonts/dm-sans-latin-var-v1.woff2",
+];
 
 /* =========================================================
    HELPERS
@@ -1065,7 +1063,20 @@ function Post({
   }
 
   return (
-    <div className={`bp-page ${displayFont.variable} ${sansFont.variable}`}>
+    <div className="bp-page">
+      <Head>
+        {BLOG_FONT_FILES.map((href) => (
+          <link
+            key={href}
+            rel="preload"
+            href={href}
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+        ))}
+      </Head>
+
       <div
         className="bp-progress"
         ref={progressRef}
@@ -1594,6 +1605,46 @@ function Post({
       </section>
 
       <style jsx global>{`
+        @font-face {
+          font-family: "BP Jakarta";
+          src: url("/fonts/plus-jakarta-sans-latin-var-v1.woff2") format("woff2");
+          font-weight: 200 800;
+          font-style: normal;
+          font-display: swap;
+          unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+            U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122,
+            U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        @font-face {
+          font-family: "BP Jakarta Fallback";
+          src: local("Arial");
+          ascent-override: 98.88%;
+          descent-override: 21.15%;
+          line-gap-override: 0%;
+          size-adjust: 104.98%;
+        }
+
+        @font-face {
+          font-family: "BP DM Sans";
+          src: url("/fonts/dm-sans-latin-var-v1.woff2") format("woff2");
+          font-weight: 100 1000;
+          font-style: normal;
+          font-display: swap;
+          unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+            U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122,
+            U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+
+        @font-face {
+          font-family: "BP DM Sans Fallback";
+          src: local("Arial");
+          ascent-override: 94.9%;
+          descent-override: 29.66%;
+          line-gap-override: 0%;
+          size-adjust: 104.53%;
+        }
+
         .bp-page {
           --bp-ink: #0b1324;
           --bp-text: #344054;
@@ -1603,8 +1654,8 @@ function Post({
           --bp-red-dark: #9e1a19;
           --bp-red-soft: #fdecec;
           --bp-bg: #f5f6f8;
-          --bp-display: var(--font-bp-display), "Helvetica Neue", Arial, sans-serif;
-          --bp-sans: var(--font-bp-sans), "Helvetica Neue", Arial, sans-serif;
+          --bp-display: "BP Jakarta", "BP Jakarta Fallback", Arial, sans-serif;
+          --bp-sans: "BP DM Sans", "BP DM Sans Fallback", Arial, sans-serif;
           font-family: var(--bp-sans);
           color: var(--bp-text);
         }

@@ -1,6 +1,7 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import Cookies from 'js-cookie';
+import Image from 'next/image';
 
 const TimerModal = () => {
   const [showModal, setShowModal] = useState(false);
@@ -56,7 +57,13 @@ const TimerModal = () => {
                 rel="nofollow"
                 onClick={handleCloseModal}
               >
-                <img src="/img/guidep-popp-banner.png" alt="guidep-popp-banner" />
+                <Image
+                  src="/img/guidep-popp-banner.png"
+                  alt="guidep-popp-banner"
+                  width={1200}
+                  height={796}
+                  sizes="(max-width: 768px) 90vw, 600px"
+                />
               </a>
               {/* <a 
                 href="https://forms.reg.buzz/subcon-2026/?exhibitor-inviter=dynamics-square" 

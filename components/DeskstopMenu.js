@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import PulseButton from "./PulseButton";
 import {
   SOLUTION_TABS,
@@ -35,7 +36,7 @@ function ItemCard({ item, small }) {
     <div className={`list-itmes-maga-menu${small ? " list-itmes-maga-menu-small" : ""}`}>
       <Link href={item.href}>
         <div className="pic">
-          <img src={item.img} alt={item.alt} width="48" height="48" />
+          <Image src={item.img} alt={item.alt} width={48} height={48} />
         </div>
         <div className="content">
           <span>{item.title}</span>
@@ -54,13 +55,13 @@ function FeaturedArticle() {
         <span className="n-title">How Much Time Can Copilot Save in Dynamics 365 Business Central?</span>
         <p>Discover how much time Copilot saves in Dynamics 365 Business Central by automating...</p>
         <div className="imag00">
-          <img src="/img/menu-icons/pic-006.png" alt="Dynamics 365" width={106} height={90} />
+          <Image src="/img/menu-icons/pic-006.png" alt="Dynamics 365" width={106} height={90} />
         </div>
         <Link href="/blog/copilot-business-central-time-savings/">Read Article <i className="bi bi-arrow-right"></i></Link>
       </div>
       <div className="res-top-bo">
         <Link style={{ padding: "0px" }} href="/products/dynamics-365-copilot/">
-          <img src="/img/menu--ss.png" width={706} height={180} alt="AI" />
+          <Image src="/img/menu--ss.png" width={706} height={180} alt="AI" sizes="320px" />
         </Link>
       </div>
     </div>
@@ -142,12 +143,12 @@ const DeskstopMenu = () => {
                 </ul>
                 <div className="pp-absol" style={{ marginTop: "2px" }}>
                   <a rel="nofollow" href="https://councils.forbes.com/profile/Manish-Goyal-Co-founder-Dynamics-Square/1e25d5c2-1d98-46cd-834b-70d335b73b35" target="_blank">
-                    <img src="/img/forber-01.png" width={771} height={282} alt="menu--ss" />
+                    <Image src="/img/forber-01.png" width={771} height={282} alt="menu--ss" sizes="320px" />
                   </a>
                 </div>
                 <div className="pp-absol" style={{ marginTop: "2px" }}>
                   <Link href="/products/dynamics-365-copilot/">
-                    <img src="/img/menu--ss.png" width={706} height={180} alt="menu--ss" />
+                    <Image src="/img/menu--ss.png" width={706} height={180} alt="menu--ss" sizes="320px" />
                   </Link>
                 </div>
               </div>
@@ -222,7 +223,7 @@ const DeskstopMenu = () => {
                       data-bs-target={`#${tab.target}`}
                     >
                       <a href="#">
-                        <img src={tab.icon} alt={tab.label} width="24" height="24" />
+                        <Image src={tab.icon} alt={tab.label} width={24} height={24} />
                         <span>{tab.label}</span>
                       </a>
                     </div>
@@ -334,7 +335,7 @@ const DeskstopMenu = () => {
                           <div className="res-card-99">
                             <span className="n-tags">Recommended</span>
                             <Link className="n-tag-link" href="/ebook/how-to-choose-right-erp/">
-                              <img className="n-tags-image" src="/img/Cover_Book_Moc.png" width={582} height={466} alt="Cover_Book_Moc" />
+                              <Image className="n-tags-image" src="/img/Cover_Book_Moc.png" width={582} height={466} alt="Cover_Book_Moc" sizes="220px" />
                             </Link>
                             <span className="n-tag-title">Ultimate ERP Guide for Your Business</span>
                             <p className="n-tag-para">Compare ERP solutions before investing</p>
@@ -350,7 +351,7 @@ const DeskstopMenu = () => {
                               <div className="guide-card-01" key={b.href}>
                                 <Link href={b.href}>
                                   <div className="guide-card-imag">
-                                    <img width={980} height={578} src={b.img} alt={b.alt} />
+                                    <Image width={980} height={578} src={b.img} alt={b.alt} sizes="260px" />
                                   </div>
                                   <div className="guide-card-inf">
                                     <span className="guide-card-title">{b.title}</span>
@@ -385,7 +386,7 @@ const DeskstopMenu = () => {
                                     <div className="guide-card-01" key={g.href}>
                                       <Link href={g.href}>
                                         <div className="guide-card-imag">
-                                          <img width={1200} height={628} src={g.img} alt={g.alt} />
+                                          <Image width={1200} height={628} src={g.img} alt={g.alt} sizes="260px" />
                                         </div>
                                         <div className="guide-card-inf">
                                           {/* <span className="guide-tags-rss">{g.tag}</span> */}
@@ -411,7 +412,7 @@ const DeskstopMenu = () => {
                                     <div className="guide-card-01" key={w.href}>
                                       <Link href={w.href}>
                                         <div className="guide-card-imag">
-                                          <img width={980} height={578} src={w.img} alt={w.alt} />
+                                          <Image width={980} height={578} src={w.img} alt={w.alt} sizes="260px" />
                                         </div>
                                         <div className="guide-card-inf">
                                           {/* <span className="guide-tags-rss">{w.tag}</span> */}
@@ -456,7 +457,7 @@ const DeskstopMenu = () => {
                                     <div className="guide-card-01" key={t.href}>
                                       <Link href={t.href}>
                                         <div className="guide-card-imag">
-                                          <img width={980} height={578} src={t.img} alt="guide" />
+                                          <Image width={980} height={578} src={t.img} alt="guide" sizes="260px" />
                                         </div>
                                         <div className="guide-card-inf">
                                           <span className="guide-tags-rss">{t.tag}</span>
@@ -492,7 +493,7 @@ const DeskstopMenu = () => {
                               <div className="guide-card-01" key={w.href}>
                                 <a target="_blank" href={w.href} rel="noreferrer">
                                   <div className="guide-card-imag">
-                                    <img width={411} height={216} src={w.img} alt="potcast" />
+                                    <Image width={411} height={216} src={w.img} alt="potcast" sizes="260px" />
                                   </div>
                                   <div className="guide-card-inf">
                                     <span className="guide-card-title">{w.title}</span>
