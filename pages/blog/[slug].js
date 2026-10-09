@@ -181,10 +181,10 @@ function SafeHTML({ html, tocList, handleTocClick }) {
         );
       }
 
-           /* =====================================================
-         TABLES → WRAP IN .table-responsive + ADD CLASSES
-         THEAD → ADD table-dark CLASS
-      ===================================================== */
+      /* =====================================================
+    TABLES → WRAP IN .table-responsive + ADD CLASSES
+    THEAD → ADD table-dark CLASS
+ ===================================================== */
 
       if (
         domNode.type === "tag" &&
@@ -1860,7 +1860,7 @@ export async function getStaticProps({
                 (schema) =>
                   sanitizeSchemaJson(
                     schema.json ||
-                      JSON.stringify(schema),
+                    JSON.stringify(schema),
                     b.featuredImage?.url
                   )
               );
