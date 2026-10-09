@@ -183,6 +183,9 @@ module.exports = {
     const robotsDisallow = robotsDisallowExcludes();
     const blogNoindex = await getBlogNoindexExcludes();
 
-    return [...staticNoindex, ...robotsDisallow, ...blogNoindex];
+    // pages/blog-old is a noindexed backup of the old blog design.
+    const blogOldBackup = ['/blog-old', '/blog-old/*'];
+
+    return [...staticNoindex, ...robotsDisallow, ...blogNoindex, ...blogOldBackup];
   },
 };

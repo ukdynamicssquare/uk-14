@@ -63,6 +63,19 @@ const nextConfig = {
           },
         ],
       },
+      // Old blog design backup (pages/blog-old): never index.
+      {
+        source: "/blog-old/:path*",
+        headers: [
+          { key: "X-Robots-Tag", value: "noindex, nofollow" },
+        ],
+      },
+      {
+        source: "/blog-old",
+        headers: [
+          { key: "X-Robots-Tag", value: "noindex, nofollow" },
+        ],
+      },
       //new code
       // 🧠 Next.js static assets (hashed → safe for 1 year)
     // 🧠 HTML (must NOT be cached long)

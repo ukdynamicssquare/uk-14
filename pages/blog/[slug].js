@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import parse, { domToReact } from "html-react-parser";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import {
   FacebookShareButton,
@@ -11,12 +11,28 @@ import {
   LinkedinShareButton,
 } from "react-share";
 
+import { Plus_Jakarta_Sans, DM_Sans } from "next/font/google";
+
 import TimerModal from "../../components/TimerModal";
 import BlogSeo from "../../components/BlogSeo";
 import { BlogService } from "../../helpers/blogApi";
 import { BACKEND_URL } from "../../helpers/blogClient";
 
 const AUTHOR_ABOUT_PREVIEW_LENGTH = 1000;
+
+const displayFont = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["600", "700", "800"],
+  display: "swap",
+  variable: "--font-bp-display",
+});
+
+const sansFont = DM_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+  variable: "--font-bp-sans",
+});
 
 /* =========================================================
    HELPERS
@@ -38,6 +54,23 @@ function getImageUrl(src) {
   }
 
   return `${BACKEND_URL}/${src}`;
+}
+
+const OPTIMIZABLE_IMAGE_HOSTS = [
+  "blognew.dynamicssquare.co.uk",
+  "blognew.dynamicssquare.com",
+  "blogdsukapi.onrender.com",
+  "cdn.gemsroot.com",
+];
+
+function isOptimizableImage(src) {
+  if (!src || src.startsWith("/")) return true;
+
+  try {
+    return OPTIMIZABLE_IMAGE_HOSTS.includes(new URL(src).hostname);
+  } catch (error) {
+    return false;
+  }
 }
 
 function formatDate(date) {
@@ -425,16 +458,21 @@ function TocList({ tocList, handleTocClick }) {
 
       <style jsx global>{`
         .toc-wrapper {
-          background-color: #f8f9fa;
-          border-radius: 8px;
-          border: 1px solid #301b54;
+          background: linear-gradient(135deg, #ffffff 0%, #f6f8fb 100%);
+          border-radius: 18px;
+          border: 1px solid #e6e9f0;
+          border-left: 4px solid #c22221;
           margin-top: 2rem;
+          box-shadow: 0 6px 20px rgba(16, 24, 40, 0.04);
         }
 
         .toc-title {
-          font-size: 20px;
-          font-weight: 600;
-          margin-bottom: 15px;
+          font-size: 13px !important;
+          font-weight: 800;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          color: #14213d !important;
+          margin: 0 0 16px !important;
         }
 
         .toc-list {
@@ -870,6 +908,45 @@ function Post({
   const router = useRouter();
 
   const [expandedAuthors, setExpandedAuthors] = useState({});
+  const progressRef = useRef(null);
+
+  /* =======================================================
+     READING PROGRESS (visual only, does not gate content)
+     Writes straight to the DOM so scrolling never re-renders
+     the article (keeps INP / TBT low).
+  ======================================================= */
+
+  useEffect(() => {
+    let frame = null;
+
+    const update = () => {
+      frame = null;
+      const max =
+        document.documentElement.scrollHeight - window.innerHeight;
+      const progress =
+        max > 0 ? Math.min(window.scrollY / max, 1) : 0;
+
+      if (progressRef.current) {
+        progressRef.current.style.transform = `scaleX(${progress})`;
+      }
+    };
+
+    const onScroll = () => {
+      if (frame === null) {
+        frame = requestAnimationFrame(update);
+      }
+    };
+
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+      if (frame !== null) cancelAnimationFrame(frame);
+    };
+  }, [router.asPath]);
 
   /* =======================================================
      AUTHOR TOGGLE
@@ -986,10 +1063,67 @@ function Post({
   }
 
   return (
-    <div>
+    <div className={`bp-page ${displayFont.variable} ${sansFont.variable}`}>
+      <div
+        className="bp-progress"
+        ref={progressRef}
+        aria-hidden="true"
+      />
+
       <section>
         {blogs.map((item) => {
           const canonicalUrl = `https://www.dynamicssquare.co.uk/blog/${item.title_slug}/`;
+
+          const heroAuthor = authordetials?.[0];
+
+          const heroAuthorImage = heroAuthor?.profile_photo_path
+            ? getImageUrl(heroAuthor.profile_photo_path)
+            : "/img/default-author.png";
+
+          const heroImage = item.meta_image
+            ? getImageUrl(item.meta_image)
+            : "";
+
+          const showUpdated =
+            item.updated_at &&
+            item.publish_date &&
+            formatDate(item.updated_at) !==
+            formatDate(item.publish_date);
+
+          const shareButtons = (
+            <>
+              <FacebookShareButton
+                url={canonicalUrl}
+                quote={item.title}
+                aria-label="Share on Facebook"
+              >
+                <span className="bp-share-btn">
+                  <i className="bi bi-facebook" />
+                </span>
+              </FacebookShareButton>
+
+              <TwitterShareButton
+                url={canonicalUrl}
+                title={item.title}
+                aria-label="Share on X"
+              >
+                <span className="bp-share-btn">
+                  <i className="bi bi-twitter-x" />
+                </span>
+              </TwitterShareButton>
+
+              <LinkedinShareButton
+                url={canonicalUrl}
+                title={item.title}
+                summary={item.short_description}
+                aria-label="Share on LinkedIn"
+              >
+                <span className="bp-share-btn">
+                  <i className="bi bi-linkedin" />
+                </span>
+              </LinkedinShareButton>
+            </>
+          );
 
           return (
             <article
@@ -1024,388 +1158,289 @@ function Post({
               />
 
               {/* =================================================
-                  BREADCRUMB
+                  HERO (split: text left, image right)
+              ================================================= */}
+
+              <header className="bp-hero">
+                <div className="container">
+                  <nav aria-label="breadcrumb">
+                    <ol className="bp-breadcrumb">
+                      <li>
+                        <Link href="/">Home</Link>
+                      </li>
+                      <li>
+                        <Link href="/blog/">Blog</Link>
+                      </li>
+                      <li aria-current="page">{item.title}</li>
+                    </ol>
+                  </nav>
+
+                  <div className="row align-items-center g-5">
+                    <div className={heroImage ? "col-lg-6" : "col-lg-10"}>
+                      {item.category_slug && (
+                        <Link
+                          href={`/blog/category/${item.category_slug}`}
+                          className="bp-pill"
+                        >
+                          {item.category}
+                        </Link>
+                      )}
+
+                      <h1 className="bp-title" itemProp="headline">
+                        {item.title}
+                      </h1>
+
+                      {item.short_description && (
+                        <p className="bp-lead">{item.short_description}</p>
+                      )}
+
+                      <div className="bp-byline">
+                        <Image
+                          src={heroAuthorImage}
+                          alt={
+                            item.author
+                              ? `${item.author} - Author`
+                              : "Blog author"
+                          }
+                          width={48}
+                          height={48}
+                          sizes="48px"
+                          className="bp-byline-avatar"
+                        />
+
+                        <div className="bp-byline-text">
+                          <Link
+                            href={`/blog/author/${encodeURIComponent(
+                              item.author
+                                ?.toLowerCase()
+                                .split(" ")
+                                .join("-")
+                            )}/`}
+                            className="bp-byline-name"
+                            itemProp="author"
+                          >
+                            {item.author}
+                          </Link>
+
+                          <span className="bp-byline-sub">
+                            {item.publish_date && (
+                              <span>
+                                <i className="bi bi-calendar3" />
+                                {formatDate(item.publish_date)}
+                              </span>
+                            )}
+
+                            {showUpdated && (
+                              <span>
+                                <i className="bi bi-arrow-repeat" />
+                                Updated {formatDate(item.updated_at)}
+                              </span>
+                            )}
+
+                            {item.read_time && (
+                              <span>
+                                <i className="bi bi-clock" />
+                                {item.read_time} min read
+                              </span>
+                            )}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {heroImage && (
+                      <div className="col-lg-6">
+                        <div className="bp-hero-media">
+                          <Image
+                            src={heroImage}
+                            alt={item.title}
+                            width={1200}
+                            height={750}
+                            priority
+                            quality={85}
+                            sizes="(max-width: 991px) 100vw, 50vw"
+                            unoptimized={!isOptimizableImage(heroImage)}
+                            className="bp-hero-img"
+                          />
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </header>
+
+              {/* =================================================
+                  MAIN CONTENT
               ================================================= */}
 
               <div className="container">
-                <div className="row">
-                  <div className="col-lg-12">
-                    <div className="blogs-breadcromb">
-                      <nav
-                        aria-label="breadcrumb"
-                      >
-                        <ol className="breadcrumb">
-                          <li className="breadcrumb-item">
-                            <Link href="/">
-                              Home
-                            </Link>
-                          </li>
-
-                          <li className="breadcrumb-item">
-                            <Link href="/blog/">
-                              Blog
-                            </Link>
-                          </li>
-
-                          <li
-                            className="breadcrumb-item active"
-                            aria-current="page"
-                          >
-                            {item.title}
-                          </li>
-                        </ol>
-                      </nav>
+                <div className="row g-5 bp-body">
+                  {/* Floating share rail (desktop) */}
+                  <div className="col-lg-1 d-none d-lg-block">
+                    <div className="bp-rail">
+                      <span className="bp-rail-label">Share</span>
+                      {shareButtons}
                     </div>
                   </div>
-                </div>
 
-                {/* =================================================
-                    MAIN CONTENT
-                ================================================= */}
+                  <div className="col-lg-7">
+                    {/* =================================================
+                        BLOG CONTENT
 
-                <div className="row g-5">
-                  <div className="col-lg-8">
-                    <div className="blogs-single-post-sec">
-                      <div className="blogs-lates blogs-lates-top-head">
-                        <h1 itemProp="headline">
-                          {item.title}
-                        </h1>
+                        IMPORTANT:
+                        No useEffect.
+                        Content is rendered immediately.
+                    ================================================= */}
 
-                        <div
-                          className="blogs-info-list"
-                          style={{
-                            flexWrap: "inherit",
-                          }}
-                        >
-                          <div className="left-list">
-                            {/* AUTHOR */}
+                    <div
+                      className="blogs-content bp-content"
+                      itemProp="articleBody"
+                    >
+                      <div className="blogs-content-inner">
+                        <SafeHTML
+                          html={item.description || ""}
+                          tocList={
+                            item.faqs?.length > 0
+                              ? [
+                                ...(item.tocList || []),
+                                { text: "Frequently Asked Questions", slug: "faqs-section" },
+                              ]
+                              : item.tocList
+                          }
+                          handleTocClick={handleTocClick}
+                        />
 
-                            <span className="user">
-                              <Link
-                                href={`/blog/author/${encodeURIComponent(
-                                  item.author
-                                    ?.toLowerCase()
-                                    .split(" ")
-                                    .join("-")
-                                )}/`}
-                                itemProp="author"
-                              >
-                                {item.author}
-                              </Link>
-                            </span>
-
-                            {/* PUBLISHED DATE */}
-
-                            {item.publish_date && (
-                              <span className="date">
-                                <a>
-                                  <i className="bi bi-calendar-event" />
-                                  {" "}
-                                  Published:{" "}
-                                  {formatDate(
-                                    item.publish_date
-                                  )}
-                                </a>
-                              </span>
-                            )}
-
-                            {/* UPDATED DATE */}
-
-                            {item.updated_at &&
-                              item.publish_date &&
-                              formatDate(
-                                item.updated_at
-                              ) !==
-                              formatDate(
-                                item.publish_date
-                              ) && (
-                                <span className="date">
-                                  <a>
-                                    <i className="bi bi-arrow-repeat" />
-                                    {" "}
-                                    Updated:{" "}
-                                    {formatDate(
-                                      item.updated_at
-                                    )}
-                                  </a>
-                                </span>
-                              )}
-
-                            {/* READ TIME */}
-
-                            {item.read_time && (
-                              <span className="time">
-                                <a>
-                                  <i className="bi bi-clock" />{" "}
-                                  {item.read_time} mins read
-                                </a>
-                              </span>
-                            )}
-
-                            {/* CATEGORY */}
-
-                            {item.category_slug && (
-                              <span className="cate">
-                                <Link
-                                  href={`/blog/category/${item.category_slug}`}
-                                >
-                                  <i className="bi bi-collection" />{" "}
-                                  {item.category}
-                                </Link>
-                              </span>
-                            )}
-                          </div>
-
-                          {/* =================================================
-                              SOCIAL SHARE
-                          ================================================= */}
-
-                          <div className="sociallist">
-                            <FacebookShareButton
-                              url={canonicalUrl}
-                              quote={item.title}
-                            >
-                              <a
-                                aria-label="Share on Facebook"
-                                role="button"
-                              >
-                                <i className="bi bi-facebook" />
-                              </a>
-                            </FacebookShareButton>
-
-                            <TwitterShareButton
-                              url={canonicalUrl}
-                              title={item.title}
-                            >
-                              <a
-                                aria-label="Share on Twitter"
-                                role="button"
-                              >
-                                <i className="bi bi-twitter" />
-                              </a>
-                            </TwitterShareButton>
-
-                            <LinkedinShareButton
-                              url={canonicalUrl}
-                              title={item.title}
-                              summary={
-                                item.short_description
-                              }
-                            >
-                              <a
-                                aria-label="Share on LinkedIn"
-                                role="button"
-                              >
-                                <i className="bi bi-linkedin" />
-                              </a>
-                            </LinkedinShareButton>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* =================================================
-                          BLOG CONTENT
-
-                          IMPORTANT:
-                          No useEffect.
-                          Content is rendered immediately.
-                      ================================================= */}
-
-                      <div
-                        className="blogs-content"
-                        itemProp="articleBody"
-                      >
-                        <div className="blogs-content-inner">
-                          {/* <SafeHTML
-                            html={
-                              item.description || ""
-                            }
-                            tocList={item.tocList}
-                            handleTocClick={
-                              handleTocClick
-                            }
-                          /> */}
-                          <SafeHTML
-                            html={item.description || ""}
-                            tocList={
-                              item.faqs?.length > 0
-                                ? [
-                                  ...(item.tocList || []),
-                                  { text: "Frequently Asked Questions", slug: "faqs-section" },
-                                ]
-                                : item.tocList
-                            }
-                            handleTocClick={handleTocClick}
-                          />
-
-
-                          <FaqAccordion
-                            faqs={item.faqs}
-                            articleSlug={item.title_slug}
-                          />
-                        </div>
-
-                        {/* =================================================
-                            AUTHOR
-                        ================================================= */}
-
-                        {authordetials?.length > 0 &&
-                          authordetials.map(
-                            (author, i) => {
-                              const isAuthorExpanded =
-                                Boolean(
-                                  expandedAuthors[i]
-                                );
-
-                              const authorAbout =
-                                author.about || "";
-
-                              const shouldShowAuthorToggle =
-                                authorAbout.length >
-                                AUTHOR_ABOUT_PREVIEW_LENGTH;
-
-                              const visibleAuthorAbout =
-                                isAuthorExpanded ||
-                                  !shouldShowAuthorToggle
-                                  ? authorAbout
-                                  : `${authorAbout
-                                    .slice(
-                                      0,
-                                      AUTHOR_ABOUT_PREVIEW_LENGTH
-                                    )
-                                    .trim()}...`;
-
-                              const authorImage =
-                                author.profile_photo_path
-                                  ? getImageUrl(
-                                    author.profile_photo_path
-                                  )
-                                  : "/img/default-author.png";
-
-                              const authorSlug =
-                                author.name
-                                  ?.toLowerCase()
-                                  .trim()
-                                  .replace(
-                                    /\s+/g,
-                                    "-"
-                                  );
-
-                              return (
-                                <div
-                                  className="author-side-head author-side-head--expandable"
-                                  id={`blog-author-details-${i}`}
-                                  key={
-                                    author.name ||
-                                    i
-                                  }
-                                  itemScope
-                                  itemType="https://schema.org/Person"
-                                >
-                                  <div className="left">
-                                    <Image
-                                      src={authorImage}
-                                      alt={
-                                        author.name
-                                          ? `${author.name} - Author`
-                                          : "Blog author"
-                                      }
-                                      width={74}
-                                      height={74}
-                                      sizes="74px"
-                                      itemProp="image"
-                                      style={{
-                                        width: "74px",
-                                        height: "74px",
-                                        objectFit:
-                                          "cover",
-                                        borderRadius:
-                                          "50%",
-                                      }}
-                                    />
-
-                                    {author.linkedin_url && (
-                                      <span className="link-din">
-                                        <a
-                                          href={
-                                            author.linkedin_url.startsWith(
-                                              "http"
-                                            )
-                                              ? author.linkedin_url
-                                              : `https://${author.linkedin_url}`
-                                          }
-                                          target="_blank"
-                                          rel="noopener noreferrer"
-                                          aria-label={`${author.name || "Author"} LinkedIn`}
-                                        >
-                                          <i className="bi bi-linkedin" />
-                                        </a>
-                                      </span>
-                                    )}
-                                  </div>
-
-                                  <div className="right">
-                                    {authorSlug ? (
-                                      <Link
-                                        href={`/blog/author/${authorSlug}/`}
-                                      >
-                                        <span itemProp="name">
-                                          {author.name}
-                                        </span>
-                                      </Link>
-                                    ) : (
-                                      <span itemProp="name">
-                                        {author.name}
-                                      </span>
-                                    )}
-
-                                    <p className="author-about">
-                                      {visibleAuthorAbout}
-                                    </p>
-
-                                    {shouldShowAuthorToggle && (
-                                      <button
-                                        type="button"
-                                        className="author-about-toggle"
-                                        onClick={() =>
-                                          handleAuthorToggle(
-                                            i
-                                          )
-                                        }
-                                        aria-expanded={
-                                          isAuthorExpanded
-                                        }
-                                        style={{
-                                          marginTop:
-                                            "10px",
-                                          padding: 0,
-                                          border: 0,
-                                          background:
-                                            "transparent",
-                                          color: "#ffffff",
-                                          fontSize:
-                                            "14px",
-                                          fontWeight: 600,
-                                          textDecoration:
-                                            "underline",
-                                          textUnderlineOffset:
-                                            "4px",
-                                          cursor:
-                                            "pointer",
-                                        }}
-                                      >
-                                        {isAuthorExpanded
-                                          ? "Read less"
-                                          : "Read more"}
-                                      </button>
-                                    )}
-                                  </div>
-                                </div>
-                              );
-                            }
-                          )}
+                        <FaqAccordion
+                          faqs={item.faqs}
+                          articleSlug={item.title_slug}
+                        />
                       </div>
                     </div>
+
+                    <div className="bp-share-inline d-lg-none">
+                      <span className="bp-rail-label">Share</span>
+                      <div className="bp-share-row">{shareButtons}</div>
+                    </div>
+
+                    {/* =================================================
+                        AUTHOR
+                    ================================================= */}
+
+                    {authordetials?.length > 0 &&
+                      authordetials.map((author, i) => {
+                        const isAuthorExpanded = Boolean(
+                          expandedAuthors[i]
+                        );
+
+                        const authorAbout = author.about || "";
+
+                        const shouldShowAuthorToggle =
+                          authorAbout.length >
+                          AUTHOR_ABOUT_PREVIEW_LENGTH;
+
+                        const visibleAuthorAbout =
+                          isAuthorExpanded || !shouldShowAuthorToggle
+                            ? authorAbout
+                            : `${authorAbout
+                              .slice(0, AUTHOR_ABOUT_PREVIEW_LENGTH)
+                              .trim()}...`;
+
+                        const authorImage = author.profile_photo_path
+                          ? getImageUrl(author.profile_photo_path)
+                          : "/img/default-author.png";
+
+                        const authorSlug = author.name
+                          ?.toLowerCase()
+                          .trim()
+                          .replace(/\s+/g, "-");
+
+                        return (
+                          <div
+                            className="bp-author"
+                            id={`blog-author-details-${i}`}
+                            key={author.name || i}
+                            itemScope
+                            itemType="https://schema.org/Person"
+                          >
+                            <div className="bp-author-top">
+                              <Image
+                                src={authorImage}
+                                alt={
+                                  author.name
+                                    ? `${author.name} - Author`
+                                    : "Blog author"
+                                }
+                                width={72}
+                                height={72}
+                                sizes="72px"
+                                itemProp="image"
+                                className="bp-author-avatar"
+                              />
+
+                              <div>
+                                <span className="bp-author-eyebrow">
+                                  About the author
+                                </span>
+
+                                {authorSlug ? (
+                                  <Link
+                                    href={`/blog/author/${authorSlug}/`}
+                                    className="bp-author-name"
+                                  >
+                                    <span itemProp="name">{author.name}</span>
+                                  </Link>
+                                ) : (
+                                  <span
+                                    className="bp-author-name"
+                                    itemProp="name"
+                                  >
+                                    {author.name}
+                                  </span>
+                                )}
+                              </div>
+
+                              {author.linkedin_url && (
+                                <a
+                                  href={
+                                    author.linkedin_url.startsWith("http")
+                                      ? author.linkedin_url
+                                      : `https://${author.linkedin_url}`
+                                  }
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="bp-author-social"
+                                  aria-label={`${author.name || "Author"} LinkedIn`}
+                                >
+                                  <i className="bi bi-linkedin" />
+                                </a>
+                              )}
+                            </div>
+
+                            <p className="bp-author-about">
+                              {visibleAuthorAbout}
+                            </p>
+
+                            {shouldShowAuthorToggle && (
+                              <button
+                                type="button"
+                                className="bp-author-toggle"
+                                onClick={() => handleAuthorToggle(i)}
+                                aria-expanded={isAuthorExpanded}
+                              >
+                                {isAuthorExpanded
+                                  ? "Read less"
+                                  : "Read more"}
+                                <i
+                                  className={`bi ${isAuthorExpanded
+                                    ? "bi-arrow-up"
+                                    : "bi-arrow-down"
+                                    }`}
+                                />
+                              </button>
+                            )}
+                          </div>
+                        );
+                      })}
                   </div>
 
                   {/* =================================================
@@ -1413,12 +1448,9 @@ function Post({
                   ================================================= */}
 
                   <div className="col-lg-4">
-                    <aside className="prom-bann">
+                    <aside className="bp-sidebar">
                       <a
-                        style={{
-                          marginBottom: "20px",
-                          display: "block",
-                        }}
+                        className="bp-side-promo"
                         rel="nofollow"
                         href="https://www.forbes.com/councils/forbestechcouncil/2026/06/01/what-companies-get-wrong-about-agentic-erp/"
                         target="_blank"
@@ -1429,14 +1461,12 @@ function Post({
                           height={392}
                           sizes="(max-width: 991px) 100vw, 413px"
                           alt="Dynamics Square Forbes technology article"
-                          style={{
-                            width: "100%",
-                            height: "auto",
-                          }}
+                          style={{ width: "100%", height: "auto" }}
                         />
                       </a>
 
                       <a
+                        className="bp-side-promo"
                         href="https://msdynamicsworld.com/vendor/dynamics-square-usa"
                         target="_blank"
                         rel="nofollow"
@@ -1447,163 +1477,938 @@ function Post({
                           width={413}
                           height={168}
                           sizes="(max-width: 991px) 100vw, 413px"
-                          style={{
-                            width: "100%",
-                            height: "auto",
-                          }}
+                          style={{ width: "100%", height: "auto" }}
                         />
                       </a>
                     </aside>
                   </div>
                 </div>
+              </div>
 
-                {/* =================================================
-                    RELATED BLOGS
-                ================================================= */}
+              {/* =================================================
+                  RELATED BLOGS
+              ================================================= */}
 
-                {blogcat?.length > 0 && (
-                  <section
-                    className="row pd-90"
-                    aria-labelledby="related-posts-title"
-                  >
-                    <div className="col-lg-12">
-                      <h2
-                        id="related-posts-title"
-                        className="visually-hidden"
-                      >
-                        Related Blog Posts
-                      </h2>
+              {blogcat?.length > 0 && (
+                <section
+                  className="bp-related"
+                  aria-labelledby="related-posts-title"
+                >
+                  <div className="container">
+                    <div className="bp-related-head">
+                      <div>
+                        <span className="bp-related-eyebrow">
+                          Related articles
+                        </span>
+                        <h2 id="related-posts-title">
+                          You might also like
+                        </h2>
+                      </div>
+
+                      {item.category_slug && (
+                        <Link
+                          href={`/blog/category/${item.category_slug}`}
+                          className="bp-related-all"
+                        >
+                          View all <i className="bi bi-arrow-right" />
+                        </Link>
+                      )}
                     </div>
 
-                    {blogcat.slice(0, 2).map((item1) => {
-                      const authorSlug =
-                        item1.author
-                          ?.toLowerCase()
-                          .trim()
-                          .replace(/\s+/g, "-");
+                    <div className="row g-4">
+                      {blogcat.slice(0, 3).map((item1) => {
+                        const relatedImage = item1.image
+                          ? getImageUrl(item1.image)
+                          : "";
 
-                      return (
-                        <div
-                          className="col-lg-6"
-                          key={item1.title_slug}
-                        >
-                          <div className="blogs-lates blogs-lates-repet">
-                            <h3>
-                              <Link
-                                href={`/blog/${item1.title_slug}`}
-                              >
-                                {item1.title}
-                              </Link>
-                            </h3>
-
-                            <div className="blogs-info-list">
-                              <span className="user">
-                                {authorSlug ? (
-                                  <Link
-                                    href={`/blog/author/${authorSlug}/`}
-                                  >
-                                    <i className="bi bi-person-circle" />{" "}
-                                    {item1.author}
-                                  </Link>
+                        return (
+                          <div
+                            className="col-md-6 col-lg-4"
+                            key={item1.title_slug}
+                          >
+                            <Link
+                              href={`/blog/${item1.title_slug}`}
+                              className="bp-card"
+                            >
+                              <div className="bp-card-media">
+                                {relatedImage ? (
+                                  <Image
+                                    src={relatedImage}
+                                    alt={item1.title}
+                                    width={640}
+                                    height={400}
+                                    sizes="(max-width: 767px) 100vw, (max-width: 991px) 50vw, 33vw"
+                                    unoptimized={!isOptimizableImage(relatedImage)}
+                                    className="bp-card-img"
+                                  />
                                 ) : (
-                                  <a>
-                                    <i className="bi bi-person-circle" />{" "}
-                                    {item1.author}
-                                  </a>
+                                  <div className="bp-card-placeholder">
+                                    <i className="bi bi-journal-text" />
+                                  </div>
                                 )}
-                              </span>
 
-                              {item1.publish_date && (
-                                <span className="date">
-                                  <a>
-                                    <i className="bi bi-calendar-event" />{" "}
-                                    Published:{" "}
-                                    {formatDate(
-                                      item1.publish_date
-                                    )}
-                                  </a>
-                                </span>
-                              )}
-
-                              {item1.updated_at &&
-                                item1.publish_date &&
-                                formatDate(
-                                  item1.updated_at
-                                ) !==
-                                formatDate(
-                                  item1.publish_date
-                                ) && (
-                                  <span className="date">
-                                    <a>
-                                      <i className="bi bi-arrow-repeat" />{" "}
-                                      Updated:{" "}
-                                      {formatDate(
-                                        item1.updated_at
-                                      )}
-                                    </a>
+                                {item1.category && (
+                                  <span className="bp-card-pill">
+                                    {item1.category}
                                   </span>
                                 )}
-
-                              {item1.read_time && (
-                                <span className="time">
-                                  <a>
-                                    <i className="bi bi-clock" />{" "}
-                                    {
-                                      item1.read_time
-                                    }{" "}
-                                    mins read
-                                  </a>
-                                </span>
-                              )}
-
-                              {item1.category_slug && (
-                                <span className="cate">
-                                  <Link
-                                    href={`/blog/category/${item1.category_slug}`}
-                                  >
-                                    <i className="bi bi-collection" />{" "}
-                                    {item1.category}
-                                  </Link>
-                                </span>
-                              )}
-                            </div>
-
-                            <div className="b-card-info">
-                              <p>
-                                {
-                                  item1.short_description
-                                }
-                              </p>
-
-                              <div className="page-link-read">
-                                <Link
-                                  href={`/blog/${item1.title_slug}`}
-                                >
-                                  Read More{" "}
-                                  <span>{">"}</span>
-                                </Link>
                               </div>
-                            </div>
+
+                              <div className="bp-card-body">
+                                <div className="bp-card-meta">
+                                  {item1.publish_date && (
+                                    <span>{formatDate(item1.publish_date)}</span>
+                                  )}
+                                  {item1.read_time && (
+                                    <span>{item1.read_time} min read</span>
+                                  )}
+                                </div>
+
+                                <h3 className="bp-card-title">
+                                  {item1.title}
+                                </h3>
+
+                                {item1.short_description && (
+                                  <p className="bp-card-text">
+                                    {item1.short_description}
+                                  </p>
+                                )}
+
+                                <span className="bp-card-cta">
+                                  Read article <i className="bi bi-arrow-right" />
+                                </span>
+                              </div>
+                            </Link>
                           </div>
-                        </div>
-                      );
-                    })}
-                  </section>
-                )}
-              </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </section>
+              )}
             </article>
           );
         })}
       </section>
+
       <style jsx global>{`
-  @media (max-width: 1400px) {
-    .blog-content img,.blog-content p img{
-      width: 100% !important;
-      max-width: 100% !important;
-      height: auto !important;
-    }
-  }
-`}</style>
+        .bp-page {
+          --bp-ink: #0b1324;
+          --bp-text: #344054;
+          --bp-muted: #667085;
+          --bp-line: #e4e7ec;
+          --bp-red: #c22221;
+          --bp-red-dark: #9e1a19;
+          --bp-red-soft: #fdecec;
+          --bp-bg: #f5f6f8;
+          --bp-display: var(--font-bp-display), "Helvetica Neue", Arial, sans-serif;
+          --bp-sans: var(--font-bp-sans), "Helvetica Neue", Arial, sans-serif;
+          font-family: var(--bp-sans);
+          color: var(--bp-text);
+        }
+
+        .bp-page p,
+        .bp-page li,
+        .bp-page a,
+        .bp-page span,
+        .bp-page button,
+        .bp-page td,
+        .bp-page th {
+          font-family: var(--bp-sans);
+        }
+
+        .bp-page h1,
+        .bp-page h2,
+        .bp-page h3,
+        .bp-page h4,
+        .bp-page .bp-title,
+        .bp-page .bp-card-title,
+        .bp-page .bp-author-name,
+        .bp-page .bp-author-name span {
+          font-family: var(--bp-display) !important;
+        }
+
+        .bp-progress {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 4px;
+          background: var(--bp-red);
+          transform-origin: 0 50%;
+          z-index: 1100;
+          pointer-events: none;
+        }
+
+        /* ---------- HERO ---------- */
+
+        /* Blend the (transparent, unscrolled) site header into the hero.
+           Once it turns .fixed-top on scroll it goes back to white. */
+        div:has(> #header),
+        #header:not(.fixed-top) {
+          background: var(--bp-hero-bg, #f5f6f8);
+        }
+
+        /* globals.css gives every <section> 60px padding; not wanted here */
+        .bp-page > section {
+          padding: 0;
+        }
+
+        .bp-hero {
+          position: relative;
+          padding: 20px 0 56px;
+          background: var(--bp-bg);
+          overflow: hidden;
+        }
+
+        .bp-hero::before {
+          content: "";
+          position: absolute;
+          right: -120px;
+          top: -120px;
+          width: 520px;
+          height: 520px;
+          border-radius: 50%;
+          background: radial-gradient(circle, rgba(194, 34, 33, 0.12), transparent 65%);
+          pointer-events: none;
+        }
+
+        .bp-breadcrumb {
+          position: relative;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+          list-style: none;
+          padding: 0;
+          margin: 0 0 28px;
+          font-size: 13px;
+          font-weight: 500;
+          color: var(--bp-muted);
+        }
+
+        .bp-breadcrumb li + li::before {
+          content: "›";
+          margin-right: 8px;
+          color: #98a2b3;
+        }
+
+        .bp-breadcrumb li:last-child {
+          max-width: 360px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .bp-breadcrumb a {
+          color: var(--bp-ink);
+          font-weight: 600;
+        }
+
+        .bp-breadcrumb a:hover {
+          color: var(--bp-red);
+        }
+
+        .bp-pill {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          padding: 7px 16px;
+          margin-bottom: 22px;
+          font-size: 13px;
+          font-weight: 700;
+          color: #fff;
+          background: var(--bp-red);
+          border-radius: 999px;
+          transition: background 0.2s ease;
+        }
+
+        .bp-pill::before {
+          content: "";
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: #fff;
+        }
+
+        .bp-pill:hover {
+          color: #fff;
+          background: var(--bp-red-dark);
+        }
+
+        .bp-title {
+          font-size: clamp(32px, 4.4vw, 52px) !important;
+          line-height: 1.1 !important;
+          font-weight: 800;
+          letter-spacing: -0.03em;
+          color: var(--bp-ink);
+          margin: 0 0 20px;
+        }
+
+        .bp-lead {
+          font-size: 18px;
+          line-height: 1.65;
+          color: var(--bp-text);
+          margin: 0 0 32px;
+        }
+
+        .bp-byline {
+          display: flex;
+          align-items: center;
+          gap: 14px;
+        }
+
+        .bp-byline-avatar {
+          width: 48px;
+          height: 48px;
+          border-radius: 50%;
+          object-fit: cover;
+          border: 2px solid var(--bp-red);
+          padding: 2px;
+          background: #fff;
+        }
+
+        .bp-byline-text {
+          display: flex;
+          flex-direction: column;
+          gap: 2px;
+        }
+
+        .bp-byline-name {
+          font-size: 16px;
+          font-weight: 700;
+          color: var(--bp-ink);
+        }
+
+        .bp-byline-name:hover {
+          color: var(--bp-red);
+        }
+
+        .bp-byline-sub {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 4px 16px;
+          font-size: 13px;
+          color: var(--bp-muted);
+        }
+
+        .bp-byline-sub i {
+          margin-right: 6px;
+          color: var(--bp-red);
+        }
+
+        .bp-hero-media {
+          position: relative;
+          padding: 0 0 18px 18px;
+        }
+
+        .bp-hero-media::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 70%;
+          height: 70%;
+          border-radius: 24px;
+          background: var(--bp-red);
+        }
+
+        .bp-hero-img {
+          position: relative;
+          display: block;
+          width: 100%;
+          height: auto;
+          aspect-ratio: 16 / 10;
+          object-fit: cover;
+          border-radius: 24px;
+          box-shadow: 0 24px 60px rgba(11, 19, 36, 0.18);
+        }
+
+        /* ---------- BODY ---------- */
+
+        .bp-body {
+          padding-top: 56px;
+        }
+
+        .bp-rail {
+          position: sticky;
+          top: 130px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+        }
+
+        .bp-rail-label {
+          font-size: 11px;
+          font-weight: 700;
+          letter-spacing: 0.14em;
+          text-transform: uppercase;
+          color: var(--bp-muted);
+        }
+
+        .bp-share-btn {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 42px;
+          height: 42px;
+          font-size: 16px;
+          color: var(--bp-ink);
+          background: var(--bp-bg);
+          border-radius: 12px;
+          transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+        }
+
+        .bp-page button:hover .bp-share-btn {
+          color: #fff;
+          background: var(--bp-red);
+          transform: translateY(-2px);
+        }
+
+        .bp-share-inline {
+          display: flex;
+          align-items: center;
+          gap: 14px;
+          padding: 24px 0;
+          border-top: 1px solid var(--bp-line);
+        }
+
+        .bp-share-row {
+          display: flex;
+          gap: 10px;
+        }
+
+        .bp-content.blogs-content {
+          padding-top: 0;
+          padding-bottom: 32px;
+          border-bottom: 0;
+        }
+
+        .bp-content p,
+        .bp-content ul li,
+        .bp-content ol li,
+        .bp-content ul li p {
+          font-size: 18px !important;
+          line-height: 1.8;
+          color: var(--bp-text);
+        }
+
+        .bp-content h2,
+        .bp-content h3 {
+          color: var(--bp-ink);
+          scroll-margin-top: 120px;
+        }
+
+        /* Article section headings (not TOC / FAQ) */
+        .bp-content .blogs-content-inner > div > h2 {
+          position: relative;
+          font-size: 30px;
+          font-weight: 800;
+          letter-spacing: -0.02em;
+          line-height: 1.2;
+          margin: 56px 0 20px;
+          padding-left: 18px;
+        }
+
+        .bp-content .blogs-content-inner > div > h2::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 4px;
+          bottom: 4px;
+          width: 5px;
+          border-radius: 4px;
+          background: var(--bp-red);
+        }
+
+        .bp-content h3 {
+          font-size: 23px;
+          font-weight: 700;
+          margin: 36px 0 14px;
+        }
+
+        /* FAQ question headers are h3s too: keep them flush */
+        .bp-content .faq-accordion-item h3,
+        .bp-content .accordion-header {
+          margin: 0 !important;
+        }
+
+        .bp-content .faq-accordion-body p {
+          font-size: 16px !important;
+          line-height: 1.7;
+        }
+
+        .bp-content a.u-i {
+          color: var(--bp-red);
+          font-weight: 600;
+          text-decoration: none;
+          background-image: linear-gradient(var(--bp-red-soft), var(--bp-red-soft));
+          background-size: 100% 35%;
+          background-position: 0 90%;
+          background-repeat: no-repeat;
+          transition: background-size 0.2s ease;
+        }
+
+        .bp-content a.u-i:hover {
+          background-size: 100% 90%;
+        }
+
+        .bp-content img {
+          border-radius: 16px;
+        }
+
+        .bp-content blockquote {
+          position: relative;
+          margin: 40px 0;
+          padding: 28px 28px 28px 72px;
+          background: var(--bp-ink);
+          border-radius: 20px;
+          color: #fff;
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 1.5;
+        }
+
+        .bp-content blockquote::before {
+          content: "“";
+          position: absolute;
+          left: 24px;
+          top: 6px;
+          font-family: Georgia, serif;
+          font-size: 64px;
+          color: var(--bp-red);
+        }
+
+        .bp-content blockquote p {
+          color: #fff !important;
+          margin: 0;
+        }
+
+        .bp-content .table-responsive {
+          margin: 32px 0;
+          border-radius: 16px;
+          border: 1px solid var(--bp-line);
+        }
+
+        .bp-content .table {
+          margin-bottom: 0;
+          font-size: 16px;
+        }
+
+        .bp-content .table-dark th {
+          background: var(--bp-ink);
+          border-color: var(--bp-ink);
+        }
+
+        /* ---------- TOC + FAQ ---------- */
+
+        .bp-page .toc-wrapper {
+          background: var(--bp-bg);
+          border: 0;
+          border-radius: 20px;
+          padding: 28px !important;
+        }
+
+        .bp-page .toc-title {
+          font-size: 14px !important;
+          font-weight: 800;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          color: var(--bp-red) !important;
+        }
+
+        .bp-page .toc-item a {
+          color: var(--bp-ink) !important;
+          font-weight: 600;
+        }
+
+        .bp-page .toc-chevron {
+          color: var(--bp-red);
+        }
+
+        .bp-page .toc-item a:hover {
+          color: var(--bp-red) !important;
+        }
+
+        .bp-page .toc-toggle-btn {
+          color: var(--bp-red);
+        }
+
+        .bp-page .toc-fade-overlay {
+          background: linear-gradient(
+            to bottom,
+            rgba(245, 246, 248, 0) 0%,
+            rgba(245, 246, 248, 0.95) 80%
+          );
+        }
+
+        .bp-page .faq-accordion-item {
+          border-radius: 16px !important;
+        }
+
+        /* ---------- AUTHOR ---------- */
+
+        .bp-author {
+          position: relative;
+          margin: 32px 0 8px;
+          padding: 32px;
+          background: var(--bp-ink);
+          border-radius: 24px;
+          overflow: hidden;
+          scroll-margin-top: 120px;
+        }
+
+        .bp-author::after {
+          content: "";
+          position: absolute;
+          right: -60px;
+          bottom: -60px;
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          background: radial-gradient(circle, rgba(194, 34, 33, 0.5), transparent 70%);
+          pointer-events: none;
+        }
+
+        .bp-author-top {
+          position: relative;
+          display: flex;
+          align-items: center;
+          gap: 18px;
+          margin-bottom: 18px;
+        }
+
+        .bp-author-avatar {
+          width: 72px;
+          height: 72px;
+          border-radius: 50%;
+          object-fit: cover;
+          border: 3px solid var(--bp-red);
+        }
+
+        .bp-author-eyebrow {
+          display: block;
+          font-size: 12px;
+          font-weight: 700;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          color: #ff8a80;
+        }
+
+        .bp-author-name,
+        .bp-author-name span {
+          font-size: 22px;
+          font-weight: 800;
+          color: #fff;
+        }
+
+        a.bp-author-name:hover span {
+          color: #ff8a80;
+        }
+
+        .bp-author-social {
+          margin-left: auto;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 40px;
+          height: 40px;
+          font-size: 16px;
+          color: #fff;
+          background: rgba(255, 255, 255, 0.1);
+          border-radius: 12px;
+          transition: background 0.2s ease;
+        }
+
+        .bp-author-social:hover {
+          color: #fff;
+          background: #0a66c2;
+        }
+
+        .bp-author-about {
+          position: relative;
+          margin: 0;
+          font-size: 15px;
+          line-height: 1.75;
+          color: rgba(255, 255, 255, 0.75);
+          white-space: pre-line;
+        }
+
+        .bp-author-toggle {
+          position: relative;
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          margin-top: 14px;
+          padding: 0;
+          border: 0;
+          background: transparent;
+          font-size: 14px;
+          font-weight: 700;
+          color: #fff;
+          cursor: pointer;
+        }
+
+        .bp-author-toggle:hover {
+          color: #ff8a80;
+        }
+
+        /* ---------- SIDEBAR ---------- */
+
+        .bp-sidebar {
+          position: sticky;
+          top: 120px;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        .bp-side-promo {
+          display: block;
+          overflow: hidden;
+          border-radius: 20px;
+          box-shadow: 0 8px 24px rgba(11, 19, 36, 0.08);
+          transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .bp-side-promo:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 18px 40px rgba(11, 19, 36, 0.14);
+        }
+
+        /* ---------- RELATED ---------- */
+
+        .bp-related {
+          margin-top: 72px;
+          padding: 80px 0 96px;
+          background: var(--bp-bg);
+        }
+
+        .bp-related-head {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: flex-end;
+          justify-content: space-between;
+          gap: 16px;
+          margin-bottom: 36px;
+        }
+
+        .bp-related-eyebrow {
+          font-size: 13px;
+          font-weight: 800;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          color: var(--bp-red);
+        }
+
+        .bp-related-head h2 {
+          font-size: clamp(28px, 3.4vw, 40px) !important;
+          font-weight: 800;
+          letter-spacing: -0.03em;
+          color: var(--bp-ink);
+          margin: 6px 0 0;
+        }
+
+        .bp-related-all {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          padding: 12px 24px;
+          font-size: 15px;
+          font-weight: 700;
+          color: #fff;
+          background: var(--bp-ink);
+          border-radius: 999px;
+          transition: background 0.2s ease;
+        }
+
+        .bp-related-all:hover {
+          color: #fff;
+          background: var(--bp-red);
+        }
+
+        .bp-card {
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          overflow: hidden;
+          background: #fff;
+          border-radius: 24px;
+          box-shadow: 0 4px 16px rgba(11, 19, 36, 0.06);
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .bp-card:hover {
+          transform: translateY(-6px);
+          box-shadow: 0 24px 48px rgba(11, 19, 36, 0.14);
+        }
+
+        .bp-card-media {
+          position: relative;
+          aspect-ratio: 16 / 10;
+          overflow: hidden;
+          background: var(--bp-ink);
+        }
+
+        .bp-card-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.5s ease;
+        }
+
+        .bp-card:hover .bp-card-img {
+          transform: scale(1.06);
+        }
+
+        .bp-card-placeholder {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 100%;
+          font-size: 44px;
+          color: rgba(255, 255, 255, 0.35);
+          background: linear-gradient(135deg, var(--bp-ink) 0%, #2a1320 100%);
+        }
+
+        .bp-card-pill {
+          position: absolute;
+          left: 16px;
+          top: 16px;
+          padding: 5px 12px;
+          font-size: 12px;
+          font-weight: 700;
+          color: #fff;
+          background: var(--bp-red);
+          border-radius: 999px;
+        }
+
+        .bp-card-body {
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+          padding: 24px;
+        }
+
+        .bp-card-meta {
+          display: flex;
+          gap: 14px;
+          font-size: 13px;
+          color: var(--bp-muted);
+          margin-bottom: 10px;
+        }
+
+        .bp-card-title {
+          font-size: 20px !important;
+          line-height: 1.35;
+          font-weight: 800;
+          letter-spacing: -0.01em;
+          color: var(--bp-ink);
+          margin: 0 0 10px;
+          transition: color 0.2s ease;
+        }
+
+        .bp-card:hover .bp-card-title {
+          color: var(--bp-red);
+        }
+
+        .bp-card-text {
+          font-size: 15px;
+          line-height: 1.6;
+          color: var(--bp-muted);
+          margin: 0 0 20px;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+
+        .bp-card-cta {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          margin-top: auto;
+          font-size: 14px;
+          font-weight: 700;
+          color: var(--bp-red);
+        }
+
+        .bp-card-cta i {
+          transition: transform 0.2s ease;
+        }
+
+        .bp-card:hover .bp-card-cta i {
+          transform: translateX(4px);
+        }
+
+        /* ---------- RESPONSIVE ---------- */
+
+        @media (max-width: 991px) {
+          .bp-sidebar {
+            position: static;
+          }
+
+          .bp-hero {
+            padding-bottom: 48px;
+          }
+        }
+
+        @media (max-width: 767px) {
+          .bp-breadcrumb {
+            margin-bottom: 28px;
+          }
+
+          .bp-breadcrumb li:last-child {
+            max-width: 180px;
+          }
+
+          .bp-lead {
+            font-size: 16px;
+          }
+
+          .bp-content p,
+          .bp-content ul li,
+          .bp-content ol li,
+          .bp-content ul li p {
+            font-size: 17px !important;
+          }
+
+          .bp-content .blogs-content-inner > div > h2 {
+            font-size: 25px;
+          }
+
+          .bp-content h3 {
+            font-size: 21px;
+          }
+
+          .bp-author {
+            padding: 24px;
+          }
+
+          .bp-related {
+            padding: 56px 0 64px;
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .bp-card,
+          .bp-card-img,
+          .bp-side-promo,
+          .bp-share-btn {
+            transition: none;
+          }
+        }
+
+        @media (max-width: 1400px) {
+          .blog-content img,
+          .blog-content p img {
+            width: 100% !important;
+            max-width: 100% !important;
+            height: auto !important;
+          }
+        }
+      `}</style>
       <TimerModal />
     </div>
   );
@@ -2121,6 +2926,11 @@ export async function getStaticProps({
                   c.excerpt ||
                   c.short_description
                 ),
+
+              image: extractStr(
+                c.featuredImage?.url ||
+                c.meta_image
+              ),
             }));
       }
     } catch (error) {
