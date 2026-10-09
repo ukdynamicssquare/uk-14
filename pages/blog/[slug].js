@@ -531,11 +531,16 @@ color: #301b54 !important;
    FAQ ACCORDION (Bootstrap + custom styling)
 ========================================================= */
 
+const FAQ_INITIAL_COUNT = 4;
+
 function FaqAccordion({ faqs, articleSlug }) {
+  const [showAllFaqs, setShowAllFaqs] = useState(false);
+
   if (!Array.isArray(faqs) || faqs.length === 0) {
     return null;
   }
 
+  const hasMoreFaqs = faqs.length > FAQ_INITIAL_COUNT;
   const accordionId = `faq-accordion-${articleSlug}`;
 
   /*
@@ -575,9 +580,22 @@ function FaqAccordion({ faqs, articleSlug }) {
           const headingId = `faq-heading-${faqId}`;
           const collapseId = `faq-collapse-${faqId}`;
           const isFirst = index === 0;
+          // Hidden items stay in the DOM so FAQ content remains crawlable.
+          const isExtra = index >= FAQ_INITIAL_COUNT;
+          const isHidden = !showAllFaqs && isExtra;
+          const isRevealed = showAllFaqs && isExtra;
 
           return (
-            <div className="faq-accordion-item accordion-item" key={faqId}>
+            <div
+              className={`faq-accordion-item accordion-item ${isHidden ? "faq-hidden" : ""
+                } ${isRevealed ? "faq-reveal" : ""}`}
+              style={
+                isRevealed
+                  ? { animationDelay: `${(index - FAQ_INITIAL_COUNT) * 80}ms` }
+                  : undefined
+              }
+              key={faqId}
+            >
               <h3 className="accordion-header" id={headingId}>
                 <button
                   className={`faq-accordion-button accordion-button ${isFirst ? "" : "collapsed"
@@ -615,7 +633,90 @@ function FaqAccordion({ faqs, articleSlug }) {
         })}
       </div>
 
+      {hasMoreFaqs && (
+        <div className="text-center mt-3">
+          <button
+            type="button"
+            className="faq-load-more"
+            onClick={() => setShowAllFaqs((prev) => !prev)}
+            aria-expanded={showAllFaqs}
+          >
+            <span>{showAllFaqs ? "Show less" : "Load more"}</span>
+            <span
+              className={`faq-load-more-arrow ${showAllFaqs ? "is-open" : ""}`}
+              aria-hidden="true"
+            />
+          </button>
+        </div>
+      )}
+
       <style jsx>{`
+        .faq-hidden {
+          display: none;
+        }
+
+        .faq-reveal {
+          opacity: 0;
+          animation: faqReveal 0.45s ease forwards;
+        }
+
+        @keyframes faqReveal {
+          from {
+            opacity: 0;
+            transform: translateY(14px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .faq-load-more {
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+          padding: 10px 28px;
+          font-size: 15px;
+          font-weight: 600;
+          color: #c22221;
+          background: #ffffff;
+          border: 1px solid #c22221;
+          border-radius: 6px;
+          transition: background 0.25s ease, color 0.25s ease,
+            transform 0.2s ease, box-shadow 0.25s ease;
+        }
+
+        .faq-load-more:hover {
+          color: #ffffff;
+          background: #c22221;
+          transform: translateY(-2px);
+          box-shadow: 0 6px 16px rgba(194, 34, 33, 0.25);
+        }
+
+        .faq-load-more:active {
+          transform: translateY(0);
+        }
+
+        .faq-load-more-arrow {
+          width: 8px;
+          height: 8px;
+          border-right: 2px solid currentColor;
+          border-bottom: 2px solid currentColor;
+          transform: translateY(-2px) rotate(45deg);
+          transition: transform 0.3s ease;
+        }
+
+        .faq-load-more-arrow.is-open {
+          transform: translateY(2px) rotate(-135deg);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .faq-reveal {
+            opacity: 1;
+            animation: none;
+          }
+        }
+
         .faq-accordion-title {
           font-size: 26px;
           font-weight: 700;
