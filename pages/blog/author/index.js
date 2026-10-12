@@ -180,7 +180,7 @@ function AuthorsList({ authors }) {
         .bl-author-card-name {
           font-family: var(--bp-display) !important;
           font-size: 19px;
-          font-weight: 800;
+          font-weight: 700;
           color: var(--bp-ink);
         }
 
@@ -199,7 +199,7 @@ function AuthorsList({ authors }) {
           padding-top: 16px;
           border-top: 1px solid var(--bp-line);
           font-size: 14px;
-          font-weight: 700;
+          font-weight: 600;
           color: var(--bp-red);
         }
 

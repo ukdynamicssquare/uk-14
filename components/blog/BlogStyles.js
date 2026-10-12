@@ -103,7 +103,7 @@ export default function BlogStyles() {
       .bl-eyebrow {
         display: inline-block;
         font-size: 13px;
-        font-weight: 800;
+        font-weight: 700;
         letter-spacing: 0.12em;
         text-transform: uppercase;
         color: var(--bp-red);
@@ -113,7 +113,7 @@ export default function BlogStyles() {
         margin: 10px 0 16px;
         font-size: clamp(32px, 4.4vw, 44px) !important;
         line-height: 1.08 !important;
-        font-weight: 800;
+        font-weight: 700;
         letter-spacing: -0.03em;
         color: var(--bp-ink);
       }
@@ -137,7 +137,7 @@ export default function BlogStyles() {
         display: block;
         margin-bottom: 12px;
         font-size: 12px;
-        font-weight: 700;
+        font-weight: 600;
         letter-spacing: 0.12em;
         text-transform: uppercase;
         color: var(--bp-muted);
@@ -176,7 +176,7 @@ export default function BlogStyles() {
       .bl-topic-count {
         padding: 1px 8px;
         font-size: 12px;
-        font-weight: 700;
+        font-weight: 600;
         color: var(--bp-muted);
         background: var(--bp-bg);
         border-radius: 999px;
@@ -211,7 +211,7 @@ export default function BlogStyles() {
         padding: 6px 14px;
         margin-bottom: 14px;
         font-size: 12px;
-        font-weight: 700;
+        font-weight: 600;
         color: #fff;
         background: var(--bp-red);
         border-radius: 999px;
@@ -242,7 +242,7 @@ export default function BlogStyles() {
         background: var(--bp-red);
         color: #fff;
         font-size: 15px;
-        font-weight: 700;
+        font-weight: 600;
         transition: background 0.2s ease, transform 0.2s ease;
       }
 
@@ -262,7 +262,7 @@ export default function BlogStyles() {
       }
 
       .bl-meta-author {
-        font-weight: 700;
+        font-weight: 600;
         color: var(--bp-ink);
       }
 
@@ -296,7 +296,7 @@ export default function BlogStyles() {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        font-weight: 800;
+        font-weight: 700;
         color: #fff;
         background: linear-gradient(135deg, var(--bp-ink) 0%, var(--bp-red) 140%);
       }
@@ -330,7 +330,7 @@ export default function BlogStyles() {
       .bl-section-head h2 {
         margin: 6px 0 0;
         font-size: clamp(26px, 3vw, 36px) !important;
-        font-weight: 800;
+        font-weight: 700;
         letter-spacing: -0.03em;
         color: var(--bp-ink);
       }
@@ -382,7 +382,7 @@ export default function BlogStyles() {
         margin: 0 0 10px;
         font-size: 19px !important;
         line-height: 1.35;
-        font-weight: 800;
+        font-weight: 700;
         letter-spacing: -0.01em;
       }
 
@@ -449,7 +449,7 @@ export default function BlogStyles() {
         height: 44px;
         padding: 0 14px;
         font-size: 15px;
-        font-weight: 700;
+        font-weight: 600;
         color: var(--bp-ink);
         background: #fff;
         border: 1px solid var(--bp-line);

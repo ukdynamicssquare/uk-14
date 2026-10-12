@@ -356,7 +356,7 @@ function AuthorPage({ author, authorSchema, posts, otherAuthors, authorSlug }) {
           border: 0;
           background: none;
           font-size: 14px;
-          font-weight: 700;
+          font-weight: 600;
           color: var(--bp-red);
         }
 
@@ -381,7 +381,7 @@ function AuthorPage({ author, authorSchema, posts, otherAuthors, authorSlug }) {
 
         .bl-stats dt {
           font-size: 12px;
-          font-weight: 700;
+          font-weight: 600;
           letter-spacing: 0.1em;
           text-transform: uppercase;
           color: var(--bp-muted);
@@ -391,7 +391,7 @@ function AuthorPage({ author, authorSchema, posts, otherAuthors, authorSlug }) {
           margin: 4px 0 0;
           font-family: var(--bp-display);
           font-size: 22px;
-          font-weight: 800;
+          font-weight: 700;
           color: var(--bp-ink);
         }
 
@@ -413,13 +413,13 @@ function AuthorPage({ author, authorSchema, posts, otherAuthors, authorSlug }) {
         .bl-authors-side-head h2 {
           margin: 0;
           font-size: 18px !important;
-          font-weight: 800;
+          font-weight: 700;
           color: var(--bp-ink);
         }
 
         .bl-authors-side-head a {
           font-size: 14px;
-          font-weight: 700;
+          font-weight: 600;
           color: var(--bp-red);
         }
 

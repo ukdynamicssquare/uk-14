@@ -119,7 +119,7 @@ function TagsIndex({ tags }) {
         .bl-popular-title {
           margin: 0 0 20px;
           font-size: 22px !important;
-          font-weight: 800;
+          font-weight: 700;
           color: var(--bp-ink);
         }
 
@@ -151,7 +151,7 @@ function TagsIndex({ tags }) {
           padding-right: 24px;
           font-family: var(--bp-display) !important;
           font-size: 17px;
-          font-weight: 800;
+          font-weight: 700;
           color: var(--bp-ink);
         }
 

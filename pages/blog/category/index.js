@@ -180,7 +180,7 @@ function CategoriesIndex({ categories }) {
           bottom: 14px;
           padding: 5px 12px;
           font-size: 12px;
-          font-weight: 700;
+          font-weight: 600;
           color: var(--bp-ink);
           background: #fff;
           border-radius: 999px;
@@ -198,7 +198,7 @@ function CategoriesIndex({ categories }) {
         .bl-topic-card-name {
           font-family: var(--bp-display) !important;
           font-size: 19px;
-          font-weight: 800;
+          font-weight: 600;
           line-height: 1.3;
           color: var(--bp-ink);
         }
@@ -224,7 +224,7 @@ function CategoriesIndex({ categories }) {
           margin-top: auto;
           padding-top: 8px;
           font-size: 14px;
-          font-weight: 700;
+          font-weight: 600;
           color: var(--bp-red);
         }
 

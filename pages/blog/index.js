@@ -2,7 +2,6 @@ import Image from "next/image";
 import Head from "next/head";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
-import { paginate } from "../../helpers/paginate";
 import TimerModal from "../../components/TimerModal";
 import BlogStyles from "../../components/blog/BlogStyles";
 import {
@@ -27,22 +26,25 @@ export async function getStaticProps() {
   // throws during an ISR background revalidation, Next.js keeps serving the
   // last successfully generated page instead of replacing it with an empty
   // one. See helpers/blogApi.js for the error/not-found distinction.
-  const [blogsRaw, businesscentralRaw, allBlogsRaw, blogtrandingRaw] =
+  // Only the newest PAGE_SIZE + 1 posts are fetched: the first is the
+  // featured post, the rest are grid page 1. Later grid pages are loaded in
+  // the browser from /api/blog-list, so the page data stays small (it used
+  // to carry every post, ~170 kB, which Next.js warned about).
+  const [blogsRaw, businesscentralRaw, firstPageRaw, blogtrandingRaw] =
     await Promise.all([
       BlogService.getLatestBlog(),
       BlogService.getBlogsByCategory("business-central"),
-      BlogService.getAllBlogs(),
+      BlogService.getBlogs(PAGE_SIZE + 1, 1),
       BlogService.getTrendingBlogs(),
     ]);
 
   const blogs = extractList(blogsRaw);
   const businesscentral = extractList(businesscentralRaw);
-  const allBlogsArray = extractList(allBlogsRaw);
-  const blograndomblogs = allBlogsArray.length > 1 ? allBlogsArray.slice(1) : allBlogsArray;
+  const newest = extractList(firstPageRaw);
+  const firstPagePosts = newest.slice(1, 1 + PAGE_SIZE);
+  const totalBlogs = firstPageRaw?.pagination?.totalBlogs ?? newest.length;
   const blogtranding = extractList(blogtrandingRaw).slice(0, 1);
 
-  // Every post is shipped to the browser for the paginated grid,
-  // so posts are reduced to card fields with trimmed excerpts (slimPost).
   const slim = (items) => items.map(slimPost);
 
   return {
@@ -50,7 +52,9 @@ export async function getStaticProps() {
       blogs: slim(blogs),
       // Only the side list's posts are rendered, so only those are sent.
       businesscentral: slim(businesscentral.slice(0, SIDE_LIST_COUNT + 1)),
-      blograndomblogs: slim(blograndomblogs),
+      firstPagePosts: slim(firstPagePosts),
+      // Grid total excludes the featured post.
+      totalPosts: Math.max(totalBlogs - 1, 0),
       blogtranding: slim(blogtranding),
     },
     revalidate: 60,
@@ -58,8 +62,11 @@ export async function getStaticProps() {
 }
 
 
-function Blogshome({ blogs, businesscentral, blograndomblogs, blogtranding }) {
+function Blogshome({ blogs, businesscentral, firstPagePosts, totalPosts, blogtranding }) {
   const [currentPage, setCurrentPage] = useState(1);
+  // Grid pages loaded so far, by page number. Page 1 comes from the build.
+  const [pages, setPages] = useState({ 1: firstPagePosts });
+  const [loadError, setLoadError] = useState(false);
 
   const blogListRef = useRef(null);
   const didMount = useRef(false);
@@ -70,7 +77,30 @@ function Blogshome({ blogs, businesscentral, blograndomblogs, blogtranding }) {
     .filter((b) => b.title_slug !== featured?.title_slug)
     .slice(0, SIDE_LIST_COUNT);
 
-  const paginatedPosts = paginate(blograndomblogs, currentPage, PAGE_SIZE);
+  const pagePosts = pages[currentPage];
+
+  useEffect(() => {
+    if (pages[currentPage]) return;
+
+    const controller = new AbortController();
+    setLoadError(false);
+
+    fetch(`/api/blog-list/?page=${currentPage}&size=${PAGE_SIZE}`, {
+      signal: controller.signal,
+    })
+      .then((res) => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return res.json();
+      })
+      .then((data) => {
+        setPages((loaded) => ({ ...loaded, [currentPage]: data.posts || [] }));
+      })
+      .catch((error) => {
+        if (error.name !== "AbortError") setLoadError(true);
+      });
+
+    return () => controller.abort();
+  }, [currentPage, pages]);
 
   const scrollToList = () => {
     if (!blogListRef.current) return;
@@ -352,13 +382,34 @@ function Blogshome({ blogs, businesscentral, blograndomblogs, blogtranding }) {
               <h2 id="all-articles-title">All articles</h2>
             </div>
             <span className="bl-count">
-              {blograndomblogs.length} article{blograndomblogs.length === 1 ? "" : "s"}
+              {totalPosts} article{totalPosts === 1 ? "" : "s"}
             </span>
           </div>
 
-          {paginatedPosts.length > 0 ? (
+          {loadError && !pagePosts ? (
+            <div className="bl-empty">
+              <i className="bi bi-wifi-off" />
+              <p>Couldn&apos;t load these articles.</p>
+              <button
+                type="button"
+                className="bl-btn"
+                onClick={() => setPages((loaded) => ({ ...loaded }))}
+              >
+                Try again
+              </button>
+            </div>
+          ) : !pagePosts ? (
+            // Placeholder cards while a page loads, so the layout doesn't jump.
+            <div className="row g-4" aria-busy="true">
+              {Array.from({ length: PAGE_SIZE }, (_, i) => (
+                <div className="col-md-6 col-lg-4" key={i}>
+                  <div className="bl-card bl-card--loading" />
+                </div>
+              ))}
+            </div>
+          ) : pagePosts.length > 0 ? (
             <div className="row g-4">
-              {paginatedPosts.map((post) => (
+              {pagePosts.map((post) => (
                 <div className="col-md-6 col-lg-4" key={post.title_slug}>
                   <PostCard post={post} />
                 </div>
@@ -372,7 +423,7 @@ function Blogshome({ blogs, businesscentral, blograndomblogs, blogtranding }) {
           )}
 
           <PageNav
-            total={blograndomblogs.length}
+            total={totalPosts}
             pageSize={PAGE_SIZE}
             current={currentPage}
             onChange={setCurrentPage}
@@ -399,6 +450,22 @@ function Blogshome({ blogs, businesscentral, blograndomblogs, blogtranding }) {
 
         .bl-home-head .bl-title {
           margin-bottom: 0;
+        }
+
+        .bl-card--loading {
+          min-height: 420px;
+          background: linear-gradient(90deg, var(--bp-bg) 25%, #eceef2 50%, var(--bp-bg) 75%);
+          background-size: 200% 100%;
+          animation: bl-shimmer 1.2s ease-in-out infinite;
+        }
+
+        @keyframes bl-shimmer {
+          from {
+            background-position: 100% 0;
+          }
+          to {
+            background-position: -100% 0;
+          }
         }
 
         .bl-featured {
@@ -439,7 +506,7 @@ function Blogshome({ blogs, businesscentral, blograndomblogs, blogtranding }) {
           top: 20px;
           padding: 6px 14px;
           font-size: 12px;
-          font-weight: 800;
+          font-weight: 600;
           letter-spacing: 0.08em;
           text-transform: uppercase;
           color: var(--bp-ink);
@@ -458,7 +525,7 @@ function Blogshome({ blogs, businesscentral, blograndomblogs, blogtranding }) {
           margin: 0 0 12px;
           font-size: clamp(24px, 2.6vw, 32px) !important;
           line-height: 1.2;
-          font-weight: 800;
+          font-weight: 700;
           letter-spacing: -0.02em;
         }
 
@@ -511,13 +578,13 @@ function Blogshome({ blogs, businesscentral, blograndomblogs, blogtranding }) {
         .bl-side-head h2 {
           margin: 0;
           font-size: 20px !important;
-          font-weight: 800;
+          font-weight: 700;
           color: var(--bp-ink);
         }
 
         .bl-side-head a {
           font-size: 14px;
-          font-weight: 700;
+          font-weight: 600;
           color: var(--bp-red);
         }
 
@@ -570,7 +637,7 @@ function Blogshome({ blogs, businesscentral, blograndomblogs, blogtranding }) {
           -webkit-box-orient: vertical;
           overflow: hidden;
           font-size: 15px;
-          font-weight: 700;
+          font-weight: 600;
           line-height: 1.35;
           color: var(--bp-ink);
           transition: color 0.2s ease;
@@ -634,7 +701,7 @@ function Blogshome({ blogs, businesscentral, blograndomblogs, blogtranding }) {
           padding: 6px 14px;
           margin-bottom: 18px;
           font-size: 12px;
-          font-weight: 800;
+          font-weight: 600;
           letter-spacing: 0.08em;
           text-transform: uppercase;
           color: #ff8a80;
@@ -646,7 +713,7 @@ function Blogshome({ blogs, businesscentral, blograndomblogs, blogtranding }) {
           margin: 0 0 14px;
           font-size: clamp(26px, 3vw, 36px) !important;
           line-height: 1.2;
-          font-weight: 800;
+          font-weight: 700;
           letter-spacing: -0.02em;
         }
 
@@ -704,7 +771,7 @@ function Blogshome({ blogs, businesscentral, blograndomblogs, blogtranding }) {
         .bl-all-head h2 {
           margin: 6px 0 0;
           font-size: clamp(28px, 3.4vw, 40px) !important;
-          font-weight: 800;
+          font-weight: 700;
           letter-spacing: -0.03em;
           color: var(--bp-ink);
         }

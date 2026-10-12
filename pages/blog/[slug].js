@@ -461,7 +461,7 @@ function TocList({ tocList, handleTocClick }) {
 
         .toc-title {
           font-size: 13px !important;
-          font-weight: 800;
+          font-weight: 600;
           letter-spacing: 0.08em;
           text-transform: uppercase;
           color: #14213d !important;
@@ -1726,7 +1726,7 @@ function Post({
           padding: 7px 16px;
           margin-bottom: 22px;
           font-size: 13px;
-          font-weight: 700;
+          font-weight: 600;
           color: #fff;
           background: var(--bp-red);
           border-radius: 999px;
@@ -1749,7 +1749,7 @@ function Post({
         .bp-title {
           font-size: clamp(32px, 4.4vw, 44px) !important;
           line-height: 1.1 !important;
-          font-weight: 800;
+          font-weight: 700;
           letter-spacing: -0.03em;
           color: var(--bp-ink);
           margin: 0 0 32px;
@@ -1791,7 +1791,7 @@ function Post({
 
         .bp-byline-label {
           font-size: 11px;
-          font-weight: 700;
+          font-weight: 600;
           letter-spacing: 0.1em;
           text-transform: uppercase;
           color: var(--bp-muted);
@@ -1821,7 +1821,7 @@ function Post({
 
         .bp-byline-name {
           font-size: 16px;
-          font-weight: 700;
+          font-weight: 600;
           color: var(--bp-ink);
         }
 
@@ -1894,7 +1894,7 @@ function Post({
 
         .bp-rail-label {
           font-size: 11px;
-          font-weight: 700;
+          font-weight: 600;
           letter-spacing: 0.14em;
           text-transform: uppercase;
           color: var(--bp-muted);
@@ -1957,7 +1957,7 @@ function Post({
         .bp-content .blogs-content-inner > div > h2 {
           position: relative;
           font-size: 30px;
-          font-weight: 800;
+          font-weight: 600;
           letter-spacing: -0.02em;
           line-height: 1.2;
           margin: 56px 0 20px;
@@ -1977,7 +1977,7 @@ function Post({
 
         .bp-content h3 {
           font-size: 23px;
-          font-weight: 700;
+          font-weight: 600;
           margin: 36px 0 14px;
         }
 
@@ -2023,7 +2023,7 @@ function Post({
         .bp-content .blog-cta .blog-cta__title {
           margin: 0 0 10px;
           font-size: 22px;
-          font-weight: 800;
+          font-weight: 600;
           color: var(--bp-ink);
         }
 
@@ -2043,7 +2043,7 @@ function Post({
           align-items: center;
           padding: 12px 24px;
           font-size: 15px;
-          font-weight: 700;
+          font-weight: 600;
           line-height: 1.3;
           color: #fff !important;
           background: var(--bp-red);
@@ -2115,7 +2115,7 @@ function Post({
 
         .bp-page .toc-title {
           font-size: 14px !important;
-          font-weight: 800;
+          font-weight: 600;
           letter-spacing: 0.12em;
           text-transform: uppercase;
           color: var(--bp-red) !important;
@@ -2193,7 +2193,7 @@ function Post({
         .bp-author-eyebrow {
           display: block;
           font-size: 12px;
-          font-weight: 700;
+          font-weight: 600;
           letter-spacing: 0.12em;
           text-transform: uppercase;
           color: #ff8a80;
@@ -2202,7 +2202,7 @@ function Post({
         .bp-author-name,
         .bp-author-name span {
           font-size: 22px;
-          font-weight: 800;
+          font-weight: 600;
           color: #fff;
         }
 
@@ -2248,7 +2248,7 @@ function Post({
           border: 0;
           background: transparent;
           font-size: 14px;
-          font-weight: 700;
+          font-weight: 600;
           color: #fff;
           cursor: pointer;
         }
@@ -2299,7 +2299,7 @@ function Post({
 
         .bp-related-eyebrow {
           font-size: 13px;
-          font-weight: 800;
+          font-weight: 600;
           letter-spacing: 0.12em;
           text-transform: uppercase;
           color: var(--bp-red);
@@ -2307,7 +2307,7 @@ function Post({
 
         .bp-related-head h2 {
           font-size: clamp(28px, 3.4vw, 40px) !important;
-          font-weight: 800;
+          font-weight: 700;
           letter-spacing: -0.03em;
           color: var(--bp-ink);
           margin: 6px 0 0;
@@ -2319,7 +2319,7 @@ function Post({
           gap: 8px;
           padding: 12px 24px;
           font-size: 15px;
-          font-weight: 700;
+          font-weight: 600;
           color: #fff;
           background: var(--bp-ink);
           border-radius: 999px;
@@ -2381,7 +2381,7 @@ function Post({
           top: 16px;
           padding: 5px 12px;
           font-size: 12px;
-          font-weight: 700;
+          font-weight: 600;
           color: #fff;
           background: var(--bp-red);
           border-radius: 999px;
@@ -2405,7 +2405,7 @@ function Post({
         .bp-card-title {
           font-size: 20px !important;
           line-height: 1.35;
-          font-weight: 800;
+          font-weight: 600;
           letter-spacing: -0.01em;
           color: var(--bp-ink);
           margin: 0 0 10px;
@@ -2433,7 +2433,7 @@ function Post({
           gap: 8px;
           margin-top: auto;
           font-size: 14px;
-          font-weight: 700;
+          font-weight: 600;
           color: var(--bp-red);
         }
 
