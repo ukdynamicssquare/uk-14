@@ -96,7 +96,7 @@ const DeskstopMenu = () => {
                       data-bs-target={`#${tab.target}`}
                       {...(!tab.active ? { "aria-selected": "false" } : {})}
                     >
-                      <a href={tab.href}>
+                      <a href={tab.href || "#"}>
                         <span>{tab.label}</span>
                       </a>
                     </div>

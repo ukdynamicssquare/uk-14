@@ -42,7 +42,7 @@ const useCardScrollEffect = (cardSelector = '.mycard', innerSelector = '.mycard_
       })
     }
 
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll, { passive: true })
     handleScroll()
 
     return () => window.removeEventListener('scroll', handleScroll)

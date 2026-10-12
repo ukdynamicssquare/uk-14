@@ -15692,7 +15692,7 @@ margin: -30px 0px -80px;
 }
 .solution-new-banner-one-content .large-heading {
   background-image: linear-gradient(to right, #984b6e, #60518c);
-  font-family: Lato;
+  font-family: Lato, "Lato Fallback", sans-serif;
   font-size: 40px !important;
   font-weight: bold;
   font-stretch: normal;
@@ -16949,10 +16949,15 @@ margin: 15px 0px 0px;
 .icons-box-9901 img {
   margin-bottom: 10px;
 }
-.icons-box-9901 h5 {
+.icons-box-9901 h5,
+.icons-box-9901 .stat-value {
   color: #3f3f3f;
   font-size: 40px;
   font-weight: 700;
+}
+.icons-box-9901 .stat-value {
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
 }
 .icons-box-9901 span {
   color: #9960a8;
@@ -20729,7 +20734,8 @@ margin: -80px 0px -60px;
     height: 500px;
     height: 100vh;
   }
-  .icons-box-9901 h5 {
+  .icons-box-9901 h5,
+  .icons-box-9901 .stat-value {
     font-size: 36px;
   }
   .solution-new-banner-sub-head h2 br {
@@ -20999,7 +21005,8 @@ margin-bottom: 10px;
   .icons-box-9901 {
     margin-bottom: 30px;
   }
-  .icons-box-9901 h5 {
+  .icons-box-9901 h5,
+  .icons-box-9901 .stat-value {
     font-size: 32px;
   }
   .t-81 {

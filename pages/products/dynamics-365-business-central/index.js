@@ -2,13 +2,16 @@ import { useRef, useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 // import useGsapScrollCards from '../../../hooks/useGsapScrollCards';
 import faqData from '../../../public/data/business_centeral_faq.json';
 import useCardScrollEffect from "../../../components/useCardScrollEffect";
-import BcPopPdf from '../../../components/BCPdfPopup';
 import NavBar from '../../../components/NavBar';
-import BlogFinanaceCard from '../../../components/BlogFinanaceCard';
 import CaseStudies from '../../../components/CaseStudies';
+
+// Modal form (EmailJS + phone input) and client-fetched blog cards are not needed for first paint.
+const BcPopPdf = dynamic(() => import('../../../components/BCPdfPopup'), { ssr: false });
+const BlogFinanaceCard = dynamic(() => import('../../../components/BlogFinanaceCard'), { ssr: false });
 
 
 
@@ -35,7 +38,10 @@ const BusinessCentral = () => {
   const handleOpenModal = (type) => {
     setPdfType(type);
     // Open modal manually (needed since you use Bootstrap)
-    const modal = new bootstrap.Modal(document.getElementById('pdfModel'));
+    // BcPopPdf is lazy-loaded, so the modal may not be in the DOM on a very early click.
+    const el = document.getElementById('pdfModel');
+    if (!el || typeof bootstrap === 'undefined') return;
+    const modal = new bootstrap.Modal(el);
     modal.show();
   };
 
@@ -63,6 +69,8 @@ const BusinessCentral = () => {
         <meta property="twitter:title" content="Microsoft Dynamics 365 Business Central - Dynamics Square UK" />
         <meta property="twitter:description" content="Microsoft Dynamics 365 Business Central is an all-in-one cloud ERP for SMBs to manage finance, sales, inventory and operations efficiently with real-time insights and scalable growth." />
         <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/business-center-new-banner.png" />
+        {/* Hero heading uses Lato 700; preload it so the heading doesn't re-wrap (CLS) when it arrives late. */}
+        <link rel="preload" href="/fonts/lato-latin-700-v1.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
 
         <script
           type="application/ld+json"
@@ -168,7 +176,7 @@ const BusinessCentral = () => {
           <div className='row justify-content-center'>
             <div className='col-lg-10'>
               <div className="solution-new-banner-one-imgs">
-                <Image src="/img/business-new-banner.png" alt="BC Banner" width={890} height={568} className="flot-1" priority />
+                <Image src="/img/business-new-banner.png" alt="Microsoft Dynamics 365 Business Central dashboard" width={890} height={568} className="flot-1" sizes="(max-width: 991px) 100vw, 890px" priority />
               </div>
             </div>
           </div>
@@ -886,21 +894,21 @@ const BusinessCentral = () => {
                       <div className='col-lg-4 d-flex'>
                         <div className='icons-box-9901'>
                           <Image src="/img/bc-8-01.png" width={65} height={65} alt="bc-8-01" />
-                          <h5>265%</h5>
+                          <p className='stat-value'>265%</p>
                           <span>Return over 3 years </span>
                         </div>
                       </div>
                       <div className='col-lg-4 d-flex'>
                         <div className='icons-box-9901'>
                           <Image src="/img/bc-8-02.png" width={65} height={65} alt="bc-8-02" />
-                          <h5>{"<"} 6 months</h5>
+                          <p className='stat-value'>{"<"} 6 months</p>
                           <span>Of payback on investment</span>
                         </div>
                       </div>
                       <div className='col-lg-4 d-flex'>
                         <div className='icons-box-9901'>
                           <Image src="/img/bc-8-03.png" width={65} height={65} alt="bc-8-03" />
-                          <h5>Up to 12.5%</h5>
+                          <p className='stat-value'>Up to 12.5%</p>
                           <span>Productivity boost for finance and ops teams</span>
                         </div>
                       </div>
@@ -930,8 +938,8 @@ const BusinessCentral = () => {
                     <div className='row'>
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card-0-001'>
-                          <a>
-                            <Image src="/img/bb-cc-busnew-03.jpg" width={733} height={384} alt="bc-8-17" />
+                          <div>
+                            <Image src="/img/bb-cc-busnew-03.jpg" width={733} height={384} alt="Oil and gas company finance team using Business Central" />
                             <h3>A reputed brand from the oil & gas industry achieved:</h3>
                             <ul>
                               <li>Up to 5x faster financial reporting</li>
@@ -940,13 +948,13 @@ const BusinessCentral = () => {
                             {/* <div className='ct--a'>
                               <span>Read Case Study</span>
                             </div> */}
-                          </a>
+                          </div>
                         </div>
                       </div>
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card-0-001'>
-                          <a>
-                            <Image src="/img/bb-cc-busnew-04.jpg" width={733} height={384} alt="bc-8-17" />
+                          <div>
+                            <Image src="/img/bb-cc-busnew-04.jpg" width={733} height={384} alt="Laboratory equipment manufacturer using Business Central" />
                             <h3>A leading laboratory equipment manufacturer attained:</h3>
                             <ul>
                               <li>20% reduction in order processing times</li>
@@ -955,13 +963,13 @@ const BusinessCentral = () => {
                             {/* <div className='ct--a'>
                               <span>Read Case Study</span>
                             </div> */}
-                          </a>
+                          </div>
                         </div>
                       </div>
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card-0-001'>
-                          <a>
-                            <Image src="/img/bb-cc-busnew-05.jpg" width={733} height={384} alt="bc-8-17" />
+                          <div>
+                            <Image src="/img/bb-cc-busnew-05.jpg" width={733} height={384} alt="Freight company operations managed in Business Central" />
                             <h3>A well-known freight company achieved:</h3>
                             <ul>
                               <li>33% improvement in close time</li>
@@ -970,7 +978,7 @@ const BusinessCentral = () => {
                             {/* <div className='ct--a'>
                               <span>Read Case Study</span>
                             </div> */}
-                          </a>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -1469,12 +1477,12 @@ const BusinessCentral = () => {
           <div className='row'>
             <div className='col-lg-6'>
               <div className='hov-card-im01'>
-                <a href="#exampleModal" data-bs-toggle="modal"><img src="/img/bcplusales.png" alt="" /></a>
+                <a href="#exampleModal" data-bs-toggle="modal"><Image src="/img/bcplusales.png" width={631} height={320} alt="Business Central plus Dynamics 365 Sales attach licence" /></a>
               </div>
             </div>
             <div className='col-lg-6'>
               <div className='hov-card-im01'>
-                <a href="#exampleModal" data-bs-toggle="modal"><img src="/img/bcpluscutmer.png" alt="" /></a>
+                <a href="#exampleModal" data-bs-toggle="modal"><Image src="/img/bcpluscutmer.png" width={631} height={320} alt="Business Central plus Dynamics 365 Customer Service attach licence" /></a>
               </div>
             </div>
           </div>
@@ -1591,7 +1599,7 @@ const BusinessCentral = () => {
                     <div className='row'>
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
-                          <a onClick={() => handleOpenModal('pdf2')}>
+                          <a href="#pdfModel" onClick={(e) => { e.preventDefault(); handleOpenModal('pdf2'); }}>
                             <Image src="/img/bc-8-18.png" width={368} height={192} alt="bc-8-17" />
                             <h3>Reach new markets with Business Central</h3>
                             <p>Research from Nucleus shows better productivity, lower costs, and stronger control.</p>
@@ -1603,7 +1611,7 @@ const BusinessCentral = () => {
                       </div>
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
-                          <a onClick={() => handleOpenModal('pdf1')}>
+                          <a href="#pdfModel" onClick={(e) => { e.preventDefault(); handleOpenModal('pdf1'); }}>
                             <Image src="/img/bc-8-17.png" width={368} height={192} alt="bc-8-18" />
                             <h3>See how firms gained from Business Central</h3>
                             <p>This 2024 Forrester study shows the returns real customers saw after getting started.</p>
@@ -1615,7 +1623,7 @@ const BusinessCentral = () => {
                       </div>
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
-                          <a onClick={() => handleOpenModal('pdf3')}>
+                          <a href="#pdfModel" onClick={(e) => { e.preventDefault(); handleOpenModal('pdf3'); }}>
                             <Image src="/img/bc-8-19.png" width={368} height={192} alt="bc-8-19" />
                             <h3>Why IDC picked Microsoft as a Leader</h3>
                             <p>Read how Microsoft stands out in small business ERP software. </p>
