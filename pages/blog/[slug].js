@@ -1189,7 +1189,7 @@ function Post({
                   </nav>
 
                   <div className="row align-items-center g-5">
-                    <div className={heroImage ? "col-lg-6" : "col-lg-10"}>
+                    <div className={heroImage ? "col-lg-7" : "col-lg-10"}>
                       {item.category_slug && (
                         <Link
                           href={`/blog/category/${item.category_slug}`}
@@ -1202,10 +1202,6 @@ function Post({
                       <h1 className="bp-title" itemProp="headline">
                         {item.title}
                       </h1>
-
-                      {item.short_description && (
-                        <p className="bp-lead">{item.short_description}</p>
-                      )}
 
                       <div className="bp-byline">
                         <Image
@@ -1222,6 +1218,7 @@ function Post({
                         />
 
                         <div className="bp-byline-text">
+                          <span className="bp-byline-label">Written by</span>
                           <Link
                             href={`/blog/author/${encodeURIComponent(
                               item.author
@@ -1234,7 +1231,11 @@ function Post({
                           >
                             {item.author}
                           </Link>
+                        </div>
 
+                        <span className="bp-byline-divider" aria-hidden="true" />
+
+                        <div className="bp-byline-meta">
                           <span className="bp-byline-sub">
                             {item.publish_date && (
                               <span>
@@ -1262,7 +1263,7 @@ function Post({
                     </div>
 
                     {heroImage && (
-                      <div className="col-lg-6">
+                      <div className="col-lg-5">
                         <div className="bp-hero-media">
                           <Image
                             src={heroImage}
@@ -1271,7 +1272,7 @@ function Post({
                             height={750}
                             priority
                             quality={75}
-                            sizes="(max-width: 991px) 100vw, 640px"
+                            sizes="(max-width: 991px) 100vw, 560px"
                             unoptimized={!isOptimizableImage(heroImage)}
                             className="bp-hero-img"
                           />
@@ -1794,20 +1795,35 @@ function Post({
           font-weight: 800;
           letter-spacing: -0.03em;
           color: var(--bp-ink);
-          margin: 0 0 20px;
-        }
-
-        .bp-lead {
-          font-size: 18px;
-          line-height: 1.65;
-          color: var(--bp-text);
           margin: 0 0 32px;
+          max-width: 760px;
         }
 
+        /* Author + meta card under the title */
         .bp-byline {
-          display: flex;
+          display: inline-flex;
+          flex-wrap: wrap;
           align-items: center;
-          gap: 14px;
+          gap: 14px 20px;
+          padding: 12px 22px 12px 12px;
+          background: #fff;
+          border: 1px solid var(--bp-line);
+          border-radius: 999px;
+          box-shadow: 0 6px 20px rgba(11, 19, 36, 0.06);
+        }
+
+        .bp-byline-label {
+          font-size: 11px;
+          font-weight: 700;
+          letter-spacing: 0.1em;
+          text-transform: uppercase;
+          color: var(--bp-muted);
+        }
+
+        .bp-byline-divider {
+          width: 1px;
+          height: 32px;
+          background: var(--bp-line);
         }
 
         .bp-byline-avatar {
@@ -1839,9 +1855,18 @@ function Post({
         .bp-byline-sub {
           display: flex;
           flex-wrap: wrap;
-          gap: 4px 16px;
+          gap: 8px;
           font-size: 13px;
-          color: var(--bp-muted);
+          font-weight: 500;
+          color: var(--bp-text);
+        }
+
+        .bp-byline-sub > span {
+          display: inline-flex;
+          align-items: center;
+          padding: 6px 12px;
+          background: var(--bp-bg);
+          border-radius: 999px;
         }
 
         .bp-byline-sub i {
@@ -2466,8 +2491,19 @@ function Post({
             max-width: 180px;
           }
 
-          .bp-lead {
-            font-size: 16px;
+          /* Card stacks: author on top, meta chips below, no divider */
+          .bp-byline {
+            display: flex;
+            border-radius: 20px;
+            padding: 14px 16px;
+          }
+
+          .bp-byline-divider {
+            display: none;
+          }
+
+          .bp-byline-meta {
+            flex-basis: 100%;
           }
 
           .bp-content p,
