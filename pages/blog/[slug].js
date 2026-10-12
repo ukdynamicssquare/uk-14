@@ -1747,7 +1747,7 @@ function Post({
         }
 
         .bp-title {
-          font-size: clamp(32px, 4.4vw, 42px) !important;
+          font-size: clamp(32px, 4.4vw, 44px) !important;
           line-height: 1.1 !important;
           font-weight: 800;
           letter-spacing: -0.03em;

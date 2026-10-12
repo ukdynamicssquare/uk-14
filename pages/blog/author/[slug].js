@@ -1,16 +1,26 @@
 import Head from "next/head";
 import Link from "next/link";
-import { useMemo, useState } from "react";
-import Image from "next/image";
-import Pagination from "../../../components/Pagination";
+import { useState } from "react";
 import TimerModal from "../../../components/TimerModal";
-import { paginate } from "../../../helpers/paginate";
+import BlogStyles from "../../../components/blog/BlogStyles";
+import {
+  Avatar,
+  BlogFontPreload,
+  PagedPostGrid,
+  formatDate,
+} from "../../../components/blog/BlogUi";
 
-const PAGE_SIZE = 12;
+import { BlogService } from "../../../helpers/blogApi";
+import {
+  authorSlugOf,
+  extractArray,
+  slimAuthor,
+  slimPost,
+} from "../../../helpers/blogData";
+import { getBlogImageUrl } from "../../../helpers/blogImage";
 
-const slugify = (name = "") => name.toLowerCase().trim().replace(/\s+/g, "-");
-
-const getAuthorSlug = (author) => author?.author_slug || slugify(author?.name);
+const SITE_URL = "https://www.dynamicssquare.co.uk";
+const BIO_PREVIEW = 420;
 
 const isValidLink = (value) => {
   if (!value || typeof value !== "string") return false;
@@ -18,31 +28,14 @@ const isValidLink = (value) => {
   return normalized !== "" && normalized !== "na" && normalized !== "n/a" && normalized !== "-";
 };
 
-const getLinkedInUrl = (author) => author?.socialLinks?.linkedin || author?.linkedin_url || "";
-
-
-function formatDate(date) {
-  if (!date) return "";
-  const parsedDate = new Date(String(date).replace(/\.\d+Z$/, "Z"));
-  if (isNaN(parsedDate)) return "";
-  return parsedDate.toLocaleDateString("en-US", {
-    month: "short",
-    day: "numeric",
-    year: "numeric",
-    timeZone: "UTC",
-  });
-}
-
-import { BlogService } from "../../../helpers/blogApi";
-import { BACKEND_URL } from "../../../helpers/blogClient";
+const withProtocol = (url) => (url.startsWith("http") ? url : `https://${url}`);
 
 export async function getStaticPaths() {
   try {
-    const authorsRaw = await BlogService.getAuthors();
-    const authors = Array.isArray(authorsRaw) ? authorsRaw : (authorsRaw?.data || []);
+    const authors = extractArray(await BlogService.getAuthors());
 
     const paths = authors
-      .map((a) => a.authorSlug || (a.name ? a.name.toLowerCase().trim().replace(/\s+/g, "-") : null))
+      .map(authorSlugOf)
       .filter(Boolean)
       .map((slug) => ({ params: { slug } }));
 
@@ -56,963 +49,448 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const slug = params?.slug || "";
 
-  const [authorslistRaw, blgsbyauthorslistRawRaw] = await Promise.all([
+  const [authorsRaw, byAuthorRaw] = await Promise.all([
     BlogService.getAuthors(),
     BlogService.getBlogsByAuthor(slug),
   ]);
 
-  const authorslist = Array.isArray(authorslistRaw) ? authorslistRaw : (authorslistRaw?.data || []);
-  const extractStr = (val) => {
-    if (!val) return "";
-    if (typeof val === 'string') return val;
-    if (Array.isArray(val)) return val.length > 0 ? extractStr(val[0]) : "";
-    if (typeof val === 'object') return val.name || val.title || "";
-    return String(val);
-  };
+  // The by-author endpoint returns either a plain list or { author, blogs }.
+  const posts = extractArray(byAuthorRaw).map(slimPost);
+  const fetchedAuthor = Array.isArray(byAuthorRaw) ? null : byAuthorRaw?.author || null;
 
-  let blgsbyauthorslistRaw = [];
-  let fetchedAuthor = null;
+  const authors = extractArray(authorsRaw).map(slimAuthor).filter((a) => a.name);
+  const rawAuthor =
+    fetchedAuthor ||
+    extractArray(authorsRaw).find((a) => authorSlugOf(a) === slug) ||
+    null;
 
-  if (Array.isArray(blgsbyauthorslistRawRaw)) {
-    blgsbyauthorslistRaw = blgsbyauthorslistRawRaw;
-  } else if (blgsbyauthorslistRawRaw?.blogs && Array.isArray(blgsbyauthorslistRawRaw.blogs)) {
-    blgsbyauthorslistRaw = blgsbyauthorslistRawRaw.blogs;
-    fetchedAuthor = blgsbyauthorslistRawRaw.author || null;
-  } else if (blgsbyauthorslistRawRaw?.posts && Array.isArray(blgsbyauthorslistRawRaw.posts)) {
-    blgsbyauthorslistRaw = blgsbyauthorslistRawRaw.posts;
-    fetchedAuthor = blgsbyauthorslistRawRaw.author || null;
-  } else if (blgsbyauthorslistRawRaw?.data && Array.isArray(blgsbyauthorslistRawRaw.data)) {
-    blgsbyauthorslistRaw = blgsbyauthorslistRawRaw.data;
+  if (posts.length === 0 && !rawAuthor) {
+    return { notFound: true, revalidate: 60 };
   }
 
-  const blgsbyauthorslist = blgsbyauthorslistRaw.map(b => ({
-    ...b,
-    title: extractStr(b.title),
-    title_slug: extractStr(b.slug || b.title_slug),
-    author: extractStr(b.author) || "Author",
-    publish_date: b.publishedAt || b.publish_date || null,
-    read_time: extractStr(b.readingTimeMinutes || b.read_time),
-    updated_at: b.updatedAt || b.updated_at || null,
-    short_description: extractStr(b.excerpt || b.short_description),
-    category: extractStr(b.category) || "Category",
-    category_slug: extractStr(b.category?.slug || b.category_slug),
-    image: extractStr(b.featuredImage?.url || b.image),
-  }));
-
-  if (blgsbyauthorslist.length === 0 && !fetchedAuthor) {
-    return { notFound: true };
-  }
+  const author = rawAuthor
+    ? slimAuthor(rawAuthor)
+    : { name: posts[0]?.author || "Author", slug, avatar: "", designation: "", about: "", linkedin: "" };
 
   return {
     props: {
-      authorslist,
-      blgsbyauthorslist,
-      fetchedAuthor,
+      author,
+      // The author's own schema from the CMS, if they have one.
+      authorSchema: rawAuthor?.schemaMarkup || null,
+      posts,
+      otherAuthors: authors
+        .filter((a) => a.slug !== slug)
+        .map(({ name, slug: s, avatar }) => ({ name, slug: s, avatar })),
       authorSlug: slug,
     },
     revalidate: 60,
   };
 }
 
-function Authors({ authorslist, blgsbyauthorslist, fetchedAuthor, authorSlug }) {
-  const [currentPage, setCurrentPage] = useState(1);
-
-  const currentAuthor = useMemo(() => {
-
-    if (fetchedAuthor) return fetchedAuthor;
-
-    return authorslist.find((item) => getAuthorSlug(item) === authorSlug);
-  }, [authorslist, authorSlug, fetchedAuthor]);
-
-  const paginatedPosts = useMemo(
-    () => paginate(blgsbyauthorslist, currentPage, PAGE_SIZE),
-    [blgsbyauthorslist, currentPage]
+function schemaScripts(authorSchema) {
+  if (!authorSchema) return [];
+  const list = Array.isArray(authorSchema) ? authorSchema : [authorSchema];
+  return list.map((item) =>
+    typeof item === "string" ? item : item?.json || JSON.stringify(item)
   );
+}
 
+function AuthorPage({ author, authorSchema, posts, otherAuthors, authorSlug }) {
+  const [bioOpen, setBioOpen] = useState(false);
 
-  const authorName = currentAuthor?.name || blgsbyauthorslist[0]?.author || "Author";
-  const rawAuthorImage = currentAuthor?.avatarUrl || currentAuthor?.profile_photo_path || "/images/default-author.webp";
-  const authorImage = rawAuthorImage.startsWith("http") ? rawAuthorImage : `${BACKEND_URL}${rawAuthorImage}`;
- 
-  const authorDescription = currentAuthor?.about || currentAuthor?.description || "A writer and contributor.";
-  
-  const articleCount = String(blgsbyauthorslist.length).padStart(3, '0');
-  const startIndex = (currentPage - 1) * PAGE_SIZE;
-  const schema_script = currentAuthor?.schemaMarkup || blgsbyauthorslist[0]?.schemaMarkup || null;
+  const pageUrl = `${SITE_URL}/blog/author/${authorSlug}/`;
+  const authorName = author.name || "Author";
+  const role = author.designation || "Content Writer & Industry Expert";
+  const bio = author.about || "A writer and contributor.";
+  const bioIsLong = bio.length > BIO_PREVIEW;
+  const shownBio =
+    bioIsLong && !bioOpen ? `${bio.slice(0, BIO_PREVIEW).replace(/\s+\S*$/, "")}…` : bio;
+  const imageUrl = getBlogImageUrl(author.avatar);
+  const topicCount = new Set(posts.map((p) => p.category_slug).filter(Boolean)).size;
+  const latest = posts[0]?.publish_date;
 
-  const onPageChange = (page) => {
-    setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  // Use the CMS schema when the author has one; otherwise describe the page
+  // as what it is: a profile page about a person.
+  const cmsSchemas = schemaScripts(authorSchema);
+  const schemas = cmsSchemas.length
+    ? cmsSchemas
+    : [
+        JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ProfilePage",
+          url: pageUrl,
+          mainEntity: {
+            "@type": "Person",
+            name: authorName,
+            jobTitle: role,
+            description: bio,
+            ...(imageUrl && { image: imageUrl }),
+            ...(isValidLink(author.linkedin) && { sameAs: [withProtocol(author.linkedin)] }),
+            worksFor: { "@type": "Organization", name: "Dynamics Square", url: SITE_URL },
+          },
+        }),
+      ];
 
   return (
-    <>
+    <div className="bl-page">
       <Head>
         <title>{`${authorName} | Author at Dynamics Square Blog`}</title>
-
         <meta
           name="description"
           content={`Read articles, insights, and expert opinions written by ${authorName} on Dynamics Square Blog.`}
         />
-
         <meta
           name="keywords"
           content={`${authorName}, Dynamics Square Blog, Business Central, Dynamics 365, ERP, CRM, Microsoft Dynamics`}
         />
-
         <meta name="author" content={authorName} />
+        <link rel="canonical" href={pageUrl} />
 
-        <link
-          rel="canonical"
-          href={`https://www.dynamicssquare.co.uk/blog/author/${authorSlug}/`}
-        />
-
-        {/* Open Graph */}
         <meta property="og:type" content="profile" />
         <meta property="og:title" content={`${authorName} | Dynamics Square Blog`} />
         <meta property="og:description" content={`Explore all blog posts written by ${authorName}.`} />
-        <meta
-          property="og:url"
-          content={`https://www.dynamicssquare.co.uk/blog/author/${authorSlug}/`}
-        />
+        <meta property="og:url" content={pageUrl} />
         <meta property="og:site_name" content="Dynamics Square Blog" />
-        <meta property="og:image" content={authorImage} />
+        {imageUrl && <meta property="og:image" content={imageUrl} />}
 
-        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${authorName} | Dynamics Square Blog`} />
         <meta name="twitter:description" content={`Read all articles written by ${authorName}.`} />
-        <meta name="twitter:image" content={authorImage} />
-        {schema_script && (
-          Array.isArray(schema_script) ? (
-            schema_script.map((scriptItem, idx) => (
-              <script
-                key={idx}
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                  __html: scriptItem.json || JSON.stringify(scriptItem)
-                }}
-              />
-            ))
-          ) : (
-            <script
-              type="application/ld+json"
-              dangerouslySetInnerHTML={{
-                __html: typeof schema_script === "string" ? schema_script : JSON.stringify(schema_script)
-              }}
-            />
-          )
-        )}
+        {imageUrl && <meta name="twitter:image" content={imageUrl} />}
+
+        {schemas.map((json, i) => (
+          <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: json }} />
+        ))}
       </Head>
+      <BlogFontPreload />
 
-      <div className="ds-author">
-        <section className="author-banner">
-          <div className="container">
-            <div className="author-profile-card">
-              <div className="row">
-                <div className="col-lg-3 text-center">
-                  <Image
-                    src={authorImage}
-                    alt={authorName}
-                    className="author-profile-img"
-                    width={168}
-                    height={168}
-                  />
+      {/* ================= PROFILE ================= */}
+
+      <header className="bl-hero">
+        <div className="container">
+          <nav aria-label="breadcrumb">
+            <ol className="bl-breadcrumb">
+              <li>
+                <Link href="/">Home</Link>
+              </li>
+              <li>
+                <Link href="/blog/">Blog</Link>
+              </li>
+              <li>
+                <Link href="/blog/author/">Authors</Link>
+              </li>
+              <li aria-current="page">{authorName}</li>
+            </ol>
+          </nav>
+
+          <div className="bl-profile">
+            <Avatar
+              name={authorName}
+              src={author.avatar}
+              size={156}
+              priority
+              className="bl-profile-photo"
+            />
+
+            <div className="bl-profile-body">
+              <span className="bl-eyebrow">{role}</span>
+
+              <h1 className="bl-title bl-profile-name">
+                {authorName}
+                {isValidLink(author.linkedin) && (
+                  <a
+                    href={withProtocol(author.linkedin)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${authorName} on LinkedIn`}
+                    className="bl-profile-linkedin"
+                  >
+                    <i className="bi bi-linkedin" />
+                  </a>
+                )}
+              </h1>
+
+              <p className="bl-profile-bio">{shownBio}</p>
+              {bioIsLong && (
+                <button
+                  type="button"
+                  className="bl-profile-more"
+                  onClick={() => setBioOpen((v) => !v)}
+                  aria-expanded={bioOpen}
+                >
+                  {bioOpen ? "Show less" : "Read full bio"}
+                </button>
+              )}
+
+              <dl className="bl-stats">
+                <div>
+                  <dt>Articles</dt>
+                  <dd>{posts.length}</dd>
                 </div>
-
-                <div className="col-lg-9">
-                  <span className="author-role"> {`${currentAuthor?.designation || currentAuthor?.role_name || "Content Writer & Industry Expert"}`}</span>
-                  <h1 className="author-name-heading">
-                    {authorName}
-                    {isValidLink(getLinkedInUrl(currentAuthor)) && (
-                      <a
-                        href={getLinkedInUrl(currentAuthor)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`${authorName} on LinkedIn`}
-                        className="author-name-linkedin"
-                      >
-                        <i className="bi bi-linkedin"></i>
-                      </a>
-                    )}
-                  </h1>
-                  <p className="author-bio">{authorDescription}</p>
-
-                  <div className="author-statline">
-                    <div className="stat-chip">
-                      <span className="stat-value">{articleCount?.replace(/^0+/, "") || "0"}</span>
-                      <span className="stat-label">Articles</span>
-                    </div>
-                  </div>
-
+                <div>
+                  <dt>Topics</dt>
+                  <dd>{topicCount}</dd>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="author-page-section">
-          <div className="container">
-            <div className="row">
-              {/* Content */}
-              <div className="col-lg-9 order-md-2 order-sm-2">
-                <div className="author-heading">
-                  <h2>Articles by {authorName}</h2>
-                  <p className="author-heading-sub">{blgsbyauthorslist.length} published</p>
-                </div>
-
-                {paginatedPosts.length > 0 ? (
-                  <div className="row blog-grid">
-                    {paginatedPosts.map((item, idx) => {
-                      const entryNumber = String(startIndex + idx + 1).padStart(3, "0");
-                      const publishedLabel = formatDate(item.publish_date);
-                      const updatedLabel = formatDate(item.updated_at);
-                      const hasUpdate = updatedLabel && publishedLabel && updatedLabel !== publishedLabel;
-
-                      return (
-                        <div className="col-lg-6 col-md-6 mb-4" key={item.title_slug}>
-                          <div className="author-blog-grid-card">
-                            <div className="blog-card-image">
-                              <a href={`/blog/${item.title_slug}/`}>
-                                <Image
-                                  src={
-                                    item.image
-                                      ? (item.image.startsWith("http") ? item.image : `${BACKEND_URL}${item.image}`)
-                                      : "/images/blog-placeholder.jpg"
-                                  }
-                                  alt={item.title}
-                                  width={600}
-                                  height={350}
-                                  className="blog-img"
-                                />
-                              </a>
-                              <span className="blog-category-badge">{item.category}</span>
-                              <span className="blog-entry-number">No. {entryNumber}</span>
-                            </div>
-
-                            <div className="blog-card-content">
-                              <div className="blog-meta">
-                                {publishedLabel && (
-                                  <span className="blog-meta-item">
-                                    <i className="bi bi-calendar-event"></i>
-                                    Published {publishedLabel}
-                                  </span>
-                                )}
-
-                                {/* Shows only when updated_at parses to an actual
-                                    different calendar date than publish_date */}
-                                {hasUpdate && (
-                                  <span className="blog-meta-item">
-                                    <i className="bi bi-arrow-repeat"></i>
-                                    Updated {updatedLabel}
-                                  </span>
-                                )}
-
-                                <span className="blog-meta-item">
-                                  <i className="bi bi-clock"></i>
-                                  {item.read_time}
-                                </span>
-                              </div>
-
-                              <h3>
-                                <a href={`/blog/${item.title_slug}/`}>{item.title}</a>
-                              </h3>
-
-                              <p>{item.short_description?.slice(0, 120)}...</p>
-
-                              <div className="blog-author-footer">
-                                <div className="author-info">
-                                  <Image src={authorImage} alt={item.author} width={32} height={32} />
-                                  <span>{item.author}</span>
-                                </div>
-
-                                <a href={`/blog/${item.title_slug}/`} className="read-link">
-                                  Read article
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      );
-                    })}
-                  </div>
-                ) : (
-                  <div className="empty-state">
-                    <i className="bi bi-journal-text"></i>
-                    <p>No articles published yet.</p>
-                    <span>Check back soon — new posts from {authorName} will show up here.</span>
+                {latest && (
+                  <div>
+                    <dt>Latest post</dt>
+                    <dd>{formatDate(latest)}</dd>
                   </div>
                 )}
-
-                {blgsbyauthorslist.length > 0 && (
-                  <Pagination
-                    items={blgsbyauthorslist.length}
-                    currentPage={currentPage}
-                    pageSize={PAGE_SIZE}
-                    onPageChange={onPageChange}
-                  />
-                )}
-              </div>
-              {/* Sidebar — now a fixed-height, scrollable list so a long author roster
-                  doesn't push the page content down */}
-              <div className="col-lg-3 order-1">
-                <div className="author-sidebar">
-                  <div className="sidebar-header">
-                    <h3>Authors</h3>
-                    <span className="sidebar-count">{authorslist.length}</span>
-                  </div>
-
-                  <div className="sidebar-scroll-wrap">
-                    <div className="sidebar-scroll">
-                      <ul className="author-list">
-                        {[...authorslist]
-                          // .sort((a, b) => a.name.localeCompare(b.name))
-                          .map((author) => {
-                            const itemSlug = getAuthorSlug(author);
-                            return (
-                              <li
-                                key={author.id ?? itemSlug}
-                                className={itemSlug === authorSlug ? "active" : ""}
-                              >
-                                  <a href={`/blog/author/${itemSlug}/`}>
-                                    <Image
-                                      src={
-                                        (author.avatarUrl || author.profile_photo_path || "").startsWith("http")
-                                          ? (author.avatarUrl || author.profile_photo_path)
-                                          : `${BACKEND_URL}${author.avatarUrl || author.profile_photo_path}`
-                                      }
-                                      alt={author.name}
-                                      width={38}
-                                      height={38}
-                                    />
-                                    <span>{author.name}</span>
-                                  </a>
-                              </li>
-                            );
-                          })}
-                      </ul>
-                    </div>
-                    <div className="sidebar-fade" />
-                  </div>
-                </div>
-              </div>
-
-
+              </dl>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </header>
 
-      <TimerModal />
+      {/* ================= ARTICLES + AUTHORS ================= */}
 
+      <section className="bl-section" aria-labelledby="author-articles">
+        <div className="container">
+          <div className="row g-5">
+            <div className="col-lg-9">
+              <div className="bl-section-head">
+                <div>
+                  <span className="bl-eyebrow">Written by {authorName.split(" ")[0]}</span>
+                  <h2 id="author-articles">Articles</h2>
+                </div>
+                <span className="bl-count">
+                  {posts.length} published
+                </span>
+              </div>
+
+              <PagedPostGrid
+                posts={posts}
+                pageSize={8}
+                colClass="col-md-6"
+                cardProps={{ showAuthor: false }}
+                emptyText={`No articles from ${authorName} yet.`}
+              />
+            </div>
+
+            {otherAuthors.length > 0 && (
+              <div className="col-lg-3">
+                <aside className="bl-authors-side">
+                  <div className="bl-authors-side-head">
+                    <h2>More authors</h2>
+                    <Link href="/blog/author/">All</Link>
+                  </div>
+
+                  <ul className="bl-authors-list">
+                    {otherAuthors.map((a) => (
+                      <li key={a.slug}>
+                        <Link href={`/blog/author/${a.slug}/`}>
+                          <Avatar name={a.name} src={a.avatar} size={40} />
+                          <span>{a.name}</span>
+                          <i className="bi bi-chevron-right" aria-hidden="true" />
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </aside>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+
+      <BlogStyles />
       <style jsx global>{`
-        .ds-author {
-          --ink: #15192b;
-          --ink-soft: #5b6172;
-          --paper: #f5f6fa;
-          --surface: #ffffff;
-          --rule: #e3e6ed;
-          --ledger: #393053;
-          --ledger-soft: #e6e6e9;
-          --stamp: #c2783b;
-          --stamp-soft: #f6e9dd;
-        }
-        /* ===========================
-        HERO
-        =========================== */
-
-        .ds-author .author-banner {
-          padding: 72px 0 56px;
-          background: #393053;
-          background-image: radial-gradient(circle at 68% 158%, #d73d3d, rgba(215, 61, 61, 0) 51%), radial-gradient(circle at 50% -43%, #7865af, #393053 78%);
-        }
-
-        .ds-author .author-profile-card {
-          border-radius: 18px;
-          padding: 30px;
-          box-shadow: 0 1px 2px rgba(20, 24, 40, 0.04);
-        }
-
-        .ds-author .author-profile-img {
-          width: 168px;
-          height: 168px;
-          border-radius: 100%;
-          object-fit: cover;
-          border: 6px solid var(--surface);
-          outline: 2px solid var(--ledger-soft);
-          outline-offset: 6px;
-        }
-
-        .ds-author .author-role {
-          font-size: 12px;
-          font-weight: 500;
-          letter-spacing: 0.14em;
-          text-transform: uppercase;
-          color: var(--surface);
-          display: block;
-          margin-bottom: 14px;
-        }
-
-        .ds-author .author-profile-card h1 {
-          font-size: 44px;
-          font-weight: 600;
-          letter-spacing: -0.01em;
-          color: var(--surface);
-          margin-bottom: 14px;
-        }
-
-        .ds-author .author-name-heading {
+        .bl-profile {
+          position: relative;
           display: flex;
+          align-items: flex-start;
+          gap: 40px;
+        }
+
+        .bl-profile-photo {
+          border: 4px solid #fff;
+          box-shadow: 0 0 0 2px var(--bp-red), 0 18px 40px rgba(11, 19, 36, 0.15);
+        }
+
+        .bl-profile-body {
+          flex: 1;
+          min-width: 0;
+          max-width: 820px;
+        }
+
+        .bl-profile-name {
+          display: flex;
+          flex-wrap: wrap;
           align-items: center;
           gap: 14px;
-          flex-wrap: wrap;
+          margin: 8px 0 14px !important;
+          font-size: clamp(32px, 4.4vw, 44px) !important;
         }
 
-        .ds-author .author-name-linkedin {
+        .bl-profile-linkedin {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          width: 34px;
-          height: 34px;
-          border-radius: 50%;
-          background: var(--surface);
+          width: 40px;
+          height: 40px;
+          font-size: 18px;
           color: #0a66c2;
-          font-size: 17px;
-          flex-shrink: 0;
-          transition: transform 0.2s ease, background 0.2s ease;
+          background: #fff;
+          border: 1px solid var(--bp-line);
+          border-radius: 12px;
+          transition: background 0.2s ease, color 0.2s ease;
         }
 
-        .ds-author .author-name-linkedin:hover {
-          transform: translateY(-2px);
+        .bl-profile-linkedin:hover {
+          color: #fff;
           background: #0a66c2;
-          color: var(--surface);
         }
 
-        .ds-author .author-bio {
-          color: var(--surface);
+        .bl-profile-bio {
+          margin: 0;
+          font-size: 17px;
           line-height: 1.75;
-          // max-width: 640px;
-          margin-bottom: 0;
+          color: var(--bp-text);
+          white-space: pre-line;
         }
 
-        .ds-author .author-statline {
+        .bl-profile-more {
+          margin-top: 10px;
+          padding: 0;
+          border: 0;
+          background: none;
+          font-size: 14px;
+          font-weight: 700;
+          color: var(--bp-red);
+        }
+
+        .bl-profile-more:hover {
+          color: var(--bp-ink);
+        }
+
+        .bl-stats {
           display: flex;
-          gap: 28px;
-          margin-top: 26px;
-          padding-top: 20px;
-          border-top: 1px solid var(--rule);
           flex-wrap: wrap;
+          gap: 12px;
+          margin: 28px 0 0;
         }
 
-        .ds-author .stat-chip {
-          display: flex;
-          flex-direction: column;
-          gap: 4px;
+        .bl-stats div {
+          min-width: 130px;
+          padding: 14px 20px;
+          background: #fff;
+          border: 1px solid var(--bp-line);
+          border-radius: 16px;
         }
 
-        .ds-author .stat-chip .stat-value {
-          font-size: 26px;
-          font-weight: 600;
-          color: var(--surface);
-          letter-spacing: -0.01em;
-        }
-
-        .ds-author .stat-chip .stat-label {
-          font-size: 11px;
-          letter-spacing: 0.12em;
+        .bl-stats dt {
+          font-size: 12px;
+          font-weight: 700;
+          letter-spacing: 0.1em;
           text-transform: uppercase;
-          color: var(--surface);
+          color: var(--bp-muted);
         }
 
-        /* ===========================
-        SOCIAL LINKS
-        =========================== */
-
-        .ds-author .author-social-links {
-          display: flex;
-          gap: 10px;
-          margin-top: 24px;
-          justify-content: center;
+        .bl-stats dd {
+          margin: 4px 0 0;
+          font-family: var(--bp-display);
+          font-size: 22px;
+          font-weight: 800;
+          color: var(--bp-ink);
         }
 
-        .ds-author .author-social-links a {
-          width: 38px;
-          height: 38px;
-          border-radius: 50%;
-          border: 1px solid var(--rule);
-          background: var(--surface);
+        .bl-authors-side {
+          position: sticky;
+          top: 120px;
+          padding: 22px;
+          background: var(--bp-bg);
+          border-radius: 24px;
+        }
+
+        .bl-authors-side-head {
           display: flex;
           align-items: center;
-          justify-content: center;
-          color: var(--ink-soft);
-          font-size: 15px;
-          text-decoration: none;
-          transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease, transform 0.2s ease;
-        }
-
-        .ds-author .author-social-links a:hover {
-          border-color: var(--ledger);
-          color: var(--ledger);
-          background: var(--ledger-soft);
-          transform: translateY(-2px);
-        }
-
-        /* ===========================
-        PAGE SECTION
-        =========================== */
-
-        .ds-author .author-page-section {
-          padding: 64px 0 96px;
-          background: var(--paper);
-        }
-
-        /* ===========================
-        SIDEBAR (scrollable)
-        =========================== */
-
-        .ds-author .author-sidebar {
-          background: var(--surface);
-          border: 1px solid var(--rule);
-          border-radius: 16px;
-          overflow: hidden;
-          position: sticky;
-          top: 96px;
-        }
-
-        .ds-author .sidebar-header {
-          display: flex;
-          align-items: baseline;
           justify-content: space-between;
-          padding: 20px 22px 16px;
-          border-bottom: 1px solid var(--rule);
+          margin-bottom: 10px;
         }
 
-        .ds-author .sidebar-header h3 {
-          font-size: 19px;
-          font-weight: 600;
-          color: var(--ink);
+        .bl-authors-side-head h2 {
           margin: 0;
+          font-size: 18px !important;
+          font-weight: 800;
+          color: var(--bp-ink);
         }
 
-        .ds-author .sidebar-count {
-          font-size: 12px;
-          color: var(--ink-soft);
+        .bl-authors-side-head a {
+          font-size: 14px;
+          font-weight: 700;
+          color: var(--bp-red);
         }
 
-        .ds-author .sidebar-scroll-wrap {
-          position: relative;
-        }
-
-        /* This is the actual scroll fix: capped height + overflow-y auto,
-           so a long author list scrolls inside the sidebar instead of
-           stretching the whole page. */
-        .ds-author .sidebar-scroll {
-          max-height: 480px;
-          overflow-y: auto;
-          padding: 10px;
-          scrollbar-width: thin;
-          scrollbar-color: var(--rule) transparent;
-        }
-
-        .ds-author .sidebar-scroll::-webkit-scrollbar {
-          width: 6px;
-        }
-
-        .ds-author .sidebar-scroll::-webkit-scrollbar-thumb {
-          background: var(--rule);
-          border-radius: 10px;
-        }
-
-        .ds-author .sidebar-scroll::-webkit-scrollbar-thumb:hover {
-          background: var(--ink-soft);
-        }
-
-        /* Soft fade at the bottom hints that the list keeps going */
-        .ds-author .sidebar-fade {
-          position: absolute;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          height: 36px;
-          background: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--surface));
-          pointer-events: none;
-        }
-
-        .ds-author .author-list {
+        .bl-authors-list {
           list-style: none;
-          margin: 0;
           padding: 0;
+          margin: 0;
         }
 
-        .ds-author .author-list li {
-          margin-bottom: 2px;
-        }
-
-        .ds-author .author-list li a {
+        .bl-authors-list a {
           display: flex;
           align-items: center;
           gap: 12px;
-          padding: 9px 10px;
-          border-radius: 10px;
-          border-left: 3px solid transparent;
-          color: var(--ink);
-          text-decoration: none;
-          transition: background 0.2s ease, border-color 0.2s ease;
-        }
-
-        .ds-author .author-list li a:hover {
-          background: var(--paper);
-        }
-
-        .ds-author .author-list li.active a {
-          background: var(--ledger-soft);
-          border-left-color: var(--ledger);
-        }
-
-        .ds-author .author-list li img {
-          width: 38px;
-          height: 38px;
-          border-radius: 100%;
-          object-fit: cover;
-          border: 1px solid var(--rule);
-          flex-shrink: 0;
-        }
-
-        .ds-author .author-list li span {
-          font-size: 14.5px;
-          font-weight: 500;
-        }
-
-        .ds-author .author-list li.active span {
-          color: var(--ledger);
-          font-weight: 600;
-        }
-
-        /* ===========================
-        HEADING
-        =========================== */
-
-        .ds-author .author-heading {
-          margin-bottom: 30px;
-        }
-
-        .ds-author .author-heading h2 {
-          font-size: 30px;
-          font-weight: 600;
-          color: var(--ink);
-          margin-bottom: 6px;
-        }
-
-        .ds-author .author-heading-sub {
-          font-size: 12.5px;
-          letter-spacing: 0.04em;
-          color: var(--ink-soft);
-          margin: 0;
-        }
-
-        /* ===========================
-        BLOG GRID CARD
-        =========================== */
-
-        .ds-author .author-blog-grid-card {
-          background: var(--surface);
-          border: 1px solid var(--rule);
+          padding: 10px;
+          margin: 0 -10px;
           border-radius: 14px;
-          overflow: hidden;
-          height: 100%;
-          transition: border-color 0.25s ease, transform 0.25s ease;
-        }
-
-        .ds-author .author-blog-grid-card:hover {
-          transform: translateY(-4px);
-        }
-
-        .ds-author .blog-card-image {
-          position: relative;
-          overflow: hidden;
-        }
-
-        .ds-author .blog-card-image img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          transition: transform 0.5s ease;
-        }
-
-        .ds-author .author-blog-grid-card:hover .blog-card-image img {
-          transform: scale(1.05);
-        }
-
-        .ds-author .blog-category-badge {
-          position: absolute;
-          top: 14px;
-          left: 14px;
-          background: var(--surface);
-          color: var(--stamp);
-          border: 1px solid var(--stamp-soft);
-          padding: 5px 12px;
-          border-radius: 20px;
-          font-size: 11px;
-          letter-spacing: 0.05em;
-          text-transform: uppercase;
-          font-weight: 500;
-          z-index: 2;
-        }
-
-        .ds-author .blog-entry-number {
-          position: absolute;
-          top: 14px;
-          right: 14px;
-          background: rgba(21, 25, 43, 0.78);
-          color: #fff;
-          padding: 5px 10px;
-          border-radius: 6px;
-          font-size: 11px;
-          letter-spacing: 0.03em;
-          z-index: 2;
-        }
-
-        /* ===========================
-        CARD CONTENT
-        =========================== */
-
-        .ds-author .blog-card-content {
-          padding: 24px;
-        }
-
-        .ds-author .blog-meta {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 14px;
-          margin-bottom: 14px;
-          font-family: var(--font-mono);
-          font-size: 11.5px;
-          color: var(--ink-soft);
-        }
-
-        .ds-author .blog-meta-item {
-          display: flex;
-          align-items: center;
-          gap: 6px;
-        }
-
-        .ds-author .blog-meta-item i {
-          font-size: 13px;
-        }
-
-        .ds-author .blog-card-content h3 {
-          margin-bottom: 12px;
-        }
-
-        .ds-author .blog-card-content h3 a {
-          color: var(--ink);
-          text-decoration: none;
-          font-size: 20px;
+          font-size: 15px;
           font-weight: 600;
-          line-height: 1.4;
-          display:block
+          color: var(--bp-ink);
+          transition: background 0.2s ease;
         }
 
-        .ds-author .blog-card-content h3 a:hover {
-          color: var(--ledger);
+        .bl-authors-list a:hover {
+          background: #fff;
         }
 
-        .ds-author .blog-card-content p {
-          color: var(--ink-soft);
-          line-height: 1.7;
-          font-size: 14.5px;
-          margin-bottom: 20px;
+        .bl-authors-list a span:not(.bl-avatar) {
+          flex: 1;
+          min-width: 0;
         }
 
-        /* ===========================
-        CARD FOOTER
-        =========================== */
-
-        .ds-author .blog-author-footer {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding-top: 16px;
-          border-top: 1px solid var(--rule);
+        .bl-authors-list .bi {
+          font-size: 12px;
+          color: var(--bp-muted);
         }
-
-        .ds-author .author-info {
-          display: flex;
-          align-items: center;
-        }
-
-        .ds-author .author-info img {
-          width: 32px;
-          height: 32px;
-          border-radius: 100%;
-          object-fit: cover;
-          border: 1px solid var(--rule);
-          margin-right: 8px;
-        }
-
-        .ds-author .author-info span {
-          font-size: 13px;
-          font-weight: 500;
-          color: var(--ink-soft);
-        }
-
-        .ds-author .read-link {
-          font-size: 12.5px;
-          letter-spacing: 0.03em;
-          color: var(--ledger);
-          text-decoration: none;
-          font-weight: 500;
-          display: inline-flex;
-          align-items: center;
-          gap: 6px;
-        }
-        .ds-author .read-link:hover{
-        color:#b5101f
-        }
-        .ds-author .read-link::after {
-          content: "→";
-          transition: transform 0.2s ease;
-        }
-
-        .ds-author .read-link:hover::after {
-          transform: translateX(3px);
-        }
-
-        /* ===========================
-        EMPTY STATE
-        =========================== */
-
-        .ds-author .empty-state {
-          text-align: center;
-          padding: 64px 24px;
-          background: var(--surface);
-          border: 1px dashed var(--rule);
-          border-radius: 14px;
-        }
-
-        .ds-author .empty-state i {
-          font-size: 30px;
-          color: var(--ledger);
-          margin-bottom: 14px;
-          display: inline-block;
-        }
-
-        .ds-author .empty-state p {
-          font-size: 19px;
-          font-weight: 600;
-          color: var(--ink);
-          margin: 0 0 6px;
-        }
-
-        .ds-author .empty-state span {
-          font-size: 14px;
-          color: var(--ink-soft);
-        }
-
-        /* ===========================
-        PAGINATION
-        =========================== */
-
-        .ds-author .pagination {
-          margin-top: 44px;
-          justify-content: center;
-        }
-
-        .ds-author .pagination .page-link {
-          border-radius: 8px;
-          margin: 0 4px;
-          font-size: 13px;
-          color: var(--ink);
-          border-color: var(--rule);
-        }
-
-        .ds-author .pagination .page-item.active .page-link {
-          background: var(--ledger);
-          border-color: var(--ledger);
-          color: #fff;
-        }
-
-        /* ===========================
-        ACCESSIBILITY
-        =========================== */
-
-        .ds-author a:focus-visible,
-        .ds-author button:focus-visible {
-          outline: 2px solid var(--ledger);
-          outline-offset: 2px;
-          border-radius: 4px;
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-          .ds-author * {
-            transition: none !important;
-            animation: none !important;
-          }
-        }
-
-        /* ===========================
-        MOBILE
-        =========================== */
 
         @media (max-width: 991px) {
-          .ds-author .author-profile-card {
-            text-align: center;
-          }
-
-          .ds-author .author-profile-img {
-            margin-bottom: 20px;
-          }
-
-          .ds-author .author-statline {
-            justify-content: center;
-          }
-
-          .ds-author .author-social-links {
-            justify-content: center;
-              margin: 0px 0px 30px;
-          }
-
-          .ds-author .author-name-heading {
-            justify-content: center;
-          }
-
-          .ds-author .author-sidebar {
-            margin-bottom: 30px;
+          .bl-authors-side {
             position: static;
           }
-
-          .ds-author .sidebar-scroll {
-            max-height: 320px;
-          }
-            
         }
 
         @media (max-width: 767px) {
-          .ds-author .author-banner {
-            padding: 48px 0;
-          }
-
-          .ds-author .author-profile-card {
-            padding: 26px;
-          }
-
-          .ds-author .author-profile-card h1 {
-            font-size: 32px;
-          }
-
-          .ds-author .blog-card-image img {
-            height: 210px;
-          }
-
-          .ds-author .blog-author-footer {
+          .bl-profile {
             flex-direction: column;
-            align-items: flex-start;
-            gap: 12px;
+            gap: 24px;
+          }
+
+          .bl-profile-photo {
+            width: 112px !important;
+            height: 112px !important;
+          }
+
+          .bl-profile-bio {
+            font-size: 16px;
+          }
+
+          .bl-stats div {
+            flex: 1;
+            min-width: 0;
+            padding: 12px 14px;
+          }
+
+          .bl-stats dd {
+            font-size: 18px;
           }
         }
       `}</style>
-    </>
+      <TimerModal />
+    </div>
   );
 }
 
-export default Authors;
+export default AuthorPage;

@@ -1,216 +1,123 @@
-import Image from "next/image";
 import Head from "next/head";
-import { useRouter } from "next/router";
-import Pagination from "../../../components/Pagination";
-import { paginate } from "../../../helpers/paginate";
-import { useState } from "react";
 import TimerModal from "../../../components/TimerModal";
+import BlogStyles from "../../../components/blog/BlogStyles";
+import {
+  BlogFontPreload,
+  BlogPageHero,
+  ChipNav,
+  PagedPostGrid,
+} from "../../../components/blog/BlogUi";
 
 import { BlogService } from "../../../helpers/blogApi";
+import { extractArray, slimCategory, slimPost } from "../../../helpers/blogData";
+
+const SITE_URL = "https://www.dynamicssquare.co.uk";
 
 export async function getStaticPaths() {
   try {
-    const categoriesRaw = await BlogService.getCategories();
-    const categories = Array.isArray(categoriesRaw) ? categoriesRaw : (categoriesRaw?.data || []);
-
-    const paths = categories.map((cat) => ({
-      params: { slug: cat.slug || cat.category_slug },
-    }));
+    const categories = extractArray(await BlogService.getCategories());
 
     return {
-      paths,
-      fallback: "blocking",  
+      paths: categories
+        .map((cat) => cat.slug || cat.category_slug)
+        .filter(Boolean)
+        .map((slug) => ({ params: { slug } })),
+      fallback: "blocking",
     };
   } catch (error) {
     console.error("Error fetching categories:", error);
-    return {
-      paths: [],
-      fallback: "blocking",
-    };
+    return { paths: [], fallback: "blocking" };
   }
 }
 
 export async function getStaticProps({ params }) {
   const slug = params?.slug || "";
- 
-  const blogsRaw = await BlogService.getBlogsByCategory(slug);
-  let blogs = [];
-  if (Array.isArray(blogsRaw)) blogs = blogsRaw;
-  else if (blogsRaw?.data && Array.isArray(blogsRaw.data)) blogs = blogsRaw.data;
-  else if (blogsRaw?.blogs && Array.isArray(blogsRaw.blogs)) blogs = blogsRaw.blogs;
-  else if (blogsRaw?.posts && Array.isArray(blogsRaw.posts)) blogs = blogsRaw.posts;
 
-  if (!blogs || blogs.length === 0) {
-    return { notFound: true };
+  const [blogsRaw, categoriesRaw] = await Promise.all([
+    BlogService.getBlogsByCategory(slug),
+    BlogService.getCategories(),
+  ]);
+
+  const blogs = extractArray(blogsRaw).map(slimPost);
+
+  if (blogs.length === 0) {
+    return { notFound: true, revalidate: 60 };
   }
 
-  const extractStr = (val) => {
-    if (!val) return "";
-    if (typeof val === 'string') return val;
-    if (Array.isArray(val)) return val.length > 0 ? extractStr(val[0]) : "";
-    if (typeof val === 'object') return val.name || val.title || "";
-    return String(val);
-  };
- 
-  const trimmedBlogs = blogs.map((b) => ({
-    title: extractStr(b.title),
-    title_slug: extractStr(b.slug || b.title_slug),
-    author: extractStr(b.author) || "Author",
-    publish_date: b.publishedAt || b.publish_date || null,
-    read_time: extractStr(b.readingTimeMinutes || b.read_time),
-    updated_at: b.updatedAt || b.updated_at || null,
-    short_description: extractStr(b.excerpt || b.short_description),
-    category: extractStr(b.category) || "Category",
-    category_slug: extractStr(b.category?.slug || b.category_slug),
-  }));
+  const categories = extractArray(categoriesRaw)
+    .map(slimCategory)
+    .filter((c) => c.name && c.slug);
 
-  // Fetch all categories
-  const categoryResRaw = await BlogService.getCategories();
-  const categoryblogs = (Array.isArray(categoryResRaw) ? categoryResRaw : (categoryResRaw?.data || [])).map(c => ({
-    ...c,
-    category_name: c.name || c.category_name,
-    category_slug: c.slug || c.category_slug
-  }));
+  const current =
+    categories.find((c) => c.slug === slug) ||
+    { name: blogs[0].category, slug, description: "" };
 
   return {
-    props: {
-      blogs: trimmedBlogs,
-      categoryblogs,
-    },
-    revalidate: 60, // regenerate page every 60s if updated
+    props: { blogs, categories, current },
+    revalidate: 60,
   };
 }
 
-function formatDate(date) {
-  if (!date) return "";
-
-  const parsedDate = new Date(
-    String(date).replace(/\.\d+Z$/, "Z")
-  );
-
-  if (isNaN(parsedDate)) return "";
-
-  return parsedDate.toLocaleDateString("en-US", {
-    month: "short",
-    day: "numeric",
-    year: "numeric",
-    timeZone: "UTC",
-  });
-}
-
-function CategoryBlogs({ blogs, categoryblogs }) {
-  const router = useRouter();
-  const [currentPage, setCurrentPage] = useState(1);
-  const pageSize = 10;
-
-  const onPageChange = (page) => setCurrentPage(page);
-  const paginatedPosts = paginate(blogs, currentPage, pageSize);
+function CategoryBlogs({ blogs, categories, current }) {
+  const pageUrl = `${SITE_URL}/blog/category/${current.slug}/`;
+  const intro =
+    current.description ||
+    `Guides, comparisons and news on ${current.name} from the Dynamics Square team.`;
 
   return (
-    <div>
+    <div className="bl-page">
       <Head>
-        <title>{blogs[0]?.category} Blogs | Dynamics Square</title>
+        <title>{`${current.name} Blogs | Dynamics Square`}</title>
         <meta
           name="description"
-          content={`Read the latest ${blogs[0]?.category} blogs and insights.`}
+          content={`Read the latest ${current.name} blogs and insights.`}
         />
+        <link rel="canonical" href={pageUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={`${current.name} Blogs | Dynamics Square`} />
+        <meta property="og:url" content={pageUrl} />
       </Head>
+      <BlogFontPreload />
 
-      <div className="blogs-extra-new">
+      <BlogPageHero
+        crumbs={[
+          { label: "Home", href: "/" },
+          { label: "Blog", href: "/blog/" },
+          { label: "Topics", href: "/blog/category/" },
+          { label: current.name },
+        ]}
+        eyebrow="Topic"
+        title={current.name}
+        intro={intro}
+      >
+        <ChipNav
+          label="Other topics"
+          items={categories}
+          activeSlug={current.slug}
+          hrefFor={(c) => `/blog/category/${c.slug}/`}
+        />
+      </BlogPageHero>
+
+      <section className="bl-section" aria-labelledby="category-articles">
         <div className="container">
-          {/* Breadcrumb */}
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="blogs-breadcromb">
-                <nav aria-label="breadcrumb">
-                  <ol className="breadcrumb">
-                    <li className="breadcrumb-item"><a href="/">Home</a></li>
-                    <li className="breadcrumb-item"><a href="/blog/">Blog</a></li>
-                    <li className="breadcrumb-item"><a href="/blog/category/">Category</a></li>
-                    <li className="breadcrumb-item active">{blogs[0]?.category}</li>
-                  </ol>
-                </nav>
-              </div>
+          <div className="bl-section-head">
+            <div>
+              <span className="bl-eyebrow">{current.name}</span>
+              <h2 id="category-articles">Latest articles</h2>
             </div>
+            <span className="bl-count">
+              {blogs.length} article{blogs.length === 1 ? "" : "s"}
+            </span>
           </div>
 
-          <div className="row">
-            {/* Sidebar Categories */}
-            <div className="col-lg-3">
-              <div className="blogs-ex-side-cate blogs-ex-side-cate-inn">
-                <h3>Explore by Topic</h3>
-                <ul>
-                  {categoryblogs.map((cateitem, i) => {
-                    const colors = ["#01808a","#cd9e1b","#3e4f8a","#000000","#b52c36","#273266"];
-                    const color = colors[i % colors.length];
-
-                    return (
-                      <li key={i} className={router.query.slug === cateitem.category_slug ? "active" : ""}>
-                        <a href={`/blog/category/${cateitem.category_slug}/`} style={{ border: `1px solid ${color}`, color }}>
-                          {cateitem.category_name}
-                        </a>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-            </div>
-
-            {/* Blog List */}
-            <div className="col-lg-9">
-              {paginatedPosts.map((item, i) => (
-                <div className="blogs-lates blogs-lates-rept" key={i}>
-                  <h3><a href={`/blog/${item.title_slug}/`}>{item.title}</a></h3>
-                  <div className="blogs-info-list">
-                    <span className="user">
-                      <a href={`/blog/author/${item.author?.toLowerCase().split(" ").join("-")}/`}>
-                        <i className="bi bi-person-circle"></i>{item.author}
-                      </a>
-                    </span>
-                    <>
-                      {item?.publish_date && (
-                        <span className="date">
-                          <a>
-                            <i className="bi bi-calendar-event"></i>
-                            {" "}Published: {formatDate(item.publish_date)}
-                          </a>
-                        </span>
-                      )}
-
-                      {item?.updated_at &&
-                        item?.publish_date &&
-                        formatDate(item.updated_at) !== formatDate(item.publish_date) && (
-                          <span className="date ms-2">
-                            <a>
-                              <i className="bi bi-arrow-repeat"></i>
-                              {" "}Updated: {formatDate(item.updated_at)}
-                            </a>
-                          </span>
-                        )}
-                    </>
-                    <span className="time"><a><i className="bi bi-clock"></i>{item.read_time} mins read</a> </span>
-                    <span className="cate"><a href={`/blog/category/${item.category_slug}/`}><i className="bi bi-app"></i> {item.category}</a></span>
-                  </div>
-                  <div className="b-card-info">
-                    <p>{item.short_description}</p>
-                    <div className="page-link-read">
-                      <a href={`/blog/${item.title_slug}/`}>Read More <span>{">"}</span></a>
-                    </div>
-                  </div>
-                </div>
-              ))}
-
-              {/* Pagination */}
-              <Pagination
-                items={blogs.length}
-                currentPage={currentPage}
-                pageSize={pageSize}
-                onPageChange={onPageChange}
-              />
-            </div>
-          </div>
+          <PagedPostGrid
+            posts={blogs}
+            cardProps={{ showCategory: false }}
+          />
         </div>
-      </div>
+      </section>
+
+      <BlogStyles />
       <TimerModal />
     </div>
   );
