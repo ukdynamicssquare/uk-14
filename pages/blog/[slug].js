@@ -1873,7 +1873,6 @@ function Post({
           width: 100%;
           height: auto;
           aspect-ratio: 16 / 10;
-          object-fit: cover;
           border-radius: 24px;
           box-shadow: 0 24px 60px rgba(11, 19, 36, 0.18);
         }
@@ -2358,7 +2357,6 @@ function Post({
         .bp-card-img {
           width: 100%;
           height: 100%;
-          object-fit: cover;
           transition: transform 0.5s ease;
         }
 
