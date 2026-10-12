@@ -15,24 +15,17 @@ import TimerModal from "../../components/TimerModal";
 import BlogSeo from "../../components/BlogSeo";
 import { BlogService } from "../../helpers/blogApi";
 import { BACKEND_URL } from "../../helpers/blogClient";
+import { BLOG_FONT_FILES } from "../../helpers/blogImage";
 
 const AUTHOR_ABOUT_PREVIEW_LENGTH = 1000;
 
 /*
- * Blog fonts are self-hosted from /public/fonts instead of next/font.
- * Reason: in the Next 14 pages router, next/font looks up preloads by the
- * real URL (/blog/some-post) while its manifest is keyed by the route
- * (/blog/[slug]), so dynamic pages never get the font preloaded. The text
- * then renders in the fallback first and visibly switches on load.
- * Fixed URLs let us preload them ourselves (see <Head> in Post).
- * Both files are the Latin subset of the variable fonts (all weights in
- * one file). Rename the -vN suffix if the files ever change: they are
- * served with a 1-year immutable cache (next.config.js).
+ * Blog fonts are self-hosted (styles/fonts.css) instead of next/font: in the
+ * Next 14 pages router next/font looks up preloads by the real URL
+ * (/blog/some-post) while its manifest is keyed by the route (/blog/[slug]),
+ * so dynamic pages never got the font preloaded and visibly switched fonts
+ * on load. BLOG_FONT_FILES are preloaded in <Head> below.
  */
-const BLOG_FONT_FILES = [
-  "/fonts/plus-jakarta-sans-latin-var-v1.woff2",
-  "/fonts/dm-sans-latin-var-v1.woff2",
-];
 
 /* =========================================================
    HELPERS
@@ -1204,33 +1197,35 @@ function Post({
                       </h1>
 
                       <div className="bp-byline">
-                        <Image
-                          src={heroAuthorImage}
-                          alt={
-                            item.author
-                              ? `${item.author} - Author`
-                              : "Blog author"
-                          }
-                          width={48}
-                          height={48}
-                          sizes="48px"
-                          className="bp-byline-avatar"
-                        />
-
-                        <div className="bp-byline-text">
-                          <span className="bp-byline-label">Written by</span>
-                          <Link
-                            href={`/blog/author/${encodeURIComponent(
+                        <div className="bp-byline-author">
+                          <Image
+                            src={heroAuthorImage}
+                            alt={
                               item.author
-                                ?.toLowerCase()
-                                .split(" ")
-                                .join("-")
-                            )}/`}
-                            className="bp-byline-name"
-                            itemProp="author"
-                          >
-                            {item.author}
-                          </Link>
+                                ? `${item.author} - Author`
+                                : "Blog author"
+                            }
+                            width={48}
+                            height={48}
+                            sizes="48px"
+                            className="bp-byline-avatar"
+                          />
+
+                          <div className="bp-byline-text">
+                            <span className="bp-byline-label">Written by</span>
+                            <Link
+                              href={`/blog/author/${encodeURIComponent(
+                                item.author
+                                  ?.toLowerCase()
+                                  .split(" ")
+                                  .join("-")
+                              )}/`}
+                              className="bp-byline-name"
+                              itemProp="author"
+                            >
+                              {item.author}
+                            </Link>
+                          </div>
                         </div>
 
                         <span className="bp-byline-divider" aria-hidden="true" />
@@ -1606,45 +1601,7 @@ function Post({
       </section>
 
       <style jsx global>{`
-        @font-face {
-          font-family: "BP Jakarta";
-          src: url("/fonts/plus-jakarta-sans-latin-var-v1.woff2") format("woff2");
-          font-weight: 200 800;
-          font-style: normal;
-          font-display: swap;
-          unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
-            U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122,
-            U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-        }
-
-        @font-face {
-          font-family: "BP Jakarta Fallback";
-          src: local("Arial");
-          ascent-override: 98.88%;
-          descent-override: 21.15%;
-          line-gap-override: 0%;
-          size-adjust: 104.98%;
-        }
-
-        @font-face {
-          font-family: "BP DM Sans";
-          src: url("/fonts/dm-sans-latin-var-v1.woff2") format("woff2");
-          font-weight: 100 1000;
-          font-style: normal;
-          font-display: swap;
-          unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
-            U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122,
-            U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-        }
-
-        @font-face {
-          font-family: "BP DM Sans Fallback";
-          src: local("Arial");
-          ascent-override: 94.9%;
-          descent-override: 29.66%;
-          line-gap-override: 0%;
-          size-adjust: 104.53%;
-        }
+        /* Blog fonts ("BP Jakarta", "BP DM Sans") live in styles/fonts.css. */
 
         .bp-page {
           --bp-ink: #0b1324;
@@ -1802,14 +1759,34 @@ function Post({
         /* Author + meta card under the title */
         .bp-byline {
           display: inline-flex;
-          flex-wrap: wrap;
           align-items: center;
-          gap: 14px 20px;
-          padding: 12px 22px 12px 12px;
-          background: #fff;
-          border: 1px solid var(--bp-line);
-          border-radius: 999px;
-          box-shadow: 0 6px 20px rgba(11, 19, 36, 0.06);
+          gap: 20px;
+          max-width: 100%;
+        }
+
+        .bp-byline-author {
+          display: flex;
+          align-items: center;
+          gap: 14px;
+          flex-shrink: 0;
+        }
+
+        .bp-byline-meta {
+          min-width: 0;
+        }
+
+        /* Below 1440px the title column is too narrow for one row: stack
+           the author above the meta chips. */
+        @media (max-width: 1439.98px) {
+          .bp-byline {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 14px;
+          }
+
+          .bp-byline-divider {
+            display: none;
+          }
         }
 
         .bp-byline-label {
@@ -2491,19 +2468,9 @@ function Post({
             max-width: 180px;
           }
 
-          /* Card stacks: author on top, meta chips below, no divider */
-          .bp-byline {
-            display: flex;
-            border-radius: 20px;
-            padding: 14px 16px;
-          }
-
-          .bp-byline-divider {
-            display: none;
-          }
-
-          .bp-byline-meta {
-            flex-basis: 100%;
+          .bp-byline-sub > span {
+            padding: 5px 10px;
+            font-size: 12px;
           }
 
           .bp-content p,
