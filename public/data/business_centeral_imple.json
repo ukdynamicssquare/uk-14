@@ -1,28 +1,57 @@
 [
     {
-      "id": 1,
-      "question": "Is Business Central an ERP?",
-      "answer": "<p>Business Central is a highly embedded ERP designed to support end-to-end enterprise practices while improving the entire workflow and accelerating the overall performance to maximize profitability. Business Central can be configured either <a target=\"_blank\" href=\"/microsoft-dynamics-365-cloud-vs-on-premise/\">on-cloud or on-premises</a> <!-- -->depending on your specific needs. Further, it can be customized as per your specific business domain or industry context.</p><p>To drive streamlined enterprise practices, D365 Business Central can be integrated with any of your existing Microsoft apps or even any third-party applications. This helps to seamlessly manage, access, and drive your data to attain overall success. To know<!-- --> <a target=\"_blank\" href=\"/products/dynamics-365-business-central/advantages-capabilities/\">how Business Central can help</a> or work for your business, connect with <a target=\"_blank\" href=\"/contact-us/\">our experts at Dynamics Square</a>. We can help.</p>"
+        "id": 1,
+        "question": "How much does it cost in the UK to implement Microsoft Dynamics 365 Business Central?",
+        "answer": "<p>The cost of <a class=\"u-i\" href=\"/products/dynamics-365-business-central/\">Microsoft Dynamics 365 Business Central</a> implementation in the UK depends on your business requirements, number of users (see <a class=\"u-i\" href=\"/products/dynamics-365-business-central/pricing-licensing/\">Business Central pricing and licensing</a>), data migration needs, integrations, customisations and training requirements. A simple implementation will generally require less investment than a more complex, multi-company implementation. Dynamics Square UK can assess your requirements (or try our <a class=\"u-i\" href=\"/erp-implementation-cost-calculator/\">ERP implementation cost calculator</a>) and provide you with a customised estimate for implementation.</p>"
     },
     {
-      "id": 2,
-      "question": "What is Business Central used for?",
-      "answer": "<p>D365 Business Central helps manage your day-to-day tasks or processes in sales, customers, finance, projects, supply chain, warehousing,<!-- --> <a href=\"/blog/business-central-for-manufacturing/\" target=\"_self\">manufacturing</a>, and human resources. It helps to centralize your data and drive a collaborative data experience.</p>"
+        "id": 2,
+        "question": "What is the time frame for a Business Central implementation?",
+        "answer": "<p>The time required for a Microsoft Dynamics 365 Business Central implementation varies depending on the size and complexity of the project, and can take several weeks to several months. Factors such as data migration, integrations, customisations, testing and user training are all factors that impact the timeline. Having a defined <a class=\"u-i\" href=\"/blog/what-is-business-central-implementation-methodology/\">implementation methodology</a> and plan will help set realistic milestones and get your team ready for go-live.</p>"
     },
     {
-      "id": 3,
-      "question": "What is included in Dynamics 365 Business Central?",
-      "answer": "<p>When you implement a cloud-based ERP system like Business Central, it includes a complete set of business solutions, helping businesses to automate their manual processes, streamline their data-driven activities in real-time, and connect people, processes, and workflows. D365 Business Central also enables you to manage your sales, inventory, warehousing, manufacturing, and finance practices. Everyone from top management to the executive level can benefit from D365 Business Central.</p><p>With AI-built business insights, people in your organization can forecast data and can have real-time insight into actual performance, profit or margins, and potential for improvement.</p><p>If you are seeking more information about D365 Business Central, do not hesitate to contact our team of <a target=\"_blank\" href=\"/products/microsoft-dynamics-365/\">Dynamics 365 experts</a>.</p>"
+        "id": 3,
+        "question": "What are the services that are included in Business Central implementation?",
+        "answer": "<p>Business Central implementation services typically include requirements analysis, solution design, system configuration, data migration, integrations, testing, user training and go-live support. This will depend on the type of business processes, existing systems and reporting requirements. Dynamics Square UK can help you create an implementation plan that aligns with your operational priorities.</p>"
     },
     {
-      "id": 4,
-      "question": "How do I implement Microsoft Dynamics 365 Business Central?",
-      "answer": "<p>Dynamics 365 Business Central implementation process requires a step-by-step effort to be followed. Let's understand the implementation process flow for Business Central. Steps are given below:<br><br><strong>Setup</strong><br><br>First you need to leverage Business Central Setup just to install the different required components. The components include Business Central production or development environment.<br><br>Setup can be found in installation media named with setup.exe file. Once you run the installation, you will have options on whether to install the individual components or select the predefined option to install the logical set of components.<br><br><strong>Configuration</strong><br><br>During the installation phase, several configuration settings will be demonstrated wherein you can either choose to customise the settings or can go with the initial settings. Once your settings are done, you can even change the configuration settings by making use of tools like Business Central Server Administration tool and Business Central Administration Shell.<br><br><strong>Prerequisite Installations</strong><br><br>To complete the installation process, you are required to install the other software too such as database requiring SQL Server and Web client requiring IIS.<br><br><strong>Downloading Business Central to Install Further</strong><br><br>Business central is available and can be downloaded from Microsoft Support. The downloaded file will contain setup.exe file. You can find several versions to choose from. Every release is equipped even with minor updates that are published on a regular basis.<br><br><strong>Download Files</strong><br><br>Now, all you need is to go to the update page to download the release that you are willing to install. Once your download is completed, you are required to install the setup. To download the setup, follow the initial steps.<br><br>Implementing Dynamics 365 Business Central requires expert practices, training, and support, if you need experts for Dynamics 365 Business Central Services, discuss your requirement with Dynamics Square, we can help to implement a highly customized solution suited to your exact business needs.</p>"
+        "id": 4,
+        "question": "Is it possible to move from Sage, QuickBooks or Excel to Business Central?",
+        "answer": "<p>Yes. Relevant financial and operational data can be moved from systems like <a class=\"u-i\" href=\"/case-studies/sage-erp-to-business-central/\">Sage</a>, <a class=\"u-i\" href=\"/case-studies/quickbooks-to-business-central-migration/\">QuickBooks</a> and Excel to Microsoft Dynamics 365 Business Central. The migration process includes checking the existing data, deduplicating data, mapping and validating the migrated data. The approach will depend on the source system and the quality of data and historical records that need to be retained.</p>"
     },
     {
-      "id": 5,
-      "question": "How long does it take to implement Business Central?",
-      "answer": "<p><a href=\"/blog/what-is-business-central-implementation-methodology/\">D365 Business Central implementation process</a> <!-- -->may vary from project to project, business to business, and industry to industry. Depending on your project complexity, customization requirements, and integration needs, it can take 3 to 9 months. If you are seeking to implement Dynamics 365 Business Central, contact Dynamics Square. By evaluating and analysing your exact implementation needs, we can tell you how long your project implementation will take.</p>"
+        "id": 5,
+        "question": "Is it possible to integrate Business Central with current business applications?",
+        "answer": "<p>Yes. Microsoft Dynamics 365 Business Central can integrate with third-party applications and Microsoft services such as <a class=\"u-i\" href=\"/products/microsoft-dynamics-365-sales/\">Dynamics 365 Sales</a>, Microsoft 365 and <a class=\"u-i\" href=\"/power-bi-implementation/\">Power BI</a>. Depending on the requirements, financial data, customer data, reporting and operational workflows can be integrated. The approach and expense of integration will depend on the applications and complexity of the data exchange.</p>"
+    },
+    {
+        "id": 6,
+        "question": "Is Business Central customisable to fit my business needs?",
+        "answer": "<p>Yes. Business Central is available for configuration, extensions and integrations to meet specific business needs. An implementation partner can find out if the standard functionality meets your needs before recommending custom development. Standard features should be considered as the main features if possible, so that the cost is reduced and future changes are easier.</p>"
+    },
+    {
+        "id": 7,
+        "question": "What support and training is offered after Business Central is implemented?",
+        "answer": "<p>Post implementation <a class=\"u-i\" href=\"/our-services/dynamics-365-training/\">training</a> enables employees to grasp the features and workflows that are relevant to their roles. Continuous <a class=\"u-i\" href=\"/d365-business-central-support/\">Business Central support</a> can be used to address technical issues, answer user questions, maintain integrations and address evolving business needs. Prior to go-live, it is important to have your support arrangements agreed with you so that you know who will be responsible for what and what you can expect from them.</p>"
+    },
+    {
+        "id": 8,
+        "question": "How do I know if a Business Central implementation partner in the UK is right for me?",
+        "answer": "<p>Choose a Business Central implementation partner with the Microsoft Dynamics 365 experience, proven delivery method and experience with businesses similar to yours (review their <a class=\"u-i\" href=\"/case-studies/\">case studies</a>). Assess its data migration, integrations, testing, training, project management and post-go-live support. It is also important to have clear scope, transparent pricing and defined responsibilities when evaluating an implementation proposal.</p>"
+    },
+    {
+        "id": 9,
+        "question": "Is it possible to implement Business Central in phases?",
+        "answer": "<p>Yes. Business Central can be implemented in phases, either by implementing core functionality first, and then modules, integrations or business processes. This can assist organisations to prioritise their needs, manage change and distribute implementation activities across time. The project plan should include the dependencies, testing requirements and acceptance criteria for each phase of the project.</p>"
+    },
+    {
+        "id": 10,
+        "question": "Can Microsoft Dynamics 365 Business Central be used for manufacturing and distribution companies?",
+        "answer": "<p>Yes. Business Central offers financial management, inventory, purchasing and sales and supply chain capabilities. It also has <a class=\"u-i\" href=\"/industries/manufacturing/\">manufacturing</a> and service management capabilities as part of its Premium licence. The suitability will be based on the complexity of production, <a class=\"u-i\" href=\"/industries/business-central-for-distribution/\">distribution</a> and warehouse processes, planning requirements, and any specific functionality and integrations the business needs.</p>"
+    },
+    {
+        "id": 11,
+        "question": "How can Dynamics Square UK help with Microsoft Dynamics 365 Business Central implementation?",
+        "answer": "<p>Dynamics Square UK provides requirements analysis, solution configuration, data migration, system integration, user training and post-go-live support to assist businesses in implementing Microsoft Dynamics 365 Business Central. <a class=\"u-i\" href=\"/contact-us/\">Talk to our team</a> to make sure the ERP solution fits your business processes, operational targets and future business growth plans.</p>"
     }
-  ]
-  
+]

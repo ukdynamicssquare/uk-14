@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/blog/business-central-for-accounting/",
+      "destination": "/blog/business-central-accounting-software/",
+      "statusCode": 301
+    },
+    {
       "source": "/dynamics-365-consultant/",
       "destination": "/our-services/dynamics-365-consultant/",
       "statusCode": 301

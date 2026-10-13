@@ -42,10 +42,21 @@ const useCardScrollEffect = (cardSelector = '.mycard', innerSelector = '.mycard_
       })
     }
 
-    window.addEventListener('scroll', handleScroll, { passive: true })
+    // Batch layout reads into one per frame instead of one per scroll event.
+    let ticking = false
+    const onScroll = () => {
+      if (ticking) return
+      ticking = true
+      window.requestAnimationFrame(() => {
+        handleScroll()
+        ticking = false
+      })
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true })
     handleScroll()
 
-    return () => window.removeEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', onScroll)
   }, [cardSelector, innerSelector])
 }
 
