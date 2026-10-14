@@ -3,6 +3,8 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/bcVsSapTwo.module.css";
+import ResourceTabs from "../components/bcTwo/ResourceTabs";
+import { bcVsSapResources } from "../components/bcTwo/legacyResources";
 import faqContent from "../public/data/bcvssapbusinessone.json";
 
 const PAGE_URL = "https://www.dynamicssquare.co.uk/dynamics-365-business-central-vs-sap-business-one/";
@@ -95,6 +97,7 @@ const sections = [
   { id: "fit-finder", label: "How to Decide" },
   { id: "how-we-help", label: "How We Help" },
   { id: "faqs", label: "FAQs" },
+  { id: "resources", label: "Resources" },
 ];
 
 // Taken word for word from the opening sentence of the section
@@ -647,6 +650,13 @@ const BCvsSapTwo = () => {
           </div>
         </div>
       </section>
+
+      {/* ===== Resources ===== */}
+      <ResourceTabs
+        title="Get Started with Microsoft Dynamics 365 Business Central"
+        intro="Case studies, e-books, podcasts and blogs to help you compare and explore Business Central."
+        tabs={bcVsSapResources}
+      />
 
       {/* ===== Related comparisons (internal links) ===== */}
       <section className={styles.related}>

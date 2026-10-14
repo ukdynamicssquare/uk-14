@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "question": "What is Dynamics GP?",
+    "answer": "<p>Microsoft Dynamics GP or Great Plains is an ERP (Enterprise Resource Planning) solution capable of managing most of the core business processes, including finance, operations, accounting, warehouse management, and distribution. However, it is an <a href=\"/products/microsoft-dynamics-erp/\">ERP solution</a> with some features of CRM (Customer Relationship Management), like sales, service, and customer support.</p>"
+  },
+  {
+    "id": 2,
+    "question": "Is there a need for a new licence while updating?",
+    "answer": "<p>No, there is no need to purchase a new licence if you are planning to update the existing version to a new version of Dynamics GP. Even so, you can apply more integrations and customisations without updating or purchasing the new licence key. Your licence will remain the same in any circumstance.</p>"
+  },
+  {
+    "id": 3,
+    "question": "How was Dynamics GP built?",
+    "answer": "<p>When GP was introduced, it was specifically made for the US market without any multi-language or multi-currency support. With the 1993 update, it became the first multi-user accounting solution in the US. At that time, it was generally known as Great Plains as it was the original founding software organisation of this amazing solution.</p><p>In 2001, Great Plains was purchased by Microsoft and released Dynamics 8.0, and later released a totally updated version of Dynamics GP.</p>"
+  },
+  {
+    "id": 4,
+    "question": "How do I upgrade Dynamics GP 2015 or a previous version to the latest version?",
+    "answer": "<p>For any kind of update, <a href=\"/our-services/dynamics-365-upgrade-services/\">upgrade</a>, or <a href=\"/our-services/dynamics-365-implementation-services/\">implementation</a>, you need to contact your trusted <a href=\"/our-services/dynamics-365-support-services/\">Dynamics 365 support partner</a>, and they will guide you with a better approach. Even so, you can contact Dynamics Square for a rapid and error-free process with support service beyond the implementation process.</p>"
+  },
+  {
+    "id": 5,
+    "question": "What does Dynamics GP offer?",
+    "answer": "<p>It offers various features to manage the entire business process, including finance management, procurement, inventory management, accurate reporting, field service management, project management, and supply chain management. With the updates from Microsoft, it now offers multi-currency functions to make global business possible.</p>"
+  },
+  {
+    "id": 6,
+    "question": "Who are the users of Dynamics GP?",
+    "answer": "<p>It offers advanced financial management features, and the typical user of this application is a large organisation with more than 3 million dollars in revenue per annum. And, if an organisation belongs to SMB, you can use <a href=\"/products/microsoft-dynamics-nav/\">Dynamics NAV</a> or <a href=\"/products/dynamics-365-business-central/\">Microsoft Dynamics 365 Business Central</a> to manage basic financial and accounting needs.</p>"
+  },
+  {
+    "id": 7,
+    "question": "What are some benefits of Dynamics GP?",
+    "answer": "<p>Dynamics GP offers various benefits to organisations, enabling them to supervise the financial and accounting operations seamlessly with easy growth and scalability.</p><p>Microsoft offers a strong network of vendor partners to offer smooth support services to all users, irrespective of the different boundaries.</p><p>The powerful system offers integrations and customizations to help businesses deal with unique business operations and different requirements.</p><p>Users can also avail add-ons to meet the current and predictive requirements.</p><p>Microsoft GP is a cloud-based platform that can be accessed using any platform, whether mobile, web, or PC, from anywhere and anytime.</p>"
+  },
+  {
+    "id": 8,
+    "question": "Does Dynamics GP offer integration options?",
+    "answer": "<p>Yes, it offers integration options with native as well as third-party integrations. Microsoft offers native integrations, including Power Applications, Office apps, and Outlook. One of the best Power Applications offered by Microsoft for Dynamics GP users is <a href=\"/products/microsoft-power-bi/\">Power BI</a>, which helps users to visualise the huge chunks of data with ease for proper utilization.</p>"
+  },
+  {
+    "id": 9,
+    "question": "What are the latest Dynamics GP versions?",
+    "answer": "<p>Dynamics GP now follows Microsoft's Modern Lifecycle Policy, and the current release is Dynamics GP 18.x. Older fixed-lifecycle versions (2013, 2015, 2016 and 2018) have reached or are reaching the end of their support dates.</p><p>Is Dynamics GP going to expire from the market?</p><p>In September 2024, Microsoft announced the end-of-sale timeline for Dynamics GP. Existing customers keep getting support in line with the dates below.</p><table><thead><tr><th>Milestone</th><th>Date</th></tr></thead><tbody><tr><td>New perpetual licences end</td><td>1 April 2025</td></tr><tr><td>New subscriptions end</td><td>1 April 2026</td></tr><tr><td>Enhancements and regulatory updates end</td><td>31 December 2029</td></tr><tr><td>Security patches end</td><td>30 April 2031</td></tr></tbody></table>"
+  }
+]

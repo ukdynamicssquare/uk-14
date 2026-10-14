@@ -2,6 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
 
+  // Inline above-the-fold CSS and load the full stylesheet without blocking render
+  experimental: { optimizeCss: true },
+
   // Still safe (default in Next 14)
   swcMinify: true,
 

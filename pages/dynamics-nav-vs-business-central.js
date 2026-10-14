@@ -3,6 +3,8 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/bcVsSapTwo.module.css";
+import ResourceTabs from "../components/bcTwo/ResourceTabs";
+import { navVsBcResources } from "../components/bcTwo/legacyResources";
 import SectionNav, { useSectionNav } from "../components/bcTwo/SectionNav";
 import FaqList, { faqSchema } from "../components/bcTwo/FaqList";
 import faqs from "../public/data/navvsbusinesscentral.json";
@@ -117,6 +119,7 @@ const sections = [
   { id: "migration", label: "Migration" },
   { id: "case-studies", label: "Case Studies" },
   { id: "faqs", label: "FAQs" },
+  { id: "resources", label: "Resources" },
 ];
 
 const relatedPages = [
@@ -411,6 +414,13 @@ const NavVsBCTwo = () => {
           </div>
         </div>
       </section>
+
+      {/* ===== Resources ===== */}
+      <ResourceTabs
+        title="Get Started with Your Move from NAV to Business Central"
+        intro="Case studies, e-books, podcasts and blogs to help you plan your Dynamics NAV to Business Central upgrade."
+        tabs={navVsBcResources}
+      />
 
       {/* ===== Final CTA ===== */}
       <section className={styles.finalWrap}>

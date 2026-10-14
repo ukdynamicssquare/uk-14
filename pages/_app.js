@@ -318,8 +318,8 @@ function MyApp({ Component, pageProps }) {
         />
       </Head>
 
-      <Script src="https://www.googletagmanager.com/gtag/js?id=G-G7DMKRQVGJ" strategy="afterInteractive" />
-      <Script id="ga" strategy="afterInteractive">
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-G7DMKRQVGJ" strategy="lazyOnload" />
+      <Script id="ga" strategy="lazyOnload">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
@@ -329,7 +329,7 @@ function MyApp({ Component, pageProps }) {
       </Script>
 
       {/* ✅ GTM */}
-      <Script id="gtm" strategy="afterInteractive">
+      <Script id="gtm" strategy="lazyOnload">
         {`
           (function(w,d,s,l,i){w[l]=w[l]||[];
           w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
@@ -342,6 +342,19 @@ function MyApp({ Component, pageProps }) {
         `}
       </Script>
           
+
+      {/* ✅ MICROSOFT CLARITY (deferred so it does not block first render) */}
+      <Script id="clarity" strategy="lazyOnload">
+        {`
+          (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;
+            t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];
+            y.parentNode.insertBefore(t,y);
+          })(window, document, "clarity", "script", "tib4o2otj4");
+        `}
+      </Script>
 
       {/* ========================= */}
       {/* ✅ APOLLO TRACKER */}

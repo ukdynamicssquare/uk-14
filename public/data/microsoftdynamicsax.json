@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "question": "What is Microsoft Dynamics AX used for?",
+    "answer": "<p>MS Dynamics AX is an ERP (Enterprise Resource Planning) solution capable of streamlining the finances and operations of a business with full efficiency and effectiveness. It helps businesses manage almost all critical operations, organise them, and automate the recurring and manual tasks.</p>"
+  },
+  {
+    "id": 2,
+    "question": "Is Microsoft Dynamics AX still available?",
+    "answer": "<p>No, Dynamics AX is not available for new installation or implementation, but Microsoft still provides its support and upgrade services to some versions only. If you want to avail the latest capabilities to streamline your finances, you can go for <a href=\"/products/microsoft-dynamics-365-finance/\">Microsoft Dynamics 365 Finance</a>, a cloud-based application for small, medium, and large organisations.</p>"
+  },
+  {
+    "id": 3,
+    "question": "Is Dynamics 365 the same as AX?",
+    "answer": "<p>No, <a href=\"/products/microsoft-dynamics-365/\">Dynamics 365</a> is an all-in-one cloud-based business management solution capable of streamlining the entire operations of all departments, including finance, inventory, distribution, customer service, and supply chain. where MS Dynamics AX is a desktop-based <a href=\"/products/microsoft-dynamics-erp/\">ERP solution</a> capable of managing financial operations only.</p>"
+  },
+  {
+    "id": 4,
+    "question": "Is Microsoft Dynamics AX free?",
+    "answer": "<p>The cost of Microsoft Dynamics AX implementation depends on various factors, like the complexity of the system, the amount of data, the kind of deployment, the number of integrations, the type of customizations, and much more. However, the average cost of a Microsoft Dynamics AX implementation is £4000.</p>"
+  },
+  {
+    "id": 5,
+    "question": "What is Dynamics AX called now?",
+    "answer": "<p>Dynamics AX has gone through a number of updates and upgrades. After the first update, Dynamics AX becomes <a href=\"/products/microsoft-dynamics-365-finance-operations/\">Microsoft Dynamics Finance and Operations</a>. It was a powerful and complete package to deal with operations, supply chain management, and financial processes. Later, Microsoft understands the urge to separate this single solution into two separate applications: Microsoft Dynamics 365 Finance and <a href=\"/products/dynamics-365-supply-chain-management/\">Microsoft Dynamics 365 Supply Chain Management</a>.</p>"
+  },
+  {
+    "id": 6,
+    "question": "What is the difference between Microsoft Dynamics NAV and AX?",
+    "answer": "<p>The basis for the difference between these two applications is that <a href=\"/products/microsoft-dynamics-nav/\">Dynamics NAV</a> is an overall business management solution with few capabilities of CRM, whereas Dynamics is a complete ERP to control and supervise financial operations of an enterprise.</p>"
+  },
+  {
+    "id": 7,
+    "question": "Who uses Microsoft Dynamics AX?",
+    "answer": "<p>Generally, Microsoft Dynamics AX is used in such industries with a need to supervise and control financial transactions only. There can be two kinds of users: one for small companies with basic requirements, and another for such companies with complex financial transactions, irrespective of their size and type.</p>"
+  }
+]

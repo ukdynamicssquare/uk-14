@@ -1,776 +1,320 @@
+import React from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import styles from "../../styles/bcVsSapTwo.module.css";
+import SectionNav, { useSectionNav } from "../../components/bcTwo/SectionNav";
+import FaqList, { faqSchema } from "../../components/bcTwo/FaqList";
+import ResourceTabs from "../../components/bcTwo/ResourceTabs";
+import RelatedLinks from "../../components/bcTwo/RelatedLinks";
+import { gpResources, gpLinks } from "../../components/bcTwo/legacyResources";
+import faqs from "../../public/data/microsoftdynamicsgp.json";
+
+const PAGE_URL = "https://www.dynamicssquare.co.uk/products/microsoft-dynamics-gp/";
+const PAGE_TITLE = "Microsoft Dynamics GP (Great Plains) Support Partner UK";
+const PAGE_DESC = "Looking for Microsoft Dynamics GP support in UK? Streamline your finances, sales, service and operations by implementing Great Plains. Contact Now Today!";
+const OG_TITLE = "Dynamics GP Partner | Dynamics Great Plains Partner UK | Dynamics Square";
+const OG_IMAGE = "https://www.dynamicssquare.co.uk/img/gpbanner.png";
+
+const features = [
+  { icon: "bi-calculator", title: "Financial Management", text: "With analytics and security, Dynamics GP offers to be a great financial accounting solution as it aids in banking and managing your budgets, assets, and cash flow. This tool allows you in tracking your financial records and data without investing any extra effort or extra time on it." },
+  { icon: "bi-bar-chart-line", title: "Business Intelligence", text: <>The <Link href="/products/microsoft-power-bi/">BI system</Link> of the tool allows you to check out the reports of data that are pre-built on your dashboard so that you are able to make instant decisions that are intelligent as well as much efficient for your organisation.</> },
+  { icon: "bi-box-seam", title: "Inventory Management", text: "Being an accounting and ERP solution, Dynamics GP aids you in inventory management, where you can keep records of your returns, orders, and others. With the proper inventory management, you can meet the customer's requirements on time and maintain the profit and reputation of your company." },
+  { icon: "bi-cart-check", title: "Sales and Service", text: "Dynamics GP Implementation in your business operations ensures that you carry on your sales and service in an even better way. The tool offers functions and features such as automating your sales process so that you can provide an enhanced service to your customers. Also, this will help you control your invoicing well and minimize the costs for shipping and labour for the entire process." },
+  { icon: "bi-kanban", title: "Project Management", text: "Dynamics GP offers a tracking solution for the project that helps track all the financial transactions because of a particular project. It allows you to seamlessly integrate all financial elements such as accounts receivables, inventory, and other financials to ensure that all the accounting and billing are done accurately." },
+  { icon: "bi-people", title: "HR/Payroll Management", text: "With Microsoft Dynamics Great Plains HR/Payroll Management Solution, you can optimise your employees' management and improve service to employees via accurate reporting and user query tools and customized lists that support better intelligence into different levels of employee data" },
+];
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": PAGE_URL,
+      "url": PAGE_URL,
+      "name": PAGE_TITLE,
+      "description": PAGE_DESC,
+      "inLanguage": "en-GB",
+      "primaryImageOfPage": { "@type": "ImageObject", "url": OG_IMAGE, "width": 1024, "height": 576 },
+      "isPartOf": { "@id": "https://www.dynamicssquare.co.uk/#website" },
+      "publisher": { "@id": "https://www.dynamicssquare.co.uk/#organization" },
+      "breadcrumb": { "@id": PAGE_URL + "#breadcrumb" },
+      "about": { "@id": PAGE_URL + "#software" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": PAGE_URL + "#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.dynamicssquare.co.uk/" },
+        { "@type": "ListItem", "position": 2, "name": "Microsoft Dynamics GP", "item": PAGE_URL }
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": PAGE_URL + "#software",
+      "name": "Microsoft Dynamics GP",
+      "alternateName": "Great Plains",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Enterprise Resource Planning (ERP)",
+      "operatingSystem": "Windows",
+      "author": { "@type": "Organization", "name": "Microsoft" },
+      "description": "Microsoft Dynamics GP is a standalone ERP solution specifically built for mid-market companies.",
+      "featureList": features.map((f) => f.title)
+    },
+    faqSchema(faqs),
+  ],
+};
+
+const sections = [
+  { id: "what-is-gp", label: "What Is Dynamics GP?" },
+  { id: "features", label: "Features" },
+  { id: "free-demo", label: "Try Dynamics GP for Free" },
+  { id: "gp-support-ended", label: "GP Support" },
+  { id: "gp-upgrade", label: "GP Upgrade" },
+  { id: "faqs", label: "FAQs" },
+  { id: "resources", label: "Resources" },
+];
 
 const MicrosoftDynamicsGP = () => {
+  const { active, navTop } = useSectionNav(sections);
+
   return (
     <>
       <Head>
-        <title>Microsoft Dynamics GP (Great Plains) Support Partner UK</title>
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-gp/"
-        />
-        <meta
-          name="description"
-          content="Looking for Microsoft Dynamics GP support in UK? Streamline your finances, sales, service and operations by implementing Great Plains. Contact Now Today!"
-        />
+        <title>{PAGE_TITLE}</title>
+        <meta name="description" content={PAGE_DESC} />
+        <link rel="canonical" href={PAGE_URL} />
+        <meta property="og:locale" content="en_GB" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-gp/" />
-        <meta property="og:title" content="Dynamics GP Partner | Dynamics Great Plains Partner UK | Dynamics Square" />
-        <meta property="og:description" content="Looking for Microsoft Dynamics GP support in UK? Streamline your finances, sales, service and operations by implementing Great Plains. Contact Now Today!" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/gpbanner.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-gp/" />
-        <meta property="twitter:title" content="Dynamics GP Partner | Dynamics Great Plains Partner UK | Dynamics Square" />
-        <meta property="twitter:description" content="Looking for Microsoft Dynamics GP support in UK? Streamline your finances, sales, service and operations by implementing Great Plains. Contact Now Today!" />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/gpbanner.png" />
-
+        <meta property="og:url" content={PAGE_URL} />
+        <meta property="og:title" content={OG_TITLE} />
+        <meta property="og:description" content={PAGE_DESC} />
+        <meta property="og:site_name" content="Dynamics Square UK" />
+        <meta property="og:image" content={OG_IMAGE} />
+        <meta property="og:image:width" content="1024" />
+        <meta property="og:image:height" content="576" />
+        <meta property="og:image:alt" content="Microsoft Dynamics GP (Great Plains) ERP solution" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@dsquare_uk" />
+        <meta name="twitter:title" content={OG_TITLE} />
+        <meta name="twitter:description" content={PAGE_DESC} />
+        <meta name="twitter:image" content={OG_IMAGE} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
       </Head>
-      <section className="Solution-banner hero-1 hero">
+
+      {/* ===== Hero ===== */}
+      <section className={styles.hero}>
+        <div className="container">
+          <nav aria-label="breadcrumb" className={styles.crumbs}>
+            <Link href="/">Home</Link>
+            <i className="bi bi-chevron-right"></i>
+            <span>Microsoft Dynamics GP</span>
+          </nav>
+          <div className="row align-items-center gy-5">
+            <div className={`col-lg-6 ${styles.heroSplit}`}>
+              <h1 className={styles.heroTitle}>Microsoft Dynamics GP</h1>
+              <p className={styles.heroLead}>Streamline your business, avail automation, get a transparent business view, simplify different operations, and integrate desired applications by implementing Dynamics GP (Great Plains).</p>
+              <div className={`${styles.heroActions} ${styles.heroActionsLeft}`}>
+                <Link href="#exampleModal" data-bs-toggle="modal" className="btn-get-started scrollto">
+                  <span>Schedule a Demo &nbsp;<i className="bi bi-arrow-right"></i></span>
+                </Link>
+              </div>
+            </div>
+            <div className="col-lg-6">
+              <div className={styles.heroVisual}>
+                <Image src="/img/gpbanner.png" alt="Microsoft Dynamics GP (Great Plains) ERP dashboard" width={1024} height={576} priority sizes="(max-width: 991px) 100vw, 560px" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <SectionNav sections={sections} active={active} navTop={navTop} ctaLabel="Schedule a Demo" />
+
+      {/* ===== What is GP ===== */}
+      <section id="what-is-gp" className={`${styles.block} ${styles.anchor}`}>
+        <div className="container">
+          <div className="row align-items-center gy-5">
+            <div className={`col-lg-6 ${styles.textCol}`}>
+              <h2 className={styles.h2}>What Is Microsoft Dynamics GP (Great Plains)?</h2>
+              <p>Microsoft Dynamics GP is a standalone <Link href="/products/microsoft-dynamics-erp/">ERP solution</Link> specifically built for mid-market companies. Some businesses also consider Great Plains as accounting software, but it can streamline all core business operations. You can deploy the servers in the <Link href="/microsoft-dynamics-365-cloud-vs-on-premise/">cloud or on-premises</Link> based on business requirements. It offers robust features to manage different departments of the business, including finance, inventory, supply chain, manufacturing, operations, and human resources. Due to its flexible customization and integration options, you can implement GP in any business or industry. Such industries include hospitality, retail, automotive, oil &amp; Gas, non-profit, and more. Whether you are an existing brand or a growing organisation, Microsoft GP is perfect for you.</p>
+            </div>
+            <div className="col-lg-6">
+              <div className={styles.mediaFlat}>
+                <Image src="/img/Dynamics-GP-overview.svg" alt="Microsoft Dynamics GP overview for mid-market companies" width={1138} height={765} sizes="(max-width: 991px) 100vw, 540px" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== Features ===== */}
+      <section id="features" className={`${styles.block} ${styles.blockTint} ${styles.anchor}`}>
         <div className="container">
           <div className="row">
-            <div className="col-lg-6 mobile-1 align-self-center">
-              <h1>
-                Microsoft
-                <br /> Dynamics GP
-              </h1>
-              <p>Streamline your business, avail automation, get a transparent business view, simplify different operations, and integrate desired applications by implementing Dynamics GP (Great Plains).</p>
-              <div>
-                <div className="text-center text-lg-start">
-                  <Link
-                    href="#exampleModal"
-                    data-bs-toggle="modal"
-                    className="btn-get-started scrollto">
-
-                    <span>Schedule a Demo</span>
-
-                  </Link>
-                </div>
-              </div>
+            <div className={`col-lg-9 ${styles.introCol}`}>
+              <h2 className={styles.h2}>Microsoft Dynamics GP Features</h2>
+              <p>Dynamics GP is loaded with some exclusive features that make it absolutely perfect for your enterprise.</p>
             </div>
-            <div className="col-lg-6 align-self-center">
-              <Image src="/img/gpbanner.png" alt="Microsoft Dynamics GP" width={1024} height={576}  priority = {true} />
+          </div>
+          <div className={styles.capGrid}>
+            {features.map((f) => (
+              <article className={styles.capCard} key={f.title}>
+                <i className={`bi ${f.icon}`}></i>
+                <h3>{f.title}</h3>
+                <p>{f.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== CTA ===== */}
+      <section className={styles.ctaBand}>
+        <div className="container">
+          <div className={styles.final}>
+            <div className={styles.finalText}>
+              <h3>Stuck with the limited capabilities of Dynamics GP 2018 or GP 2021?</h3>
+              <p>Upgrade your system today and avail yourself of advanced features to supercharge your business with enhanced tools, features, and capabilities.</p>
+            </div>
+            <div className={styles.finalAction}>
+              <Link href="#exampleModal" data-bs-toggle="modal" className="btn-get-started scrollto">
+                <span>Upgrade Now! &nbsp;<i className="bi bi-arrow-right"></i></span>
+              </Link>
             </div>
           </div>
         </div>
       </section>
-      <section>
-        <div className="container">
-          <header className="section-header">
-            <h2>What Is Microsoft Dynamics GP (Great Plains)?</h2>
-            <p>Microsoft Dynamics GP is a standalone ERP solution specifically built for mid-market companies. Some businesses also consider Great Plains as accounting software, but it can streamline all core business operations. You can deploy the servers in the cloud or on-premises based on business requirements. It offers robust features to manage different departments of the business, including finance, inventory, supply chain, manufacturing, operations, and human resources. Due to its flexible customization and integration options, you can implement GP in any business or industry. Such industries include hospitality, retail, automotive, oil & Gas, non-profit, and more. Whether you are an existing brand or a growing organisation, Microsoft GP is perfect for you. </p>
-          </header>
-        </div>
-      </section>
-      <section className="new-style-bg" style={{backgroundColor:'#f7f7f7'}}>
-        <div className="container">
-          <div className='row justify-content-center'>
-            <div className='col-lg-9'>
-            <header className="section-header">
-               <h2>
-              Microsoft Dynamics
-              GP Features
-            </h2>
-            <p>
-              Dynamics GP is loaded with some exclusive features that make it
-              absolutely perfect for your enterprise.
-            </p>
-          </header>
-            </div>
-          </div>
-          <div className="row g-5 pad2xyr">
-            <div className="col-lg-6">
-              <div className="style-grid-1">
-                <div className="style-grid-content">
-                  <h3>Financial Management</h3>
-                  <p>With analytics and security, Dynamics GP offers to be a great financial accounting solution as it aids in banking and managing your budgets, assets, and cash flow. This tool allows you in tracking your financial records and data without investing any extra effort or extra time on it.</p>
-                </div>
-              </div>
-              <div className="style-grid-1">
-                <div className="style-grid-content">
-                  <h3>Business Intelligence</h3>
-                  <p>The BI system of the tool allows you to check out the reports of data that are pre-built on your dashboard so that you are able to make instant decisions that are intelligent as well as much efficient for your organisation.</p>
-                </div>
-              </div>
-              <div className="style-grid-1">
-                <div className="style-grid-content">
-                  <h3>Inventory Management</h3>
-                  <p>Being an accounting and ERP solution, Dynamics GP aids you in inventory management, where you can keep records of your returns, orders, and others. With the proper inventory management, you can meet the customer's requirements on time and maintain the profit and reputation of your company.</p>
-                </div>
-              </div>
-             
 
-          
+      {/* ===== Free demo ===== */}
+      <section id="free-demo" className={`${styles.block} pt-0 ${styles.anchor}`}>
+        <div className="container">
+          <div className="row align-items-center gy-5">
+            <div className="col-lg-6 order-2 order-lg-1">
+              <div className={styles.mediaFlat}>
+                <Image src="/img/gp-newimga.png" alt="Free Microsoft Dynamics GP demo showing features and tools" width={1024} height={630} sizes="(max-width: 991px) 100vw, 540px" />
+              </div>
             </div>
-            <div className="col-lg-6">
-            <div className="style-grid-1">
-                <div className="style-grid-content">
-                  <h3>Sales and Service</h3>
-                  <p>Dynamics GP Implementation in your business operations ensures that you carry on your sales and service in an even better way. The tool offers functions and features such as automating your sales process so that you can provide an enhanced service to your customers. Also, this will help you control your invoicing well and minimize the costs for shipping and labour for the entire process.</p>
-                </div>
-              </div>
-            <div className="style-grid-1">
-                <div className="style-grid-content">
-                  <h3>Project Management</h3>
-                  <p>Dynamics GP offers a tracking solution for the project that helps track all the financial transactions because of a particular project. It allows you to seamlessly integrate all financial elements such as accounts receivables, inventory, and other financials to ensure that all the accounting and billing are done accurately.</p>
-                </div>
-              </div>
-              <div className="style-grid-1">
-                <div className="style-grid-content">
-                  <h3>HR/Payroll Management</h3>
-                  <p>With Microsoft Dynamics Great Plains HR/Payroll Management Solution, you can optimise your employees' management and improve service to employees via accurate reporting and user query tools and customized lists that support better intelligence into different levels of employee data</p>
-                </div>
-              </div>
-
+            <div className={`col-lg-6 order-1 order-lg-2 ${styles.textCol}`}>
+              <h2 className={styles.h2}>Try Dynamics GP for Free!</h2>
+              <p>No doubt, Dynamics GP is a powerful solution, but is it perfect as per your business needs? It is always a great idea to try a system before investing in it. This will help you understand whether you are investing in the right resource for the business or not. Similarly, you can avail of a Dynamics GP demo from Dynamics Square (one of the UK’s leading <Link href="/our-services/dynamics-365-support-services/">Dynamics GP support partners</Link>) to understand its functionality, features, and tools.</p>
+              <p>The demo of Dynamics GP is absolutely free, regardless of your industry. This demo will give you insights into the sheer capabilities of Microsoft GP and how it aligns with all businesses. Once you find the Great Plains software good for your business, you can go ahead and make the right decision for your business - implementing Dynamics GP.</p>
             </div>
           </div>
         </div>
       </section>
-      {/* <section className="Solution-business-why">
-        <div className="container">
-          <header className="section-header">
-            <h2>
-              Microsoft Dynamics
-              GP Features
-            </h2>
-            <p>
-              Dynamics GP is loaded with some exclusive features that make it
-              absolutely perfect for your enterprise.
-            </p>
-          </header>
-          <div className="row pdd1">
-            <div className="col-lg-4 col-md-6">
-              <div className="why-solution-wrapper why-solution-wrapper-1">
-                <div className="why-solution-wrapper-inner">
-                  <h3>
-                    Financial
-                    Management
-                  </h3>
-                  <div className="overlay">
-                    <p>
-                      With analytics and security, Dynamics GP offers to be a
-                      great financial accounting solution as it aids in banking
-                      and managing your budgets, assets, and cash flow. This
-                      tool allows you in tracking your financial records and
-                      data without investing any extra effort or extra time on
-                      it.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <div className="why-solution-wrapper why-solution-wrapper-1">
-                <div className="why-solution-wrapper-inner">
-                  <h3>
-                    Business
-                    Intelligence
-                  </h3>
-                  <div className="overlay">
-                    <p>
-                      The BI system of the tool allows you to check out the
-                      reports of data that are pre-built on your dashboard so
-                      that you are able to make instant decisions that are
-                      intelligent as well as much efficient for your
-                      organisation.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <div className="why-solution-wrapper why-solution-wrapper-1">
-                <div className="why-solution-wrapper-inner">
-                  <h3>
-                    Inventory
-                    Management
-                  </h3>
-                  <div className="overlay">
-                    <p>
-                      Being an accounting and ERP solution, Dynamics GP aids you
-                      in inventory management, where you can keep records of
-                      your returns, orders, and others. With the proper
-                      inventory management, you can meet the customer's
-                      requirements on time and maintain the profit and
-                      reputation of your company.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <div className="why-solution-wrapper why-solution-wrapper-1">
-                <div className="why-solution-wrapper-inner">
-                  <h3>
-                    Sales and
-                    Service
-                  </h3>
-                  <div className="overlay">
-                    <p>
-                      Dynamics GP Implementation in your business operations
-                      ensures that you carry on your sales and service in an
-                      even better way. The tool offers functions and features
-                      such as automating your sales process so that you can
-                      provide an enhanced service to your customers. Also, this
-                      will help you control your invoicing well and minimize the
-                      costs for shipping and labour for the entire process.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <div className="why-solution-wrapper why-solution-wrapper-1">
-                <div className="why-solution-wrapper-inner">
-                  <h3>
-                    Project
-                    Management
-                  </h3>
-                  <div className="overlay">
-                    <p>
-                      Dynamics GP offers a tracking solution for the project
-                      that helps track all the financial transactions because of
-                      a particular project. It allows you to seamlessly
-                      integrate all financial elements such as accounts
-                      receivables, inventory, and other financials to ensure
-                      that all the accounting and billing are done accurately.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <div className="why-solution-wrapper why-solution-wrapper-1">
-                <div className="why-solution-wrapper-inner">
-                  <h3>
-                    HR/Payroll
-                    Management
-                  </h3>
-                  <div className="overlay">
-                    <p>
-                      With Microsoft Dynamics Great Plains HR/Payroll Management
-                      Solution, you can optimise your employees' management and
-                      improve service to employees via accurate reporting and
-                      user query tools and customized lists that support better
-                      intelligence into different levels of employee data
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
-      <section className="call-to-action-center hero-4">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-8">
-              <div className="call-to-action-content">
-                <h3>Stuck with the limited capabilities of Dynamics GP 2018 or GP 2021? </h3>
-                <p>Upgrade your system today and avail yourself of advanced features to supercharge your business with enhanced tools, features, and capabilities. </p>
-                <div className="text-center m-o-t new-btn-nn">
-                  <Link
-                    href="#exampleModal"
-                    data-bs-toggle="modal"
-                    className="btn-get-started scrollto">
 
-                    <span>Upgrade Now!</span>
-
-                  </Link>
-                </div>
-              </div>
+      {/* ===== CTA ===== */}
+      <section className={styles.ctaBand}>
+        <div className="container">
+          <div className={styles.final}>
+            <div className={styles.finalText}>
+              <h3>Get the Dynamics GP Demo for free!</h3>
+              <p>Check out the tools, features, and efficiency of Dynamics GP with a free demo from Microsoft-certified Dynamics GP experts.</p>
+            </div>
+            <div className={styles.finalAction}>
+              <Link href="#exampleModal" data-bs-toggle="modal" className="btn-get-started scrollto">
+                <span>Book a Free Dynamics GP Demo &nbsp;<i className="bi bi-arrow-right"></i></span>
+              </Link>
             </div>
           </div>
         </div>
       </section>
-      <section className="">
-        <div className="container">
-          <div className="row pad9x rever-1">
-            <div className="col-lg-7 align-self-center">
-              <div className="commen-lef-pic">
-                <Image
-                  src="/img/gp-newimga.png"
-                  alt="Dynamics-GP-overview"
-                  width={1138} height={765}
-                />
-              </div>
-            </div>
-            <div className="col-lg-5 align-self-center">
-              <div className="commen-rit-info">
-                <h3>Try Dynamics GP for Free!</h3>
-                <p>No doubt, Dynamics GP is a powerful solution, but is it perfect as per your business needs? 
 
-It is always a great idea to try a system before investing in it. This will help you understand whether you are investing in the right resource for the business or not. Similarly, you can avail of a Dynamics GP demo from Dynamics Square (one of the UK’s leading Dynamics GP support partners) to understand its functionality, features, and tools.  </p>
-                <p>The demo of Dynamics GP is absolutely free, regardless of your industry. This demo will give you insights into the sheer capabilities of Microsoft GP and how it aligns with all businesses. Once you find the Great Plains software good for your business, you can go ahead and make the right decision for your business - implementing Dynamics GP. </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="call-to-action-center hero-4">
+      {/* ===== Support ended ===== */}
+      <section id="gp-support-ended" className={`${styles.block} ${styles.blockTint} ${styles.anchor}`}>
         <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-8">
-              <div className="call-to-action-content">
-                <h3>Get the Dynamics GP Demo for free! </h3>
-                <p>Check out the tools, features, and efficiency of Dynamics GP with a free demo from Microsoft-certified Dynamics GP experts. </p>
-                <div className="text-center m-o-t new-btn-nn">
-                 <Link
-                   href="#exampleModal"
-                   className="btn-get-started scrollto"
-                   data-bs-toggle="modal">
-
-                   <span>Book a Free Dynamics GP Demo </span>
-
-                 </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="">
-        <div className="container">
-        <div className="row pad9x">
-            <div className="col-lg-6 align-self-center">
-              <div className="commen-rit-info">
-                <h2>Has Microsoft ended Dynamics GP Support for all Versions?</h2>
+          <div className="row gy-4">
+            <div className="col-lg-6 d-flex">
+              <article className={`${styles.capCard} w-100`}>
+                <i className="bi bi-calendar-x"></i>
+                <h2 className={styles.h2}>Has Microsoft ended Dynamics GP Support for all Versions?</h2>
                 <p>Yes, Microsoft has ended the mainstream support of Dynamics GP 2013, 2015, 2016, and 2018 running on a fixed lifecycle policy, or you can also consider it the end of the life of Dynamics GP. It means these versions will not get any kind of updates, upgrades, bug fixes, or patches from Microsoft. However, you can still avail of extended support for Dynamics GP 2015, 2016, and 2018, and Microsoft will continue to release security updates on time until the end of extended support.</p>
-                <p>The latest version (Dynamics GP 18.) is available under modern lifecycle policy, which means Microsoft will continue to release GP updates, upgrades, patches, and more automatically until Microsoft rolls out new information. </p>
-              </div>
+                <p>The latest version (Dynamics GP 18.) is available under modern lifecycle policy, which means Microsoft will continue to release GP updates, upgrades, patches, and more automatically until Microsoft rolls out new information.</p>
+              </article>
             </div>
-            <div className="col-lg-6 align-self-center">
-              <div className="commen-lef-pic">
-                <Image
-                  src="/img/gp-newimga.png"
-                  alt="gp-newimga"
-                  width={1024} height={630}
-                />
-              </div>
-            </div>
-          </div>
-          <div className="row pad9x rever-1">
-            <div className="col-lg-6 align-self-center">
-              <div className="commen-lef-pic">
-                <Image
-                  src="/img/gp-upgrade-1024x630.png"
-                  alt="gp-upgrade-1024x630"
-                  width={1024} height={630}
-                />
-              </div>
-            </div>
-            <div className="col-lg-6 align-self-center">
-              <div className="commen-rit-info">
-                <h2>My Dynamics GP Support has ended - What Should I Do? </h2>
-                <p>If so, it's high time you need to make a smart decision for your business. Because you must provide all necessary resources to empower your business to grow, irrespective of its complexity. Based on your GP version, you have two choices. Either you upgrade your system to the latest Dynamics GP version or you upgrade to <Link href="/products/dynamics-365-business-central/" target="_blank">Business Central</Link>. </p>
-                <p>Based on our analysis and market research, we have found that <Link href="/gp-to-business-central-migration/" target="_blank">upgrading Dynamics GP to Business Central</Link> is a better and more cost-effective decision. Because, sooner or later, the support of all Dynamics GP versions will end, and you need to eventually upgrade to a modern ERP solution. If you have to upgrade tomorrow, why not consider upgrading today? It will save a lot of essential resources for your business that can be utilised for business growth rather than investing in upgrading to the latest version of GP. </p>
-              </div>
+            <div className="col-lg-6 d-flex">
+              <article className={`${styles.capCard} w-100`}>
+                <i className="bi bi-signpost-split"></i>
+                <h2 className={styles.h2}>My Dynamics GP Support has ended - What Should I Do?</h2>
+                <p>If so, it&apos;s high time you need to make a smart decision for your business. Because you must provide all necessary resources to empower your business to grow, irrespective of its complexity. Based on your GP version, you have two choices. Either you upgrade your system to the latest Dynamics GP version or you upgrade to <Link href="/products/dynamics-365-business-central/">Business Central</Link>.</p>
+                <p>Based on our analysis and market research, we have found that <Link href="/gp-to-business-central-migration/">upgrading Dynamics GP to Business Central</Link> is a better and more cost-effective decision. Because, sooner or later, the support of all Dynamics GP versions will end, and you need to eventually upgrade to a modern ERP solution. If you have to upgrade tomorrow, why not consider upgrading today? It will save a lot of essential resources for your business that can be utilised for business growth rather than investing in upgrading to the latest version of GP.</p>
+              </article>
             </div>
           </div>
-          <div className="row pad9x">
-            <div className="col-lg-6 align-self-center">
-              <div className="commen-rit-info">
-                <h2>Microsoft Dynamics GP Upgrade</h2>
-                <p>
-                  <b>Dynamics Square is a Microsoft Dynamics GP 2023 Expert.</b>
-                </p>
-                <p>There are a number of organisations that have been using Dynamics GP for a long time now with different versions, like 2013, 2015, 2016, or 2018. The latest update of Dynamics GP version 18.6 (Dynamics GP 2025) offers exceptional features and functions. These features include more fields in the payable transaction workflow, new workflows for different processes, and more. These added functionalities will help your organisation run smoothly. </p>
-                <p>Getting the upgrade to Microsoft Dynamics GP 18.6 will offer you new features over your existing package that will make your operations even more powerful than before. These features will streamline complex operations in different areas such as finances, human resources, inventory management, and many others. </p>
-                <p>You can get a hands-on Dynamics GP trial to understand the latest features and tools and identify whether this is a perfect ERP solution or not based on your business needs. As per Microsoft Dynamics policy, you can avail yourself of a trial of any Dynamics solution for a month to test the solution's reliability. </p>
-                <p>After you have checked out the functioning of the tool for a month, you can proceed further to find the Microsoft Dynamics GP cost and the prices of different licences. </p>
-               
-              </div>
+        </div>
+      </section>
+
+      {/* ===== Upgrade + Support ===== */}
+      <section id="gp-upgrade" className={`${styles.block} ${styles.anchor}`}>
+        <div className="container">
+          <div className={`row align-items-center gy-5 ${styles.splitRow}`}>
+            <div className={`col-lg-6 ${styles.textCol}`}>
+              <h2 className={styles.h2}>Microsoft Dynamics GP Upgrade</h2>
+              <p><b>Dynamics Square is a Microsoft Dynamics GP 2023 Expert.</b></p>
+              <p>There are a number of organisations that have been using Dynamics GP for a long time now with different versions, like 2013, 2015, 2016, or 2018. The latest update of Dynamics GP version 18.6 (Dynamics GP 2025) offers exceptional features and functions. These features include more fields in the payable transaction workflow, new workflows for different processes, and more. These added functionalities will help your organisation run smoothly.</p>
+              <p>Getting the <Link href="/our-services/dynamics-365-upgrade-services/">upgrade to Microsoft Dynamics GP 18.6</Link> will offer you new features over your existing package that will make your operations even more powerful than before. These features will streamline complex operations in different areas such as finances, human resources, inventory management, and many others.</p>
+              <p>You can get a hands-on Dynamics GP trial to understand the latest features and tools and identify whether this is a perfect ERP solution or not based on your business needs. As per Microsoft Dynamics policy, you can avail yourself of a trial of any Dynamics solution for a month to test the solution&apos;s reliability.</p>
+              <p>After you have checked out the functioning of the tool for a month, you can proceed further to find the Microsoft Dynamics GP cost and the prices of different licences.</p>
             </div>
-            <div className="col-lg-6 align-self-center">
-              <div className="commen-lef-pic">
-                <Image
-                  src="/img/gp-upgrade-1024x630.png"
-                  alt="gp-upgrade-1024x630"
-                  width={1024} height={630}
-                />
+            <div className="col-lg-6">
+              <div className={styles.mediaFlat}>
+                <Image src="/img/gp-upgrade-1024x630.png" alt="Microsoft Dynamics GP upgrade to version 18.6" width={1024} height={630} sizes="(max-width: 991px) 100vw, 540px" />
               </div>
             </div>
           </div>
 
-          <div className="row pad9x rever-1">
-          <div className="col-lg-6 align-self-center">
-              <div className="commen-lef-pic">
-                <Image
-                  src="/img/gp-support-1024x630.png"
-                  alt="gp-support-1024x630"
-                  width={1024} height={630}
-                />
+          <div className={`row align-items-center gy-5 ${styles.splitRow}`}>
+            <div className="col-lg-6 order-2 order-lg-1">
+              <div className={styles.mediaFlat}>
+                <Image src="/img/gp-support-1024x630.png" alt="Microsoft-certified Dynamics GP support team" width={1024} height={630} sizes="(max-width: 991px) 100vw, 540px" />
               </div>
             </div>
-            <div className="col-lg-6 align-self-center">
-              <div className="commen-rit-info">
-                <h2>Get Dynamics GP Support - Cost Effective and Productive  </h2>
-                <p>
-                  <b>Get Dynamics GP support from our dedicated team of Microsoft-certified Great Plains software experts. </b>
-                </p>
-                <p>Microsoft is known for its brand name and its reliability. Hence, when you are investing your hard-earned money in Dynamics GP, you can surely expect some excellent results according to your requirements. But a technical glitch can happen even with the best options available. But you do not have to worry much, as we offer you the best, most reliable, and most trustworthy Dynamics GP support for all versions. </p>
-                <p>Our support team ensures to offer a huge list of services such as consulting, licencing, upgrading your older version, implementation, integration, customization, and others. </p>
-                <p>Regardless of your query, our expert Dynamics consultants will resolve it in no time so that your business can continue to grow. Also, if you are having issues, you can get Microsoft Dynamics GP training to get a deep understanding of this powerful <Link href="/products/microsoft-dynamics-erp/" target="_blank">Microsoft ERP solution</Link>. </p>
-                <div className="cltt-actt">
-                  <Link href="/contact-us/" target="_blank">Get Support Now! </Link>
-                </div>
-              </div>
+            <div className={`col-lg-6 order-1 order-lg-2 ${styles.textCol}`}>
+              <h2 className={styles.h2}>Get Dynamics GP Support - Cost Effective and Productive</h2>
+              <p><b>Get Dynamics GP support from our dedicated team of Microsoft-certified Great Plains software experts.</b></p>
+              <p>Microsoft is known for its brand name and its reliability. Hence, when you are investing your hard-earned money in Dynamics GP, you can surely expect some excellent results according to your requirements. But a technical glitch can happen even with the best options available. But you do not have to worry much, as we offer you the best, most reliable, and most trustworthy Dynamics GP support for all versions.</p>
+              <p>Our support team ensures to offer a huge list of services such as <Link href="/our-services/dynamics-365-consultant/">consulting</Link>, licencing, upgrading your older version, <Link href="/our-services/dynamics-365-implementation-services/">implementation</Link>, <Link href="/products/microsoft-dynamics-365/integration/">integration</Link>, customization, and others.</p>
+              <p>Regardless of your query, our expert Dynamics consultants will resolve it in no time so that your business can continue to grow. Also, if you are having issues, you can get <Link href="/our-services/dynamics-365-training/">Microsoft Dynamics GP training</Link> to get a deep understanding of this powerful <Link href="/products/microsoft-dynamics-erp/">Microsoft ERP solution</Link>.</p>
+              <Link href="/contact-us/" className={styles.ctaGhost}>
+                Get Support Now! <i className="bi bi-arrow-right"></i>
+              </Link>
             </div>
-           
           </div>
-        
         </div>
       </section>
-      <section className="solution-faq faq">
+
+      {/* ===== FAQs ===== */}
+      <section id="faqs" className={`${styles.block} ${styles.blockTint} ${styles.anchor}`}>
         <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-8">
-              <header className="section-header">
-                <h2>
-                  Have you got <br /> questions about Microsoft Dynamics GP
-                </h2>
+          <div className="row gy-5">
+            <div className="col-lg-4">
+              <div className={styles.faqAside}>
+                <h2 className={styles.h2}>Have you got questions about Microsoft Dynamics GP</h2>
                 <p>Click through to our FAQ for the best answers!</p>
-              </header>
-            </div>
-          </div>
-          <div className="row justify-content-center mar-top-7">
-            <div className="col-lg-8">
-              <div className="accordion accordion-flush" id="faqlist1">
-                <div className="accordion-item">
-                  <h3 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-content-1"
-                    >
-                      What is Dynamics GP?
-                    </button>
-                  </h3>
-                  <div
-                    id="faq-content-1"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#faqlist1"
-                  >
-                    <div className="accordion-body">
-                      <p>
-                        Microsoft Dynamics GP or Great Plains is an ERP
-                        (Enterprise Resource Planning) solution capable of
-                        managing most of the core business processes, including
-                        finance, operations, accounting, warehouse management,
-                        and distribution. However, it is an{" "}
-                        <Link href="/products/microsoft-dynamics-erp/" target="_blank">
-                        ERP solution
-                        </Link>{" "}
-                        with some features of CRM (Customer Relationship
-                        Management), like sales, service, and customer support.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <h3 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-content-2"
-                    >
-                      Is there a need for a new licence while updating?
-                    </button>
-                  </h3>
-                  <div
-                    id="faq-content-2"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#faqlist1"
-                  >
-                    <div className="accordion-body">
-                      <p>
-                        No, there is no need to purchase a new licence if you
-                        are planning to update the existing version to a new
-                        version of Dynamics GP. Even so, you can apply more
-                        integrations and customisations without updating or
-                        purchasing the new licence key. Your licence will remain
-                        the same in any circumstance.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <h3 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-content-3"
-                    >
-                      How was Dynamics GP built?
-                    </button>
-                  </h3>
-                  <div
-                    id="faq-content-3"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#faqlist1"
-                  >
-                    <div className="accordion-body">
-                      <p>
-                        When GP was introduced, it was specifically made for the
-                        US market without any multi-language or multi-currency
-                        support. With the 1993 update, it became the first
-                        multi-user accounting solution in the US. At that time,
-                        it was generally known as Great Plains as it was the
-                        original founding software organisation of this amazing
-                        solution.
-                      </p>
-                      <p>
-                        In 2001, Great Plains was purchased by Microsoft and
-                        released Dynamics 8.0, and later released a totally
-                        updated version of Dynamics GP.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <h3 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-content-4"
-                    >
-                      How do I upgrade Dynamics GP 2015 or a previous version to
-                      the latest version?
-                    </button>
-                  </h3>
-                  <div
-                    id="faq-content-4"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#faqlist1"
-                  >
-                    <div className="accordion-body">
-                      <p>
-                        For any kind of update,{" "}
-                        <Link href="/our-services/dynamics-365-upgrade-services/" target="_blank">
-                         upgrade
-                        </Link>
-                        , or{" "}
-                        <Link href="/our-services/dynamics-365-implementation-services" target="_blank">
-                         implementation
-                        </Link>
-                        , you need to contact your trusted{" "}
-                        <Link href="/our-services/dynamics-365-support-services" target="_blank">
-                        Dynamics 365 support partner
-                        </Link>
-                        , and they will guide you with a better approach. Even
-                        so, you can contact Dynamics Square for a rapid and
-                        error-free process with support service beyond the
-                        implementation process.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <h3 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-content-5"
-                    >
-                      What does Dynamics GP offer?
-                    </button>
-                  </h3>
-                  <div
-                    id="faq-content-5"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#faqlist1"
-                  >
-                    <div className="accordion-body">
-                      <p>
-                        It offers various features to manage the entire business
-                        process, including finance management, procurement,
-                        inventory management, accurate reporting, field service
-                        management, project management, and supply chain
-                        management. With the updates from Microsoft, it now
-                        offers multi-currency functions to make global business
-                        possible.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <h3 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-content-6"
-                    >
-                      Who are the users of Dynamics GP?
-                    </button>
-                  </h3>
-                  <div
-                    id="faq-content-6"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#faqlist1"
-                  >
-                    <div className="accordion-body">
-                      <p>
-                        It offers advanced financial management features, and
-                        the typical user of this application is a large
-                        organisation with more than 3 million dollars in revenue
-                        per annum. And, if an organisation belongs to SMB, you
-                        can use ,
-                        <Link href="/products/microsoft-dynamics-nav/" target="_blank">
-                        Dynamics NAV
-                        </Link>{" "}
-                        or{" "}
-                        <Link href=" /products/dynamics-365-business-central/" target="_blank">
-                         Microsoft Dynamics 365 Business Central
-                        </Link>{" "}
-                        to manage basic financial and accounting needs.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <h3 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-content-7"
-                    >
-                      What are some benefits of Dynamics GP?
-                    </button>
-                  </h3>
-                  <div
-                    id="faq-content-7"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#faqlist1"
-                  >
-                    <div className="accordion-body">
-                      <p>
-                        Dynamics GP offers various benefits to organisations,
-                        enabling them to supervise the financial and accounting
-                        operations seamlessly with easy growth and scalability.
-                      </p>
-                      <p>
-                        Microsoft offers a strong network of vendor partners to
-                        offer smooth support services to all users, irrespective
-                        of the different boundaries.
-                      </p>
-                      <p>
-                        The powerful system offers integrations and
-                        customizations to help businesses deal with unique
-                        business operations and different requirements.
-                      </p>
-                      <p>
-                        Users can also avail add-ons to meet the current and
-                        predictive requirements.
-                      </p>
-                      <p>
-                        Microsoft GP is a cloud-based platform that can be
-                        accessed using any platform, whether mobile, web, or PC,
-                        from anywhere and anytime.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <h3 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-content-8"
-                    >
-                      Does Dynamics GP offer integration options?
-                    </button>
-                  </h3>
-                  <div
-                    id="faq-content-8"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#faqlist1"
-                  >
-                    <div className="accordion-body">
-                      <p>
-                        Yes, it offers integration options with native as well
-                        as third-party integrations. Microsoft offers native
-                        integrations, including Power Applications, Office apps,
-                        and Outlook. One of the best Power Applications offered
-                        by Microsoft for Dynamics GP users is{" "}
-                        <Link href="/products/microsoft-power-bi/" target="_blank">
-                        Power BI
-                        </Link>
-                        , which helps users to visualise the huge chunks of data
-                        with ease for proper utilization.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="accordion-item">
-                  <h3 className="accordion-header">
-                    <button
-                      className="accordion-button collapsed"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#faq-content-9"
-                    >
-                      What are the latest Dynamics GP versions?
-                    </button>
-                  </h3>
-                  <div
-                    id="faq-content-9"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#faqlist1"
-                  >
-                    <div className="accordion-body">
-                      <p>
-                        Dynamics GP now follows Microsoft's Modern Lifecycle Policy, and the current release is Dynamics GP 18.x. Older fixed-lifecycle versions (2013, 2015, 2016 and 2018) have reached or are reaching the end of their support dates.
-                      </p>
-                      <p>
-                        Is Dynamics GP going to expire from the market?
-                      </p>
-                      <p>
-                        In September 2024, Microsoft announced the end-of-sale timeline for Dynamics GP. Existing customers keep getting support in line with the dates below.
-                      </p>
-                      <table className="table table-bordered table-responsive">
-                        <thead>
-                          <tr>
-                            <th>Milestone</th>
-                            <th>Date</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>New perpetual licences end</td>
-                            <td>1 April 2025</td>
-                          </tr>
-                          <tr>
-                            <td>New subscriptions end</td>
-                            <td>1 April 2026</td>
-                          </tr>
-                          <tr>
-                            <td>Enhancements and regulatory updates end</td>
-                            <td>31 December 2029</td>
-                          </tr>
-                          <tr>
-                            <td>Security patches end</td>
-                            <td>30 April 2031</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
+                <div className={`${styles.faqCtaCard} ${styles.faqCtaCardFlat}`}>
+                  <Image src="/img/gpbanner.png" alt="Microsoft Dynamics GP support from Dynamics Square" width={1024} height={576} sizes="(max-width: 991px) 100vw, 360px" />
+                  <Link href="#exampleModal" data-bs-toggle="modal" className="btn-get-started scrollto">
+                    <span>Book a Free Dynamics GP Demo &nbsp;<i className="bi bi-arrow-right"></i></span>
+                  </Link>
                 </div>
               </div>
+            </div>
+            <div className="col-lg-8">
+              <FaqList items={faqs} />
             </div>
           </div>
         </div>
       </section>
+      {/* ===== Resources ===== */}
+      <ResourceTabs
+        title="Get Started with Microsoft Dynamics GP"
+        intro="Case studies, e-books, podcasts and blogs to help you explore Dynamics GP and your move to Business Central."
+        tabs={gpResources}
+      />
+
+      {/* ===== Internal links ===== */}
+      <RelatedLinks links={gpLinks} />
     </>
   );
 };
