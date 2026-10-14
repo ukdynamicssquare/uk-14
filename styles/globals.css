@@ -22965,3 +22965,363 @@ letter-spacing:3px
     font-size: 16px;
   }
 }
+
+/* Dynamics 365 Supply Chain Management page */
+/* Hero: lines background (n-001) with SCM visuals layered on top,
+   matching the Finance hero composition */
+.scm-hero-visual .flot-1 {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.scm-hero-lines {
+  aspect-ratio: 1952 / 963;
+  overflow: visible;
+}
+.scm-hero-dash {
+  animation: scmDashFlow 6s linear infinite;
+}
+@keyframes scmDashFlow {
+  to {
+    stroke-dashoffset: -64;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .scm-hero-dash,
+  .scm-hd .scm-hd-card {
+    animation: none;
+  }
+}
+/* Hero dashboard illustration. Sized in cqw (1cqw = 1% of the hero width)
+   so the whole composition scales like the Finance banner image */
+.scm-hd {
+  position: absolute;
+  inset: 0;
+  container-type: inline-size;
+  pointer-events: none;
+  color: #1f2937;
+  text-align: left;
+}
+.scm-hd-window {
+  position: absolute;
+  top: 1%;
+  left: 25%;
+  width: 51cqw;
+  padding: 0.9cqw;
+  background: #fff;
+  border-radius: 0.8cqw;
+  box-shadow: 0 1.6cqw 4cqw rgba(60, 50, 110, 0.18);
+}
+.scm-hd-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.8cqw;
+  height: 2.2cqw;
+  padding: 0 1cqw;
+  background: #0f2547;
+  color: #fff;
+  font-size: 0.72cqw;
+  border-radius: 0.3cqw 0.3cqw 0 0;
+}
+.scm-hd-waffle {
+  width: 0.9cqw;
+  height: 0.9cqw;
+}
+.scm-hd-sep {
+  padding-left: 0.8cqw;
+  border-left: 1px solid rgba(255, 255, 255, 0.35);
+}
+.scm-hd-search {
+  width: 14cqw;
+  margin-left: 4cqw;
+  padding: 0.2cqw 0.6cqw;
+  background: #e9edf3;
+  color: #6b7280;
+  font-size: 0.58cqw;
+  border-radius: 0.2cqw;
+}
+.scm-hd-user {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.3cqw;
+  height: 1.3cqw;
+  margin-left: auto;
+  border-radius: 50%;
+  background: #fff;
+  color: #0f2547;
+  font-size: 0.5cqw;
+  font-weight: 700;
+}
+.scm-hd-body {
+  display: grid;
+  grid-template-columns: 9.5cqw 1fr;
+  height: 22cqw;
+  border: 1px solid #eceef3;
+  border-top: 0;
+}
+.scm-hd-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75cqw;
+  padding: 1.1cqw 0.8cqw;
+  background: #f6f6f9;
+  font-size: 0.58cqw;
+  color: #4b5563;
+}
+.scm-hd-nav-title {
+  font-weight: 600;
+  color: #111827;
+}
+.scm-hd-nav .is-active {
+  padding-left: 0.4cqw;
+  border-left: 0.15cqw solid #5b4f96;
+  color: #5b4f96;
+  font-weight: 600;
+}
+.scm-hd-main {
+  padding: 1.2cqw 1.4cqw;
+  background: linear-gradient(180deg, #eaf2fb 0%, #fff 45%);
+}
+.scm-hd-head {
+  display: flex;
+  align-items: center;
+  gap: 0.8cqw;
+  margin-bottom: 1.1cqw;
+}
+.scm-hd-title {
+  margin-right: auto;
+  font-size: 1.15cqw;
+  font-weight: 600;
+}
+.scm-hd-filter {
+  padding: 0.2cqw 0.6cqw;
+  background: #fff;
+  border: 1px solid #d9dce3;
+  border-radius: 0.2cqw;
+  font-size: 0.55cqw;
+  color: #555;
+}
+.scm-hd-kpis,
+.scm-hd-charts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8cqw;
+}
+.scm-hd-kpis {
+  margin-bottom: 1cqw;
+}
+.scm-hd-kpi,
+.scm-hd-panel {
+  padding: 0.7cqw 0.8cqw;
+  background: #fff;
+  border: 1px solid #e3e5ec;
+  border-radius: 0.3cqw;
+}
+.scm-hd-kpi span,
+.scm-hd-panel span {
+  display: block;
+  font-size: 0.55cqw;
+  color: #4b5563;
+}
+.scm-hd-kpi b {
+  display: block;
+  margin-top: 0.5cqw;
+  font-size: 1.5cqw;
+  font-weight: 500;
+  color: #138a4a;
+}
+.scm-hd-kpi:last-child b {
+  color: #1f2937;
+}
+.scm-hd-panel span {
+  margin-bottom: 0.5cqw;
+}
+.scm-hd-panel svg {
+  display: block;
+  width: 100%;
+  height: 8.2cqw;
+}
+.scm-hd-card,
+.scm-hd-stat {
+  position: absolute;
+  background: #fff;
+  border-radius: 0.5cqw;
+  box-shadow: 1.2cqw 1cqw 2.6cqw rgba(0, 0, 0, 0.14);
+}
+.scm-hd-card {
+  padding: 0.8cqw 1cqw;
+}
+.scm-hd-card-title {
+  display: block;
+  font-size: 0.62cqw;
+  font-weight: 600;
+}
+.scm-hd-card-meta {
+  display: block;
+  margin-bottom: 0.5cqw;
+  font-size: 0.5cqw;
+  color: #6b7280;
+}
+.scm-hd-card svg {
+  display: block;
+  width: 100%;
+  height: 4.5cqw;
+}
+.scm-hd-card-left {
+  top: 30%;
+  left: 11%;
+  width: 11cqw;
+  animation: Moveleft 3s ease-in-out infinite alternate;
+}
+.scm-hd-card-right {
+  top: 8%;
+  left: 78%;
+  width: 9cqw;
+  animation: MoveDown 3s ease-in-out infinite alternate;
+}
+.scm-hd-stat {
+  top: 51%;
+  width: 8.5cqw;
+  padding: 0.8cqw 1cqw;
+}
+.scm-hd-stat span {
+  display: block;
+  margin-bottom: 0.3cqw;
+  font-size: 0.55cqw;
+  color: #4b5563;
+}
+.scm-hd-stat b {
+  font-size: 1.3cqw;
+  font-weight: 500;
+}
+.scm-hd-stat b.is-ok {
+  font-size: 0.95cqw;
+  color: #138a4a;
+}
+.scm-hd-stat-1 {
+  left: 40%;
+}
+.scm-hd-stat-2 {
+  left: 50%;
+}
+.scm-hd-stat-3 {
+  left: 60%;
+}
+/* Tablet / mobile: same dashboard, window only. The inner .scm-hd is sized as if
+   the hero were 1 / 0.51 times wider and shifted left, so the window (51% wide,
+   25% from the left) fills the column exactly */
+.scm-hd-mobile {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 100 / 60;
+  container-type: inline-size;
+  /* the scaled inner box is wider than the screen: clip sideways only */
+  overflow: hidden;
+  overflow-x: clip;
+  overflow-y: visible;
+}
+.scm-hd-mobile .scm-hd {
+  inset: auto;
+  top: 0;
+  left: -49.02cqw;
+  width: 196.08cqw;
+  height: 96.73cqw;
+}
+.scm-intro a.u-i,
+.scm-pricing-note a.u-i,
+.busnes-upgrade-serve-one .solution-new-banner-sub-head a.u-i,
+.solution-new-six .solution-new-banner-sub-head a.u-i {
+  color: #954b70;
+  text-underline-offset: 3px;
+}
+.scm-icon {
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #b488c4 0%, #6f4b80 100%);
+  color: #fff;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+.scm-card-img img {
+  display: block;
+  width: 100%;
+  max-width: 580px;
+  height: auto;
+  aspect-ratio: 580 / 456;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-left: auto;
+}
+@media (min-width: 992px) {
+  .scm-stack .mycard__inner {
+    min-height: 520px;
+  }
+  /* Same sticky line for every card so each one fully covers the one behind */
+  .scm-stack .mycard {
+    transform: none;
+  }
+  /* Last card stays flat (overrides the scroll hook's -50px lift) */
+  .scm-stack .mycard:last-of-type .mycard__inner {
+    transform: none !important;
+  }
+  /* Extra room inside the sticky container: the last card pins over the
+     whole stack, then all cards scroll out together */
+  .scm-stack-hold {
+    height: 120px;
+  }
+}
+.scm-pricing-note {
+  margin-top: 30px;
+}
+.product-side-002-content ul li .bi-x-circle {
+  flex-shrink: 0;
+}
+@media (max-width: 991px) {
+  .scm-card-img img {
+    margin-right: auto;
+  }
+  .m-b-image.scm-hd-mobile {
+    margin-bottom: -40px;
+  }
+}
+
+/* Header dropdowns (Our Services, Company): icon tile before each link,
+   styled like the Case Studies icons in the Resources megamenu */
+.navbar .dropdown ul.dd-ic-list {
+  padding: 8px 0;
+}
+.navbar .dropdown ul.dd-ic-list a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 8px 20px;
+}
+.dd-ic-list .dd-ic {
+  display: inline-flex;
+  flex: 0 0 32px;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: #f4eef8;
+  transition: background 0.2s ease;
+}
+.navbar .dropdown ul.dd-ic-list a .dd-ic i {
+  margin: 0;
+  font-size: 16px;
+  color: #8e44ad;
+  transition: color 0.2s ease;
+}
+.navbar .dropdown ul.dd-ic-list a:hover .dd-ic {
+  background: #8e44ad;
+}
+.navbar .dropdown ul.dd-ic-list a:hover .dd-ic i {
+  color: #fff;
+}

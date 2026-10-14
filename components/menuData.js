@@ -573,18 +573,18 @@ export const INDUSTRIES = [
 ];
 
 export const OUR_SERVICES = [
-  { href: "/our-services/dynamics-365-implementation-services/", label: "Implementation Services" },
-  { href: "/our-services/dynamics-365-support-services/", label: "Support Services" },
-  { href: "/our-services/dynamics-365-upgrade-services/", label: "Upgrade Services" },
-  { href: "/our-services/dynamics-365-training/", label: "Dynamics 365 Training" },
-  { href: "/our-services/dynamics-365-consultant/", label: "Dynamics 365 Consultants" },
+  { href: "/our-services/dynamics-365-implementation-services/", label: "Implementation Services", icon: "bi-gear-wide-connected" },
+  { href: "/our-services/dynamics-365-support-services/", label: "Support Services", icon: "bi-headset" },
+  { href: "/our-services/dynamics-365-upgrade-services/", label: "Upgrade Services", icon: "bi-arrow-up-circle" },
+  { href: "/our-services/dynamics-365-training/", label: "Dynamics 365 Training", icon: "bi-mortarboard" },
+  { href: "/our-services/dynamics-365-consultant/", label: "Dynamics 365 Consultants", icon: "bi-people" },
 ];
 
 export const COMPANY_LINKS = [
-  { href: "/about-us/", label: "About Us" },
-  { href: "/why-us/", label: "Why Us" },
-  { href: "/partner/", label: "Partners" },
-  { href: "/career/", label: "Careers" },
+  { href: "/about-us/", label: "About Us", icon: "bi-building" },
+  { href: "/why-us/", label: "Why Us", icon: "bi-patch-check" },
+  { href: "/partner/", label: "Partners", icon: "bi-person-heart" },
+  { href: "/career/", label: "Careers", icon: "bi-briefcase" },
 ];
 
 export const RESOURCE_TABS = [

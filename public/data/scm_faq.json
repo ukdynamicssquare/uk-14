@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "question": "What is Dynamics 365 Supply Chain Management?",
+    "answer": "<p>Dynamics 365 Supply Chain Management is a Microsoft ERP solution for managing inventory, procurement, manufacturing, warehousing and supply chain operations.</p>"
+  },
+  {
+    "id": 2,
+    "question": "What are the key Dynamics 365 Supply Chain Management features?",
+    "answer": "<p>Key features include inventory management, warehouse operations, procurement, production planning, demand forecasting and asset management.</p>"
+  },
+  {
+    "id": 3,
+    "question": "What are the Dynamics 365 Supply Chain Management modules?",
+    "answer": "<p>The main modules cover inventory, warehouse management, procurement, production control, asset management, master planning and transportation management.</p>"
+  },
+  {
+    "id": 4,
+    "question": "What is the difference between Microsoft Dynamics 365 Finance and Supply Chain Management?",
+    "answer": "<p><a class=\"u-i\" href=\"/products/microsoft-dynamics-365-finance/\">Dynamics 365 Finance</a> focuses on financial operations, while Supply Chain Management manages inventory, procurement, production and logistics. They can work together.</p>"
+  },
+  {
+    "id": 5,
+    "question": "What is Dynamics 365 F&SCM?",
+    "answer": "<p><a class=\"u-i\" href=\"/products/microsoft-dynamics-365-finance-operations/\">Dynamics 365 F&amp;SCM</a> refers to Dynamics 365 Finance and Supply Chain Management, which businesses can use to connect financial and operational processes.</p>"
+  },
+  {
+    "id": 6,
+    "question": "How much does Dynamics 365 Supply Chain Management cost?",
+    "answer": "<p>Dynamics 365 Supply Chain Management pricing depends on the licence and business requirements. <a class=\"u-i\" href=\"/contact-us/\">Contact Dynamics Square</a> for a tailored estimate.</p>"
+  },
+  {
+    "id": 7,
+    "question": "Does Dynamics 365 SCM support manufacturing?",
+    "answer": "<p>Yes. Dynamics 365 SCM supports production planning, bills of materials, material requirements and <a class=\"u-i\" href=\"/industries/manufacturing/\">manufacturing</a> operations.</p>"
+  },
+  {
+    "id": 8,
+    "question": "What is Copilot in Microsoft Dynamics 365 Supply Chain Management?",
+    "answer": "<p><a class=\"u-i\" href=\"/products/dynamics-365-copilot/\">Copilot</a> provides AI-powered assistance for selected tasks, such as operational summaries and demand-plan analysis. Available features depend on the setup and release.</p>"
+  },
+  {
+    "id": 9,
+    "question": "Can Dynamics 365 Supply Chain Management integrate with other systems?",
+    "answer": "<p>Yes. Microsoft Dynamics 365 Supply Chain Management can connect with other business applications through supported integrations and configured solutions.</p>"
+  },
+  {
+    "id": 10,
+    "question": "How long does Dynamics 365 SCM implementation take?",
+    "answer": "<p>The timeline depends on your business processes, data migration, integrations and customisation requirements.</p>"
+  },
+  {
+    "id": 11,
+    "question": "How do I choose a Dynamics 365 SCM implementation partner?",
+    "answer": "<p>Look for a partner with relevant <a class=\"u-i\" href=\"/d365-supply-chain-management-implementation/\">implementation experience</a>, clear project planning, data migration support and user training services.</p>"
+  },
+  {
+    "id": 12,
+    "question": "Does Dynamics Square provide Dynamics 365 Supply Chain Management training?",
+    "answer": "<p>Dynamics Square offers user training as part of its listed implementation and support services. The scope can be agreed for your project.</p>"
+  },
+  {
+    "id": 13,
+    "question": "Can I migrate from my existing ERP to Microsoft Dynamics 365 Supply Chain Management?",
+    "answer": "<p>Yes. <a class=\"u-i\" href=\"/why-to-migrate-to-d365-finance-supply-chain/\">Data migration</a> can be included in the implementation plan, depending on your current system and data requirements.</p>"
+  },
+  {
+    "id": 14,
+    "question": "Can Dynamics 365 Supply Chain Management help reduce stock shortages?",
+    "answer": "<p>It supports inventory visibility and demand planning to help businesses make better replenishment decisions.</p>"
+  },
+  {
+    "id": 15,
+    "question": "How can I book a Dynamics 365 Supply Chain Management demo?",
+    "answer": "<p><a class=\"u-i\" href=\"/contact-us/\">Contact Dynamics Square</a> to discuss your requirements and arrange a demo focused on your supply chain processes.</p>"
+  }
+]

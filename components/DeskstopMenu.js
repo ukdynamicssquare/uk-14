@@ -176,10 +176,13 @@ const DeskstopMenu = () => {
             <span>Our Services</span>
             <i className="bi bi-chevron-down"></i>
           </Link>
-          <ul>
+          <ul className="dd-ic-list">
             {OUR_SERVICES.map((item) => (
               <li key={item.href}>
-                <Link href={item.href}>{item.label}</Link>
+                <Link href={item.href}>
+                  <span className="dd-ic" aria-hidden="true"><i className={`bi ${item.icon}`}></i></span>
+                  <span>{item.label}</span>
+                </Link>
               </li>
             ))}
           </ul>
@@ -190,10 +193,13 @@ const DeskstopMenu = () => {
           <a href="#">
             <span>Company</span> <i className="bi bi-chevron-down"></i>
           </a>
-          <ul>
+          <ul className="dd-ic-list">
             {COMPANY_LINKS.map((item) => (
               <li key={item.href}>
-                <Link href={item.href}>{item.label}</Link>
+                <Link href={item.href}>
+                  <span className="dd-ic" aria-hidden="true"><i className={`bi ${item.icon}`}></i></span>
+                  <span>{item.label}</span>
+                </Link>
               </li>
             ))}
           </ul>

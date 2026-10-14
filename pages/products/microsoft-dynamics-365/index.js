@@ -5,6 +5,102 @@ import Link from 'next/link';
 import faqData from '../../../public/data/ai-powered.json';
 import useCardScrollEffect from "../../../components/useCardScrollEffect";
 
+const siteUrl = "https://www.dynamicssquare.co.uk";
+const pageUrl = `${siteUrl}/products/microsoft-dynamics-365/`;
+const pageTitle = "Microsoft Dynamics 365: AI-Powered ERP & CRM Solutions | Dynamics Square UK";
+const pageDescription = "Transform your business with Microsoft Dynamics 365 ERP & CRM solutions. Dynamics Square UK delivers implementation, support, migration, AI & Copilot expertise.";
+const pageImage = `${siteUrl}/img/d360-banner.png`;
+
+const inlineLink = { display: "inline-block", fontSize: 'inherit', color: '#b10817' };
+
+const d365Apps = [
+  { name: "Dynamics 365 Business Central", url: `${siteUrl}/products/dynamics-365-business-central/`, description: "Cloud ERP for finance, purchasing, inventory, projects and operations in growing businesses." },
+  { name: "Dynamics 365 Finance", url: `${siteUrl}/products/microsoft-dynamics-365-finance/`, description: "Advanced budgeting, reporting, compliance and multi-entity financial management." },
+  { name: "Dynamics 365 Supply Chain Management", url: `${siteUrl}/products/dynamics-365-supply-chain-management/`, description: "Planning, manufacturing, warehousing, procurement and logistics with operational visibility." },
+  { name: "Dynamics 365 Sales", url: `${siteUrl}/products/microsoft-dynamics-365-sales/`, description: "Opportunity management, customer relationships and revenue forecasting." },
+  { name: "Dynamics 365 Customer Service", url: `${siteUrl}/products/microsoft-dynamics-365-customer-service/`, description: "Omnichannel customer support and faster case resolution." },
+  { name: "Dynamics 365 Field Service", url: `${siteUrl}/products/microsoft-dynamics-365-field-service/`, description: "Technician scheduling, work orders and on-site service delivery." },
+  { name: "Dynamics 365 Customer Insights", url: `${siteUrl}/products/dynamics-365-customer-engagement/`, description: "Unified customer data for personalised marketing and engagement." },
+];
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": `${pageUrl}#webpage`,
+      "url": pageUrl,
+      "name": pageTitle,
+      "description": pageDescription,
+      "inLanguage": "en-GB",
+      "primaryImageOfPage": { "@type": "ImageObject", "url": pageImage },
+      "breadcrumb": { "@id": `${pageUrl}#breadcrumb` },
+      "about": { "@id": `${pageUrl}#service` },
+      "publisher": { "@id": `${siteUrl}/#organization` }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${pageUrl}#breadcrumb`,
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": `${siteUrl}/` },
+        { "@type": "ListItem", "position": 2, "name": "Microsoft Dynamics 365", "item": pageUrl }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": `${pageUrl}#service`,
+      "name": "Microsoft Dynamics 365 ERP & CRM Solutions",
+      "serviceType": "Microsoft Dynamics 365 implementation, licensing, integration, migration and support",
+      "url": pageUrl,
+      "image": pageImage,
+      "description": pageDescription,
+      "provider": { "@id": `${siteUrl}/#organization` },
+      "areaServed": { "@type": "Country", "name": "United Kingdom" },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Microsoft Dynamics 365 Services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dynamics 365 Implementation", "url": `${siteUrl}/our-services/dynamics-365-implementation-services/` } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dynamics 365 Support", "url": `${siteUrl}/our-services/dynamics-365-support-services/` } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dynamics 365 Upgrade & Migration", "url": `${siteUrl}/our-services/dynamics-365-upgrade-services/` } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dynamics 365 Integration", "url": `${siteUrl}/products/microsoft-dynamics-365/integration/` } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Dynamics 365 Licensing Advice" } }
+        ]
+      }
+    },
+    {
+      "@type": "ItemList",
+      "@id": `${pageUrl}#applications`,
+      "name": "Microsoft Dynamics 365 Applications",
+      "itemListElement": d365Apps.map((app, i) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": app.name,
+          "url": app.url,
+          "description": app.description,
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web, Windows, iOS, Android",
+          "publisher": { "@type": "Organization", "name": "Microsoft" }
+        }
+      }))
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${pageUrl}#faq`,
+      "mainEntity": faqData.map((faq) => ({
+        "@type": "Question",
+        "name": faq.question.replace(/^\d+\.\s*/, ""),
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer.replace(/<!--.*?-->/g, "").replace(/<[^>]+>/g, "").replace(/\s+/g, " ").trim(),
+        },
+      })),
+    },
+  ],
+};
+
 
 const AiERP = () => {
 
@@ -20,27 +116,25 @@ const AiERP = () => {
   return (
     <>
       <Head>
-        <title>Microsoft Dynamics 365: AI-Powered Solutions | Dynamics Square UK</title>
-        <meta
-          name="description"
-          content="Transform your business with Microsoft Dynamics 365 ERP & CRM solutions. Dynamics Square UK delivers implementation, support, migration, AI & Copilot expertise."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365/"
-        />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <link rel="canonical" href={pageUrl} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365/" />
-        <meta property="og:title" content="Microsoft Dynamics 365: AI-Powered Solutions | Dynamics Square UK" />
-        <meta property="og:description" content="Transform your business with Microsoft Dynamics 365 ERP & CRM solutions. Dynamics Square UK delivers implementation, support, migration, AI & Copilot expertise." />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/d360-banner.png" />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:image" content={pageImage} />
 
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365/" />
-        <meta property="twitter:title" content="Microsoft Dynamics 365: AI-Powered Solutions | Dynamics Square UK" />
-        <meta property="twitter:description" content="Transform your business with Microsoft Dynamics 365 ERP & CRM solutions. Dynamics Square UK delivers implementation, support, migration, AI & Copilot expertise." />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/d360-banner.png" />
+        <meta property="twitter:url" content={pageUrl} />
+        <meta property="twitter:title" content={pageTitle} />
+        <meta property="twitter:description" content={pageDescription} />
+        <meta property="twitter:image" content={pageImage} />
 
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
+        />
       </Head>
       <section className="top-banner-new top-banner-new-style new-tex-left">
         <div className="container">
@@ -49,7 +143,7 @@ const AiERP = () => {
               <h1>Microsoft Dynamics 365 for AI-Powered ERP & CRM Solutions</h1>
               <h2>Thrive with intelligent business applications</h2>
               <p>Deploy one intelligent system to drive efficiency across all your operations, be it finance, sales, operations, or customer service. The Microsoft Dynamics 365 suite of AI-powered ERP and CRM applications is built to help UK companies become more efficient, make faster decisions, and grow with confidence. </p>
-              <p style={{ marginTop: '-15px' }}>Dynamics Square will lead you through the entire process of implementation, customisation, and support of the solution you choose.</p>
+              <p style={{ marginTop: '-15px' }}>Dynamics Square will lead you through the entire process of <Link href="/our-services/dynamics-365-implementation-services/" className="u-i">implementation</Link>, customisation, and <Link href="/our-services/dynamics-365-support-services/" className="u-i">support</Link> of the solution you choose.</p>
               <ul>
                 <li>14+ Years of Microsoft Expertise </li>
                 <li>500+ Successful Projects </li>
@@ -69,7 +163,7 @@ const AiERP = () => {
             </div>
             <div className="col-lg-6 align-self-center">
               <div className='text-center'>
-                <Image src="/img/AI-Powered-00.png" alt="Microsoft Dynamics 365 for AI-Powered ERP & CRM Solutions" width={556} height={563} priority={true} />
+                <Image src="/img/AI-Powered-00.png" alt="Microsoft Dynamics 365 AI-powered ERP and CRM applications dashboard" width={556} height={563} priority={true} fetchPriority="high" sizes="(max-width: 991px) 90vw, 556px" style={{ width: '100%', height: 'auto', maxWidth: 556 }} />
               </div>
             </div>
           </div>
@@ -81,7 +175,7 @@ const AiERP = () => {
             <div className='col-lg-5 align-self-center'>
               <div className='product-side-001'>
                 <div className="flot-8">
-                  <Image src="/img/AI-Powered-01.png" width={496} height={540} alt="What Is Microsoft Dynamics 365?" />
+                  <Image src="/img/AI-Powered-01.png" width={496} height={540} alt="Microsoft Dynamics 365 unified cloud platform for finance, sales, service and supply chain" sizes="(max-width: 991px) 90vw, 496px" style={{ width: '100%', height: 'auto', maxWidth: 496 }} />
                 </div>
               </div>
             </div>
@@ -100,7 +194,7 @@ const AiERP = () => {
                   <li><i className="bi bi-check2"></i>Improving sales performance and pipeline visibility</li>
                   <li><i className="bi bi-check2"></i>Delivering responsive customer service</li>
                   <li><i className="bi bi-check2"></i>Supporting field teams and project operations</li>
-                  <li><i className="bi bi-check2"></i>Driving data-driven decision-making with AI insights</li>
+                  <li><i className="bi bi-check2"></i>Driving data-driven decision-making with <Link href="/products/microsoft-dynamics-365-ai/" className="u-i">AI insights</Link></li>
                 </ul>
                 <p>In essence, Dynamics 365 from Microsoft is a set of business apps that help organisations modernise how work gets done.</p>
               </div>
@@ -126,7 +220,7 @@ const AiERP = () => {
                 <div className="col-lg-6 d-flex">
                   <div className="solution-new-six-card d-flexsolu">
                     <div className='i-pic'>
-                      <Image src="/img/AI-Powered-02.png" alt="AI-Powered-02" width={40} height={40} />
+                      <Image src="/img/AI-Powered-02.png" alt="Real-time reporting icon" width={40} height={40} />
                     </div>
                     <p>Improve visibility throughout your business with real-time reporting </p>
                   </div>
@@ -134,7 +228,7 @@ const AiERP = () => {
                 <div className="col-lg-6 d-flex">
                   <div className="solution-new-six-card d-flexsolu">
                     <div className='i-pic'>
-                      <Image src="/img/AI-Powered-03.png" alt="AI-Powered-02" width={40} height={40} />
+                      <Image src="/img/AI-Powered-03.png" alt="AI workflow automation icon" width={40} height={40} />
                     </div>
                     <p>Reduce repetitive manual work with AI and workflow automation </p>
                   </div>
@@ -142,7 +236,7 @@ const AiERP = () => {
                 <div className="col-lg-6 d-flex">
                   <div className="solution-new-six-card d-flexsolu">
                     <div className='i-pic'>
-                      <Image src="/img/AI-Powered-04.png" alt="AI-Powered-02" width={40} height={40} />
+                      <Image src="/img/AI-Powered-04.png" alt="Role-based business applications icon" width={40} height={40} />
                     </div>
                     <p>Support teams with applications built for their day-to-day work </p>
                   </div>
@@ -150,15 +244,15 @@ const AiERP = () => {
                 <div className="col-lg-6 d-flex">
                   <div className="solution-new-six-card d-flexsolu">
                     <div className='i-pic'>
-                      <Image src="/img/AI-Powered-05.png" alt="AI-Powered-02" width={40} height={40} />
+                      <Image src="/img/AI-Powered-05.png" alt="Microsoft 365 integration icon" width={40} height={40} />
                     </div>
-                    <p>Connect Microsoft tools your people already use </p>
+                    <p>Connect <Link href="/products/microsoft-dynamics-365/integration/" className="u-i">Microsoft tools</Link> your people already use </p>
                   </div>
                 </div>
                 <div className="col-lg-6 d-flex">
                   <div className="solution-new-six-card d-flexsolu">
                     <div className='i-pic'>
-                      <Image src="/img/AI-Powered-06.png" alt="AI-Powered-02" width={40} height={40} />
+                      <Image src="/img/AI-Powered-06.png" alt="Scalable cloud growth icon" width={40} height={40} />
                     </div>
                     <p>Scale without replacing your technology again</p>
                   </div>
@@ -166,9 +260,9 @@ const AiERP = () => {
                 <div className="col-lg-6 d-flex">
                   <div className="solution-new-six-card d-flexsolu">
                     <div className='i-pic'>
-                      <Image src="/img/AI-Powered-07.png" alt="AI-Powered-02" width={40} height={40} />
+                      <Image src="/img/AI-Powered-07.png" alt="Secure cloud access icon" width={40} height={40} />
                     </div>
-                    <p>Work securely from anywhere using Microsoft's cloud platform </p>
+                    <p>Work securely from anywhere using Microsoft's <Link href="/microsoft-dynamics-365-cloud-vs-on-premise/" className="u-i">cloud platform</Link> </p>
                   </div>
                 </div>
                 <div className='col-lg-12'>
@@ -207,7 +301,7 @@ const AiERP = () => {
               <a href="/products/dynamics-365-business-central/" className="serv-card-666">
                 <div className='serv-card-666-flex'>
                   <div className="serv-card-icon-666">
-                    <img src="/img/menu-icons/dynamics-365-businesscentral.svg" alt="dynamics-365-businesscentral" width="48" height="48" />
+                    <img src="/img/menu-icons/dynamics-365-businesscentral.svg" alt="Dynamics 365 Business Central icon" width="48" height="48" loading="lazy" decoding="async" />
                   </div>
                   <h3 className="serv-card-title-666">
                     Dynamics 365 <br /> Business Central
@@ -225,7 +319,7 @@ const AiERP = () => {
               <a href="/products/microsoft-dynamics-365-finance/" className="serv-card-666">
                 <div className='serv-card-666-flex'>
                   <div className="serv-card-icon-666">
-                    <img src="/img/menu-icons/dynamics-365-finance.svg" alt="dynamics-365-finance" width="48" height="48" />
+                    <img src="/img/menu-icons/dynamics-365-finance.svg" alt="Dynamics 365 Finance icon" width="48" height="48" loading="lazy" decoding="async" />
                   </div>
                   <h3 className="serv-card-title-666">
                     Dynamics 365<br /> Finance
@@ -243,7 +337,7 @@ const AiERP = () => {
               <a href="/products/dynamics-365-supply-chain-management/" className="serv-card-666">
                 <div className='serv-card-666-flex'>
                   <div className="serv-card-icon-666">
-                    <img src="/img/menu-icons/dynamics-365-supplychainmanagement.svg" alt="Supply Chain Management" width="48" height="48" />
+                    <img src="/img/menu-icons/dynamics-365-supplychainmanagement.svg" alt="Dynamics 365 Supply Chain Management icon" width="48" height="48" loading="lazy" decoding="async" />
                   </div>
                   <h3 className="serv-card-title-666">
                     Dynamics 365 <br /> Supply Chain Management
@@ -261,7 +355,7 @@ const AiERP = () => {
               <a href="/products/microsoft-dynamics-365-sales/" className="serv-card-666">
                 <div className='serv-card-666-flex'>
                   <div className="serv-card-icon-666">
-                    <img src="/img/menu-icons/dynamics-365-sales.svg" alt="Sales" width="48" height="48" />
+                    <img src="/img/menu-icons/dynamics-365-sales.svg" alt="Dynamics 365 Sales icon" width="48" height="48" loading="lazy" decoding="async" />
                   </div>
                   <h3 className="serv-card-title-666">
                     Dynamics 365 <br /> Sales
@@ -279,7 +373,7 @@ const AiERP = () => {
               <a href="/products/microsoft-dynamics-365-customer-service/" className="serv-card-666">
                 <div className='serv-card-666-flex'>
                   <div className="serv-card-icon-666">
-                    <img src="/img/menu-icons/dynamics-365-customer-service.svg" alt="Customer Service" width="48" height="48" />
+                    <img src="/img/menu-icons/dynamics-365-customer-service.svg" alt="Dynamics 365 Customer Service icon" width="48" height="48" loading="lazy" decoding="async" />
                   </div>
                   <h3 className="serv-card-title-666">
                     Dynamics 365 <br /> Customer Service
@@ -297,7 +391,7 @@ const AiERP = () => {
               <a href="/products/microsoft-dynamics-365-field-service/" className="serv-card-666">
                 <div className='serv-card-666-flex'>
                   <div className="serv-card-icon-666">
-                    <img src="/img/menu-icons/dynamics-365-fieldservice.svg" alt="Field Service" width="48" height="48" />
+                    <img src="/img/menu-icons/dynamics-365-fieldservice.svg" alt="Dynamics 365 Field Service icon" width="48" height="48" loading="lazy" decoding="async" />
                   </div>
                   <h3 className="serv-card-title-666">
                     Dynamics 365 <br /> Field Service
@@ -315,7 +409,7 @@ const AiERP = () => {
               <a href="/products/dynamics-365-customer-engagement/" className="serv-card-666">
                 <div className='serv-card-666-flex'>
                   <div className="serv-card-icon-666">
-                    <img src="/img/menu-icons/dynamics-365-customer-engagement.svg" alt="Customer Insights" width="48" height="48" />
+                    <img src="/img/menu-icons/dynamics-365-customer-engagement.svg" alt="Dynamics 365 Customer Insights icon" width="48" height="48" loading="lazy" decoding="async" />
                   </div>
                   <h3 className="serv-card-title-666">
                     Dynamics 365 <br /> Customer Insights
@@ -361,49 +455,49 @@ const AiERP = () => {
                       <td>
                         Manage finance, inventory, purchasing, and day-to-day operations
                       </td>
-                      <td>Dynamics 365 Business Central</td>
+                      <td><Link href="/products/dynamics-365-business-central/" className="u-i">Dynamics 365 Business Central</Link></td>
                     </tr>
 
                     <tr className='ds-table-bg'>
                       <td>
                         Strengthen financial planning, compliance, and global financial management
                       </td>
-                      <td>Dynamics 365 Finance</td>
+                      <td><Link href="/products/microsoft-dynamics-365-finance/" className="u-i">Dynamics 365 Finance</Link></td>
                     </tr>
 
                     <tr>
                       <td>
                         Improve manufacturing, warehousing, procurement, and logistics
                       </td>
-                      <td>Dynamics 365 Supply Chain Management</td>
+                      <td><Link href="/products/dynamics-365-supply-chain-management/" className="u-i">Dynamics 365 Supply Chain Management</Link></td>
                     </tr>
 
                     <tr className='ds-table-bg'>
                       <td>
                         Increase sales productivity and improve pipeline visibility
                       </td>
-                      <td>Dynamics 365 Sales</td>
+                      <td><Link href="/products/microsoft-dynamics-365-sales/" className="u-i">Dynamics 365 Sales</Link></td>
                     </tr>
 
                     <tr>
                       <td>
                         Deliver better, more consistent customer support
                       </td>
-                      <td>Dynamics 365 Customer Service</td>
+                      <td><Link href="/products/microsoft-dynamics-365-customer-service/" className="u-i">Dynamics 365 Customer Service</Link></td>
                     </tr>
 
                     <tr className='ds-table-bg'>
                       <td>
                         Manage onsite service teams and work orders
                       </td>
-                      <td>Dynamics 365 Field Service</td>
+                      <td><Link href="/products/microsoft-dynamics-365-field-service/" className="u-i">Dynamics 365 Field Service</Link></td>
                     </tr>
 
                     <tr>
                       <td>
                         Understand customer behaviour and deliver personalised engagement
                       </td>
-                      <td>Dynamics 365 Customer Insights</td>
+                      <td><Link href="/products/dynamics-365-customer-engagement/" className="u-i">Dynamics 365 Customer Insights</Link></td>
                     </tr>
 
                   </tbody>
@@ -413,9 +507,9 @@ const AiERP = () => {
             </div>
             <div className='col-lg-7'>
               <div className='mt-4'>
-                <p>You don't have to deploy every application at once. Many organisations begin with a single solution and expand as new requirements emerge.</p>
+                <p>You don't have to deploy every application at once. Many organisations begin with a single solution and expand as new requirements emerge. Still weighing up ERP options? Compare <Link href="/d365-business-central-vs-d365-finance/" className="u-i">Business Central vs Finance</Link>.</p>
 
-                <p>Need help deciding? Speak to a Dynamics 365 Consultant.</p>
+                <p>Need help deciding? <Link href="/contact-us/" className="u-i">Speak to a Dynamics 365 Consultant</Link>.</p>
                 <div className='ne-callt-batt'>
                   <Link
                     href="#exampleModal"
@@ -492,7 +586,7 @@ const AiERP = () => {
             </div>
             <div className='col-lg-6'>
               <div>
-                <Image src="/img/AI-Powered-08.png" alt="AI-Powered-08" width={600} height={822} />
+                <Image src="/img/AI-Powered-08.png" alt="The Ultimate Guide to Microsoft Dynamics 365 ebook cover" width={600} height={822} sizes="(max-width: 991px) 90vw, 600px" quality={70} style={{ width: '100%', height: 'auto', maxWidth: 600 }} />
               </div>
             </div>
           </div>
@@ -516,56 +610,56 @@ const AiERP = () => {
           <div className='row g-4'>
             <div className='col-lg-3 d-flex'>
               <div className='solution-new-card-001 solution-new-card-001-bg'>
-                <img src="/img/AI-Powered-09.png" width={36} height={36} alt="Microsoft-Certified Expertise" />
+                <img src="/img/AI-Powered-09.png" width={36} height={36} loading="lazy" decoding="async" alt="Microsoft-Certified Expertise" />
                 <h3>Microsoft-Certified Expertise</h3>
                 <p>Work with a team of Microsoft-certified consultants who specialise in ERP, CRM, Power Platform, AI, and cloud technologies, ensuring your solution is built on proven best practices.</p>
               </div>
             </div>
             <div className='col-lg-3 d-flex'>
               <div className='solution-new-card-001 solution-new-card-001-bg'>
-                <img src="/img/AI-Powered-10.png" width={36} height={36} alt="Business-First Solution Architects" />
+                <img src="/img/AI-Powered-10.png" width={36} height={36} loading="lazy" decoding="async" alt="Business-First Solution Architects" />
                 <h3>Business-First Solution Architects</h3>
                 <p>We don't begin with software. We begin with your business. Our solution architects analyse your processes, identify gaps, and recommend the right approach before implementation starts.</p>
               </div>
             </div>
             <div className='col-lg-3 d-flex'>
               <div className='solution-new-card-001 solution-new-card-001-bg'>
-                <img src="/img/AI-Powered-11.png" width={36} height={36} alt="End-to-End Microsoft Capability" />
+                <img src="/img/AI-Powered-11.png" width={36} height={36} loading="lazy" decoding="async" alt="End-to-End Microsoft Capability" />
                 <h3>End-to-End Microsoft Capability</h3>
-                <p>From Dynamics 365 Business Central and Finance to Sales, Customer Service, Power Platform, Azure, and ISV integrations, you'll have one experienced partner for your entire Microsoft ecosystem.</p>
+                <p>From Dynamics 365 Business Central and Finance to Sales, Customer Service, <a href="/products/microsoft-power-platform/" style={inlineLink}>Power Platform</a>, <a href="/products/microsoft-azure/" style={inlineLink}>Azure</a>, and ISV integrations, you'll have one experienced partner for your entire Microsoft ecosystem.</p>
               </div>
             </div>
             <div className='col-lg-3 d-flex'>
               <div className='solution-new-card-001 solution-new-card-001-bg'>
-                <img src="/img/AI-Powered-12.png" width={36} height={36} alt="Experience That Spans Legacy and Modern Platforms" />
+                <img src="/img/AI-Powered-12.png" width={36} height={36} loading="lazy" decoding="async" alt="Experience That Spans Legacy and Modern Platforms" />
                 <h3>Experience That Spans Legacy and Modern Platforms</h3>
-                <p>Having worked with Microsoft business applications since the Dynamics NAV and AX era, we understand both legacy environments and modern cloud transformation, making upgrades and migrations significantly smoother for UK-based firms.</p>
+                <p>Having worked with Microsoft business applications since the Dynamics NAV and AX era, we understand both legacy environments and modern cloud transformation, making <a href="/our-services/dynamics-365-upgrade-services/" style={inlineLink}>upgrades and migrations</a> significantly smoother for UK-based firms.</p>
               </div>
             </div>
             <div className='col-lg-3 d-flex'>
               <div className='solution-new-card-001 solution-new-card-001-bg'>
-                <img src="/img/AI-Powered-13.png" width={36} height={36} alt="Industry Knowledge That Goes Beyond Technology" />
+                <img src="/img/AI-Powered-13.png" width={36} height={36} loading="lazy" decoding="async" alt="Industry Knowledge That Goes Beyond Technology" />
                 <h3>Industry Knowledge That Goes Beyond Technology</h3>
-                <p>Our consultants have delivered Dynamics 365 projects in manufacturing, healthcare, distribution, retail, education, and professional services domain. We have helped UK firms solve operational challenges than simply deploying software.</p>
+                <p>Our consultants have delivered Dynamics 365 projects in <a href="/industries/manufacturing/" style={inlineLink}>manufacturing</a>, healthcare, distribution, retail, education, and professional services domain. We have helped UK firms solve operational challenges than simply deploying software.</p>
               </div>
             </div>
             <div className='col-lg-3 d-flex'>
               <div className='solution-new-card-001 solution-new-card-001-bg'>
-                <img src="/img/AI-Powered-14.png" width={36} height={36} alt="Collaborative Delivery Model" />
+                <img src="/img/AI-Powered-14.png" width={36} height={36} loading="lazy" decoding="async" alt="Collaborative Delivery Model" />
                 <h3>Collaborative Delivery Model</h3>
                 <p>With responsive onsite and offshore teams, we combine local engagement with global delivery capability to keep projects moving efficiently while maintaining close collaboration.</p>
               </div>
             </div>
             <div className='col-lg-3 d-flex'>
               <div className='solution-new-card-001 solution-new-card-001-bg'>
-                <img src="/img/AI-Powered-15.png" width={36} height={36} alt="Built for Long-Term Partnerships" />
+                <img src="/img/AI-Powered-15.png" width={36} height={36} loading="lazy" decoding="async" alt="Built for Long-Term Partnerships" />
                 <h3>Built for Long-Term Partnerships</h3>
-                <p>Our relationship doesn't end at go-live. We continue to support, optimise, and enhance your Dynamics 365 environment as your business evolves.</p>
+                <p>Our relationship doesn't end at go-live. We continue to <a href="/our-services/dynamics-365-support-services/" style={inlineLink}>support</a>, optimise, and enhance your Dynamics 365 environment as your business evolves.</p>
               </div>
             </div>
             <div className='col-lg-3 d-flex'>
               <div className='solution-new-card-001 solution-new-card-001-bg'>
-                <img src="/img/AI-Powered-16.png" width={36} height={36} alt="Value Without Compromise" />
+                <img src="/img/AI-Powered-16.png" width={36} height={36} loading="lazy" decoding="async" alt="Value Without Compromise" />
                 <h3>Value Without Compromise</h3>
                 <p>Our hybrid delivery model combines personalised consulting with cost-efficient execution. This lets us help you maximise the return on your Dynamics 365 investment.</p>
               </div>
@@ -592,7 +686,7 @@ const AiERP = () => {
             </div>
           </div>
         </div>
-        <Image style={{ mixBlendMode: 'normal' }} src="/img/AI-Powered-17.png" alt="AI-Powered-17" width={680} height={418} />
+        <Image style={{ mixBlendMode: 'normal' }} src="/img/AI-Powered-17.png" alt="Live Microsoft Dynamics 365 demo on laptop and mobile" width={680} height={418} sizes="(max-width: 991px) 100vw, 680px" quality={70} />
       </section>
       <section id='section2' className="solution-new-banner-two">
         <div className='container'>
@@ -604,8 +698,8 @@ const AiERP = () => {
                   <h2>Microsoft Dynamics 365 Implementation That Fits Your Business</h2>
                 </div>
                 <p>Every Dynamics 365 project is unique. Some UK organisations replace legacy ERP software, others require CRM capabilities, modernise finance, or connect several business apps for the first time.</p>
-                <p>Our specialists understand your company process before suggesting the proper implementation solution. Whether you are implementing a single Dynamics 365 application or rolling out in phases, we partner with your team to limit interruption and drive user adoption.</p>
-                <p>We have delivered Microsoft Dynamics 365 projects for organisations across the UK because we understand local business processes, regulatory issues, and the practical obstacles of replacing legacy ERP and CRM systems.</p>
+                <p>Our specialists understand your company process before suggesting the proper implementation solution. Whether you are implementing a single Dynamics 365 application or rolling out in phases, we partner with your team to limit interruption and drive user adoption. Explore our application-specific services for <Link href="/dynamics-365-business-central-implementation/" className="u-i">Business Central</Link>, <Link href="/dynamics-365-finance-implementation/" className="u-i">Finance</Link>, <Link href="/d365-supply-chain-management-implementation/" className="u-i">Supply Chain Management</Link>, <Link href="/dynamics-365-sales-implementation/" className="u-i">Sales</Link>, <Link href="/dynamics-365-customer-service-implementation/" className="u-i">Customer Service</Link> and <Link href="/dynamics-365-field-service-implementation/" className="u-i">Field Service</Link> implementation.</p>
+                <p>We have delivered <Link href="/our-services/dynamics-365-implementation-services/" className="u-i">Microsoft Dynamics 365 implementation</Link> projects for organisations across the UK because we understand local business processes, regulatory issues, and the practical obstacles of replacing legacy ERP and CRM systems.</p>
               </div>
 
             </div>
@@ -667,8 +761,8 @@ const AiERP = () => {
                     <li>Business and Enterprise applications </li>
                     <li>Full User and Team Member licences </li>
 
-                    <li>Implementation costs</li>
-                    <li>Ongoing support options </li>
+                    <li><Link href="/erp-implementation-cost-calculator/">Implementation costs</Link></li>
+                    <li><Link href="/our-services/dynamics-365-support-services/">Ongoing support options</Link></li>
 
                     <li>Future licensing requirements </li>
                     <li>Attach licences</li>
@@ -683,7 +777,7 @@ const AiERP = () => {
             <div className='col-lg-5 align-self-center'>
               <div className='product-side-001'>
                 <div className="flot-8">
-                  <Image src="/img/AI-Powered-18.png" width={630} height={336} alt="Why Dynamics Square" />
+                  <Image src="/img/AI-Powered-18.png" width={630} height={336} alt="Microsoft Dynamics 365 pricing and licensing options" sizes="(max-width: 991px) 90vw, 630px" quality={70} style={{ width: '100%', height: 'auto', maxWidth: 630 }} />
                 </div>
                 <div className="cta-box-666">
                   <h3>Looking for a tailored estimate?</h3>
@@ -708,7 +802,7 @@ const AiERP = () => {
             <div className='col-lg-8 text-center'>
               <div className='solution-new-cta-0011' style={{ paddingBottom: '40px' }}>
                 <h2>Dynamics 365 Integrations</h2>
-                <p>Connect Dynamics 365 with the Tools Your Business Already Uses</p>
+                <p>Connect <Link href="/products/microsoft-dynamics-365/integration/" className="u-i">Dynamics 365 with the tools your business already uses</Link></p>
                 <p>Microsoft Dynamics 365 works best when it fits naturally into your existing technology setup. Whether you rely on Microsoft applications or third-party business systems, our consultants help you create a connected environment where information flows securely and efficiently across your organisation.</p>
               </div>
             </div>
@@ -716,7 +810,7 @@ const AiERP = () => {
           <div className='row g-5'>
             <div className='col-lg-6 align-self-center'>
               <div>
-                <Image src="/img/AI-Powered-19.png" alt="Microsoft Dynamics 365 ERP Right for You" width={614} height={473} />
+                <Image src="/img/AI-Powered-19.png" alt="Microsoft Dynamics 365 integrations with Power Platform, Azure and third-party apps" width={614} height={473} sizes="(max-width: 991px) 90vw, 614px" quality={70} style={{ width: '100%', height: 'auto', maxWidth: 614 }} />
               </div>
             </div>
             <div className='col-lg-6'>
@@ -724,8 +818,8 @@ const AiERP = () => {
                 <div>
                   <p><b>Popular Dynamics 365 integrations include:</b></p>
                   <ul>
-                    <li>Power Apps & Power Automate</li>
-                    <li>Microsoft Azure</li>
+                    <li><Link href="/products/microsoft-power-platform/" className="u-i">Power Apps & Power Automate</Link></li>
+                    <li><Link href="/products/microsoft-azure/" className="u-i">Microsoft Azure</Link></li>
                     <li>Shopify and other eCommerce platforms</li>
                     <li>Banking, payment, and UK tax compliance solutions</li>
                     <li>Document management systems</li>
@@ -765,23 +859,23 @@ const AiERP = () => {
           <div className='row g-4'>
             <div className='col-lg-4 d-flex'>
               <div className='solution-new-card-001 solution-new-card-001-bg'>
-                <img src="/img/AI-Powered-20.png" width={36} height={36} alt="Designed for UK Businesses" />
+                <img src="/img/AI-Powered-20.png" width={36} height={36} loading="lazy" decoding="async" alt="Designed for UK Businesses" />
                 <h3>Designed for UK Businesses</h3>
-                <p>Implement solutions aligned with local business practices and operational requirements.</p>
+                <p>Implement solutions aligned with local business practices for <a href="/dynamics-365-for-small-businesses/" style={inlineLink}>small</a>, <a href="/dynamics-365-for-medium-businesses/" style={inlineLink}>medium</a> and <a href="/dynamics-365-for-large-businesses/" style={inlineLink}>large</a> businesses.</p>
               </div>
             </div>
             <div className='col-lg-4 d-flex'>
               <div className='solution-new-card-001 solution-new-card-001-bg'>
-                <img src="/img/AI-Powered-21.png" width={36} height={36} alt="Supports Compliance" />
+                <img src="/img/AI-Powered-21.png" width={36} height={36} loading="lazy" decoding="async" alt="Supports Compliance" />
                 <h3>Supports Compliance</h3>
-                <p>Applications such as Dynamics 365 Business Central and Finance can support VAT reporting and <a href="/blog/making-tax-digital-business-central-and-hmrc-integration/" style={{display:"inline-block",fontSize:'inherit',color:'#b10817'}}>Making Tax Digital</a> (MTD) requirements when configured appropriately.</p>
+                <p>Applications such as Dynamics 365 Business Central and Finance can support VAT reporting and <a href="/blog/making-tax-digital-business-central-and-hmrc-integration/" style={inlineLink}>Making Tax Digital</a> (MTD) requirements when configured appropriately.</p>
               </div>
             </div>
             <div className='col-lg-4 d-flex'>
               <div className='solution-new-card-001 solution-new-card-001-bg'>
-                <img src="/img/AI-Powered-22.png" width={36} height={36} alt="Local Expertise" />
+                <img src="/img/AI-Powered-22.png" width={36} height={36} loading="lazy" decoding="async" alt="Local Expertise" />
                 <h3>Local Expertise</h3>
-                <p>Work with Microsoft-certified consultants who have delivered Dynamics 365 projects across the UK.</p>
+                <p>Work with Microsoft-certified consultants who have delivered Dynamics 365 projects across the UK. See our <a href="/case-studies/" style={inlineLink}>case studies</a>.</p>
               </div>
             </div>
 
