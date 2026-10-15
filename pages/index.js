@@ -2,6 +2,25 @@ import Head from "next/head";
 import FooterNew from "../components/FooterNew";
 import Image from "next/image";
 import Link from "next/link";
+import pageLastmod from "../page-lastmod.json";
+
+// Homepage-only WebPage node. Organization, WebSite and #logo are defined
+// site-wide in _app.js and referenced here by @id.
+const webPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://www.dynamicssquare.co.uk/#webpage",
+  url: "https://www.dynamicssquare.co.uk/",
+  name: "Microsoft Dynamics 365 Partner UK - Dynamics Square™",
+  description:
+    "Dynamics Square™ is a leading Microsoft Dynamics 365 Partner in the UK, empowering organisations with expert CRM and ERP solutions, seamless implementation, and ongoing support.",
+  isPartOf: { "@id": "https://www.dynamicssquare.co.uk/#website" },
+  about: { "@id": "https://www.dynamicssquare.co.uk/#organization" },
+  primaryImageOfPage: { "@id": "https://www.dynamicssquare.co.uk/#logo" },
+  datePublished: "2021-08-31T06:09:16+00:00",
+  dateModified: pageLastmod["pages/index.js"],
+  inLanguage: "en-GB",
+};
 
 const HomeOneNew = () => {
   return (
@@ -15,6 +34,10 @@ const HomeOneNew = () => {
           content="Dynamics Square™ is a leading Microsoft Dynamics 365 Partner in the UK, empowering organisations with expert CRM and ERP solutions, seamless implementation, and ongoing support."
         />
         <link rel="canonical" href="https://www.dynamicssquare.co.uk/" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
+        />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/" />
         <meta

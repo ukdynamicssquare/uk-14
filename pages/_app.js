@@ -129,38 +129,6 @@ function MyApp({ Component, pageProps }) {
                   "inLanguage": "en-GB"
                 },
                 {
-                  "@type": "WebPage",
-                  "@id": "https://www.dynamicssquare.co.uk/#webpage",
-                  "url": "https://www.dynamicssquare.co.uk/",
-                  "name": "Trusted Dynamics 365 CRM and ERP Partner for UK Region | Dynamics Square UK",
-                  "isPartOf": { "@id": "https://www.dynamicssquare.co.uk/#website" },
-                  "about": { "@id": "https://www.dynamicssquare.co.uk/#organization" },
-                  "primaryImageOfPage": { "@id": "https://www.dynamicssquare.co.uk/#logo" },
-                  "datePublished": "2021-08-31T06:09:16+00:00",
-                  "dateModified": "2021-11-07T09:15:37+00:00",
-                  "description": "Dynamics Square is Dynamics 365 partner in the UK who help your business succeed by deploying the finest CRM, ERP, and Microsoft cloud solutions for your unique needs.",
-                  "inLanguage": "en-GB",
-                  "potentialAction": [
-                    {
-                      "@type": "ReadAction",
-                      "target": ["https://www.dynamicssquare.co.uk/"]
-                    }
-                  ],
-                  "headline": "As a Dynamics 365 partner, we assist your business in scaling up by giving unbiased advise on the best Microsoft Dynamics ERP and CRM solutions.",
-                  "keywords": [
-                    "dynamics 365 partner uk",
-                    "erp consultants UK",
-                    "crm consultancy",
-                    "d365 business central",
-                    "crm expert online",
-                    "d365 for finance",
-                    "Microsoft NAV partner",
-                    "dynamics crm implementation",
-                    "d365 field service",
-                    "crm implementation services"
-                  ]
-                },
-                {
                   "@type": "LocalBusiness",
                   "name": "Dynamics Square UK Ltd. - London Office",
                   "description": "Dynamics Square is Dynamics 365 partner in the London, UK who help your business succeed by deploying the finest CRM, ERP, and Microsoft cloud solutions for your unique needs.",

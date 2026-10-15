@@ -17,7 +17,7 @@ const BusinessCentralForDiscreteManufacturing = () => {
         <title>Microsoft Business Central for discrete Manufacturing | Dynamics Square</title>
         <meta
           name="description"
-          content="Optimise your process manufacturing with Business Central. Streamline production, manage resources, and ensure quality with an integrated, scalable ERP solution."
+          content="Simplify production, track raw materials, and manage BOMs, MRP and scheduling with Business Central for discrete manufacturing. UK implementation partner."
         />
         <link
           rel="canonical"
@@ -26,13 +26,13 @@ const BusinessCentralForDiscreteManufacturing = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/industries/business-central-for-discrete-manufacturing/" />
         <meta property="og:title" content="Microsoft Business Central for discrete Manufacturing | Dynamics Square" />
-        <meta property="og:description" content="Optimise your process manufacturing with Business Central. Streamline production, manage resources, and ensure quality with an integrated, scalable ERP solution." />
+        <meta property="og:description" content="Simplify production, track raw materials, and manage BOMs, MRP and scheduling with Business Central for discrete manufacturing. UK implementation partner." />
         <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/Bc-Discrete-Manufacturing.png" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/industries/business-central-for-discrete-manufacturing/" />
         <meta property="twitter:title" content="Microsoft Business Central for discrete Manufacturing | Dynamics Square" />
-        <meta property="twitter:description" content="Optimise your process manufacturing with Business Central. Streamline production, manage resources, and ensure quality with an integrated, scalable ERP solution." />
+        <meta property="twitter:description" content="Simplify production, track raw materials, and manage BOMs, MRP and scheduling with Business Central for discrete manufacturing. UK implementation partner." />
         <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/Bc-Discrete-Manufacturing.png" />
       </Head>
         <section className="Solution-banner hero-1 hero">

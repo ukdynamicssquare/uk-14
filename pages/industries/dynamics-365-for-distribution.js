@@ -14,7 +14,7 @@ const Continia = () => {
         <title>Dynamics 365 for Wholesale & Distribution Industry | Dynamics Square UK</title>
         <meta
           name="description"
-          content="Simplify banking with Yavrio integration with Dynamics 365 Business Central — automate reconciliation, enhance accuracy, and save hours of manual work."
+          content="Dynamics 365 for wholesale and distribution brings stock levels, orders, suppliers and finance into one system. Business Central and F&SCM from a UK partner."
         />
         <link
           rel="canonical"
@@ -23,7 +23,7 @@ const Continia = () => {
         <meta property="og:locale" content="GB" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content=" Dynamics 365 for Wholesale & Distribution Industry | Dynamics Square UK " />
-        <meta property="og:description" content="Simplify banking with Yavrio integration with Dynamics 365 Business Central — automate reconciliation, enhance accuracy, and save hours of manual work." />
+        <meta property="og:description" content="Dynamics 365 for wholesale and distribution brings stock levels, orders, suppliers and finance into one system. Business Central and F&SCM from a UK partner." />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/industries/dynamics-365-for-distribution/" />
         <meta property="og:site_name" content="Dynamics Square UK" />
         <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/wholesale-pic-01.png" />
@@ -33,7 +33,7 @@ const Continia = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@dsquare_uk" />
         <meta name="twitter:title" content="Dynamics 365 for Wholesale & Distribution Industry | Dynamics Square UK" />
-        <meta name="twitter:description" content="Simplify banking with Yavrio integration with Dynamics 365 Business Central — automate reconciliation, enhance accuracy, and save hours of manual work." />
+        <meta name="twitter:description" content="Dynamics 365 for wholesale and distribution brings stock levels, orders, suppliers and finance into one system. Business Central and F&SCM from a UK partner." />
         <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/wholesale-pic-01.png" />
       </Head>
       <div className='solution-new-banner-one solution-new-banner-one-colo'>
