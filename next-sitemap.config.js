@@ -182,8 +182,7 @@ async function getBlogNoindexExcludes() {
  * so every deploy made the whole site look freshly modified. Instead:
  *  - blog posts use the CMS `updatedAt` (falling back to `publishedAt`);
  *  - /blog uses the newest post's date;
- *  - static pages use the date of the last git commit that touched their
- *    file under pages/;
+ *  - static pages use the date their file under pages/ last changed;
  *  - anything else gets no <lastmod> rather than a fake one.
  */
 function toRouteFileMap(dir = PAGES_DIR, acc = new Map()) {
@@ -204,20 +203,31 @@ function git(args) {
   return execFileSync('git', args, { cwd: __dirname, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 }).trim();
 }
 
-// Map of "pages/foo.js" -> ISO date of the last commit touching it.
+// Map of "pages/foo.js" -> ISO date the file last changed. The committed
+// page-lastmod.json (kept current by .githooks/pre-commit, see
+// scripts/page-lastmod.js) is the main source, because Vercel's shallow clone
+// has no history for most pages. Whatever git history IS available is used on
+// top of it, so a commit made without the hook still gets its date.
+function getPageFileDates() {
+  let dates = new Map();
+  try {
+    dates = new Map(Object.entries(require('./page-lastmod.json')));
+  } catch (error) {
+    console.warn('[sitemap] page-lastmod.json missing or invalid:', error.message);
+  }
+
+  for (const [file, date] of getGitFileDates()) {
+    const iso = new Date(date).toISOString();
+    if (!dates.has(file) || iso > dates.get(file)) dates.set(file, iso);
+  }
+  return dates;
+}
+
 function getGitFileDates() {
   const dates = new Map();
   try {
-    // Vercel clones shallowly; a shallow boundary commit looks like it added
-    // every file, which would give them all the same (wrong) date again.
-    if (git(['rev-parse', '--is-shallow-repository']) === 'true') {
-      try {
-        git(['fetch', '--unshallow', '--quiet']);
-      } catch (error) {
-        console.warn('[sitemap] git fetch --unshallow failed; dates beyond the shallow history are omitted.');
-      }
-    }
-
+    // In a shallow clone the boundary commit looks like it added every file,
+    // which would give them all the same (wrong) date — so it is skipped.
     const shallowFile = git(['rev-parse', '--git-path', 'shallow']);
     const boundary = new Set(
       fs.existsSync(path.resolve(__dirname, shallowFile))
@@ -259,7 +269,7 @@ function getLastmodLookup() {
       if (newestBlog) blogDates.set('/blog', newestBlog);
 
       const routeFiles = toRouteFileMap();
-      const fileDates = getGitFileDates();
+      const fileDates = getPageFileDates();
 
       return (route) => {
         if (blogDates.has(route)) return blogDates.get(route);

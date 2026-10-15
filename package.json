@@ -10,7 +10,9 @@
     "build": "next build",
     "postbuild": "node scripts/postbuild-sitemap.js",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "node -e \"try{require('child_process').execSync('git config core.hooksPath .githooks',{stdio:'ignore'})}catch(e){}\"",
+    "sitemap:dates": "node scripts/page-lastmod.js"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

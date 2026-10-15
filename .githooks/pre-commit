@@ -1,0 +1,3 @@
+#!/bin/sh
+# Keeps page-lastmod.json (sitemap <lastmod> dates) in step with page edits.
+node scripts/page-lastmod.js --staged
