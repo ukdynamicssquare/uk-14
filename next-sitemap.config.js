@@ -1,3 +1,4 @@
+const { execFileSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 
@@ -85,14 +86,22 @@ function robotsDisallowExcludes() {
  * is intentionally NOT wrapped in a try/catch that swallows the error —
  * see the comment on module.exports.exclude below for why.
  */
-async function getBlogNoindexExcludes() {
-  const apiBaseUrl = process.env.MERN_API_URL || 'https://blogdsukapi.onrender.com';
-  const apiKey = process.env.MERN_API_KEY;
+const apiBaseUrl = process.env.MERN_API_URL || 'https://blogdsukapi.onrender.com';
+const apiKey = process.env.MERN_API_KEY;
 
+// Fetched once per sitemap run and shared by `exclude` (noindex check) and
+// `transform` (per-post lastmod).
+let blogListPromise;
+function getAllBlogs() {
+  if (!blogListPromise) blogListPromise = fetchAllBlogs();
+  return blogListPromise;
+}
+
+async function fetchAllBlogs() {
   // The API silently caps `limit` at 100 per page no matter what's
   // requested, returning a `pagination` object alongside the page of
   // results. A single request (even with limit=5000) only ever sees the
-  // first 100 blogs, so this walks every page to check rank on all of them.
+  // first 100 blogs, so this walks every page.
   const blogs = [];
   let page = 1;
   let totalPages = 1;
@@ -116,6 +125,12 @@ async function getBlogNoindexExcludes() {
     totalPages = data?.pagination?.totalPages || 1;
     page += 1;
   } while (page <= totalPages);
+
+  return blogs;
+}
+
+async function getBlogNoindexExcludes() {
+  const blogs = await getAllBlogs();
 
   const slugOf = (b) => b?.title_slug || b?.slug;
   const isValidSlug = (slug) => typeof slug === 'string' && slug.trim() !== '';
@@ -162,6 +177,101 @@ async function getBlogNoindexExcludes() {
   return [...noindexSlugs].map((slug) => `/blog/${slug}`);
 }
 
+/**
+ * next-sitemap's default `autoLastmod` stamps every URL with the build time,
+ * so every deploy made the whole site look freshly modified. Instead:
+ *  - blog posts use the CMS `updatedAt` (falling back to `publishedAt`);
+ *  - /blog uses the newest post's date;
+ *  - static pages use the date of the last git commit that touched their
+ *    file under pages/;
+ *  - anything else gets no <lastmod> rather than a fake one.
+ */
+function toRouteFileMap(dir = PAGES_DIR, acc = new Map()) {
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    if (entry.isDirectory()) {
+      if (IGNORED_DIRS.has(entry.name)) continue;
+      toRouteFileMap(path.join(dir, entry.name), acc);
+      continue;
+    }
+    if (!entry.name.endsWith('.js') || IGNORED_FILES.has(entry.name) || entry.name.includes('[')) continue;
+    const relativePath = path.relative(PAGES_DIR, path.join(dir, entry.name));
+    acc.set(fileToRoute(relativePath), `pages/${relativePath.replace(/\\/g, '/')}`);
+  }
+  return acc;
+}
+
+function git(args) {
+  return execFileSync('git', args, { cwd: __dirname, encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 }).trim();
+}
+
+// Map of "pages/foo.js" -> ISO date of the last commit touching it.
+function getGitFileDates() {
+  const dates = new Map();
+  try {
+    // Vercel clones shallowly; a shallow boundary commit looks like it added
+    // every file, which would give them all the same (wrong) date again.
+    if (git(['rev-parse', '--is-shallow-repository']) === 'true') {
+      try {
+        git(['fetch', '--unshallow', '--quiet']);
+      } catch (error) {
+        console.warn('[sitemap] git fetch --unshallow failed; dates beyond the shallow history are omitted.');
+      }
+    }
+
+    const shallowFile = git(['rev-parse', '--git-path', 'shallow']);
+    const boundary = new Set(
+      fs.existsSync(path.resolve(__dirname, shallowFile))
+        ? fs.readFileSync(path.resolve(__dirname, shallowFile), 'utf8').split('\n').filter(Boolean)
+        : []
+    );
+
+    const log = git(['log', '--format=__C__%H %cI', '--name-only', '--', 'pages']);
+    let hash = null;
+    let date = null;
+    for (const line of log.split('\n')) {
+      if (line.startsWith('__C__')) {
+        [hash, date] = line.slice(5).split(' ');
+      } else if (line && !dates.has(line) && !boundary.has(hash)) {
+        dates.set(line, date); // log is newest-first, so first hit is the latest change
+      }
+    }
+  } catch (error) {
+    console.warn('[sitemap] Could not read git history for lastmod:', error.message);
+  }
+  return dates;
+}
+
+let lastmodLookupPromise;
+function getLastmodLookup() {
+  if (!lastmodLookupPromise) {
+    lastmodLookupPromise = (async () => {
+      const blogs = await getAllBlogs();
+      const blogDates = new Map();
+      let newestBlog;
+      for (const b of blogs) {
+        const slug = b?.title_slug || b?.slug;
+        const date = b?.updatedAt || b?.publishedAt;
+        if (!slug || !date) continue;
+        const iso = new Date(date).toISOString();
+        blogDates.set(`/blog/${slug}`, iso);
+        if (!newestBlog || iso > newestBlog) newestBlog = iso;
+      }
+      if (newestBlog) blogDates.set('/blog', newestBlog);
+
+      const routeFiles = toRouteFileMap();
+      const fileDates = getGitFileDates();
+
+      return (route) => {
+        if (blogDates.has(route)) return blogDates.get(route);
+        const file = routeFiles.get(route);
+        const date = file && fileDates.get(file);
+        return date ? new Date(date).toISOString() : undefined;
+      };
+    })();
+  }
+  return lastmodLookupPromise;
+}
+
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
   siteUrl: SITE_URL,
@@ -169,6 +279,18 @@ module.exports = {
   sitemapSize: 7000,
   generateIndexSitemap: false, // write a single public/sitemap.xml instead of an index + sitemap-0.xml
   output: 'standalone', // matches next.config.js `output: "standalone"`
+  autoLastmod: false, // see getLastmodLookup() — real per-page dates come from transform
+
+  transform: async (config, route) => {
+    const lastmodFor = await getLastmodLookup();
+    return {
+      loc: route,
+      changefreq: config.changefreq,
+      priority: config.priority,
+      lastmod: lastmodFor(route),
+      alternateRefs: config.alternateRefs ?? [],
+    };
+  },
 
   exclude: async () => {
     // IMPORTANT: this function fetches the blog API. If that call throws
