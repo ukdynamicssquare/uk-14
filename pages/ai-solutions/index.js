@@ -1,47 +1,18 @@
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import PageSeo from "../../components/PageSeo";
 
 const Index = () => {
     return (
         <>
-            <Head>
-                <title>
-                    Microsoft Dynamics 365 AI Business Solutions | AI Consulting
-                </title>
-
-                <link
-                    rel="canonical"
-                    href="https://www.dynamicssquare.co.uk/ai-solutions/"
-                />
-
-                <meta
-                    name="description"
-                    content="Discover Microsoft Dynamics 365 AI business solutions designed to automate processes, improve productivity, analyse business data, and support smarter decision-making."
-                />
-
-                <meta
-                    name="keywords"
-                    content="Microsoft Dynamics 365 AI business solutions, Dynamics 365 AI solutions, Dynamics 365 Copilot, Microsoft AI solutions, AI business solutions, Dynamics 365 AI consulting, AI automation"
-                />
-
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://www.dynamicssquare.co.uk/ai-solutions/" />
-                <meta property="og:title" content="Microsoft Dynamics 365 AI Business Solutions | AI Consulting" />
-                <meta property="og:description" content="Discover Microsoft Dynamics 365 AI business solutions designed to automate processes, improve productivity, analyse business data, and support smarter decision-making." />
-                <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/AI-Banner.png" />
-
-                <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/ai-solutions/" />
-                <meta property="twitter:title" content="Microsoft Dynamics 365 AI Business Solutions | AI Consulting" />
-                <meta property="twitter:description" content="Discover Microsoft Dynamics 365 AI business solutions designed to automate processes, improve productivity, analyse business data, and support smarter decision-making." />
-                <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/AI-Banner.png" />
-
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                        __html: JSON.stringify({
+            <PageSeo
+              type="Service"
+              title="Microsoft Dynamics 365 AI Business Solutions | AI Consulting"
+              description="Discover Microsoft Dynamics 365 AI business solutions designed to automate processes, improve productivity, analyse business data, and support smarter decision-making."
+              keywords="Microsoft Dynamics 365 AI business solutions, Dynamics 365 AI solutions, Dynamics 365 Copilot, Microsoft AI solutions, AI business solutions, Dynamics 365 AI consulting, AI automation"
+              image="/img/AI-Banner.png"
+              extraSchema={{
                             "@context": "https://schema.org",
                             "@graph": [
                                 {
@@ -118,10 +89,8 @@ const Index = () => {
                                     ]
                                 }
                             ]
-                        })
-                    }}
-                />
-            </Head>
+                        }}
+            />
 
             <main>
 

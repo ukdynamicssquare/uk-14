@@ -1,21 +1,16 @@
-import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
+import PageSeo from "../components/PageSeo";
 
 const UpgradeServices = () => {
   return (
     <>
-      <Head>
-        <title>Looking for change your Microsoft Business Central Partner?</title>
-        <meta
-          name="description"
-          content="Change your D365 ERP partner today to avail seamless and reliable support all day and night. We offer client-oriented services with an aim to deliver exceptional services to all businesses."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/change-your-erp-partner-for-a-better-future/"
-        />
-      </Head>
+      <PageSeo
+        type="Article"
+        title="Looking for change your Microsoft Business Central Partner?"
+        description="Change your D365 ERP partner today to avail seamless and reliable support all day and night. We offer client-oriented services with an aim to deliver exceptional services to all businesses."
+        image="/img/erp-partner-banner.png"
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -74,7 +69,7 @@ const UpgradeServices = () => {
             <div className="col-lg-6">
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                  <Image src="/img/strong_communication.png" alt="strong_communication" width={98} height={98} />
+                  <Image src="/img/strong_communication.png" alt="Strong Communication" width={98} height={98} />
                 </div>
                 <div className="style-grid-content">
                   <h3>Strong Communication</h3>
@@ -86,7 +81,7 @@ const UpgradeServices = () => {
 
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                  <Image src="/img/proven_records.png" alt="proven_records" width={98} height={98} />
+                  <Image src="/img/proven_records.png" alt="Proven Track Record" width={98} height={98} />
                 </div>
                 <div className="style-grid-content">
                   <h3>Proven Track Record</h3>
@@ -97,7 +92,7 @@ const UpgradeServices = () => {
             <div className="col-lg-6">
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                  <Image src="/img/Equipped_resources.png" alt="Equipped_resources" width={98} height={98} />
+                  <Image src="/img/Equipped_resources.png" alt="Equipped with Resources" width={98} height={98} />
                 </div>
                 <div className="style-grid-content">
                   <h3>Equipped with Resources</h3>
@@ -109,9 +104,8 @@ const UpgradeServices = () => {
                 <div className="style-grid-icons">
                   <Image
                     src="/img/robust_Methodlogy.png"
-                    alt="robust_Methodlogy"
-                    width={98} height={98}
-                  />
+                    alt="Robust Methodology"
+                    width={98} height={98} />
                 </div>
                 <div className="style-grid-content">
                   <h3>Robust Methodology</h3>

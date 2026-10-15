@@ -1,5 +1,4 @@
 import React, { useRef, useState, useEffect } from 'react';
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -10,22 +9,41 @@ import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 import FormNewUIndsustry from "../components/FormNewUIndsustry";
+import PageSeo from "../components/PageSeo";
+// Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
+const PAGE_FAQS = [
+  {
+    "question": "What is Dynamics 365, and why is it good for small businesses?",
+    "answer": "Dynamics 365 is a cloud-based suite of business apps by Microsoft. It's scalable, affordable, and integrates with Microsoft 365. It is ideal for growing small businesses."
+  },
+  {
+    "question": "Which Dynamics 365 apps are best for small businesses?",
+    "answer": "Dynamics 365 Business Central - for finance, inventory, and operations Dynamics 365 Sales - for managing leads and customer relationships Customer Service - for support and case management Marketing - for email campaigns and customer journeys"
+  },
+  {
+    "question": "How much does Dynamics 365 cost for small businesses?",
+    "answer": "Sales Professional starts at around £50.00/user/month, paid yearly, while Business Central Essentials starts at around £61.50/user/month. Microsoft often offers bundled pricing or partner discounts for SMBs."
+  },
+  {
+    "question": "Can Dynamics 365 integrate with existing tools?",
+    "answer": "Yes. It connects with Microsoft 365, Power Platform, and third-party tools like Shopify, QuickBooks, and Mailchimp."
+  },
+  {
+    "question": "Is Dynamics 365 easy to implement?",
+    "answer": "Yes. It offers cloud setup, partner support, and user-friendly tools, which are ideal for non-technical teams."
+  }
+];
+
 const MicrosoftCloudForNonpro = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   return (
     <>
-      <Head>
-        <title>Dynamics 365 for Small Businesses UK</title>
-        <meta
-          name="description"
-          content="Explore Dynamics 365 for small businesses! Boost efficiency, improve customer engagement, and streamline operations with Microsoft's powerful business solutions."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/dynamics-365-for-small-businesses/"
-        />
-
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Dynamics 365 for Small Businesses UK"
+        description="Explore Dynamics 365 for small businesses! Boost efficiency, improve customer engagement, and streamline operations with Microsoft's powerful business solutions."
+        faqs={PAGE_FAQS}
+      />
         <section className="top-banner-new">
           <div className="container">
             <div className="row">
@@ -187,7 +205,7 @@ const MicrosoftCloudForNonpro = () => {
                       For Marketing Needs
                     </p>
                     <div className="card-head">
-                      <img src="/img/menu-icons/Customer-Insights.png" width={48} height={48} alt="businesscentral" />
+                      <img src="/img/menu-icons/Customer-Insights.png" width={48} height={48} alt="businesscentral"  loading="lazy" decoding="async" />
                       <h3>Dynamics 365<br />
                         Customer Insights</h3>
                     </div>
@@ -207,7 +225,7 @@ const MicrosoftCloudForNonpro = () => {
                       To Extend ERP Functionality
                     </p>
                     <div className="card-head">
-                      <img src="/img/menu-icons/power-pltform.png" width={48} height={48} alt="businesscentral" />
+                      <img src="/img/menu-icons/power-pltform.png" width={48} height={48} alt="businesscentral"  loading="lazy" decoding="async" />
                       <h3>Microsoft <br />
                         Power Platform</h3>
                     </div>
@@ -237,7 +255,7 @@ const MicrosoftCloudForNonpro = () => {
             <div className="row d-none d-md-block">
               <div className="col-lg-12">
                 <div className="chal-pic-banner">
-                  <Image src="/img/group-35368.png" width={1305} height={313} alt="smart-busimess-mamangemt" />
+                  <Image src="/img/group-35368.png" width={1305} height={313} alt="Affordable Solutions, Powerful Returns" />
                 </div>
               </div>
             </div>
@@ -315,28 +333,28 @@ const MicrosoftCloudForNonpro = () => {
                   >
                     <SwiperSlide>
                       <div className='thum-tab'>
-                        <Image src="/img/Arteak-new-logo.png" alt='Arteak-new-logo' width={241} height={78} />
+                        <Image src="/img/Arteak-new-logo.png" alt="Arteak logo" width={241} height={78} />
                       </div>
                     </SwiperSlide>
 
                     <SwiperSlide>
                       <div className='thum-tab'>
-                        <Image src="/img/parweld-new-logo.png" alt='parweld-new-logo' width={223} height={78} />
+                        <Image src="/img/parweld-new-logo.png" alt="Parweld logo" width={223} height={78} />
                       </div>
                     </SwiperSlide>
                     <SwiperSlide>
                       <div className='thum-tab'>
-                        <Image src="/img/green-wireless-logo.png" alt='green-wireless-logo' width={163} height={72} />
+                        <Image src="/img/green-wireless-logo.png" alt="Green Wireless logo" width={163} height={72} />
                       </div>
                     </SwiperSlide>
                     <SwiperSlide>
                       <div className='thum-tab'>
-                        <Image src="/img/timesco-logo.png" alt='timesco-logo' width={191} height={40} />
+                        <Image src="/img/timesco-logo.png" alt="Timesco logo" width={191} height={40} />
                       </div>
                     </SwiperSlide>
                     <SwiperSlide>
                       <div className='thum-tab'>
-                        <Image src="/img/omicron_engineering_blur.png" alt='omicron_engineering_blur' width={180} height={41} />
+                        <Image src="/img/omicron_engineering_blur.png" alt="Omicron Engineering logo" width={180} height={41} />
                       </div>
                     </SwiperSlide>
                     {/* <SwiperSlide>
@@ -369,7 +387,7 @@ const MicrosoftCloudForNonpro = () => {
                         <div className='col-lg-7 d-flex'>
                           <div className='test-s-info'>
                             <figure>
-                              <Image src="/img/testimonials/Terence-Turner.png" alt="erence-Turner" width={84} height={84} />
+                              <Image src="/img/testimonials/Terence-Turner.png" alt="Terence Turner" width={84} height={84} />
                               <p>Dynamics Square Team provided us a top-level service. Well trained staff as well as excellent support when needed. Very professional and trustworthy.</p>
                               <h5>Terence Turner</h5>
                               <span>General Manager</span>
@@ -401,7 +419,7 @@ const MicrosoftCloudForNonpro = () => {
                         <div className='col-lg-7 d-flex'>
                           <div className='test-s-info'>
                             <figure>
-                              <Image src="/img/testimonials/Jonathan-W.png" alt="Jonathan-W" width={84} height={84} />
+                              <Image src="/img/testimonials/Jonathan-W.png" alt="Jonathan W" width={84} height={84} />
                               <p>We have worked with Dynamics Square since 2019. Our working relationship has built during this period, and we have found them to be very professional</p>
                               <h5>Jonathan W</h5>
                               <span>Technical Director</span>
@@ -553,10 +571,9 @@ const MicrosoftCloudForNonpro = () => {
                   <div className="icons icons-0102">
                     <Image
                       src="/img/case-studies-1.jpg"
-                      alt="crm-trading"
+                      alt="Check out some of our case studies"
                       width={850}
-                      height={410}
-                    />
+                      height={410} />
                   </div>
                   <div className="commen-boc-2-info">
                     <p>
@@ -578,10 +595,9 @@ const MicrosoftCloudForNonpro = () => {
                   <div className="icons icons-0102">
                     <Image
                       src="/img/case-studies-2.jpg"
-                      alt="case-studies-2.jpg"
+                      alt="Check out some of our case studies"
                       width={850}
-                      height={410}
-                    />
+                      height={410} />
                   </div>
                   <div className="commen-boc-2-info">
                     <p>
@@ -604,10 +620,9 @@ const MicrosoftCloudForNonpro = () => {
                   <div className="icons icons-0102">
                     <Image
                       src="/img/case-studies-3.jpg"
-                      alt="timesco-logo"
+                      alt="Check out some of our case studies"
                       width={850}
-                      height={410}
-                    />
+                      height={410} />
                   </div>
                   <div className="commen-boc-2-info">
                     <p>
@@ -677,7 +692,7 @@ const MicrosoftCloudForNonpro = () => {
               <div className="col-lg-4">
                 <div className="w-achive-l">
                   <figure>
-                    <Image src="/img/manage_accounts.png" alt="manage_accounts" width={98} height={98} />
+                    <Image src="/img/manage_accounts.png" alt="" width={98} height={98} aria-hidden="true" />
                   </figure>
                 </div>
                 <div className="w-achive-b">

@@ -1,26 +1,20 @@
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Autoplay, FreeMode, Pagination } from "swiper/modules";
+import PageSeo from "../../components/PageSeo";
 
 const SageErpToBusinessCentral = () => {
   return (
     <>
-      <Head>
-        <title>Sage ERP to D365 Business Central - Case Study</title>
-        <meta
-          name="description"
-          content="Sage ERP to D365 Business Central Case Study: We resolved different operational challenges while achieving high ROI."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/case-studies/sage-erp-to-business-central/"
-        />
-      </Head>
+      <PageSeo
+        type="Article"
+        title="Sage ERP to D365 Business Central - Case Study"
+        description="Sage ERP to D365 Business Central Case Study: We resolved different operational challenges while achieving high ROI."
+      />
       <section className="hero-1 hero">
         <div className="container">
           <div className="row">
@@ -37,8 +31,7 @@ const SageErpToBusinessCentral = () => {
               <div className="sider-over">
                 <img
                   src="/img/business-central-implementation-banner-1.svg"
-                  alt="business-central-implementation-banner"
-                />
+                  alt="Sage ERP to Microsoft Dynamics 365 Business Central" />
               </div>
             </div>
           </div>
@@ -52,8 +45,7 @@ const SageErpToBusinessCentral = () => {
                 <div className="col-lg-3 align-self-center text-center">
                   <img
                     src="/img/casestudy-pic.png"
-                    alt="casestudy-pic"
-                  />
+                    alt="Sage ERP to Microsoft Dynamics 365 Business Central" />
                 </div>
                 <div className="col-lg-9 align-self-center">
                   <p>For more than 25 years in the industry, the business has been helping builders' merchants grow their businesses. During this journey, they have built an extensive supply chain to find products that are not easily available on the market. Irrespective of the complexity of the order, whether urgent or irregular, the business will find and supply it before the deadline. This will help businesses grow by increasing the inquiry-to-order ratio. With good response time and an efficient supply chain, business has 327 active branches at the moment, with a turnaround time of less than 2 hours. They not only deal with builder's merchants but also offer their services to other merchants as well.</p>
@@ -186,8 +178,8 @@ const SageErpToBusinessCentral = () => {
                           <div className="img-wrp">
                             <img
                               src="/img/material-lightbulb-outline.svg"
-                              alt="Food-and-beverage"
-                            />
+                              alt=""
+                             aria-hidden="true"  loading="lazy" decoding="async" />
                           </div>
                           <div className="text-wrp-content">
                             <p>The business is now able to get advanced support and hassle-free updates from Microsoft without any charge. </p>
@@ -203,7 +195,7 @@ const SageErpToBusinessCentral = () => {
                               <img
                                 src="/img/material-lightbulb-outline.svg"
                                 alt="NotforProfit"
-                              />
+                               loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>The company can now take control of all financial data that includes cash flow, bank reconciliations, fixed assets, budgeting, and project costing while shortening cycle times with the late payment-prediction extension. </p>
@@ -220,7 +212,7 @@ const SageErpToBusinessCentral = () => {
                               <img
                                 src="/img/material-lightbulb-outline.svg"
                                 alt="Ecommerce"
-                              />
+                               loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>They can access advanced procurement capabilities that include vendor management, purchase order creation, inventory tracking, and management. </p>
@@ -328,7 +320,7 @@ const SageErpToBusinessCentral = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="call_to_action-right over-img">
-                <img src="/img/MaskGroup8.png" alt="image" />
+                <img src="/img/MaskGroup8.png" alt="Business consultant"  loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="col-lg-7 align-self-center">

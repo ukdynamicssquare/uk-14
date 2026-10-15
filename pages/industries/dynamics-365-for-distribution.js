@@ -1,8 +1,8 @@
-import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
 import useCardScrollEffect from "../../components/useCardScrollEffect";
+import PageSeo from "../../components/PageSeo";
 
 const Continia = () => {
 
@@ -10,32 +10,12 @@ const Continia = () => {
 
   return (
     <>
-      <Head>
-        <title>Dynamics 365 for Wholesale & Distribution Industry | Dynamics Square UK</title>
-        <meta
-          name="description"
-          content="Dynamics 365 for wholesale and distribution brings stock levels, orders, suppliers and finance into one system. Business Central and F&SCM from a UK partner."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/industries/dynamics-365-for-distribution/"
-        />
-        <meta property="og:locale" content="GB" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content=" Dynamics 365 for Wholesale & Distribution Industry | Dynamics Square UK " />
-        <meta property="og:description" content="Dynamics 365 for wholesale and distribution brings stock levels, orders, suppliers and finance into one system. Business Central and F&SCM from a UK partner." />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/industries/dynamics-365-for-distribution/" />
-        <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/wholesale-pic-01.png" />
-        <meta property="og:image:width" content="200" />
-        <meta property="og:image:height" content="200" />
-        <meta property="og:image:type" content="image/png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="Dynamics 365 for Wholesale & Distribution Industry | Dynamics Square UK" />
-        <meta name="twitter:description" content="Dynamics 365 for wholesale and distribution brings stock levels, orders, suppliers and finance into one system. Business Central and F&SCM from a UK partner." />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/wholesale-pic-01.png" />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Dynamics 365 for Wholesale & Distribution Industry | Dynamics Square UK"
+        description="Dynamics 365 for wholesale and distribution brings stock levels, orders, suppliers and finance into one system. Business Central and F&SCM from a UK partner."
+        image="https://www.dynamicssquare.co.uk/img/wholesale-pic-01.png"
+      />
       <div className='solution-new-banner-one solution-new-banner-one-colo'>
         <div className='container'>
           <div className='row justify-content-center'>
@@ -64,7 +44,7 @@ const Continia = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className='m-b-image-nnn'>
-                <Image src="/img/wholesale-pic-01.png" alt='bc-support-banner' width={1097} height={656} />
+                <Image src="/img/wholesale-pic-01.png" alt="What is Dynamics 365 for Distribution Companies?" width={1097} height={656} />
               </div>
             </div>
           </div>
@@ -87,7 +67,7 @@ const Continia = () => {
               <div className="col-whole-card">
                 <h4>1. Dynamics 365 Business Central</h4>
                 <div className="col-bag-car">
-                  <Image src="/img/wholesale-pic-02.png" alt="wholesale-pic-02" width={93} height={93} />
+                  <Image src="/img/wholesale-pic-02.png" alt="Dynamics 365 Business Central" width={93} height={93} />
                 </div>
                 <p><a href="/products/dynamics-365-business-central/">Dynamics 365 Business Central</a> for Distribution targets small to mid-sized distribution businesses that need an all-in-one ERP system with fast implementation, lower cost, and complete control over sales, inventory, purchasing, finance, and service in one unified solution.</p>
                 <p><b>Growing distribution companies would go for it when:</b></p>
@@ -104,7 +84,7 @@ const Continia = () => {
               <div className="col-whole-card">
                 <h4>2. Dynamics 365 Finance and Supply Chain Management </h4>
                 <div className="col-bag-car">
-                  <Image src="/img/wholesale-pic-03.png" alt="wholesale-pic-03" width={386} height={96} />
+                  <Image src="/img/wholesale-pic-03.png" alt="Dynamics 365 Finance and Supply Chain Management" width={386} height={96} />
                 </div>
                 <p>Distribution target large, enterprise-level distribution companies with highly complex operations, multiple entities, global supply chains, and advanced manufacturing or logistics needs. Based on their business requirements, wholesale and distribution companies can choose either <a href="/products/dynamics-365-supply-chain-management/">Dynamics 365 Supply Chain Management</a> or both solutions in case they have complex finance operations.</p>
                 <p><b>Large distribution companies would go for these solutions when:</b></p>
@@ -137,70 +117,70 @@ const Continia = () => {
           <div className="row g-5">
             <div className="col-lg-6 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/wholesale-pic-04.png" alt="wholesale-pic-04" width={40} height={36} />
+                <img src="/img/wholesale-pic-04.png" alt="Limited Clarity on Stock Levels" width={40} height={36}  loading="lazy" decoding="async" />
                 <h3>Limited Clarity on Stock Levels</h3>
                 <p>When stock information stays in different systems, teams cannot see what is available. This causes wrong orders, empty shelves, and blocked cash flow.</p>
               </div>
             </div>
             <div className="col-lg-6 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/wholesale-pic-05.png" alt="wholesale-pic-05" width={40} height={36} />
+                <img src="/img/wholesale-pic-05.png" alt="Slow, Manual Order Handling" width={40} height={36}  loading="lazy" decoding="async" />
                 <h3>Slow, Manual Order Handling</h3>
                 <p>When every order passes through many people, mistakes and delays increase. This slows delivery and hurts customer trust.</p>
               </div>
             </div>
             <div className="col-lg-6 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/wholesale-pic-06.png" alt="wholesale-pic-06" width={40} height={36} />
+                <img src="/img/wholesale-pic-06.png" alt="Disconnected Systems" width={40} height={36}  loading="lazy" decoding="async" />
                 <h3>Disconnected Systems</h3>
                 <p>When finance, sales, and warehouse teams work on separate tools, data stays scattered. This creates confusion and poor decisions.</p>
               </div>
             </div>
             <div className="col-lg-6 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/wholesale-pic-07.png" alt="wholesale-pic-07" width={40} height={36} />
+                <img src="/img/wholesale-pic-07.png" alt="Supplier Delays" width={40} height={36}  loading="lazy" decoding="async" />
                 <h3>Supplier Delays</h3>
                 <p>When supplier performance is tracked by hand, problems stay hidden. Late shipments then stop deliveries and upset customers.</p>
               </div>
             </div>
             <div className="col-lg-6 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/wholesale-pic-08.png" alt="wholesale-pic-08" width={40} height={36} />
+                <img src="/img/wholesale-pic-08.png" alt="Unclear Pricing and Margins" width={40} height={36}  loading="lazy" decoding="async" />
                 <h3>Unclear Pricing and Margins</h3>
                 <p>When cost and sales data do not connect, profit visibility fades. This leads to poor pricing and weak margins.</p>
               </div>
             </div>
             <div className="col-lg-6 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/wholesale-pic-09.png" alt="wholesale-pic-09" width={40} height={36} />
+                <img src="/img/wholesale-pic-09.png" alt="Complex Multi-Channel Selling" width={40} height={36}  loading="lazy" decoding="async" />
                 <h3>Complex Multi-Channel Selling</h3>
                 <p>When sales come from many channels without one system, order tracking breaks. This increases manual work and billing errors.</p>
               </div>
             </div>
             <div className="col-lg-6 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/wholesale-pic-10.png" alt="wholesale-pic-10" width={40} height={36} />
+                <img src="/img/wholesale-pic-10.png" alt="Limited Financial Visibility" width={40} height={36}  loading="lazy" decoding="async" />
                 <h3>Limited Financial Visibility</h3>
                 <p>When financial reports are not linked to operations, leaders cannot see true cash flow. This slows planning and growth.</p>
               </div>
             </div>
             <div className="col-lg-6 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/wholesale-pic-11.png" alt="wholesale-pic-11" width={40} height={36} />
+                <img src="/img/wholesale-pic-11.png" alt="Weak Forecasting" width={40} height={36}  loading="lazy" decoding="async" />
                 <h3>Weak Forecasting</h3>
                 <p>When planning depends on guesses, stock levels go wrong. This causes shortages or piles of unsold items.</p>
               </div>
             </div>
             <div className="col-lg-6 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/wholesale-pic-12.png" alt="wholesale-pic-12" width={40} height={36} />
+                <img src="/img/wholesale-pic-12.png" alt="Compliance Challenges" width={40} height={36}  loading="lazy" decoding="async" />
                 <h3>Compliance Challenges</h3>
                 <p>When records stay manual, tracking product batches becomes hard. This risks errors, penalties, and recall costs.</p>
               </div>
             </div>
             <div className="col-lg-6 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/wholesale-pic-13.png" alt="wholesale-pic-13" width={40} height={36} />
+                <img src="/img/wholesale-pic-13.png" alt="Scattered Customer Information" width={40} height={36}  loading="lazy" decoding="async" />
                 <h3>Scattered Customer Information</h3>
                 <p>When customer data stays spread across teams, service slows down. This weakens relationships and repeat sales.</p>
               </div>
@@ -239,7 +219,7 @@ const Continia = () => {
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/wholesale-pic-14.png" width={580} height={456} alt="wholesale-pic-14" />
+                      <Image src="/img/wholesale-pic-14.png" width={580} height={456} alt="Seamless Order Processing and Automation" />
                     </div>
                   </div>
                 </div>
@@ -256,7 +236,7 @@ const Continia = () => {
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/wholesale-pic-15.png" width={580} height={456} alt="wholesale-pic-15" />
+                      <Image src="/img/wholesale-pic-15.png" width={580} height={456} alt="Unified Financial and Operational Control" />
                     </div>
                   </div>
                 </div>
@@ -273,7 +253,7 @@ const Continia = () => {
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/wholesale-pic-16.png" width={580} height={456} alt="wholesale-pic-16" />
+                      <Image src="/img/wholesale-pic-16.png" width={580} height={456} alt="Smarter Supplier Management" />
                     </div>
                   </div>
                 </div>
@@ -290,7 +270,7 @@ const Continia = () => {
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/wholesale-pic-17.png" width={580} height={456} alt="wholesale-pic-17" />
+                      <Image src="/img/wholesale-pic-17.png" width={580} height={456} alt="Centralised Pricing and Margin Insights" />
                     </div>
                   </div>
                 </div>
@@ -307,7 +287,7 @@ const Continia = () => {
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/wholesale-pic-18.png" width={580} height={456} alt="wholesale-pic-18" />
+                      <Image src="/img/wholesale-pic-18.png" width={580} height={456} alt="Simplified Multi-Channel Selling" />
                     </div>
                   </div>
                 </div>
@@ -324,7 +304,7 @@ const Continia = () => {
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/wholesale-pic-19.png" width={580} height={456} alt="wholesale-pic-19" />
+                      <Image src="/img/wholesale-pic-19.png" width={580} height={456} alt="Clear, Real-Time Financial Visibility" />
                     </div>
                   </div>
                 </div>
@@ -341,7 +321,7 @@ const Continia = () => {
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/wholesale-pic-20.png" width={580} height={456} alt="wholesale-pic-20" />
+                      <Image src="/img/wholesale-pic-20.png" width={580} height={456} alt="Improved Demand Forecasting with AI and Analytics" />
                     </div>
                   </div>
                 </div>
@@ -358,7 +338,7 @@ const Continia = () => {
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/wholesale-pic-21.png" width={580} height={456} alt="wholesale-pic-21" />
+                      <Image src="/img/wholesale-pic-21.png" width={580} height={456} alt="Full Traceability and Compliance Confidence" />
                     </div>
                   </div>
                 </div>
@@ -375,7 +355,7 @@ const Continia = () => {
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/wholesale-pic-22.png" width={580} height={456} alt="wholesale-pic-22" />
+                      <Image src="/img/wholesale-pic-22.png" width={580} height={456} alt="Unified Customer View for Better Relationships" />
                     </div>
                   </div>
                 </div>
@@ -392,7 +372,7 @@ const Continia = () => {
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/wholesale-pic-23.png" width={580} height={456} alt="wholesale-pic-23" />
+                      <Image src="/img/wholesale-pic-23.png" width={580} height={456} alt="Unified Customer View for Better Relationships" />
                     </div>
                   </div>
                 </div>
@@ -407,7 +387,7 @@ const Continia = () => {
           <div className="row">
             <div className="col-lg-5 align-self-center">
               <div className="whole-image">
-                <Image src="/img/wholesale-pic-27.png" alt="wholesale-pic-27" width={383} height={487} />
+                <Image src="/img/wholesale-pic-27.png" alt="Why Dynamics 365 is the Best ERP for Wholesale and Distribution Industry?" width={383} height={487} />
               </div>
             </div>
             <div className="col-lg-7">
@@ -573,14 +553,14 @@ const Continia = () => {
             </div>
           </div>
         </div>
-        <img src="/img/n-015.png" alt="n-015" />
+        <img src="/img/n-015.png" alt="" aria-hidden="true"  loading="lazy" decoding="async" />
       </section>
       <section className='bg-003s pd-con-66'>
         <div className="container my-float-i">
           <div className="row">
             <div className="col-lg-5 align-self-center order-3">
               <div className='img-backs-sid-two text-center'>
-                <Image src="/img/wholesale-pic-28.png" alt="wholesale-pic-28" width={401} height={455} className='im-two' />
+                <Image src="/img/wholesale-pic-28.png" alt="Partnering with Dynamics Square, UK" width={401} height={455} className='im-two' />
               </div>
             </div>
             <div className="col-lg-1 order-2"></div>
@@ -608,7 +588,7 @@ const Continia = () => {
           <div className="row">
             <div className="col-lg-5 align-self-center">
               <div className='img-backs-sid-two text-center'>
-                <Image src="/img/wholesale-pic-29.png" alt="wholesale-pic-29" width={400} height={450} className='im-two' />
+                <Image src="/img/wholesale-pic-29.png" alt="The Outcomes to Expect with Dynamics 365 For Wholesale and Distribution Industry" width={400} height={450} className='im-two' />
               </div>
             </div>
             <div className="col-lg-1"></div>

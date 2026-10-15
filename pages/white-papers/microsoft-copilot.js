@@ -1,10 +1,10 @@
 import React, { useRef, useState,useEffect } from "react";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import emailjs from "@emailjs/browser";
 import PhoneInput from 'react-phone-input-2';
+import PageSeo from "../../components/PageSeo";
 import 'react-phone-input-2/lib/style.css';
 const Whitepaerguide = () => {
 
@@ -135,17 +135,12 @@ const fetchCountryCodeByIP = () => {
 
   return (
     <>
-      <Head>
-      <title>Microsoft Copilot White Paper | Dynamics Square</title>
-        <meta
-          name="description"
-          content="Explore Microsoft's Copilot White Paper by Dynamics Square, offering insights into AI-driven productivity, integration, and business transformation."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/white-papers/microsoft-copilot/"
-        />
-      </Head>
+      <PageSeo
+        type="WebPage"
+        title="Microsoft Copilot White Paper | Dynamics Square"
+        description="Explore Microsoft's Copilot White Paper by Dynamics Square, offering insights into AI-driven productivity, integration, and business transformation."
+        image="/img/whitepaper-one.png"
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -164,7 +159,7 @@ const fetchCountryCodeByIP = () => {
               </div>
             </div>
             <div className="col-lg-6 align-self-center text-center">
-              <img width={450} src="/img/whitepaper-one.png" alt="whitepaper-one" priority />
+              <img width={450} src="/img/whitepaper-one.png" alt="The White paper will Walk you Through" priority />
             </div>
           </div>
         </div>
@@ -196,7 +191,7 @@ const fetchCountryCodeByIP = () => {
             </div>
             <div className="col-lg-6 align-self-center">
               <div className="text-center remove-pre">
-                <Image src="/img/tablet-ebook-one.png" alt="tablet-ebook" width={487} height={613} />
+                <Image src="/img/tablet-ebook-one.png" alt="The Essence of the Cloud for Productivity" width={487} height={613} />
               </div>
             </div>
             <div className="col-lg-3 align-self-center">
@@ -224,9 +219,8 @@ const fetchCountryCodeByIP = () => {
               <div className="pic-ll">
                 <Image
                   src="/img/erp-left-about.png"
-                  alt="erp-left-about"
-                  width={337} height={460}
-                />
+                  alt="What’s More in This White Paper?"
+                  width={337} height={460} />
               </div>
             </div>
             {/* <div className="col-lg-1 align-self-center"></div> */}
@@ -246,7 +240,7 @@ const fetchCountryCodeByIP = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="call_to_action-right over-img">
-                <img src="/img/MaskGroup8.png" alt="images" />
+                <img src="/img/MaskGroup8.png" alt="images"  loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="col-lg-7 align-self-center">

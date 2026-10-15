@@ -1,5 +1,5 @@
-import Head from "next/head";
 import Link from "next/link";
+import PageSeo from "../../components/PageSeo";
 
 const productCategories = [
   {
@@ -173,33 +173,14 @@ const productSchema = {
 const ProductsList = () => {
   return (
     <>
-      <Head>
-        <title>{pageTitle}</title>
-        <meta name="description" content={pageDescription} />
-        <meta
-          name="keywords"
-          content="Microsoft Dynamics 365 products, Business Central, Dynamics 365 Finance, Supply Chain Management, Dynamics 365 Sales, Power Platform, Power BI, Power Apps"
-        />
-        <link rel="canonical" href={pageUrl} />
-
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={pageUrl} />
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={pageDescription} />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/business-new-banner.png" />
-        <meta property="og:site_name" content="Dynamics Square" />
-
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content={pageUrl} />
-        <meta property="twitter:title" content={pageTitle} />
-        <meta property="twitter:description" content={pageDescription} />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/business-new-banner.png" />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
-        />
-      </Head>
+      <PageSeo
+        type="CollectionPage"
+        title={pageTitle}
+        description={pageDescription}
+        keywords="Microsoft Dynamics 365 products, Business Central, Dynamics 365 Finance, Supply Chain Management, Dynamics 365 Sales, Power Platform, Power BI, Power Apps"
+        image="/img/business-new-banner.png"
+        extraSchema={productSchema}
+      />
 
       <div className="solution-new-banner-one">
         <div className="container">

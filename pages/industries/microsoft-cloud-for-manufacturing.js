@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
@@ -10,33 +9,43 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Autoplay, FreeMode, Pagination } from "swiper/modules";
 import Blog from "../../components/Blog";
+import PageSeo from "../../components/PageSeo";
+// Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
+const PAGE_FAQS = [
+  {
+    "question": "What is the Microsoft Cloud for Manufacturing?",
+    "answer": "Microsoft Cloud for Manufacturing is a solution built to offer sustainability using core operations, data sharing, and automation. It has the powerful capability of streamlining entire manufacturing processes while removing redundancies from the system to allow for continuous growth."
+  },
+  {
+    "question": "What are the features of Microsoft Cloud for Manufacturing?",
+    "answer": "It provides numerous benefits to all businesses, regardless of their unique business operations or size. Some of the features include seamless customer management, effective workforce management, enhanced visibility of processes, pushing businesses towards digital transformation through AI, and much more."
+  },
+  {
+    "question": "Is Microsoft Cloud for Manufacturing an ERP or CRM?",
+    "answer": "It is an ERP capable of streamlining business management processes related to manufacturing and similar domains. It can be implemented using cloud-based ERP or on-premises servers, depending on the requirements of a business, whether large or small. Also, if you are looking for a better cloud-based ERP, you can go with Microsoft Dynamics 365, and if you are a SMB, Business Central would work great for your needs as it is adaptable and powerful for all industries."
+  },
+  {
+    "question": "Can Microsoft Cloud for Manufacturing enhance manufacturing capabilities?",
+    "answer": "Yes, because it understands the changing manufacturing needs and offers a modern solution to align with them. Microsoft constantly updates the features and capabilities it provides to all business solutions so that businesses can chart a course for long-term growth and revenue.."
+  },
+  {
+    "question": "Name the industries in which Microsoft Cloud for Manufacturing can be utilised?",
+    "answer": "Microsoft Cloud for Manufacturing is available to all industries with manufacturing departments. However, food & beverages, e-commerce, startups, metal product manufacturing, and more."
+  }
+];
+
 const Manufacturing = () => {
   const [isOpen, setOpen] = useState(false);
   const [open, setsOpen] = useState(false);
   return (
     <>
-      <Head>
-        <title>Microsoft Cloud for Manufacturing | Dynamics Square</title>
-        <meta
-          name="description"
-          content="By implementing Microsoft Cloud for Manufacturing, you can uncover new manufacturing capabilities to effectively connect your employees, workflow, processes, drive transparency, profitability, and agility."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/industries/microsoft-cloud-for-manufacturing/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/industries/microsoft-cloud-for-manufacturing/" />
-        <meta property="og:title" content="Microsoft Cloud for Manufacturing | Dynamics Square" />
-        <meta property="og:description" content="By implementing Microsoft Cloud for Manufacturing, you can uncover new manufacturing capabilities to effectively connect your employees, workflow, processes, drive transparency, profitability, and agility." />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/manufacturing-banner.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/industries/microsoft-cloud-for-manufacturing/" />
-        <meta property="twitter:title" content="Microsoft Cloud for Manufacturing | Dynamics Square" />
-        <meta property="twitter:description" content="By implementing Microsoft Cloud for Manufacturing, you can uncover new manufacturing capabilities to effectively connect your employees, workflow, processes, drive transparency, profitability, and agility." />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/manufacturing-banner.png" />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Microsoft Cloud for Manufacturing | Dynamics Square"
+        description="By implementing Microsoft Cloud for Manufacturing, you can uncover new manufacturing capabilities to effectively connect your employees, workflow, processes, drive transparency, profitability, and agility."
+        image="https://www.dynamicssquare.co.uk/img/manufacturing-banner.png"
+        faqs={PAGE_FAQS}
+      />
       <ModalVideo
         channel="youtube"
         autoplay
@@ -189,7 +198,7 @@ const Manufacturing = () => {
             <div className="row">
               <div className="col-lg-5">
                 <div className="call_to_action-right over-img">
-                  <img src="/img/MaskGroup8.png" alt="image" />
+                  <img src="/img/MaskGroup8.png" alt="Business consultant" />
                 </div>
               </div>
               <div className="col-lg-7 align-self-center">
@@ -232,10 +241,9 @@ const Manufacturing = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/custom-crm-solutions.svg"
-                      alt="custom-crm-solutions"
+                      alt="Workforce Management"
                       width={48}
-                      height={48}
-                    />
+                      height={48}  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Workforce Management</h3>
@@ -250,10 +258,10 @@ const Manufacturing = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/icons_flexibility.svg"
-                      alt="icons_flexibility"
+                      alt=""
                       width={48}
                       height={48}
-                    />
+                     aria-hidden="true"  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Drive Agility</h3>
@@ -271,7 +279,7 @@ const Manufacturing = () => {
                       alt="icons_supply-chain (1)"
                       width={48}
                       height={48}
-                    />
+                     loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Resilient Supply Chain</h3>
@@ -290,7 +298,7 @@ const Manufacturing = () => {
                       alt="icons-power-automate_Enhanced-Efficiency (1)"
                       width={48}
                       height={48}
-                    />
+                     loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Digital Transformation</h3>
@@ -308,10 +316,10 @@ const Manufacturing = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/icons_customer-relation.svg"
-                      alt="icons_customer-relation"
+                      alt=""
                       width={48}
                       height={48}
-                    />
+                     aria-hidden="true"  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Customer Engagement</h3>
@@ -327,10 +335,10 @@ const Manufacturing = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/icons_Improved-Visibility.svg"
-                      alt="icons_Improved-Visibility"
+                      alt=""
                       width={48}
                       height={48}
-                    />
+                     aria-hidden="true"  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Improved Visibility</h3>
@@ -345,10 +353,10 @@ const Manufacturing = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/icons_Streamline-Operations.svg"
-                      alt="icons_Streamline-Operations"
+                      alt=""
                       width={48}
                       height={48}
-                    />
+                     aria-hidden="true"  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Streamline Operations</h3>
@@ -365,10 +373,10 @@ const Manufacturing = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/icons_Manufacturing-Intelligence.svg"
-                      alt="icons_Manufacturing-Intelligence"
+                      alt=""
                       width={48}
                       height={48}
-                    />
+                     aria-hidden="true"  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Manufacturing Intelligence</h3>
@@ -404,10 +412,9 @@ const Manufacturing = () => {
 
                           <img
                             src="/img/video-Manufacturing.png"
-                            alt="video-Manufacturing"
-                          />
+                            alt="Manufacturing Intelligence"  loading="lazy" decoding="async" />
                           <span className="cente-icns">
-                            <img src="/img/play_icons.svg" alt="play_icons" />
+                            <img src="/img/play_icons.svg" alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                           </span>
 
                         </Link>
@@ -523,8 +530,8 @@ const Manufacturing = () => {
                               <div className="img-wrp">
                                 <img
                                   src="/img/Food-and-beverage.svg"
-                                  alt="Food-and-beverage"
-                                />
+                                  alt=""
+                                 aria-hidden="true"  loading="lazy" decoding="async" />
                               </div>
                               <div className="text-wrp-content">
                                 <h3>Food & Beverages</h3>
@@ -548,7 +555,7 @@ const Manufacturing = () => {
                                   <img
                                     src="/img/NotforProfit.svg"
                                     alt="NotforProfit"
-                                  />
+                                   loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>Not for Profit</h3>
@@ -573,7 +580,7 @@ const Manufacturing = () => {
                                   <img
                                     src="/img/Ecommerce.svg"
                                     alt="Ecommerce"
-                                  />
+                                   loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>E-Commerce</h3>
@@ -596,8 +603,8 @@ const Manufacturing = () => {
                                 <div className="img-wrp">
                                   <img
                                     src="/img/proffesional-service.svg"
-                                    alt="proffesional-service"
-                                  />
+                                    alt=""
+                                   aria-hidden="true"  loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>Professional Services</h3>
@@ -620,7 +627,7 @@ const Manufacturing = () => {
                             <div className="industries-list-more">
                               <Link href="/industries/startups/">
                                 <div className="img-wrp">
-                                  <img src="/img/start-up.svg" alt="start-up" />
+                                  <img src="/img/start-up.svg" alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>Startups</h3>
@@ -789,7 +796,7 @@ const Manufacturing = () => {
             <div className="row top-2 gx-5">
               <Blog />
               <div className="col-lg-6 align-self-center">
-                <Image src="/img/n/Cloud-For-Manufacturing-banner.png" alt="pic" width={640} height={366}  priority={true} />
+                <Image src="/img/n/Cloud-For-Manufacturing-banner.png" alt="Explore Our Recent Blogs & Resources" width={640} height={366}  priority={true} />
               </div>
             </div>
           </div>

@@ -1,11 +1,11 @@
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Autoplay, FreeMode, Pagination } from "swiper/modules";
+import PageSeo from "../../components/PageSeo";
 
 const DynamicsNav09ToBusinessCentralUpgrade = () => {
 
@@ -14,17 +14,11 @@ const DynamicsNav09ToBusinessCentralUpgrade = () => {
 
   return (
     <>
-      <Head>
-        <title>Dynamics NAV 2009 to Business Central Upgrade | Case Study</title>
-        <meta
-          name="description"
-          content="Read our case study, which highlights enhanced performance, reduced procedures, and cutting-edge capabilities, on upgrading from Dynamics NAV 2009 to Business Central."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/case-studies/dynamics-nav09-to-business-central-upgrade/"
-        />
-      </Head>
+      <PageSeo
+        type="Article"
+        title="Dynamics NAV 2009 to Business Central Upgrade | Case Study"
+        description="Read our case study, which highlights enhanced performance, reduced procedures, and cutting-edge capabilities, on upgrading from Dynamics NAV 2009 to Business Central."
+      />
       <section className="hero-1 hero">
         <div className="container">
           <div className="row">
@@ -41,8 +35,7 @@ const DynamicsNav09ToBusinessCentralUpgrade = () => {
               <div className="sider-over">
                 <img
                   src="/img/business-central-implementation-banner-1.svg"
-                  alt="business-central-implementation-banner"
-                />
+                  alt="Dynamics NAV 2009 to Business Central Upgrade" />
               </div>
             </div>
           </div>
@@ -56,8 +49,7 @@ const DynamicsNav09ToBusinessCentralUpgrade = () => {
                 <div className="col-lg-3 align-self-center text-center">
                   <img
                     src="/img/casestudy-pic.png"
-                    alt="casestudy-pic"
-                  />
+                    alt="Dynamics NAV 2009 to Business Central Upgrade" />
                 </div>
                 <div className="col-lg-9 align-self-center">
                   <p>The business is a business that caters to the supply of fertilizers, cattle grooming, and agrochemicals to local farmers. They have a warehouse and retail store in Denbigh where they sell clothes & footwear too.</p>
@@ -180,8 +172,8 @@ const DynamicsNav09ToBusinessCentralUpgrade = () => {
                           <div className="img-wrp">
                             <img
                               src="/img/material-lightbulb-outline.svg"
-                              alt="Food-and-beverage"
-                            />
+                              alt=""
+                             aria-hidden="true"  loading="lazy" decoding="async" />
                           </div>
                           <div className="text-wrp-content">
                             <p>Implementation of Business Central improved inventory management processes.</p>
@@ -197,7 +189,7 @@ const DynamicsNav09ToBusinessCentralUpgrade = () => {
                               <img
                                 src="/img/material-lightbulb-outline.svg"
                                 alt="NotforProfit"
-                              />
+                               loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>Fresh implementation provided better visibility into stock levels, real-time data updates, and accurate inventory tracking.</p>
@@ -214,7 +206,7 @@ const DynamicsNav09ToBusinessCentralUpgrade = () => {
                               <img
                                 src="/img/material-lightbulb-outline.svg"
                                 alt="Ecommerce"
-                              />
+                               loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>Business Central facilitated efficient stock control management, replenishment, and automated monitoring of stock levels.</p>
@@ -302,7 +294,7 @@ const DynamicsNav09ToBusinessCentralUpgrade = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="call_to_action-right over-img">
-                <img src="/img/MaskGroup8.png" alt="image" />
+                <img src="/img/MaskGroup8.png" alt="Business consultant"  loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="col-lg-7 align-self-center">

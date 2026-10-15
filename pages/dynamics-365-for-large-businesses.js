@@ -1,5 +1,4 @@
 import React, { useRef, useState, useEffect } from 'react';
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -10,23 +9,17 @@ import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 import FormNewUIndsustry from "../components/FormNewUIndsustry";
+import PageSeo from "../components/PageSeo";
 
 const MicrosoftCloudForNonpro = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   return (
     <>
-      <Head>
-        <title>Dynamics 365 for Large Businesses | Dynamics Square UK</title>
-        <meta
-          name="description"
-          content="Dynamics 365 for Large Businesses enhances efficiency, automates processes, and provides insights to drive growth and scalability."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/dynamics-365-for-large-businesses/"
-        />
-
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Dynamics 365 for Large Businesses | Dynamics Square UK"
+        description="Dynamics 365 for Large Businesses enhances efficiency, automates processes, and provides insights to drive growth and scalability."
+      />
         <section className="top-banner-new">
           <div className="container">
             <div className="row">
@@ -190,7 +183,7 @@ const MicrosoftCloudForNonpro = () => {
                     For Great Customer Experiences
                     </p>
                     <div className="card-head">
-                      <img src="/img/menu-icons/dynamics-365-customer-service.svg" alt="dynamics-365-customer-service" width={48} height={48} />
+                      <img src="/img/menu-icons/dynamics-365-customer-service.svg" alt="" width={48} height={48} aria-hidden="true"  loading="lazy" decoding="async" />
                       <h3>Dynamics 365 <br/>
                       Customer Service</h3>
                     </div>
@@ -210,7 +203,7 @@ const MicrosoftCloudForNonpro = () => {
                     Dynamics 365 Field Service 
                     </p>
                     <div className="card-head">
-                      <img src="/img/menu-icons/dynamics-365-fieldservice.svg" alt="dynamics-365-fieldservice"  width={48} height={48} />
+                      <img src="/img/menu-icons/dynamics-365-fieldservice.svg" alt=""  width={48} height={48} aria-hidden="true"  loading="lazy" decoding="async" />
                       <h3>Dynamics 365  <br/>
                       Field Service </h3>
                     </div>
@@ -231,7 +224,7 @@ const MicrosoftCloudForNonpro = () => {
                     For Seamless Operations 
                     </p>
                     <div className="card-head">
-                      <img src="/img/menu-icons/Customer-Insights.png" alt="customer_insights" width={48} height={48} />
+                      <img src="/img/menu-icons/Customer-Insights.png" alt="" width={48} height={48} aria-hidden="true"  loading="lazy" decoding="async" />
                       <h3>Dynamics 365  <br/>
                       Electronic Invoicing </h3>
                     </div>
@@ -251,7 +244,7 @@ const MicrosoftCloudForNonpro = () => {
                     For Data-Driven Insights
                     </p>
                     <div className="card-head">
-                      <img src="/img/menu-icons/Customer-Insights.png" alt="customer_insights" width={48} height={48} />
+                      <img src="/img/menu-icons/Customer-Insights.png" alt="" width={48} height={48} aria-hidden="true"  loading="lazy" decoding="async" />
                       <h3>Dynamics 365  <br/>
                       Customer Insights</h3>
                     </div>
@@ -273,7 +266,7 @@ const MicrosoftCloudForNonpro = () => {
                     For Productivity Boost
                     </p>
                     <div className="card-head">
-                      <img src="/img/menu-icons/power-pltform.png" alt="power-apps" width={48} height={48} />
+                      <img src="/img/menu-icons/power-pltform.png" alt="" width={48} height={48} aria-hidden="true"  loading="lazy" decoding="async" />
                       <h3>Microsoft <br/>
                       Power Platform</h3>
                     </div>
@@ -295,7 +288,7 @@ const MicrosoftCloudForNonpro = () => {
                     AI-Powered Assistance
                     </p>
                     <div className="card-head">
-                      <img src="/img/menu-icons/copilate-small.png" alt="copilate" width={48} height={48} />
+                      <img src="/img/menu-icons/copilate-small.png" alt="copilate" width={48} height={48}  loading="lazy" decoding="async" />
                       <h3>Microsoft  <br/>
                       Copilot</h3>
                     </div>
@@ -315,7 +308,7 @@ const MicrosoftCloudForNonpro = () => {
                     For Risk Management 
                     </p>
                     <div className="card-head">
-                      <img src="/img/menu-icons/fraud-protection.png" alt="fraud-protection" width={48} height={48} />
+                      <img src="/img/menu-icons/fraud-protection.png" alt="" width={48} height={48} aria-hidden="true"  loading="lazy" decoding="async" />
                       <h3>Dynamics 365   <br/>
                       Fraud Protection</h3>
                     </div>
@@ -462,28 +455,28 @@ const MicrosoftCloudForNonpro = () => {
                   >
                     <SwiperSlide>
                       <div className='thum-tab'>
-                        <Image src="/img/Arteak-new-logo.png" alt='Arteak-new-logo' width={241} height={78} />
+                        <Image src="/img/Arteak-new-logo.png" alt="Arteak logo" width={241} height={78} />
                       </div>
                     </SwiperSlide>
 
                     <SwiperSlide>
                       <div className='thum-tab'>
-                        <Image src="/img/parweld-new-logo.png" alt='parweld-new-logo' width={223} height={78} />
+                        <Image src="/img/parweld-new-logo.png" alt="Parweld logo" width={223} height={78} />
                       </div>
                     </SwiperSlide>
                     <SwiperSlide>
                       <div className='thum-tab'>
-                        <Image src="/img/green-wireless-logo.png" alt='green-wireless-logo' width={163} height={72} />
+                        <Image src="/img/green-wireless-logo.png" alt="Green Wireless logo" width={163} height={72} />
                       </div>
                     </SwiperSlide>
                     <SwiperSlide>
                       <div className='thum-tab'>
-                        <Image src="/img/timesco-logo.png" alt='timesco-logo' width={191} height={40} />
+                        <Image src="/img/timesco-logo.png" alt="Timesco logo" width={191} height={40} />
                       </div>
                     </SwiperSlide>
                     <SwiperSlide>
                       <div className='thum-tab'>
-                        <Image src="/img/omicron_engineering_blur.png" alt='omicron_engineering_blur' width={180} height={41} />
+                        <Image src="/img/omicron_engineering_blur.png" alt="Omicron Engineering logo" width={180} height={41} />
                       </div>
                     </SwiperSlide>
                     {/* <SwiperSlide>
@@ -516,7 +509,7 @@ const MicrosoftCloudForNonpro = () => {
                         <div className='col-lg-7 d-flex'>
                           <div className='test-s-info'>
                             <figure>
-                              <Image src="/img/testimonials/Terence-Turner.png" alt="erence-Turner" width={84} height={84} />
+                              <Image src="/img/testimonials/Terence-Turner.png" alt="Terence Turner" width={84} height={84} />
                               <p>Dynamics Square Team provided us a top-level service. Well trained staff as well as excellent support when needed. Very professional and trustworthy.</p>
                               <h5>Terence Turner</h5>
                               <span>General Manager</span>
@@ -548,7 +541,7 @@ const MicrosoftCloudForNonpro = () => {
                         <div className='col-lg-7 d-flex'>
                           <div className='test-s-info'>
                             <figure>
-                              <Image src="/img/testimonials/Jonathan-W.png" alt="Jonathan-W" width={84} height={84} />
+                              <Image src="/img/testimonials/Jonathan-W.png" alt="Jonathan W" width={84} height={84} />
                               <p>We have worked with Dynamics Square since 2019. Our working relationship has built during this period, and we have found them to be very professional</p>
                               <h5>Jonathan W</h5>
                               <span>Technical Director</span>
@@ -700,8 +693,7 @@ const MicrosoftCloudForNonpro = () => {
                   <div className="icons icons-0102">
                     <img
                       src="/img/case-studies-1.jpg"
-                      alt="crm-trading"
-                    />
+                      alt="Check out some of our case studies"  loading="lazy" decoding="async" />
                   </div>
                   <div className="commen-boc-2-info">
                     <p>
@@ -723,8 +715,7 @@ const MicrosoftCloudForNonpro = () => {
                   <div className="icons icons-0102">
                     <img
                       src="/img/case-studies-2.jpg"
-                      alt="case-studies-2.jpg"
-                    />
+                      alt="Check out some of our case studies"  loading="lazy" decoding="async" />
                   </div>
                   <div className="commen-boc-2-info">
                     <p>
@@ -747,8 +738,7 @@ const MicrosoftCloudForNonpro = () => {
                   <div className="icons icons-0102">
                     <img
                       src="/img/case-studies-3.jpg"
-                      alt="timesco-logo"
-                    />
+                      alt="Check out some of our case studies"  loading="lazy" decoding="async" />
                   </div>
                   <div className="commen-boc-2-info">
                     <p>
@@ -818,7 +808,7 @@ const MicrosoftCloudForNonpro = () => {
               <div className="col-lg-4">
                 <div className="w-achive-l">
                   <figure>
-                    <Image src="/img/manage_accounts.png" alt="manage_accounts" width={98} height={98} />
+                    <Image src="/img/manage_accounts.png" alt="" width={98} height={98} aria-hidden="true" />
                   </figure>
                 </div>
                 <div className="w-achive-b">

@@ -1,6 +1,6 @@
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import PageSeo from "../../components/PageSeo";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
@@ -11,31 +11,12 @@ const Dynamics365Training = () => {
   
   return (
     <>
-      <Head>
-        <meta charSet="utf-8" />
-        <title>
-          Microsoft Dynamics 365 Training UK | Dynamics Square 
-        </title>
-        <meta
-          name="description"
-          content="Get Dynamics 365 trainings from the UK's leading Microsoft Solution Partners to properly utilize the solution and get most out of it."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/our-services/dynamics-365-training/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/our-services/dynamics-365-training/" />
-        <meta property="og:title" content="Microsoft Dynamics 365 Training UK | Dynamics Square " />
-        <meta property="og:description" content="Get Dynamics 365 trainings from the UK's leading Microsoft Solution Partners to properly utilize the solution and get most out of it." />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/Microsoft-Dynamics-365-Training.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/our-services/dynamics-365-training/" />
-        <meta property="twitter:title" content="Microsoft Dynamics 365 Training UK | Dynamics Square " />
-        <meta property="twitter:description" contet="Get Dynamics 365 trainings from the UK's leading Microsoft Solution Partners to properly utilize the solution and get most out of it." />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/Microsoft-Dynamics-365-Training.png/" />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Microsoft Dynamics 365 Training UK | Dynamics Square"
+        description="Get Dynamics 365 trainings from the UK's leading Microsoft Solution Partners to properly utilize the solution and get most out of it."
+        image="https://www.dynamicssquare.co.uk/img/Microsoft-Dynamics-365-Training.png"
+      />
         <section className="Solution-banner hero-1 hero">
           <div className="container">
             <div className="row">
@@ -56,10 +37,9 @@ const Dynamics365Training = () => {
               <div className="col-lg-6 align-self-center">
                 <Image
                   src="/img/Microsoft-Dynamics-365-Training.png"
-                  alt="Microsoft-Dynamics-365-Training"
+                  alt="Empower your Team with Tailored Dynamics 365 Training"
                   width={708} height={447}
-                  priority = {true}
-                />
+                  priority = {true} />
               </div>
             </div>
           </div>
@@ -137,7 +117,7 @@ const Dynamics365Training = () => {
             <div className="row">
               <div className="col-lg-5">
                 <div className="call_to_action-right over-img">
-                  <img src="/img/MaskGroup8.png" alt="image" />
+                  <img src="/img/MaskGroup8.png" alt="Business consultant" />
                 </div>
               </div>
               <div className="col-lg-7 align-self-center">
@@ -172,8 +152,8 @@ const Dynamics365Training = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/icons-commerce_user-experience.svg"
-                      alt="icons-commerce_user-experienc.svg"
-                    />
+                      alt=""
+                     aria-hidden="true"  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Educate You </h3>
@@ -185,7 +165,7 @@ const Dynamics365Training = () => {
                     <img
                       src="/img/icons_Customer-Feedback- (1).svg"
                       alt="Business Central Upgrade-icons"
-                    />
+                     loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Empower You </h3>
@@ -199,8 +179,7 @@ const Dynamics365Training = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/connect-collaborate-1.svg"
-                      alt="connect-collaborate-1"
-                    />
+                      alt="Simplify Operations"  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Simplify Operations </h3>
@@ -212,7 +191,7 @@ const Dynamics365Training = () => {
                     <img
                       src="/img/icons-implementation-service_Sales-.svg"
                       alt="icons-implementation-service_Sales-"
-                    />
+                     loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Transform Business </h3>

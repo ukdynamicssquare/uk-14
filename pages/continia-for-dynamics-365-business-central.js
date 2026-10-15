@@ -1,8 +1,32 @@
-import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
 import useCardScrollEffect from "/components/useCardScrollEffect";
+import PageSeo from "../components/PageSeo";
+// Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
+const PAGE_FAQS = [
+  {
+    "question": "How long does Continia integration with Business Central take?",
+    "answer": "Deployment typically takes less than a week, with most modules active in under 3 days. It works within Business Central, so no big system switch is needed."
+  },
+  {
+    "question": "Can Continia process scanned documents from old archives?",
+    "answer": "Yes. Continia OCR Business Central reads PDFs, images, and even poorly scanned documents. It extracts key data and files them correctly."
+  },
+  {
+    "question": "Is Continia expense management Business Central module mobile-friendly?",
+    "answer": "Absolutely. Field teams can upload receipts via the mobile app, and finance can process claims instantly with GPS-based mileage tracking."
+  },
+  {
+    "question": "Does Continia work with international suppliers and multi-currency?",
+    "answer": "Yes. Continia payment management Business Central handles multi-currency setups, multiple banks, and localisation for over 20 countries."
+  },
+  {
+    "question": "Can I start with just one Continia module?",
+    "answer": "Yes. You can begin with one module (like document capture), and scale into expense, payment, and output as needed. All modules are native to Business Central."
+  }
+];
+
 
 const Continia = () => {
 
@@ -10,33 +34,13 @@ const Continia = () => {
 
   return (
     <>
-      <Head>
-        <title>Continia for: Dynamics 365 Business Central</title>
-       
-        <meta
-          name="description"
-          content="Avail automation, and simplify business operations while optimising existing resources by integrating Continia with Business Central."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/continia-for-dynamics-365-business-central/"
-        />
-        <meta property="og:locale" content="GB" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content=" Continia for: Dynamics 365 Business Central " />
-        <meta property="og:description" content="Avail automation, and simplify business operations while optimising existing resources by integrating Continia with Business Central." />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/continia-for-dynamics-365-business-central/" />
-        <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/cont-shape-pic.png" />
-        <meta property="og:image:width" content="200" />
-        <meta property="og:image:height" content="200" />
-        <meta property="og:image:type" content="image/png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="Continia for: Dynamics 365 Business Central" />
-        <meta name="twitter:description" content="Avail automation, and simplify business operations while optimising existing resources by integrating Continia with Business Central." />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/cont-shape-pic.png" />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Continia for: Dynamics 365 Business Central"
+        description="Avail automation, and simplify business operations while optimising existing resources by integrating Continia with Business Central."
+        image="https://www.dynamicssquare.co.uk/img/cont-shape-pic.png"
+        faqs={PAGE_FAQS}
+      />
       <div className='solution-new-banner-one solution-new-banner-one-colo'>
         <div className='container'>
           <div className='row justify-content-center'>
@@ -55,10 +59,10 @@ const Continia = () => {
                 </div>
               </div>
               <div className='m-b-image-banner m-b-image-banner-nn'>
-                <Image src="/img/cont-shape-pic.png" alt='bc-support-banner' width={944} height={322} priority />
+                <Image src="/img/cont-shape-pic.png" alt="" width={944} height={322} priority aria-hidden="true" />
               </div>
               <div className='m-b-image-banner-bott'>
-                <Image src="/img/cont-shape.png" alt='cont-shape' width={1898} height={470} priority />
+                <Image src="/img/cont-shape.png" alt="" width={1898} height={470} priority aria-hidden="true" />
               </div>
             </div>
 
@@ -94,7 +98,7 @@ const Continia = () => {
             <div className="col-lg-1"></div>
             <div className="col-lg-5 align-self-center">
               <div className='img-backs-sid-two text-center'>
-                <Image src="/img/con-side-01.png" alt="con-side-01" width={485} height={450} className='im-two' />
+                <Image src="/img/con-side-01.png" alt="What is Continia for Dynamics 365 Business Central?" width={485} height={450} className='im-two' />
               </div>
             </div>
           </div>
@@ -117,28 +121,28 @@ const Continia = () => {
           <div className="row g-3 ">
             <div className="col-lg-3 col-md-6  d-flex">
               <div className="card-700 card-700-img">
-                <Image src="/img/con-ic-01.png" alt="con-ic-01" width={197} height={76} />
+                <Image src="/img/con-ic-01.png" alt="" width={197} height={76} aria-hidden="true" />
                 <p><b>Document Capture</b><br />
                   to process invoices without lifting a finger</p>
               </div>
             </div>
             <div className="col-lg-3 col-md-6  d-flex">
               <div className="card-700 card-700-img">
-                <Image src="/img/con-ic-02.png" alt="con-ic-02" width={197} height={76} />
+                <Image src="/img/con-ic-02.png" alt="" width={197} height={76} aria-hidden="true" />
                 <p><b>Expense Management</b><br />
                   that eliminates paper receipts and messy spreadsheets </p>
               </div>
             </div>
             <div className="col-lg-3 col-md-6  d-flex">
               <div className="card-700 card-700-img">
-                <Image src="/img/con-ic-03.png" alt="con-ic-03" width={197} height={76} />
+                <Image src="/img/con-ic-03.png" alt="" width={197} height={76} aria-hidden="true" />
                 <p><b>Payment Management</b><br />
                   that keeps errors and missed deadlines off your books </p>
               </div>
             </div>
             <div className="col-lg-3 col-md-6  d-flex">
               <div className="card-700 card-700-img">
-                <Image src="/img/con-ic-04.png" alt="con-ic-04" width={197} height={76} />
+                <Image src="/img/con-ic-04.png" alt="" width={197} height={76} aria-hidden="true" />
                 <p><b>Document Output </b><br />
                   for seamless, consistent communication with vendors and clients </p>
               </div>
@@ -180,7 +184,7 @@ const Continia = () => {
             </div>
           </div>
         </div>
-        <Image src="/img/n-015.png" alt="n-015" width={671} height={344} />
+        <Image src="/img/n-015.png" alt="" width={671} height={344} aria-hidden="true" />
       </section>
       <section className='solution-new-banner-three pd-con-63'>
         {/* <div className="container" ref={containerRef}> */}
@@ -212,7 +216,7 @@ const Continia = () => {
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/con-side-02.png" width={580} height={456} alt="con-side-02" />
+                      <Image src="/img/con-side-02.png" width={580} height={456} alt="Continia Expense Management Business Central" />
                     </div>
                   </div>
                 </div>
@@ -231,7 +235,7 @@ const Continia = () => {
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/con-side-03.png" width={580} height={456} alt="con-side-03" />
+                      <Image src="/img/con-side-03.png" width={580} height={456} alt="Continia Document Output Business Central ERP" />
                     </div>
                   </div>
                 </div>
@@ -250,7 +254,7 @@ const Continia = () => {
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/con-side-04.png" width={580} height={456} alt="con-side-04" />
+                      <Image src="/img/con-side-04.png" width={580} height={456} alt="Continia Payment Management Business Central" />
                     </div>
                   </div>
                 </div>
@@ -269,7 +273,7 @@ const Continia = () => {
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/con-side-05.png" width={580} height={456} alt="con-side-05" />
+                      <Image src="/img/con-side-05.png" width={580} height={456} alt="The Stack of Continia Tools" />
                     </div>
                   </div>
                 </div>
@@ -626,7 +630,7 @@ const Continia = () => {
                     aria-controls="s-pills-home-1"
                     aria-selected="true"
                   >
-                    <h3><Image src="/img/autostop-01.png" alt="autostop-01" width={24} height={24} />Process Automation with Precision</h3>
+                    <h3><Image src="/img/autostop-01.png" alt="Sustainability (Without the Consultant Fee)" width={24} height={24} />Process Automation with Precision</h3>
                   </button>
                   <button
                     className="nav-link"
@@ -638,7 +642,7 @@ const Continia = () => {
                     aria-controls="s-pills-home-2"
                     aria-selected="false"
                   >
-                    <h3><Image src="/img/autostop-02.png" alt="autostop-02" width={24} height={24} />Accuracy Where It Matters Most</h3>
+                    <h3><Image src="/img/autostop-02.png" alt="Sustainability (Without the Consultant Fee)" width={24} height={24} />Accuracy Where It Matters Most</h3>
                   </button>
                   <button
                     className="nav-link"
@@ -650,7 +654,7 @@ const Continia = () => {
                     aria-controls="s-pills-hpme-3"
                     aria-selected="false"
                   >
-                    <h3><Image src="/img/autostop-03.png" alt="autostop-03" width={24} height={24} />Built-in Security and Compliance</h3>
+                    <h3><Image src="/img/autostop-03.png" alt="Sustainability (Without the Consultant Fee)" width={24} height={24} />Built-in Security and Compliance</h3>
                   </button>
                   <button
                     className="nav-link"
@@ -662,7 +666,7 @@ const Continia = () => {
                     aria-controls="s-pills-home-4"
                     aria-selected="false"
                   >
-                    <h3><Image src="/img/autostop-04.png" alt="autostop-04" width={24} height={24} />Real-Time Visibility and Control</h3>
+                    <h3><Image src="/img/autostop-04.png" alt="Sustainability (Without the Consultant Fee)" width={24} height={24} />Real-Time Visibility and Control</h3>
                   </button>
                   <button
                     className="nav-link"
@@ -674,7 +678,7 @@ const Continia = () => {
                     aria-controls="s-pills-home-5"
                     aria-selected="false"
                   >
-                    <h3><Image src="/img/autostop-05.png" alt="autostop-05" width={24} height={24} />ROI You Can Measure in Days</h3>
+                    <h3><Image src="/img/autostop-05.png" alt="Sustainability (Without the Consultant Fee)" width={24} height={24} />ROI You Can Measure in Days</h3>
                   </button>
                   <button
                     className="nav-link"
@@ -686,7 +690,7 @@ const Continia = () => {
                     aria-controls="s-pills-home-6"
                     aria-selected="false"
                   >
-                    <h3><Image src="/img/autostop-06.png" alt="autostop-06" width={24} height={24} />Sustainability</h3>
+                    <h3><Image src="/img/autostop-06.png" alt="Sustainability (Without the Consultant Fee)" width={24} height={24} />Sustainability</h3>
                   </button>
 
                 </div>
@@ -936,7 +940,7 @@ const Continia = () => {
           <div className="row">
             <div className="col-lg-5 align-self-center">
               <div className='img-backs-sid-two text-center'>
-                <Image src="/img/con-side-06.png" alt="con-side-06" width={627} height={517} className='im-two' />
+                <Image src="/img/con-side-06.png" alt="Business Central Continia: Precision Builds Reputation" width={627} height={517} className='im-two' />
               </div>
             </div>
             <div className="col-lg-1"></div>
@@ -945,10 +949,10 @@ const Continia = () => {
                 <h2>Business Central Continia: Precision Builds Reputation </h2>
                 <p>With Continia integration with Business Central, you gain decision clarity.</p>
                 <ul className="bx-pi-cc">
-                  <li><div className="im-60-b"><Image src="/img/autostop-07.png" alt="autostop-02" width={25} height={25} /></div><span>Know which vendors delay payments and which team delays approvals</span></li>
-                  <li><div className="im-60-b"><Image src="/img/autostop-08.png" alt="autostop-02" width={25} height={25} /></div><span>See which expense types bleed budget</span></li>
-                  <li><div className="im-60-b"><Image src="/img/autostop-09.png" alt="autostop-02" width={25} height={25} /></div><span>Receive alerts for invoice duplicates before payment</span></li>
-                  <li><div className="im-60-b"><Image src="/img/autostop-10.png" alt="autostop-02" width={25} height={25} /></div><span>Trace every action to a human or a rule</span></li>
+                  <li><div className="im-60-b"><Image src="/img/autostop-07.png" alt="Business Central Continia: Precision Builds Reputation" width={25} height={25} /></div><span>Know which vendors delay payments and which team delays approvals</span></li>
+                  <li><div className="im-60-b"><Image src="/img/autostop-08.png" alt="Business Central Continia: Precision Builds Reputation" width={25} height={25} /></div><span>See which expense types bleed budget</span></li>
+                  <li><div className="im-60-b"><Image src="/img/autostop-09.png" alt="Business Central Continia: Precision Builds Reputation" width={25} height={25} /></div><span>Receive alerts for invoice duplicates before payment</span></li>
+                  <li><div className="im-60-b"><Image src="/img/autostop-10.png" alt="Business Central Continia: Precision Builds Reputation" width={25} height={25} /></div><span>Trace every action to a human or a rule</span></li>
                 </ul>
 
                 <Link
@@ -989,7 +993,7 @@ const Continia = () => {
             <div className="col-lg-1"></div>
             <div className="col-lg-5 align-self-center">
               <div className='img-backs-sid-two text-center'>
-                <Image src="/img/con-side-07.png" alt="con-side-07" width={400} height={450} className='im-two' />
+                <Image src="/img/con-side-07.png" alt="Frequently asked questions" width={400} height={450} className='im-two' />
               </div>
             </div>
 

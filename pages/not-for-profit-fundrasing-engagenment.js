@@ -1,23 +1,17 @@
 import Link from "next/link"; 
-import Head from 'next/head';
 import Image from 'next/image';
 import FormCampaign from "../components/FormCampaign";
 import FooterHide from "../components/FooterHide";
+import PageSeo from "../components/PageSeo";
 
 const DynamicsNavNotFor = () => {
     return (
       <>
-        <Head>
-        <title>Make Fundraisng and Engagement Simpler | Dynamics Square</title>
-        <meta
-          name="description"
-          content="AI &amp; Machine Learning Capabilities"
+        <PageSeo
+          type="WebPage"
+          title="Make Fundraisng and Engagement Simpler | Dynamics Square"
+          description="AI & Machine Learning Capabilities"
         />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/not-for-profit-fundrasing-engagenment/"
-        />
-        </Head>
         <section
         className="Solution-banner hero-1 hero"
         style={{ overflow: "hidden", paddingBottom: "160px" }}

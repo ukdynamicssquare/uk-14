@@ -1,5 +1,4 @@
 import { useRef, useState } from 'react';
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import useGsapScrollCards from '../../../hooks/useGsapScrollCards';
@@ -8,6 +7,7 @@ import useCardScrollEffect from "../../../components/useCardScrollEffect";
 // import NavBar from '../../../components/NavBar';
 import BlogFinanaceCard from '../../../components/BlogFinanaceCard';
 import dynamic from "next/dynamic";
+import PageSeo from "../../../components/PageSeo";
 
 
 const StackedCards = dynamic(() => import("../../../components/StackedCards"), {
@@ -39,33 +39,12 @@ const FieldService = () => {
 
   return (
     <>
-      <Head>
-        <title>Dynamics 365 Customer Service Partner | Dynamics Square UK</title>
-        <meta
-          name="description"
-          content="Transform customer support with AI-powered Dynamics 365 Customer Service from Dynamics Square UK. Manage cases, automate workflows and deliver personalised omnichannel support."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-customer-service/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-customer-service/" />
-        <meta property="og:title" content="Dynamics 365 Customer Service Partner | Dynamics Square UK" />
-        <meta property="og:description" content="Transform customer support with AI-powered Dynamics 365 Customer Service from Dynamics Square UK. Manage cases, automate workflows and deliver personalised omnichannel support." />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/customer-service-001.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-customer-service/" />
-        <meta property="twitter:title" content="Dynamics 365 Customer Service Partner | Dynamics Square UK" />
-        <meta property="twitter:description" content="Transform customer support with AI-powered Dynamics 365 Customer Service from Dynamics Square UK. Manage cases, automate workflows and deliver personalised omnichannel support." />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/customer-service-001.png" />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(
-              {
+      <PageSeo
+        type="Service"
+        title="Dynamics 365 Customer Service Partner | Dynamics Square UK"
+        description="Transform customer support with AI-powered Dynamics 365 Customer Service from Dynamics Square UK. Manage cases, automate workflows and deliver personalised omnichannel support."
+        image="/img/customer-service-001.png"
+        extraSchema={{
                 "@context": "https://schema.org",
                 "@type": "FAQPage",
                 "mainEntity": [
@@ -230,12 +209,8 @@ const FieldService = () => {
                     }
                   }
                 ]
-              }
-
-            ),
-          }}
-        />
-      </Head>
+              }}
+      />
       <div className='solution-new-banner-one'>
         <div className='container'>
           <div className='row justify-content-center'>
@@ -278,7 +253,7 @@ const FieldService = () => {
                   <p>Dynamics Square helps small and medium businesses streamline customer support, resolve cases faster, and deliver personalised experiences with the AI-powered Dynamics 365 Customer Service CRM.</p>
                 </div>
                 <div className='left-rl'>
-                  <Image src="/img/partner-logo-black.png" width={193} height={55} alt="partner-logo-black" />
+                  <Image src="/img/partner-logo-black.png" width={193} height={55} alt="Microsoft Solutions Partner badge" />
                 </div>
               </div>
             </div>

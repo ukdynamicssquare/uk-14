@@ -1,23 +1,18 @@
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import PageSeo from "../components/PageSeo";
 
 const Bcinsights = () => {
 
 
   return (
     <>
-      <Head>
-        <title>Sana Commerce for Microsoft Dynamics 365 business central</title>
-        <meta
-          name="description"
-          content="Sana Commerce is the ultimate e-commerce solution for Microsoft Dynamics 365 Business Central. With seamless integration and user-friendly features, boost your online sales and improve customer satisfaction."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/sana-commerce-for-dynamics-365-business-central/"
-        />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Sana Commerce for Microsoft Dynamics 365 business central"
+        description="Sana Commerce is the ultimate e-commerce solution for Microsoft Dynamics 365 Business Central. With seamless integration and user-friendly features, boost your online sales and improve customer satisfaction."
+        image="/img/sana-Commerce.png"
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">

@@ -62,9 +62,12 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       {/* ========================= */}
-      {/* ✅ GLOBAL SCHEMA */}
+      {/* ✅ VIEWPORT + GLOBAL SCHEMA */}
       {/* ========================= */}
       <Head>
+        {/* Viewport lives here, not in _document.js: next/head replaces its
+            built-in viewport tag with this one, so pages get exactly one. */}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

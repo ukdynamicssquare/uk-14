@@ -1,17 +1,20 @@
-import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import Form from "../../components/Form";
+import PageSeo from "../../components/PageSeo";
+import LocationPageStyles from "../../components/LocationPageStyles";
 
 const MicrosoftDynamicsPartnerManchester = () => {
   return (
     <>
-      <Head>
-      <title>Microsoft Dynamics 365 Partner Manchester, UK </title>
-<meta name="description" content="Dynamics Square is UK's leading Microsoft Dynamics 365 partner in Manchester, to resolve all your issues instantly with the best on-field experts of Microsoft Dynamics 365."/>
-<link rel="canonical" href="https://www.dynamicssquare.co.uk/location/microsoft-dynamics-partner-manchester/" />
-
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Microsoft Dynamics 365 Partner Manchester, UK"
+        description="Dynamics Square is UK's leading Microsoft Dynamics 365 partner in Manchester, to resolve all your issues instantly with the best on-field experts of Microsoft Dynamics 365."
+        image="/img/dynamics-365-partner-manchester.png"
+        areaServed="Manchester"
+      />
+      <main className="loc-detail">
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -35,10 +38,10 @@ const MicrosoftDynamicsPartnerManchester = () => {
             <div className="col-lg-6 align-self-center">
               <Image
                 src="/img/dynamics-365-partner-manchester.png"
-                alt="dynamics-365-partner-manchester"
+                alt="We are Available for Manchester People"
                 width={783} height={447}
                 priority = {true}
-              />
+                sizes="(max-width: 991px) 100vw, 50vw" />
             </div>
           </div>
         </div>
@@ -495,14 +498,15 @@ const MicrosoftDynamicsPartnerManchester = () => {
               <div className="commen-lef-pic text-center">
                 <Image
                   src="/img/system-health-check-1024x601.webp"
-                  alt="system-health-check-1024x601"
-                  width={1024} height={601}
-                />
+                  alt="How Dynamics Square can help you with Microsoft Business App solutions?"
+                  width={1024} height={601} />
               </div>
             </div>
           </div>
         </div>
       </section>
+      </main>
+      <LocationPageStyles />
     </>
   );
 };

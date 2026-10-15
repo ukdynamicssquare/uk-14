@@ -1,30 +1,16 @@
 import Link from "next/link"; 
-import Head from 'next/head';
 import Image from 'next/image';
+import PageSeo from "../components/PageSeo";
 
 const AdvantagesfinanceScm = () => {
     return (
       <>
-        <Head>
-        <title>Dynamics 365 Finance & Supply Chain Management Advantages</title>
-<meta name="description" content="Check out some advantage of Dynamics 365 Finance & Supply Chain management. Optimize financials, inventory, production & more to streamline operations & drive growth."/>
-<link rel="canonical" href="https://www.dynamicssquare.co.uk/advantages-of-using-dynamics-365-finance-scm/" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/advantages-of-using-dynamics-365-finance-scm/" />
-        <meta property="og:title" content="Dynamics 365 Finance & Supply Chain Management Advantages" />
-        <meta property="og:description" content="Check out some advantage of Dynamics 365 Finance & Supply Chain management. Optimize financials, inventory, production & more to streamline operations & drive growth." />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/why-migart.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/advantages-of-using-dynamics-365-finance-scm/" />
-        <meta property="twitter:title" content="Dynamics 365 Finance & Supply Chain Management Advantages" />
-        <meta property="twitter:description" content="Check out some advantage of Dynamics 365 Finance & Supply Chain management. Optimize financials, inventory, production & more to streamline operations & drive growth." />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/why-migart.png" />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
+        <PageSeo
+          type="Article"
+          title="Dynamics 365 Finance & Supply Chain Management Advantages"
+          description="Check out some advantage of Dynamics 365 Finance & Supply Chain management. Optimize financials, inventory, production & more to streamline operations & drive growth."
+          image="/img/why-migart.png"
+          extraSchema={{
               "@context": "https://schema.org",
               "@graph": [
                 {
@@ -57,10 +43,8 @@ const AdvantagesfinanceScm = () => {
                   ]
                 }
               ]
-            })
-          }}
+            }}
         />
-        </Head>
         <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -83,7 +67,7 @@ const AdvantagesfinanceScm = () => {
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/why-migart.png" alt="why-migart"
+              <Image src="/img/why-migart.png" alt="Microsoft Dynamics 365 for Finance and Supply Chain Management: Top Benefits You Can Avail for Your Business."
               width={744} height={473}  priority = {true} />
 
             </div>

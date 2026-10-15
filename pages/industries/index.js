@@ -1,20 +1,14 @@
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
+import PageSeo from "../../components/PageSeo";
 const IndustriesList = () => {
   return (
     <>
-      <Head>
-        <title>Dynamics 356 for Industries | Dynamics Square</title>
-        <meta
-          name="description"
-          content="Power the growth of your industry by implementing Dynamics 365 Business applications. Our Dynamics 365 experts have the expertise to assist you in any time."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/industries/"
-        />
-      </Head>
+      <PageSeo
+        type="CollectionPage"
+        title="Dynamics 356 for Industries | Dynamics Square"
+        description="Power the growth of your industry by implementing Dynamics 365 Business applications. Our Dynamics 365 experts have the expertise to assist you in any time."
+      />
       
       <div className="heo-banner-industry">
         <div className="container">
@@ -32,10 +26,10 @@ const IndustriesList = () => {
         </div>
         <div className="bott-in-imag">
           <div className="lef-p">
-            <img src="/img/ll-pic.png" alt="picture" />
+            <img src="/img/ll-pic.png" alt="Unlock the Power of Dynamics 365 Tailored to Your Industry Needs" />
           </div>
           <div className="right-p">
-            <img src="/img/rr-pic.png" alt="picture" />
+            <img src="/img/rr-pic.png" alt="Unlock the Power of Dynamics 365 Tailored to Your Industry Needs" />
           </div>
         </div>
       </div>
@@ -47,7 +41,7 @@ const IndustriesList = () => {
               <div className="indut-card-one">
                 <a href="/industries/dynamics-365-for-distribution/">
                   <div className="pic">
-                    <img src="/img/distuburation.jpg" alt="Distribution" />
+                    <img src="/img/distuburation.jpg" alt="Distribution"  loading="lazy" decoding="async" />
                     <h3>Distribution</h3>
                   </div>
                   <div className="pic-body">
@@ -66,7 +60,7 @@ const IndustriesList = () => {
               <div className="indut-card-one">
                 <a href="/industries/microsoft-cloud-for-manufacturing/">
                   <div className="pic">
-                    <img src="/img/rectangle-01.jpg" alt="Manufacturing" />
+                    <img src="/img/rectangle-01.jpg" alt="Manufacturing"  loading="lazy" decoding="async" />
                     <h3>Manufacturing</h3>
                   </div>
                   <div className="pic-body">
@@ -85,7 +79,7 @@ const IndustriesList = () => {
               <div className="indut-card-one">
                 <a href="/industries/dynamics-365-for-retail/">
                   <div className="pic">
-                    <img src="/img/rectangle-02.jpg" alt="Retail" />
+                    <img src="/img/rectangle-02.jpg" alt="Retail"  loading="lazy" decoding="async" />
                     <h3>Retail</h3>
                   </div>
                   <div className="pic-body">
@@ -104,7 +98,7 @@ const IndustriesList = () => {
               <div className="indut-card-one">
                 <a href="/industries/dynamics-365-for-healthcare/">
                   <div className="pic">
-                    <img src="/img/rectangle-03.jpg" alt="Healthcare" />
+                    <img src="/img/rectangle-03.jpg" alt="Healthcare"  loading="lazy" decoding="async" />
                     <h3>Healthcare</h3>
                   </div>
                   <div className="pic-body">
@@ -123,7 +117,7 @@ const IndustriesList = () => {
               <div className="indut-card-one">
                 <a href="/industries/microsoft-cloud-for-financial-services/">
                   <div className="pic">
-                    <img src="/img/rectangle-04.jpg" alt="Financial Services" />
+                    <img src="/img/rectangle-04.jpg" alt="Financial Services"  loading="lazy" decoding="async" />
                     <h3>Financial Services </h3>
                   </div>
                   <div className="pic-body">
@@ -142,7 +136,7 @@ const IndustriesList = () => {
               <div className="indut-card-one">
                 <a href="/industries/professional-services/">
                   <div className="pic">
-                    <img src="/img/rectangle-05.jpg" alt="Professional Services " />
+                    <img src="/img/rectangle-05.jpg" alt="Professional Services "  loading="lazy" decoding="async" />
                     <h3>Professional Services </h3>
                   </div>
                   <div className="pic-body">
@@ -180,7 +174,7 @@ const IndustriesList = () => {
               <div className="indut-card-one">
                 <a href="/industries/startups/">
                   <div className="pic">
-                    <img src="/img/rectangle-07.jpg" alt="Startup" />
+                    <img src="/img/rectangle-07.jpg" alt="Startup"  loading="lazy" decoding="async" />
                     <h3>Startup </h3>
                   </div>
                   <div className="pic-body">
@@ -199,7 +193,7 @@ const IndustriesList = () => {
               <div className="indut-card-one">
                 <a href="/industries/microsoft-cloud-for-nonprofit/">
                   <div className="pic">
-                    <img src="/img/rectangle-08.jpg" alt="Not for Profit" />
+                    <img src="/img/rectangle-08.jpg" alt="Not for Profit"  loading="lazy" decoding="async" />
                     <h3>Not for Profit</h3>
                   </div>
                   <div className="pic-body">
@@ -218,7 +212,7 @@ const IndustriesList = () => {
               <div className="indut-card-one">
                 <a href="/industries/dynamics-365-for-education/">
                   <div className="pic">
-                    <img src="/img/rectangle-09.jpg" alt="Education" />
+                    <img src="/img/rectangle-09.jpg" alt="Education"  loading="lazy" decoding="async" />
                     <h3>Education</h3>
                   </div>
                   <div className="pic-body">
@@ -237,7 +231,7 @@ const IndustriesList = () => {
               <div className="indut-card-one">
                 <a href="/industries/ecommerce/">
                   <div className="pic">
-                    <img src="/img/rectangle-10.jpg" alt="E-Commerce" />
+                    <img src="/img/rectangle-10.jpg" alt="E-commerce"  loading="lazy" decoding="async" />
                     <h3>E-commerce</h3>
                   </div>
                   <div className="pic-body">
@@ -256,7 +250,7 @@ const IndustriesList = () => {
               <div className="indut-card-one">
                 <a href="/industries/food-and-beverages/">
                   <div className="pic">
-                    <img src="/img/rectangle-11.jpg" alt="Food & Beverages" />
+                    <img src="/img/rectangle-11.jpg" alt="Food & Beverages"  loading="lazy" decoding="async" />
                     <h3>Food & Beverages</h3>
                   </div>
                   <div className="pic-body">
@@ -275,7 +269,7 @@ const IndustriesList = () => {
               <div className="indut-card-one">
                 <a href="/industries/dynamics-365-automotive-accelerator/">
                   <div className="pic">
-                    <img src="/img/rectangle-12.jpg" alt="Automotive Business" />
+                    <img src="/img/rectangle-12.jpg" alt="Automotive Business"  loading="lazy" decoding="async" />
                     <h3>Automotive Business </h3>
                   </div>
                   <div className="pic-body">
@@ -308,28 +302,28 @@ const IndustriesList = () => {
           <div className="row g-4">
             <div className="col-lg-3 col-md-6 d-flex">
               <div className="indut-icon-card-one">
-                <img src="/img/in-icon-01.png" alt="Successful Implementation" width={40} height={40} />
+                <img src="/img/in-icon-01.png" alt="Successful Implementation" width={40} height={40}  loading="lazy" decoding="async" />
                 <h4>Successful Implementation</h4>
                 <p>500+ Businesses Trust Us: Successful businesses have chosen us for /transformative results. </p>
               </div>
             </div>
             <div className="col-lg-3 col-md-6 d-flex">
               <div className="indut-icon-card-one">
-                <img src="/img/in-icon-02.png" alt="Successful Implementation" width={40} height={40} />
+                <img src="/img/in-icon-02.png" alt="Successful Implementation" width={40} height={40}  loading="lazy" decoding="async" />
                 <h4>Certified Professionals</h4>
                 <p>150+ Consultants are just a call away: Our expert consultants are always ready to assist you. </p>
               </div>
             </div>
             <div className="col-lg-3 col-md-6 d-flex">
               <div className="indut-icon-card-one">
-                <img src="/img/in-icon-03.png" alt="Successful Implementation" width={40} height={40} />
+                <img src="/img/in-icon-03.png" alt="Successful Implementation" width={40} height={40}  loading="lazy" decoding="async" />
                 <h4>Quick Turnaround Time</h4>
                 <p>24/7 Availability for Constant Growth: We're committed to your success, offering round-the-clock assistance</p>
               </div>
             </div>
             <div className="col-lg-3 col-md-6 d-flex">
               <div className="indut-icon-card-one">
-                <img src="/img/in-icon-04.png" alt="Successful Implementation" width={40} height={40} />
+                <img src="/img/in-icon-04.png" alt="Successful Implementation" width={40} height={40}  loading="lazy" decoding="async" />
                 <h4>Long-term commitment</h4>
                 <p>14+ Years of Industrial Experience: Leverage our deep-rooted industry knowledge and proven track record. </p>
               </div>

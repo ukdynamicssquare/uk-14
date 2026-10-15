@@ -17,18 +17,15 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           rel="canonical"
           href="https://www.dynamicssquare.co.uk/case-studies/dynamics-365-f&O-implementation-for-healthcare/"
         />
-        <meta property="og:locale" content="GB" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Dynamics 365 F&O Implementation for Healthcare - Dynamics Square" />
         <meta property="og:description" content="Dynamics Square UK delivers tailored Dynamics 365 F&O implementation for healthcare, improving compliance, finance control, and operational efficiency." />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/case-studies/dynamics-365-f&O-implementation-for-healthcare/" />
-        <meta property="og:site_name" content="Dynamics Square UK" />
         <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/case-v-11.png" />
         <meta property="og:image:width" content="200" />
         <meta property="og:image:height" content="200" />
         <meta property="og:image:type" content="image/jpg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
         <meta name="twitter:title" content="Dynamics 365 F&O Implementation for Healthcare - Dynamics Square" />
         <meta name="twitter:description" content="Dynamics Square UK delivers tailored Dynamics 365 F&O implementation for healthcare, improving compliance, finance control, and operational efficiency." />
         <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/case-v-11.png" />

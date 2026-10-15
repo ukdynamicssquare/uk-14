@@ -1,39 +1,18 @@
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link"; 
+import PageSeo from "../components/PageSeo";
 
 
 const WhyMigrade360 = () => {
 
   return (
     <>
-      <Head>
-        <title>Dynamics GP to Business Central Migration | Dynamics Square UK</title>
-        <meta
-          name="description"
-          content="Guide to seamless migration from Dynamics GP to Business Central. Enhance your business efficiency with a smooth transition. Upgrade now!"
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/gp-to-business-central-migration/"
-        />
-      <meta property="og:locale" content="GB" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Dynamics GP to Business Central Migration | Dynamics Square UK" />
-        <meta property="og:description" content="Guide to seamless migration from Dynamics GP to Business Central. Enhance your business efficiency with a smooth transition. Upgrade now!" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/gp-to-business-central-migration/" />
-        <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/why-migrate-36--banner.png" />
-        <meta property="og:image:width" content="200" />
-        <meta property="og:image:height" content="200" />
-        <meta property="og:image:type" content="image/png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="Dynamics GP to Business Central Migration | Dynamics Square UK" />
-        <meta name="twitter:description" content="Guide to seamless migration from Dynamics GP to Business Central. Enhance your business efficiency with a smooth transition. Upgrade now!" />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/why-migrate-36--banner.png" />
-        
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Dynamics GP to Business Central Migration | Dynamics Square UK"
+        description="Guide to seamless migration from Dynamics GP to Business Central. Enhance your business efficiency with a smooth transition. Upgrade now!"
+        image="https://www.dynamicssquare.co.uk/img/why-migrate-36--banner.png"
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -446,7 +425,7 @@ const WhyMigrade360 = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="call_to_action-right over-img">
-                <img src="/img/MaskGroup8.png" alt="image" />
+                <img src="/img/MaskGroup8.png" alt="Business consultant"  loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="col-lg-7 align-self-center">

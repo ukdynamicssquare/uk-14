@@ -1,34 +1,17 @@
 
 import Link from "next/link"; 
-import Head from 'next/head';
 import Image from 'next/image';
+import PageSeo from "../components/PageSeo";
 
 const Career = () => {
     return (
       <>
-        <Head>
-        <title>Career | Dynamics Square</title>
-        <meta
-          name="description"
-          content="Our effective leaders knows their company's success depends upon not just a vision or product, but the people who carry out the vision and build the product"
-        />
-        <link rel="canonical" href="https://www.dynamicssquare.co.uk/career/"/>
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/career/" />
-        <meta property="og:title" content="Career | Dynamics Square" />
-        <meta property="og:description" content="Our effective leaders knows their company's success depends upon not just a vision or product, but the people who carry out the vision and build the product" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/carrer-banner.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/career/" />
-        <meta property="twitter:title" content="Career | Dynamics Square" />
-        <meta property="twitter:description" content="Our effective leaders knows their company's success depends upon not just a vision or product, but the people who carry out the vision and build the product" />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/carrer-banner.png" />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
+        <PageSeo
+          type="WebPage"
+          title="Career | Dynamics Square"
+          description="Our effective leaders knows their company's success depends upon not just a vision or product, but the people who carry out the vision and build the product"
+          image="/img/carrer-banner.png"
+          extraSchema={{
               "@context": "https://schema.org",
               "@graph": [
                 {
@@ -45,10 +28,8 @@ const Career = () => {
                   "email": "info@dynamicssquare.co.uk"
                 }
               ]
-            })
-          }}
+            }}
         />
-        </Head>
         <section className="Solution-banner hero-1 hero about-banner carrer-into">
           <div className="container">
             <div className="row">
@@ -61,7 +42,7 @@ const Career = () => {
                 </h1>
               </div>
               <div className="col-lg-6 align-self-center">
-                <Image src="/img/carrer-banner.png" alt="carrer-banner" width={747} height={473} priority = {true} />
+                <Image src="/img/carrer-banner.png" alt="If you are striving to be the best we want you!" width={747} height={473} priority = {true} />
               </div>
             </div>
           </div>
@@ -74,10 +55,9 @@ const Career = () => {
                 <div className="commen-left-pic">
                   <Image
                     src="/img/carrer-left-pic.png"
-                    alt="carrer-left-pic"
+                    alt="What Is Dynamics Square?"
                     width={514}
-                    height={613}
-                  />
+                    height={613} />
                 </div>
               </div>
 
@@ -182,7 +162,7 @@ const Career = () => {
             </header>
             <div className="section-header section-heade-custom">
               <h3>
-                4.5 <Image src="/img/star-red.svg" alt="star-red" width={197} height={36} />
+                4.5 <Image src="/img/star-red.svg" alt="" width={197} height={36} aria-hidden="true" />
               </h3>
               <p>90% of Employees on Glassdoor Recommend Dynamics Square</p>
             </div>

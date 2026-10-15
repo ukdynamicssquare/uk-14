@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
 import CaseStudyClientCard from "../../components/CaseStudyClientCard";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -7,41 +6,20 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Autoplay, FreeMode, Pagination } from "swiper/modules";
+import PageSeo from "../../components/PageSeo";
 
 
 const CaseStudyArteak = () => {
 
   return (
     <>
-      <Head>
-        <title>Arteak Ltd: NAV 9 R2 to Business Central Migration Case Study | Dynamics Square</title>
-        <meta
-          name="description"
-          content="How Arteak Ltd, a London HSSE consulting firm, migrated from Dynamics NAV 9 R2 to Dynamics 365 Business Central to improve accounting and financial processes."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/case-studies/migrate-nav9-to-business-central/"
-        />
-        <meta property="og:locale" content="en_GB" />
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content="Arteak Ltd: NAV 9 R2 to Business Central Migration Case Study | Dynamics Square" />
-        <meta property="og:description" content="How Arteak Ltd, a London HSSE consulting firm, migrated from Dynamics NAV 9 R2 to Dynamics 365 Business Central to improve accounting and financial processes." />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/case-studies/migrate-nav9-to-business-central/" />
-        <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/case-studies-5.jpg" />
-        <meta property="og:image:secure_url" content="https://www.dynamicssquare.co.uk/img/case-studies-5.jpg" />
-        <meta property="og:image:width" content="850" />
-        <meta property="og:image:height" content="410" />
-        <meta property="og:image:type" content="image/jpeg" />
-        <meta property="og:image:alt" content="Arteak Ltd case study – Dynamics Square" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="Arteak Ltd: NAV 9 R2 to Business Central Migration Case Study | Dynamics Square" />
-        <meta name="twitter:description" content="How Arteak Ltd, a London HSSE consulting firm, migrated from Dynamics NAV 9 R2 to Dynamics 365 Business Central to improve accounting and financial processes." />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/case-studies-5.jpg" />
-        <meta name="twitter:image:alt" content="Arteak Ltd case study – Dynamics Square" />
-      </Head>
+      <PageSeo
+        type="Article"
+        title="Arteak Ltd: NAV 9 R2 to Business Central Migration Case Study | Dynamics Square"
+        description="How Arteak Ltd, a London HSSE consulting firm, migrated from Dynamics NAV 9 R2 to Dynamics 365 Business Central to improve accounting and financial processes."
+        image="https://www.dynamicssquare.co.uk/img/case-studies-5.jpg"
+        imageAlt="Arteak Ltd case study – Dynamics Square"
+      />
       <section className="hero-1 hero">
         <div className="container">
           <div className="row">
@@ -208,8 +186,8 @@ const CaseStudyArteak = () => {
                           <div className="img-wrp">
                             <img
                               src="/img/material-lightbulb-outline.svg"
-                              alt="Food-and-beverage"
-                            />
+                              alt=""
+                             aria-hidden="true"  loading="lazy" decoding="async" />
                           </div>
                           <div className="text-wrp-content">
                             <p>
@@ -233,7 +211,7 @@ const CaseStudyArteak = () => {
                               <img
                                 src="/img/material-lightbulb-outline.svg"
                                 alt="NotforProfit"
-                              />
+                               loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>
@@ -254,7 +232,7 @@ const CaseStudyArteak = () => {
                               <img
                                 src="/img/material-lightbulb-outline.svg"
                                 alt="Ecommerce"
-                              />
+                               loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>
@@ -279,8 +257,8 @@ const CaseStudyArteak = () => {
                             <div className="img-wrp">
                               <img
                                 src="/img/material-lightbulb-outline.svg"
-                                alt="proffesional-service"
-                              />
+                                alt=""
+                               aria-hidden="true"  loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>
@@ -300,8 +278,8 @@ const CaseStudyArteak = () => {
                             <div className="img-wrp">
                               <img
                                 src="/img/material-lightbulb-outline.svg"
-                                alt="proffesional-service"
-                              />
+                                alt=""
+                               aria-hidden="true"  loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>
@@ -445,7 +423,7 @@ const CaseStudyArteak = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="call_to_action-right over-img">
-                <img src="/img/MaskGroup8.png" alt="image" />
+                <img src="/img/MaskGroup8.png" alt="Business consultant"  loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="col-lg-7 align-self-center">

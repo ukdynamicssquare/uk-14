@@ -1,5 +1,4 @@
 import { useRef, useState } from 'react';
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
@@ -8,6 +7,7 @@ import faqData from '../../../public/data/business_centeral_faq.json';
 import useCardScrollEffect from "../../../components/useCardScrollEffect";
 import NavBar from '../../../components/NavBar';
 import CaseStudies from '../../../components/CaseStudies';
+import PageSeo from "../../../components/PageSeo";
 
 // Modal form (EmailJS + phone input) and client-fetched blog cards are not needed for first paint.
 const BcPopPdf = dynamic(() => import('../../../components/BCPdfPopup'), { ssr: false });
@@ -47,36 +47,13 @@ const BusinessCentral = () => {
 
   return (
     <>
-      <Head>
-        <title>Microsoft Dynamics 365 Business Central - Dynamics Square UK</title>
-        <meta
-          name="description"
-          content="Microsoft Dynamics 365 Business Central is an all-in-one cloud ERP for SMBs to manage finance, sales, inventory and operations efficiently with real-time insights and scalable growth."
-        />
-        <meta name="keywords" content="Microsoft Dynamics 365 Business Central, Business Central UK, Microsoft Dynamics 365 Pricing, Business Central Team Member License, Business Dynamics 365, Dynamics 365 Business Central Essentials, ERP Microsoft Dynamics 365,Microsoft 365 Business, Microsoft Bc, Microsoft Business Central Pricing UK, Microsoft Business Central Partner, Business Central Integration, MS Dynamics Business Central, Business Central Support"></meta>
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/" />
-        <meta property="og:title" content="Microsoft Dynamics 365 Business Central - Dynamics Square UK" />
-        <meta property="og:description" content="Microsoft Dynamics 365 Business Central is an all-in-one cloud ERP for SMBs to manage finance, sales, inventory and operations efficiently with real-time insights and scalable growth." />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/business-center-new-banner.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/" />
-        <meta property="twitter:title" content="Microsoft Dynamics 365 Business Central - Dynamics Square UK" />
-        <meta property="twitter:description" content="Microsoft Dynamics 365 Business Central is an all-in-one cloud ERP for SMBs to manage finance, sales, inventory and operations efficiently with real-time insights and scalable growth." />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/business-center-new-banner.png" />
-        {/* Hero heading uses Lato 700; preload it so the heading doesn't re-wrap (CLS) when it arrives late. */}
-        <link rel="preload" href="/fonts/lato-latin-700-v1.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(
-              {
+      <PageSeo
+        type="Service"
+        title="Microsoft Dynamics 365 Business Central - Dynamics Square UK"
+        description="Microsoft Dynamics 365 Business Central is an all-in-one cloud ERP for SMBs to manage finance, sales, inventory and operations efficiently with real-time insights and scalable growth."
+        keywords="Microsoft Dynamics 365 Business Central, Business Central UK, Microsoft Dynamics 365 Pricing, Business Central Team Member License, Business Dynamics 365, Dynamics 365 Business Central Essentials, ERP Microsoft Dynamics 365,Microsoft 365 Business, Microsoft Bc, Microsoft Business Central Pricing UK, Microsoft Business Central Partner, Business Central Integration, MS Dynamics Business Central, Business Central Support"
+        image="/img/business-center-new-banner.png"
+        extraSchema={{
                 "@context": "https://schema.org",
                 "@type": "FAQPage",
                 "mainEntity": [{
@@ -143,13 +120,10 @@ const BusinessCentral = () => {
                     "text": "Business Central is an all-in-one ERP solution. In case you want advancement in your reporting & analytics terms, seamless integration with Power BI can be done as both are Microsoft's products, hence, Power BI fits well with Dynamics 365 Business Central. Power BI can enable visualization in your reporting, key metrics, and your entire business analytics. You can create your own business reports and dashboards leveraging standard reporting templates and other visuals. If you want expert advice on how you can leverage Power BI and Business Central together, connect with us, being a reliable Business Central Support, NAV Upgrade, and Implementation partner, we can always provide you with expert consulting."
                   }
                 }]
-              }
-
-            ),
-          }}
-        />
-
-      </Head>
+              }}
+      >
+        <link rel="preload" href="/fonts/lato-latin-700-v1.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+      </PageSeo>
       <div className='solution-new-banner-one'>
         <div className='container'>
           <div className='row justify-content-center'>
@@ -192,7 +166,7 @@ const BusinessCentral = () => {
                   <p>Dynamics Square helps small and medium sized UK businesses simplify processes, boost productivity, and achieve measurable results with the AI-powered Dynamics 365 Business Central ERP.</p>
                 </div>
                 <div className='left-rl'>
-                  <Image src="/img/partner-logo-black.png" width={193} height={55} alt="partner-logo-black" />
+                  <Image src="/img/partner-logo-black.png" width={193} height={55} alt="Microsoft Solutions Partner badge" />
                 </div>
               </div>
             </div>
@@ -249,9 +223,9 @@ const BusinessCentral = () => {
             <div className='col-lg-6'>
               <div className='product-side-001'>
                 <div className="flot-8" style={{ textAlign: 'center' }}>
-                  <Image src="/img/bb-cc-busnew-01.png" width={320} height={440} alt="New Solution" />
+                  <Image src="/img/bb-cc-busnew-01.png" width={320} height={440} alt="Business Challenges Solved by Business Central" />
                 </div>
-                <Image width={563} height={478} src="/img/n-007.png" alt="New Solution" className="flot-9 flot-10" />
+                <Image width={563} height={478} src="/img/n-007.png" alt="" className="flot-9 flot-10" aria-hidden="true" />
               </div>
             </div>
             <div className='col-lg-6 align-self-center'>
@@ -779,7 +753,7 @@ const BusinessCentral = () => {
           <div className='row'>
             <div className='col-lg-12'>
               <div className='solution-new-six-img'>
-                <Image src="/img/copilotbc-new.png" width={1282} height={394} alt="New Solution" />
+                <Image src="/img/copilotbc-new.png" width={1282} height={394} alt="Chat with Copilot Gives Guidance Inside Business Central" />
               </div>
             </div>
           </div>
@@ -893,21 +867,21 @@ const BusinessCentral = () => {
                     <div className='row'>
                       <div className='col-lg-4 d-flex'>
                         <div className='icons-box-9901'>
-                          <Image src="/img/bc-8-01.png" width={65} height={65} alt="bc-8-01" />
+                          <Image src="/img/bc-8-01.png" width={65} height={65} alt="" aria-hidden="true" />
                           <p className='stat-value'>265%</p>
                           <span>Return over 3 years </span>
                         </div>
                       </div>
                       <div className='col-lg-4 d-flex'>
                         <div className='icons-box-9901'>
-                          <Image src="/img/bc-8-02.png" width={65} height={65} alt="bc-8-02" />
+                          <Image src="/img/bc-8-02.png" width={65} height={65} alt="" aria-hidden="true" />
                           <p className='stat-value'>{"<"} 6 months</p>
                           <span>Of payback on investment</span>
                         </div>
                       </div>
                       <div className='col-lg-4 d-flex'>
                         <div className='icons-box-9901'>
-                          <Image src="/img/bc-8-03.png" width={65} height={65} alt="bc-8-03" />
+                          <Image src="/img/bc-8-03.png" width={65} height={65} alt="" aria-hidden="true" />
                           <p className='stat-value'>Up to 12.5%</p>
                           <span>Productivity boost for finance and ops teams</span>
                         </div>
@@ -1034,17 +1008,17 @@ const BusinessCentral = () => {
                           <div className="image-list-new-im image-list-new-im-flex">
                             <div className='ii-pic-list'>
                               <div className='s-widt-p'>
-                                <Image src="/img/rartin-log-01.png" alt="rartin-log-01" width={140} height={54} />
+                                <Image src="/img/rartin-log-01.png" alt="Gartner rating 4.3 out of 5" width={140} height={54} />
                               </div>
                             </div>
                             <div className='ii-pic-list'>
                               <div className='s-widt-p'>
-                                <Image src="/img/rartin-log-02.png" alt="rartin-log-01" width={204} height={54} />
+                                <Image src="/img/rartin-log-02.png" alt="Forbes Advisor rating 5 out of 5" width={204} height={54} />
                               </div>
                             </div>
                             <div className='ii-pic-list'>
                               <div className='s-widt-p'>
-                                <Image src="/img/rartin-log-03.png" alt="rartin-log-01" width={130} height={54} />
+                                <Image src="/img/rartin-log-03.png" alt="G2 rating 4 out of 5" width={130} height={54} />
                               </div>
                             </div>
 
@@ -1058,12 +1032,12 @@ const BusinessCentral = () => {
                           <div className="image-list-new-im image-list-new-im-flex">
                             <div className='ii-pic-list'>
                               <div className='s-widt-p'>
-                                <Image src="/img/rartin-log-04.png" alt="rartin-log-01" width={129} height={54} />
+                                <Image src="/img/rartin-log-04.png" alt="Software Suggest rating 4.7 out of 5" width={129} height={54} />
                               </div>
                             </div>
                             <div className='ii-pic-list'>
                               <div className='s-widt-p'>
-                                <Image src="/img/rartin-log-05.png" alt="rartin-log-01" width={155} height={54} />
+                                <Image src="/img/rartin-log-05.png" alt="Capterra rating 4 out of 5" width={155} height={54} />
                               </div>
                             </div>
                           </div>
@@ -1094,7 +1068,7 @@ const BusinessCentral = () => {
             <div className='col-lg-4 d-flex'>
               <div className='solution-new-card-001 solution-new-card-0011'>
                 <a href="/dynamics-365-business-central-implementation/">
-                  <Image src="/img/new-b-i01.png" width={32} height={32} alt="new-b-i01" />
+                  <Image src="/img/new-b-i01.png" width={32} height={32} alt="Implementation" />
                   <h3>Implementation</h3>
                   <p>Our team at Dynamics Square carries out smooth Business Central implementations . We study your business needs carefully and configure the system so that every process runs in line with your goals.</p>
                   <span>Learn More</span>
@@ -1104,7 +1078,7 @@ const BusinessCentral = () => {
             <div className='col-lg-4 d-flex'>
               <div className='solution-new-card-001 solution-new-card-0011'>
                 <a href="/dynamics-nav-to-business-central/">
-                  <Image src="/img/new-b-i02.png" width={32} height={32} alt="new-b-i02" />
+                  <Image src="/img/new-b-i02.png" width={32} height={32} alt="Upgrade and Migration" />
                   <h3>Upgrade and Migration</h3>
                   <p>Older systems can slow down growth. Microsoft Dynamics 365 Business Central helps firms move data safely from on-premises legacy systems into a cloud ERP that always stays up to date.</p>
                   <span>Learn More</span>
@@ -1114,7 +1088,7 @@ const BusinessCentral = () => {
             <div className='col-lg-4 d-flex'>
               <div className='solution-new-card-001 solution-new-card-0011'>
                 <a href="/d365-business-central-support/">
-                  <Image src="/img/new-b-i03.png" width={32} height={32} alt="new-b-i03" />
+                  <Image src="/img/new-b-i03.png" width={32} height={32} alt="Support and Maintenance" />
                   <h3>Support and Maintenance</h3>
                   <p>Dynamics Square provides Business Central support and regular system care. Our focus is on keeping your ERP running smoothly, solving issues quickly, and improving efficiency without disruption.</p>
                   <span>Learn More</span>
@@ -1124,7 +1098,7 @@ const BusinessCentral = () => {
             <div className='col-lg-4 d-flex'>
               <div className='solution-new-card-001 solution-new-card-0011'>
                 <a href="/our-services/dynamics-365-consultant/">
-                  <Image src="/img/new-b-i04.png" width={32} height={32} alt="new-b-i04" />
+                  <Image src="/img/new-b-i04.png" width={32} height={32} alt="Consulting" />
                   <h3>Consulting</h3>
                   <p>Our consultants guide firms on how to get the best from Business Central. With better planning, clearer reporting, and smoother workflows, businesses improve daily results.</p>
                   <span>Learn More</span>
@@ -1134,7 +1108,7 @@ const BusinessCentral = () => {
             <div className='col-lg-4 d-flex'>
               <div className='solution-new-card-001 solution-new-card-0011'>
                 <a href="/products/dynamics-365-business-central/customisation/">
-                  <Image src="/img/new-b-i05.png" width={32} height={32} alt="new-b-i05" />
+                  <Image src="/img/new-b-i05.png" width={32} height={32} alt="Customisation" />
                   <h3>Customisation</h3>
                   <p>Every company works in its own way. Dynamics 365 Business Central allows tailored extensions and add-ons. Dynamics Square designs changes that match the way your teams actually work.</p>
                   <span>Learn More</span>
@@ -1144,7 +1118,7 @@ const BusinessCentral = () => {
             <div className='col-lg-4 d-flex'>
               <div className='solution-new-card-001 solution-new-card-0011'>
                 <a href="/blog/business-central-with-power-platform-integration/">
-                  <Image src="/img/new-b-i06.png" width={32} height={32} alt="new-b-i06" />
+                  <Image src="/img/new-b-i06.png" width={32} height={32} alt="Integration" />
                   <h3>Integration</h3>
                   <p>Business Central connects easily with Microsoft 365, Power Platform, and other third-party applications from ISVs. Dynamics Square integrates these systems so that staff can work from one source of truth.</p>
                   <span>Learn More</span>
@@ -1288,7 +1262,7 @@ const BusinessCentral = () => {
             <div className='col-lg-3 col-md-4 col-sm-6 d-flex'>
               <div className='card0-01'>
                 <a href="/shopify-connector-business-central/">
-                  <Image src="/img/bc-8-13.png" width={273} height={192} alt="bc-8-13" />
+                  <Image src="/img/bc-8-13.png" width={273} height={192} alt="" aria-hidden="true" />
                   <h3>Shopify Connector</h3>
                   <p>Keep stock, orders, and customer details in sync</p>
                   <div className='ct--a'>
@@ -1300,7 +1274,7 @@ const BusinessCentral = () => {
             <div className='col-lg-3 col-md-4 col-sm-6 d-flex'>
               <div className='card0-01'>
                 <a href="/blog/yavrio-integration-with-business-central/">
-                  <Image src="/img/bc-8-14.png" width={273} height={192} alt="bc-8-14" />
+                  <Image src="/img/bc-8-14.png" width={273} height={192} alt="" aria-hidden="true" />
                   <h3>Bank Feeds and Payments</h3>
                   <p>Handle bank transactions and payments directly from Business Central</p>
                   <div className='ct--a'>
@@ -1312,7 +1286,7 @@ const BusinessCentral = () => {
             <div className='col-lg-3 col-md-4 col-sm-6 d-flex'>
               <div className='card0-01'>
                 <a href="/continia-for-dynamics-365-business-central/">
-                  <Image src="/img/bc-8-15.png" width={273} height={192} alt="bc-8-15" />
+                  <Image src="/img/bc-8-15.png" width={273} height={192} alt="" aria-hidden="true" />
                   <h3>Document Management</h3>
                   <p>Scan, store, and track documents without switching systems</p>
                   <div className='ct--a'>
@@ -1324,7 +1298,7 @@ const BusinessCentral = () => {
             <div className='col-lg-3 col-md-4 col-sm-6 d-flex'>
               <div className='card0-01'>
                 <a href="/wms-for-business-central/">
-                  <Image src="/img/bc-8-16.png" width={273} height={192} alt="bc-8-16" />
+                  <Image src="/img/bc-8-16.png" width={273} height={192} alt="" aria-hidden="true" />
                   <h3>Mobile WMS</h3>
                   <p>Pick, pack, and move stock on the go with handheld devices</p>
                   <div className='ct--a'>
@@ -1349,9 +1323,9 @@ const BusinessCentral = () => {
             <div className='col-lg-6'>
               <div className='product-side-001'>
                 <div className="flot-8" style={{ textAlign: 'center' }}>
-                  <Image src="/img/bc-cotainer.png" width={395} height={440} alt="New Solution" />
+                  <Image src="/img/bc-cotainer.png" width={395} height={440} alt="Dynamics’ Square Custom Business Central Solution" />
                 </div>
-                <Image width={563} height={478} src="/img/n-007.png" alt="New Solution" className="flot-9" />
+                <Image width={563} height={478} src="/img/n-007.png" alt="" className="flot-9" aria-hidden="true" />
               </div>
             </div>
             <div className='col-lg-6 align-self-center'>
@@ -1394,7 +1368,7 @@ const BusinessCentral = () => {
             </div>
           </div>
         </div>
-        <Image src="/img/n-015.png" alt="n-015" width={671} height={344} />
+        <Image src="/img/n-015.png" alt="" width={671} height={344} aria-hidden="true" />
       </section>
       <section id='section8' className='solution-new-pricing'>
         <div className='container'>
@@ -1600,7 +1574,7 @@ const BusinessCentral = () => {
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
                           <a href="#pdfModel" onClick={(e) => { e.preventDefault(); handleOpenModal('pdf2'); }}>
-                            <Image src="/img/bc-8-18.png" width={368} height={192} alt="bc-8-17" />
+                            <Image src="/img/bc-8-18.png" width={368} height={192} alt="" aria-hidden="true" />
                             <h3>Reach new markets with Business Central</h3>
                             <p>Research from Nucleus shows better productivity, lower costs, and stronger control.</p>
                             <div className='ct--a'>
@@ -1612,7 +1586,7 @@ const BusinessCentral = () => {
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
                           <a href="#pdfModel" onClick={(e) => { e.preventDefault(); handleOpenModal('pdf1'); }}>
-                            <Image src="/img/bc-8-17.png" width={368} height={192} alt="bc-8-18" />
+                            <Image src="/img/bc-8-17.png" width={368} height={192} alt="" aria-hidden="true" />
                             <h3>See how firms gained from Business Central</h3>
                             <p>This 2024 Forrester study shows the returns real customers saw after getting started.</p>
                             <div className='ct--a'>
@@ -1624,7 +1598,7 @@ const BusinessCentral = () => {
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
                           <a href="#pdfModel" onClick={(e) => { e.preventDefault(); handleOpenModal('pdf3'); }}>
-                            <Image src="/img/bc-8-19.png" width={368} height={192} alt="bc-8-19" />
+                            <Image src="/img/bc-8-19.png" width={368} height={192} alt="" aria-hidden="true" />
                             <h3>Why IDC picked Microsoft as a Leader</h3>
                             <p>Read how Microsoft stands out in small business ERP software. </p>
                             <div className='ct--a'>
@@ -1641,7 +1615,7 @@ const BusinessCentral = () => {
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
                           <a href="/ebook/upgrade-nav-to-business-central/">
-                            <Image src="/img/Ebook-Nav-to-BC.png" width={980} height={579} alt="bc-8-17" />
+                            <Image src="/img/Ebook-Nav-to-BC.png" width={980} height={579} alt="Quick Start Guide for Upgrading NAV to Business Central" />
                             <h3>Quick Start Guide for Upgrading NAV to Business Central</h3>
                             <p>Learn when, why, and how to upgrade from Dynamics NAV to Business Central with confidence.</p>
 
@@ -1654,7 +1628,7 @@ const BusinessCentral = () => {
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
                           <a href="/ebook/gp-to-bc-migration/">
-                            <Image src="/img/dynamics-GP-BC-Ebook-featured-image.png" width={980} height={578} alt="bc-8-18" />
+                            <Image src="/img/dynamics-GP-BC-Ebook-featured-image.png" width={980} height={578} alt="Your Guide to Dynamics GP to Business Central Migration" />
                             <h3>Your Guide to Dynamics GP to Business Central Migration</h3>
                             <p>Find how businesses are moving from Microsoft GP to Business Central with confidence.</p>
                             <div className='ct--a'>
@@ -1671,7 +1645,7 @@ const BusinessCentral = () => {
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
                           <a href="https://youtu.be/44hqw-S27D0?si=mCEpK1p1hVAXszlj" target='_blank'>
-                            <Image src="/img/bc-8-20.png" width={411} height={216} alt="bc-8-20" />
+                            <Image src="/img/bc-8-20.png" width={411} height={216} alt="" aria-hidden="true" />
                             <h3>Is Your Business Ready for an ERP System?</h3>
                             <p>Explore key signs, benefits, and steps to ERP readiness with Dynamics Square experts in this episode.</p>
                             <div className='ct--a'>
@@ -1683,7 +1657,7 @@ const BusinessCentral = () => {
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
                           <a href="https://youtu.be/hUPT5DejiR0?si=p_hlO_BdCj_gbWwh" target='_blank'>
-                            <Image src="/img/bc-8-21.png" width={411} height={216} alt="bc-8-21" />
+                            <Image src="/img/bc-8-21.png" width={411} height={216} alt="" aria-hidden="true" />
                             <h3>Unpacking Microsoft Dynamics 365 Business Central for Growth</h3>
                             <p>Learn how Business Central helps streamline operations and scale growth in this expert-driven podcast episode.</p>
                             <div className='ct--a'>
@@ -1695,7 +1669,7 @@ const BusinessCentral = () => {
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
                           <a href="https://youtu.be/Of8upj7BtGo?si=Lsf5SCwBtIpSU1ST" target='_blank'>
-                            <Image src="/img/bc-8-22.png" width={411} height={216} alt="bc-8-22" />
+                            <Image src="/img/bc-8-22.png" width={411} height={216} alt="" aria-hidden="true" />
                             <h3>Signs Your Business Is Ready for an ERP System</h3>
                             <p>Understand when to adopt ERP, its benefits, and how Dynamics 365 drives business transformation.</p>
                             <div className='ct--a'>
@@ -1710,7 +1684,7 @@ const BusinessCentral = () => {
                     <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                       <div className='card0-01 card0-02'>
                         <a href="/guides/business-central-guide-for-smb/">
-                          <Image src="/img/chapter5-5.png" width={992} height={499} alt="bc-8-17" />
+                          <Image src="/img/chapter5-5.png" width={992} height={499} alt="Comprehensive Business Central Guide for SMBs in 2026" />
                           <h3>Comprehensive Business Central Guide for SMBs in 2026</h3>
                           <p>A detailed guide helping SMBs automate operations, improve scalability, and prepare for long-term digital growth.</p>
                           <div className='ct--a'>
@@ -1727,7 +1701,7 @@ const BusinessCentral = () => {
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
                           <a href="/case-studies/business-central-reimplementation-for-recycling-industry/">
-                            <Image src="/img/Summit-Systems.png" width={850} height={410} alt="bc-8-17" />
+                            <Image src="/img/Summit-Systems.png" width={850} height={410} alt="Driving Efficiency with Microsoft Business Central for Manufacturers" />
                             <h3>Driving Efficiency with Microsoft Business Central for Manufacturers</h3>
                             <p>A UK plastic automation company streamlined operations and scaled growth with Dynamics 365 Business Central.</p>
                             <div className='ct--a'>
@@ -1739,7 +1713,7 @@ const BusinessCentral = () => {
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
                           <a href="/case-studies/quickbooks-to-business-central-migration/">
-                            <Image src="/img/Greenstar.jpg" width={850} height={410} alt="bc-8-18" />
+                            <Image src="/img/Greenstar.jpg" width={850} height={410} alt="From QuickBooks to Business Central: A Seamless ERP Upgrade" />
                             <h3>From QuickBooks to Business Central: A Seamless ERP Upgrade</h3>
                             <p>A Moroccan fruit importer improved inventory, sales, and distribution by upgrading from QuickBooks to Business Central.</p>
                             <div className='ct--a'>
@@ -1751,7 +1725,7 @@ const BusinessCentral = () => {
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
                           <a href="/case-studies/odoo-erp-to-business-central-migration/">
-                            <Image src="/img/GTT-Wireless.jpg" width={850} height={410} alt="bc-8-19" />
+                            <Image src="/img/GTT-Wireless.jpg" width={850} height={410} alt="Upgrading from Odoo to Business Central with Mobile WMS" />
                             <h3>Upgrading from Odoo to Business Central with Mobile WMS</h3>
                             <p>A wireless tech provider streamlined warehouse operations by moving from Odoo ERP to Business Central.</p>
                             <div className='ct--a'>

@@ -1,15 +1,16 @@
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link"; 
+import PageSeo from "../components/PageSeo";
 
 const WebinarList = () => {
   return (
     <>
-      <Head>
-      <title>Dynamics Square Webinars | Dynamics Square</title>
-<meta name="description" content="Check out our new webinar on Azure IoT Central (A complete SaaS-based Solution) to understand how to make your IoT project more accessible and how modern"/>
-<link rel="canonical" href="https://www.dynamicssquare.co.uk/webinars/" />
-      </Head>
+      <PageSeo
+        type="CollectionPage"
+        title="Dynamics Square Webinars | Dynamics Square"
+        description="Check out our new webinar on Azure IoT Central (A complete SaaS-based Solution) to understand how to make your IoT project more accessible and how modern"
+        image="/img/Webinar-page-banner.png"
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -29,11 +30,10 @@ const WebinarList = () => {
             <div className="col-lg-6 align-self-center">
               <Image
                 src="/img/Webinar-page-banner.png"
-                alt="Webinar-page-banner"
+                alt="Webinars"
                 width={759}
                 height={447}
-                priority = {true}
-              />
+                priority = {true} />
             </div>
           </div>
         </div>
@@ -78,8 +78,7 @@ const WebinarList = () => {
                           <img
                             className="card-img-top"
                             src="/img/iot_youtube-thumbnail.png"
-                            alt="iot_youtube-thumbnail"
-                          />
+                            alt="Webinars" />
                           <span>
                             <i className="bi bi-play-circle-fill"></i>
                           </span>
@@ -99,8 +98,7 @@ const WebinarList = () => {
                           <img
                             className="card-img-top"
                             src="/img/Azure-IoT-Thumbnail.jpg"
-                            alt="Azure-IoT-Thumbnail.jpg"
-                          />
+                            alt="Webinars"  loading="lazy" decoding="async" />
                           <span>
                             <i className="bi bi-play-circle-fill"></i>
                           </span>
@@ -120,8 +118,7 @@ const WebinarList = () => {
                           <img
                             className="card-img-top"
                             src="/img/Webinar-3.jpg"
-                            alt="iot_youtube-thumbnail"
-                          />
+                            alt="Webinars"  loading="lazy" decoding="async" />
                           <span>
                             <i className="bi bi-play-circle-fill"></i>
                           </span>
@@ -141,8 +138,7 @@ const WebinarList = () => {
                           <img
                             className="card-img-top"
                             src="/img/Webinar-2.jpg"
-                            alt="iot_youtube-thumbnail"
-                          />
+                            alt="Webinars"  loading="lazy" decoding="async" />
                           <span>
                             <i className="bi bi-play-circle-fill"></i>
                           </span>
@@ -162,8 +158,7 @@ const WebinarList = () => {
                           <img
                             className="card-img-top"
                             src="/img/Webinar-1.jpg"
-                            alt="iot_youtube-thumbnail"
-                          />
+                            alt="Webinars"  loading="lazy" decoding="async" />
                           <span>
                             <i className="bi bi-play-circle-fill"></i>
                           </span>

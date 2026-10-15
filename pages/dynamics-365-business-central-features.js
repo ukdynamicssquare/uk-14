@@ -1,27 +1,17 @@
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
+import PageSeo from "../components/PageSeo";
 
 const BusinessCentralFeatures = () => {
   return (
     <>
-      <Head>
-        <title>
-          Dynamics 365 Business Central Features | Dynamics Square UK
-        </title>
-        <meta
-          name="description"
-          content="Explore how Dynamics 365 Business Central features and capabilities allows you to improve business financials, sales, supply chain and operations."
-        />
-        <meta
-          name="robots"
-          content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/dynamics-365-business-central-features/"
-        />
-      </Head>
+      <PageSeo
+        robots="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+        type="Article"
+        title="Dynamics 365 Business Central Features | Dynamics Square UK"
+        description="Explore how Dynamics 365 Business Central features and capabilities allows you to improve business financials, sales, supply chain and operations."
+        image="/img/Dynamics-365-Business-Central-Features-banner-side.png"
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -50,10 +40,9 @@ const BusinessCentralFeatures = () => {
             <div className="col-lg-6 align-self-center text-center">
               <Image
                 src="/img/Dynamics-365-Business-Central-Features-banner-side.png"
-                alt="Dynamics-365-Business-Central-Features-banner-side"
+                alt="Dynamics 365 Business Central Features & Benefits"
                 width={1576} height={1188}
-                priority = {true}
-              />
+                priority = {true} />
             </div>
           </div>
         </div>
@@ -118,9 +107,8 @@ const BusinessCentralFeatures = () => {
                 <div className="busine_service_bottom-right">
                   <Image
                     src="/img/Dynamics-365-Business-Central-pricing-im.png"
-                    alt="Dynamics-365-Business-Central-pricing-im"
-                    width={610} height={826}
-                  />
+                    alt="Business Central Premium"
+                    width={610} height={826} />
                 </div>
               </div>
             </div>
@@ -132,7 +120,7 @@ const BusinessCentralFeatures = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="call_to_action-right over-img">
-                <img src="/img/MaskGroup8.png" alt="image" />
+                <img src="/img/MaskGroup8.png" alt="Business consultant"  loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="col-lg-7 align-self-center">
@@ -170,9 +158,8 @@ const BusinessCentralFeatures = () => {
               <div className="commen-lef-pic">
                 <Image
                   src="/img/Financial-Management.png"
-                  alt="Financial-Management"
-                  width={800} height={600}
-                />
+                  alt="Finance Management Features"
+                  width={800} height={600} />
               </div>
             </div>
             <div className="col-lg-5 align-self-center">
@@ -229,9 +216,8 @@ const BusinessCentralFeatures = () => {
               <div className="commen-lef-pic">
                 <Image
                   src="/img/customer-relationship-management.png"
-                  alt="customer-relationship-management"
-                  width={800} height={600}
-                />
+                  alt="Customer Relation Management Features"
+                  width={800} height={600} />
               </div>
             </div>
           </div>
@@ -299,9 +285,8 @@ const BusinessCentralFeatures = () => {
               <div className="commen-lef-pic">
                 <Image
                   src="/img/human-resource.png"
-                  alt="human-resource"
-                  width={800} height={600}
-                />
+                  alt="Planning to Implement Business Central?"
+                  width={800} height={600} />
               </div>
             </div>
           </div>
@@ -339,9 +324,8 @@ const BusinessCentralFeatures = () => {
               <div className="commen-lef-pic">
                 <Image
                   src="/img/warehouse-managment.png"
-                  alt="warehouse-managment"
-                  width={800} height={600}
-                />
+                  alt="Warehouse Management Features"
+                  width={800} height={600} />
               </div>
             </div>
             <div className="col-lg-5 align-self-center">
@@ -394,9 +378,8 @@ const BusinessCentralFeatures = () => {
               <div className="commen-lef-pic">
                 <Image
                   src="/img/service-management.png"
-                  alt="service-management"
-                  width={800} height={600}
-                />
+                  alt="Service Management Features"
+                  width={800} height={600} />
               </div>
             </div>
           </div>

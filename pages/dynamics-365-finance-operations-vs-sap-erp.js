@@ -1,35 +1,17 @@
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
+import PageSeo from "../components/PageSeo";
 
 const FinancevsSapErp = () => {
   return (
     <>
-      <Head>
-        <title>
-          What&#039;s the Difference B/w Microsoft Business Central Vs SAP
-          Business One?
-        </title>
-        <meta
-          name="description"
-          content="Are you looking for the Right ERP Solution for your Enterprise, but not sure of choosing between Microsoft Dynamics 365 Business Central and SAP Business One?"
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/dynamics-365-finance-operations-vs-sap-erp/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/dynamics-365-finance-operations-vs-sap-erp/" />
-        <meta property="og:title" content="What's the Difference B/w Microsoft Business Central Vs SAP Business One?" />
-        <meta property="og:description" content="Are you looking for the Right ERP Solution for your Enterprise, but not sure of choosing between Microsoft Dynamics 365 Business Central and SAP Business One?" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/Fno-Sap-Erp.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/dynamics-365-finance-operations-vs-sap-erp/" />
-        <meta property="twitter:title" content="What's the Difference B/w Microsoft Business Central Vs SAP Business One?" />
-        <meta property="twitter:description" content="Are you looking for the Right ERP Solution for your Enterprise, but not sure of choosing between Microsoft Dynamics 365 Business Central and SAP Business One?" />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/Fno-Sap-Erp.png" />
-      </Head>
+      <PageSeo
+        type="Article"
+        title="What&#039;s the Difference B/w Microsoft Business Central Vs SAP Business One?"
+        description="Are you looking for the Right ERP Solution for your Enterprise, but not sure of choosing between Microsoft Dynamics 365 Business Central and SAP Business One?"
+        image="https://www.dynamicssquare.co.uk/img/Fno-Sap-Erp.png"
+        ogTitle="What's the Difference B/w Microsoft Business Central Vs SAP Business One?"
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -50,7 +32,7 @@ const FinancevsSapErp = () => {
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/Fno-Sap-Erp.png" alt="Fno-Sap-Erp" width={602} height={315} priority = {true} />
+              <Image src="/img/Fno-Sap-Erp.png" alt="Overview" width={602} height={315} priority = {true} />
             </div>
           </div>
         </div>
@@ -137,8 +119,7 @@ const FinancevsSapErp = () => {
               <div className="content-box-222">
                 <img
                   src="/img/dynamics-finace.png"
-                  alt="dynamics-finace"
-                />
+                  alt="Which ERP Platform is the Best for Growing Enterprises?" />
                 <p>
                   Built on the robust Microsoft infrastructure,{" "}
                   <Link
@@ -157,7 +138,7 @@ const FinancevsSapErp = () => {
             </div>
             <div className="col-md-6">
               <div className="content-box-222">
-                <img src="/img/sap-erp.png" alt="sap-erp" />
+                <img src="/img/sap-erp.png" alt="Which ERP Platform is the Best for Growing Enterprises?"  loading="lazy" decoding="async" />
                 <p>
                   SAP ERP has a strong market foothold, but it seems to be ideal
                   'only' for multinational organisations and small-size
@@ -282,7 +263,7 @@ const FinancevsSapErp = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="call_to_action-right over-img">
-                <img src="/img/MaskGroup8.png" alt="image" />
+                <img src="/img/MaskGroup8.png" alt="Business consultant"  loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="col-lg-7 align-self-center">

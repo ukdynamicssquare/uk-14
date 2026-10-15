@@ -10,8 +10,9 @@ const BlogSeo = ({
   robots,
   additional_script,
   additional_multiscript,
+  // Extra head tags (e.g. font preloads) so the post keeps a single <Head>.
+  children,
 }) => {
-  const siteName = "Dynamics Square UK";
 
   const absoluteImage = meta_image 
     ? (meta_image.startsWith("http") ? meta_image : `${BACKEND_URL}${meta_image}`)
@@ -28,10 +29,9 @@ const BlogSeo = ({
       {robots && <meta name="robots" content={robots} />}
        
       <meta property="og:title" content={meta_title} />
-      <meta property="og:site_name" content={siteName} />
       {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
       <meta property="og:description" content={meta_description} />
-      <meta property="og:type" content="blog" /> 
+      <meta property="og:type" content="article" />
       {absoluteImage && <meta property="og:image" content={absoluteImage} />}
       
       
@@ -61,6 +61,8 @@ const BlogSeo = ({
             }}
           />
         ))}
+
+      {children}
     </Head>
   );
 };

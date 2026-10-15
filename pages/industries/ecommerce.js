@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Link from "next/link"; 
-import Head from 'next/head';
 import Image from 'next/image';
 import Blog from "../../components/Blog";
 import ModalVideo from "react-modal-video";
@@ -9,33 +8,18 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Autoplay, FreeMode, Pagination } from "swiper/modules";
+import PageSeo from "../../components/PageSeo";
 const Ecommerce = () => {
   const [isOpen, setOpen] = useState(false);
   const [open, setsOpen] = useState(false);
   return (
     <>
-      <Head>
-        <title>Dynamics 365 for Ecommerce Industry | Dynamics Square</title>
-        <meta
-          name="description"
-          content="Optimize Your End-to-End Ecommerce Processes and Improve Your Customer Experience with Microsoft Dynamics 365 for eCommerce ."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/industries/ecommerce/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/industries/ecommerce/" />
-        <meta property="og:title" content="Dynamics 365 for Ecommerce Industry | Dynamics Square" />
-        <meta property="og:description" content="Optimize Your End-to-End Ecommerce Processes and Improve Your Customer Experience with Microsoft Dynamics 365 for eCommerce ." />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/ecommerce banner.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/industries/ecommerce/" />
-        <meta property="twitter:title" content="Dynamics 365 for Ecommerce Industry | Dynamics Square" />
-        <meta property="twitter:description" content="Optimize Your End-to-End Ecommerce Processes and Improve Your Customer Experience with Microsoft Dynamics 365 for eCommerce." />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/ecommerce banner.png" />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Dynamics 365 for Ecommerce Industry | Dynamics Square"
+        description="Optimize Your End-to-End Ecommerce Processes and Improve Your Customer Experience with Microsoft Dynamics 365 for eCommerce ."
+        image="https://www.dynamicssquare.co.uk/img/ecommerce banner.png"
+      />
       <ModalVideo
             channel="youtube"
             autoplay
@@ -176,7 +160,7 @@ const Ecommerce = () => {
             <div className="row">
               <div className="col-lg-5">
                 <div className="call_to_action-right over-img">
-                  <img src="/img/MaskGroup8.png" alt="image" width="339" height="483" />
+                  <img src="/img/MaskGroup8.png" alt="Business consultant" width="339" height="483" />
                 </div>
               </div>
               <div className="col-lg-7 align-self-center">
@@ -216,10 +200,9 @@ const Ecommerce = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/Distribution-Delivery.svg"
-                      alt="Distribution-Delivery"
+                      alt="Order Management"
                       width="48"
-                      height="48"
-                    />
+                      height="48"  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Order Management</h3>
@@ -234,10 +217,10 @@ const Ecommerce = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/inventory-management-icon-01.svg"
-                      alt="inventory-management-icon-01"
+                      alt=""
                       width="48"
                       height="48"
-                    />
+                     aria-hidden="true"  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Inventory Management</h3>
@@ -255,7 +238,7 @@ const Ecommerce = () => {
                       alt="Customer Management"
                       width="48"
                       height="48"
-                    />
+                     loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Customer Management</h3>
@@ -273,7 +256,7 @@ const Ecommerce = () => {
                       alt="Finance Management"
                       width="48"
                       height="48"
-                    />
+                     loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Finance Management</h3>
@@ -294,7 +277,7 @@ const Ecommerce = () => {
                       alt="Supply Chain Management"
                       width="48"
                       height="48"
-                    />
+                     loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Supply Chain Management</h3>
@@ -312,7 +295,7 @@ const Ecommerce = () => {
                       alt="Production Management"
                       width="48"
                       height="48"
-                    />
+                     loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Production Management</h3>
@@ -330,7 +313,7 @@ const Ecommerce = () => {
                       alt="Procurement"
                       width="48"
                       height="48"
-                    />
+                     loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Procurement</h3>
@@ -348,7 +331,7 @@ const Ecommerce = () => {
                       alt="icons_Constituent Analytics"
                       width="48"
                       height="48"
-                    />
+                     loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Reporting & Analytics</h3>
@@ -412,15 +395,14 @@ const Ecommerce = () => {
 
                           <Image
                             src="/img/video-Ecommerce.png"
-                            alt="video-Ecommerce"
+                            alt="We are here to help you out. Talk to us!"
                             width={390}
-                            height={259}
-                          />
+                            height={259} />
                           <span className="cente-icns">
                             <img
                               src="/img/play_icons.svg"
-                              alt="play_icons"
-                            />
+                              alt=""
+                             aria-hidden="true"  loading="lazy" decoding="async" />
                           </span>
                         </Link>
                       </div>
@@ -507,10 +489,10 @@ const Ecommerce = () => {
                               <div className="img-wrp">
                                 <img
                                   src="/img/Food-and-beverage.svg"
-                                  alt="Food-and-beverage"
+                                  alt=""
                                   width="48"
                                   height="48"
-                                />
+                                 aria-hidden="true"  loading="lazy" decoding="async" />
                               </div>
                               <div className="text-wrp-content">
                                 <h3>Food & Beverages</h3>
@@ -536,7 +518,7 @@ const Ecommerce = () => {
                                     alt="NotforProfit"
                                     width="48"
                                     height="48"
-                                  />
+                                   loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>Not for Profit</h3>
@@ -561,10 +543,10 @@ const Ecommerce = () => {
                                 <div className="img-wrp">
                                   <img
                                     src="/img/proffesional-service.svg"
-                                    alt="proffesional-service"
+                                    alt=""
                                     width="48"
                                     height="48"
-                                  />
+                                   aria-hidden="true"  loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>Professional Services</h3>
@@ -588,10 +570,9 @@ const Ecommerce = () => {
                                 <div className="img-wrp">
                                   <img
                                     src="/img/microsoft-cloud-for-manufacturing.svg"
-                                    alt="microsoft-cloud-for-manufacturing"
+                                    alt="Manufacturing & Distribution"
                                     width="48"
-                                    height="48"
-                                  />
+                                    height="48"  loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>Manufacturing & Distribution</h3>
@@ -615,10 +596,10 @@ const Ecommerce = () => {
                                 <div className="img-wrp">
                                   <img
                                     src="/img/start-up.svg"
-                                    alt="start-up"
+                                    alt=""
                                     width="48"
                                     height="48"
-                                  />
+                                   aria-hidden="true"  loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>Startups</h3>
@@ -653,7 +634,7 @@ const Ecommerce = () => {
             <div className="row top-2 gx-5">
               <Blog />
               <div className="col-lg-6 align-self-center">
-                <Image src="/img/n/Dynamics-ecommerce-Banner.png" alt="Dynamics-ecommerce-Banner" width={790} height={470} />
+                <Image src="/img/n/Dynamics-ecommerce-Banner.png" alt="Explore Our Recent Blogs & Resources" width={790} height={470} />
               </div>
             </div>
           </div>

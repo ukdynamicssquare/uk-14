@@ -1,39 +1,21 @@
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link"; 
+import PageSeo from "../components/PageSeo";
 
 
 const WhyMigrade360 = () => {
 
   return (
     <>
-      <Head>
-        <title>Unlock the Power of Cloud Computing: Migrate to Microsoft Dynamics 365</title>
-        <meta
-          name="description"
-          content="Unlock the power of cloud computing by migrating to Microsoft Dynamics 365 cloud. Supercharge your business and streamline operations. Contact us for a free consultation."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/10-reasons-to-choose-dynamics-365/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/10-reasons-to-choose-dynamics-365/" />
-        <meta property="og:title" content="10 Reasons Why Migrate To Microsoft Dynamics 365" />
-        <meta property="og:description" content="Here are the top 10 reasons to choose or migrate to Microsoft Dynamics 365. Get the best Dynamics 365 implementation plans from Dynamics Square." />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/why-migrate-36--banner.png" />
-        <meta property="og:image:alt" content="Migrate to Microsoft Dynamics 365 - Unlock the Power of Cloud Computing" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/10-reasons-to-choose-dynamics-365/" />
-        <meta property="twitter:title" content="10 Reasons Why Migrate To Microsoft Dynamics 365" />
-        <meta property="twitter:description" content="Here are the top 10 reasons to choose or migrate to Microsoft Dynamics 365. Get the best Dynamics 365 implementation plans from Dynamics Square." />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/why-migrate-36--banner.png" />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
+      <PageSeo
+        type="Article"
+        title="Unlock the Power of Cloud Computing: Migrate to Microsoft Dynamics 365"
+        description="Unlock the power of cloud computing by migrating to Microsoft Dynamics 365 cloud. Supercharge your business and streamline operations. Contact us for a free consultation."
+        image="/img/why-migrate-36--banner.png"
+        imageAlt="Migrate to Microsoft Dynamics 365 - Unlock the Power of Cloud Computing"
+        ogTitle="10 Reasons Why Migrate To Microsoft Dynamics 365"
+        ogDescription="Here are the top 10 reasons to choose or migrate to Microsoft Dynamics 365. Get the best Dynamics 365 implementation plans from Dynamics Square."
+        extraSchema={{
               "@context": "https://schema.org",
               "@graph": [
                 {
@@ -60,10 +42,8 @@ const WhyMigrade360 = () => {
                   ]
                 }
               ]
-            })
-          }}
-        />
-      </Head>
+            }}
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -160,7 +140,7 @@ const WhyMigrade360 = () => {
           <div className="row">
             <div className="col-lg-6 align-self-center">
               <div className="busine_service_bottom-left custom012">
-                <Image src="/img/whu-upgrade-side.png" alt="whu-upgrade-side" width={456} height={463} />
+                <Image src="/img/whu-upgrade-side.png" alt="Cloud Vs On-Premises ERP" width={456} height={463} />
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
@@ -492,7 +472,7 @@ const WhyMigrade360 = () => {
           <div className="row">
             <div className="col-lg-6 align-self-center">
               <div className="busine_service_bottom-left custom012">
-                <Image src="/img/whu-upgrade-side.png" alt="whu-upgrade-side" width={456} height={463} />
+                <Image src="/img/whu-upgrade-side.png" alt="The Benefits of Migrating to Dynamics 365" width={456} height={463} />
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
@@ -523,7 +503,7 @@ const WhyMigrade360 = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="call_to_action-right over-img">
-                <Image src="/img/MaskGroup8.png" width={339} height={483} alt="image" />
+                <Image src="/img/MaskGroup8.png" width={339} height={483} alt="Business consultant" />
               </div>
             </div>
             <div className="col-lg-7 align-self-center">

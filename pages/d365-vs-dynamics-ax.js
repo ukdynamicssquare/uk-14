@@ -1,23 +1,17 @@
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
 import Form from "../components/Form";
+import PageSeo from "../components/PageSeo";
 
 const D365VSDynamicsAX = () => {
   return (
     <>
-      <Head>
-        <title>Dynamics 365 vs Dynamics AX : [Must comparisons] </title>
-        <meta
-          name="description"
-          content="Compare the capabilities, features, and tools of Dynamics AX vs Dynamics 365. Uncover the trust of Dynamics 365 you have been missing."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/d365-vs-dynamics-ax/"
-        />
-        
-      </Head>
+      <PageSeo
+        type="Article"
+        title="Dynamics 365 vs Dynamics AX : [Must comparisons]"
+        description="Compare the capabilities, features, and tools of Dynamics AX vs Dynamics 365. Uncover the trust of Dynamics 365 you have been missing."
+        image="/img/why-migart.png"
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -40,7 +34,7 @@ const D365VSDynamicsAX = () => {
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/why-migart.png" alt="why-migart"
+              <Image src="/img/why-migart.png" alt="Why Dynamics AX vs Dynamics 365 Comparison is Necessary?"
               width={744} height={473}   priority = {true} />
             </div>
           </div>
@@ -87,9 +81,8 @@ const D365VSDynamicsAX = () => {
               <div className="busine_service_bottom-left custom012">
                 <Image
                   src="/img/microosoft-partner.png"
-                  alt="microosoft-partner.png"
-                  width={625} height={651}
-                />
+                  alt="Microsoft Solutions Partner badge"
+                  width={625} height={651} />
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
@@ -206,9 +199,8 @@ const D365VSDynamicsAX = () => {
               <div className="busine_service_bottom-left custom012">
                 <Image
                   src="/img/microosoft-partner.png"
-                  alt="microosoft-partner.png"
-                  width={625} height={651}
-                />
+                  alt="Microsoft Solutions Partner badge"
+                  width={625} height={651} />
               </div>
             </div>
             <div className="col-lg-7 align-self-center">
@@ -247,7 +239,7 @@ const D365VSDynamicsAX = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="call_to_action-right over-img">
-                <img src="/img/MaskGroup8.png" alt="image" />
+                <img src="/img/MaskGroup8.png" alt="Business consultant"  loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="col-lg-7 align-self-center">

@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -7,56 +6,16 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation, FreeMode } from "swiper/modules";
+import PageSeo from "../../../components/PageSeo";
 const Integration = () => {
     return (
         <>
-            <Head>
-                <title>Microsoft Dynamics 365 Integration - Dynamics Square UK</title>
-                <meta
-                    name="description"
-                    content="Seamlessly integrate Microsoft Dynamics 365 with your business systems. Enhance efficiency, automate workflows, and drive growth with our expert integration services."
-                />
-                <link
-                    rel="canonical"
-                    href="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365/integration/"
-                />
-                <meta property="og:locale" content="GB" />
-                <meta property="og:type" content="website" />
-                <meta
-                    property="og:title"
-                    content="Microsoft Dynamics 365 Integration - Dynamics Square UK"
-                />
-                <meta
-                    property="og:description"
-                    content="Seamlessly integrate Microsoft Dynamics 365 with your business systems. Enhance efficiency, automate workflows, and drive growth with our expert integration services."
-                />
-                <meta
-                    property="og:url"
-                    content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365/integration/"
-                />
-                <meta property="og:site_name" content="Dynamics Square UK" />
-                <meta
-                    property="og:image"
-                    content="https://www.dynamicssquare.co.uk/img/power-bi-suppor-banner.png"
-                />
-                <meta property="og:image:width" content="200" />
-                <meta property="og:image:height" content="200" />
-                <meta property="og:image:type" content="image/png" />
-                <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:site" content="@dsquare_uk" />
-                <meta
-                    name="twitter:title"
-                    content="Microsoft Dynamics 365 Integration - Dynamics Square UK"
-                />
-                <meta
-                    name="twitter:description"
-                    content="Seamlessly integrate Microsoft Dynamics 365 with your business systems. Enhance efficiency, automate workflows, and drive growth with our expert integration services."
-                />
-                <meta
-                    name="twitter:image"
-                    content="https://www.dynamicssquare.co.uk/img/power-bi-suppor-banner.png"
-                />
-            </Head>
+            <PageSeo
+              type="Service"
+              title="Microsoft Dynamics 365 Integration - Dynamics Square UK"
+              description="Seamlessly integrate Microsoft Dynamics 365 with your business systems. Enhance efficiency, automate workflows, and drive growth with our expert integration services."
+              image="https://www.dynamicssquare.co.uk/img/power-bi-suppor-banner.png"
+            />
             <section className="Solution-banner hero-1 hero">
                 <div className="container">
                     <div className="row">
@@ -87,10 +46,9 @@ const Integration = () => {
                         <div className="col-lg-6 align-self-center">
                             <Image
                                 src="/img/power-bi-suppor-banner.png"
-                                alt="power-bi-suppor-banner"
+                                alt="What are Dynamics 365 Integrations and why are they Necessary?"
                                 width={800}
-                                height={500}
-                            />
+                                height={500} />
                         </div>
                     </div>
                 </div>
@@ -611,7 +569,7 @@ const Integration = () => {
                     <div className="row">
                         <div className="col-lg-5">
                             <div className="call_to_action-right over-img">
-                                <img src="/img/MaskGroup8.png" alt="image" />
+                                <img src="/img/MaskGroup8.png" alt="Business consultant" />
                             </div>
                         </div>
                         <div className="col-lg-7 align-self-center">

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Head from 'next/head';
 import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
@@ -9,16 +8,18 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Autoplay, FreeMode, Pagination } from "swiper/modules";
+import PageSeo from "../../components/PageSeo";
 const NonProfits = () => {
   const [isOpen, setOpen] = useState(false);
   const [open, setsOpen] = useState(false);
   return (
     <>
-      <Head>
-      <title>Dynamics 365 for Nonprofits | Dynamics 365 for Charities</title>
-<meta name="description" content="Get Microsoft Dynamics 365 for nonprofits to manage charity, NFP accounts, financial grants, global payments, expenses, payroll activities, and more crucial activities."/>
-<link rel="canonical" href="https://www.dynamicssquare.co.uk/industries/non-profits/" />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Dynamics 365 for Nonprofits | Dynamics 365 for Charities"
+        description="Get Microsoft Dynamics 365 for nonprofits to manage charity, NFP accounts, financial grants, global payments, expenses, payroll activities, and more crucial activities."
+        image="/img/Dynamics-non-profit-Banner.png"
+      />
       <ModalVideo
         channel="youtube"
         autoplay
@@ -48,10 +49,9 @@ const NonProfits = () => {
               <div className="col-lg-6 align-self-center">
                 <Image
                   src="/img/Dynamics-non-profit-Banner.png"
-                  alt="Dynamics-non-profit-Banner"
+                  alt="Supercharge your Charity With Dynamics 365 Solutions"
                   width={790} height={470}
-                  priority={true}
-                />
+                  priority={true} />
               </div>
             </div>
           </div>
@@ -155,7 +155,7 @@ With Dynamics 365 Solutions </h2>
             <div className="row">
               <div className="col-lg-5">
                 <div className="call_to_action-right over-img">
-                  <img src="/img/MaskGroup8.png" alt="image" />
+                  <img src="/img/MaskGroup8.png" alt="Business consultant" />
                 </div>
               </div>
               <div className="col-lg-7 align-self-center">
@@ -190,8 +190,8 @@ With Dynamics 365 Solutions </h2>
                   <div className="card_new_img">
                     <img
                       src="/img/icons-nonprofits_Constituent-Management-1.svg"
-                      alt="icons-nonprofits_Constituent-Management-1"
-                    />
+                      alt=""
+                     aria-hidden="true"  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Unified Data Dashboard </h3>
@@ -202,8 +202,8 @@ With Dynamics 365 Solutions </h2>
                   <div className="card_new_img">
                     <img
                       src="/img/icons-nonprofits_Awards-Management.svg"
-                      alt="icons-nonprofits_Awards-Management"
-                    />
+                      alt=""
+                     aria-hidden="true"  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Seamless Collaboration </h3>
@@ -215,7 +215,7 @@ With Dynamics 365 Solutions </h2>
                     <img
                       src="/img/Fundraising.svg"
                       alt="Fundraising"
-                    />
+                     loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Global Data Access  </h3>
@@ -227,7 +227,7 @@ With Dynamics 365 Solutions </h2>
                     <img
                       src="/img/icons-nonprofits_program-delivery-1.svg"
                       alt="Program Delivery"
-                    />
+                     loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Funds Management </h3>
@@ -240,8 +240,7 @@ With Dynamics 365 Solutions </h2>
                   <div className="card_new_img">
                     <img
                       src="/img/IATI-Processes.svg"
-                      alt="IATI-Processes"
-                    />
+                      alt="Fundraising & Membership Management"  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Fundraising & Membership Management </h3>
@@ -253,7 +252,7 @@ With Dynamics 365 Solutions </h2>
                     <img
                       src="/img/icons-nonprofits_CRM-integrator-1.svg"
                       alt="Finance & CRM Data Integrator"
-                    />
+                     loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Resource Management </h3>
@@ -264,8 +263,7 @@ With Dynamics 365 Solutions </h2>
                   <div className="card_new_img">
                     <img
                       src="/img/Assessment-Management.svg"
-                      alt="Assessment-Management"
-                    />
+                      alt="Data Reporting"  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Data Reporting </h3>
@@ -276,8 +274,7 @@ With Dynamics 365 Solutions </h2>
                   <div className="card_new_img">
                     <img
                       src="/img/Project-Management-Program-Design.svg"
-                      alt="Project-Management-Program-Design"
-                    />
+                      alt="Donation & Award Management"  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Donation & Award Management </h3>
@@ -319,8 +316,8 @@ With Dynamics 365 Solutions </h2>
                           <span className="cente-icns">
                             <img
                               src="/img/play_icons.svg"
-                              alt="play_icons"
-                            />
+                              alt=""
+                             aria-hidden="true"  loading="lazy" decoding="async" />
                           </span>
                         </Link>
                       </div>
@@ -417,8 +414,8 @@ With Dynamics 365 Solutions </h2>
                               <div className="img-wrp">
                                 <img
                                   src="/img/Food-and-beverage.svg"
-                                  alt="Food-and-beverage"
-                                />
+                                  alt=""
+                                 aria-hidden="true"  loading="lazy" decoding="async" />
                               </div>
                               <div className="text-wrp-content">
                                 <h3>Food & Beverages</h3>
@@ -443,7 +440,7 @@ With Dynamics 365 Solutions </h2>
                                   <img
                                     src="/img/Ecommerce.svg"
                                     alt="Ecommerce"
-                                  />
+                                   loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>E-Commerce</h3>
@@ -466,8 +463,8 @@ With Dynamics 365 Solutions </h2>
                                 <div className="img-wrp">
                                   <img
                                     src="/img/proffesional-service.svg"
-                                    alt="proffesional-service"
-                                  />
+                                    alt=""
+                                   aria-hidden="true"  loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>Professional Services</h3>
@@ -491,8 +488,8 @@ With Dynamics 365 Solutions </h2>
                                 <div className="img-wrp">
                                   <img
                                     src="/img/Food-and-beverage.svg"
-                                    alt="Food-and-beverage"
-                                  />
+                                    alt=""
+                                   aria-hidden="true"  loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>Manufacturing & Distribution</h3>
@@ -517,8 +514,8 @@ With Dynamics 365 Solutions </h2>
                                 <div className="img-wrp">
                                   <img
                                     src="/img/start-up.svg"
-                                    alt="start-up"
-                                  />
+                                    alt=""
+                                   aria-hidden="true"  loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>Startups</h3>

@@ -1,37 +1,17 @@
-import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
+import PageSeo from "../../components/PageSeo";
 
 const MicrosoftAzure = () => {
   return (
     <>
-      <Head>
-        <title>Microsoft Azure | Microsoft Azure Cloud Services</title>
-        <meta
-          name="description"
-          content="Microsoft Azure is referred to cloud computing service owned and operated by Microsoft to manage hosted applications via its Microsoft-managed data centres."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/microsoft-azure/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/microsoft-azure/" />
-        <meta property="og:title" content="
-Microsoft Azure | Microsoft Azure Cloud Services
-" />
-        <meta property="og:description" content="Microsoft Azure is referred to cloud computing service owned and operated by Microsoft to manage hosted applications via its Microsoft-managed data centres." />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/azurebanner.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/products/microsoft-azure/" />
-        <meta property="twitter:title" content="
-Microsoft Azure | Microsoft Azure Cloud Services
-" />
-        <meta property="twitter:description" content="Microsoft Azure is referred to cloud computing service owned and operated by Microsoft to manage hosted applications via its Microsoft-managed data centres." />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/azurebanner.png" />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Microsoft Azure | Microsoft Azure Cloud Services"
+        description="Microsoft Azure is referred to cloud computing service owned and operated by Microsoft to manage hosted applications via its Microsoft-managed data centres."
+        image="https://www.dynamicssquare.co.uk/img/azurebanner.png"
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -58,7 +38,7 @@ Microsoft Azure | Microsoft Azure Cloud Services
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/azurebanner.png" alt="microsoft-azure-Banner" width={728} height={466}  priority = {true} />
+              <Image src="/img/azurebanner.png" alt="What Is Microsoft Azure?" width={728} height={466}  priority = {true} />
             </div>
           </div>
         </div>

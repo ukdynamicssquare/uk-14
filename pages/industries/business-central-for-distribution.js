@@ -1,38 +1,17 @@
-import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
+import PageSeo from "../../components/PageSeo";
 
 const MicrosoftDynamics365Ai = () => {
   return (
     <>
-      <Head>
-        <title>Microsoft Business Central for Distribution Industry | Dynamics Square</title>
-        <meta
-          name="description"
-          content="Optimise your distribution business with Microsoft Business Central. Streamline operations, manage inventory, and drive growth with tailored solutions for the distribution industry."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/industries/business-central-for-distribution/"
-        />
-        <meta property="og:locale" content="GB" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Microsoft Business Central for Distribution Industry | Dynamics Square" />
-        <meta property="og:description" content="Optimise your distribution business with Microsoft Business Central. Streamline operations, manage inventory, and drive growth with tailored solutions for the distribution industry." />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/human-resource-management/" />
-        <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/distribution-business-banner.png" />
-        <meta property="og:image:width" content="200" />
-        <meta property="og:image:height" content="200" />
-        <meta property="og:image:type" content="image/png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="Microsoft Business Central for Distribution Industry | Dynamics Square" />
-        <meta name="twitter:description" content="Optimise your distribution business with Microsoft Business Central. Streamline operations, manage inventory, and drive growth with tailored solutions for the distribution industry." />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/distribution-business-banner.png" />
-
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Microsoft Business Central for Distribution Industry | Dynamics Square"
+        description="Optimise your distribution business with Microsoft Business Central. Streamline operations, manage inventory, and drive growth with tailored solutions for the distribution industry."
+        image="https://www.dynamicssquare.co.uk/img/distribution-business-banner.png"
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -53,11 +32,10 @@ const MicrosoftDynamics365Ai = () => {
             <div className="col-lg-6 align-self-center">
               <Image
                 src="/img/distribution-business-banner.png"
-                alt="distribution-business-banner"
+                alt="Deliver what your Customer Wants with D365 Business Central for Distribution"
                 width={736} height={461}
                 priority={true}
-                quality={70}
-              />
+                quality={70} />
             </div>
           </div>
         </div>
@@ -133,7 +111,7 @@ const MicrosoftDynamics365Ai = () => {
                             aria-controls="fin2"
                           >
                             <div className="wr-in">
-                              <img src="/img/i-cons-02.png" alt="Enhanced Productivity and Efficiency" />
+                              <img src="/img/i-cons-02.png" alt="Enhanced Productivity and Efficiency"  loading="lazy" decoding="async" />
                             </div>
                             <span>Enhanced Productivity and Efficiency</span>
                           </button>
@@ -165,7 +143,7 @@ const MicrosoftDynamics365Ai = () => {
                             aria-controls="fin3"
                           >
                             <div className="wr-in">
-                              <img src="/img/i-cons-03.png" alt="Lower Operational Costs" />
+                              <img src="/img/i-cons-03.png" alt="Lower Operational Costs"  loading="lazy" decoding="async" />
                             </div>
                             <span>Lower Operational Costs</span>
                           </button>
@@ -349,9 +327,8 @@ const MicrosoftDynamics365Ai = () => {
                   <Image
                     src="/img/struggling-inventory.png"
                     className="fix-im"
-                    alt="struggling-inventory"
-                    width={483} height={514}
-                  />
+                    alt="Struggling with inventory management and order fulfilment?"
+                    width={483} height={514} />
                 
                 </div>
               </div>

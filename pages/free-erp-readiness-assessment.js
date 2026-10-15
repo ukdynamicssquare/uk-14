@@ -1,39 +1,16 @@
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import FormNewUIndsustry from "../components/FormNewUIndsustry";
+import PageSeo from "../components/PageSeo";
 const ERPTest = () => {
   return (
     <>
-      <Head>
-        <title>Free ERP Readiness Assessment | Dynamics Square UK</title>
-        <meta
-          name="description"
-          content="Get a free ERP readiness assessment from certified Microsoft Dynamics 365 consultants. Honest report in 3 days, no obligation. Book yours today."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/free-erp-readiness-assessment/"
-        />
-        <meta property="og:locale" content="GB" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Free ERP Readiness Assessment | Dynamics Square UK" />
-        <meta property="og:description" content="Get a free ERP readiness assessment from certified Microsoft Dynamics 365 consultants. Honest report in 3 days, no obligation. Book yours today." />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-customer-service/case-management/" />
-        <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/nav-vs-business-central.png" />
-        <meta property="og:image:width" content="200" />
-        <meta property="og:image:height" content="200" />
-        <meta property="og:image:type" content="image/png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="Free ERP Readiness Assessment | Dynamics Square UK" />
-        <meta name="twitter:description" content="Get a free ERP readiness assessment from certified Microsoft Dynamics 365 consultants. Honest report in 3 days, no obligation. Book yours today." />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/nav-vs-business-central.png" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
+      <PageSeo
+        type="Service"
+        title="Free ERP Readiness Assessment | Dynamics Square UK"
+        description="Get a free ERP readiness assessment from certified Microsoft Dynamics 365 consultants. Honest report in 3 days, no obligation. Book yours today."
+        image="/img/nav-vs-business-central.png"
+        extraSchema={{
               "@context": "https://schema.org",
               "@graph": [
                 {
@@ -110,11 +87,12 @@ const ERPTest = () => {
                   ]
                 }
               ]
-            })
-          }}
-        />
-
-      </Head>
+            }}
+      >
+        <meta property="og:image:width" content="200" />
+        <meta property="og:image:height" content="200" />
+        <meta property="og:image:type" content="image/png" />
+      </PageSeo>
       <section className="top-banner-new top-banner-new-01">
         <div className="container">
           <div className="row">
@@ -155,27 +133,27 @@ const ERPTest = () => {
                 <div className="image-list-new-im image-list-new-im-n">
                   <div className='ii-pic-list'>
                     <div className='s-widt-p'>
-                      <Image src="/img/Arteak-new-logo.png" alt='Arteak-new-logo' width={160} height={60} />
+                      <Image src="/img/Arteak-new-logo.png" alt="Arteak logo" width={160} height={60} />
                     </div>
                   </div>
                   <div className='ii-pic-list'>
                     <div className='s-widt-p'>
-                      <Image src="/img/parweld-new-logo.png" alt='parweld-new-logo' width={160} height={60} />
+                      <Image src="/img/parweld-new-logo.png" alt="Parweld logo" width={160} height={60} />
                     </div>
                   </div>
                   <div className='ii-pic-list'>
                     <div className='s-widt-p'>
-                      <Image src="/img/green-wireless-logo.png" alt='green-wireless-logo' width={160} height={60} />
+                      <Image src="/img/green-wireless-logo.png" alt="Green Wireless logo" width={160} height={60} />
                     </div>
                   </div>
                   <div className='ii-pic-list'>
                     <div className='s-widt-p'>
-                      <Image src="/img/timesco-logo.png" alt='timesco-logo' width={160} height={60} />
+                      <Image src="/img/timesco-logo.png" alt="Timesco logo" width={160} height={60} />
                     </div>
                   </div>
                   <div className='ii-pic-list'>
                     <div className='s-widt-p'>
-                      <Image src="/img/omicron_engineering_blur.png" alt='omicron_engineering_blur' width={160} height={60} />
+                      <Image src="/img/omicron_engineering_blur.png" alt="Omicron Engineering logo" width={160} height={60} />
                     </div>
                   </div>
                 </div>
@@ -199,7 +177,7 @@ const ERPTest = () => {
             <div className='col-lg-3 d-flex'>
               <div className='sign-card'>
                 <div className='sign-icon'>
-                  <img src="/img/sentiment_dissatisfied.svg" alt="Disconnected systems" />
+                  <img src="/img/sentiment_dissatisfied.svg" alt="Disconnected systems"  loading="lazy" decoding="async" />
                 </div>
                 <h3>Disconnected systems</h3>
                 <p>Finance, sales and operations run on separate tools, and your team re-enters the same data more than once.</p>
@@ -208,7 +186,7 @@ const ERPTest = () => {
             <div className='col-lg-3 d-flex'>
               <div className='sign-card'>
                 <div className='sign-icon'>
-                  <img src="/img/hourglass_check.svg" alt="Manual month-end close" />
+                  <img src="/img/hourglass_check.svg" alt="Manual month-end close"  loading="lazy" decoding="async" />
                 </div>
                 <h3>Manual month-end close</h3>
                 <p>Your team exports, copies and reconciles by hand every month, and still questions whether the numbers are right.</p>
@@ -217,7 +195,7 @@ const ERPTest = () => {
             <div className='col-lg-3 d-flex'>
               <div className='sign-card'>
                 <div className='sign-icon'>
-                  <img src="/img/change_circle.svg" alt="A system you've outgrown" />
+                  <img src="/img/change_circle.svg" alt="A system you've outgrown"  loading="lazy" decoding="async" />
                 </div>
                 <h3>A system you've outgrown</h3>
                 <p>What worked at your previous size cannot support the volume, complexity or markets you operate in now.</p>
@@ -226,7 +204,7 @@ const ERPTest = () => {
             <div className='col-lg-3 d-flex'>
               <div className='sign-card'>
                 <div className='sign-icon'>
-                  <img src="/img/online_prediction.svg" alt="Limited real-time visibility" />
+                  <img src="/img/online_prediction.svg" alt="Limited real-time visibility"  loading="lazy" decoding="async" />
                 </div>
                 <h3>Limited real-time visibility</h3>
                 <p>Leadership makes decisions on last week's figures because this week's aren't ready yet.</p>
@@ -297,7 +275,7 @@ const ERPTest = () => {
               <div className='col-lg-5'>
                 <div className='oblig-card'>
                   <div className='oblig-icon'>
-                    <img src="/img/cancel.svg" alt="No cost either way" />
+                    <img src="/img/cancel.svg" alt="No cost either way"  loading="lazy" decoding="async" />
                   </div>
                   <div>
                     <h3>No cost either way</h3>
@@ -306,7 +284,7 @@ const ERPTest = () => {
                 </div>
                 <div className='oblig-card'>
                   <div className='oblig-icon'>
-                    <img src="/img/hourglass_check.svg" alt="Revisit on your own timeline" />
+                    <img src="/img/hourglass_check.svg" alt="Revisit on your own timeline"  loading="lazy" decoding="async" />
                   </div>
                   <div>
                     <h3>Revisit on your own timeline</h3>
@@ -315,7 +293,7 @@ const ERPTest = () => {
                 </div>
                 <div className='oblig-card'>
                   <div className='oblig-icon'>
-                    <img src="/img/groups.svg" alt="No follow-up sales calls" />
+                    <img src="/img/groups.svg" alt="No follow-up sales calls"  loading="lazy" decoding="async" />
                   </div>
                   <div>
                     <h3>No follow-up sales calls</h3>

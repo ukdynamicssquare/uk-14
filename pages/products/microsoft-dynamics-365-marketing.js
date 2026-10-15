@@ -1,37 +1,66 @@
-import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
+import PageSeo from "../../components/PageSeo";
+// Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
+const PAGE_FAQS = [
+  {
+    "question": "Are Microsoft Dynamics 365 Marketing and Microsoft Dynamics 365 Insights - Journey same?",
+    "answer": "No, Microsoft has merged Marketing and Insights solutions to offer a single powerful solution capable of fulfilling the core demands of business that consists of marketing and data insights. From September 1, 2023, Dynamics 365 Marketing isn’t available for purchase, as you can go for D365 Insights – Journey."
+  },
+  {
+    "question": "What is Dynamics 365 for Marketing?",
+    "answer": "Dynamics 365 for Marketing is a tool for automating entire marketing operations. It manages the journey of a customer from becoming a lead to a recurring client. Also, it seamlessly tracks all activities of the customer to offer them better products and services."
+  },
+  {
+    "question": "Which features are available in Dynamics 365 Marketing?",
+    "answer": "Microsoft Dynamics 365 Marketing offers various features for all businesses, whether small or large. Some of the core features include a smooth customer journey, managing events, personalising marketing, understanding leads, and much more."
+  },
+  {
+    "question": "Is Dynamics 365 Marketing ERP or CRM?",
+    "answer": "Dynamics 365 Marketing is a CRM (customer relationship management) application. However, it carries a few options for ERP (enterprise resource planning) as well as standard operations."
+  },
+  {
+    "question": "Which one is for me, Microsoft Dynamics 365 Marketing or Salesforce?",
+    "answer": "If you are considering ease of accessibility and want a simple user interface with a cost-effective pricing strategy irrespective of the type of business, you should go with D365 Marketing."
+  },
+  {
+    "question": "How much does D365 marketing cost?",
+    "answer": "The cost of Dynamics 365 Marketing totally depends on the complexity of the business and its unique requirements. However, if you want to use it as a standalone application, you have to pay £1,307.20 per tenant/month, and if you are using one of the Dynamics 365 apps, you have to pay £769.00 per tenant/month as an additional amount."
+  },
+  {
+    "question": "What are the server deployment options for Dynamics 365 marketing?",
+    "answer": "You can deploy the servers on cloud servers as well as on-premises servers. If you want global connectivity, you can go with the cloud, as it works 24x7, and if you want to manage your data servers yourself, you can go with the on-premises deployment option."
+  },
+  {
+    "question": "What is the difference between Dynamics 365 Marketing and Dynamics CRM?",
+    "answer": "Dynamics CRM is capable of managing the entire relationship with customers, whereas Dynamics 365 Marketing is responsible for managing the marketing section of an organisation. Dynamics CRM includes four applications: Dynamics 365 Field Service, D365 Customer Service, Dynamics 365 for Sales, and Dynamics 365 Marketing."
+  },
+  {
+    "question": "Can I avail myself of a trial of Dynamics 365 Marketing?",
+    "answer": "Yes, you can avail yourself of a demo or a free trial of this application by contacting Dynamics Square. Our team will help you understand your marketing needs and provide you with a sound overview of this application."
+  },
+  {
+    "question": "How do I integrate Dynamics 365 Marketing with my existing Dynamics 365 solution?",
+    "answer": "You can easily integrate with your existing system by contacting your Microsoft certified partner, or you can contact Dynamics Square to know more about this process and the cost required to do so."
+  },
+  {
+    "question": "Where is Dynamics Square based in the UK for D365 Marketing Partner?",
+    "answer": "Dynamics Square is located in several locations in the UK to offer on-site support and services, like London, Manchester, Birmingham, Leeds, Glasgow, Bristol, Liverpool, and more. See Also - Microsoft Dynamics CRM | Dynamics 365 Implementation"
+  }
+];
+
 
 const Marketing = () => {
   return (
     <>
-      <Head>
-      <title>
-      Microsoft Dynamics 365 Marketing - Dynamics Square UK
-        </title>
-        <meta
-          name="description"
-          content="Drive personalised customer journeys with Microsoft Dynamics 365 Marketing. Dynamics Square UK offers implementation, support, and tailored marketing solutions."
-        />
-           <meta name="robots" content="index,follow" />
-           <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-marketing/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-marketing/" />
-        <meta property="og:title" content="Microsoft Dynamics 365 Marketing - Dynamics Square UK" />
-        <meta property="og:description" content="Drive personalised customer journeys with Microsoft Dynamics 365 Marketing. Dynamics Square UK offers implementation, support, and tailored marketing solutions." />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/marketing-banners.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-marketing/" />
-        <meta property="twitter:title" content="Microsoft Dynamics 365 Marketing - Dynamics Square UK" />
-        <meta property="twitter:description" content="Drive personalised customer journeys with Microsoft Dynamics 365 Marketing. Dynamics Square UK offers implementation, support, and tailored marketing solutions." />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/marketing-banners.png" />
-        
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Microsoft Dynamics 365 Marketing - Dynamics Square UK"
+        description="Drive personalised customer journeys with Microsoft Dynamics 365 Marketing. Dynamics Square UK offers implementation, support, and tailored marketing solutions."
+        image="https://www.dynamicssquare.co.uk/img/marketing-banners.png"
+        faqs={PAGE_FAQS}
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -100,10 +129,10 @@ const Marketing = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons_centeralised-source.svg"
-                            alt="icons_centeralised-source"
+                            alt=""
                             width="36"
                             height="36"
-                          />
+                           aria-hidden="true" />
                         </div>
                         <span>Centralized Source</span>
                       </button>
@@ -143,10 +172,10 @@ const Marketing = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons_Personalized-Communication-.svg"
-                            alt="icons_Personalized-Communication"
+                            alt=""
                             width="36"
                             height="36"
-                          />
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Personalized Communication</span>
                       </button>
@@ -183,10 +212,10 @@ const Marketing = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons_Journey-Mapping.svg"
-                            alt="icons_Journey-Mapping"
+                            alt=""
                             width="36"
                             height="36"
-                          />
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Journey Mapping</span>
                       </button>
@@ -228,10 +257,10 @@ const Marketing = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons_Email-Templates-.svg"
-                            alt="icons_Email-Templates"
+                            alt=""
                             width="36"
                             height="36"
-                          />
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Email Templates</span>
                       </button>
@@ -267,10 +296,10 @@ const Marketing = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons_Customer-Feedback-.svg"
-                            alt="icons_Customer-Feedback"
+                            alt=""
                             width="36"
                             height="36"
-                          />
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Customer Feedback</span>
                       </button>
@@ -308,10 +337,10 @@ const Marketing = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons_Automated-Lead-Scoring.svg"
-                            alt="icons_Automated-Lead-Scoring"
+                            alt=""
                             width="36"
                             height="36"
-                          />
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Automated Lead Scoring</span>
                       </button>
@@ -371,7 +400,7 @@ const Marketing = () => {
                         aria-controls="fins1"
                       >
                         <div className="wr-in">
-                          <img src="/img/Group11.png" alt="Group11" width="90" height="90" />
+                          <img src="/img/Group11.png" alt="Group11" width="90" height="90"  loading="lazy" decoding="async" />
                         </div>
                         <span>Core Marketing</span>
                       </button>
@@ -403,7 +432,7 @@ const Marketing = () => {
                         aria-controls="fins2"
                       >
                         <div className="wr-in">
-                          <img src="/img/Group12.png" alt="Group12" width="90" height="90" />
+                          <img src="/img/Group12.png" alt="Group12" width="90" height="90"  loading="lazy" decoding="async" />
                         </div>
                         <span>Event Management</span>
                       </button>
@@ -434,7 +463,7 @@ const Marketing = () => {
                         aria-controls="fins3"
                       >
                         <div className="wr-in">
-                          <img src="/img/Group13.png" alt="Group13" width="90" height="90" />
+                          <img src="/img/Group13.png" alt="Group13" width="90" height="90"  loading="lazy" decoding="async" />
                         </div>
                         <span>Forms Pro</span>
                       </button>
@@ -466,7 +495,7 @@ const Marketing = () => {
                         aria-controls="fins4"
                       >
                         <div className="wr-in">
-                          <img src="/img/Group14.png" alt="Group14" width="90" height="90" />
+                          <img src="/img/Group14.png" alt="Group14" width="90" height="90"  loading="lazy" decoding="async" />
                         </div>
                         <span>Add-Ons</span>
                       </button>

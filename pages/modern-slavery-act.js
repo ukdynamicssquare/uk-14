@@ -1,14 +1,14 @@
-import Head from 'next/head';
 import Link from "next/link";
+import PageSeo from "../components/PageSeo";
 
 const PrivacyPolicy = () => {
   return (
     <>
-      <Head>
-      <title>Modern Slavery Act Statement | Dynamics Square UK</title>
-<meta name="description" content="Check out Modern Slavery Act and Human Trafficking Statement at Dynamics Square."/>
-<link rel="canonical" href="https://www.dynamicssquare.co.uk/modern-slavery-act/" />
-      </Head>
+      <PageSeo
+        type="WebPage"
+        title="Modern Slavery Act Statement | Dynamics Square UK"
+        description="Check out Modern Slavery Act and Human Trafficking Statement at Dynamics Square."
+      />
       <section className="Solution-banner hero-1 hero custom-pd-4">
         <div className="container">
           <div className="row justify-content-center ">

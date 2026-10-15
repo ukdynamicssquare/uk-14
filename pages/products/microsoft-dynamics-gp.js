@@ -1,5 +1,4 @@
 import React from "react";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../../styles/bcVsSapTwo.module.css";
@@ -9,6 +8,7 @@ import ResourceTabs from "../../components/bcTwo/ResourceTabs";
 import RelatedLinks from "../../components/bcTwo/RelatedLinks";
 import { gpResources, gpLinks } from "../../components/bcTwo/legacyResources";
 import faqs from "../../public/data/microsoftdynamicsgp.json";
+import PageSeo from "../../components/PageSeo";
 
 const PAGE_URL = "https://www.dynamicssquare.co.uk/products/microsoft-dynamics-gp/";
 const PAGE_TITLE = "Microsoft Dynamics GP (Great Plains) Support Partner UK";
@@ -80,27 +80,18 @@ const MicrosoftDynamicsGP = () => {
 
   return (
     <>
-      <Head>
-        <title>{PAGE_TITLE}</title>
-        <meta name="description" content={PAGE_DESC} />
-        <link rel="canonical" href={PAGE_URL} />
-        <meta property="og:locale" content="en_GB" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={PAGE_URL} />
-        <meta property="og:title" content={OG_TITLE} />
-        <meta property="og:description" content={PAGE_DESC} />
-        <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content={OG_IMAGE} />
+      <PageSeo
+        type="WebPage"
+        title={PAGE_TITLE}
+        description={PAGE_DESC}
+        image={OG_IMAGE}
+        imageAlt="Microsoft Dynamics GP (Great Plains) ERP solution"
+        ogTitle={OG_TITLE}
+        extraSchema={pageSchema}
+      >
         <meta property="og:image:width" content="1024" />
         <meta property="og:image:height" content="576" />
-        <meta property="og:image:alt" content="Microsoft Dynamics GP (Great Plains) ERP solution" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content={OG_TITLE} />
-        <meta name="twitter:description" content={PAGE_DESC} />
-        <meta name="twitter:image" content={OG_IMAGE} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
-      </Head>
+      </PageSeo>
 
       {/* ===== Hero ===== */}
       <section className={styles.hero}>

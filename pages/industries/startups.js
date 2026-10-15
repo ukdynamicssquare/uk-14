@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import ModalVideo from "react-modal-video";
@@ -9,24 +8,18 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import Blog from "../../components/Blog";
 import { Autoplay, FreeMode, Pagination } from "swiper/modules";
+import PageSeo from "../../components/PageSeo";
 const Startup = () => {
   const [isOpen, setOpen] = useState(false);
   const [open, setsOpen] = useState(false);
   return (
     <>
-      <Head>
-        <title>
-          Dynamics 365 For Startups &amp; Small Business | Dynamics Square
-        </title>
-        <meta
-          name="description"
-          content="Dynamics 365 for Startups - ERP, CRM, and business intelligence powered by Dynamics 365 and enabled by Dynamics Square, Solutions Partner."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/industries/startups/"
-        />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Dynamics 365 For Startups & Small Business | Dynamics Square"
+        description="Dynamics 365 for Startups - ERP, CRM, and business intelligence powered by Dynamics 365 and enabled by Dynamics Square, Solutions Partner."
+        image="/img/industry-startup-banner.png"
+      />
       <ModalVideo
         channel="youtube"
         autoplay
@@ -214,7 +207,7 @@ const Startup = () => {
                       alt="icons-_seamless customisation"
                       width={48}
                       height={48}
-                    />
+                     loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Seamless Customization</h3>
@@ -232,7 +225,7 @@ const Startup = () => {
                       alt="centralised data"
                       width={48}
                       height={48}
-                    />
+                     loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Centralize Data</h3>
@@ -250,7 +243,7 @@ const Startup = () => {
                       alt="icons-_manage customer"
                       width={48}
                       height={48}
-                    />
+                     loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Manage Customers</h3>
@@ -268,7 +261,7 @@ const Startup = () => {
                       alt="icons-_decison making"
                       width={48}
                       height={48}
-                    />
+                     loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Decision Making</h3>
@@ -288,7 +281,7 @@ const Startup = () => {
                       alt="icons-_connect collobrate"
                       width={48}
                       height={48}
-                    />
+                     loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Connect & Collaborate</h3>
@@ -306,7 +299,7 @@ const Startup = () => {
                       alt="icons-_drive automation"
                       width={48}
                       height={48}
-                    />
+                     loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Drive Automation</h3>
@@ -324,7 +317,7 @@ const Startup = () => {
                       alt="icons-_enterprise mobility"
                       width={48}
                       height={48}
-                    />
+                     loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Enterprise Mobility</h3>
@@ -341,7 +334,7 @@ const Startup = () => {
                       alt="icons-_Predict Opportunity"
                       width={48}
                       height={48}
-                    />
+                     loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Predict Opportunity</h3>
@@ -390,9 +383,8 @@ const Startup = () => {
                     <Image
                       src="/img/startup-side.png"
                       className="fix-im"
-                      alt="bisin_leftimg"
-                      width={546} height={524}
-                    />
+                      alt="Talk to Us to Reveal Your Actual Requirements"
+                      width={546} height={524} />
                     <div className="video-ytube video-ytubes">
                       <div className="popup-btn popup-btns">
                         <Link href="#javascript:void(0)" onClick={() => setOpen(true)}>
@@ -403,7 +395,7 @@ const Startup = () => {
                             width={390} height={259}
                           />
                           <span className="cente-icns">
-                            <img src="/img/play_icons.svg" alt="play_icons" />
+                            <img src="/img/play_icons.svg" alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                           </span>
 
                         </Link>
@@ -493,8 +485,8 @@ const Startup = () => {
                               <div className="img-wrp">
                                 <img
                                   src="/img/Food-and-beverage.svg"
-                                  alt="Food-and-beverage"
-                                />
+                                  alt=""
+                                 aria-hidden="true"  loading="lazy" decoding="async" />
                               </div>
                               <div className="text-wrp-content">
                                 <h3>Food & Beverages</h3>
@@ -520,7 +512,7 @@ const Startup = () => {
                                   <img
                                     src="/img/NotforProfit.svg"
                                     alt="NotforProfit"
-                                  />
+                                   loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>Not for Profit</h3>
@@ -547,7 +539,7 @@ const Startup = () => {
                                   <img
                                     src="/img/Ecommerce.svg"
                                     alt="Ecommerce"
-                                  />
+                                   loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>E-Commerce</h3>
@@ -573,8 +565,8 @@ const Startup = () => {
                                 <div className="img-wrp">
                                   <img
                                     src="/img/proffesional-service.svg"
-                                    alt="proffesional-service"
-                                  />
+                                    alt=""
+                                   aria-hidden="true"  loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>Professional Services</h3>
@@ -600,8 +592,7 @@ const Startup = () => {
                                 <div className="img-wrp">
                                   <img
                                     src="/img/microsoft-cloud-for-manufacturing.svg"
-                                    alt="microsoft-cloud-for-manufacturing"
-                                  />
+                                    alt="Manufacturing & Distribution"  loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>Manufacturing & Distribution</h3>
@@ -640,7 +631,7 @@ const Startup = () => {
             <div className="row top-2 gx-5">
               <Blog />
               <div className="col-lg-6 align-self-center">
-                <Image src="/img/industry-startup-banner.png" alt="startup-banner"   width={805} height={473} />
+                <Image src="/img/industry-startup-banner.png" alt="Explore Our Recent Blogs & Resources"   width={805} height={473} />
               </div>
             </div>
           </div>

@@ -1,21 +1,15 @@
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
+import PageSeo from "../../components/PageSeo";
 
 const AzureSphere = () => {
   return (
     <>
-      <Head>
-        <title>Microsoft Azure Sphere | Cloud Security Services</title>
-        <meta
-          name="description"
-          content="Develop & deploy highly secured IoT applications with Azure Sphere leveraging its set of components and ensure secure communication between your IoT devices and Azure Cloud."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/azure-sphere/"
-        />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Microsoft Azure Sphere | Cloud Security Services"
+        description="Develop & deploy highly secured IoT applications with Azure Sphere leveraging its set of components and ensure secure communication between your IoT devices and Azure Cloud."
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -42,10 +36,9 @@ const AzureSphere = () => {
             <div className="col-lg-6 align-self-center">
               <Image
                 src="/img/azure-sphere-banner.svg"
-                alt="azure-sphere-banner"
+                alt="What is Microsoft Azure Sphere?"
                 width={1024} height={586}
-                priority = {true}
-              />
+                priority = {true} />
             </div>
           </div>
         </div>
@@ -92,8 +85,8 @@ const AzureSphere = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-power-sphere_High-End-Connectivity.svg"
-                            alt="icons-power-sphere_High-End-Connectivity"
-                          />
+                            alt=""
+                           aria-hidden="true" />
                         </div>
                         <span>High-End Connectivity</span>
                       </button>
@@ -125,8 +118,8 @@ const AzureSphere = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-power-sphere_Highly-Secure.svg"
-                            alt="icons-power-sphere_Highly-Secure"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Highly Secure OS</span>
                       </button>
@@ -165,8 +158,8 @@ const AzureSphere = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-power-sphere_threat-detection.svg"
-                            alt="icons-power-sphere_threat-detection"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Detect Threats</span>
                       </button>
@@ -198,8 +191,8 @@ const AzureSphere = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-power-sphere_Build-iot-device.svg"
-                            alt="icons-power-sphere_Build-iot-device"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Build Highly Secured IoT Devices</span>
                       </button>

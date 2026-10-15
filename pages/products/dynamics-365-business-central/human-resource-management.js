@@ -1,37 +1,17 @@
-import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
+import PageSeo from "../../../components/PageSeo";
 
 const HumanResourceManagements = () => {
   return (
     <>
-      <Head>
-      <title>D365 Business Central for Human Resource Management</title>
-        <meta
-          name="description"
-          content="Explore ERP functionalities of Dynamics 365 Business Central for Human Resource Management: Streamline employee data, payroll processing, and performance tracking in one platform."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/human-resource-management/"
-        />
-        <meta property="og:locale" content="GB" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="D365 Business Central for Human Resource Management" />
-        <meta property="og:description" content="Explore ERP functionalities of Dynamics 365 Business Central for Human Resource Management: Streamline employee data, payroll processing, and performance tracking in one platform." />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/human-resource-management/" />
-        <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/Human-Resource-Management-banner.png" />
-        <meta property="og:image:width" content="200" />
-        <meta property="og:image:height" content="200" />
-        <meta property="og:image:type" content="image/png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="D365 Business Central for Human Resource Management" />
-        <meta name="twitter:description" content="Explore ERP functionalities of Dynamics 365 Business Central for Human Resource Management: Streamline employee data, payroll processing, and performance tracking in one platform." />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/Human-Resource-Management-banner.png" />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="D365 Business Central for Human Resource Management"
+        description="Explore ERP functionalities of Dynamics 365 Business Central for Human Resource Management: Streamline employee data, payroll processing, and performance tracking in one platform."
+        image="https://www.dynamicssquare.co.uk/img/Human-Resource-Management-banner.png"
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -52,10 +32,9 @@ const HumanResourceManagements = () => {
             <div className="col-lg-6 align-self-center">
               <Image
                 src="/img/Human-Resource-Management-banner.png"
-                alt="Human-Resource-Management-banner"
+                alt="What is Dynamics 365 Business Central for Human Resources Management?"
                 width={665} height={447}
-                priority = {true}
-              />
+                priority = {true} />
             </div>
           </div>
         </div>
@@ -87,7 +66,7 @@ const HumanResourceManagements = () => {
                         aria-controls="fin1"
                       >
                         <div className="wr-in">
-                          <img src="/img/increase-organisational-agility.png" alt="increase-organisational-agility" />
+                          <img src="/img/increase-organisational-agility.png" alt="What is Dynamics 365 Business Central for Human Resources Management?" />
                         </div>
                         <span>Increase Organisational Agility</span>
                       </button>
@@ -115,7 +94,7 @@ const HumanResourceManagements = () => {
                         aria-controls="fin2"
                       >
                         <div className="wr-in">
-                          <img src="/img/transform-employee-experiences.png" alt="transform-employee-experiences" />
+                          <img src="/img/transform-employee-experiences.png" alt="Increase Organisational Agility"  loading="lazy" decoding="async" />
                         </div>
                         <span>Transform Employee Experiences</span>
                       </button>
@@ -150,7 +129,7 @@ const HumanResourceManagements = () => {
                         aria-controls="fin3"
                       >
                         <div className="wr-in">
-                          <img src="/img/optimise-hr-programs.png" alt="optimise-hr-programs" />
+                          <img src="/img/optimise-hr-programs.png" alt="Transform Employee Experiences"  loading="lazy" decoding="async" />
                         </div>
                         <span>Optimise HR Programs</span>
                       </button>
@@ -180,8 +159,7 @@ const HumanResourceManagements = () => {
                         <div className="wr-in">
                           <img
                             src="/img/get-workforce-insights.png"
-                            alt="get-workforce-insights"
-                          />
+                            alt="Optimise HR Programs"  loading="lazy" decoding="async" />
                         </div>
                         <span>Get Workforce Insights</span>
                       </button>
@@ -279,7 +257,7 @@ const HumanResourceManagements = () => {
               <div className="col-lg-6">
                 <div className="style-grid-1">
                   <div className="style-grid-icons">
-                    <Image src="/img/reduce-hr-challenges.png" alt="reduce-hr-challenges" width={84} height={84} />
+                    <Image src="/img/reduce-hr-challenges.png" alt="Reduce HR challenges" width={84} height={84} />
                   </div>
                   <div className="style-grid-content">
                     <h3>Reduce HR challenges</h3>
@@ -288,7 +266,7 @@ const HumanResourceManagements = () => {
                 </div>
                 <div className="style-grid-1">
                   <div className="style-grid-icons">
-                    <Image src="/img/enhance-employee-retention.png" alt="enhance-employee-retention"  width={84} height={84} />
+                    <Image src="/img/enhance-employee-retention.png" alt="Enhance Employee Retention"  width={84} height={84} />
                   </div>
                   <div className="style-grid-content">
                     <h3>Enhance Employee Retention</h3>
@@ -302,9 +280,8 @@ const HumanResourceManagements = () => {
                   <div className="style-grid-icons">
                     <Image
                       src="/img/maximise-business-agility.png"
-                      alt="maximise-business-agility"
-                      width={84} height={84}
-                    />
+                      alt="Maximise Business Agility"
+                      width={84} height={84} />
                   </div>
                   <div className="style-grid-content">
                     <h3>Maximise Business Agility</h3>
@@ -314,7 +291,7 @@ const HumanResourceManagements = () => {
 
                 <div className="style-grid-1">
                   <div className="style-grid-icons">
-                    <Image src="/img/discover-useful-insights.png" alt="discover-useful-insights"  width={84} height={84} />
+                    <Image src="/img/discover-useful-insights.png" alt="Discover Useful Insights"  width={84} height={84} />
                   </div>
                   <div className="style-grid-content">
                     <h3>Discover Useful Insights</h3>
@@ -332,9 +309,8 @@ const HumanResourceManagements = () => {
                 <div className="busine_service_bottom-left custom012">
                   <Image
                     src="/img/Warehouse-Management-in-Different-Industries.png"
-                    alt="Warehouse-Management-in-Different-Industries"
-                    width={482} height={513}
-                  />
+                    alt="Human Resource Management in Industries"
+                    width={482} height={513} />
                 </div>
               </div>
               <div className="col-lg-6 align-self-center">

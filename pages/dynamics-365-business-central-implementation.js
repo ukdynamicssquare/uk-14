@@ -1,10 +1,10 @@
 import { useRef, useState } from 'react';
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 // import useGsapScrollCards from '../../../hooks/useGsapScrollCards';
 import faqData from '../public/data/business_centeral_imple.json';
 import useCardScrollEffect from "../components/useCardScrollEffect";
+import PageSeo from "../components/PageSeo";
 
 const pageUrl = "https://www.dynamicssquare.co.uk/dynamics-365-business-central-implementation/";
 const pageTitle = "Dynamics 365 Business Central Implementation | Dynamics Square™";
@@ -77,31 +77,16 @@ const BusinessCentralImplementation = () => {
   };
   return (
     <>
-      <Head>
-        <title>{pageTitle}</title>
-        <meta name="description" content={pageDescription} />
-        <meta name="keywords" content="Dynamics 365 Business Central Implementation, Business Central Implementation UK, Business Central Implementation Partner, Business Central Implementation Cost, Business Central Data Migration, Microsoft Business Central Implementation Services" />
-        <link rel="canonical" href={pageUrl} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={pageUrl} />
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={pageDescription} />
-        <meta property="og:image" content={pageImage} />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content={pageUrl} />
-        <meta property="twitter:title" content={pageTitle} />
-        <meta property="twitter:description" content={pageDescription} />
-        <meta property="twitter:image" content={pageImage} />
-
-        {/* Hero heading uses Lato 700; preload it so the heading doesn't re-wrap (CLS) when it arrives late. */}
+      <PageSeo
+        type="Service"
+        title={pageTitle}
+        description={pageDescription}
+        keywords="Dynamics 365 Business Central Implementation, Business Central Implementation UK, Business Central Implementation Partner, Business Central Implementation Cost, Business Central Data Migration, Microsoft Business Central Implementation Services"
+        image={pageImage}
+        extraSchema={pageSchema}
+      >
         <link rel="preload" href="/fonts/lato-latin-700-v1.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
-        />
-      </Head>
+      </PageSeo>
       <div className='solution-new-banner-one'>
         <div className='container'>
           <div className='row justify-content-center'>

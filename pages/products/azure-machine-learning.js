@@ -1,23 +1,15 @@
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
+import PageSeo from "../../components/PageSeo";
 
 const AzureMachineLearning = () => {
   return (
     <>
-      <Head>
-        <meta charSet="utf-8" />
-        <title>Azure Machine Learning | Dynamics Square</title>
-        <meta
-          name="description"
-          content="Develop and deploy enterprise-level Machine Learning Models accurately and instantly to support your process optimization and critical business practices."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/azure-machine-learning/"
-        />
-        <meta name="robots" content="index,follow" />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Azure Machine Learning | Dynamics Square"
+        description="Develop and deploy enterprise-level Machine Learning Models accurately and instantly to support your process optimization and critical business practices."
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -47,10 +39,9 @@ const AzureMachineLearning = () => {
             <div className="col-lg-6 align-self-center">
               <Image
                 src="/img/azure-machine-learning-banner.svg"
-                alt="azure-machine-learning-banner"
+                alt="What Is Azure Machine Learning?"
                 width={1024} height={586}
-                priority = {true}
-              />
+                priority = {true} />
             </div>
           </div>
         </div>
@@ -107,8 +98,8 @@ const AzureMachineLearning = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-machine-learning_Automated-Machine-Learning-.svg"
-                            alt="icons-machine-learning_Automated-Machine-Learning"
-                          />
+                            alt=""
+                           aria-hidden="true" />
                         </div>
                         <span>Streamlined & Automated ML</span>
                       </button>
@@ -141,8 +132,8 @@ const AzureMachineLearning = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-machine-learning_Easy-to-Use-Functionality-.svg"
-                            alt="icons-machine-learning_Easy-to-Use-Functionality"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Seamless Functionality</span>
                       </button>
@@ -174,8 +165,8 @@ const AzureMachineLearning = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-machine-learning_High-End-Security-.svg"
-                            alt="icons-machine-learning_High-End-Security"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Enterprise-Grade Security</span>
                       </button>
@@ -215,8 +206,8 @@ const AzureMachineLearning = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-machine-learning_Seamless-Integration-.svg"
-                            alt="icons-machine-learning_Seamless-Integration"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Simplified Integration</span>
                       </button>
@@ -253,8 +244,8 @@ const AzureMachineLearning = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-machine-learning_Hybrid-Multi-Cloud-Support-.svg"
-                            alt="icons-machine-learning_Hybrid-Multi-Cloud-Support"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Multi-Network Support</span>
                       </button>

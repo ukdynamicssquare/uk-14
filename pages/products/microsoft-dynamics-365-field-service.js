@@ -1,5 +1,4 @@
 import { useRef, useState } from 'react';
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import useGsapScrollCards from '../../hooks/useGsapScrollCards';
@@ -8,6 +7,7 @@ import useCardScrollEffect from "../../components/useCardScrollEffect";
 // import NavBar from '../../components/NavBar';
 import BlogFinanaceCard from '../../components/BlogFinanaceCard';
 import dynamic from "next/dynamic";
+import PageSeo from "../../components/PageSeo";
 
 
 const StackedCards = dynamic(() => import("../../components/StackedCards"), {
@@ -39,28 +39,13 @@ const FieldService = () => {
 
   return (
     <>
-      <Head>
-         <title>Dynamics 365 Field Service Partner | Dynamics Square UK</title>
-        <meta
-          name="description"
-          content="Transform field operations with Dynamics 365 Field Service. UK experts for implementation, integration & support. Book your free consultation."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-field-service/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-field-service/" />
-        <meta property="og:title" content="Dynamics 365 Field Service Partner | Dynamics Square UK" />
-        <meta property="og:description" content="Transform field operations with Dynamics 365 Field Service. UK experts for implementation, integration & support. Book your free consultation." />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/FieldServicebanner.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-field-service/" />
-        <meta property="twitter:title" content="Dynamics 365 Field Service Partner | Dynamics Square UK" />
-        <meta property="twitter:description" content="Transform field operations with Dynamics 365 Field Service. UK experts for implementation, integration & support. Book your free consultation." />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/FieldServicebanner.png" />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Dynamics 365 Field Service Partner | Dynamics Square UK"
+        description="Transform field operations with Dynamics 365 Field Service. UK experts for implementation, integration & support. Book your free consultation."
+        image="https://www.dynamicssquare.co.uk/img/FieldServicebanner.png"
+        faqs={faqData.slice(0, 5)}
+      />
       <div className='solution-new-banner-one'>
         <div className='container'>
           <div className='row justify-content-center'>
@@ -103,7 +88,7 @@ const FieldService = () => {
                   <p>As a trusted Dynamics 365 Field Service partner in the UK, Dynamics Square helps small and medium businesses streamline field operations, improve service delivery, and achieve measurable results with an AI-powered CRM.</p>
                 </div>
                 <div className='left-rl'>
-                  <Image src="/img/partner-logo-black.png" width={193} height={55} alt="partner-logo-black" />
+                  <Image src="/img/partner-logo-black.png" width={193} height={55} alt="Microsoft Solutions Partner badge" />
                 </div>
               </div>
             </div>
@@ -172,7 +157,7 @@ const FieldService = () => {
             <div className='col-lg-6'>
               <div className='product-side-001'>
                 <div className="flot-8" style={{ textAlign: 'center' }}>
-                  <Image src="/img/field-service-002.png" width={630} height={256} alt="New Solution" />
+                  <Image src="/img/field-service-002.png" width={630} height={256} alt="Business Challenges Solved by Dynamics 365 Field Service" />
                 </div>
                 <p style={{ paddingTop: '30px' }}>Microsoft Dynamics 365 for field service management is an agentic service solution that helps service teams optimise operations, respond faster to changes, and deliver reliable, high-quality service.</p>
                 <p>No matter the goal is to improve existing service processes or scale operations, <a className='u-i' href="/products/microsoft-dynamics-crm/">Dynamics 365 CRM</a> supports efficient service delivery with greater visibility and control.</p>

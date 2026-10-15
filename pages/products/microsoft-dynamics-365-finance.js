@@ -1,5 +1,4 @@
 import { useRef, useState } from 'react';
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 // import useGsapScrollCards from '../../../hooks/useGsapScrollCards';
@@ -8,6 +7,7 @@ import useCardScrollEffect from "../../components/useCardScrollEffect";
 import BcPopPdf from '../../components/BCPdfPopup';
 import NavBar from '../../components/NavBar';
 import BlogFinanaceCard from '../../components/BlogFinanaceCard';
+import PageSeo from "../../components/PageSeo";
 
 
 
@@ -40,29 +40,13 @@ const BusinessCentral = () => {
 
   return (
     <>
-      <Head>
-        <title>Dynamics 365 Finance Partner | Dynamics Square UK</title>
-        <meta
-          name="description"
-          content="Boost your financial visibility and faster your financial decision making by implementing Microsoft Dynamics 365 Finance. Book a free consultation today."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-finance/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-finance/" />
-        <meta property="og:title" content="Dynamics 365 Finance Partner | Dynamics Square UK" />
-        <meta property="og:description" content="Boost your financial visibility and faster your financial decision making by implementing Microsoft Dynamics 365 Finance. Book a free consultation today." />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/Dynamics-365-Finance-Banner.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-finance/" />
-        <meta property="twitter:title" content="Dynamics 365 Finance Partner | Dynamics Square UK" />
-        <meta property="twitter:description" content="Boost your financial visibility and faster your financial decision making by implementing Microsoft Dynamics 365 Finance. Book a free consultation today." />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/Dynamics-365-Finance-Banner.png" />
-
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Dynamics 365 Finance Partner | Dynamics Square UK"
+        description="Boost your financial visibility and faster your financial decision making by implementing Microsoft Dynamics 365 Finance. Book a free consultation today."
+        image="https://www.dynamicssquare.co.uk/img/Dynamics-365-Finance-Banner.png"
+        faqs={faqData.slice(0, 5)}
+      />
       <div className='solution-new-banner-one'>
         <div className='container'>
           <div className='row justify-content-center'>
@@ -81,19 +65,19 @@ const BusinessCentral = () => {
                 </div>
               </div>
               <div className='m-b-image'>
-                <Image src="/img/Dynamics-365-Finance-Banner.png" alt='Dynamics-365-Finance-Banner' width={1098} height={657} />
+                <Image src="/img/Dynamics-365-Finance-Banner.png" alt="Dynamics 365 Finance" width={1098} height={657} />
               </div>
             </div>
 
           </div>
         </div>
         <div className="solution-new-banner-one-img solution-new-banner-one-img-f">
-          <Image src="/img/f-mobile-banner-one.png" alt="New Solution" width={1920} height={993} className="flot-1" />
+          <Image src="/img/f-mobile-banner-one.png" alt="" width={1920} height={993} className="flot-1" aria-hidden="true" />
           {/* <img src="/img/n-003.png" alt="New Solution" className="flot-2" />
           <img src="/img/n-004.png" alt="New Solution" className="flot-3" />
           <img src="/img/n-005.png" alt="New Solution" className="flot-4" /> */}
           <div className='flot-5  flot-5-a'>
-            <img src="/img/menu-icons/dynamics-365-finance.svg" alt="New Solution" className="flot-img" width={48} height={48} />
+            <img src="/img/menu-icons/dynamics-365-finance.svg" alt="" className="flot-img" width={48} height={48} aria-hidden="true"  loading="lazy" decoding="async" />
           </div>
           {/* <div className='flot-121'>
                         <div className='border-11'>
@@ -137,27 +121,27 @@ const BusinessCentral = () => {
                 <div className="image-list-new-im">
                   <div className='ii-pic-list'>
                     <div className='s-widt-p'>
-                      <img src="/img/rartin-log-01.png" alt="rartin-log-01" width={140} height={54} />
+                      <img src="/img/rartin-log-01.png" alt="Gartner rating 4.3 out of 5" width={140} height={54}  loading="lazy" decoding="async" />
                     </div>
                   </div>
                   <div className='ii-pic-list'>
                     <div className='s-widt-p'>
-                      <img src="/img/rartin-log-02.png" alt="rartin-log-01" width={204} height={54} />
+                      <img src="/img/rartin-log-02.png" alt="Forbes Advisor rating 5 out of 5" width={204} height={54}  loading="lazy" decoding="async" />
                     </div>
                   </div>
                   <div className='ii-pic-list'>
                     <div className='s-widt-p'>
-                      <img src="/img/rartin-log-03.png" alt="rartin-log-01" width={130} height={54} />
+                      <img src="/img/rartin-log-03.png" alt="G2 rating 4 out of 5" width={130} height={54}  loading="lazy" decoding="async" />
                     </div>
                   </div>
                   <div className='ii-pic-list'>
                     <div className='s-widt-p'>
-                      <img src="/img/rartin-log-04.png" alt="rartin-log-01" width={129} height={54} />
+                      <img src="/img/rartin-log-04.png" alt="Software Suggest rating 4.7 out of 5" width={129} height={54}  loading="lazy" decoding="async" />
                     </div>
                   </div>
                   <div className='ii-pic-list'>
                     <div className='s-widt-p'>
-                      <img src="/img/rartin-log-05.png" alt="rartin-log-01" width={155} height={54} />
+                      <img src="/img/rartin-log-05.png" alt="Capterra rating 4 out of 5" width={155} height={54}  loading="lazy" decoding="async" />
                     </div>
                   </div>
                 </div>
@@ -180,9 +164,9 @@ const BusinessCentral = () => {
             <div className='col-lg-6'>
               <div className='product-side-001'>
                 <div className="flot-8">
-                  <Image src="/img/ff-finance-side.png" width={535} height={455} alt="New Solution" />
+                  <Image src="/img/ff-finance-side.png" width={535} height={455} alt="Dynamics 365 Finance Implementation: Why Your Business Needs It" />
                 </div>
-                <img width={563} height={478} src="/img/n-007.png" alt="New Solution" className="flot-9" />
+                <img width={563} height={478} src="/img/n-007.png" alt="" className="flot-9" aria-hidden="true"  loading="lazy" decoding="async" />
               </div>
             </div>
             <div className='col-lg-6 align-self-center'>
@@ -329,21 +313,21 @@ const BusinessCentral = () => {
           <div className='row t-81'>
             <div className='col-lg-4 d-flex'>
               <div className='icons-box-9901'>
-                <img src="/img/bc-8-01.png" width={65} height={65} alt="bc-8-01" />
+                <img src="/img/bc-8-01.png" width={65} height={65} alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                 <h5>106%</h5>
                 <span>ROI over 3 years</span>
               </div>
             </div>
             <div className='col-lg-4 d-flex'>
               <div className='icons-box-9901'>
-                <img src="/img/bc-8-02.png" width={65} height={65} alt="bc-8-02" />
+                <img src="/img/bc-8-02.png" width={65} height={65} alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                 <h5>$3.9M</h5>
                 <span>Legacy cost savings</span>
               </div>
             </div>
             <div className='col-lg-4 d-flex'>
               <div className='icons-box-9901'>
-                <img src="/img/bc-8-03.png" width={65} height={65} alt="bc-8-03" />
+                <img src="/img/bc-8-03.png" width={65} height={65} alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                 <h5>$8.9M</h5>
                 <span>Productivity improvements</span>
               </div>
@@ -430,7 +414,7 @@ const BusinessCentral = () => {
           </div>
         </div>
         <div className='n-014' >
-          <img src="/img/n-014.png" width={604} height={958} alt="Card 6" />
+          <img src="/img/n-014.png" width={604} height={958} alt="Card 6"  loading="lazy" decoding="async" />
         </div>
       </section>
       <section id='section5' className='solution-new-banner-five'>
@@ -447,14 +431,14 @@ const BusinessCentral = () => {
           <div className='row g-5'>
             <div className='col-lg-4 d-flex'>
               <div className='solution-new-card-001'>
-                <img src="/img/ff-finance-i-01.png" width={48} height={49} alt="ff-finance-i-01" />
+                <img src="/img/ff-finance-i-01.png" width={48} height={49} alt="Financial Planning & Analysis"  loading="lazy" decoding="async" />
                 <h3>Financial Planning & Analysis</h3>
                 <p>AI powered budgeting, forecasting, and performance analytics with Copilot assistance.</p>
               </div>
             </div>
             <div className='col-lg-4 d-flex'>
               <div className='solution-new-card-001'>
-                <img src="/img/ff-finance-i-02.png" width={48} height={49} alt="ff-finance-i-02" />
+                <img src="/img/ff-finance-i-02.png" width={48} height={49} alt="Accounting & Financial Close"  loading="lazy" decoding="async" />
                 <h3>Accounting & Financial Close</h3>
                 <p>Automated journal entries, reconciliations, and faster financial closing cycles.</p>
 
@@ -462,7 +446,7 @@ const BusinessCentral = () => {
             </div>
             <div className='col-lg-4 d-flex'>
               <div className='solution-new-card-001'>
-                <img src="/img/ff-finance-i-03.png" width={48} height={49} alt="ff-finance-i-03" />
+                <img src="/img/ff-finance-i-03.png" width={48} height={49} alt="Cash & Treasury Management"  loading="lazy" decoding="async" />
                 <h3>Cash & Treasury Management</h3>
                 <p>Real time cash flow tracking, predictive liquidity insights, and credit risk automation.</p>
 
@@ -470,7 +454,7 @@ const BusinessCentral = () => {
             </div>
             <div className='col-lg-4 d-flex'>
               <div className='solution-new-card-001'>
-                <img src="/img/ff-finance-i-04.png" width={48} height={49} alt="ff-finance-i-04" />
+                <img src="/img/ff-finance-i-04.png" width={48} height={49} alt="Tax Management"  loading="lazy" decoding="async" />
                 <h3>Tax Management</h3>
                 <p>Centralised tax rules, automated calculation, and regulatory compliance across regions.</p>
 
@@ -478,7 +462,7 @@ const BusinessCentral = () => {
             </div>
             <div className='col-lg-4 d-flex'>
               <div className='solution-new-card-001'>
-                <img src="/img/ff-finance-i-05.png" width={48} height={49} alt="ff-finance-i-05" />
+                <img src="/img/ff-finance-i-05.png" width={48} height={49} alt="Quote to Cash"  loading="lazy" decoding="async" />
                 <h3>Quote to Cash</h3>
                 <p>AI driven billing, collections automation, and smarter accounts receivable management.</p>
 
@@ -486,7 +470,7 @@ const BusinessCentral = () => {
             </div>
             <div className='col-lg-4 d-flex'>
               <div className='solution-new-card-001'>
-                <img src="/img/ff-finance-i-06.png" width={48} height={49} alt="ff-finance-i-06" />
+                <img src="/img/ff-finance-i-06.png" width={48} height={49} alt="Global Compliance & Governance"  loading="lazy" decoding="async" />
                 <h3>Global Compliance & Governance</h3>
                 <p>Multi-currency, multi entity, and country specific regulatory support in one system.</p>
 
@@ -494,7 +478,7 @@ const BusinessCentral = () => {
             </div>
             <div className='col-lg-4 d-flex'>
               <div className='solution-new-card-001'>
-                <img src="/img/ff-finance-i-07.png" width={48} height={49} alt="ff-finance-i-07" />
+                <img src="/img/ff-finance-i-07.png" width={48} height={49} alt="Subscription & Revenue Management"  loading="lazy" decoding="async" />
                 <h3>Subscription & Revenue Management</h3>
                 <p>Flexible recurring billing, contract management, and revenue recognition automation.</p>
 
@@ -502,14 +486,14 @@ const BusinessCentral = () => {
             </div>
             <div className='col-lg-4 d-flex'>
               <div className='solution-new-card-001'>
-                <img src="/img/ff-finance-i-08.png" width={48} height={49} alt="ff-finance-i-08" />
+                <img src="/img/ff-finance-i-08.png" width={48} height={49} alt="Expense & Cost Management"  loading="lazy" decoding="async" />
                 <h3>Expense & Cost Management</h3>
                 <p>Automated expense reporting, cost tracking, and role-based approvals to control spend.</p>
               </div>
             </div>
             <div className='col-lg-4 d-flex'>
               <div className='solution-new-card-001'>
-                <img src="/img/ff-finance-i-09.png" width={48} height={49} alt="ff-finance-i-09" />
+                <img src="/img/ff-finance-i-09.png" width={48} height={49} alt="AI (Copilot) & Business Intelligence"  loading="lazy" decoding="async" />
                 <h3>AI (Copilot) & Business Intelligence</h3>
                 <p>Predictive insights, automated reports, and real time decision support with Microsoft Copilot.</p>
               </div>
@@ -543,7 +527,7 @@ const BusinessCentral = () => {
           <div className='row'>
             <div className='col-lg-12'>
               <div className='solution-new-six-img'>
-                <Image src="/img/solution-new-six-img.png" width={1282} height={383} alt="New Solution" />
+                <Image src="/img/solution-new-six-img.png" width={1282} height={383} alt="Enhanced Collections Management" />
               </div>
             </div>
           </div>
@@ -681,7 +665,7 @@ const BusinessCentral = () => {
             </div>
           </div>
         </div>
-        <img src="/img/n-015.png" alt="n-015" />
+        <img src="/img/n-015.png" alt="" aria-hidden="true"  loading="lazy" decoding="async" />
       </section>
       <section id='section8' className='solution-new-pricing'>
         <div className='container'>
@@ -809,7 +793,7 @@ const BusinessCentral = () => {
           <div className="row">
             <div className="col-lg-3 d-flex">
               <div className="upgrade-box-one upgrade-box-one-c d-flex-fil">
-                <Image src="/img/settings_b.png" alt="settings_b" width={48} height={48} />
+                <Image src="/img/settings_b.png" alt="" width={48} height={48} aria-hidden="true" />
                 <h3>Implementation</h3>
                 <p>Get optimum D365 finance implementation services suited to your customised business needs.</p>
                 <a href="#exampleModal" data-bs-toggle="modal">Get Started <i className="bi bi-arrow-right"></i></a>
@@ -826,7 +810,7 @@ const BusinessCentral = () => {
 
             <div className="col-lg-3 d-flex">
               <div className="upgrade-box-one upgrade-box-one-c d-flex-fil">
-                <Image src="/img/person_pin.png" alt="person_pin" width={48} height={48} />
+                <Image src="/img/person_pin.png" alt="" width={48} height={48} aria-hidden="true" />
                 <h3>Support</h3>
                 <p>Ensure smoother and uninterrupted flow in your business with our continuous support services.</p>
                 <a href="#exampleModal" data-bs-toggle="modal">Get Started <i className="bi bi-arrow-right"></i></a>
@@ -835,7 +819,7 @@ const BusinessCentral = () => {
 
             <div className="col-lg-3 d-flex">
               <div className="upgrade-box-one upgrade-box-one-c d-flex-fil">
-                <img className="image-backx" src="/img/free-cons.png" alt="free-cons" />
+                <img className="image-backx" src="/img/free-cons.png" alt="Support"  loading="lazy" decoding="async" />
                 <Image src="/img/forum.png" alt="forum" width={48} height={48} />
                 <h3>Consulting</h3>
                 <p>Get optimum D365 finance implementation services suited to your customised business needs.</p>
@@ -895,7 +879,7 @@ const BusinessCentral = () => {
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
                           <a href='/case-studies/dynamics-365-finance-for-logistic-uk-multi-entity/'>
-                            <img src="/img/logistic-uk.jpg" width={273} height={192} alt="bc-8-17" />
+                            <img src="/img/logistic-uk.jpg" width={273} height={192} alt="Dynamics 365 Finance for Logistic UK Multi Entity"  loading="lazy" decoding="async" />
                             <h3>Dynamics 365 Finance for Logistic UK Multi Entity</h3>
                             <p>How Bertling Group Strengthened Financial Control and Prepared for a Multi-Entity Rollout with Microsoft Dynamics 365...</p>
                             <div className='ct--a'>
@@ -907,7 +891,7 @@ const BusinessCentral = () => {
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
                           <a href='/case-studies/d365-finance-and-operations-for-project-management/'>
-                            <img src="/img/operations-for-project-management.jpg" width={273} height={192} alt="bc-8-18" />
+                            <img src="/img/operations-for-project-management.jpg" width={273} height={192} alt="D365 Finance and Operations for Project Management"  loading="lazy" decoding="async" />
                             <h3>D365 Finance and Operations for Project Management</h3>
                             <p>How a Multi-Entity Engineering Business Built Financial Clarity and Operational Control with Microsoft Dynamics 365..</p>
                             <div className='ct--a'>
@@ -919,7 +903,7 @@ const BusinessCentral = () => {
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
                           <a href='/case-studies/dynamics-365-f&O-implementation-for-healthcare/'>
-                            <img src="/img/f&O-implementation-for-healthcare.jpg" width={273} height={192} alt="bc-8-18" />
+                            <img src="/img/f&O-implementation-for-healthcare.jpg" width={273} height={192} alt="Dynamics 365 F&O Implementation for Healthcare"  loading="lazy" decoding="async" />
                             <h3>Dynamics 365 F&O Implementation for Healthcare</h3>
                             <p>How a Clinical Research Organisation Improved Financial Processes and System Adoption with Dynamics 365 Finance and Operations...</p>
                             <div className='ct--a'>
@@ -936,7 +920,7 @@ const BusinessCentral = () => {
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
                           <a href="/ebook/dynamics-365-finance/">
-                            <img src="/img/nav-guide-pic.png" width={273} height={192} alt="bc-8-17" />
+                            <img src="/img/nav-guide-pic.png" width={273} height={192} alt="Dynamics 365 Finance Guide"  loading="lazy" decoding="async" />
                             <h3>Dynamics 365 Finance Guide </h3>
                             <p>A Quick Start Guide To Dynamics 365 Finance</p>
                             <div className='ct--a'>
@@ -963,7 +947,7 @@ const BusinessCentral = () => {
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
                           <a href="https://youtu.be/44hqw-S27D0?si=mCEpK1p1hVAXszlj" target='_blank'>
-                            <img src="/img/bc-8-20.png" width={273} height={192} alt="bc-8-20" />
+                            <img src="/img/bc-8-20.png" width={273} height={192} alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                             <h3>Is Your Business Ready for an ERP System?</h3>
                             <p>Explore key signs, benefits, and steps to ERP readiness with Dynamics Square experts in this episode.</p>
                             <div className='ct--a'>
@@ -976,7 +960,7 @@ const BusinessCentral = () => {
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
                           <a href="https://youtu.be/Of8upj7BtGo?si=Lsf5SCwBtIpSU1ST" target='_blank'>
-                            <img src="/img/bc-8-22.png" width={273} height={192} alt="bc-8-22" />
+                            <img src="/img/bc-8-22.png" width={273} height={192} alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                             <h3>Signs Your Business Is Ready for an ERP System</h3>
                             <p>Understand when to adopt ERP, its benefits, and how Dynamics 365 drives business transformation.</p>
                             <div className='ct--a'>
@@ -1008,7 +992,7 @@ const BusinessCentral = () => {
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
                           <a href="https://youtu.be/f0EmJkDmpg4?si=8kVDObQ4LcrEHEzO" target='_blank'>
-                            <img src="/img/thumb-01.jpg" width={273} height={192} alt="bc-8-20" />
+                            <img src="/img/thumb-01.jpg" width={273} height={192} alt="Microsoft Dynamics 365 Finance Premium"  loading="lazy" decoding="async" />
                             <h3>Microsoft Dynamics 365 Finance Premium</h3>
                             <p>Introducing business performance management capabilities in Dynamics 365 Finance.</p>
                             <div className='ct--a'>
@@ -1020,7 +1004,7 @@ const BusinessCentral = () => {
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
                           <a href="https://youtu.be/43S3_bV8ht0?si=F4Tmf_ebE7D7HsOS" target='_blank'>
-                            <img src="/img/thumb-02.jpg" width={273} height={192} alt="bc-8-21" />
+                            <img src="/img/thumb-02.jpg" width={273} height={192} alt="Microsoft Copilot for Finance"  loading="lazy" decoding="async" />
                             <h3>Microsoft Copilot for Finance</h3>
                             <p>Introducing Microsoft Copilot for Finance, the AI assistant for finance professionals.</p>
                             <div className='ct--a'>
@@ -1032,7 +1016,7 @@ const BusinessCentral = () => {
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
                           <a href="https://youtu.be/0G2HO5dSVoM?si=VfXiFOIQUnK2RuWO" target='_blank'>
-                            <img src="/img/thumb-03.jpg" width={273} height={192} alt="bc-8-21" />
+                            <img src="/img/thumb-03.jpg" width={273} height={192} alt="Get started with the Financial Reconciliation Agent for Copilot for Finance"  loading="lazy" decoding="async" />
                             <h3>Get started with the Financial Reconciliation Agent for Copilot for Finance</h3>
                             <p>The Financial Reconciliation Agent in Microsoft 365 Copilot for Finance simplifies and automates</p>
                             <div className='ct--a'>
@@ -1049,7 +1033,7 @@ const BusinessCentral = () => {
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
                           <a href="/white-papers/microsoft-finance/">
-                            <img src="/img/finacne-white-paper-category.png" width={273} height={192} alt="bc-8-17" />
+                            <img src="/img/finacne-white-paper-category.png" width={273} height={192} alt="Build Resilience in Your Financial Operations"  loading="lazy" decoding="async" />
                             <h3>Build Resilience in Your Financial Operations</h3>
                             <p>A maturity model designed to strengthen people, processes, and technology.</p>
                             <div className='ct--a'>

@@ -2,7 +2,7 @@ import Head from "next/head";
 import TimerModal from "../../../components/TimerModal";
 import BlogStyles from "../../../components/blog/BlogStyles";
 import {
-  BlogFontPreload,
+  blogFontLinks,
   BlogPageHero,
   ChipNav,
   PagedPostGrid,
@@ -10,6 +10,7 @@ import {
 
 import { BlogService } from "../../../helpers/blogApi";
 import { extractArray, slimCategory, slimPost } from "../../../helpers/blogData";
+import { buildCollectionGraph, jsonLd } from "../../../helpers/schema";
 
 const SITE_URL = "https://www.dynamicssquare.co.uk";
 
@@ -76,8 +77,35 @@ function CategoryBlogs({ blogs, categories, current }) {
         <meta property="og:type" content="website" />
         <meta property="og:title" content={`${current.name} Blogs | Dynamics Square`} />
         <meta property="og:url" content={pageUrl} />
+        <meta property="og:description" content={`Read the latest ${current.name} blogs and insights.`} />
+        <meta property="og:image" content={`${SITE_URL}/img/home-page-og.png`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${current.name} Blogs | Dynamics Square`} />
+        <meta name="twitter:description" content={`Read the latest ${current.name} blogs and insights.`} />
+        <meta name="twitter:image" content={`${SITE_URL}/img/home-page-og.png`} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: jsonLd(
+              buildCollectionGraph({
+                path: `/blog/category/${current.slug}/`,
+                title: `${current.name} Blogs | Dynamics Square`,
+                description: `Read the latest ${current.name} blogs and insights.`,
+                crumbs: [
+                  { name: "Blog", path: "/blog/" },
+                  { name: current.name, path: `/blog/category/${current.slug}/` },
+                ],
+                // The grid's first page (PagedPostGrid shows 9 at a time).
+                items: blogs.slice(0, 9).map((post) => ({
+                  name: post.title,
+                  path: `/blog/${post.title_slug}/`,
+                })),
+              })
+            ),
+          }}
+        />
+        {blogFontLinks()}
       </Head>
-      <BlogFontPreload />
 
       <BlogPageHero
         crumbs={[

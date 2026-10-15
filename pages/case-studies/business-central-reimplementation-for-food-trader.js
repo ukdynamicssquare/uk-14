@@ -1,39 +1,17 @@
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
 import CaseStudyClientCard from "../../components/CaseStudyClientCard";
+import PageSeo from "../../components/PageSeo";
 const DynamicsNav2013BusinessCentralUpgrade = () => {
   return (
     <>
-      <Head>
-        <title>World Food Trading: Business Central Implementation Case Study | Dynamics Square</title>
-        <meta
-          name="description"
-          content="How World Food Trading implemented Business Central across its UK and Danish entities to gain financial control before scaling, with a projected 162% ROI."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/case-studies/business-central-reimplementation-for-food-trader/"
-        />
-        <meta property="og:locale" content="en_GB" />
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content="World Food Trading: Business Central Implementation Case Study | Dynamics Square" />
-        <meta property="og:description" content="How World Food Trading implemented Business Central across its UK and Danish entities to gain financial control before scaling, with a projected 162% ROI." />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/case-studies/business-central-reimplementation-for-food-trader/" />
-        <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/mgg-food-feautre.jpg" />
-        <meta property="og:image:secure_url" content="https://www.dynamicssquare.co.uk/img/mgg-food-feautre.jpg" />
-        <meta property="og:image:width" content="850" />
-        <meta property="og:image:height" content="410" />
-        <meta property="og:image:type" content="image/jpeg" />
-        <meta property="og:image:alt" content="World Food Trading case study – Dynamics Square" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="World Food Trading: Business Central Implementation Case Study | Dynamics Square" />
-        <meta name="twitter:description" content="How World Food Trading implemented Business Central across its UK and Danish entities to gain financial control before scaling, with a projected 162% ROI." />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/mgg-food-feautre.jpg" />
-        <meta name="twitter:image:alt" content="World Food Trading case study – Dynamics Square" />
-      </Head>
+      <PageSeo
+        type="Article"
+        title="World Food Trading: Business Central Implementation Case Study | Dynamics Square"
+        description="How World Food Trading implemented Business Central across its UK and Danish entities to gain financial control before scaling, with a projected 162% ROI."
+        image="https://www.dynamicssquare.co.uk/img/mgg-food-feautre.jpg"
+        imageAlt="World Food Trading case study – Dynamics Square"
+      />
       <section className="hero hero-new-bg">
         <div className="container">
           <div className="row justify-content-center">
@@ -397,7 +375,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="ce-image-cee">
-                <img src="/img/case-s-07.png" alt="World Food Trading Business Central implementation" className="img-fluid" />
+                <img src="/img/case-s-07.png" alt="World Food Trading Business Central implementation" className="img-fluid"  loading="lazy" decoding="async" />
               </div>
             </div>
           </div>
@@ -712,7 +690,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="call_to_action-right over-img">
-                <img src="/img/MaskGroup8.png" alt="image" />
+                <img src="/img/MaskGroup8.png" alt="Business consultant"  loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="col-lg-7 align-self-center">

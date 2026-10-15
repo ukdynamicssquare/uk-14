@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
 import CaseStudyClientCard from "../../components/CaseStudyClientCard";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -7,44 +6,20 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Autoplay, FreeMode, Pagination } from "swiper/modules";
+import PageSeo from "../../components/PageSeo";
 
 
 const AccessDimensionErpToBusinessCentralMigration = () => {
 
   return (
     <>
-      <Head>
-        <title>Omicron Engineering: Access Dimensions to Business Central Case Study | Dynamics Square</title>
-        <meta
-          name="description"
-          content="How Omicron Engineering, a classic Lancia restoration specialist, moved from Access Dimensions to Business Central to simplify costing and margins."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/case-studies/access-dimension-erp-to-business-central-migration/"
-        />
-        <meta property="og:locale" content="en_GB" />
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content="Omicron Engineering: Access Dimensions to Business Central Case Study | Dynamics Square" />
-        <meta property="og:description" content="How Omicron Engineering, a classic Lancia restoration specialist, moved from Access Dimensions to Business Central to simplify costing and margins." />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/case-studies/access-dimension-erp-to-business-central-migration/" />
-        <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/Omicron-Engineering.jpg" />
-        <meta property="og:image:secure_url" content="https://www.dynamicssquare.co.uk/img/Omicron-Engineering.jpg" />
-        <meta property="og:image:width" content="851" />
-        <meta property="og:image:height" content="410" />
-        <meta property="og:image:type" content="image/jpeg" />
-        <meta property="og:image:alt" content="Omicron Engineering case study – Dynamics Square" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="Omicron Engineering: Access Dimensions to Business Central Case Study | Dynamics Square" />
-        <meta name="twitter:description" content="How Omicron Engineering, a classic Lancia restoration specialist, moved from Access Dimensions to Business Central to simplify costing and margins." />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/Omicron-Engineering.jpg" />
-        <meta name="twitter:image:alt" content="Omicron Engineering case study – Dynamics Square" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
+      <PageSeo
+        type="Article"
+        title="Omicron Engineering: Access Dimensions to Business Central Case Study | Dynamics Square"
+        description="How Omicron Engineering, a classic Lancia restoration specialist, moved from Access Dimensions to Business Central to simplify costing and margins."
+        image="/img/Omicron-Engineering.jpg"
+        imageAlt="Omicron Engineering case study – Dynamics Square"
+        extraSchema={{
               "@context": "https://schema.org",
               "@graph": [
                 {
@@ -67,10 +42,13 @@ const AccessDimensionErpToBusinessCentralMigration = () => {
                   }
                 }
               ]
-            })
-          }}
-        />
-      </Head>
+            }}
+      >
+        <meta property="og:image:secure_url" content="https://www.dynamicssquare.co.uk/img/Omicron-Engineering.jpg" />
+        <meta property="og:image:width" content="851" />
+        <meta property="og:image:height" content="410" />
+        <meta property="og:image:type" content="image/jpeg" />
+      </PageSeo>
       <div>
         <section className="hero-1 hero">
           <div className="container">
@@ -234,10 +212,10 @@ const AccessDimensionErpToBusinessCentralMigration = () => {
                             <div className="img-wrp">
                               <Image
                                 src="/img/material-lightbulb-outline.svg"
-                                alt="Food-and-beverage"
+                                alt=""
                                 width={21}
                                 height={30}
-                              />
+                               aria-hidden="true" />
                             </div>
                             <div className="text-wrp-content">
                               <p>Our team has facilitated the global connectivity for the business, leading to a 2X increase in team collaboration.</p>
@@ -374,7 +352,7 @@ const AccessDimensionErpToBusinessCentralMigration = () => {
             <div className="row">
               <div className="col-lg-5">
                 <div className="call_to_action-right over-img">
-                  <Image src="/img/MaskGroup8.png" alt="image" width={339} height={483} />
+                  <Image src="/img/MaskGroup8.png" alt="Business consultant" width={339} height={483} />
                 </div>
               </div>
               <div className="col-lg-7 align-self-center">

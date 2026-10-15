@@ -1,10 +1,10 @@
 import React, { useRef, useState, useEffect } from "react";
-import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
 // import FormGuideBusinessCentral from "../../components/FormGuideBusinessCentral";
 import FormGuide from "../../components/FormGuide";
+import PageSeo from "../../components/PageSeo";
 const PowerBIGuide = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [display, setDisplay] = useState("ds-none");
@@ -34,17 +34,12 @@ const PowerBIGuide = () => {
   };
   return (
     <>
-      <Head>
-        <title>Dynamics 365 Business Central For Small Business [Guide 2026]</title>
-        <meta
-          name="description"
-          content="Learn how Dynamics 365 Business Central helps for small businesses streamline operations, boost productivity, and drive growth efficiently."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/guides/business-central-guide-for-smb/"
-        />
-      </Head>
+      <PageSeo
+        type="Article"
+        title="Dynamics 365 Business Central For Small Business [Guide 2026]"
+        description="Learn how Dynamics 365 Business Central helps for small businesses streamline operations, boost productivity, and drive growth efficiently."
+        image="/img/chapter5-5.png"
+      />
       <section className="banner-guide hero-1 hero">
         <div className="container">
           <div className="row">
@@ -89,7 +84,7 @@ const PowerBIGuide = () => {
             <div className="col-lg-3 col-6">
               <div className="table-of-content-list text-center">
                 <a href="#tabs-1" rel="" target="_self">
-                  <img src="/img/business-central-logo-3.png" alt="" />
+                  <img src="/img/business-central-logo-3.png" alt="Dynamics 365 Business Central logo" />
                   <h3>Chapter 1</h3>
                   <p>Understanding ERP and Business Central </p>
                 </a>
@@ -101,7 +96,7 @@ const PowerBIGuide = () => {
                   <img
                     src="/img/power-2.png"
                     alt="Business Central Features and Benefits"
-                  />
+                   loading="lazy" decoding="async" />
                   <h3>Chapter 2</h3>
                   <p>Where Business Central can be Deployed?</p>
                 </a>
@@ -113,7 +108,7 @@ const PowerBIGuide = () => {
                   <img
                     src="/img/power-3.png"
                     alt="Business Central Dashboard Examples"
-                  />
+                   loading="lazy" decoding="async" />
                   <h3>Chapter 3</h3>
                   <p>
                     Business Central Benefits
@@ -127,7 +122,7 @@ const PowerBIGuide = () => {
                   <img
                     src="/img/power-4.png"
                     alt="Business Central Integration & Automation"
-                  />
+                   loading="lazy" decoding="async" />
                   <h3>Chapter 4</h3>
                   <p>
                     Business Central Pricing and Licensing
@@ -141,7 +136,7 @@ const PowerBIGuide = () => {
                   <img
                     src="/img/power-5.png"
                     alt="Business Central Versions, Pricing & Licensing"
-                  />
+                   loading="lazy" decoding="async" />
                   <h3>Chapter 5</h3>
                   <p>
                     Business Central Capabilities
@@ -155,7 +150,7 @@ const PowerBIGuide = () => {
                   <img
                     src="/img/power-6.png"
                     alt="Business Central vs Others BI Tools"
-                  />
+                   loading="lazy" decoding="async" />
                   <h3>Chapter 6</h3>
                   <p>Business Central vs Other Tools</p>
                 </a>
@@ -167,7 +162,7 @@ const PowerBIGuide = () => {
                   <img
                     src="/img/group-2330.png"
                     alt="Future Scope of Business Central"
-                  />
+                   loading="lazy" decoding="async" />
                   <h3>Chapter 7</h3>
                   <p>What's new in Business Central 2026? </p>
                 </a>
@@ -415,14 +410,13 @@ const PowerBIGuide = () => {
                 <div className="balnde-imge-mode">
                   <img
                     src="/img/business-central-logo-3.png"
-                    alt=""
-                    className="shape-1 shape-2"
-                  />
+                    alt="Dynamics 365 Business Central logo"
+                    className="shape-1 shape-2"  loading="lazy" decoding="async" />
                   <img
                     src="/img/over-lay-shape.png"
-                    alt="over-lay-shape"
+                    alt=""
                     className="overlay-1"
-                  />
+                   aria-hidden="true"  loading="lazy" decoding="async" />
                 </div>
               </header>
             </div>
@@ -448,7 +442,7 @@ const PowerBIGuide = () => {
                 </p>
               </div>
               <div className="iner-pp">
-                <img src="/img/chapter1-1.png" alt="" />
+                <img src="/img/chapter1-1.png" alt="Chapter 1 Understanding ERP and Business Central"  loading="lazy" decoding="async" />
               </div>
               <div className="cont-table-inner">
                 <p>
@@ -467,7 +461,7 @@ const PowerBIGuide = () => {
                 </p>
               </div>
               <div className="iner-pp">
-                <img src="/img/chapter1-2.png" alt="" />
+                <img src="/img/chapter1-2.png" alt="Chapter 1 Understanding ERP and Business Central"  loading="lazy" decoding="async" />
               </div>
               <div className="cont-table-inner">
                 <p>
@@ -481,7 +475,7 @@ const PowerBIGuide = () => {
                 </p>
               </div>
               <div className="iner-pp">
-                <img src="/img/chapter1-3.png" alt="" />
+                <img src="/img/chapter1-3.png" alt="Chapter 1 Understanding ERP and Business Central"  loading="lazy" decoding="async" />
               </div>
               <div className="cont-table-inner">
                 <p>
@@ -495,7 +489,7 @@ const PowerBIGuide = () => {
                 </p>
               </div>
               <div className="iner-pp">
-                <img src="/img/chapter1-4.png" alt="" />
+                <img src="/img/chapter1-4.png" alt="Chapter 1 Understanding ERP and Business Central"  loading="lazy" decoding="async" />
               </div>
               <div className="cont-table-inner">
                 <p>
@@ -520,7 +514,7 @@ const PowerBIGuide = () => {
                 </p>
               </div>
               <div className="iner-pp">
-                <img src="/img/chapter1-5.png" alt="" />
+                <img src="/img/chapter1-5.png" alt="Chapter 1 Understanding ERP and Business Central"  loading="lazy" decoding="async" />
               </div>
               <div className="cont-table-inner">
                 <p>
@@ -550,7 +544,7 @@ const PowerBIGuide = () => {
                 </p>
               </div>
               <div className="iner-pp">
-                <img src="/img/chapter1-6.png" alt="" />
+                <img src="/img/chapter1-6.png" alt="Chapter 1 Understanding ERP and Business Central"  loading="lazy" decoding="async" />
               </div>
               <div className="cont-table-inner">
                 <p>
@@ -578,7 +572,7 @@ const PowerBIGuide = () => {
                 </p>
               </div>
               <div className="iner-pp">
-                <img src="/img/chapter1-7.png" alt="" />
+                <img src="/img/chapter1-7.png" alt="Chapter 1 Understanding ERP and Business Central"  loading="lazy" decoding="async" />
               </div>
               <div className="cont-table-inner">
                 <p>
@@ -634,7 +628,7 @@ const PowerBIGuide = () => {
                 </p>
               </div>
               <div className="iner-pp">
-                <img src="/img/chapter1-8.png" alt="" />
+                <img src="/img/chapter1-8.png" alt="Chapter 1 Understanding ERP and Business Central"  loading="lazy" decoding="async" />
               </div>
               <div className="cont-table-inner">
                 <p>
@@ -661,7 +655,7 @@ const PowerBIGuide = () => {
                 </p>
               </div>
               <div className="iner-pp">
-                <img src="/img/chapter1-9.png" alt="" />
+                <img src="/img/chapter1-9.png" alt="Chapter 1 Understanding ERP and Business Central"  loading="lazy" decoding="async" />
               </div>
               <div className="cont-table-inner">
                 <p>
@@ -683,7 +677,7 @@ const PowerBIGuide = () => {
                 </p>
               </div>
               <div className="iner-pp">
-                <img src="/img/chapter1-10.png" alt="" />
+                <img src="/img/chapter1-10.png" alt="Chapter 1 Understanding ERP and Business Central"  loading="lazy" decoding="async" />
               </div>
               <div className="cont-table-inner">
                 <p>
@@ -714,9 +708,9 @@ const PowerBIGuide = () => {
                 <div className="clint-qt">
                   <img
                     src="/img/quote-up@2x.png"
-                    alt="quote-up"
+                    alt=""
                     className="left"
-                  />
+                   aria-hidden="true"  loading="lazy" decoding="async" />
                   <p>
                     <span style={{ color: "#ee3442", fontWeight: "500" }}>
                       Kambukka
@@ -739,9 +733,9 @@ const PowerBIGuide = () => {
                   <div className="text-right-t">
                     <img
                       src="/img/quote-down@2x.png"
-                      alt="Quote-down"
+                      alt=""
                       className="righ"
-                    />
+                     aria-hidden="true"  loading="lazy" decoding="async" />
                   </div>
                 </div>
               </div>
@@ -749,8 +743,7 @@ const PowerBIGuide = () => {
               <Link href="#powerBIModals" data-bs-toggle="modal">
                   <img
                     src="/img/business-guide-call-to-banner-1.png"
-                    alt=""
-                  />
+                    alt="Chapter 2 Where Business Central can be Deployed?"  loading="lazy" decoding="async" />
                 </Link>
               </div>
             </div>
@@ -773,14 +766,13 @@ const PowerBIGuide = () => {
                 <div className="balnde-imge-mode">
                   <img
                     src="/img/Business-Central-depolyed.png"
-                    alt=""
-                    className="shape-1 shape-2"
-                  />
+                    alt="Chapter 2 Where Business Central can be Deployed?"
+                    className="shape-1 shape-2"  loading="lazy" decoding="async" />
                   <img
                     src="/img/over-lay-shape.png"
-                    alt="over-lay-shape"
+                    alt=""
                     className="overlay-1"
-                  />
+                   aria-hidden="true"  loading="lazy" decoding="async" />
                 </div>
               </header>
             </div>
@@ -806,7 +798,7 @@ const PowerBIGuide = () => {
                 </p>
               </div>
               <div className="iner-pp">
-                <img src="/img/chapter2-1.png" alt="" />
+                <img src="/img/chapter2-1.png" alt="Chapter 2 Where Business Central can be Deployed?"  loading="lazy" decoding="async" />
               </div>
               <div className="cont-table-inner">
                 <p>
@@ -850,7 +842,7 @@ const PowerBIGuide = () => {
                 </p>
               </div>
               <div className="iner-pp">
-                <img src="/img/chapter2-2.png" alt="" />
+                <img src="/img/chapter2-2.png" alt="Chapter 2 Where Business Central can be Deployed?"  loading="lazy" decoding="async" />
               </div>
               <div className="cont-table-inner">
                 <p>It offers numerous benefits to users, which are:</p>
@@ -902,7 +894,7 @@ const PowerBIGuide = () => {
                 </p>
               </div>
               <div className="iner-pp">
-                <img src="/img/chapter2-3.png" alt="" />
+                <img src="/img/chapter2-3.png" alt="Chapter 2 Where Business Central can be Deployed?"  loading="lazy" decoding="async" />
               </div>
               <div className="cont-table-inner">
                 <p>Some of the on-premises deployment benefits are:</p>
@@ -946,7 +938,7 @@ const PowerBIGuide = () => {
               </div>
 
               <div className="iner-pp">
-                <img src="/img/chapter2-4.png" alt="" />
+                <img src="/img/chapter2-4.png" alt="Chapter 2 Where Business Central can be Deployed?"  loading="lazy" decoding="async" />
               </div>
               <div className="cont-table-inner">
                 <p>
@@ -960,7 +952,7 @@ const PowerBIGuide = () => {
                 </p>
               </div>
               <div className="iner-pp">
-                <img src="/img/chapter2-5.png" alt="" />
+                <img src="/img/chapter2-5.png" alt="Chapter 2 Where Business Central can be Deployed?"  loading="lazy" decoding="async" />
               </div>
               <div className="cont-table-inner">
                 <p>
@@ -974,7 +966,7 @@ const PowerBIGuide = () => {
                 </p>
               </div>
               <div className="iner-pp">
-                <img src="/img/chapter2-6.png" alt="" />
+                <img src="/img/chapter2-6.png" alt="Chapter 2 Where Business Central can be Deployed?"  loading="lazy" decoding="async" />
               </div>
               <div className="cont-table-inner">
                 <p>
@@ -1034,9 +1026,9 @@ const PowerBIGuide = () => {
                 <div className="clint-qt">
                   <img
                     src="/img/quote-up@2x.png"
-                    alt="quote-up"
+                    alt=""
                     className="left"
-                  />
+                   aria-hidden="true"  loading="lazy" decoding="async" />
                   <p>
                     <span style={{ color: "#ee3442", fontWeight: "500" }}>
                       Liftstar Group
@@ -1062,9 +1054,9 @@ const PowerBIGuide = () => {
                   <div className="text-right-t">
                     <img
                       src="/img/quote-down@2x.png"
-                      alt="Quote-down"
+                      alt=""
                       className="righ"
-                    />
+                     aria-hidden="true"  loading="lazy" decoding="async" />
                   </div>
                 </div>
               </div>
@@ -1089,14 +1081,13 @@ const PowerBIGuide = () => {
                 <div className="balnde-imge-mode">
                   <img
                     src="/img/Business-Central-Benefits.png"
-                    alt="Business-Central-Benefits"
-                    className="shape-1 shape-2"
-                  />
+                    alt="Chapter 3 Business Central Benefits: Discover Top Reasons why SMBs Choose It"
+                    className="shape-1 shape-2"  loading="lazy" decoding="async" />
                   <img
                     src="/img/over-lay-shape.png"
-                    alt="over-lay-shape"
+                    alt=""
                     className="overlay-1"
-                  />
+                   aria-hidden="true"  loading="lazy" decoding="async" />
                 </div>
               </header>
             </div>
@@ -1129,7 +1120,7 @@ const PowerBIGuide = () => {
               </div>
 
               <div className="iner-pp">
-                <img src="/img/chapter3-1.png" alt="" />
+                <img src="/img/chapter3-1.png" alt="Chapter 3 Business Central Benefits: Discover Top Reasons why SMBs Choose It"  loading="lazy" decoding="async" />
               </div>
               <div className="cont-table-inner">
                 <p>
@@ -1145,7 +1136,7 @@ const PowerBIGuide = () => {
                 </p>
               </div>
               <div className="iner-pp">
-                <img src="/img/chapter3-2.png" alt="" />
+                <img src="/img/chapter3-2.png" alt="Chapter 3 Business Central Benefits: Discover Top Reasons why SMBs Choose It"  loading="lazy" decoding="async" />
               </div>
 
               <div className="cont-table-inner">
@@ -1182,7 +1173,7 @@ const PowerBIGuide = () => {
                 <p>SMBs choose ERP systems over standalone platforms because</p>
               </div>
               <div className="iner-pp">
-                <img src="/img/chapter3-3.png" alt="" />
+                <img src="/img/chapter3-3.png" alt="Chapter 3 Business Central Benefits: Discover Top Reasons why SMBs Choose It"  loading="lazy" decoding="async" />
               </div>
               <div className="cont-table-inner">
                 <p>
@@ -1197,7 +1188,7 @@ const PowerBIGuide = () => {
                 </p>
               </div>
               <div className="iner-pp">
-                <img src="/img/chapter3-4.png" alt="" />
+                <img src="/img/chapter3-4.png" alt="Chapter 3 Business Central Benefits: Discover Top Reasons why SMBs Choose It"  loading="lazy" decoding="async" />
               </div>
               <div className="cont-table-inner">
                 <p>
@@ -1246,7 +1237,7 @@ const PowerBIGuide = () => {
                 </p>
               </div>
               <div className="iner-pp">
-                <img src="/img/chapter3-5.png" alt="" />
+                <img src="/img/chapter3-5.png" alt="Chapter 3 Business Central Benefits: Discover Top Reasons why SMBs Choose It"  loading="lazy" decoding="async" />
               </div>
               <div className="cont-table-inner">
                 <p>
@@ -1262,7 +1253,7 @@ const PowerBIGuide = () => {
               </div>
 
               <div className="iner-pp">
-                <img src="/img/chapter3-6.png" alt="" />
+                <img src="/img/chapter3-6.png" alt="Chapter 3 Business Central Benefits: Discover Top Reasons why SMBs Choose It"  loading="lazy" decoding="async" />
               </div>
               <div className="cont-table-inner">
                 <p>
@@ -1283,9 +1274,9 @@ const PowerBIGuide = () => {
                 <div className="clint-qt">
                   <img
                     src="/img/quote-up@2x.png"
-                    alt="quote-up"
+                    alt=""
                     className="left"
-                  />
+                   aria-hidden="true"  loading="lazy" decoding="async" />
                   <p>
                     <span style={{ color: "#ee3442", fontWeight: "500" }}>
                       Leysieffer GmbH & Co.
@@ -1311,9 +1302,9 @@ const PowerBIGuide = () => {
                   <div className="text-right-t">
                     <img
                       src="/img/quote-down@2x.png"
-                      alt="Quote-down"
+                      alt=""
                       className="righ"
-                    />
+                     aria-hidden="true"  loading="lazy" decoding="async" />
                   </div>
                 </div>
               </div>
@@ -1321,8 +1312,7 @@ const PowerBIGuide = () => {
               <Link href="#powerBIModals" data-bs-toggle="modal">
                   <img
                     src="/img/business-guide-call-to-banner-2.png"
-                    alt=""
-                  />
+                    alt="Chapter 4 Business Central Capabilities: Accelerate your Business Growth using Existing Resources"  loading="lazy" decoding="async" />
                 </Link>
               </div>
             </div>
@@ -1346,14 +1336,13 @@ const PowerBIGuide = () => {
                 <div className="balnde-imge-mode">
                   <img
                     src="/img/Busines-cent-Accelerate.png"
-                    alt="Business-central-Accelerate"
-                    className="shape-1 shape-2"
-                  />
+                    alt="Chapter 4 Business Central Capabilities: Accelerate your Business Growth using Existing Resources"
+                    className="shape-1 shape-2"  loading="lazy" decoding="async" />
                   <img
                     src="/img/over-lay-shape.png"
-                    alt="over-lay-shape"
+                    alt=""
                     className="overlay-1"
-                  />
+                   aria-hidden="true"  loading="lazy" decoding="async" />
                 </div>
               </header>
             </div>
@@ -1377,10 +1366,10 @@ const PowerBIGuide = () => {
               </div>
 
               <div className="iner-pp">
-                <img src="/img/chapter4-2.png" alt="" />
+                <img src="/img/chapter4-2.png" alt="Chapter 4 Business Central Capabilities: Accelerate your Business Growth using Existing Resources"  loading="lazy" decoding="async" />
               </div>
               <div className="iner-pp">
-                <img src="/img/chapter4-1.png" alt="" />
+                <img src="/img/chapter4-1.png" alt="Chapter 4 Business Central Capabilities: Accelerate your Business Growth using Existing Resources"  loading="lazy" decoding="async" />
               </div>
               <div className="cont-table-inner">
                 <p>
@@ -1936,9 +1925,9 @@ const PowerBIGuide = () => {
                 <div className="clint-qt">
                   <img
                     src="/img/quote-up@2x.png"
-                    alt="quote-up"
+                    alt=""
                     className="left"
-                  />
+                   aria-hidden="true"  loading="lazy" decoding="async" />
                   <p>
                     <span style={{ color: "#ee3442", fontWeight: "500" }}>
                       Ultimation Industries
@@ -1965,9 +1954,9 @@ const PowerBIGuide = () => {
                   <div className="text-right-t">
                     <img
                       src="/img/quote-down@2x.png"
-                      alt="Quote-down"
+                      alt=""
                       className="righ"
-                    />
+                     aria-hidden="true"  loading="lazy" decoding="async" />
                   </div>
                 </div>
               </div>
@@ -1993,12 +1982,12 @@ const PowerBIGuide = () => {
                     src="/img/PowerBi-Licensing.png"
                     alt="Power BI Versions, Pricing, and Licensing"
                     className="shape-1 shape-2"
-                  />
+                   loading="lazy" decoding="async" />
                   <img
                     src="/img/over-lay-shape.png"
-                    alt="over-lay-shape"
+                    alt=""
                     className="overlay-1"
-                  />
+                   aria-hidden="true"  loading="lazy" decoding="async" />
                 </div>
               </header>
             </div>
@@ -2041,7 +2030,7 @@ const PowerBIGuide = () => {
               </div>
 
               <div className="iner-pp">
-                <img src="/img/chapter5-1.png" alt="" />
+                <img src="/img/chapter5-1.png" alt="Chapter 5 Microsoft Business Central Pricing and Licensing: Cost-effective and Efficient"  loading="lazy" decoding="async" />
               </div>
               <div className="cont-table-inner">
                 <p>
@@ -2064,7 +2053,7 @@ const PowerBIGuide = () => {
                 </p>
               </div>
               <div className="iner-pp">
-                <img src="/img/chapter5-2.png" alt="" />
+                <img src="/img/chapter5-2.png" alt="Chapter 5 Microsoft Business Central Pricing and Licensing: Cost-effective and Efficient"  loading="lazy" decoding="async" />
               </div>
               <div className="cont-table-inner">
                 <p>
@@ -2149,7 +2138,7 @@ const PowerBIGuide = () => {
                 </p>
               </div>
               <div className="iner-pp">
-                <img src="/img/chapter5-3.png" alt="" />
+                <img src="/img/chapter5-3.png" alt="Chapter 5 Microsoft Business Central Pricing and Licensing: Cost-effective and Efficient"  loading="lazy" decoding="async" />
               </div>
               <div className="cont-table-inner">
                 <p>
@@ -2159,7 +2148,7 @@ const PowerBIGuide = () => {
                 </p>
               </div>
               <div className="iner-pp">
-                <img src="/img/chapter5-6.png" alt="" />
+                <img src="/img/chapter5-6.png" alt="Chapter 5 Microsoft Business Central Pricing and Licensing: Cost-effective and Efficient"  loading="lazy" decoding="async" />
               </div>
               <div className="cont-table-inner">
                 <p>
@@ -2187,7 +2176,7 @@ const PowerBIGuide = () => {
                 </p>
               </div>
               <div className="iner-pp">
-                <img src="/img/chapter5-4.png" alt="" />
+                <img src="/img/chapter5-4.png" alt="Chapter 5 Microsoft Business Central Pricing and Licensing: Cost-effective and Efficient"  loading="lazy" decoding="async" />
               </div>
               <div className="cont-table-inner">
                 <p>
@@ -2242,7 +2231,7 @@ const PowerBIGuide = () => {
                 </p>
               </div>
               <div className="iner-pp">
-                <img src="/img/chapter5-5.png" alt="" />
+                <img src="/img/chapter5-5.png" alt="Chapter 5 Microsoft Business Central Pricing and Licensing: Cost-effective and Efficient"  loading="lazy" decoding="async" />
               </div>
 
               <div className="cont-table-inner">
@@ -2250,9 +2239,9 @@ const PowerBIGuide = () => {
                 <div className="clint-qt">
                   <img
                     src="/img/quote-up@2x.png"
-                    alt="quote-up"
+                    alt=""
                     className="left"
-                  />
+                   aria-hidden="true"  loading="lazy" decoding="async" />
                   <p>
                     <span style={{ color: "#ee3442", fontWeight: "500" }}>
                       Unger Fabrikker{" "}
@@ -2277,9 +2266,9 @@ const PowerBIGuide = () => {
                   <div className="text-right-t">
                     <img
                       src="/img/quote-down@2x.png"
-                      alt="Quote-down"
+                      alt=""
                       className="righ"
-                    />
+                     aria-hidden="true"  loading="lazy" decoding="async" />
                   </div>
                 </div>
               </div>
@@ -2287,8 +2276,7 @@ const PowerBIGuide = () => {
               <Link href="#powerBIModals" data-bs-toggle="modal">
                   <img
                     src="/img/business-guide-call-to-banner-3.png"
-                    alt=""
-                  />
+                    alt="Chapter 6 Business Central vs Other Tools"  loading="lazy" decoding="async" />
                 </Link>
               </div>
             </div>
@@ -2312,12 +2300,12 @@ const PowerBIGuide = () => {
                     src="/img/PowerBi-vs.png"
                     alt="Power BI vs. Competitors"
                     className="shape-1 shape-2"
-                  />
+                   loading="lazy" decoding="async" />
                   <img
                     src="/img/over-lay-shape.png"
-                    alt="over-lay-shape"
+                    alt=""
                     className="overlay-1"
-                  />
+                   aria-hidden="true"  loading="lazy" decoding="async" />
                 </div>
               </header>
             </div>
@@ -2336,31 +2324,31 @@ const PowerBIGuide = () => {
                 </p>
               </div>
               <div className="iner-pp">
-                <img src="/img/chapter6-1.png" alt="" />
+                <img src="/img/chapter6-1.png" alt="Chapter 6 Business Central vs Other Tools"  loading="lazy" decoding="async" />
               </div>
               <div className="iner-pp">
-                <img src="/img/chapter6-2.png" alt="" />
+                <img src="/img/chapter6-2.png" alt="Chapter 6 Business Central vs Other Tools"  loading="lazy" decoding="async" />
               </div>
               <div className="iner-pp">
-                <img src="/img/chapter6-3.png" alt="" />
+                <img src="/img/chapter6-3.png" alt="Chapter 6 Business Central vs Other Tools"  loading="lazy" decoding="async" />
               </div>
               <div className="iner-pp">
-                <img src="/img/chapter6-4.png" alt="" />
+                <img src="/img/chapter6-4.png" alt="Chapter 6 Business Central vs Other Tools"  loading="lazy" decoding="async" />
               </div>
               <div className="iner-pp">
-                <img src="/img/chapter6-5.png" alt="" />
+                <img src="/img/chapter6-5.png" alt="Chapter 6 Business Central vs Other Tools"  loading="lazy" decoding="async" />
               </div>
               <div className="iner-pp">
-                <img src="/img/chapter6-6.png" alt="" />
+                <img src="/img/chapter6-6.png" alt="Chapter 6 Business Central vs Other Tools"  loading="lazy" decoding="async" />
               </div>
               <div className="cont-table-inner">
                 <div className="ttx">Use Case:</div>
                 <div className="clint-qt">
                   <img
                     src="/img/quote-up@2x.png"
-                    alt="quote-up"
+                    alt=""
                     className="left"
-                  />
+                   aria-hidden="true"  loading="lazy" decoding="async" />
                   <p>
                     <span style={{ color: "#ee3442", fontWeight: "500" }}>
                       SPY Alarms
@@ -2391,9 +2379,9 @@ const PowerBIGuide = () => {
                   <div className="text-right-t">
                     <img
                       src="/img/quote-down@2x.png"
-                      alt="Quote-down"
+                      alt=""
                       className="righ"
-                    />
+                     aria-hidden="true"  loading="lazy" decoding="async" />
                   </div>
                 </div>
               </div>
@@ -2401,8 +2389,7 @@ const PowerBIGuide = () => {
               <Link href="#powerBIModals" data-bs-toggle="modal">
                   <img
                     src="/img/business-guide-call-to-banner-1.png"
-                    alt=""
-                  />
+                    alt="Chapter 7 What's new in Business Central 2026?"  loading="lazy" decoding="async" />
                 </Link>
               </div>
             </div>
@@ -2424,14 +2411,13 @@ const PowerBIGuide = () => {
                 <div className="balnde-imge-mode">
                   <img
                     src="/img/busine-integration.png"
-                    alt=""
-                    className="shape-1 shape-2"
-                  />
+                    alt="Chapter 7 What's new in Business Central 2026?"
+                    className="shape-1 shape-2"  loading="lazy" decoding="async" />
                   <img
                     src="/img/over-lay-shape.png"
-                    alt="over-lay-shape"
+                    alt=""
                     className="overlay-1"
-                  />
+                   aria-hidden="true"  loading="lazy" decoding="async" />
                 </div>
               </header>
             </div>
@@ -2585,7 +2571,7 @@ const PowerBIGuide = () => {
               </div>
 
               <div className="iner-pp">
-                <img src="/img/chapter7-1.png" alt="" />
+                <img src="/img/chapter7-1.png" alt="Chapter 7 What's new in Business Central 2026?"  loading="lazy" decoding="async" />
               </div>
 
               <div className="cont-table-inner">
@@ -2598,7 +2584,7 @@ const PowerBIGuide = () => {
               </div>
 
               <div className="iner-pp">
-                <img src="/img/chapter7-2.png" alt="" />
+                <img src="/img/chapter7-2.png" alt="Chapter 7 What's new in Business Central 2026?"  loading="lazy" decoding="async" />
               </div>
 
               <div className="cont-table-inner">
@@ -2611,7 +2597,7 @@ const PowerBIGuide = () => {
               </div>
 
               <div className="iner-pp">
-                <img src="/img/chapter7-3.png" alt="" />
+                <img src="/img/chapter7-3.png" alt="Chapter 7 What's new in Business Central 2026?"  loading="lazy" decoding="async" />
               </div>
 
               <div className="cont-table-inner">
@@ -2624,7 +2610,7 @@ const PowerBIGuide = () => {
               </div>
 
               <div className="iner-pp">
-                <img src="/img/chapter7-4.png" alt="" />
+                <img src="/img/chapter7-4.png" alt="Chapter 7 What's new in Business Central 2026?"  loading="lazy" decoding="async" />
               </div>
 
               <div className="cont-table-inner">
@@ -2640,7 +2626,7 @@ const PowerBIGuide = () => {
               </div>
 
               <div className="iner-pp">
-                <img src="/img/chapter7-5.png" alt="" />
+                <img src="/img/chapter7-5.png" alt="Chapter 7 What's new in Business Central 2026?"  loading="lazy" decoding="async" />
               </div>
 
               <div className="cont-table-inner">
@@ -2665,7 +2651,7 @@ const PowerBIGuide = () => {
               </div>
 
               <div className="iner-pp">
-                <img src="/img/chapter7-6.png" alt="" />
+                <img src="/img/chapter7-6.png" alt="Chapter 7 What's new in Business Central 2026?"  loading="lazy" decoding="async" />
               </div>
 
               <div className="cont-table-inner">
@@ -2735,8 +2721,7 @@ const PowerBIGuide = () => {
               <Link href="#powerBIModals" data-bs-toggle="modal">
                   <img
                     src="/img/business-guide-call-to-banner-3.png"
-                    alt=""
-                  />
+                    alt="Conclusion"  loading="lazy" decoding="async" />
                 </Link>
               </div>
             </div>
@@ -2757,14 +2742,13 @@ const PowerBIGuide = () => {
                 <div className="balnde-imge-mode">
                   <img
                     src="/img/business-FAQ.png"
-                    alt=""
-                    className="shape-1 shape-2"
-                  />
+                    alt="Conclusion"
+                    className="shape-1 shape-2"  loading="lazy" decoding="async" />
                   <img
                     src="/img/over-lay-shape.png"
-                    alt="over-lay-shape"
+                    alt=""
                     className="overlay-1"
-                  />
+                   aria-hidden="true"  loading="lazy" decoding="async" />
                 </div>
               </header>
             </div>
@@ -2844,9 +2828,9 @@ const PowerBIGuide = () => {
                 <div className="clint-qt">
                   <img
                     src="/img/quote-up@2x.png"
-                    alt="quote-up"
+                    alt=""
                     className="left"
-                  />
+                   aria-hidden="true"  loading="lazy" decoding="async" />
                   <p>
                     <span style={{ color: "#ee3442", fontWeight: "500" }}>
                       Klepper Lifestyle GmbH
@@ -2872,9 +2856,9 @@ const PowerBIGuide = () => {
                   <div className="text-right-t">
                     <img
                       src="/img/quote-down@2x.png"
-                      alt="Quote-down"
+                      alt=""
                       className="righ"
-                    />
+                     aria-hidden="true"  loading="lazy" decoding="async" />
                   </div>
                 </div>
               </div>

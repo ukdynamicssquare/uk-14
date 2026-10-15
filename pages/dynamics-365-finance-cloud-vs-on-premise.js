@@ -1,23 +1,16 @@
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
+import PageSeo from "../components/PageSeo";
 
 const FinanceCloudvsOnpremise = () => {
   return (
     <>
-      <Head>
-        <title>
-          Dynamics 365 Finance - Cloud vs On-premise | Dynamics Square
-        </title>
-        <meta
-          name="description"
-          content="
-          Get the quick comparison of Dynamics 365 Finance - cloud vs on-premises and choose the best option for your unique business while enabling it for accelerated growth. "  />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/dynamics-365-finance-cloud-vs-on-premise/"
-        />
-      </Head>
+      <PageSeo
+        type="Article"
+        title="Dynamics 365 Finance - Cloud vs On-premise | Dynamics Square"
+        description="Get the quick comparison of Dynamics 365 Finance - cloud vs on-premises and choose the best option for your unique business while enabling it for accelerated growth."
+        image="/img/Dynamics365-SCM.png"
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -45,7 +38,7 @@ const FinanceCloudvsOnpremise = () => {
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/Dynamics365-SCM.png" alt="Dynamics365-SCM" width={668} height={507} priority = {true} />
+              <Image src="/img/Dynamics365-SCM.png" alt="Dynamics 365 Finance Cloud vs On-Premise" width={668} height={507} priority = {true} />
             </div>
           </div>
         </div>
@@ -350,7 +343,7 @@ const FinanceCloudvsOnpremise = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="call_to_action-right over-img">
-                <img src="/img/MaskGroup8.png" alt="image" />
+                <img src="/img/MaskGroup8.png" alt="Business consultant" />
               </div>
             </div>
             <div className="col-lg-7 align-self-center">

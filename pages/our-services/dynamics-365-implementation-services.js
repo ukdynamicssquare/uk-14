@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -8,35 +7,63 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import { FreeMode, Navigation, Thumbs, Autoplay } from "swiper/modules";
+import PageSeo from "../../components/PageSeo";
+// Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
+const PAGE_FAQS = [
+  {
+    "question": "What is Microsoft Dynamics 365?",
+    "answer": "Microsoft Dynamics 365 is an all-in-one business management tool with the added applications of ERP and CRM. It is a cloud-based tool capable of enhancing the efficiency and productivity of your business using technologies like AI and ML."
+  },
+  {
+    "question": "How much time does implementation take?",
+    "answer": "There is no absolute data about the exact time taken in the implementation process. It depends on various factors, including business requirements, deployment options, the complexity of business, and customized requirements."
+  },
+  {
+    "question": "How to choose the right Dynamics 365 implementation partner?",
+    "answer": "Selecting the right partner is a task that needs a lot of effort. However, various factors must be evaluated before selecting the right partner, including precious work, expertise in a particular module, support availability, time to implement, and implementation cost."
+  },
+  {
+    "question": "What is the cost of implementing Dynamics 365?",
+    "answer": "The cost of implementation depends on various factors, including business requirements, server deployment, business complexity, process types, and data amount. However, your implementation partner will get you the exact cost and resolve your related issues."
+  },
+  {
+    "question": "Are there any specialized Dynamics 365 implementation partners?",
+    "answer": "Yes, many partners have been providing D365 implementation services for years. They have specified industry verticals for whom they serve. You need to check with the partner whether they belong to your industry or not."
+  },
+  {
+    "question": "What is the role of Dynamics Square in D365 Implementation?",
+    "answer": "Dynamics Square is one of the leading implementation support partners in the UK and has been providing its services for the last 14 years. Our team is an expert in consulting, implementing, upgrade, and providing support for modules of Dynamics Square."
+  },
+  {
+    "question": "What is the process of Dynamics 365 Sales implementation?",
+    "answer": "The implementation process of Dynamics 365 and Dynamics 365 Sales is slightly different. Dynamics 365 is a full package consisting of CRM and ERP solutions, whereas Sales is one of the modules of 365 to streamline the whole sales process."
+  },
+  {
+    "question": "Is Business Central Implementation different from Dynamics 365?",
+    "answer": "Yes, Business Central implementation is a low-cost and less time-consuming process than D365. Microsoft Dynamics Business Central is an ERP solution with some parts of CRM, but Dynamics 365 is a fully-fledged ERP and CRM solution built to transform the overall business management."
+  },
+  {
+    "question": "Can we integrate Microsoft Dynamics 365 Finance with Dynamics 365?",
+    "answer": "MS Dynamics 365 Finance is a part of Dynamics 365 and comes together in the package. However, you need to pay an extra licensing fee starting from £50.00 per user/month (Sales Professional) or £80.70 per user/month (Sales Enterprise) to avail the features and capabilities of Sales."
+  },
+  {
+    "question": "Does Dynamics 365 Supply Chain Management come with Dynamics 365?",
+    "answer": "Yes, being a part of Dynamics 365, Supply Chain Management comes as a standard. To avail of D365 Supply Chain Management services, users have to pay a subscription fee starting from £161.50 per user per month."
+  }
+];
+
 
 const ImplementationServices = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   return (
     <>
-      <Head>
-        <title>Microsoft Dynamics 365 Implementation Services</title>
-        <meta
-          name="description"
-          content="Expert Dynamics 365 implementation services for seamless integration, improved efficiency, and business transformation. Contact us Dynamics Square UK for a consultation!"
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/our-services/dynamics-365-implementation-services/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/our-services/dynamics-365-implementation-services/" />
-        <meta property="og:title" content="Microsoft Dynamics 365 Implementation Services" />
-        <meta property="og:description" content="Expert Dynamics 365 implementation services for seamless integration, improved efficiency, and business transformation. Contact us Dynamics Square UK for a consultation!" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/implimenation-service-banner.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/our-services/dynamics-365-implementation-services/" />
-        <meta property="twitter:title" content="Microsoft Dynamics 365 Implementation Services" />
-        <meta property="twitter:description" content="Expert Dynamics 365 implementation services for seamless integration, improved efficiency, and business transformation. Contact us Dynamics Square UK for a consultation!" />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/implimenation-service-banner.png" />
-
-        
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Microsoft Dynamics 365 Implementation Services"
+        description="Expert Dynamics 365 implementation services for seamless integration, improved efficiency, and business transformation. Contact us Dynamics Square UK for a consultation!"
+        image="https://www.dynamicssquare.co.uk/img/implimenation-service-banner.png"
+        faqs={PAGE_FAQS}
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -94,9 +121,8 @@ const ImplementationServices = () => {
               <div className="busine_service_bottom-left custom012">
                 <Image
                   src="/img/microosoft-partner.png"
-                  alt="microosoft-partner.png"
-                  width={625} height={651}
-                />
+                  alt="Microsoft Solutions Partner badge"
+                  width={625} height={651} />
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
@@ -133,10 +159,9 @@ const ImplementationServices = () => {
               <div className="custom-bg-001-right">
                 <Image
                   src="/img/Dynamics-365-overview.svg"
-                  alt="Dynamics-365-overview"
+                  alt="Delivering Domain-Specific & Agile Implementation Approach"
                   width={455}
-                  height={432}
-                />
+                  height={432} />
               </div>
             </div>
             <div className="col-lg-1"></div>
@@ -160,9 +185,9 @@ const ImplementationServices = () => {
                 <div className="style-grid-icons">
                   <Image
                     src="/img/supply-chain-icons.svg"
-                    alt="supply-chain-icons"
+                    alt=""
                     width={94} height={94}
-                  />
+                   aria-hidden="true" />
                 </div>
                 <div className="style-grid-content">
                   <h3>Supply Chain</h3>
@@ -177,7 +202,7 @@ const ImplementationServices = () => {
 
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                  <Image src="/img/marketing-icons.svg" alt="marketing-icons"  width={94} height={94} />
+                  <Image src="/img/marketing-icons.svg" alt=""  width={94} height={94} aria-hidden="true" />
                 </div>
                 <div className="style-grid-content">
                   <h3>Marketing</h3>
@@ -195,9 +220,9 @@ const ImplementationServices = () => {
                 <div className="style-grid-icons">
                   <Image
                     src="/img/Field-Service-icons.svg"
-                    alt="Field-Service-icons"
+                    alt=""
                     width={94} height={94}
-                  />
+                   aria-hidden="true" />
                 </div>
                 <div className="style-grid-content">
                   <h3>Field Service</h3>
@@ -215,7 +240,7 @@ const ImplementationServices = () => {
               </div>
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                  <Image src="/img/commerce-icons.svg" alt="commerce-icons"  width={94} height={94} />
+                  <Image src="/img/commerce-icons.svg" alt=""  width={94} height={94} aria-hidden="true" />
                 </div>
                 <div className="style-grid-content">
                   <h3>Commerce</h3>
@@ -231,7 +256,7 @@ const ImplementationServices = () => {
             <div className="col-lg-6">
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                  <Image src="/img/finance-icns-1.svg" alt="finance-icns-1" width={94} height={94} />
+                  <Image src="/img/finance-icns-1.svg" alt="Finance" width={94} height={94} />
                 </div>
                 <div className="style-grid-content">
                   <h3>Finance</h3>
@@ -260,7 +285,7 @@ const ImplementationServices = () => {
               </div>
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                  <Image src="/img/Customer-Service.svg" alt="Customer-Service"  width={94} height={94} />
+                  <Image src="/img/Customer-Service.svg" alt="Customer Service"  width={94} height={94} />
                 </div>
                 <div className="style-grid-content">
                   <h3>Customer Service</h3>
@@ -276,9 +301,9 @@ const ImplementationServices = () => {
                 <div className="style-grid-icons">
                   <Image
                     src="/img/Project-Management-icons.svg"
-                    alt="Project-Management-icons"
+                    alt=""
                     width={94} height={94}
-                  />
+                   aria-hidden="true" />
                 </div>
                 <div className="style-grid-content">
                   <h3>Project Management</h3>
@@ -323,7 +348,7 @@ const ImplementationServices = () => {
           <div className="row">
             <div className="col-lg-6">
               <div className="box-6-pic">
-                <Image src="/img/imp-left.svg" alt="imp-left.svg" width={531} height={771} />
+                <Image src="/img/imp-left.svg" alt="" width={531} height={771} aria-hidden="true" />
               </div>
             </div>
 
@@ -441,17 +466,17 @@ const ImplementationServices = () => {
                           <img
                             src="/img/Component-1-icons.svg"
                             className="overmain-thumb"
-                            alt="Component-1-icons"
+                            alt=""
                             width="181"
                             height="181"
-                          />
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-1-iconss.svg"
                             className="over"
-                            alt="Component-1-icons-red"
+                            alt=""
                             width="181"
                             height="181"
-                          />
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
@@ -459,17 +484,17 @@ const ImplementationServices = () => {
                           <img
                             src="/img/Component-2.svg"
                             className="overmain-thumb-1"
-                            alt="Component-2"
+                            alt=""
                             width="181"
                             height="181"
-                          />
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-2-iconss.svg"
                             className="over-1"
-                            alt="Component-2-icons-red"
+                            alt=""
                             width="181"
                             height="181"
-                          />
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
@@ -477,17 +502,17 @@ const ImplementationServices = () => {
                           <img
                             src="/img/Component-3.svg"
                             className="overmain-thumb-2"
-                            alt="Component-3"
+                            alt=""
                             width="181"
                             height="181"
-                          />
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-3-iconss.svg"
                             className="over-1"
-                            alt="Component-1-icons-red"
+                            alt=""
                             width="181"
                             height="181"
-                          />
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
@@ -495,17 +520,17 @@ const ImplementationServices = () => {
                           <img
                             src="/img/Component-4.svg"
                             className="overmain-thumb-3"
-                            alt="Component-4"
+                            alt=""
                             width="181"
                             height="181"
-                          />
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-4-iconss.svg"
                             className="over-1"
-                            alt="Component-1-icons-red"
+                            alt=""
                             width="181"
                             height="181"
-                          />
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
@@ -513,17 +538,17 @@ const ImplementationServices = () => {
                           <img
                             src="/img/Component-5.svg"
                             className="overmain-thumb-4"
-                            alt="Component-5"
+                            alt=""
                             width="181"
                             height="181"
-                          />
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-5-iconss.svg"
                             className="over-1"
-                            alt="Component-1-icons-red"
+                            alt=""
                             width="181"
                             height="181"
-                          />
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                     </Swiper>
@@ -547,7 +572,7 @@ const ImplementationServices = () => {
             <div className="col-lg-4 align-self-center">
               <div className="commen-box-3">
                 <div className="icons">
-                  <img src="/img/microsft-p-icons.svg" alt="microsft-p-icons" />
+                  <img src="/img/microsft-p-icons.svg" alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                   <h3>
                     Authorized Microsoft <br />
                     Solutions Partner
@@ -567,7 +592,7 @@ const ImplementationServices = () => {
             <div className="col-lg-4 align-self-center">
               <div className="commen-box-3">
                 <div className="icons">
-                  <img src="/img/Group997.svg" alt="Group997.svg" />
+                  <img src="/img/Group997.svg" alt="High-End Implementation Team"  loading="lazy" decoding="async" />
                   <h3>
                     High-End <br />
                     Implementation Team
@@ -585,7 +610,7 @@ const ImplementationServices = () => {
             <div className="col-lg-4 align-self-center">
               <div className="commen-box-3">
                 <div className="icons">
-                  <img src="/img/Group772.svg" alt="Group772" />
+                  <img src="/img/Group772.svg" alt="Group772"  loading="lazy" decoding="async" />
                   <h3>
                     Dedicated <br />
                     Support Model
@@ -604,7 +629,7 @@ const ImplementationServices = () => {
             <div className="col-lg-4 align-self-center">
               <div className="commen-box-3">
                 <div className="icons">
-                  <img src="/img/Group1003.svg" alt="Group1003" />
+                  <img src="/img/Group1003.svg" alt="Group1003"  loading="lazy" decoding="async" />
                   <h3>
                     Cost-Effective <br />
                     Solution
@@ -626,7 +651,7 @@ const ImplementationServices = () => {
                   <img
                     src="/img/proffesionalserviceicon.svg"
                     alt="proffesionalserviceicon"
-                  />
+                   loading="lazy" decoding="async" />
                   <h3>
                     Highly <br />
                     Customized
@@ -645,7 +670,7 @@ const ImplementationServices = () => {
             <div className="col-lg-4 align-self-center">
               <div className="commen-box-3">
                 <div className="icons">
-                  <img src="/img/Group1000.svg" alt="Group1000" />
+                  <img src="/img/Group1000.svg" alt="Group1000"  loading="lazy" decoding="async" />
                   <h3>
                     Flexible <br />
                     Delivery

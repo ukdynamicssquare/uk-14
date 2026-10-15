@@ -1,7 +1,7 @@
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import CommonEbookForm from "../../components/CommonEbookForm";
+import PageSeo from "../../components/PageSeo";
 
 const StartGuideOne = () => {
   // const router = useRouter();
@@ -44,19 +44,12 @@ const StartGuideOne = () => {
 
   return (
     <>
-      <Head>
-      <title>
-         The Extensive Guide to Dynamics 365 Finance
-        </title>
-        <meta
-          name="description"
-          content="Download our free eBook - Dynamics 365 Finance to simplify your complex accounting and financial data with enterprise-grade ERP system."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/ebook/dynamics-365-finance/"
-        />
-      </Head>
+      <PageSeo
+        type="WebPage"
+        title="The Extensive Guide to Dynamics 365 Finance"
+        description="Download our free eBook - Dynamics 365 Finance to simplify your complex accounting and financial data with enterprise-grade ERP system."
+        image="/img/three-book-mockup.png"
+      />
       <section className="Solution-banner hero-1 hero">
          <div className="container">
            <div className="row">
@@ -77,7 +70,7 @@ const StartGuideOne = () => {
                </div>
              </div>
              <div className="col-lg-6 align-self-center text-center">
-               <Image src="/img/three-book-mockup.png" alt="finance-banner-book" width={800} height={600} priority = {true} />
+               <Image src="/img/three-book-mockup.png" alt="This Ultimate eBook Will Walk You Through" width={800} height={600} priority = {true} />
              </div>
            </div>
          </div>
@@ -112,7 +105,7 @@ const StartGuideOne = () => {
              </div>
              <div className="col-lg-6 align-self-center">
                <div className="text-center remove-pre">
-                 <Image src="/img/tablet-ebook-finance.png" alt="tablet-ebook-finance" width={487} height={613} />
+                 <Image src="/img/tablet-ebook-finance.png" alt="Top Benefits of Dynamics 365 Finance" width={487} height={613} />
                </div>
              </div>
              <div className="col-lg-3 align-self-center">
@@ -145,9 +138,8 @@ const StartGuideOne = () => {
                <div className="pic-ll">
                  <img
                    src="/img/erp-left-about.png"
-                   alt="erp-left-about"
-                   width={337} height={460}
-                 />
+                   alt="What's more about this eBook?"
+                   width={337} height={460}  loading="lazy" decoding="async" />
                </div>
              </div>
              {/* <div className="col-lg-1 align-self-center"></div> */}
@@ -183,7 +175,7 @@ const StartGuideOne = () => {
            <div className="row">
              <div className="col-lg-5">
                <div className="call_to_action-right over-img">
-                 <img src="/img/MaskGroup8.png" alt="images" />
+                 <img src="/img/MaskGroup8.png" alt="images"  loading="lazy" decoding="async" />
                </div>
              </div>
              <div className="col-lg-7 align-self-center">
@@ -360,9 +352,8 @@ const StartGuideOne = () => {
                <div className="pic-l2">
                  <Image
                    src="/img/Cover_Book_Moc.png"
-                   alt="Cover_Book_Moc"
-                   width={582} height={466}
-                 />
+                   alt="Why do I need to fill out the information requested?"
+                   width={582} height={466} />
                </div>
              </div>
            </div>

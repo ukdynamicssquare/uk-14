@@ -1,37 +1,42 @@
-import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
+import PageSeo from "../../components/PageSeo";
+// Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
+const PAGE_FAQS = [
+  {
+    "question": "Sales Insights",
+    "answer": "The tool ensures to offer insights on sales to help boost up sales and grow in profitability. Offers a detail on the type of effective communication methods with the customers, Prioritises the leads that are more likely to convert into potential customers, Real-time notifications, Provides a customer relationship health score to understand your customer service better"
+  },
+  {
+    "question": "Customer Service Insights",
+    "answer": "Helps you understand the customer support score, Points out the problems areas and shows options to resolve them, Ensures a boost in customer satisfaction by highlighting areas of improvement, Analyses dashboards of customer satisfaction, resolutions, and cases, Offers a visual of the interaction pattern of the customers and the agents"
+  },
+  {
+    "question": "Customer Insights",
+    "answer": "Maintains customer data in a secured way to boost up the reliability of the customers, Integrates the Microsoft Dynamics 365 AI apps with other applications too to offer a detailed insight on the dashboard, Enables responding to the customers with a proper flow yet faster, Coming up with new customer segments and creating insights about them, Offering already existing templates"
+  },
+  {
+    "question": "Product Insights",
+    "answer": "Apart from the insights related to customer support, the tool also offers insights related to products, Identifying problem areas and suggesting proactive repairs for the same, Maintains quality by offering regular scope for continuous improvement, Helps in product planning and analysis, Insights about the products that are more famous among customers and what are not"
+  },
+  {
+    "question": "Market Insights",
+    "answer": "The need and demand among the customers, Detailed knowledge about the actions taken by the competitors, Track activities that are happening within the industry, Check out major events that are taking place Once you check out the tool in detail, you can come across many other insights such as that of commerce, supply chain, human resources, and many others."
+  }
+];
+
 
 const MicrosoftDynamics365Ai = () => {
   return (
     <>
-      <Head>
-      <title>Microsoft Dynamics 365 AI | Artificial intelligence</title>
-        <meta
-          name="description"
-          content="Improve customer's experience and organisation's processes with Dynamics 365 AI (Artificial Intelligence). Schedule a free Dynamics 365 AI demo today."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-ai/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-ai/" />
-        <meta property="og:title" content="
-Microsoft Dynamics 365 AI | Artificial intelligence
-" />
-        <meta property="og:description" content="Improve customer's experience and organisation's processes with Dynamics 365 AI (Artificial Intelligence). Schedule a free Dynamics 365 AI demo today." />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/Artificial-Intelligence-banner.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-ai/" />
-        <meta property="twitter:title" content="
-Microsoft Dynamics 365 AI | Artificial intelligence
-" />
-        <meta property="twitter:description" content="Improve customer's experience and organisation's processes with Dynamics 365 AI (Artificial Intelligence). Schedule a free Dynamics 365 AI demo today." />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/Artificial-Intelligence-banner.png" />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Microsoft Dynamics 365 AI | Artificial intelligence"
+        description="Improve customer's experience and organisation's processes with Dynamics 365 AI (Artificial Intelligence). Schedule a free Dynamics 365 AI demo today."
+        image="https://www.dynamicssquare.co.uk/img/Artificial-Intelligence-banner.png"
+        faqs={PAGE_FAQS}
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -59,10 +64,9 @@ Microsoft Dynamics 365 AI | Artificial intelligence
             <div className="col-lg-6 align-self-center">
               <Image
                 src="/img/Artificial-Intelligence-banner.png"
-                alt="AI-Banner"
+                alt="Dynamics 365 AI Features"
                 width={723} height={499}
-                priority = {true}
-              />
+                priority = {true} />
             </div>
           </div>
         </div>
@@ -124,7 +128,7 @@ Microsoft Dynamics 365 AI | Artificial intelligence
                         aria-controls="fin2"
                       >
                         <div className="wr-in">
-                          <img src="/img/Financials-3.svg" alt="icons" />
+                          <img src="/img/Financials-3.svg" alt="icons"  loading="lazy" decoding="async" />
                         </div>
                         <span>Better Business Model</span>
                       </button>
@@ -164,7 +168,7 @@ Microsoft Dynamics 365 AI | Artificial intelligence
                         aria-controls="fin3"
                       >
                         <div className="wr-in">
-                          <img src="/img/Project.svg" alt="icons" />
+                          <img src="/img/Project.svg" alt="icons"  loading="lazy" decoding="async" />
                         </div>
                         <span>Fruitful Insights</span>
                       </button>
@@ -201,7 +205,7 @@ Microsoft Dynamics 365 AI | Artificial intelligence
                           <img
                             src="/img/International-Accounting-3.svg"
                             alt="icons"
-                          />
+                           loading="lazy" decoding="async" />
                         </div>
                         <span>Agile Model</span>
                       </button>

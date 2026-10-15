@@ -1,28 +1,23 @@
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Autoplay, FreeMode, Pagination } from "swiper/modules";
+import PageSeo from "../../components/PageSeo";
 
 
 const PowerBiSupportSolutions = () => {
 
   return (
     <>
-      <Head>
-        <title>Microsoft Power BI Support Service with Dynamics Square UK - Case Study</title>
-        <meta
-          name="description"
-          content="We resolved data inefficiency issue to get real-time data from different sources. The UK's company is very happy with their Power BI support solutions."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/case-studies/power-bi-support-solutions/"
-        />
-      </Head>
+      <PageSeo
+        type="Article"
+        title="Microsoft Power BI Support Service with Dynamics Square UK - Case Study"
+        description="We resolved data inefficiency issue to get real-time data from different sources. The UK's company is very happy with their Power BI support solutions."
+        image="/img/Power-BI-1024x586.webp"
+      />
       <section className="hero-1 hero">
         <div className="container">
           <div className="row">
@@ -39,8 +34,7 @@ const PowerBiSupportSolutions = () => {
               <div className="sider-over">
                 <img
                   src="/img/Power-BI-1024x586.webp"
-                  alt="Power-BI"
-                />
+                  alt="Microsoft Power BI Support" />
               </div>
             </div>
           </div>
@@ -54,8 +48,7 @@ const PowerBiSupportSolutions = () => {
                 <div className="col-lg-3 align-self-center text-center">
                   <img
                     src="/img/casestudy-pic.png"
-                    alt="casestudy-pic"
-                  />
+                    alt="Microsoft Power BI Support" />
                 </div>
                 <div className="col-lg-9 align-self-center">
                   <p>The business is into offering transformational switchboard and business support services to numerous organisaitons of the UK. They are experts in providing a great customer experience and have been trusted by 31 out of 100 global firms. With 34 years of client experience and being the winner of 12 consecutive years for the Switchboard of the Year award, the business offers an exceptional experience combining knowledge, expertise, creativity, and passion.</p>
@@ -178,8 +171,8 @@ const PowerBiSupportSolutions = () => {
                           <div className="img-wrp">
                             <img
                               src="/img/material-lightbulb-outline.svg"
-                              alt="Food-and-beverage"
-                            />
+                              alt=""
+                             aria-hidden="true"  loading="lazy" decoding="async" />
                           </div>
                           <div className="text-wrp-content">
                             <p>Performed permission setup for the service account.</p>
@@ -195,7 +188,7 @@ const PowerBiSupportSolutions = () => {
                               <img
                                 src="/img/material-lightbulb-outline.svg"
                                 alt="NotforProfit"
-                              />
+                               loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>Activated Auto Refresh to empower them with real-time reporting.</p>
@@ -212,7 +205,7 @@ const PowerBiSupportSolutions = () => {
                               <img
                                 src="/img/material-lightbulb-outline.svg"
                                 alt="Ecommerce"
-                              />
+                               loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>Access query folding and query reduction to optimise data retrieval. </p>
@@ -229,7 +222,7 @@ const PowerBiSupportSolutions = () => {
                               <img
                                 src="/img/material-lightbulb-outline.svg"
                                 alt="Ecommerce"
-                              />
+                               loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>Monitor reports and dashboard health using automated data refresh schedules. </p>
@@ -327,7 +320,7 @@ const PowerBiSupportSolutions = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="call_to_action-right over-img">
-                <img src="/img/MaskGroup8.png" alt="image" />
+                <img src="/img/MaskGroup8.png" alt="Business consultant"  loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="col-lg-7 align-self-center">

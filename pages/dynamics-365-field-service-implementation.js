@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -8,24 +7,43 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import { FreeMode, Navigation, Thumbs, Autoplay } from "swiper/modules";
+import PageSeo from "../components/PageSeo";
+// Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
+const PAGE_FAQS = [
+  {
+    "question": "How long will it take to implement the project successfully?",
+    "answer": "We can't give you an accurate timeline for implementing a solution until we fully understand the business and its needs. The time required is determined by several factors, including the number of processes, the complexity of operations, integrations, and customizations."
+  },
+  {
+    "question": "What's my role in the entire implementation project?",
+    "answer": "Your responsibility is to give us the right information about your company's current status and what you'll need in the future. This way, we can together find the best D365 solution for you. We also rely on your cooperation to make sure the installation process is as smooth as possible."
+  },
+  {
+    "question": "What's next after submitting my contact details?",
+    "answer": "After you submit your information, one of our specialists will call you in order to learn more about your company - this includes current needs as well as any potential future needs. This process is what we refer to as the Phase 1 Discovery Call. Everything will be documented accordingly, and then a FIT-GAP analysis will be done in order to establish what the implementation phase will entail. If necessary, we set up another discovery call with a highly qualified functional consultant in order to address any issues that might have come up."
+  },
+  {
+    "question": "Does Dynamics Square provide training?",
+    "answer": "we understand that it can be difficult to learn how to use a new software or solution. That's why we offer free training for all of our users. We want you to be able to fully comprehend the features, capabilities, and functionalities of the newly installed solution so that you can make the most of it. Additionally, we'll assist you in comprehending the fundamental capabilities so that you can recognise your present and long-term needs for the Phase 2 implementation process (in case of need)."
+  },
+  {
+    "question": "What is the accurate cost of D365 Field Service implementation?",
+    "answer": "The cost of implementation can vary depending on a number of factors, like time. To get an accurate quote for the implementation process, simply give us a call or fill out the contact form. See Also -: Dynamics 365 Finance Implementation, Power BI Implementation, Dynamics 365 Sales Implementation"
+  }
+];
+
 
 const FieldServicesImplementation = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   return (
     <>
-      <Head>
-        <title>
-          Dynamics 365 Field Service Implementation | Dynamics Square UK
-        </title>
-        <meta
-          name="description"
-          content="Dynamics Square UK delivers expert Dynamics 365 Field Service implementation to optimise workforce, automate scheduling, and enhance service delivery."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/dynamics-365-field-service-implementation/"
-        />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Dynamics 365 Field Service Implementation | Dynamics Square UK"
+        description="Dynamics Square UK delivers expert Dynamics 365 Field Service implementation to optimise workforce, automate scheduling, and enhance service delivery."
+        image="/img/FieldServicebanner.png"
+        faqs={PAGE_FAQS}
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -59,11 +77,10 @@ const FieldServicesImplementation = () => {
             <div className="col-lg-6">
               <Image
                 src="/img/FieldServicebanner.png"
-                alt="Field-implementation-banner"
+                alt="How can Dynamics 365 Field Service help you enhance customer engagement while empowering field executives?"
                 width={771}
                 height={478}
-                priority = {true}
-              />
+                priority = {true} />
             </div>
           </div>
         </div>
@@ -411,7 +428,7 @@ const FieldServicesImplementation = () => {
           <div className="row">
             <div className="col-lg-6">
               <div className="box-6-pic">
-                <img src="/img/imp-left.svg" alt="imp-left.svg" />
+                <img src="/img/imp-left.svg" alt="" aria-hidden="true" />
               </div>
             </div>
 
@@ -523,13 +540,13 @@ const FieldServicesImplementation = () => {
                           <img
                             src="/img/Component-1-icons.svg"
                             className="overmain-thumb"
-                            alt="Component-1-icons"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-1-iconss.svg"
                             className="over"
-                            alt="Component-1-icons-red"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
@@ -537,13 +554,13 @@ const FieldServicesImplementation = () => {
                           <img
                             src="/img/Component-2.svg"
                             className="overmain-thumb-1"
-                            alt="Component-2"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-2-iconss.svg"
                             className="over-1"
-                            alt="Component-2-icons-red"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
@@ -551,13 +568,13 @@ const FieldServicesImplementation = () => {
                           <img
                             src="/img/Component-3.svg"
                             className="overmain-thumb-2"
-                            alt="Component-3"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-3-iconss.svg"
                             className="over-1"
-                            alt="Component-1-icons-red"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
@@ -565,13 +582,13 @@ const FieldServicesImplementation = () => {
                           <img
                             src="/img/Component-4.svg"
                             className="overmain-thumb-3"
-                            alt="Component-4"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-4-iconss.svg"
                             className="over-1"
-                            alt="Component-1-icons-red"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
@@ -579,13 +596,13 @@ const FieldServicesImplementation = () => {
                           <img
                             src="/img/Component-5.svg"
                             className="overmain-thumb-4"
-                            alt="Component-5"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-5-iconss.svg"
                             className="over-1"
-                            alt="Component-1-icons-red"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                     </Swiper>

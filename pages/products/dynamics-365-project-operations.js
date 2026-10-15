@@ -1,5 +1,4 @@
 import { useRef, useState } from 'react';
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 // import useGsapScrollCards from '../../../hooks/useGsapScrollCards';
@@ -8,6 +7,7 @@ import useCardScrollEffect from "../../components/useCardScrollEffect";
 import BcPopPdf from '../../components/BCPdfPopup';
 import NavBar from '../../components/NavBar';
 import BlogFinanaceCard from '../../components/BlogFinanaceCard';
+import PageSeo from "../../components/PageSeo";
 
 
 
@@ -175,37 +175,17 @@ const ProjectOpeartion = () => {
 
   return (
     <>
-      <Head>
-   
-        <title>Dynamics 365 Project Operations Partner | Dynamics Square UK</title>
-        <meta
-          name="description"
-          content="Transform project delivery with Dynamics 365 Project Operations. Dynamics Square UK offers expert consulting, deployment, and ongoing support. "
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/dynamics-365-project-operations/"
-        />
-        <meta property="og:locale" content="GB" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content=" Dynamics 365 Project Operations Partner | Dynamics Square UK " />
-        <meta property="og:description" content="Transform project delivery with Dynamics 365 Project Operations. Dynamics Square UK offers expert consulting, deployment, and ongoing support." />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/dynamics-365-project-operations/" />
-        <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/project-operation-banner.png" />
+      <PageSeo
+        type="Service"
+        title="Dynamics 365 Project Operations Partner | Dynamics Square UK"
+        description="Transform project delivery with Dynamics 365 Project Operations. Dynamics Square UK offers expert consulting, deployment, and ongoing support. "
+        image="/img/project-operation-banner.png"
+        extraSchema={schemaData}
+      >
         <meta property="og:image:width" content="200" />
         <meta property="og:image:height" content="200" />
         <meta property="og:image:type" content="image/png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="Dynamics 365 Project Operations Partner | Dynamics Square UK" />
-        <meta name="twitter:description" content="Transform project delivery with Dynamics 365 Project Operations. Dynamics Square UK offers expert consulting, deployment, and ongoing support." />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/project-operation-banner.png" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-        />
-      </Head>
+      </PageSeo>
       <div className='solution-new-banner-one'>
         <div className='container'>
           <div className='row justify-content-center'>
@@ -231,7 +211,7 @@ const ProjectOpeartion = () => {
           <div className='row justify-content-center'>
             <div className='col-lg-10'>
               <div className="solution-new-banner-one-imgs">
-                <Image src="/img/project-operatiom-01.png" alt="project-operatiom-01" width={916} height={584} className="flot-1" priority />
+                <Image src="/img/project-operatiom-01.png" alt="" width={916} height={584} className="flot-1" priority aria-hidden="true" />
               </div>
             </div>
           </div>
@@ -247,7 +227,7 @@ const ProjectOpeartion = () => {
                   <p>Dynamics Square helps project-based companies plan projects, manage resources, and deliver profitable outcomes with the AI-powered Dynamics 365 Project Operations solution.</p>
                 </div>
                 <div className='left-rl'>
-                  <Image src="/img/partner-logo-black.png" width={193} height={55} alt="partner-logo-black" />
+                  <Image src="/img/partner-logo-black.png" width={193} height={55} alt="Microsoft Solutions Partner badge" />
                 </div>
               </div>
             </div>
@@ -284,7 +264,7 @@ const ProjectOpeartion = () => {
               </div>
             </div>
             <div className='col-lg-6 align-self-center'>
-              <div className='dsa-minee'><Image src="/img/project-operatiom-02.png" alt="project-operatiom-02" width={630} height={588} /></div>
+              <div className='dsa-minee'><Image src="/img/project-operatiom-02.png" alt="Dynamics 365 Finance Implementation: Why Your Business Needs It" width={630} height={588} /></div>
             </div>
           </div>
 
@@ -304,7 +284,7 @@ const ProjectOpeartion = () => {
             <div className='col-lg-6 align-self-center'>
               <div className='product-side-001'>
                 <div className="flot-8" style={{textAlign:'left'}}>
-                  <Image src="/img/project-operatiom-03.png" width={531} height={459} alt="project-operatiom-03" />
+                  <Image src="/img/project-operatiom-03.png" width={531} height={459} alt="Business Challenges Solved by Dynamics 365 Project Operations" />
                 </div>
                
               </div>
@@ -522,7 +502,7 @@ const ProjectOpeartion = () => {
           </div>
         </div>
         <div className='n-014' >
-          <img src="/img/n-014.png" width={604} height={958} alt="Card 6" />
+          <img src="/img/n-014.png" width={604} height={958} alt="Card 6"  loading="lazy" decoding="async" />
         </div>
       </section>
 
@@ -541,7 +521,7 @@ const ProjectOpeartion = () => {
           <div className='row'>
             <div className='col-lg-12'>
               <div className='text-center' style={{ marginBottom: '30px' }}>
-                <Image src='/img/project-operatiom-10.png' alt='project-operatiom-10' width={2564} height={790} />
+                <Image src='/img/project-operatiom-10.png' alt="Time Entry Agent" width={2564} height={790} />
               </div>
             </div>
           </div>
@@ -617,7 +597,7 @@ const ProjectOpeartion = () => {
             </div>
           </div>
         </div>
-        <img src="/img/mask-group-aaa.png" alt="n-015" />
+        <img src="/img/mask-group-aaa.png" alt="Dynamics 365 Project Operations Pricing"  loading="lazy" decoding="async" />
       </section>
       <section id='section8' className='solution-new-pricing'>
         <div className='container'>
@@ -671,7 +651,7 @@ As a leading Microsoft Solutions Partner in the UK, we help organisations adopt 
           <div className="row">
             <div className="col-lg-3 d-flex">
               <div className="upgrade-box-one upgrade-box-one-c d-flex-fil">
-                <Image src="/img/settings_b.png" alt="settings_b" width={48} height={48} />
+                <Image src="/img/settings_b.png" alt="" width={48} height={48} aria-hidden="true" />
                 <h3>Implementation</h3>
                 <p>Deliver a structured Dynamics 365 Project Operations implementation aligned with your project lifecycle, billing models, and financial processes. Our approach focuses on clean configuration, resource scheduling setup, project accounting structure, and practical adoption across project managers, finance teams, and leadership.</p>
                 <a href="#exampleModal" data-bs-toggle="modal">Get Started <i className="bi bi-arrow-right"></i></a>
@@ -688,7 +668,7 @@ As a leading Microsoft Solutions Partner in the UK, we help organisations adopt 
 
             <div className="col-lg-3 d-flex">
               <div className="upgrade-box-one upgrade-box-one-c d-flex-fil">
-                <Image src="/img/person_pin.png" alt="person_pin" width={48} height={48} />
+                <Image src="/img/person_pin.png" alt="" width={48} height={48} aria-hidden="true" />
                 <h3>Support</h3>
                 <p>Keep your project operations system stable and efficient with ongoing support. Our team resolves issues, manages updates, and ensures time entry, expense management, approvals, and billing processes continue without disruption.</p>
                 <a href="#exampleModal" data-bs-toggle="modal">Get Started <i className="bi bi-arrow-right"></i></a>
@@ -697,7 +677,7 @@ As a leading Microsoft Solutions Partner in the UK, we help organisations adopt 
 
             <div className="col-lg-3 d-flex">
               <div className="upgrade-box-one upgrade-box-one-c d-flex-fil">
-                <img className="image-backx" src="/img/free-cons.png" alt="free-cons" />
+                <img className="image-backx" src="/img/free-cons.png" alt="Support"  loading="lazy" decoding="async" />
                 <Image src="/img/forum.png" alt="forum" width={48} height={48} />
                 <h3>Consulting</h3>
                 <p>Gain expert guidance on improving resource utilisation, forecasting accuracy, revenue recognition, and compliance with standards such as IFRS. Our consultants help you use Copilot and ERP agents such as the Time Entry Agent and Expense Agent to reduce manual effort and improve visibility across projects.</p>
@@ -741,7 +721,7 @@ As a leading Microsoft Solutions Partner in the UK, we help organisations adopt 
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
                           <a href="https://youtu.be/44hqw-S27D0?si=mCEpK1p1hVAXszlj" target='_blank'>
-                            <img src="/img/bc-8-20.png" width={273} height={192} alt="bc-8-20" />
+                            <img src="/img/bc-8-20.png" width={273} height={192} alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                             <h3>Is Your Business Ready for an ERP System?</h3>
                             <p>Explore key signs, benefits, and steps to ERP readiness with Dynamics Square experts in this episode.</p>
                             <div className='ct--a'>
@@ -754,7 +734,7 @@ As a leading Microsoft Solutions Partner in the UK, we help organisations adopt 
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
                           <a href="https://youtu.be/Of8upj7BtGo?si=Lsf5SCwBtIpSU1ST" target='_blank'>
-                            <img src="/img/bc-8-22.png" width={273} height={192} alt="bc-8-22" />
+                            <img src="/img/bc-8-22.png" width={273} height={192} alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                             <h3>Signs Your Business Is Ready for an ERP System</h3>
                             <p>Understand when to adopt ERP, its benefits, and how Dynamics 365 drives business transformation.</p>
                             <div className='ct--a'>
@@ -770,7 +750,7 @@ As a leading Microsoft Solutions Partner in the UK, we help organisations adopt 
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
                           <a href="https://www.youtube.com/watch?v=xU_kJ4_7hzY" target='_blank'>
-                            <img src="/img/project-vid-01.jpg" width={273} height={192} alt="bc-8-20" />
+                            <img src="/img/project-vid-01.jpg" width={273} height={192} alt="Get started with the Time and Expense Agent for Dynamics 365 Project Operations"  loading="lazy" decoding="async" />
                             <h3>Get started with the Time and Expense Agent for Dynamics 365 Project Operations</h3>
                             <p>The Time and Expense Agent in Dynamics 365 Project Operations autonomously manages time entry...</p>
                             <div className='ct--a'>
@@ -782,7 +762,7 @@ As a leading Microsoft Solutions Partner in the UK, we help organisations adopt 
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
                           <a href="https://www.youtube.com/watch?v=UNk4-k1_g4U" target='_blank'>
-                            <img src="/img/project-vid-02.jpg" width={273} height={192} alt="bc-8-21" />
+                            <img src="/img/project-vid-02.jpg" width={273} height={192} alt="Deep dive: Finance, human resources and project operations with Dynamics 365"  loading="lazy" decoding="async" />
                             <h3>Deep dive: Finance, human resources and project operations with Dynamics 365</h3>
                             <p>Watch a demo of Finance, human resources and project operations capabilities in Dynamics 365...</p>
                             <div className='ct--a'>
@@ -794,7 +774,7 @@ As a leading Microsoft Solutions Partner in the UK, we help organisations adopt 
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
                           <a href="https://www.youtube.com/watch?v=N8uT5Zla24E" target='_blank'>
-                            <img src="/img/project-vid-03.jpg" width={273} height={192} alt="bc-8-21" />
+                            <img src="/img/project-vid-03.jpg" width={273} height={192} alt="BDO unifies tax and accounting services with Dynamics 365 Project Operations and Copilot"  loading="lazy" decoding="async" />
                             <h3>BDO unifies tax and accounting services with Dynamics 365 Project Operations and Copilot</h3>
                             <p>BDO USA has ignited a revolution in project management with its groundbreaking BDO Tax UserVerse on Microsoft Dynamics 365...</p>
                             <div className='ct--a'>

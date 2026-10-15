@@ -1,20 +1,18 @@
-import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
+import PageSeo from "../../../components/PageSeo";
 
 
 const Dynamics365SalesCopilot = () => {
   return (
     <>
-      <Head>
-      <title>Dynamics 365 Sales Copilot | Dynamics Square</title>
-        <link rel="canonical" href="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-sales/copilot/" />
-        <meta name="description"
-          content="Strengthen customer relationships, avail AI-powered sales insights, and automate sales processes leveraging the power of Dynamics 365 Sales Copilot."
-        />
-
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Dynamics 365 Sales Copilot | Dynamics Square"
+        description="Strengthen customer relationships, avail AI-powered sales insights, and automate sales processes leveraging the power of Dynamics 365 Sales Copilot."
+        image="/img/copilate-banner.png"
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -35,7 +33,7 @@ const Dynamics365SalesCopilot = () => {
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/copilate-banner.png" alt="copilate-banner" width={728} height={447}  priority = {true} />
+              <Image src="/img/copilate-banner.png" alt="What Is Dynamics 365 Sales Copilot?" width={728} height={447}  priority = {true} />
             </div>
           </div>
         </div>
@@ -58,7 +56,7 @@ const Dynamics365SalesCopilot = () => {
             <div className="col-lg-6">
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                  <Image src="/img/Enhance-your-Business-Productivity.png" alt="Enhance-your-Business-Productivity" width={94} height={94} />
+                  <Image src="/img/Enhance-your-Business-Productivity.png" alt="Enhance your Business Productivity" width={94} height={94} />
                 </div>
                 <div className="style-grid-content">
                   <h3>Enhance your Business Productivity</h3>
@@ -67,7 +65,7 @@ const Dynamics365SalesCopilot = () => {
               </div>
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                  <Image src="/img/Offer-Bespoke-Customer-Interaction.png" alt="Offer-Bespoke-Customer-Interaction"  width={94} height={94} />
+                  <Image src="/img/Offer-Bespoke-Customer-Interaction.png" alt="Offer Bespoke Customer Interaction"  width={94} height={94} />
                 </div>
                 <div className="style-grid-content">
                   <h3>Offer Bespoke Customer Interaction </h3>
@@ -76,7 +74,7 @@ const Dynamics365SalesCopilot = () => {
               </div>
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                  <Image src="/img/Build-Sustainable-Workflow.png" alt="Build-Sustainable-Workflow"  width={94} height={94} />
+                  <Image src="/img/Build-Sustainable-Workflow.png" alt="Build Sustainable Workflow"  width={94} height={94} />
                 </div>
                 <div className="style-grid-content">
                   <h3>Build Sustainable Workflow </h3>
@@ -90,9 +88,8 @@ const Dynamics365SalesCopilot = () => {
                 <div className="style-grid-icons">
                   <Image
                     src="/img/Command-using-Simple-Language.png"
-                    alt="Command-using-Simple-Language"
-                    width={94} height={94}
-                  />
+                    alt="Command using Simple Language"
+                    width={94} height={94} />
                 </div>
                 <div className="style-grid-content">
                   <h3>Command using Simple Language </h3>
@@ -102,7 +99,7 @@ const Dynamics365SalesCopilot = () => {
 
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                  <Image src="/img/Analyse-Conversation.png" alt="Analyse-Conversation"  width={94} height={94} />
+                  <Image src="/img/Analyse-Conversation.png" alt="Analyse Conversation"  width={94} height={94} />
                 </div>
                 <div className="style-grid-content">
                   <h3>Analyse Conversation </h3>
@@ -114,9 +111,8 @@ const Dynamics365SalesCopilot = () => {
                 <div className="style-grid-icons">
                   <Image
                     src="/img/Automates-core-Processes.png"
-                    alt="Automates-core-Processes"
-                    width={94} height={94}
-                  />
+                    alt="Automates core Processes"
+                    width={94} height={94} />
                 </div>
                 <div className="style-grid-content">
                   <h3>Automates core Processes </h3>
@@ -146,9 +142,8 @@ const Dynamics365SalesCopilot = () => {
               <div className="busine_service_bottom-left custom012">
                 <Image
                   src="/img/copilate-side-pic.png"
-                  alt="microosoft-partner.png"
-                  width={840} height={566}
-                />
+                  alt="Generate Quick Summaries"
+                  width={840} height={566} />
               </div>
             </div>
             <div className="col-lg-6 align-self-center">

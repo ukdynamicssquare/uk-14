@@ -1,22 +1,40 @@
 import Link from "next/link"; 
-import Head from 'next/head';
 import Image from 'next/image';
+import PageSeo from "../../components/PageSeo";
+// Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
+const PAGE_FAQS = [
+  {
+    "question": "What is Azure IoT Central?",
+    "answer": "Azure IoT Central is an IoT application development platform whereby enterprise-grade IoT applications can be built with reduced embedded coding, costing, and management efforts. With one of these IoT Enterprise solutions, enterprises can instantly establish device connections, register millions of devices simultaneously, and monitor device performance or real-time conditions along with data throughout their process flow."
+  },
+  {
+    "question": "What is SLA for Azure IoT Central?",
+    "answer": "The term SLA refers to Service Level Agreement for Microsoft online services defined as a part of Microsoft volume licensing agreement. Through this SLA, Microsoft commits that Azure IoT Central will be available at least 99 percent of the overall time. SLA for Azure Central comprises a multitude of terms. To know more, experts at Dynamics are always available to help enterprises seeking to modernize their enterprise environment with IoT-connected experience."
+  },
+  {
+    "question": "How can I access Azure IoT Central?",
+    "answer": "Azure IoT Central is designed with cross-platform and cross-device compatibility with almost all desktops, tablets, mobile devices, or browsers. To know your system compatibility, connect with our experts, we will let you know your system compatibility for Azure IoT Central and how deploying IoT Central with it can help your enterprise to drive a smarter connected experience."
+  },
+  {
+    "question": "What is data retention policy for IoT Central?",
+    "answer": "In Azure IoT Central, data can be retained for 30-days of period. Further, businesses can export their data at regular intervals by making effective use of the export feature. Leveraging 'Export Feature', you can export your IoT enriched or filtered data from your IoT Central application. Such exported data can help to support future rhythms in terms of insights, analytics, etc."
+  },
+  {
+    "question": "Is Azure IoT Central free?",
+    "answer": "For new users, Azure IoT Central is available with 7-days of free trial embedded with a standard message size is 4KB. Once your trial period gets over, you can choose from the standard available plans depending on your specific requirement. There are three types of standard plans available for Azure IoT Central, you can choose out of them: Standard Tier 0, Standard Tier 1, and Standard Tier 2. To know which one could be a fruitful deal for your business, talk to us, we will let you know by examining or evaluating your exact IoT business requirement."
+  }
+];
+
 
 const AzureIoTCentral = () => {
   return (
     <>
-      <Head>
-      <title>Azure IoT Central | Enterprise Grade IoT solutions</title>
-        <meta
-          name="description"
-          content="With Azure IoT Central (SaaS) you can build IoT applications using industry-specific standardized templates for your enterprise. Know more about IoT Central."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/azure-iot-central/"
-        />
-        
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Azure IoT Central | Enterprise Grade IoT solutions"
+        description="With Azure IoT Central (SaaS) you can build IoT applications using industry-specific standardized templates for your enterprise. Know more about IoT Central."
+        faqs={PAGE_FAQS}
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -44,10 +62,9 @@ const AzureIoTCentral = () => {
             <div className="col-lg-6 align-self-center">
               <Image
                 src="/img/azure-iot-central-hero-image.svg"
-                alt="azure-iot-central-hero-image"
+                alt="What is Azure IoT Central?"
                 width={1024} height={586}
-                priority = {true}
-              />
+                priority = {true} />
             </div>
           </div>
         </div>
@@ -83,8 +100,8 @@ const AzureIoTCentral = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-IoTcentral_Faster-Connectivity-.svg"
-                            alt="icons-IoTcentral_Faster-Connectivity"
-                          />
+                            alt=""
+                           aria-hidden="true" />
                         </div>
                         <span>Faster Connectivity</span>
                       </button>
@@ -116,8 +133,8 @@ const AzureIoTCentral = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-IoTcentral_Real-Time-Insights.svg"
-                            alt="icons-IoTcentral_Real-Time-Insights"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Real-Time Insights</span>
                       </button>
@@ -157,8 +174,8 @@ const AzureIoTCentral = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-IoTcentral_Highly-Secure-Scalable.svg"
-                            alt="icons-IoTcentral_Highly-Secure-Scalable"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Highly Secure & Scalable</span>
                       </button>
@@ -191,8 +208,8 @@ const AzureIoTCentral = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-IoTcentral_industry-focused.svg"
-                            alt="icons-IoTcentral_industry-focused"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Industry Focused </span>
                       </button>

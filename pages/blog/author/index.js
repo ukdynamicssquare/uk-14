@@ -2,10 +2,11 @@ import Head from "next/head";
 import Link from "next/link";
 import TimerModal from "../../../components/TimerModal";
 import BlogStyles from "../../../components/blog/BlogStyles";
-import { Avatar, BlogFontPreload, BlogPageHero } from "../../../components/blog/BlogUi";
+import { Avatar, blogFontLinks, BlogPageHero } from "../../../components/blog/BlogUi";
 
 import { BlogService } from "../../../helpers/blogApi";
 import { extractArray, extractStr, slimAuthor } from "../../../helpers/blogData";
+import { buildCollectionGraph, jsonLd } from "../../../helpers/schema";
 
 const SITE_URL = "https://www.dynamicssquare.co.uk";
 const PAGE_URL = `${SITE_URL}/blog/author/`;
@@ -68,17 +69,35 @@ function AuthorsList({ authors }) {
         <meta property="og:title" content="Blog Authors | Dynamics Square" />
         <meta property="og:description" content={DESCRIPTION} />
         <meta property="og:url" content={PAGE_URL} />
-        <meta property="og:site_name" content="Dynamics Square" />
         <meta property="og:image" content={`${SITE_URL}/img/d360-banner.png`} />
         <meta property="og:image:alt" content="Dynamics Square Blog Authors" />
-        <meta property="og:locale" content="en_GB" />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Blog Authors | Dynamics Square" />
         <meta name="twitter:description" content="Meet the authors and experts behind Dynamics Square." />
         <meta name="twitter:image" content={`${SITE_URL}/img/d360-banner.png`} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: jsonLd(
+              buildCollectionGraph({
+                path: "/blog/author/",
+                title: "Blog Authors | Dynamics Square",
+                description: DESCRIPTION,
+                crumbs: [
+                  { name: "Blog", path: "/blog/" },
+                  { name: "Authors", path: "/blog/author/" },
+                ],
+                items: authors.map((a) => ({
+                  name: a.name,
+                  path: `/blog/author/${a.slug}/`,
+                })),
+              })
+            ),
+          }}
+        />
+        {blogFontLinks()}
       </Head>
-      <BlogFontPreload />
 
       <BlogPageHero
         crumbs={[

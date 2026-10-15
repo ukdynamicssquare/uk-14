@@ -1,32 +1,18 @@
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
+import PageSeo from "../components/PageSeo";
 
 const BCvsFinance = () => {
   return (
     <>
-      <Head>
-        <title>Dynamics 365 Business Central vs Dynamics 365 Finance (2023)</title>
-        <meta
-          name="description"
-          content="Let's Compare Dynamics 365 Business Central vs Dynamics 365 Finance and choose a solution that your business requires for rapid growth and success."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/d365-business-central-vs-d365-finance/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/d365-business-central-vs-d365-finance/" />
-        <meta property="og:title" content="Dynamics 365 Business Central vs Dynamics 365 Finance" />
-        <meta property="og:description" content="Let's compare between two Microsoft Business Applications: Dynamics 365 Business Central vs Dynamics 365 Finance to get the right decision for your business growth." />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/bcvsfinance.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/d365-business-central-vs-d365-finance/" />
-        <meta property="twitter:title" content="Dynamics 365 Business Central vs Dynamics 365 Finance" />
-        <meta property="twitter:description" content="Let's compare between two Microsoft Business Applications: Dynamics 365 Business Central vs Dynamics 365 Finance to get the right decision for your business growth." />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/bcvsfinance.png" />
-      </Head>
+      <PageSeo
+        type="Article"
+        title="Dynamics 365 Business Central vs Dynamics 365 Finance (2023)"
+        description="Let's Compare Dynamics 365 Business Central vs Dynamics 365 Finance and choose a solution that your business requires for rapid growth and success."
+        image="https://www.dynamicssquare.co.uk/img/bcvsfinance.png"
+        ogTitle="Dynamics 365 Business Central vs Dynamics 365 Finance"
+        ogDescription="Let's compare between two Microsoft Business Applications: Dynamics 365 Business Central vs Dynamics 365 Finance to get the right decision for your business growth."
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -266,7 +252,7 @@ const BCvsFinance = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="call_to_action-right over-img">
-                <img src="/img/MaskGroup8.png" alt="image" />
+                <img src="/img/MaskGroup8.png" alt="Business consultant" />
               </div>
             </div>
             <div className="col-lg-7 align-self-center">
@@ -305,7 +291,7 @@ const BCvsFinance = () => {
                         aria-controls="fin1"
                       >
                         <div className="wr-in wr-in-001">
-                          <img src="/img/icons-001.svg" alt="ic-1" />
+                          <img src="/img/icons-001.svg" alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Identify Your Business Profile: </span>
                       </button>
@@ -333,7 +319,7 @@ const BCvsFinance = () => {
                         aria-controls="fin2"
                       >
                         <div className="wr-in wr-in-001">
-                          <img src="/img/icons-002.svg" alt="ic-2" />
+                          <img src="/img/icons-002.svg" alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Identify your Investment Limits:</span>
                       </button>
@@ -361,7 +347,7 @@ const BCvsFinance = () => {
                         aria-controls="fin3"
                       >
                         <div className="wr-in wr-in-001">
-                          <img src="/img/icons-003.svg" alt="ic-3" />
+                          <img src="/img/icons-003.svg" alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Identify your Business Requirements:</span>
                       </button>
@@ -385,9 +371,8 @@ const BCvsFinance = () => {
             <div className="col-lg-6 align-self-center">
               <Image
                 src="/img/Tablet-Pro-Mockup-10.png"
-                alt="Tablet_Pro_Mockup_10"
-                width={646} height={597}
-              />
+                alt="Identify your Business Requirements:"
+                width={646} height={597} />
             </div>
           </div>
         </div>

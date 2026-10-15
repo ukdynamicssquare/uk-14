@@ -1,28 +1,22 @@
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Autoplay, FreeMode, Pagination } from "swiper/modules";
+import PageSeo from "../../components/PageSeo";
 
 
 const CaseStudyGlobalTea = () => {
 
   return (
     <>
-      <Head>
-        <title>Dynamics NAV 2016 Support Services - Case Study</title>
-        <meta
-          name="description"
-          content="Global Tea & Commodities Ltd. worked with Dynamics Square to get dedicated Microsoft Dynamics NAV support. Read Global Tea case story to gain insights."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/case-studies/nav16-support/"
-        />
-      </Head>
+      <PageSeo
+        type="Article"
+        title="Dynamics NAV 2016 Support Services - Case Study"
+        description="Global Tea & Commodities Ltd. worked with Dynamics Square to get dedicated Microsoft Dynamics NAV support. Read Global Tea case story to gain insights."
+      />
       <section className="hero-1 hero">
         <div className="container">
           <div className="row">
@@ -39,10 +33,9 @@ const CaseStudyGlobalTea = () => {
               <div className="sider-over">
                 <Image
                   src="/img/business-central-implementation-banner-1.svg"
-                  alt="business-central-implementation-banner"
+                  alt="Dynamics NAV 2016 Support Services"
                   width={1024} height={586}
-                  priority={true}
-                />
+                  priority={true} />
               </div>
             </div>
           </div>
@@ -56,8 +49,7 @@ const CaseStudyGlobalTea = () => {
                 <div className="col-lg-3 align-self-center">
                   <img
                     src="/img/casestudy-pic.png"
-                    alt="casestudy-pic"
-                  />
+                    alt="Dynamics NAV 2016 Support Services" />
                 </div>
                 <div className="col-lg-9">
                   <p>The company was founded in 1991 and a largest and fastest-growing distributors of tea, coffee, and macadamia nuts. It offers its wide range of products to all stages of the supply chain. The company has crossed the sales of $220 million to date and processed more than 70 million kilos of tea each year. Being the most prominent independent tea and coffee company in the UK, it has employed over 4,000 people around the world. In Africa, they are the largest producer of macadamia nuts.</p>
@@ -77,7 +69,7 @@ const CaseStudyGlobalTea = () => {
           </header>
           <div className="row gx-5">
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/cast-stu-pic.png" alt="cast-stu-pic" width={484} height={407} />
+              <Image src="/img/cast-stu-pic.png" alt="What are The Business Challenges" width={484} height={407} />
             </div>
             <div className="col-lg-6">
               <div className="content-icons-modil-1">
@@ -190,8 +182,8 @@ const CaseStudyGlobalTea = () => {
                           <div className="img-wrp">
                             <img
                               src="/img/material-lightbulb-outline.svg"
-                              alt="Food-and-beverage"
-                            />
+                              alt=""
+                             aria-hidden="true"  loading="lazy" decoding="async" />
                           </div>
                           <div className="text-wrp-content">
                             <p>
@@ -211,7 +203,7 @@ const CaseStudyGlobalTea = () => {
                               <img
                                 src="/img/material-lightbulb-outline.svg"
                                 alt="NotforProfit"
-                              />
+                               loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>
@@ -231,7 +223,7 @@ const CaseStudyGlobalTea = () => {
                               <img
                                 src="/img/material-lightbulb-outline.svg"
                                 alt="Ecommerce"
-                              />
+                               loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>
@@ -250,8 +242,8 @@ const CaseStudyGlobalTea = () => {
                             <div className="img-wrp">
                               <img
                                 src="/img/material-lightbulb-outline.svg"
-                                alt="proffesional-service"
-                              />
+                                alt=""
+                               aria-hidden="true"  loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>
@@ -367,7 +359,7 @@ const CaseStudyGlobalTea = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="call_to_action-right over-img">
-                <img src="/img/MaskGroup8.png" alt="image" />
+                <img src="/img/MaskGroup8.png" alt="Business consultant"  loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="col-lg-7 align-self-center">

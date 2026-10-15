@@ -1,21 +1,16 @@
-import Head from "next/head";
 import Link from "next/link"; 
 import Image from 'next/image';
 import Form from "../../../components/Form";
+import PageSeo from "../../../components/PageSeo";
 const CrmModule = () => {
   return (
     <>
-      <Head>
-        <title>CRM Module for Dynamics 365 Business Central | Dynamics Square UK</title>
-        <meta
-          name="description"
-          content="Manage customer and offer best customer experience utilizing the advanced capabilities of Dynamics 365 Business Central CRM Module."
-        />
-         <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/crm-module/"
-        />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="CRM Module for Dynamics 365 Business Central | Dynamics Square UK"
+        description="Manage customer and offer best customer experience utilizing the advanced capabilities of Dynamics 365 Business Central CRM Module."
+        image="/img/crm-module.png"
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -96,9 +91,8 @@ const CrmModule = () => {
               <div className="left-pic-nn">
                 <Image
                   src="/img/Dynamics-365-for-Health-care-side.png"
-                  alt="Dynamics-365-for-Health-care-side"
-                  width={422} height={453}
-                />
+                  alt="Generate More Revenue with Business Central CRM Module"
+                  width={422} height={453} />
               </div>
             </div>
 

@@ -1,9 +1,9 @@
 import React, { useRef, useState, useEffect } from "react";
-import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
 import FormGuide from "../../components/FormGuide";
+import PageSeo from "../../components/PageSeo";
 const PowerBIGuide = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [display, setDisplay] = useState("ds-none");
@@ -33,32 +33,15 @@ const PowerBIGuide = () => {
   };
   return (
     <>
-      <Head>
-      <title>Power BI: The Definitive Guide For SMBs (2026)</title>
-        <meta
-          name="description"
-          content="A complete guide to Power BI (2026) for SMBs. Learn how to transform your data into interactive reports that drive results."
-        />
-        <meta
-          name="keywords"
-          content="power bi guide, guide to power bi, ultimate power bi guide, comprehensive power bi guide, power bi guide for SMBs, power bi buisness guide, power bi guide for business"
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/guides/power-bi-guide-for-smb/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/guides/power-bi-guide-for-smb/" />
-        <meta property="og:title" content="Power BI: The Definitive Guide For SMBs" />
-        <meta property="og:description" content="A complete guide to Power BI. Learn how to transform your data into interactive reports that drive results." />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/group-2308.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/guides/power-bi-guide-for-smb/" />
-        <meta property="twitter:title" content="Power BI: The Definitive Guide For SMBs" />
-        <meta property="twitter:description" content="A complete guide to Power BI. Learn how to transform your data into interactive reports that drive results." />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/group-2308.png" />
-      </Head>
+      <PageSeo
+        keywords="power bi guide, guide to power bi, ultimate power bi guide, comprehensive power bi guide, power bi guide for SMBs, power bi buisness guide, power bi guide for business"
+        type="Article"
+        title="Power BI: The Definitive Guide For SMBs (2026)"
+        description="A complete guide to Power BI (2026) for SMBs. Learn how to transform your data into interactive reports that drive results."
+        image="https://www.dynamicssquare.co.uk/img/group-2308.png"
+        ogTitle="Power BI: The Definitive Guide For SMBs"
+        ogDescription="A complete guide to Power BI. Learn how to transform your data into interactive reports that drive results."
+      />
       <section className="banner-guide hero-1 hero">
         <div className="container">
           <div className="row">
@@ -396,10 +379,9 @@ const PowerBIGuide = () => {
               <Link href="#powerBIModals" data-bs-toggle="modal">
                   <Image
                     src="/img/powerb-guide-call-to-banner-2.png"
-                    alt="power-guide"
+                    alt="Chapter 1 Introduction to Power BI"
                     width={1260}
-                    height={510}
-                  />
+                    height={510} />
                 </Link>
               </div>
             </div>
@@ -425,14 +407,14 @@ const PowerBIGuide = () => {
                     className="shape-1"
                    width="250"
                    height="250"
-                  />
+                   loading="lazy" decoding="async" />
                   <img
                     src="/img/over-lay-shape.png"
-                    alt="over-lay-shape"
+                    alt=""
                     className="overlay-1"
                     width="769"
                     height="324"
-                  />
+                   aria-hidden="true"  loading="lazy" decoding="async" />
                 </div>
               </header>
             </div>
@@ -829,7 +811,7 @@ const PowerBIGuide = () => {
                 </a>
               </div>
               <div className="iner-pp">
-                <Image src="/img/group-22.jpg" alt="group-22"  width={624} height={348} />
+                <Image src="/img/group-22.jpg" alt="Chapter 2 Power BI Features and Benefits"  width={624} height={348} />
               </div>
             </div>
           </div>
@@ -854,14 +836,14 @@ const PowerBIGuide = () => {
                     className="shape-1"
                     width="250"
                     height="250"
-                  />
+                   loading="lazy" decoding="async" />
                   <img
                     src="/img/over-lay-shape.png"
-                    alt="over-lay-shape"
+                    alt=""
                     className="overlay-1"
                     width="769"
                     height="324"
-                  />
+                   aria-hidden="true"  loading="lazy" decoding="async" />
                 </div>
               </header>
             </div>
@@ -1120,10 +1102,9 @@ const PowerBIGuide = () => {
               <Link href="#powerBIModals" data-bs-toggle="modal">
                   <Image
                     src="/img/powerb-guide-call-to-banner-2.png"
-                    alt="power-guide"
+                    alt="Chapter 3 Power BI Dashboards"
                     width={1260}
-                    height={510}
-                  />
+                    height={510} />
                 </Link>
               </div>
             </div>
@@ -1150,14 +1131,14 @@ const PowerBIGuide = () => {
                     className="shape-1"
                     width="250"
                     height="250"
-                  />
+                   loading="lazy" decoding="async" />
                   <img
                     src="/img/over-lay-shape.png"
-                    alt="over-lay-shape"
+                    alt=""
                     className="overlay-1"
                     width="769"
                     height="324"
-                  />
+                   aria-hidden="true"  loading="lazy" decoding="async" />
                 </div>
               </header>
             </div>
@@ -1253,7 +1234,7 @@ const PowerBIGuide = () => {
                 </p>
               </div>
               <div className="iner-pp">
-                <Image src="/img/group-2224-4.png" alt="group-2224" width={1054} height={340} />
+                <Image src="/img/group-2224-4.png" alt="Chapter 3 Power BI Dashboards" width={1054} height={340} />
               </div>
               <div className="cont-table-inner">
                 <p>
@@ -1717,10 +1698,9 @@ const PowerBIGuide = () => {
               <Link href="#powerBIModals" data-bs-toggle="modal">
                   <Image
                     src="/img/powerb-guide-call-to-banner-2.png"
-                    alt="power-guide"
+                    alt="Chapter 3 Power BI Dashboards"
                     width={1260}
-                    height={510}
-                  />
+                    height={510} />
                 </Link>
               </div>
               <div className="cont-table-inner">
@@ -1844,18 +1824,17 @@ const PowerBIGuide = () => {
                 <div className="balnde-imge-mode">
                   <img
                     src="/img/PowerBi-integration.png"
-                    alt="PowerBi-integration"
+                    alt="Chapter 4 Power BI Integration"
                     className="shape-1"
                     width="250"
-                    height="250"
-                  />
+                    height="250"  loading="lazy" decoding="async" />
                   <img
                     src="/img/over-lay-shape.png"
-                    alt="over-lay-shape"
+                    alt=""
                     className="overlay-1"
                     width="769"
                     height="324"
-                  />
+                   aria-hidden="true"  loading="lazy" decoding="async" />
                 </div>
               </header>
             </div>
@@ -1967,10 +1946,9 @@ const PowerBIGuide = () => {
               <Link href="#powerBIModals" data-bs-toggle="modal">
                   <Image
                     src="/img/powerb-guide-call-to-banner-2.png"
-                    alt="power-guide"
+                    alt="Chapter 5 Power BI Versions, Pricing, and Licensing"
                     width={1260}
-                    height={510}
-                  />
+                    height={510} />
                 </Link>
               </div>
             </div>
@@ -1997,14 +1975,14 @@ const PowerBIGuide = () => {
                     className="shape-1"
                     width="250"
                     height="250"
-                  />
+                   loading="lazy" decoding="async" />
                   <img
                     src="/img/over-lay-shape.png"
-                    alt="over-lay-shape"
+                    alt=""
                     className="overlay-1"
                     width="769"
                     height="324"
-                  />
+                   aria-hidden="true"  loading="lazy" decoding="async" />
                 </div>
               </header>
             </div>
@@ -2190,10 +2168,9 @@ const PowerBIGuide = () => {
               <Link href="#powerBIModals" data-bs-toggle="modal">
                   <Image
                     src="/img/powerb-guide-call-to-banner-2.png"
-                    alt="power-guide"
+                    alt="Chapter 5 Power BI Versions, Pricing, and Licensing"
                     width={1260}
-                    height={510}
-                  />
+                    height={510} />
                 </Link>
               </div>
               <div className="cont-table-inner">
@@ -2447,10 +2424,10 @@ const PowerBIGuide = () => {
                 </p>
               </div>
               <div className="iner-pp">
-                <Image src="/img/group-2221.png" alt="group-2221" width={1093} height={215} />
+                <Image src="/img/group-2221.png" alt="Capacity Pricing Per Node/Month" width={1093} height={215} />
               </div>
               <div className="iner-pp">
-                <Image src="/img/group-2222.png" alt="group-2222" width={1039} height={350} />
+                <Image src="/img/group-2222.png" alt="Chapter 6 Power BI vs. Competitors" width={1039} height={350} />
               </div>
             </div>
           </div>
@@ -2476,14 +2453,14 @@ const PowerBIGuide = () => {
                     className="shape-1"
                     width="250"
                     height="250"
-                  />
+                   loading="lazy" decoding="async" />
                   <img
                     src="/img/over-lay-shape.png"
-                    alt="over-lay-shape"
+                    alt=""
                     className="overlay-1"
                     width="769"
                     height="324"
-                  />
+                   aria-hidden="true"  loading="lazy" decoding="async" />
                 </div>
               </header>
             </div>
@@ -2623,10 +2600,9 @@ const PowerBIGuide = () => {
               <Link href="#powerBIModals" data-bs-toggle="modal">
                   <Image
                     src="/img/powerb-guide-call-to-banner-2.png"
-                    alt="power-guide"
+                    alt="Chapter 7 Future Scope of Power BI"
                     width={1260}
-                    height={510}
-                  />
+                    height={510} />
                 </Link>
               </div>
             </div>
@@ -2653,14 +2629,14 @@ const PowerBIGuide = () => {
                     className="shape-1"
                     width="250"
                     height="250"
-                  />
+                   loading="lazy" decoding="async" />
                   <img
                     src="/img/over-lay-shape.png"
-                    alt="over-lay-shape"
+                    alt=""
                     className="overlay-1"
                     width="769"
                     height="324"
-                  />
+                   aria-hidden="true"  loading="lazy" decoding="async" />
                 </div>
               </header>
             </div>
@@ -2815,10 +2791,9 @@ const PowerBIGuide = () => {
               <Link href="#powerBIModals" data-bs-toggle="modal">
                   <Image
                     src="/img/powerb-guide-call-to-banner-2.png"
-                    alt="power-guide"
+                    alt="Chapter 7 Future Scope of Power BI"
                     width={1260}
-                    height={510}
-                  />
+                    height={510} />
                 </Link>
               </div>
             </div>

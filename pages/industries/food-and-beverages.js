@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import Blog from "../../components/Blog";
@@ -9,34 +8,18 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Autoplay, FreeMode, Pagination } from "swiper/modules";
+import PageSeo from "../../components/PageSeo";
 const Startup = () => {
   const [isOpen, setOpen] = useState(false);
   const [open, setsOpen] = useState(false);
   return (
     <>
-      <Head>
-        <meta charSet="utf-8" />
-        <title>Microsoft Dynamics 365 for Food and Beverages Industry</title>
-        <meta
-          name="description"
-          content="Enable quick adaption, simplify processes, and drive continuity throughout your organisation with Dynamics 365 for Food and Beverages Industry Solutions."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/industries/food-and-beverages/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/industries/food-and-beverages/" />
-        <meta property="og:title" content="Microsoft Dynamics 365 for Food and Beverages Industry" />
-        <meta property="og:description" content="Enable quick adaption, simplify processes, and drive continuity throughout your organisation with Dynamics 365 for Food and Beverages Industry Solutions." />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/food-and-beverages-banner.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/industries/food-and-beverages/" />
-        <meta property="twitter:title" content="Microsoft Dynamics 365 for Food and Beverages Industry" />
-        <meta property="twitter:description" content="Enable quick adaption, simplify processes, and drive continuity throughout your organisation with Dynamics 365 for Food and Beverages Industry Solutions." />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/food-and-beverages-banner.png" />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Microsoft Dynamics 365 for Food and Beverages Industry"
+        description="Enable quick adaption, simplify processes, and drive continuity throughout your organisation with Dynamics 365 for Food and Beverages Industry Solutions."
+        image="https://www.dynamicssquare.co.uk/img/food-and-beverages-banner.png"
+      />
       <ModalVideo
         channel="youtube"
         autoplay
@@ -177,7 +160,7 @@ const Startup = () => {
             <div className="row">
               <div className="col-lg-5">
                 <div className="call_to_action-right over-img">
-                  <img src="/img/MaskGroup8.png" alt="image" />
+                  <img src="/img/MaskGroup8.png" alt="Business consultant" />
                 </div>
               </div>
               <div className="col-lg-7 align-self-center">
@@ -227,10 +210,9 @@ const Startup = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/Distribution-Delivery.svg"
-                      alt="Distribution-Delivery"
+                      alt="Warehouse & Distribution Management"
                       width={48}
-                      height={48}
-                    />
+                      height={48}  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Warehouse & Distribution Management</h3>
@@ -245,10 +227,9 @@ const Startup = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/Asset-Management.svg"
-                      alt="Asset-Management"
+                      alt="Marketing & Sales"
                       width={48}
-                      height={48}
-                    />
+                      height={48}  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Marketing & Sales</h3>
@@ -263,10 +244,9 @@ const Startup = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/Customer-Management.svg"
-                      alt="Customer-Management"
+                      alt="Customer Management"
                       width={48}
-                      height={48}
-                    />
+                      height={48}  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Customer Management</h3>
@@ -281,10 +261,9 @@ const Startup = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/Production-Mnagement.svg"
-                      alt="Production-Mnagement"
+                      alt="Manufacturing Management"
                       width={48}
-                      height={48}
-                    />
+                      height={48}  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Manufacturing Management</h3>
@@ -301,10 +280,9 @@ const Startup = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/Design-and-Training.svg"
-                      alt="Design-and-Training"
+                      alt="Supply Chain Management"
                       width={48}
-                      height={48}
-                    />
+                      height={48}  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Supply Chain Management</h3>
@@ -319,10 +297,9 @@ const Startup = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/Service-Management.svg"
-                      alt="Service-Management"
+                      alt="Analytics & Insights"
                       width={48}
-                      height={48}
-                    />
+                      height={48}  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Analytics & Insights</h3>
@@ -337,10 +314,9 @@ const Startup = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/predict-opportunity.svg"
-                      alt="predict-opportunity"
+                      alt="Production & Quality Control"
                       width={48}
-                      height={48}
-                    />
+                      height={48}  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Production & Quality Control</h3>
@@ -356,10 +332,10 @@ const Startup = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/icons-ax-_sales-management.svg"
-                      alt="Sales-Management"
+                      alt=""
                       width={48}
                       height={48}
-                    />
+                     aria-hidden="true"  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Financial Management</h3>
@@ -424,9 +400,9 @@ const Startup = () => {
                           <img
                             src="/img/Video-Food And beerages.png"
                             alt="Video-Food And beerages"
-                          />
+                           loading="lazy" decoding="async" />
                           <span className="cente-icns">
-                            <img src="/img/play_icons.svg" alt="play_icons" />
+                            <img src="/img/play_icons.svg" alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                           </span>
 
                         </Link>
@@ -514,7 +490,7 @@ const Startup = () => {
                                   <img
                                     src="/img/NotforProfit.svg"
                                     alt="NotforProfit"
-                                  />
+                                   loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>Not for Profit</h3>
@@ -539,7 +515,7 @@ const Startup = () => {
                                   <img
                                     src="/img/Ecommerce.svg"
                                     alt="Ecommerce"
-                                  />
+                                   loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>E-Commerce</h3>
@@ -562,8 +538,8 @@ const Startup = () => {
                                 <div className="img-wrp">
                                   <img
                                     src="/img/proffesional-service.svg"
-                                    alt="proffesional-service"
-                                  />
+                                    alt=""
+                                   aria-hidden="true"  loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>Professional Services</h3>
@@ -587,8 +563,7 @@ const Startup = () => {
                                 <div className="img-wrp">
                                   <img
                                     src="/img/microsoft-cloud-for-manufacturing.svg"
-                                    alt="microsoft-cloud-for-manufacturing"
-                                  />
+                                    alt="Manufacturing & Distribution"  loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>Manufacturing & Distribution</h3>
@@ -610,7 +585,7 @@ const Startup = () => {
                             <div className="industries-list-more">
                               <a href="/industries/startups/">
                                 <div className="img-wrp">
-                                  <img src="/img/start-up.svg" alt="start-up" />
+                                  <img src="/img/start-up.svg" alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>Startups</h3>
@@ -647,7 +622,7 @@ const Startup = () => {
             <div className="row top-2 gx-5">
               <Blog />
               <div className="col-lg-6 align-self-center">
-                <Image src="/img/n/Dynamics-food-beverages-Banner.png" width={790} height={470} alt="pic" />
+                <Image src="/img/n/Dynamics-food-beverages-Banner.png" width={790} height={470} alt="Check out our Best Resources for food and beverages" />
               </div>
             </div>
           </div>

@@ -1,8 +1,32 @@
-import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
 import useCardScrollEffect from "/components/useCardScrollEffect";
+import PageSeo from "../components/PageSeo";
+// Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
+const PAGE_FAQS = [
+  {
+    "question": "Is Continia Expense Management embedded or a separate tool?",
+    "answer": "It’s embedded. It lives inside your Business Central expense management module, with direct links to G/L, vendors, and dimensions."
+  },
+  {
+    "question": "Can I customise expense policies or approval flows?",
+    "answer": "Yes. You can build logic based on departments, thresholds, roles, and project codes, all fully configurable."
+  },
+  {
+    "question": "What’s the setup time for Continia Expense Management?",
+    "answer": "Typically, under 2–3 weeks for standard rollout with training. Larger organisations may vary based on card integrations and policy structures."
+  },
+  {
+    "question": "Does the app support mileage and per diem calculations?",
+    "answer": "Yes. The mobile app supports Google Maps mileage tracking, per diem logic, and multi-leg trip reporting."
+  },
+  {
+    "question": "What is Continia Expense Management pricing like?",
+    "answer": "Continia Expense Management pricing is based on flat licence models, not per-user charges. It scales affordably with your growth."
+  }
+];
+
 
 const ContiniaExpence = () => {
 
@@ -10,32 +34,13 @@ const ContiniaExpence = () => {
 
   return (
     <>
-      <Head>
-        <title>What is Continia Expense Management?</title>
-        <meta
-          name="description"
-          content="Get Continia Expense Management to track and monitor corporate expenses and digitalize the entire reimbursement process."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/continia-expense-management/"
-        />
-        <meta property="og:locale" content="GB" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content=" What is Continia Expense Management? " />
-        <meta property="og:description" content="Get Continia Expense Management to track and monitor corporate expenses and digitalize the entire reimbursement process." />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/continia-expense-management/" />
-        <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/exp-mangnet-banner.png" />
-        <meta property="og:image:width" content="200" />
-        <meta property="og:image:height" content="200" />
-        <meta property="og:image:type" content="image/png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="What is Continia Expense Management?" />
-        <meta name="twitter:description" content="Get Continia Expense Management to track and monitor corporate expenses and digitalize the entire reimbursement process." />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/exp-mangnet-banner.png" />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="What is Continia Expense Management?"
+        description="Get Continia Expense Management to track and monitor corporate expenses and digitalize the entire reimbursement process."
+        image="https://www.dynamicssquare.co.uk/img/exp-mangnet-banner.png"
+        faqs={PAGE_FAQS}
+      />
       <div className='solution-new-banner-one solution-new-banner-one-colo'>
         <div className='container'>
           <div className='row justify-content-center'>
@@ -54,10 +59,10 @@ const ContiniaExpence = () => {
                 </div>
               </div>
               <div className='m-b-image-banner m-b-image-banner-nn'>
-                <Image src="/img/exp-mangnet-banner.png" alt='bc-support-banner' width={944} height={322} priority />
+                <Image src="/img/exp-mangnet-banner.png" alt="Continia Expense Management for D365 Business Central" width={944} height={322} priority />
               </div>
               <div className='m-b-image-banner-bott'>
-                <Image src="/img/cont-shape.png" alt='cont-shape' width={1898} height={470} priority />
+                <Image src="/img/cont-shape.png" alt="" width={1898} height={470} priority aria-hidden="true" />
               </div>
             </div>
 
@@ -94,7 +99,7 @@ const ContiniaExpence = () => {
             <div className="col-lg-1"></div>
             <div className="col-lg-5 align-self-center">
               <div className='img-backs-sid-two text-center'>
-                <Image src="/img/exp-mangnet-pic-01.png" alt="exp-mangnet-pic-01" width={485} height={450} className='im-two' />
+                <Image src="/img/exp-mangnet-pic-01.png" alt="Consequences of Not Using Continia Expense Management" width={485} height={450} className='im-two' />
               </div>
             </div>
           </div>
@@ -105,7 +110,7 @@ const ContiniaExpence = () => {
           <div className="row">
             <div className="col-lg-5 align-self-center">
               <div className='img-backs-sid-two text-center'>
-                <Image src="/img/exp-mangnet-pic-02.png" alt="exp-mangnet-pic-02" width={580} height={456} className='im-two' />
+                <Image src="/img/exp-mangnet-pic-02.png" alt="What Is Continia Expense Management for Business Central ERP?" width={580} height={456} className='im-two' />
               </div>
             </div>
             <div className="col-lg-1"></div>
@@ -145,7 +150,7 @@ const ContiniaExpence = () => {
             </div>
           </div>
         </div>
-        <Image src="/img/n-015.png" alt="n-015" width={671} height={344} />
+        <Image src="/img/n-015.png" alt="" width={671} height={344} aria-hidden="true" />
       </section>
       <section className='solution-new-banner-three pd-con-63'>
         {/* <div className="container" ref={containerRef}> */}
@@ -173,7 +178,7 @@ const ContiniaExpence = () => {
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/exp-mangnet-pic-03.png" width={510} height={401} alt="exp-mangnet-pic-03" />
+                      <Image src="/img/exp-mangnet-pic-03.png" width={510} height={401} alt="Mileage Made Simple" />
                     </div>
                   </div>
                 </div>
@@ -189,7 +194,7 @@ const ContiniaExpence = () => {
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/exp-mangnet-pic-04.png" width={510} height={401} alt="exp-mangnet-pic-04" />
+                      <Image src="/img/exp-mangnet-pic-04.png" width={510} height={401} alt="Smart Credit Card Reconciliation" />
                     </div>
                   </div>
                 </div>
@@ -205,7 +210,7 @@ const ContiniaExpence = () => {
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/exp-mangnet-pic-05.png" width={510} height={401} alt="exp-mangnet-pic-05" />
+                      <Image src="/img/exp-mangnet-pic-05.png" width={510} height={401} alt="Streamlined Approvals" />
                     </div>
                   </div>
                 </div>
@@ -221,7 +226,7 @@ const ContiniaExpence = () => {
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/exp-mangnet-pic-06.png" width={510} height={401} alt="exp-mangnet-pic-06" />
+                      <Image src="/img/exp-mangnet-pic-06.png" width={510} height={401} alt="Secure Digital Archiving" />
                     </div>
                   </div>
                 </div>
@@ -237,7 +242,7 @@ const ContiniaExpence = () => {
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/exp-mangnet-pic-07.png" width={510} height={401} alt="exp-mangnet-pic-07" />
+                      <Image src="/img/exp-mangnet-pic-07.png" width={510} height={401} alt="Per Diems and Purchase Contracts" />
                     </div>
                   </div>
                 </div>
@@ -253,7 +258,7 @@ const ContiniaExpence = () => {
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/exp-mangnet-pic-08.png" width={510} height={401} alt="exp-mangnet-pic-08" />
+                      <Image src="/img/exp-mangnet-pic-08.png" width={510} height={401} alt="Benefits of Continia Expense Management for Business Central ERP" />
                     </div>
                   </div>
                 </div>
@@ -557,7 +562,7 @@ const ContiniaExpence = () => {
                     aria-controls="s-pills-home-1"
                     aria-selected="true"
                   >
-                    <h3><Image src="/img/exp-mangnet-icon-1.png" alt="exp-mangnet-icon-1" width={24} height={24} />Time Savings Across the Board</h3>
+                    <h3><Image src="/img/exp-mangnet-icon-1.png" alt="" width={24} height={24} aria-hidden="true" />Time Savings Across the Board</h3>
                   </button>
                   <button
                     className="nav-link"
@@ -569,7 +574,7 @@ const ContiniaExpence = () => {
                     aria-controls="s-pills-home-2"
                     aria-selected="false"
                   >
-                    <h3><Image src="/img/exp-mangnet-icon-2.png" alt="exp-mangnet-icon-2" width={24} height={24} />Real-Time Visibility Into Spend </h3>
+                    <h3><Image src="/img/exp-mangnet-icon-2.png" alt="" width={24} height={24} aria-hidden="true" />Real-Time Visibility Into Spend </h3>
                   </button>
                   <button
                     className="nav-link"
@@ -581,7 +586,7 @@ const ContiniaExpence = () => {
                     aria-controls="s-pills-hpme-3"
                     aria-selected="false"
                   >
-                    <h3><Image src="/img/exp-mangnet-icon-3.png" alt="exp-mangnet-icon-3" width={24} height={24} />Audit-Ready Compliance</h3>
+                    <h3><Image src="/img/exp-mangnet-icon-3.png" alt="" width={24} height={24} aria-hidden="true" />Audit-Ready Compliance</h3>
                   </button>
                   <button
                     className="nav-link"
@@ -593,7 +598,7 @@ const ContiniaExpence = () => {
                     aria-controls="s-pills-home-4"
                     aria-selected="false"
                   >
-                    <h3><Image src="/img/exp-mangnet-icon-4.png" alt="exp-mangnet-icon-4" width={24} height={24} />Scalable, No Matter the Team Size</h3>
+                    <h3><Image src="/img/exp-mangnet-icon-4.png" alt="" width={24} height={24} aria-hidden="true" />Scalable, No Matter the Team Size</h3>
                   </button>
                   <button
                     className="nav-link"
@@ -605,7 +610,7 @@ const ContiniaExpence = () => {
                     aria-controls="s-pills-home-5"
                     aria-selected="false"
                   >
-                    <h3><Image src="/img/exp-mangnet-icon-5.png" alt="exp-mangnet-icon-5" width={24} height={24} />AI-Driven Efficiency </h3>
+                    <h3><Image src="/img/exp-mangnet-icon-5.png" alt="" width={24} height={24} aria-hidden="true" />AI-Driven Efficiency </h3>
                   </button>
                  
 
@@ -844,7 +849,7 @@ const ContiniaExpence = () => {
             <div className="col-lg-1"></div>
             <div className="col-lg-5 align-self-center">
               <div className='img-backs-sid-two text-center'>
-                <Image src="/img/exp-mangnet-pic-09.png" alt="exp-mangnet-pic-09" width={627} height={517} className='im-two' />
+                <Image src="/img/exp-mangnet-pic-09.png" alt="Frequently asked questions" width={627} height={517} className='im-two' />
               </div>
             </div>
 

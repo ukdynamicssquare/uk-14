@@ -1,25 +1,44 @@
 import React, { useState } from "react";
-import Head from "next/head";
 import Image from 'next/image';
 import Link from "next/link";
+import PageSeo from "../components/PageSeo";
+// Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
+const PAGE_FAQS = [
+  {
+    "question": "What are the basic requirements to implement Mobile WMS?",
+    "answer": "Mobile WMS is an add-on that can be implemented with a Microsoft ERP solution. To implement it with your existing system, you need to search for the right Microsoft Certified Solutions Partner in UK. (Select a partner who offers implementation as well as support services to enable your solution to get going.) Contact Dynamics Square for Mobile WMS support and implementation services."
+  },
+  {
+    "question": "Is Mobile WMS programmable?",
+    "answer": "Yes, depending on the specific business requirements, Mobile WMS by Tasklet Factory can be customized. It is simple to set up and integrates with standard Dynamics 365 Business Central or Dynamics NAV functions. Contact us for customised needs."
+  },
+  {
+    "question": "How much time does it take a certified partner to implement Mobile WMS?",
+    "answer": "The total time needed for an implementation depends on the complexity of the business. However, on a standard implementation process, it can be implemented in less than 7 days after implementing warehouse management with the existing ERP. Contact Dynamics Square to know the exact time of implementation."
+  },
+  {
+    "question": "What is the total number of devices we can use with Mobile WMS?",
+    "answer": "You can access Mobile WMS on the desired number of devices. It totally depends on your requirements, whether you want to use it on a single device or on multiple devices."
+  },
+  {
+    "question": "What type of barcode does Mobile WMS support?",
+    "answer": "Mobile WMS supports international standard GS1 barcodes. If you need help choosing the right barcodes, contact Dynamics Square."
+  }
+];
+
 const Wms = () => {
   const [isOpen, setOpen] = useState(false);
   const [open, setsOpen] = useState(false);
 
   return (
     <>
-      <Head>
-        <title>WMS Tasklet for Dynamics 365 Business Central</title>
-        <meta
-          name="description"
-          content="Integration Mobile WMS for Business Central supports the core warehouse processes seemlessly while pushing the team towards more efficiency and productivity."
-        />
-      <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/wms-for-business-central/"
-        />
-  
-      </Head>
+      <PageSeo
+        type="Service"
+        title="WMS Tasklet for Dynamics 365 Business Central"
+        description="Integration Mobile WMS for Business Central supports the core warehouse processes seemlessly while pushing the team towards more efficiency and productivity."
+        image="/img/wms-bc-banner.png"
+        faqs={PAGE_FAQS}
+      />
       <section className="Solution-banner hero-1 hero">
               <div className="container">
                 <div className="row">
@@ -108,7 +127,7 @@ const Wms = () => {
             <div className="col-lg-6">
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                  <img src="/img/Group1407.svg" alt="Group1407" />
+                  <img src="/img/Group1407.svg" alt="Group1407"  loading="lazy" decoding="async" />
                 </div>
                 <div className="style-grid-content">
                   <h3>Works with Most Popular Operating System </h3>
@@ -118,7 +137,7 @@ const Wms = () => {
 
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                  <img src="/img/Add-ons.svg" alt="Add-ons.svg" />
+                  <img src="/img/Add-ons.svg" alt="Interactive User-Interface"  loading="lazy" decoding="async" />
                 </div>
                 <div className="style-grid-content">
                   <h3>Interactive User-Interface </h3>
@@ -129,7 +148,7 @@ const Wms = () => {
             <div className="col-lg-6">
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                  <img src="/img/Group1408.svg" alt="Group1408" />
+                  <img src="/img/Group1408.svg" alt="Group1408"  loading="lazy" decoding="async" />
                 </div>
                 <div className="style-grid-content">
                   <h3>Works in Online and Offline Mode </h3>
@@ -142,7 +161,7 @@ const Wms = () => {
                   <img
                     src="/img/Modifications.svg"
                     alt="Modifications"
-                  />
+                   loading="lazy" decoding="async" />
                 </div>
                 <div className="style-grid-content">
                   <h3>Fully Functional within a Week </h3>

@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/location/dynamics-365-partner-london/",
+      "destination": "/location/",
+      "statusCode": 301
+    },
+    {
       "source": "/blog/business-central-for-accounting/",
       "destination": "/blog/business-central-accounting-software/",
       "statusCode": 301

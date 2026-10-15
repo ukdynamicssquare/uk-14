@@ -2,7 +2,7 @@ import Head from "next/head";
 import TimerModal from "../../../components/TimerModal";
 import BlogStyles from "../../../components/blog/BlogStyles";
 import {
-  BlogFontPreload,
+  blogFontLinks,
   BlogPageHero,
   ChipNav,
   PagedPostGrid,
@@ -93,8 +93,8 @@ function TagBlogs({ blogs, tags, current }) {
           content={`Explore blogs about ${current.name.toLowerCase()}.`}
         />
         <link rel="canonical" href={pageUrl} />
+        {blogFontLinks()}
       </Head>
-      <BlogFontPreload />
 
       <BlogPageHero
         crumbs={[

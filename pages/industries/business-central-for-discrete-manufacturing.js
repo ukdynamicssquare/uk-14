@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
@@ -9,32 +8,17 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Autoplay, FreeMode, Pagination } from "swiper/modules";
 import Blog from "../../components/Blog";
+import PageSeo from "../../components/PageSeo";
 const BusinessCentralForDiscreteManufacturing = () => {
   const [isOpen, setOpen] = useState(false);
   return (
     <>
-      <Head>
-        <title>Microsoft Business Central for discrete Manufacturing | Dynamics Square</title>
-        <meta
-          name="description"
-          content="Simplify production, track raw materials, and manage BOMs, MRP and scheduling with Business Central for discrete manufacturing. UK implementation partner."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/industries/business-central-for-discrete-manufacturing/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/industries/business-central-for-discrete-manufacturing/" />
-        <meta property="og:title" content="Microsoft Business Central for discrete Manufacturing | Dynamics Square" />
-        <meta property="og:description" content="Simplify production, track raw materials, and manage BOMs, MRP and scheduling with Business Central for discrete manufacturing. UK implementation partner." />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/Bc-Discrete-Manufacturing.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/industries/business-central-for-discrete-manufacturing/" />
-        <meta property="twitter:title" content="Microsoft Business Central for discrete Manufacturing | Dynamics Square" />
-        <meta property="twitter:description" content="Simplify production, track raw materials, and manage BOMs, MRP and scheduling with Business Central for discrete manufacturing. UK implementation partner." />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/Bc-Discrete-Manufacturing.png" />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Microsoft Business Central for discrete Manufacturing | Dynamics Square"
+        description="Simplify production, track raw materials, and manage BOMs, MRP and scheduling with Business Central for discrete manufacturing. UK implementation partner."
+        image="https://www.dynamicssquare.co.uk/img/Bc-Discrete-Manufacturing.png"
+      />
         <section className="Solution-banner hero-1 hero">
           <div className="container">
             <div className="row">
@@ -55,11 +39,10 @@ const BusinessCentralForDiscreteManufacturing = () => {
               <div className="col-lg-6 align-self-center">
                 <Image
                   src="/img/Bc-Discrete-Manufacturing.png"
-                  alt="Bc-Discrete-Manufacturing"
+                  alt="How does Business Central Support Businesses with Discrete Manufacturing?"
                   width={939}
                   height={502}
-                  priority={true}
-                />
+                  priority={true} />
               </div>
             </div>
           </div>
@@ -117,7 +100,7 @@ const BusinessCentralForDiscreteManufacturing = () => {
             <div className="row">
               <div className="col-lg-5">
                 <div className="call_to_action-right over-img">
-                  <img src="/img/MaskGroup8.png" alt="image" />
+                  <img src="/img/MaskGroup8.png" alt="Business consultant" />
                 </div>
               </div>
               <div className="col-lg-7 align-self-center">
@@ -150,10 +133,9 @@ const BusinessCentralForDiscreteManufacturing = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/Smooth-Inventory-Management.png"
-                      alt="Smooth-Inventory-Management"
+                      alt="Smooth Inventory Management"
                       width={48}
-                      height={48}
-                    />
+                      height={48}  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Smooth Inventory Management</h3>
@@ -164,10 +146,9 @@ const BusinessCentralForDiscreteManufacturing = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/BOM-Management.png"
-                      alt="BOM-Management"
+                      alt="BOM Management"
                       width={48}
-                      height={48}
-                    />
+                      height={48}  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>BOM Management</h3>
@@ -178,10 +159,9 @@ const BusinessCentralForDiscreteManufacturing = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/Production-Planning-and-Scheduling.png"
-                      alt="Production-Planning-and-Scheduling"
+                      alt="Production Planning and Scheduling"
                       width={48}
-                      height={48}
-                    />
+                      height={48}  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Production Planning and Scheduling</h3>
@@ -192,10 +172,9 @@ const BusinessCentralForDiscreteManufacturing = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/Production-Tracking.png"
-                      alt="Production-Tracking"
+                      alt="Production Tracking"
                       width={48}
-                      height={48}
-                    />
+                      height={48}  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Production Tracking</h3>
@@ -208,10 +187,9 @@ const BusinessCentralForDiscreteManufacturing = () => {
                   <div className="card_new_img text-center">
                     <img
                      src="/img/360-Degree-Visibility.png"
-                      alt="360-Degree-Visibility"
+                      alt="360-Degree Visibility"
                       width={48}
-                      height={48}
-                    />
+                      height={48}  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>360-Degree Visibility</h3>
@@ -222,10 +200,9 @@ const BusinessCentralForDiscreteManufacturing = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/Promotes-Team-Collaboration.png"
-                      alt="Promotes-Team-Collaboration"
+                      alt="Promotes Team Collaboration"
                       width={48}
-                      height={48}
-                    />
+                      height={48}  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Promotes Team Collaboration</h3>
@@ -236,10 +213,9 @@ const BusinessCentralForDiscreteManufacturing = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/Product-Quality-Management.png"
-                      alt="Product-Quality-Management"
+                      alt="Product Quality Management"
                       width={48}
-                      height={48}
-                    />
+                      height={48}  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Product Quality Management</h3>
@@ -251,10 +227,9 @@ const BusinessCentralForDiscreteManufacturing = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/Shop-Floor-Control.png"
-                      alt="Shop-Floor-Control"
+                      alt="Shop Floor Control"
                       width={48}
-                      height={48}
-                    />
+                      height={48}  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Shop Floor Control</h3>
@@ -376,8 +351,8 @@ const BusinessCentralForDiscreteManufacturing = () => {
                               <div className="img-wrp">
                                 <img
                                   src="/img/Food-and-beverage.svg"
-                                  alt="Food-and-beverage"
-                                />
+                                  alt=""
+                                 aria-hidden="true"  loading="lazy" decoding="async" />
                               </div>
                               <div className="text-wrp-content">
                                 <h3>Food & Beverages</h3>
@@ -401,7 +376,7 @@ const BusinessCentralForDiscreteManufacturing = () => {
                                   <img
                                     src="/img/NotforProfit.svg"
                                     alt="NotforProfit"
-                                  />
+                                   loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>Not for Profit</h3>
@@ -426,7 +401,7 @@ const BusinessCentralForDiscreteManufacturing = () => {
                                   <img
                                     src="/img/Ecommerce.svg"
                                     alt="Ecommerce"
-                                  />
+                                   loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>E-Commerce</h3>
@@ -449,8 +424,8 @@ const BusinessCentralForDiscreteManufacturing = () => {
                                 <div className="img-wrp">
                                   <img
                                     src="/img/proffesional-service.svg"
-                                    alt="proffesional-service"
-                                  />
+                                    alt=""
+                                   aria-hidden="true"  loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>Professional Services</h3>
@@ -473,7 +448,7 @@ const BusinessCentralForDiscreteManufacturing = () => {
                             <div className="industries-list-more">
                               <Link href="/industries/startups/">
                                 <div className="img-wrp">
-                                  <img src="/img/start-up.svg" alt="start-up" />
+                                  <img src="/img/start-up.svg" alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>Startups</h3>

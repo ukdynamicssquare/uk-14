@@ -1,24 +1,37 @@
 import Link from "next/link"; 
-import Head from 'next/head';
 import Image from 'next/image';
+import PageSeo from "../components/PageSeo";
+// Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
+const PAGE_FAQS = [
+  {
+    "question": "How do you upgrade Business Central on-premises?",
+    "answer": "Upgrading Business Central on-premises means going online or configuring your set-up on-cloud. Data can be migrated from the earlier versions of Business Central such as 14, 15, 16, and 17. Current users can also switch to cloud from version 19. To upgrade Business Central on-premises, you are required to set up a connection between your Business Central on-premises wherein you can manage cloud migration by going through Cloud Migration Management Page. The next step is to manage data migration by running the migration tool. This process goes can be performed in a single step but with limited options of migration troubleshooting. To run customized migration suited to your specific data transformation needs, experts at Dynamics Square can help. You can run on-premises data migration in two steps: Data Replication This is the step that starts when you allow 'Set Up Cloud Migration'. Once the process reaches to end, you will have the backup or copy of the on-premises data through you can very whether the migration went successful or not. Data Upgrade This is the process that starts when you allow 'Run Data Upgrade Now' using the 'Cloud Migration Management Page' in your Business Central account. After a successful migration, you are needed to test the performed data migration. To perform so, you need to run the data replication and then create a 'Sandbox' environment to ensure a safer data upgrade. To run data migration, you are required to have hard-core technical expertise in Business Central Data Migration. At Dynamics Square, we can perform such data migration as customized as suited to your current as well as futuristic business needs while applying secure, and productive methodologies."
+  },
+  {
+    "question": "What is the latest version of Business Central?",
+    "answer": "Dynamics 365 Business Central Wave 2; the latest release is Business Central 2026 release wave 2 (version 29, October 2026). Microsoft ships two major releases a year, in April (wave 1) and October (wave 2), so the latest version changes twice a year. Business Central is primarily a cloud-based platform."
+  },
+  {
+    "question": "Is Business Central part of Dynamics 365?",
+    "answer": "Yes, Dynamics 365 Business Central is a part of Dynamics 365. Formerly known as Dynamics NAV and prior to this- Navision. Business Central is a solely integrated business solution to manage and streamline your business processes. Dynamics 365 is a group of business applications and Business Central is a part of it."
+  },
+  {
+    "question": "How much does it cost to upgrade to Business Central?",
+    "answer": "Depending on your project complexity, upgrading costs may vary.Connect with us, we can review your system first and can share the best quote suited to your customized needs. Dial 0207 193 2502"
+  }
+];
+
 
 const BusinessCentralUpgrade = () => {
     return (
       <>
-        <Head>
-        <title>
-          Dynamics 365 Business Central Upgrade by Microsoft Solutions Partner
-        </title>
-        <meta
-          name="description"
-          content="With Dynamics 365 Business Central upgrade, understand your customer behaviour, know your process flow, stay updated with real-time data, and enable everyone in your organisation to make faster and productive decisions."
+        <PageSeo
+          type="Service"
+          title="Dynamics 365 Business Central Upgrade by Microsoft Solutions Partner"
+          description="With Dynamics 365 Business Central upgrade, understand your customer behaviour, know your process flow, stay updated with real-time data, and enable everyone in your organisation to make faster and productive decisions."
+          image="/img/Schedule-1024x618.png"
+          faqs={PAGE_FAQS}
         />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/dynamics-365-business-central-upgrade/"
-        />
-          
-        </Head>
         <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -48,9 +61,8 @@ const BusinessCentralUpgrade = () => {
             <div className="col-lg-6 align-self-center">
               <Image
                 src="/img/business-central-implementation-banner.svg"
-                alt="business-central-implementation-banner"
-                width={1024} height={586}   priority = {true}
-              />
+                alt="Dynamics 365 Business Central Upgrade"
+                width={1024} height={586}   priority = {true} />
             </div>
           </div>
         </div>
@@ -62,9 +74,8 @@ const BusinessCentralUpgrade = () => {
                 <div className="commen-lef-pic">
                   <Image
                     src="/img/Schedule-1024x618.png"
-                    alt="Schedule-1024x618"
-                    width={1024} height={618}
-                  />
+                    alt="Dynamics 365 Business Central Upgrade Benefits"
+                    width={1024} height={618} />
                 </div>
               </div>
               <div className="col-lg-5 align-self-center">
@@ -123,7 +134,7 @@ const BusinessCentralUpgrade = () => {
                             <img
                               src="/img/icons-_system-starts-compromising.svg"
                               alt="icons-_system-starts-compromising"
-                            />
+                             loading="lazy" decoding="async" />
                           </div>
                           <span>When your system starts compromising</span>
                         </button>
@@ -159,7 +170,7 @@ const BusinessCentralUpgrade = () => {
                             <img
                               src="/img/icons-_losing-your-customers.svg"
                               alt="icons-_losing-your-customers"
-                            />
+                             loading="lazy" decoding="async" />
                           </div>
                           <span>You are losing your existing customers</span>
                         </button>
@@ -195,7 +206,7 @@ const BusinessCentralUpgrade = () => {
                             <img
                               src="/img/icons-_Unable-to-manage-sales.svg"
                               alt="icons-_Unable-to-manage-sales"
-                            />
+                             loading="lazy" decoding="async" />
                           </div>
                           <span>Unable to manage sales & production line</span>
                         </button>
@@ -237,7 +248,7 @@ const BusinessCentralUpgrade = () => {
                             <img
                               src="/img/icons-_delaying-your-decisions.svg"
                               alt="icons-_delaying-your-decisions"
-                            />
+                             loading="lazy" decoding="async" />
                           </div>
                           <span>Manual reporting is delaying your decisions</span>
                         </button>
@@ -273,7 +284,7 @@ const BusinessCentralUpgrade = () => {
                             <img
                               src="/img/icons-_-improper-finance-management.svg"
                               alt="icons-_-improper-finance-management"
-                            />
+                             loading="lazy" decoding="async" />
                           </div>
                           <span>Facing improper finance management</span>
                         </button>
@@ -309,7 +320,7 @@ const BusinessCentralUpgrade = () => {
                             <img
                               src="/img/icons-_Project-management-is-suffering.svg"
                               alt="icons-_Project-management-is-suffering"
-                            />
+                             loading="lazy" decoding="async" />
                           </div>
                           <span>Project management is suffering</span>
                         </button>

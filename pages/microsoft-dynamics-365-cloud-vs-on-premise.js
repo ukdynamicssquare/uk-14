@@ -1,32 +1,17 @@
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
+import PageSeo from "../components/PageSeo";
 
 const CloudvsOnpremise = () => {
   return (
     <>
-      <Head>
-        <title>What is the Difference between Dynamics 365 on-premise vs cloud? [Comparison]</title>
-        <meta
-          name="description"
-          content="The complete guide to Microsoft Dynamics 365 — ERP, CRM, AI, and the Power Platform. Written by Dynamics Square, UK's trusted Microsoft implementation partner."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/microsoft-dynamics-365-cloud-vs-on-premise/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/microsoft-dynamics-365-cloud-vs-on-premise/" />
-        <meta property="og:title" content="Dynamics 365 Cloud vs On-Premise Comparison | Dynamics Square" />
-        <meta property="og:description" content="The complete guide to Microsoft Dynamics 365 — ERP, CRM, AI, and the Power Platform. Written by Dynamics Square, UK's trusted Microsoft implementation partner." />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/MicrosoftTeams-image-5.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/microsoft-dynamics-365-cloud-vs-on-premise/" />
-        <meta property="twitter:title" content="Dynamics 365 Cloud vs On-Premise Comparison | Dynamics Square" />
-        <meta property="twitter:description" content="The complete guide to Microsoft Dynamics 365 — ERP, CRM, AI, and the Power Platform. Written by Dynamics Square, UK's trusted Microsoft implementation partner." />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/MicrosoftTeams-image-5.png" />
-      </Head>
+      <PageSeo
+        type="Article"
+        title="What is the Difference between Dynamics 365 on-premise vs cloud? [Comparison]"
+        description="The complete guide to Microsoft Dynamics 365 — ERP, CRM, AI, and the Power Platform. Written by Dynamics Square, UK's trusted Microsoft implementation partner."
+        image="https://www.dynamicssquare.co.uk/img/MicrosoftTeams-image-5.png"
+        ogTitle="Dynamics 365 Cloud vs On-Premise Comparison | Dynamics Square"
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -49,10 +34,9 @@ const CloudvsOnpremise = () => {
             <div className="col-lg-6 align-self-center">
               <Image
                 src="/img/MicrosoftTeams-image-5.png"
-                alt="MicrosoftTeams-imag-5"
+                alt="Dynamics 365 On-Premises Vs Cloud: Which one is for you?"
                 width={668} height={507}
-                priority = {true}
-              />
+                priority = {true} />
             </div>
           </div>
         </div>
@@ -161,7 +145,7 @@ const CloudvsOnpremise = () => {
             <div className="col-lg-6">
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                  <img src="/img/on-cloud.svg" alt="on-cloud"  width="48" height="48" />
+                  <img src="/img/on-cloud.svg" alt="On Cloud"  width="48" height="48" />
                 </div>
                 <div className="style-grid-content style-grid-content-1">
                   <h4>On Cloud</h4>
@@ -170,7 +154,7 @@ const CloudvsOnpremise = () => {
               </div>
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                  <img src="/img/On-Premises.svg" alt="On-Premises" width="48" height="48" />
+                  <img src="/img/On-Premises.svg" alt="On-Premises" width="48" height="48"  loading="lazy" decoding="async" />
                 </div>
                 <div className="style-grid-content  style-grid-content-1">
                   <h4>On-Premises </h4>
@@ -179,7 +163,7 @@ const CloudvsOnpremise = () => {
               </div>
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                  <img src="/img/Hybrid.svg" alt="Hybrid" width="48" height="48" />
+                  <img src="/img/Hybrid.svg" alt="Hybrid" width="48" height="48"  loading="lazy" decoding="async" />
                 </div>
                 <div className="style-grid-content  style-grid-content-1">
                   <h4>Hybrid </h4>
@@ -268,7 +252,7 @@ const CloudvsOnpremise = () => {
             </div>
             <div className="col-lg-4 align-self-center">
               <div className="img-txt-cent">
-                <img src="/img/in-cloud.png" alt="in-cloud"  width="354" height="303" />
+                <img src="/img/in-cloud.png" alt="Microsoft Dynamics 365 Cloud Deployment"  width="354" height="303"  loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="col-lg-4">
@@ -409,7 +393,7 @@ const CloudvsOnpremise = () => {
             </div>
             <div className="col-lg-4 align-self-center">
               <div className="img-txt-cent">
-                <img src="/img/Group1502.png" alt="Group1502"  width="217" height="249" />
+                <img src="/img/Group1502.png" alt="Group1502"  width="217" height="249"  loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="col-lg-4">
@@ -722,7 +706,7 @@ const CloudvsOnpremise = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="call_to_action-right over-img">
-                <img src="/img/MaskGroup8.png" alt="MaskGroup8"  width="339" height="483" />
+                <img src="/img/MaskGroup8.png" alt="MaskGroup8"  width="339" height="483"  loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="col-lg-7 align-self-center">

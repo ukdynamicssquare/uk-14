@@ -1,13 +1,13 @@
-import Head from 'next/head'
 import Link from "next/link"; 
+import PageSeo from "../components/PageSeo";
 const TermsOfUse = () => {
   return (
     <>
-      <Head>
-      <title>Website Terms of Use | Dynamics Square</title>
-<meta name="description" content="Dynamics Square terms of use page is all about the information on our website that you access and make use of."/>
-<link rel="canonical" href="https://www.dynamicssquare.co.uk/terms-of-use/" />
-      </Head>
+      <PageSeo
+        type="WebPage"
+        title="Website Terms of Use | Dynamics Square"
+        description="Dynamics Square terms of use page is all about the information on our website that you access and make use of."
+      />
       <section className="Solution-banner hero-1 hero custom-pd-4">
         <div className="container">
           <div className="row justify-content-center ">

@@ -1,23 +1,16 @@
-import Head from "next/head";
 import Link from "next/link"; 
 import Image from 'next/image';
 import Form from "../components/Form";
+import PageSeo from "../components/PageSeo";
 const SystemHealth = () => {
   return (
     <>
-      <Head>
-        <title>
-          Get Free Dynamics 365 System Health Check | Dynamics Square
-        </title>
-        <meta
-          name="description"
-          content="Is your Dynamics CRM or ERP system running slow? Are you unhappy with your current system performance? Try our free Dynamics 365 System Health Check!"
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/free-dynamics-365-system-health-check/"
-        />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Get Free Dynamics 365 System Health Check | Dynamics Square"
+        description="Is your Dynamics CRM or ERP system running slow? Are you unhappy with your current system performance? Try our free Dynamics 365 System Health Check!"
+        image="/img/why-Free-Health-Check-1024x-576.png"
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -45,11 +38,10 @@ const SystemHealth = () => {
             <div className="col-lg-6 align-self-center">
               <Image
                 src="/img/why-Free-Health-Check-1024x-576.png"
-                alt="why-Free-Health-Check-1024x-576"
+                alt="Why Microsoft Dynamics ERP and CRM Free Health Check is required?"
                 width={1024}
                 height={576}
-                priority = {true}
-              />
+                priority = {true} />
             </div>
           </div>
         </div>
@@ -148,9 +140,8 @@ const SystemHealth = () => {
               <div className="left-pic-nn">
                 <Image
                   src="/img/feature-review.png"
-                  alt="feature-review"
-                  width={1024} height={576}
-                />
+                  alt="Feature Review"
+                  width={1024} height={576} />
               </div>
             </div>
 
@@ -209,7 +200,7 @@ const SystemHealth = () => {
           <div className="row pad9x rever-1">
             <div className="col-lg-5 align-self-center">
               <div className="commen-lef-pic">
-                <img src="/img/code-auditing.png" alt="code-auditing" />
+                <img src="/img/code-auditing.png" alt="Code Auditing"  loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="col-lg-7 align-self-center">
@@ -289,9 +280,8 @@ const SystemHealth = () => {
               <div className="commen-lef-pic">
                 <Image
                   src="/img/Upgrading-Analysis.png"
-                  alt="Upgrading-Analysis"
-                  width={1024} height={576}
-                />
+                  alt="Upgrading Analysis"
+                  width={1024} height={576} />
               </div>
             </div>
           </div>
@@ -301,9 +291,8 @@ const SystemHealth = () => {
               <div className="commen-lef-pic">
                 <Image
                   src="/img/data-health-check.png"
-                  alt="data-health-check"
-                  width={1024} height={576}
-                />
+                  alt="Data Health Check"
+                  width={1024} height={576} />
               </div>
             </div>
             <div className="col-lg-5 align-self-center">

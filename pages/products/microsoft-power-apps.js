@@ -1,30 +1,54 @@
-import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
 import React, { useState } from "react";
 // import ModalVideo from "react-modal-video";
 import Blog from "../../components/Blog";
+import PageSeo from "../../components/PageSeo";
+// Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
+const PAGE_FAQS = [
+  {
+    "question": "Which apps are included in Power Apps?",
+    "answer": "Power Apps consists of six solutions, which are: AI Builder, Automate Processes, Azure + Power Apps, Build Apps, Connect Data, and Pages. All these solutions have separate motives and can be used for different purposes."
+  },
+  {
+    "question": "What kinds of apps can I build using Power Apps?",
+    "answer": "You can rapidly build custom apps to connect your data sources to different Microsoft platforms. These customised apps are based on your business needs and complexity. It allows you to build various kinds of responsive applications that can be operated using the web and mobile."
+  },
+  {
+    "question": "Is there any need to learn code to build apps?",
+    "answer": "No, there is no need to learn any kind of code language to build a customised app using Power Apps. It comes with built-in templates and a simple user interface to help you understand the exact requirements and build the app accordingly. It is a kind of drag-and-drop platform where you only need to align the desired functions to get the desired result."
+  },
+  {
+    "question": "How much time will it take to build an app using Power Apps?",
+    "answer": "There can be no accurate answer to this question. It totally depends on the complexity of the app and the functions you want in an app. Users can build the required app whenever it is needed and modify it later to meet their changing needs."
+  },
+  {
+    "question": "How many apps or services can I connect with Power Apps?",
+    "answer": "You can connect an unlimited number of data sources, apps, and services with Power Apps to make the whole system work together and enhance the growth of the organisation. You can avail yourself of a library of Microsoft Dataverse and connectors to connect various data sources together. Not only data sources, but you can also integrate some other applications too, including Azure, Power Platform, Microsoft Dynamics 365, and more native apps."
+  },
+  {
+    "question": "What are the top features of Power Apps?",
+    "answer": "Power Apps offers numerous features and capabilities to help users efficiently build customised apps using low code. Some of the powerful features are pre-built templates, a drag-and-drop builder, a role based personalised user experience, a built-in website development tool, private submission of information, and much more."
+  },
+  {
+    "question": "What are the available Power Apps pricing options?",
+    "answer": "The Power Apps pricing and licencing is based on two basic plans: subscription or pay-as-you-go. The Subscription Plan is more flexible for businesses, allowing them to offer licences to users based on app usage. The pay-as-you-go Plan is designed for businesses that want to be charged monthly, per user, for the apps they use. There are two per-app plan options available under the subscription plan:: £4.10 per user/app/month, £15.40 per user/month The pay-as-you-go plan is £8.20 per active user/app/month. See Other Power Platforms:: Power BI, Power Virtual Agents, Power Automate"
+  }
+];
+
 const PowerApps = () => {
   const [isOpen, setOpen] = useState(false);
   const [open, setsOpen] = useState(false);
 
   return (
     <>
-      <Head>
-        <title>
-          Microsoft Power Apps Partner UK | Dynamics Square
-        </title>
-        <meta
-          name="description"
-          content="Microsoft Power Apps can let you build low-code apps and drive swiftness across the core operations of the business. Schedule a demo today!"
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/microsoft-power-apps/"
-        />
-
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Microsoft Power Apps Partner UK | Dynamics Square"
+        description="Microsoft Power Apps can let you build low-code apps and drive swiftness across the core operations of the business. Schedule a demo today!"
+        faqs={PAGE_FAQS}
+      />
       {/* <ModalVideo
         channel="youtube"
         autoplay
@@ -58,10 +82,9 @@ const PowerApps = () => {
             <div className="col-lg-6 align-self-center">
               <Image
                 src="/img/power-apps-banner-01.svg"
-                alt="power-apps-banner-01"
+                alt="What are Power Apps?"
                 width={1024} height={586}
-                priority = {true}
-              />
+                priority = {true} />
             </div>
           </div>
         </div>
@@ -103,10 +126,10 @@ const PowerApps = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-power-apps_Quick-and-Easy.svg"
-                            alt="icons-power-apps_Quick-and-Easy"
+                            alt=""
                             width="36"
                             height="36"
-                          />
+                           aria-hidden="true" />
                         </div>
                         <span>Quick and Easy</span>
                       </button>
@@ -148,10 +171,10 @@ const PowerApps = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-power-apps_App-Development.svg"
-                            alt="icons-power-apps_App-Development"
+                            alt=""
                             width="36"
                             height="36"
-                          />
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Professional App Development</span>
                       </button>
@@ -191,10 +214,10 @@ const PowerApps = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-power-apps_Enhancing-Capabilities.svg"
-                            alt="icons-power-apps_Enhancing-Capabilities"
+                            alt=""
                             width="36"
                             height="36"
-                          />
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Enhancing Capabilities</span>
                       </button>
@@ -238,10 +261,10 @@ const PowerApps = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-power-apps_Responsive-Design.svg"
-                            alt="icons-power-apps_Responsive-Design"
+                            alt=""
                             width="36"
                             height="36"
-                          />
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Responsive Design</span>
                       </button>
@@ -276,10 +299,10 @@ const PowerApps = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-power-apps_Data.svg"
-                            alt="icons-power-apps_Data"
+                            alt=""
                             width="36"
                             height="36"
-                          />
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Data</span>
                       </button>
@@ -467,7 +490,7 @@ const PowerApps = () => {
           <div className="row justify-content-center">
             <div className="col-lg-3 d-flex">
               <div className="upgrade-box-one d-flex-fil">
-                <Image src="/img/settings_b.png" alt="settings_b" width={48} height={48} />
+                <Image src="/img/settings_b.png" alt="" width={48} height={48} aria-hidden="true" />
                 <h3>Implementation</h3>
                 <p>Successfully implement Power Apps solutions by our experts to ensure your needs are met on time and within budget.</p>
                 <a href="#exampleModal" data-bs-toggle="modal">Get Started <i className="bi bi-arrow-right"></i></a>
@@ -484,7 +507,7 @@ const PowerApps = () => {
 
             <div className="col-lg-3 d-flex">
               <div className="upgrade-box-one d-flex-fil">
-                <Image src="/img/person_pin.png" alt="person_pin" width={48} height={48} />
+                <Image src="/img/person_pin.png" alt="" width={48} height={48} aria-hidden="true" />
                 <h3>Support</h3>
                 <p>Get constant and seamless support from Dynamics Square team to manage your web and mobile apps.</p>
                 <a href="#exampleModal" data-bs-toggle="modal">Get Started <i className="bi bi-arrow-right"></i></a>
@@ -493,7 +516,7 @@ const PowerApps = () => {
 
             <div className="col-lg-3 d-flex">
               <div className="upgrade-box-one d-flex-fil">
-                <img className="image-backx" src="/img/free-cons.png" alt="free-cons" />
+                <img className="image-backx" src="/img/free-cons.png" alt="Support"  loading="lazy" decoding="async" />
                 <Image src="/img/forum.png" alt="forum" width={48} height={48} />
                 <h3>Consulting</h3>
                 <p>Get optimum Power Apps suited to your customised business needs.</p>

@@ -1,25 +1,19 @@
 import React, { useState } from "react";
-import Head from "next/head";
 import Image from 'next/image';
 import Link from "next/link";
+import PageSeo from "../components/PageSeo";
 const Wms = () => {
   const [isOpen, setOpen] = useState(false);
   const [open, setsOpen] = useState(false);
 
   return (
     <>
-      <Head>
-        <title>Continia Document Capture with Business Central</title>
-        <meta
-          name="description"
-          content="Achieve superior document scanning quality and ensure error-free data entry with automation by utilizing Continia Document Capture with Dynamics 365 Business Central."
-        />
-      <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/continia-document-capture-with-business-central/"
-        />
-  
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Continia Document Capture with Business Central"
+        description="Achieve superior document scanning quality and ensure error-free data entry with automation by utilizing Continia Document Capture with Dynamics 365 Business Central."
+        image="/img/Continia-Document.png"
+      />
       <section className="Solution-banner hero-1 hero">
               <div className="container">
                 <div className="row">
@@ -77,9 +71,8 @@ const Wms = () => {
               <div className="busine_service_bottom-left custom012">
                 <Image
                   src="/img/scan-capture-analyse.png"
-                  alt="scan-capture-analyse"
-                  width={530} height={545}
-                />
+                  alt="Scan, Capture, and Analyse Document Efficiently"
+                  width={530} height={545} />
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
@@ -104,7 +97,7 @@ const Wms = () => {
             <div className="col-lg-6">
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                  <Image src="/img/intelegent-ocr.png" alt="intelegent-ocr" width="90" height="90" />
+                  <Image src="/img/intelegent-ocr.png" alt="Intelligent OCR" width="90" height="90" />
                 </div>
                 <div className="style-grid-content">
                   <h3>Intelligent OCR</h3>
@@ -125,7 +118,7 @@ const Wms = () => {
             <div className="col-lg-6">
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                <Image src="/img/automatic-approval.png" alt="automatic-approval" width="90" height="90" />
+                <Image src="/img/automatic-approval.png" alt="Automatic Approval" width="90" height="90" />
                 </div>
                 <div className="style-grid-content">
                   <h3>Automatic Approval</h3>

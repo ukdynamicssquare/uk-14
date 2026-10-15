@@ -1,34 +1,41 @@
 import Link from "next/link"; 
-import Head from 'next/head';
 import Image from 'next/image';
+import PageSeo from "../../components/PageSeo";
+// Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
+const PAGE_FAQS = [
+  {
+    "question": "Drive Process Efficiency",
+    "answer": "Centralize your sales, customers/clients, or project data to make real-time and improved decisions. Streamline and access your processes in real-time while ensuring seamless remote services and strengthening your employee's capability with highly efficient and productive tools."
+  },
+  {
+    "question": "Uplift Customer Interaction",
+    "answer": "Efficiently engage your customers via customer-preferred communicating channels through AI-based recommendations and ensure seamless interactions across sales, marketing, and services. Proactively serve your customers via connected people, devices, and processes all through Dynamics 365 Customer Engagement modules."
+  },
+  {
+    "question": "Centralize Your Data",
+    "answer": "Centralize your customers, sales, marketing, and services data to streamline, track, and manage your processes in real-time leveraging a single unified dashboard. Increase your employees' efficiency with integrated data and assist your remote team in proactively serving customers to attain profitability."
+  },
+  {
+    "question": "Gain Improved Insights",
+    "answer": "With the built-in business intelligence of Dynamics 365 CE, gain real-time insights to empower your support team, marketing people, and sales individuals with process clarity and decision-making capability to make a strategic yet productive decision in real-time without ensuring a single delay."
+  },
+  {
+    "question": "Close More Deals",
+    "answer": "Dynamics 365 Customer Engagement Apps help to empower your service agents to quickly solve customer issues, keep track of your sales pipeline, plan capacity, streamline your supply chain, and improve your sales practices to close more deals faster and generate more improved revenue."
+  }
+];
+
 
 const Dynamics365CustomerEngagement = () => {
   return (
     <>
-      <Head>
-        <title>
-          Dynamics 365 Customer Engagement (D365 CE) Partner UK
-        </title>
-        <meta
-          name="description"
-          content="Uplift your sales & marketing efforts and improve your customer relationships with our Microsoft Dynamics 365 Customer Engagement (CE) plans."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/dynamics-365-customer-engagement/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/dynamics-365-customer-engagement/" />
-        <meta property="og:title" content="Dynamics 365 Customer Engagement (D365 CE) Partner UK" />
-        <meta property="og:description" content="Uplift your sales & marketing efforts and improve your customer relationships with our Microsoft Dynamics 365 Customer Engagement (CE) plans." />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/customer-engagement-banner.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/products/dynamics-365-customer-engagement/" />
-        <meta property="twitter:title" content="Dynamics 365 Customer Engagement (D365 CE) Partner UK" />
-        <meta property="twitter:description" content="Uplift your sales & marketing efforts and improve your customer relationships with our Microsoft Dynamics 365 Customer Engagement (CE) plans." />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/customer-engagement-banner.png" />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Dynamics 365 Customer Engagement (D365 CE) Partner UK"
+        description="Uplift your sales & marketing efforts and improve your customer relationships with our Microsoft Dynamics 365 Customer Engagement (CE) plans."
+        image="https://www.dynamicssquare.co.uk/img/customer-engagement-banner.png"
+        faqs={PAGE_FAQS}
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -142,10 +149,9 @@ const Dynamics365CustomerEngagement = () => {
                 <div className="busine_service_bottom-right">
                   <Image
                     src="/img/customer-engagement-side-image.png"
-                    alt="customer-engagement-side-images"
+                    alt="Planning to Implement Dynamics CE?"
                     width={532}
-                    height={513}
-                  />
+                    height={513} />
                 </div>
               </div>
             </div>
@@ -327,10 +333,9 @@ const Dynamics365CustomerEngagement = () => {
                 <div className="style-grid-icons">
                   <img
                     src="/img/Customer-Service.svg"
-                    alt="Customer-Service"
+                    alt="Build Customer Relationships"
                     width="94"
-                    height="94"
-                  />
+                    height="94"  loading="lazy" decoding="async" />
                 </div>
                 <div className="style-grid-content">
                   <h3>Build Customer Relationships</h3>
@@ -349,7 +354,7 @@ const Dynamics365CustomerEngagement = () => {
               <div className="style-grid-1">
                 <div className="style-grid-icons">
                   <img src="/img/sales.svg" alt="sales"  width="94"
-                    height="94" />
+                    height="94"  loading="lazy" decoding="async" />
                 </div>
                 <div className="style-grid-content">
                   <h3>Remain Productive</h3>
@@ -369,10 +374,10 @@ const Dynamics365CustomerEngagement = () => {
                 <div className="style-grid-icons">
                   <img
                     src="/img/supply-chain-icons.svg"
-                    alt="supply-chain-icons"
+                    alt=""
                     width="94"
                     height="94"
-                  />
+                   aria-hidden="true"  loading="lazy" decoding="async" />
                 </div>
                 <div className="style-grid-content">
                   <h3>Drive Predictive Approach</h3>
@@ -391,10 +396,10 @@ const Dynamics365CustomerEngagement = () => {
                 <div className="style-grid-icons">
                   <img
                     src="/img/Field-Service-icons.svg"
-                    alt="Field-Service-icons"
+                    alt=""
                     width="94"
                     height="94"
-                  />
+                   aria-hidden="true"  loading="lazy" decoding="async" />
                 </div>
                 <div className="style-grid-content">
                   <h3>Drive Personalized Experienced</h3>

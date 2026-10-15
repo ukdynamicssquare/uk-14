@@ -1,21 +1,16 @@
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
+import PageSeo from "../components/PageSeo";
 
 const ScmCloudvsonPremise = () => {
   return (
     <>
-      <Head>
-        <title>Dynamics 365 SCM - Cloud vs On-premise | Dynamics Square</title>
-        <meta
-          name="description"
-          content="Dynamics 365 Supply Chain Management (SCM) aka Dynamics 365 Operations can help you build an agile, connected and resilient supply chain, which is critical"
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/dynamics-365-scm-cloud-vs-on-premise/"
-        />
-      </Head>
+      <PageSeo
+        type="Article"
+        title="Dynamics 365 SCM - Cloud vs On-premise | Dynamics Square"
+        description="Dynamics 365 Supply Chain Management (SCM) aka Dynamics 365 Operations can help you build an agile, connected and resilient supply chain, which is critical"
+        image="/img/Dynamics365-SCM.png"
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -50,7 +45,7 @@ const ScmCloudvsonPremise = () => {
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/Dynamics365-SCM.png" alt="Dynamics365-SCM" width={668} height={507}  priority = {true} />
+              <Image src="/img/Dynamics365-SCM.png" alt="Features" width={668} height={507}  priority = {true} />
             </div>
           </div>
         </div>
@@ -465,7 +460,7 @@ const ScmCloudvsonPremise = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="call_to_action-right over-img">
-                <img src="/img/MaskGroup8.png" alt="image" />
+                <img src="/img/MaskGroup8.png" alt="Business consultant" />
               </div>
             </div>
             <div className="col-lg-7 align-self-center">

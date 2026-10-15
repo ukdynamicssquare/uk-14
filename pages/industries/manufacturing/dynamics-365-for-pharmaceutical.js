@@ -1,9 +1,9 @@
 import React, { useRef, useState, useEffect } from 'react';
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import useCardScrollEffect from "../../../components/useCardScrollEffect";
 import faqData from '../../../public/data/industriespharmaceutical.json';
+import PageSeo from "../../../components/PageSeo";
 const INDDD = () => {
 
   useCardScrollEffect()
@@ -15,32 +15,13 @@ const INDDD = () => {
 
   return (
     <>
-      <Head>
-        <title>Dynamics 365 ERP for Pharmaceutical Manufacturing</title>
-        <meta
-          name="description"
-          content="Optimise pharmaceutical manufacturing with Dynamics 365 ERP. Manage production, quality, compliance, inventory and supply chains with a scalable cloud ERP."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/industries/manufacturing/dynamics-365-for-pharmaceutical/"
-        />
-        <meta property="og:locale" content="GB" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Dynamics 365 ERP for Pharmaceutical Manufacturing " />
-        <meta property="og:description" content="Optimise pharmaceutical manufacturing with Dynamics 365 ERP. Manage production, quality, compliance, inventory and supply chains with a scalable cloud ERP." />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/industries/manufacturing/dynamics-365-for-pharmaceutical/" />
-        <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/pharmaceutica-00.png" />
-        <meta property="og:image:width" content="200" />
-        <meta property="og:image:height" content="200" />
-        <meta property="og:image:type" content="image/png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="Dynamics 365 ERP for Pharmaceutical Manufacturing" />
-        <meta name="twitter:description" content="Optimise pharmaceutical manufacturing with Dynamics 365 ERP. Manage production, quality, compliance, inventory and supply chains with a scalable cloud ERP." />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/pharmaceutica-00.png" />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Dynamics 365 ERP for Pharmaceutical Manufacturing"
+        description="Optimise pharmaceutical manufacturing with Dynamics 365 ERP. Manage production, quality, compliance, inventory and supply chains with a scalable cloud ERP."
+        image="https://www.dynamicssquare.co.uk/img/pharmaceutica-00.png"
+        faqs={faqData.slice(0, 5)}
+      />
      <div className='solution-new-banner-one solution-new-banner-one-colos'>
         <div className='container'>
           <div className='row justify-content-center'>

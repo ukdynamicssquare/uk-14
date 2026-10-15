@@ -1,5 +1,4 @@
 import React from "react";
-import Head from "next/head";
 import Link from "next/link";
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -8,17 +7,16 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation, FreeMode } from "swiper/modules";
+import PageSeo from "../components/PageSeo";
 const PartnerUK = () => {
   return (
     <>
-      <Head>
-        <title>Microsoft Partners UK | Dynamics Square</title>
-        <meta
-          name="description"
-          content="Dynamics Square is a leading Microsoft partner in the UK, delivering end-to-end business solutions and expert consulting services. Do Contact us today!"
-        />
-        <link rel="canonical" href="https://www.dynamicssquare.co.uk/microsoft-partners-uk/" />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Microsoft Partners UK | Dynamics Square"
+        description="Dynamics Square is a leading Microsoft partner in the UK, delivering end-to-end business solutions and expert consulting services. Do Contact us today!"
+        image="/img/microsoft-new-pic.png"
+      />
         <section className="Solution-banner hero-1 hero about-banner">
           <div className="container">
             <div className="row">
@@ -38,7 +36,7 @@ const PartnerUK = () => {
             <div className="row">
               <div className="col-lg-5 align-self-center">
                 <div className="domain-expertise-right-pic">
-                  <Image src="/img/why-side.png" alt="why-side" width={514} height={534} />
+                  <Image src="/img/why-side.png" alt="You deserve the best" width={514} height={534} />
                 </div>
               </div>
               <div className="col-lg-7 align-self-center">
@@ -88,7 +86,7 @@ const PartnerUK = () => {
             <div className="col-lg-6">
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                  <img src="/img/Group1407.svg" alt="Group1407" />
+                  <img src="/img/Group1407.svg" alt="Group1407"  loading="lazy" decoding="async" />
                 </div>
                 <div className="style-grid-content">
                   <h3>Microsoft Dynamics 365</h3>
@@ -98,7 +96,7 @@ const PartnerUK = () => {
 
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                  <img src="/img/group-2211.png" alt="Add-ons.svg" />
+                  <img src="/img/group-2211.png" alt="Power Platform"  loading="lazy" decoding="async" />
                 </div>
                 <div className="style-grid-content">
                   <h3>Power Platform</h3>
@@ -109,7 +107,7 @@ const PartnerUK = () => {
             <div className="col-lg-6">
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                  <img src="/img/group-2164.png" alt="Group1408" />
+                  <img src="/img/group-2164.png" alt="Group1408"  loading="lazy" decoding="async" />
                 </div>
                 <div className="style-grid-content">
                   <h3>Microsoft Azure</h3>
@@ -122,7 +120,7 @@ const PartnerUK = () => {
                   <img
                     src="/img/Modifications.svg"
                     alt="Modifications"
-                  />
+                   loading="lazy" decoding="async" />
                 </div>
                 <div className="style-grid-content">
                   <h3>Microsoft Office 365 </h3>
@@ -140,7 +138,7 @@ const PartnerUK = () => {
             <div className="row">
               <div className="col-lg-5">
                 <div className="call_to_action-right over-img">
-                  <img src="/img/MaskGroup8.png" alt="image" />
+                  <img src="/img/MaskGroup8.png" alt="Business consultant"  loading="lazy" decoding="async" />
                 </div>
               </div>
               <div className="col-lg-7 align-self-center">

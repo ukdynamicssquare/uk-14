@@ -1,36 +1,16 @@
-import Head from "next/head";
 import Link from "next/link"; 
 import Image from 'next/image';
 import Form from "../../components/Form";
+import PageSeo from "../../components/PageSeo";
 const HealthCheck = () => {
   return (
     <>
-      <Head>
-        <title>Dynamics 365 for Healthcare | Dynamics Square UK</title>
-        <meta
-          name="description"
-          content="Choose the cloud Microsoft Dynamics 365 for Healthcare industry to get a 360-degree view of your clinic while accelerating the business towards growth."
-        />
-         <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/industries/dynamics-365-for-healthcare/"
-        />
-        <meta property="og:locale" content="GB" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Dynamics 365 for Healthcare | Dynamics Square UK" />
-        <meta property="og:description" content="Choose the cloud Microsoft Dynamics 365 for Healthcare industry to get a 360-degree view of your clinic while accelerating the business towards growth." />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/industries/dynamics-365-for-healthcare/" />
-        <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/Dynamics-365-for-Healthcare.png" />
-        <meta property="og:image:width" content="200" />
-        <meta property="og:image:height" content="200" />
-        <meta property="og:image:type" content="image/png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="Dynamics 365 for Healthcare | Dynamics Square UK" />
-        <meta name="twitter:description" content="Choose the cloud Microsoft Dynamics 365 for Healthcare industry to get a 360-degree view of your clinic while accelerating the business towards growth." />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/Dynamics-365-for-Healthcare.png" />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Dynamics 365 for Healthcare | Dynamics Square UK"
+        description="Choose the cloud Microsoft Dynamics 365 for Healthcare industry to get a 360-degree view of your clinic while accelerating the business towards growth."
+        image="https://www.dynamicssquare.co.uk/img/Dynamics-365-for-Healthcare.png"
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -52,11 +32,10 @@ const HealthCheck = () => {
             <div className="col-lg-6 align-self-center">
               <Image
                 src="/img/Dynamics-365-for-Healthcare.png"
-                alt="Dynamics-365-for-Healthcare"
+                alt="Dynamics 365 for Healthcare; a Powerful Clinic Management Solution"
                 width={717}
                 height={484}
-                priority={true}
-              />
+                priority={true} />
             </div>
           </div>
         </div>
@@ -114,9 +93,8 @@ const HealthCheck = () => {
               <div className="left-pic-nn">
                 <Image
                   src="/img/Dynamics-365-for-Health-care-side.png"
-                  alt="Dynamics-365-for-Health-care-side"
-                  width={422} height={453}
-                />
+                  alt="What is the need of Dynamics 365 for healthcare?"
+                  width={422} height={453} />
               </div>
             </div>
 

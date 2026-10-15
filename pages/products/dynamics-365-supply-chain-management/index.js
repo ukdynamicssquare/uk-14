@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import faqData from '../../../public/data/scm_faq.json';
 import useCardScrollEffect from "../../../components/useCardScrollEffect";
 import NavBar from '../../../components/NavBar';
 import BlogFinanaceCard from '../../../components/BlogFinanaceCard';
+import PageSeo from "../../../components/PageSeo";
 
 const pageUrl = "https://www.dynamicssquare.co.uk/products/dynamics-365-supply-chain-management/";
 const pageTitle = "Dynamics 365 Supply Chain Management Partner | Dynamics Square UK";
@@ -423,31 +423,15 @@ const SupplyChainManagement = () => {
 
   return (
     <>
-      <Head>
-        <title>{pageTitle}</title>
-        <meta name="description" content={pageDescription} />
-        <meta name="keywords" content="Dynamics 365 Supply Chain Management, what is Dynamics 365 Supply Chain Management, Microsoft Dynamics 365 Supply Chain Management, Microsoft Dynamics 365 Finance and Supply Chain Management, Dynamics 365 Supply Chain Management features, Dynamics 365 Supply Chain Management modules, Dynamics 365 SCM, Dynamics 365 F&SCM, Copilot in Microsoft Dynamics 365 Supply Chain Management, Dynamics 365 Supply Chain Management pricing, Dynamics 365 Supply Chain Management training, Dynamics 365 SCM implementation partner, Microsoft ERP solution, Dynamics 365 Supply Chain Management manufacturing" />
-        <link rel="canonical" href={pageUrl} />
-        <meta property="og:type" content="website" />
-        <meta property="og:locale" content="en_GB" />
-        <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:url" content={pageUrl} />
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={pageDescription} />
-        <meta property="og:image" content={pageImage} />
-        <meta property="og:image:alt" content="Microsoft Dynamics 365 Supply Chain Management" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content={pageUrl} />
-        <meta property="twitter:title" content={pageTitle} />
-        <meta property="twitter:description" content={pageDescription} />
-        <meta property="twitter:image" content={pageImage} />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
-        />
-      </Head>
+      <PageSeo
+        type="Service"
+        title={pageTitle}
+        description={pageDescription}
+        keywords="Dynamics 365 Supply Chain Management, what is Dynamics 365 Supply Chain Management, Microsoft Dynamics 365 Supply Chain Management, Microsoft Dynamics 365 Finance and Supply Chain Management, Dynamics 365 Supply Chain Management features, Dynamics 365 Supply Chain Management modules, Dynamics 365 SCM, Dynamics 365 F&SCM, Copilot in Microsoft Dynamics 365 Supply Chain Management, Dynamics 365 Supply Chain Management pricing, Dynamics 365 Supply Chain Management training, Dynamics 365 SCM implementation partner, Microsoft ERP solution, Dynamics 365 Supply Chain Management manufacturing"
+        image={pageImage}
+        imageAlt="Microsoft Dynamics 365 Supply Chain Management"
+        extraSchema={pageSchema}
+      />
       <div className='solution-new-banner-one'>
         <div className='container'>
           <div className='row justify-content-center'>

@@ -1,18 +1,16 @@
-import Head from 'next/head';
 import Image from 'next/image';
 import Script from 'next/script';
 import Link from 'next/link';
+import PageSeo from "../../components/PageSeo";
 const WhitePaper = () => {
   return (
     <>
-      <Head>
-      <title>White Paper – Dynamics Square</title>
-        <meta
-          name="description"
-          content="Explore Dynamics Square's in-depth white papers on Microsoft Dynamics solutions. Gain insights, optimise processes, and drive business growth with expert guidance."
-        />
-        <link rel="canonical" href="https://www.dynamicssquare.co.uk/white-papers/" />
-      </Head>
+      <PageSeo
+        type="CollectionPage"
+        title="White Paper – Dynamics Square"
+        description="Explore Dynamics Square's in-depth white papers on Microsoft Dynamics solutions. Gain insights, optimise processes, and drive business growth with expert guidance."
+        image="/img/whit-indexbanner.png"
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -68,8 +66,7 @@ const WhitePaper = () => {
                           <img
                             className="card-img-top"
                             src="/img/white-p-one.png"
-                            alt="white-p-one"
-                          />
+                            alt="White Paper" />
                         </a>
                         <div className="card-body">
                           <h5 className="card-title">
@@ -98,7 +95,7 @@ const WhitePaper = () => {
                             className="card-img-top"
                             src="/img/finacne-white-paper-category.png"
                             alt="white paper finance"
-                          />
+                           loading="lazy" decoding="async" />
                         </a>
                         <div className="card-body">
                           <h5 className="card-title">

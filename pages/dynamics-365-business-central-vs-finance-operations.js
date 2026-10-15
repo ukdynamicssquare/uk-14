@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/bcVsSapTwo.module.css";
@@ -8,6 +7,7 @@ import { bcVsFoResources } from "../components/bcTwo/legacyResources";
 import SectionNav, { useSectionNav } from "../components/bcTwo/SectionNav";
 import FaqList, { faqSchema } from "../components/bcTwo/FaqList";
 import faqs from "../public/data/bcvsfinanceoperations.json";
+import PageSeo from "../components/PageSeo";
 
 const PAGE_URL = "https://www.dynamicssquare.co.uk/dynamics-365-business-central-vs-finance-operations/";
 const PAGE_TITLE = "Business Central vs Finance & Operations: 2026 UK Comparison";
@@ -182,25 +182,14 @@ const BCvsFinanceOperationsTwo = () => {
 
   return (
     <>
-      <Head>
-        <title>{PAGE_TITLE}</title>
-        <meta name="description" content={PAGE_DESC} />
-        <link rel="canonical" href={PAGE_URL} />
-        <meta property="og:locale" content="en_GB" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content={PAGE_TITLE} />
-        <meta property="og:description" content={PAGE_DESC} />
-        <meta property="og:url" content={PAGE_URL} />
-        <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content={OG_IMAGE} />
-        <meta property="og:image:alt" content="Dynamics 365 Business Central vs Finance & Operations" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content={PAGE_TITLE} />
-        <meta name="twitter:description" content={PAGE_DESC} />
-        <meta name="twitter:image" content={OG_IMAGE} />
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} />
-      </Head>
+      <PageSeo
+        type="Article"
+        title={PAGE_TITLE}
+        description={PAGE_DESC}
+        image={OG_IMAGE}
+        imageAlt="Dynamics 365 Business Central vs Finance & Operations"
+        extraSchema={pageSchema}
+      />
 
       {/* ===== Hero ===== */}
       <section className={styles.hero}>

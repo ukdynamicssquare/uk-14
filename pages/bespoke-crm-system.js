@@ -1,37 +1,17 @@
-import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
+import PageSeo from "../components/PageSeo";
 
 const Startup = () => {
 
   return (
     <>
-      <Head>
-        <title>Bespoke CRM | Microsoft Partner - Dynamics Square UK </title>
-        <meta
-          name="description"
-          content="Implement a bespoke CRM system solution to boost customer experience, achieve maximum customer satisfaction, and generate more sales. Implement Dynamics 365 CRM today! "
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/bespoke-crm-system/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/bespoke-crm-system/" />
-        <meta property="og:title" content="Bespoke CRM | Microsoft Partner - Dynamics Square UK" />
-        <meta property="og:description" content="Implement a bespoke CRM system solution to boost customer experience, achieve maximum customer satisfaction, and generate more sales. Implement Dynamics 365 CRM today! " />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/CRM-header-banner.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/bespoke-crm-system/" />
-        <meta property="twitter:title" content="Bespoke CRM | Microsoft Partner - Dynamics Square UK" />
-        <meta property="twitter:description" content="Implement a bespoke CRM system solution to boost customer experience, achieve maximum customer satisfaction, and generate more sales. Implement Dynamics 365 CRM today! " />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/CRM-header-banner.png" />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
+      <PageSeo
+        type="Service"
+        title="Bespoke CRM | Microsoft Partner - Dynamics Square UK"
+        description="Implement a bespoke CRM system solution to boost customer experience, achieve maximum customer satisfaction, and generate more sales. Implement Dynamics 365 CRM today! "
+        image="/img/CRM-header-banner.png"
+        extraSchema={{
               "@context": "https://schema.org",
               "@graph": [
                 {
@@ -54,10 +34,8 @@ const Startup = () => {
                   "description": "Implement a bespoke CRM system solution to boost customer experience, achieve maximum customer satisfaction, and generate more sales with Dynamics 365 CRM."
                 }
               ]
-            })
-          }}
-        />
-      </Head>
+            }}
+      />
         <section className="Solution-banner hero-1 hero">
           <div className="container">
             <div className="row">
@@ -356,9 +334,8 @@ const Startup = () => {
                     <Image
                       src="/img/startup-side.png"
                       className="fix-im"
-                      alt="bisin_leftimg"
-                      width={546} height={524}
-                    />
+                      alt="Are you Ready to Achieve your Planned Sales Targets?"
+                      width={546} height={524} />
                    
                   </div>
                 </div>

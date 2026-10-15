@@ -1,21 +1,16 @@
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link"; 
+import PageSeo from "../../components/PageSeo";
 
 const Microsoftsustainabilitymanager = () => {
   return (
     <>
-      <Head>
-      <title>Microsoft Sustainability Manager | Dynamics Square </title>
-        <meta
-          name="description"
-          content="Looking to make your business more sustainable? Microsoft Sustainability Manager can help you access environmental data and make changes to reduce your company's impact on the planet. Get started today and make a difference. "
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/microsoft-sustainability-manager/"
-        />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Microsoft Sustainability Manager | Dynamics Square"
+        description="Looking to make your business more sustainable? Microsoft Sustainability Manager can help you access environmental data and make changes to reduce your company's impact on the planet. Get started today and make a difference."
+        image="/img/Microsoft-Sustainability-Manager.png"
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -149,7 +144,7 @@ const Microsoftsustainabilitymanager = () => {
                           <img
                             src="/img/reduce-ico.svg"
                             alt="Reduce Emission"
-                          />
+                           loading="lazy" decoding="async" />
                         </div>
                         <span>Reduce</span>
                       </button>
@@ -191,7 +186,7 @@ const Microsoftsustainabilitymanager = () => {
                           <img
                             src="/img/report-ico.svg"
                             alt="Report emission"
-                          />
+                           loading="lazy" decoding="async" />
                         </div>
                         <span>Report </span>
                       </button>
@@ -271,8 +266,7 @@ const Microsoftsustainabilitymanager = () => {
                 <div className="icons size-new">
                   <img
                     src="/img/Sustainable-Infrastructure.svg"
-                    alt="Sustainable-Infrastructure"
-                  />
+                    alt="Sustainable Infrastructure"  loading="lazy" decoding="async" />
                 </div>
                 <div className="commen-boc-2-info">
                   <h3>Sustainable Infrastructure </h3>
@@ -289,8 +283,7 @@ const Microsoftsustainabilitymanager = () => {
                 <div className="icons size-new">
                   <img
                     src="/img/Centralize-Data-Insights.svg"
-                    alt="Centralize-Data-Insights"
-                  />
+                    alt="Centralize Data Insights"  loading="lazy" decoding="async" />
                 </div>
                 <div className="commen-boc-2-info">
                   <h3>Centralize Data Insights</h3>
@@ -307,8 +300,7 @@ const Microsoftsustainabilitymanager = () => {
                 <div className="icons size-new">
                   <img
                     src="/img/Reducing-Impacts.svg"
-                    alt="Reducing-Impacts"
-                  />
+                    alt="Reducing Impacts"  loading="lazy" decoding="async" />
                 </div>
                 <div className="commen-boc-2-info">
                   <h3>Reducing Impacts</h3>

@@ -22,18 +22,15 @@ const ProjectOperations = () => {
           rel="canonical"
           href="https://www.dynamicssquare.co.uk/products/dynamics-365-project-operations/"
         />
-        <meta property="og:locale" content="GB" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content=" Dynamics 365 Project Operations: Manage Projects Smarter " />
         <meta property="og:description" content="Optimize project planning, tracking, and delivery with Dynamics 365 Project Operations. Streamline workflows and boost profitability effortlessly. Contact now today!" />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/dynamics-365-project-operations/" />
-        <meta property="og:site_name" content="Dynamics Square UK" />
         <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/project-operation-banner.png" />
         <meta property="og:image:width" content="200" />
         <meta property="og:image:height" content="200" />
         <meta property="og:image:type" content="image/png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
         <meta name="twitter:title" content="Dynamics 365 Project Operations: Manage Projects Smarter" />
         <meta name="twitter:description" content="Optimize project planning, tracking, and delivery with Dynamics 365 Project Operations. Streamline workflows and boost profitability effortlessly. Contact now today!" />
         <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/project-operation-banner.png" />

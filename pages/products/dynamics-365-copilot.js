@@ -1,5 +1,4 @@
 import React, { useRef, useState, useEffect } from 'react';
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -9,32 +8,18 @@ import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 import { FreeMode, Navigation, Thumbs, Mousewheel } from "swiper/modules";
+import PageSeo from "../../components/PageSeo";
 const ErpMicrosoftCloudFor = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   return (
     <>
-      <Head>
-        <title>Dynamics 365 Copilot Services - AI-Powered assistance</title>
-        <meta
-          name="description"
-          content="Enhance productivity with Dynamics 365 Copilot Services—AI-powered assistance for automation, insights, and collaboration. Streamline workflows and drive efficiency!"
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/dynamics-365-copilot/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/dynamics-365-copilot/" />
-        <meta property="og:title" content="Dynamics 365 Copilot Services - AI-Powered assistance" />
-        <meta property="og:description" content="Enhance productivity with Dynamics 365 Copilot Services—AI-powered assistance for automation, insights, and collaboration. Streamline workflows and drive efficiency" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/copilot-new-banner.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/products/dynamics-365-copilot/" />
-        <meta property="twitter:title" content="Dynamics 365 Copilot Services - AI-Powered assistance" />
-        <meta property="twitter:description" content="Enhance productivity with Dynamics 365 Copilot Services—AI-powered assistance for automation, insights, and collaboration. Streamline workflows and drive efficiency" />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/copilot-new-banner.png" />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Dynamics 365 Copilot Services - AI-Powered assistance"
+        description="Enhance productivity with Dynamics 365 Copilot Services—AI-powered assistance for automation, insights, and collaboration. Streamline workflows and drive efficiency!"
+        image="https://www.dynamicssquare.co.uk/img/copilot-new-banner.png"
+        ogDescription="Enhance productivity with Dynamics 365 Copilot Services—AI-powered assistance for automation, insights, and collaboration. Streamline workflows and drive efficiency"
+      />
         <section className="top-banner-new top-banner-new-bg">
           <div className="container">
             <div className="row">
@@ -98,7 +83,7 @@ const ErpMicrosoftCloudFor = () => {
               <div className="col-lg-3 col-md-6 d-flex">
                 <div className='card555'>
                   <div className='card555-body'>
-                    <img src="/img/i-cons-14.png" width={48} height={48} alt="icons" />
+                    <img src="/img/i-cons-14.png" width={48} height={48} alt="icons"  loading="lazy" decoding="async" />
                     <h3 className="card-title">Better User Experience</h3>
                     <p>Intuitive design with context-sensitive AI assistance for various workflows.</p>
                   </div>
@@ -107,7 +92,7 @@ const ErpMicrosoftCloudFor = () => {
               <div className="col-lg-3 col-md-6 d-flex">
                 <div className='card555'>
                   <div className='card555-body'>
-                    <img src="/img/i-cons-15.png" width={48} height={48} alt="icons" />
+                    <img src="/img/i-cons-15.png" width={48} height={48} alt="icons"  loading="lazy" decoding="async" />
                     <h3 className="card-title">Collaborative Intelligence</h3>
                     <p>Helps people from different departments to work together better by acting as a smart assistant.</p>
                   </div>
@@ -183,8 +168,8 @@ const ErpMicrosoftCloudFor = () => {
               </div>
               <div className='col-lg-5'>
                 <div className='img-backs-sid'>
-                  <img src="/img/copil-side.png" alt="copil-side" className='im-two' />
-                  <img src="/img/bb-gg.png" alt="copil-side" className='im-one' />
+                  <img src="/img/copil-side.png" alt="Data Simplification" className='im-two'  loading="lazy" decoding="async" />
+                  <img src="/img/bb-gg.png" alt="Dynamics 365 Copilot Empowers Microsoft CRM Solutions" className='im-one'  loading="lazy" decoding="async" />
                 </div>
               </div>
             </div>
@@ -268,8 +253,8 @@ const ErpMicrosoftCloudFor = () => {
               </div>
               <div className='col-lg-5 order-1'>
                 <div className='img-backs-sid'>
-                  <img src="/img/fincial-acc-pci.png" alt="copil-side" className='im-two' />
-                  <img src="/img/bb-gg.png" alt="copil-side" className='im-one' />
+                  <img src="/img/fincial-acc-pci.png" alt="Report Generation" className='im-two'  loading="lazy" decoding="async" />
+                  <img src="/img/bb-gg.png" alt="Dynamics 365 Solutions Integrated with Copilot" className='im-one'  loading="lazy" decoding="async" />
                 </div>
               </div>
             </div>
@@ -317,7 +302,7 @@ const ErpMicrosoftCloudFor = () => {
                   <SwiperSlide>
                     <div className='slider-card-001'>
                       <div>
-                        <img src="/img/chapter-01.png" alt="chapter-01" />
+                        <img src="/img/chapter-01.png" alt="Dynamics 365 Sales"  loading="lazy" decoding="async" />
                         <h3>Dynamics 365 Sales</h3>
                         <ul>
                           <li><i className="bi bi-check2"></i><span>Automatically generates meeting summaries and follow-up suggestions based on customer interactions</span></li>
@@ -334,7 +319,7 @@ const ErpMicrosoftCloudFor = () => {
                   <SwiperSlide>
                     <div className='slider-card-001'>
                       <div>
-                        <img src="/img/chapter-03.png" alt="chapter-01" />
+                        <img src="/img/chapter-03.png" alt="Dynamics 365 Customer Service"  loading="lazy" decoding="async" />
                         <h3>Dynamics 365 Customer Service</h3>
                         <ul>
                           <li><i className="bi bi-check2"></i><span>Real-time suggestions for resolving customer issues more effectively.</span></li>
@@ -351,7 +336,7 @@ const ErpMicrosoftCloudFor = () => {
                   <SwiperSlide>
                     <div className='slider-card-001'>
                       <div>
-                        <img src="/img/chapter-04.png" alt="chapter-01" />
+                        <img src="/img/chapter-04.png" alt="Dynamics 365 Marketing"  loading="lazy" decoding="async" />
                         <h3>Dynamics 365 Marketing</h3>
                         <ul>
                           <li><i className="bi bi-check2"></i><span>Offers personalized campaign suggestions tailored to audience behaviour.</span></li>
@@ -372,7 +357,7 @@ const ErpMicrosoftCloudFor = () => {
                   <SwiperSlide>
                     <div className='slider-card-001'>
                       <div>
-                        <img src="/img/chapter-05.png" alt="chapter-01" />
+                        <img src="/img/chapter-05.png" alt="Dynamics 365 Finance"  loading="lazy" decoding="async" />
                         <h3>Dynamics 365 Finance</h3>
                         <ul>
                           <li><i className="bi bi-check2"></i><span>Keeps track of costs automatically and gives detailed financial reports.</span></li>
@@ -389,7 +374,7 @@ const ErpMicrosoftCloudFor = () => {
                   <SwiperSlide>
                     <div className='slider-card-001'>
                       <div>
-                        <img src="/img/chapter-02.png" alt="chapter-01" />
+                        <img src="/img/chapter-02.png" alt="Dynamics 365 SCM"  loading="lazy" decoding="async" />
                         <h3>Dynamics 365 SCM</h3>
                         <ul>
                           <li><i className="bi bi-check2"></i><span>Helps with demand forecasting to optimise inventory levels.</span></li>
@@ -405,7 +390,7 @@ const ErpMicrosoftCloudFor = () => {
                   <SwiperSlide>
                     <div className='slider-card-001'>
                       <div>
-                        <img src="/img/chapter-06.png" alt="chapter-01" />
+                        <img src="/img/chapter-06.png" alt="Dynamics 365 Commerce"  loading="lazy" decoding="async" />
                         <h3>Dynamics 365 Commerce</h3>
                         <ul>
                           <li><i className="bi bi-check2"></i><span>Personalizes shopping experiences with AI-driven product recommendations.</span></li>
@@ -445,7 +430,7 @@ const ErpMicrosoftCloudFor = () => {
             <div className="row d-none d-md-block">
               <div className="col-lg-12">
                 <div className="chal-pic-banner">
-                  <img src="/img/colilte-full-banner.png" alt="colilte-full-banner" />
+                  <img src="/img/colilte-full-banner.png" alt="Integrated Workspaces"  loading="lazy" decoding="async" />
                 </div>
               </div>
             </div>
@@ -492,7 +477,7 @@ const ErpMicrosoftCloudFor = () => {
             <div className="row d-none d-md-block">
               <div className="col-lg-12">
                 <div className="chal-pic-banner">
-                  <img src="/img/colilte-full-banne-1.png" alt="colilte-full-banner" />
+                  <img src="/img/colilte-full-banne-1.png" alt="Always Learning"  loading="lazy" decoding="async" />
                 </div>
               </div>
             </div>
@@ -560,7 +545,7 @@ const ErpMicrosoftCloudFor = () => {
                   </div>
                 </div>
                 <div className='abs-pic abs-pic-n'>
-                  <img src="/img/sahpe-2212-pic.png" alt="sahpe-2212-pic" />
+                  <img src="/img/sahpe-2212-pic.png" alt="Ready to tap into the potential of Dynamics 365 Copilot?"  loading="lazy" decoding="async" />
                 </div>
               </div>
 

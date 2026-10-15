@@ -1,22 +1,16 @@
 import Link from "next/link"; 
-import Head from 'next/head';
 import Image from 'next/image';
 import FormCampaign from "../components/FormCampaign";
+import PageSeo from "../components/PageSeo";
 
 const DynamicsNavSupportEndingSoon = () => {
     return (
       <>
-        <Head>
-        <title>Dynamics NAV Support End of Life Soon | Dynamics Square UK</title>
-        <meta
-          name="description"
-          content="Dynamics NAV support ending soon. You can plan migration for continued functionality and security. Explore upgrade options for business continuity at Dynamics Square."
+        <PageSeo
+          type="Article"
+          title="Dynamics NAV Support End of Life Soon | Dynamics Square UK"
+          description="Dynamics NAV support ending soon. You can plan migration for continued functionality and security. Explore upgrade options for business continuity at Dynamics Square."
         />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/dynamics-nav-support-ending-soon/"
-        />
-        </Head>
         <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -168,7 +162,7 @@ const DynamicsNavSupportEndingSoon = () => {
             <div className="col-lg-4 col-md-6">
               <div className="commen-box-2">
                 <div className="icons">
-                  <img src="/img/Apps.svg" alt="Apps" />
+                  <img src="/img/Apps.svg" alt="Apps"  loading="lazy" decoding="async" />
                 </div>
                 <div className="commen-boc-2-info">
                   <h3>
@@ -185,7 +179,7 @@ const DynamicsNavSupportEndingSoon = () => {
             <div className="col-lg-4 col-md-6">
               <div className="commen-box-2">
                 <div className="icons">
-                  <img src="/img/Integration.svg" alt="Integration" />
+                  <img src="/img/Integration.svg" alt="Integration"  loading="lazy" decoding="async" />
                 </div>
                 <div className="commen-boc-2-info">
                   <h3>
@@ -205,7 +199,7 @@ const DynamicsNavSupportEndingSoon = () => {
                   <img
                     src="/img/automatic Updates.svg"
                     alt="automatic Updates"
-                  />
+                   loading="lazy" decoding="async" />
                 </div>
                 <div className="commen-boc-2-info">
                   <h3>
@@ -226,7 +220,7 @@ const DynamicsNavSupportEndingSoon = () => {
                   <img
                     src="/img/Azure Storage.svg"
                     alt="Azure Storage"
-                  />
+                   loading="lazy" decoding="async" />
                 </div>
                 <div className="commen-boc-2-info">
                   <h3>

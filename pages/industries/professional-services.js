@@ -1,40 +1,37 @@
-import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
 import useCardScrollEffect from "../../components/useCardScrollEffect";
+import PageSeo from "../../components/PageSeo";
+// Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
+const PAGE_FAQS = [
+  {
+    "question": "What is Microsoft Dynamics 365 for Professional Services industry?",
+    "answer": "Microsoft Dynamics 365 offers a comprehensive solution for the Professional service industry. organisations can simplify and drive their end-to-end tasks that come across their professional services domain. organisations can manage, automate, & faster their tasks, empower their workforce, and drive excellence in their business. Whether it comes to project automation, financial management, client & vendor management, or customer engagement; Dynamics 365 can help and empower everyone in your organisation from top management to executive level to simply, manage, and accelerate their tasks. With powerful decision-making capability, businesses can make instant, productive, and informed decisions to support and strengthen the bottom line and to drive maximized revenues. To know how Dynamics 365 can help your enterprise manage your professional services, connect with us, we can share the best potential deal for your business."
+  },
+  {
+    "question": "What is included in Dynamics 365 for Professional Services industry?",
+    "answer": "Dynamics 365 comprises a range of business applications that can be combined and configured to manage your specific processes or operations. Whether you need to manage your operations, human resource, project automation, financial part, service & delivery model, production line, clients, and more, Dynamics 365 can be implemented and customized as per your customized business model addressing the core behaviour of your business. We are always here to help you out if you have any sort of queries. Do not hesitate to contact us, our experts have a solution for your specific professional services or practices."
+  },
+  {
+    "question": "What are the benefits of Microsoft Dynamics 365 for the Professional Services industry?",
+    "answer": "By implementing Microsoft Dynamics solutions for professional services, you can manage across your processes and bring the capability to drive challenges leading your business to drive profitability and scalability. Here are the benefits that are involved once you implement Dynamics 365 for your business: With Dynamics 365 solutions for the professional services industry, businesses can estimate revenue and keep real-time eyes on every process or activity that takes place., Enterprises can leverage opportunity management and faster their client or customer delivery by bringing transparency, real-time efficiency, and improving collaboration for timely engagement., Bring automation to your projects and simplify your billing & invoicing., Empower your resources to faster project delivery and maximize their utilization to drive productivity., Businesses can list key stakeholders, analyse management information, drive engagement profitability, and optimise growth."
+  }
+];
+
 const Dynamics365ForProfessionalServices = () => {
 
   useCardScrollEffect()
 
   return (
     <>
-      <Head>
-        <title>Miscrosoft Dynamics 365 For Professional Services | Dynamics Square</title>
-        <meta
-          name="description"
-          content="Dynamics 365 for professional services helps firms manage projects, resources, billing, and profitability with real-time insights and automation. Partner with Dynamics Square UK today."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/industries/professional-services/"
-        />
-        <meta property="og:locale" content="GB" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Miscrosoft Dynamics 365 For Professional Services | Dynamics Square " />
-        <meta property="og:description" content="Dynamics 365 for professional services helps firms manage projects, resources, billing, and profitability with real-time insights and automation. Partner with Dynamics Square UK today." />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/industries/professional-services/" />
-        <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/professional-services-01.png" />
-        <meta property="og:image:width" content="200" />
-        <meta property="og:image:height" content="200" />
-        <meta property="og:image:type" content="image/png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="Miscrosoft Dynamics 365 For Professional Services | Dynamics Square" />
-        <meta name="twitter:description" content="Dynamics 365 for professional services helps firms manage projects, resources, billing, and profitability with real-time insights and automation. Partner with Dynamics Square UK today." />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/professional-services-01.png" />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Miscrosoft Dynamics 365 For Professional Services | Dynamics Square"
+        description="Dynamics 365 for professional services helps firms manage projects, resources, billing, and profitability with real-time insights and automation. Partner with Dynamics Square UK today."
+        image="https://www.dynamicssquare.co.uk/img/professional-services-01.png"
+        faqs={PAGE_FAQS}
+      />
       <div className='solution-new-banner-one solution-new-banner-one-colo'>
         <div className='container'>
           <div className='row justify-content-center'>
@@ -62,7 +59,7 @@ const Dynamics365ForProfessionalServices = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className='m-b-image-nnn'>
-                <Image src="/img/professional-services-01.png" alt='bc-support-banner' width={1097} height={656} priority />
+                <Image src="/img/professional-services-01.png" alt="What is Dynamics 365 for Professional Service Companies?" width={1097} height={656} priority />
               </div>
             </div>
           </div>
@@ -85,7 +82,7 @@ const Dynamics365ForProfessionalServices = () => {
               <div className="col-whole-card">
                 <h4>1. Dynamics 365 Business Central</h4>
                 <div className="col-bag-car">
-                  <Image src="/img/wholesale-pic-02.png" alt="wholesale-pic-02" width={93} height={93} />
+                  <Image src="/img/wholesale-pic-02.png" alt="Dynamics 365 Business Central" width={93} height={93} />
                 </div>
                 <p><a href="/products/dynamics-365-business-central/">Dynamics 365 Business Central</a> for Professional Services works well for small to mid-sized consultancies, agencies, engineering services firms, legal practices, accounting firms, and growing advisory teams.
                   The solutions available in Dynamics 365 suite help companies run projects, manage resources, handle billing, capture timesheets, track expenses, and keep financials accurate.
@@ -104,7 +101,7 @@ const Dynamics365ForProfessionalServices = () => {
               <div className="col-whole-card">
                 <h4>2. Dynamics 365 Finance and Supply Chain Management</h4>
                 <div className="col-bag-car">
-                  <Image src="/img/wholesale-pic-03.png" alt="wholesale-pic-03" width={386} height={96} />
+                  <Image src="/img/wholesale-pic-03.png" alt="Dynamics 365 Finance and Supply Chain Management" width={386} height={96} />
                 </div>
                 <p><a href="/products/microsoft-dynamics-365-finance-operations/">Dynamics 365 Finance and Operations</a> for large service firms helps them when they need to handle large delivery teams, multi-region projects, heavy compliance, and several operating units. The system has features to support advanced project accounting, multi-currency work, complex pricing, and structured approvals.</p>
 
@@ -136,63 +133,63 @@ const Dynamics365ForProfessionalServices = () => {
           <div className="row g-5">
             <div className="col-lg-6 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/professional-services-02.png" alt="professional-services-02" width={40} height={40} />
+                <img src="/img/professional-services-02.png" alt="Scattered Project Information" width={40} height={40}  loading="lazy" decoding="async" />
                 <h3>Scattered Project Information</h3>
                 <p>When project plans sit in different tools, teams struggle to follow tasks, deadlines, or progress. This creates confusion across delivery.</p>
               </div>
             </div>
             <div className="col-lg-6 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/professional-services-03.png" alt="professional-services-03" width={40} height={40} />
+                <img src="/img/professional-services-03.png" alt="Unclear Resource Availability" width={40} height={40}  loading="lazy" decoding="async" />
                 <h3>Unclear Resource Availability</h3>
                 <p>When schedules are spread across sheets, it becomes difficult to assign the right person at the right time.</p>
               </div>
             </div>
             <div className="col-lg-6 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/professional-services-04.png" alt="professional-services-04" width={40} height={40} />
+                <img src="/img/professional-services-04.png" alt="Inaccurate Time and Expense Records" width={40} height={40}  loading="lazy" decoding="async" />
                 <h3>Inaccurate Time and Expense Records</h3>
                 <p>When timesheets and expenses move through manual steps, billing becomes slow and approvals take longer.</p>
               </div>
             </div>
             <div className="col-lg-6 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/professional-services-05.png" alt="professional-services-05" width={40} height={40} />
+                <img src="/img/professional-services-05.png" alt="Weak Cost Tracking During Delivery" width={40} height={40}  loading="lazy" decoding="async" />
                 <h3>Weak Cost Tracking During Delivery</h3>
                 <p>When project costs remain separated from accounts, managers cannot understand how budgets behave during each stage.</p>
               </div>
             </div>
             <div className="col-lg-6 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/professional-services-06.png" alt="professional-services-06" width={40} height={40} />
+                <img src="/img/professional-services-06.png" alt="Slow Client Communication" width={40} height={40}  loading="lazy" decoding="async" />
                 <h3>Slow Client Communication</h3>
                 <p>When updates do not reach clients or internal teams, questions increase and delivery confidence weakens.</p>
               </div>
             </div>
             <div className="col-lg-6 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/professional-services-07.png" alt="professional-services-07" width={40} height={40} />
+                <img src="/img/professional-services-07.png" alt="Disorganised Document History" width={40} height={40}  loading="lazy" decoding="async" />
                 <h3>Disorganised Document History</h3>
                 <p>When files, proposals, contracts, and work notes stay scattered across folders, teams lose time searching for accurate information.</p>
               </div>
             </div>
             <div className="col-lg-6 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/professional-services-08.png" alt="professional-services-08" width={40} height={40} />
+                <img src="/img/professional-services-08.png" alt="Late Insight into Project Risks" width={40} height={40}  loading="lazy" decoding="async" />
                 <h3>Late Insight into Project Risks</h3>
                 <p>When risk signals remain unseen, small issues grow until they affect client trust and delivery timelines.</p>
               </div>
             </div>
             <div className="col-lg-6 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/professional-services-09.png" alt="professional-services-09" width={40} height={40} />
+                <img src="/img/professional-services-09.png" alt="Limited Visibility Across Operating Units" width={40} height={40}  loading="lazy" decoding="async" />
                 <h3>Limited Visibility Across Operating Units</h3>
                 <p>When each team follows separate tools, senior leaders struggle to see performance trends across the entire business.</p>
               </div>
             </div>
             <div className="col-lg-6 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/professional-services-10.png" alt="professional-services-10" width={40} height={40} />
+                <img src="/img/professional-services-10.png" alt="Disconnected Support Records" width={40} height={40}  loading="lazy" decoding="async" />
                 <h3>Disconnected Support Records</h3>
                 <p>When service requests and support enquiries sit outside project data, clients face delays in getting the right answers.</p>
               </div>
@@ -410,7 +407,7 @@ const Dynamics365ForProfessionalServices = () => {
           <div className="row">
             <div className="col-lg-5 align-self-center">
               <div className="whole-image">
-                <Image src="/img/professional-services-21.png" alt="professional-services-21" width={416} height={436} />
+                <Image src="/img/professional-services-21.png" alt="Why Dynamics 365 is a Strong Fit for the Professional Services Industry" width={416} height={436} />
               </div>
             </div>
             <div className="col-lg-7">
@@ -571,14 +568,14 @@ const Dynamics365ForProfessionalServices = () => {
             </div>
           </div>
         </div>
-        <img src="/img/n-015.png" alt="n-015" />
+        <img src="/img/n-015.png" alt="" aria-hidden="true"  loading="lazy" decoding="async" />
       </section>
       <section className='bg-003s pd-con-66'>
         <div className="container my-float-i">
           <div className="row">
             <div className="col-lg-5 align-self-center order-3">
               <div className='img-backs-sid-two text-center'>
-                <Image src="/img/professional-services-22.png" alt="professional-services-22" width={398} height={455} className='im-two' />
+                <Image src="/img/professional-services-22.png" alt="Partnering with Dynamics Square, UK" width={398} height={455} className='im-two' />
               </div>
             </div>
             <div className="col-lg-1 order-2"></div>
@@ -605,7 +602,7 @@ const Dynamics365ForProfessionalServices = () => {
           <div className="row">
             <div className="col-lg-5 align-self-center">
               <div className='img-backs-sid-two text-center'>
-                <Image src="/img/professional-services-23.png" alt="professional-services-23" width={400} height={450} className='im-two' />
+                <Image src="/img/professional-services-23.png" alt="Outcomes to Expect with Dynamics 365 for Professional Services" width={400} height={450} className='im-two' />
               </div>
             </div>
             <div className="col-lg-1"></div>

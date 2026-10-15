@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
@@ -9,33 +8,18 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Autoplay, FreeMode, Pagination } from "swiper/modules";
 import Blog from "../../components/Blog";
+import PageSeo from "../../components/PageSeo";
 const Manufacturing = () => {
   const [isOpen, setOpen] = useState(false);
   const [open, setsOpen] = useState(false);
   return (
     <>
-      <Head>
-        <title>Microsoft Business Central for Process Manufacturing | Dynamics Square</title>
-        <meta
-          name="description"
-          content="Optimise your process manufacturing with Business Central. Streamline production, manage resources, and ensure quality with an integrated, scalable ERP solution."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/industries/business-central-for-process-manufacturing/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/industries/business-central-for-process-manufacturing/" />
-        <meta property="og:title" content="Microsoft Business Central for Process Manufacturing | Dynamics Square" />
-        <meta property="og:description" content="Optimise your process manufacturing with Business Central. Streamline production, manage resources, and ensure quality with an integrated, scalable ERP solution." />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/BC-Process-Manufacturing.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/industries/business-central-for-process-manufacturing/" />
-        <meta property="twitter:title" content="Microsoft Business Central for Process Manufacturing | Dynamics Square" />
-        <meta property="twitter:description" content="Optimise your process manufacturing with Business Central. Streamline production, manage resources, and ensure quality with an integrated, scalable ERP solution." />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/BC-Process-Manufacturing.png" />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Microsoft Business Central for Process Manufacturing | Dynamics Square"
+        description="Optimise your process manufacturing with Business Central. Streamline production, manage resources, and ensure quality with an integrated, scalable ERP solution."
+        image="https://www.dynamicssquare.co.uk/img/BC-Process-Manufacturing.png"
+      />
         <section className="Solution-banner hero-1 hero">
           <div className="container">
             <div className="row">
@@ -124,7 +108,7 @@ const Manufacturing = () => {
             <div className="row">
               <div className="col-lg-5">
                 <div className="call_to_action-right over-img">
-                  <img src="/img/MaskGroup8.png" alt="image" />
+                  <img src="/img/MaskGroup8.png" alt="Business consultant" />
                 </div>
               </div>
               <div className="col-lg-7 align-self-center">
@@ -157,10 +141,9 @@ const Manufacturing = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/BOM-with-Multi-Level-Consumption.png"
-                      alt="BOM-with-Multi-Level-Consumption"
+                      alt="BOM with Multi-Level Consumption"
                       width={48}
-                      height={48}
-                    />
+                      height={48}  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>BOM with Multi-Level Consumption </h3>
@@ -171,10 +154,9 @@ const Manufacturing = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/Production-Order-Management.png"
-                      alt="Production-Order-Management"
+                      alt="Production Order Management"
                       width={48}
-                      height={48}
-                    />
+                      height={48}  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Production Order Management</h3>
@@ -185,10 +167,9 @@ const Manufacturing = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/Work-in-Progress-Tracking.png"
-                      alt="Work-in-Progress-Tracking"
+                      alt="Work in Progress Tracking"
                       width={48}
-                      height={48}
-                    />
+                      height={48}  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Work in Progress Tracking</h3>
@@ -199,10 +180,9 @@ const Manufacturing = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/Finite-Scheduling.png"
-                      alt="Finite-Scheduling"
+                      alt="Finite Scheduling"
                       width={48}
-                      height={48}
-                    />
+                      height={48}  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Finite Scheduling</h3>
@@ -215,10 +195,9 @@ const Manufacturing = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/Batch-and-Lot-Management.png"
-                      alt="Batch-and-Lot-Management"
+                      alt="Batch and Lot Management"
                       width={48}
-                      height={48}
-                    />
+                      height={48}  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Batch and Lot Management</h3>
@@ -229,10 +208,9 @@ const Manufacturing = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/Formula-and-Production-Analysis.png"
-                      alt="Formula-and-Production-Analysis"
+                      alt="Formula and Production Analysis"
                       width={48}
-                      height={48}
-                    />
+                      height={48}  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Formula and Production Analysis</h3>
@@ -243,10 +221,9 @@ const Manufacturing = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/Industry-Specific-Reporting.png"
-                      alt="Industry-Specific-Reporting"
+                      alt="Industry Specific Reporting"
                       width={48}
-                      height={48}
-                    />
+                      height={48}  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Industry Specific Reporting</h3>
@@ -258,10 +235,9 @@ const Manufacturing = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/Integration-with-D365-Solutions.png"
-                      alt="Integration-with-D365-Solutions"
+                      alt="Integration with D365 Solutions"
                       width={48}
-                      height={48}
-                    />
+                      height={48}  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Integration with D365 Solutions</h3>
@@ -382,8 +358,8 @@ const Manufacturing = () => {
                               <div className="img-wrp">
                                 <img
                                   src="/img/Food-and-beverage.svg"
-                                  alt="Food-and-beverage"
-                                />
+                                  alt=""
+                                 aria-hidden="true"  loading="lazy" decoding="async" />
                               </div>
                               <div className="text-wrp-content">
                                 <h3>Food & Beverages</h3>
@@ -407,7 +383,7 @@ const Manufacturing = () => {
                                   <img
                                     src="/img/NotforProfit.svg"
                                     alt="NotforProfit"
-                                  />
+                                   loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>Not for Profit</h3>
@@ -432,7 +408,7 @@ const Manufacturing = () => {
                                   <img
                                     src="/img/Ecommerce.svg"
                                     alt="Ecommerce"
-                                  />
+                                   loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>E-Commerce</h3>
@@ -455,8 +431,8 @@ const Manufacturing = () => {
                                 <div className="img-wrp">
                                   <img
                                     src="/img/proffesional-service.svg"
-                                    alt="proffesional-service"
-                                  />
+                                    alt=""
+                                   aria-hidden="true"  loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>Professional Services</h3>
@@ -479,7 +455,7 @@ const Manufacturing = () => {
                             <div className="industries-list-more">
                               <Link href="/industries/startups/">
                                 <div className="img-wrp">
-                                  <img src="/img/start-up.svg" alt="start-up" />
+                                  <img src="/img/start-up.svg" alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>Startups</h3>

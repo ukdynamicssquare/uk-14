@@ -1,21 +1,15 @@
 
-import Head from "next/head";
+import PageSeo from "../components/PageSeo";
 
 const BookADemo = () => {
     return (
         <>
-         <Head>
-        <title>Book a demo - Dynamics Square</title>
-        <meta name="robots" content="noidex,nofollow" />
-        <meta
-          name="description"
-          content="Embark on a journey of business excellence – schedule a free demo with Dynamics Square now. Preview the transformative power of Microsoft Business Applications."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/book-a-demo/"
-        />
-      </Head>
+      <PageSeo
+        robots="noidex,nofollow"
+        type="ContactPage"
+        title="Book a demo - Dynamics Square"
+        description="Embark on a journey of business excellence – schedule a free demo with Dynamics Square now. Preview the transformative power of Microsoft Business Applications."
+      />
 
       <section className="bbobg-col">
         <div className="container">

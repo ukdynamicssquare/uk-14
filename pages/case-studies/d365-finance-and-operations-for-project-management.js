@@ -17,18 +17,15 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           rel="canonical"
           href="https://www.dynamicssquare.co.uk/case-studies/d365-finance-and-operations-for-project-management/"
         />
-        <meta property="og:locale" content="GB" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="D365 Finance & Operations for Project Management - Case Study" />
         <meta property="og:description" content="Streamline project management with Dynamics 365 Finance & Operations—real-time insights, cost control, and seamless execution for complex projects." />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/case-studies/d365-finance-and-operations-for-project-management/" />
-        <meta property="og:site_name" content="Dynamics Square UK" />
         <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/old-mill-feature.jpg" />
         <meta property="og:image:width" content="200" />
         <meta property="og:image:height" content="200" />
         <meta property="og:image:type" content="image/jpg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
         <meta name="twitter:title" content="D365 Finance & Operations for Project Management - Case Study" />
         <meta name="twitter:description" content="Streamline project management with Dynamics 365 Finance & Operations—real-time insights, cost control, and seamless execution for complex projects." />
         <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/old-mill-feature.jpg" />

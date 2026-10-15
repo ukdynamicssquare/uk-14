@@ -1,34 +1,66 @@
-import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
+import PageSeo from "../../components/PageSeo";
+// Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
+const PAGE_FAQS = [
+  {
+    "question": "What is Microsoft Dynamics CRM used for?",
+    "answer": "Microsoft Dynamics CRM (Customer Relationship Management) is a powerful application capable of managing and streamlining customer relationships, tracking marketing campaigns, measuring sales, managing leads, and providing a seamless experience to deliver action-oriented decisions."
+  },
+  {
+    "question": "Is Dynamics 365 a CRM or ERP?",
+    "answer": "Microsoft Dynamics 365 is an all-in-one solution for all business needs, whether CRM or ERP (Enterprise Relationship Management). It contains 12 applications of ERP and CRM software that aid businesses in rapid growth and scalability."
+  },
+  {
+    "question": "Is Microsoft Dynamics CRM free?",
+    "answer": "Four applications are available under Dynamics 365 CRM, i.e., Dynamics 365 Sales, Dynamics 365 Customer Service, Dynamics 365 Field Service, and Microsoft D365 Project Service Automation. A user can get a 30-day free license to use all the features and understand the functions better before purchasing it."
+  },
+  {
+    "question": "What are the main areas in Dynamics CRM?",
+    "answer": "Dynamics CRM covers various areas of marketing and helps with business sales and customer retention. The top three regions of D365 CRM include Sales, Marketing, and Service. This is a complete application for overall sales and service management."
+  },
+  {
+    "question": "What is Dynamics CRM known for today?",
+    "answer": "Microsoft is very conscious of updating the features and capabilities of an existing application to deal with modern ways of business. Formerly, the CRM solution by Microsoft was known as Dynamics CRM, but after a significant update, it has evolved into Microsoft Dynamics 365 CRM."
+  },
+  {
+    "question": "Does Microsoft Dynamics CRM work on the web?",
+    "answer": "MS D365 CRM can work on web and mobile platforms with cloud deployment. Users can manage and supervise the sales process from anywhere and anytime using an internet connection."
+  },
+  {
+    "question": "What is Microsoft Dynamics CRM online?",
+    "answer": "Microsoft Dynamics CRM offers two deployment options to all on-premises and cloud users. The cloud deployment provides CRM online using Microsoft Azure (Microsoft's cloud storage service), where users can deploy the servers online and access the data in real-time."
+  },
+  {
+    "question": "Does Microsoft Dynamics 365 CRM support customizations?",
+    "answer": "Yes, it supports customizations per specific business requirements of the organisation. You will need the right Dynamics 365 implementation partner to successfully implement the application without errors."
+  },
+  {
+    "question": "Does Microsoft Dynamics 365 CRM support integrations?",
+    "answer": "Yes, this application does support native and third-party integrations. You can easily integrate Excel and Outlook apps to make the workflow smoother. If you need any integration as per your business type, you can contact Dynamics Square."
+  },
+  {
+    "question": "Is it easy to implement Microsoft Dynamics 365 CRM for any business?",
+    "answer": "Dynamics 365 CRM is a flexible tool that can be customized based on specific business requirements and industry types. Being adaptive, it provides seamless features to all businesses, irrespective of their industry. Generally, growing industries opt for this powerful application as the performance can be increased or decreased using the cloud anytime."
+  },
+  {
+    "question": "Does industry-specific application are available with Microsoft Dynamics CRM?",
+    "answer": "All applications per their specific industry type are available in Microsoft Marketplace. You can easily search for and implement them to boost your business operations."
+  }
+];
+
 
 const MicrosoftDynamicsCrm = () => {
   return (
     <>
-      <Head>
-        <title>Microsoft Dynamics CRM | A Complete CRM Solution</title>
-        <meta
-          name="description"
-          content="Microsoft Dynamics CRM is a complete CRM solution that can help your business grow by increasing sales, strengthening customer relationships, nurturing leads, and resolving customer support concerns."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-crm/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-crm/" />
-        <meta property="og:title" content="Microsoft Dynamics CRM | A Complete CRM Solution" />
-        <meta property="og:description" content="Microsoft Dynamics CRM is a complete CRM solution that can help your business grow by increasing sales, strengthening customer relationships, nurturing leads, and resolving customer support concerns." />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/CRM-header-banner.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-crm/" />
-        <meta property="twitter:title" content="Microsoft Dynamics CRM | A Complete CRM Solution" />
-        <meta property="twitter:description" content="Microsoft Dynamics CRM is a complete CRM solution that can help your business grow by increasing sales, strengthening customer relationships, nurturing leads, and resolving customer support concerns." />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/CRM-header-banner.png" />
-
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Microsoft Dynamics CRM | A Complete CRM Solution"
+        description="Microsoft Dynamics CRM is a complete CRM solution that can help your business grow by increasing sales, strengthening customer relationships, nurturing leads, and resolving customer support concerns."
+        image="https://www.dynamicssquare.co.uk/img/CRM-header-banner.png"
+        faqs={PAGE_FAQS}
+      />
       <div className='solution-new-banner-one'>
         <div className='container'>
           <div className='row justify-content-center'>
@@ -94,9 +126,9 @@ const MicrosoftDynamicsCrm = () => {
             <div className='col-lg-6 align-self-center'>
               <div className='product-side-001'>
                 <div className="flot-8">
-                  <Image src="/img/sales-new-03.png" width={523} height={459} alt="sales-new-03" />
+                  <Image src="/img/sales-new-03.png" width={523} height={459} alt="Dynamics 365 Finance Implementation: Why Your Business Needs It" />
                 </div>
-                <img width={563} height={478} src="/img/n-007.png" alt="sales-new-03" className="flot-9" />
+                <img width={563} height={478} src="/img/n-007.png" alt="" className="flot-9" aria-hidden="true"  loading="lazy" decoding="async" />
               </div>
             </div>
             <div className='col-lg-6 align-self-center'>
@@ -275,10 +307,10 @@ const MicrosoftDynamicsCrm = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons_simplify-marketing.svg"
-                            alt="icons_simplify-marketing"
+                            alt=""
                             width="48"
                             height="48"
-                          />
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Simplify Sales & Marketing</span>
                       </button>
@@ -308,10 +340,10 @@ const MicrosoftDynamicsCrm = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons_maximise-sales.svg"
-                            alt="icons_maximise-sales"
+                            alt=""
                             width="48"
                             height="48"
-                          />
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Maximise Sales</span>
                       </button>
@@ -341,10 +373,9 @@ const MicrosoftDynamicsCrm = () => {
                         <div className="wr-in">
                           <img
                             src="/img/Build-and-Manage-Opportunities.png"
-                            alt="Build-and-Manage-Opportunities"
+                            alt="Maximise Sales"
                             width="48"
-                            height="48"
-                          />
+                            height="48"  loading="lazy" decoding="async" />
                         </div>
                         <span>Build and Manage Opportunities </span>
                       </button>
@@ -374,10 +405,9 @@ const MicrosoftDynamicsCrm = () => {
                         <div className="wr-in">
                           <img
                             src="/img/Get-Real-time-Performance-Data.png"
-                            alt="Get-Real-time-Performance-Data"
+                            alt="Build and Manage Opportunities"
                             width="48"
-                            height="48"
-                          />
+                            height="48"  loading="lazy" decoding="async" />
                         </div>
                         <span>Get Real-time Performance Data</span>
                       </button>
@@ -414,10 +444,10 @@ const MicrosoftDynamicsCrm = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons_customer-relation.svg"
-                            alt="icons_customer-relation"
+                            alt=""
                             width="48"
                             height="48"
-                          />
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Build Sustainable Customer Relationships </span>
                       </button>
@@ -447,10 +477,9 @@ const MicrosoftDynamicsCrm = () => {
                         <div className="wr-in">
                           <img
                             src="/img/AvaiL-Actionable-Insights.png"
-                            alt="AvaiL-Actionable-Insights"
+                            alt="Build Sustainable Customer Relationships"
                             width="48"
-                            height="48"
-                          />
+                            height="48"  loading="lazy" decoding="async" />
                         </div>
                         <span>Avail Actionable Insights </span>
                       </button>
@@ -480,10 +509,9 @@ const MicrosoftDynamicsCrm = () => {
                         <div className="wr-in">
                           <img
                             src="/img/Track-Customer-Interaction.png"
-                            alt="Track-Customer-Interaction"
+                            alt="Avail Actionable Insights"
                             width="48"
-                            height="48"
-                          />
+                            height="48"  loading="lazy" decoding="async" />
                         </div>
                         <span>Track Customer Interaction </span>
                       </button>
@@ -513,10 +541,9 @@ const MicrosoftDynamicsCrm = () => {
                         <div className="wr-in">
                           <img
                             src="/img/Centralise-Communication-Channels.png"
-                            alt="Centralise-Communication-Channels"
+                            alt="Track Customer Interaction"
                             width="48"
-                            height="48"
-                          />
+                            height="48"  loading="lazy" decoding="async" />
                         </div>
                         <span>Centralise Communication Channels </span>
                       </button>
@@ -556,9 +583,8 @@ const MicrosoftDynamicsCrm = () => {
               <div className="commen-lef-pic">
                 <Image
                   src="/img/dynamics-365-sales.png"
-                  alt="dynamics-365-sales"
-                  width={1025} height={587}
-                />
+                  alt="Dynamics 365 for Sales"
+                  width={1025} height={587} />
               </div>
             </div>
             <div className="col-lg-5 align-self-center">
@@ -590,9 +616,8 @@ const MicrosoftDynamicsCrm = () => {
               <div className="commen-lef-pic">
                 <Image
                   src="/img/dynamics-for-customer-service.png"
-                  alt="dynamics-for-customer-service"
-                  width={1025} height={587}
-                />
+                  alt="Dynamics 365 for Customer Service"
+                  width={1025} height={587} />
               </div>
             </div>
           </div>
@@ -602,9 +627,8 @@ const MicrosoftDynamicsCrm = () => {
               <div className="commen-lef-pic">
                 <Image
                   src="/img/Project-Service-Automation.png"
-                  alt="Project-Service-Automation"
-                  width={1025} height={587}
-                />
+                  alt="Dynamics 365 for Customer Insights – Journeys"
+                  width={1025} height={587} />
               </div>
             </div>
             <div className="col-lg-5 align-self-center">
@@ -636,9 +660,8 @@ const MicrosoftDynamicsCrm = () => {
               <div className="commen-lef-pic text-center">
                 <Image
                   src="/img/FieldServicebanner.png"
-                  alt="Project-Service-Automation"
-                  width={600} height={380}
-                />
+                  alt="Dynamics 365 Field Service"
+                  width={600} height={380} />
               </div>
             </div>
           </div>
@@ -651,9 +674,8 @@ const MicrosoftDynamicsCrm = () => {
               <div className="busine_service_bottom-left custom012">
                 <Image
                   src="/img/microosoft-partner.png"
-                  alt="microosoft-partner.png"
-                  width={625} height={651}
-                />
+                  alt="Microsoft Solutions Partner badge"
+                  width={625} height={651} />
               </div>
             </div>
             <div className="col-lg-6 align-self-center">

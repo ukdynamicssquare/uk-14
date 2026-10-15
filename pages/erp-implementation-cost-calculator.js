@@ -1,38 +1,47 @@
 import React from 'react';
 import MultiStepFormNew from '../components/MultiStepFormNew';
-import Head from 'next/head';
 import FooterHide from '../components/FooterHide';
+import PageSeo from "../components/PageSeo";
+// Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
+const PAGE_FAQS = [
+  {
+    "question": "What is ERP implementation?",
+    "answer": "ERP implementation is the process of identifying the perfect ERP solution, customising it to meet unique requirements, and deploying it to streamline complex business operations. The entire process requires a perfectly built deployment plan, effective project management, and strong user adaptability. The entire process of implementation consists of different milestones to help a business control the operations of different departments that include finance, supply chain, human resources, production, customer relationship management, and a lot more. A successful ERP implementation leads a business towards constructive collaboration, centralising communication, and building endless opportunities for business growth."
+  },
+  {
+    "question": "What are the steps for implementing a new ERP system?",
+    "answer": "The entire process of ERP system implementation consists of different crucial steps, from choosing the suitable ERP solution to getting post-implementation support. However, some of the major steps are discussed next: Step 1: Choose the ideal ERP solution that fulfils the standard requirements of the business. Step 2: Build a detailed implementation strategy that includes successful data migration. Step 3: Customising the ERP system and integrating different add-ons to make it perfect for you. Step 4: Migrating the required data from your legacy system to the new system. Step 5: Complete deployment of the solution along with data and testing it. Step 6: Perform UAT (user acceptance testing) for customer acceptability. Step 7: Post implementation support for successful adaptation of the newly installed system."
+  },
+  {
+    "question": "How long does ERP implementation take?",
+    "answer": "The total time taken to completely implement an ERP solution depends on various factors that include the complexity of the ERP solution, type of business, deployment option, and level of customisations to align with the uniqueness of the business. However, a standard implementation can take from 1 to 2 months, but a customised ERP implementation integrated with different modules can take up to 12 months or more. In simple terms, it varies from one business to another."
+  },
+  {
+    "question": "What costs are included in the ERP implementation cost?",
+    "answer": "As discussed earlier, there are numerous costs associated with a complete ERP implementation. Such microcosts include software cost, deployment cost (cloud/on-premises), customisation cost, number of users, types of license fees, integration cost, solution training cost, and post-implementation support cost. To get the overall cost of ERP implementation as per your business, you should try the ERP software price calculator developed by Dynamics Square."
+  },
+  {
+    "question": "How accurate is the ERP Implementation Cost Calculator?",
+    "answer": "Dynamics Square’s ERP cost calculator is built leveraging our 14+ years of experience of implementing ERP solutions in various industries along with the expertise of our Microsoft-certified ERP consultants. 500+ global businesses trust our authenticity in giving the right direction to businesses so that they can grow consistently. So, you can get an estimate of your ERP implementation using our ERP cost calculator. For more information, you can schedule a call with our consultants, and they will justify the entire cost with practical reasons."
+  },
+  {
+    "question": "What are the ERP pricing models?",
+    "answer": "In general, there are two kinds of ERP pricing models. One is a user-based licensing model, and another is a perpetual licensing model. Based on your requirements, you can opt for the desired licensing model."
+  }
+];
+
 
 const TestForm = () => {
 
     return (
         <div>
-            <Head>
-            <title>ERP Implementation Pricing Calculator</title>
-        <meta
-          name="description"
-          content="Calculate your ERP implementation pricing with our easy-to-use calculator. Get accurate estimates tailored to your business needs. Start planning today!"
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/erp-implementation-cost-calculator/"
-        />
-        <meta property="og:locale" content="GB" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="ERP Implementation Pricing Calculator" />
-        <meta property="og:description" content="Calculate your ERP implementation pricing with our easy-to-use calculator. Get accurate estimates tailored to your business needs. Start planning today!" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/erp-implementation-cost-calculator/" />
-        <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/erp-shared-pic.png" />
-        <meta property="og:image:width" content="200" />
-        <meta property="og:image:height" content="200" />
-        <meta property="og:image:type" content="image/png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="ERP Implementation Pricing Calculator" />
-        <meta name="twitter:description" content="Calculate your ERP implementation pricing with our easy-to-use calculator. Get accurate estimates tailored to your business needs. Start planning today!" />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/erp-shared-pic.png" />
-            </Head>
+            <PageSeo
+              type="WebApplication"
+              title="ERP Implementation Pricing Calculator"
+              description="Calculate your ERP implementation pricing with our easy-to-use calculator. Get accurate estimates tailored to your business needs. Start planning today!"
+              image="https://www.dynamicssquare.co.uk/img/erp-shared-pic.png"
+              faqs={PAGE_FAQS}
+            />
 
             <section>
                 <MultiStepFormNew />

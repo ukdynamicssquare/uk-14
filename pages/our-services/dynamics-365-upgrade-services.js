@@ -1,23 +1,16 @@
-import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
+import PageSeo from "../../components/PageSeo";
 
 const UpgradeServices = () => {
   return (
     <>
-      <Head>
-        <title>
-          Dynamics 365 Upgrade Solutions & Service UK | Trusted by 500+ Clients
-        </title>
-        <meta
-          name="description"
-          content="Upgrade your system capabilities, process flow, adapt operational change through our highly integrated Dynamics 365 upgrade solutions. We have extensive experience in helping businesses upgrade services their systems."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/our-services/dynamics-365-upgrade-services/"
-        />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Dynamics 365 Upgrade Solutions & Service UK | Trusted by 500+ Clients"
+        description="Upgrade your system capabilities, process flow, adapt operational change through our highly integrated Dynamics 365 upgrade solutions. We have extensive experience in helping businesses upgrade services their systems."
+        image="/img/upgrade-service-banner.png"
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -69,7 +62,7 @@ const UpgradeServices = () => {
           <div className="row pad2xxx">
             <div className="col-lg-6 align-self-center">
               <div className="busine_service_bottom-left custom012">
-                <Image src="/img/upgrade-why.png" alt="upgrade-why" width={601} height={591} />
+                <Image src="/img/upgrade-why.png" alt="Why Upgrade To Dynamics 365?" width={601} height={591} />
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
@@ -148,7 +141,7 @@ const UpgradeServices = () => {
                 <img
                   src="/img/nav-logo-icons-1.png"
                   alt="NAV To Business Central Upgrade"
-                />
+                 loading="lazy" decoding="async" />
               </div>
             </div>
           </div>
@@ -158,7 +151,7 @@ const UpgradeServices = () => {
                 <img
                   src="/img/nav-ax-log.png"
                   alt="AX To Finance & Supply Chain Upgrade"
-                />
+                 loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="col-lg-7 align-self-center">
@@ -201,7 +194,7 @@ const UpgradeServices = () => {
                 <img
                   src="/img/upgrade-logo.png"
                   alt="Upgrade To Dynamics 365"
-                />
+                 loading="lazy" decoding="async" />
               </div>
             </div>
           </div>
@@ -259,7 +252,7 @@ const UpgradeServices = () => {
                           <img
                             src="/img/icons-upgrade-service_gold-partner.svg"
                             alt="Microsoft Solutions Partner"
-                          />
+                           loading="lazy" decoding="async" />
                         </div>
                         <span>Authorized Solutions Partner</span>
                       </button>
@@ -299,8 +292,8 @@ const UpgradeServices = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-upgrade-service_Highly-Customized-Solution.svg"
-                            alt="icons-upgrade-service_Highly-Customized-Solution"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Highly Customized Solution</span>
                       </button>
@@ -333,8 +326,8 @@ const UpgradeServices = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-upgrade-service_Secure-Data-Migration.svg"
-                            alt="icons-upgrade-service_Secure-Data-Migration"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Secure Data Migration</span>
                       </button>
@@ -381,8 +374,8 @@ const UpgradeServices = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-upgrade-service_seamless-upgrade.svg"
-                            alt="icons-upgrade-service_seamless-upgrade"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Seamless Upgrade</span>
                       </button>
@@ -425,8 +418,8 @@ const UpgradeServices = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-upgrade-service_Competitive-Pricing.svg"
-                            alt="icons-upgrade-service_Competitive-Pricing"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Competitive Pricing</span>
                       </button>
@@ -463,8 +456,8 @@ const UpgradeServices = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-upgrade-service_Post-Support.svg"
-                            alt="icons-upgrade-service_Post-Support"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Reliable Post Support</span>
                       </button>

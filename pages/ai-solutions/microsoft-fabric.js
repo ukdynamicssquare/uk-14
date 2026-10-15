@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import faqData from '../../public/data/fabric.json';
 import { sanitizeHtml } from '../../helpers/sanitizeHtml';
+import PageSeo from "../../components/PageSeo";
 
 const pageSchema = {
   "@context": "https://schema.org",
@@ -66,33 +66,13 @@ const Fabric = () => {
 
   return (
     <>
-      <Head>
-        <title>Microsoft Fabric Partner - Dynamics Square UK</title>
-        <meta
-          name="description"
-          content="Dynamics Square UK is a Microsoft Fabric partner offering implementation, analytics, Power BI integration and support to help businesses unlock data insights."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/ai-solutions/microsoft-fabric/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/ai-solutions/microsoft-fabric/" />
-        <meta property="og:title" content="Microsoft Fabric Partner - Dynamics Square UK" />
-        <meta property="og:description" content="Dynamics Square UK is a Microsoft Fabric partner offering implementation, analytics, Power BI integration and support to help businesses unlock data insights." />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/febric-00.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/ai-solutions/microsoft-fabric/" />
-        <meta property="twitter:title" content="Microsoft Fabric Partner - Dynamics Square UK" />
-        <meta property="twitter:description" content="Dynamics Square UK is a Microsoft Fabric partner offering implementation, analytics, Power BI integration and support to help businesses unlock data insights." />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/febric-00.png" />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
-        />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Microsoft Fabric Partner - Dynamics Square UK"
+        description="Dynamics Square UK is a Microsoft Fabric partner offering implementation, analytics, Power BI integration and support to help businesses unlock data insights."
+        image="/img/febric-00.png"
+        extraSchema={pageSchema}
+      />
       <div className='solution-new-banner-one'>
         <div className='container'>
           <div className='row justify-content-center'>
@@ -111,14 +91,14 @@ const Fabric = () => {
                 </div>
               </div>
               <div className='m-b-image'>
-                <Image src="/img/febric-00.png" alt='febric-00' width={1098} height={657} />
+                <Image src="/img/febric-00.png" alt="" width={1098} height={657} aria-hidden="true" />
               </div>
             </div>
 
           </div>
         </div>
         <div className="solution-new-banner-one-img imm-mins">
-          <Image src="/img/febric-00.png" alt="New Solution" width={1920} height={993} className="flot-1" />
+          <Image src="/img/febric-00.png" alt="" width={1920} height={993} className="flot-1" aria-hidden="true" />
         </div>
 
       </div>
@@ -214,7 +194,7 @@ const Fabric = () => {
             <div className='col-lg-6'>
               <div className='product-side-001'>
                 <div className="flot-8">
-                  <Image src="/img/febric-01.png" width={630} height={588} alt="New Solution" />
+                  <Image src="/img/febric-01.png" width={630} height={588} alt="" aria-hidden="true" />
                 </div>
               </div>
             </div>
@@ -360,7 +340,7 @@ const Fabric = () => {
           <div className='row'>
             <div className='col-lg-12'>
               <div className='solution-new-six-img' style={{textAlign:'center'}}>
-                <Image src="/img/febric-03.png" width={1137} height={396} alt="New Solution" />
+                <Image src="/img/febric-03.png" width={1137} height={396} alt="" aria-hidden="true" />
               </div>
             </div>
           </div>
@@ -447,10 +427,10 @@ const Fabric = () => {
                 <div className="fabric-service-icon">
                   <Image
                     src="/img/febric-08.png"
-                    alt="fabric-consulting"
+                    alt=""
                     width={40}
                     height={40}
-                  />
+                   aria-hidden="true" />
                 </div>
 
                 <h3>Microsoft Fabric Consulting</h3>
@@ -472,10 +452,10 @@ const Fabric = () => {
                 <div className="fabric-service-icon">
                  <Image
                     src="/img/febric-09.png"
-                    alt="fabric-consulting"
+                    alt=""
                     width={40}
                     height={40}
-                  />
+                   aria-hidden="true" />
                 </div>
 
                 <h3>Microsoft Fabric Implementation</h3>
@@ -498,10 +478,10 @@ const Fabric = () => {
                 <div className="fabric-service-icon">
                  <Image
                     src="/img/febric-10.png"
-                    alt="fabric-consulting"
+                    alt=""
                     width={40}
                     height={40}
-                  />
+                   aria-hidden="true" />
                 </div>
 
                 <h3>Microsoft Fabric Integration Services</h3>
@@ -523,10 +503,10 @@ const Fabric = () => {
                 <div className="fabric-service-icon">
                   <Image
                     src="/img/febric-11.png"
-                    alt="fabric-consulting"
+                    alt=""
                     width={40}
                     height={40}
-                  />
+                   aria-hidden="true" />
                 </div>
 
                 <h3>Microsoft Fabric Migration Services</h3>
@@ -548,10 +528,10 @@ const Fabric = () => {
                 <div className="fabric-service-icon">
                   <Image
                     src="/img/febric-12.png"
-                    alt="fabric-consulting"
+                    alt=""
                     width={40}
                     height={40}
-                  />
+                   aria-hidden="true" />
                 </div>
 
                 <h3>Microsoft Fabric Data Warehouse Setup</h3>
@@ -573,10 +553,10 @@ const Fabric = () => {
                 <div className="fabric-service-icon">
                   <Image
                     src="/img/febric-13.png"
-                    alt="fabric-consulting"
+                    alt=""
                     width={40}
                     height={40}
-                  />
+                   aria-hidden="true" />
                 </div>
 
                 <h3>Microsoft Fabric Data Engineering</h3>
@@ -598,10 +578,10 @@ const Fabric = () => {
                 <div className="fabric-service-icon">
                  <Image
                     src="/img/febric-14.png"
-                    alt="fabric-consulting"
+                    alt=""
                     width={40}
                     height={40}
-                  />
+                   aria-hidden="true" />
                 </div>
 
                 <h3>Microsoft Fabric AI Enablement</h3>
@@ -623,10 +603,10 @@ const Fabric = () => {
                 <div className="fabric-service-icon">
                  <Image
                     src="/img/febric-15.png"
-                    alt="fabric-consulting"
+                    alt=""
                     width={40}
                     height={40}
-                  />
+                   aria-hidden="true" />
                 </div>
 
                 <h3>Ongoing Support</h3>
@@ -667,7 +647,7 @@ const Fabric = () => {
             <div className='col-lg-6 align-self-center'>
               <div className='product-side-001'>
                 <div className="flot-8">
-                  <Image src="/img/febric-16.png" width={632} height={455} alt="New Solution" />
+                  <Image src="/img/febric-16.png" width={632} height={455} alt="" aria-hidden="true" />
                 </div>
               </div>
             </div>
@@ -755,7 +735,7 @@ const Fabric = () => {
              <div className='col-lg-6 align-self-center'>
               <div className='product-side-001'>
                 <div className="flot-8">
-                  <Image src="/img/febric-17.png" width={580} height={456} alt="febric-17" />
+                  <Image src="/img/febric-17.png" width={580} height={456} alt="" aria-hidden="true" />
                 </div>
               </div>
             </div>

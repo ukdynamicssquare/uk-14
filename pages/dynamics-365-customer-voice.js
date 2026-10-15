@@ -1,28 +1,16 @@
 import React, { useState } from "react";
-import Head from "next/head";
 import Image from 'next/image';
 import Link from "next/link";
+import PageSeo from "../components/PageSeo";
 const CustomerVoice = () => {
 
   return (
     <>
-      <Head>
-        <title>Dynamics 365 Customer Voice : Trial & Pricing - Dynamics Square</title>
-        <meta
-          name="description"
-          content=" Activate your feedback management system implementing Dynamics 365 Customer Voice to record, collect, and analyse responses for better understanding of your customer."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/dynamics-365-customer-voice/"
-        />
-        <meta
-          property="og:url"
-          content="https://www.dynamicssquare.co.uk/dynamics-365-customer-voice/"
-        />
-        <meta name="robots" content="index,follow" />
-
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Dynamics 365 Customer Voice : Trial & Pricing - Dynamics Square"
+        description=" Activate your feedback management system implementing Dynamics 365 Customer Voice to record, collect, and analyse responses for better understanding of your customer."
+      />
       <section className="Solution-banner hero-1 hero">
               <div className="container">
                 <div className="row">
@@ -72,9 +60,8 @@ const CustomerVoice = () => {
               <div className="busine_service_bottom-left custom012">
                 <Image
                   src="/img/customer-voice-side.png"
-                  alt="microosoft-partner.png"
-                  width={1038} height={1010}
-                />
+                  alt="What is Dynamics 365 Customer Voice?"
+                  width={1038} height={1010} />
               </div>
             </div>
             <div className="col-lg-6 align-self-center">

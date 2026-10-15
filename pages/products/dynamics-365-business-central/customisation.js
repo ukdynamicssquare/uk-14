@@ -1,6 +1,30 @@
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import PageSeo from "../../../components/PageSeo";
+// Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
+const PAGE_FAQS = [
+  {
+    "question": "Can we customise Business Central?",
+    "answer": "Yes, Microsoft Business Central is a flexible cloud-based ERP solution that offers intense customisation options to all businesses, regardless of their requirements. When you want to customise this solution as per your needs, you can contact your Business Central partner to make things work according to you."
+  },
+  {
+    "question": "My business is unique; can I go with Business Central?",
+    "answer": "In the modern era of doing business, we get to see different methodologies to operate and generate revenue. Most businesses are following unique methods and approaches to perform in this competitive world. Microsoft understands this scenario and makes Business Central accept its uniqueness. Regardless of your business, Business Central can be customised to align it with evolving needs."
+  },
+  {
+    "question": "What is customisation in Business Central?",
+    "answer": "Business Central follows an extension technology that allows standard customisation with just a click. It allows users to build tailor-made user interfaces and increase performance without the involvement of a Dynamics 365 customisation partner. In cases of complex requirements where the customisation needs to be built via coding, your Business Central implementation partner will build it for you."
+  },
+  {
+    "question": "What is the difference between customisation and configuration in Dynamics 365?",
+    "answer": "Configuration is something where a Dynamics 365 partner configures the solution for smooth working. Whereas customisation refers to personalising the system to meet the specific demands of a business while adding out-of-the-box functionalities to the solution."
+  },
+  {
+    "question": "What is the cost of Business Central customisation?",
+    "answer": "If you are going for a fresh Business Central implementation, your Microsoft ERP partner will give you a unified quote that includes the cost of the standard implementation and required customizations. However, if you already have a Business Central system and want to customise it as per evolving business needs, you need to contact your partner and purchase the Business Central support services to customise the system as per demand."
+  }
+];
+
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
@@ -11,32 +35,13 @@ const Customisation = () => {
 
   return (
     <>
-      <Head>
-        <title>Microsoft Business Central Customisation | Dynamics Square UK</title>
-        <meta
-          name="description"
-          content="Unlock the full potential of Dynamics 365 Business Central with customisation, optimising workflows and enhancing business performance."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/customisation/"
-        />
-        <meta property="og:locale" content="GB" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Microsoft Business Central Customisation | Dynamics Square UK" />
-        <meta property="og:description" content="Unlock the full potential of Dynamics 365 Business Central with customisation, optimising workflows and enhancing business performance." />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/customisation/" />
-        <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/Customise-Business-banner.png" />
-        <meta property="og:image:width" content="200" />
-        <meta property="og:image:height" content="200" />
-        <meta property="og:image:type" content="image/png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="Microsoft Business Central Customisation | Dynamics Square UK" />
-        <meta name="twitter:description" content="Unlock the full potential of Dynamics 365 Business Central with customisation, optimising workflows and enhancing business performance." />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/Customise-Business-banner.png" />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Microsoft Business Central Customisation | Dynamics Square UK"
+        description="Unlock the full potential of Dynamics 365 Business Central with customisation, optimising workflows and enhancing business performance."
+        image="https://www.dynamicssquare.co.uk/img/Customise-Business-banner.png"
+        faqs={PAGE_FAQS}
+      />
         <section className="Solution-banner hero-1 hero">
           <div className="container">
             <div className="row">
@@ -57,10 +62,9 @@ const Customisation = () => {
               <div className="col-lg-6 align-self-center">
                 <Image
                   src="/img/Customise-Business-banner.png"
-                  alt="Customise-Business-banner"
+                  alt="Power Up Business Central Capabilities with Tailored Approach"
                   width={1120} height={672}
-                  priority = {true}
-                />
+                  priority = {true} />
               </div>
             </div>
           </div>
@@ -130,7 +134,7 @@ const Customisation = () => {
             <div className="row">
               <div className="col-lg-5">
                 <div className="call_to_action-right over-img">
-                  <img src="/img/MaskGroup8.png" alt="image" />
+                  <img src="/img/MaskGroup8.png" alt="Business consultant" />
                 </div>
               </div>
               <div className="col-lg-7 align-self-center">
@@ -172,8 +176,7 @@ const Customisation = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/User-Interface-bc.png"
-                      alt="User-Interface-bc.png"
-                    />
+                      alt="User Interface"  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>User Interface</h3>
@@ -184,8 +187,7 @@ const Customisation = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/Extensions-bc.png"
-                      alt="Extensions-bc"
-                    />
+                      alt="Extensions"  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Extensions</h3>
@@ -196,8 +198,7 @@ const Customisation = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/Data-Model-bc.png"
-                      alt="Data-Model-bc"
-                    />
+                      alt="Data Model"  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Data Model</h3>
@@ -209,7 +210,7 @@ const Customisation = () => {
                     <img
                       src="/img/Reports and Dashboards.png"
                       alt="Reports and Dashboards"
-                    />
+                     loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Reports and Dashboards</h3>
@@ -220,8 +221,7 @@ const Customisation = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/Security-Permissions-bc.png"
-                      alt="Security-Permissions-bc"
-                    />
+                      alt="Security Permissions"  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Security Permissions</h3>
@@ -235,8 +235,7 @@ const Customisation = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/Localisation-bc.png"
-                      alt="Localisation-bc"
-                    />
+                      alt="Localisation"  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Localisation</h3>
@@ -247,8 +246,7 @@ const Customisation = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/Branding-bc.png"
-                      alt="Branding-bc"
-                    />
+                      alt="Branding"  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Branding</h3>
@@ -259,8 +257,7 @@ const Customisation = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/Workflow-Automation-bc.png"
-                      alt="Workflow-Automation-bc"
-                    />
+                      alt="Workflow Automation"  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Workflow Automation</h3>
@@ -271,8 +268,7 @@ const Customisation = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/Role-based-Access-bc.png"
-                      alt="Role-based-Access-bc"
-                    />
+                      alt="Role-based Access"  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Role-based Access</h3>
@@ -283,8 +279,7 @@ const Customisation = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/Customise-Design-and-Personalisation-bc.png"
-                      alt="Customise-Design-and-Personalisation-bc"
-                    />
+                      alt="Customise Design and Personalisation Modes"  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Customise Design and Personalisation Modes</h3>
@@ -326,9 +321,8 @@ const Customisation = () => {
                     <Image
                       src="/img/Customise-Business-side-pic.png"
                       className="fix-im"
-                      alt="Customise-Business-side"
-                      width={553} height={541}
-                    />
+                      alt="Why Trust Dynamics Square for Business Central Customisation?"
+                      width={553} height={541} />
 
                   </div>
                 </div>

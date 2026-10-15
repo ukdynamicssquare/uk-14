@@ -1,41 +1,19 @@
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
 import CaseStudyClientCard from "../../components/CaseStudyClientCard";
+import PageSeo from "../../components/PageSeo";
 const DynamicsNav2013BusinessCentralUpgrade = () => {
 
 
   return (
     <>
-      <Head>
-        <title>Summit Systems: Business Central Reimplementation Case Study | Dynamics Square</title>
-        <meta
-          name="description"
-          content="How Summit Systems, a plastic automation and recycling specialist, reimplemented Business Central to simplify buy-sell operations and project control."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/case-studies/business-central-reimplementation-for-recycling-industry/"
-        />
-        <meta property="og:locale" content="en_GB" />
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content="Summit Systems: Business Central Reimplementation Case Study | Dynamics Square" />
-        <meta property="og:description" content="How Summit Systems, a plastic automation and recycling specialist, reimplemented Business Central to simplify buy-sell operations and project control." />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/case-studies/business-central-reimplementation-for-recycling-industry/" />
-        <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/Summit-Systems.png" />
-        <meta property="og:image:secure_url" content="https://www.dynamicssquare.co.uk/img/Summit-Systems.png" />
-        <meta property="og:image:width" content="850" />
-        <meta property="og:image:height" content="410" />
-        <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:alt" content="Summit Systems case study – Dynamics Square" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="Summit Systems: Business Central Reimplementation Case Study | Dynamics Square" />
-        <meta name="twitter:description" content="How Summit Systems, a plastic automation and recycling specialist, reimplemented Business Central to simplify buy-sell operations and project control." />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/Summit-Systems.png" />
-        <meta name="twitter:image:alt" content="Summit Systems case study – Dynamics Square" />
-      </Head>
+      <PageSeo
+        type="Article"
+        title="Summit Systems: Business Central Reimplementation Case Study | Dynamics Square"
+        description="How Summit Systems, a plastic automation and recycling specialist, reimplemented Business Central to simplify buy-sell operations and project control."
+        image="https://www.dynamicssquare.co.uk/img/Summit-Systems.png"
+        imageAlt="Summit Systems case study – Dynamics Square"
+      />
       <section className="hero hero-new-bg">
         <div className="container">
           <div className="row justify-content-center">
@@ -272,7 +250,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="ce-image-cee">
-                <img src="/img/case-s-07.png" alt="Summit Systems Business Central reimplementation" className="img-fluid" />
+                <img src="/img/case-s-07.png" alt="Summit Systems Business Central reimplementation" className="img-fluid"  loading="lazy" decoding="async" />
               </div>
             </div>
           </div>
@@ -491,7 +469,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="call_to_action-right over-img">
-                <img src="/img/MaskGroup8.png" alt="image" />
+                <img src="/img/MaskGroup8.png" alt="Business consultant"  loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="col-lg-7 align-self-center">

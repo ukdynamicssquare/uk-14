@@ -1,22 +1,17 @@
-import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
+import PageSeo from "../../components/PageSeo";
 
 const PowerPlatform = () => {
   return (
     <>
-      <Head>
-        <title>Microsoft Power Platform Partner UK | Dynamics Square</title>
-        <meta
-          name="description"
-          content="Analyse data, create solutions, automate processes and create virtual agents with Microsoft Power Platform. Schedule a free power platform demo today."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/microsoft-power-platform/"
-        />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Microsoft Power Platform Partner UK | Dynamics Square"
+        description="Analyse data, create solutions, automate processes and create virtual agents with Microsoft Power Platform. Schedule a free power platform demo today."
+        image="/img/power-platform.png"
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -45,7 +40,7 @@ const PowerPlatform = () => {
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/power-platform.png" alt="power-platform" width={1024} height={586}  priority = {true} />
+              <Image src="/img/power-platform.png" alt="What is Power Platform?" width={1024} height={586}  priority = {true} />
             </div>
           </div>
         </div>
@@ -70,7 +65,7 @@ const PowerPlatform = () => {
           <div className="row pad9x rever-1">
             <div className="col-lg-4 align-self-center">
               <div className="commen-lef-pic power-custom text-center ">
-                <Image src="/img/Power-BI.png" alt="Power-BI" width={407} height={338} />
+                <Image src="/img/Power-BI.png" alt="Power BI" width={407} height={338} />
               </div>
             </div>
             <div className="col-lg-8 align-self-center">
@@ -121,7 +116,7 @@ const PowerPlatform = () => {
             </div>
             <div className="col-lg-4 align-self-center ">
               <div className="commen-lef-pic power-custom text-center">
-                <Image src="/img/Power-Apps.png" alt="Power-Apps" width={410} height={337} />
+                <Image src="/img/Power-Apps.png" alt="Power Apps" width={410} height={337} />
               </div>
             </div>
           </div>
@@ -129,7 +124,7 @@ const PowerPlatform = () => {
           <div className="row pad9x rever-1">
             <div className="col-lg-4 align-self-center">
               <div className="commen-lef-pic power-custom text-center">
-                <Image src="/img/Power-Automate.png" alt="Power-Automate" width={419} height={328} />
+                <Image src="/img/Power-Automate.png" alt="Power Automate" width={419} height={328} />
               </div>
             </div>
             <div className="col-lg-8 align-self-center">
@@ -180,7 +175,7 @@ const PowerPlatform = () => {
             </div>
             <div className="col-lg-4 align-self-center">
               <div className="commen-lef-pic power-custom text-center">
-                <Image src="/img/Virtual-Agent.png" alt="Virtual-Agent" width={426} height={328} />
+                <Image src="/img/Virtual-Agent.png" alt="Talk to our experts" width={426} height={328} />
               </div>
             </div>
           </div>
@@ -232,10 +227,10 @@ const PowerPlatform = () => {
                 <div className="icons icons-0101">
                   <Image
                     src="/img/combo-icon_BI-Bcentral.svg"
-                    alt="combo-icon_BI-Bcentral"
+                    alt=""
                     width={242}
                     height={120}
-                  />
+                   aria-hidden="true" />
                 </div>
                 <div className="commen-boc-2-info">
                   <h3>
@@ -265,10 +260,10 @@ const PowerPlatform = () => {
                 <div className="icons icons-0101">
                   <Image
                     src="/img/combo-icon_powerapps-bcentral.svg"
-                    alt="combo-icon_powerapps-bcentral"
+                    alt=""
                     width={242}
                     height={120}
-                  />
+                   aria-hidden="true" />
                 </div>
                 <div className="commen-boc-2-info">
                   <h3>
@@ -298,10 +293,10 @@ const PowerPlatform = () => {
                 <div className="icons icons-0101">
                   <Image
                     src="/img/combo-icon_virtualagent-bcentral.svg"
-                    alt="combo-icon_virtualagent-bcentral"
+                    alt=""
                     width={242}
                     height={120}
-                  />
+                   aria-hidden="true" />
                 </div>
                 <div className="commen-boc-2-info">
                   <h3>

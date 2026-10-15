@@ -1,41 +1,19 @@
-import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
 import useCardScrollEffect from "/components/useCardScrollEffect";
+import PageSeo from "../../../components/PageSeo";
 
 const SupplyChainManagements = () => {
     useCardScrollEffect()
   return (
     <>
-      <Head>
-
-        <title>Dynamics 365 Business Central for Supply Chain Management</title>
-        <meta
-          name="description"
-          content="Dynamics 365 Business Central optimises supply chain processes, offering seamless management, real-time insights, and enhanced efficiency for businesses."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/supply-chain-management/"
-        />
-        <meta property="og:locale" content="GB" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Dynamics 365 Business Central for Supply Chain Management" />
-        <meta property="og:description" content="Dynamics 365 Business Central optimises supply chain processes, offering seamless management, real-time insights, and enhanced efficiency for businesses." />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/supply-chain-management/" />
-        <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/Supplychain-banner.png" />
-        <meta property="og:image:width" content="200" />
-        <meta property="og:image:height" content="200" />
-        <meta property="og:image:type" content="image/png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="Dynamics 365 Business Central for Supply Chain Management" />
-        <meta name="twitter:description" content="Dynamics 365 Business Central optimises supply chain processes, offering seamless management, real-time insights, and enhanced efficiency for businesses." />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/Supplychain-banner.png" />
-
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Dynamics 365 Business Central for Supply Chain Management"
+        description="Dynamics 365 Business Central optimises supply chain processes, offering seamless management, real-time insights, and enhanced efficiency for businesses."
+        image="https://www.dynamicssquare.co.uk/img/Supplychain-banner.png"
+      />
       <div className='solution-new-banner-one'>
         <div className='container'>
           <div className='row justify-content-center'>
@@ -55,7 +33,7 @@ const SupplyChainManagements = () => {
                 </div>
               </div>
               <div className='m-b-image-banner'>
-                <Image src="/img/bc-support-banner.png" alt='bc-support-banner' width={1097} height={656} />
+                <Image src="/img/bc-support-banner.png" alt="What is the Impact of Business Central Supply Chain Management?" width={1097} height={656} />
                 <div className='ff-one'>  <span className=''>Procurement & Sourcing Automation</span></div>
                 <div className='ff-two'>  <span className=''>Demand Forecasting</span></div>
               </div>
@@ -112,7 +90,7 @@ const SupplyChainManagements = () => {
 
           </div>
           <div className="card-700-image">
-            <img src="/img/Union-shape-one.png" alt="Union-shape-one" />
+            <img src="/img/Union-shape-one.png" alt="" aria-hidden="true" />
           </div>
         </div>
       </section>
@@ -403,7 +381,7 @@ const SupplyChainManagements = () => {
           <div className="row g-3">
             <div className="col-lg-4">
               <div className='support-image--onea'>
-                <Image src="/img/bc-supply-04.png" alt='f-side-002' width={318} height={436} />
+                <Image src="/img/bc-supply-04.png" alt="Business Central for Supply Chain: Ready for Any Industry" width={318} height={436} />
               </div>
             </div>
             <div className="col-lg-8">
@@ -454,7 +432,7 @@ const SupplyChainManagements = () => {
 
           </div>
           <div className="card-700-image-t">
-            <img src="/img/Union-shape-one.png" alt="Union-shape-one" />
+            <img src="/img/Union-shape-one.png" alt="" aria-hidden="true"  loading="lazy" decoding="async" />
           </div>
         </div>
       </section>
@@ -672,7 +650,7 @@ const SupplyChainManagements = () => {
             </div>
             <div className='col-lg-5 align-self-center'>
               <div className='img-backs-sid'>
-                <Image src="/img/f-side-001.png" alt="f-side-001" width={318} height={436} className='im-two' />
+                <Image src="/img/f-side-001.png" alt="End-user training to drive real adoption" width={318} height={436} className='im-two' />
               </div>
             </div>
           </div>

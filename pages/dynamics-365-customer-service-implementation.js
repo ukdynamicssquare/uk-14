@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import Link from "next/link"; 
-import Head from 'next/head';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -8,24 +7,43 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import { FreeMode, Navigation, Thumbs, Autoplay } from "swiper/modules";
+import PageSeo from "../components/PageSeo";
+// Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
+const PAGE_FAQS = [
+  {
+    "question": "What's next after submitting my contact details?",
+    "answer": "Our team will reach out to you after you submit your information in order to learn more about your company during what is known as the Phase 1 Discovery Call. We'll document everything, create a FRD, do a FIT-GAP analysis, and then begin the implementation phase. If it's determined that another Discovery Call is necessary, we'll set that up with one of our highly qualified functional consultants who will address any remaining questions."
+  },
+  {
+    "question": "How long will it take to implement the project successfully?",
+    "answer": "Without first understanding the ins and outs of your business, it's difficult to provide an accurate timeline for implementing Customer Service - as there are many factors that go into the equation such as the quantity of processes, the complexity of operations, integrations, and customizations. All of these elements play a role in how long it will take to get up and running."
+  },
+  {
+    "question": "What's my role in the entire implementation project?",
+    "answer": "In order for your D365 Customer Service implementation partner to develop a superb solution for you, we only require that you provide us with accurate information about your current procedures and future demands. We also ask for your cooperation throughout the process to ensure a seamless and effortless deployment."
+  },
+  {
+    "question": "Does Dynamics Square provide training?",
+    "answer": "We provide free training to users so that they can understand how to use the newly installed solution. This includes learning about the features, capabilities, and functionalities of the software. Additionally, we'll assist you in comprehending the fundamental capabilities so that you can recognise your present and long-term needs for the Phase 2 implementation process (in case of need)."
+  },
+  {
+    "question": "What is the accurate cost of D365 Customer Service implementation?",
+    "answer": "The cost of implementation will depend on several factors, just like how time is defined. If you want to receive a precise price for the implementation process, you can give us a call or fill out the Contact Form. See Also -:, Power BI Implementation, Dynamics 365 Sales Implementation"
+  }
+];
+
 
 const CustomerServiceImplementation = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
     return (
       <>
-        <Head>
-        <title>
-          Dynamics 365 Customer Service Implementation | Dynamics Square UK
-        </title>
-        <meta
-          name="description"
-          content="Transform your support operations with Dynamics 365 Customer Service implementation by Dynamics Square UK for faster response and better CX."
+        <PageSeo
+          type="Service"
+          title="Dynamics 365 Customer Service Implementation | Dynamics Square UK"
+          description="Transform your support operations with Dynamics 365 Customer Service implementation by Dynamics Square UK for faster response and better CX."
+          image="/img/customer-service-banner.png"
+          faqs={PAGE_FAQS}
         />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/dynamics-365-customer-service-implementation/"
-        />
-        </Head>
         <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -405,7 +423,7 @@ const CustomerServiceImplementation = () => {
             <div className="row">
               <div className="col-lg-6">
                 <div className="box-6-pic">
-                  <Image src="/img/imp-left.svg" alt="imp-left.svg" width={531} height={771} />
+                  <Image src="/img/imp-left.svg" alt="" width={531} height={771} aria-hidden="true" />
                 </div>
               </div>
 
@@ -518,13 +536,13 @@ const CustomerServiceImplementation = () => {
                             <img
                               src="/img/Component-1-icons.svg"
                               className="overmain-thumb"
-                              alt="Component-1-icons"
-                            />
+                              alt=""
+                             aria-hidden="true"  loading="lazy" decoding="async" />
                             <img
                               src="/img/Component-1-iconss.svg"
                               className="over"
-                              alt="Component-1-icons-red"
-                            />
+                              alt=""
+                             aria-hidden="true"  loading="lazy" decoding="async" />
                           </div>
                         </SwiperSlide>
                         <SwiperSlide>
@@ -532,13 +550,13 @@ const CustomerServiceImplementation = () => {
                             <img
                               src="/img/Component-2.svg"
                               className="overmain-thumb-1"
-                              alt="Component-2"
-                            />
+                              alt=""
+                             aria-hidden="true"  loading="lazy" decoding="async" />
                             <img
                               src="/img/Component-2-iconss.svg"
                               className="over-1"
-                              alt="Component-2-icons-red"
-                            />
+                              alt=""
+                             aria-hidden="true"  loading="lazy" decoding="async" />
                           </div>
                         </SwiperSlide>
                         <SwiperSlide>
@@ -546,13 +564,13 @@ const CustomerServiceImplementation = () => {
                             <img
                               src="/img/Component-3.svg"
                               className="overmain-thumb-2"
-                              alt="Component-3"
-                            />
+                              alt=""
+                             aria-hidden="true"  loading="lazy" decoding="async" />
                             <img
                               src="/img/Component-3-iconss.svg"
                               className="over-1"
-                              alt="Component-1-icons-red"
-                            />
+                              alt=""
+                             aria-hidden="true"  loading="lazy" decoding="async" />
                           </div>
                         </SwiperSlide>
                         <SwiperSlide>
@@ -560,13 +578,13 @@ const CustomerServiceImplementation = () => {
                             <img
                               src="/img/Component-4.svg"
                               className="overmain-thumb-3"
-                              alt="Component-4"
-                            />
+                              alt=""
+                             aria-hidden="true"  loading="lazy" decoding="async" />
                             <img
                               src="/img/Component-4-iconss.svg"
                               className="over-1"
-                              alt="Component-1-icons-red"
-                            />
+                              alt=""
+                             aria-hidden="true"  loading="lazy" decoding="async" />
                           </div>
                         </SwiperSlide>
                         <SwiperSlide>
@@ -574,13 +592,13 @@ const CustomerServiceImplementation = () => {
                             <img
                               src="/img/Component-5.svg"
                               className="overmain-thumb-4"
-                              alt="Component-5"
-                            />
+                              alt=""
+                             aria-hidden="true"  loading="lazy" decoding="async" />
                             <img
                               src="/img/Component-5-iconss.svg"
                               className="over-1"
-                              alt="Component-1-icons-red"
-                            />
+                              alt=""
+                             aria-hidden="true"  loading="lazy" decoding="async" />
                           </div>
                         </SwiperSlide>
                       </Swiper>

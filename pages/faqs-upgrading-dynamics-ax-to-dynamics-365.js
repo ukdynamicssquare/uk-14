@@ -1,21 +1,61 @@
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
+import PageSeo from "../components/PageSeo";
+// Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
+const PAGE_FAQS = [
+  {
+    "question": "What are the deployment scenarios?",
+    "answer": "D365O deployment is extremely flexible. There are three deployment options: cloud-hosted, on-premises (“local business data”) and hybrid (“cloud + edge”). It is possible to start on one scenario and move to another, in either direction. There are different subscription and infrastructure costs for each scenario."
+  },
+  {
+    "question": "What happens to my existing customisations?",
+    "answer": "Generally, the older your version of Microsoft Dynamics AX, the more iterations it has undergone, and the more likely the customisations will have to be re-developed for Dynamics 365 for Operations. Custom coding is now done via extensions instead of over-layering. Microsoft has made it a priority to provide code upgrade tools to simplify the migration of custom code. The code upgrade tools in Lifecycle Services (LCS) assist in evaluating the effort for upgrade before making the commitment, automatically migrate code to the current version, and also streamline the process by providing automated merging and documenting where manual merging needs to be performed. As Dynamics AX 2012 R3 has a similar data structure to D365 there will be less refactoring required than older versions; and some customisations may now be covered by standard functionality and will not have to be migrated or re-coded."
+  },
+  {
+    "question": "What happens to my existing reports and BI content?",
+    "answer": "As with custom code, the upgrade process of reports and BI content is a three-stage approach: analyse, execute and validate. Microsoft's upgrade tools may migrate some SSRS reports and BI cubes from AX 2012 R3, however, content from older versions will need more re-development."
+  },
+  {
+    "question": "What happens to my existing third-party interfaces?",
+    "answer": "The interface technology has evolved significantly since AX 2009, so the older your version of AX the more likely the interfaces will require re-development. Transition needs to be assessed on a case-by-case basis."
+  },
+  {
+    "question": "What happens to my existing Dynamics AX licences?",
+    "answer": "Dynamics 365 for Operations is licenced on a monthly subscription per user or per device. The on-premise version may be licenced by monthly subscription or annual perpetual licence. For existing customers that are active on a Dynamics AX maintenance plan Microsoft is offering a 40% discount on the standard cloud-hosted Dynamics 365 pricing. There are two transition-to-cloud options: From SA - allows you to continue paying your Dynamics AX maintenance and add the Dynamics 365 SKUs on top of this at any time. - allows you to drop your existing maintenance payments at renewal and move fully to the cloud service., Cloud Add-on - allows you to continue paying your Dynamics AX maintenance and add the Dynamics 365 SKUs on top of this at any time. Active maintenance (SA or Enhancement Plan) will be a requirement for on-premises D365 ('local business data'). On-premises subscriptions will be 55% of cloud pricing. There are four user types in D365O: Full user/Activity/Team member/Device. Our consultants will be happy to provide more details on how your current users will map to the new user types and which options may be most cost effective for your organisation."
+  },
+  {
+    "question": "What is the upgrade process?",
+    "answer": "The costs and effort of upgrade are fully evaluated before making the commitment."
+  },
+  {
+    "question": "How long will the upgrade process take?",
+    "answer": "The following are very general estimates: Mostly standard functionality with minimal change to business processes - 2 to 3 months, Customisations that require re-development - 3 to 6 months, Customisations and significant re-engineering of business processes - 6 to 9 months"
+  },
+  {
+    "question": "Will our staff need to be retrained?",
+    "answer": "No. Most of the business logic in Dynamics AX is carried forward to D365O, yet the user interface has been greatly improved to provide a more fluid and intuitive experience. Upgrading from AX 2009 may require more user training - where necessary, this can be supplied throughout the upgrade process to ensure maximum uptake of new functionality and full onboarding at cutover. Additionally, the Task Recorder tool within D365O has been greatly enhanced to provide task guides with step-by-step instructions for completing business processes."
+  },
+  {
+    "question": "Will the upgrade disrupt our operations",
+    "answer": "No. Whether on-premises or in cloud, D365O is deployed through LCS. New builds are deployed first to test environments."
+  },
+  {
+    "question": "How much will the upgrade cost?",
+    "answer": "Our experts will carry out a code and data assessment, including BI and reporting content, interfaces and, if required, business processes, then offer a fixed price to upgrade your system to the latest on-premises or cloud version, including converting and migrating data."
+  }
+];
+
 
 const FaqsUgradingDynamics = () => {
   return (
     <>
-      <Head>
-        <title>FAQ – UPGRADING AX TO D365 | Dynamics Square</title>
-        <meta
-          name="description"
-          content="Upgrading from Dynamics AX 2009 and AX 2012 to Dynamics 365 for Operations brings significant new features and capabilities. Operations is available in three"
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/faqs-upgrading-dynamics-ax-to-dynamics-365/"
-        />
-      </Head>
+      <PageSeo
+        type="Article"
+        title="FAQ – UPGRADING AX TO D365 | Dynamics Square"
+        description="Upgrading from Dynamics AX 2009 and AX 2012 to Dynamics 365 for Operations brings significant new features and capabilities. Operations is available in three"
+        image="/img/AX-Dynamics-365-banner.png"
+        faqs={PAGE_FAQS}
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -48,10 +88,9 @@ const FaqsUgradingDynamics = () => {
             <div className="col-lg-6 align-self-center">
               <Image
                 src="/img/AX-Dynamics-365-banner.png"
-                alt="AX-Dynamics-365-banner"
+                alt="Are Dynamics AX and Dynamics 365 Similar?"
                 width={723} height={473}
-                priority = {true}
-              />
+                priority = {true} />
             </div>
           </div>
         </div>
@@ -131,7 +170,7 @@ const FaqsUgradingDynamics = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="call_to_action-right over-img">
-                <img src="/img/MaskGroup8.png" alt="image" />
+                <img src="/img/MaskGroup8.png" alt="Business consultant" />
               </div>
             </div>
             <div className="col-lg-7 align-self-center">

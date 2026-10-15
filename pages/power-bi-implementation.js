@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -8,32 +7,46 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import { FreeMode, Navigation, Thumbs, Autoplay } from "swiper/modules";
+import PageSeo from "../components/PageSeo";
+// Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
+const PAGE_FAQS = [
+  {
+    "question": "How do you implement a Power BI Project?",
+    "answer": "As we know, Microsoft Power BI is a powerful data analysis and visualisation tool capable of offering seamless visuals to properly utilise the data. It is a flexible solution that can be integrated with native as well as external business solutions. The process to implement Power BI with an existing solution, like Dynamics 365 Business Central, is a simple one if you have chosen the right Power BI implementation partner. Once you decide to implement, your partner will take care of the entire process without hampering your existing business operations."
+  },
+  {
+    "question": "How long does it take to implement Power BI?",
+    "answer": "There isn't a fixed timeline to specify the total time taken to implement Power BI. Because there are various factors that describe the total time to implement Power BI, including complexity, size, type, and amount of data for a business. If general scenarios are considered, it can take from 15 days to 4 months."
+  },
+  {
+    "question": "What are the roles of Power BI implementation?",
+    "answer": "Here, roles refer to the number of professionals engaged while implementing the Power BI project. Such roles include business analysts, data architects, data analysts, data scientists, IT administrators, and project managers."
+  },
+  {
+    "question": "What are the six stages of BI system implementation?",
+    "answer": "There can be different stages of Power BI implementation that depend on one project or another. In this, the major stages include: the discovery and planning stage where the implementation partner will analyse the business requirements, the data preparation stage where your business data will be prepared for the implementation process, dashboard development stage to develop custom dashboards based on required data to help you visualise data, testing stage to test the smooth working of power BI, deployment stage where power BI will be deployed on your servers, and the maintenance stage where your Microsoft Power BI support partner will maintain the excellent working of your solution."
+  },
+  {
+    "question": "How do you implement BI?",
+    "answer": "If you want to implement Power BI with your existing system, you will need to look for the right implementation partner that understands your needs and offers the most suitable solution. You can contact Dynamics Square and get your Power BI implemented in the most cost-effective, impactful, and efficient manner possible."
+  },
+  {
+    "question": "What are the benefits of Power BI implementation?",
+    "answer": "There are numerous benefits of Power BI implementation that can accelerate your business while occupying your data in the most efficient way. Some of the benefits are data visualisation, data integration, automation, mobile accessibility, cost-effectiveness, and much more."
+  }
+];
+
 const PowerBIImplementation = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   return (
     <>
-      <Head>
-        <title>Power BI Implementation Process & Services | Dynamics Square UK</title>
-        <meta
-          name="description"
-          content="Dynamics Square delivers trusted solutions through a proven Power BI Implementation process to businesses across the UK, As your requirements & budgets."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/power-bi-implementation/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/power-bi-implementation/" />
-        <meta property="og:title" content="Power BI Implementation Process & Services | Dynamics Square UK" />
-        <meta property="og:description" content="Dynamics Square delivers trusted solutions through a proven Power BI Implementation process to businesses across the UK, As your requirements & budgets." />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/Power-BI-1024x586.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/power-bi-implementation/" />
-        <meta property="twitter:title" content="Power BI Implementation Process & Services | Dynamics Square UK" />
-        <meta property="twitter:description" content="Dynamics Square delivers trusted solutions through a proven Power BI Implementation process to businesses across the UK, As your requirements & budgets." />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/Power-BI-1024x586.png" />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Power BI Implementation Process & Services | Dynamics Square UK"
+        description="Dynamics Square delivers trusted solutions through a proven Power BI Implementation process to businesses across the UK, As your requirements & budgets."
+        image="https://www.dynamicssquare.co.uk/img/Power-BI-1024x586.png"
+        faqs={PAGE_FAQS}
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -57,7 +70,7 @@ const PowerBIImplementation = () => {
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/Power-BI-1024x586.png" alt="Power-BI-Partner" width={1024} height={586}  priority = {true} />
+              <Image src="/img/Power-BI-1024x586.png" alt="Get Expert Guidance from Microsoft Power BI Implementation Partner" width={1024} height={586}  priority = {true} />
             </div>
           </div>
         </div>
@@ -124,9 +137,8 @@ const PowerBIImplementation = () => {
               <div className="busine_service_bottom-left custom012">
                 <Image
                   src="/img/power-bi-dashboard-1024x813.png"
-                  alt="power-bi-dashboard-1024x813"
-                  width={1024} height={813}
-                />
+                  alt="How Choosing Power BI Implementation Could Be a Proven Milestone for Your Enterprises"
+                  width={1024} height={813} />
               </div>
             </div>
           </div>
@@ -150,7 +162,7 @@ const PowerBIImplementation = () => {
             <div className="col-lg-6">
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                  <img src="/img/Customer-Service.svg" alt="Customer-Service" />
+                  <img src="/img/Customer-Service.svg" alt="Infrastructure & Flexibility"  loading="lazy" decoding="async" />
                 </div>
                 <div className="style-grid-content">
                   <h3>Infrastructure & Flexibility</h3>
@@ -165,7 +177,7 @@ const PowerBIImplementation = () => {
 
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                  <img src="/img/sales.svg" alt="sales" />
+                  <img src="/img/sales.svg" alt="sales"  loading="lazy" decoding="async" />
                 </div>
                 <div className="style-grid-content">
                   <h3>Customized Implementation</h3>
@@ -181,7 +193,7 @@ const PowerBIImplementation = () => {
 
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                  <img src="/img/marketing-icons.svg" alt="marketing-icons" />
+                  <img src="/img/marketing-icons.svg" alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                 </div>
                 <div className="style-grid-content">
                   <h3>Data Transformation</h3>
@@ -197,7 +209,7 @@ const PowerBIImplementation = () => {
 
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                  <img src="/img/commerce-icons.svg" alt="commerce-icons" />
+                  <img src="/img/commerce-icons.svg" alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                 </div>
                 <div className="style-grid-content">
                   <h3>Security & Reliability</h3>
@@ -216,8 +228,8 @@ const PowerBIImplementation = () => {
                 <div className="style-grid-icons">
                   <img
                     src="/img/supply-chain-icons.svg"
-                    alt="supply-chain-icons"
-                  />
+                    alt=""
+                   aria-hidden="true"  loading="lazy" decoding="async" />
                 </div>
                 <div className="style-grid-content">
                   <h3>Easy to Adapt</h3>
@@ -236,8 +248,8 @@ const PowerBIImplementation = () => {
                 <div className="style-grid-icons">
                   <img
                     src="/img/Field-Service-icons.svg"
-                    alt="Field-Service-icons"
-                  />
+                    alt=""
+                   aria-hidden="true"  loading="lazy" decoding="async" />
                 </div>
                 <div className="style-grid-content">
                   <h3>Leverage Insights into Actions</h3>
@@ -254,7 +266,7 @@ const PowerBIImplementation = () => {
 
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                  <img src="/img/finance-icns-1.svg" alt="finance-icns-1" />
+                  <img src="/img/finance-icns-1.svg" alt="Streamline Analytics in Real-Time"  loading="lazy" decoding="async" />
                 </div>
                 <div className="style-grid-content">
                   <h3>Streamline Analytics in Real-Time</h3>
@@ -298,7 +310,7 @@ const PowerBIImplementation = () => {
           <div className="row">
             <div className="col-lg-6 align-self-center">
               <div className="box-6-pic">
-                <Image src="/img/imp-left.svg" alt="imp-left.svg" width={531} height={771} />
+                <Image src="/img/imp-left.svg" alt="" width={531} height={771} aria-hidden="true" />
               </div>
             </div>
 
@@ -389,13 +401,13 @@ const PowerBIImplementation = () => {
                           <img
                             src="/img/Component-1-icons.svg"
                             className="overmain-thumb"
-                            alt="Component-1-icons"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-1-iconss.svg"
                             className="over"
-                            alt="Component-1-icons-red"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
@@ -403,13 +415,13 @@ const PowerBIImplementation = () => {
                           <img
                             src="/img/Component-2.svg"
                             className="overmain-thumb-1"
-                            alt="Component-2"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-2-iconss.svg"
                             className="over-1"
-                            alt="Component-1-icons-red"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
@@ -417,13 +429,13 @@ const PowerBIImplementation = () => {
                           <img
                             src="/img/Component-3.svg"
                             className="overmain-thumb-2"
-                            alt="Component-3"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-3-iconss.svg"
                             className="over-1"
-                            alt="Component-1-icons-red"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
@@ -431,13 +443,13 @@ const PowerBIImplementation = () => {
                           <img
                             src="/img/Component-4.svg"
                             className="overmain-thumb-3"
-                            alt="Component-4"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-4-iconss.svg"
                             className="over-1"
-                            alt="Component-1-icons-red"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
@@ -445,13 +457,13 @@ const PowerBIImplementation = () => {
                           <img
                             src="/img/Component-5.svg"
                             className="overmain-thumb-4"
-                            alt="Component-5"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-5-iconss.svg"
                             className="over-1"
-                            alt="Component-1-icons-red"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                     </Swiper>
@@ -475,7 +487,7 @@ const PowerBIImplementation = () => {
             <div className="col-lg-4 align-self-center">
               <div className="commen-box-3">
                 <div className="icons">
-                  <img src="/img/microsft-p-icons.svg" alt="microsft-p-icons" />
+                  <img src="/img/microsft-p-icons.svg" alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                   <h3>
                     Seamless Business
                     <br /> Intelligence{" "}
@@ -494,7 +506,7 @@ const PowerBIImplementation = () => {
             <div className="col-lg-4 align-self-center">
               <div className="commen-box-3">
                 <div className="icons">
-                  <img src="/img/Group997.svg" alt="Group997.svg" />
+                  <img src="/img/Group997.svg" alt="Secure Data Analytics"  loading="lazy" decoding="async" />
                   <h3>
                     Secure
                     <br /> Data Analytics{" "}
@@ -514,7 +526,7 @@ const PowerBIImplementation = () => {
             <div className="col-lg-4 align-self-center">
               <div className="commen-box-3">
                 <div className="icons">
-                  <img src="/img/Group772.svg" alt="Group772" />
+                  <img src="/img/Group772.svg" alt="Group772"  loading="lazy" decoding="async" />
                   <h3>
                     Unified
                     <br /> Analytics{" "}
@@ -536,7 +548,7 @@ const PowerBIImplementation = () => {
             <div className="col-lg-4 align-self-center">
               <div className="commen-box-3">
                 <div className="icons">
-                  <img src="/img/Group1003.svg" alt="Group1003" />
+                  <img src="/img/Group1003.svg" alt="Group1003"  loading="lazy" decoding="async" />
                   <h3>
                     Create More <br />
                     In-Depth Insights{" "}
@@ -561,7 +573,7 @@ const PowerBIImplementation = () => {
                   <img
                     src="/img/proffesionalserviceicon.svg"
                     alt="proffesionalserviceicon"
-                  />
+                   loading="lazy" decoding="async" />
                   <h3>
                     Accurate Visuals
                     <br /> with Industry-Leading AI{" "}
@@ -583,7 +595,7 @@ const PowerBIImplementation = () => {
             <div className="col-lg-4 align-self-center">
               <div className="commen-box-3">
                 <div className="icons">
-                  <img src="/img/Group1000.svg" alt="Group1000" />
+                  <img src="/img/Group1000.svg" alt="Group1000"  loading="lazy" decoding="async" />
                   <h3>
                     Excel
                     <br /> Advantage{" "}

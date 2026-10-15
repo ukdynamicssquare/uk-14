@@ -1,8 +1,8 @@
-import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
 import useCardScrollEffect from "../../../components/useCardScrollEffect";
+import PageSeo from "../../../components/PageSeo";
 
 const Dynamics365ForDiscreteManufacturing = () => {
 
@@ -10,32 +10,12 @@ const Dynamics365ForDiscreteManufacturing = () => {
 
   return (
     <>
-      <Head>
-        <title>Dynamics 365 For Discrete Manufacturing</title>
-        <meta
-          name="description"
-          content="Dynamics 365 for Discrete Manufacturing helps UK manufacturers streamline production, BOMs, inventory, and operations with real-time insights."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/industries/manufacturing/dynamics-365-for-discrete/"
-        />
-        <meta property="og:locale" content="GB" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content=" Dynamics 365 For Discrete Manufacturing " />
-        <meta property="og:description" content="Dynamics 365 for Discrete Manufacturing helps UK manufacturers streamline production, BOMs, inventory, and operations with real-time insights." />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/industries/manufacturing/dynamics-365-for-discrete/" />
-        <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/discrete-01.png" />
-        <meta property="og:image:width" content="200" />
-        <meta property="og:image:height" content="200" />
-        <meta property="og:image:type" content="image/png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="Dynamics 365 For Discrete Manufacturing" />
-        <meta name="twitter:description" content="Dynamics 365 for Discrete Manufacturing helps UK manufacturers streamline production, BOMs, inventory, and operations with real-time insights." />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/discrete-01.png" />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Dynamics 365 For Discrete Manufacturing"
+        description="Dynamics 365 for Discrete Manufacturing helps UK manufacturers streamline production, BOMs, inventory, and operations with real-time insights."
+        image="https://www.dynamicssquare.co.uk/img/discrete-01.png"
+      />
       <div className='solution-new-banner-one solution-new-banner-one-colo'>
         <div className='container'>
           <div className='row justify-content-center'>
@@ -63,7 +43,7 @@ const Dynamics365ForDiscreteManufacturing = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className='m-b-image-nnn'>
-                <Image src="/img/discrete-01.png" alt='bc-support-banner' width={1097} height={656} />
+                <Image src="/img/discrete-01.png" alt="What is Dynamics 365 for Discrete Manufacturing Companies?" width={1097} height={656} />
               </div>
             </div>
           </div>
@@ -86,7 +66,7 @@ const Dynamics365ForDiscreteManufacturing = () => {
               <div className="col-whole-card">
                 <h4>1. Dynamics 365 Business Central</h4>
                 <div className="col-bag-car">
-                  <Image src="/img/wholesale-pic-02.png" alt="wholesale-pic-02" width={93} height={93} />
+                  <Image src="/img/wholesale-pic-02.png" alt="Dynamics 365 Business Central" width={93} height={93} />
                 </div>
                 <p><a href="/products/dynamics-365-business-central/">Dynamics 365 Business Central</a> ERP for discrete manufacturing suits small to mid-sized manufacturers who want a single ERP for discrete manufacturing that covers production planning, inventory, procurement, sales, finance, and service. </p>
                 <p><b>Discrete manufacturers choose D365 Business Central when:</b></p>
@@ -103,7 +83,7 @@ const Dynamics365ForDiscreteManufacturing = () => {
               <div className="col-whole-card">
                 <h4>2. Dynamics 365 Finance and Supply Chain Management, formerly known as Dynamics 365 Finance and Operations or D365 F&O</h4>
                 <div className="col-bag-car">
-                  <Image src="/img/wholesale-pic-03.png" alt="wholesale-pic-03" width={386} height={96} />
+                  <Image src="/img/wholesale-pic-03.png" alt="Dynamics 365 Finance and Supply Chain Management, formerly known as Dynamics 365 Finance and Operations or D365 F&O" width={386} height={96} />
                 </div>
                 <p><a href="/products/microsoft-dynamics-365-finance-operations/">Dynamics 365 Finance and Operations</a> for discrete manufacturing is chosen by large manufacturers when they handle multi-plant operations, global sourcing, detailed engineering, and advanced automation. </p>
                 <p><b>Manufacturers choose Dynamics 365 Finance and Operations for discrete manufacturing when:</b></p>
@@ -134,63 +114,63 @@ const Dynamics365ForDiscreteManufacturing = () => {
           <div className="row g-5">
             <div className="col-lg-4 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/discrete-02.png" alt="Fragmented Production Information" width={40} height={36} />
+                <img src="/img/discrete-02.png" alt="Fragmented Production Information" width={40} height={36}  loading="lazy" decoding="async" />
                 <h3>Fragmented Production Information</h3>
                 <p>When production data stays in different systems, teams cannot follow work in progress correctly. This affects planning accuracy.</p>
               </div>
             </div>
             <div className="col-lg-4 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/discrete-03.png" alt="Paper Based Scheduling Pressure" width={40} height={36} />
+                <img src="/img/discrete-03.png" alt="Paper Based Scheduling Pressure" width={40} height={36}  loading="lazy" decoding="async" />
                 <h3>Paper Based Scheduling Pressure</h3>
                 <p>When job cards, drawings, and routing details travel through manual steps, planning falls behind. This slows production flow. </p>
               </div>
             </div>
             <div className="col-lg-4 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/discrete-04.png" alt="Parts and Materials Visibility Gaps" width={40} height={36} />
+                <img src="/img/discrete-04.png" alt="Parts and Materials Visibility Gaps" width={40} height={36}  loading="lazy" decoding="async" />
                 <h3>Parts and Materials Visibility Gaps</h3>
                 <p>When stock systems do not connect with planning tools, material shortages appear without warning.</p>
               </div>
             </div>
             <div className="col-lg-4 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/discrete-05.png" alt="Supplier Variability" width={40} height={36} />
+                <img src="/img/discrete-05.png" alt="Supplier Variability" width={40} height={36}  loading="lazy" decoding="async" />
                 <h3>Supplier Variability</h3>
                 <p>When supplier records are scattered, teams cannot track delivery behaviour. This slows raw material availability.</p>
               </div>
             </div>
             <div className="col-lg-4 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/discrete-06.png" alt="Unclear Costing and Margin View" width={40} height={36} />
+                <img src="/img/discrete-06.png" alt="Unclear Costing and Margin View" width={40} height={36}  loading="lazy" decoding="async" />
                 <h3>Unclear Costing and Margin View</h3>
                 <p>When costing stays disconnected from procurement and production, teams cannot understand true product margins.</p>
               </div>
             </div>
             <div className="col-lg-4 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/discrete-07.png" alt="Engineering Updates Reaching Teams Late" width={40} height={36} />
+                <img src="/img/discrete-07.png" alt="Engineering Updates Reaching Teams Late" width={40} height={36}  loading="lazy" decoding="async" />
                 <h3>Engineering Updates Reaching Teams Late</h3>
                 <p>When design changes do not reach production lines quickly, assembly errors appear.</p>
               </div>
             </div>
             <div className="col-lg-4 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/discrete-08.png" alt="Weak Forecasting Confidence" width={40} height={36} />
+                <img src="/img/discrete-08.png" alt="Weak Forecasting Confidence" width={40} height={36}  loading="lazy" decoding="async" />
                 <h3>Weak Forecasting Confidence</h3>
                 <p>When demand planning relies on estimates, teams cannot prepare accurate material and production schedules.</p>
               </div>
             </div>
             <div className="col-lg-4 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/discrete-09.png" alt="Quality and Compliance Records Spread Across Files" width={40} height={36} />
+                <img src="/img/discrete-09.png" alt="Quality and Compliance Records Spread Across Files" width={40} height={36}  loading="lazy" decoding="async" />
                 <h3>Quality and Compliance Records Spread Across Files</h3>
                 <p>When quality checks depend on manual notes, teams cannot trace issues quickly.</p>
               </div>
             </div>
             <div className="col-lg-4 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/discrete-10.png" alt="Service Data Sitting Outside Manufacturing Records" width={40} height={36} />
+                <img src="/img/discrete-10.png" alt="Service Data Sitting Outside Manufacturing Records" width={40} height={36}  loading="lazy" decoding="async" />
                 <h3>Service Data Sitting Outside Manufacturing Records</h3>
                 <p>When service history stays in isolated tools, teams cannot plan improvements based on real usage.</p>
               </div>
@@ -400,7 +380,7 @@ And when decision starts relying on live and consistent data, it builds discipli
           <div className="row">
             <div className="col-lg-5 align-self-center">
               <div className="whole-image">
-                <Image src="/img/discrete-21.png" alt="discrete-21" width={383} height={487} />
+                <Image src="/img/discrete-21.png" alt="Why Dynamics 365 is a Strong Fit for Discrete Manufacturing" width={383} height={487} />
               </div>
             </div>
             <div className="col-lg-7">
@@ -561,14 +541,14 @@ And when decision starts relying on live and consistent data, it builds discipli
             </div>
           </div>
         </div>
-        <img src="/img/n-015.png" alt="n-015" />
+        <img src="/img/n-015.png" alt="" aria-hidden="true"  loading="lazy" decoding="async" />
       </section>
       <section className='bg-003s pd-con-66'>
         <div className="container my-float-i">
           <div className="row">
             <div className="col-lg-5 align-self-center order-3">
               <div className='img-backs-sid-two text-center'>
-                <Image src="/img/wholesale-pic-28.png" alt="wholesale-pic-28" width={401} height={455} className='im-two' />
+                <Image src="/img/wholesale-pic-28.png" alt="Partnering With Dynamics Square UK" width={401} height={455} className='im-two' />
               </div>
             </div>
             <div className="col-lg-1 order-2"></div>
@@ -595,7 +575,7 @@ And when decision starts relying on live and consistent data, it builds discipli
           <div className="row">
             <div className="col-lg-5 align-self-center">
               <div className='img-backs-sid-two text-center'>
-                <Image src="/img/wholesale-pic-29.png" alt="wholesale-pic-29" width={400} height={450} className='im-two' />
+                <Image src="/img/wholesale-pic-29.png" alt="Outcomes You Can Expect with Dynamics 365 for Discrete Manufacturing" width={400} height={450} className='im-two' />
               </div>
             </div>
             <div className="col-lg-1"></div>

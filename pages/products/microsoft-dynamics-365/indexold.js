@@ -20,18 +20,15 @@ const D360 = () => {
           href="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365/"
         />
 
-        <meta property="og:locale" content="GB" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Microsoft Dynamics 365 Software: Cloud CRM & ERP Solutions UK" />
         <meta property="og:description" content="Need Microsoft Dynamics 365 cloud-based CRM and ERP solutions? Scale-up your business productivity by implementing Dynamics 365 apps with Dynamics Square UK." />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365/" />
-        <meta property="og:site_name" content="Dynamics Square UK" />
         <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/d360-banner.png" />
         <meta property="og:image:width" content="200" />
         <meta property="og:image:height" content="200" />
         <meta property="og:image:type" content="image/png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
         <meta name="twitter:title" content="Microsoft Dynamics 365 Software: Cloud CRM & ERP Solutions UK" />
         <meta name="twitter:description" content="Need Microsoft Dynamics 365 cloud-based CRM and ERP solutions? Scale-up your business productivity by implementing Dynamics 365 apps with Dynamics Square UK." />
         <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/d360-banner.png" />

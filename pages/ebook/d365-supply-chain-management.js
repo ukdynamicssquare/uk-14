@@ -1,7 +1,7 @@
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import CommonEbookForm from "../../components/CommonEbookForm";
+import PageSeo from "../../components/PageSeo";
 const StartGuideThree = () => {
 
 
@@ -56,29 +56,14 @@ const StartGuideThree = () => {
 
   return (
     <>
-      <Head>
-        <title>The Extensive Guide to Dynamics 365 Supply Chain Management</title>
-        <meta
-          name="description"
-          content="Download our free eBook - Dynamics 365 Supply Chain Management20 to simplify your customer relationship journey and enhance profitability along with rapid growth."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/ebook/d365-supply-chain-management/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/ebook/d365-supply-chain-management/" />
-        <meta property="og:title" content="Ultimate Dynamics 365 Supply Chain eBook" />
-        <meta property="og:description" content="Learn how to streamline your supply chain processes and optimise your operations with our Dynamics 365 Supply Chain Management guide. Download our free eBook to discover expert tips, real-world examples, and best practices for achieving supply chain excellence." />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/dynamics-SCM-Ebook-og.png" />
-        <meta property="og:image:width" content="1200" />
-          <meta property="og:image:height" content="630" />
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/ebook/d365-supply-chain-management/" />
-        <meta property="twitter:title" content="Ultimate Dynamics 365 Supply Chain eBook" />
-        <meta property="twitter:description" content="Learn how to streamline your supply chain processes and optimise your operations with our Dynamics 365 Supply Chain Management guide. Download our free eBook to discover expert tips, real-world examples, and best practices for achieving supply chain excellence." />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/dynamics-SCM-Ebook-og.png" />
-      </Head>
+      <PageSeo
+        type="WebPage"
+        title="The Extensive Guide to Dynamics 365 Supply Chain Management"
+        description="Download our free eBook - Dynamics 365 Supply Chain Management20 to simplify your customer relationship journey and enhance profitability along with rapid growth."
+        image="https://www.dynamicssquare.co.uk/img/dynamics-SCM-Ebook-og.png"
+        ogTitle="Ultimate Dynamics 365 Supply Chain eBook"
+        ogDescription="Learn how to streamline your supply chain processes and optimise your operations with our Dynamics 365 Supply Chain Management guide. Download our free eBook to discover expert tips, real-world examples, and best practices for achieving supply chain excellence."
+      />
       <section className="Solution-banner hero-1 hero">
          <div className="container">
            <div className="row">
@@ -103,9 +88,8 @@ const StartGuideThree = () => {
              <div className="col-lg-6 align-self-center text-center">
                <Image
                  src="/img/dynamics-SCM-Ebook-featured-banner.png"
-                 alt="dynamics-SCM-Ebook-featured-banner"
-                 width={800} height={600} priority = {true}
-               />
+                 alt="This Ultimate eBook Will Walk You Through"
+                 width={800} height={600} priority = {true} />
              </div>
            </div>
          </div>
@@ -140,9 +124,8 @@ const StartGuideThree = () => {
                <div className="text-center remove-pre">
                  <Image
                    src="/img/Supply-chain-management-ebook-tab.png"
-                   alt="Supply-chain-management-ebook-tab"
-                   width={487} height={613}
-                 />
+                   alt="Top Benefits to Choose D365 SCM"
+                   width={487} height={613} />
                </div>
              </div>
              <div className="col-lg-3 align-self-center">
@@ -169,7 +152,7 @@ const StartGuideThree = () => {
            <div className="row">
              <div className="col-lg-6 align-self-center">
                <div className="pic-ll">
-                 <Image src="/img/erp-left-about.png" alt="erp-left-about" width={337} height={460} />
+                 <Image src="/img/erp-left-about.png" alt="What's more about this eBook?" width={337} height={460} />
                </div>
              </div>
              {/* <div className="col-lg-1 align-self-center"></div> */}
@@ -217,7 +200,7 @@ const StartGuideThree = () => {
            <div className="row">
              <div className="col-lg-5">
                <div className="call_to_action-right over-img">
-                 <img src="/img/MaskGroup8.png" alt="images" />
+                 <img src="/img/MaskGroup8.png" alt="images"  loading="lazy" decoding="async" />
                </div>
              </div>
              <div className="col-lg-7 align-self-center">
@@ -414,7 +397,7 @@ const StartGuideThree = () => {
              </div>
              <div className="col-lg-6 align-self-center">
                <div className="pic-l2">
-                 <Image src="/img/Cover_Book_Moc.png" alt="Cover_Book_Moc" width={582} height={466} />
+                 <Image src="/img/Cover_Book_Moc.png" alt="Register For Free EBook" width={582} height={466} />
                </div>
              </div>
            </div>

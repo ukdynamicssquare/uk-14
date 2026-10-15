@@ -1,10 +1,10 @@
 import React, { useRef, useState,useEffect } from "react";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import emailjs from "@emailjs/browser";
 import PhoneInput from 'react-phone-input-2';
+import PageSeo from "../../components/PageSeo";
 import 'react-phone-input-2/lib/style.css';
 const WhitepaerguideFianace = () => {
 
@@ -135,17 +135,12 @@ const fetchCountryCodeByIP = () => {
 
   return (
     <>
-      <Head>
-      <title>Dynamics 365 Finance with Copilot WhitePaper | Dynamics Square</title>
-        <meta
-          name="description"
-          content="How Dynamics 365 Finance with Copilot boosts efficiency, automates tasks, and drives smarter financial decisions in this comprehensive whitepaper."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/white-papers/microsoft-finance/"
-        />
-      </Head>
+      <PageSeo
+        type="WebPage"
+        title="Dynamics 365 Finance with Copilot WhitePaper | Dynamics Square"
+        description="How Dynamics 365 Finance with Copilot boosts efficiency, automates tasks, and drives smarter financial decisions in this comprehensive whitepaper."
+        image="/img/finace-white-papper-banner.png"
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -165,7 +160,7 @@ const fetchCountryCodeByIP = () => {
               </div>
             </div>
             <div className="col-lg-6 align-self-center text-center">
-              <img width={800} src="/img/finace-white-papper-banner.png" alt="whitepaper-one" priority />
+              <img width={800} src="/img/finace-white-papper-banner.png" alt="The White paper will Walk you Through" priority />
             </div>
           </div>
         </div>
@@ -198,7 +193,7 @@ const fetchCountryCodeByIP = () => {
             </div>
             <div className="col-lg-6 align-self-center">
               <div className="text-center remove-pre">
-                <Image src="/img/finace-whitper-center.png" alt="tablet-ebook" width={487} height={613} />
+                <Image src="/img/finace-whitper-center.png" alt="The Perfect Solution to Eliminate all Financial Challenges" width={487} height={613} />
               </div>
             </div>
             <div className="col-lg-3 align-self-center">
@@ -226,9 +221,8 @@ const fetchCountryCodeByIP = () => {
               <div className="pic-ll">
                 <Image
                   src="/img/erp-left-about.png"
-                  alt="erp-left-about"
-                  width={337} height={460}
-                />
+                  alt="What’s More in This White Paper?"
+                  width={337} height={460} />
               </div>
             </div>
             {/* <div className="col-lg-1 align-self-center"></div> */}
@@ -249,7 +243,7 @@ const fetchCountryCodeByIP = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="call_to_action-right over-img">
-                <img src="/img/MaskGroup8.png" alt="images" />
+                <img src="/img/MaskGroup8.png" alt="images"  loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="col-lg-7 align-self-center">

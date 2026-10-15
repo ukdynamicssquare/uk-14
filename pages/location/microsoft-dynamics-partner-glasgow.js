@@ -1,24 +1,21 @@
-import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
 import Form from "../../components/Form";
+import PageSeo from "../../components/PageSeo";
+import LocationPageStyles from "../../components/LocationPageStyles";
 
 const MicrosoftDynamicsPartnerGlasgow = () => {
   return (
     <>
-      <Head>
-        <title>Microsoft Dynamics Partner Glasgow, UK | Dynamics Square</title>
-        <meta
-          name="description"
-          content="Looking for a trusted Microsoft Dynamics partner in Glasgow? We help businesses take advantage of Microsoft Dynamics' powerful suite of tools. Contact us today!"
-        />
-
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/location/microsoft-dynamics-partner-glasgow/"
-        />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Microsoft Dynamics Partner Glasgow, UK | Dynamics Square"
+        description="Looking for a trusted Microsoft Dynamics partner in Glasgow? We help businesses take advantage of Microsoft Dynamics' powerful suite of tools. Contact us today!"
+        image="/img/Microsoft-Dynamics-Partner-Glasgow.png"
+        areaServed="Glasgow"
+      />
+      <main className="loc-detail">
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -44,10 +41,10 @@ const MicrosoftDynamicsPartnerGlasgow = () => {
             <div className="col-lg-6 align-self-center">
               <Image
                 src="/img/Microsoft-Dynamics-Partner-Glasgow.png"
-                alt="Microsoft-Dynamics-Partner-Glasgow"
+                alt="Microsoft Solutions Partner in Glasgow"
                 width={768} height={501}
                 priority = {true}
-              />
+                sizes="(max-width: 991px) 100vw, 50vw" />
             </div>
           </div>
         </div>
@@ -493,8 +490,7 @@ const MicrosoftDynamicsPartnerGlasgow = () => {
                 <Image
                  width={1024} height={601}
                   src="/img/system-health-check-1024x601.webp"
-                  alt="system-health-check-1024x601"
-                />
+                  alt="Microsoft Partner You Can Trust!" />
               </div>
             </div>
             <div className="col-lg-12 text-center p-5">
@@ -574,6 +570,8 @@ const MicrosoftDynamicsPartnerGlasgow = () => {
           </div>
         </div>
       </section>
+      </main>
+      <LocationPageStyles />
     </>
   );
 };

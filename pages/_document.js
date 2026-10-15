@@ -12,7 +12,6 @@ class MyDocument extends Document {
     return (
       <Html lang='en-GB'>
         <Head>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link href="/favicon.png" rel="icon" />
           <link href="/favicon.png" rel="apple-touch-icon" />
           {/* Fonts are self-hosted (styles/fonts.css). Preload the body font. */}
@@ -23,6 +22,10 @@ class MyDocument extends Document {
             type="font/woff2"
             crossOrigin="anonymous"
           />
+          {/* Same on every page, so set once here. Pages must not repeat them. */}
+          <meta property="og:locale" content="en_GB" />
+          <meta property="og:site_name" content="Dynamics Square UK" />
+          <meta name="twitter:site" content="@dsquare_uk" />
           <meta name="msvalidate.01" content="EE56DA95B952D734B4521A0EFA1F0E8B" />
           <meta
             name="google-site-verification"

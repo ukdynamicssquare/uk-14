@@ -5,7 +5,7 @@ import { useState, useEffect, useRef } from "react";
 import TimerModal from "../../components/TimerModal";
 import BlogStyles from "../../components/blog/BlogStyles";
 import {
-  BlogFontPreload,
+  blogFontLinks,
   PageNav,
   PostCard,
   PostImage,
@@ -15,6 +15,7 @@ import {
 
 import { BlogService } from "../../helpers/blogApi";
 import { extractList, slimPost } from "../../helpers/blogData";
+import { buildCollectionGraph, jsonLd } from "../../helpers/schema";
 
 const PAGE_SIZE = 9;
 const SIDE_LIST_COUNT = 4;
@@ -136,11 +137,6 @@ function Blogshome({ blogs, businesscentral, firstPagePosts, totalPosts, blogtra
         />
 
         <meta
-          property="og:locale"
-          content="en_GB"
-        />
-
-        <meta
           property="og:type"
           content="website"
         />
@@ -161,11 +157,6 @@ function Blogshome({ blogs, businesscentral, firstPagePosts, totalPosts, blogtra
         />
 
         <meta
-          property="og:site_name"
-          content="Best Microsoft Dynamics 365 Blogs | Dynamics Square"
-        />
-
-        <meta
           name="twitter:card"
           content="summary_large_image"
         />
@@ -180,8 +171,35 @@ function Blogshome({ blogs, businesscentral, firstPagePosts, totalPosts, blogtra
           content="Dynamics 365 Blogs"
         />
 
+        <meta
+          property="og:image"
+          content="https://www.dynamicssquare.co.uk/img/home-page-og.png"
+        />
+
+        <meta
+          name="twitter:image"
+          content="https://www.dynamicssquare.co.uk/img/home-page-og.png"
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: jsonLd(
+              buildCollectionGraph({
+                path: "/blog/",
+                title: "Best Microsoft Dynamics 365 Blogs | Dynamics Square - Dynamics 365 Blogs",
+                description: "Dynamics 365 Blogs",
+                crumbs: [{ name: "Blog", path: "/blog/" }],
+                items: firstPagePosts.map((post) => ({
+                  name: post.title,
+                  path: `/blog/${post.title_slug}/`,
+                })),
+              })
+            ),
+          }}
+        />
+        {blogFontLinks()}
       </Head>
-      <BlogFontPreload />
 
       {/* =================================================
           PAGE HEADING

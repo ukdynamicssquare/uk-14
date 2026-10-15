@@ -1,5 +1,4 @@
 import { useRef, useState } from 'react';
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 // import useGsapScrollCards from '../../../hooks/useGsapScrollCards';
@@ -8,6 +7,7 @@ import useCardScrollEffect from "../../components/useCardScrollEffect";
 // import BcPopPdf from '../../components/BCPdfPopup';
 import NavBar from '../../components/NavBar';
 import BlogFinanaceCard from '../../components/BlogFinanaceCard';
+import PageSeo from "../../components/PageSeo";
 
 
 
@@ -40,28 +40,13 @@ const HumanResour = () => {
 
   return (
     <>
-      <Head>
-        <title>Dynamics 365 Human Resources | Dynamics Square UK</title>
-        <meta
-          name="description"
-          content="Transform HR operations with Dynamics 365 Human Resources. Manage talent, payroll, and compliance effortlessly with Dynamics Square UK." />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/dynamics-365-human-resources/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/dynamics-365-human-resources/" />
-        <meta property="og:title" content="Dynamics 365 Human Resources | Dynamics Square UK" />
-        <meta property="og:description" content="Transform HR operations with Dynamics 365 Human Resources. Manage talent, payroll, and compliance effortlessly with Dynamics Square UK." />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/Human-Resource-banner.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/products/dynamics-365-human-resources/" />
-        <meta property="twitter:title" content="Dynamics 365 Human Resources | Dynamics Square UK" />
-        <meta property="twitter:description" content="Transform HR operations with Dynamics 365 Human Resources. Manage talent, payroll, and compliance effortlessly with Dynamics Square UK." />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/Human-Resource-banner.png" />
-
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Dynamics 365 Human Resources | Dynamics Square UK"
+        description="Transform HR operations with Dynamics 365 Human Resources. Manage talent, payroll, and compliance effortlessly with Dynamics Square UK."
+        image="https://www.dynamicssquare.co.uk/img/Human-Resource-banner.png"
+        faqs={faqData.slice(0, 5)}
+      />
       <div className='solution-new-banner-one'>
         <div className='container'>
           <div className='row justify-content-center'>
@@ -80,19 +65,19 @@ const HumanResour = () => {
                 </div>
               </div>
               <div className='m-b-image'>
-                <Image src="/img/Human-Resource-banner.png" alt='Human-Resource-banner' width={1098} height={657} />
+                <Image src="/img/Human-Resource-banner.png" alt="Dynamics 365 Human Resources" width={1098} height={657} />
               </div>
             </div>
 
           </div>
         </div>
         <div className="solution-new-banner-one-img solution-new-banner-one-img-f">
-          <Image src="/img/hr-banner.png" alt="hr-banner" width={1920} height={948} className="flot-1" />
+          <Image src="/img/hr-banner.png" alt="" width={1920} height={948} className="flot-1" aria-hidden="true" />
           {/* <img src="/img/n-003.png" alt="New Solution" className="flot-2" />
           <img src="/img/n-004.png" alt="New Solution" className="flot-3" />
           <img src="/img/n-005.png" alt="New Solution" className="flot-4" /> */}
           <div className='flot-5'>
-            <img src="/img/hr-banner-icon.png" alt="" className="flot-img" width={48} height={48} />
+            <img src="/img/hr-banner-icon.png" alt="" className="flot-img" width={48} height={48}  loading="lazy" decoding="async" />
           </div>
           {/* <div className='flot-121'>
                         <div className='border-11'>
@@ -141,27 +126,27 @@ const HumanResour = () => {
                 <div className="image-list-new-im">
                   <div className='ii-pic-list'>
                     <div className='s-widt-p'>
-                      <img src="/img/rartin-log-01.png" alt="rartin-log-01" width={140} height={54} />
+                      <img src="/img/rartin-log-01.png" alt="Gartner rating 4.3 out of 5" width={140} height={54}  loading="lazy" decoding="async" />
                     </div>
                   </div>
                   <div className='ii-pic-list'>
                     <div className='s-widt-p'>
-                      <img src="/img/rartin-log-02.png" alt="rartin-log-01" width={204} height={54} />
+                      <img src="/img/rartin-log-02.png" alt="Forbes Advisor rating 5 out of 5" width={204} height={54}  loading="lazy" decoding="async" />
                     </div>
                   </div>
                   <div className='ii-pic-list'>
                     <div className='s-widt-p'>
-                      <img src="/img/rartin-log-03.png" alt="rartin-log-01" width={130} height={54} />
+                      <img src="/img/rartin-log-03.png" alt="G2 rating 4 out of 5" width={130} height={54}  loading="lazy" decoding="async" />
                     </div>
                   </div>
                   <div className='ii-pic-list'>
                     <div className='s-widt-p'>
-                      <img src="/img/rartin-log-04.png" alt="rartin-log-01" width={129} height={54} />
+                      <img src="/img/rartin-log-04.png" alt="Software Suggest rating 4.7 out of 5" width={129} height={54}  loading="lazy" decoding="async" />
                     </div>
                   </div>
                   <div className='ii-pic-list'>
                     <div className='s-widt-p'>
-                      <img src="/img/rartin-log-05.png" alt="rartin-log-01" width={155} height={54} />
+                      <img src="/img/rartin-log-05.png" alt="Capterra rating 4 out of 5" width={155} height={54}  loading="lazy" decoding="async" />
                     </div>
                   </div>
                 </div>
@@ -184,9 +169,9 @@ const HumanResour = () => {
             <div className='col-lg-6'>
               <div className='product-side-001'>
                 <div className="flot-8">
-                  <Image src="/img/hr-side-01.png" width={513} height={455} alt="New Solution" />
+                  <Image src="/img/hr-side-01.png" width={513} height={455} alt="Dynamics 365 Human Resources Implementation: Why Is It Necessary?" />
                 </div>
-                <img width={563} height={478} src="/img/n-007.png" alt="New Solution" className="flot-9" />
+                <img width={563} height={478} src="/img/n-007.png" alt="" className="flot-9" aria-hidden="true"  loading="lazy" decoding="async" />
               </div>
             </div>
             <div className='col-lg-6 align-self-center'>
@@ -446,7 +431,7 @@ const HumanResour = () => {
           </div>
         </div>
         <div className='n-014' >
-          <img src="/img/n-014.png" width={604} height={958} alt="Card 6" />
+          <img src="/img/n-014.png" width={604} height={958} alt="Card 6"  loading="lazy" decoding="async" />
         </div>
       </section>
       <section id='section5' className='solution-new-banner-five'>
@@ -463,7 +448,7 @@ const HumanResour = () => {
           <div className='row g-5'>
             <div className='col-lg-4 d-flex'>
               <div className='solution-new-card-001'>
-                <img src="/img/hr-banner-icon-01.png" width={36} height={36} alt="hr-banner-icon-01" />
+                <img src="/img/hr-banner-icon-01.png" width={36} height={36} alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                 <h3>Payroll and Finance</h3>
                 <p>Integrated payroll with providers, real-time cost tracking, and compliance-ready reporting.</p>
                 <a href="/products/dynamics-365-business-central/financial-management/" target='_blank'>Learn More</a>
@@ -471,7 +456,7 @@ const HumanResour = () => {
             </div>
             <div className='col-lg-4 d-flex'>
               <div className='solution-new-card-001'>
-                <img src="/img/hr-banner-icon-02.png" width={36} height={36} alt="hr-banner-icon-02" />
+                <img src="/img/hr-banner-icon-02.png" width={36} height={36} alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                 <h3>Benefits and Compensation</h3>
                 <p>Create flexible benefits packages, manage enrolment, and roll out company-wide compensation changes with confidence.</p>
                 {/* <a href="/products/dynamics-365-business-central/supply-chain-management/" target='_blank'>Learn More</a> */}
@@ -479,7 +464,7 @@ const HumanResour = () => {
             </div>
             <div className='col-lg-4 d-flex'>
               <div className='solution-new-card-001'>
-                <img src="/img/hr-banner-icon-03.png" width={36} height={36} alt="hr-banner-icon-03" />
+                <img src="/img/hr-banner-icon-03.png" width={36} height={36} alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                 <h3>Recruiting Add-On</h3>
                 <p>Track applicants, automate interviews, and connect with LinkedIn Talent Solutions for faster hiring.</p>
                 {/* <a href="/products/dynamics-365-business-central/sales-order-management/" target='_blank'>Learn More</a> */}
@@ -487,7 +472,7 @@ const HumanResour = () => {
             </div>
             <div className='col-lg-4 d-flex'>
               <div className='solution-new-card-001'>
-                <img src="/img/hr-banner-icon-04.png" width={36} height={36} alt="hr-banner-icon-04" />
+                <img src="/img/hr-banner-icon-04.png" width={36} height={36} alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                 <h3>Employee Self-Service</h3>
                 <p>Leave requests, training enrolment, and performance tracking through Teams and mobile access.</p>
                 {/* <a href="/products/dynamics-365-business-central/project-management/" target='_blank'>Learn More</a> */}
@@ -495,7 +480,7 @@ const HumanResour = () => {
             </div>
             <div className='col-lg-4 d-flex'>
               <div className='solution-new-card-001'>
-                <img src="/img/hr-banner-icon-05.png" width={36} height={36} alt="hr-banner-icon-05" />
+                <img src="/img/hr-banner-icon-05.png" width={36} height={36} alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                 <h3>Performance and Training</h3>
                 <p>Set goals, monitor feedback, and track certifications to improve growth and retention.</p>
                 {/* <a href="/products/dynamics-365-business-central/warehouse-management/" target='_blank'>Learn More</a> */}
@@ -503,7 +488,7 @@ const HumanResour = () => {
             </div>
             <div className='col-lg-4 d-flex'>
               <div className='solution-new-card-001'>
-                <img src="/img/hr-banner-icon-06.png" width={36} height={36} alt="hr-banner-icon-06" />
+                <img src="/img/hr-banner-icon-06.png" width={36} height={36} alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                 <h3>Workforce Insights and Analytics</h3>
                 <p>Use <a href="/products/microsoft-power-bi/">Power BI dashboards</a> and embedded analytics for better workforce planning.</p>
                 {/* <a href="/products/dynamics-365-business-central/service-management/" target='_blank'>Learn More</a> */}
@@ -511,7 +496,7 @@ const HumanResour = () => {
             </div>
             <div className='col-lg-4 d-flex'>
               <div className='solution-new-card-001'>
-                <img src="/img/hr-banner-icon-07.png" width={36} height={36} alt="hr-banner-icon-07" />
+                <img src="/img/hr-banner-icon-07.png" width={36} height={36} alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                 <h3>Service and Case Management</h3>
                 <p>Automate scheduling, track HR cases in real time, and monitor service agreements.</p>
                 {/* <a href="/products/dynamics-365-business-central/manufacturing-management/" target='_blank'>Learn More</a> */}
@@ -519,7 +504,7 @@ const HumanResour = () => {
             </div>
             <div className='col-lg-4 d-flex'>
               <div className='solution-new-card-001'>
-                <img src="/img/hr-banner-icon-08.png" width={36} height={36} alt="hr-banner-icon-08" />
+                <img src="/img/hr-banner-icon-08.png" width={36} height={36} alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                 <h3>Leave and Absence Management</h3>
                 <p>Create compliant leave programmes that adapt to global regulations and keep employees informed.</p>
                 {/* <a href="/products/dynamics-365-copilot/" target='_blank'>Learn More</a> */}
@@ -527,7 +512,7 @@ const HumanResour = () => {
             </div>
             <div className='col-lg-4 d-flex'>
               <div className='solution-new-card-001'>
-                <img src="/img/hr-banner-icon-09.png" width={36} height={36} alt="hr-banner-icon-09" />
+                <img src="/img/hr-banner-icon-09.png" width={36} height={36} alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                 <h3>Microsoft Copilot and AI Agents</h3>
                 <p>AI-driven predictions, chat-based assistance, and workforce insights that help HR teams act faster.</p>
                 <a href="/products/dynamics-365-copilot/" target='_blank'>Learn More</a>
@@ -561,7 +546,7 @@ const HumanResour = () => {
           <div className='row'>
             <div className='col-lg-12'>
               <div className='solution-new-six-img'>
-                <Image src="/img/solution-new-six-img.png" width={1282} height={383} alt="New Solution" />
+                <Image src="/img/solution-new-six-img.png" width={1282} height={383} alt="Transform the Way HR Works" />
               </div>
             </div>
           </div>
@@ -697,7 +682,7 @@ const HumanResour = () => {
             </div>
           </div>
         </div>
-        <img src="/img/hr-banner-icon-10.png" alt="hr-banner-icon-10" />
+        <img src="/img/hr-banner-icon-10.png" alt="" aria-hidden="true"  loading="lazy" decoding="async" />
       </section>
       <section id='section8' className='solution-new-pricing'>
         <div className='container'>
@@ -756,7 +741,7 @@ const HumanResour = () => {
           <div className="row justify-content-center" style={{paddingBottom:'30px'}}>
             <div className="col-lg-4 d-flex">
               <div className="upgrade-box-one upgrade-box-one-c d-flex-fil">
-                <Image src="/img/hr-banner-icon-11.png" alt="hr-banner-icon-11" width={42} height={42} />
+                <Image src="/img/hr-banner-icon-11.png" alt="" width={42} height={42} aria-hidden="true" />
                 <h3>Dynamics 365 HR Implementation</h3>
                 <p>Seamless deployment of HR capabilities, aligned with your business processes.</p>
                 <a href="#exampleModal" data-bs-toggle="modal">Get Started <i className="bi bi-arrow-right"></i></a>
@@ -764,7 +749,7 @@ const HumanResour = () => {
             </div>
             <div className="col-lg-4 d-flex">
               <div className="upgrade-box-one upgrade-box-one-c d-flex-fil">
-                <Image src="/img/hr-banner-icon-12.png" alt="hr-banner-icon-12" width={40} height={40} />
+                <Image src="/img/hr-banner-icon-12.png" alt="" width={40} height={40} aria-hidden="true" />
                 <h3>Dynamics 365 HR Support</h3>
                 <p>Continuous assistance to keep systems optimised and aligned with HR goals.</p>
                 <a href="#exampleModal" data-bs-toggle="modal">Get Started <i className="bi bi-arrow-right"></i></a>
@@ -773,7 +758,7 @@ const HumanResour = () => {
 
             <div className="col-lg-4 d-flex">
               <div className="upgrade-box-one upgrade-box-one-c d-flex-fil">
-                <Image src="/img/hr-banner-icon-13.png" alt="hr-banner-icon-13" width={40} height={36} />
+                <Image src="/img/hr-banner-icon-13.png" alt="" width={40} height={36} aria-hidden="true" />
                 <h3>Payroll Integration</h3>
                 <p>Configure and connect Dynamics 365 Human Resources payroll with providers for accurate salary processing and compliance.</p>
                 <a href="#exampleModal" data-bs-toggle="modal">Get Started <i className="bi bi-arrow-right"></i></a>
@@ -783,7 +768,7 @@ const HumanResour = () => {
            <div className="row justify-content-center">
             <div className="col-lg-6 d-flex">
               <div className="upgrade-box-one upgrade-box-one-c d-flex-fil">
-                <Image src="/img/hr-banner-icon-14.png" alt="hr-banner-icon-14" width={44} height={32} />
+                <Image src="/img/hr-banner-icon-14.png" alt="" width={44} height={32} aria-hidden="true" />
                 <h3>Recruiting Add-On</h3>
                 <p>Integrate the Dynamics 365 Human Resources recruiting add-on with LinkedIn Talent Solutions to attract and hire better talent.</p>
                 <a href="#exampleModal" data-bs-toggle="modal">Get Started <i className="bi bi-arrow-right"></i></a>
@@ -793,7 +778,7 @@ const HumanResour = () => {
             <div className="col-lg-6 d-flex">
               <div className="upgrade-box-one upgrade-box-one-c d-flex-fil">
                 {/* <img className="image-backx" src="/img/free-cons.png" alt="free-cons" /> */}
-                <Image src="/img/hr-banner-icon-15.png" alt="hr-banner-icon-15" width={38} height={44} />
+                <Image src="/img/hr-banner-icon-15.png" alt="" width={38} height={44} aria-hidden="true" />
                 <h3>Finance and Supply Chain Integration</h3>
                 <p>Extend HR capabilities by linking with Dynamics 365 Finance and Dynamics 365 Supply Chain Management for unified operations.</p>
                 <a href="/products/dynamics-365-supply-chain-management/" >Get Started <i className="bi bi-arrow-right"></i></a>
@@ -881,7 +866,7 @@ const HumanResour = () => {
                      <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                        <div className='card0-01 card0-02'>
                          <a href="/ebook/dynamics-365-finance/">
-                           <img src="/img/nav-guide-pic.png" width={273} height={192} alt="bc-8-17" />
+                           <img src="/img/nav-guide-pic.png" width={273} height={192} alt="Dynamics 365 Finance Guide"  loading="lazy" decoding="async" />
                            <h3>Dynamics 365 Finance Guide </h3>
                            <p>A Quick Start Guide To Dynamics 365 Finance</p>
                            <div className='ct--a'>
@@ -908,7 +893,7 @@ const HumanResour = () => {
                      <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                        <div className='card0-01 card0-02'>
                          <a href="https://youtu.be/44hqw-S27D0?si=mCEpK1p1hVAXszlj" target='_blank'>
-                           <img src="/img/bc-8-20.png" width={273} height={192} alt="bc-8-20" />
+                           <img src="/img/bc-8-20.png" width={273} height={192} alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                            <h3>Is Your Business Ready for an ERP System?</h3>
                            <p>Explore key signs, benefits, and steps to ERP readiness with Dynamics Square experts in this episode.</p>
                            <div className='ct--a'>
@@ -921,7 +906,7 @@ const HumanResour = () => {
                      <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                        <div className='card0-01 card0-02'>
                          <a href="https://youtu.be/Of8upj7BtGo?si=Lsf5SCwBtIpSU1ST" target='_blank'>
-                           <img src="/img/bc-8-22.png" width={273} height={192} alt="bc-8-22" />
+                           <img src="/img/bc-8-22.png" width={273} height={192} alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                            <h3>Signs Your Business Is Ready for an ERP System</h3>
                            <p>Understand when to adopt ERP, its benefits, and how Dynamics 365 drives business transformation.</p>
                            <div className='ct--a'>
@@ -953,7 +938,7 @@ const HumanResour = () => {
                      <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                        <div className='card0-01 card0-02'>
                          <a href="https://youtu.be/568w868TJdw?si=ULTGoaJJhz9Atmr2" target='_blank'>
-                           <img src="/img/y-thum-01.jpg" width={273} height={192} alt="bc-8-20" />
+                           <img src="/img/y-thum-01.jpg" width={273} height={192} alt="Foster organizational agility with Microsoft Dynamics 365 Human Resources"  loading="lazy" decoding="async" />
                            <h3>Foster organizational agility with Microsoft Dynamics 365 Human Resources</h3>
                            <p>Learn how Microsoft Dynamics 365 Human Resources can help HR leaders to foster organizational agility with business process, task, and compliance management.</p>
                            <div className='ct--a'>
@@ -965,7 +950,7 @@ const HumanResour = () => {
                      <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                        <div className='card0-01 card0-02'>
                          <a href="https://youtu.be/LKmtKeN2hwk?si=ApJU_46aphXvKfz1" target='_blank'>
-                           <img src="/img/y-thum-02.jpg" width={273} height={192} alt="bc-8-21" />
+                           <img src="/img/y-thum-02.jpg" width={273} height={192} alt="How to optimise HR programs with Microsoft Dynamics Human Resources"  loading="lazy" decoding="async" />
                            <h3>How to optimise HR programs with Microsoft Dynamics Human Resources</h3>
                            <p>Learn how to strengthen your operational HR programs, like benefits, leave and absence, and compliance with Microsoft Dynamics 365 Human Resources.</p>
                            <div className='ct--a'>
@@ -977,7 +962,7 @@ const HumanResour = () => {
                      <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                        <div className='card0-01 card0-02'>
                          <a href="https://youtu.be/8EKxmQLteto?si=D42o3JbtSRdHIhun" target='_blank'>
-                           <img src="/img/y-thum-03.jpg" width={273} height={192} alt="bc-8-21" />
+                           <img src="/img/y-thum-03.jpg" width={273} height={192} alt="How to transform your employee experience with Microsoft Dynamics 365 Human Resources"  loading="lazy" decoding="async" />
                            <h3>How to transform your employee experience with Microsoft Dynamics 365 Human Resources</h3>
                            <p>Learn how to foster self-service to provide a better employee experience and optimise workforce costs with Microsoft Dynamics 365 Human Resources.</p>
                            <div className='ct--a'>
@@ -994,7 +979,7 @@ const HumanResour = () => {
                      <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                        <div className='card0-01 card0-02'>
                          <a href="/white-papers/microsoft-finance/">
-                           <img src="/img/finacne-white-paper-category.png" width={273} height={192} alt="bc-8-17" />
+                           <img src="/img/finacne-white-paper-category.png" width={273} height={192} alt="Build Resilience in Your Financial Operations"  loading="lazy" decoding="async" />
                            <h3>Build Resilience in Your Financial Operations</h3>
                            <p>A maturity model designed to strengthen people, processes, and technology.</p>
                            <div className='ct--a'>

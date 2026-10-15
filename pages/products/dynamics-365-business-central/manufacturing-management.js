@@ -1,39 +1,17 @@
-import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
+import PageSeo from "../../../components/PageSeo";
 
 const ManufacturingManagement = () => {
   return (
     <>
-      <Head>
-        <title>Manufacturing Functionalities with Dynamics 365 Business Central</title>
-        <meta
-          name="description"
-          content="Optimise processes of Dynamics 365 Business Central for manufacturing — integrated solution for efficient production, inventory, and resource management."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/manufacturing-management/"
-        />
-        <meta property="og:locale" content="GB" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Manufacturing Functionalities with Dynamics 365 Business Central" />
-        <meta property="og:description" content="Optimise processes of Dynamics 365 Business Central for manufacturing — integrated solution for efficient production, inventory, and resource management." />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/manufacturing-management/" />
-        <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/manufacturing-management-banner.png" />
-        <meta property="og:image:width" content="200" />
-        <meta property="og:image:height" content="200" />
-        <meta property="og:image:type" content="image/png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="Manufacturing Functionalities with Dynamics 365 Business Central" />
-        <meta name="twitter:description" content="Optimise processes of Dynamics 365 Business Central for manufacturing — integrated solution for efficient production, inventory, and resource management." />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/manufacturing-management-banner.png" />
-
-
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Manufacturing Functionalities with Dynamics 365 Business Central"
+        description="Optimise processes of Dynamics 365 Business Central for manufacturing — integrated solution for efficient production, inventory, and resource management."
+        image="https://www.dynamicssquare.co.uk/img/manufacturing-management-banner.png"
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -54,10 +32,9 @@ const ManufacturingManagement = () => {
             <div className="col-lg-6 align-self-center">
               <Image
                 src="/img/manufacturing-management-banner.png"
-                alt="manufacturing-management-banner"
+                alt="What is Dynamics 365 Business Central for Manufacturing?"
                 width={665} height={447}
-                priority = {true}
-              />
+                priority = {true} />
             </div>
           </div>
         </div>
@@ -90,7 +67,7 @@ const ManufacturingManagement = () => {
                         aria-controls="fin1"
                       >
                         <div className="wr-in">
-                          <img src="/img/seamless-workforce-management.png" alt="seamless-workforce-management" />
+                          <img src="/img/seamless-workforce-management.png" alt="What is Dynamics 365 Business Central for Manufacturing?" />
                         </div>
                         <span>Seamless Workforce Management</span>
                       </button>
@@ -118,7 +95,7 @@ const ManufacturingManagement = () => {
                         aria-controls="fin2"
                       >
                         <div className="wr-in">
-                          <img src="/img/simplify-supply-chain-operations.png" alt="simplify-supply-chain-operations" />
+                          <img src="/img/simplify-supply-chain-operations.png" alt="Seamless Workforce Management"  loading="lazy" decoding="async" />
                         </div>
                         <span>Simplify Supply Chain Operations</span>
                       </button>
@@ -153,7 +130,7 @@ const ManufacturingManagement = () => {
                         aria-controls="fin3"
                       >
                         <div className="wr-in">
-                          <img src="/img/leverage-ai-to-automate-processes.png" alt="leverage-ai-to-automate-processes" />
+                          <img src="/img/leverage-ai-to-automate-processes.png" alt="Simplify Supply Chain Operations"  loading="lazy" decoding="async" />
                         </div>
                         <span>Leverage AI to Automate Processes</span>
                       </button>
@@ -183,8 +160,7 @@ const ManufacturingManagement = () => {
                         <div className="wr-in">
                           <img
                             src="/img/unified-platform-for-diverse-businesses.png"
-                            alt="unified-platform-for-diverse-businesses"
-                          />
+                            alt="Leverage AI to Automate Processes"  loading="lazy" decoding="async" />
                         </div>
                         <span>Unified Platform for Diverse Businesses</span>
                       </button>
@@ -284,7 +260,7 @@ const ManufacturingManagement = () => {
             <div className="col-lg-6">
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                  <Image src="/img/minimise-lead-time.png" alt="minimise-lead-time" width={84} height={84} />
+                  <Image src="/img/minimise-lead-time.png" alt="Minimise Lead Time" width={84} height={84} />
                 </div>
                 <div className="style-grid-content">
                   <h3>Minimise Lead Time</h3>
@@ -293,7 +269,7 @@ const ManufacturingManagement = () => {
               </div>
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                  <Image src="/img/enhanced-product-quality.png" alt="enhanced-product-quality" width={84} height={84} />
+                  <Image src="/img/enhanced-product-quality.png" alt="Enhanced Production Planning" width={84} height={84} />
                 </div>
                 <div className="style-grid-content">
                   <h3>Enhanced Production Planning</h3>
@@ -307,9 +283,8 @@ const ManufacturingManagement = () => {
                 <div className="style-grid-icons">
                   <Image
                     src="/img/enhanced-production-planning.png"
-                    alt="enhanced-production-planning"
-                    width={84} height={84}
-                  />
+                    alt="Enhanced Product Quality"
+                    width={84} height={84} />
                 </div>
                 <div className="style-grid-content">
                   <h3>Enhanced Product Quality</h3>
@@ -319,7 +294,7 @@ const ManufacturingManagement = () => {
 
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                  <Image src="/img/increased-team-communication.png" alt="increased-team-communication" width={84} height={84} />
+                  <Image src="/img/increased-team-communication.png" alt="Increased Team Communication" width={84} height={84} />
                 </div>
                 <div className="style-grid-content">
                   <h3>Increased Team Communication</h3>
@@ -337,9 +312,8 @@ const ManufacturingManagement = () => {
               <div className="busine_service_bottom-left custom012">
                 <Image
                   src="/img/manufacturing-management-side.png"
-                  alt="manufacturing-management-side"
-                  width={482} height={513}
-                />
+                  alt="Manufacturing Module in Industries"
+                  width={482} height={513} />
               </div>
             </div>
             <div className="col-lg-6 align-self-center">

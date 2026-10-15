@@ -1,38 +1,18 @@
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import PageSeo from "../components/PageSeo";
 
 const ShopifyConnectorBusinessCentral = () => {
 
 
   return (
     <>
-      <Head>
-        <title>Shopify Connector for Business Central & Integration | Dynamics Square UK</title>
-        <meta
-          name="description"
-          content="Streamline your operations with our Shopify Connector for Business Central, enabling seamless integration and efficient management. Boost your productivity now!"
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/shopify-connector-business-central/"
-        />
-        <meta property="og:locale" content="GB" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Shopify Connector for Business Central & Integration | Dynamics Square UK" />
-        <meta property="og:description" content="Streamline your operations with our Shopify Connector for Business Central, enabling seamless integration and efficient management. Boost your productivity now!" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/shopify-connector-business-central/" />
-        <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/Shopify-Connector-banner.png" />
-        <meta property="og:image:width" content="200" />
-        <meta property="og:image:height" content="200" />
-        <meta property="og:image:type" content="image/png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="Shopify Connector for Business Central & Integration | Dynamics Square UK" />
-        <meta name="twitter:description" content="Streamline your operations with our Shopify Connector for Business Central, enabling seamless integration and efficient management. Boost your productivity now!" />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/Shopify-Connector-banner.png" />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Shopify Connector for Business Central & Integration | Dynamics Square UK"
+        description="Streamline your operations with our Shopify Connector for Business Central, enabling seamless integration and efficient management. Boost your productivity now!"
+        image="https://www.dynamicssquare.co.uk/img/Shopify-Connector-banner.png"
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -161,7 +141,7 @@ const ShopifyConnectorBusinessCentral = () => {
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/all-in-one-bc.png" alt="all-in-one-bc" width={950} height={545} />
+              <Image src="/img/all-in-one-bc.png" alt="Financial Management" width={950} height={545} />
             </div>
           </div>
         </div>
@@ -170,7 +150,7 @@ const ShopifyConnectorBusinessCentral = () => {
         <div className="container">
           <div className="row rever-1">
             <div className="col-lg-6 align-self-center">
-            <Image src="/img/Interactive-Shopfront.png" alt="Interactive-Shopfront" width={946} height={529} />
+            <Image src="/img/Interactive-Shopfront.png" alt="Shopify: Your Interactive Shopfront for Global Customers" width={946} height={529} />
             </div>
             <div className="col-lg-6">
               <h2>Shopify: Your Interactive Shopfront for Global Customers </h2>
@@ -343,7 +323,7 @@ const ShopifyConnectorBusinessCentral = () => {
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
-            <Image src="/img/Automate-Your-E-Commerce.png" alt="Automate-Your-E-Commerce" width={870} height={513} />
+            <Image src="/img/Automate-Your-E-Commerce.png" alt="Streamline your e-commerce with Shopify Connector" width={870} height={513} />
             </div>
           </div>
         </div>
@@ -425,9 +405,8 @@ const ShopifyConnectorBusinessCentral = () => {
                <div className="style-grid-icons">
                  <Image
                    src="/img/Increased-Sales-sofi.png"
-                   alt="Increased-Sales-sofi"
-                   width={94} height={94}
-                 />
+                   alt="Increased Sales"
+                   width={94} height={94} />
                </div>
                <div className="style-grid-content">
                  <h3>Increased Sales</h3>
@@ -437,7 +416,7 @@ const ShopifyConnectorBusinessCentral = () => {
 
              <div className="style-grid-1">
                <div className="style-grid-icons">
-                 <Image src="/img/_Lowered-Overall-Costs.png" alt="Lowered-Overall-Costs"  width={94} height={94} />
+                 <Image src="/img/_Lowered-Overall-Costs.png" alt="Lowered Overall Costs"  width={94} height={94} />
                </div>
                <div className="style-grid-content">
                  <h3>Lowered Overall Costs </h3>
@@ -449,9 +428,8 @@ const ShopifyConnectorBusinessCentral = () => {
                <div className="style-grid-icons">
                  <Image
                    src="/img/_Enhanced-Inventory-Management.png"
-                   alt="Enhanced-Inventory-Management"
-                   width={94} height={94}
-                 />
+                   alt="Enhanced Inventory Management"
+                   width={94} height={94} />
                </div>
                <div className="style-grid-content">
                  <h3>Enhanced Inventory Management </h3>
@@ -463,7 +441,7 @@ const ShopifyConnectorBusinessCentral = () => {
            <div className="col-lg-6">
              <div className="style-grid-1">
                <div className="style-grid-icons">
-                 <Image src="/img/Increased-Customer-Satisfaction.png" alt="Increased-Customer-Satisfaction" width={94} height={94} />
+                 <Image src="/img/Increased-Customer-Satisfaction.png" alt="Increased Customer Satisfaction" width={94} height={94} />
                </div>
                <div className="style-grid-content">
                  <h3>Increased Customer Satisfaction </h3>
@@ -472,7 +450,7 @@ const ShopifyConnectorBusinessCentral = () => {
              </div>
              <div className="style-grid-1">
                <div className="style-grid-icons">
-                 <Image src="/img/_Centralises-Data.png" alt="Centralises-Data"  width={94} height={94} />
+                 <Image src="/img/_Centralises-Data.png" alt="Centralises Data"  width={94} height={94} />
                </div>
                <div className="style-grid-content">
                  <h3>Centralises Data </h3>
@@ -481,7 +459,7 @@ const ShopifyConnectorBusinessCentral = () => {
              </div>
              <div className="style-grid-1">
                <div className="style-grid-icons">
-                 <Image src="/img/_Improved-Data-Accuracy-sofi.png" alt="Improved-Data-Accuracy-sofi"  width={94} height={94} />
+                 <Image src="/img/_Improved-Data-Accuracy-sofi.png" alt="Improved Data Accuracy"  width={94} height={94} />
                </div>
                <div className="style-grid-content">
                  <h3>Improved Data Accuracy </h3>

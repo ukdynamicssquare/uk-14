@@ -1,24 +1,17 @@
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
 import Form from "../components/Form";
+import PageSeo from "../components/PageSeo";
 
 const SalesInsightsanOverview = () => {
   return (
     <>
-      <Head>
-        <title>
-          Dynamics 365 Sales Insights: An Overview | Dynamics Square
-        </title>
-        <meta
-          name="description"
-          content="Dynamics 365 Sales Insights is a prominent add-on in Microsoft Dynamics 365. It enables sales teams to build better relationships with customers, cut down on monotonous tasks and augment business processes leveraging in-built coaching tools and AI Insights."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/dynamics-365-sales-insights-an-overview/"
-        />
-      </Head>
+      <PageSeo
+        type="Article"
+        title="Dynamics 365 Sales Insights: An Overview | Dynamics Square"
+        description="Dynamics 365 Sales Insights is a prominent add-on in Microsoft Dynamics 365. It enables sales teams to build better relationships with customers, cut down on monotonous tasks and augment business processes leveraging in-built coaching tools and AI Insights."
+        image="/img/Sales-Insights-Overview-banner.png"
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -45,10 +38,9 @@ const SalesInsightsanOverview = () => {
             <div className="col-lg-6 align-self-center">
               <Image
                 src="/img/Sales-Insights-Overview-banner.png"
-                alt="Sales-Insights-Overview-banner"
+                alt="Dynamics 365 Sales Insights an Overview"
                 width={793} height={497}
-                priority = {true}
-              />
+                priority = {true} />
             </div>
           </div>
         </div>
@@ -222,7 +214,7 @@ const SalesInsightsanOverview = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="call_to_action-right over-img">
-                <img src="/img/MaskGroup8.png" alt="image" width="339" height="483" />
+                <img src="/img/MaskGroup8.png" alt="Business consultant" width="339" height="483" />
               </div>
             </div>
             <div className="col-lg-7 align-self-center">

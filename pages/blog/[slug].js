@@ -15,7 +15,12 @@ import TimerModal from "../../components/TimerModal";
 import BlogSeo from "../../components/BlogSeo";
 import { BlogService } from "../../helpers/blogApi";
 import { BACKEND_URL } from "../../helpers/blogClient";
-import { BLOG_FONT_FILES } from "../../helpers/blogImage";
+import { blogFontLinks } from "../../components/blog/BlogUi";
+import {
+  buildBlogPostGraph,
+  cmsExtraSchemas,
+  jsonLd,
+} from "../../helpers/schema";
 
 const AUTHOR_ABOUT_PREVIEW_LENGTH = 1000;
 
@@ -24,7 +29,7 @@ const AUTHOR_ABOUT_PREVIEW_LENGTH = 1000;
  * Next 14 pages router next/font looks up preloads by the real URL
  * (/blog/some-post) while its manifest is keyed by the route (/blog/[slug]),
  * so dynamic pages never got the font preloaded and visibly switched fonts
- * on load. BLOG_FONT_FILES are preloaded in <Head> below.
+ * on load. The font files are preloaded through BlogSeo's <Head> below.
  */
 
 /* =========================================================
@@ -1057,19 +1062,6 @@ function Post({
 
   return (
     <div className="bp-page">
-      <Head>
-        {BLOG_FONT_FILES.map((href) => (
-          <link
-            key={href}
-            rel="preload"
-            href={href}
-            as="font"
-            type="font/woff2"
-            crossOrigin="anonymous"
-          />
-        ))}
-      </Head>
-
       <div
         className="bp-progress"
         ref={progressRef}
@@ -1134,8 +1126,6 @@ function Post({
           return (
             <article
               key={item.title_slug}
-              itemScope
-              itemType="https://schema.org/BlogPosting"
             >
               {/* =================================================
                   SEO
@@ -1161,7 +1151,9 @@ function Post({
                 additional_multiscript={
                   item.additional_multiscript
                 }
-              />
+              >
+                {blogFontLinks()}
+              </BlogSeo>
 
               {/* =================================================
                   HERO (split: text left, image right)
@@ -1192,7 +1184,7 @@ function Post({
                         </Link>
                       )}
 
-                      <h1 className="bp-title" itemProp="headline">
+                      <h1 className="bp-title">
                         {item.title}
                       </h1>
 
@@ -1221,7 +1213,6 @@ function Post({
                                   .join("-")
                               )}/`}
                               className="bp-byline-name"
-                              itemProp="author"
                             >
                               {item.author}
                             </Link>
@@ -1303,7 +1294,6 @@ function Post({
 
                     <div
                       className="blogs-content bp-content"
-                      itemProp="articleBody"
                     >
                       <div className="blogs-content-inner">
                         <SafeHTML
@@ -1368,8 +1358,6 @@ function Post({
                             className="bp-author"
                             id={`blog-author-details-${i}`}
                             key={author.name || i}
-                            itemScope
-                            itemType="https://schema.org/Person"
                           >
                             <div className="bp-author-top">
                               <Image
@@ -1382,7 +1370,6 @@ function Post({
                                 width={72}
                                 height={72}
                                 sizes="72px"
-                                itemProp="image"
                                 className="bp-author-avatar"
                               />
 
@@ -1396,12 +1383,11 @@ function Post({
                                     href={`/blog/author/${authorSlug}/`}
                                     className="bp-author-name"
                                   >
-                                    <span itemProp="name">{author.name}</span>
+                                    {author.name}
                                   </Link>
                                 ) : (
                                   <span
                                     className="bp-author-name"
-                                    itemProp="name"
                                   >
                                     {author.name}
                                   </span>
@@ -2650,34 +2636,6 @@ export async function getStaticProps({
     };
 
     /* =====================================================
-       STRIP BASE64 IMAGES FROM JSON-LD
-       CMS schema markup sometimes embeds a base64 data URI
-       in `image`, which can bloat the page payload by 100s
-       of KB. Swap it for the real (tiny) image URL instead.
-    ===================================================== */
-
-    const sanitizeSchemaJson = (jsonStr, fallbackImage) => {
-      if (typeof jsonStr !== "string") {
-        return jsonStr;
-      }
-
-      try {
-        const parsed = JSON.parse(jsonStr);
-
-        if (
-          typeof parsed?.image === "string" &&
-          parsed.image.startsWith("data:")
-        ) {
-          parsed.image = fallbackImage || "";
-        }
-
-        return JSON.stringify(parsed);
-      } catch (error) {
-        return jsonStr;
-      }
-    };
-
-    /* =====================================================
        NORMALIZE BLOG DATA
     ===================================================== */
 
@@ -2756,6 +2714,11 @@ export async function getStaticProps({
 
       additional_script: null,
 
+      /*
+       * Only the extras a writer added in the CMS (FAQPage, HowTo...).
+       * The article, author and breadcrumb schema is generated below from
+       * the API fields, so CMS copies of those are dropped.
+       */
       additional_multiscript:
         (() => {
           try {
@@ -2765,13 +2728,12 @@ export async function getStaticProps({
                 b.schemaMarkup
               )
             ) {
-              return b.schemaMarkup.map(
-                (schema) =>
-                  sanitizeSchemaJson(
-                    schema.json ||
-                    JSON.stringify(schema),
-                    b.featuredImage?.url
-                  )
+              return cmsExtraSchemas(
+                b.schemaMarkup.map(
+                  (schema) =>
+                    schema.json || schema
+                ),
+                b.featuredImage?.url
               );
             }
 
@@ -2789,16 +2751,9 @@ export async function getStaticProps({
               return Array.isArray(
                 parsed
               )
-                ? parsed.map((item) =>
-                  sanitizeSchemaJson(
-                    typeof item ===
-                      "string"
-                      ? item
-                      : JSON.stringify(
-                        item
-                      ),
-                    b.featuredImage?.url
-                  )
+                ? cmsExtraSchemas(
+                  parsed,
+                  b.featuredImage?.url
                 )
                 : [];
             }
@@ -3194,6 +3149,47 @@ export async function getStaticProps({
         error
       );
     }
+
+    /* =====================================================
+       ARTICLE SCHEMA
+       Built from the API fields so every post has complete
+       BlogPosting + breadcrumb schema with real dates and a
+       linked author, whatever was entered in the CMS.
+    ===================================================== */
+
+    const post = blogs[0];
+    const postAuthor = authordetials[0];
+
+    post.additional_script = jsonLd(
+      buildBlogPostGraph({
+        slug: post.title_slug,
+        title: post.meta_title || post.title,
+        description:
+          post.meta_description ||
+          post.short_description,
+        image: getImageUrl(post.meta_image),
+        datePublished: post.publish_date,
+        dateModified: post.updated_at,
+        author: postAuthor?.name
+          ? {
+            name: postAuthor.name,
+            image: getImageUrl(
+              postAuthor.profile_photo_path
+            ),
+            sameAs: [
+              postAuthor.linkedin_url,
+              postAuthor.twitter_url,
+              postAuthor.facebook_url,
+              postAuthor.instagram_url,
+            ],
+          }
+          : null,
+        category: {
+          name: post.category !== "Category" ? post.category : "",
+          slug: post.category_slug,
+        },
+      })
+    );
 
     /* =====================================================
        RETURN PROPS

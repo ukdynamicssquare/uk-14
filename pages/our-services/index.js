@@ -1,25 +1,18 @@
-import Head from 'next/head'
 import Link from "next/link";
 import Image from "next/image";
 import useSectionScroll from '../../hooks/useSectionScroll';
+import PageSeo from "../../components/PageSeo";
 const Inedex = () => {
   // const { goToSection } = useSectionScroll()
   // useSectionScroll({ excludeSelector: '.horizontal-container' });
 
   return (
     <>
-      <Head>
-        <title>Microsoft Dynamics Services | Trusted by 500+ Clients</title>
-        <meta
-          name="description"
-          content="Power your business by our unique Microsoft Dynamics Services that includes Implementation services, cloud migration, consulting services and upgrade."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/our-services/"
-        />
-
-      </Head>
+      <PageSeo
+        type="CollectionPage"
+        title="Microsoft Dynamics Services | Trusted by 500+ Clients"
+        description="Power your business by our unique Microsoft Dynamics Services that includes Implementation services, cloud migration, consulting services and upgrade."
+      />
       <section className="panel panel-new-haed" style={{ transform: 'translateZ(0)',padding:'160px 0px' }}>
         <div className="container">
           <div className="row justify-content-center">
@@ -180,7 +173,7 @@ const Inedex = () => {
           <div className='row g-3 m--t-40'>
             <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
               <div className='card-669 card-669-p card-669-liner'>
-                <img src="/img/testimonials/Terence-Turner.png" alt="card-669-01" width={126} height={126} />
+                <img src="/img/testimonials/Terence-Turner.png" alt="Terence Turner" width={126} height={126}  loading="lazy" decoding="async" />
                 <h3>Terence Turner</h3>
                 <span>General Manager</span>
                 <p>Dynamics Square Team provided us a top-level service. Well trained staff as well as excellent support when needed. Very professional and trustworthy.</p>
@@ -188,7 +181,7 @@ const Inedex = () => {
             </div>
             <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
               <div className='card-669 card-669-p'>
-                <img src="/img/testimonials/Jonathan-W.png" alt="card-669-01" width={126} height={126} />
+                <img src="/img/testimonials/Jonathan-W.png" alt="Jonathan W" width={126} height={126}  loading="lazy" decoding="async" />
                 <h3>Jonathan W</h3>
                 <span>Technical Director</span>
                 <p>We have worked with Dynamics Square since 2019. Our working relationship has built during this period, and we have found them to be very professional.</p>
@@ -196,7 +189,7 @@ const Inedex = () => {
             </div>
             <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
               <div className='card-669 card-669-p card-669-liner'>
-                <img src="/img/avatar.png" alt="card-669-01" width={126} height={126} />
+                <img src="/img/avatar.png" alt="Mark Shaxted" width={126} height={126}  loading="lazy" decoding="async" />
                 <h3>Mark Shaxted</h3>
                 <span>Operations Manager</span>
                 <p>Dynamics Square has been a solid partner for 4 years, skilfully upgrading our Microsoft Dynamics NAV to Dynamics 365 Business Central. They offer great value and professionalism.</p>

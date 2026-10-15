@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -8,22 +7,18 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import { FreeMode, Navigation, Thumbs, Autoplay } from "swiper/modules";
+import PageSeo from "../components/PageSeo";
 
 const FinanceImplementation = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   return (
     <>
-      <Head>
-        <title>Dynamics 365 Finance Implementation Partner UK</title>
-        <meta
-          name="description"
-          content="Dynamics 365 Finance Implementation is an enterprise-grade ERP platform that helps businesses manage their finances and operations more efficiently. Get in touch Today!"
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/dynamics-365-finance-implementation/"
-        />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Dynamics 365 Finance Implementation Partner UK"
+        description="Dynamics 365 Finance Implementation is an enterprise-grade ERP platform that helps businesses manage their finances and operations more efficiently. Get in touch Today!"
+        image="/img/implimenation-service-banner.png"
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -50,10 +45,9 @@ const FinanceImplementation = () => {
             <div className="col-lg-6 align-self-center">
               <Image
                 src="/img/implimenation-service-banner.png"
-                alt="implimenation-service-banner"
+                alt="Dynamics 365 Finance Implementation"
                 width={805} height={473}
-                priority = {true}
-              />
+                priority = {true} />
             </div>
           </div>
         </div>
@@ -65,9 +59,8 @@ const FinanceImplementation = () => {
               <div className="busine_service_bottom-left custom012">
                 <Image
                   src="/img/microosoft-partner.png"
-                  alt="microosoft-partner.png"
-                  width={625} height={651}
-                />
+                  alt="Microsoft Solutions Partner badge"
+                  width={625} height={651} />
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
@@ -140,8 +133,8 @@ const FinanceImplementation = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-azure_cloud-embed.svg"
-                            alt="icons-azure_cloud-embed"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Improved Decision-Making</span>
                       </button>
@@ -174,8 +167,8 @@ const FinanceImplementation = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-azure_agile.svg"
-                            alt="icons-azure_agile"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Process Automation</span>
                       </button>
@@ -215,8 +208,8 @@ const FinanceImplementation = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-azure_innovation.svg"
-                            alt="icons-azure_innovation"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Global Expansion</span>
                       </button>
@@ -249,8 +242,8 @@ const FinanceImplementation = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-azure_security.svg"
-                            alt="icons-azure_security"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Manage Risks</span>
                       </button>
@@ -303,7 +296,7 @@ const FinanceImplementation = () => {
           <div className="row">
             <div className="col-lg-6">
               <div className="box-6-pic">
-                <img src="/img/imp-left.svg" alt="imp-left.svg" />
+                <img src="/img/imp-left.svg" alt="" aria-hidden="true"  loading="lazy" decoding="async" />
               </div>
             </div>
 
@@ -395,13 +388,13 @@ const FinanceImplementation = () => {
                           <img
                             src="/img/Component-1-icons.svg"
                             className="overmain-thumb"
-                            alt="Component-1-icons"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-1-iconss.svg"
                             className="over"
-                            alt="Component-1-icons-red"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
@@ -409,13 +402,13 @@ const FinanceImplementation = () => {
                           <img
                             src="/img/Component-2.svg"
                             className="overmain-thumb-1"
-                            alt="Component-2"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-2-iconss.svg"
                             className="over-1"
-                            alt="Component-1-icons-red"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
@@ -423,13 +416,13 @@ const FinanceImplementation = () => {
                           <img
                             src="/img/Component-3.svg"
                             className="overmain-thumb-2"
-                            alt="Component-3"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-3-iconss.svg"
                             className="over-1"
-                            alt="Component-1-icons-red"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
@@ -437,13 +430,13 @@ const FinanceImplementation = () => {
                           <img
                             src="/img/Component-4.svg"
                             className="overmain-thumb-3"
-                            alt="Component-4"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-4-iconss.svg"
                             className="over-1"
-                            alt="Component-1-icons-red"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
@@ -451,13 +444,13 @@ const FinanceImplementation = () => {
                           <img
                             src="/img/Component-5.svg"
                             className="overmain-thumb-4"
-                            alt="Component-5"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-5-iconss.svg"
                             className="over-1"
-                            alt="Component-1-icons-red"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                     </Swiper>
@@ -486,8 +479,7 @@ const FinanceImplementation = () => {
                 <div className="style-grid-icons">
                   <img
                     src="/img/Customer-Service.svg"
-                    alt="Customer-Service"
-                  />
+                    alt="Budgeting"  loading="lazy" decoding="async" />
                 </div>
                 <div className="style-grid-content">
                   <h3>Budgeting</h3>
@@ -506,7 +498,7 @@ const FinanceImplementation = () => {
 
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                  <img src="/img/sales.svg" alt="sales" />
+                  <img src="/img/sales.svg" alt="sales"  loading="lazy" decoding="async" />
                 </div>
                 <div className="style-grid-content">
                   <h3>Unified Processes</h3>
@@ -527,8 +519,8 @@ const FinanceImplementation = () => {
                 <div className="style-grid-icons">
                   <img
                     src="/img/supply-chain-icons.svg"
-                    alt="supply-chain-icons"
-                  />
+                    alt=""
+                   aria-hidden="true"  loading="lazy" decoding="async" />
                 </div>
                 <div className="style-grid-content">
                   <h3>Improved Financials</h3>
@@ -548,8 +540,8 @@ const FinanceImplementation = () => {
                 <div className="style-grid-icons">
                   <img
                     src="/img/Field-Service-icons.svg"
-                    alt="Field-Service-icons"
-                  />
+                    alt=""
+                   aria-hidden="true"  loading="lazy" decoding="async" />
                 </div>
                 <div className="style-grid-content">
                   <h3>Global Accounting</h3>

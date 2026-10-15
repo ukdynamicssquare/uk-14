@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -8,22 +7,43 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import { FreeMode, Navigation, Thumbs, Autoplay } from "swiper/modules";
+import PageSeo from "../components/PageSeo";
+// Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
+const PAGE_FAQS = [
+  {
+    "question": "What's my role in the entire implementation project?",
+    "answer": "Your sole responsibility will be to provide your Dynamics 365 installation partner with correct information about your present processes and anticipated future needs so that we may create the ideal D365 Project Operations implementation solution for you. Additionally, for a flawless and easy deployment, you must be cooperative throughout the process."
+  },
+  {
+    "question": "Does Dynamics Square provide training?",
+    "answer": "We provide free comprehensive training to users so they can get the most out of the new solution. This not only includes learning about all the features and capabilities, but also understanding the fundamental capabilities to recognise present and future needs for Phase 2 implementation (if necessary)."
+  },
+  {
+    "question": "What's next after submitting my contact details?",
+    "answer": "Following the submission of your information, one of our experts will contact you to conduct a Phase 1 Discovery Call in which they will learn more about your company's history, current needs, and potential future requirements. The implementation phase will begin after we have finished documenting everything, creating a FRD, and running a FIT-GAP analysis. In the event that it is necessary, we set up another Discovery Call with one of our knowledgeable functional consultants to address the issues."
+  },
+  {
+    "question": "What is the accurate cost of D365 Human Resources implementation?",
+    "answer": "The exact cost of implementation is determined by a number of factors, just as time. To receive a precise price for the implementation process, you may just phone us and complete the Contact Form."
+  },
+  {
+    "question": "How long will it take to implement the project successfully?",
+    "answer": "Without fully comprehending the business and its needs, neither we nor anyone else can provide you a precise timeline for implementing a solution. The time is determined by a number of elements, such as the quantity of processes, the complexity of operations, integrations, and customizations. See Also -: Dynamics 365 Finance Implementation, Power BI Implementation, Dynamics 365 Sales Implementation"
+  }
+];
+
 
 const HumanResourceImplementation = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   return (
     <>
-      <Head>
-        <title>Dynamics 365 for (HR) Human Resources Implementation Partener UK</title>
-        <meta
-          name="description"
-          content="Manage your entire workforce, onboard right talent, and transform employee experiences through the implementing Dynamics 365 Human Resources today!"
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/dynamics-365-human-resources-implementation/"
-        />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Dynamics 365 for (HR) Human Resources Implementation Partener UK"
+        description="Manage your entire workforce, onboard right talent, and transform employee experiences through the implementing Dynamics 365 Human Resources today!"
+        image="/img/Human-Resource-banner.png"
+        faqs={PAGE_FAQS}
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -58,10 +78,9 @@ const HumanResourceImplementation = () => {
             <div className="col-lg-6">
               <Image
                 src="/img/Human-Resource-banner.png"
-                alt="Human-Resource-banner"
+                alt="How can Dynamics 365 Human Resources can help you accelerate recruitment process with enhanced employee engagement?"
                 width={778} height={473}
-                priority = {true}
-              />
+                priority = {true} />
             </div>
           </div>
         </div>
@@ -415,7 +434,7 @@ const HumanResourceImplementation = () => {
           <div className="row">
             <div className="col-lg-6">
               <div className="box-6-pic">
-                <img src="/img/imp-left.svg" alt="imp-left.svg" />
+                <img src="/img/imp-left.svg" alt="" aria-hidden="true" />
               </div>
             </div>
 
@@ -530,13 +549,13 @@ const HumanResourceImplementation = () => {
                           <img
                             src="/img/Component-1-icons.svg"
                             className="overmain-thumb"
-                            alt="Component-1-icons"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-1-iconss.svg"
                             className="over"
-                            alt="Component-1-icons-red"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
@@ -544,13 +563,13 @@ const HumanResourceImplementation = () => {
                           <img
                             src="/img/Component-2.svg"
                             className="overmain-thumb-1"
-                            alt="Component-2"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-2-iconss.svg"
                             className="over-1"
-                            alt="Component-2-icons-red"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
@@ -558,13 +577,13 @@ const HumanResourceImplementation = () => {
                           <img
                             src="/img/Component-3.svg"
                             className="overmain-thumb-2"
-                            alt="Component-3"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-3-iconss.svg"
                             className="over-1"
-                            alt="Component-1-icons-red"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
@@ -572,13 +591,13 @@ const HumanResourceImplementation = () => {
                           <img
                             src="/img/Component-4.svg"
                             className="overmain-thumb-3"
-                            alt="Component-4"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-4-iconss.svg"
                             className="over-1"
-                            alt="Component-1-icons-red"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
@@ -586,13 +605,13 @@ const HumanResourceImplementation = () => {
                           <img
                             src="/img/Component-5.svg"
                             className="overmain-thumb-4"
-                            alt="Component-5"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-5-iconss.svg"
                             className="over-1"
-                            alt="Component-1-icons-red"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                     </Swiper>

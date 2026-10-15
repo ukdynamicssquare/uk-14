@@ -1,11 +1,11 @@
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Autoplay, FreeMode, Pagination } from "swiper/modules";
+import PageSeo from "../../components/PageSeo";
 
 const DynamicsNav2013BusinessCentralUpgrade = () => {
 
@@ -15,17 +15,12 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
 
   return (
     <>
-      <Head>
-        <title>Dynamics NAV 2013 R2 to Business Central Upgrade | Case Study</title>
-        <meta
-          name="description"
-          content="UK's leading fragrance supplier worked with Dynamics Square to Dynamics NAV 2013 R2 to Business Central Upgrade. Read the case story to gain insights."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/case-studies/nav-2013-r2-to-business-central-upgrade/"
-        />
-      </Head>
+      <PageSeo
+        type="Article"
+        title="Dynamics NAV 2013 R2 to Business Central Upgrade | Case Study"
+        description="UK's leading fragrance supplier worked with Dynamics Square to Dynamics NAV 2013 R2 to Business Central Upgrade. Read the case story to gain insights."
+        image="/img/Dynamics-365-Business-Central.png"
+      />
       <section className="hero-1 hero">
         <div className="container">
           <div className="row">
@@ -59,8 +54,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
                 <div className="col-lg-3 align-self-center">
                   <div> <div><img
                     src="/img/casestudy-pic.png"
-                    alt="casestudy-pic"
-                  /></div>
+                    alt="Dynamics NAV 2013 R2 to Business Central Upgrade" /></div>
                   </div></div>
                 <div className="col-lg-9">
                   <p>At Dynamics Square, we're passionate about empowering businesses to achieve their full potential. As a leading Microsoft Solutions Partner with a global reach, we've been helping organizations of all sizes streamline operations, boost productivity, and drive growth for over 14 years.</p>
@@ -86,7 +80,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           </div>
           <div className="row gx-5">
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/cast-stu-pic.png" alt="cast-stu-pic" width={484} height={407} />
+              <Image src="/img/cast-stu-pic.png" alt="What are The Business Challenges" width={484} height={407} />
             </div>
             <div className="col-lg-6">
               <div className="content-icons-modil-1">
@@ -194,8 +188,8 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
                           <div className="img-wrp">
                             <img
                               src="/img/material-lightbulb-outline.svg"
-                              alt="Food-and-beverage"
-                            />
+                              alt=""
+                             aria-hidden="true"  loading="lazy" decoding="async" />
                           </div>
                           <div className="text-wrp-content">
                             <p>Core ERP Functionality: Implemented core ERP modules to streamline financial management, sales, purchasing, and inventory control.</p>
@@ -211,7 +205,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
                               <img
                                 src="/img/material-lightbulb-outline.svg"
                                 alt="NotforProfit"
-                              />
+                               loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>Integration with Warehouse Management System: Integrated the Tasklet WMS to optimise warehouse operations and improve inventory accuracy.</p>
@@ -228,7 +222,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
                               <img
                                 src="/img/material-lightbulb-outline.svg"
                                 alt="Ecommerce"
-                              />
+                               loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>Document Automation: Utilized Continia Document Capture to automate document handling and improve efficiency.</p>
@@ -244,8 +238,8 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
                             <div className="img-wrp">
                               <img
                                 src="/img/material-lightbulb-outline.svg"
-                                alt="proffesional-service"
-                              />
+                                alt=""
+                               aria-hidden="true"  loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>Document Management: Implemented Zetadocs Capture with Business Central to streamline document management process.</p>
@@ -261,8 +255,8 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
                             <div className="img-wrp">
                               <img
                                 src="/img/material-lightbulb-outline.svg"
-                                alt="proffesional-service"
-                              />
+                                alt=""
+                               aria-hidden="true"  loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>Mobile Accessibility: Leveraged mobile capabilities to enable remote access and field operations.</p>
@@ -278,8 +272,8 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
                             <div className="img-wrp">
                               <img
                                 src="/img/material-lightbulb-outline.svg"
-                                alt="proffesional-service"
-                              />
+                                alt=""
+                               aria-hidden="true"  loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>Customization and Configuration: Tailored the solution to meet the client's unique business processes and requirements.</p>
@@ -295,8 +289,8 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
                             <div className="img-wrp">
                               <img
                                 src="/img/material-lightbulb-outline.svg"
-                                alt="proffesional-service"
-                              />
+                                alt=""
+                               aria-hidden="true"  loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>Training and Support: Provided comprehensive training to users and ongoing support to ensure smooth operations.</p>
@@ -412,7 +406,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="call_to_action-right over-img">
-                <img src="/img/MaskGroup8.png" alt="image" />
+                <img src="/img/MaskGroup8.png" alt="Business consultant"  loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="col-lg-7 align-self-center">

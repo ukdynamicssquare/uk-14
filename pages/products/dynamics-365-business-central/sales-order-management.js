@@ -1,40 +1,65 @@
-import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
 import useCardScrollEffect from "/components/useCardScrollEffect";
+import PageSeo from "../../../components/PageSeo";
+// Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
+const PAGE_FAQS = [
+  {
+    "question": "How do I get technical support for Business Central?",
+    "answer": "The process of getting technical support for Business Central is straightforward. If there is a need, contact Dynamics Square and schedule a demo with one of our experts. After that, evaluate the issues, and our team will provide you with the best solution possible on time."
+  },
+  {
+    "question": "How to get help for Business Central Migration?",
+    "answer": "Business Central Migration can be hectic if you have not selected the right Business Central support partner. Dynamics Square can help any business with a seamless migration process, including an affordable quotation, timely implementation, best support, and training if required."
+  },
+  {
+    "question": "What is the Dynamics 365 Business Central Support Lifecycle?",
+    "answer": "The D365 Business Central versions before April 2019 followed the Fixed Lifecycle Policy, which includes ten years of continuous support from the date of implementation and five years of Mainstream Support with an additional five years of Extended Support. The Modern Lifecycle Policy covers the asset till the customer has a license to use a particular product or service."
+  },
+  {
+    "question": "What is the difference between Dynamics 365 and Business Central?",
+    "answer": "Dynamics 365 is an all-in-one solution that combines different CRM (Customer Relationship Manager) and ERP (Enterprise Resource Planning) applications. In contrast, Business Central is one of the applications from Dynamics 365 applications as an ERP but has some features of CRM as well."
+  },
+  {
+    "question": "What is included in Dynamics 365 Business Central Essentials?",
+    "answer": "Business Central with Cloud deployment offers two license plans: Essentials (£57.50 per user/month) and Premium (£82.20 per user/month). Dynamics 365 Business Central Essential comes with Finance Management, Sales and Marketing, Purchasing Payables, Inventory, Supply Planning and Availability, Project Management, and Warehouse Management."
+  },
+  {
+    "question": "Is Business Central a database?",
+    "answer": "Business Central isn't a database, but one or more databases exist in Business Central that contain data for the entire organisation. The database is built using a set of data sets, including tables, reports, and data structures."
+  },
+  {
+    "question": "What are Business Central Modules?",
+    "answer": "D365 Business Central is a powerful ERP solution that streamlines all business management processes and operations. It has modules including Financial Management, Customer Relationship Management, Supply Chain Management, Project Management, Human Resources Management, Cloud for Manufacturing, and Service Management."
+  },
+  {
+    "question": "How do I open a case with Microsoft Business Central Support?",
+    "answer": "The process of getting premium support is easy and simple. Whenever you encounter an issue with your system, you need to schedule a call with Dynamics Square. The dedicated team will analyse the issue's complexity and provide you with a solution so that you can resume business operations soon."
+  },
+  {
+    "question": "What is a Support Request for Business Central?",
+    "answer": "A \"Support Request\" is a query, or an inquiry submitted to a company's website where the Business Central support services are available. The support request can be for a specific module or a function of Business Central, and the team of Dynamics Square will resolve any query with quality services."
+  },
+  {
+    "question": "How to raise a ticket for Dynamics 365 Business Central Support?",
+    "answer": "Whenever your current BC shows any issue, whether small or complex, you need to schedule a call with Dynamics Square. Once the team receives a call, they transfer it to the dedicated support team to resolve the query soon. Also, you will get updates about the status of your ticket on your email automatically."
+  }
+];
+
 
 const SalesOrderManagement = () => {
   useCardScrollEffect()
 
   return (
     <>
-      <Head>
-        <title>Dynamics 365 Business Central Sales and Order Management</title>
-        <meta
-          name="description"
-          content="Simplify sales & order management with Dynamics 365 Business Central. Enhance efficiency, improve customer satisfaction, and drive revenue growth."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/sales-order-management/"
-        />
-        <meta property="og:locale" content="GB" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Dynamics 365 Business Central Sales and Order Management" />
-        <meta property="og:description" content="Simplify sales & order management with Dynamics 365 Business Central. Enhance efficiency, improve customer satisfaction, and drive revenue growth." />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/sales-order-management/" />
-        <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/Sales-and-Order-Management-banner.png" />
-        <meta property="og:image:width" content="200" />
-        <meta property="og:image:height" content="200" />
-        <meta property="og:image:type" content="image/png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="Dynamics 365 Business Central Sales and Order Management" />
-        <meta name="twitter:description" content="Simplify sales & order management with Dynamics 365 Business Central. Enhance efficiency, improve customer satisfaction, and drive revenue growth." />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/Sales-and-Order-Management-banner.png" />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Dynamics 365 Business Central Sales and Order Management"
+        description="Simplify sales & order management with Dynamics 365 Business Central. Enhance efficiency, improve customer satisfaction, and drive revenue growth."
+        image="https://www.dynamicssquare.co.uk/img/Sales-and-Order-Management-banner.png"
+        faqs={PAGE_FAQS}
+      />
       <div className='solution-new-banner-one'>
         <div className='container'>
           <div className='row justify-content-center'>
@@ -54,7 +79,7 @@ const SalesOrderManagement = () => {
                 </div>
               </div>
               <div className='m-b-image-banner'>
-                <Image src="/img/bc-support-banner.png" alt='bc-support-banner' width={1097} height={656} />
+                <Image src="/img/bc-support-banner.png" alt="Don't let missed opportunities and frustrated customers become the norm. Here’s what too many businesses normalise:" width={1097} height={656} />
                 <div className='ff-one'>  <span className=''>Dynamic Sales Insights</span></div>
                 <div className='ff-two'>  <span className=''>Real-time Inventory Visibility</span></div>
               </div>
@@ -112,7 +137,7 @@ const SalesOrderManagement = () => {
 
           </div>
           <div className="card-700-image">
-            <img src="/img/Union-shape-one.png" alt="Union-shape-one" />
+            <img src="/img/Union-shape-one.png" alt="" aria-hidden="true" />
           </div>
         </div>
       </section>
@@ -193,7 +218,7 @@ const SalesOrderManagement = () => {
             </div>
             <div className='col-lg-5 align-self-center'>
               <div className='img-backs-sid'>
-                <Image src="/img/f-side-001.png" alt="f-side-001" width={318} height={436} className='im-two' />
+                <Image src="/img/f-side-001.png" alt="Dynamic Sales Insights" width={318} height={436} className='im-two' />
               </div>
             </div>
           </div>
@@ -295,7 +320,7 @@ const SalesOrderManagement = () => {
 
           </div>
           <div className="card-700-image-t">
-            <img src="/img/Union-shape-one.png" alt="Union-shape-one" />
+            <img src="/img/Union-shape-one.png" alt="" aria-hidden="true"  loading="lazy" decoding="async" />
           </div>
         </div>
       </section>
@@ -314,7 +339,7 @@ const SalesOrderManagement = () => {
           <div className="row g-3">
             <div className="col-lg-4">
               <div className='support-image--onea'>
-                <Image src="/img/f-side-002.png" alt='f-side-002' width={402} height={436} />
+                <Image src="/img/f-side-002.png" alt="Beyond Automation: Intelligent Selling with Copilot and AI Agents" width={402} height={436} />
               </div>
             </div>
             <div className="col-lg-8">
@@ -367,7 +392,7 @@ const SalesOrderManagement = () => {
 
           </div>
           <div className="card-700-image-t">
-            <img src="/img/Union-shape-one.png" alt="Union-shape-one" />
+            <img src="/img/Union-shape-one.png" alt="" aria-hidden="true"  loading="lazy" decoding="async" />
           </div>
         </div>
       </section>
@@ -575,7 +600,7 @@ const SalesOrderManagement = () => {
             </div>
           </div>
         </div>
-        <img src="/img/n-015.png" alt="n-015" />
+        <img src="/img/n-015.png" alt="" aria-hidden="true"  loading="lazy" decoding="async" />
       </section>
       <section className='bg-003-x'>
         <div className="container my-float-i">
@@ -688,7 +713,7 @@ const SalesOrderManagement = () => {
             </div>
             <div className='col-lg-5 order-2 align-self-center'>
               <div className='img-backs-sid'>
-                <Image src="/img/n-016.png" alt="copil-side" width={401} height={455} className='im-two' />
+                <Image src="/img/n-016.png" alt="" width={401} height={455} className='im-two' aria-hidden="true" />
               </div>
             </div>
           </div>

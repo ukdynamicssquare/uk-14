@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
 import CaseStudyClientCard from "../../components/CaseStudyClientCard";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -7,6 +6,7 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Autoplay, FreeMode, Pagination } from "swiper/modules";
+import PageSeo from "../../components/PageSeo";
 
 
 const CaseStudyWiper = () => {
@@ -15,35 +15,13 @@ const CaseStudyWiper = () => {
 
   return (
     <>
-      <Head>
-        <title>Wiper Supply: Dynamics NAV 2016 Support Case Study | Dynamics Square</title>
-        <meta
-          name="description"
-          content="How Wiper Supply, a UK hygienic wipes wholesaler, kept its Dynamics NAV 2016 system running smoothly with dedicated support from Dynamics Square."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/case-studies/nav-2016-support-services/"
-        />
-        <meta property="og:locale" content="en_GB" />
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content="Wiper Supply: Dynamics NAV 2016 Support Case Study | Dynamics Square" />
-        <meta property="og:description" content="How Wiper Supply, a UK hygienic wipes wholesaler, kept its Dynamics NAV 2016 system running smoothly with dedicated support from Dynamics Square." />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/case-studies/nav-2016-support-services/" />
-        <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/case-studies-6.jpg" />
-        <meta property="og:image:secure_url" content="https://www.dynamicssquare.co.uk/img/case-studies-6.jpg" />
-        <meta property="og:image:width" content="850" />
-        <meta property="og:image:height" content="410" />
-        <meta property="og:image:type" content="image/jpeg" />
-        <meta property="og:image:alt" content="Wiper Supply case study – Dynamics Square" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="Wiper Supply: Dynamics NAV 2016 Support Case Study | Dynamics Square" />
-        <meta name="twitter:description" content="How Wiper Supply, a UK hygienic wipes wholesaler, kept its Dynamics NAV 2016 system running smoothly with dedicated support from Dynamics Square." />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/case-studies-6.jpg" />
-        <meta name="twitter:image:alt" content="Wiper Supply case study – Dynamics Square" />
-      </Head>
+      <PageSeo
+        type="Article"
+        title="Wiper Supply: Dynamics NAV 2016 Support Case Study | Dynamics Square"
+        description="How Wiper Supply, a UK hygienic wipes wholesaler, kept its Dynamics NAV 2016 system running smoothly with dedicated support from Dynamics Square."
+        image="https://www.dynamicssquare.co.uk/img/case-studies-6.jpg"
+        imageAlt="Wiper Supply case study – Dynamics Square"
+      />
       <section className="hero-1 hero">
         <div className="container">
           <div className="row">
@@ -204,8 +182,8 @@ const CaseStudyWiper = () => {
                           <div className="img-wrp">
                             <img
                               src="/img/material-lightbulb-outline.svg"
-                              alt="Food-and-beverage"
-                            />
+                              alt=""
+                             aria-hidden="true"  loading="lazy" decoding="async" />
                           </div>
                           <div className="text-wrp-content">
                             <p>
@@ -224,7 +202,7 @@ const CaseStudyWiper = () => {
                               <img
                                 src="/img/material-lightbulb-outline.svg"
                                 alt="NotforProfit"
-                              />
+                               loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>
@@ -247,7 +225,7 @@ const CaseStudyWiper = () => {
                               <img
                                 src="/img/material-lightbulb-outline.svg"
                                 alt="Ecommerce"
-                              />
+                               loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>
@@ -267,8 +245,8 @@ const CaseStudyWiper = () => {
                             <div className="img-wrp">
                               <img
                                 src="/img/material-lightbulb-outline.svg"
-                                alt="proffesional-service"
-                              />
+                                alt=""
+                               aria-hidden="true"  loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>
@@ -288,8 +266,8 @@ const CaseStudyWiper = () => {
                             <div className="img-wrp">
                               <img
                                 src="/img/material-lightbulb-outline.svg"
-                                alt="proffesional-service"
-                              />
+                                alt=""
+                               aria-hidden="true"  loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>
@@ -310,8 +288,8 @@ const CaseStudyWiper = () => {
                             <div className="img-wrp">
                               <img
                                 src="/img/material-lightbulb-outline.svg"
-                                alt="proffesional-service"
-                              />
+                                alt=""
+                               aria-hidden="true"  loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>
@@ -439,7 +417,7 @@ const CaseStudyWiper = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="call_to_action-right over-img">
-                <img src="/img/MaskGroup8.png" alt="image" />
+                <img src="/img/MaskGroup8.png" alt="Business consultant"  loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="col-lg-7 align-self-center">

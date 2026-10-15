@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
@@ -10,36 +9,17 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import Blog from "../../components/Blog";
 import { Autoplay, FreeMode, Pagination } from "swiper/modules";
+import PageSeo from "../../components/PageSeo";
 const MicrosoftCloudForNonprofit = () => {
 
   return (
     <>
-      <Head>
-     <title>Dynamics 365 for Logistics industry | Dynamics Square</title>
-        <meta
-          name="description"
-          content="Optimise logistics operations with Dynamics 365. Streamline supply chains, boost efficiency, and enhance real-time visibility across your logistics network."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/industries/dynamics-365-for-logistics/"
-        />
-        <meta property="og:locale" content="GB" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Dynamics 365 for Logistics industry | Dynamics Square" />
-        <meta property="og:description" content="Optimise logistics operations with Dynamics 365. Streamline supply chains, boost efficiency, and enhance real-time visibility across your logistics network." />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/industries/dynamics-365-for-logistics/" />
-        <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/logistic-main-banner.png" />
-        <meta property="og:image:width" content="200" />
-        <meta property="og:image:height" content="200" />
-        <meta property="og:image:type" content="image/png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="Dynamics 365 for Logistics industry | Dynamics Square" />
-        <meta name="twitter:description" content="Optimise logistics operations with Dynamics 365. Streamline supply chains, boost efficiency, and enhance real-time visibility across your logistics network." />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/logistic-main-banner.png" />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Dynamics 365 for Logistics industry | Dynamics Square"
+        description="Optimise logistics operations with Dynamics 365. Streamline supply chains, boost efficiency, and enhance real-time visibility across your logistics network."
+        image="https://www.dynamicssquare.co.uk/img/logistic-main-banner.png"
+      />
         <section className="Solution-banner hero-1 hero">
           <div className="container">
             <div className="row">
@@ -60,10 +40,9 @@ const MicrosoftCloudForNonprofit = () => {
               <div className="col-lg-6 align-self-center">
                 <Image
                   src="/img/logistic-main-banner.png"
-                  alt="logistic-main-banner"
+                  alt="Make Moving Goods Simple and Efficient with D365 for Logistics"
                   width={665} height={447}
-                  priority={true}
-                />
+                  priority={true} />
               </div>
             </div>
           </div>
@@ -135,7 +114,7 @@ const MicrosoftCloudForNonprofit = () => {
             <div className="row">
               <div className="col-lg-5">
                 <div className="call_to_action-right over-img">
-                  <img src="/img/MaskGroup8.png" alt="image" />
+                  <img src="/img/MaskGroup8.png" alt="Business consultant" />
                 </div>
               </div>
               <div className="col-lg-7 align-self-center">
@@ -176,7 +155,7 @@ const MicrosoftCloudForNonprofit = () => {
                       alt="Route Optimisation "
                       width="48"
                       height="48"
-                    />
+                     loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Route Optimisation </h3>
@@ -190,7 +169,7 @@ const MicrosoftCloudForNonprofit = () => {
                       alt="Freight Rate Management"
                       width="48"
                       height="48"
-                    />
+                     loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Freight Rate Management </h3>
@@ -204,7 +183,7 @@ const MicrosoftCloudForNonprofit = () => {
                       alt="Inventory Management"
                       width="48"
                       height="48"
-                    />
+                     loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Inventory Management </h3>
@@ -220,7 +199,7 @@ const MicrosoftCloudForNonprofit = () => {
                       alt="Yard Management"
                       width="48"
                       height="48"
-                    />
+                     loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Yard Management </h3>
@@ -231,10 +210,9 @@ const MicrosoftCloudForNonprofit = () => {
                   <div className="card_new_img">
                     <img
                       src="/img/supply-chain-modelling.png"
-                      alt="supply-chain-modelling"
+                      alt="Supply Chain Modelling"
                       width="48"
-                      height="48"
-                    />
+                      height="48"  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Supply Chain Modelling  </h3>
@@ -248,7 +226,7 @@ const MicrosoftCloudForNonprofit = () => {
                       alt="Sourcing and procurement"
                       width="48"
                       height="48"
-                    />
+                     loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Sourcing and procurement </h3>
@@ -290,9 +268,8 @@ const MicrosoftCloudForNonprofit = () => {
                     <Image
                       src="/img/logistic-side-image.png"
                       className="fix-im"
-                      alt="logistic-side-image"
-                      width={482} height={513}
-                    />
+                      alt="Dynamics 365 - One Stop Solution for All Logistics Demands"
+                      width={482} height={513} />
                   
                   </div>
                 </div>
@@ -371,10 +348,10 @@ const MicrosoftCloudForNonprofit = () => {
                               <div className="img-wrp">
                                 <img
                                   src="/img/Food-and-beverage.svg"
-                                  alt="Food-and-beverage"
+                                  alt=""
                                   width="48"
                                   height="48"
-                                />
+                                 aria-hidden="true"  loading="lazy" decoding="async" />
                               </div>
                               <div className="text-wrp-content">
                                 <h3>Food & Beverages</h3>
@@ -403,7 +380,7 @@ const MicrosoftCloudForNonprofit = () => {
                                     alt="Ecommerce"
                                     width="48"
                                   height="48"
-                                  />
+                                   loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>E-Commerce</h3>
@@ -429,10 +406,10 @@ const MicrosoftCloudForNonprofit = () => {
                                 <div className="img-wrp">
                                   <img
                                     src="/img/proffesional-service.svg"
-                                    alt="proffesional-service"
+                                    alt=""
                                     width="48"
                                   height="48"
-                                  />
+                                   aria-hidden="true"  loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>Professional Services</h3>
@@ -458,10 +435,9 @@ const MicrosoftCloudForNonprofit = () => {
                                 <div className="img-wrp">
                                   <img
                                     src="/img/microsoft-cloud-for-manufacturing.svg"
-                                    alt="microsoft-cloud-for-manufacturing"
+                                    alt="Manufacturing & Distribution"
                                     width="48"
-                                  height="48"
-                                  />
+                                  height="48"  loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>Manufacturing & Distribution</h3>
@@ -487,10 +463,10 @@ const MicrosoftCloudForNonprofit = () => {
                                 <div className="img-wrp">
                                   <img
                                     src="/img/start-up.svg"
-                                    alt="start-up"
+                                    alt=""
                                     width="48"
                                   height="48"
-                                  />
+                                   aria-hidden="true"  loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>Startups</h3>
@@ -530,9 +506,8 @@ const MicrosoftCloudForNonprofit = () => {
               <div className="col-lg-6 align-self-center">
                 <Image
                   src="/img/n/Microsoft-Cloud-For-Non-Profits-Banner.png"
-                  alt="Cloud-For-Non-Profits-Banner"
-                  width={1024} height={586}
-                />
+                  alt="Check out our Best Resources for Business Central"
+                  width={1024} height={586} />
               </div>
             </div>
           </div>

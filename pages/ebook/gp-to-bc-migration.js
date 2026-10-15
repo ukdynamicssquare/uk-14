@@ -1,8 +1,8 @@
-import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
 import CommonEbookForm from "../../components/CommonEbookForm";
+import PageSeo from "../../components/PageSeo";
 const StartGuideGp = () => {
 
 
@@ -49,32 +49,12 @@ const StartGuideGp = () => {
 
   return (
     <>
-      <Head>
-        <title>The Quick Guide to Dynamics GP to Business Central Migration</title>
-        <meta
-          name="description"
-          content="Download our free eBook - Unlock seamless transitions with 'Dynamics GP to Business Central Migration.' Utilise the evolution of your business effortlessly."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/ebook/gp-to-bc-migration/"
-        />
-        <meta property="og:locale" content="GB" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="The Quick Guide to Dynamics GP to Business Central Migration" />
-        <meta property="og:description" content="Download our free eBook - Unlock seamless transitions with 'Dynamics GP to Business Central Migration.' Utilise the evolution of your business effortlessly." />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/ebook/gp-to-bc-migration/" />
-        <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/dynamics-GP-BC-Ebook-banner-image.png" />
-        <meta property="og:image:width" content="200" />
-        <meta property="og:image:height" content="200" />
-        <meta property="og:image:type" content="image/png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="The Quick Guide to Dynamics GP to Business Central Migration" />
-        <meta name="twitter:description" content="Download our free eBook - Unlock seamless transitions with 'Dynamics GP to Business Central Migration.' Utilise the evolution of your business effortlessly." />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/dynamics-GP-BC-Ebook-banner-image.png" />
-      </Head>
+      <PageSeo
+        type="WebPage"
+        title="The Quick Guide to Dynamics GP to Business Central Migration"
+        description="Download our free eBook - Unlock seamless transitions with 'Dynamics GP to Business Central Migration.' Utilise the evolution of your business effortlessly."
+        image="https://www.dynamicssquare.co.uk/img/dynamics-GP-BC-Ebook-banner-image.png"
+      />
       <section className="Solution-banner hero-1 hero">
          <div className="container">
            <div className="row">
@@ -97,10 +77,9 @@ const StartGuideGp = () => {
              <div className="col-lg-6 align-self-center text-center">
                <Image
                  src="/img/dynamics-GP-BC-Ebook-banner-image.png"
-                 alt="dynamics-GP-BC-Ebook-banner-image"
+                 alt="This Perfect eBook will guide you through:"
                  width={800} height={600}
-                 priority = {true}
-               />
+                 priority = {true} />
              </div>
            </div>
          </div>
@@ -135,9 +114,8 @@ const StartGuideGp = () => {
                <div className="text-center remove-pre">
                  <Image
                    src="/img/dynamics-GP-BC-tablet.png"
-                   alt="dynamics-GP-BC-tablet"
-                   width={487} height={613}
-                 />
+                   alt="Why you should migrate"
+                   width={487} height={613} />
                </div>
              </div>
              <div className="col-lg-3 align-self-center">
@@ -164,7 +142,7 @@ const StartGuideGp = () => {
            <div className="row">
              <div className="col-lg-6 align-self-center">
                <div className="pic-ll">
-                 <Image src="/img/erp-left-about.png" alt="erp-left-about" width={337} height={460} />
+                 <Image src="/img/erp-left-about.png" alt="What's more about this eBook?" width={337} height={460} />
                </div>
              </div>
              {/* <div className="col-lg-1 align-self-center"></div> */}
@@ -187,7 +165,7 @@ const StartGuideGp = () => {
            <div className="row">
              <div className="col-lg-5">
                <div className="call_to_action-right over-img">
-                 <img src="/img/MaskGroup8.png" alt="images" />
+                 <img src="/img/MaskGroup8.png" alt="images"  loading="lazy" decoding="async" />
                </div>
              </div>
              <div className="col-lg-7 align-self-center">
@@ -334,7 +312,7 @@ const StartGuideGp = () => {
              </div>
              <div className="col-lg-6 align-self-center">
                <div className="pic-l2">
-               <Image src="/img/Cover_Book_Moc.png" alt="Cover_Book_Moc" width={582} height={466} />
+               <Image src="/img/Cover_Book_Moc.png" alt="How will this guide help me?" width={582} height={466} />
                </div>
              </div>
            </div>

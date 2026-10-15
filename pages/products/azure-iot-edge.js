@@ -1,21 +1,16 @@
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
+import PageSeo from "../../components/PageSeo";
 
 const AzureIoTEdge = () => {
   return (
     <>
-      <Head>
-        <title>Azure IoT Edge | Cloud Intelligent Solutions</title>
-        <meta
-          name="description"
-          content="With Azure IoT Edge, optimise your device performance, measure your equipment to prevent downtime, enable your devices to respond promptly."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/azure-iot-edge/"
-        />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Azure IoT Edge | Cloud Intelligent Solutions"
+        description="With Azure IoT Edge, optimise your device performance, measure your equipment to prevent downtime, enable your devices to respond promptly."
+        image="/img/azure-iot-edge-banner.webp"
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -43,11 +38,10 @@ const AzureIoTEdge = () => {
             <div className="col-lg-6 align-self-center">
               <Image
                 src="/img/azure-iot-edge-banner.webp"
-                alt="azure-iot-edge-banner"
+                alt="What is Azure IoT Edge?"
                 width={1024}
                 height={586}
-                priority = {true}
-              />
+                priority = {true} />
             </div>
           </div>
         </div>
@@ -93,8 +87,8 @@ const AzureIoTEdge = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons_Smoother-Data-Intelligence.svg"
-                            alt="icons_Smoother-Data-Intelligence"
-                          />
+                            alt=""
+                           aria-hidden="true" />
                         </div>
                         <span>Smoother Data Intelligence</span>
                       </button>
@@ -127,8 +121,8 @@ const AzureIoTEdge = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons_Real-time-Data-analysis.svg"
-                            alt="icons_Real-time-Data-analysis"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Real-time Data analysis</span>
                       </button>
@@ -167,8 +161,8 @@ const AzureIoTEdge = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons_Monitor-Device-Health-Performance.svg"
-                            alt="icons_Monitor-Device-Health-Performance"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Monitor Device Health & Performance</span>
                       </button>
@@ -202,8 +196,8 @@ const AzureIoTEdge = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons_Seamless-Data-Operation.svg"
-                            alt="icons_Seamless-Data-Operation"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Seamless Data Operation</span>
                       </button>

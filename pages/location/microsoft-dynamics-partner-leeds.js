@@ -1,16 +1,20 @@
-import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import Form from "../../components/Form";
+import PageSeo from "../../components/PageSeo";
+import LocationPageStyles from "../../components/LocationPageStyles";
 
 const MicrosoftDynamicsPartnerLeeds = () => {
   return (
     <>
-      <Head>
-      <title>Microsoft Dynamics Partner Leeds, UK | Dynamics Square</title>
-<meta name="description" content="Dynamics Square is Microsoft Dynamics Partner in Leeds. We help Leeds-based businesses to grow rapidly and sustainably by implementing Microsoft Dynamics Applications."/>
-<link rel="canonical" href="https://www.dynamicssquare.co.uk/location/microsoft-dynamics-partner-leeds/" />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Microsoft Dynamics Partner Leeds, UK | Dynamics Square"
+        description="Dynamics Square is Microsoft Dynamics Partner in Leeds. We help Leeds-based businesses to grow rapidly and sustainably by implementing Microsoft Dynamics Applications."
+        image="/img/Microsoft-Dynamics-Partner-Leeds.png"
+        areaServed="Leeds"
+      />
+      <main className="loc-detail">
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -35,10 +39,10 @@ const MicrosoftDynamicsPartnerLeeds = () => {
             <div className="col-lg-6 align-self-center">
               <Image
                 src="/img/Microsoft-Dynamics-Partner-Leeds.png"
-                alt="Microsoft-Dynamics-Partner-Leeds"
+                alt="Microsoft Solutions Partner in Leeds"
                 width={768} height={501}
                 priority = {true}
-              />
+                sizes="(max-width: 991px) 100vw, 50vw" />
             </div>
           </div>
         </div>
@@ -556,9 +560,8 @@ const MicrosoftDynamicsPartnerLeeds = () => {
               <div className="commen-lef-pic text-center">
                 <Image
                   src="/img/system-health-check-1024x601.webp"
-                  alt="system-health-check-1024x601"
-                  width={1024} height={601}
-                />
+                  alt="Microsoft Dynamics Partner You Can Trust"
+                  width={1024} height={601} />
               </div>
             </div>
             <div className="col-lg-12 text-center p-5">
@@ -638,6 +641,8 @@ const MicrosoftDynamicsPartnerLeeds = () => {
           </div>
         </div>
       </section>
+      </main>
+      <LocationPageStyles />
     </>
   );
 };

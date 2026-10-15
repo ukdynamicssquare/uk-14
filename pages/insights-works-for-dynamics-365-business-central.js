@@ -1,23 +1,18 @@
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import PageSeo from "../components/PageSeo";
 
 const Bcinsights = () => {
 
 
   return (
     <>
-      <Head>
-        <title>Insight Works for Dynamics 365 Business Central</title>
-        <meta
-          name="description"
-          content="Integrate Insights Works with Business Central to optimise your entire order fulfilment process along with streamlining warehouse operations."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/insights-works-for-dynamics-365-business-central/"
-        />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Insight Works for Dynamics 365 Business Central"
+        description="Integrate Insights Works with Business Central to optimise your entire order fulfilment process along with streamlining warehouse operations."
+        image="/img/insightworks.png"
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">

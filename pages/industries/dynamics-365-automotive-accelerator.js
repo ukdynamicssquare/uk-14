@@ -1,26 +1,17 @@
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Form from "../../components/Form";
+import PageSeo from "../../components/PageSeo";
 const Finance = () => {
 
   return (
     <>
-      <Head>
-        <title>Dynamics 365 Automotive Accelerator | Dynamics Square UK </title>
-        <meta
-          name="description"
-          content="Implement Dynamics 365 Automotive Accelerator to supercharge your automotive business while building strong relationships with customers.  "
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/industries/dynamics-365-automotive-accelerator/"
-        />
-        <meta
-          property="og:url"
-          content="https://www.dynamicssquare.co.uk//img/dynamics-365-automotive.png"
-        />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Dynamics 365 Automotive Accelerator | Dynamics Square UK"
+        description="Implement Dynamics 365 Automotive Accelerator to supercharge your automotive business while building strong relationships with customers."
+        image="/img/dynamics-365-automotive.png"
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -47,11 +38,10 @@ const Finance = () => {
             <div className="col-lg-6 align-self-center">
               <Image
                 src="/img/dynamics-365-automotive.png"
-                alt="dynamics-365-automotive"
+                alt="What is Dynamics 365 Automotive Accelerator?"
                 width={719}
                 height={447}
-                priority={true}
-              />
+                priority={true} />
             </div>
           </div>
         </div>
@@ -140,9 +130,8 @@ const Finance = () => {
               <div className="busine_service_bottom-left custom012">
                 <Image
                   src="/img/dynamics-365-automotive-side.png"
-                  alt="dynamics-365-automotive"
-                  width={625} height={651}
-                />
+                  alt="What is the Need for an Automotive Accelerator for Dynamics 365?"
+                  width={625} height={651} />
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
@@ -213,7 +202,7 @@ const Finance = () => {
             </div>
             <div className="col-lg-7 align-self-center">
               <div className="commen-lef-pics">
-                <Image src="/img/Customer-360.png" alt="Customer-360" width={840} height={540} />
+                <Image src="/img/Customer-360.png" alt="Customer 360 - auto form" width={840} height={540} />
               </div>
             </div>
           </div>
@@ -244,14 +233,14 @@ const Finance = () => {
             </div>
             <div className="col-lg-7 align-self-center">
               <div className="commen-lef-pics">
-              <Image src="/img/Lead-Disposition.png" alt="Lead-Dispositi" width={933} height={540} />
+              <Image src="/img/Lead-Disposition.png" alt="Lead Disposition Form" width={933} height={540} />
               </div>
             </div>
           </div>
           <div className="row pad9x align-items-center">
           <div className="col-lg-7 align-self-center">
               <div className="commen-lef-pics">
-              <Image src="/img/Vehicle-Inventory.png" alt="Vehicle-Inventory" width={971} height={540} />
+              <Image src="/img/Vehicle-Inventory.png" alt="Vehicle Inventory Dashboard" width={971} height={540} />
               </div>
             </div>
             <div className="col-lg-5 align-self-center">

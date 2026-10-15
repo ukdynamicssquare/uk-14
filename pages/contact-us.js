@@ -1,5 +1,4 @@
 import React, { useRef, useState, useEffect } from 'react';
-import Head from "next/head";
 // import FormFooterSubscriber from "../components/FormFooterSubscriber";
 import Link from "next/link";
 import Image from "next/image";
@@ -12,23 +11,17 @@ import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 import FooterHideNew from '../components/FooterHide';
+import PageSeo from "../components/PageSeo";
 const ContactUs = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
     <>
-      <Head>
-        <title>Contact Dynamics Square for D365 Advice</title>
-        <meta
-          name="description"
-          content="Dynamics Square's Dyanmic 365 consultants are available to give experienced cloud IT guidance for your company."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/contact-us/"
-        />
- 
-      </Head>
+      <PageSeo
+        type="ContactPage"
+        title="Contact Dynamics Square for D365 Advice"
+        description="Dynamics Square's Dyanmic 365 consultants are available to give experienced cloud IT guidance for your company."
+      />
         <section className="Solution-banner about-banner">
           <div className="container">
             <div className="row">
@@ -41,7 +34,7 @@ const ContactUs = () => {
                     <h2>Why Choose Dynamics Square</h2>
                     <div className="new-flex-se">
                       <div className="left">
-                        <Image src="/img/card_travel.png" alt="card_travel" width={32} height={32} />
+                        <Image src="/img/card_travel.png" alt="Why Choose Dynamics Square" width={32} height={32} />
                       </div>
                       <div className="right">
                         <span>500+ Successful Implementations and Counting!</span>
@@ -49,7 +42,7 @@ const ContactUs = () => {
                     </div>
                     <div className="new-flex-se">
                       <div className="left">
-                        <Image src="/img/workspace_premi.png" alt="workspace_premi" width={32} height={32} />
+                        <Image src="/img/workspace_premi.png" alt="Why Choose Dynamics Square" width={32} height={32} />
                       </div>
                       <div className="right">
                         <span>150+ Certified Professionals at Your Service!</span>
@@ -66,7 +59,7 @@ const ContactUs = () => {
                     </div>
                     <div className="new-flex-se">
                       <div className="left">
-                        <Image src="/img/diversity-3.png" alt="diversity-3" width={32} height={32} />
+                        <Image src="/img/diversity-3.png" alt="Why Choose Dynamics Square" width={32} height={32} />
                       </div>
                       <div className="right">
                         <span>24/7 Support to Keep Your Business Up and Running!</span>
@@ -122,7 +115,7 @@ const ContactUs = () => {
                   </div>
                   <div className="col-lg-3">
                     <div className='picc'>
-                    <img src="/img/m-partner.png" alt="m-partner" />
+                    <img src="/img/m-partner.png" alt="500+ Global Businesses Trust Dynamics Square"  loading="lazy" decoding="async" />
                     </div>
                   </div>
                  
@@ -153,28 +146,28 @@ const ContactUs = () => {
                   >
                     <SwiperSlide>
                       <div className='thum-tab'>
-                        <Image src="/img/Arteak-new-logo.png" alt='Arteak-new-logo' width={160} height={60} />
+                        <Image src="/img/Arteak-new-logo.png" alt="Arteak logo" width={160} height={60} />
                       </div>
                     </SwiperSlide>
 
                     <SwiperSlide>
                       <div className='thum-tab'>
-                        <Image src="/img/parweld-new-logo.png" alt='parweld-new-logo' width={160} height={60} />
+                        <Image src="/img/parweld-new-logo.png" alt="Parweld logo" width={160} height={60} />
                       </div>
                     </SwiperSlide>
                     <SwiperSlide>
                       <div className='thum-tab'>
-                        <Image src="/img/green-wireless-logo.png" alt='green-wireless-logo' width={160} height={60} />
+                        <Image src="/img/green-wireless-logo.png" alt="Green Wireless logo" width={160} height={60} />
                       </div>
                     </SwiperSlide>
                     <SwiperSlide>
                       <div className='thum-tab'>
-                        <Image src="/img/timesco-logo.png" alt='timesco-logo' width={160} height={60} />
+                        <Image src="/img/timesco-logo.png" alt="Timesco logo" width={160} height={60} />
                       </div>
                     </SwiperSlide>
                     <SwiperSlide>
                       <div className='thum-tab'>
-                        <Image src="/img/omicron_engineering_blur.png" alt='omicron_engineering_blur' width={160} height={60} />
+                        <Image src="/img/omicron_engineering_blur.png" alt="Omicron Engineering logo" width={160} height={60} />
                       </div>
                     </SwiperSlide>
                     {/* <SwiperSlide>
@@ -207,7 +200,7 @@ const ContactUs = () => {
                         <div className='col-lg-7'>
                           <div className='test-s-info'>
                             <figure>
-                              <Image src="/img/testimonials/Terence-Turner.png" alt="erence-Turner" width={126} height={126} />
+                              <Image src="/img/testimonials/Terence-Turner.png" alt="Terence Turner" width={126} height={126} />
                               <p>Dynamics Square Team provided us a top-level service. Well trained staff as well as excellent support when needed. Very professional and trustworthy.</p>
                               <h5>Terence Turner</h5>
                               <span>General Manager</span>
@@ -239,7 +232,7 @@ const ContactUs = () => {
                         <div className='col-lg-7'>
                           <div className='test-s-info'>
                             <figure>
-                              <Image src="/img/testimonials/Jonathan-W.png" alt="Jonathan-W" width={126} height={126} />
+                              <Image src="/img/testimonials/Jonathan-W.png" alt="Jonathan W" width={126} height={126} />
                               <p>We have worked with Dynamics Square since 2019. Our working relationship has built during this period, and we have found them to be very professional</p>
                               <h5>Jonathan W</h5>
                               <span>Technical Director</span>

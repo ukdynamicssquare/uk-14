@@ -1,7 +1,7 @@
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import CommonEbookForm from "../../components/CommonEbookForm";
+import PageSeo from "../../components/PageSeo";
 const StartGuide = () => {
   // const router = useRouter();
   // const [display, setDisplay] = useState("dspn");
@@ -43,20 +43,12 @@ const StartGuide = () => {
 
   return (
     <>
-      <Head>
-      <title>
-          Why Should You Upgrade from Microsoft Dynamics NAV to Business
-          Central?
-        </title>
-        <meta
-          name="description"
-          content="When upgrading Dynamics NAV to Business Central, it's important to know that the steps required will depend greatly on how different your version of NAV is from the standard version, as well as a variety of other factors."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/ebook/upgrade-nav-to-business-central/"
-        />
-      </Head>
+      <PageSeo
+        type="WebPage"
+        title="Why Should You Upgrade from Microsoft Dynamics NAV to Business Central?"
+        description="When upgrading Dynamics NAV to Business Central, it's important to know that the steps required will depend greatly on how different your version of NAV is from the standard version, as well as a variety of other factors."
+        image="/img/prebook-banner.png"
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -78,7 +70,7 @@ const StartGuide = () => {
               </div>
             </div>
             <div className="col-lg-6 align-self-center text-center">
-              <Image src="/img/prebook-banner.png" alt="erp-banner-book" width={800} height={708} priority = {true} />
+              <Image src="/img/prebook-banner.png" alt="This Ultimate eBook Will Walk You Through" width={800} height={708} priority = {true} />
             </div>
           </div>
         </div>
@@ -113,7 +105,7 @@ const StartGuide = () => {
             </div>
             <div className="col-lg-6 align-self-center">
               <div className="text-center remove-pre">
-                <Image src="/img/Ebbok-1.png" alt="Ebbok-1" width={487} height={613}  />
+                <Image src="/img/Ebbok-1.png" alt="Why is it the right time to upgrade to Dynamics 365 Business Central?" width={487} height={613} />
               </div>
             </div>
             <div className="col-lg-3 align-self-center">
@@ -147,9 +139,8 @@ const StartGuide = () => {
               <div className="pic-ll">
                 <Image
                   src="/img/erp-left-about.png"
-                  alt="erp-left-about"
-                  width={337} height={460}
-                />
+                  alt="What's more about this eBook?"
+                  width={337} height={460} />
               </div>
             </div>
             {/* <div className="col-lg-1 align-self-center"></div> */}
@@ -191,7 +182,7 @@ const StartGuide = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="call_to_action-right over-img">
-                <img src="/img/MaskGroup8.png" alt="image" />
+                <img src="/img/MaskGroup8.png" alt="Business consultant"  loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="col-lg-7 align-self-center">
@@ -416,9 +407,8 @@ const StartGuide = () => {
               <div className="pic-l2">
                 <Image
                   src="/img/Cover_Book_Moc.png"
-                  alt="Cover_Book_Moc"
-                  width={582} height={466}
-                />
+                  alt="Why do I need to fill out the information requested?"
+                  width={582} height={466} />
               </div>
             </div>
           </div>

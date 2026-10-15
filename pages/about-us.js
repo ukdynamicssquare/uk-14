@@ -1,6 +1,5 @@
 
 import Link from "next/link";
-import Head from 'next/head';
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -9,6 +8,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import PageSeo from "../components/PageSeo";
 
 
 const AboutUs = () => {
@@ -20,30 +20,12 @@ const AboutUs = () => {
 
   return (
     <>
-      <Head>
-        <title>
-          About Dynamics Square | Dynamics 365 Business Central Partner
-        </title>
-        <meta
-          name="description"
-          content="Learn about Dynamics Square and explore what makes us unique and one of the most trusted Dynamics 365 Business Central partners in the UK and Europe region."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/about-us/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/about-us/" />
-        <meta property="og:title" content="About Dynamics Square | Dynamics 365 Business Central Partner" />
-        <meta property="og:description" content="Learn about Dynamics Square and explore what makes us unique and one of the most trusted Dynamics 365 Business Central partners in the UK and Europe region.​" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/about-pic.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/about-us/" />
-        <meta property="twitter:title" content="About Dynamics Square | Dynamics 365 Business Central Partner" />
-        <meta property="twitter:description" content="Learn about Dynamics Square and explore what makes us unique and one of the most trusted Dynamics 365 Business Central partners in the UK and Europe region." />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/about-pic.png" />
-      </Head>
+      <PageSeo
+        type="AboutPage"
+        title="About Dynamics Square | Dynamics 365 Business Central Partner"
+        description="Learn about Dynamics Square and explore what makes us unique and one of the most trusted Dynamics 365 Business Central partners in the UK and Europe region."
+        image="https://www.dynamicssquare.co.uk/img/about-pic.png"
+      />
       <section className="Solution-banner hero-1 hero about-banner">
         <div className="container">
           <div className="row">
@@ -54,10 +36,9 @@ const AboutUs = () => {
               </p>
             </div>
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/about-pic.png" alt="About-us"
+              <Image src="/img/about-pic.png" alt="We’re Microsoft Solutions Partner"
                 width={775} height={528}
-                priority
-              />
+                priority />
             </div>
           </div>
         </div>
@@ -162,9 +143,8 @@ const AboutUs = () => {
               <div className="mission-pic">
                 <Image
                   src="/img/miss-lefiimage.png"
-                  alt="miss-lefiimage"
-                  width={683} height={689}
-                />
+                  alt="Building Long Term Association"
+                  width={683} height={689} />
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
@@ -204,7 +184,7 @@ const AboutUs = () => {
             <div className="col-lg-4">
               <div className="team-memb">
                 <div className="tem-mem-pic">
-                  <Image src="/img/gaurav-goyal.png" alt="gaurav-goyal" width={238} height={238} />
+                  <Image src="/img/gaurav-goyal.png" alt="Gaurav Goyal" width={238} height={238} />
                 </div>
                 <div className="tem-mem-info">
                   <h4>Gaurav Goyal</h4>
@@ -222,7 +202,7 @@ const AboutUs = () => {
               <div className="team-memb">
                 <div className="tem-mem-pic">
                   <Link href="https://www.linkedin.com/in/manish-g-74854a44">
-                    <Image src="/img/manish-goyal.png" alt="manish-goyal" width={238} height={238} />
+                    <Image src="/img/manish-goyal.png" alt="Manish Goyal" width={238} height={238} />
 
                   </Link>
                 </div>
@@ -241,7 +221,7 @@ const AboutUs = () => {
             <div className="col-lg-4">
               <div className="team-memb">
                 <div className="tem-mem-pic">
-                  <Image src="/img/dr-felton-lean.png" alt="dr-felton-lean" width={238} height={238} />
+                  <Image src="/img/dr-felton-lean.png" alt="Dr. Felton Lean" width={238} height={238} />
                 </div>
                 <div className="tem-mem-info">
                   <h4>Dr. Felton Lean</h4>
@@ -362,7 +342,7 @@ const AboutUs = () => {
           </div>
           <div className="row">
             <div className="col-lg-12">
-              <Image src="/img/group-2192.svg" alt="group-2192"
+              <Image src="/img/group-2192.svg" alt="Our Expertise and Capabilities"
                 width={1387} height={534} />
             </div>
           </div>
@@ -393,7 +373,7 @@ const AboutUs = () => {
               <div className="row bg-grays">
                 <div className="col-lg-6 align-self-center">
                   <div className="text-center">
-                    <Image src="/img/new-side-1.png" alt="new-side-1" width={482} height={448} />
+                    <Image src="/img/new-side-1.png" alt="Outpace Your Competition with Microsoft's Cloud-based ERP Solutions" width={482} height={448} />
                   </div>
                 </div>
                 <div className="col-lg-6 align-self-center">
@@ -490,7 +470,7 @@ const AboutUs = () => {
               <div className="row bg-grays">
                 <div className="col-lg-6 align-self-center">
                   <div className="text-center">
-                    <Image src="/img/group-2152.png" alt="new-side-1" width={482} height={447} />
+                    <Image src="/img/group-2152.png" alt="Uncover Deeper Insights to Deliver Extraordinary Customer Experience" width={482} height={447} />
                   </div>
                 </div>
                 <div className="col-lg-6 align-self-center">
@@ -562,7 +542,7 @@ const AboutUs = () => {
               <div className="row bg-grays">
                 <div className="col-lg-6 align-self-center">
                   <div className="text-center">
-                    <Image src="/img/group-215.png" alt="new-side-1" width={482} height={447} />
+                    <Image src="/img/group-215.png" alt="Integrate Microsoft Business Apps with Power Platform for Impactful Solutions" width={482} height={447} />
                   </div>
                 </div>
                 <div className="col-lg-6 align-self-center">
@@ -634,7 +614,7 @@ const AboutUs = () => {
               <div className="row bg-grays">
                 <div className="col-lg-6 align-self-center">
                   <div className="text-center">
-                    <Image src="/img/group-2154.png" alt="new-side-1" width={482} height={447} />
+                    <Image src="/img/group-2154.png" alt="Leverage Emerging Technologies for Sustainability" width={482} height={447} />
                   </div>
                 </div>
                 <div className="col-lg-6 align-self-center">
@@ -734,7 +714,7 @@ const AboutUs = () => {
           </header>
           <div className="row">
             <div className="col-lg-12">
-              <Image src="/img/word-map.png" alt="word-map" width={1312} height={637} />
+              <Image src="/img/word-map.png" alt="Our Presence Worldwide" width={1312} height={637} />
             </div>
           </div>
         </div>

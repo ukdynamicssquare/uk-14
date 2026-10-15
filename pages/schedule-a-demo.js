@@ -1,32 +1,20 @@
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/scheduleDemo.module.css";
+import PageSeo from "../components/PageSeo";
 
 
 const ScheduleDemoForm = () => {
   return (
     <>
-      <Head>
-        <title>Schedule a Dynamics 365 Demo | Free Consultation | Dynamics Square UK</title>
-        <meta name="description" content="Schedule a free Dynamics 365 demo with Dynamics Square UK. See Business Central, Sales, Customer Service, Finance and Supply Chain apps in action and get expert advice on licensing and implementation." />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.dynamicssquare.co.uk/schedule-a-demo/" />
-        <meta property="og:locale" content="en_GB" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Schedule a Dynamics 365 Demo | Dynamics Square UK" />
-        <meta property="og:description" content="Book a free, no-obligation Dynamics 365 demo with our UK experts and see which apps fit your business." />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/schedule-a-demo/" />
-        <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/sec-bac-demo.png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Schedule a Dynamics 365 Demo | Dynamics Square UK" />
-        <meta name="twitter:description" content="Book a free, no-obligation Dynamics 365 demo with our UK experts." />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/sec-bac-demo.png" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
+      <PageSeo
+        type="ContactPage"
+        title="Schedule a Dynamics 365 Demo | Free Consultation | Dynamics Square UK"
+        description="Schedule a free Dynamics 365 demo with Dynamics Square UK. See Business Central, Sales, Customer Service, Finance and Supply Chain apps in action and get expert advice on licensing and implementation."
+        image="/img/sec-bac-demo.png"
+        ogTitle="Schedule a Dynamics 365 Demo | Dynamics Square UK"
+        ogDescription="Book a free, no-obligation Dynamics 365 demo with our UK experts and see which apps fit your business."
+        extraSchema={{
               "@context": "https://schema.org",
               "@graph": [
                 {
@@ -46,10 +34,8 @@ const ScheduleDemoForm = () => {
                   ]
                 }
               ]
-            })
-          }}
-        />
-      </Head>
+            }}
+      />
 
       <div className={styles.page}>
         <section className={styles.hero}>

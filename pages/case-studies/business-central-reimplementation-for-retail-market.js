@@ -1,37 +1,17 @@
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
+import PageSeo from "../../components/PageSeo";
 const DynamicsNav2013BusinessCentralUpgrade = () => {
 
 
   return (
     <>
-      <Head>
-        <title>Reimplements Microsoft Business Central for Retail & warehouse</title>
-        <meta
-          name="description"
-          content="Retail & warehouse business reimplements Microsoft Business Central to streamline WMS, cut costs, and drive operational excellence."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/case-studies/business-central-reimplementation-for-retail-market/"
-        />
-        <meta property="og:locale" content="GB" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Reimplements Microsoft Business Central for Retail & warehouse" />
-        <meta property="og:description" content="Retail & warehouse business reimplements Microsoft Business Central to streamline WMS, cut costs, and drive operational excellence." />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/case-studies/business-central-reimplementation-for-retail-market/" />
-        <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/old-mill-feature.jpg" />
-        <meta property="og:image:width" content="200" />
-        <meta property="og:image:height" content="200" />
-        <meta property="og:image:type" content="image/jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="Reimplements Microsoft Business Central for Retail & warehouse" />
-        <meta name="twitter:description" content="Retail & warehouse business reimplements Microsoft Business Central to streamline WMS, cut costs, and drive operational excellence." />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/old-mill-feature.jpg" />
-      </Head>
+      <PageSeo
+        type="Article"
+        title="Reimplements Microsoft Business Central for Retail & warehouse"
+        description="Retail & warehouse business reimplements Microsoft Business Central to streamline WMS, cut costs, and drive operational excellence."
+        image="https://www.dynamicssquare.co.uk/img/old-mill-feature.jpg"
+      />
       <section className="hero hero-new-bg">
         <div className="container">
           <div className="row justify-content-center">
@@ -81,9 +61,8 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
                 <Image
                   src="/img/case-s-01.png"
                   className="fix-im"
-                  alt="case-s-01"
-                  width={400} height={450}
-                />
+                  alt="What are The Business Challenges"
+                  width={400} height={450} />
               </div>
             </div>
           </div>
@@ -104,7 +83,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           </div>
           <div className="row gx-5">
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/cast-stu-pic.png" alt="cast-stu-pic" width={484} height={407} />
+              <Image src="/img/cast-stu-pic.png" alt="What are The Business Challenges" width={484} height={407} />
             </div>
             <div className="col-lg-6">
               <div className="content-icons-modil-1">
@@ -181,7 +160,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           </div>
           <div className="row gx-5">
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/case-s-02.png" alt="case-s-02" width={733} height={512} />
+              <Image src="/img/case-s-02.png" alt="What the Business Needed" width={733} height={512} />
             </div>
             <div className="col-lg-6 align-self-center">
               <div className="ms-c-po">
@@ -247,7 +226,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="ce-image-ce">
-                  <img src="/img/case-s-03.png" alt="Case Study" className="img-fluid" />
+                  <img src="/img/case-s-03.png" alt="Case Study" className="img-fluid"  loading="lazy" decoding="async" />
               </div>
             </div>
           </div>
@@ -421,7 +400,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
             </div>
             <div className="col-lg-6">
               <div className="text-center">
-                <Image src="/img/case-s-04.png" alt="case-s-04" width={485} height={450} />
+                <Image src="/img/case-s-04.png" alt="Why This Case Matters" width={485} height={450} />
               </div>
             </div>
           </div>
@@ -432,7 +411,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="call_to_action-right over-img">
-                <img src="/img/MaskGroup8.png" alt="image" />
+                <img src="/img/MaskGroup8.png" alt="Business consultant"  loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="col-lg-7 align-self-center">

@@ -1,28 +1,22 @@
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Autoplay, FreeMode, Pagination } from "swiper/modules";
+import PageSeo from "../../components/PageSeo";
 
 
 const OdooErpToBusinessCentralMigration = () => {
 
   return (
     <>
-      <Head>
-        <title>Odoo ERP to Business Central Migration | Case Study</title>
-        <meta
-          name="description"
-          content="Read our comprehensive case study on the migration of Odoo ERP to Business Central, which includes important strategies, benefits and insights for an easy migration."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/case-studies/odoo-erp-to-business-central-migration/"
-        />
-      </Head>
+      <PageSeo
+        type="Article"
+        title="Odoo ERP to Business Central Migration | Case Study"
+        description="Read our comprehensive case study on the migration of Odoo ERP to Business Central, which includes important strategies, benefits and insights for an easy migration."
+      />
       <section className="hero-1 hero">
         <div className="container">
           <div className="row">
@@ -39,8 +33,7 @@ const OdooErpToBusinessCentralMigration = () => {
               <div className="sider-over">
                 <img
                   src="/img/business-central-implementation-banner-1.svg"
-                  alt="business-central-implementation-banner"
-                />
+                  alt="Odoo ERP to Business Central Upgrade" />
               </div>
             </div>
           </div>
@@ -54,8 +47,7 @@ const OdooErpToBusinessCentralMigration = () => {
                 <div className="col-lg-3 align-self-center text-center">
                   <img
                     src="/img/casestudy-pic.png"
-                    alt="casestudy-pic"
-                  />
+                    alt="Odoo ERP to Business Central Upgrade" />
                 </div>
                 <div className="col-lg-9 align-self-center">
                   <p>The business is a trusted provider of wireless and technology solutions for businesses, with 15+ years of experience in the industry. Founded in 2008, they are a leading supplier of carrier-grade antenna and enclosure protection solutions. Also, the organisation further offers customized solutions to meet unique business needs. They offer a comprehensive range of products that includes two-way radios, public safety communications, wireless broadband, and high-quality indoor and outdoor antennas. The company offers its bespoke products to the global IoT and M2M industries.</p>
@@ -178,8 +170,8 @@ const OdooErpToBusinessCentralMigration = () => {
                           <div className="img-wrp">
                             <img
                               src="/img/material-lightbulb-outline.svg"
-                              alt="Food-and-beverage"
-                            />
+                              alt=""
+                             aria-hidden="true"  loading="lazy" decoding="async" />
                           </div>
                           <div className="text-wrp-content">
                             <p>Odoo was replaced with Business Central Cloud to offer automation, smooth business functioning, and real-time process management.</p>
@@ -195,7 +187,7 @@ const OdooErpToBusinessCentralMigration = () => {
                               <img
                                 src="/img/material-lightbulb-outline.svg"
                                 alt="NotforProfit"
-                              />
+                               loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>The integration of Tasklet with Business Central offers a responsive interface, resulting in enhanced overall efficiency and productivity.</p>
@@ -212,7 +204,7 @@ const OdooErpToBusinessCentralMigration = () => {
                               <img
                                 src="/img/material-lightbulb-outline.svg"
                                 alt="Ecommerce"
-                              />
+                               loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>The integration of WMS Mobile by Tasklet enables them to avail automation while streamlining entire inventory activities.</p>
@@ -228,8 +220,8 @@ const OdooErpToBusinessCentralMigration = () => {
                             <div className="img-wrp">
                               <img
                                 src="/img/material-lightbulb-outline.svg"
-                                alt="proffesional-service"
-                              />
+                                alt=""
+                               aria-hidden="true"  loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>Better Optimized Picking, Packing, and Shipping Processes, making it easy for another person to take over and complete the shipping process later.</p>
@@ -329,7 +321,7 @@ const OdooErpToBusinessCentralMigration = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="call_to_action-right over-img">
-                <img src="/img/MaskGroup8.png" alt="image" />
+                <img src="/img/MaskGroup8.png" alt="Business consultant"  loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="col-lg-7 align-self-center">

@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -8,22 +7,43 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import { FreeMode, Navigation, Thumbs, Autoplay } from "swiper/modules";
+import PageSeo from "../components/PageSeo";
+// Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
+const PAGE_FAQS = [
+  {
+    "question": "What's next after submitting my contact details?",
+    "answer": "After you submit your information, one of our specialists will call you to learn more about your company, its current needs, and potential future needs. This process is known as the Phase 1 Discovery Call. Everything will be documented, a FRD will be created, a FIT-GAP analysis will be done, and then the implementation phase will begin. If necessary, we set up another Discovery Call with one of our highly qualified functional consultants to address the questions."
+  },
+  {
+    "question": "What's my role in the entire implementation project?",
+    "answer": "In order for us to develop a proper D365 Customer Insights – Journeys implementation solution for you, your only responsibility will be to provide correct information to your Dynamics 365 installation partner regarding the present procedures and future demands. You must also cooperate throughout the process to ensure a flawless and easy deployment."
+  },
+  {
+    "question": "Does Dynamics Square provide training?",
+    "answer": "We offer free training sessions to help users become familiar with the system's features, capabilities, and functions in order to make the most of the recently installed solution. Additionally, we will assist you in comprehending the fundamental capabilities so that you may comprehend your present and upcoming needs for the Phase 2 implementation procedure (in case of need)."
+  },
+  {
+    "question": "How long will it take to implement the project successfully?",
+    "answer": "Without fully comprehending the business and its needs, neither we nor anyone else can provide you a precise timeline for implementing a solution. The time is determined by a number of elements, such as the quantity of processes, the complexity of operations, integrations, and customizations."
+  },
+  {
+    "question": "What is the accurate cost of D365 Customer Insights – Journeys implementation?",
+    "answer": "The exact cost of implementation is determined by a number of factors. To receive a precise price for the implementation process, you may just phone us or complete the Contact Form, and one of our executives will contact you soon. See Also -: Dynamics 365 Finance Implementation, Power BI Implementation, Dynamics 365 Sales Implementation"
+  }
+];
+
 
 const MarketingImplementation = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   return (
     <>
-      <Head>
-        <title>Dynamics 365 Customer Insights – Journeys Implementation | Dynamics Square UK</title>
-        <meta
-          name="description"
-          content="Dynamics 365 Customer Insights – Journeys implementation services by Dynamics Square UK. Drive smarter campaigns, real-time insights, and improved customer engagement."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/dynamics-365-marketing-implementation/"
-        />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Dynamics 365 Customer Insights – Journeys Implementation | Dynamics Square UK"
+        description="Dynamics 365 Customer Insights – Journeys implementation services by Dynamics Square UK. Drive smarter campaigns, real-time insights, and improved customer engagement."
+        image="/img/FieldServicebanner.png"
+        faqs={PAGE_FAQS}
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -60,11 +80,10 @@ const MarketingImplementation = () => {
             <div className="col-lg-6">
               <Image
                 src="/img/FieldServicebanner.png"
-                alt="Field-implementation-banner"
+                alt="How can Dynamics 365 Customer Insights"
                 width={771}
                 height={478}
-                priority = {true}
-              />
+                priority = {true} />
             </div>
           </div>
         </div>
@@ -413,7 +432,7 @@ const MarketingImplementation = () => {
           <div className="row">
             <div className="col-lg-6">
               <div className="box-6-pic">
-                <img src="/img/imp-left.svg" alt="imp-left.svg" />
+                <img src="/img/imp-left.svg" alt="" aria-hidden="true" />
               </div>
             </div>
 
@@ -518,13 +537,13 @@ const MarketingImplementation = () => {
                           <img
                             src="/img/Component-1-icons.svg"
                             className="overmain-thumb"
-                            alt="Component-1-icons"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-1-iconss.svg"
                             className="over"
-                            alt="Component-1-icons-red"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
@@ -532,13 +551,13 @@ const MarketingImplementation = () => {
                           <img
                             src="/img/Component-2.svg"
                             className="overmain-thumb-1"
-                            alt="Component-2"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-2-iconss.svg"
                             className="over-1"
-                            alt="Component-2-icons-red"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
@@ -546,13 +565,13 @@ const MarketingImplementation = () => {
                           <img
                             src="/img/Component-3.svg"
                             className="overmain-thumb-2"
-                            alt="Component-3"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-3-iconss.svg"
                             className="over-1"
-                            alt="Component-1-icons-red"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
@@ -560,13 +579,13 @@ const MarketingImplementation = () => {
                           <img
                             src="/img/Component-4.svg"
                             className="overmain-thumb-3"
-                            alt="Component-4"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-4-iconss.svg"
                             className="over-1"
-                            alt="Component-1-icons-red"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
@@ -574,13 +593,13 @@ const MarketingImplementation = () => {
                           <img
                             src="/img/Component-5.svg"
                             className="overmain-thumb-4"
-                            alt="Component-5"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-5-iconss.svg"
                             className="over-1"
-                            alt="Component-1-icons-red"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                     </Swiper>

@@ -1,32 +1,41 @@
 import Link from "next/link"; 
-import Head from 'next/head';
 import Image from 'next/image';
+import PageSeo from "../../components/PageSeo";
+// Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
+const PAGE_FAQS = [
+  {
+    "question": "What is Microsoft Azure IoT hub?",
+    "answer": "Azure IoT hub is a managed cloud service supports centralized messaging between IoT applications and attached assets or devices. Enterprises can connect millions of devices simultaneously while ensuring security and reliability. It allows connecting almost all the devices to your Azure IoT hub. With Azure IoT, you can connect, monitor, and control your IoT devices and stay updated with real-time device data, status, or analytics leveraging a single unified dashboard. To know more about how Azure IoT works, connect with experts at Dynamics Square, we can help you to understand its capability, and implementing Azure IoT solutions to help your enterprise to manage and streamline your IoT workflow."
+  },
+  {
+    "question": "What is the difference between Azure IoT hub and IoT Central?",
+    "answer": "Azure IoT hub is a PaaS (Platform-as-a-service) based IoT solution to seamlessly connect, manage, and control a multitude of devices simultaneously. Azure IoT Hub allows bidirectional communication between the Azure cloud and IoT devices. It’s a highly secure, reliable, and flexible platform to connect and drive secure IoT workload across your enterprise. Azure IoT Central is a SaaS-based solution to connect and monitor the device performance with real-time flexibility. Azure IoT central is quite similar to Azure IoT Hub that allows access to a set of standard templates to develop efficient IoT applications."
+  },
+  {
+    "question": "Is Microsoft Azure IoT hub free?",
+    "answer": "IoT hub free edition comes with limited usage. It allows enterprises to register up to 500 IoT devices with the flexibility to transmit up to a limit of 8000 messages/per day. If your requirement crosses this limit, you need to go with a paid plan. If you have any sort of queries in this regard, talk to us, we can help."
+  },
+  {
+    "question": "What is SLA for Azure IoT Hub?",
+    "answer": "SLA refers to Service Level Agreement also a part of Microsoft volume licensing agreement created for Microsoft online service. For Azure IoT Hub, Microsoft commits that 99% time of the time deployed IoT Hubs would be able to manage communication or send and receive messages from the registered devices. For Azure IoT Hub Device Provisioning Service, Microsoft commits that at least 99% of the time deployed providing services would be leveraged to receive provisioning requests and register the related devices to an IoT Hub. To know complete information about SLA for Azure IoT Hub, connect with us, experts at Dynamics Square can help you to understand in-depth or required to your business."
+  },
+  {
+    "question": "What are the basic differences between IoT Hub Basic tier, IoT Hub Standard tier, and Azure Event Hubs?",
+    "answer": "Depending on your unique requirement, your requirement may go different. So, let's drive a difference to understand your requirement. When you plan to deploy an IoT environment, you can start with IoT Hub Basic tier initially. Since IoT Hub comes with the property of bidirectional communication and if you want to deploy your IoT hub with foundational security embedded with per-device authentication along with optimal device support and seamless upgrade opportunity, IoT Hub Standard could be a smarter choice for you. This plan also comprises device management and Azure IoT Edge support. Azure Event Hubs could be a suitable deal for those dealing and willing to manage big-data or web data ingestion. Moreover, if you need more clarification on this, contact Dynamics Square, we can help."
+  }
+];
+
 
 const AzureIoTHub = () => {
   return (
     <>
-      <Head>
-      <title>Azure IoT Hub | Cloud-Hosted IoT Solutions</title>
-        <meta
-          name="description"
-          content="Control, manage, and secure your IoT workspace in real-time to drive streamlined IoT workload all through by implementing Azure IoT Hub."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/azure-iot-hub/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/azure-iot-hub/" />
-        <meta property="og:title" content="Azure IoT Hub | Cloud-Hosted IoT Solutions" />
-        <meta property="og:description" content="Control, manage, and secure your IoT workspace in real-time to drive streamlined IoT workload all through by implementing Azure IoT Hub." />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/azure-iot-hub-banner.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/products/azure-iot-hub/" />
-        <meta property="twitter:title" content="Azure IoT Hub | Cloud-Hosted IoT Solutions" />
-        <meta property="twitter:description" content="Control, manage, and secure your IoT workspace in real-time to drive streamlined IoT workload all through by implementing Azure IoT Hub." />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/azure-iot-hub-banner.png" />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Azure IoT Hub | Cloud-Hosted IoT Solutions"
+        description="Control, manage, and secure your IoT workspace in real-time to drive streamlined IoT workload all through by implementing Azure IoT Hub."
+        image="https://www.dynamicssquare.co.uk/img/azure-iot-hub-banner.png"
+        faqs={PAGE_FAQS}
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -55,10 +64,9 @@ const AzureIoTHub = () => {
             <div className="col-lg-6 align-self-center">
               <Image
                 src="/img/azure-iot-hub-banner.png"
-                alt="azure-iot-hub-banner"
+                alt="What is Azure IoT Hub?"
                 width={1024} height={586}
-                priority = {true}
-              />
+                priority = {true} />
             </div>
           </div>
         </div>
@@ -114,10 +122,8 @@ const AzureIoTHub = () => {
               <div className="azurpic">
                 <Image
                   src="/img/iot-hub-feature.webp"
-                  alt="iot-hub-feature"
-                  width={1024} height={586}
-
-                />
+                  alt="Azure IoT Hub Features"
+                  width={1024} height={586} />
               </div>
             </div>
           </div>

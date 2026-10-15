@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import TimerModal from "../../../components/TimerModal";
 import BlogStyles from "../../../components/blog/BlogStyles";
-import { BlogFontPreload, BlogPageHero } from "../../../components/blog/BlogUi";
+import { blogFontLinks, BlogPageHero } from "../../../components/blog/BlogUi";
 
 import { BlogService } from "../../../helpers/blogApi";
 import { extractArray, slimCategory, slimPost } from "../../../helpers/blogData";
@@ -64,8 +64,8 @@ function CategoriesIndex({ categories }) {
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Blog Topics | Dynamics Square" />
         <meta property="og:url" content={pageUrl} />
+        {blogFontLinks()}
       </Head>
-      <BlogFontPreload />
 
       <BlogPageHero
         crumbs={[

@@ -1,23 +1,16 @@
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
+import PageSeo from "../components/PageSeo";
 
 const DynamicsNavnowBusinessCentral = () => {
   return (
     <>
-      <Head>
-        <title>
-          Dynamics NAV is now Dynamics 365 Business Central | Dynamics Square
-        </title>
-        <meta
-          name="description"
-          content="Microsoft is a leading business management and ERP solutions provider. Microsoft Dynamics Navision (NAV) has ruled the business landscape ever since its"
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/dynamics-nav-is-now-dynamics-365-business-central/"
-        />
-      </Head>
+      <PageSeo
+        type="Article"
+        title="Dynamics NAV is now Dynamics 365 Business Central | Dynamics Square"
+        description="Microsoft is a leading business management and ERP solutions provider. Microsoft Dynamics Navision (NAV) has ruled the business landscape ever since its"
+        image="/img/Dynamics-NAV-busines-centeral.png"
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -43,10 +36,9 @@ const DynamicsNavnowBusinessCentral = () => {
             <div className="col-lg-6 align-self-center">
               <Image
                 src="/img/Dynamics-NAV-busines-centeral.png"
-                alt="Dynamics-NAV-busines-centeral"
+                alt="Dynamics 365 Business Central"
                 width={736} height={488}
-                priority = {true}
-              />
+                priority = {true} />
             </div>
           </div>
         </div>
@@ -96,7 +88,7 @@ const DynamicsNavnowBusinessCentral = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="call_to_action-right over-img">
-                <img src="/img/MaskGroup8.png" alt="image" />
+                <img src="/img/MaskGroup8.png" alt="Business consultant"  loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="col-lg-7 align-self-center">

@@ -1,16 +1,20 @@
-import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import Form from "../../components/Form";
+import PageSeo from "../../components/PageSeo";
+import LocationPageStyles from "../../components/LocationPageStyles";
 
 const MicrosoftDynamicsPartnerLiverpool = () => {
   return (
     <>
-      <Head>
-      <title>Microsoft Dynamics Partner Liverpool, UK | Dynamics Square</title>
-<meta name="description" content="Looking for a Microsoft Dynamics partner in Liverpool? Dynamics Square is helping businesses to get the best Dynamics 365 implementation, upgrade and support services."/>
-<link rel="canonical" href="https://www.dynamicssquare.co.uk/location/microsoft-dynamics-partner-liverpool/" />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Microsoft Dynamics Partner Liverpool, UK | Dynamics Square"
+        description="Looking for a Microsoft Dynamics partner in Liverpool? Dynamics Square is helping businesses to get the best Dynamics 365 implementation, upgrade and support services."
+        image="/img/Microsoft-Dynamics-Partner-Liverpool.png"
+        areaServed="Liverpool"
+      />
+      <main className="loc-detail">
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -33,10 +37,10 @@ const MicrosoftDynamicsPartnerLiverpool = () => {
             <div className="col-lg-6 align-self-center">
               <Image
                 src="/img/Microsoft-Dynamics-Partner-Liverpool.png"
-                alt="Microsoft-Dynamics-Partner-Liverpool"
+                alt="Microsoft Certified Solutions Partner in Liverpool: One-Stop Solution for all Microsoft Dynamics Issues"
                 width={768} height={501}
                 priority = {true}
-              />
+                sizes="(max-width: 991px) 100vw, 50vw" />
             </div>
           </div>
         </div>
@@ -338,8 +342,7 @@ const MicrosoftDynamicsPartnerLiverpool = () => {
                 <Image
                   width={1024} height={601}
                   src="/img/system-health-check-1024x601.webp"
-                  alt="system-health-check-1024x601"
-                />
+                  alt="Liverpool Based Microsoft Solutions Partners" />
               </div>
             </div>
           </div>
@@ -379,6 +382,8 @@ const MicrosoftDynamicsPartnerLiverpool = () => {
           </div>
         </div>
       </section>
+      </main>
+      <LocationPageStyles />
     </>
   );
 };

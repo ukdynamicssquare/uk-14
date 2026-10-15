@@ -1,26 +1,21 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
 import ModalVideo from "react-modal-video";
 import Blog from "../../components/Blog";
+import PageSeo from "../../components/PageSeo";
 
 const AzureIoT = () => {
   const [isOpen, setOpen] = useState(false);
   const [open, setsOpen] = useState(false);
   return (
     <>
-      <Head>
-        <title>Microsoft Azure IoT | Connect Your Business With IoT</title>
-        <meta
-          name="description"
-          content="Microsoft Azure IoT (internet of things) and Dynamics 365 help enterprises to bring efficiency, maximize revenue and security in their business. Get IoT solutions today."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/azure-iot-internet-of-things/"
-        />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Microsoft Azure IoT | Connect Your Business With IoT"
+        description="Microsoft Azure IoT (internet of things) and Dynamics 365 help enterprises to bring efficiency, maximize revenue and security in their business. Get IoT solutions today."
+        image="/img/azure-Banner.png"
+      />
       <ModalVideo
         channel="youtube"
         autoplay
@@ -58,11 +53,10 @@ const AzureIoT = () => {
             <div className="col-lg-6 align-self-center">
               <Image
                 src="/img/azure-Banner.png"
-                alt="azure-Banner"
+                alt="Deliver A Flexible, Scalable Solution That Adapts To Your Needs & Processes."
                 width={1024}
                 height={609}
-                priority = {true}
-              />
+                priority = {true} />
             </div>
           </div>
         </div>
@@ -98,8 +92,8 @@ const AzureIoT = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-azure_cloud-embed.svg"
-                            alt="icons-azure_cloud-embed"
-                          />
+                            alt=""
+                           aria-hidden="true" />
                         </div>
                         <span>Azure IoT hub</span>
                       </button>
@@ -137,8 +131,8 @@ const AzureIoT = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-azure_agile.svg"
-                            alt="icons-azure_agile"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Azure IoT Central</span>
                       </button>
@@ -178,8 +172,8 @@ const AzureIoT = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-azure_project-management.svg"
-                            alt="icons-azure_project-management"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Azure Sphere</span>
                       </button>
@@ -225,8 +219,8 @@ const AzureIoT = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-azure_innovation.svg"
-                            alt="icons-azure_innovation"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Azure Digital Twins</span>
                       </button>
@@ -265,8 +259,8 @@ const AzureIoT = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-azure_security.svg"
-                            alt="icons-azure_security"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Azure IoT Edge</span>
                       </button>
@@ -306,8 +300,8 @@ const AzureIoT = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-azure_machine-learning.svg"
-                            alt="icons-azure_machine-learning"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Azure Machine Learning</span>
                       </button>
@@ -432,10 +426,9 @@ const AzureIoT = () => {
                   <Image
                     src="/img/InternetTHingsSide.png"
                     className="fix-im"
-                    alt="bisin_leftimg"
+                    alt="Reduce Production Delays"
                     width={553}
-                    height={531}
-                  />
+                    height={531} />
                   <div className="video-ytube video-ytubes">
                     <div className="popup-btn popup-btns">
                       <Link href="#javascript:void(0)" onClick={() => setOpen(true)}>
@@ -447,7 +440,7 @@ const AzureIoT = () => {
                           height={259}
                         />
                         <span className="cente-icns">
-                          <img src="/img/play_icons.svg" alt="play_icons" />
+                          <img src="/img/play_icons.svg" alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                         </span>
 
                       </Link>
@@ -469,8 +462,8 @@ const AzureIoT = () => {
                 <div className="card_new_img">
                   <img
                     src="/img/Business-Central-Implementation-icons.svg"
-                    alt="Business-Central-Implementation-icons"
-                  />
+                    alt=""
+                   aria-hidden="true"  loading="lazy" decoding="async" />
                 </div>
                 <div className="card_new_content">
                   <h3>Implementation</h3>
@@ -490,7 +483,7 @@ const AzureIoT = () => {
                   <img
                     src="/img/Business Central Upgrade-icons.svg"
                     alt="Business Central Upgrade-icons"
-                  />
+                   loading="lazy" decoding="async" />
                 </div>
                 <div className="card_new_content">
                   <h3>Upgrade</h3>
@@ -509,8 +502,8 @@ const AzureIoT = () => {
                 <div className="card_new_img">
                   <img
                     src="/img/Business-Central-Support-icons.svg"
-                    alt="Business-Central-Support-icons"
-                  />
+                    alt=""
+                   aria-hidden="true"  loading="lazy" decoding="async" />
                 </div>
                 <div className="card_new_content">
                   <h3>Support</h3>

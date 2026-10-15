@@ -1,19 +1,15 @@
 import React from 'react';
-import Head from 'next/head';
 import Link from 'next/link';
+import PageSeo from "../../components/PageSeo";
 
 const Index = () => {
     return (
         <>
-            <Head>
-                <title>Free Dynamics 365 Tools | Dynamics Square UK</title>
-                <meta
-                    name="description"
-                    content="Free tools from Dynamics Square UK to help you plan your Dynamics 365 investment, including our Dynamics 365 licensing and pricing calculator."
-                />
-                <meta name="robots" content="index, follow" />
-                <link rel="canonical" href="https://www.dynamicssquare.co.uk/tools/" />
-            </Head>
+            <PageSeo
+              type="CollectionPage"
+              title="Free Dynamics 365 Tools | Dynamics Square UK"
+              description="Free tools from Dynamics Square UK to help you plan your Dynamics 365 investment, including our Dynamics 365 licensing and pricing calculator."
+            />
             <section className="sp-top">
                 <div className="container">
                     <div className="row justify-content-center">

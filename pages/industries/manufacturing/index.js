@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
 import ModalVideo from "react-modal-video";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -8,23 +7,44 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Autoplay, FreeMode, Pagination } from "swiper/modules";
+import PageSeo from "../../../components/PageSeo";
+// Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
+const PAGE_FAQS = [
+  {
+    "question": "What is Dynamics 365 for Manufacturing?",
+    "answer": "Dynamics 365 for Manufacturing is a powerful and seamless application to monitor the entire manufacturing process and enhance the overall efficiency of the plant. It gathers data in real-time and lets the employee make data-driven decisions."
+  },
+  {
+    "question": "Does Dynamics 365 have manufacturing?",
+    "answer": "Yes, Dynamics 365 comes with various applications to manage different verticals of a business, which include manufacturing, finance, supply chain management, and warehouse operations. The manufacturing section empowers the users to streamline all processes, from picking up the raw material to checking the quality."
+  },
+  {
+    "question": "What are the different types of manufacturing processes in D365?",
+    "answer": "D365 for manufacturing consists of different processes that include job shop, repetitive job shop, make-to-order, make-to-stock, configure-to-order, engineer-to-order, mixed mode, and process manufacturing."
+  },
+  {
+    "question": "How can Dynamics 365 for Manufacturing help improve collaboration?",
+    "answer": "Dynamics 365 is a flexible solution that offers on-premises and cloud deployment options. And, with Dynamics 365 for cloud manufacturing, you can empower your team to collaborate with different departments as well as employees to make data sharing more efficient and effective."
+  },
+  {
+    "question": "What are the benefits of using Dynamics 365 for manufacturing?",
+    "answer": "Dynamics 365 Manufacturing offers numerous benefits to its users. You can streamline change management, improve quality, enable predictive maintenance, build a seamless distribution process, build strong relationships with customers, track inventory levels in real-time, and offer an outstanding customer experience."
+  }
+];
+
 const Startup = () => {
   const [isOpen, setOpen] = useState(false);
   const [open, setsOpen] = useState(false);
   
   return (
     <>
-      <Head>
-        <title>Microsoft Dynamics 365 for Manufacturing | Dyanmics Square UK</title>
-        <meta
-          name="description"
-          content="Microsoft Dynamics 365 for Manufacturing optimises production processes, simplifies operations, and improve collaboration for efficient and agile manufacturing ecosystems."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/industries/manufacturing/"
-        />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Microsoft Dynamics 365 for Manufacturing | Dyanmics Square UK"
+        description="Microsoft Dynamics 365 for Manufacturing optimises production processes, simplifies operations, and improve collaboration for efficient and agile manufacturing ecosystems."
+        image="/img/Dynamics-manufacturing-Banner.png"
+        faqs={PAGE_FAQS}
+      />
       <ModalVideo
         channel="youtube"
         autoplay
@@ -61,10 +81,9 @@ const Startup = () => {
               <div className="col-lg-6 align-self-center">
                 <Image
                   src="/img/Dynamics-manufacturing-Banner.png"
-                  alt="Dynamics-manufacturing-Banner"
+                  alt="Dynamics 365 for Manufacturing: An all-in-one solution for your Production Business"
                   width={790} height={470}
-                  priority={true}
-                />
+                  priority={true} />
               </div>
             </div>
           </div>
@@ -214,10 +233,10 @@ const Startup = () => {
                   <div className="card_new_img">
                     <img
                       src="/img/designing-icon.svg"
-                      alt="Design-and-Training"
+                      alt=""
                       width={48}
                       height={48}
-                    />
+                     aria-hidden="true"  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Design & Training </h3>
@@ -232,10 +251,10 @@ const Startup = () => {
                   <div className="card_new_img">
                     <img
                       src="/img/planning-icon.svg"
-                      alt="Planning-and-Sourcing"
+                      alt=""
                       width={48}
                       height={48}
-                    />
+                     aria-hidden="true"  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Planning & Sourcing</h3>
@@ -250,10 +269,9 @@ const Startup = () => {
                   <div className="card_new_img">
                     <img
                       src="/img/Production-Mnagement.svg"
-                      alt="Production-Mnagement"
+                      alt="Production Management"
                       width={48}
-                      height={48}
-                    />
+                      height={48}  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Production Management</h3>
@@ -268,10 +286,9 @@ const Startup = () => {
                   <div className="card_new_img">
                     <img
                       src="/img/Distribution-Delivery.svg"
-                      alt="Business-Central-Support-icons"
+                      alt="Distribution & Delivery"
                       width={48}
-                      height={48}
-                    />
+                      height={48}  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Distribution & Delivery </h3>
@@ -288,10 +305,9 @@ const Startup = () => {
                   <div className="card_new_img">
                     <img
                       src="/img/Asset-Management.svg"
-                      alt="Asset-Management"
+                      alt="Asset Management"
                       width={48}
-                      height={48}
-                    />
+                      height={48}  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Asset Management</h3>
@@ -306,10 +322,9 @@ const Startup = () => {
                   <div className="card_new_img">
                     <img
                       src="/img/Sales-Management.svg"
-                      alt="Sales-Management"
+                      alt="Sales Management"
                       width={48}
-                      height={48}
-                    />
+                      height={48}  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Sales Management</h3>
@@ -324,10 +339,9 @@ const Startup = () => {
                   <div className="card_new_img">
                     <img
                       src="/img/connect-collaborate.svg"
-                      alt="connect-collaborate"
+                      alt="Customer Management"
                       width={48}
-                      height={48}
-                    />
+                      height={48}  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Customer Management</h3>
@@ -342,10 +356,9 @@ const Startup = () => {
                   <div className="card_new_img">
                     <img
                       src="/img/Service-Management.svg"
-                      alt="Service-Management"
+                      alt="Service Management"
                       width={48}
-                      height={48}
-                    />
+                      height={48}  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Service Management</h3>
@@ -387,10 +400,9 @@ const Startup = () => {
 
                           <img
                             src="/img/video-Manufacturing.png"
-                            alt="video-Manufacturing"
-                          />
+                            alt="Service Management"  loading="lazy" decoding="async" />
                           <span className="cente-icns">
-                            <img src="/img/play_icons.svg" alt="play_icons" />
+                            <img src="/img/play_icons.svg" alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                           </span>
 
                         </Link>
@@ -610,8 +622,8 @@ const Startup = () => {
                               <div className="img-wrp">
                                 <img
                                   src="/img/Food-and-beverage.svg"
-                                  alt="Food-and-beverage"
-                                />
+                                  alt=""
+                                 aria-hidden="true"  loading="lazy" decoding="async" />
                               </div>
                               <div className="text-wrp-content">
                                 <h3>Food & Beverages</h3>
@@ -635,7 +647,7 @@ const Startup = () => {
                                   <img
                                     src="/img/NotforProfit.svg"
                                     alt="NotforProfit"
-                                  />
+                                   loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>Not for Profit</h3>
@@ -660,7 +672,7 @@ const Startup = () => {
                                   <img
                                     src="/img/Ecommerce.svg"
                                     alt="Ecommerce"
-                                  />
+                                   loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>E-Commerce</h3>
@@ -683,8 +695,8 @@ const Startup = () => {
                                 <div className="img-wrp">
                                   <img
                                     src="/img/proffesional-service.svg"
-                                    alt="proffesional-service"
-                                  />
+                                    alt=""
+                                   aria-hidden="true"  loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>Professional Services</h3>
@@ -708,8 +720,8 @@ const Startup = () => {
                                 <div className="img-wrp">
                                   <img
                                     src="/img/Food-and-beverage.svg"
-                                    alt="Food-and-beverage"
-                                  />
+                                    alt=""
+                                   aria-hidden="true"  loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>Manufacturing & Distribution</h3>
@@ -733,8 +745,8 @@ const Startup = () => {
                                 <div className="img-wrp">
                                   <img
                                     src="/img/start-up.svg"
-                                    alt="start-up"
-                                  />
+                                    alt=""
+                                   aria-hidden="true"  loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>Startups</h3>

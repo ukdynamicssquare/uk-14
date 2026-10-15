@@ -1,24 +1,18 @@
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link"; 
 import Form from "../components/Form";
+import PageSeo from "../components/PageSeo";
 
 const WhyMigrade360 = () => {
 
   return (
     <>
-      <Head>
-        <title>Dynamics NAV (Business Central) Magento Integration  </title>
-        <meta
-          name="description"
-          content="Avail yourself of the powerful integration of Microsoft (Business Central) Dynamics NAV with Magento and supercharge your e-commerce business to generate more business. "
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/magento-dynamics-365-integration/"
-        />
-        
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Dynamics NAV (Business Central) Magento Integration"
+        description="Avail yourself of the powerful integration of Microsoft (Business Central) Dynamics NAV with Magento and supercharge your e-commerce business to generate more business."
+        image="/img/magentodynamics-365.png"
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -41,10 +35,9 @@ const WhyMigrade360 = () => {
             <div className="col-lg-6 align-self-center">
               <Image
                 src="/img/magentodynamics-365.png"
-                alt="magentodynamics-365"
+                alt="Why Migrate to Microsoft Dynamics 365 Cloud?"
                 width={660} height={464}
-                priority = {true}
-              />
+                priority = {true} />
             </div>
           </div>
         </div>
@@ -68,9 +61,8 @@ const WhyMigrade360 = () => {
               <div className="busine_service_bottom-left custom012">
                 <Image
                   src="/img/microosoft-partner.png"
-                  alt="microosoft-partner.png"
-                  width={625} height={651}
-                />
+                  alt="Microsoft Solutions Partner badge"
+                  width={625} height={651} />
               </div>
             </div>
             
@@ -445,7 +437,7 @@ const WhyMigrade360 = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="call_to_action-right over-img">
-                <img src="/img/MaskGroup8.png" alt="image" />
+                <img src="/img/MaskGroup8.png" alt="Business consultant"  loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="col-lg-7 align-self-center">

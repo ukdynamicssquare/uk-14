@@ -1,21 +1,16 @@
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
+import PageSeo from "../../components/PageSeo";
 
 const AzureDigitalTwins = () => {
   return (
     <>
-      <Head>
-        <title>Azure Digital Twins | Best Data Modelling and Simulations</title>
-        <meta
-          name="description"
-          content="Azure Digital Twins is an IoT platform that allows you to create a digital representation of IoT-connected infrastructure. Get Azure Digital Twins today."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/azure-digital-twins/"
-        />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Azure Digital Twins | Best Data Modelling and Simulations"
+        description="Azure Digital Twins is an IoT platform that allows you to create a digital representation of IoT-connected infrastructure. Get Azure Digital Twins today."
+        image="/img/azure-digital-twins-banner-1.png"
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -43,11 +38,10 @@ const AzureDigitalTwins = () => {
             <div className="col-lg-6 align-self-center">
               <Image
                 src="/img/azure-digital-twins-banner-1.png"
-                alt="azure-digital-twins-banner"
+                alt="What is Azure Digital Twins?"
                 width={1024}
                 height={586}
-                priority = {true}
-              />
+                priority = {true} />
             </div>
           </div>
         </div>
@@ -94,8 +88,8 @@ const AzureDigitalTwins = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-digitaltwin_Create-Comprehensive.svg"
-                            alt="icons-digitaltwin_Create-Comprehensive"
-                          />
+                            alt=""
+                           aria-hidden="true" />
                         </div>
                         <span>Create Comprehensive Digital Models</span>
                       </button>
@@ -129,8 +123,8 @@ const AzureDigitalTwins = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-digitaltwin_Predictive-Analysis.svg"
-                            alt="icons-digitaltwin_Predictive-Analysis"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Predictive Analysis</span>
                       </button>
@@ -169,8 +163,8 @@ const AzureDigitalTwins = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-digitaltwin_Reduce-Downtime.svg"
-                            alt="icons-digitaltwin_Reduce-Downtime"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Reduce Downtime</span>
                       </button>
@@ -203,8 +197,8 @@ const AzureDigitalTwins = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-digitaltwin_Trusted-Enterprise.svg"
-                            alt="icons-digitaltwin_Trusted-Enterprise"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Trusted Enterprise-Grade Platform</span>
                       </button>

@@ -1,5 +1,4 @@
 import { useRef, useState } from 'react';
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 // import useGsapScrollCards from '../../../hooks/useGsapScrollCards';
@@ -8,6 +7,7 @@ import useCardScrollEffect from "../../../components/useCardScrollEffect";
 import BcPopPdf from '../../../components/BCPdfPopup';
 import NavBar from '../../../components/NavBar';
 import BlogFinanaceCard from '../../../components/BlogFinanaceCard';
+import PageSeo from "../../../components/PageSeo";
 
 
 
@@ -40,29 +40,13 @@ const SalesNew = () => {
 
   return (
     <>
-      <Head>
-        <title>Dynamics 365 Sales Partner UK | Dynamics Square UK</title>
-        <meta
-          name="description"
-          content="Transform your sales operations with Microsoft Dynamics 365 Sales Software in the UK. Automate workflows and improve customer engagement."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-sales/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-sales/" />
-        <meta property="og:title" content="Dynamics 365 Sales Partner UK | Dynamics Square UK" />
-        <meta property="og:description" content="Transform your sales operations with Microsoft Dynamics 365 Sales Software in the UK. Automate workflows and improve customer engagement." />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/sales-new-01.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-sales/" />
-        <meta property="twitter:title" content="Dynamics 365 Sales Partner UK | Dynamics Square UK" />
-        <meta property="twitter:description" content="Transform your sales operations with Microsoft Dynamics 365 Sales Software in the UK. Automate workflows and improve customer engagement." />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/sales-new-01.png" />
-
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Dynamics 365 Sales Partner UK | Dynamics Square UK"
+        description="Transform your sales operations with Microsoft Dynamics 365 Sales Software in the UK. Automate workflows and improve customer engagement."
+        image="https://www.dynamicssquare.co.uk/img/sales-new-01.png"
+        faqs={faqData.slice(0, 5)}
+      />
       <div className='solution-new-banner-one'>
         <div className='container'>
           <div className='row justify-content-center'>
@@ -86,7 +70,7 @@ const SalesNew = () => {
           <div className='row justify-content-center'>
             <div className='col-lg-10'>
               <div className="solution-new-banner-one-imgs">
-                <Image src="/img/sales-new-01.png" alt="sales-new-01" width={916} height={584} className="flot-1" priority />
+                <Image src="/img/sales-new-01.png" alt="" width={916} height={584} className="flot-1" priority aria-hidden="true" />
               </div>
             </div>
           </div>
@@ -102,7 +86,7 @@ const SalesNew = () => {
                   <p>As a trusted Dynamics 365 Sales partner in the UK, Dynamics Square helps businesses manage leads, strengthen customer relationships, and close deals faster with the AI-powered Dynamics 365 Sales CRM.</p>
                 </div>
                 <div className='left-rl'>
-                  <Image src="/img/partner-logo-black.png" width={193} height={55} alt="partner-logo-black" />
+                  <Image src="/img/partner-logo-black.png" width={193} height={55} alt="Microsoft Solutions Partner badge" />
                 </div>
               </div>
             </div>
@@ -140,7 +124,7 @@ const SalesNew = () => {
               </div>
             </div>
             <div className='col-lg-6 align-self-center'>
-              <div className='dsa-minee'><Image src="/img/sales-new-02.png" alt="sales-new-02" width={630} height={588} /></div>
+              <div className='dsa-minee'><Image src="/img/sales-new-02.png" alt="Dynamics 365 Finance Implementation: Why Your Business Needs It" width={630} height={588} /></div>
             </div>
           </div>
 
@@ -160,9 +144,9 @@ const SalesNew = () => {
             <div className='col-lg-6 align-self-center'>
               <div className='product-side-001'>
                 <div className="flot-8">
-                  <Image src="/img/sales-new-03.png" width={523} height={459} alt="sales-new-03" />
+                  <Image src="/img/sales-new-03.png" width={523} height={459} alt="Dynamics 365 Finance Implementation: Why Your Business Needs It" />
                 </div>
-                <img width={563} height={478} src="/img/n-007.png" alt="sales-new-03" className="flot-9" />
+                <img width={563} height={478} src="/img/n-007.png" alt="" className="flot-9" aria-hidden="true"  loading="lazy" decoding="async" />
               </div>
             </div>
             <div className='col-lg-6 align-self-center'>
@@ -374,7 +358,7 @@ const SalesNew = () => {
           </div>
         </div>
         <div className='n-014' >
-          <img src="/img/n-014.png" width={604} height={958} alt="Card 6" />
+          <img src="/img/n-014.png" width={604} height={958} alt="Card 6"  loading="lazy" decoding="async" />
         </div>
       </section>
 
@@ -390,7 +374,7 @@ const SalesNew = () => {
           <div className='row'>
             <div className='col-lg-12'>
               <div className='text-center' style={{marginBottom:'30px'}}>
-                <Image src='/img/sales-new-11.png' alt='sales-new-11' width={1282} height={383} />
+                <Image src='/img/sales-new-11.png' alt="AI-First Selling, Built into Your CRM" width={1282} height={383} />
               </div>
             </div>
           </div>
@@ -465,7 +449,7 @@ const SalesNew = () => {
             </div>
           </div>
         </div>
-        <img src="/img/mask-group-aaa.png" alt="n-015" />
+        <img src="/img/mask-group-aaa.png" alt="Dynamics 365 Sales CRM Pricing & Licensing"  loading="lazy" decoding="async" />
       </section>
       <section id='section8' className='solution-new-pricing'>
         <div className='container'>
@@ -536,7 +520,7 @@ const SalesNew = () => {
           <div className="row">
             <div className="col-lg-3 d-flex">
               <div className="upgrade-box-one upgrade-box-one-c d-flex-fil">
-                <Image src="/img/settings_b.png" alt="settings_b" width={48} height={48} />
+                <Image src="/img/settings_b.png" alt="" width={48} height={48} aria-hidden="true" />
                 <h3>Implementation</h3>
                 <p>Deliver a structured Dynamics 365 Sales implementation aligned with your sales processes and team workflows. Our approach focuses on clean configuration, role-based setup, and practical adoption across sellers and managers.</p>
                 <a href="#exampleModal" data-bs-toggle="modal">Get Started <i className="bi bi-arrow-right"></i></a>
@@ -553,7 +537,7 @@ const SalesNew = () => {
 
             <div className="col-lg-3 d-flex">
               <div className="upgrade-box-one upgrade-box-one-c d-flex-fil">
-                <Image src="/img/person_pin.png" alt="person_pin" width={48} height={48} />
+                <Image src="/img/person_pin.png" alt="" width={48} height={48} aria-hidden="true" />
                 <h3>Support</h3>
                 <p>Keep your sales CRM system running smoothly with ongoing Dynamics 365 Sales support. Our team resolves issues, manages updates, and ensures your CRM continues to support daily selling without any disruption.</p>
                 <a href="#exampleModal" data-bs-toggle="modal">Get Started <i className="bi bi-arrow-right"></i></a>
@@ -562,7 +546,7 @@ const SalesNew = () => {
 
             <div className="col-lg-3 d-flex">
               <div className="upgrade-box-one upgrade-box-one-c d-flex-fil">
-                <img className="image-backx" src="/img/free-cons.png" alt="free-cons" />
+                <img className="image-backx" src="/img/free-cons.png" alt="Support"  loading="lazy" decoding="async" />
                 <Image src="/img/forum.png" alt="forum" width={48} height={48} />
                 <h3>Consulting</h3>
                 <p>Gain Dynamics 365 Sales insights on improving pipeline visibility, forecasting, and seller productivity. Our consultants help you use Copilot, sales agents, and analytics in ways that are in line with your business goals.</p>
@@ -606,7 +590,7 @@ const SalesNew = () => {
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
                           <a href="https://youtu.be/44hqw-S27D0?si=mCEpK1p1hVAXszlj" target='_blank'>
-                            <img src="/img/bc-8-20.png" width={273} height={192} alt="bc-8-20" />
+                            <img src="/img/bc-8-20.png" width={273} height={192} alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                             <h3>Is Your Business Ready for an ERP System?</h3>
                             <p>Explore key signs, benefits, and steps to ERP readiness with Dynamics Square experts in this episode.</p>
                             <div className='ct--a'>
@@ -619,7 +603,7 @@ const SalesNew = () => {
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
                           <a href="https://youtu.be/Of8upj7BtGo?si=Lsf5SCwBtIpSU1ST" target='_blank'>
-                            <img src="/img/bc-8-22.png" width={273} height={192} alt="bc-8-22" />
+                            <img src="/img/bc-8-22.png" width={273} height={192} alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                             <h3>Signs Your Business Is Ready for an ERP System</h3>
                             <p>Understand when to adopt ERP, its benefits, and how Dynamics 365 drives business transformation.</p>
                             <div className='ct--a'>
@@ -635,7 +619,7 @@ const SalesNew = () => {
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
                           <a href="https://www.youtube.com/watch?v=buh-r3WxZtA" target='_blank'>
-                            <img src="/img/sales-vid-01.jpg" width={273} height={192} alt="bc-8-20" />
+                            <img src="/img/sales-vid-01.jpg" width={273} height={192} alt="Microsoft Dynamics 365 Sales Accelerator Overview"  loading="lazy" decoding="async" />
                             <h3>Microsoft Dynamics 365 Sales Accelerator Overview</h3>
                             <p>In this video, get a comprehensive overview of Sales Accelerator in Microsoft Dynamics 365.</p>
                             <div className='ct--a'>
@@ -647,7 +631,7 @@ const SalesNew = () => {
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
                           <a href="https://www.youtube.com/watch?v=RQC9Qu9-hbI" target='_blank'>
-                            <img src="/img/sales-vid-02.jpg" width={273} height={192} alt="bc-8-21" />
+                            <img src="/img/sales-vid-02.jpg" width={273} height={192} alt="EY redefines CRM with Dynamics 365 Sales and Sales Agent in Microsoft 365 Copilot"  loading="lazy" decoding="async" />
                             <h3>EY redefines CRM with Dynamics 365 Sales and Sales Agent in Microsoft 365 Copilot</h3>
                             <p>EY redefines CRM with Dynamics 365 and Sales Agent in Microsoft 365 Copilot, facilitating data entry and freeing sellers to focus on relationships. </p>
                             <div className='ct--a'>
@@ -659,7 +643,7 @@ const SalesNew = () => {
                       <div className='col-lg-4 col-md-4 col-sm-6 d-flex'>
                         <div className='card0-01 card0-02'>
                           <a href="https://www.youtube.com/watch?v=x6zLv5V0eC0" target='_blank'>
-                            <img src="/img/sales-vid-03.jpg" width={273} height={192} alt="bc-8-21" />
+                            <img src="/img/sales-vid-03.jpg" width={273} height={192} alt="Customer ROI with Dynamics 365 Sales"  loading="lazy" decoding="async" />
                             <h3>Customer ROI with Dynamics 365 Sales</h3>
                             <p>Learn about the powerful transformations seen with Dynamics 365 Sales and Microsoft 365 Copilot, such as improved sales performance, enhanced customer interactions, and increased productivity.</p>
                             <div className='ct--a'>

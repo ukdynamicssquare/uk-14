@@ -1,19 +1,13 @@
 import Link from "next/link";
-import Head from "next/head";
+import PageSeo from "../components/PageSeo";
 const CookiePolicy = () => {
   return (
     <>
-      <Head>
-      <title>Cookie Policy | Dynamics Square</title>
-        <meta
-          name="description"
-          content="For more information on Dynamics Square Cookie Policy, contact our Dynamics 365 support team. We would love to provide the best information for your perusal."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/cookie-policy/"
-        />
-      </Head>
+      <PageSeo
+        type="WebPage"
+        title="Cookie Policy | Dynamics Square"
+        description="For more information on Dynamics Square Cookie Policy, contact our Dynamics 365 support team. We would love to provide the best information for your perusal."
+      />
       <section className="Solution-banner hero-1 hero custom-pd-4">
         <div className="container">
           <div className="row justify-content-center ">

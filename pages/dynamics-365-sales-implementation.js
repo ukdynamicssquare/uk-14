@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -8,6 +7,31 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import { FreeMode, Navigation, Thumbs, Autoplay } from "swiper/modules";
+import PageSeo from "../components/PageSeo";
+// Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
+const PAGE_FAQS = [
+  {
+    "question": "What's next after submitting my contact details?",
+    "answer": "Once you submit your details, one of our experts will call you to understand your business, its present requirements, and future needs too, and the process is known as Phase 1 Discovery Call. We will document everything, prepare an FRD, perform a FIT-GAP analysis, and start the implementation process. In case of need, we arrange a Discovery Call again with our expert functional consultants."
+  },
+  {
+    "question": "What's my role in the entire implementation project?",
+    "answer": "Your sole role would be to give us accurate information about your current processes and future needs so that we can implement a perfect D365 CRM sales solution for you. Also, you need to be cooperative during the process for a seamless and smooth implementation."
+  },
+  {
+    "question": "Does Dynamics Square provide training?",
+    "answer": "To properly utilise the newly installed solution, we provide a free training session for users to understand the system functions, features, and capabilities. Also, we will help you understand the core capabilities so that you can understand your current and future requirements for the Phase 2 implementation process (in case of need)."
+  },
+  {
+    "question": "How long will it take to implement the project successfully?",
+    "answer": "Neither we, nor anyone else, can give you an exact time frame for implementing a solution without first understanding the business and its requirements. Various factors, including the number of processes, complexity of operations, integrations, and customizations, specify the time."
+  },
+  {
+    "question": "What is the accurate cost of D365 Sales implementation?",
+    "answer": "Like time, various factors define the accurate cost of implementation. You can simply call your Dynamics 365 Sales Implementation partner to get the exact quote for the implementation process. Dynamics 365 Field Service, Dynamics 365 Customer Engagement, Microsoft Dynamics AX, Microsoft Dynamics 365 Sales Implementation Guide"
+  }
+];
+
 
 const ImplementationSales = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -20,17 +44,12 @@ const ImplementationSales = () => {
 }
   return (
     <>
-      <Head>
-        <title>Dynamics 365 Sales Implementation | Dynamics Square UK</title>
-        <meta
-          name="description"
-          content="Drive revenue growth with Dynamics 365 Sales implementation by Dynamics Square UK. Optimise sales processes, improve visibility, and close deals faster."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/dynamics-365-sales-implementation/"
-        />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Dynamics 365 Sales Implementation | Dynamics Square UK"
+        description="Drive revenue growth with Dynamics 365 Sales implementation by Dynamics Square UK. Optimise sales processes, improve visibility, and close deals faster."
+        faqs={PAGE_FAQS}
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -61,10 +80,9 @@ const ImplementationSales = () => {
             <div className="col-lg-6">
               <Image
                 src="/img/business-central-implementation-banner-1.svg"
-                alt="business-central-implementation-banner"
+                alt="How can D365 Sales enhance your business Growth?"
                 width={1024} height={586}
-                priority={true}
-              />
+                priority={true} />
             </div>
           </div>
         </div>
@@ -394,7 +412,7 @@ const ImplementationSales = () => {
           <div className="row">
             <div className="col-lg-6">
               <div className="box-6-pic">
-                <img src="/img/imp-left.svg" alt="imp-left.svg" />
+                <img src="/img/imp-left.svg" alt="" aria-hidden="true" />
               </div>
             </div>
 
@@ -499,13 +517,13 @@ const ImplementationSales = () => {
                           <img
                             src="/img/Component-1-icons.svg"
                             className="overmain-thumb"
-                            alt="Component-1-icons"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-1-iconss.svg"
                             className="over"
-                            alt="Component-1-icons-red"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
@@ -513,13 +531,13 @@ const ImplementationSales = () => {
                           <img
                             src="/img/Component-2.svg"
                             className="overmain-thumb-1"
-                            alt="Component-2"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-2-iconss.svg"
                             className="over-1"
-                            alt="Component-2-icons-red"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
@@ -527,13 +545,13 @@ const ImplementationSales = () => {
                           <img
                             src="/img/Component-3.svg"
                             className="overmain-thumb-2"
-                            alt="Component-3"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-3-iconss.svg"
                             className="over-1"
-                            alt="Component-1-icons-red"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
@@ -541,13 +559,13 @@ const ImplementationSales = () => {
                           <img
                             src="/img/Component-4.svg"
                             className="overmain-thumb-3"
-                            alt="Component-4"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-4-iconss.svg"
                             className="over-1"
-                            alt="Component-1-icons-red"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
@@ -555,13 +573,13 @@ const ImplementationSales = () => {
                           <img
                             src="/img/Component-5.svg"
                             className="overmain-thumb-4"
-                            alt="Component-5"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-5-iconss.svg"
                             className="over-1"
-                            alt="Component-1-icons-red"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                     </Swiper>

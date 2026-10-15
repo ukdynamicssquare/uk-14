@@ -1,29 +1,24 @@
 import { useEffect, useState } from "react";
 import FormCaseScroll from "../../components/FormCaseScroll";
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Autoplay, FreeMode, Pagination } from "swiper/modules";
+import PageSeo from "../../components/PageSeo";
 
 const CaseStudyTimosco = () => {
 
   return (
     <>
-      <Head>
-        <title>NAV 13 R2 to Dynamics 365 Business Central Upgrade</title>
-        <meta
-          name="description"
-          content="A surgical instruments UK brand collaborated with Dynamics Square to enhance their system from Dynamics NAV 13 R2 to Dynamics 365 Business Central Upgrade. Check out the case study to discover valuable insights."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/case-studies/nav13R2-to-business-central/ "
-        />
-      </Head>
+      <PageSeo
+        type="Article"
+        title="NAV 13 R2 to Dynamics 365 Business Central Upgrade"
+        description="A surgical instruments UK brand collaborated with Dynamics Square to enhance their system from Dynamics NAV 13 R2 to Dynamics 365 Business Central Upgrade. Check out the case study to discover valuable insights."
+        image="/img/Dynamics-365-Business-Central.png"
+      />
       <section className="hero-1 hero">
         <div className="container">
           <div className="row">
@@ -58,8 +53,7 @@ const CaseStudyTimosco = () => {
                 <div className="col-lg-3 align-self-center">
                   <img
                     src="/img/casestudy-pic.png"
-                    alt="casestudy-pic"
-                  />
+                    alt="NAV 13 R2 to Dynamics 365 Business Central Upgrade" />
                 </div>
                 <div className="col-lg-9">
                   <p>Established in 1964,the company is a well-known manufacturer and supplier of surgical instruments in the UK market and is continuously working to expand the same globally. The company was expanding with a product range that includes Anesthesia, Surgery, General Medical, and Podiatry in the medical industry. They were also working toward innovating and developing medical technologies to bring awareness and improve the quality of human life.</p>
@@ -81,10 +75,9 @@ const CaseStudyTimosco = () => {
             <div className="col-lg-6">
               <Image
                 src="/img/cast-stu-pic.png"
-                alt="cast-stu-pic"
+                alt="What are The Business Challenges"
                 width={484}
-                height={407}
-              />
+                height={407} />
             </div>
             <div className="col-lg-6">
               <div className="content-icons-modil-1">
@@ -186,8 +179,8 @@ const CaseStudyTimosco = () => {
                           <div className="img-wrp">
                             <img
                               src="/img/material-lightbulb-outline.svg"
-                              alt="Food-and-beverage"
-                            />
+                              alt=""
+                             aria-hidden="true"  loading="lazy" decoding="async" />
                           </div>
                           <div className="text-wrp-content">
                             <p>
@@ -212,7 +205,7 @@ const CaseStudyTimosco = () => {
                               <img
                                 src="/img/material-lightbulb-outline.svg"
                                 alt="NotforProfit"
-                              />
+                               loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>
@@ -234,7 +227,7 @@ const CaseStudyTimosco = () => {
                               <img
                                 src="/img/material-lightbulb-outline.svg"
                                 alt="Ecommerce"
-                              />
+                               loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>
@@ -255,8 +248,8 @@ const CaseStudyTimosco = () => {
                             <div className="img-wrp">
                               <img
                                 src="/img/material-lightbulb-outline.svg"
-                                alt="proffesional-service"
-                              />
+                                alt=""
+                               aria-hidden="true"  loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>
@@ -352,7 +345,7 @@ const CaseStudyTimosco = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="call_to_action-right over-img">
-                <img src="/img/MaskGroup8.png" alt="image" />
+                <img src="/img/MaskGroup8.png" alt="Business consultant"  loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="col-lg-7 align-self-center">

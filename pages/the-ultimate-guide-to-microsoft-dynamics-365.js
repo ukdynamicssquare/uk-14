@@ -1,7 +1,7 @@
-import Head from 'next/head';
 import Image from 'next/image';
 import FormUltimateGuideForm from '../components/FormUltimateGuideForm';
 import FormUltimateGuideFormInner from '../components/FormUltimateGuideFormInner';
+import PageSeo from "../components/PageSeo";
 export default function TheUltimateGuide() {
 
 const checklistItems = [
@@ -51,28 +51,12 @@ const logos = [
 
     return (
         <>
-            <Head>
-               <title>The Ultimate Guide to Microsoft Dynamics 365 | Dynamics Square</title>
-        <meta
-          name="description"
-          content="Comprehensive guide to Microsoft Dynamics 365—features, benefits, modules and how it transforms modern business operations."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/the-ultimate-guide-to-microsoft-dynamics-365/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/the-ultimate-guide-to-microsoft-dynamics-365/" />
-        <meta property="og:title" content="The Ultimate Guide to Microsoft Dynamics 365 | Dynamics Square" />
-        <meta property="og:description" content="Comprehensive guide to Microsoft Dynamics 365—features, benefits, modules and how it transforms modern business operations." />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/the-ultmate-ai-guide-banner.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/the-ultimate-guide-to-microsoft-dynamics-365/" />
-        <meta property="twitter:title" content="The Ultimate Guide to Microsoft Dynamics 365 | Dynamics Square" />
-        <meta property="twitter:description" content="Comprehensive guide to Microsoft Dynamics 365—features, benefits, modules and how it transforms modern business operations." />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/the-ultmate-ai-guide-banner.png" />
-            </Head>
+            <PageSeo
+              type="Article"
+              title="The Ultimate Guide to Microsoft Dynamics 365 | Dynamics Square"
+              description="Comprehensive guide to Microsoft Dynamics 365—features, benefits, modules and how it transforms modern business operations."
+              image="https://www.dynamicssquare.co.uk/img/the-ultmate-ai-guide-banner.png"
+            />
 
             <section className="home-baner-head-new home-baner-head-nepd">
                 <div className="container">
@@ -101,7 +85,7 @@ const logos = [
                         </div>
                         <div className='col-lg-6'>
                             <div className='guide-side-b-pic'>
-                                <Image src="/img/guide-00.png" alt='guide-00' width={1476} height={1292} />
+                                <Image src="/img/guide-00.png" alt="Most Businesses Don't Lack Ambition. They Lack Clarity." width={1476} height={1292} />
                             </div>
                         </div>
                     </div>

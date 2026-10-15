@@ -1,20 +1,16 @@
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
+import PageSeo from "../../components/PageSeo";
 
 const Guides = () => {
   return (
     <>
-      <Head>
-        <title>
-          Microsoft Dynamics Guides: Knowledge Hub from Dynamics Square
-        </title>
-        <meta
-          name="description"
-          content="Our guides provide in-depth analysis, emerging technology updates, advanced ERP and CRM solutions to help you grow."
-        />
-        <link rel="canonical" href="https://www.dynamicssquare.co.uk/guides/" />
-      </Head>
+      <PageSeo
+        type="CollectionPage"
+        title="Microsoft Dynamics Guides: Knowledge Hub from Dynamics Square"
+        description="Our guides provide in-depth analysis, emerging technology updates, advanced ERP and CRM solutions to help you grow."
+        image="/img/guide-main-banner.png"
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -23,7 +19,7 @@ const Guides = () => {
               <p>Our guides provide in-depth analysis, emerging technology updates, advanced ERP and CRM solutions to help you grow.</p>
             </div>
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/guide-main-banner.png" alt="guide-main-banner" width={717} height={447} priority = {true} />
+              <Image src="/img/guide-main-banner.png" alt="Make your digital transformation journey a success" width={717} height={447} priority = {true} />
             </div>
           </div>
         </div>
@@ -130,8 +126,7 @@ const Guides = () => {
                           <img
                             className="card-img-top"
                             src="/img/chapter5-5.png"
-                            alt="business-central-guide"
-                          />
+                            alt="Make your digital transformation journey a success"  loading="lazy" decoding="async" />
                         </Link>
                         <div className="card-body">
                           <h5 className="card-title">
@@ -158,8 +153,7 @@ const Guides = () => {
                           <img
                             className="card-img-top"
                             src="/img/powerbi-guid-pic.png"
-                            alt="Power-bi-guide"
-                          />
+                            alt="Make your digital transformation journey a success"  loading="lazy" decoding="async" />
                         </Link>
                         <div className="card-body">
                           <h5 className="card-title">

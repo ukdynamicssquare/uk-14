@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import BlogStyles from "../../../components/blog/BlogStyles";
-import { BlogFontPreload, BlogPageHero } from "../../../components/blog/BlogUi";
+import { blogFontLinks, BlogPageHero } from "../../../components/blog/BlogUi";
 
 import { BlogService } from "../../../helpers/blogApi";
 import { extractArray, tagNameOf, tagSlugOf } from "../../../helpers/blogData";
@@ -50,8 +50,8 @@ function TagsIndex({ tags }) {
           content="Explore all blog tags and discover articles by topic."
         />
         <link rel="canonical" href={`${SITE_URL}/blog/tag/`} />
+        {blogFontLinks()}
       </Head>
-      <BlogFontPreload />
 
       <BlogPageHero
         crumbs={[

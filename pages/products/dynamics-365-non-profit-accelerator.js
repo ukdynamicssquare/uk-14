@@ -1,19 +1,49 @@
 import React, { useState } from "react";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link"; 
 import ModalVideo from "react-modal-video";
+import PageSeo from "../../components/PageSeo";
+// Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
+const PAGE_FAQS = [
+  {
+    "question": "How does Microsoft Dynamics 365 CRM benefit Not for Profit Organisation?",
+    "answer": "Microsoft offers a variety of business management solutions, among which Dynamics 365 CRM is the most popular and effective. It can aid nonprofit organisations in managing their donors, stakeholders, and board members while offering a superior experience of charity interaction."
+  },
+  {
+    "question": "Is my organisation eligible for Dynamics 365 nonprofit pricing?",
+    "answer": "Yes, irrespective of the size and complexity of your charitable organisation, you are eligible to implement Dynamics 365 for nonprofits. It will supercharge your core operations while accelerating your ability to make a greater impact on society for an important cause."
+  },
+  {
+    "question": "How can Dynamics 365 help nonprofits?",
+    "answer": "Dynamics 365 nonprofit accelerator can help you manage funds, streamline expenses, monitor resources, and control frontline humanitarian logistics. Not only this, but Dynamics 365 empowers you to automate processes, manage project delivery, and offer donation data in real time."
+  },
+  {
+    "question": "How a custom-built Dynamics 365 CRM for a non-Profit Organisation look like?",
+    "answer": "Charities or nonprofit organisations work with different methodologies and different causes. This leads to their specific needs and demands. To deal with such processes, you can customise your Dynamics 365 CRM to align with your nonprofit's needs. Your Dynamics 365 CRM implementation partner will understand your requirements and offer you the perfect solution."
+  },
+  {
+    "question": "What is included in Microsoft 365 for nonprofits?",
+    "answer": "Dynamics 365 nonprofit comes with exceptional features, tools, and capabilities to deal with the changing demands of modern nonprofit organisations. It comes with award management, project tracking, fundraising management, volunteer management, tax management, and tracking project goals. and much more capability."
+  },
+  {
+    "question": "What can I expect when I buy through a Microsoft partner?",
+    "answer": "When you buy Dynamics 365 Nonprofit from a Microsoft-certified solutions partner, like Dynamics Square UK, you will get cost effectiveness, reliability, trustworthiness, and value for money services."
+  }
+];
+
 
 const NonProfitAccelerator = () => {
   const [isOpen, setOpen] = useState(false);
   const [open, setsOpen] = useState(false);
   return (
     <>
-      <Head>
-      <title>Dynamics 365 Nonprofit Accelerator | Dynamics Square UK</title>
-<meta name="description" content="Implement Dynamics 365 Nonprofit Accelerator to simplify charity operations, streamline funds management, build customise solutions, and monitor expenses while optimizing funds."/>
-<link rel="canonical" href="https://www.dynamicssquare.co.uk/products/dynamics-365-non-profit-accelerator/" />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Dynamics 365 Nonprofit Accelerator | Dynamics Square UK"
+        description="Implement Dynamics 365 Nonprofit Accelerator to simplify charity operations, streamline funds management, build customise solutions, and monitor expenses while optimizing funds."
+        image="/img/Dynamics-non-profit-Banner.png"
+        faqs={PAGE_FAQS}
+      />
       <ModalVideo
         channel="youtube"
         autoplay
@@ -45,10 +75,9 @@ const NonProfitAccelerator = () => {
                  <div className="col-lg-6 align-self-center">
                    <Image
                      src="/img/Dynamics-non-profit-Banner.png"
-                     alt="Dynamics-non-profit-Banner"
+                     alt="What Is Dynamics 365 Nonprofit Accelerator?"
                      width={790} height={470}
-                     priority = {true}
-                   />
+                     priority = {true} />
                  </div>
                </div>
              </div>
@@ -118,7 +147,7 @@ const NonProfitAccelerator = () => {
                         aria-controls="fin2"
                       >
                         <div className="wr-in">
-                          <img src="/img/Financials-3.svg" alt="icons" width="36" height="36" />
+                          <img src="/img/Financials-3.svg" alt="icons" width="36" height="36"  loading="lazy" decoding="async" />
                         </div>
                         <span>Project Management</span>
                       </button>
@@ -146,7 +175,7 @@ const NonProfitAccelerator = () => {
                         aria-controls="fin3"
                       >
                         <div className="wr-in">
-                        <img src="/img/Budget.svg" alt="icons" width="36" height="36" />
+                        <img src="/img/Budget.svg" alt="icons" width="36" height="36"  loading="lazy" decoding="async" />
                         </div>
                         <span>Build Specific Applications </span>
                       </button>
@@ -174,7 +203,7 @@ const NonProfitAccelerator = () => {
                         aria-controls="fin4"
                       >
                         <div className="wr-in">
-                          <img src="/img/Financials-3.svg" alt="icons" width="36" height="36" />
+                          <img src="/img/Financials-3.svg" alt="icons" width="36" height="36"  loading="lazy" decoding="async" />
                         </div>
                         <span>Track Fundraising Activity </span>
                       </button>
@@ -210,7 +239,7 @@ const NonProfitAccelerator = () => {
                         aria-controls="fin7"
                       >
                         <div className="wr-in">
-                          <img src="/img/Project.svg" alt="icons" width="36" height="36" />
+                          <img src="/img/Project.svg" alt="icons" width="36" height="36"  loading="lazy" decoding="async" />
                         </div>
                         <span>Volunteer Management </span>
                       </button>
@@ -242,7 +271,7 @@ const NonProfitAccelerator = () => {
                             src="/img/International-Accounting-3.svg"
                             alt="icons"
                             width="36" height="36"
-                          />
+                           loading="lazy" decoding="async" />
                         </div>
                         <span>Collecting and Distributing Donations </span>
                       </button>
@@ -270,7 +299,7 @@ const NonProfitAccelerator = () => {
                         aria-controls="fin9"
                       >
                         <div className="wr-in">
-                        <img src="/img/Project.svg" alt="icons" width="36" height="36" />
+                        <img src="/img/Project.svg" alt="icons" width="36" height="36"  loading="lazy" decoding="async" />
                         </div>
                         <span>Programme Delivery </span>
                       </button>
@@ -302,7 +331,7 @@ const NonProfitAccelerator = () => {
                             src="/img/International-Accounting-3.svg"
                             alt="icons"
                             width="36" height="36"
-                          />
+                           loading="lazy" decoding="async" />
                         </div>
                         <span>Donation Management </span>
                       </button>
@@ -423,8 +452,8 @@ const NonProfitAccelerator = () => {
                         <span className="cente-icns">
                           <img
                             src="/img/play_icons.svg"
-                            alt="play_icons"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </span></a>
                      
                     </div>

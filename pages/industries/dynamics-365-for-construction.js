@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
@@ -8,32 +7,17 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Autoplay, FreeMode, Pagination } from "swiper/modules";
+import PageSeo from "../../components/PageSeo";
 
 const Dynamics365ForConstruction = () => {
   return (
     <>
-      <Head>
-        <title>Microsoft Dynamics 365 for Construction | Dynamics Square UK</title>
-        <meta
-          name="description"
-          content="Dynamics 365 for Construction optimises project management, collaboration, and efficiency, simplifying construction processes for enhanced productivity."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/industries/dynamics-365-for-construction/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/industries/dynamics-365-for-construction/" />
-        <meta property="og:title" content="Microsoft Dynamics 365 for Construction | Dynamics Square UK" />
-        <meta property="og:description" content="Dynamics 365 for Construction optimises project management, collaboration, and efficiency, simplifying construction processes for enhanced productivity." />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/construction-banner.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/industries/dynamics-365-for-construction/" />
-        <meta property="twitter:title" content="Microsoft Dynamics 365 for Construction | Dynamics Square UK" />
-        <meta property="twitter:description" content="Dynamics 365 for Construction optimises project management, collaboration, and efficiency, simplifying construction processes for enhanced productivity." />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/construction-banner.png" />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Microsoft Dynamics 365 for Construction | Dynamics Square UK"
+        description="Dynamics 365 for Construction optimises project management, collaboration, and efficiency, simplifying construction processes for enhanced productivity."
+        image="https://www.dynamicssquare.co.uk/img/construction-banner.png"
+      />
         <section className="Solution-banner hero-1 hero">
           <div className="container">
             <div className="row">
@@ -54,11 +38,10 @@ const Dynamics365ForConstruction = () => {
               <div className="col-lg-6 align-self-center">
                 <Image
                   src="/img/construction-banner.png"
-                  alt="construction-banner"
+                  alt="Dynamics 365 for Construction: Streamline Projects, Maximise Profits"
                   width={665}
                   height={447}
-                  priority={true}
-                />
+                  priority={true} />
               </div>
             </div>
           </div>
@@ -128,7 +111,7 @@ const Dynamics365ForConstruction = () => {
             <div className="row">
               <div className="col-lg-5">
                 <div className="call_to_action-right over-img">
-                  <img src="/img/MaskGroup8.png" alt="image" />
+                  <img src="/img/MaskGroup8.png" alt="Business consultant" />
                 </div>
               </div>
               <div className="col-lg-7 align-self-center">
@@ -166,10 +149,9 @@ const Dynamics365ForConstruction = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/manage-schedule-resources.png"
-                      alt="manage-schedule-resources"
+                      alt="Manage and Schedule Resources"
                       width={48}
-                      height={48}
-                    />
+                      height={48}  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Manage and Schedule Resources</h3>
@@ -180,10 +162,9 @@ const Dynamics365ForConstruction = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/enhanced-team-collaboration.png"
-                      alt="enhanced-team-collaboration"
+                      alt="Enhanced Team Collaboration"
                       width={48}
-                      height={48}
-                    />
+                      height={48}  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Enhanced Team Collaboration</h3>
@@ -194,10 +175,9 @@ const Dynamics365ForConstruction = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/seamless-integration.png"
-                      alt="seamless-integration"
+                      alt="Seamless Integration"
                       width={48}
-                      height={48}
-                    />
+                      height={48}  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Seamless Integration</h3>
@@ -208,10 +188,9 @@ const Dynamics365ForConstruction = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/real-time-reporting.png"
-                      alt="real-time-reporting"
+                      alt="Real-time Reporting"
                       width={48}
-                      height={48}
-                    />
+                      height={48}  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Real-time Reporting</h3>
@@ -224,10 +203,9 @@ const Dynamics365ForConstruction = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/one-click-integration.png"
-                      alt="one-click-integration"
+                      alt="Easy to Scale"
                       width={48}
-                      height={48}
-                    />
+                      height={48}  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Easy to Scale</h3>
@@ -238,10 +216,9 @@ const Dynamics365ForConstruction = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/comes-with-business-intelligence.png"
-                      alt="comes-with-business-intelligence"
+                      alt="Comes with Business Intelligence"
                       width={48}
-                      height={48}
-                    />
+                      height={48}  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Comes with Business Intelligence</h3>
@@ -252,10 +229,9 @@ const Dynamics365ForConstruction = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/role-tailored-user-interface.png"
-                      alt="role-tailored-user-interface"
+                      alt="Role-tailored User Interface"
                       width={48}
-                      height={48}
-                    />
+                      height={48}  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Role-tailored User Interface</h3>
@@ -267,10 +243,9 @@ const Dynamics365ForConstruction = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/bulit-in-automation.png"
-                      alt="bulit-in-automation"
+                      alt="Built-in Automation"
                       width={48}
-                      height={48}
-                    />
+                      height={48}  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Built-in Automation</h3>
@@ -299,10 +274,9 @@ const Dynamics365ForConstruction = () => {
                     <Image
                       src="/img/construction-side.png"
                       className="fix-im"
-                      alt="construction-side"
+                      alt="What else can Dynamics 365 for Construction do?"
                       width={482}
-                      height={513}
-                    />
+                      height={513} />
                   </div>
                 </div>
               </div>
@@ -398,8 +372,8 @@ const Dynamics365ForConstruction = () => {
                               <div className="img-wrp">
                                 <img
                                   src="/img/Food-and-beverage.svg"
-                                  alt="Food-and-beverage"
-                                />
+                                  alt=""
+                                 aria-hidden="true"  loading="lazy" decoding="async" />
                               </div>
                               <div className="text-wrp-content">
                                 <h3>Food & Beverages</h3>
@@ -423,7 +397,7 @@ const Dynamics365ForConstruction = () => {
                                   <img
                                     src="/img/NotforProfit.svg"
                                     alt="NotforProfit"
-                                  />
+                                   loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>Not for Profit</h3>
@@ -448,7 +422,7 @@ const Dynamics365ForConstruction = () => {
                                   <img
                                     src="/img/Ecommerce.svg"
                                     alt="Ecommerce"
-                                  />
+                                   loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>E-Commerce</h3>
@@ -471,8 +445,8 @@ const Dynamics365ForConstruction = () => {
                                 <div className="img-wrp">
                                   <img
                                     src="/img/proffesional-service.svg"
-                                    alt="proffesional-service"
-                                  />
+                                    alt=""
+                                   aria-hidden="true"  loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>Professional Services</h3>
@@ -495,7 +469,7 @@ const Dynamics365ForConstruction = () => {
                             <div className="industries-list-more">
                               <Link href="/industries/startups/">
                                 <div className="img-wrp">
-                                  <img src="/img/start-up.svg" alt="start-up" />
+                                  <img src="/img/start-up.svg" alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>Startups</h3>

@@ -1,34 +1,42 @@
-import Head from 'next/head';
 import Link from "next/link"; 
 import Image from 'next/image';
+import PageSeo from "../../components/PageSeo";
+// Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
+const PAGE_FAQS = [
+  {
+    "question": "What is Microsoft Dynamics 365 Support?",
+    "answer": "Microsoft offers different business management applications to help streamline their entire business while simplifying existing operations. These applications are supposed to be maintained, updated, and upgraded over time to meet customer as well as market demands. For this, we have certified Microsoft partners who offer support services, as Microsoft doesn't provide such services directly to businesses. If you own any of the Microsoft Dynamics 365 solutions, you will need an efficient Dynamics 365 support partner for effective business operations."
+  },
+  {
+    "question": "Is it necessary to get support?",
+    "answer": "If you want an efficient working of your business solution and want to resolve critical business issues whenever they arise, you will need the right ERP support partner. Even so, you will need the partner to upgrade or update your existing system to align with the latest business requirements. To avail seamless support, contact Dynamics Square and make your business future-proof."
+  },
+  {
+    "question": "How can I avail instant support for Dynamics 365 applications?",
+    "answer": "It might be possible that you are stuck with an error or an issue that requires immediate support to get it resolved. In such a case, you will need to contact your Dynamics support partner, like Dynamics Square, and avail of ad-hoc support for instant resolution of all your business issues."
+  },
+  {
+    "question": "Can I avail support for other Microsoft solutions as well?",
+    "answer": "Yes, most of the Microsoft certified support partner offers their support services to other Microsoft solutions as well. If you have integrated any application of the Power Platform, like Power BI or Power Apps, you can get support whenever required."
+  },
+  {
+    "question": "Does support from partners help with system updates or upgrades?",
+    "answer": "If you are working with an outdated ERP or CRM solution and want to update or upgrade it, your support partner can do it easily. Even so, the entire system can be updated without hampering your current business operations."
+  }
+];
+
 
 const SupportServices = () => {
   return (
     <>
-      <Head>
-      <title>Microsoft Dynamics 365 Support & Services UK | Dynamics Square</title>
-        <meta
-          name="description"
-          content="Peace of Mind with Dynamics 365: 24/7 Support at your fingertips. Resolve complex issues, resume business operations instantly, and drive continuous growth by partnering with a top-tier Microsoft Dynamics 365 support partner UK."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/our-services/dynamics-365-support-services/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/our-services/dynamics-365-support-services/" />
-        <meta property="og:title" content="Microsoft Dynamics 365 Support & Services | Dynamics Square UK" />
-        <meta property="og:description" content="Peace of Mind with Dynamics 365: 24/7 Support at your fingertips. Resolve complex issues, resume business operations instantly, and drive continuous growth by partnering with a top-tier Microsoft Dynamics 365 support partner UK." />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/support-service-banner.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/our-services/dynamics-365-support-services/" />
-        <meta property="twitter:title" content="Microsoft Dynamics 365 Support & Services | Dynamics Square UK" />
-        <meta property="twitter:description" content="Peace of Mind with Dynamics 365: 24/7 Support at your fingertips. Resolve complex issues, resume business operations instantly, and drive continuous growth by partnering with a top-tier Microsoft Dynamics 365 support partner UK." />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/support-service-banner.png" />
-
-        
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Microsoft Dynamics 365 Support & Services UK | Dynamics Square"
+        description="Peace of Mind with Dynamics 365: 24/7 Support at your fingertips. Resolve complex issues, resume business operations instantly, and drive continuous growth by partnering with a top-tier Microsoft Dynamics 365 support partner UK."
+        image="https://www.dynamicssquare.co.uk/img/support-service-banner.png"
+        ogTitle="Microsoft Dynamics 365 Support & Services | Dynamics Square UK"
+        faqs={PAGE_FAQS}
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -72,7 +80,7 @@ const SupportServices = () => {
           <div className="row pad2xxx">
             <div className="col-lg-6 align-self-center">
               <div className="busine_service_bottom-left custom012">
-                <Image src="/img/supper-img.png" alt="supper-img" width={581} height={477} />
+                <Image src="/img/supper-img.png" alt="Peace of Mind with Dynamics 365: 24/7 Support at Your Fingertips" width={581} height={477} />
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
@@ -111,7 +119,7 @@ const SupportServices = () => {
             <div className="col-lg-4">
               <div className="new-card-sol new-card-sol-new">
                 <div className="head-img">
-                  <img src="/img/Ad-hoc-Support.png" alt="icons" width="210" height="119" />
+                  <img src="/img/Ad-hoc-Support.png" alt="icons" width="210" height="119"  loading="lazy" decoding="async" />
                 </div>
                 <div className="body">
                   <h3>Ad-hoc Support</h3>
@@ -123,7 +131,7 @@ const SupportServices = () => {
             <div className="col-lg-4">
               <div className="new-card-sol new-card-sol-new">
                 <div className="head-img">
-                  <img src="/img/Prepaid-Hours-Support.png" alt="icons"  width="210" height="119" />
+                  <img src="/img/Prepaid-Hours-Support.png" alt="icons"  width="210" height="119"  loading="lazy" decoding="async" />
                 </div>
                 <div className="body">
                   <h3>Prepaid Hours Support</h3>
@@ -135,7 +143,7 @@ const SupportServices = () => {
             <div className="col-lg-4">
               <div className="new-card-sol new-card-sol-new">
                 <div className="head-img">
-                  <img src="/img/annual-support-icons.png" alt="annual-support-icons"  width="210" height="119" />
+                  <img src="/img/annual-support-icons.png" alt=""  width="210" height="119" aria-hidden="true"  loading="lazy" decoding="async" />
                 </div>
                 <div className="body">
                   <h3>Annual Support</h3>
@@ -182,7 +190,7 @@ const SupportServices = () => {
             <div className="col-lg-6">
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                  <Image src="/img/Technical-Supports-ic.svg" alt="Technical-Supports-ic" width={94} height={94} />
+                  <Image src="/img/Technical-Supports-ic.svg" alt="Technical Support" width={94} height={94} />
                 </div>
                 <div className="style-grid-content">
                   <h3>Technical Support</h3>
@@ -192,7 +200,7 @@ const SupportServices = () => {
 
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                  <Image src="/img/Integration-ic.svg" alt="Integration-ic.svg" width={94} height={94} />
+                  <Image src="/img/Integration-ic.svg" alt="Integrations" width={94} height={94} />
                 </div>
                 <div className="style-grid-content">
                   <h3>Integrations</h3>
@@ -201,7 +209,7 @@ const SupportServices = () => {
               </div>
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                  <Image src="/img/System-upgrade-ic.svg" alt="System-upgrade-ic" width={94} height={94} />
+                  <Image src="/img/System-upgrade-ic.svg" alt="System Upgrade" width={94} height={94} />
                 </div>
                 <div className="style-grid-content">
                   <h3>System Upgrade</h3>
@@ -212,7 +220,7 @@ const SupportServices = () => {
             <div className="col-lg-6">
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                  <Image src="/img/Technical-Support-ic.svg" alt="Technical-Support-ic" width={94} height={94} />
+                  <Image src="/img/Technical-Support-ic.svg" alt="Consultation" width={94} height={94} />
                 </div>
                 <div className="style-grid-content">
                   <h3>Consultation</h3>
@@ -224,9 +232,8 @@ const SupportServices = () => {
                 <div className="style-grid-icons">
                   <Image
                     src="/img/Customisation-ic.svg"
-                    alt="Customisation-ic"
-                    width={94} height={94}
-                  />
+                    alt="Customisations"
+                    width={94} height={94} />
                 </div>
                 <div className="style-grid-content">
                   <h3>Customisations</h3>
@@ -237,9 +244,8 @@ const SupportServices = () => {
                 <div className="style-grid-icons">
                   <Image
                     src="/img/User-Training-ic.svg"
-                    alt="User-Training-ic"
-                    width={94} height={94}
-                  />
+                    alt="User Trainings"
+                    width={94} height={94} />
                 </div>
                 <div className="style-grid-content">
                   <h3>User Trainings</h3>
@@ -265,70 +271,70 @@ const SupportServices = () => {
             <div className='col-lg-3'>
               <div className='hover-action-d'>
                 <Link href='/products/microsoft-dynamics-nav/'>
-                  <img src="/img/menu-icons/NAV.png" alt="NAV" width="48" height="48" />Dynamics NAV
+                  <img src="/img/menu-icons/NAV.png" alt="NAV" width="48" height="48"  loading="lazy" decoding="async" />Dynamics NAV
                 </Link>
               </div>
             </div>
             <div className='col-lg-3'>
               <div className='hover-action-d'>
                 <Link href='/products/microsoft-dynamics-ax/'>
-                  <img src="/img/menu-icons/AX.png" alt="AX" width="48" height="48" />Dynamics AX
+                  <img src="/img/menu-icons/AX.png" alt="AX" width="48" height="48"  loading="lazy" decoding="async" />Dynamics AX
                 </Link>
               </div>
             </div>
             <div className='col-lg-3'>
               <div className='hover-action-d'>
                 <Link href='/products/dynamics-365-customer-engagement/'>
-                  <img src="/img/menu-icons/dynamics-365-customer-engagement.svg" alt="dynamics-365-customer-engagement" width="48" height="48" />Customer Engagement
+                  <img src="/img/menu-icons/dynamics-365-customer-engagement.svg" alt="" width="48" height="48" aria-hidden="true"  loading="lazy" decoding="async" />Customer Engagement
                 </Link>
               </div>
             </div>
             <div className='col-lg-3'>
               <div className='hover-action-d'>
                 <Link href='/products/dynamics-365-business-central/'>
-                  <img src="/img/menu-icons/dynamics-365-businesscentral.svg" alt="dynamics-365-businesscentral" width="48" height="48" />Business Central
+                  <img src="/img/menu-icons/dynamics-365-businesscentral.svg" alt="" width="48" height="48" aria-hidden="true"  loading="lazy" decoding="async" />Business Central
                 </Link>
               </div>
             </div>
             <div className='col-lg-3'>
               <div className='hover-action-d'>
                 <Link href='/products/microsoft-dynamics-365-finance/'>
-                  <img src="/img/menu-icons/dynamics-365-finance.svg" alt="dynamics-365-finance" width="48" height="48" />Dynamics 365 Finance
+                  <img src="/img/menu-icons/dynamics-365-finance.svg" alt="" width="48" height="48" aria-hidden="true"  loading="lazy" decoding="async" />Dynamics 365 Finance
                 </Link>
               </div>
             </div>
             <div className='col-lg-3'>
               <div className='hover-action-d'>
                 <Link href='/products/microsoft-dynamics-crm/'>
-                  <img src="/img/menu-icons/CRM.png" alt="CRM" width="48" height="48" />Dynamics 365 CRM
+                  <img src="/img/menu-icons/CRM.png" alt="CRM" width="48" height="48"  loading="lazy" decoding="async" />Dynamics 365 CRM
                 </Link>
               </div>
             </div>
             <div className='col-lg-3'>
               <div className='hover-action-d'>
                 <Link href='/products/microsoft-power-bi/'>
-                  <img src="/img/menu-icons/power-bi.svg" alt="power-bi" width="48" height="48" />Power BI
+                  <img src="/img/menu-icons/power-bi.svg" alt="" width="48" height="48" aria-hidden="true"  loading="lazy" decoding="async" />Power BI
                 </Link>
               </div>
             </div>
             <div className='col-lg-3'>
               <div className='hover-action-d'>
                 <Link href='/blog/what-is-microsoft-sharepoint/'>
-                  <img src="/img/icons_sharepoint.svg" alt="icons_sharepoint" width="48" height="48" />Microsoft SharePoint
+                  <img src="/img/icons_sharepoint.svg" alt="" width="48" height="48" aria-hidden="true"  loading="lazy" decoding="async" />Microsoft SharePoint
                 </Link>
               </div>
             </div>
             <div className='col-lg-3'>
               <div className='hover-action-d'>
                 <Link href='/products/microsoft-power-apps/'>
-                  <img src="/img/menu-icons/power-apps.svg" alt="power-apps" width="48" height="48" />PowerApps
+                  <img src="/img/menu-icons/power-apps.svg" alt="" width="48" height="48" aria-hidden="true"  loading="lazy" decoding="async" />PowerApps
                 </Link>
               </div>
             </div>
             <div className='col-lg-3'>
               <div className='hover-action-d'>
                 <Link href='/products/microsoft-power-automate/'>
-                  <img src="/img/menu-icons/power-automate.svg" alt="power-automate" width="48" height="48" />Power Automate
+                  <img src="/img/menu-icons/power-automate.svg" alt="" width="48" height="48" aria-hidden="true"  loading="lazy" decoding="async" />Power Automate
                 </Link>
               </div>
             </div>
@@ -348,7 +354,7 @@ const SupportServices = () => {
             <div className="col-xl-4 col-lg-6 col-md-6 align-self-center">
               <div className="commen-box-3">
                 <div className="icons">
-                  <img src="/img/service-i-01.svg" alt="service-i-01" />
+                  <img src="/img/service-i-01.svg" alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                   <h3>
                     For Uninterrupted
                     <br />
@@ -370,7 +376,7 @@ const SupportServices = () => {
             <div className="col-xl-4 col-lg-6 col-md-6 align-self-center">
               <div className="commen-box-3">
                 <div className="icons">
-                  <img src="/img/service-i-02.svg" alt="service-i-02" />
+                  <img src="/img/service-i-02.svg" alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                   <h3>
                     To Adapt &<br />
                     Drive Changes
@@ -391,7 +397,7 @@ const SupportServices = () => {
             <div className="col-xl-4 col-lg-6 col-md-6 align-self-center">
               <div className="commen-box-3">
                 <div className="icons">
-                  <img src="/img/service-i-03.svg" alt="service-i-03" />
+                  <img src="/img/service-i-03.svg" alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                   <h3>
                     To Simplify <br />
                     Operational Flow
@@ -413,7 +419,7 @@ const SupportServices = () => {
             <div className="col-xl-4 col-lg-6 col-md-6 align-self-center">
               <div className="commen-box-3">
                 <div className="icons">
-                  <img src="/img/service-i-04.svg" alt="service-i-04" />
+                  <img src="/img/service-i-04.svg" alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                   <h3>
                     To Remain Updated
                     <br />
@@ -435,7 +441,7 @@ const SupportServices = () => {
             <div className="col-xl-4 col-lg-6 col-md-6 align-self-center">
               <div className="commen-box-3">
                 <div className="icons">
-                  <img src="/img/service-i-05.svg" alt="service-i-05" />
+                  <img src="/img/service-i-05.svg" alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                   <h3>
                     Customized
                     <br />
@@ -458,7 +464,7 @@ const SupportServices = () => {
             <div className="col-xl-4 col-lg-6 col-md-6 align-self-center">
               <div className="commen-box-3">
                 <div className="icons">
-                  <img src="/img/service-i-06.svg" alt="service-i-06" />
+                  <img src="/img/service-i-06.svg" alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                   <h3>
                     Cost-Effective
                     <br />
@@ -506,10 +512,9 @@ const SupportServices = () => {
                         <div className="wr-ins">
                           <img
                             src="/img/Leading-Dynamics-365-Partner.svg"
-                            alt="Leading-Dynamics-365-Partner"
+                            alt="Dynamics Square: Your Partner in Growth"
                             width="151"
-                            height="151"
-                          />
+                            height="151"  loading="lazy" decoding="async" />
                         </div>
                         <span>Leading Dynamics 365 Partner in the UK</span>
                       </button>
@@ -538,10 +543,9 @@ const SupportServices = () => {
                         <div className="wr-ins">
                           <img
                             src="/img/Remote-and-On-Site-Availability.svg"
-                            alt="Remote-and-On-Site-Availability"
+                            alt="Leading Dynamics 365 Partner in the UK"
                             width="151"
-                            height="151"
-                          />
+                            height="151"  loading="lazy" decoding="async" />
                         </div>
                         <span>Remote and On-Site Availability</span>
                       </button>
@@ -570,10 +574,9 @@ const SupportServices = () => {
                         <div className="wr-ins">
                           <img
                             src="/img/Value-for-money-Services.svg"
-                            alt="Value-for-money-Services"
+                            alt="Remote and On-Site Availability"
                             width="151"
-                            height="151"
-                          />
+                            height="151"  loading="lazy" decoding="async" />
                         </div>
                         <span>Value-for-money Services</span>
                       </button>

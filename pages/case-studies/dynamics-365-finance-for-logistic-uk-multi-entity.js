@@ -1,40 +1,18 @@
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
 import CaseStudyClientCard from "../../components/CaseStudyClientCard";
+import PageSeo from "../../components/PageSeo";
 const DynamicsNav2013BusinessCentralUpgrade = () => {
 
   return (
     <>
-      <Head>
-        <title>Bertling Group: Dynamics 365 Finance Multi-Entity Case Study | Dynamics Square</title>
-        <meta
-          name="description"
-          content="How Bertling Group stabilised its UK finance function on Dynamics 365 Finance and built a blueprint for rolling out across 30 legal entities, including the US and Indonesia."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/case-studies/dynamics-365-finance-for-logistic-uk-multi-entity/"
-        />
-        <meta property="og:locale" content="en_GB" />
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content="Bertling Group: Dynamics 365 Finance Multi-Entity Case Study | Dynamics Square" />
-        <meta property="og:description" content="How Bertling Group stabilised its UK finance function on Dynamics 365 Finance and built a blueprint for rolling out across 30 legal entities, including the US and Indonesia." />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/case-studies/dynamics-365-finance-for-logistic-uk-multi-entity/" />
-        <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/logistic-uk.jpg" />
-        <meta property="og:image:secure_url" content="https://www.dynamicssquare.co.uk/img/logistic-uk.jpg" />
-        <meta property="og:image:width" content="850" />
-        <meta property="og:image:height" content="410" />
-        <meta property="og:image:type" content="image/jpeg" />
-        <meta property="og:image:alt" content="Bertling Group case study – Dynamics Square" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="Bertling Group: Dynamics 365 Finance Multi-Entity Case Study | Dynamics Square" />
-        <meta name="twitter:description" content="How Bertling Group stabilised its UK finance function on Dynamics 365 Finance and built a blueprint for rolling out across 30 legal entities, including the US and Indonesia." />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/logistic-uk.jpg" />
-        <meta name="twitter:image:alt" content="Bertling Group case study – Dynamics Square" />
-      </Head>
+      <PageSeo
+        type="Article"
+        title="Bertling Group: Dynamics 365 Finance Multi-Entity Case Study | Dynamics Square"
+        description="How Bertling Group stabilised its UK finance function on Dynamics 365 Finance and built a blueprint for rolling out across 30 legal entities, including the US and Indonesia."
+        image="https://www.dynamicssquare.co.uk/img/logistic-uk.jpg"
+        imageAlt="Bertling Group case study – Dynamics Square"
+      />
       <section className="hero hero-new-bg">
         <div className="container">
           <div className="row justify-content-center">
@@ -473,7 +451,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="call_to_action-right over-img">
-                <img src="/img/MaskGroup8.png" alt="image" />
+                <img src="/img/MaskGroup8.png" alt="Business consultant"  loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="col-lg-7 align-self-center">

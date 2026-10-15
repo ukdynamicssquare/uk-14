@@ -1,41 +1,19 @@
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
 import CaseStudyClientCard from "../../components/CaseStudyClientCard";
+import PageSeo from "../../components/PageSeo";
 const DynamicsNav2013BusinessCentralUpgrade = () => {
 
 
   return (
     <>
-      <Head>
-        <title>Rolson Tools: NAV 2016 to Business Central Upgrade Case Study | Dynamics Square</title>
-        <meta
-          name="description"
-          content="How Rolson Tools moved from NAV 2016 to Business Central, restored VAT compliance and rebuilt its tooling-specific customisations on a supported platform."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/case-studies/business-central-for-tool-manufacturing-company/"
-        />
-        <meta property="og:locale" content="en_GB" />
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content="Rolson Tools: NAV 2016 to Business Central Upgrade Case Study | Dynamics Square" />
-        <meta property="og:description" content="How Rolson Tools moved from NAV 2016 to Business Central, restored VAT compliance and rebuilt its tooling-specific customisations on a supported platform." />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/case-studies/business-central-for-tool-manufacturing-company/" />
-        <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/tool-manufacturing-company.jpg" />
-        <meta property="og:image:secure_url" content="https://www.dynamicssquare.co.uk/img/tool-manufacturing-company.jpg" />
-        <meta property="og:image:width" content="850" />
-        <meta property="og:image:height" content="410" />
-        <meta property="og:image:type" content="image/jpeg" />
-        <meta property="og:image:alt" content="Rolson Tools case study – Dynamics Square" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="Rolson Tools: NAV 2016 to Business Central Upgrade Case Study | Dynamics Square" />
-        <meta name="twitter:description" content="How Rolson Tools moved from NAV 2016 to Business Central, restored VAT compliance and rebuilt its tooling-specific customisations on a supported platform." />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/tool-manufacturing-company.jpg" />
-        <meta name="twitter:image:alt" content="Rolson Tools case study – Dynamics Square" />
-      </Head>
+      <PageSeo
+        type="Article"
+        title="Rolson Tools: NAV 2016 to Business Central Upgrade Case Study | Dynamics Square"
+        description="How Rolson Tools moved from NAV 2016 to Business Central, restored VAT compliance and rebuilt its tooling-specific customisations on a supported platform."
+        image="https://www.dynamicssquare.co.uk/img/tool-manufacturing-company.jpg"
+        imageAlt="Rolson Tools case study – Dynamics Square"
+      />
       <section className="hero hero-new-bg">
         <div className="container">
           <div className="row justify-content-center">
@@ -513,7 +491,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="call_to_action-right over-img">
-                <img src="/img/MaskGroup8.png" alt="image" />
+                <img src="/img/MaskGroup8.png" alt="Business consultant"  loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="col-lg-7 align-self-center">

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
 import CaseStudyClientCard from "../../components/CaseStudyClientCard";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -7,41 +6,20 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Autoplay, FreeMode, Pagination } from "swiper/modules";
+import PageSeo from "../../components/PageSeo";
 
 
 const MigrateOnPremisesToBusinessCentralCloud = () => {
 
   return (
     <>
-      <Head>
-        <title>Dalebrook Supplies: On-Premises to Business Central Cloud Case Study | Dynamics Square</title>
-        <meta
-          name="description"
-          content="How Dalebrook Supplies, a melamine food display manufacturer, migrated from on-premises to Business Central cloud to simplify processes and boost productivity."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/case-studies/migrate-on-premises-to-business-central-cloud/"
-        />
-        <meta property="og:locale" content="en_GB" />
-        <meta property="og:type" content="article" />
-        <meta property="og:title" content="Dalebrook Supplies: On-Premises to Business Central Cloud Case Study | Dynamics Square" />
-        <meta property="og:description" content="How Dalebrook Supplies, a melamine food display manufacturer, migrated from on-premises to Business Central cloud to simplify processes and boost productivity." />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/case-studies/migrate-on-premises-to-business-central-cloud/" />
-        <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/Dalebrook-Supplies.jpg" />
-        <meta property="og:image:secure_url" content="https://www.dynamicssquare.co.uk/img/Dalebrook-Supplies.jpg" />
-        <meta property="og:image:width" content="851" />
-        <meta property="og:image:height" content="410" />
-        <meta property="og:image:type" content="image/jpeg" />
-        <meta property="og:image:alt" content="Dalebrook Supplies case study – Dynamics Square" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="Dalebrook Supplies: On-Premises to Business Central Cloud Case Study | Dynamics Square" />
-        <meta name="twitter:description" content="How Dalebrook Supplies, a melamine food display manufacturer, migrated from on-premises to Business Central cloud to simplify processes and boost productivity." />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/Dalebrook-Supplies.jpg" />
-        <meta name="twitter:image:alt" content="Dalebrook Supplies case study – Dynamics Square" />
-      </Head>
+      <PageSeo
+        type="Article"
+        title="Dalebrook Supplies: On-Premises to Business Central Cloud Case Study | Dynamics Square"
+        description="How Dalebrook Supplies, a melamine food display manufacturer, migrated from on-premises to Business Central cloud to simplify processes and boost productivity."
+        image="https://www.dynamicssquare.co.uk/img/Dalebrook-Supplies.jpg"
+        imageAlt="Dalebrook Supplies case study – Dynamics Square"
+      />
       <section className="hero-1 hero">
         <div className="container">
           <div className="row">
@@ -188,8 +166,8 @@ const MigrateOnPremisesToBusinessCentralCloud = () => {
                           <div className="img-wrp">
                             <img
                               src="/img/material-lightbulb-outline.svg"
-                              alt="Food-and-beverage"
-                            />
+                              alt=""
+                             aria-hidden="true"  loading="lazy" decoding="async" />
                           </div>
                           <div className="text-wrp-content">
                             <p>The business is now able to eliminate all complexities due to unwanted add-ons and integrations. </p>
@@ -205,7 +183,7 @@ const MigrateOnPremisesToBusinessCentralCloud = () => {
                               <img
                                 src="/img/material-lightbulb-outline.svg"
                                 alt="NotforProfit"
-                              />
+                               loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>They are now able to get real-time business insights into business processes with 100% transparency in their business operations.</p>
@@ -222,7 +200,7 @@ const MigrateOnPremisesToBusinessCentralCloud = () => {
                               <img
                                 src="/img/material-lightbulb-outline.svg"
                                 alt="Ecommerce"
-                              />
+                               loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>The business automation enabled them to reduce time-consuming and repetitive tasks by 50%, freeing up resources for more strategic efforts. </p>
@@ -340,7 +318,7 @@ const MigrateOnPremisesToBusinessCentralCloud = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="call_to_action-right over-img">
-                <img src="/img/MaskGroup8.png" alt="image" />
+                <img src="/img/MaskGroup8.png" alt="Business consultant"  loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="col-lg-7 align-self-center">

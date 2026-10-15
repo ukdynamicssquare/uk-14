@@ -1,5 +1,4 @@
 import React from "react";
-import Head from "next/head";
 import Link from "next/link";
 import Image from 'next/image';
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -8,19 +7,16 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation, FreeMode } from "swiper/modules";
+import PageSeo from "../components/PageSeo";
 const WhyUs = () => {
   return (
     <>
-      <Head>
-        <title>
-          Why Dynamics Square | Your Trusted Microsoft Partner in UK
-        </title>
-        <meta
-          name="description"
-          content="Why Dynamics Square? Because, we&#039;re Microsoft Solutions Partner in the USA helping businesses to scale up their processes through Microsoft ERP &amp; CRM software solutions."
-        />
-        <link rel="canonical" href="https://www.dynamicssquare.co.uk/why-us/" />
-      </Head>
+      <PageSeo
+        type="AboutPage"
+        title="Why Dynamics Square | Your Trusted Microsoft Partner in UK"
+        description="Why Dynamics Square? Because, we&#039;re Microsoft Solutions Partner in the USA helping businesses to scale up their processes through Microsoft ERP & CRM software solutions."
+        image="/img/about-pic.png"
+      />
         <section className="Solution-banner hero-1 hero about-banner">
           <div className="container">
             <div className="row">
@@ -32,7 +28,7 @@ const WhyUs = () => {
                 </p>
               </div>
               <div className="col-lg-6">
-                <Image src="/img/about-pic.png" alt="image" width={775} height={528}  priority = {true} />
+                <Image src="/img/about-pic.png" alt="Why Us?" width={775} height={528}  priority = {true} />
               </div>
             </div>
           </div>
@@ -43,7 +39,7 @@ const WhyUs = () => {
             <div className="row">
               <div className="col-lg-5 align-self-center">
                 <div className="domain-expertise-right-pic">
-                  <Image src="/img/why-side.png" alt="why-side" width={514} height={534} />
+                  <Image src="/img/why-side.png" alt="Get More Out of Every Pound: Efficient Microsoft Business Solutions" width={514} height={534} />
                 </div>
               </div>
               <div className="col-lg-6 align-self-center">
@@ -252,7 +248,7 @@ const WhyUs = () => {
             <div className="row">
               <div className="col-lg-5">
                 <div className="call_to_action-right over-img">
-                  <img src="/img/MaskGroup8.png" alt="image" />
+                  <img src="/img/MaskGroup8.png" alt="Business consultant"  loading="lazy" decoding="async" />
                 </div>
               </div>
               <div className="col-lg-7 align-self-center">
@@ -337,8 +333,7 @@ const WhyUs = () => {
                           <img
                             src="/img/clients/client-1.png"
                             className="img-fluid"
-                            alt=""
-                          />
+                            alt="CQC logo"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
@@ -347,8 +342,7 @@ const WhyUs = () => {
                           <img
                             src="/img/clients/client-2.png"
                             className="img-fluid"
-                            alt=""
-                          />
+                            alt="Global Tea logo"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
@@ -356,8 +350,7 @@ const WhyUs = () => {
                           <img
                             src="/img/clients/client-3.png"
                             className="img-fluid"
-                            alt=""
-                          />
+                            alt="Parweld logo"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
@@ -366,8 +359,7 @@ const WhyUs = () => {
                           <img
                             src="/img/clients/client-4.png"
                             className="img-fluid"
-                            alt=""
-                          />
+                            alt="Britannia Garment Packaging logo"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
@@ -375,8 +367,7 @@ const WhyUs = () => {
                           <img
                             src="/img/clients/client-5.png"
                             className="img-fluid"
-                            alt=""
-                          />
+                            alt="Arteak logo"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
@@ -384,8 +375,7 @@ const WhyUs = () => {
                           <img
                             src="/img/clients/client-4.png"
                             className="img-fluid"
-                            alt=""
-                          />
+                            alt="Britannia Garment Packaging logo"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                     </Swiper>

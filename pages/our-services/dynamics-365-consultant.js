@@ -1,21 +1,17 @@
 import React from "react";
-import Head from "next/head";
 import Link from "next/link";
 import Image from 'next/image';
+import PageSeo from "../../components/PageSeo";
 
 const Dynamics365Consultant = () => {
   return (
     <>
-      <Head>
-        <title>
-        Microsoft Dynamics 365 Consultant UK | Dynamics Square
-        </title>
-        <meta
-          name="description"
-          content="Get the seamless Dynamics 365 Consultancy service from the certified Microsoft Dynamics consultants UK. We are reliable, cost-effective, and trusted by 500+ clients."
-        />
-        <link rel="canonical" href="https://www.dynamicssquare.co.uk/our-services/dynamics-365-consultant/" />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Microsoft Dynamics 365 Consultant UK | Dynamics Square"
+        description="Get the seamless Dynamics 365 Consultancy service from the certified Microsoft Dynamics consultants UK. We are reliable, cost-effective, and trusted by 500+ clients."
+        image="/img/Microsoft-Dynamics-365-consulting.png"
+      />
         <section className="Solution-banner hero-1 hero about-banner">
           <div className="container">
             <div className="row">
@@ -24,7 +20,7 @@ const Dynamics365Consultant = () => {
                 <p>Get seamless support from top Dynamics 365 consultants based in UK to empower your business for growth, digital transformation, and success.</p>
               </div>
               <div className="col-lg-6">
-                <Image src="/img/Microsoft-Dynamics-365-consulting.png" alt="Microsoft-Dynamics-365-consulting" width={708} height={525}  priority = {true} />
+                <Image src="/img/Microsoft-Dynamics-365-consulting.png" alt="Microsoft Dynamics 365 Consultants: Specialised and Reliable" width={708} height={525}  priority = {true} />
               </div>
             </div>
           </div>
@@ -35,7 +31,7 @@ const Dynamics365Consultant = () => {
             <div className="row">
               <div className="col-lg-5 align-self-center">
                 <div className="domain-expertise-right-pic">
-                  <Image src="/img/why-side.png" alt="why-side" width={514} height={534} />
+                  <Image src="/img/why-side.png" alt="150+ Microsoft Dynamics 365 Consultants Available at your Fingertips" width={514} height={534} />
                 </div>
               </div>
               <div className="col-lg-7 align-self-center">
@@ -124,7 +120,7 @@ const Dynamics365Consultant = () => {
             <div className="row">
               <div className="col-lg-5">
                 <div className="call_to_action-right over-img">
-                  <img src="/img/MaskGroup8.png" alt="image" />
+                  <img src="/img/MaskGroup8.png" alt="Business consultant"  loading="lazy" decoding="async" />
                 </div>
               </div>
               <div className="col-lg-7 align-self-center">

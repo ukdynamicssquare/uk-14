@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import Blog from "../../components/Blog";
@@ -8,6 +7,7 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Autoplay, FreeMode, Pagination } from "swiper/modules";
+import PageSeo from "../../components/PageSeo";
 
 
 const MicrosoftCloudForFinancialServices = () => {
@@ -15,33 +15,12 @@ const MicrosoftCloudForFinancialServices = () => {
   const [open, setsOpen] = useState(false);
   return (
     <>
-      <Head>
-        <meta charSet="utf-8" />
-        <title>Microsoft Cloud for Financial Services | Dynamics Square UK</title>
-        <meta
-          name="description"
-          content="Unlock agility and innovation in financial services with Microsoft Cloud, which empowers secure, compliant, and customer-centric solutions."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/industries/microsoft-cloud-for-financial-services/"
-        />
-        <meta property="og:locale" content="GB" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Microsoft Cloud for Financial Services | Dynamics Square UK" />
-        <meta property="og:description" content="Unlock agility and innovation in financial services with Microsoft Cloud, which empowers secure, compliant, and customer-centric solutions." />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/industries/microsoft-cloud-for-financial-services/" />
-        <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/Microsoft-Cloud-Financial-Services-banner.png" />
-        <meta property="og:image:width" content="200" />
-        <meta property="og:image:height" content="200" />
-        <meta property="og:image:type" content="image/png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="Microsoft Cloud for Financial Services | Dynamics Square UK" />
-        <meta name="twitter:description" content="Unlock agility and innovation in financial services with Microsoft Cloud, which empowers secure, compliant, and customer-centric solutions." />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/Microsoft-Cloud-Financial-Services-banner.png" />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Microsoft Cloud for Financial Services | Dynamics Square UK"
+        description="Unlock agility and innovation in financial services with Microsoft Cloud, which empowers secure, compliant, and customer-centric solutions."
+        image="https://www.dynamicssquare.co.uk/img/Microsoft-Cloud-Financial-Services-banner.png"
+      />
         <section className="Solution-banner hero-1 hero">
           <div className="container">
             <div className="row">
@@ -62,11 +41,10 @@ const MicrosoftCloudForFinancialServices = () => {
               <div className="col-lg-6 align-self-center">
                 <Image
                   src="/img/Microsoft-Cloud-Financial-Services-banner.png"
-                  alt="Microsoft-Cloud-Financial-Services-banner"
+                  alt="What is Microsoft Cloud for Financial Services?"
                   width={708}
                   height={447}
-                  priority={true}
-                />
+                  priority={true} />
               </div>
             </div>
           </div>
@@ -137,7 +115,7 @@ const MicrosoftCloudForFinancialServices = () => {
             <div className="row">
               <div className="col-lg-5">
                 <div className="call_to_action-right over-img">
-                  <img src="/img/MaskGroup8.png" alt="image" />
+                  <img src="/img/MaskGroup8.png" alt="Business consultant" />
                 </div>
               </div>
               <div className="col-lg-7 align-self-center">
@@ -175,8 +153,7 @@ const MicrosoftCloudForFinancialServices = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/dynamics_365_customer_insights.png"
-                      alt="dynamics_365_customer_insights"
-                    />
+                      alt="Dynamics 365 Customer Insights"  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Dynamics 365 Customer Insights</h3>
@@ -187,8 +164,7 @@ const MicrosoftCloudForFinancialServices = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/microsoft_power_apps.png"
-                      alt="microsoft_power_apps"
-                    />
+                      alt="Microsoft Power Apps"  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Microsoft Power Apps</h3>
@@ -199,8 +175,7 @@ const MicrosoftCloudForFinancialServices = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/microsoft_365_new.png"
-                      alt="microsoft_365_new"
-                    />
+                      alt="Microsoft 365"  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Microsoft 365</h3>
@@ -214,8 +189,7 @@ const MicrosoftCloudForFinancialServices = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/microsoft_power_apps.png"
-                      alt="microsoft_power_apps"
-                    />
+                      alt="Microsoft Power Platform"  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Microsoft Power Platform</h3>
@@ -226,8 +200,7 @@ const MicrosoftCloudForFinancialServices = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/dynamics_365_fraud_protection.png"
-                      alt="dynamics_365_fraud_protection"
-                    />
+                      alt="Dynamics 365 Fraud Protection"  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Dynamics 365 Fraud Protection</h3>
@@ -238,8 +211,7 @@ const MicrosoftCloudForFinancialServices = () => {
                   <div className="card_new_img text-center">
                     <img
                       src="/img/compliance_program_for_microsoft_cloud.png"
-                      alt="compliance_program_for_microsoft_cloud"
-                    />
+                      alt="Compliance Program for Microsoft Cloud"  loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
                     <h3>Compliance Program for Microsoft Cloud</h3>
@@ -283,10 +255,9 @@ const MicrosoftCloudForFinancialServices = () => {
                     <Image
                       src="/img/dynamics-365-for-higher-education.png"
                       className="fix-im"
-                      alt="dynamics-365-for-higher-education"
+                      alt="Financial Management Made Easy for SMBs: Get Started with Business Central Today!"
                       width={483}
-                      height={513}
-                    />
+                      height={513} />
                   </div>
                 </div>
               </div>
@@ -340,9 +311,8 @@ const MicrosoftCloudForFinancialServices = () => {
               <div className="busine_service_bottom-left custom012">
                 <Image
                   src="/img/microosoft-partner.png"
-                  alt="microosoft-partner.png"
-                  width={625} height={651}
-                />
+                  alt="Microsoft Solutions Partner badge"
+                  width={625} height={651} />
               </div>
             </div>
           </div>
@@ -417,7 +387,7 @@ const MicrosoftCloudForFinancialServices = () => {
                                   <img
                                     src="/img/NotforProfit.svg"
                                     alt="NotforProfit"
-                                  />
+                                   loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>Not for Profit</h3>
@@ -442,7 +412,7 @@ const MicrosoftCloudForFinancialServices = () => {
                                   <img
                                     src="/img/Ecommerce.svg"
                                     alt="Ecommerce"
-                                  />
+                                   loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>E-Commerce</h3>
@@ -465,8 +435,8 @@ const MicrosoftCloudForFinancialServices = () => {
                                 <div className="img-wrp">
                                   <img
                                     src="/img/proffesional-service.svg"
-                                    alt="proffesional-service"
-                                  />
+                                    alt=""
+                                   aria-hidden="true"  loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>Professional Services</h3>
@@ -490,8 +460,7 @@ const MicrosoftCloudForFinancialServices = () => {
                                 <div className="img-wrp">
                                   <img
                                     src="/img/microsoft-cloud-for-manufacturing.svg"
-                                    alt="microsoft-cloud-for-manufacturing"
-                                  />
+                                    alt="Manufacturing & Distribution"  loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>Manufacturing & Distribution</h3>
@@ -513,7 +482,7 @@ const MicrosoftCloudForFinancialServices = () => {
                             <div className="industries-list-more">
                               <a href="/industries/startups/">
                                 <div className="img-wrp">
-                                  <img src="/img/start-up.svg" alt="start-up" />
+                                  <img src="/img/start-up.svg" alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                                 </div>
                                 <div className="text-wrp-content">
                                   <h3>Startups</h3>
@@ -552,10 +521,9 @@ const MicrosoftCloudForFinancialServices = () => {
               <div className="col-lg-6 align-self-center">
               <Image
                   src="/img/Microsoft-Cloud-Financial-Services-side.png"
-                  alt="Microsoft-Cloud-Financial-Services-side"
+                  alt="Check out our Best Resources for food and beverages"
                   width={661}
-                  height={447}
-                />
+                  height={447} />
               </div>
             </div>
           </div>

@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -9,23 +8,42 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
 import { FreeMode, Navigation, Thumbs, Autoplay } from "swiper/modules";
+import PageSeo from "../components/PageSeo";
+// Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
+const PAGE_FAQS = [
+  {
+    "question": "What's my role in the entire implementation project?",
+    "answer": "The only thing you need to do in order for us to develop a proper D365 Project Operations implementation solution for you is to provide accurate information to your Dynamics 365 installation partner about your current procedures and future needs. You also need to cooperate throughout the process to make sure the deployment is smooth and hassle-free."
+  },
+  {
+    "question": "Does Dynamics Square provide training?",
+    "answer": "We provide complimentary training courses to help users understand how to use the system's features, capabilities, and functions. In these sessions, we will also teach you the basics of the system so that you can have a better understanding of your current needs and be able to anticipate future needs for the installation process (Phase 2 implementation)."
+  },
+  {
+    "question": "How much will it actually cost to deploy D365 Project Operations?",
+    "answer": "A few factors that will affect the cost of implementation are time and the number of people working on the project. To get an accurate price quote for the implementation process, please give us a call or fill out the contact form on our website."
+  },
+  {
+    "question": "How long will it take to successfully implement the project?",
+    "answer": "To provide an adequate and accurate timeline for implementing a solution, it is essential that we have a clear understanding of the business and its needs. The time required is contingent upon various factors, such as the number of processes, the complexity of operations, integrations, and customizations."
+  },
+  {
+    "question": "What's next after submitting my contact details?",
+    "answer": "Our team will call you to get a better understanding of your company, current needs, and what potential needs might arise in the future. This is what we like to call the Phase 1 Discovery Call - a chance for us to ask questions and for you to get to know us better too. Everything will be documented so that we can move forward with creating a FRD, conducting a FIT-GAP analysis, and beginning the implementation phase. If necessary, another Discovery Call will be scheduled with one of our highly qualified functional consultants to answer any additional questions. See Also -: Dynamics 365 Finance Implementation, Power BI Implementation, Dynamics 365 Sales Implementation"
+  }
+];
+
 const ProjectOperationImplementation = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   return (
     <>
-      <Head>
-        <title>
-          Dynamics 365 Project Operations Implementation | Dynamics Square UK
-        </title>
-        <meta
-          name="description"
-          content="Dynamics Square UK delivers expert Dynamics 365 Project Operations implementation to streamline projects, improve visibility, and boost margins."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/dynamics-365-project-operations-implementation/"
-        />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Dynamics 365 Project Operations Implementation | Dynamics Square UK"
+        description="Dynamics Square UK delivers expert Dynamics 365 Project Operations implementation to streamline projects, improve visibility, and boost margins."
+        image="/img/FieldServicebanner.png"
+        faqs={PAGE_FAQS}
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -62,10 +80,9 @@ const ProjectOperationImplementation = () => {
             <div className="col-lg-6">
               <Image
                 src="/img/FieldServicebanner.png"
-                alt="Field-implementation-banner"
+                alt="How can Dynamics 365 Project Operations can help you accelerate project deliveries while assuring optimum quality?"
                 width={771} height={478}
-                priority = {true}
-              />
+                priority = {true} />
             </div>
           </div>
         </div>
@@ -416,7 +433,7 @@ const ProjectOperationImplementation = () => {
           <div className="row">
             <div className="col-lg-6">
               <div className="box-6-pic">
-                <Image src="/img/imp-left.svg" alt="imp-left.svg" width={531} height={771} />
+                <Image src="/img/imp-left.svg" alt="" width={531} height={771} aria-hidden="true" />
               </div>
             </div>
 
@@ -522,13 +539,13 @@ const ProjectOperationImplementation = () => {
                           <img
                             src="/img/Component-1-icons.svg"
                             className="overmain-thumb"
-                            alt="Component-1-icons"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-1-iconss.svg"
                             className="over"
-                            alt="Component-1-icons-red"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
@@ -536,13 +553,13 @@ const ProjectOperationImplementation = () => {
                           <img
                             src="/img/Component-2.svg"
                             className="overmain-thumb-1"
-                            alt="Component-2"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-2-iconss.svg"
                             className="over-1"
-                            alt="Component-2-icons-red"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
@@ -550,13 +567,13 @@ const ProjectOperationImplementation = () => {
                           <img
                             src="/img/Component-3.svg"
                             className="overmain-thumb-2"
-                            alt="Component-3"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-3-iconss.svg"
                             className="over-1"
-                            alt="Component-1-icons-red"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
@@ -564,13 +581,13 @@ const ProjectOperationImplementation = () => {
                           <img
                             src="/img/Component-4.svg"
                             className="overmain-thumb-3"
-                            alt="Component-4"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-4-iconss.svg"
                             className="over-1"
-                            alt="Component-1-icons-red"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
@@ -578,13 +595,13 @@ const ProjectOperationImplementation = () => {
                           <img
                             src="/img/Component-5.svg"
                             className="overmain-thumb-4"
-                            alt="Component-5"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-5-iconss.svg"
                             className="over-1"
-                            alt="Component-1-icons-red"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                     </Swiper>

@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -8,27 +7,43 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import { FreeMode, Navigation, Thumbs, Autoplay } from "swiper/modules";
+import PageSeo from "../components/PageSeo";
+// Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
+const PAGE_FAQS = [
+  {
+    "question": "What's next after submitting my contact details?",
+    "answer": "One of our consultants will call you after you've submitted your information to find out more about your business. The Phase 1 Discovery Call refers to this initial discussion. Everything will be documented, a functional requirements document (FRD) will be made, a FIT-GAP analysis will be carried out, and then the implementation phase will start. We'll have another Discovery Call if necessary with one of our experienced functional consultants."
+  },
+  {
+    "question": "What is the accurate cost of D365 Supply Chain Management implementation?",
+    "answer": "Several variables, including time and complexity, will affect implementation costs. Please give us a call or use the contact form on our website if you'd like an exact price for the implementation procedure."
+  },
+  {
+    "question": "What's my role in the entire implementation project?",
+    "answer": "We need your help to build the best Dynamics 365 Supply Chain Management implementation strategy possible. Your responsibility will be to provide your Dynamics 365 implementation partner with accurate information about the procedures that are in place today and any future requirements. Additionally, for a flawless and easy deployment, it is essential that you be cooperative throughout the process."
+  },
+  {
+    "question": "How long will it take to implement the project successfully?",
+    "answer": "There is no one-size-fits-all answer when it comes to how long it will take to implement a solution like Dynamics 365 Finance and Operations or SCM. The timeframe depends on a number of factors, such as the number of processes, the complexity of operations, integrations, and customizations. Without knowing more about your specific business and its needs, it's impossible to provide a more accurate estimate."
+  },
+  {
+    "question": "Does Dynamics Square provide training?",
+    "answer": "Yes, we provide free training to users after providing the respected service. Our training will help users like you to understand the core features, and capabilities of this powerful solution. Also, we will help you understand the effectiveness of this software so that you can customise it in future too. See Also -: Dynamics 365 Finance Implementation, Power BI Implementation, Dynamics 365 Sales Implementation"
+  }
+];
+
 const SupplyChainImplementation = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   return (
     <>
-      <Head>
-        <title>
-          Dynamics 365 Supply Chain Management Implementation | Dynamics Square
-        </title>
-        <meta
-          name="description"
-          content="Bring agility, optimise resources, and build a resilient supply chain through Dynamics 365 Supply Chain Management implementation."
-        />
-        <meta
-          name="robots"
-          content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/d365-supply-chain-management-implementation/"
-        />
-      </Head>
+      <PageSeo
+        robots="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+        type="Service"
+        title="Dynamics 365 Supply Chain Management Implementation | Dynamics Square"
+        description="Bring agility, optimise resources, and build a resilient supply chain through Dynamics 365 Supply Chain Management implementation."
+        image="/img/Supplychain banner.png"
+        faqs={PAGE_FAQS}
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -395,7 +410,7 @@ const SupplyChainImplementation = () => {
           <div className="row">
             <div className="col-lg-6">
               <div className="box-6-pic">
-                <img src="/img/imp-left.svg" alt="imp-left.svg" />
+                <img src="/img/imp-left.svg" alt="" aria-hidden="true" />
               </div>
             </div>
 
@@ -507,13 +522,13 @@ const SupplyChainImplementation = () => {
                           <img
                             src="/img/Component-1-icons.svg"
                             className="overmain-thumb"
-                            alt="Component-1-icons"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-1-iconss.svg"
                             className="over"
-                            alt="Component-1-icons-red"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
@@ -521,13 +536,13 @@ const SupplyChainImplementation = () => {
                           <img
                             src="/img/Component-2.svg"
                             className="overmain-thumb-1"
-                            alt="Component-2"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-2-iconss.svg"
                             className="over-1"
-                            alt="Component-2-icons-red"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
@@ -535,13 +550,13 @@ const SupplyChainImplementation = () => {
                           <img
                             src="/img/Component-3.svg"
                             className="overmain-thumb-2"
-                            alt="Component-3"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-3-iconss.svg"
                             className="over-1"
-                            alt="Component-1-icons-red"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
@@ -549,13 +564,13 @@ const SupplyChainImplementation = () => {
                           <img
                             src="/img/Component-4.svg"
                             className="overmain-thumb-3"
-                            alt="Component-4"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-4-iconss.svg"
                             className="over-1"
-                            alt="Component-1-icons-red"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                       <SwiperSlide>
@@ -563,13 +578,13 @@ const SupplyChainImplementation = () => {
                           <img
                             src="/img/Component-5.svg"
                             className="overmain-thumb-4"
-                            alt="Component-5"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                           <img
                             src="/img/Component-5-iconss.svg"
                             className="over-1"
-                            alt="Component-1-icons-red"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                       </SwiperSlide>
                     </Swiper>

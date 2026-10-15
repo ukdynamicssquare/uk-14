@@ -1,27 +1,21 @@
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Autoplay, FreeMode, Pagination } from "swiper/modules";
+import PageSeo from "../../components/PageSeo";
 
 const QuickbooksToBusinessCentralMigration = () => {
 
   return (
     <>
-      <Head>
-        <title>QuickBooks ERP to Business Central Migration | Case Study </title>
-        <meta
-          name="description"
-          content="See how our in-depth case study on the migration from QuickBooks ERP to Business Central improves productivity and expansion. Find out essential information and benefits!"
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/case-studies/quickbooks-to-business-central-migration/"
-        />
-      </Head>
+      <PageSeo
+        type="Article"
+        title="QuickBooks ERP to Business Central Migration | Case Study"
+        description="See how our in-depth case study on the migration from QuickBooks ERP to Business Central improves productivity and expansion. Find out essential information and benefits!"
+      />
       <section className="hero-1 hero">
         <div className="container">
           <div className="row">
@@ -38,8 +32,7 @@ const QuickbooksToBusinessCentralMigration = () => {
               <div className="sider-over">
                 <img
                   src="/img/business-central-implementation-banner-1.svg"
-                  alt="business-central-implementation-banner"
-                />
+                  alt="QuickBooks ERP to Business Central Upgrade" />
               </div>
             </div>
           </div>
@@ -53,8 +46,7 @@ const QuickbooksToBusinessCentralMigration = () => {
                 <div className="col-lg-3 align-self-center text-center">
                   <img
                     src="/img/casestudy-pic.png"
-                    alt="casestudy-pic"
-                  />
+                    alt="QuickBooks ERP to Business Central Upgrade" />
                 </div>
                 <div className="col-lg-9 align-self-center">
                   <p>The business is an established importer of citric fruits from Morocco, caters to a comprehensive portfolio of UK retailers. They focus on supplying fresh fruits to retailers by growing, packing, and delivering the best product that Morocco has to offer. Their operations are driven by a strong finance process that incorporates balance sheet maintenance, bank reconciliation, cash flow tracking, and maintaining a general ledger.</p>
@@ -167,8 +159,8 @@ const QuickbooksToBusinessCentralMigration = () => {
                           <div className="img-wrp">
                             <img
                               src="/img/material-lightbulb-outline.svg"
-                              alt="Food-and-beverage"
-                            />
+                              alt=""
+                             aria-hidden="true"  loading="lazy" decoding="async" />
                           </div>
                           <div className="text-wrp-content">
                             <p>We streamlined complex business processes, offering a comprehensive, cloud-based business management solution that could help them deliver fresh products.</p>
@@ -184,7 +176,7 @@ const QuickbooksToBusinessCentralMigration = () => {
                               <img
                                 src="/img/material-lightbulb-outline.svg"
                                 alt="NotforProfit"
-                              />
+                               loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>With Business Central's implementation, they now can optimise their inventory management processes.</p>
@@ -201,7 +193,7 @@ const QuickbooksToBusinessCentralMigration = () => {
                               <img
                                 src="/img/material-lightbulb-outline.svg"
                                 alt="Ecommerce"
-                              />
+                               loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>Now the company can track inventory levels, manage replenishment, set up automated reorder points, and analyse inventory turnover.</p>
@@ -217,8 +209,8 @@ const QuickbooksToBusinessCentralMigration = () => {
                             <div className="img-wrp">
                               <img
                                 src="/img/material-lightbulb-outline.svg"
-                                alt="proffesional-service"
-                              />
+                                alt=""
+                               aria-hidden="true"  loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>Further, with this implementation, they were able to manage the sales cycle, including lead management, opportunity tracking, quotes, orders, invoicing etc.</p>
@@ -327,7 +319,7 @@ const QuickbooksToBusinessCentralMigration = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="call_to_action-right over-img">
-                <img src="/img/MaskGroup8.png" alt="image" />
+                <img src="/img/MaskGroup8.png" alt="Business consultant"  loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="col-lg-7 align-self-center">

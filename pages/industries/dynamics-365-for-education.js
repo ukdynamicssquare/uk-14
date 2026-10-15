@@ -1,5 +1,4 @@
 import React, { useRef, useState, useEffect } from 'react';
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -9,6 +8,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 import { FreeMode, Navigation, Thumbs, Mousewheel } from "swiper/modules";
 import faqData from '../../public/data/industrieseducation.json';
+import PageSeo from "../../components/PageSeo";
 const Education = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
     const [visibleCount, setVisibleCount] = useState(5);
@@ -19,29 +19,13 @@ const Education = () => {
 
   return (
     <>
-      <Head>
-        <title>Microsoft Dynamics 365 for Education | Dynamics Square UK</title>
-        <meta
-          name="description"
-          content="Transform higher education with Microsoft Dynamics 365 for Education. Streamline admissions, student engagement & operations. Contact Dynamics Square UK."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/industries/dynamics-365-for-education/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/industries/dynamics-365-for-education/" />
-        <meta property="og:title" content="Microsoft Dynamics 365 for Education | Dynamics Square UK" />
-        <meta property="og:description" content="Transform higher education with Microsoft Dynamics 365 for Education. Streamline admissions, student engagement & operations. Contact Dynamics Square UK." />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/Bc-Discrete-Manufacturing.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/industries/dynamics-365-for-education/" />
-        <meta property="twitter:title" content="Microsoft Dynamics 365 for Education | Dynamics Square UK" />
-        <meta property="twitter:description" content="Transform higher education with Microsoft Dynamics 365 for Education. Streamline admissions, student engagement & operations. Contact Dynamics Square UK." />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/Bc-Discrete-Manufacturing.png" />
-
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Microsoft Dynamics 365 for Education | Dynamics Square UK"
+        description="Transform higher education with Microsoft Dynamics 365 for Education. Streamline admissions, student engagement & operations. Contact Dynamics Square UK."
+        image="https://www.dynamicssquare.co.uk/img/Bc-Discrete-Manufacturing.png"
+        faqs={faqData.slice(0, 5)}
+      />
       <div className='solution-new-banner-one solution-new-banner-one-colo ct-padd'>
         <div className='container'>
           <div className='row justify-content-center'>
@@ -69,7 +53,7 @@ const Education = () => {
           <div className="row">
             <div className="col-lg-5 align-self-center">
               <div className='img-backs-sid-two text-center'>
-                <Image src="/img/education-00.png" alt="wholesale-pic-28" width={540} height={630} className='im-two' />
+                <Image src="/img/education-00.png" alt="What is Dynamics 365 for Education?" width={540} height={630} className='im-two' />
               </div>
             </div>
             <div className="col-lg-1 align-self-center"></div>
@@ -123,7 +107,7 @@ const Education = () => {
 
                 <SwiperSlide>
                   <div className='slider-card-0001'>
-                    <Image width={826} height={464} src="/img/education-01.png" alt="AI-assisted" />
+                    <Image width={826} height={464} src="/img/education-01.png" alt="What is Dynamics 365 for Education?" />
                     <p>AI-assisted administration for everyday operational tasks</p>
                   </div>
                 </SwiperSlide>
@@ -269,7 +253,7 @@ const Education = () => {
             <div className="col-lg-1"></div>
             <div className="col-lg-5 align-self-center">
               <div className='img-backs-sid-two text-center'>
-                <Image src="/img/education-09.png" alt="education-09" width={540} height={630} className='im-two' />
+                <Image src="/img/education-09.png" alt="Core Features of Microsoft Dynamics 365 for Education" width={540} height={630} className='im-two' />
               </div>
             </div>
 
@@ -298,49 +282,49 @@ const Education = () => {
             </div>
             <div className="col-lg-6 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/education-11.png" alt="Workflow Automation" width={48} height={48} />
+                <img src="/img/education-11.png" alt="Workflow Automation" width={48} height={48}  loading="lazy" decoding="async" />
                 <h3>Workflow Automation</h3>
                 <p>Automate admissions, approvals, onboarding communication, scheduling, reporting, and other repetitive administrative processes.</p>
               </div>
             </div>
             <div className="col-lg-6 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/education-12.png" alt="Communication Tracking" width={48} height={48} />
+                <img src="/img/education-12.png" alt="Communication Tracking" width={48} height={48}  loading="lazy" decoding="async" />
                 <h3>Communication Tracking</h3>
                 <p>Track emails, calls, meetings, messages, and student interactions through one centralised system for better collaboration and follow-ups.</p>
               </div>
             </div>
             <div className="col-lg-6 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/education-13.png" alt="AI-powered Insights" width={48} height={48} />
+                <img src="/img/education-13.png" alt="AI-powered Insights" width={48} height={48}  loading="lazy" decoding="async" />
                 <h3>AI-powered Insights</h3>
                 <p>Use AI summaries, predictive insights, forecasting, and analytics to support operational planning and student engagement.</p>
               </div>
             </div>
             <div className="col-lg-6 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/education-14.png" alt="Reporting and Analytics" width={48} height={48} />
+                <img src="/img/education-14.png" alt="Reporting and Analytics" width={48} height={48}  loading="lazy" decoding="async" />
                 <h3>Reporting and Analytics</h3>
                 <p>Generate real-time operational, financial, and student performance reports through connected dashboards and analytics tools.</p>
               </div>
             </div>
             <div className="col-lg-6 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/education-15.png" alt="Multi-channel Engagement" width={48} height={48} />
+                <img src="/img/education-15.png" alt="Multi-channel Engagement" width={48} height={48}  loading="lazy" decoding="async" />
                 <h3>Multi-channel Engagement</h3>
                 <p>Connect with students through email, portals, live chat, SMS, and other communication channels from one platform.</p>
               </div>
             </div>
             <div className="col-lg-6 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/education-16.png" alt="Security and Access Control" width={48} height={48} />
+                <img src="/img/education-16.png" alt="Security and Access Control" width={48} height={48}  loading="lazy" decoding="async" />
                 <h3>Security and Access Control</h3>
                 <p>Protect institutional data with role-based access, secure sign-ins, permissions management, and Microsoft security capabilities.</p>
               </div>
             </div>
             <div className="col-lg-6 d-flex">
               <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/education-17.png" alt="wholesale-pic-11" width={48} height={48} />
+                <img src="/img/education-17.png" alt="Microsoft Ecosystem Integration" width={48} height={48}  loading="lazy" decoding="async" />
                 <h3>Microsoft Ecosystem Integration</h3>
                 <p>Integrate seamlessly with Microsoft Teams, Microsoft Outlook, Microsoft Power BI, and other Microsoft applications.</p>
               </div>
@@ -367,7 +351,7 @@ const Education = () => {
             </div>
           </div>
         </div>
-        <Image style={{mixBlendMode:"soft-light"}} width={903} height={444} src="/img/education-31.png" alt="education-31" />
+        <Image style={{mixBlendMode:"soft-light"}} width={903} height={444} src="/img/education-31.png" alt="Benefits of Microsoft Dynamics 365 for Education" />
       </section>
       <section id='section5' className='solution-new-banner-five'>
         <div className='container'>
@@ -456,7 +440,7 @@ const Education = () => {
               <a href="/products/dynamics-365-business-central/" className="serv-card-666 serv-card-666-1">
                 <div className='serv-card-666-flex'>
                   <div className="serv-card-icon-666">
-                    <img src="/img/menu-icons/dynamics-365-businesscentral.svg" alt="dynamics-365-businesscentral" width="48" height="48" />
+                    <img src="/img/menu-icons/dynamics-365-businesscentral.svg" alt="" width="48" height="48" aria-hidden="true"  loading="lazy" decoding="async" />
                   </div>
                   <h3 className="serv-card-title-666">
                     Microsoft Dynamics 365 Business Central
@@ -475,7 +459,7 @@ const Education = () => {
               <a href="/products/microsoft-dynamics-365-sales/" className="serv-card-666 serv-card-666-1">
                 <div className='serv-card-666-flex'>
                   <div className="serv-card-icon-666">
-                    <img src="/img/menu-icons/dynamics-365-sales.svg" alt="Sales" width="48" height="48" />
+                    <img src="/img/menu-icons/dynamics-365-sales.svg" alt="Sales" width="48" height="48"  loading="lazy" decoding="async" />
                   </div>
                   <h3 className="serv-card-title-666">
                     Microsoft Dynamics 365 Sales
@@ -493,7 +477,7 @@ const Education = () => {
               <a href="/products/microsoft-dynamics-365-customer-service/" className="serv-card-666 serv-card-666-1">
                 <div className='serv-card-666-flex'>
                   <div className="serv-card-icon-666">
-                    <img src="/img/menu-icons/dynamics-365-customer-service.svg" alt="Customer Service" width="48" height="48" />
+                    <img src="/img/menu-icons/dynamics-365-customer-service.svg" alt="Customer Service" width="48" height="48"  loading="lazy" decoding="async" />
                   </div>
                   <h3 className="serv-card-title-666">
                     Microsoft Dynamics 365 Customer Service
@@ -511,7 +495,7 @@ const Education = () => {
               <a href="/blog/what-is-dynamics-365-customer-insights/" className="serv-card-666 serv-card-666-1">
                 <div className='serv-card-666-flex'>
                   <div className="serv-card-icon-666">
-                    <img src="/img/menu-icons/dynamics-365-customer-engagement.svg" alt="Customer Insights" width="48" height="48" />
+                    <img src="/img/menu-icons/dynamics-365-customer-engagement.svg" alt="Customer Insights" width="48" height="48"  loading="lazy" decoding="async" />
                   </div>
                   <h3 className="serv-card-title-666">
                     Microsoft Dynamics 365 Customer Insights
@@ -529,7 +513,7 @@ const Education = () => {
               <a href="/products/microsoft-power-bi/" className="serv-card-666 serv-card-666-1">
                 <div className='serv-card-666-flex'>
                   <div className="serv-card-icon-666">
-                    <img src="/img/menu-icons/power-bi.svg" alt="Microsoft Power BI" width="48" height="48" />
+                    <img src="/img/menu-icons/power-bi.svg" alt="Microsoft Power BI" width="48" height="48"  loading="lazy" decoding="async" />
                   </div>
                   <h3 className="serv-card-title-666">
                     Microsoft Power BI
@@ -547,7 +531,7 @@ const Education = () => {
               <a href="/products/microsoft-power-platform/" className="serv-card-666 serv-card-666-1">
                 <div className='serv-card-666-flex'>
                   <div className="serv-card-icon-666">
-                    <img src="/img/menu-icons/power-apps.svg" alt="Microsoft Power Platform" width="48" height="48" />
+                    <img src="/img/menu-icons/power-apps.svg" alt="Microsoft Power Platform" width="48" height="48"  loading="lazy" decoding="async" />
                   </div>
                   <h3 className="serv-card-title-666">
                     Microsoft Power Platform
@@ -603,7 +587,7 @@ const Education = () => {
             </div>
           </div>
         </div>
-        <img src="/img/education-26.png" alt="n-015" />
+        <img src="/img/education-26.png" alt="Services Offered by Dynamics Square UK for the Education Industry"  loading="lazy" decoding="async" />
       </section>
       <section id='section5' className='solution-new-banner-five solution-new-banner-six'>
         <div className='container'>
@@ -749,7 +733,7 @@ const Education = () => {
             </div>
             <div className='col-lg-5 order-2 align-self-center'>
               <div className='img-backs-sid img-backs-sid-t'>
-                <Image src="/img/about-new-32.png" alt="copil-side" width={495} height={4985} className='im-two' />
+                <Image src="/img/about-new-32.png" alt="Have you got questions about Dynamics 365 for Education?" width={495} height={4985} className='im-two' />
               </div>
             </div>
           </div>

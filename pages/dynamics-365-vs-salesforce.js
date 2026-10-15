@@ -1,21 +1,41 @@
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
+import PageSeo from "../components/PageSeo";
+// Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
+const PAGE_FAQS = [
+  {
+    "question": "1. Is Dynamics 365 a good CRM for larger businesses?",
+    "answer": "Dynamics 365 CRM is a powerful yet flexible CRM solution that supports all businesses, whether small or large. Large businesses consist of a lot of process complexities and various essential processes that need to be resolved for a smooth operation. Dynamics 365 CRM is one such solution that aligns its capabilities to match unique and complicated business needs."
+  },
+  {
+    "question": "2. Is CRM software only for large businesses?",
+    "answer": "A CRM solution is one such element of a business that plays an essential role in managing customers. And we all know that customers build businesses, and meeting their changing requirements is as important as generating revenue. So, a CRM solution supports the growth of a business, whether small, mid-sized, or large."
+  },
+  {
+    "question": "3. Which CRM software is best for marketing?",
+    "answer": "There are numerous CRM solutions on the market, and choosing the best one totally depends on your business requirements. However, if you are confused about choosing the perfect solution without paying a hefty implementation or subscription fee, feel free to contact CRM solutions consultants at ***. They are just a call away."
+  },
+  {
+    "question": "4. Is CRM software good for real estate?",
+    "answer": "A successful real estate business consists of offering great customer experiences at all stages of the sales journey. Implementing a good CRM solution will manage all real estate leads, track progress, and build a good relationship to earn loyalty."
+  },
+  {
+    "question": "5. My business is very small. Do I need a CRM solution?",
+    "answer": "Yes, you can go for a CRM solution specifically crafted for SMBs. It will help you focus on growing the small business rather than streamlining different queries from customers. If you have standard sales requirements, you can go with Dynamics 365 Business Central. It is an ERP solution but comes with basic sales capabilities. For more information, you can contact Dynamics 365 Business Central consultants."
+  }
+];
+
 
 const Dynamics365vsSalesForce = () => {
   return (
     <>
-      <Head>
-        <title>Dynamics 365 vs Salesforce CRM: Quick Comparison 2026</title>
-        <meta
-          name="description"
-          content="Explore a quick comparison of Dynamics 365 vs Salesforce CRM. Check out features, pros and cons and pricing also. Read which one is the best fit for your business needs?"
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/dynamics-365-vs-salesforce/"
-        />
-      </Head>
+      <PageSeo
+        type="Article"
+        title="Dynamics 365 vs Salesforce CRM: Quick Comparison 2026"
+        description="Explore a quick comparison of Dynamics 365 vs Salesforce CRM. Check out features, pros and cons and pricing also. Read which one is the best fit for your business needs?"
+        image="/img/dynamics-365-vs-salesforce-banner.png"
+        faqs={PAGE_FAQS}
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -40,10 +60,9 @@ const Dynamics365vsSalesForce = () => {
             <div className="col-lg-6 align-self-center">
               <Image
                 src="/img/dynamics-365-vs-salesforce-banner.png"
-                alt="dynamics-365-vs-salesforce-banner"
+                alt="Dynamics 365 CRM vs Salesforce: A Head-to-Head Comparison"
                 width={714} height={364}
-                priority = {true}
-              />
+                priority = {true} />
             </div>
           </div>
         </div>
@@ -171,9 +190,8 @@ const Dynamics365vsSalesForce = () => {
                  <Image
                    src="/img/startup-side.png"
                    className="fix-im"
-                   alt="startup-side"
-                   width={553} height={541}
-                 />
+                   alt="Simplified Integrations to Power Up Customer Journey"
+                   width={553} height={541} />
              
                </div>
              </div>
@@ -188,7 +206,7 @@ const Dynamics365vsSalesForce = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="call_to_action-right over-img">
-                <img src="/img/MaskGroup8.png" alt="image" />
+                <img src="/img/MaskGroup8.png" alt="Business consultant"  loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="col-lg-7 align-self-center">

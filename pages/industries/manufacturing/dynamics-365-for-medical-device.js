@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import useCardScrollEffect from "../../../components/useCardScrollEffect";
 import faqData from '../../../public/data/industriesmedicaldevice.json';
+import PageSeo from "../../../components/PageSeo";
 
 const PAGE_URL = "https://www.dynamicssquare.co.uk/industries/manufacturing/dynamics-365-for-medical-device/";
 const PAGE_TITLE = "Dynamics 365 ERP for Medical Device Manufacturing | Dynamics Square UK";
@@ -95,30 +95,17 @@ const MedicalDevice = () => {
 
   return (
     <>
-      <Head>
-        <title>{PAGE_TITLE}</title>
-        <meta name="description" content={PAGE_DESC} />
-        <link rel="canonical" href={PAGE_URL} />
-        <meta property="og:locale" content="GB" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content={PAGE_TITLE} />
-        <meta property="og:description" content={PAGE_DESC} />
-        <meta property="og:url" content={PAGE_URL} />
-        <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content={OG_IMAGE} />
+      <PageSeo
+        type="Service"
+        title={PAGE_TITLE}
+        description={PAGE_DESC}
+        image={OG_IMAGE}
+        extraSchema={pageSchema}
+      >
         <meta property="og:image:width" content="1097" />
         <meta property="og:image:height" content="656" />
         <meta property="og:image:type" content="image/png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content={PAGE_TITLE} />
-        <meta name="twitter:description" content={PAGE_DESC} />
-        <meta name="twitter:image" content={OG_IMAGE} />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
-        />
-      </Head>
+      </PageSeo>
       <div className='solution-new-banner-one solution-new-banner-one-colos'>
         <div className='container'>
           <div className='row justify-content-center'>

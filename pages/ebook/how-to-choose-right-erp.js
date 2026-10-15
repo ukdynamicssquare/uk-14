@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -7,6 +6,7 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Navigation } from "swiper/modules";
 import CommonEbookForm from "../../components/CommonEbookForm";
+import PageSeo from "../../components/PageSeo";
 
 const Howtochooserighterp = () => {
   // const router = useRouter();
@@ -51,21 +51,13 @@ const Howtochooserighterp = () => {
 
   return (
     <>
-      <Head>
-        <title>Free ERP eBook | Ultimate Guide to Choose the Right ERP</title>
-        <meta
-          name="description"
-          content="Our guide will take you step-by-step through how to get started with ERP software, from the very beginning. Jump in and explore our free ERP eBook!"
-        />
-        <meta
-          name="robots"
-          content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/ebook/how-to-choose-right-erp/"
-        />
-      </Head>
+      <PageSeo
+        robots="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"
+        type="WebPage"
+        title="Free ERP eBook | Ultimate Guide to Choose the Right ERP"
+        description="Our guide will take you step-by-step through how to get started with ERP software, from the very beginning. Jump in and explore our free ERP eBook!"
+        image="/img/erp-banner-book.png"
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -90,7 +82,7 @@ const Howtochooserighterp = () => {
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/erp-banner-book.png" alt="erp-banner-book" width={980} height={578} priority = {true} />
+              <Image src="/img/erp-banner-book.png" alt="By reading this E-book on ERP You Will learn" width={980} height={578} priority = {true} />
             </div>
           </div>
         </div>
@@ -129,43 +121,37 @@ const Howtochooserighterp = () => {
                   className="mySwiper phone-slider"
                 >
                   <SwiperSlide>
-                    <img src="/img/cover-1.jpg" alt="cover-1.jpg" />
+                    <img src="/img/cover-1.jpg" alt="Steps for Successful ERP Implementation" />
                   </SwiperSlide>
                   <SwiperSlide>
                     <img
                       src="/img/right-time-to-implement-ERP.png"
-                      alt="cover-1.jpg"
-                    />
+                      alt="Steps for Successful ERP Implementation"  loading="lazy" decoding="async" />
                   </SwiperSlide>
                   <SwiperSlide>
                     <img
                       src="/img/reason-for-implementing-ERP.png"
-                      alt="cover-1.jpg"
-                    />
+                      alt="Steps for Successful ERP Implementation"  loading="lazy" decoding="async" />
                   </SwiperSlide>
                   <SwiperSlide>
                     <img
                       src="/img/choose-right-WRP.png"
-                      alt="choose-right-WRP"
-                    />
+                      alt="Steps for Successful ERP Implementation"  loading="lazy" decoding="async" />
                   </SwiperSlide>
                   <SwiperSlide>
                     <img
                       src="/img/things-to-considerchoosing-ERP.png"
-                      alt="things-to-considerchoosing-ERP"
-                    />
+                      alt="Steps for Successful ERP Implementation"  loading="lazy" decoding="async" />
                   </SwiperSlide>
                   <SwiperSlide>
                     <img
                       src="/img/step-for-successful-ERP.png"
-                      alt="step-for-successful-ERP"
-                    />
+                      alt="Steps for Successful ERP Implementation"  loading="lazy" decoding="async" />
                   </SwiperSlide>
                   <SwiperSlide>
                     <img
                       src="/img/selecting-right-ERP.png"
-                      alt="selecting-right-ERP"
-                    />
+                      alt="Strategic Reasons for Implementing Modern ERP"  loading="lazy" decoding="async" />
                   </SwiperSlide>
                 </Swiper>
               </div>
@@ -194,7 +180,7 @@ const Howtochooserighterp = () => {
           <div className="row">
             <div className="col-lg-6 align-self-center">
               <div className="pic-ll">
-                <img src="/img/erp-left-about.png" alt="erp-left-about" />
+                <img src="/img/erp-left-about.png" alt="More about this E-book"  loading="lazy" decoding="async" />
               </div>
             </div>
             {/* <div className="col-lg-1 align-self-center"></div> */}
@@ -235,7 +221,7 @@ const Howtochooserighterp = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="call_to_action-right over-img">
-                <img src="/img/MaskGroup8.png" alt="image" />
+                <img src="/img/MaskGroup8.png" alt="Business consultant"  loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="col-lg-7 align-self-center">
@@ -416,7 +402,7 @@ const Howtochooserighterp = () => {
             </div>
             <div className="col-lg-6 align-self-center">
               <div className="pic-l2">
-                <img src="/img/Cover_Book_Moc.png" alt="Cover_Book_Moc" />
+                <img src="/img/Cover_Book_Moc.png" alt="Why do I need to fill out the information requested?"  loading="lazy" decoding="async" />
               </div>
             </div>
           </div>

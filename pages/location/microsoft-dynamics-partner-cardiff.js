@@ -1,16 +1,20 @@
-import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import Form from "../../components/Form";
+import PageSeo from "../../components/PageSeo";
+import LocationPageStyles from "../../components/LocationPageStyles";
 
 const MicrosoftDynamicsPartnerCardiff = () => {
   return (
     <>
-      <Head>
-      <title>Microsoft Dynamics Partner in Cardiff, UK | Dynamics Square</title>
-<meta name="description" content="Looking for trusted Microsoft Dynamics 365 partner in Cardiff, UK? Our expert team provides tailored CRM & ERP solutions to boost business efficiency. Contact us today!"/>
-<link rel="canonical" href="https://www.dynamicssquare.co.uk/location/microsoft-dynamics-partner-cardiff/" />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Microsoft Dynamics Partner in Cardiff, UK | Dynamics Square"
+        description="Looking for trusted Microsoft Dynamics 365 partner in Cardiff, UK? Our expert team provides tailored CRM & ERP solutions to boost business efficiency. Contact us today!"
+        image="/img/Cardiff-pic.png"
+        areaServed="Cardiff"
+      />
+      <main className="loc-detail">
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -29,10 +33,10 @@ const MicrosoftDynamicsPartnerCardiff = () => {
             <div className="col-lg-6 align-self-center">
               <Image
                 src="/img/Cardiff-pic.png"
-                alt="Cardiff-pic"
+                alt="Elevate Your Cardiff Business with Reliable Global Dynamics 365 Solutions"
                 width={718} height={447}
                 priority = {true}
-              />
+                sizes="(max-width: 991px) 100vw, 50vw" />
             </div>
           </div>
         </div>
@@ -275,6 +279,8 @@ const MicrosoftDynamicsPartnerCardiff = () => {
           </div>
         </div>
       </section>
+      </main>
+      <LocationPageStyles />
     </>
   );
 };

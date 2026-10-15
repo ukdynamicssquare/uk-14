@@ -1,18 +1,21 @@
-import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import Form from "../../components/Form";
+import PageSeo from "../../components/PageSeo";
+import LocationPageStyles from "../../components/LocationPageStyles";
 
 
 const MicrosoftDynamicsPartnerSheffield = () => {
   return (
     <>
-      <Head>
-      <title>Microsoft Dynamics Partner Sheffield, UK | Dynamics Square </title>
-<meta name="description" content="Get instant support from a top Microsoft Dynamics 365 partner in Sheffield, UK. We offer remote and on-site solutions to enable your business's growth and scalability. "/>
-<link rel="canonical" href="https://www.dynamicssquare.co.uk/location/microsoft-dynamics-partner-sheffield/" />
-
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Microsoft Dynamics Partner Sheffield, UK | Dynamics Square"
+        description="Get instant support from a top Microsoft Dynamics 365 partner in Sheffield, UK. We offer remote and on-site solutions to enable your business's growth and scalability."
+        image="/img/contact-us-pic.png"
+        areaServed="Sheffield"
+      />
+      <main className="loc-detail">
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -31,10 +34,10 @@ const MicrosoftDynamicsPartnerSheffield = () => {
             <div className="col-lg-6 align-self-center">
               <Image
                 src="/img/contact-us-pic.png"
-                alt="microsoft-dynamics-partner-sheffield"
+                alt="Dynamics Square - A Trusted Microsoft Dynamics Partner in Sheffield (UK)"
                 width={692} height={526}
                 priority = {true}
-              />
+                sizes="(max-width: 991px) 100vw, 50vw" />
             </div>
           </div>
         </div>
@@ -81,9 +84,8 @@ const MicrosoftDynamicsPartnerSheffield = () => {
               <div className="commen-lef-pic text-center">
                 <Image
                   src="/img/upgrade-service-banner.png"
-                  alt="upgrade-service-banner"
-                  width={514} height={472}
-                />
+                  alt="Dynamics 365 Upgrade Services"
+                  width={514} height={472} />
               </div>
             </div>
           </div>
@@ -92,9 +94,8 @@ const MicrosoftDynamicsPartnerSheffield = () => {
               <div className="commen-lef-pic text-center">
                 <Image
                   src="/img/support-service-banner.png"
-                  alt="support-service-banner"
-                  width={805} height={473}
-                />
+                  alt="Dynamics 365 Support Services"
+                  width={805} height={473} />
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
@@ -116,9 +117,8 @@ const MicrosoftDynamicsPartnerSheffield = () => {
               <div className="commen-lef-pic text-center">
                 <Image
                   src="/img/implimenation-service-banner.png"
-                  alt="implimenation-service-banner"
-                  width={805} height={473}
-                />
+                  alt="Ready to unlock your business's full potential and accelerate growth?"
+                  width={805} height={473} />
               </div>
             </div>
           </div>
@@ -169,7 +169,7 @@ const MicrosoftDynamicsPartnerSheffield = () => {
 
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                  <Image src="/img/group-2123.png" alt="Add-ons.svg" width={94} height={94} />
+                  <Image src="/img/group-2123.png" alt="Dynamics 365 Finances" width={94} height={94} />
                 </div>
                 <div className="style-grid-content">
                   <h3>Dynamics 365 Finances </h3>
@@ -178,7 +178,7 @@ const MicrosoftDynamicsPartnerSheffield = () => {
               </div>
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                  <Image src="/img/group-2126.png" alt="Add-ons.svg" width={94} height={94} />
+                  <Image src="/img/group-2126.png" alt="Dynamics 365 Supply Chain" width={94} height={94} />
                 </div>
                 <div className="style-grid-content">
                   <h3>Dynamics 365 Supply Chain </h3>
@@ -187,7 +187,7 @@ const MicrosoftDynamicsPartnerSheffield = () => {
               </div>
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                  <Image src="/img/group-2136.png" alt="Add-ons.svg" width={94} height={94} />
+                  <Image src="/img/group-2136.png" alt="Dynamics 365 Customer Engagement" width={94} height={94} />
                 </div>
                 <div className="style-grid-content">
                   <h3>Dynamics 365 Customer Engagement</h3>
@@ -196,7 +196,7 @@ const MicrosoftDynamicsPartnerSheffield = () => {
               </div>
               <div className="style-grid-1">
                 <div className="style-grid-icons">
-                  <Image src="/img/group-2137.png" alt="Add-ons.svg" width={94} height={94} />
+                  <Image src="/img/group-2137.png" alt="Dynamics 365 Field Service" width={94} height={94} />
                 </div>
                 <div className="style-grid-content">
                   <h3>Dynamics 365 Field Service</h3>
@@ -298,9 +298,8 @@ const MicrosoftDynamicsPartnerSheffield = () => {
               <div className="commen-lef-pic text-center">
                 <Image
                   src="/img/system-health-check-1024x601.webp"
-                  alt="system-health-check-1024x601"
-                  width={1024} height={601}
-                />
+                  alt="Sheffield Based Microsoft Solutions Partners"
+                  width={1024} height={601} />
               </div>
             </div>
           </div>
@@ -385,6 +384,8 @@ const MicrosoftDynamicsPartnerSheffield = () => {
           </div>
         </div>
       </section>
+      </main>
+      <LocationPageStyles />
     </>
   );
 };

@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -28,21 +27,19 @@ export function formatDate(date) {
 export const authorHref = (author) =>
   `/blog/author/${String(author || "").toLowerCase().trim().split(/\s+/).join("-")}/`;
 
-export function BlogFontPreload() {
-  return (
-    <Head>
-      {BLOG_FONT_FILES.map((href) => (
-        <link
-          key={href}
-          rel="preload"
-          href={href}
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
-      ))}
-    </Head>
-  );
+// Font preload tags. Put {blogFontLinks()} inside the page's own <Head>, so
+// each page keeps a single <Head>.
+export function blogFontLinks() {
+  return BLOG_FONT_FILES.map((href) => (
+    <link
+      key={href}
+      rel="preload"
+      href={href}
+      as="font"
+      type="font/woff2"
+      crossOrigin="anonymous"
+    />
+  ));
 }
 
 export function PostImage({ post, sizes, priority = false, className }) {

@@ -1,10 +1,10 @@
 
 import { useState, useEffect } from "react";
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
 import caseStudies from "../../public/data/case-studies.json";
+import PageSeo from "../../components/PageSeo";
 
 const tabs = [
   "All",
@@ -155,21 +155,11 @@ const handleTabChange = (tab) => {
 
   return (
     <>
-      <Head>
-        <title>
-          Microsoft Dynamics 365 Case Studies | Dynamics Square
-        </title>
-
-        <meta
-          name="description"
-          content="Discover how Dynamics Square helps businesses transform their operations with Microsoft Dynamics 365 solutions, implementation, upgrades and support."
-        />
-
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/case-studies/"
-        />
-      </Head>
+      <PageSeo
+        type="CollectionPage"
+        title="Microsoft Dynamics 365 Case Studies | Dynamics Square"
+        description="Discover how Dynamics Square helps businesses transform their operations with Microsoft Dynamics 365 solutions, implementation, upgrades and support."
+      />
 
       <main className="case-studies-page">
 

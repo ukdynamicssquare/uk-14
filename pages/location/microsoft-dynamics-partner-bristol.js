@@ -1,16 +1,19 @@
-import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import Form from "../../components/Form";
+import PageSeo from "../../components/PageSeo";
+import LocationPageStyles from "../../components/LocationPageStyles";
 const MicrosoftDynamicsPartnerLiverpool = () => {
   return (
     <>
-      <Head>
-      <title>Microsoft Dynamics Partner Bristol, UK </title>
-<meta name="description" content="Dynamics Square is Microsoft Dynamics partner in Bristol, UK serving quality assured ERP and CRM solutions with high-end support. Book free consultation today."/>
-<link rel="canonical" href="https://www.dynamicssquare.co.uk/location/microsoft-dynamics-partner-bristol/" />
-
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Microsoft Dynamics Partner Bristol, UK"
+        description="Dynamics Square is Microsoft Dynamics partner in Bristol, UK serving quality assured ERP and CRM solutions with high-end support. Book free consultation today."
+        image="/img/Microsoft-Dynamics-Partner-Liverpool.png"
+        areaServed="Bristol"
+      />
+      <main className="loc-detail">
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -34,9 +37,9 @@ const MicrosoftDynamicsPartnerLiverpool = () => {
             <div className="col-lg-6 align-self-center">
               <Image
                 src="/img/Microsoft-Dynamics-Partner-Liverpool.png"
-                alt="Microsoft-Dynamics-Partner-Bristol-Location-768x501"
+                alt="Looking for a Reliable Microsoft Certified Partner near Bristol?"
                 width={768} height={501} priority = {true}
-              />
+                sizes="(max-width: 991px) 100vw, 50vw" />
             </div>
           </div>
         </div>
@@ -554,9 +557,8 @@ If you require minor adjustments or have minor issues, our Microsoft-certified t
               <div className="commen-lef-pic text-center">
                 <Image
                   src="/img/system-health-check-1024x601.webp"
-                  alt="system-health-check-1024x601"
-                  width={1024} height={601}
-                />
+                  alt="Bristol Based Microsoft Solutions Partners"
+                  width={1024} height={601} />
               </div>
             </div>
           </div>
@@ -607,6 +609,8 @@ If you require minor adjustments or have minor issues, our Microsoft-certified t
           </div>
         </div>
       </section>
+      </main>
+      <LocationPageStyles />
     </>
   );
 };

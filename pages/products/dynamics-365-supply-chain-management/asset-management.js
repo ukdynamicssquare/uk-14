@@ -1,37 +1,17 @@
-import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
+import PageSeo from "../../../components/PageSeo";
 
 const AssetManagement = () => {
   return (
     <>
-      <Head>
-      <title>Asset Management in Supply Chain Management | Dynamics Square UK</title>
-        <meta
-          name="description"
-          content="Asset management in supply chain to optimise inventory, reduce costs, and improve efficiency. Key to seamless operations and customer satisfaction."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/dynamics-365-supply-chain-management/asset-management/"
-        />
-        <meta property="og:locale" content="GB" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Asset Management in Supply Chain Management | Dynamics Square UK" />
-        <meta property="og:description" content="Asset management in supply chain to optimise inventory, reduce costs, and improve efficiency. Key to seamless operations and customer satisfaction." />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/dynamics-365-supply-chain-management/asset-management/" />
-        <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/assest-manage-banner.png" />
-        <meta property="og:image:width" content="200" />
-        <meta property="og:image:height" content="200" />
-        <meta property="og:image:type" content="image/png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="Asset Management in Supply Chain Management | Dynamics Square UK" />
-        <meta name="twitter:description" content="Asset management in supply chain to optimise inventory, reduce costs, and improve efficiency. Key to seamless operations and customer satisfaction." />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/assest-manage-banner.png" />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Asset Management in Supply Chain Management | Dynamics Square UK"
+        description="Asset management in supply chain to optimise inventory, reduce costs, and improve efficiency. Key to seamless operations and customer satisfaction."
+        image="https://www.dynamicssquare.co.uk/img/assest-manage-banner.png"
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -86,7 +66,7 @@ const AssetManagement = () => {
                         aria-controls="fin1"
                       >
                         <div className="wr-in">
-                          <img src="/img/track_assets.png" alt="track_assets" />
+                          <img src="/img/track_assets.png" alt="What is Asset Management in Dynamics 365 Supply Chain Management?" />
                         </div>
                         <span>Track Assets</span>
                       </button>
@@ -114,7 +94,7 @@ const AssetManagement = () => {
                         aria-controls="fin2"
                       >
                         <div className="wr-in">
-                          <img src="/img/optimise_machine_performances.png" alt="optimise_machine_performances" />
+                          <img src="/img/optimise_machine_performances.png" alt="Track Assets"  loading="lazy" decoding="async" />
                         </div>
                         <span>Optimise Machine Performances</span>
                       </button>
@@ -149,7 +129,7 @@ const AssetManagement = () => {
                         aria-controls="fin3"
                       >
                         <div className="wr-in">
-                          <img src="/img/Warehouse-Picks.png" alt="Warehouse-Picks" />
+                          <img src="/img/Warehouse-Picks.png" alt="Optimise Machine Performances"  loading="lazy" decoding="async" />
                         </div>
                         <span>Manage Maintenance/Servicing</span>
                       </button>
@@ -179,8 +159,7 @@ const AssetManagement = () => {
                         <div className="wr-in">
                           <img
                             src="/img/mobile_accessibility.png"
-                            alt="mobile_accessibility"
-                          />
+                            alt="Manage Maintenance/Servicing"  loading="lazy" decoding="async" />
                         </div>
                         <span>Mobile Accessibility</span>
                       </button>
@@ -280,7 +259,7 @@ const AssetManagement = () => {
               <div className="col-lg-6">
                 <div className="style-grid-1">
                   <div className="style-grid-icons">
-                    <Image src="/img/preventive_maintenance.png" alt="preventive_maintenance" width={84} height={84} />
+                    <Image src="/img/preventive_maintenance.png" alt="Preventive Maintenance" width={84} height={84} />
                   </div>
                   <div className="style-grid-content">
                     <h3>Preventive Maintenance</h3>
@@ -289,7 +268,7 @@ const AssetManagement = () => {
                 </div>
                 <div className="style-grid-1">
                   <div className="style-grid-icons">
-                  <Image src="/img/improve_maintenance_planning.png" alt="improve_maintenance_planning"  width={84} height={84} />
+                  <Image src="/img/improve_maintenance_planning.png" alt="Improve Maintenance Planning"  width={84} height={84} />
                   </div>
                   <div className="style-grid-content">
                     <h3>Improve Maintenance Planning</h3>
@@ -298,7 +277,7 @@ const AssetManagement = () => {
                 </div>
                 <div className="style-grid-1">
                   <div className="style-grid-icons">
-                  <Image src="/img/extended_asset_life.png" alt="extended_asset_life"  width={84} height={84} />
+                  <Image src="/img/extended_asset_life.png" alt="Extended Asset Life"  width={84} height={84} />
                   </div>
                   <div className="style-grid-content">
                     <h3>Extended Asset Life</h3>
@@ -312,9 +291,8 @@ const AssetManagement = () => {
                   <div className="style-grid-icons">
                     <Image
                       src="/img/data_driven_decision_making.png"
-                      alt="data_driven_decision_making"
-                      width={84} height={84}
-                    />
+                      alt="Data-driven Decision Making"
+                      width={84} height={84} />
                   </div>
                   <div className="style-grid-content">
                     <h3>Data-driven Decision Making</h3>
@@ -324,7 +302,7 @@ const AssetManagement = () => {
 
                 <div className="style-grid-1">
                   <div className="style-grid-icons">
-                    <Image src="/img/accurate_asset_records.png" alt="accurate_asset_records"  width={84} height={84} />
+                    <Image src="/img/accurate_asset_records.png" alt="Accurate Asset Records"  width={84} height={84} />
                   </div>
                   <div className="style-grid-content">
                     <h3>Accurate Asset Records</h3>
@@ -333,7 +311,7 @@ const AssetManagement = () => {
                 </div>
                 <div className="style-grid-1">
                   <div className="style-grid-icons">
-                    <Image src="/img/increased_asset_utilisation.png" alt="increased_asset_utilisation"  width={84} height={84} />
+                    <Image src="/img/increased_asset_utilisation.png" alt="Increased Asset Utilisation"  width={84} height={84} />
                   </div>
                   <div className="style-grid-content">
                     <h3>Increased Asset Utilisation</h3>
@@ -351,9 +329,8 @@ const AssetManagement = () => {
                 <div className="busine_service_bottom-left custom012">
                   <Image
                     src="/img/assest-manage-side.png"
-                    alt="assest-manage-side"
-                    width={482} height={513}
-                  />
+                    alt="Asset Management in Different Industries"
+                    width={482} height={513} />
                 </div>
               </div>
               <div className="col-lg-6 align-self-center">

@@ -1,28 +1,56 @@
 import React, { useState } from "react";
 // import ModalVideo from "react-modal-video";
-import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
 // import Blog from "../../components/Blog";
 import FormGuide from "../../../components/FormGuide";
 import Blog from "../../../components/Blog";
+import PageSeo from "../../../components/PageSeo";
+// Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
+const PAGE_FAQS = [
+  {
+    "question": "What is Power BI?",
+    "answer": "Power BI is Microsoft's highly embedded analytics tool to develop and share reports with people across your business. Power BI is designed that can seamlessly be configured with Microsoft's own applications as well as other well-known third-party applications so as businesses without disturbing their existing system set-up can avail of Power BI and get it configured with their existing system to work in an integrated manner. Power BI helps enterprises to make powerful reporting visuals, key analytics, and other graphical analysis. Users can even develop their own visuals suited to their specific business needs and can share the same within their organisation to be used further by their workforce. All the Power BI reports can be published and demonstrated on user dashboards. These reports and insights available in different visualizations help businesses for better decision making. Moreover, dashboards can also be customized to address specific user needs. Get more insight about \" What is Power BI? \""
+  },
+  {
+    "question": "Does Power BI produce Paginated reports?",
+    "answer": "Yes, Power BI allows users to create pixel-perfect and highly formatted Paginated reports that can be leveraged for a printing purpose or to create a pdf version. Paginated reports are developed and available in the Power BI premium plan to fit well on multiple pages. User(s) can publish and share paginated reports through the Power BI dashboard across their workspace."
+  },
+  {
+    "question": "Can I use Power BI for Budgeting & Forecasting?",
+    "answer": "Power BI is a powerful data visualization and business analytics tool that makes effective use of the data sources you connect with and prepares your data for budgeting and forecasting insights. You could have data on MS Excel, Salesforce, or QuickBooks; Power BI utilizes your data sources and prepares your data for budgeting and forecasting insights. For instance, it could be sales forecasting reports, production analysis, operational budgets, Cashflow statements, asset planning, and more. To know more about how it works, you can contact Dynamics Square."
+  },
+  {
+    "question": "How is Power BI different from traditional BI implementations?",
+    "answer": "When it comes to comparing Power BI with traditional BI tools, there could be several differences. Power BI is a next-generation Business Intelligence tool that is facilitated with cloud and self-service opportunities. The very first benefit of Power BI over a traditional one is - Power BI can be configured for on-premises as well as on-cloud i.e., Software as a Service (SaaS). Users can access their data (hosted on Microsoft's Azure Server) simply using their browser. Cloud-based Power BI solution eliminates the upfront cost, hardware investment, and lowers the license pricing. The Next but not the least benefit of Power BI over traditional BI systems is Self-service facilitation. With Power BI, you can create custom reports, create your own visuals, and can extend the existing Power BI reports which are not possible with traditional business intelligence systems. Using traditional BI configuration, users can make decisions based on guided analytics or reports only; they can't make their own reports or perform customizations, etc. Moreover, Power BI reduces your costs, stimulates the development cycle, and accelerates user adoption."
+  },
+  {
+    "question": "What is Power BI Report Server? Does this mean you are making Power BI available for on-premises systems?",
+    "answer": "Power BI Report Server is the on-premises reporting solution wherein users can create reports today and can move to the cloud later. If you want to keep data within your organisational boundaries, you can simply create, access, and share accordingly. It is included in the Power BI premium plan. It works on your own terms. Report Server enables you to create interactive and intuitive reports leveraging the reporting capabilities of SSRS (SQL Server Reporting Services). You can even design pixel-perfect paginated reports configured to your business needs. Since the Power BI Report Server is an enterprise-grade platform, it also allows you to scale thousands of users."
+  },
+  {
+    "question": "How is Power BI licensed? How much does the Power BI premium cost?",
+    "answer": "In terms of Power BI licensing, Power BI Desktop is available to download for free. All you need to register your business at no cost. With this simple step, any business user can start creating their reports, but this will not allow you to share or distribute your reports to the people in your organisation. Once you opt for the Power BI Pro license, you will be get permitted to share your reports with other users each with a Power BI Pro license in your workspace. Rest, you can always contact Dynamics Square to enquire about Power BI licensing costs for your business."
+  },
+  {
+    "question": "What if I want more functionality or change?",
+    "answer": "Power BI is a highly flexible business analytics solution that can be customized as per your specific business domain and contextual needs. Even post-implementation, you can ask for more functionality from your Power BI implementation provider. For instance, your current system is on-premises facilitated and you want cloud later or you are using Power BI Pro and want to upgrade with Power BI premium. You can even get your custom implementation for now and can ask for more functionality upgrades or customization suited to your continuously changing need. To get more information on this, simply connect with Dynamics Square."
+  }
+];
+
 const PowerBI = () => {
   const [isOpen, setOpen] = useState(false);
   const [open, setsOpen] = useState(false);
   return (
     <>
-      <Head>
-        <title>Microsoft Power BI Partner: Experts & Consultant - Dynamics Square UK</title>
-        <meta
-          name="description"
-          content="Need Microsoft Power BI services in the UK? Hire a trusted Power BI expert to transform your data into actionable insights. Get free online consultation today."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/microsoft-power-bi/"
-        />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Microsoft Power BI Partner: Experts & Consultant - Dynamics Square UK"
+        description="Need Microsoft Power BI services in the UK? Hire a trusted Power BI expert to transform your data into actionable insights. Get free online consultation today."
+        image="/img/Power-BI-1024x586.webp"
+        faqs={PAGE_FAQS}
+      />
       {/* <ModalVideo
         channel="youtube"
         autoplay
@@ -89,10 +117,9 @@ const PowerBI = () => {
                         <div className="wr-in">
                           <img
                             src="/img/Power-BI-Desktop.svg"
-                            alt="Power-BI-Desktop"
+                            alt="Get Microsoft Power BI Consulting Services"
                             width="36"
-                            height="36"
-                          />
+                            height="36" />
                         </div>
                         <span>Power BI Desktop</span>
                       </button>
@@ -125,10 +152,9 @@ const PowerBI = () => {
                         <div className="wr-in">
                           <img
                             src="/img/Power-Bi-Service.svg"
-                            alt="Power-Bi-Service"
+                            alt="Power BI Desktop"
                             width="36"
-                            height="36"
-                          />
+                            height="36"  loading="lazy" decoding="async" />
                         </div>
                         <span>Power BI Service</span>
                       </button>
@@ -168,10 +194,9 @@ const PowerBI = () => {
                         <div className="wr-in">
                           <img
                             src="/img/Power-Bi-Mobile.svg"
-                            alt="Power-Bi-Mobile"
+                            alt="Power BI Service"
                             width="36"
-                            height="36"
-                          />
+                            height="36"  loading="lazy" decoding="async" />
                         </div>
                         <span>Power BI Mobile</span>
                       </button>
@@ -373,7 +398,7 @@ const PowerBI = () => {
                 </div>
                 <div className="col-lg-6 col-md-6">
                   <div className="all-to-power-bi-pic text-center">
-                    <img src="/img/mask-group3x.png" alt="mask-group@3x" width="894" height="954" />
+                    <img src="/img/mask-group3x.png" alt="mask-group@3x" width="894" height="954"  loading="lazy" decoding="async" />
                   </div>
                 </div>
               </div>
@@ -394,7 +419,7 @@ const PowerBI = () => {
           <div className="row justify-content-center">
             <div className="col-lg-3 d-flex">
               <div className="upgrade-box-one d-flex-fil">
-                <Image src="/img/settings_b.png" alt="settings_b" width={48} height={48} />
+                <Image src="/img/settings_b.png" alt="" width={48} height={48} aria-hidden="true" />
                 <h3>Implementation</h3>
                 <p>Get Power BI Implementation customized and configured suited to your specific business needs.</p>
                 <a href="/power-bi-implementation/">Get Started <i className="bi bi-arrow-right"></i></a>
@@ -411,7 +436,7 @@ const PowerBI = () => {
 
             <div className="col-lg-3 d-flex">
               <div className="upgrade-box-one d-flex-fil">
-                <Image src="/img/person_pin.png" alt="person_pin" width={48} height={48} />
+                <Image src="/img/person_pin.png" alt="" width={48} height={48} aria-hidden="true" />
                 <h3>Support</h3>
                 <p>Get our Power BI Support Services to fully meet your business needs. Contact our Power Expert Now.</p>
                 <a href="/power-bi-support/">Get Started <i className="bi bi-arrow-right"></i></a>
@@ -420,7 +445,7 @@ const PowerBI = () => {
 
             <div className="col-lg-3 d-flex">
               <div className="upgrade-box-one d-flex-fil">
-                <img className="image-backx" src="/img/free-cons.png" alt="free-cons" />
+                <img className="image-backx" src="/img/free-cons.png" alt="Support"  loading="lazy" decoding="async" />
                 <Image src="/img/forum.png" alt="forum" width={48} height={48} />
                 <h3>Consulting</h3>
                 <p>Get optimum D365 Power BI service suited to your customised business needs.</p>

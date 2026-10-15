@@ -1,15 +1,16 @@
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link"; 
+import PageSeo from "../components/PageSeo";
 
 const MigrateFandSC = () => {
   return (
     <>
-      <Head>
-      <title>Why Migrate to Dynamics 365 Finance &amp; Supply Chain</title>
-<meta name="description" content="Discover the concrete reasons why migrate to Dynamics 365 Finance &amp; Supply Chain Managment ERP solutions. Connect to Dynamics Square experts to know more."/>
-<link rel="canonical" href="https://www.dynamicssquare.co.uk/why-to-migrate-to-d365-finance-supply-chain/" />
-      </Head>
+      <PageSeo
+        type="Article"
+        title="Why Migrate to Dynamics 365 Finance & Supply Chain"
+        description="Discover the concrete reasons why migrate to Dynamics 365 Finance & Supply Chain Managment ERP solutions. Connect to Dynamics Square experts to know more."
+        image="/img/why-migart.png"
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -36,7 +37,7 @@ const MigrateFandSC = () => {
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/why-migart.png" alt="why-migart" width={774} height={473}  priority = {true} />
+              <Image src="/img/why-migart.png" alt="dynamics 365 finance & supply chain benefits" width={774} height={473}  priority = {true} />
             </div>
           </div>
         </div>
@@ -65,8 +66,7 @@ const MigrateFandSC = () => {
                         <div className="wr-in">
                           <img
                             src="/img/new-icons1.png"
-                            alt="new-icons1"
-                          />
+                            alt="dynamics 365 finance & supply chain benefits" />
                         </div>
                         <span>New End User Interface</span>
                       </button>
@@ -115,8 +115,7 @@ const MigrateFandSC = () => {
                         <div className="wr-in">
                           <img
                             src="/img/new-icons2.png"
-                            alt="new-icons2"
-                          />
+                            alt="New End User Interface"  loading="lazy" decoding="async" />
                         </div>
                         <span>Platform Elasticity</span>
                       </button>
@@ -164,8 +163,7 @@ const MigrateFandSC = () => {
                         <div className="wr-in">
                           <img
                             src="/img/new-icons3.png"
-                            alt="new-icons3"
-                          />
+                            alt="Platform Elasticity"  loading="lazy" decoding="async" />
                         </div>
                         <span>Mobile Ready</span>
                       </button>
@@ -211,8 +209,7 @@ const MigrateFandSC = () => {
                         <div className="wr-in">
                           <img
                             src="/img/new-icons4.png"
-                            alt="new-icons4"
-                          />
+                            alt="Mobile Ready"  loading="lazy" decoding="async" />
                         </div>
                         <span>Reduce Customization</span>
                       </button>
@@ -263,8 +260,7 @@ const MigrateFandSC = () => {
                         <div className="wr-in">
                           <img
                             src="/img/new-icons5.png"
-                            alt="new-icons5"
-                          />
+                            alt="Reduce Customization"  loading="lazy" decoding="async" />
                         </div>
                         <span>Reduce Hardware Costs</span>
                       </button>
@@ -318,8 +314,7 @@ const MigrateFandSC = () => {
                         <div className="wr-in">
                           <img
                             src="/img/new-icons6.png"
-                            alt="new-icons1"
-                          />
+                            alt="Reduce Hardware Costs"  loading="lazy" decoding="async" />
                         </div>
                         <span>Predictable Implementations</span>
                       </button>
@@ -367,8 +362,7 @@ const MigrateFandSC = () => {
                         <div className="wr-in">
                           <img
                             src="/img/new-icons7.png"
-                            alt="new-icons7"
-                          />
+                            alt="Predictable Implementations"  loading="lazy" decoding="async" />
                         </div>
                         <span>Out Of The Box Ha/Dr</span>
                       </button>
@@ -415,8 +409,7 @@ const MigrateFandSC = () => {
                         <div className="wr-in">
                           <img
                             src="/img/new-icons8.png"
-                            alt="new-icons8"
-                          />
+                            alt="Out Of The Box Ha/Dr"  loading="lazy" decoding="async" />
                         </div>
                         <span>Integration With Productivity Tools</span>
                       </button>
@@ -471,8 +464,7 @@ const MigrateFandSC = () => {
                         <div className="wr-in">
                           <img
                             src="/img/new-icons9.png"
-                            alt="new-icons9"
-                          />
+                            alt="Integration With Productivity Tools"  loading="lazy" decoding="async" />
                         </div>
                         <span>Migration Tools</span>
                       </button>
@@ -510,7 +502,7 @@ const MigrateFandSC = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="call_to_action-right over-img">
-                <img src="/img/MaskGroup8.png" alt="image" />
+                <img src="/img/MaskGroup8.png" alt="Business consultant"  loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="col-lg-7 align-self-center">

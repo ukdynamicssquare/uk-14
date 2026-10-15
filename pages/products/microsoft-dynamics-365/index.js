@@ -1,9 +1,9 @@
 import { useRef, useState } from 'react';
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import faqData from '../../../public/data/ai-powered.json';
 import useCardScrollEffect from "../../../components/useCardScrollEffect";
+import PageSeo from "../../../components/PageSeo";
 
 const siteUrl = "https://www.dynamicssquare.co.uk";
 const pageUrl = `${siteUrl}/products/microsoft-dynamics-365/`;
@@ -115,27 +115,13 @@ const AiERP = () => {
 
   return (
     <>
-      <Head>
-        <title>{pageTitle}</title>
-        <meta name="description" content={pageDescription} />
-        <link rel="canonical" href={pageUrl} />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={pageUrl} />
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={pageDescription} />
-        <meta property="og:image" content={pageImage} />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content={pageUrl} />
-        <meta property="twitter:title" content={pageTitle} />
-        <meta property="twitter:description" content={pageDescription} />
-        <meta property="twitter:image" content={pageImage} />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
-        />
-      </Head>
+      <PageSeo
+        type="Service"
+        title={pageTitle}
+        description={pageDescription}
+        image={pageImage}
+        extraSchema={pageSchema}
+      />
       <section className="top-banner-new top-banner-new-style new-tex-left">
         <div className="container">
           <div className="row">

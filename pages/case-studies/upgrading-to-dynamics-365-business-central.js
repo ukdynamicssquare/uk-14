@@ -1,27 +1,22 @@
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Autoplay, FreeMode, Pagination } from "swiper/modules";
+import PageSeo from "../../components/PageSeo";
 
 const UpgradingToDynamics365BusinessCentral = () => {
 
   return (
     <>
-      <Head>
-        <title>Upgrading to Dynamics 365 Business Central | Case Study</title>
-        <meta
-          name="description"
-          content="Learn key points from our case study about the upgrading to Dynamics 365 Business Central, which highlights enhanced productivity and streamlined workflows. "
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/case-studies/upgrading-to-dynamics-365-business-central/"
-        />
-      </Head>
+      <PageSeo
+        type="Article"
+        title="Upgrading to Dynamics 365 Business Central | Case Study"
+        description="Learn key points from our case study about the upgrading to Dynamics 365 Business Central, which highlights enhanced productivity and streamlined workflows."
+        image="/img/why-migart.png"
+      />
       <section className="hero-1 hero">
         <div className="container">
           <div className="row">
@@ -38,8 +33,7 @@ const UpgradingToDynamics365BusinessCentral = () => {
               <div className="sider-over">
                 <img
                   src="/img/why-migart.png"
-                  alt="why-migart"
-                />
+                  alt="Manual Methods to Business Central Upgrade" />
               </div>
             </div>
           </div>
@@ -53,8 +47,7 @@ const UpgradingToDynamics365BusinessCentral = () => {
                 <div className="col-lg-3 align-self-center text-center">
                   <img
                     src="/img/casestudy-pic.png"
-                    alt="casestudy-pic"
-                  />
+                    alt="Manual Methods to Business Central Upgrade" />
                 </div>
                 <div className="col-lg-9 align-self-center">
                   <p>The business is a UK's leading manufacturer and supplier of orthopaedic implants and instruments. Established in 2006, they've built a reputation for delivering high-quality products and outstanding customer service. They offer a wide range of products for joint replacement, trauma surgery, spine surgery, and sports medicine. They are committed to sustainability and support charitable organizations that work to improve access to healthcare and education.</p>
@@ -187,8 +180,8 @@ const UpgradingToDynamics365BusinessCentral = () => {
                           <div className="img-wrp">
                             <img
                               src="/img/material-lightbulb-outline.svg"
-                              alt="Food-and-beverage"
-                            />
+                              alt=""
+                             aria-hidden="true"  loading="lazy" decoding="async" />
                           </div>
                           <div className="text-wrp-content">
                             <p>Enhanced data synchronization capabilities, allowing effective warehouse operations and making data-driven decisions.</p>
@@ -204,7 +197,7 @@ const UpgradingToDynamics365BusinessCentral = () => {
                               <img
                                 src="/img/material-lightbulb-outline.svg"
                                 alt="NotforProfit"
-                              />
+                               loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>Increased the security and inventory accuracy in the warehouse management process, making it a hassle-free process for employees.</p>
@@ -221,7 +214,7 @@ const UpgradingToDynamics365BusinessCentral = () => {
                               <img
                                 src="/img/material-lightbulb-outline.svg"
                                 alt="Ecommerce"
-                              />
+                               loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>Comprehensible and better-structured processes, allowing accelerated business growth.</p>
@@ -237,8 +230,8 @@ const UpgradingToDynamics365BusinessCentral = () => {
                             <div className="img-wrp">
                               <img
                                 src="/img/material-lightbulb-outline.svg"
-                                alt="proffesional-service"
-                              />
+                                alt=""
+                               aria-hidden="true"  loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>Spreadsheets were replaced with Business Central using automation and advanced tools.</p>
@@ -254,8 +247,8 @@ const UpgradingToDynamics365BusinessCentral = () => {
                             <div className="img-wrp">
                               <img
                                 src="/img/material-lightbulb-outline.svg"
-                                alt="proffesional-service"
-                              />
+                                alt=""
+                               aria-hidden="true"  loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>Real-time bank reconciliation is now possible with Business Central's integration with Yavr.io.</p>
@@ -354,7 +347,7 @@ const UpgradingToDynamics365BusinessCentral = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="call_to_action-right over-img">
-                <img src="/img/MaskGroup8.png" alt="image" />
+                <img src="/img/MaskGroup8.png" alt="Business consultant"  loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="col-lg-7 align-self-center">

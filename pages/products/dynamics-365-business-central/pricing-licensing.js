@@ -1,11 +1,11 @@
 import { useRef, useState } from 'react';
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 // import useGsapScrollCards from '../../../hooks/useGsapScrollCards';
 import faqData from '../../../public/data/bclicance.json';
 import useCardScrollEffect from "../../../components/useCardScrollEffect";
 import BlogFinanaceCard from '../../../components/BlogFinanaceCard';
+import PageSeo from "../../../components/PageSeo";
 
 
 
@@ -38,30 +38,13 @@ const BusinessCentral = () => {
 
   return (
     <>
-      <Head>
-        <title>Dynamics 365 Business Central Pricing UK (2026)</title>
-
-        <meta
-          name="description"
-          content="Microsoft Dynamics 365 Business Central UK pricing 2026: full GBP breakdown of Essentials and Premium licences, Team Member costs, setup, support and total cost guide."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/pricing-licensing/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/pricing-licensing/" />
-        <meta property="og:title" content="Dynamics 365 Business Central Pricing UK (2026)" />
-        <meta property="og:description" content="Microsoft Dynamics 365 Business Central UK pricing 2026: full GBP breakdown of Essentials and Premium licences, Team Member costs, setup, support and total cost guide." />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/Dynamics-365-Finance-Banner.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/pricing-licensing/" />
-        <meta property="twitter:title" content="Dynamics 365 Business Central Pricing UK (2026)" />
-        <meta property="twitter:description" content="Microsoft Dynamics 365 Business Central UK pricing 2026: full GBP breakdown of Essentials and Premium licences, Team Member costs, setup, support and total cost guide." />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/Dynamics-365-Finance-Banner.png" />
-
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Dynamics 365 Business Central Pricing UK (2026)"
+        description="Microsoft Dynamics 365 Business Central UK pricing 2026: full GBP breakdown of Essentials and Premium licences, Team Member costs, setup, support and total cost guide."
+        image="https://www.dynamicssquare.co.uk/img/Dynamics-365-Finance-Banner.png"
+        faqs={faqData.slice(0, 5)}
+      />
       <div className='solution-new-banner-one'>
         <div className='container'>
           <div className='row justify-content-center'>
@@ -179,7 +162,7 @@ const BusinessCentral = () => {
           <div className="row g-4">
             <div className="col-lg-4 col-md-6">
               <div className="cost-card h-100">
-                <Image src="/img/price-pic-03.png" alt="price-pic-03" className="card-icon" width={48} height={48} />
+                <Image src="/img/price-pic-03.png" alt="" className="card-icon" width={48} height={48} aria-hidden="true" />
                 <h4>Licensing Costs</h4>
                 <p>
                   It is based on the number of users and the type of access required:
@@ -193,7 +176,7 @@ const BusinessCentral = () => {
             </div>
             <div className="col-lg-4 col-md-6">
               <div className="cost-card h-100">
-                <Image src="/img/price-pic-04.png" alt="price-pic-04" className="card-icon" width={48} height={48} />
+                <Image src="/img/price-pic-04.png" alt="" className="card-icon" width={48} height={48} aria-hidden="true" />
                 <h4>Implementation Costs</h4>
                 <p>
                   The final Business Central implementation cost includes everything required to get your system live:
@@ -209,7 +192,7 @@ const BusinessCentral = () => {
 
             <div className="col-lg-4 col-md-6">
               <div className="cost-card h-100">
-                <Image src="/img/price-pic-05.png" alt="price-pic-05" className="card-icon" width={48} height={48} />
+                <Image src="/img/price-pic-05.png" alt="" className="card-icon" width={48} height={48} aria-hidden="true" />
 
                 <h4>Ongoing Costs</h4>
 
@@ -315,7 +298,7 @@ const BusinessCentral = () => {
             </div>
           </div>
         </div>
-        <img src="/img/n-015.png" alt="n-015" />
+        <img src="/img/n-015.png" alt="" aria-hidden="true"  loading="lazy" decoding="async" />
       </section>
 
       <section className="license-section py-5">
@@ -401,7 +384,7 @@ const BusinessCentral = () => {
                   <div className="accordion-button bec-acc-bott collapsed" data-bs-toggle="collapse"
                     data-bs-target="#bc-content-1">
                     <div className='bec-acc'>
-                      <div className='d-flex-99'><Image src="/img/price-pic-06.png" alt="price-pic-08" className="card-iconss" width={48} height={48} /><h3>User Licenses</h3></div>
+                      <div className='d-flex-99'><Image src="/img/price-pic-06.png" alt="" className="card-iconss" width={48} height={48} aria-hidden="true" /><h3>User Licenses</h3></div>
                       <span>User licences are assigned to named individuals and allow access from any device. These are further classified into two subcategories: Full-Access User Licenses and Additional User Licenses.</span></div>
                   </div>
 
@@ -455,7 +438,7 @@ const BusinessCentral = () => {
                   <div className="accordion-button bec-acc-bott collapsed" data-bs-toggle="collapse"
                     data-bs-target="#bc-content-2">
                     <div className='bec-acc'>
-                      <div className='d-flex-99'><Image src="/img/price-pic-07.png" alt="price-pic-07" className="card-iconss" width={48} height={48} /><h3>Device Licences</h3></div>
+                      <div className='d-flex-99'><Image src="/img/price-pic-07.png" alt="" className="card-iconss" width={48} height={48} aria-hidden="true" /><h3>Device Licences</h3></div>
                       <span>Device licences are assigned to a shared device, not an individual user.</span></div>
                   </div>
 
@@ -481,7 +464,7 @@ const BusinessCentral = () => {
                   <div className="accordion-button bec-acc-bott collapsed" data-bs-toggle="collapse"
                     data-bs-target="#bc-content-3">
                     <div className='bec-acc'>
-                      <div className='d-flex-99'><Image src="/img/price-pic-08.png" alt="price-pic-08" className="card-iconss" width={48} height={48} /><h3>Tenant-Level Licensing</h3></div>
+                      <div className='d-flex-99'><Image src="/img/price-pic-08.png" alt="" className="card-iconss" width={48} height={48} aria-hidden="true" /><h3>Tenant-Level Licensing</h3></div>
                       <span>A tenant licence in Microsoft Dynamics 365 Business Central is not assigned to a person or a device. Instead, it applies to your entire organisation (your system environment).</span></div>
                   </div>
 
@@ -666,11 +649,11 @@ const BusinessCentral = () => {
                 <p>Business Central price increases due to different cost drivers and knowing them helps you make informed decisions.</p>
                 <p style={{ color: '#443c68' }}><b>Factors That Lead to Business Central Price Increase:</b></p>
                 <ul className='ss-tab-01'>
-                  <li><Image src="/img/price-pic-14.png" width={24} height={24} alt="price-pic-14" /> <span>Heavy customisation beyond standard features</span></li>
-                  <li><Image src="/img/price-pic-15.png" width={24} height={24} alt="price-pic-14" /> <span>Complex or unstructured legacy data </span></li>
-                  <li><Image src="/img/price-pic-16.png" width={24} height={24} alt="price-pic-14" /> <span>Multiple entities or international operations </span></li>
-                  <li><Image src="/img/price-pic-17.png" width={24} height={24} alt="price-pic-14" /> <span>Extensive third-party integrations </span></li>
-                  <li><Image src="/img/price-pic-21.png" width={24} height={24} alt="price-pic-14" /> <span>Compressed implementation timelines </span></li>
+                  <li><Image src="/img/price-pic-14.png" width={24} height={24} alt="" aria-hidden="true" /> <span>Heavy customisation beyond standard features</span></li>
+                  <li><Image src="/img/price-pic-15.png" width={24} height={24} alt="" aria-hidden="true" /> <span>Complex or unstructured legacy data </span></li>
+                  <li><Image src="/img/price-pic-16.png" width={24} height={24} alt="" aria-hidden="true" /> <span>Multiple entities or international operations </span></li>
+                  <li><Image src="/img/price-pic-17.png" width={24} height={24} alt="" aria-hidden="true" /> <span>Extensive third-party integrations </span></li>
+                  <li><Image src="/img/price-pic-21.png" width={24} height={24} alt="" aria-hidden="true" /> <span>Compressed implementation timelines </span></li>
                 </ul>
                 {/* <div className="text-lg-start">
                   <Link
@@ -685,7 +668,7 @@ const BusinessCentral = () => {
             <div className='col-lg-6'>
               <div className='product-side-001'>
                 <div className="flot-8">
-                  <Image src="/img/price-pic-09.png" width={580} height={456} alt="New Solution" />
+                  <Image src="/img/price-pic-09.png" width={580} height={456} alt="" aria-hidden="true" />
                 </div>
 
               </div>
@@ -700,7 +683,7 @@ const BusinessCentral = () => {
             <div className='col-lg-5 align-self-center'>
               <div className='product-side-001'>
                 <div className="flot-8">
-                  <Image src="/img/price-pic-10.png" width={580} height={456} alt="New Solution" />
+                  <Image src="/img/price-pic-10.png" width={580} height={456} alt="" aria-hidden="true" />
                 </div>
 
               </div>
@@ -830,7 +813,7 @@ const BusinessCentral = () => {
                   </div>
 
                   <div className="vs-image">
-                    <img src="/img/price-pic-19.png" alt="VS" />
+                    <img src="/img/price-pic-19.png" alt="VS"  loading="lazy" decoding="async" />
                   </div>
 
                   <div className="compare-card dynamics-card">
@@ -853,7 +836,7 @@ const BusinessCentral = () => {
             <div className='col-lg-6 align-self-end'>
               <div className='product-side-001'>
                 <div className="flot-8">
-                  <Image src="/img/price-pic-20.png" width={697} height={401} alt="New Solution" />
+                  <Image src="/img/price-pic-20.png" width={697} height={401} alt="" aria-hidden="true" />
                 </div>
               </div>
             </div>

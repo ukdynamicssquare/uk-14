@@ -5,40 +5,44 @@ import DropdownComponent from '../components/DropdownComponent';
 import 'swiper/css/navigation';
 import { Navigation, Autoplay } from "swiper/modules";
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
+import PageSeo from "../components/PageSeo";
+// Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
+const PAGE_FAQS = [
+  {
+    "question": "Are you facing difficulty managing finances in your organisations?",
+    "answer": "If you're finding it difficult to manage finances, then it is worth considering a financial management solution like Microsoft Dynamics 365 Business Central. This intelligent application by Microsoft handles advanced accounting capabilities that support general ledger, accounts payable, accounts receivable and fixed asset management. You can also streamline the financial planning process as Business Central can create manage & track budgets. Business Central is effectual when it comes to planning the future with budget forecasting tools"
+  },
+  {
+    "question": "Do you know you can collaborate well by adding Microsoft Business Central to Microsoft Teams?",
+    "answer": "We know that integrating Microsoft Business Central with Microsoft Teams can lead to a more collaborative work environment. With this seamless integration, Microsoft Teams across various departments can work together and make quicker decisions. They can provide several benefits like quick approvals, and quick access to Business Central data from within Teams allowing team members to quickly find and share relevant information, improving productivity etc."
+  },
+  {
+    "question": "How can you get Real-Time Business Insights from Business Central?",
+    "answer": "If you are seeking help in decision-making, then fret not! By automating reports and financial dashboards, organisations can gain real-time insights into their financial status. This analysis helps in decision-making and risk management. Further, it empowers decision-makers to analyse and predict data, enabling them to respond intelligently and make informed plans that are refraining from risks etc."
+  },
+  {
+    "question": "Do you want to simplify your tasks by intelligently automating your business?",
+    "answer": "D365 Business Central permits the employees in the organisations to create custom workflows. For example, you can set up approval workflows for purchase orders, sales orders, or expense reports. Then automation ensures that the assigned person reviews the document before proceeding. Further, automation in the inventory management process ensures that you have the right amount of stock on hand, minimizing overstocking or understocking issues. Sales and Customer Relationship Management is also streamlined through automation."
+  },
+  {
+    "question": "Are you worried about managing your organisation whilst working remotely or globally?",
+    "answer": "With Business Central Upgrade, you can access the system remotely from anywhere with an internet connection. This feature is increasingly important in today's flexible work environments. Additionally, if you are considering expansion, then Dynamics Business Central Upgrade is a must for your organisation. This can easily adjust to your changing business needs in different locations of the world. For companies that rely on Microsoft NAV, the move to D365 Business Central can represent a substantial upgrade in technology that can facilitate Big Wins."
+  }
+];
+
 
 const DynamicsNavToBusinessCentral = () => {
 
   return (
     <>
-      <Head>
-        <title>NAV to Business Central  Upgrade - Dynamics Square UK</title>
-        <meta
-          name="description"
-          content="Looking for stree-free upgrade from Dynamics NAV to Business Central services? Book a free consultation today to know more about NAV upgrade offers and more."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/dynamics-nav-to-business-central/"
-        />
-        <meta property="og:locale" content="GB" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="NAV to Business Central  Upgrade - Dynamics Square UK" />
-        <meta property="og:description" content="Looking for stree-free upgrade from Dynamics NAV to Business Central services? Book a free consultation today to know more about NAV upgrade offers and more." />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/dynamics-nav-to-business-central/" />
-        <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/m-d-nav.png" />
-        <meta property="og:image:width" content="200" />
-        <meta property="og:image:height" content="200" />
-        <meta property="og:image:type" content="image/png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="NAV to Business Central  Upgrade - Dynamics Square UK" />
-        <meta name="twitter:description" content="Looking for stree-free upgrade from Dynamics NAV to Business Central services? Book a free consultation today to know more about NAV upgrade offers and more." />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/m-d-nav.png" />
-
-      </Head>
+      <PageSeo
+        type="Service"
+        title="NAV to Business Central Upgrade - Dynamics Square UK"
+        description="Looking for stree-free upgrade from Dynamics NAV to Business Central services? Book a free consultation today to know more about NAV upgrade offers and more."
+        image="https://www.dynamicssquare.co.uk/img/m-d-nav.png"
+        faqs={PAGE_FAQS}
+      />
       <section className="Solution-banner hero-1 hero nav-solution">
         <div className="container">
           <div className="row">
@@ -58,8 +62,7 @@ const DynamicsNavToBusinessCentral = () => {
             <div className="col-lg-6 align-self-center tab-pc">
               <img
                 src="/img/navi-bc-banner-new.png"
-                alt="Dynamics-NAV-To-Business-Central-Upgrade-1024x597"
-              />
+                alt="Find Dynamics NAV Questions, Answered by Experts!" />
             </div>
           </div>
         </div>
@@ -83,7 +86,7 @@ const DynamicsNavToBusinessCentral = () => {
               <div className="nav-icon-box-bg">
                 <Link href="/our-services/dynamics-365-support-services/" target='_blank'>
                    <div className="pic-nav">
-                    <img src="/img/nav-icon-mac-1.png" alt="contact_support" />
+                    <img src="/img/nav-icon-mac-1.png" alt="" aria-hidden="true" />
                   </div>
                   <div className="over-heading-nav bg-1">
                     <h3>I would like to receive <span>support and advice</span> on my current NAV version</h3>
@@ -95,7 +98,7 @@ const DynamicsNavToBusinessCentral = () => {
               <div className="nav-icon-box-bg">
                 <Link href='#exampleModal' data-bs-toggle="modal">
                   <div className="pic-nav">
-                    <img src="/img/nav-icon-mac-2.png" alt="contact_support" />
+                    <img src="/img/nav-icon-mac-2.png" alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                   </div>
                   <div className="over-heading-nav bg-2">
                     <h3>I am <span>looking for enhancements</span> in my existing NAV version</h3>
@@ -107,7 +110,7 @@ const DynamicsNavToBusinessCentral = () => {
               <div className="nav-icon-box-bg">
                 <Link href="/our-services/dynamics-365-upgrade-services/" target='_blank'>
                   <div className="pic-nav">
-                    <img src="/img/nav-icon-mac-3.png" alt="contact_support" />
+                    <img src="/img/nav-icon-mac-3.png" alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                   </div>
                   <div className="over-heading-nav bg-3">
                     <h3>I am using NAV, but willing to <span>Upgrade to Dynamics 365 Business Central</span></h3>
@@ -120,7 +123,7 @@ const DynamicsNavToBusinessCentral = () => {
                 <Link href="/products/microsoft-dynamics-365/" target='_blank'>
 
                   <div className="pic-nav">
-                    <img src="/img/nav-icon-mac-4.png" alt="contact_support" />
+                    <img src="/img/nav-icon-mac-4.png" alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                   </div>
                   <div className="over-heading-nav bg-4">
                     <h3>I would like to <span>learn more about the D365</span> business applications ecosystem</h3>
@@ -167,8 +170,7 @@ const DynamicsNavToBusinessCentral = () => {
               <div className="commen-lef-pic">
                 <img
                   src="/img/analyse-real-time.png"
-                  alt="analyse-real-time"
-                />
+                  alt="NAV support from Microsoft is Getting Exhausted"  loading="lazy" decoding="async" />
               </div>
             </div>
           </div>
@@ -178,8 +180,7 @@ const DynamicsNavToBusinessCentral = () => {
               <div className="commen-lef-pic">
                 <img
                   src="/img/higher-expenses.png"
-                  alt="higher-expenses"
-                />
+                  alt="Upgrade Now, Pay Less Later: Secure Your Investment for Business Growth"  loading="lazy" decoding="async" />
               </div>
             </div>
 
@@ -228,10 +229,9 @@ const DynamicsNavToBusinessCentral = () => {
                 <div className="top">
                   <img
                     src="/img/dashboard_customize.png"
-                    alt="dashboard_customize"
+                    alt="Pressure to Migrate or Lose Support"
                     width="48"
-                    height="48"
-                  />
+                    height="48"  loading="lazy" decoding="async" />
 
                 </div>
                 <h3>Pressure to Migrate or Lose Support</h3>
@@ -248,10 +248,9 @@ const DynamicsNavToBusinessCentral = () => {
                 <div className="top">
                   <img
                     src="/img/rule_settings.png"
-                    alt="rule_settings"
+                    alt="Upgrade Costs Causing Discontent"
                     width="48"
-                    height="48"
-                  />
+                    height="48"  loading="lazy" decoding="async" />
 
                 </div>
                 <h3>Upgrade Costs Causing Discontent</h3>
@@ -268,10 +267,9 @@ const DynamicsNavToBusinessCentral = () => {
                 <div className="top">
                   <img
                     src="/img/switch_access_2.png"
-                    alt="switch_access_2"
+                    alt="Data Control Concerns"
                     width="48"
-                    height="48"
-                  />
+                    height="48"  loading="lazy" decoding="async" />
 
                 </div>
                 <h3>Data Control Concerns</h3>
@@ -358,7 +356,7 @@ const DynamicsNavToBusinessCentral = () => {
                 <img
                   src="/img/minimize-risks.png"
                   alt="Minimize Risks"
-                />
+                 loading="lazy" decoding="async" />
               </div>
             </div>
           </div>
@@ -408,8 +406,7 @@ const DynamicsNavToBusinessCentral = () => {
 
                 <img
                   src="/img/pillars-3.png"
-                  alt="analyse-real-time"
-                />
+                  alt="People"  loading="lazy" decoding="async" />
               </div>
             </div>
             <div className='col-lg-1'></div>
@@ -474,25 +471,25 @@ const DynamicsNavToBusinessCentral = () => {
             <div className='bg-shapte'></div>
             <div className='col-lg-3 m-t-09'>
               <div className='box-style-12'>
-                <img src="/img/rule_settings-1.png" alt="icons" />
+                <img src="/img/rule_settings-1.png" alt="icons"  loading="lazy" decoding="async" />
                 <p>When Microsoft support lifecycle comes to an end</p>
               </div>
             </div>
             <div className='col-lg-3 m-t-10'>
               <div className='box-style-12'>
-                <img src="/img/chart_data.png" alt="icons" />
+                <img src="/img/chart_data.png" alt="icons"  loading="lazy" decoding="async" />
                 <p>Your origination is seeking business growth</p>
               </div>
             </div>
             <div className='col-lg-3 m-t-11'>
               <div className='box-style-12'>
-                <img src="/img/data_saver_on.png" alt="icons" />
+                <img src="/img/data_saver_on.png" alt="icons"  loading="lazy" decoding="async" />
                 <p>When your business requires tighter integration like Microsoft 365, Power BI, or Azure</p>
               </div>
             </div>
             <div className='col-lg-3 m-t-12'>
               <div className='box-style-12'>
-                <img src="/img/add_chart.png" alt="icons" />
+                <img src="/img/add_chart.png" alt="icons"  loading="lazy" decoding="async" />
                 <p>If your industry or region has specific regulatory requirements, unique reporting or data retention requirements</p>
               </div>
             </div>
@@ -507,8 +504,7 @@ const DynamicsNavToBusinessCentral = () => {
               <div className="commen-lef-pic">
                 <img
                   src="/img/m-d-nav.png"
-                  alt="m-d-nav"
-                />
+                  alt="Is it the right time to upgrade your NAV to Business Central?"  loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="col-lg-1 align-self-center"></div>
@@ -587,8 +583,7 @@ const DynamicsNavToBusinessCentral = () => {
               <div className="commen-lef-pic">
                 <img
                   src="/img/progress-bc.png"
-                  alt="progress-bc"
-                />
+                  alt="Why upgrading from NAV to BC is a progressive step towards your business growth?"  loading="lazy" decoding="async" />
               </div>
             </div>
           </div>
@@ -726,8 +721,7 @@ const DynamicsNavToBusinessCentral = () => {
               <div className="commen-lef-pic">
                 <img
                   src="/img/bc-navupgrade.png"
-                  alt="bc-navupgrade"
-                />
+                  alt="How you can do more with Microsoft Business Central Upgrade?"  loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
@@ -774,10 +768,9 @@ const DynamicsNavToBusinessCentral = () => {
                 <div className="top">
                   <img
                     src="/img/dashboard_customize.png"
-                    alt="dashboard_customize"
+                    alt="Standard Business Central"
                     width="48"
-                    height="48"
-                  />
+                    height="48"  loading="lazy" decoding="async" />
 
                 </div>
                 <h3>Standard Business Central</h3>
@@ -794,10 +787,9 @@ const DynamicsNavToBusinessCentral = () => {
                 <div className="top">
                   <img
                     src="/img/rule_settings.png"
-                    alt="rule_settings"
+                    alt="BC with existing Customization"
                     width="48"
-                    height="48"
-                  />
+                    height="48"  loading="lazy" decoding="async" />
 
                 </div>
                 <h3>BC with existing Customization</h3>
@@ -814,10 +806,9 @@ const DynamicsNavToBusinessCentral = () => {
                 <div className="top">
                   <img
                     src="/img/switch_access_2.png"
-                    alt="switch_access_2"
+                    alt="Bridging Customization"
                     width="48"
-                    height="48"
-                  />
+                    height="48"  loading="lazy" decoding="async" />
 
                 </div>
                 <h3>Bridging Customization</h3>
@@ -894,8 +885,7 @@ const DynamicsNavToBusinessCentral = () => {
               <div className="commen-lef-pic">
                 <img
                   src="/img/Group-nav.png"
-                  alt="progress-bc"
-                />
+                  alt="Dynamics NAV to Business Central Upgrade Process"  loading="lazy" decoding="async" />
               </div>
             </div>
           </div>
@@ -914,7 +904,7 @@ const DynamicsNavToBusinessCentral = () => {
           <div className='row'>
             <div className='col-lg-12'>
               <div className='text-center'>
-                <img src='/img/bc-upgrade-process.png' alt='BC Upgrade Process' />
+                <img src='/img/bc-upgrade-process.png' alt='BC Upgrade Process'  loading="lazy" decoding="async" />
               </div>
             </div>
           </div>
@@ -977,7 +967,7 @@ const DynamicsNavToBusinessCentral = () => {
               <div className="upgrading-list">
                 <div className="left">
                   <div className="shapes">
-                    <img src="/img/troubleshoot-new.png" alt="troubleshoot-new" />
+                    <img src="/img/troubleshoot-new.png" alt="Go for Transparency"  loading="lazy" decoding="async" />
                   </div>
                 </div>
                 <div className="right">
@@ -988,7 +978,7 @@ const DynamicsNavToBusinessCentral = () => {
               <div className="upgrading-list">
                 <div className="left">
                   <div className="shapes">
-                    <img src="/img/waving_hand.png" alt="waving_hand" />
+                    <img src="/img/waving_hand.png" alt="Bid Farewell to Delays"  loading="lazy" decoding="async" />
                   </div>
                 </div>
                 <div className="right">
@@ -999,7 +989,7 @@ const DynamicsNavToBusinessCentral = () => {
               <div className="upgrading-list">
                 <div className="left">
                   <div className="shapes">
-                    <img src="/img/offline_bolt.png" alt="offline_bolt" />
+                    <img src="/img/offline_bolt.png" alt="Swift & Personalized Services"  loading="lazy" decoding="async" />
                   </div>
                 </div>
                 <div className="right">
@@ -1010,7 +1000,7 @@ const DynamicsNavToBusinessCentral = () => {
               <div className="upgrading-list">
                 <div className="left">
                   <div className="shapes">
-                    <img src="/img/readiness_score.png" alt="readiness_score" />
+                    <img src="/img/readiness_score.png" alt="Maximize Efficiency and Cost Saving"  loading="lazy" decoding="async" />
                   </div>
                 </div>
                 <div className="right">
@@ -1040,7 +1030,7 @@ const DynamicsNavToBusinessCentral = () => {
               <div className="team-memb">
                 <div className="tem-mem-pic tem-mem-pic-size">
                   <Link href="https://www.linkedin.com/in/manish-g-74854a44" target='_blank'>
-                    <img src="/img/02.png" alt="manish-goyal" />
+                    <img src="/img/02.png" alt="Darshan A. Mungekar"  loading="lazy" decoding="async" />
 
                   </Link>
                 </div>
@@ -1079,7 +1069,7 @@ const DynamicsNavToBusinessCentral = () => {
             <div className="col-lg-3">
               <div className="team-memb">
                 <div className="tem-mem-pic tem-mem-pic-size">
-                  <img src="/img/01.png" alt="gaurav-goyal" />
+                  <img src="/img/01.png" alt="Nitesh Sharma"  loading="lazy" decoding="async" />
                 </div>
                 <div className="tem-mem-info">
                   <h4>Nitesh Sharma</h4>

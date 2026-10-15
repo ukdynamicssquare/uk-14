@@ -1,11 +1,11 @@
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Autoplay, FreeMode, Pagination } from "swiper/modules";
+import PageSeo from "../../components/PageSeo";
 
 
 const MicrosoftPowerBiImplementation = () => {
@@ -14,17 +14,12 @@ const MicrosoftPowerBiImplementation = () => {
 
   return (
     <>
-      <Head>
-        <title>Case Study: Microsoft Power BI Implementation</title>
-        <meta
-          name="description"
-          content="Check the Microsoft Power BI Implementation Case Study:  We simplified sales and stock analysis with real-time reporting."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/case-studies/microsoft-power-bi-implementation/"
-        />
-      </Head>
+      <PageSeo
+        type="Article"
+        title="Case Study: Microsoft Power BI Implementation"
+        description="Check the Microsoft Power BI Implementation Case Study: We simplified sales and stock analysis with real-time reporting."
+        image="/img/Power-BI-1024x586.webp"
+      />
       <section className="hero-1 hero">
         <div className="container">
           <div className="row">
@@ -41,8 +36,7 @@ const MicrosoftPowerBiImplementation = () => {
               <div className="sider-over">
                 <img
                   src="/img/Power-BI-1024x586.webp"
-                  alt="Power-BI"
-                />
+                  alt="Microsoft Power BI Implementation" />
               </div>
             </div>
           </div>
@@ -56,8 +50,7 @@ const MicrosoftPowerBiImplementation = () => {
                 <div className="col-lg-3 align-self-center text-center">
                   <img
                     src="/img/casestudy-pic.png"
-                    alt="casestudy-pic"
-                  />
+                    alt="Microsoft Power BI Implementation" />
                 </div>
                 <div className="col-lg-9 align-self-center">
                   <p>Founded in 1897, the company is the leading business in the design and manufacturing of lifting and handling solutions. With a wide range of machines that include lifting equipment, load securing, hydraulic machines, height safety equipment, and machine maintenance and repair. These machines are generally used in various applications, like lifting, rigging, and handling material from one place to another. Other than offering their highly engineered machines, they also offer different services leveraging their experienced professionals, which include crane installation, maintenance, statutory maintenance, HAVS testing, design/fabrication, PAT testing, and consultancy services.</p>
@@ -170,8 +163,8 @@ const MicrosoftPowerBiImplementation = () => {
                           <div className="img-wrp">
                             <img
                               src="/img/material-lightbulb-outline.svg"
-                              alt="Food-and-beverage"
-                            />
+                              alt=""
+                             aria-hidden="true"  loading="lazy" decoding="async" />
                           </div>
                           <div className="text-wrp-content">
                             <p>The business is now able to access real-time reports of sales, stocks, and business insights. </p>
@@ -187,7 +180,7 @@ const MicrosoftPowerBiImplementation = () => {
                               <img
                                 src="/img/material-lightbulb-outline.svg"
                                 alt="NotforProfit"
-                              />
+                               loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>With the standard implementation of Power BI, we have developed two additional reports: the Sales Analysis Report and the Stock Analysis Report. </p>
@@ -204,7 +197,7 @@ const MicrosoftPowerBiImplementation = () => {
                               <img
                                 src="/img/material-lightbulb-outline.svg"
                                 alt="Ecommerce"
-                              />
+                               loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>The business is now able to analyse entire stocks and sales data from single dashboards. </p>
@@ -221,7 +214,7 @@ const MicrosoftPowerBiImplementation = () => {
                               <img
                                 src="/img/material-lightbulb-outline.svg"
                                 alt="Ecommerce"
-                              />
+                               loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
                               <p>Such sales reports would empower the client to focus on enhancing the customer experience and offering them the right product at the right time. </p>
@@ -319,7 +312,7 @@ const MicrosoftPowerBiImplementation = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="call_to_action-right over-img">
-                <img src="/img/MaskGroup8.png" alt="image" />
+                <img src="/img/MaskGroup8.png" alt="Business consultant"  loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="col-lg-7 align-self-center">

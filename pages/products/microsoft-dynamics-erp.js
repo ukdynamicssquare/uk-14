@@ -1,9 +1,9 @@
 import { useRef, useState } from 'react';
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import faqData from '../../public/data/dynamics-erp-faq.json';
 import useCardScrollEffect from "../../components/useCardScrollEffect";
+import PageSeo from "../../components/PageSeo";
 
 
 const SalesNew = () => {
@@ -19,29 +19,14 @@ const SalesNew = () => {
 
   return (
     <>
-      <Head>
-        <title>Microsoft Dynamics ERP: A Complete ERP Solution</title>
-        <meta
-          name="description"
-          content="Simplify and manage your enterprise practices by an Integrated Microsoft Dynamics ERP Solution solutions. Request a free demo at Dynamics Square UK today!"
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-erp/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-erp/" />
-        <meta property="og:title" content="Microsoft Dynamics ERP: A Complete ERP Solution" />
-        <meta property="og:description" content="Simplify and manage your enterprise practices by an Integrated Microsoft Dynamics ERP Solution. Request a free demo from our ERP expert today." />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/erp-new-pic-00.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-erp/" />
-        <meta property="twitter:title" content="Microsoft Dynamics ERP: A Complete ERP Solution" />
-        <meta property="twitter:description" content="Simplify and manage your enterprise practices by an Integrated Microsoft Dynamics ERP Solution. Request a free demo from our ERP expert today." />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/erp-new-pic-00.png" />
-
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Microsoft Dynamics ERP: A Complete ERP Solution"
+        description="Simplify and manage your enterprise practices by an Integrated Microsoft Dynamics ERP Solution solutions. Request a free demo at Dynamics Square UK today!"
+        image="https://www.dynamicssquare.co.uk/img/erp-new-pic-00.png"
+        ogDescription="Simplify and manage your enterprise practices by an Integrated Microsoft Dynamics ERP Solution. Request a free demo from our ERP expert today."
+        faqs={faqData.slice(0, 5)}
+      />
       <section className="top-banner-new top-banner-new-style new-tex-left">
         <div className="container">
           <div className="row">
@@ -68,7 +53,7 @@ const SalesNew = () => {
             </div>
             <div className="col-lg-6 align-self-center">
               <div className='text-center'>
-                <Image src="/img/erp-new-pic-00.png" alt="ERP-banner" width={556} height={563} priority={true} />
+                <Image src="/img/erp-new-pic-00.png" alt="Agentic and AI-Powered ERP Solutions for Modern Enterprises" width={556} height={563} priority={true} />
               </div>
             </div>
           </div>
@@ -130,7 +115,7 @@ const SalesNew = () => {
             <div className='col-lg-5 align-self-center'>
               <div className='product-side-001'>
                 <div className="flot-8">
-                  <Image src="/img/erp-new-pic-02.png" width={559} height={485} alt="sales-new-03" />
+                  <Image src="/img/erp-new-pic-02.png" width={559} height={485} alt="What Are Agentic ERP Solutions?" />
                 </div>
               </div>
             </div>
@@ -148,9 +133,9 @@ const SalesNew = () => {
                 </div>
                 <div className='botom-de'>
                   <ul>
-                    <li><Image src="/img/erp-new-pic-03.png" alt="erp-new-pic-03" width={40} height={40} /> <p>A finance manager reviews month-end reports manually.</p></li>
-                    <li><Image src="/img/erp-new-pic-04.png" alt="erp-new-pic-04" width={40} height={40} /> <p>Inventory planners analyse stock levels periodically.</p></li>
-                    <li><Image src="/img/erp-new-pic-05.png" alt="erp-new-pic-05" width={40} height={40} /> <p>Procurement teams respond to shortages after alerts.</p></li>
+                    <li><Image src="/img/erp-new-pic-03.png" alt="What Are Agentic ERP Solutions?" width={40} height={40} /> <p>A finance manager reviews month-end reports manually.</p></li>
+                    <li><Image src="/img/erp-new-pic-04.png" alt="What Are Agentic ERP Solutions?" width={40} height={40} /> <p>Inventory planners analyse stock levels periodically.</p></li>
+                    <li><Image src="/img/erp-new-pic-05.png" alt="What Are Agentic ERP Solutions?" width={40} height={40} /> <p>Procurement teams respond to shortages after alerts.</p></li>
                   </ul>
                 </div>
               </div>
@@ -162,11 +147,11 @@ const SalesNew = () => {
                 </div>
                 <div className='botom-de'>
                   <ul>
-                    <li><Image src="/img/erp-new-pic-06.png" alt="erp-new-pic-06" width={40} height={40} /> <p>The AI agent flags unusual spending patterns before month-end.</p></li>
-                    <li><Image src="/img/erp-new-pic-07.png" alt="erp-new-pic-07" width={40} height={40} /> <p>It predicts potential stockouts based on demand signals.</p></li>
-                    <li><Image src="/img/erp-new-pic-08.png" alt="erp-new-pic-08" width={40} height={40} /> <p>It recommends purchase orders automatically.</p></li>
-                    <li><Image src="/img/erp-new-pic-09.png" alt="erp-new-pic-09" width={40} height={40} /> <p>It drafts journal entries for review.</p></li>
-                    <li><Image src="/img/erp-new-pic-10.png" alt="erp-new-pic-10" width={40} height={40} /> <p>It prepares cash flow forecasts without manual spreadsheet work.</p></li>
+                    <li><Image src="/img/erp-new-pic-06.png" alt="What Are Agentic ERP Solutions?" width={40} height={40} /> <p>The AI agent flags unusual spending patterns before month-end.</p></li>
+                    <li><Image src="/img/erp-new-pic-07.png" alt="What Are Agentic ERP Solutions?" width={40} height={40} /> <p>It predicts potential stockouts based on demand signals.</p></li>
+                    <li><Image src="/img/erp-new-pic-08.png" alt="What Are Agentic ERP Solutions?" width={40} height={40} /> <p>It recommends purchase orders automatically.</p></li>
+                    <li><Image src="/img/erp-new-pic-09.png" alt="What Are Agentic ERP Solutions?" width={40} height={40} /> <p>It drafts journal entries for review.</p></li>
+                    <li><Image src="/img/erp-new-pic-10.png" alt="What Are Agentic ERP Solutions?" width={40} height={40} /> <p>It prepares cash flow forecasts without manual spreadsheet work.</p></li>
                   </ul>
                 </div>
               </div>
@@ -511,7 +496,7 @@ const SalesNew = () => {
             </div>
             <div className='col-lg-12 align-self-center'>
               <div className='product-side-002-content'>
-                <img src="/img/ero-new-banner.png" alt="Dynamics 365 Integrations" width={1366} height={599} />
+                <img src="/img/ero-new-banner.png" alt="Dynamics 365 Integrations" width={1366} height={599}  loading="lazy" decoding="async" />
               </div>
             </div>
           </div>
@@ -528,19 +513,19 @@ const SalesNew = () => {
                   <p><b>They focus on crucial questions:</b></p>
                 </div>
                 <div className='card-0101'>
-                  <Image src="/img/erp-new-pic-18.png" alt="erp-new-pic-18" width={40} height={40} />
+                  <Image src="/img/erp-new-pic-18.png" alt="Why Organisations Choose Microsoft Dynamics ERP?" width={40} height={40} />
                   <p className='m-0'>Will this scale over the next decade?</p>
                 </div>
                 <div className='card-0101'>
-                  <Image src="/img/erp-new-pic-19.png" alt="erp-new-pic-19" width={40} height={40} />
+                  <Image src="/img/erp-new-pic-19.png" alt="Why Organisations Choose Microsoft Dynamics ERP?" width={40} height={40} />
                   <p className='m-0'>Does it reduce operational and compliance risk?</p>
                 </div>
                 <div className='card-0101'>
-                  <Image src="/img/erp-new-pic-20.png" alt="erp-new-pic-20" width={40} height={40} />
+                  <Image src="/img/erp-new-pic-20.png" alt="Why Organisations Choose Microsoft Dynamics ERP?" width={40} height={40} />
                   <p className='m-0'>Is the total cost sustainable in long term?</p>
                 </div>
                 <div className='card-0101'>
-                  <Image src="/img/erp-new-pic-21.png" alt="erp-new-pic-21" width={40} height={40} />
+                  <Image src="/img/erp-new-pic-21.png" alt="Built to Scale Without Replacing the Platform" width={40} height={40} />
                   <p className='m-0'>Is the solution stable and future-ready?</p>
                 </div>
               </div>
@@ -606,7 +591,7 @@ const SalesNew = () => {
           <div className='row'>
             <div className='col-lg-12'>
               <div className='text-center' style={{ marginBottom: '30px' }}>
-                <Image src='/img/ero-new-banner-1.png' alt='ero-new-banner-1' width={1321} height={353} />
+                <Image src='/img/ero-new-banner-1.png' alt="Dynamics 365 ERP Implementation: What to Expect" width={1321} height={353} />
               </div>
             </div>
           </div>

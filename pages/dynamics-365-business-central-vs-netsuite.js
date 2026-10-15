@@ -1,32 +1,16 @@
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
+import PageSeo from "../components/PageSeo";
 
 const BcNetSuite = () => {
   return (
     <>
-      <Head>
-        <title>Dynamics 365 Business Central vs NetSuite ERP [Comparison]</title>
-        <meta
-          name="description"
-          content="Check out the neck-to-neck comparison of D365 Business Central vs NetSuite to find the best solution for your unique business needs. Contact our experts at Dynamics Square UK!"
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/dynamics-365-business-central-vs-netsuite/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/dynamics-365-business-central-vs-netsuite/" />
-        <meta property="og:title" content="Dynamics 365 Business Central vs NetSuite ERP [Comparison]" />
-        <meta property="og:description" content="Check out the neck-to-neck comparison of D365 Business Central vs NetSuite to find the best solution for your unique business needs. Contact our experts at Dynamics Square UK!" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/bc-nut.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/dynamics-365-business-central-vs-netsuite/" />
-        <meta property="twitter:title" content="Dynamics 365 Business Central vs NetSuite ERP [Comparison]" />
-        <meta property="twitter:description" content="Check out the neck-to-neck comparison of D365 Business Central vs NetSuite to find the best solution for your unique business needs. Contact our experts at Dynamics Square UK!" />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/bc-nut.png" />
-      </Head>
+      <PageSeo
+        type="Article"
+        title="Dynamics 365 Business Central vs NetSuite ERP [Comparison]"
+        description="Check out the neck-to-neck comparison of D365 Business Central vs NetSuite to find the best solution for your unique business needs. Contact our experts at Dynamics Square UK!"
+        image="https://www.dynamicssquare.co.uk/img/bc-nut.png"
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -142,7 +126,7 @@ const BcNetSuite = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="call_to_action-right over-img">
-                <img src="/img/MaskGroup8.png" alt="image" />
+                <img src="/img/MaskGroup8.png" alt="Business consultant" />
               </div>
             </div>
             <div className="col-lg-7 align-self-center">

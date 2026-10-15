@@ -1,8 +1,32 @@
-import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
 import useCardScrollEffect from "/components/useCardScrollEffect";
+import PageSeo from "../components/PageSeo";
+// Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
+const PAGE_FAQS = [
+  {
+    "question": "How does Yavrio Business Central Integration work?",
+    "answer": "It connects Business Central directly to Yavrio through secure APIs. This ensures automated data flows between your ERP and banks."
+  },
+  {
+    "question": "What are the benefits of Yavrio and Business Central integration?",
+    "answer": "You gain automated bank feeds, faster reconciliations, simplified payment handling, and real-time financial visibility — all within Dynamics 365 Business Central."
+  },
+  {
+    "question": "Can Yavrio integration support multi-currency and multiple banks?",
+    "answer": "Yes. The integration supports a wide range of banks, accounts, and currencies for global operations."
+  },
+  {
+    "question": "Is Yavrio ERP Integration secure?",
+    "answer": "Yes. It uses banking-grade encryption and secure data protocols combined with Business Central compliance and audit tools."
+  },
+  {
+    "question": "Why choose Dynamics Square for Yavrio integration consulting for Business Central?",
+    "answer": "Dynamics Square is a certified Microsoft partner with expertise in Business Central implementation, support services, and third-party integrations. With proven consulting for Dynamics 365 Business Central Yavrio integration, we deliver faster adoption, smoother automation, and long-term success."
+  }
+];
+
 
 const Continia = () => {
 
@@ -10,33 +34,13 @@ const Continia = () => {
 
   return (
     <>
-      <Head>
-        <title>Yavrio Integration with Business Central | Dynamics Square UK</title>
-
-        <meta
-          name="description"
-          content="Simplify banking with Yavrio integration with Dynamics 365 Business Central — automate reconciliation, enhance accuracy, and save hours of manual work."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/yavrio-integration-with-business-central/"
-        />
-        <meta property="og:locale" content="GB" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content=" Yavrio Integration with Business Central | Dynamics Square UK " />
-        <meta property="og:description" content="Simplify banking with Yavrio integration with Dynamics 365 Business Central — automate reconciliation, enhance accuracy, and save hours of manual work." />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/yavrio-integration-with-business-central/" />
-        <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/yavrio-side.png" />
-        <meta property="og:image:width" content="200" />
-        <meta property="og:image:height" content="200" />
-        <meta property="og:image:type" content="image/png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
-        <meta name="twitter:title" content="Yavrio Integration with Business Central | Dynamics Square UK" />
-        <meta name="twitter:description" content="Simplify banking with Yavrio integration with Dynamics 365 Business Central — automate reconciliation, enhance accuracy, and save hours of manual work." />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/yavrio-side.png" />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Yavrio Integration with Business Central | Dynamics Square UK"
+        description="Simplify banking with Yavrio integration with Dynamics 365 Business Central — automate reconciliation, enhance accuracy, and save hours of manual work."
+        image="https://www.dynamicssquare.co.uk/img/yavrio-side.png"
+        faqs={PAGE_FAQS}
+      />
       <div className='solution-new-banner-one solution-new-banner-one-colo'>
         <div className='container'>
           <div className='row justify-content-center'>
@@ -55,10 +59,10 @@ const Continia = () => {
                 </div>
               </div>
               <div className='m-b-image-banner m-b-image-banner-nn'>
-                <Image src="/img/yavrio-banner.png" alt='bc-support-banner' width={944} height={322} priority />
+                <Image src="/img/yavrio-banner.png" alt="Yavrio Integration with Business Central" width={944} height={322} priority />
               </div>
               <div className='m-b-image-banner-bott'>
-                <Image src="/img/cont-shape.png" alt='cont-shape' width={1898} height={470} priority />
+                <Image src="/img/cont-shape.png" alt="" width={1898} height={470} priority aria-hidden="true" />
               </div>
             </div>
 
@@ -93,7 +97,7 @@ const Continia = () => {
             <div className="col-lg-1"></div>
             <div className="col-lg-5 align-self-center">
               <div className='img-backs-sid-two text-center'>
-                <Image src="/img/yavrio-side.png" alt="con-side-01" width={485} height={450} className='im-two' />
+                <Image src="/img/yavrio-side.png" alt="What is Yavrio Integration with Business Central?" width={485} height={450} className='im-two' />
               </div>
             </div>
           </div>
@@ -176,7 +180,7 @@ const Continia = () => {
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/yavrio-side-01.png" width={580} height={456} alt="con-side-02" />
+                      <Image src="/img/yavrio-side-01.png" width={580} height={456} alt="Reconciliation Automation" />
                     </div>
                   </div>
                 </div>
@@ -192,7 +196,7 @@ const Continia = () => {
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/yavrio-side-02.png" width={580} height={456} alt="con-side-03" />
+                      <Image src="/img/yavrio-side-02.png" width={580} height={456} alt="Payment Processing Integration" />
                     </div>
                   </div>
                 </div>
@@ -208,7 +212,7 @@ const Continia = () => {
                       </ul>
                     </div>
                     <div className='mycard__inner-right'>
-                      <Image src="/img/yavrio-side-03.png" width={580} height={456} alt="con-side-04" />
+                      <Image src="/img/yavrio-side-03.png" width={580} height={456} alt="The Stack of Continia Tools" />
                     </div>
                   </div>
                 </div>
@@ -923,7 +927,7 @@ const Continia = () => {
             </div>
             <div className='col-lg-5 order-2 align-self-center'>
               <div className='img-backs-sid'>
-                <Image src="/img/yavrio-side-04.png" alt="copil-side" width={627} height={517} className='im-two' />
+                <Image src="/img/yavrio-side-04.png" alt="Run Banking and ERP as ONE with Yavrio!" width={627} height={517} className='im-two' />
               </div>
             </div>
           </div>
@@ -948,14 +952,14 @@ const Continia = () => {
            </div>
          </div>
        </div>
-       <img src="/img/n-015.png" alt="n-015" />
+       <img src="/img/n-015.png" alt="" aria-hidden="true"  loading="lazy" decoding="async" />
      </section>
       <section className='bg-003s pd-con-66'>
         <div className="container my-float-i">
           <div className="row">
             <div className="col-lg-5 align-self-center">
               <div className='img-backs-sid-two text-center'>
-                <Image src="/img/yavrio-side-05.png" alt="con-side-06" width={580} height={456} className='im-two' />
+                <Image src="/img/yavrio-side-05.png" alt="Business Central Yavrio Connector: Precision in Finance" width={580} height={456} className='im-two' />
               </div>
             </div>
             <div className="col-lg-1"></div>
@@ -964,10 +968,10 @@ const Continia = () => {
                 <h2>Business Central Yavrio Connector: Precision in Finance</h2>
                 <p>Finance leaders want accuracy, speed, and control. Yavrio integration services for Business Central by Dynamics Square deliver that. Here’s what to expect after the integration: </p>
                 <ul className="bx-pi-cc">
-                  <li><div className="im-60-b"><img src="/img/autostop-07.png" alt="autostop-02" width={24} height={24} /></div><span>Accuracy in every transaction through direct bank data integration</span></li>
-                  <li><div className="im-60-b"><img src="/img/autostop-08.png" alt="autostop-02" width={24} height={24} /></div><span>Speed from automated reconciliation and instant payment processing</span></li>
-                  <li><div className="im-60-b"><img src="/img/autostop-09.png" alt="autostop-02" width={24} height={24} /></div><span>Control with secure workflows inside Microsoft’s trusted ERP ecosystem</span></li>
-                  <li><div className="im-60-b"><img src="/img/autostop-10.png" alt="autostop-02" width={24} height={24} /></div><span>Transparency that strengthens compliance and builds business reputation</span></li>
+                  <li><div className="im-60-b"><img src="/img/autostop-07.png" alt="Business Central Yavrio Connector: Precision in Finance" width={24} height={24}  loading="lazy" decoding="async" /></div><span>Accuracy in every transaction through direct bank data integration</span></li>
+                  <li><div className="im-60-b"><img src="/img/autostop-08.png" alt="Business Central Yavrio Connector: Precision in Finance" width={24} height={24}  loading="lazy" decoding="async" /></div><span>Speed from automated reconciliation and instant payment processing</span></li>
+                  <li><div className="im-60-b"><img src="/img/autostop-09.png" alt="Business Central Yavrio Connector: Precision in Finance" width={24} height={24}  loading="lazy" decoding="async" /></div><span>Control with secure workflows inside Microsoft’s trusted ERP ecosystem</span></li>
+                  <li><div className="im-60-b"><img src="/img/autostop-10.png" alt="Business Central Yavrio Connector: Precision in Finance" width={24} height={24}  loading="lazy" decoding="async" /></div><span>Transparency that strengthens compliance and builds business reputation</span></li>
                 </ul>
 
                 <Link

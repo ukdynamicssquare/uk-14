@@ -304,19 +304,16 @@ const BCvsSapTwo = () => {
         <meta name="description" content={PAGE_DESC} />
         {/* Demo URL: remove noindex when this page replaces the live one */}
         <link rel="canonical" href={PAGE_URL} />
-        <meta property="og:locale" content="en_GB" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={PAGE_TITLE} />
         <meta property="og:description" content={PAGE_DESC} />
         <meta property="og:url" content={PAGE_URL} />
-        <meta property="og:site_name" content="Dynamics Square UK" />
         <meta property="og:image" content={OG_IMAGE} />
         <meta property="og:image:width" content="602" />
         <meta property="og:image:height" content="315" />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:alt" content="Dynamics 365 Business Central vs SAP Business One" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
         <meta name="twitter:title" content={PAGE_TITLE} />
         <meta name="twitter:description" content={PAGE_DESC} />
         <meta name="twitter:image" content={OG_IMAGE} />

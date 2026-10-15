@@ -1,16 +1,14 @@
-import Head from 'next/head'
 import Iframe from "react-iframe";
+import PageSeo from "../components/PageSeo";
 const Partner = () => {
     return (
       <>
-        <Head>
-        <title>Partner | Dynamics Square</title>
-          <meta name="description" content="Learn about the collaborative work we do with our partners. We create limitless impact in collaboration with industry leaders and innovators. " />
-          <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/partner/"
+        <PageSeo
+          type="WebPage"
+          title="Partner | Dynamics Square"
+          description="Learn about the collaborative work we do with our partners. We create limitless impact in collaboration with industry leaders and innovators."
+          image="/img/p4.jpg"
         />
-        </Head>
         <section className="Solution-banner hero partener-di">
         <div className="container">
           <div className="row justify-content-center">
@@ -115,7 +113,7 @@ const Partner = () => {
             </div>
             <div className="col-lg-1 align-self-center"></div>
             <div className="col-lg-3 align-self-center">
-              <img src="/img/p2.jpg" alt="p2" />
+              <img src="/img/p2.jpg" alt="p2"  loading="lazy" decoding="async" />
             </div>
            
            
@@ -126,7 +124,7 @@ const Partner = () => {
         <div className="container">
           <div className="row g-5">
             <div className="col-lg-3 align-self-center">
-              <img src="/img/new1.jpg" alt="new1" />
+              <img src="/img/new1.jpg" alt="new1"  loading="lazy" decoding="async" />
             </div>
             <div className="col-lg-1 align-self-center"></div>
             <div className="col-lg-8 align-self-center">
@@ -161,7 +159,7 @@ const Partner = () => {
               </div>
               <div className="col-lg-1 align-self-center"></div>
               <div className="col-lg-3 align-self-center">
-                <img src="/img/tasklet-factoty-logo.png" alt="tasklet-factoty-logo" />
+                <img src="/img/tasklet-factoty-logo.png" alt="Tasklet Factory logo"  loading="lazy" decoding="async" />
               </div>
              
              
@@ -172,7 +170,7 @@ const Partner = () => {
           <div className="container">
             <div className="row g-5">
               <div className="col-lg-3 align-self-center">
-                <img src="/img/continialogo.svg" alt="continialogo" />
+                <img src="/img/continialogo.svg" alt="continialogo"  loading="lazy" decoding="async" />
               </div>
               <div className="col-lg-1 align-self-center"></div>
               <div className="col-lg-8 align-self-center">
@@ -218,7 +216,7 @@ const Partner = () => {
               </div>
               <div className="col-lg-1 align-self-center"></div>
               <div className="col-lg-3 align-self-center">
-                <img src="/img/Yavrio-CMYK.svg" alt="Yavrio-CMYK" />
+                <img src="/img/Yavrio-CMYK.svg" alt="Yavrio - Open Banking for ERPs"  loading="lazy" decoding="async" />
               </div>
              
              

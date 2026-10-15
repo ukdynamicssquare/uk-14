@@ -17,18 +17,15 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           rel="canonical"
           href="https://www.dynamicssquare.co.uk/case-studies/business-central-with-crm-implement-for-equestrian-manufacturing/"
         />
-        <meta property="og:locale" content="GB" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Microsoft Business Central with CRM for Equestrian Manufacturing | Case Study" />
         <meta property="og:description" content="Unified Microsoft Dynamics 365 Business Central and Microsoft Dynamics 365 CRM for equestrian manufacturing—streamlining production, sales, and customer insights end-to-end." />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/case-studies/business-central-with-crm-implement-for-equestrian-manufacturing/" />
-        <meta property="og:site_name" content="Dynamics Square UK" />
         <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/case-v-08.png" />
         <meta property="og:image:width" content="200" />
         <meta property="og:image:height" content="200" />
         <meta property="og:image:type" content="image/jpg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
         <meta name="twitter:title" content="Microsoft Business Central with CRM for Equestrian Manufacturing | Case Study" />
         <meta name="twitter:description" content="Unified Microsoft Dynamics 365 Business Central and Microsoft Dynamics 365 CRM for equestrian manufacturing—streamlining production, sales, and customer insights end-to-end." />
         <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/case-v-08.png" />

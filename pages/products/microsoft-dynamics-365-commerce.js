@@ -1,35 +1,52 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import Head from 'next/head';
 import Image from 'next/image';
+import PageSeo from "../../components/PageSeo";
+// Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
+const PAGE_FAQS = [
+  {
+    "question": "What is D365 Commerce?",
+    "answer": "Microsoft Dynamics 365 Commerce is a proven retail solution that integrates or unifies your back-office, in-store, and digital experiences. D365 Commerce enables you to optimise your operations, improve your employee productivity, boost customer engagement, and drive efficient results while reducing costs, time, and energy. With built-in AI capabilities, streamline your core operations from efficiently managing customers to resources to supply chain to marketing practices, and more."
+  },
+  {
+    "question": "What is D365 Commerce scale?",
+    "answer": "The Commerce Scale Unit allows stores to sell products even if their internet connection is not consistent! It means that your store can still process credit card transactions, issue gift cards, and sync data with HQ despite poor internet service."
+  },
+  {
+    "question": "Is Dynamics 365 Retail the same as Dynamics 365 commerce?",
+    "answer": "Dynamics 365 Retail is now Dynamics 365 Commerce. It has recently had an important upgrade. Because of the way it was named before, people had difficulty connecting the name to what this system is capable of doing. Dynamics 365 commerce contains features such as e-commerce and back office control, among others. See Also - Dynamics 365 Sales Professional | Dynamics 365 Project and Operations"
+  },
+  {
+    "question": "What are the top benefits of D365 Commerce?",
+    "answer": "The Dynamics 365 Commerce platform provides numerous benefits to users, including cloud-based features, simplified customer engagement, increased customer loyalty, business-specific flexibility, adaptability to modern business requirements, and an easy-to-use user interface."
+  },
+  {
+    "question": "What are some important capabilities of D365 Commerce?",
+    "answer": "It has numerous capabilities that can assist you in providing a more functional customer experience. It offers capabilities including centralised data, smart operations, good customer engagement, an adaptable platform, and much more."
+  },
+  {
+    "question": "Are integrations allowed with this business application?",
+    "answer": "Yes, you can integrate the desired apps, whether native or third-party, with Dynamics 365 Commerce. However, you will need to contact your support partner to build the required application that understands your requirements and works accordingly."
+  },
+  {
+    "question": "What is the cost of a Dynamics 365 Commerce implementation?",
+    "answer": "D365 Commerce implementation isn't fixed. It varies from business to business. One of the critical factors that determines the cost of implementation is the complexity of the solution and the business requirements. To get an accurate estimate, you need to contact a Microsoft Solutions Partner like Dynamics Square."
+  }
+];
+
 // import ModalVideo from "react-modal-video";
 const Commerce = () => {
   const [isOpen, setOpen] = useState(false);
   const [open, setsOpen] = useState(false);
   return (
     <>
-      <Head>
-        <title>Dynamics 365 Commerce Solutions | Dynamics Square UK</title>
-        <meta
-          name="description"
-          content="Transform your retail business with Dynamics 365 Commerce. Connect online & in-store channels, improve efficiency, and deliver personalized customer journeys."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-commerce/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-commerce/" />
-        <meta property="og:title" content="Dynamics 365 Commerce Solutions | Dynamics Square UK" />
-        <meta property="og:description" content="Transform your retail business with Dynamics 365 Commerce. Connect online & in-store channels, improve efficiency, and deliver personalized customer journeys." />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/commerce-banner.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-commerce/" />
-        <meta property="twitter:title" content="Dynamics 365 Commerce Solutions | Dynamics Square UK" />
-        <meta property="twitter:description" content="Transform your retail business with Dynamics 365 Commerce. Connect online & in-store channels, improve efficiency, and deliver personalized customer journeys." />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/commerce-banner.png" />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Dynamics 365 Commerce Solutions | Dynamics Square UK"
+        description="Transform your retail business with Dynamics 365 Commerce. Connect online & in-store channels, improve efficiency, and deliver personalized customer journeys."
+        image="https://www.dynamicssquare.co.uk/img/commerce-banner.png"
+        faqs={PAGE_FAQS}
+      />
       {/* <ModalVideo
         channel="youtube"
         autoplay
@@ -104,8 +121,8 @@ const Commerce = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-commerce_user-experience.svg"
-                            alt="icons-commerce_user-experience"
-                          />
+                            alt=""
+                           aria-hidden="true" />
                         </div>
                         <span>User Experience</span>
                       </button>
@@ -135,8 +152,8 @@ const Commerce = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-commerce_back-office.svg"
-                            alt="icons-commerce_back-office"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Back Office</span>
                       </button>
@@ -173,8 +190,8 @@ const Commerce = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-commerce_ecommerce-platform.svg"
-                            alt="icons-commerce_ecommerce-platform"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>E-commerce Platform</span>
                       </button>
@@ -204,8 +221,8 @@ const Commerce = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-commerce_Commerce-Surround-Services.svg"
-                            alt="icons-commerce_Commerce-Surround-Services"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Commerce Surround Services</span>
                       </button>
@@ -305,7 +322,7 @@ const Commerce = () => {
           <div className="row">
             <div className="col-lg-3 d-flex">
               <div className="upgrade-box-one d-flex-fil">
-                <Image src="/img/settings_b.png" alt="settings_b" width={48} height={48} />
+                <Image src="/img/settings_b.png" alt="" width={48} height={48} aria-hidden="true" />
                 <h3>Implementation</h3>
                 <p>We use a disciplined, process-first strategy to integrate Dynamics 365 Commerce to turn your current retail operations into a system that can grow and make money. </p>
                 <a href="#exampleModal" data-bs-toggle="modal">Get Started <i className="bi bi-arrow-right"></i></a>
@@ -322,7 +339,7 @@ const Commerce = () => {
 
             <div className="col-lg-3 d-flex">
               <div className="upgrade-box-one d-flex-fil">
-                <Image src="/img/person_pin.png" alt="person_pin" width={48} height={48} />
+                <Image src="/img/person_pin.png" alt="" width={48} height={48} aria-hidden="true" />
                 <h3>Support</h3>
                 <p>With professional support for Dynamics 365 Commerce, you can keep your processes running smoothly and minimise downtime. Fix problems right away and keep the system healthy.</p>
                 <a href="#exampleModal" data-bs-toggle="modal">Get Started <i className="bi bi-arrow-right"></i></a>
@@ -331,7 +348,7 @@ const Commerce = () => {
 
             <div className="col-lg-3 d-flex">
               <div className="upgrade-box-one d-flex-fil">
-                <img className="image-backx" src="/img/free-cons.png" alt="free-cons" />
+                <img className="image-backx" src="/img/free-cons.png" alt="Support"  loading="lazy" decoding="async" />
                 <Image src="/img/forum.png" alt="forum" width={48} height={48} />
                 <h3>Consulting</h3>
                 <p>Get optimum D365 commerce services suited to your customised business needs.</p>

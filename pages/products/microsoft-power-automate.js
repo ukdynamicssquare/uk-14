@@ -1,26 +1,20 @@
-import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
 import React, { useState } from "react";
 // import ModalVideo from "react-modal-video";
 import Blog from "../../components/Blog";
+import PageSeo from "../../components/PageSeo";
 const PowerAutomate = () => {
   const [isOpen, setOpen] = useState(false);
   const [open, setsOpen] = useState(false);
   return (
     <>
-      <Head>
-        <title>Microsoft Power Automate: Demo & Pricing UK | Dynamics Square</title>
-        <meta
-          name="description"
-          content="Power Automate offers the ability to easily create workflows directly in your applications with a no-code approach that connects to hundreds of popular. Do call us for demo & pricing!"
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/microsoft-power-automate/"
-        />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Microsoft Power Automate: Demo & Pricing UK | Dynamics Square"
+        description="Power Automate offers the ability to easily create workflows directly in your applications with a no-code approach that connects to hundreds of popular. Do call us for demo & pricing!"
+      />
       {/* <ModalVideo
         channel="youtube"
         autoplay
@@ -53,10 +47,9 @@ const PowerAutomate = () => {
             <div className="col-lg-6 align-self-center">
               <Image
                 src="/img/power-automate-banner.svg"
-                alt="power-automate-banner"
+                alt="What is Power Automate?"
                 width={1024} height={586}
-                priority = {true}
-              />
+                priority = {true} />
             </div>
           </div>
         </div>
@@ -90,8 +83,8 @@ const PowerAutomate = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-power-automate_Quick-and-Secure.svg"
-                            alt="icons-power-automate_Quick-and-Secure"
-                          />
+                            alt=""
+                           aria-hidden="true" />
                         </div>
                         <span>Quick and Secure</span>
                       </button>
@@ -128,8 +121,8 @@ const PowerAutomate = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-power-automate_Enhanced-Efficiency.svg"
-                            alt="icons-power-automate_Enhanced-Efficiency"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Enhanced Efficiency</span>
                       </button>
@@ -174,8 +167,8 @@ const PowerAutomate = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-power-automate_AI-Support.svg"
-                            alt="icons-power-automate_AI-Support"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>AI Support</span>
                       </button>
@@ -224,8 +217,8 @@ const PowerAutomate = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-power-automate_Highly-Compatible.svg"
-                            alt="icons-power-automate_Highly-Compatible"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Highly Compatible</span>
                       </button>
@@ -358,7 +351,7 @@ const PowerAutomate = () => {
           <div className="row justify-content-center">
             <div className="col-lg-3 d-flex">
               <div className="upgrade-box-one d-flex-fil">
-                <Image src="/img/settings_b.png" alt="settings_b" width={48} height={48} />
+                <Image src="/img/settings_b.png" alt="" width={48} height={48} aria-hidden="true" />
                 <h3>Implementation</h3>
                 <p>Successfully implement Power Automate solutions by our experts to ensure your needs are met on time and within budget.</p>
                 <a href="#exampleModal" data-bs-toggle="modal">Get Started <i className="bi bi-arrow-right"></i></a>
@@ -375,7 +368,7 @@ const PowerAutomate = () => {
 
             <div className="col-lg-3 d-flex">
               <div className="upgrade-box-one d-flex-fil">
-                <Image src="/img/person_pin.png" alt="person_pin" width={48} height={48} />
+                <Image src="/img/person_pin.png" alt="" width={48} height={48} aria-hidden="true" />
                 <h3>Support</h3>
                 <p>Get constant and seamless support from Dynamics Square team to create and manage your work flows.</p>
                 <a href="#exampleModal" data-bs-toggle="modal">Get Started <i className="bi bi-arrow-right"></i></a>
@@ -384,7 +377,7 @@ const PowerAutomate = () => {
 
             <div className="col-lg-3 d-flex">
               <div className="upgrade-box-one d-flex-fil">
-                <img className="image-backx" src="/img/free-cons.png" alt="free-cons" />
+                <img className="image-backx" src="/img/free-cons.png" alt="Support"  loading="lazy" decoding="async" />
                 <Image src="/img/forum.png" alt="forum" width={48} height={48} />
                 <h3>Consulting</h3>
                 <p>Get optimum Power Automate Services to your customised business needs.</p>

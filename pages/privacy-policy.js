@@ -1,14 +1,14 @@
-import Head from 'next/head';
 import Link from "next/link";
+import PageSeo from "../components/PageSeo";
 
 const PrivacyPolicy = () => {
   return (
     <>
-      <Head>
-      <title>Privacy Policy | Dynamics Square</title>
-<meta name="description" content="Dynamics Square Privacy Policy consists of how we collect, use, and distribute your data that imbibes your identity or personal information."/>
-<link rel="canonical" href="https://www.dynamicssquare.co.uk/privacy-policy/" />
-      </Head>
+      <PageSeo
+        type="WebPage"
+        title="Privacy Policy | Dynamics Square"
+        description="Dynamics Square Privacy Policy consists of how we collect, use, and distribute your data that imbibes your identity or personal information."
+      />
       <section className="Solution-banner hero-1 hero custom-pd-4">
         <div className="container">
           <div className="row justify-content-center ">

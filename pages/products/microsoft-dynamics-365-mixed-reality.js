@@ -1,38 +1,54 @@
 import React, { useState } from "react";
-import Head from "next/head";
 import Image from "next/image";
 import ModalVideo from "react-modal-video";
 import Link from "next/link";
 import Blog from "../../components/Blog";
+import PageSeo from "../../components/PageSeo";
+// Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
+const PAGE_FAQS = [
+  {
+    "question": "What is Mixed Reality and how does it work?",
+    "answer": "Mixed Reality is a next-generation solution that can be leveraged to empower people in your organisation and to improve your customer experience while reducing risks and costing. Mix Reality combines physical and digital worlds to interact in real-time to serve several purposes from remote services to virtual visualization to preparing learning guides for the users within your organisation. Mixed Reality bridges the gap between people and objects that are on distance. Here, one does not need to visit miles just to collaborate with the object, things can be managed from the distance. For instance, businesses can showcase their complicated, large, customizable products to the customers using Mixed Reality concepts or devices. Microsoft's HoloLens is an example of a Mixed Reality device."
+  },
+  {
+    "question": "What are Mixed Reality Services?",
+    "answer": "When it comes to Microsoft's Mixed Reality Services, it helps to improve your workflow, customer trust, and facilitate your workforce with the self-created Mix Reality guides to learn the required information in real-time and implement the same to ensure smoother and continuous operational flow in your organisation. Mixed Reality Services can be availed of in the following terms: Microsoft Dynamics 365 Remote Assist, Microsoft Dynamics 365 Layout, Accounts Receivable, Cash & Bank Management, Microsoft Dynamics 365 Product Visualize, Microsoft Dynamics 365 Guides To know more about contact Dynamics Square Team, we can help."
+  },
+  {
+    "question": "How businesses can improve their workflow with Mixed Reality solutions?",
+    "answer": "Mixed Reality is a business transforming solution that enables the organisation in various terms. It can help to simplify your complex processes and ease your day-to-day tasks by bringing the digital information to demonstrate like real-world experience. Here are few key benefits that can be availed with Mixed Reality licensing: Showcase complicated products or issues from distance in real-time., Generate trust and improve customer satisfaction during the process., Reduce downtime and eliminate the travelling need., Collaborate in real-time and proactively solve the problems., Quickly identify issues and get technical assistance anywhere."
+  },
+  {
+    "question": "What is also known as Mixed Reality?",
+    "answer": "Mixed Reality is also referred to as Hybrid Reality or Extended Reality. As it combines Augmented Reality and Virtual Reality, thereby, most commonly known as Mixed Reality."
+  },
+  {
+    "question": "What are the three components of Mixed Reality?",
+    "answer": "Mixed Reality is achieved by seamlessly blending the physical world with the digital world. Mixed Reality is based on three components: Mixed Reality is achieved by seamlessly blending the physical world with the digital world. Mixed Reality is based on three components:, Real World, Digital Objects"
+  },
+  {
+    "question": "What are the benefits of Mixed Reality?",
+    "answer": "As the name suggests, it combines the attributes of both AR (Augmented Reality) and VR (Virtual Reality) that allows users to create a new environment by leveraging physical and digital objects in real-time. Mixed Reality can provide a proven experience to both the consumers and businesses. Eliminating the wait time and saving the travel efforts, Mixed Reality can help to solve the problems in real-time. When integrated with Dynamics 365 Field Service, it can help businesses to capture the asset information. If there is a piece of critical or complex information, can be transformed into easy visualization by integrating with Power BI or any other enterprise-level application."
+  },
+  {
+    "question": "How is Mixed Reality used in Businesses?",
+    "answer": "When there is a complex, harsh, or risk-enabled task, Mixed Reality can help with Experiential Training which allows the workforce to learn things in the process without indulging in any risk. This enables continuity in business flow and empowers people in your organisation to resolve the interruptions by self-learning in real-time. If you are running a kind of business wherein you have complex, customizable, large-size products that can't be carried by your workforce while client or customer visiting, Mixed Reality can help to start improving your customer experience as well as their trust while being in the process. If you want to solve your business problems or want to improve your business flow, contact us, we can suggest and configure the best possible solution for your business."
+  }
+];
+
 const MicrosoftDynamics365MixedReality = () => {
   const [isOpen, setOpen] = useState(false);
   const [open, setsOpen] = useState(false);
 
   return (
     <>
-      <Head>
-        <title>Microsoft Dynamics 365 Remote Assist &amp; Mixed Reality</title>
-        <meta
-          name="description"
-          content="Empower your workforce and optimise your operations with Dynamics 365 Mixed Reality Applications like remote assist, product visualize and guides."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-mixed-reality/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-mixed-reality/" />
-        <meta property="og:title" content="Microsoft Dynamics 365 Remote Assist & Mixed Reality" />
-        <meta property="og:description" content="Empower your workforce and optimise your operations with Dynamics 365 Mixed Reality Applications like remote assist, product visualize and guides." />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/Mixed-Reality-banner.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-mixed-reality/" />
-        <meta property="twitter:title" content="Microsoft Dynamics 365 Remote Assist & Mixed Reality" />
-        <meta property="twitter:description" content="Empower your workforce and optimise your operations with Dynamics 365 Mixed Reality Applications like remote assist, product visualize and guides." />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/Mixed-Reality-banner.png" />
-
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Microsoft Dynamics 365 Remote Assist & Mixed Reality"
+        description="Empower your workforce and optimise your operations with Dynamics 365 Mixed Reality Applications like remote assist, product visualize and guides."
+        image="https://www.dynamicssquare.co.uk/img/Mixed-Reality-banner.png"
+        faqs={PAGE_FAQS}
+      />
       <ModalVideo
         channel="youtube"
         autoplay
@@ -140,8 +156,7 @@ const MicrosoftDynamics365MixedReality = () => {
                         <div className="wr-in">
                           <img
                             src="/img/Mixed-Reality-Layout.svg"
-                            alt="Mixed-Reality-Layout"
-                          />
+                            alt="Microsoft Dynamics 365 Remote Assist"  loading="lazy" decoding="async" />
                         </div>
                         <span>Microsoft Dynamics 365 Layout</span>
                       </button>
@@ -184,8 +199,7 @@ const MicrosoftDynamics365MixedReality = () => {
                         <div className="wr-in">
                           <img
                             src="/img/Mixed-Reality-Guide.svg"
-                            alt="Mixed-Reality-Guide"
-                          />
+                            alt="Microsoft Dynamics 365 Layout"  loading="lazy" decoding="async" />
                         </div>
                         <span>Microsoft Dynamics 365 Guides</span>
                       </button>
@@ -221,8 +235,7 @@ const MicrosoftDynamics365MixedReality = () => {
                         <div className="wr-in">
                           <img
                             src="/img/Mixed-Reality-Product-Visualize.svg"
-                            alt="Mixed-Reality-Product-Visualize"
-                          />
+                            alt="Microsoft Dynamics 365 Guides"  loading="lazy" decoding="async" />
                         </div>
                         <span>Microsoft Dynamics 365 Product Visualize</span>
                       </button>
@@ -350,9 +363,8 @@ const MicrosoftDynamics365MixedReality = () => {
                   <Image
                     src="/img/mixed-reality-side-image.png"
                     className="fix-im"
-                    alt="mixed-reality-side-image"
-                    width={553} height={531}
-                  />
+                    alt="Secured Cloud Model"
+                    width={553} height={531} />
                   <div className="video-ytube video-ytubes">
                     <div className="popup-btn popup-btns">
                       <Link href="#javascript:void(0)" onClick={() => setOpen(true)}>
@@ -365,8 +377,8 @@ const MicrosoftDynamics365MixedReality = () => {
                         <span className="cente-icns">
                           <img
                             src="/img/play_icons.svg"
-                            alt="play_icons"
-                          />
+                            alt=""
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </span>
 
                       </Link>
@@ -384,8 +396,8 @@ const MicrosoftDynamics365MixedReality = () => {
                 <div className="card_new_img">
                   <img
                     src="/img/Business-Central-Implementation-icons.svg"
-                    alt="Business-Central-Implementation-icons"
-                  />
+                    alt=""
+                   aria-hidden="true"  loading="lazy" decoding="async" />
                 </div>
                 <div className="card_new_content">
                   <h3>Implementation</h3>
@@ -403,7 +415,7 @@ const MicrosoftDynamics365MixedReality = () => {
                   <img
                     src="/img/Business Central Upgrade-icons.svg"
                     alt="Business Central Upgrade-icons"
-                  />
+                   loading="lazy" decoding="async" />
                 </div>
                 <div className="card_new_content">
                   <h3>Upgrade</h3>
@@ -420,8 +432,8 @@ const MicrosoftDynamics365MixedReality = () => {
                 <div className="card_new_img">
                   <img
                     src="/img/Business-Central-Support-icons.svg"
-                    alt="Business-Central-Support-icons"
-                  />
+                    alt=""
+                   aria-hidden="true"  loading="lazy" decoding="async" />
                 </div>
                 <div className="card_new_content">
                   <h3>Support</h3>

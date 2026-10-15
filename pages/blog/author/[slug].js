@@ -5,7 +5,7 @@ import TimerModal from "../../../components/TimerModal";
 import BlogStyles from "../../../components/blog/BlogStyles";
 import {
   Avatar,
-  BlogFontPreload,
+  blogFontLinks,
   PagedPostGrid,
   formatDate,
 } from "../../../components/blog/BlogUi";
@@ -121,12 +121,15 @@ function AuthorPage({ author, authorSchema, posts, otherAuthors, authorSlug }) {
           url: pageUrl,
           mainEntity: {
             "@type": "Person",
+            // Same @id the blog posts use for their author, so the two connect.
+            "@id": `${pageUrl}#person`,
+            url: pageUrl,
             name: authorName,
             jobTitle: role,
             description: bio,
             ...(imageUrl && { image: imageUrl }),
             ...(isValidLink(author.linkedin) && { sameAs: [withProtocol(author.linkedin)] }),
-            worksFor: { "@type": "Organization", name: "Dynamics Square", url: SITE_URL },
+            worksFor: { "@id": `${SITE_URL}/#organization` },
           },
         }),
       ];
@@ -150,7 +153,6 @@ function AuthorPage({ author, authorSchema, posts, otherAuthors, authorSlug }) {
         <meta property="og:title" content={`${authorName} | Dynamics Square Blog`} />
         <meta property="og:description" content={`Explore all blog posts written by ${authorName}.`} />
         <meta property="og:url" content={pageUrl} />
-        <meta property="og:site_name" content="Dynamics Square Blog" />
         {imageUrl && <meta property="og:image" content={imageUrl} />}
 
         <meta name="twitter:card" content="summary_large_image" />
@@ -161,8 +163,8 @@ function AuthorPage({ author, authorSchema, posts, otherAuthors, authorSlug }) {
         {schemas.map((json, i) => (
           <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: json }} />
         ))}
+        {blogFontLinks()}
       </Head>
-      <BlogFontPreload />
 
       {/* ================= PROFILE ================= */}
 

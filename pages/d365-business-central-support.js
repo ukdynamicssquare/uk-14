@@ -1,35 +1,64 @@
-import Head from 'next/head';
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import useCardScrollEffect from "/components/useCardScrollEffect";
+import PageSeo from "../components/PageSeo";
+// Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
+const PAGE_FAQS = [
+  {
+    "question": "How do I get technical support for Business Central?",
+    "answer": "The process of getting technical support for Business Central is straightforward. If there is a need, contact Dynamics Square and schedule a demo with one of our experts. After that, evaluate the issues, and our team will provide you with the best solution possible on time."
+  },
+  {
+    "question": "How to get help for Business Central Migration?",
+    "answer": "Business Central Migration can be hectic if you have not selected the right Business Central support partner. Dynamics Square can help any business with a seamless migration process, including an affordable quotation, timely implementation, best support, and training if required."
+  },
+  {
+    "question": "What is the Dynamics 365 Business Central Support Lifecycle?",
+    "answer": "The D365 Business Central versions before April 2019 followed the Fixed Lifecycle Policy, which includes five years of Mainstream Support followed by five years of Extended Support, counted from the product release date. The Modern Lifecycle Policy has no fixed end date: support continues as long as you stay current by installing the latest updates."
+  },
+  {
+    "question": "What is the difference between Dynamics 365 and Business Central?",
+    "answer": "Dynamics 365 is an all-in-one solution that combines different CRM (Customer Relationship Manager) and ERP (Enterprise Resource Planning) applications. In contrast, Business Central is one of the applications from Dynamics 365 applications as an ERP but has some features of CRM as well."
+  },
+  {
+    "question": "What is included in Dynamics 365 Business Central Essentials?",
+    "answer": "Business Central with Cloud deployment offers two license plans: Essentials (£61.50 per user/month) and Premium (£84.60 per user/month). Dynamics 365 Business Central Essential comes with Finance Management, Sales and Marketing, Purchasing Payables, Inventory, Supply Planning and Availability, Project Management, and Warehouse Management."
+  },
+  {
+    "question": "Is Business Central a database?",
+    "answer": "Business Central isn't a database, but one or more databases exist in Business Central that contain data for the entire organisation. The database is built using a set of data sets, including tables, reports, and data structures."
+  },
+  {
+    "question": "What are Business Central Modules?",
+    "answer": "D365 Business Central is a powerful ERP solution that streamlines all business management processes and operations. It has modules including Financial Management, Customer Relationship Management, Supply Chain Management, Project Management, Human Resources Management, Cloud for Manufacturing, and Service Management."
+  },
+  {
+    "question": "How do I open a case with Microsoft Business Central Support?",
+    "answer": "The process of getting premium support is easy and simple. Whenever you encounter an issue with your system, you need to schedule a call with Dynamics Square. The dedicated team will analyse the issue's complexity and provide you with a solution so that you can resume business operations soon."
+  },
+  {
+    "question": "What is a Support Request for Business Central?",
+    "answer": "A \"Support Request\" is a query, or an inquiry submitted to a company's website where the Business Central support services are available. The support request can be for a specific module or a function of Business Central, and the team of Dynamics Square will resolve any query with quality services."
+  },
+  {
+    "question": "How to raise a ticket for Dynamics 365 Business Central Support?",
+    "answer": "Whenever your current BC shows any issue, whether small or complex, you need to schedule a call with Dynamics Square. Once the team receives a call, they transfer it to the dedicated support team to resolve the query soon. Also, you will get updates about the status of your ticket on your email automatically."
+  }
+];
+
 const BcSupport = () => {
     useCardScrollEffect()
 
     return (
         <>
-            <Head>
-                <title>Dynamics 365 Business Central Support | Dynamics Square UK</title>
-                <meta
-                    name="description"
-                    content="We provide comprehensive Dynamics 365 Business Central support services, including customisations, integrations, training, add-ons, and technical support."
-                />
-                <link
-                    rel="canonical"
-                    href="https://www.dynamicssquare.co.uk/d365-business-central-support/"
-                />
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://www.dynamicssquare.co.uk/d365-business-central-support/" />
-                <meta property="og:title" content="Dynamics 365 Business Central Support | Dynamics Square UK" />
-                <meta property="og:description" content="We provide comprehensive Dynamics 365 Business Central support services, including customisations, integrations, training, add-ons, and technical support." />
-                <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/bc-support-banner.png" />
-
-                <meta property="twitter:card" content="summary_large_image" />
-                <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/d365-business-central-support/" />
-                <meta property="twitter:title" content="Dynamics 365 Business Central Support | Dynamics Square UK" />
-                <meta property="twitter:description" content="We provide comprehensive Dynamics 365 Business Central support services, including customisations, integrations, training, add-ons, and technical support." />
-                <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/bc-support-banner.png" />
-            </Head>
+            <PageSeo
+              type="Service"
+              title="Dynamics 365 Business Central Support | Dynamics Square UK"
+              description="We provide comprehensive Dynamics 365 Business Central support services, including customisations, integrations, training, add-ons, and technical support."
+              image="https://www.dynamicssquare.co.uk/img/bc-support-banner.png"
+              faqs={PAGE_FAQS}
+            />
             <div className='solution-new-banner-one'>
                 <div className='container'>
                     <div className='row justify-content-center'>
@@ -48,7 +77,7 @@ const BcSupport = () => {
                                 </div>
                             </div>
                             <div className='m-b-image-banner'>
-                                <Image src="/img/bc-support-banner.png" alt='bc-support-banner' width={1097} height={656} priority />
+                                <Image src="/img/bc-support-banner.png" alt="Dynamics 365 Business Central Support" width={1097} height={656} priority />
                                 <div className='ff-one'>  <span className=''>Dedicated Key Account Manager</span></div>
                                 <div className='ff-two'>  <span className=''>Rapid Issue Resolution</span></div>
                             </div>
@@ -76,7 +105,7 @@ const BcSupport = () => {
                         </div>
                         <div className='col-lg-6 align-self-center'>
                             <div className='support-image--one'>
-                                <Image src="/img/bc-support-side-01.png" alt='bc-support' width={402} height={436} />
+                                <Image src="/img/bc-support-side-01.png" alt="Our Comprehensive Dynamics 365 Business Central Support Offerings" width={402} height={436} />
                             </div>
                         </div>
                     </div>
@@ -101,17 +130,17 @@ const BcSupport = () => {
                                         <h3>Ad-Hoc Support</h3>
                                         <div className='mycard__inner_gir'>
                                             <div className='mycard__inner_gird-colomn'>
-                                                <img src="/img/suppot-icon-001.png" alt="lexible Assistance" />
+                                                <img src="/img/suppot-icon-001.png" alt="lexible Assistance"  loading="lazy" decoding="async" />
                                                 <h4>Flexible Assistance</h4>
                                                 <p>Our Ad-Hoc Support services are perfect for companies that need periodic help without long-term obligations.</p>
                                             </div>
                                             <div className='mycard__inner_gird-colomn'>
-                                                <img src="/img/suppot-icon-002.png" alt="System Health Checks" />
+                                                <img src="/img/suppot-icon-002.png" alt="System Health Checks"  loading="lazy" decoding="async" />
                                                 <h4>System Health Checks</h4>
                                                 <p>Our comprehensive system health checks help you to find and fix possible problems before they affect your running.</p>
                                             </div>
                                             <div className='mycard__inner_gird-colomn'>
-                                                <img src="/img/suppot-icon-003.png" alt="Customised Solutions<" />
+                                                <img src="/img/suppot-icon-003.png" alt="Customised Solutions<"  loading="lazy" decoding="async" />
                                                 <h4>Customised Solutions</h4>
                                                 <p>Our team provides customised solutions to guarantee you receive the maximum value from our Dynamics 365 Business Central Support Services.</p>
                                             </div>
@@ -124,17 +153,17 @@ const BcSupport = () => {
                                         <h3>Prepaid Hours Support</h3>
                                         <div className='mycard__inner_gir'>
                                             <div className='mycard__inner_gird-colomn'>
-                                                <img src="/img/suppot-icon-004.png" alt="Proactive Support" />
+                                                <img src="/img/suppot-icon-004.png" alt="Proactive Support"  loading="lazy" decoding="async" />
                                                 <h4>Proactive Support</h4>
                                                 <p>Our 50-hour prepaid support system lets you have proactive and timely support. You can utilise 50-hours as per your need throughout the year.</p>
                                             </div>
                                             <div className='mycard__inner_gird-colomn'>
-                                                <img src="/img/suppot-icon-005.png" alt="Timely Assistance" />
+                                                <img src="/img/suppot-icon-005.png" alt="Timely Assistance"  loading="lazy" decoding="async" />
                                                 <h4>Timely Assistance</h4>
                                                 <p>This plan guarantees that you have access to professional aid anytime you require it, so enabling you to keep seamless business operations.</p>
                                             </div>
                                             <div className='mycard__inner_gird-colomn'>
-                                                <img src="/img/suppot-icon-006.png" alt="Cost-Effective" />
+                                                <img src="/img/suppot-icon-006.png" alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                                                 <h4>Cost-Effective</h4>
                                                 <p>Our prepaid hours give you control over your budget. Pay for 50-hour Dynamics 365 Business Central support once and eliminate getting surprising invoice.</p>
                                             </div>
@@ -148,17 +177,17 @@ const BcSupport = () => {
                                         <h3>Yearly Support</h3>
                                         <div className='mycard__inner_gir'>
                                             <div className='mycard__inner_gird-colomn'>
-                                                <img src="/img/suppot-icon-007.png" alt="Continuous Assistance" />
+                                                <img src="/img/suppot-icon-007.png" alt="Continuous Assistance"  loading="lazy" decoding="async" />
                                                 <h4>Continuous Assistance</h4>
                                                 <p>Our annual support package offers continuous assistance throughout the year.</p>
                                             </div>
                                             <div className='mycard__inner_gird-colomn'>
-                                                <img src="/img/suppot-icon-008.png" alt="Issue Resolution" />
+                                                <img src="/img/suppot-icon-008.png" alt="Issue Resolution"  loading="lazy" decoding="async" />
                                                 <h4>Issue Resolution</h4>
                                                 <p>We help resolve general issues, fix bugs, and ensure strategic and improved workflows across your organisation.</p>
                                             </div>
                                             <div className='mycard__inner_gird-colomn'>
-                                                <img src="/img/suppot-icon-009.png" alt="Strategic Planning" />
+                                                <img src="/img/suppot-icon-009.png" alt="Strategic Planning"  loading="lazy" decoding="async" />
                                                 <h4>Strategic Planning</h4>
                                                 <p>Our team works with you to develop strategic plans that align with your business goals and ensure long-term success.</p>
                                             </div>
@@ -171,17 +200,17 @@ const BcSupport = () => {
                                         <h3>End-User Training</h3>
                                         <div className='mycard__inner_gir'>
                                             <div className='mycard__inner_gird-colomn'>
-                                                <img src="/img/suppot-icon-010.png" alt="Effective Utilisation" />
+                                                <img src="/img/suppot-icon-010.png" alt="Effective Utilisation"  loading="lazy" decoding="async" />
                                                 <h4>Effective Utilisation</h4>
                                                 <p>Effective utilisation of your ERP system is essential for maximising its benefits.</p>
                                             </div>
                                             <div className='mycard__inner_gird-colomn'>
-                                                <img src="/img/suppot-icon-011.png" alt="raining Sessions" />
+                                                <img src="/img/suppot-icon-011.png" alt="raining Sessions"  loading="lazy" decoding="async" />
                                                 <h4>Training Sessions</h4>
                                                 <p>Dynamics Square provides training to help end-users adapt to newly configured or updated systems.</p>
                                             </div>
                                             <div className='mycard__inner_gird-colomn'>
-                                                <img src="/img/suppot-icon-012.png" alt="Enhanced Productivity" />
+                                                <img src="/img/suppot-icon-012.png" alt="Enhanced Productivity"  loading="lazy" decoding="async" />
                                                 <h4>Enhanced Productivity</h4>
                                                 <p>Our training sessions ensure that your team can effectively use the implemented solutions, enhancing productivity and efficiency.</p>
                                             </div>
@@ -214,7 +243,7 @@ const BcSupport = () => {
                             <div className="indut-card-one indut-card-one-pdd">
                                 <a href="/industries/microsoft-cloud-for-manufacturing/">
                                     <div className="pic">
-                                        <img src="/img/rectangle-01.jpg" alt="Manufacturing" />
+                                        <img src="/img/rectangle-01.jpg" alt="Manufacturing"  loading="lazy" decoding="async" />
                                         <h3>Manufacturing</h3>
                                     </div>
                                     <div className="pic-body">
@@ -228,7 +257,7 @@ const BcSupport = () => {
                             <div className="indut-card-one indut-card-one-pdd">
                                 <a href="/industries/dynamics-365-for-retail/">
                                     <div className="pic">
-                                        <img src="/img/rectangle-02.jpg" alt="Retail & E-commerce" />
+                                        <img src="/img/rectangle-02.jpg" alt="Retail & E-commerce"  loading="lazy" decoding="async" />
                                         <h3>Retail & E-commerce</h3>
                                     </div>
                                     <div className="pic-body">
@@ -242,7 +271,7 @@ const BcSupport = () => {
                             <div className="indut-card-one indut-card-one-pdd">
                                 <a href="/industries/professional-services/">
                                     <div className="pic">
-                                        <img src="/img/rectangle-05.jpg" alt="Professional Services" />
+                                        <img src="/img/rectangle-05.jpg" alt="Professional Services"  loading="lazy" decoding="async" />
                                         <h3>Professional Services</h3>
                                     </div>
                                     <div className="pic-body">
@@ -256,7 +285,7 @@ const BcSupport = () => {
                             <div className="indut-card-one indut-card-one-pdd">
                                 <a href="/industries/dynamics-365-for-distribution/">
                                     <div className="pic">
-                                        <img src="/img/rectangle-011.jpg" alt="Wholesale & Distribution" />
+                                        <img src="/img/rectangle-011.jpg" alt="Wholesale & Distribution"  loading="lazy" decoding="async" />
                                         <h3>Wholesale & Distribution</h3>
                                     </div>
                                     <div className="pic-body">
@@ -270,7 +299,7 @@ const BcSupport = () => {
                             <div className="indut-card-one indut-card-one-pdd">
                                 <a href="/industries/microsoft-cloud-for-financial-services/">
                                     <div className="pic">
-                                        <img src="/img/rectangle-04.jpg" alt="Finance" />
+                                        <img src="/img/rectangle-04.jpg" alt="Finance"  loading="lazy" decoding="async" />
                                         <h3>Finance</h3>
                                     </div>
                                     <div className="pic-body">
@@ -284,7 +313,7 @@ const BcSupport = () => {
                             <div className="indut-card-one indut-card-one-pdd">
                                 <a href="/industries/dynamics-365-for-healthcare/">
                                     <div className="pic">
-                                        <img src="/img/rectangle-03.jpg" alt="Healthcare" />
+                                        <img src="/img/rectangle-03.jpg" alt="Healthcare"  loading="lazy" decoding="async" />
                                         <h3>Healthcare</h3>
                                     </div>
                                     <div className="pic-body">
@@ -309,7 +338,7 @@ const BcSupport = () => {
                     <div className="row">
                         <div className='col-lg-6 align-self-center'>
                             <div className='support-image--one'>
-                                <Image src="/img/bc-support-side-02.png" alt='bc-support' width={513} height={455} />
+                                <Image src="/img/bc-support-side-02.png" alt="Planning to Switch Your Business Central Support Partner?" width={513} height={455} />
                             </div>
                         </div>
                         <div className="col-lg-6 align-self-center">
@@ -342,7 +371,7 @@ const BcSupport = () => {
                         </div>
                     </div>
                 </div>
-                <img src="/img/n-015.png" alt="n-015" />
+                <img src="/img/n-015.png" alt="" aria-hidden="true"  loading="lazy" decoding="async" />
             </section>
             <section className='s-options-end'>
                 <div className="container">
@@ -399,12 +428,12 @@ const BcSupport = () => {
                         </div>
                         <div className='col-lg-5 order-1'>
                             <div className='img-backs-sid'>
-                                <Image src="/img/n-016.png" alt="copil-side" width={401} height={455} className='im-two' />
+                                <Image src="/img/n-016.png" alt="" width={401} height={455} className='im-two' aria-hidden="true" />
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className='n-017'><img src="/img/n-017.png" width={698} height={449} alt="copil-side" className='im-one-17' /></div>
+                <div className='n-017'><img src="/img/n-017.png" width={698} height={449} alt="" className='im-one-17' aria-hidden="true"  loading="lazy" decoding="async" /></div>
             </section>
             <section className="solution-faq faq">
                 <div className="container">

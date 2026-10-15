@@ -1,56 +1,37 @@
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
+import PageSeo from "../../../components/PageSeo";
+// Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
+const PAGE_FAQS = [
+  {
+    "question": "What is included in Dynamics Square’s Power BI support services?",
+    "answer": "Dynamics Square's Power BI support services are intended to provide comprehensive help across the whole Power BI ecosystem. We ensure that your reports and data sources are updated often by offering proactive monitoring to spot possible problems before they happen. Our team is dedicated to optimising the effectiveness and productivity of your Power BI deployment. To make sure you and your team are utilising the platform to its most potential, we also provide ongoing training and support."
+  },
+  {
+    "question": "How can I get started with Power BI support from Dynamics Square?",
+    "answer": "Make an appointment for a conversation with our team to begin utilising Dynamics Square's Power BI support. Following a thorough assessment of your particular requirements, we will collaborate with you to create a customised support plan that meets your objectives and your financial constraints. Our experienced team will make sure the onboarding process runs well so you can start using our support services straight away."
+  },
+  {
+    "question": "What is the cost of Power BI support services from Dynamics Square?",
+    "answer": "For Power BI support services that are tailored to your company's unique needs, we provide variable pricing. In our opinion, the billing ought to be clear and upfront, letting you know exactly what to expect. Our purpose is to help you achieve your company objectives profitably and successfully by offering exceptional value in the form of support services."
+  },
+  {
+    "question": "What are the options for customizing Power BI services for my organisation?",
+    "answer": "We offer a wide range of customisable options to ensure that our Power BI services exactly meet the particular requirements of your business. Our team can design customised Power BI solutions, integrate Power BI with your existing systems, implement robust data governance and security protocols, and provide specific training and educational programs to empower your staff."
+  }
+];
+
 
 const PowerBiSupport = () => {
   return (
     <>
-      <Head>
-        <title>Power BI Support & Services | Dynamics Square</title>
-        <meta
-          name="description"
-          content="Get expert Power BI support and services with Dynamics Square. Optimise your data analytics, visualisation, and reporting with our tailored Power BI solutions."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/microsoft-power-bi/support/" />
-         <meta property="og:locale" content="GB" />
-        <meta property="og:type" content="website" />
-        <meta
-          property="og:title"
-          content="Power BI Support & Services | Dynamics Square"
-        />
-        <meta
-          property="og:description"
-          content="Get expert Power BI support and services with Dynamics Square. Optimise your data analytics, visualisation, and reporting with our tailored Power BI solutions."
-        />
-        <meta
-          property="og:url"
-          content="https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365/integration/"
-        />
-        <meta property="og:site_name" content="Dynamics Square UK" />
-        <meta
-          property="og:image"
-          content="https://www.dynamicssquare.co.uk/img/project-operation-banner.png"
-        />
-        <meta property="og:image:width" content="200" />
-        <meta property="og:image:height" content="200" />
-        <meta property="og:image:type" content="image/png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@dsquare_uk" />
-        <meta
-          name="twitter:title"
-          content="Power BI Support & Services | Dynamics Square"
-        />
-        <meta
-          name="twitter:description"
-          content="Get expert Power BI support and services with Dynamics Square. Optimise your data analytics, visualisation, and reporting with our tailored Power BI solutions."
-        />
-        <meta
-          name="twitter:image"
-          content="https://www.dynamicssquare.co.uk/img/project-operation-banner.png"
-        />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Power BI Support & Services | Dynamics Square"
+        description="Get expert Power BI support and services with Dynamics Square. Optimise your data analytics, visualisation, and reporting with our tailored Power BI solutions."
+        image="https://www.dynamicssquare.co.uk/img/project-operation-banner.png"
+        faqs={PAGE_FAQS}
+      />
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -78,7 +59,7 @@ const PowerBiSupport = () => {
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/Power-BI-1024x586.webp" alt="Power-BI" width={1024} height={586}  priority = {true} />
+              <Image src="/img/Power-BI-1024x586.webp" alt="Collect, Analyse, and Visualize Data to Create Amazing Data Experiences" width={1024} height={586}  priority = {true} />
             </div>
           </div>
         </div>
@@ -108,7 +89,7 @@ const PowerBiSupport = () => {
           <div className="row pad9x rever-1">
             <div className="col-lg-6 align-self-center">
               <div className="commen-lef-pic">
-                <Image src="/img/microosoft-partner.png" alt="ds-partener" width={625} height={651} />
+                <Image src="/img/microosoft-partner.png" alt="Microsoft Solutions Partner badge" width={625} height={651} />
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
@@ -170,7 +151,7 @@ const PowerBiSupport = () => {
                         aria-controls="fin1"
                       >
                         <div className="wr-in">
-                          <img src="/img/Budget.svg" alt="icons" />
+                          <img src="/img/Budget.svg" alt="icons"  loading="lazy" decoding="async" />
                         </div>
                         <span>AD-Hoc Support</span>
                       </button>
@@ -204,7 +185,7 @@ const PowerBiSupport = () => {
                         aria-controls="fin2"
                       >
                         <div className="wr-in">
-                          <img src="/img/Financials-3.svg" alt="icons" />
+                          <img src="/img/Financials-3.svg" alt="icons"  loading="lazy" decoding="async" />
                         </div>
                         <span>Prepaid Hours Support</span>
                       </button>
@@ -246,7 +227,7 @@ const PowerBiSupport = () => {
                         aria-controls="fin4"
                       >
                         <div className="wr-in">
-                          <img src="/img/Project.svg" alt="icons" />
+                          <img src="/img/Project.svg" alt="icons"  loading="lazy" decoding="async" />
                         </div>
                         <span>Annual Support</span>
                       </button>

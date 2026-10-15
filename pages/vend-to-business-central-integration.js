@@ -1,31 +1,20 @@
 import React, { useState } from "react";
-import Head from "next/head";
 import Image from 'next/image';
 import ModalVideo from "react-modal-video";
 import Link from "next/link";
 import Blog from "../components/Blog";
+import PageSeo from "../components/PageSeo";
 const Finance = () => {
   const [isOpen, setOpen] = useState(false);
   const [open, setsOpen] = useState(false);
 
   return (
     <>
-      <Head>
-        <title>Integrate [POS] Vend to Dynamics 365 Business central </title>
-        <meta
-          name="description"
-          content="Integrate Vend with Microsoft Dynamics 365 Business central and get a holistic approach to streamline entire retail and inventory operations."
-        />
-      <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/vend-to-business-central-integration/"
-        />
-        <meta
-          property="og:url"
-          content="https://www.dynamicssquare.co.uk/vend-to-business-central-integration/"
-        />
- 
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Integrate [POS] Vend to Dynamics 365 Business central"
+        description="Integrate Vend with Microsoft Dynamics 365 Business central and get a holistic approach to streamline entire retail and inventory operations."
+      />
       <ModalVideo
         channel="youtube"
         autoplay
@@ -54,11 +43,10 @@ const Finance = () => {
                   <div className="col-lg-6 align-self-center">
                     <Image
                       src="/img/vend-business-central-integration.png"
-                      alt="business-center-new-banne"
+                      alt="Why there is a Need for Vend to Business Central Integration?"
                       width={868}
                       height={487}
-                      priority = {true}
-                    />
+                      priority = {true} />
                   </div>
                 </div>
               </div>
@@ -135,7 +123,7 @@ const Finance = () => {
               <img
                   src="/img/iPaaS-2.png"
                   alt="iPaaS"
-                />
+                 loading="lazy" decoding="async" />
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
@@ -167,7 +155,7 @@ const Finance = () => {
               <img
                   src="/img/iPaaS-3.png"
                   alt="iPaaS"
-                />
+                 loading="lazy" decoding="async" />
               </div>
             </div>
           </div>

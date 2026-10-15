@@ -1,8 +1,8 @@
-import Head from "next/head";
 import FooterNew from "../components/FooterNew";
 import Image from "next/image";
 import Link from "next/link";
 import pageLastmod from "../page-lastmod.json";
+import PageSeo from "../components/PageSeo";
 
 // Homepage-only WebPage node. Organization, WebSite and #logo are defined
 // site-wide in _app.js and referenced here by @id.
@@ -25,52 +25,13 @@ const webPageSchema = {
 const HomeOneNew = () => {
   return (
     <>
-      <Head>
-        <title>
-          Microsoft Dynamics 365 Partner UK - Dynamics Square™
-        </title>
-        <meta
-          name="description"
-          content="Dynamics Square™ is a leading Microsoft Dynamics 365 Partner in the UK, empowering organisations with expert CRM and ERP solutions, seamless implementation, and ongoing support."
-        />
-        <link rel="canonical" href="https://www.dynamicssquare.co.uk/" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/" />
-        <meta
-          property="og:title"
-          content="Microsoft Dynamics 365 Partner UK - Dynamics Square™"
-        />
-        <meta
-          property="og:description"
-          content="Dynamics Square™ is a leading Microsoft Dynamics 365 Partner in the UK, empowering organisations with expert CRM and ERP solutions, seamless implementation, and ongoing support."
-        />
-        <meta
-          property="og:image"
-          content="https://www.dynamicssquare.co.uk/img/home-page-og.png"
-        />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta
-          property="twitter:url"
-          content="https://www.dynamicssquare.co.uk/"
-        />
-        <meta
-          property="twitter:title"
-          content="Microsoft Dynamics 365 Partner UK - Dynamics Square™"
-        />
-        <meta
-          property="twitter:description"
-          content="Dynamics Square™ is a leading Microsoft Dynamics 365 Partner in the UK, empowering organisations with expert CRM and ERP solutions, seamless implementation, and ongoing support."
-        />
-        <meta
-          property="twitter:image"
-          content="https://www.dynamicssquare.co.uk/img/home-page-og.png"
-        />
-      </Head>
+      <PageSeo
+        type="WebPage"
+        title="Microsoft Dynamics 365 Partner UK - Dynamics Square™"
+        description="Dynamics Square™ is a leading Microsoft Dynamics 365 Partner in the UK, empowering organisations with expert CRM and ERP solutions, seamless implementation, and ongoing support."
+        image="/img/home-page-og.png"
+        extraSchema={webPageSchema}
+      />
 
         <section className="home-baner-head-new">
           <div className="container">
@@ -134,9 +95,8 @@ const HomeOneNew = () => {
                 <div className="home-floting-image text-center">
                   <Image width={1388} height={318}
                     src="/img/new-home-banner.png"
-                    alt="new-home-banner.png"
-                    priority
-                  />
+                    alt="UK's Trusted Microsoft Dynamics 365 Partner"
+                    priority />
                 </div>
               </div>
             </div>
@@ -150,42 +110,37 @@ const HomeOneNew = () => {
                     <li>
                       <Image
                         src="/img/cli-1.png"
-                        alt="cli-1.png"
+                        alt="Parweld logo"
                         width={223}
-                        height={78}
-                      />
+                        height={78} />
                     </li>
                     <li>
                       <Image
                         src="/img/cli-2.png"
-                        alt="cli-2.png"
+                        alt="NCC Education logo"
                         width={174}
-                        height={78}
-                      />
+                        height={78} />
                     </li>
                     <li>
                       <Image
                         src="/img/cli-3.png"
-                        alt="cli-3.png"
+                        alt="COMXO logo"
                         width={230}
-                        height={78}
-                      />
+                        height={78} />
                     </li>
                     <li>
                       <Image
                         src="/img/cli-4.png"
-                        alt="cli-4.png"
+                        alt="Arteak logo"
                         width={241}
-                        height={78}
-                      />
+                        height={78} />
                     </li>
                     <li>
                       <Image
                         src="/img/cli-5.png"
-                        alt="cli-5.png"
+                        alt="MTA logo"
                         width={122}
-                        height={78}
-                      />
+                        height={78} />
                     </li>
                   </ul>
                 </div>
@@ -193,7 +148,7 @@ const HomeOneNew = () => {
             </div>
           </div>
           <div className="client-home-new-list-btom">
-            <Image width={423} height={425} src="/img/new-home-banner-1.png" alt="new-home-banner.png" />
+            <Image width={423} height={425} src="/img/new-home-banner-1.png" alt="Dynamics Square: Your Microsoft Solutions Partner" />
           </div>
         </section>
 
@@ -227,10 +182,9 @@ const HomeOneNew = () => {
                 <div className="border-left-img">
                   <img
                     src="/img/partner-logo-black-big.png"
-                    alt="partner-logo-black-big"
+                    alt="Microsoft Solutions Partner badge"
                     width={308}
-                    height={86}
-                  />
+                    height={86}  loading="lazy" decoding="async" />
                 </div>
               </div>
             </div>
@@ -301,10 +255,10 @@ const HomeOneNew = () => {
                     <a href="our-services/dynamics-365-consultant/">
                       <img
                         src="/img/serve-ic-01.png"
-                        alt="serve-ic-01"
+                        alt=""
                         width={40}
                         height={40}
-                      />
+                       aria-hidden="true"  loading="lazy" decoding="async" />
                       <h3>Consulting</h3>
                       <p>
                         We study how your business runs today and show where
@@ -323,10 +277,10 @@ const HomeOneNew = () => {
                     <a href="/our-services/dynamics-365-implementation-services/">
                       <img
                         src="/img/serve-ic-02.png"
-                        alt="serve-ic-02"
+                        alt=""
                         width={40}
                         height={40}
-                      />
+                       aria-hidden="true"  loading="lazy" decoding="async" />
                       <h3>Implementation</h3>
                       <p>
                         From Dynamics 365 Business Central to Dynamics 365
@@ -345,10 +299,10 @@ const HomeOneNew = () => {
                     <a href="/our-services/dynamics-365-upgrade-services/">
                       <img
                         src="/img/serve-ic-03.png"
-                        alt="serve-ic-03"
+                        alt=""
                         width={40}
                         height={40}
-                      />
+                       aria-hidden="true"  loading="lazy" decoding="async" />
                       <h3>Upgrade</h3>
                       <p>
                         Our team works quietly in the background, so your
@@ -367,10 +321,10 @@ const HomeOneNew = () => {
                     <a href="/our-services/dynamics-365-support-services/">
                       <img
                         src="/img/serve-ic-04.png"
-                        alt="serve-ic-04"
+                        alt=""
                         width={40}
                         height={40}
-                      />
+                       aria-hidden="true"  loading="lazy" decoding="async" />
                       <h3>Ongoing Support</h3>
                       <p>
                         Dynamics Square stays beside you after the system goes
@@ -435,7 +389,7 @@ const HomeOneNew = () => {
                         alt="Distribution"
                         width="32"
                         height="32"
-                      />
+                       loading="lazy" decoding="async" />
                     </div>
                     <span>Distribution</span>
                   </button>
@@ -452,10 +406,9 @@ const HomeOneNew = () => {
                     <div className="rounded-circle">
                       <img
                         src="/img/shopping_cart.png"
-                        alt="E-commerce"
+                        alt="Your Industry? Our Expertise!"
                         width="32"
-                        height="32"
-                      />
+                        height="32"  loading="lazy" decoding="async" />
                     </div>
                     <span>E-commerce</span>
                   </button>
@@ -475,7 +428,7 @@ const HomeOneNew = () => {
                         alt="Education"
                         width="32"
                         height="32"
-                      />
+                       loading="lazy" decoding="async" />
                     </div>
                     <span>Education</span>
                   </button>
@@ -495,7 +448,7 @@ const HomeOneNew = () => {
                         alt="Manufacturing"
                         width="32"
                         height="32"
-                      />
+                       loading="lazy" decoding="async" />
                     </div>
                     <span>Manufacturing</span>
                   </button>
@@ -516,7 +469,7 @@ const HomeOneNew = () => {
                         alt="Retail"
                         width="32"
                         height="32"
-                      />
+                       loading="lazy" decoding="async" />
                     </div>
                     <span>Retail</span>
                   </button>
@@ -536,7 +489,7 @@ const HomeOneNew = () => {
                         alt="Logistics"
                         width="32"
                         height="32"
-                      />
+                       loading="lazy" decoding="async" />
                     </div>
                     <span>Logistics</span>
                   </button>
@@ -569,8 +522,7 @@ const HomeOneNew = () => {
                             width={414}
                             height={465}
                             src="/img/001.png"
-                            alt="E-commerce"
-                          />
+                            alt="Scale Your Online Stores Confidently" />
                         </div>
                       </div>
                       <div className="left-sect">
@@ -933,10 +885,9 @@ const HomeOneNew = () => {
                     <div className="crad-img">
                       <Image
                         src="/img/case-imgs-2.jpg"
-                        alt="case-imgs-1"
+                        alt="See how our customers drive impact"
                         width={610}
-                        height={592}
-                      />
+                        height={592} />
                       <p>
                         London’s top college boosts departmental synergy by 80%
                         with a system upgrade.
@@ -954,10 +905,9 @@ const HomeOneNew = () => {
                     <div className="crad-img">
                       <Image
                         src="/img/case-imgs-3.jpg"
-                        alt="case-imgs-2"
+                        alt="See how our customers drive impact"
                         width={610}
-                        height={592}
-                      />
+                        height={592} />
                       <p>
                         A car restoration company boosted ROI by 30% through
                         custom solutions.
@@ -975,10 +925,9 @@ const HomeOneNew = () => {
                     <div className="crad-img">
                       <Image
                         src="/img/case-imgs-1.jpg"
-                        alt="case-imgs-1"
+                        alt="See how our customers drive impact"
                         width={610}
-                        height={592}
-                      />
+                        height={592} />
                       <p>
                         A renowned UK defence apparel company maximised
                         efficiency by 50%.
@@ -996,10 +945,9 @@ const HomeOneNew = () => {
                     <div className="crad-img">
                       <Image
                         src="/img/case-imgs-4.jpg"
-                        alt="case-imgs-4"
+                        alt="See how our customers drive impact"
                         width={610}
-                        height={592}
-                      />
+                        height={592} />
                       <p>
                         Strategic advancements led an orthopaedic implant
                         manufacturer to 60% more visibility.
@@ -1039,23 +987,23 @@ const HomeOneNew = () => {
               <div className="tabs-service-slide">
                 <div className="nav nav-tabs mb-3" id="nav-tab" role="tablist">
                   <button className="nav-link active" id="nav-service-one-tab" data-bs-toggle="tab" data-bs-target="#nav-service-one" type="button" role="tab" aria-controls="nav-service-one" aria-selected="true"><figure>
-                    <img src="/img/menu-icons/dynamics-365-businesscentral.svg" alt="dynamics-365-businesscentral" width="48" height="48" />
+                    <img src="/img/menu-icons/dynamics-365-businesscentral.svg" alt="" width="48" height="48" aria-hidden="true"  loading="lazy" decoding="async" />
                   </figure> Business Central</button>
                   <button className="nav-link" id="nav-service-two-tab" data-bs-toggle="tab" data-bs-target="#nav-service-two" type="button" role="tab" aria-controls="nav-service-two" aria-selected="true"><figure>
-                    <img src="/img/menu-icons/dynamics-365-finance.svg" alt="dynamics-365-businesscentral" width="48" height="48" />
+                    <img src="/img/menu-icons/dynamics-365-finance.svg" alt="" width="48" height="48" aria-hidden="true"  loading="lazy" decoding="async" />
                   </figure> Finance</button>
                   <button className="nav-link" id="nav-service-five-tab" data-bs-toggle="tab" data-bs-target="#nav-service-five" type="button" role="tab" aria-controls="nav-service-five" aria-selected="true"><figure>
-                    <img src="/img/menu-icons/dynamics-365-supplychainmanagement.svg" alt="dynamics-365-businesscentral" width="48" height="48" />
+                    <img src="/img/menu-icons/dynamics-365-supplychainmanagement.svg" alt="" width="48" height="48" aria-hidden="true"  loading="lazy" decoding="async" />
                   </figure> Supply Chain</button>
                   <button className="nav-link" id="nav-service-three-tab" data-bs-toggle="tab" data-bs-target="#nav-service-three" type="button" role="tab" aria-controls="nav-service-three" aria-selected="true"><figure>
-                    <img src="/img/menu-icons/dynamics-365-sales.svg" alt="dynamics-365-businesscentral" width="48" height="48" />
+                    <img src="/img/menu-icons/dynamics-365-sales.svg" alt="" width="48" height="48" aria-hidden="true"  loading="lazy" decoding="async" />
                   </figure>Sales</button>
                   <button className="nav-link" id="nav-service-four-tab" data-bs-toggle="tab" data-bs-target="#nav-service-four" type="button" role="tab" aria-controls="nav-service-four" aria-selected="true"><figure>
-                    <img src="/img/menu-icons/power-bi.svg" alt="power-bi" width="48" height="48" />
+                    <img src="/img/menu-icons/power-bi.svg" alt="" width="48" height="48" aria-hidden="true"  loading="lazy" decoding="async" />
                   </figure>Power BI</button>
 
                   <button className="nav-link" id="nav-service-six-tab" data-bs-toggle="tab" data-bs-target="#nav-service-six" type="button" role="tab" aria-controls="nav-service-six" aria-selected="true"><figure>
-                    <img src="/img/menu-icons/dynamics-365-customer-engagement.svg" alt="dynamics-365-businesscentral" width="48" height="48" />
+                    <img src="/img/menu-icons/dynamics-365-customer-engagement.svg" alt="" width="48" height="48" aria-hidden="true"  loading="lazy" decoding="async" />
                   </figure> Customer Service</button>
 
 
@@ -1081,31 +1029,31 @@ const HomeOneNew = () => {
                       <div className="right-sect">
                         <div className="d-colomn">
                           <figure>
-                            <img src="/img/cloud_done.png" alt="cloud_done" />
+                            <img src="/img/cloud_done.png" alt="Smart, AI-enabled ERP for SMBs"  loading="lazy" decoding="async" />
                             <span>Cloud-Enabled Growth</span>
                           </figure>
                         </div>
                         <div className="d-colomn">
                           <figure>
-                            <img src="/img/AI-powered-efficiency.png" alt="AI-powered-efficiency" />
+                            <img src="/img/AI-powered-efficiency.png" alt="Smart, AI-enabled ERP for SMBs"  loading="lazy" decoding="async" />
                             <span>AI-Powered Efficiency</span>
                           </figure>
                         </div>
                         <div className="d-colomn">
                           <figure>
-                            <img src="/img/work-on-the-move.png" alt="work-on-the-move" />
+                            <img src="/img/work-on-the-move.png" alt="Smart, AI-enabled ERP for SMBs"  loading="lazy" decoding="async" />
                             <span>Work on the Move</span>
                           </figure>
                         </div>
                         <div className="d-colomn">
                           <figure>
-                            <img src="/img/flexible-integration.png" alt="flexible-integration" />
+                            <img src="/img/flexible-integration.png" alt="Smart, AI-enabled ERP for SMBs"  loading="lazy" decoding="async" />
                             <span>Flexible Integration</span>
                           </figure>
                         </div>
                         <div className="d-colomn">
                           <figure>
-                            <img src="/img/intelligent-decision-making.png" alt="intelligent-decision-making" />
+                            <img src="/img/intelligent-decision-making.png" alt="Smart, AI-enabled ERP for SMBs"  loading="lazy" decoding="async" />
                             <span>Intelligent Decision Making </span>
                           </figure>
                         </div>
@@ -1140,31 +1088,31 @@ const HomeOneNew = () => {
                       <div className="right-sect">
                         <div className="d-colomn">
                           <figure>
-                            <img src="/img/financial-agility.png" alt="financial-agility" />
+                            <img src="/img/financial-agility.png" alt="Accurate financials, every time, on time"  loading="lazy" decoding="async" />
                             <span>Accurate financial forecasting</span>
                           </figure>
                         </div>
                         <div className="d-colomn">
                           <figure>
-                            <img src="/img/AI-Powerdbilling.png" alt="AI-Powerdbilling" />
+                            <img src="/img/AI-Powerdbilling.png" alt="Accurate financials, every time, on time"  loading="lazy" decoding="async" />
                             <span>AI for risk predictions</span>
                           </figure>
                         </div>
                         <div className="d-colomn">
                           <figure>
-                            <img src="/img/cash-flow.png" alt="cash-flow" />
+                            <img src="/img/cash-flow.png" alt="Accurate financials, every time, on time"  loading="lazy" decoding="async" />
                             <span>Automated financial workflows</span>
                           </figure>
                         </div>
                         <div className="d-colomn">
                           <figure>
-                            <img src="/img/away-from-dijointed.png" alt="away-from-dijointed" />
+                            <img src="/img/away-from-dijointed.png" alt="Accurate financials, every time, on time"  loading="lazy" decoding="async" />
                             <span>Regulatory compliance tools</span>
                           </figure>
                         </div>
                         <div className="d-colomn">
                           <figure>
-                            <img src="/img/cloud_done.png" alt="cloud_done" />
+                            <img src="/img/cloud_done.png" alt="Accurate financials, every time, on time"  loading="lazy" decoding="async" />
                             <span>Secure, unified data platform</span>
                           </figure>
                         </div>
@@ -1200,31 +1148,31 @@ const HomeOneNew = () => {
                       <div className="right-sect">
                         <div className="d-colomn">
                           <figure>
-                            <img src="/img/control_point_duplicate.png" alt="control_point_duplicate" />
+                            <img src="/img/control_point_duplicate.png" alt="Close deals faster and win more customers"  loading="lazy" decoding="async" />
                             <span>AI-powered Sales Automation</span>
                           </figure>
                         </div>
                         <div className="d-colomn">
                           <figure>
-                            <img src="/img/perm_data_setting.png" alt="perm_data_setting" />
+                            <img src="/img/perm_data_setting.png" alt="Close deals faster and win more customers"  loading="lazy" decoding="async" />
                             <span>Integration with native Solutions</span>
                           </figure>
                         </div>
                         <div className="d-colomn">
                           <figure>
-                            <img src="/img/data_exploration.png" alt="data_exploration" />
+                            <img src="/img/data_exploration.png" alt="Close deals faster and win more customers"  loading="lazy" decoding="async" />
                             <span>Data-driven sales strategies</span>
                           </figure>
                         </div>
                         <div className="d-colomn">
                           <figure>
-                            <img src="/img/aspect_ratio.png" alt="aspect_ratio" />
+                            <img src="/img/aspect_ratio.png" alt="Close deals faster and win more customers"  loading="lazy" decoding="async" />
                             <span>Avail Real-time insights</span>
                           </figure>
                         </div>
                         <div className="d-colomn">
                           <figure>
-                            <img src="/img/Unified-data.png" alt="Unified-data" />
+                            <img src="/img/Unified-data.png" alt="Close deals faster and win more customers"  loading="lazy" decoding="async" />
                             <span>Shorten sales cycle using AI</span>
                           </figure>
                         </div>
@@ -1261,31 +1209,31 @@ const HomeOneNew = () => {
                       <div className="right-sect">
                         <div className="d-colomn">
                           <figure>
-                            <img src="/img/experimental-journey.png" alt="experimental-journey" />
+                            <img src="/img/experimental-journey.png" alt="Visualise Data, See Beyond the Numbers"  loading="lazy" decoding="async" />
                             <span>Cloud-based data connectivity</span>
                           </figure>
                         </div>
                         <div className="d-colomn">
                           <figure>
-                            <img src="/img/multi-channel-campaign.png" alt="multi-channel-campaign" />
+                            <img src="/img/multi-channel-campaign.png" alt="Visualise Data, See Beyond the Numbers"  loading="lazy" decoding="async" />
                             <span>Data transformation and modelling</span>
                           </figure>
                         </div>
                         <div className="d-colomn">
                           <figure>
-                            <img src="/img/customer-insights.png" alt="customer-insights" />
+                            <img src="/img/customer-insights.png" alt="Visualise Data, See Beyond the Numbers"  loading="lazy" decoding="async" />
                             <span>Interactive reports and dashboards</span>
                           </figure>
                         </div>
                         <div className="d-colomn">
                           <figure>
-                            <img src="/img/Scalable-market.png" alt="Scalable-market" />
+                            <img src="/img/Scalable-market.png" alt="Visualise Data, See Beyond the Numbers"  loading="lazy" decoding="async" />
                             <span>Advanced data analytics</span>
                           </figure>
                         </div>
                         <div className="d-colomn">
                           <figure>
-                            <img src="/img/realtime-performance.png" alt="realtime-performance" />
+                            <img src="/img/realtime-performance.png" alt="Visualise Data, See Beyond the Numbers"  loading="lazy" decoding="async" />
                             <span>Fully secured data</span>
                           </figure>
                         </div>
@@ -1322,31 +1270,31 @@ const HomeOneNew = () => {
                       <div className="right-sect">
                         <div className="d-colomn">
                           <figure>
-                            <img src="/img/unmatched-cybersecurity.png" alt="unmatched-cybersecurity" />
+                            <img src="/img/unmatched-cybersecurity.png" alt="Secure, smart and optimised Supply Chain"  loading="lazy" decoding="async" />
                             <span>Strategic Supply Chain Mapping</span>
                           </figure>
                         </div>
                         <div className="d-colomn">
                           <figure>
-                            <img src="/img/proactive-inventory-management.png" alt="proactive-inventory-management" />
+                            <img src="/img/proactive-inventory-management.png" alt="Secure, smart and optimised Supply Chain"  loading="lazy" decoding="async" />
                             <span>Efficient Procurement Solutions</span>
                           </figure>
                         </div>
                         <div className="d-colomn">
                           <figure>
-                            <img src="/img/warehouse-optimisation.png" alt="warehouse-optimisation" />
+                            <img src="/img/warehouse-optimisation.png" alt="Secure, smart and optimised Supply Chain"  loading="lazy" decoding="async" />
                             <span>Streamlined Manufacturing Flow</span>
                           </figure>
                         </div>
                         <div className="d-colomn">
                           <figure>
-                            <img src="/img/agile-manufacturing-practice.png" alt="agile-manufacturing-practice" />
+                            <img src="/img/agile-manufacturing-practice.png" alt="Secure, smart and optimised Supply Chain"  loading="lazy" decoding="async" />
                             <span>Effective Order & Pricing System</span>
                           </figure>
                         </div>
                         <div className="d-colomn">
                           <figure>
-                            <img src="/img/minimise-downtime.png" alt="minimise-downtime" />
+                            <img src="/img/minimise-downtime.png" alt="Secure, smart and optimised Supply Chain"  loading="lazy" decoding="async" />
                             <span>Optimized Warehouse & Fulfilment</span>
                           </figure>
                         </div>
@@ -1382,31 +1330,31 @@ const HomeOneNew = () => {
                       <div className="right-sect">
                         <div className="d-colomn">
                           <figure>
-                            <img src="/img/Seamless-support.png" alt="Seamless-support" />
+                            <img src="/img/Seamless-support.png" alt="Empower agents to offer great customer experience"  loading="lazy" decoding="async" />
                             <span>Seamless Support</span>
                           </figure>
                         </div>
                         <div className="d-colomn">
                           <figure>
-                            <img src="/img/customer-accesibility.png" alt="customer-accesibility" />
+                            <img src="/img/customer-accesibility.png" alt="Empower agents to offer great customer experience"  loading="lazy" decoding="async" />
                             <span>Enhanced Customer Accessibility</span>
                           </figure>
                         </div>
                         <div className="d-colomn">
                           <figure>
-                            <img src="/img/Personalisation-for-customer.png" alt="Personalisation-for-customer" />
+                            <img src="/img/Personalisation-for-customer.png" alt="Empower agents to offer great customer experience"  loading="lazy" decoding="async" />
                             <span>AI-Driven Personalization</span>
                           </figure>
                         </div>
                         <div className="d-colomn">
                           <figure>
-                            <img src="/img/issuee-resolution.png" alt="issuee-resolution" />
+                            <img src="/img/issuee-resolution.png" alt="Empower agents to offer great customer experience"  loading="lazy" decoding="async" />
                             <span>Proactive Issue Resolution</span>
                           </figure>
                         </div>
                         <div className="d-colomn">
                           <figure>
-                            <img src="/img/Knowledge-management.png" alt="Knowledge-management" />
+                            <img src="/img/Knowledge-management.png" alt="Empower agents to offer great customer experience"  loading="lazy" decoding="async" />
                             <span>Knowledge Management </span>
                           </figure>
                         </div>
@@ -1456,10 +1404,10 @@ const HomeOneNew = () => {
                   <div className="card-top">
                     <img
                       src="/img/startic-2.png"
-                      alt="startic-01"
+                      alt=""
                       width={40}
                       height={40}
-                    />
+                     aria-hidden="true"  loading="lazy" decoding="async" />
                     <h3>Startups </h3>
                     <p>
                       Agile, cost-effective solutions to set a strong foundation
@@ -1474,10 +1422,10 @@ const HomeOneNew = () => {
                   <div className="card-top">
                     <img
                       src="/img/startic-01.png"
-                      alt="startic-02"
+                      alt=""
                       width={40}
                       height={40}
-                    />
+                     aria-hidden="true"  loading="lazy" decoding="async" />
                     <h3>Small Businesses </h3>
                     <p>
                       Scalable tools to drive efficiency, productivity, and
@@ -1492,10 +1440,10 @@ const HomeOneNew = () => {
                   <div className="card-top">
                     <img
                       src="/img/startic-03.png"
-                      alt="sstartic-03"
+                      alt=""
                       width={40}
                       height={40}
-                    />
+                     aria-hidden="true"  loading="lazy" decoding="async" />
                     <h3>Medium Businesses </h3>
                     <p>
                       Advanced solutions to streamline operations and boost
@@ -1510,10 +1458,10 @@ const HomeOneNew = () => {
                   <div className="card-top">
                     <img
                       src="/img/startic-04.png"
-                      alt="startic-04"
+                      alt=""
                       width={40}
                       height={40}
-                    />
+                     aria-hidden="true"  loading="lazy" decoding="async" />
                     <h3>Large Enterprises </h3>
                     <p>
                       Enterprise-grade solutions designed to optimise processes
@@ -1553,10 +1501,9 @@ const HomeOneNew = () => {
                 <div className="card-669 card-669-p card-669-liner">
                   <img
                     src="/img/testimonials/Terence-Turner.png"
-                    alt="card-669-01"
+                    alt="Terence Turner"
                     width={126}
-                    height={126}
-                  />
+                    height={126}  loading="lazy" decoding="async" />
                   <h3>Terence Turner</h3>
                   <span>General Manager</span>
                   <p>
@@ -1570,10 +1517,9 @@ const HomeOneNew = () => {
                 <div className="card-669 card-669-p">
                   <img
                     src="/img/testimonials/Jonathan-W.png"
-                    alt="card-669-01"
+                    alt="Jonathan W"
                     width={126}
-                    height={126}
-                  />
+                    height={126}  loading="lazy" decoding="async" />
                   <h3>Jonathan W</h3>
                   <span>Technical Director</span>
                   <p>
@@ -1587,10 +1533,9 @@ const HomeOneNew = () => {
                 <div className="card-669 card-669-p card-669-liner">
                   <img
                     src="/img/avatar.png"
-                    alt="card-669-01"
+                    alt="Mark Shaxted"
                     width={126}
-                    height={126}
-                  />
+                    height={126}  loading="lazy" decoding="async" />
                   <h3>Mark Shaxted</h3>
                   <span>Operations Manager</span>
                   <p>
@@ -1626,23 +1571,23 @@ const HomeOneNew = () => {
                 <div className="client-home-new-list client-home-new-list-one">
                   <ul>
                      <li>
-                      <Image src="/img/feat-03.png" alt="cli-3.png" width={250} height={150} />
+                      <Image src="/img/feat-03.png" alt="Featured On" width={250} height={150} />
                     </li>
                     <li>
-                      <Image src="/img/feat-02.png" alt="cli-2.png" width={250} height={150} />
+                      <Image src="/img/feat-02.png" alt="Featured On" width={250} height={150} />
                     </li>
                     <li>
-                      <Image src="/img/feat-04.png" alt="cli-4.png" width={250} height={150} />
+                      <Image src="/img/feat-04.png" alt="Featured On" width={250} height={150} />
                     </li>      
                     <li>
-                      <Image src="/img/awa-01.png" alt="awa-01" width={250} height={150} />
+                      <Image src="/img/awa-01.png" alt="ERP Software Blog Top Member 2025 award" width={250} height={150} />
                     </li>
                     
                     <li>
-                      <Image src="/img/awa-02.png" alt="ms-dyanmics-logo" width={250} height={150} />
+                      <Image src="/img/awa-02.png" alt="MSDynamicsWorld 2025 Marketing Impact Award for Blogging Performance" width={250} height={150} />
                     </li>
                     <li>
-                      <Image src="/img/feat-01.png" alt="cli-1.png" width={250} height={150} />
+                      <Image src="/img/feat-01.png" alt="Resources & Insights" width={250} height={150} />
                     </li>
                   </ul>
                 </div>
@@ -1668,10 +1613,9 @@ const HomeOneNew = () => {
                   <div className="crad-img">
                     <Image
                       src="/img/res-tag-05.png"
-                      alt="res-tag-01"
+                      alt="Resources & Insights"
                       width={610}
-                      height={610}
-                    />
+                      height={610} />
                     <span>
                       <a href="/white-papers/microsoft-copilot/">Whitepaper</a>
                     </span>
@@ -1692,10 +1636,9 @@ const HomeOneNew = () => {
                   <div className="crad-img">
                     <Image
                       src="/img/res-tag-02.jpg"
-                      alt="res-tag-01"
+                      alt="Resources & Insights"
                       width={610}
-                      height={610}
-                    />
+                      height={610} />
                     <span>
                       <a href="/white-papers/microsoft-finance/">Whitepaper</a>
                     </span>
@@ -1713,10 +1656,9 @@ const HomeOneNew = () => {
                   <div className="crad-img">
                     <Image
                       src="/img/res-tag-03.jpg"
-                      alt="res-tag-01"
+                      alt="Resources & Insights"
                       width={610}
-                      height={610}
-                    />
+                      height={610} />
                     <span>
                       <a href="/guides/">Guide</a>
                     </span>
@@ -1734,10 +1676,9 @@ const HomeOneNew = () => {
                   <div className="crad-img">
                     <Image
                       src="/img/res-tag-04.png"
-                      alt="res-tag-01"
+                      alt="Resources & Insights"
                       width={610}
-                      height={610}
-                    />
+                      height={610} />
                     <span>
                       <a href="/erp-implementation-cost-calculator/">
                         Calculator

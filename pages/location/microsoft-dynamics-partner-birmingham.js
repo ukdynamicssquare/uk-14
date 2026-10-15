@@ -1,16 +1,19 @@
-import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 import Form from "../../components/Form";
+import PageSeo from "../../components/PageSeo";
+import LocationPageStyles from "../../components/LocationPageStyles";
 const MicrosoftDynamicsPartnerBirmingham = () => {
   return (
     <>
-      <Head>
-      <title>Microsoft Dynamics Partner in Birmingham, UK</title>
-<meta name="description" content="Looking for a trusted Microsoft Dynamics Solutions Partner in Birmingham, UK? We provide implementation, customization, and support solution. Contact us today!"/>
-<link rel="canonical" href="https://www.dynamicssquare.co.uk/location/microsoft-dynamics-partner-birmingham/" />
-
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Microsoft Dynamics Partner in Birmingham, UK"
+        description="Looking for a trusted Microsoft Dynamics Solutions Partner in Birmingham, UK? We provide implementation, customization, and support solution. Contact us today!"
+        image="/img/birmingham-bg.png"
+        areaServed="Birmingham"
+      />
+      <main className="loc-detail">
       <section className="Solution-banner hero-1 hero">
         <div className="container">
           <div className="row">
@@ -31,10 +34,10 @@ const MicrosoftDynamicsPartnerBirmingham = () => {
             <div className="col-lg-6 align-self-center">
               <Image
                 src="/img/birmingham-bg.png"
-                alt="Microsoft-Dynamics-Partner-birmingham"
+                alt="Cost-effective and Reliable Microsoft Partner in Birmingham, UK"
                 width={708} height={447}
                 priority = {true}
-              />
+                sizes="(max-width: 991px) 100vw, 50vw" />
             </div>
           </div>
         </div>
@@ -433,14 +436,15 @@ const MicrosoftDynamicsPartnerBirmingham = () => {
               <div className="commen-lef-pic text-center">
                 <Image
                   src="/img/system-health-check-1024x601.webp"
-                  alt="system-health-check-1024x601"
-                  width={1024} height={601}
-                />
+                  alt="Drive Growth and Innovation with Dynamics Square's Microsoft Business App Expertise"
+                  width={1024} height={601} />
               </div>
             </div>
           </div>
         </div>
       </section>
+      </main>
+      <LocationPageStyles />
     </>
   );
 };

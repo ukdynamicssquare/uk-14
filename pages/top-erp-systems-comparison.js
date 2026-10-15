@@ -3,9 +3,9 @@
 import React, { useState, useEffect } from 'react';
 import { Modal, Button, Spinner, Form } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Head from "next/head";
 import faqData from '../public/data/erp_faq.json';
 import FormErpCompare from '../components/FormErpCompare';
+import PageSeo from "../components/PageSeo";
 const CompareErps = () => {
   const [allErps, setAllErps] = useState([]);
   const [features, setFeatures] = useState([]);
@@ -188,28 +188,13 @@ const CompareErps = () => {
 
   return (
     <>
-      <Head>
-        <title>ERP Comparison 2026: Which System Fits Your Business Needs?</title>
-        <meta
-          name="description"
-          content="Compare top ERP systems for 2026. Get features, pricing, and benefits to find the best ERP software that fits your business needs and boosts efficiency."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/top-erp-systems-comparison/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/top-erp-systems-comparison/" />
-        <meta property="og:title" content="ERP Comparison 2026: Which System Fits Your Business Needs?" />
-        <meta property="og:description" content="Compare top ERP systems for 2026. Get features, pricing, and benefits to find the best ERP software that fits your business needs and boosts efficiency.​" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/erp-f-im.png" />
-
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://www.dynamicssquare.co.uk/top-erp-systems-comparison/" />
-        <meta property="twitter:title" content="ERP Comparison 2026: Which System Fits Your Business Needs?" />
-        <meta property="twitter:description" content="Compare top ERP systems for 2026. Get features, pricing, and benefits to find the best ERP software that fits your business needs and boosts efficiency." />
-        <meta property="twitter:image" content="https://www.dynamicssquare.co.uk/img/erp-f-im.png" />
-      </Head>
+      <PageSeo
+        type="WebApplication"
+        title="ERP Comparison 2026: Which System Fits Your Business Needs?"
+        description="Compare top ERP systems for 2026. Get features, pricing, and benefits to find the best ERP software that fits your business needs and boosts efficiency."
+        image="https://www.dynamicssquare.co.uk/img/erp-f-im.png"
+        faqs={faqData.slice(0, 5)}
+      />
       <div className="container py-5">
         <div className='row justify-content-center'>
           <div className='col-lg-8'>

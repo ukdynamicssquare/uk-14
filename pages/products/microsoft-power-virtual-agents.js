@@ -1,27 +1,45 @@
-import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
 import React, { useState } from "react";
 // import ModalVideo from "react-modal-video";
 import Blog from "../../components/Blog";
+import PageSeo from "../../components/PageSeo";
+// Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
+const PAGE_FAQS = [
+  {
+    "question": "What is Power Virtual Agents?",
+    "answer": "Built by Microsoft, Power Virtual Agents offer AI-enabled chatbots to enhance the customer experience while increasing the credibility of the business. Microsoft Power Virtual Agents is capable of empowering users or businesses to create a desired chatbot with desired features without learning to code."
+  },
+  {
+    "question": "Is Power Virtual Agent available for free?",
+    "answer": "No, it isn't free, but you can avail of a 60-day trial to know its capabilities and benefits as per your business. You can sign up for the trial on the Microsoft website."
+  },
+  {
+    "question": "Is Power Virtual Agent included with Power Platform?",
+    "answer": "Yes, it is one of the applications offered by Microsoft under the Power application. The Power Platform contains Power BI, Power Apps, Power Pages, Power Automate, and Power Virtual Agents. These applications are also known as elements of the Power Platform. All of these applications are designed to boost the overall productivity and efficiency of the business while utilising existing resources."
+  },
+  {
+    "question": "What type of offering is Power Virtual Agents?",
+    "answer": "It is based on a SaaS platform to help you build chatbots for different purposes. You can easily create the required bot and embed it on the website without any knowledge of programming. It offers a drag-and-drop feature to bots and deploys them in a matter of a few clicks.."
+  },
+  {
+    "question": "What types of bots can I create using Power Virtual Agents?",
+    "answer": "You can create any kind of bot using this application based on your needs. It may be a chatbot or a VA (virtual agent). Even so, you can integrate other native applications with Power Virtual Agents to fetch more customer data in real-time."
+  }
+];
+
 const PowerVirtualAgents = () => {
   const [isOpen, setOpen] = useState(false);
   const [open, setsOpen] = useState(false);
   return (
     <>
-      <Head>
-        <title>
-          Microsoft Power Virtual Agents: Demo & Pricing UK | Dynamics Square</title>
-        <meta
-          name="description"
-          content="Enhance customer experience and boost sales using AI enabled chatbots built with Microsoft Power Virtual Agents. Schedule a free demo today!"
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/products/microsoft-power-virtual-agents/"
-        />
-      </Head>
+      <PageSeo
+        type="Service"
+        title="Microsoft Power Virtual Agents: Demo & Pricing UK | Dynamics Square"
+        description="Enhance customer experience and boost sales using AI enabled chatbots built with Microsoft Power Virtual Agents. Schedule a free demo today!"
+        faqs={PAGE_FAQS}
+      />
       {/* <ModalVideo
         channel="youtube"
         autoplay
@@ -58,11 +76,10 @@ const PowerVirtualAgents = () => {
             <div className="col-lg-6 align-self-center">
               <Image
                 src="/img/virtual-agent-banner-01.svg"
-                alt="virtual-agent-banner-01"
+                alt="What is Power Virtual Agents?"
                 width={1024}
                 height={586}
-                priority = {true}
-              />
+                priority = {true} />
             </div>
           </div>
         </div>
@@ -97,10 +114,10 @@ const PowerVirtualAgents = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-power-apps_Quick-and-Easy.svg"
-                            alt="icons-power-apps_Quick-and-Easy"
+                            alt=""
                             width="36"
                             height="36"
-                          />
+                           aria-hidden="true" />
                         </div>
                         <span>Easy Chatbot Creation</span>
                       </button>
@@ -140,10 +157,10 @@ const PowerVirtualAgents = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-power-apps_App-Development.svg"
-                            alt="icons-power-apps_App-Development"
+                            alt=""
                             width="36"
                             height="36"
-                          />
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Instant Actions</span>
                       </button>
@@ -198,10 +215,10 @@ const PowerVirtualAgents = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-power-apps_Enhancing-Capabilities.svg"
-                            alt="icons-power-apps_Enhancing-Capabilities"
+                            alt=""
                             width="36"
                             height="36"
-                          />
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Smarter Bots</span>
                       </button>
@@ -247,10 +264,10 @@ const PowerVirtualAgents = () => {
                         <div className="wr-in">
                           <img
                             src="/img/icons-power-apps_Responsive-Design.svg"
-                            alt="icons-power-apps_Responsive-Design"
+                            alt=""
                             width="36"
                             height="36"
-                          />
+                           aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
                         <span>Easy to Start</span>
                       </button>
@@ -384,7 +401,7 @@ const PowerVirtualAgents = () => {
           <div className="row justify-content-center">
             <div className="col-lg-3 d-flex">
               <div className="upgrade-box-one d-flex-fil">
-                <Image src="/img/settings_b.png" alt="settings_b" width={48} height={48} />
+                <Image src="/img/settings_b.png" alt="" width={48} height={48} aria-hidden="true" />
                 <h3>Implementation</h3>
                 <p>Successfully implement Power Virtual Agents solutions by our experts to ensure your needs are met on time and within budget.</p>
                 <a href="#exampleModal" data-bs-toggle="modal">Get Started <i className="bi bi-arrow-right"></i></a>
@@ -401,7 +418,7 @@ const PowerVirtualAgents = () => {
 
             <div className="col-lg-3 d-flex">
               <div className="upgrade-box-one d-flex-fil">
-                <Image src="/img/person_pin.png" alt="person_pin" width={48} height={48} />
+                <Image src="/img/person_pin.png" alt="" width={48} height={48} aria-hidden="true" />
                 <h3>Support</h3>
                 <p>Get constant and seamless support from Dynamics Square team to manage your Chat bot.</p>
                 <a href="#exampleModal" data-bs-toggle="modal">Get Started <i className="bi bi-arrow-right"></i></a>
@@ -410,7 +427,7 @@ const PowerVirtualAgents = () => {
 
             <div className="col-lg-3 d-flex">
               <div className="upgrade-box-one d-flex-fil">
-                <img className="image-backx" src="/img/free-cons.png" alt="free-cons" />
+                <img className="image-backx" src="/img/free-cons.png" alt="Support"  loading="lazy" decoding="async" />
                 <Image src="/img/forum.png" alt="forum" width={48} height={48} />
                 <h3>Consulting</h3>
                 <p>Get optimum Power Virtual Agents Services to your customised business needs.</p>
