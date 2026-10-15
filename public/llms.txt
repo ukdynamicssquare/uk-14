@@ -1,0 +1,219 @@
+# Dynamics Square UK: Microsoft Dynamics 365 Partner for Business Central, Finance & Operations and CRM
+
+> Dynamics Square is a Microsoft Solutions Partner for Business Applications serving UK organisations. It implements, upgrades, migrates and supports Microsoft Dynamics 365 Business Central, Dynamics 365 Finance, Supply Chain Management, Dynamics 365 CRM (Sales, Customer Service, Field Service), Power Platform, Power BI and Copilot. The company reports 14+ years of experience, 150+ professionals and 500+ implementations.
+
+This file lists the most useful pages on dynamicssquare.co.uk for large language models. UK pricing is shown in GBP. Sister sites: [dynamicssquare.com](https://www.dynamicssquare.com/llms.txt) (United States) and [dynamicssquare.ca](https://www.dynamicssquare.ca/llms.txt) (Canada).
+
+## Company
+- [Home](https://www.dynamicssquare.co.uk/): Dynamics Square is a Microsoft Dynamics 365 partner in the UK providing CRM and ERP implementation, upgrades and ongoing support.
+- [About Dynamics Square](https://www.dynamicssquare.co.uk/about-us/): Who Dynamics Square is and how it works as a Dynamics 365 Business Central partner for UK and European businesses.
+- [Why Dynamics Square](https://www.dynamicssquare.co.uk/why-us/): Reasons UK organisations choose Dynamics Square as their Microsoft Solutions Partner for ERP and CRM.
+- [Microsoft Partners UK](https://www.dynamicssquare.co.uk/microsoft-partners-uk/): Dynamics Square as a Microsoft partner in the UK delivering end-to-end business solutions and consulting.
+- [Case Studies](https://www.dynamicssquare.co.uk/case-studies/): How UK businesses implemented, upgraded and supported Microsoft Dynamics 365 with Dynamics Square.
+- [Contact](https://www.dynamicssquare.co.uk/contact-us/): Contact Dynamics Square's Dynamics 365 consultants for advice on ERP and CRM projects.
+- [Schedule a Demo](https://www.dynamicssquare.co.uk/schedule-a-demo/): Book a free Dynamics 365 demo covering Business Central, Sales, Customer Service, Finance and Supply Chain, with advice on licensing and implementation.
+
+## Services
+- [Dynamics 365 Implementation Services](https://www.dynamicssquare.co.uk/our-services/dynamics-365-implementation-services/): Dynamics 365 implementation services for UK businesses, from scoping and configuration to go-live.
+- [Business Central Implementation](https://www.dynamicssquare.co.uk/dynamics-365-business-central-implementation/): Microsoft Dynamics 365 Business Central implementation tailored to UK businesses of all sizes.
+- [Dynamics 365 Finance Implementation](https://www.dynamicssquare.co.uk/dynamics-365-finance-implementation/): Dynamics 365 Finance implementation for organisations that need enterprise-grade financial management.
+- [Supply Chain Management Implementation](https://www.dynamicssquare.co.uk/d365-supply-chain-management-implementation/): Dynamics 365 Supply Chain Management implementation to build a more resilient, optimised supply chain.
+- [Dynamics 365 Sales Implementation](https://www.dynamicssquare.co.uk/dynamics-365-sales-implementation/): Dynamics 365 Sales implementation to optimise sales processes and pipeline visibility.
+- [Dynamics 365 Customer Service Implementation](https://www.dynamicssquare.co.uk/dynamics-365-customer-service-implementation/): Dynamics 365 Customer Service implementation for faster response times and better customer experience.
+- [Dynamics 365 Field Service Implementation](https://www.dynamicssquare.co.uk/dynamics-365-field-service-implementation/): Dynamics 365 Field Service implementation to automate scheduling and improve service delivery.
+- [Dynamics 365 Project Operations Implementation](https://www.dynamicssquare.co.uk/dynamics-365-project-operations-implementation/): Dynamics 365 Project Operations implementation to improve project visibility and margins.
+- [Customer Insights – Journeys Implementation](https://www.dynamicssquare.co.uk/dynamics-365-marketing-implementation/): Dynamics 365 Customer Insights – Journeys (formerly Marketing) implementation for campaigns and customer engagement.
+- [Dynamics 365 Support Services](https://www.dynamicssquare.co.uk/our-services/dynamics-365-support-services/): Dynamics 365 support for UK businesses to resolve issues and keep operations running.
+- [Business Central Support](https://www.dynamicssquare.co.uk/d365-business-central-support/): Business Central support covering customisations, integrations, training, add-ons and technical issues.
+- [Dynamics 365 Upgrade Services](https://www.dynamicssquare.co.uk/our-services/dynamics-365-upgrade-services/): Dynamics 365 upgrade services to modernise systems and processes.
+- [Business Central Upgrade](https://www.dynamicssquare.co.uk/dynamics-365-business-central-upgrade/): Upgrading to the latest version of Dynamics 365 Business Central.
+- [Dynamics 365 Consultants](https://www.dynamicssquare.co.uk/our-services/dynamics-365-consultant/): Certified Microsoft Dynamics 365 consultancy for UK businesses.
+- [Dynamics 365 Training](https://www.dynamicssquare.co.uk/our-services/dynamics-365-training/): Dynamics 365 training so teams use the system effectively.
+- [Business Central Customisation](https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/customisation/): Customising Business Central to fit specific workflows.
+- [Dynamics 365 Integration](https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365/integration/): Integrating Microsoft Dynamics 365 with other business systems.
+- [Power BI Implementation](https://www.dynamicssquare.co.uk/power-bi-implementation/): Power BI implementation process and services for UK businesses.
+- [Power BI Support](https://www.dynamicssquare.co.uk/products/microsoft-power-bi/support/): Power BI support and services for analytics and reporting.
+- [Microsoft Fabric Partner](https://www.dynamicssquare.co.uk/ai-solutions/microsoft-fabric/): Microsoft Fabric implementation, analytics, Power BI integration and support.
+- [Free Dynamics 365 System Health Check](https://www.dynamicssquare.co.uk/free-dynamics-365-system-health-check/): A free review of Dynamics CRM or ERP performance.
+- [Free ERP Readiness Assessment](https://www.dynamicssquare.co.uk/free-erp-readiness-assessment/): A free assessment of readiness for an ERP project.
+
+## Products
+- [Microsoft Dynamics 365](https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365/): Overview of Microsoft Dynamics 365 ERP and CRM, with implementation, support, migration, AI and Copilot expertise.
+- [Dynamics 365 Business Central](https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/): Business Central, an all-in-one cloud ERP for SMBs covering finance, sales, inventory and operations.
+- [Business Central Advantages & Capabilities](https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/advantages-capabilities/): Core Business Central capabilities including finance, supply chain, manufacturing, reporting, Copilot AI agents and security.
+- [Business Central Features](https://www.dynamicssquare.co.uk/dynamics-365-business-central-features/): Business Central features for financials, sales, supply chain and operations.
+- [Why Choose Business Central](https://www.dynamicssquare.co.uk/why-choose-microsoft-dynamics-365-business-central/): Why companies choose Business Central: one connected system, built-in AI, reporting and predictable pricing.
+- [Business Central Financial Management](https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/financial-management/): Financial management capabilities in Business Central.
+- [Business Central Manufacturing](https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/manufacturing-management/): Production, inventory and resource management for manufacturers in Business Central.
+- [Business Central Warehouse Management](https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/warehouse-management/): Warehouse and inventory management in Business Central.
+- [Business Central Supply Chain Management](https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/supply-chain-management/): Supply chain processes and real-time insight in Business Central.
+- [Business Central Project Management](https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/project-management/): Scheduling, budgeting and tracking projects in Business Central.
+- [Business Central Sales & Order Management](https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/sales-order-management/): Sales and order management in Business Central.
+- [Business Central Service Management](https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/service-management/): Service management in Business Central.
+- [Business Central CRM Module](https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/crm-module/): Customer relationship capabilities built into Business Central.
+- [Dynamics 365 Finance](https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-finance/): Dynamics 365 Finance for financial visibility and faster decision-making.
+- [Dynamics 365 Finance & Operations](https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-finance-operations/): Dynamics 365 Finance and Operations for large or diversified businesses.
+- [Dynamics 365 Supply Chain Management](https://www.dynamicssquare.co.uk/products/dynamics-365-supply-chain-management/): Supply Chain Management features, modules, Copilot and UK pricing.
+- [Dynamics 365 Project Operations](https://www.dynamicssquare.co.uk/products/dynamics-365-project-operations/): Dynamics 365 Project Operations consulting, deployment and support.
+- [Dynamics 365 Human Resources](https://www.dynamicssquare.co.uk/products/dynamics-365-human-resources/): Talent, payroll and compliance management with Dynamics 365 Human Resources.
+- [Dynamics 365 Commerce](https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-commerce/): Connecting online and in-store retail channels with Dynamics 365 Commerce.
+- [Dynamics 365 Sales](https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-sales/): Dynamics 365 Sales for workflow automation and customer engagement.
+- [Dynamics 365 Customer Service](https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-customer-service/): AI-powered case management and omnichannel support with Dynamics 365 Customer Service.
+- [Dynamics 365 Field Service](https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-field-service/): Dynamics 365 Field Service implementation, integration and support.
+- [Dynamics 365 Customer Engagement](https://www.dynamicssquare.co.uk/products/dynamics-365-customer-engagement/): Dynamics 365 Customer Engagement plans for sales, marketing and service.
+- [Dynamics 365 Copilot](https://www.dynamicssquare.co.uk/products/dynamics-365-copilot/): Copilot services for AI-assisted automation, insight and collaboration in Dynamics 365.
+- [Dynamics 365 Sales Copilot](https://www.dynamicssquare.co.uk/products/microsoft-dynamics-365-sales/copilot/): AI-powered sales insights and automation with Copilot in Dynamics 365 Sales.
+- [Microsoft Power Platform](https://www.dynamicssquare.co.uk/products/microsoft-power-platform/): Data analysis, apps, automation and agents with Power Platform.
+- [Microsoft Power BI](https://www.dynamicssquare.co.uk/products/microsoft-power-bi/): Power BI services and consultants in the UK.
+- [Microsoft Dynamics NAV Support](https://www.dynamicssquare.co.uk/products/microsoft-dynamics-nav/): Support for older and newer versions of Dynamics NAV (Navision) in the UK.
+- [Microsoft Dynamics GP Support](https://www.dynamicssquare.co.uk/products/microsoft-dynamics-gp/): Support for Microsoft Dynamics GP (Great Plains) in the UK.
+- [Microsoft Dynamics AX Support](https://www.dynamicssquare.co.uk/products/microsoft-dynamics-ax/): Support for Microsoft Dynamics AX (Axapta) in the UK.
+
+## Pricing & Licensing
+- [Business Central Pricing UK](https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/pricing-licensing/): Business Central UK pricing in GBP: Essentials, Premium and Team Member licences, setup, support and total cost.
+- [Dynamics 365 Pricing & Licensing UK](https://www.dynamicssquare.co.uk/blog/dynamics-365-pricing-and-licensing/): Dynamics 365 UK costs, plans and user types, and how to choose the right licence.
+- [Dynamics 365 CRM Pricing Guide](https://www.dynamicssquare.co.uk/blog/dynamics-365-crm-pricing-guide/): Dynamics 365 CRM pricing, plans, add-ons and fees.
+- [Business Central Essentials vs Premium](https://www.dynamicssquare.co.uk/blog/business-central-essentials-vs-premium/): Pricing and feature differences between Business Central Essentials and Premium.
+- [New Business Central Pricing (October 2025)](https://www.dynamicssquare.co.uk/blog/new-pricing-for-dynamics-365-business-central-explained/): Business Central pricing changes effective October 2025.
+- [Dynamics 365 Licensing Calculator](https://www.dynamicssquare.co.uk/tools/microsoft-dynamics-licensing-calculator/): Estimate Dynamics 365 licence costs for a UK business.
+- [ERP Implementation Cost Calculator](https://www.dynamicssquare.co.uk/erp-implementation-cost-calculator/): Estimate ERP implementation costs.
+- [Power BI Pricing UK](https://www.dynamicssquare.co.uk/blog/power-bi-pricing-uk/): Power BI Pro, Premium Per User and Fabric pricing in the UK.
+- [Power Apps Pricing & Licensing UK](https://www.dynamicssquare.co.uk/blog/power-apps-pricing-licensing-uk/): Power Apps Premium, Developer, per-app and pay-as-you-go plans.
+- [Microsoft Fabric Pricing UK](https://www.dynamicssquare.co.uk/blog/microsoft-fabric-pricing-uk/): Microsoft Fabric capacity costs and licensing options in the UK.
+
+## Migration & Upgrade
+- [NAV to Business Central Upgrade](https://www.dynamicssquare.co.uk/dynamics-nav-to-business-central/): Upgrade services from Dynamics NAV to Business Central.
+- [Dynamics NAV vs Business Central](https://www.dynamicssquare.co.uk/dynamics-nav-vs-business-central/): Support end dates, licensing, customisation, AI and what a NAV to Business Central migration involves.
+- [Dynamics NAV Support Ending](https://www.dynamicssquare.co.uk/dynamics-nav-support-ending-soon/): Planning a NAV migration as support ends.
+- [Does Microsoft Still Support Dynamics NAV?](https://www.dynamicssquare.co.uk/blog/does-microsoft-still-support-dynamics-nav/): Current support dates for NAV versions and options for support or migration.
+- [NAV Upgrade vs Business Central Re-implementation](https://www.dynamicssquare.co.uk/blog/nav-upgrade-vs-business-central-reimplementation-uk/): Costs, risks and timelines of upgrading versus re-implementing.
+- [NAV to Business Central Data Migration](https://www.dynamicssquare.co.uk/blog/nav-to-business-central-data-migration/): Data migration challenges, risks and best practices for NAV to Business Central.
+- [Migrate Dynamics NAV to Business Central](https://www.dynamicssquare.co.uk/blog/migrate-nav-to-business-central/): A migration plan covering data, customisations, upgrade routes, costs, testing and cloud migration.
+- [GP to Business Central Migration](https://www.dynamicssquare.co.uk/gp-to-business-central-migration/): Migrating from Dynamics GP to Business Central.
+- [Dynamics AX to Dynamics 365 Migration](https://www.dynamicssquare.co.uk/blog/dynamics-ax-to-dynamics-365-migration/): Planning, upgrade paths, data migration, costs and timelines for AX to Dynamics 365.
+- [Sage to Business Central Migration](https://www.dynamicssquare.co.uk/blog/sage-to-business-central-migration/): Benefits, process, costs and challenges of moving from Sage to Business Central.
+- [Sage X3 to Dynamics 365 Finance Migration](https://www.dynamicssquare.co.uk/blog/sage-x3-to-dynamics-365-finance-migration/): Data, costs, timelines and steps for Sage X3 to Dynamics 365 Finance.
+- [QuickBooks to Business Central Migration](https://www.dynamicssquare.co.uk/blog/quickbooks-to-microsoft-business-central-migration/): Data migration, setup and support for moving from QuickBooks to Business Central.
+- [Xero to Business Central Migration](https://www.dynamicssquare.co.uk/blog/xero-to-business-central-migration/): Costs, data migration and implementation steps for Xero to Business Central.
+- [Oracle EBS to Dynamics 365 Finance Migration](https://www.dynamicssquare.co.uk/blog/oracle-ebs-to-dynamics-365-finance-migration/): A step-by-step roadmap from Oracle EBS to Dynamics 365 Finance.
+- [On-premises to Dynamics 365 Cloud Migration](https://www.dynamicssquare.co.uk/blog/dynamics-365-on-premises-to-cloud-migration/): Moving Dynamics 365 from on-premises to the cloud.
+- [Dynamics 365 Data Migration](https://www.dynamicssquare.co.uk/blog/dynamics-365-data-migration-step-by-step/): Steps, tools and best practices for Dynamics 365 data migration.
+
+## Comparisons
+- [Business Central vs Finance & Operations](https://www.dynamicssquare.co.uk/dynamics-365-business-central-vs-finance-operations/): Size, cost, deployment, AI and implementation time compared for the two Microsoft ERPs.
+- [Business Central vs NetSuite](https://www.dynamicssquare.co.uk/dynamics-365-business-central-vs-netsuite/): Dynamics 365 Business Central compared with Oracle NetSuite.
+- [Business Central vs SAP Business One](https://www.dynamicssquare.co.uk/dynamics-365-business-central-vs-sap-business-one/): Deployment, pricing, AI, Microsoft 365 integration and implementation time compared.
+- [Business Central vs Sage 50](https://www.dynamicssquare.co.uk/blog/business-central-vs-sage-50/): Pricing, features, AI, integrations and scalability compared.
+- [Business Central vs Sage 200](https://www.dynamicssquare.co.uk/blog/business-central-vs-sage-200/): Features, costs, scalability, integrations and migration compared for UK businesses.
+- [Business Central vs Sage Intacct](https://www.dynamicssquare.co.uk/blog/business-central-vs-sage-intacct/): Features, pricing, reporting, integrations and scalability compared.
+- [Business Central vs Odoo](https://www.dynamicssquare.co.uk/blog/business-central-vs-odoo/): Features, pricing and scalability compared for SMBs.
+- [Business Central vs Acumatica](https://www.dynamicssquare.co.uk/blog/business-central-vs-acumatica-erp/): Features, pricing, integrations and manufacturing capabilities compared.
+- [Dynamics 365 vs NetSuite](https://www.dynamicssquare.co.uk/blog/dynamics-365-vs-netsuite/): Features, pricing, integrations and scalability compared.
+- [Dynamics 365 vs SAP](https://www.dynamicssquare.co.uk/blog/dynamics-365-vs-sap/): Features, pricing, scalability and use cases compared.
+- [Dynamics 365 F&O vs Oracle Fusion vs SAP S/4HANA](https://www.dynamicssquare.co.uk/blog/d365-finance-and-operations-vs-oracle-fusion-vs-sap-s4hana/): Enterprise ERP comparison for UK businesses.
+- [Oracle ERP vs Microsoft Dynamics 365](https://www.dynamicssquare.co.uk/blog/oracle-erp-vs-microsoft-dynamics-365/): Features, costs, scalability and ROI compared.
+- [Access Dimensions vs Business Central](https://www.dynamicssquare.co.uk/blog/access-dimensions-vs-microsoft-dynamics-365-business-central/): Features, pricing and scalability compared.
+- [Pegasus Opera vs Business Central](https://www.dynamicssquare.co.uk/blog/pegasus-opera-vs-dynamics-365-business-central/): Pegasus Opera 3 compared with Business Central.
+- [Business Central vs Orderwise](https://www.dynamicssquare.co.uk/blog/dynamics-365-business-central-vs-orderwise-erp/): Features and fit compared.
+- [Business Central vs Dynamics 365 CRM](https://www.dynamicssquare.co.uk/blog/dynamics-365-business-central-vs-dynamics-365-crm/): ERP and CRM capabilities compared.
+- [Dynamics 365 vs Salesforce](https://www.dynamicssquare.co.uk/dynamics-365-vs-salesforce/): Features, pros and cons and pricing compared.
+- [Dynamics 365 Field Service vs ServiceNow](https://www.dynamicssquare.co.uk/blog/dynamics-365-field-service-vs-servicenow/): Features, costs and integrations compared for UK mid-sized companies.
+- [Power BI vs Tableau](https://www.dynamicssquare.co.uk/blog/power-bi-vs-tableau/): Features, pricing, integrations, AI and ease of use compared.
+- [Top ERP Systems Comparison](https://www.dynamicssquare.co.uk/top-erp-systems-comparison/): Features, pricing and benefits of leading ERP systems.
+
+## Alternatives
+- [Sage Alternatives](https://www.dynamicssquare.co.uk/blog/sage-alternatives/): 10 accounting software alternatives to Sage for UK businesses.
+- [QuickBooks Alternatives UK](https://www.dynamicssquare.co.uk/blog/quickbooks-alternatives-uk/): Accounting software alternatives to QuickBooks for UK SMEs.
+- [Xero Alternatives](https://www.dynamicssquare.co.uk/blog/xero-alternatives/): 9 accounting software alternatives to Xero in the UK.
+- [FreshBooks Alternatives](https://www.dynamicssquare.co.uk/blog/freshbooks-alternatives-uk/): FreshBooks alternatives and when to move to a full ERP.
+- [NetSuite Alternatives](https://www.dynamicssquare.co.uk/blog/netsuite-alternatives/): 10 ERP alternatives to NetSuite.
+- [Salesforce Alternatives](https://www.dynamicssquare.co.uk/blog/salesforce-alternatives/): 9 CRM alternatives to Salesforce.
+
+## Industries
+- [Manufacturing](https://www.dynamicssquare.co.uk/industries/manufacturing/): Dynamics 365 for manufacturing production, operations and collaboration.
+- [Discrete Manufacturing (Business Central)](https://www.dynamicssquare.co.uk/industries/business-central-for-discrete-manufacturing/): Business Central for discrete manufacturers.
+- [Process Manufacturing (Business Central)](https://www.dynamicssquare.co.uk/industries/business-central-for-process-manufacturing/): Business Central for process manufacturers.
+- [Wholesale & Distribution (Business Central)](https://www.dynamicssquare.co.uk/industries/business-central-for-distribution/): Business Central for distribution operations and inventory.
+- [Wholesale & Distribution (Dynamics 365)](https://www.dynamicssquare.co.uk/industries/dynamics-365-for-distribution/): Dynamics 365 for wholesale and distribution businesses.
+- [Retail](https://www.dynamicssquare.co.uk/industries/dynamics-365-for-retail/): Dynamics 365 omnichannel solutions for retail.
+- [eCommerce](https://www.dynamicssquare.co.uk/industries/ecommerce/): Dynamics 365 for end-to-end eCommerce processes.
+- [Food and Beverages](https://www.dynamicssquare.co.uk/industries/food-and-beverages/): Dynamics 365 for food and beverage businesses.
+- [Pharmaceutical](https://www.dynamicssquare.co.uk/industries/manufacturing/dynamics-365-for-pharmaceutical/): Dynamics 365 for pharmaceutical manufacturers.
+- [Medical Device](https://www.dynamicssquare.co.uk/industries/manufacturing/dynamics-365-for-medical-device/): Dynamics 365 for medical device manufacturers.
+- [Healthcare](https://www.dynamicssquare.co.uk/industries/dynamics-365-for-healthcare/): Dynamics 365 for healthcare providers.
+- [Logistics](https://www.dynamicssquare.co.uk/industries/dynamics-365-for-logistics/): Dynamics 365 for logistics operations and supply chain visibility.
+- [Construction](https://www.dynamicssquare.co.uk/industries/dynamics-365-for-construction/): Dynamics 365 for construction project management and collaboration.
+- [Professional Services](https://www.dynamicssquare.co.uk/industries/professional-services/): Dynamics 365 for projects, resources, billing and profitability.
+- [Education](https://www.dynamicssquare.co.uk/industries/dynamics-365-for-education/): Dynamics 365 for admissions, student engagement and operations.
+- [Non-profits & Charities](https://www.dynamicssquare.co.uk/industries/non-profits/): Dynamics 365 for charity finance, grants, payments and payroll.
+- [Automotive Accelerator](https://www.dynamicssquare.co.uk/industries/dynamics-365-automotive-accelerator/): Dynamics 365 Automotive Accelerator for automotive businesses.
+- [Startups](https://www.dynamicssquare.co.uk/industries/startups/): ERP, CRM and BI for startups and small businesses.
+- [Small Businesses](https://www.dynamicssquare.co.uk/dynamics-365-for-small-businesses/): Dynamics 365 for small businesses in the UK.
+- [Medium Businesses](https://www.dynamicssquare.co.uk/dynamics-365-for-medium-businesses/): Dynamics 365 ERP and CRM for medium-sized businesses.
+- [Large Businesses](https://www.dynamicssquare.co.uk/dynamics-365-for-large-businesses/): Dynamics 365 for large businesses and scalability.
+
+## Case Studies
+- [World Food Trading: Business Central implementation](https://www.dynamicssquare.co.uk/case-studies/business-central-reimplementation-for-food-trader/): World Food Trading implemented Business Central across its UK and Danish entities to gain financial control before scaling, with a projected 162% ROI.
+- [Bertling Group: Dynamics 365 Finance multi-entity](https://www.dynamicssquare.co.uk/case-studies/dynamics-365-finance-for-logistic-uk-multi-entity/): Bertling Group stabilised its UK finance function on Dynamics 365 Finance and built a blueprint for rollout across 30 legal entities.
+- [Omicron Engineering: Access Dimensions to Business Central](https://www.dynamicssquare.co.uk/case-studies/access-dimension-erp-to-business-central-migration/): A classic Lancia restoration specialist moved to Business Central to simplify costing and margins.
+- [BSix Sixth Form College: NAV 2009 to Business Central](https://www.dynamicssquare.co.uk/case-studies/upgrade-from-nav09-to-business-central/): A college upgraded from NAV 2009 to Business Central to improve department collaboration.
+- [Arteak Ltd: NAV 9 R2 to Business Central](https://www.dynamicssquare.co.uk/case-studies/migrate-nav9-to-business-central/): A London HSSE consulting firm migrated to Business Central to improve accounting.
+- [CQC Ltd: NAV 9 R2 to Business Central](https://www.dynamicssquare.co.uk/case-studies/nav2009R2-to-business-central/): A UK defence textile manufacturer upgraded to Business Central.
+- [Pasante Healthcare: NAV 2009 to Business Central on-premises](https://www.dynamicssquare.co.uk/case-studies/nav09-to-business-central-upgrade/): A healthcare supplier upgraded to Business Central on-premises.
+- [Dalebrook Supplies: On-premises to Business Central cloud](https://www.dynamicssquare.co.uk/case-studies/migrate-on-premises-to-business-central-cloud/): A melamine food display manufacturer moved to Business Central cloud.
+- [Summit Systems: Business Central reimplementation](https://www.dynamicssquare.co.uk/case-studies/business-central-reimplementation-for-recycling-industry/): A plastic automation and recycling specialist reimplemented Business Central for buy-sell operations and project control.
+- [Retail & warehouse: Business Central reimplementation](https://www.dynamicssquare.co.uk/case-studies/business-central-reimplementation-for-retail-market/): A retail and warehouse business reimplemented Business Central to streamline WMS.
+- [Sage ERP to Business Central](https://www.dynamicssquare.co.uk/case-studies/sage-erp-to-business-central/): Migration from Sage ERP to Business Central.
+- [QuickBooks to Business Central](https://www.dynamicssquare.co.uk/case-studies/quickbooks-to-business-central-migration/): Migration from QuickBooks to Business Central.
+- [Odoo to Business Central](https://www.dynamicssquare.co.uk/case-studies/odoo-erp-to-business-central-migration/): Migration from Odoo ERP to Business Central.
+- [NAV 2013 R2 to Business Central (fragrance supplier)](https://www.dynamicssquare.co.uk/case-studies/nav-2013-r2-to-business-central-upgrade/): A UK fragrance supplier upgraded from NAV 2013 R2 to Business Central.
+- [NAV 13 R2 to Business Central (surgical instruments)](https://www.dynamicssquare.co.uk/case-studies/nav13R2-to-business-central/): A UK surgical instruments brand upgraded to Business Central.
+- [CRM Trading: NAV 2009 to NAV 2018](https://www.dynamicssquare.co.uk/case-studies/nav2009-nav18-upgrade/): A UK fragrance and cosmetics wholesaler upgraded from NAV 2009 to NAV 2018.
+- [Wiper Supply: NAV 2016 support](https://www.dynamicssquare.co.uk/case-studies/nav-2016-support-services/): A UK hygienic wipes wholesaler kept NAV 2016 running with dedicated support.
+- [Global Tea & Commodities: NAV 2016 support](https://www.dynamicssquare.co.uk/case-studies/nav16-support/): Dedicated Dynamics NAV support for a tea and commodities company.
+- [Power BI implementation](https://www.dynamicssquare.co.uk/case-studies/microsoft-power-bi-implementation/): Real-time sales and stock reporting with Power BI.
+
+## Guides
+- [Dynamics 365 Implementation Guide](https://www.dynamicssquare.co.uk/blog/dynamics-365-implementation-guide/): Step-by-step Dynamics 365 implementation process and best practices.
+- [Business Central Implementation Methodology](https://www.dynamicssquare.co.uk/blog/what-is-business-central-implementation-methodology/): Phases, data migration, testing, training and go-live for Business Central.
+- [ERP Implementation Best Practices](https://www.dynamicssquare.co.uk/blog/7-best-practices-for-successful-erp-implementation/): 7 practical steps to reduce ERP implementation risk.
+- [ERP Implementation Phases](https://www.dynamicssquare.co.uk/blog/erp-implementation-phases/): From business analysis and selection to go-live and post-live support.
+- [The Ultimate Guide to Microsoft Dynamics 365](https://www.dynamicssquare.co.uk/the-ultimate-guide-to-microsoft-dynamics-365/): Dynamics 365 features, benefits and modules.
+- [Business Central Guide for SMBs](https://www.dynamicssquare.co.uk/guides/business-central-guide-for-smb/): How Business Central helps small businesses.
+- [What is Dynamics 365 Business Central?](https://www.dynamicssquare.co.uk/blog/what-is-dynamics-365-business-central/): An introduction to Business Central.
+- [What is Dynamics 365 Finance?](https://www.dynamicssquare.co.uk/blog/what-is-microsoft-dynamics-365-finance/): Dynamics 365 Finance features and benefits.
+- [D365 Finance and Operations Guide](https://www.dynamicssquare.co.uk/blog/d365-finance-and-operations-overview/): Features, modules, pricing and implementation of D365 F&O.
+- [What is Dynamics 365 Supply Chain Management?](https://www.dynamicssquare.co.uk/blog/d365-supply-chain-management-overview/): Overview, features and benefits of D365 SCM.
+- [What is Dynamics 365 CRM?](https://www.dynamicssquare.co.uk/blog/what-is-dynamics-365-crm/): Dynamics 365 CRM features, modules and pricing.
+- [Making Tax Digital in Business Central](https://www.dynamicssquare.co.uk/blog/making-tax-digital-business-central-and-hmrc-integration/): HMRC integration, VAT returns and Group VAT in Business Central.
+- [Multi-Entity & Multi-Currency Consolidation in Business Central](https://www.dynamicssquare.co.uk/blog/multi-entity-multi-currency-consolidation-in-business-central/): Consolidating multiple entities and currencies in Business Central.
+- [Business Central Integration Guide](https://www.dynamicssquare.co.uk/blog/dynamics-365-business-central-integration-guide/): Connecting Business Central with other systems.
+- [Business Central Trial](https://www.dynamicssquare.co.uk/blog/dynamics-365-business-central-trial/): Starting, extending and converting a Business Central trial.
+
+## AI & Copilot
+- [Business Central AI Agents](https://www.dynamicssquare.co.uk/blog/business-central-ai-agents/): AI agents available in Business Central.
+- [Sales Order Agent in Business Central](https://www.dynamicssquare.co.uk/blog/sales-order-agent-explained-features-setup-and-benefits/): Automating sales orders, emails, quotes and availability checks with AI and human oversight.
+- [Business Central Payables Agent](https://www.dynamicssquare.co.uk/blog/business-central-payables-agent/): Features, setup and benefits of the Payables Agent.
+- [Copilot Time Savings in Business Central](https://www.dynamicssquare.co.uk/blog/copilot-business-central-time-savings/): How Copilot saves time in Business Central.
+- [Dynamics 365 Copilot vs Custom AI Agents](https://www.dynamicssquare.co.uk/blog/dynamics-365-copilot-vs-custom-ai-agents/): Costs, benefits and ROI compared.
+- [AI in Dynamics 365 Finance: Cash Flow Forecasting](https://www.dynamicssquare.co.uk/blog/ai-in-dynamics-365-finance/): How AI improves cash flow forecasting in Dynamics 365 Finance.
+
+## Locations
+- [Birmingham](https://www.dynamicssquare.co.uk/location/microsoft-dynamics-partner-birmingham/): Microsoft Dynamics partner in Birmingham.
+- [Bristol](https://www.dynamicssquare.co.uk/location/microsoft-dynamics-partner-bristol/): Microsoft Dynamics partner in Bristol.
+- [Cardiff](https://www.dynamicssquare.co.uk/location/microsoft-dynamics-partner-cardiff/): Microsoft Dynamics partner in Cardiff.
+- [Edinburgh](https://www.dynamicssquare.co.uk/location/microsoft-dynamics-partner-edinburgh/): Microsoft Dynamics partner in Edinburgh.
+- [Glasgow](https://www.dynamicssquare.co.uk/location/microsoft-dynamics-partner-glasgow/): Microsoft Dynamics partner in Glasgow.
+- [Leeds](https://www.dynamicssquare.co.uk/location/microsoft-dynamics-partner-leeds/): Microsoft Dynamics partner in Leeds.
+- [Liverpool](https://www.dynamicssquare.co.uk/location/microsoft-dynamics-partner-liverpool/): Microsoft Dynamics partner in Liverpool.
+- [Manchester](https://www.dynamicssquare.co.uk/location/microsoft-dynamics-partner-manchester/): Microsoft Dynamics 365 partner in Manchester.
+- [Sheffield](https://www.dynamicssquare.co.uk/location/microsoft-dynamics-partner-sheffield/): Microsoft Dynamics 365 partner in Sheffield.
+
+## Optional
+- [Blog](https://www.dynamicssquare.co.uk/blog/): All Dynamics Square UK articles on Dynamics 365, ERP, CRM and AI.
+- [eBooks](https://www.dynamicssquare.co.uk/ebook/): Downloadable guides on Dynamics 365 Finance, Supply Chain, CRM, ERP selection and migration.
+- [White Papers](https://www.dynamicssquare.co.uk/white-papers/): White papers on Microsoft Copilot and Dynamics 365 Finance.
+- [Webinars](https://www.dynamicssquare.co.uk/webinars/): Dynamics Square webinars.
+- [Privacy Policy](https://www.dynamicssquare.co.uk/privacy-policy/): How Dynamics Square collects and uses personal data.
+- [Terms of Use](https://www.dynamicssquare.co.uk/terms-of-use/): Terms for using the Dynamics Square website.
+- [Sitemap](https://www.dynamicssquare.co.uk/sitemap.xml)
