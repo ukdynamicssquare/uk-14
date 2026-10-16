@@ -1,16 +1,14 @@
 import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import s from "../styles/aboutJourney.module.css";
 
 /*
   "Our Journey So Far" - built in code (SVG road + HTML pins) instead of a flat image.
 
   Desktop (>= 992px): the road draws itself while you scroll, a light travels along it, and each
-  milestone drops in with its connector line and text. Scrolling back up plays everything in reverse.
+  milestone drops in with its connector line and text. Everything plays once; scrolling back up never reverses it.
   Below 992px (or with reduced motion) a plain static timeline is shown.
 
-  To go back to the old image version, set USE_CODE_JOURNEY to false in pages/aboutus-new.js.
+  To go back to the old image version, set USE_CODE_JOURNEY to false in pages/about-us.js.
 */
 
 const VB_W = 1781;
@@ -132,10 +130,21 @@ const AboutJourney = () => {
     const traveller = travellerRef.current;
     if (!root || !stage || !track || !sticky || !road || !maskPath || !traveller) return undefined;
 
-    gsap.registerPlugin(ScrollTrigger);
-    const mm = gsap.matchMedia();
+    // GSAP is loaded on demand: below 992px the static timeline is shown, so it is never downloaded there
+    const MOTION_QUERY = "(min-width: 992px) and (prefers-reduced-motion: no-preference)";
+    const mq = window.matchMedia(MOTION_QUERY);
+    let mm;
+    let cancelled = false;
 
-    mm.add("(min-width: 992px) and (prefers-reduced-motion: no-preference)", () => {
+    const start = async () => {
+      if (mm || cancelled) return;
+      const [{ gsap }, { ScrollTrigger }] = await Promise.all([import("gsap"), import("gsap/ScrollTrigger")]);
+      if (mm || cancelled) return;
+
+    gsap.registerPlugin(ScrollTrigger);
+    mm = gsap.matchMedia();
+
+    mm.add(MOTION_QUERY, () => {
       const length = road.getTotalLength();
 
       // where along the road (0-1) each milestone sits
@@ -183,18 +192,25 @@ const AboutJourney = () => {
       traveller.setAttribute("cx", start.x);
       traveller.setAttribute("cy", start.y);
 
-      // tall track: the sticky map stays fixed while you scroll through the extra ~3 screens
+      // tall track: the sticky map stays fixed while you scroll through ~1 extra screen
+      // (kept short, since part of the road is already drawn; raise the multiplier for a slower reveal)
       const sizeTrack = () => {
-        track.style.minHeight = `${sticky.offsetHeight + Math.round(window.innerHeight * 3)}px`;
+        track.style.minHeight = `${sticky.offsetHeight + Math.round(window.innerHeight * 1)}px`;
       };
       sizeTrack();
       ScrollTrigger.addEventListener("refreshInit", sizeTrack);
 
-      // The timeline follows the scroll position with a little smoothing, so scrolling back up before the
-      // road is finished rewinds it (pins and text are removed again). Once the hold ends (onLeave below)
-      // the finished state is locked in.
+      // The timeline follows the scroll position with a little smoothing, but only forwards: scrolling
+      // back up never rewinds it (pins and text stay). Once the hold ends (onLeave below) it is locked finished.
+      // The road is already drawn this far (0-1) when the section appears, so it is never empty;
+      // scrolling draws the rest. Raise to start further along, 0 = draw from the very beginning.
+      const START_AT = 0.4;
+      let reached = START_AT; // furthest progress so far
       const follow = (progress) => {
-        gsap.to(tl, { progress, duration: 0.8, ease: "power1.out", overwrite: true });
+        const target = START_AT + progress * (1 - START_AT);
+        if (target <= reached) return; // never go backwards
+        reached = target;
+        gsap.to(tl, { progress: target, duration: 0.8, ease: "power1.out", overwrite: true });
       };
 
       const tl = gsap.timeline({
@@ -204,23 +220,26 @@ const AboutJourney = () => {
         // so the whole animation finishes before the next section scrolls in.
         scrollTrigger: {
           trigger: track,
-          // the sticky top (space kept clear for the fixed header) comes from CSS, so it can change per breakpoint
-          start: () => `top ${parseFloat(getComputedStyle(sticky).top) || 0}px`,
+          // start drawing once the section reaches the middle of the screen, so it never sits there empty
+          start: "top center",
           end: () => `bottom top+=${(parseFloat(getComputedStyle(sticky).top) || 0) + sticky.offsetHeight}`,
           // progress is driven only by scroll via follow(); without this GSAP's default "play" would auto-run the timeline
           toggleActions: "none none none none",
           onUpdate: (self) => follow(self.progress),
           invalidateOnRefresh: true,
-          // While the map is held, scrolling up rewinds the animation. When the hold ends the timeline stays in
-          // its finished state and the extra scroll space is removed, so scrolling back up neither re-holds nor reverses it.
+          // When the hold ends the timeline stays in its finished state and the extra scroll space is removed,
+          // so scrolling back up neither re-holds nor reverses it.
           onLeave: (self) => {
-            const distance = self.end - self.start;
             gsap.killTweensOf(tl);
             tl.progress(1);
             self.kill(); // does not touch the animation, which stays finished
             ScrollTrigger.removeEventListener("refreshInit", sizeTrack);
-            track.style.minHeight = ""; // collapse the extra scroll space
-            const y = Math.max(0, window.scrollY - distance); // keep the same content on screen
+            // collapse the extra scroll space, then scroll back by exactly the height removed
+            // (not the trigger distance: the trigger starts mid-screen, so the two differ)
+            const before = track.offsetHeight;
+            track.style.minHeight = "";
+            const removed = before - track.offsetHeight;
+            const y = Math.max(0, window.scrollY - removed); // keep the same content on screen
             if (window.__lenis) window.__lenis.scrollTo(y, { immediate: true, force: true });
             else window.scrollTo(0, y);
             requestAnimationFrame(() => ScrollTrigger.refresh());
@@ -254,11 +273,18 @@ const AboutJourney = () => {
       // hold the finished timeline on screen for a moment before the pin releases
       tl.to({}, { duration: 0.8 }, T);
 
-      // 3. heading
-      tl.from(`.${s.title}`, { y: 40, opacity: 0, duration: 1 }, 0);
-
-      // 3b. quote sits under the heading, so it comes in right after it
-      tl.fromTo(`.${s.quote}`, { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 1, ease: "power3.out" }, 0.4);
+      // 3. heading + quote: shown as soon as the section scrolls in (not tied to the road progress,
+      // otherwise the section looked blank until the road started)
+      const intro = gsap.timeline({
+        scrollTrigger: { trigger: root, start: "top 80%", once: true },
+      });
+      intro.from(root.querySelector(`.${s.title}`), { y: 40, opacity: 0, duration: 1, ease: "power3.out" });
+      intro.fromTo(
+        root.querySelector(`.${s.quote}`),
+        { y: 20, opacity: 0 },
+        { y: 0, opacity: 1, duration: 1, ease: "power3.out" },
+        0.3
+      );
 
       // 4. each milestone: pin drops, connector grows, dot pops, text rises
       milestones.forEach((m, i) => {
@@ -293,6 +319,8 @@ const AboutJourney = () => {
         );
       });
 
+      tl.progress(START_AT);
+
       return () => {
         ScrollTrigger.removeEventListener("refreshInit", sizeTrack);
         track.style.minHeight = "";
@@ -300,8 +328,19 @@ const AboutJourney = () => {
         traveller.removeAttribute("cy");
       };
     });
+    };
 
-    return () => mm.revert();
+    const onChange = (e) => {
+      if (e.matches) start();
+    };
+    if (mq.matches) start();
+    else mq.addEventListener("change", onChange);
+
+    return () => {
+      cancelled = true;
+      mq.removeEventListener("change", onChange);
+      if (mm) mm.revert();
+    };
   }, []);
 
   return (

@@ -317,7 +317,10 @@ module.exports = {
 
     // pages/blog-old is a noindexed backup of the old blog design.
     const blogOldBackup = ['/blog-old', '/blog-old/*'];
+    // pages/about-us-old is a noindexed backup of the old About Us design
+    // (its noindex is a PageSeo prop, which NOINDEX_PATTERN doesn't detect).
+    const aboutOldBackup = ['/about-us-old'];
 
-    return [...staticNoindex, ...robotsDisallow, ...blogNoindex, ...blogOldBackup];
+    return [...staticNoindex, ...robotsDisallow, ...blogNoindex, ...blogOldBackup, ...aboutOldBackup];
   },
 };

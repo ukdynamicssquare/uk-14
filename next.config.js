@@ -76,6 +76,19 @@ const nextConfig = {
           { key: "X-Robots-Tag", value: "noindex, nofollow" },
         ],
       },
+      // Old About Us design backup (pages/about-us-old): never index.
+      {
+        source: "/about-us-old/:path*",
+        headers: [
+          { key: "X-Robots-Tag", value: "noindex, nofollow" },
+        ],
+      },
+      {
+        source: "/about-us-old",
+        headers: [
+          { key: "X-Robots-Tag", value: "noindex, nofollow" },
+        ],
+      },
       //new code
       // 🧠 Next.js static assets (hashed → safe for 1 year)
     // 🧠 HTML (must NOT be cached long)

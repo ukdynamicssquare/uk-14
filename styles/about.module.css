@@ -1,11 +1,11 @@
-/* about.module.css — styles for pages/aboutus-new.js */
+/* about.module.css — styles for pages/about-us.js */
 
 .page {
   --about-heading: #8a4568;
   --about-purple: #9b5cc0;
   --about-purple-dark: #4a3f6d;
   --about-purple-darker: #2e2744;
-  --about-red: #dc5555;
+  --about-red: #cc4444; /* darkened from #dc5555 so white button text passes WCAG AA contrast */
   --about-lilac: #f1f0f4;
 
   /* Common heading tokens */
@@ -34,7 +34,7 @@
 
 /* ---------- Hero ---------- */
 .hero {
-  background:url('/img/about-home-bg.png');
+  background:url('/img/about-home-bg.webp');
   padding: 70px 0 0px;
   text-align: center;
  position: relative;
@@ -99,7 +99,7 @@
 .partnerSection:before{
 content: '';
     position: absolute;
-     background:url('/img/aboutus-new-02.png');
+     background:url('/img/aboutus-new-02.webp');
     width: 100%;
     height: 100%;
     top: 0;
@@ -111,7 +111,9 @@ content: '';
 
 }
 
-.partnerSection h3 {
+.partnerSection h2 {
+  background: none;
+  -webkit-text-fill-color: #fff;
   color: #fff;
   font-weight: var(--heading-font-weight);
   font-size: var(--h2-font-size);
@@ -134,7 +136,9 @@ content: '';
   flex-wrap: wrap;
 }
 
-.statRow h4 {
+.statRow strong {
+  display: block;
+  line-height: 1.2;
   color: #fff;
     font-weight: 500;
     font-size: 40px;
@@ -193,7 +197,7 @@ content: '';
   margin-right: 8px;
 }
 
-.mvCard h5 {
+.mvCard h3 {
   color: var(--about-heading);
   font-weight: 700;
   font-size: 16px;
@@ -382,7 +386,7 @@ content: '';
   z-index: 1;
 }
 
-.teamMeta h4 {
+.teamMeta h3 {
   font-size: 16px;
   font-weight: 600;
   margin: 0;
@@ -412,7 +416,7 @@ content: '';
   gap: 20px;
 }
 
-.teamCallout h5 {
+.teamCallout h3 {
   color: #fff;
   font-weight: 700;
   font-size: 18px;
@@ -473,7 +477,7 @@ content: '';
   margin-bottom: 14px;
 }
 
-.techCardHead h5 {
+.techCardHead h3 {
   color: var(--about-heading);
   font-weight: 700;
   font-size: 18px;
@@ -543,7 +547,7 @@ color: var(--about-heading);
   margin-bottom: 6px;
 }
 
-.deliverSection h5 {
+.deliverSection h3 {
   color: var(--about-heading);
   font-weight: 700;
   font-size: 16px;
@@ -655,7 +659,7 @@ color: var(--about-heading);
   object-fit: contain;
 }
 
-.serviceCard h5 {
+.serviceCard h3 {
   color: var(--about-heading);
   font-weight: 700;
   font-size: 18px;
@@ -779,7 +783,7 @@ color: var(--about-heading);
 
   margin: 0 auto;
 
-  background-image: url("/img/aboutus-new/world-map-pins-one.png");
+  background-image: url("/img/aboutus-new/world-map-pins-one.webp");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100% 100%;
@@ -804,7 +808,8 @@ color: var(--about-heading);
 
   z-index: 10;
 
-  cursor: pointer;
+  /* pins are not links */
+  cursor: default;
 
   /* smaller pin, anchored at its tip so the map position stays the same */
   scale: var(--pin-scale, 0.78);
@@ -2089,7 +2094,9 @@ color: var(--about-heading);
 ========================================================= */
 
 /* ---------- Fluid type & spacing (all widths) ---------- */
-.statRow h4 {
+.statRow strong {
+  display: block;
+  line-height: 1.2;
   font-size: clamp(28px, 3vw + 12px, 40px);
   letter-spacing: clamp(1px, 0.3vw, 4px);
 }
@@ -2119,7 +2126,7 @@ color: var(--about-heading);
   padding-bottom: clamp(40px, 7vw, 80px);
 }
 
-.partnerSection h3,
+.partnerSection h2,
 .techSection h2,
 .servicesSection h2,
 .teamSection h2,
@@ -2595,7 +2602,7 @@ color: var(--about-heading);
   z-index: 0;
   pointer-events: none;
 
-  background-image: url("/img/aboutus-new/world-map-pins-one.png");
+  background-image: url("/img/aboutus-new/world-map-pins-one.webp");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100% 100%;
@@ -2696,7 +2703,6 @@ color: var(--about-heading);
 }
 
 /* GPU hints for the elements GSAP moves the most */
-.hero img,
 .ringWrap img,
 .serviceIconImg,
 .aboutMethodologyIconImg {
@@ -2739,5 +2745,266 @@ color: var(--about-heading);
     left: 52%;
     right: 30px;
     bottom: 5%;
+  }
+}
+
+/* =========================================
+   RESPONSIVE FIXES (tablet / mobile)
+========================================= */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* keep the three stats on one line in the narrower column */
+  .statRow {
+    gap: 28px;
+  }
+
+  /* stop the CTA copy running under the photo on the right */
+  .ctaBanner .row > div {
+    max-width: 68%;
+  }
+}
+
+@media (max-width: 991px) {
+  /* .container already supplies the side gutter; extra section padding doubled it */
+  .aboutMethodology {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* full-width text once the columns stack */
+  .aboutMethodologyContent p,
+  .aboutMethodologyDescription {
+    max-width: 100%;
+  }
+
+  .aboutMethodologyDescription {
+    line-height: 1.6;
+  }
+
+  /* stacked cards: no fixed height, so no empty space under short text */
+  .aboutMethodologyCard {
+    min-height: auto;
+  }
+
+  /* line the stacked cards up with the text above them */
+  .aboutMethodologyCards > div {
+    padding-left: calc(var(--bs-gutter-x, 1.5rem) * 0.5);
+    padding-right: calc(var(--bs-gutter-x, 1.5rem) * 0.5);
+  }
+
+  /* desktop right-offset pushed the chevrons off-centre once stacked */
+  .aboutMethodologyArrows {
+    padding-right: 20px;
+  }
+
+  .choiceImageWrap {
+    text-align: center;
+    margin: 30px 0 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .ctaBanner h2 {
+    font-size: 28px;
+  }
+
+  /* keep the slider arrows inside the screen */
+  .teamSlider :global(.swiper-button-next) {
+    right: 0;
+  }
+
+  .teamSlider :global(.swiper-button-prev) {
+    right: 48px;
+  }
+
+  /* world map: fit the screen instead of a cropped, side-scrolling 650-700px map */
+  .globalPresence {
+    overflow: hidden;
+  }
+
+  .globalMap {
+    width: 100%;
+    min-width: 0;
+    aspect-ratio: 1949 / 807;
+    --pin-w: clamp(22px, 7cqw, 36px);
+  }
+
+  .locationPin {
+    width: var(--pin-w);
+    height: calc(var(--pin-w) * 1.395);
+  }
+
+  .pinBody {
+    width: var(--pin-w);
+    height: var(--pin-w);
+  }
+
+  .pinIcon {
+    width: calc(var(--pin-w) * 0.7);
+    height: calc(var(--pin-w) * 0.7);
+    border-width: 2px;
+  }
+
+  .globalMap .locationLabel {
+    font-size: 10px;
+    padding: 2px 6px;
+  }
+}
+
+@media (max-width: 575px) {
+  /* too little room for name pills next to the pins; each pin keeps its aria-label */
+  .globalMap .locationLabel {
+    display: none;
+  }
+}
+
+/* =========================================
+   MAP PIN ADDRESS CARD
+   - pins are not links; hover (desktop) or tap / keyboard focus shows the office address
+========================================= */
+
+.locationPin:hover,
+.locationPin:focus,
+.locationPin:focus-within {
+  z-index: 30;
+  animation-play-state: paused; /* hold the float so the card stays still while reading */
+}
+
+.locationPin:focus {
+  outline: none;
+}
+
+.pinCard {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 50%;
+  z-index: 2;
+  width: 220px;
+  padding: 10px 12px;
+  background: #fff;
+  border: 1px solid rgba(122, 63, 160, 0.15);
+  border-radius: 10px;
+  box-shadow: 0 10px 28px rgba(46, 39, 68, 0.18);
+  color: #4a4458;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.45;
+  text-align: left;
+  white-space: normal;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translate(-50%, 6px);
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+}
+
+.pinCard strong {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--about-heading);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* small pointer towards the pin */
+.pinCard::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  margin-left: -5px;
+  background: #fff;
+  border-left: 1px solid rgba(122, 63, 160, 0.15);
+  border-top: 1px solid rgba(122, 63, 160, 0.15);
+  transform: rotate(45deg);
+}
+
+.locationPin:hover .pinCard,
+.locationPin:focus .pinCard,
+.locationPin:focus-within .pinCard {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
+
+/* left-edge pins: card grows to the right */
+.canada .pinCard,
+.usa .pinCard {
+  left: 0;
+  transform: translate(0, 6px);
+}
+
+.canada:hover .pinCard,
+.canada:focus .pinCard,
+.canada:focus-within .pinCard,
+.usa:hover .pinCard,
+.usa:focus .pinCard,
+.usa:focus-within .pinCard {
+  transform: translate(0, 0);
+}
+
+.canada .pinCard::before,
+.usa .pinCard::before {
+  left: calc(var(--pin-w, 40px) / 2);
+}
+
+/* right-side pins: card grows to the left */
+.india .pinCard,
+.singapore .pinCard,
+.australia .pinCard {
+  left: auto;
+  right: 0;
+  transform: translate(0, 6px);
+}
+
+.india:hover .pinCard,
+.india:focus .pinCard,
+.india:focus-within .pinCard,
+.singapore:hover .pinCard,
+.singapore:focus .pinCard,
+.singapore:focus-within .pinCard,
+.australia:hover .pinCard,
+.australia:focus .pinCard,
+.australia:focus-within .pinCard {
+  transform: translate(0, 0);
+}
+
+.india .pinCard::before,
+.singapore .pinCard::before,
+.australia .pinCard::before {
+  left: auto;
+  right: calc(var(--pin-w, 40px) / 2 - 5px);
+}
+
+/* pins low on the map: card opens above the pin */
+.singapore .pinCard,
+.australia .pinCard {
+  top: auto;
+  bottom: calc(100% + 6px);
+}
+
+.singapore .pinCard::before,
+.australia .pinCard::before {
+  top: auto;
+  bottom: -6px;
+  transform: rotate(225deg);
+}
+
+@media (max-width: 575px) {
+  .pinCard {
+    width: 180px;
+    font-size: 12px;
+  }
+
+  .pinCard strong {
+    font-size: 13px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pinCard {
+    transition: none;
   }
 }

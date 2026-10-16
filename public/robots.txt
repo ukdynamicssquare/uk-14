@@ -4,6 +4,7 @@ Disallow: /blog/tag/
 Disallow: /blog/category/
 Disallow: /blog/preview/
 Disallow: /blog-old
+Disallow: /about-us-old
 Disallow: /react-ds/
 
 
