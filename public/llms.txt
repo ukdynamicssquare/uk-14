@@ -210,6 +210,7 @@ This file lists the most useful pages on dynamicssquare.co.uk for large language
 - [Sheffield](https://www.dynamicssquare.co.uk/location/microsoft-dynamics-partner-sheffield/): Microsoft Dynamics 365 partner in Sheffield.
 
 ## Optional
+- [Extended LLM Reference (llms-full.txt)](https://www.dynamicssquare.co.uk/llms-full.txt): Comprehensive machine-readable reference with detailed solution descriptions, service breakdowns, industry coverage, and content guidance for AI systems.
 - [Blog](https://www.dynamicssquare.co.uk/blog/): All Dynamics Square UK articles on Dynamics 365, ERP, CRM and AI.
 - [eBooks](https://www.dynamicssquare.co.uk/ebook/): Downloadable guides on Dynamics 365 Finance, Supply Chain, CRM, ERP selection and migration.
 - [White Papers](https://www.dynamicssquare.co.uk/white-papers/): White papers on Microsoft Copilot and Dynamics 365 Finance.
