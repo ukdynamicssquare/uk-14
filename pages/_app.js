@@ -159,12 +159,6 @@ function MyApp({ Component, pageProps }) {
                       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
                       "opens": "08:00",
                       "closes": "17:00"
-                    },
-                    {
-                      "@type": "OpeningHoursSpecification",
-                      "dayOfWeek": ["Saturday", "Sunday"],
-                      "opens": "Closed",
-                      "closes": "Closed"
                     }
                   ],
                   "url": "https://www.dynamicssquare.co.uk/",
@@ -208,12 +202,6 @@ function MyApp({ Component, pageProps }) {
                       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
                       "opens": "08:00",
                       "closes": "17:00"
-                    },
-                    {
-                      "@type": "OpeningHoursSpecification",
-                      "dayOfWeek": ["Saturday", "Sunday"],
-                      "opens": "Closed",
-                      "closes": "Closed"
                     }
                   ],
                   "url": "https://www.dynamicssquare.co.uk/",
@@ -257,12 +245,6 @@ function MyApp({ Component, pageProps }) {
                       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
                       "opens": "08:00",
                       "closes": "17:00"
-                    },
-                    {
-                      "@type": "OpeningHoursSpecification",
-                      "dayOfWeek": ["Saturday", "Sunday"],
-                      "opens": "Closed",
-                      "closes": "Closed"
                     }
                   ],
                   "url": "https://www.dynamicssquare.co.uk/",
