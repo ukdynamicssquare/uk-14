@@ -386,7 +386,7 @@ const MicrosoftDynamicsPartnerBirmingham = () => {
                           <li>Business Central / <Link href="/products/microsoft-dynamics-nav/">NAV Support</Link></li>
                           <li><Link href="/products/microsoft-dynamics-ax/">AX Support</Link></li>
                           <li><Link href="/products/microsoft-dynamics-gp/">GP Support</Link></li>
-                          <li><Link href="/power-bi-support/">Power BI Support</Link></li>
+                          <li><Link href="/products/microsoft-power-bi/support/">Power BI Support</Link></li>
                           <li>Business Central Upgrade</li>
                           <li><Link href="https://blog.dynamicssquare.co.uk/migrate-nav-to-business-central/">NAV Migration</Link></li>
                           <li>and much more.</li>

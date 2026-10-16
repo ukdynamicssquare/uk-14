@@ -701,7 +701,7 @@ const PowerBIImplementation = () => {
                     data-bs-parent="#faqlist1"
                   >
                     <div className="accordion-body">
-                      <p>There can be different stages of Power BI implementation that depend on one project or another. In this, the major stages include: the discovery and planning stage where the implementation partner will analyse the business requirements, the data preparation stage where your business data will be prepared for the implementation process, dashboard development stage to develop custom dashboards based on required data to help you visualise data, testing stage to test the smooth working of power BI, deployment stage where power BI will be deployed on your servers, and the maintenance stage where your <Link href="/power-bi-support/">Microsoft Power BI support partner</Link> will maintain the excellent working of your solution.</p>
+                      <p>There can be different stages of Power BI implementation that depend on one project or another. In this, the major stages include: the discovery and planning stage where the implementation partner will analyse the business requirements, the data preparation stage where your business data will be prepared for the implementation process, dashboard development stage to develop custom dashboards based on required data to help you visualise data, testing stage to test the smooth working of power BI, deployment stage where power BI will be deployed on your servers, and the maintenance stage where your <Link href="/products/microsoft-power-bi/support/">Microsoft Power BI support partner</Link> will maintain the excellent working of your solution.</p>
                     </div>
                   </div>
                 </div>

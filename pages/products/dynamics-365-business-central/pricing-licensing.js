@@ -372,7 +372,7 @@ const BusinessCentral = () => {
               <div className='solution-new-banner-sub-head'>
                 <h2>Dynamics 365 Business Central Capabilities</h2>
                 <p>Microsoft Dynamics 365 Business Central capabilities make it a widely preferred choice by small and midsize businesses.</p>
-                <p>Is<a href="/blog/business-central-for-accounting/"> Business Central for Accounting</a>? Yes… and no. D365 BC is much more than just being accounting software. It supports companies across industries and keeps teams connected anywhere in the world.</p>
+                <p>Is<a href="/blog/business-central-accounting-software/"> Business Central for Accounting</a>? Yes… and no. D365 BC is much more than just being accounting software. It supports companies across industries and keeps teams connected anywhere in the world.</p>
                 <p><b>Business Central comes with the following capabilities:</b></p>
               </div>
             </div>

@@ -331,7 +331,7 @@ const BCvsFinance = () => {
                       data-bs-parent="#accnew"
                     >
                       <div className="accordion-body">
-                     <p>The cost of an ERP solution depends on your unique business requirements, including, integrations, customisations, server deployment, complexity of operations, licencing cost, and any other personalisations.</p> <p>However, in terms of licencing costs, <Link href="/dynamics-365-business-central-pricing-licensing/" target="_blank">Business Central costs</Link> 50% less when compared to D365 Finance. Aside from implementation costs, the Business Central Premium plan costs £84.60 per user per month, whereas Microsoft D365 Finance costs £161.50 per user per month (Finance Premium costs £230.70 per user per month). </p>
+                     <p>The cost of an ERP solution depends on your unique business requirements, including, integrations, customisations, server deployment, complexity of operations, licencing cost, and any other personalisations.</p> <p>However, in terms of licencing costs, <Link href="/products/dynamics-365-business-central/pricing-licensing/" target="_blank">Business Central costs</Link> 50% less when compared to D365 Finance. Aside from implementation costs, the Business Central Premium plan costs £84.60 per user per month, whereas Microsoft D365 Finance costs £161.50 per user per month (Finance Premium costs £230.70 per user per month). </p>
                       </div>
                     </div>
                   </div>

@@ -439,7 +439,7 @@ const PowerBI = () => {
                 <Image src="/img/person_pin.png" alt="" width={48} height={48} aria-hidden="true" />
                 <h3>Support</h3>
                 <p>Get our Power BI Support Services to fully meet your business needs. Contact our Power Expert Now.</p>
-                <a href="/power-bi-support/">Get Started <i className="bi bi-arrow-right"></i></a>
+                <a href="/products/microsoft-power-bi/support/">Get Started <i className="bi bi-arrow-right"></i></a>
               </div>
             </div>
 
@@ -526,7 +526,7 @@ const PowerBI = () => {
                     business needs. Contact our Power Expert Now.
                   </p>
                   <div className="action-content">
-                    <Link href="/power-bi-support/"><a target="_blank">Get Started</a></Link>
+                    <Link href="/products/microsoft-power-bi/support/"><a target="_blank">Get Started</a></Link>
                   </div>
                 </div>
               </div>

@@ -68,7 +68,7 @@ export const navLinks = [
   { href: "/dynamics-nav-to-business-central/", title: "Dynamics NAV to Business Central Upgrade", icon: "bi-arrow-up-circle" },
   { href: "/dynamics-nav-vs-business-central/", title: "Dynamics NAV vs Business Central", icon: "bi-arrow-left-right" },
   { href: "/dynamics-nav-support-ending-soon/", title: "Dynamics NAV Support End of Life", icon: "bi-calendar-x" },
-  { href: "/dynamics-nav-is-now-dynamics-365-business-central/", title: "Dynamics NAV is Now Dynamics 365 Business Central", icon: "bi-arrow-repeat" },
+  { href: "/dynamics-nav-to-business-central/", title: "Dynamics NAV is Now Dynamics 365 Business Central", icon: "bi-arrow-repeat" },
   { href: "/products/dynamics-365-business-central/", title: "Microsoft Dynamics 365 Business Central", icon: "bi-grid" },
   { href: "/d365-business-central-support/", title: "Dynamics 365 Business Central Support", icon: "bi-headset" },
 ];

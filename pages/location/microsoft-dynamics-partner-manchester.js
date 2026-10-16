@@ -435,7 +435,7 @@ const MicrosoftDynamicsPartnerManchester = () => {
                       AX Support</Link></li>
                       <li><Link href="/products/microsoft-dynamics-gp/">
                       GP Support</Link></li>
-                      <li><Link href="/power-bi-support/">
+                      <li><Link href="/products/microsoft-power-bi/support/">
                       Power BI Support</Link></li>
                       <li>Business Central Upgrade</li>
                       <li>NAV Migration</li>

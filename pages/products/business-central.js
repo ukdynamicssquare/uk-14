@@ -3295,7 +3295,7 @@ const BusinessCentral = () => {
                   >
                     <div className="accordion-body">
                       <p>
-                        <Link href="/dynamics-365-business-central-pricing-licensing/">
+                        <Link href="/products/dynamics-365-business-central/pricing-licensing/">
                           Dynamics 365 Business Central pricing
                         </Link>{" "}
                         goes as per your specific business processes. You can

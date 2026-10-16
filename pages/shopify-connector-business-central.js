@@ -243,7 +243,7 @@ const ShopifyConnectorBusinessCentral = () => {
               <h2>Automate Your E-Commerce with the Shopify Connector</h2>
               <p>The Shopify Connector is an application that can establish a connection between Business Central and Shopify with ease. It builds a reciprocating connection between solutions so that an update in one of the solutions will take place in both and in real-time. </p>
 
-              <p>With a full-user <Link href="/dynamics-365-business-central-pricing-licensing/">Business Central licence</Link>, a user can access Shopify Connector from Microsoft’s marketplace. After downloading, one can proceed to establish a connection by entering the necessary information, like APIs or access keys. </p>
+              <p>With a full-user <Link href="/products/dynamics-365-business-central/pricing-licensing/">Business Central licence</Link>, a user can access Shopify Connector from Microsoft’s marketplace. After downloading, one can proceed to establish a connection by entering the necessary information, like APIs or access keys. </p>
 
               <p>The integration of Shopify with Business Central will eliminate manual ways of entering data into the system while automating different core e-commerce processes. Some of the major features you will be getting after successful integration are: </p>
               <div className="finace-acc finace-acc-nn" style={{ paddingTop: '20px' }}>

@@ -193,7 +193,7 @@ const CrmModule = () => {
                 <p>Business Central is an AI-driven ERP and CRM solution that can revolutionise the way a business deals with internal as well as external processes. It will transform and accelerate your business towards growth and scalability. </p>
                 <p>The Business Central CRM module not only simplifies customer management but also boosts sales. It can help you track sales performance, track potential opportunities, utilise data in real-time, and enhance overall revenue.</p> 
                 <p>Regardless of your industry, you can implement Business Central along with its CRM module to offer personalised deals, increase customer visibility, prioritise potential leads, and enhance overall sales efficiency. </p>
-                <p>For more details, like <Link href="/dynamics-365-business-central-pricing-licensing/" target="_blank">Business Central pricing and licencing plans</Link>, feel free to contact Dynamics Square, the trusted and reliable Microsoft Solutions Partner in the UK.</p>
+                <p>For more details, like <Link href="/products/dynamics-365-business-central/pricing-licensing/" target="_blank">Business Central pricing and licencing plans</Link>, feel free to contact Dynamics Square, the trusted and reliable Microsoft Solutions Partner in the UK.</p>
               </div>
             </div>
           </div>

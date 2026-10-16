@@ -252,7 +252,7 @@ const HomeOneNew = () => {
               <div className="col-lg-3 col-md-3 col-sm-6 d-flex">
                 <div className="card-667">
                   <div className="card-top">
-                    <a href="our-services/dynamics-365-consultant/">
+                    <a href="/our-services/dynamics-365-consultant/">
                       <img
                         src="/img/serve-ic-01.png"
                         alt=""

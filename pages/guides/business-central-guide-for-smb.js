@@ -877,7 +877,7 @@ const PowerBIGuide = () => {
                   Microsoft Azure is the cloud deployment service available
                   through a monthly subscription based on specific business
                   requirements and the desired Business Central license. About
-                  licencing, we will read about it in the <Link href="/dynamics-365-business-central-pricing-licensing/">Business Central
+                  licencing, we will read about it in the <Link href="/products/dynamics-365-business-central/pricing-licensing/">Business Central
                   Pricing and Licensing</Link> section.
                 </p>
                 <p>

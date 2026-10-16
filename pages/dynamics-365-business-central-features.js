@@ -417,7 +417,7 @@ const BusinessCentralFeatures = () => {
                   <strong>Check Also -</strong>
                 </p>
                 <p>
-                  <Link href="/dynamics-365-business-central-pricing-licensing/" target="_blank">
+                  <Link href="/products/dynamics-365-business-central/pricing-licensing/" target="_blank">
                   Dynamics 365 Business Central Pricing &amp; Licensing
                   </Link>
                   <br />
