@@ -104,11 +104,6 @@ function MyApp({ Component, pageProps }) {
                     "@type": "Brand",
                     "name": "Dynamics Square UK Ltd.",
                     "logo": "https://www.dynamicssquare.co.uk/img/dynamicssqure-logo.svg"
-                  },
-                  "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "4.3",
-                    "reviewCount": "1280"
                   }
                 },
                 {
@@ -157,11 +152,6 @@ function MyApp({ Component, pageProps }) {
                     "@type": "Brand",
                     "name": "Dynamics Square UK Ltd.",
                     "logo": "https://www.dynamicssquare.co.uk/img/dynamicssqure-logo.svg"
-                  },
-                  "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "4.3",
-                    "reviewCount": "1260"
                   },
                   "openingHoursSpecification": [
                     {
