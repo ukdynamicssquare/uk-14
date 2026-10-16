@@ -243,7 +243,7 @@ export const solutionMenu = {
     heading: "Essential Tool",
     items: [
       {
-        href: "/erp-implementation-cost-calculator/",
+        href: "/tools/erp-implementation-cost-calculator/",
         title: "Get Your ERP Cost Estimate",
         para: "Quick, free, and tailored to your business.",
         cta: "Check Now",
@@ -470,8 +470,8 @@ export const resourcesMenu = {
       subheading: "Estimate costs, compare solutions, and choose the right Microsoft Dynamics 365 platform with confidence.",
       items: [
         { href: "/tools/microsoft-dynamics-licensing-calculator/", image: "/img/tools-three.png", tag: "Licensing Calculator", title: "Calculate your Dynamics 365 licensing costs.", cta: "Calculate Now" },
-        { href: "/erp-implementation-cost-calculator/", image: "/img/tools-one.png", tag: "ERP Calculator", title: "Estimate implementation costs in minutes.", cta: "Calculate Now" },
-        { href: "/top-erp-systems-comparison/", image: "/img/tools-two.png", tag: "ERP Comparison", title: "Compare Dynamics 365 solutions side-by-side.", cta: "Compare Now" },
+        { href: "/tools/erp-implementation-cost-calculator/", image: "/img/tools-one.png", tag: "ERP Calculator", title: "Estimate implementation costs in minutes.", cta: "Calculate Now" },
+        { href: "/tools/top-erp-systems-comparison/", image: "/img/tools-two.png", tag: "ERP Comparison", title: "Compare Dynamics 365 solutions side-by-side.", cta: "Compare Now" },
       ],
     },
     {
@@ -657,8 +657,8 @@ export const WHITEPAPERS = [
 
 export const TOOLS = [
   { href: "/tools/microsoft-dynamics-licensing-calculator/", img: "/img/tools-three.png", tag: "Licensing Calculator", title: "Calculate your Dynamics 365 licensing costs.", cta: "Calculate Now" },
-  { href: "/erp-implementation-cost-calculator/", img: "/img/tools-one.png", tag: "ERP Calculator", title: "Estimate implementation costs in minutes.", cta: "Calculate Now" },
-  { href: "/top-erp-systems-comparison/", img: "/img/tools-two.png", tag: "ERP Comparison", title: "Compare Dynamics 365 solutions side-by-side.", cta: "Compare Now" },
+  { href: "/tools/erp-implementation-cost-calculator/", img: "/img/tools-one.png", tag: "ERP Calculator", title: "Estimate implementation costs in minutes.", cta: "Calculate Now" },
+  { href: "/tools/top-erp-systems-comparison/", img: "/img/tools-two.png", tag: "ERP Comparison", title: "Compare Dynamics 365 solutions side-by-side.", cta: "Compare Now" },
 ];
 
 export const WEBCASTS = [

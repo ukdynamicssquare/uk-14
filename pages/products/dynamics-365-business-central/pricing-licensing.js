@@ -268,7 +268,7 @@ const BusinessCentral = () => {
             <div className="col-lg-4">
               <div className="calculator-card">
                 <p>Besides, you can also use our  Dynamics 365 ERP Implementation Price Calculator to get an estimated cost of ERP implementation.</p>
-                <a href="/erp-implementation-cost-calculator/" className="calculator-btn">
+                <a href="/tools/erp-implementation-cost-calculator/" className="calculator-btn">
                   Calculate Now
                   <span>→</span>
                 </a>

@@ -76,7 +76,7 @@ This file lists the most useful pages on dynamicssquare.co.uk for large language
 - [Business Central Essentials vs Premium](https://www.dynamicssquare.co.uk/blog/business-central-essentials-vs-premium/): Pricing and feature differences between Business Central Essentials and Premium.
 - [New Business Central Pricing (October 2025)](https://www.dynamicssquare.co.uk/blog/new-pricing-for-dynamics-365-business-central-explained/): Business Central pricing changes effective October 2025.
 - [Dynamics 365 Licensing Calculator](https://www.dynamicssquare.co.uk/tools/microsoft-dynamics-licensing-calculator/): Estimate Dynamics 365 licence costs for a UK business.
-- [ERP Implementation Cost Calculator](https://www.dynamicssquare.co.uk/erp-implementation-cost-calculator/): Estimate ERP implementation costs.
+- [ERP Implementation Cost Calculator](https://www.dynamicssquare.co.uk/tools/erp-implementation-cost-calculator/): Estimate ERP implementation costs.
 - [Power BI Pricing UK](https://www.dynamicssquare.co.uk/blog/power-bi-pricing-uk/): Power BI Pro, Premium Per User and Fabric pricing in the UK.
 - [Power Apps Pricing & Licensing UK](https://www.dynamicssquare.co.uk/blog/power-apps-pricing-licensing-uk/): Power Apps Premium, Developer, per-app and pay-as-you-go plans.
 - [Microsoft Fabric Pricing UK](https://www.dynamicssquare.co.uk/blog/microsoft-fabric-pricing-uk/): Microsoft Fabric capacity costs and licensing options in the UK.
@@ -119,7 +119,7 @@ This file lists the most useful pages on dynamicssquare.co.uk for large language
 - [Dynamics 365 vs Salesforce](https://www.dynamicssquare.co.uk/dynamics-365-vs-salesforce/): Features, pros and cons and pricing compared.
 - [Dynamics 365 Field Service vs ServiceNow](https://www.dynamicssquare.co.uk/blog/dynamics-365-field-service-vs-servicenow/): Features, costs and integrations compared for UK mid-sized companies.
 - [Power BI vs Tableau](https://www.dynamicssquare.co.uk/blog/power-bi-vs-tableau/): Features, pricing, integrations, AI and ease of use compared.
-- [Top ERP Systems Comparison](https://www.dynamicssquare.co.uk/top-erp-systems-comparison/): Features, pricing and benefits of leading ERP systems.
+- [Top ERP Systems Comparison](https://www.dynamicssquare.co.uk/tools/top-erp-systems-comparison/): Features, pricing and benefits of leading ERP systems.
 
 ## Alternatives
 - [Sage Alternatives](https://www.dynamicssquare.co.uk/blog/sage-alternatives/): 10 accounting software alternatives to Sage for UK businesses.

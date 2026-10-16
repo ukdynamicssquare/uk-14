@@ -662,11 +662,11 @@ const HomeOneNewBack = () => {
                                 <div className='card-666 card-666-1'>
                                     <div className='crad-img'>
                                         <Image src="/img/res-tag-04.png" alt="res-tag-01" width={610} height={610} />
-                                        <span><a href="/erp-implementation-cost-calculator/">Calculator</a></span>
+                                        <span><a href="/tools/erp-implementation-cost-calculator/">Calculator</a></span>
                                         <p>Dynamics 365 ERP Implementation Price Calculator.</p>
                                     </div>
                                     <div className='card-666-anc'>
-                                        <a href="/erp-implementation-cost-calculator/">Read more <i className="bi bi-arrow-right"></i></a>
+                                        <a href="/tools/erp-implementation-cost-calculator/">Read more <i className="bi bi-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>

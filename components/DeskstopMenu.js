@@ -128,7 +128,7 @@ const DeskstopMenu = () => {
                 <p>Essential Tool</p>
                 <ul>
                   <li>
-                    <Link href="/erp-implementation-cost-calculator/">
+                    <Link href="/tools/erp-implementation-cost-calculator/">
                       <span className="menu-title-new">
                         Get Your ERP Cost Estimate
                       </span>

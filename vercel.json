@@ -149,6 +149,16 @@
       "source": "/industries/dynamics-365-for-discrete-manufacturing/",
       "destination": "/industries/manufacturing/dynamics-365-for-discrete/",
       "statusCode": 301
+    },
+    {
+      "source": "/top-erp-systems-comparison/",
+      "destination": "/tools/top-erp-systems-comparison/",
+      "statusCode": 301
+    },
+    {
+      "source": "/erp-implementation-cost-calculator/",
+      "destination": "/tools/erp-implementation-cost-calculator/",
+      "statusCode": 301
     }
   ]
 }

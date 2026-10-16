@@ -53,7 +53,7 @@ function MyApp({ Component, pageProps }) {
     "/schedule-a-demo",
     "/products/microsoft-dynamics-365-finance-old",
     "/test-form",
-    "/erp-implementation-cost-calculator",
+    "/tools/erp-implementation-cost-calculator",
         "/tools/microsoft-dynamics-licensing-calculator",
   ];
 

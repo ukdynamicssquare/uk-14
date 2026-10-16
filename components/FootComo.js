@@ -58,8 +58,9 @@ const NAV_COLUMNS = [
     links: [
       { label: "Business Central Pricing", href: "/products/dynamics-365-business-central/pricing-licensing/", isKey: true },
       { label: "Dynamics 365 Guide", href: "/the-ultimate-guide-to-microsoft-dynamics-365/", isKey: true },
-      { label: "ERP Cost Calculator", href: "/erp-implementation-cost-calculator/", isKey: true },
-       {label: "ERP Comparison", href: "/top-erp-systems-comparison/", isKey: true },
+      { label: "ERP Cost Calculator", href: "/tools/erp-implementation-cost-calculator/", isKey: true },
+       {label: "ERP Comparison", href: "/tools/top-erp-systems-comparison/", isKey: true },
+      { label: "Licensing Calculator", href: "/tools/microsoft-dynamics-licensing-calculator/", isKey: true },
       { label: "Business Central vs SAP B1", href: "/dynamics-365-business-central-vs-sap-business-one/" },
       { label: "Business Central vs Sage", href: "/blog/business-central-vs-sage-50/" },
       { label: "Case Studies", href: "/case-studies/" },

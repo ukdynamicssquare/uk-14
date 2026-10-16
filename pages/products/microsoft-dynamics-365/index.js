@@ -747,7 +747,7 @@ const AiERP = () => {
                     <li>Business and Enterprise applications </li>
                     <li>Full User and Team Member licences </li>
 
-                    <li><Link href="/erp-implementation-cost-calculator/">Implementation costs</Link></li>
+                    <li><Link href="/tools/erp-implementation-cost-calculator/">Implementation costs</Link></li>
                     <li><Link href="/our-services/dynamics-365-support-services/">Ongoing support options</Link></li>
 
                     <li>Future licensing requirements </li>

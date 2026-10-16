@@ -195,7 +195,7 @@ const relatedComparisons = [
   { href: "/d365-business-central-vs-d365-finance/", title: "Business Central vs Dynamics 365 Finance", icon: "bi-graph-up" },
   { href: "/dynamics-nav-vs-business-central/", title: "Dynamics NAV vs Business Central", icon: "bi-arrow-repeat" },
   { href: "/dynamics-365-finance-operations-vs-sap-erp/", title: "Finance & Operations vs SAP ERP", icon: "bi-building" },
-  { href: "/top-erp-systems-comparison/", title: "Top ERP Systems Comparison", icon: "bi-trophy" },
+  { href: "/tools/top-erp-systems-comparison/", title: "Top ERP Systems Comparison", icon: "bi-trophy" },
 ];
 
 // Verdict wording reuses the doc's own headings and sentences

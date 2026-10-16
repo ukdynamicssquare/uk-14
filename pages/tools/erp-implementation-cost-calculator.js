@@ -1,7 +1,7 @@
 import React from 'react';
-import MultiStepFormNew from '../components/MultiStepFormNew';
-import FooterHide from '../components/FooterHide';
-import PageSeo from "../components/PageSeo";
+import MultiStepFormNew from '../../components/MultiStepFormNew';
+import FooterHide from '../../components/FooterHide';
+import PageSeo from "../../components/PageSeo";
 // Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
 const PAGE_FAQS = [
   {

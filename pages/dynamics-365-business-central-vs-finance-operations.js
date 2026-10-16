@@ -146,7 +146,7 @@ const relatedComparisons = [
   { href: "/dynamics-nav-vs-business-central/", title: "Dynamics NAV vs Business Central", icon: "bi-arrow-repeat" },
   { href: "/why-choose-microsoft-dynamics-365-business-central/", title: "Why Choose Microsoft Dynamics 365 Business Central", icon: "bi-patch-check" },
   { href: "/products/dynamics-365-business-central/advantages-capabilities/", title: "Business Central Advantages & Capabilities", icon: "bi-grid" },
-  { href: "/top-erp-systems-comparison/", title: "Top ERP Systems Comparison", icon: "bi-trophy" },
+  { href: "/tools/top-erp-systems-comparison/", title: "Top ERP Systems Comparison", icon: "bi-trophy" },
 ];
 
 const getVerdict = (bc, fo) => {

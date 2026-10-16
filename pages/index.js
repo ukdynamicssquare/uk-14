@@ -1680,14 +1680,14 @@ const HomeOneNew = () => {
                       width={610}
                       height={610} />
                     <span>
-                      <a href="/erp-implementation-cost-calculator/">
+                      <a href="/tools/erp-implementation-cost-calculator/">
                         Calculator
                       </a>
                     </span>
                     <p>Dynamics 365 ERP Implementation Price Calculator.</p>
                   </div>
                   <div className="card-666-anc">
-                    <a href="/erp-implementation-cost-calculator/">
+                    <a href="/tools/erp-implementation-cost-calculator/">
                       Read more <i className="bi bi-arrow-right"></i>
                     </a>
                   </div>

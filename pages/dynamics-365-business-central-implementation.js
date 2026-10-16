@@ -253,7 +253,7 @@ const BusinessCentralImplementation = () => {
               <div className='card-671'>
                 <h3>Hidden Costs and Poor Budgeting</h3>
                 <p>The fear of Business Central implementation cost overruns is real. Many businesses underestimate the total cost, including training, integrations, and support. </p>
-                <p>Dynamics Square provides a transparent cost breakdown, ensuring you know where every penny is going. Our goal? Maximum ROI with zero surprises. To calculate ERP implementation cost, you can try our <a className="u-i" href="/erp-implementation-cost-calculator/">ERP implementation cost calculator</a>. </p>
+                <p>Dynamics Square provides a transparent cost breakdown, ensuring you know where every penny is going. Our goal? Maximum ROI with zero surprises. To calculate ERP implementation cost, you can try our <a className="u-i" href="/tools/erp-implementation-cost-calculator/">ERP implementation cost calculator</a>. </p>
               </div>
             </div>
           </div>
@@ -422,9 +422,9 @@ const BusinessCentralImplementation = () => {
                   Support & Maintenance
                   </div>
                 </div>
-                <p>Dynamics Square ensures you get maximum value for your investment without overspending. Besides, you can use our <a className="u-i" href="/erp-implementation-cost-calculator/">ERP implementation cost calculator</a> to calculate the actual cost of implementation.</p>
+                <p>Dynamics Square ensures you get maximum value for your investment without overspending. Besides, you can use our <a className="u-i" href="/tools/erp-implementation-cost-calculator/">ERP implementation cost calculator</a> to calculate the actual cost of implementation.</p>
                 <Link
-                  href="/erp-implementation-cost-calculator/"
+                  href="/tools/erp-implementation-cost-calculator/"
                   className="btn-get-started scrollto">
                   <span>Calculate Your ERP Cost &nbsp;<i className="bi bi-arrow-right"></i></span>
                 </Link>
