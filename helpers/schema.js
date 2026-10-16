@@ -406,6 +406,19 @@ function parseLooseJson(value) {
   }
 }
 
+// The site doesn't publish star ratings about itself (Google treats them as
+// self-serving), so any a writer pastes into the CMS are removed.
+function withoutRatings(value) {
+  if (Array.isArray(value)) return value.map(withoutRatings);
+  if (!value || typeof value !== "object") return value;
+  const out = {};
+  for (const [key, child] of Object.entries(value)) {
+    if (key === "aggregateRating") continue;
+    out[key] = withoutRatings(child);
+  }
+  return out;
+}
+
 // Keeps only the extra schema a writer added in the CMS (FAQPage, HowTo,
 // VideoObject...), repaired and as JSON-LD strings. Unparseable blocks are
 // dropped rather than shipped broken.
@@ -425,7 +438,8 @@ export function cmsExtraSchemas(blocks = [], fallbackImage = "") {
     const extras = nodes
       .filter((node) => node && typeof node === "object")
       .filter((node) => ![].concat(node["@type"]).some((t) => GENERATED_TYPES.has(t)))
-      .map(({ "@context": _context, ...node }) => {
+      .map(({ "@context": _context, ...rawNode }) => {
+        const node = withoutRatings(rawNode);
         if (typeof node.image === "string" && node.image.startsWith("data:")) {
           // Base64 images bloat the page by 100s of KB.
           return fallbackImage ? { ...node, image: fallbackImage } : (({ image, ...rest }) => rest)(node);
