@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "question": "What is Microsoft Dynamics 365 for Healthcare used for?",
+        "answer": "<p>Dynamics 365 applications can support healthcare-related business processes such as financial management, customer service, sales, inventory, procurement and field service. The applications selected depend on the organisation's requirements and existing systems.</p>"
+    },
+    {
+        "id": 2,
+        "question": "Is Microsoft Dynamics 365 suitable for private healthcare providers in the UK?",
+        "answer": "<p>It can be suitable for private healthcare providers that need to improve financial control, manage enquiries, streamline administrative processes or connect business applications. The right solution depends on the provider's size, workflows, integration requirements and data protection obligations.</p>"
+    },
+    {
+        "id": 3,
+        "question": "Can Dynamics 365 integrate with EHR and EMR systems?",
+        "answer": "<p>Integration may be possible through supported APIs, connectors or other integration services. Technical feasibility depends on the EHR or EMR product, available interfaces, data requirements, permissions and security considerations. Each integration should be assessed before implementation.</p>"
+    },
+    {
+        "id": 4,
+        "question": "Which Dynamics 365 solution is suitable for healthcare businesses?",
+        "answer": "<p><a href=\"/products/dynamics-365-business-central/\" class=\"u-i\">Business Central</a> may suit smaller healthcare businesses that need integrated finance and inventory management. Dynamics 365 Finance and Supply Chain Management may be appropriate for more complex financial or supply chain requirements. Customer Service, Sales and <a href=\"/products/microsoft-dynamics-365-field-service/\" class=\"u-i\">Field Service</a> support different customer-facing and operational processes.</p>"
+    },
+    {
+        "id": 5,
+        "question": "Can Dynamics 365 manage healthcare inventory?",
+        "answer": "<p>Business Central and Supply Chain Management can support inventory and purchasing processes. Requirements such as batch tracking, expiry management, product traceability and regulated inventory handling should be assessed against the selected application and configuration.</p>"
+    },
+    {
+        "id": 6,
+        "question": "Is Microsoft Dynamics 365 compliant with UK healthcare regulations?",
+        "answer": "<p>Microsoft provides security and compliance features, but compliance depends on the services used, configuration, organisational controls and applicable regulations. Healthcare organisations must assess their own UK GDPR, data protection and sector-specific obligations.</p>"
+    },
+    {
+        "id": 7,
+        "question": "How much does Dynamics 365 implementation for healthcare cost?",
+        "answer": "<p>Costs depend on the selected applications, number of users, data migration, integrations, customisation, training and support requirements. Dynamics Square can assess your requirements to help define the project scope and expected investment.</p>"
+    },
+    {
+        "id": 8,
+        "question": "How long does a Dynamics 365 implementation take?",
+        "answer": "<p>There is no fixed timeline for every healthcare project. A straightforward implementation may require a different delivery schedule from a project involving several applications, complex integrations, extensive data migration or multiple business locations. The timeline should be agreed after requirements assessment.</p>"
+    },
+    {
+        "id": 9,
+        "question": "Does Dynamics Square provide Dynamics 365 healthcare support?",
+        "answer": "<p>Yes, Dynamics Square provides <a href=\"/our-services/\" class=\"u-i\">Microsoft Dynamics 365 services</a>, including implementation, upgrades, training and support. The appropriate service scope can be discussed according to your applications, technical environment and business requirements.</p>"
+    }
+]

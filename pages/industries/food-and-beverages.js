@@ -39,6 +39,7 @@ const Startup = () => {
                   Efficiently manage your inventory and supply chain by
                   implementing Dynamics 365 for Food and Beverages business.
                 </p>
+                <p>As a trusted Microsoft Dynamics 365 partner in the UK, Dynamics Square helps food and beverage businesses manage inventory, track batches, monitor expiry dates, and improve production planning. Our tailored ERP solutions help businesses maintain quality standards, reduce waste, and streamline supply chain operations.</p>
                 <div className="text-center text-lg-start">
                   <Link
                     href="#exampleModal"

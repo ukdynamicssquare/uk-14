@@ -2,6 +2,8 @@ import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
 import PageSeo from "../../components/PageSeo";
+import { useRef, useState } from "react";
+import styles from "../../styles/microsoft-dynamics-crm.module.css";
 // Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
 const PAGE_FAQS = [
   {
@@ -51,7 +53,132 @@ const PAGE_FAQS = [
 ];
 
 
+const crmFeatures = [
+  {
+    title: "Centralised Customer Information",
+    icon: "bi-person-vcard",
+    text: "As Microsoft Dynamics CRM consolidates everything into one integrated system, it gives teams access to entire customer information on demand, helping organisations ensure easier and better-informed customer interactions.",
+  },
+  {
+    title: "AI-Powered Copilot Assistance",
+    icon: "bi-stars",
+    text: "It helps your employees easily summarise information, create emails, draft responses, and obtain relevant recommendations throughout everyday tasks.",
+  },
+  {
+    title: "Sales Pipeline Management",
+    icon: "bi-funnel",
+    text: "Your sales teams can manage leads, opportunities, follow-ups, and customer interactions through a structured sales pipeline.",
+  },
+  {
+    title: "Marketing Campaign Management",
+    icon: "bi-megaphone",
+    text: "Run marketing campaigns from one place. Businesses can send the right message to the right people and see what is working and what is not.",
+  },
+  {
+    title: "Omnichannel Customer Communication",
+    icon: "bi-chat-dots",
+    text: "Talk to customers through email, phone, chat, or social media from one system. This helps businesses reply faster and stay connected everywhere.",
+  },
+  {
+    title: "Customer Service Management",
+    icon: "bi-headset",
+    text: "Customer support teams can track problems, check past conversations, and help customers better. Everything stays organised in one place.",
+  },
+  {
+    title: "Workflow and Task Automation",
+    icon: "bi-lightning-charge",
+    text: "The system can automatically handle small daily tasks like reminders, follow-ups, and updates. This saves time and reduces manual work.",
+  },
+  {
+    title: "Real-Time Reporting and Insights",
+    icon: "bi-graph-up-arrow",
+    text: "Businesses can see live reports about sales, customers, and performance. This helps teams understand what is happening in the business at any time.",
+  },
+  {
+    title: "Team Collaboration Across Departments",
+    icon: "bi-people",
+    text: "Different teams can share customer information and work together easily. This improves communication and keeps everyone updated.",
+  },
+  {
+    title: "Mobile and Remote Accessibility",
+    icon: "bi-phone",
+    text: "Microsoft Dynamics CRM allows employees to use the system from mobile phones, laptops, or while working outside the office. This helps teams stay connected from anywhere.",
+  },
+  {
+    title: "AI-Driven Customer Insights",
+    icon: "bi-lightbulb",
+    text: "The system studies customer behaviour and buying habits using AI. This helps businesses understand customers better and improve communication.",
+  },
+  {
+    title: "Scalable and Flexible CRM Platform",
+    icon: "bi-arrows-angle-expand",
+    text: "Microsoft Dynamics CRM can support businesses as they grow. It can handle more customers, more employees, and changing business needs without creating confusion.",
+  },
+];
+
+const crmApps = [
+  {
+    title: "Dynamics 365 for Sales",
+    icon: "/img/menu-icons/dynamics-365-sales.svg",
+    href: "/products/microsoft-dynamics-365-sales/",
+    image: "/img/dynamics-365-sales.png",
+    alt: "Dynamics 365 for Sales",
+    width: 1025,
+    height: 587,
+    text: <>Dynamics 365 Sales is an agent-based CRM that keeps track of all sales activity, leads, customers, and opportunities in one place for sales teams. Businesses can get real-time AI sales data, keep track of conversations with customers, and make the most of follow-ups. Businesses can use <a href="/blog/top-benefits-of-microsoft-copilot-in-dynamics-365-crm/">Microsoft Copilot</a> to summarise information, write emails, suggest the best next steps, and cut down on manual sales work. This frees up salespeople to focus on talking to clients and close deals faster. </>,
+  },
+  {
+    title: "Dynamics 365 for Customer Service",
+    icon: "/img/menu-icons/dynamics-365-customer-service.svg",
+    href: "/products/microsoft-dynamics-365-customer-service/",
+    image: "/img/dynamics-for-customer-service.png",
+    alt: "Dynamics 365 for Customer Service",
+    width: 1025,
+    height: 587,
+    text: <>Businesses can provide connected and tailored assistance across different channels with Dynamics 365 Customer Service. Customer support teams can manage cases, access customer history, react quicker, and address problems with greater context every time. Microsoft Copilot improves support operations efficiency and customer happiness with AI-generated replies, case summaries, knowledge recommendations, and virtual agents.</>,
+  },
+  {
+    title: "Dynamics 365 for Customer Insights – Journeys",
+    icon: "/img/menu-icons/dynamics-365-marketing.svg",
+    href: "/products/microsoft-dynamics-365-marketing/",
+    image: "/img/Project-Service-Automation.png",
+    alt: "Dynamics 365 for Customer Insights – Journeys",
+    width: 1025,
+    height: 587,
+    text: <>Marketing teams can tailor customer journeys using <a href="/blog/dynamics-365-customer-insights-journeys/">Dynamics 365 Customer Insights—Journeys&apos;</a> connected data, AI-powered insights, and automated campaign management capabilities. Businesses can monitor client interaction and campaign effectiveness in real time via email, events, and digital marketing. With AI-assisted assistance, Microsoft Copilot helps teams construct campaigns, audience segmentation, content ideas, and lead qualification. </>,
+  },
+  {
+    title: "Dynamics 365 Field Service",
+    icon: "/img/menu-icons/dynamics-365-fieldservice.svg",
+    href: "/products/microsoft-dynamics-365-field-service/",
+    image: "/img/FieldServicebanner.png",
+    alt: "Dynamics 365 Field Service",
+    width: 771,
+    height: 478,
+    text: <>Dynamics 365 Field Services helps firms handle work orders, technician scheduling, service enquiries, and on-site operations from one platform. Field teams can access customer data, service history, and job updates in real time, increasing service coordination. IoT linked capabilities and Microsoft Copilot support enable organisations optimise scheduling, discover service problems earlier, and assist professionals provide quicker and more informed customer care.</>,
+  },
+];
+
 const MicrosoftDynamicsCrm = () => {
+  const [activeCrmApp, setActiveCrmApp] = useState(0);
+  const crmTrackRef = useRef(null);
+
+  // Phones: the application cards become a swipe track. Keep the dots in
+  // sync with whichever card is snapped into view.
+  const crmSlideWidth = (track) =>
+    track.firstElementChild.offsetWidth + (parseFloat(getComputedStyle(track).columnGap) || 0);
+
+  const handleCrmSwipe = () => {
+    const track = crmTrackRef.current;
+    if (!track || track.scrollWidth <= track.clientWidth) return;
+    const index = Math.min(Math.round(track.scrollLeft / crmSlideWidth(track)), crmApps.length - 1);
+    if (index !== activeCrmApp) setActiveCrmApp(index);
+  };
+
+  const goToCrmSlide = (i) => {
+    const track = crmTrackRef.current;
+    if (track) track.scrollTo({ left: i * crmSlideWidth(track), behavior: 'smooth' });
+  };
   return (
     <>
       <PageSeo
@@ -168,93 +295,30 @@ const MicrosoftDynamicsCrm = () => {
       </section>
 
 
-      <section className='bg-004s'>
-        <div className="container my-float-i">
-          <div className="row">
+      <section className={styles['crm-feat-section']}>
+        <div className="container">
+          <div className="row justify-content-center">
             <div className="col-lg-9">
-              <div className="supprt-header-new-one">
+              <div className={`supprt-header-new-one ${styles['crm-feat-head']}`}>
                 <h2>Microsoft Dynamics CRM Features</h2>
                 <p>Microsoft Dynamics CRM keeps customer data, communications, sales activities, marketing initiatives, and service operations into one, unified platform. Every app inside Dynamics 365 CRM is powered by <a href="/products/dynamics-365-copilot/">Microsoft Copilot</a> and agentic CRM features. These capabilities enable firms to manage customer interactions with more speed and visibility, and with better collaboration across departments. Let’s find out more on the key capabilities of Microsoft Dynamics CRM:  </p>
-                <br />
               </div>
             </div>
           </div>
-
-          <div className="row g-5">
-            <div className="col-lg-4 d-flex">
-              <div className="solution-new-card-001 solution-new-card-009">
-                <h3>Centralised Customer Information </h3>
-                <p>As Microsoft Dynamics CRM consolidates everything into one integrated system, it gives teams access to entire customer information on demand, helping organisations ensure easier and better-informed customer interactions.</p>
+          <div className={styles['crm-feat-grid']}>
+            {crmFeatures.map((feature, i) => (
+              <div className={styles['crm-feat-card']} key={feature.title}>
+                <div className={styles['crm-feat-card__top']}>
+                  <span className={styles['crm-feat-card__icon']}><i className={`bi ${feature.icon}`} aria-hidden="true"></i></span>
+                  <span className={styles['crm-feat-card__num']} aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+                </div>
+                <div className={styles['crm-feat-card__body']}>
+                  <h3>{feature.title}</h3>
+                  <p>{feature.text}</p>
+                </div>
               </div>
-            </div>
-            <div className="col-lg-4 d-flex">
-              <div className="solution-new-card-001 solution-new-card-009">
-                <h3>AI-Powered Copilot Assistance </h3>
-                <p>It helps your employees easily summarise information, create emails, draft responses, and obtain relevant recommendations throughout everyday tasks.</p>
-              </div>
-            </div>
-            <div className="col-lg-4 d-flex">
-              <div className="solution-new-card-001 solution-new-card-009">
-                <h3>Sales Pipeline Management</h3>
-                <p>Your sales teams can manage leads, opportunities, follow-ups, and customer interactions through a structured sales pipeline.</p>
-              </div>
-            </div>
-            <div className="col-lg-4 d-flex">
-              <div className="solution-new-card-001 solution-new-card-009">
-                <h3>Marketing Campaign Management </h3>
-                <p>Run marketing campaigns from one place. Businesses can send the right message to the right people and see what is working and what is not. </p>
-              </div>
-            </div>
-            <div className="col-lg-4 d-flex">
-              <div className="solution-new-card-001 solution-new-card-009">
-                <h3>Omnichannel Customer Communication</h3>
-                <p>Talk to customers through email, phone, chat, or social media from one system. This helps businesses reply faster and stay connected everywhere. </p>
-              </div>
-            </div>
-            <div className="col-lg-4 d-flex">
-              <div className="solution-new-card-001 solution-new-card-009">
-                <h3>Customer Service Management </h3>
-                <p>Customer support teams can track problems, check past conversations, and help customers better. Everything stays organised in one place.</p>
-              </div>
-            </div>
-            <div className="col-lg-4 d-flex">
-              <div className="solution-new-card-001 solution-new-card-009">
-                <h3>Workflow and Task Automation</h3>
-                <p>The system can automatically handle small daily tasks like reminders, follow-ups, and updates. This saves time and reduces manual work. </p>
-              </div>
-            </div>
-            <div className="col-lg-4 d-flex">
-              <div className="solution-new-card-001 solution-new-card-009">
-                <h3>Real-Time Reporting and Insights</h3>
-                <p>Businesses can see live reports about sales, customers, and performance. This helps teams understand what is happening in the business at any time.</p>
-              </div>
-            </div>
-            <div className="col-lg-4 d-flex">
-              <div className="solution-new-card-001 solution-new-card-009">
-                <h3>Team Collaboration Across Departments </h3>
-                <p>Different teams can share customer information and work together easily. This improves communication and keeps everyone updated.</p>
-              </div>
-            </div>
-            <div className="col-lg-4 d-flex">
-              <div className="solution-new-card-001 solution-new-card-009">
-                <h3>Mobile and Remote Accessibility </h3>
-                <p>Microsoft Dynamics CRM allows employees to use the system from mobile phones, laptops, or while working outside the office. This helps teams stay connected from anywhere. </p>
-              </div>
-            </div>
-            <div className="col-lg-4 d-flex">
-              <div className="solution-new-card-001 solution-new-card-009">
-                <h3>AI-Driven Customer Insights </h3>
-                <p>The system studies customer behaviour and buying habits using AI. This helps businesses understand customers better and improve communication. </p>
-              </div>
-            </div>
-            <div className="col-lg-4 d-flex">
-              <div className="solution-new-card-001 solution-new-card-009">
-                <h3>Scalable and Flexible CRM Platform</h3>
-                <p>Microsoft Dynamics CRM can support businesses as they grow. It can handle more customers, more employees, and changing business needs without creating confusion.</p>
-              </div>
-            </div>
+            ))}
           </div>
-
         </div>
       </section>
       <section className="call-to-action-center hero-4">
@@ -566,7 +630,7 @@ const MicrosoftDynamicsCrm = () => {
         </div>
       </section>
 
-      <section className="bg-shape">
+      <section className={styles['crm-apps-section']}>
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-9">
@@ -578,92 +642,57 @@ const MicrosoftDynamicsCrm = () => {
               </header>
             </div>
           </div>
-          <div className="row pad9x rever-1">
-            <div className="col-lg-7 align-self-center">
-              <div className="commen-lef-pic">
-                <Image
-                  src="/img/dynamics-365-sales.png"
-                  alt="Dynamics 365 for Sales"
-                  width={1025} height={587} />
-              </div>
-            </div>
-            <div className="col-lg-5 align-self-center">
-              <div className="commen-rit-info">
-                <h3 className="cc-color-g">Dynamics 365 for Sales</h3>
-                <p>Dynamics 365 Sales is an agent-based CRM that keeps track of all sales activity, leads, customers, and opportunities in one place for sales teams. Businesses can get real-time AI sales data, keep track of conversations with customers, and make the most of follow-ups. Businesses can use <a href="/blog/top-benefits-of-microsoft-copilot-in-dynamics-365-crm/">Microsoft Copilot</a> to summarise information, write emails, suggest the best next steps, and cut down on manual sales work. This frees up salespeople to focus on talking to clients and close deals faster. </p>
-                <div className="cltt-actt">
-                  <Link href="/products/microsoft-dynamics-365-sales/" target="_blank">
-                    Learn More
-                  </Link>
-                </div>
-              </div>
-            </div>
+          <div className={styles['crm-apps__tabs']} role="tablist" aria-label="Microsoft Dynamics CRM Applications">
+            {crmApps.map((app, i) => (
+              <button
+                key={app.title}
+                type="button"
+                role="tab"
+                id={`crm-app-tab-${i}`}
+                aria-selected={activeCrmApp === i}
+                aria-controls={`crm-app-panel-${i}`}
+                className={`${styles['crm-apps__tab']}${activeCrmApp === i ? ' is-active' : ''}`}
+                onClick={() => setActiveCrmApp(i)}
+              >
+                <img src={app.icon} alt={`${app.title} logo`} width={28} height={28} loading="lazy" decoding="async" />
+                <span>{app.title}</span>
+              </button>
+            ))}
           </div>
-
-          <div className="row pad9x">
-            <div className="col-lg-5 align-self-center">
-              <div className="commen-rit-info">
-                <h3 className="cc-color-g">Dynamics 365 for Customer Service</h3>
-                <p>Businesses can provide connected and tailored assistance across different channels with Dynamics 365 Customer Service. Customer support teams can manage cases, access customer history, react quicker, and address problems with greater context every time. Microsoft Copilot improves support operations efficiency and customer happiness with AI-generated replies, case summaries, knowledge recommendations, and virtual agents.</p>
-                <div className="cltt-actt">
-                  <Link href="/products/microsoft-dynamics-365-customer-service/" target="_blank">
-                    Learn More
+          <div className={styles['crm-apps__panels']} ref={crmTrackRef} onScroll={handleCrmSwipe}>
+            {crmApps.map((app, i) => (
+              <div
+                key={app.title}
+                role="tabpanel"
+                id={`crm-app-panel-${i}`}
+                aria-labelledby={`crm-app-tab-${i}`}
+                className={`${styles['crm-apps__panel']}${activeCrmApp === i ? ' is-active' : ''}`}
+              >
+                <div className={styles['crm-apps__media']}>
+                  <Image src={app.image} alt={app.alt} width={app.width} height={app.height} sizes="(max-width: 991px) 100vw, 640px" />
+                </div>
+                <div className={styles['crm-apps__body']}>
+                  <h3>{app.title}</h3>
+                  <p>{app.text}</p>
+                  <Link href={app.href} target="_blank" className={styles['crm-apps__link']}>
+                    Learn More <i className="bi bi-arrow-right" aria-hidden="true"></i>
                   </Link>
                 </div>
               </div>
-            </div>
-            <div className="col-lg-7 align-self-center">
-              <div className="commen-lef-pic">
-                <Image
-                  src="/img/dynamics-for-customer-service.png"
-                  alt="Dynamics 365 for Customer Service"
-                  width={1025} height={587} />
-              </div>
-            </div>
+            ))}
           </div>
-
-          <div className="row pad9x rever-1">
-            <div className="col-lg-7 align-self-center">
-              <div className="commen-lef-pic">
-                <Image
-                  src="/img/Project-Service-Automation.png"
-                  alt="Dynamics 365 for Customer Insights – Journeys"
-                  width={1025} height={587} />
-              </div>
-            </div>
-            <div className="col-lg-5 align-self-center">
-              <div className="commen-rit-info">
-                <h3 className="cc-color-g">Dynamics 365 for Customer Insights – Journeys</h3>
-                <p>Marketing teams can tailor customer journeys using <a href="/blog/dynamics-365-customer-insights-journeys/">Dynamics 365 Customer Insights—Journeys'</a> connected data, AI-powered insights, and automated campaign management capabilities. Businesses can monitor client interaction and campaign effectiveness in real time via email, events, and digital marketing. With AI-assisted assistance, Microsoft Copilot helps teams construct campaigns, audience segmentation, content ideas, and lead qualification. </p>
-                <div className="cltt-actt">
-                  <Link href="/products/microsoft-dynamics-365-marketing/" target="_blank">
-                    Learn More
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="row pad9x">
-            <div className="col-lg-5 align-self-center">
-              <div className="commen-rit-info">
-                <h3 className="cc-color-g">Dynamics 365 Field Service</h3>
-                <p>Dynamics 365 Field Services helps firms handle work orders, technician scheduling, service enquiries, and on-site operations from one platform. Field teams can access customer data, service history, and job updates in real time, increasing service coordination. IoT linked capabilities and Microsoft Copilot support enable organisations optimise scheduling, discover service problems earlier, and assist professionals provide quicker and more informed customer care.</p>
-                <div className="cltt-actt">
-                  <Link href="/products/microsoft-dynamics-365-field-service/" target="_blank">
-                    Learn More
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-7 align-self-center">
-              <div className="commen-lef-pic text-center">
-                <Image
-                  src="/img/FieldServicebanner.png"
-                  alt="Dynamics 365 Field Service"
-                  width={600} height={380} />
-              </div>
-            </div>
+          {/* Phones only: position dots for the swipe track */}
+          <div className={styles['crm-apps__dots']}>
+            {crmApps.map((app, i) => (
+              <button
+                key={app.title}
+                type="button"
+                aria-label={app.title}
+                aria-current={activeCrmApp === i ? 'step' : undefined}
+                className={activeCrmApp === i ? 'is-active' : ''}
+                onClick={() => goToCrmSlide(i)}
+              ></button>
+            ))}
           </div>
         </div>
       </section>

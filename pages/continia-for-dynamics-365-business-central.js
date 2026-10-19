@@ -49,6 +49,7 @@ const Continia = () => {
                 <h1>Continia for Dynamics 365 Business Central</h1>
                 <span className='large-heading'>Finance Chaos Ends Here</span>
                 <p>Are your invoices piling up? Expense claims crawl through spreadsheets? Output delivery still needs a human nudge? Gain full control with Continia for Dynamics 365 Business Central. It eliminates every blind spot before it costs you.</p>
+                <p>As a trusted UK's Microsoft Dynamics 365 partner, Dynamics Square helps businesses integrate Continia with Dynamics 365 Business Central to automate invoice processing, manage expenses, and streamline financial workflows. Our experts help reduce manual tasks, improve financial accuracy, and make accounts payable processes more efficient.</p>
                 <div className="text-center">
                   <Link
                     href="#exampleModal"

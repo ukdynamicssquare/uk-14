@@ -27,7 +27,7 @@ const Dynamics365ForProfessionalServices = () => {
     <>
       <PageSeo
         type="Service"
-        title="Miscrosoft Dynamics 365 For Professional Services | Dynamics Square"
+        title="Dynamics 365 For Professional Services | Dynamics Square"
         description="Dynamics 365 for professional services helps firms manage projects, resources, billing, and profitability with real-time insights and automation. Partner with Dynamics Square UK today."
         image="https://www.dynamicssquare.co.uk/img/professional-services-01.png"
         faqs={PAGE_FAQS}
@@ -40,6 +40,7 @@ const Dynamics365ForProfessionalServices = () => {
                 <h1>Dynamics 365 for Professional Services</h1>
                 <span className='large-heading'>Better Planning. Stronger Coordination for Service Firms</span>
                 <p>Dynamics 365 for professional services helps service firms in the UK bring order to their projects, teams, clients, and financials. It connects planning, scheduling, resourcing, billing, and performance tracking so that teams work with steady clarity across every stage of a project. Choose a setup that keeps client work organised, supports stronger coordination, and helps every department move in the same direction.</p>
+                <p>As a trusted UK's Microsoft Dynamics 365 partner, Dynamics Square helps professional services firms implement and optimise tailored solutions to streamline project management, improve resource utilisation, strengthen client relationships, and enhance financial visibility through seamless integration and AI-powered capabilities.</p>
                 <div className="text-center">
                   <Link
                     href="#exampleModal"

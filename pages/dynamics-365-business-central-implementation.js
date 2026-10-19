@@ -7,8 +7,8 @@ import useCardScrollEffect from "../components/useCardScrollEffect";
 import PageSeo from "../components/PageSeo";
 
 const pageUrl = "https://www.dynamicssquare.co.uk/dynamics-365-business-central-implementation/";
-const pageTitle = "Dynamics 365 Business Central Implementation | Dynamics Square™";
-const pageDescription = "Get fast, efficient Microsoft Dynamics 365 Business Central implementation with Dynamics Square UK – tailored ERP solutions for UK businesses of all sizes.";
+const pageTitle = "Business Central Implementation | Dynamics Square™ UK";
+const pageDescription = "Partner with Dynamics Square UK for Microsoft Dynamics 365 Business Central implementation. Get expert guidance on data migration, system integration, training and ongoing support.";
 const pageImage = "https://www.dynamicssquare.co.uk/img/bc-support-banner.png";
 
 const pageSchema = {
@@ -94,7 +94,7 @@ const BusinessCentralImplementation = () => {
               <div className='solution-new-banner-one-content'>
                 <h1>Dynamics 365 Business Central Implementation </h1>
                 <span className='large-heading'>Implement Business Central, Unlock AI-Powered Growth!</span>
-                <p>Looking for Business Central implementation? Get it right the first time with Dynamics Square, a leading Microsoft Dynamics 365 Business Central implementation partner in the UK! </p>
+                <p>Looking to Business Central implementation? Dynamics Square is a trusted Microsoft partner in the UK, helping businesses plan and deliver successful ERP implementations.</p>
                 <p>From planning and data migration to system integration, AI-powered capabilities and user training, our experts help align Business Central with your business requirements for a smooth, well-managed implementation.</p>
                 <div className="text-center">
                   <Link

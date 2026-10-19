@@ -26,6 +26,7 @@ const MicrosoftCloudForNonprofit = () => {
               <div className="col-lg-6 mobile-1 align-self-center">
                 <h1>Dynamics 365 for Retail</h1>
                 <p>Manage end-to-end retail operations, offer an exceptional customer experience, and handle multiple sales channels from a single screen with Dynamics 365 for Retail.</p>
+                <p>As a trusted Microsoft Dynamics 365 partner in the UK, Dynamics Square helps retail businesses manage inventory, streamline sales, and improve customer experiences across online and physical stores. Our tailored ERP and retail solutions help businesses simplify operations, gain better insights, and support business growth.</p>
                 <div className="text-center text-lg-start">
                   <Link
                     href="#exampleModal"

@@ -27,6 +27,7 @@ const ErpMicrosoftCloudFor = () => {
                 <h1>Dynamics 365 Copilot</h1>
                 <h2>Unleash Productivity with Dynamics 365 Copilot</h2>
                 <p>Transform your workflows, automate tasks, and accelerate decision-making with Microsoft Dynamics 365 Copilot.</p>
+                <p>As a trusted UK's Microsoft Dynamics partner, Dynamics Square helps businesses use Copilot to automate tasks, improve productivity, streamline workflows, and make better business decisions with AI-powered capabilities.</p>
                 <div className='ne-callt-batt'>
                   <Link
                     href="#exampleModal"

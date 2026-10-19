@@ -58,6 +58,9 @@ const HeaderWork = () => {
            "/industries/manufacturing/dynamics-365-for-pharmaceutical": `${gname}`,
            "/industries/manufacturing/dynamics-365-for-medical-device": `${gname}`,
            "/products": `${gname}`,
+            "/industries/dynamics-365-for-healthcare": `${gname}`,
+
+
     "/book-a-demo": `${gname}`,
   };
   // const hide = ["/contact-us", "/thank-you"];
@@ -101,7 +104,18 @@ const HeaderWork = () => {
     };
     measure();
     window.addEventListener("resize", measure);
-    return () => window.removeEventListener("resize", measure);
+    // Re-measure whenever the header's own size changes (e.g. the top bar is
+    // hidden by the mobile stylesheet after the first measure), so the
+    // reserved space never leaves a gap under the header.
+    const observer =
+      typeof ResizeObserver !== "undefined" && headerRef.current
+        ? new ResizeObserver(measure)
+        : null;
+    if (observer) observer.observe(headerRef.current);
+    return () => {
+      window.removeEventListener("resize", measure);
+      if (observer) observer.disconnect();
+    };
   }, [router.pathname]);
 
   useEffect(() => {
@@ -171,8 +185,8 @@ const HeaderWork = () => {
                     width={301}
                     height={21}
                   />
-                  <Image className="log-part" src={getLogoSrctwo()} alt="" width={141}
-                    height={40} style={{ height: "auto" }} priority />
+                  <Image className="log-part" src={getLogoSrctwo()} alt="Microsoft Solutions Partner logo" width={141}
+                    height={40} priority />
                 </div>
 
               </Link>

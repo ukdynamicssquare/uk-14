@@ -21,7 +21,7 @@ const Education = () => {
     <>
       <PageSeo
         type="Service"
-        title="Microsoft Dynamics 365 for Education | Dynamics Square UK"
+        title="Dynamics 365 for Education | Dynamics Square UK"
         description="Transform higher education with Microsoft Dynamics 365 for Education. Streamline admissions, student engagement & operations. Contact Dynamics Square UK."
         image="https://www.dynamicssquare.co.uk/img/Bc-Discrete-Manufacturing.png"
         faqs={faqData.slice(0, 5)}
@@ -34,6 +34,7 @@ const Education = () => {
                 <h1>Dynamics 365 for Education</h1>
                 <span className='large-heading'>Create Connected Experiences in Your Educational Institution</span>
                 <p>Microsoft Dynamics 365 for Education helps educational institutions connect admissions, student engagement, finance, communication, and administration through one AI-powered platform.</p>
+                <p>As a trusted UK's Microsoft Dynamics 365 partner, Dynamics Square helps universities and colleges implement and optimise integrated solutions to streamline admissions, enhance student engagement, and improve financial and administrative management through seamless integration and AI-powered capabilities.</p>
                 <div className="text-center">
                   <Link
                     href="#exampleModal"

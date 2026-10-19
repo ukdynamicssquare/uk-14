@@ -49,6 +49,7 @@ const Continia = () => {
                 <h1>Yavrio Integration with Business Central</h1>
                 <span className='large-heading'>Precision Banking Now Inside Your ERP</span>
                 <p>Yavrio integration with Business Central ensures your finance team does not end up spending hours on manual banking tasks such as expense reconciliation and matching records across multiple systems. Transform manual finance into real-time, automated, and fully connected operations.</p>
+                <p>As a trusted UK's Microsoft Dynamics partner, Dynamics Square helps businesses integrate Yavrio with Dynamics 365 Business Central to automate bank feeds, streamline bank reconciliation, and improve financial visibility. Our experts help reduce manual data entry, improve accuracy, and simplify day-to-day financial management.</p>
                 <div className="text-center">
                   <Link
                     href="#exampleModal"

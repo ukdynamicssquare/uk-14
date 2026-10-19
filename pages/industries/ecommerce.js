@@ -41,6 +41,7 @@ const Ecommerce = () => {
                   Customer Experience With Microsoft Dynamics 365 For ECommerce
                   .
                 </p>
+                <p>As a trusted Dynamics 365 partner in the UK, Dynamics Square helps retail businesses implement Dynamics 365 Commerce to manage sales, inventory, and customer interactions across online and physical stores. Our solutions help businesses streamline retail operations, improve customer experiences, and gain better visibility into sales performance.</p>
                 <div className="text-center text-lg-start">
                   <Link
                     href="#exampleModal"

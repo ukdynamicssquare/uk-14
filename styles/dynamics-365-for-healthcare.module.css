@@ -1,0 +1,946 @@
+/* Styles for pages/industries/dynamics-365-for-healthcare.js */
+
+/* ==========================================================================
+   Applications tabs
+   ========================================================================== */
+.hc-apps-section {
+  padding: 70px 0;
+  background: #F1F0F4;
+}
+.hc-apps {
+  display: grid;
+  grid-template-columns: 360px minmax(0, 1fr);
+  gap: 28px;
+  margin-top: 30px;
+  align-items: stretch;
+}
+.hc-apps__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* lets the phone tab row scroll instead of widening the page */
+  min-width: 0;
+}
+.hc-apps__tab {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 16px 18px;
+  background: #fff;
+  border: 1px solid #e4e0ee;
+  border-radius: 12px;
+  text-align: left;
+  color: #2d2640;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+.hc-apps__tab span {
+  flex: 1;
+}
+.hc-apps__tab :global(.bi) {
+  color: #8e44ad;
+  font-size: 14px;
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.hc-apps__tab:hover {
+  border-color: #c9b8e0;
+  transform: translateX(4px);
+}
+.hc-apps__tab:global(.is-active) {
+  background: linear-gradient(135deg, #4a3b69 0%, #2d2640 100%);
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 12px 28px rgba(45, 38, 64, 0.25);
+}
+.hc-apps__tab:global(.is-active) :global(.bi) {
+  color: #fff;
+  opacity: 1;
+  transform: translateX(0);
+}
+.hc-apps__tab img {
+  flex-shrink: 0;
+  background: #fff;
+  border-radius: 8px;
+  padding: 3px;
+}
+.hc-apps__panels {
+  position: relative;
+}
+.hc-apps__panel {
+  display: none;
+  position: relative;
+  height: 100%;
+  padding: 44px 48px 90px;
+  background: #fff;
+  border-radius: 16px;
+  border-top: 4px solid #8e44ad;
+  box-shadow: 0 16px 40px rgba(45, 38, 64, 0.08);
+  overflow: hidden;
+}
+.hc-apps__panel::after {
+  content: "";
+  position: absolute;
+  right: -80px;
+  bottom: -80px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(142, 68, 173, 0.12) 0%, rgba(142, 68, 173, 0) 70%);
+  pointer-events: none;
+}
+.hc-apps__panel:global(.is-active) {
+  display: block;
+  animation: hcAppsFade 0.35s ease;
+}
+@keyframes hcAppsFade {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hc-apps__panel-head {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+.hc-apps__panel-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 76px;
+  height: 76px;
+  flex-shrink: 0;
+  border-radius: 18px;
+  background: #f2eff7;
+}
+.hc-apps__panel h3 {
+  margin: 0;
+  color: #2d2640;
+  font-size: 26px;
+  font-weight: 700;
+}
+.hc-apps__panel p {
+  color: #5b5768;
+  font-size: 17px;
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+.hc-apps__link {
+  position: absolute;
+  left: 48px;
+  bottom: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #8e44ad;
+  color: #fff;
+  font-size: 20px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+.hc-apps__link:hover {
+  background: #60518c;
+  color: #fff;
+  transform: translateX(4px);
+}
+
+@media (max-width: 991px) {
+  .hc-apps {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+  .hc-apps__nav {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    scroll-snap-type: x mandatory;
+  }
+  .hc-apps__tab {
+    width: auto;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+  .hc-apps__tab:hover {
+    transform: none;
+  }
+  .hc-apps__tab :global(.bi) {
+    display: none;
+  }
+  .hc-apps__panel {
+    padding: 30px 24px 86px;
+  }
+  .hc-apps__panel h3 {
+    font-size: 21px;
+  }
+  .hc-apps__panel p {
+    font-size: 15px;
+  }
+  .hc-apps__link {
+    left: 24px;
+    bottom: 26px;
+  }
+}
+@media (max-width: 575px) {
+  .hc-apps-section {
+    padding: 50px 0;
+  }
+  .hc-apps__panel-icon {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+/* ==========================================================================
+   Case studies list
+   ========================================================================== */
+.hc-case-section {
+  padding: 80px 0;
+  background: #fff;
+}
+.hc-case-intro {
+  position: sticky;
+  top: 110px;
+  padding: 36px 32px;
+  border-radius: 18px;
+  background: linear-gradient(160deg, #4a3b69 0%, #2d2640 100%);
+  box-shadow: 0 18px 40px rgba(45, 38, 64, 0.22);
+}
+.hc-case-intro h2 {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 18px;
+}
+.hc-case-intro p {
+  color: #d8cdea;
+  font-size: 15px;
+  line-height: 1.7;
+}
+.hc-case-intro p:last-child {
+  margin-bottom: 0;
+}
+.hc-case-list {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  padding-bottom: 20px;
+}
+.hc-case-item {
+  /* Stacked cards: each card sticks a little lower than the one before,
+     so later cards slide over earlier ones while scrolling. */
+  /* --stack (0 → 1) is set from scroll in the page: the card shrinks and
+     dims as the next card covers it. */
+  position: sticky;
+  top: calc(110px + var(--i, 0) * 14px);
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  min-height: 250px;
+  background: #F7F6FA;
+  border: 1px solid #ebe7f2;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 -6px 24px rgba(45, 38, 64, 0.08);
+  transform: scale(var(--stack-scale, 1));
+  transform-origin: center top;
+  will-change: transform;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.hc-case-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #2d2640;
+  opacity: var(--stack-dim, 0);
+  pointer-events: none;
+}
+.hc-case-item:hover {
+  border-color: #d6c8ea;
+  box-shadow: 0 -6px 24px rgba(45, 38, 64, 0.08), 0 16px 36px rgba(45, 38, 64, 0.12);
+}
+.hc-case-item__img {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+.hc-case-item__img img {
+  width: 100%;
+  height: 100%;
+  min-height: 210px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.hc-case-item:hover .hc-case-item__img img {
+  transform: scale(1.05);
+}
+.hc-case-item__num {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(45, 38, 64, 0.85);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.hc-case-item__body {
+  display: flex;
+  flex-direction: column;
+  padding: 26px 30px;
+}
+.hc-case-item__body h3 {
+  color: #2d2640;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+.hc-case-item__body p {
+  color: #5b5768;
+  font-size: 15px;
+  line-height: 1.65;
+  margin-bottom: 16px;
+}
+.hc-case-item__link {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-start;
+  color: #8e44ad;
+  font-weight: 700;
+  font-size: 15px;
+}
+.hc-case-item__link :global(.bi) {
+  transition: transform 0.2s ease;
+}
+.hc-case-item__link:hover {
+  color: #60518c;
+}
+.hc-case-item__link:hover :global(.bi) {
+  transform: translateX(4px);
+}
+
+@media (max-width: 991px) {
+  .hc-case-section {
+    padding: 60px 0;
+  }
+  .hc-case-intro {
+    position: static;
+  }
+  .hc-case-intro h2 {
+    font-size: 26px;
+  }
+}
+@media (max-width: 767px) {
+  .hc-case-item {
+    grid-template-columns: minmax(0, 1fr);
+    top: calc(80px + var(--i, 0) * 10px);
+    min-height: 0;
+  }
+  .hc-case-item__img img {
+    height: 200px;
+    min-height: 0;
+  }
+  .hc-case-item__body {
+    padding: 22px 20px;
+  }
+  .hc-case-item__body h3 {
+    font-size: 18px;
+  }
+}
+
+/* Hero image. The image is
+   shorter than the template's, so it overlaps the next section less. */
+@media (min-width: 993px) {
+  :global(.m-b-image-nnn).hc-hero-img {
+    margin-bottom: -120px;
+  }
+}
+/* Tablets and phones: the template trims the image's bottom whitespace with a
+   negative margin, but this photo has little whitespace, so the next heading
+   ran into it. Keep a gap instead. */
+@media (max-width: 992px) {
+  .hc-hero-img:global(.m-b-image-nnn):not(:global(.m-b-image-nna)) {
+    margin-bottom: 0;
+  }
+  :global(.pd-con-69).hc-intro-section {
+    padding-top: 40px;
+  }
+  /* Side photo stacks under the CTA button; give it room */
+  .hc-intro-section :global(.img-backs-sid-two) {
+    margin-top: 36px;
+  }
+}
+
+/* ==========================================================================
+   Challenges grid
+   ========================================================================== */
+.hc-challenge-section {
+  padding: 80px 0;
+  background: #F1F0F4;
+}
+.hc-challenges {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 36px;
+}
+.hc-challenge {
+  position: relative;
+  padding: 30px 28px 32px;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(45, 38, 64, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  isolation: isolate;
+}
+/* Accent along the top edge */
+.hc-challenge::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(to right, #984b6e, #60518c);
+}
+/* Dark fill that fades in on hover */
+.hc-challenge::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: linear-gradient(135deg, #4a3b69 0%, #2d2640 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.hc-challenge:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 44px rgba(45, 38, 64, 0.22);
+}
+.hc-challenge:hover::after {
+  opacity: 1;
+}
+.hc-challenge__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+.hc-challenge__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  background: #f2eff7;
+  transition: transform 0.3s ease;
+}
+.hc-challenge:hover .hc-challenge__icon {
+  transform: scale(1.06);
+}
+.hc-challenge__num {
+  font-family: Lato, "Lato Fallback", sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1.5px #e0d6ee;
+  transition: -webkit-text-stroke-color 0.3s ease;
+}
+.hc-challenge:hover .hc-challenge__num {
+  -webkit-text-stroke-color: rgba(214, 200, 234, 0.45);
+}
+.hc-challenge h3 {
+  color: #2d2640;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
+}
+.hc-challenge p {
+  color: #5b5768;
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+.hc-challenge:hover h3 {
+  color: #fff;
+}
+.hc-challenge:hover p {
+  color: #d8cdea;
+}
+
+@media (max-width: 991px) {
+  .hc-challenges {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+}
+@media (max-width: 575px) {
+  .hc-challenge-section {
+    padding: 60px 0;
+  }
+  .hc-challenges {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    margin-top: 26px;
+  }
+  .hc-challenge {
+    padding: 24px 20px 26px;
+  }
+  .hc-challenge__icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 15px;
+  }
+  .hc-challenge__num {
+    font-size: 32px;
+  }
+  .hc-challenge h3 {
+    font-size: 18px;
+  }
+}
+
+/* ==========================================================================
+   "What is" section
+   ========================================================================== */
+.hc-intro-section {
+  padding-bottom: 80px;
+}
+.hc-what-section {
+  padding: 80px 0;
+  background: #fff;
+}
+.hc-what-lead h2 {
+  background-image: linear-gradient(to right, #984b6e, #60518c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 26px;
+}
+.hc-what-lead__card {
+  position: relative;
+  padding: 34px 32px 30px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #4a3b69 0%, #2d2640 100%);
+  box-shadow: 0 18px 40px rgba(45, 38, 64, 0.22);
+  overflow: hidden;
+}
+.hc-what-lead__card::after {
+  content: "";
+  position: absolute;
+  right: -60px;
+  top: -60px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(152, 75, 110, 0.5) 0%, rgba(152, 75, 110, 0) 70%);
+  pointer-events: none;
+}
+.hc-what-lead__card :global(.bi) {
+  display: block;
+  color: #b79ad6;
+  font-size: 44px;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.hc-what-lead__card p {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.6;
+  margin: 0;
+}
+.hc-what-points {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.hc-what-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 24px 26px;
+  border-radius: 16px;
+  background: #F7F6FA;
+  border: 1px solid #ebe7f2;
+  border-left: 4px solid #8e44ad;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.hc-what-point:hover {
+  transform: translateX(6px);
+  box-shadow: 0 12px 28px rgba(45, 38, 64, 0.1);
+}
+.hc-what-point__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #8e44ad 0%, #60518c 100%);
+  color: #fff;
+  font-size: 21px;
+}
+.hc-what-point p {
+  color: #5b5768;
+  font-size: 15px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .hc-intro-section {
+    padding-bottom: 60px;
+  }
+  .hc-what-section {
+    padding: 60px 0;
+  }
+  .hc-what-lead h2 {
+    font-size: 28px;
+  }
+}
+@media (max-width: 575px) {
+  .hc-what-lead__card {
+    padding: 26px 22px 24px;
+  }
+  .hc-what-lead__card p {
+    font-size: 17px;
+  }
+  .hc-what-point {
+    gap: 14px;
+    padding: 20px 18px;
+  }
+  .hc-what-point:hover {
+    transform: none;
+  }
+  .hc-what-point__icon {
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+  }
+}
+
+/* ==========================================================================
+   Why Choose section
+   ========================================================================== */
+.hc-why-section {
+  position: relative;
+  padding: 70px 0;
+  overflow: hidden;
+  background: #fff;
+}
+.hc-why-head h2 {
+  background-image: linear-gradient(to right, #984b6e, #60518c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Lato, "Lato Fallback", sans-serif;
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 14px;
+}
+.hc-why-head p {
+  color: #544c7d;
+  font-size: 16px;
+  line-height: 1.65;
+  margin-bottom: 10px;
+}
+.hc-why-label {
+  margin: 20px 0 4px;
+  color: #8e44ad;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.hc-why-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+}
+.hc-why-row {
+  position: relative;
+  border-radius: 14px;
+  background: #F7F6FA;
+  border: 1px solid transparent;
+  transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+/* Timeline line joining each badge to the next one */
+.hc-why-row:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: 35px;
+  top: 49px;
+  bottom: -21px;
+  width: 2px;
+  background: linear-gradient(to bottom, #d6c8ea, rgba(214, 200, 234, 0.3));
+}
+.hc-why-row:hover {
+  border-color: #e0d6ee;
+}
+.hc-why-row:global(.is-open) {
+  background: #fff;
+  border-color: #e0d6ee;
+  box-shadow: 0 14px 32px rgba(45, 38, 64, 0.1);
+}
+.hc-why-row__toggle {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 13px 18px;
+  background: none;
+  border: 0;
+  text-align: left;
+  cursor: pointer;
+}
+.hc-why-row__toggle:focus-visible {
+  outline: 2px solid #8e44ad;
+  outline-offset: -2px;
+  border-radius: 14px;
+}
+.hc-why-row__label {
+  flex: 1;
+  color: #2d2640;
+  font-size: 17px;
+  font-weight: 700;
+}
+.hc-why-row__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #ece6f4;
+  color: #8e44ad;
+  font-size: 14px;
+  transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+.hc-why-row:global(.is-open) .hc-why-row__icon {
+  transform: rotate(45deg);
+  background: #8e44ad;
+  color: #fff;
+}
+/* Collapsible description: animates height via grid rows */
+.hc-why-row__body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+.hc-why-row:global(.is-open) .hc-why-row__body {
+  grid-template-rows: 1fr;
+}
+.hc-why-row__body > div {
+  overflow: hidden;
+  min-height: 0;
+}
+.hc-why-row__num {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #8e44ad 0%, #60518c 100%);
+  color: #fff;
+  font-family: Lato, "Lato Fallback", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  box-shadow: 0 0 0 4px #F1ECF7, 0 6px 14px rgba(142, 68, 173, 0.28);
+  transition: transform 0.25s ease;
+}
+.hc-why-row:global(.is-open) .hc-why-row__num {
+  transform: scale(1.08);
+}
+.hc-why-row__body p {
+  color: #5b5768;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0 60px 16px 68px;
+}
+.hc-why-photo {
+  position: sticky;
+  top: 110px;
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+}
+/* Photo clipped inside a ring; the logo badge sits on the ring's edge */
+.hc-why-ring {
+  position: relative;
+  width: 360px;
+  max-width: 82%;
+  margin: 30px 0;
+}
+/* Square box that works on every iOS version */
+.hc-why-ring::after {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+.hc-why-ring::before {
+  content: "";
+  position: absolute;
+  top: -34px;
+  right: -34px;
+  bottom: -34px;
+  left: -34px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(230, 223, 240, 0.9) 55%, rgba(230, 223, 240, 0) 72%);
+  box-shadow: 0 0 0 1px #ebe7f2;
+}
+.hc-why-ring__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #e6dff0;
+  box-shadow: 0 0 0 10px #fff, 0 20px 44px rgba(45, 38, 64, 0.18);
+}
+/* Scaled and shifted so the faces sit in the circle and the badge baked
+   into the photo lands under .hc-why-ring__logo */
+.hc-why-ring__img img {
+  position: absolute;
+  left: -1.7%;
+  top: -19%;
+  width: 129%;
+  max-width: none;
+  height: auto;
+}
+.hc-why-ring__logo {
+  position: absolute;
+  left: 76.5%;
+  top: 76.5%;
+  width: 31%;
+  height: auto;
+  border-radius: 18%;
+  border: 4px solid #fff;
+  box-shadow: 0 14px 30px rgba(45, 38, 64, 0.25);
+}
+.hc-why-goal {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 28px;
+  padding: 18px 24px;
+  border-radius: 16px;
+  border: 1px solid #ebe7f2;
+  border-left: 4px solid #8e44ad;
+  background: #F7F6FA;
+}
+.hc-why-goal :global(.bi) {
+  flex-shrink: 0;
+  color: #8e44ad;
+  font-size: 30px;
+  line-height: 1;
+}
+.hc-why-goal p {
+  color: #2d2640;
+  font-size: 17px;
+  line-height: 1.65;
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .hc-why-section {
+    padding: 60px 0;
+  }
+  .hc-why-head h2 {
+    font-size: 28px;
+  }
+  .hc-why-photo {
+    position: static;
+    padding: 10px 0 0;
+  }
+  .hc-why-ring {
+    width: 300px;
+  }
+}
+@media (max-width: 575px) {
+  .hc-why-row__toggle {
+    gap: 12px;
+    padding: 12px 14px;
+  }
+  .hc-why-row:not(:last-child)::before {
+    left: 29px;
+    top: 44px;
+    bottom: -20px;
+  }
+  .hc-why-row__num {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+  .hc-why-row__label {
+    font-size: 16px;
+  }
+  .hc-why-row__body p {
+    padding: 0 14px 14px 56px;
+    font-size: 14px;
+  }
+  .hc-why-ring {
+    width: 240px;
+  }
+  .hc-why-goal {
+    align-items: flex-start;
+    padding: 18px 18px;
+  }
+  .hc-why-goal p {
+    font-size: 15px;
+  }
+}
+
+/* Plan section follows the white Why Choose section, so it takes the lilac
+   background instead of pd-con-67's white. */
+:global(.pd-con-67).hc-plan-section {
+  background: #F1F0F4;
+}
+
+/* Phones and tablets: the Plan photo stacks above its heading; give it room */
+@media (max-width: 991px) {
+  .hc-plan-section :global(.img-backs-sid-two) {
+    margin-bottom: 30px;
+  }
+}

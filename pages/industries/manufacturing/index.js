@@ -61,11 +61,11 @@ const Startup = () => {
                   <br />
                   for Manufacturing
                 </h1>
-                <p>Drive Sustainability In Your Manufacturing Operations</p>
                 <p>
-                  Keep track of your production lines and bring transparency
+                  Drive Sustainability In Your Manufacturing Operations. Keep track of your production lines and bring transparency
                   with Microsoft Dynamics 365 for Manufacturing.
                 </p>
+                <p>As a trusted UK's Microsoft Dynamics 365 partner, Dynamics Square helps manufacturing businesses improve production planning, manage inventory, streamline supply chains, and reduce manual work. Our tailored ERP solutions help businesses improve efficiency, control costs, and make better decisions.</p>
                 <br />
                 <div className="text-center text-lg-start">
                 <Link
