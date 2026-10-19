@@ -22,7 +22,7 @@ const MultiStepFormNew = () => {
 useEffect(() => {
   const fetchQuestions = async () => {
     try {
-      const response = await fetch('https://blognew.dynamicssquare.co.uk/api/get-all-questions/1');
+      const response = await fetch('https://blogdsukapi.onrender.com/api/public/estimators/get-all-questions/1');
       if (!response.ok) throw new Error('Failed to fetch questions');
       const data = await response.json();
 
@@ -132,7 +132,7 @@ useEffect(() => {
     console.log('Submitting Data:', structuredData); // Check the data being submitted
 
     try {
-      const response = await fetch('https://blognew.dynamicssquare.co.uk/api/estimation-submit', {
+      const response = await fetch('https://blogdsukapi.onrender.com/api/public/estimators/estimation-submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(structuredData),
