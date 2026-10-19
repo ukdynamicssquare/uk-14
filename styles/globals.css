@@ -23325,3 +23325,12 @@ letter-spacing:3px
 .navbar .dropdown ul.dd-ic-list a:hover .dd-ic i {
   color: #fff;
 }
+
+/* Hide the Zoho SalesIQ chat bubble on mobile while the cookie banner is showing (it covered the buttons) */
+@media (max-width: 768px) {
+  body.cookie-banner-open #zsiq_float,
+  body.cookie-banner-open .zsiq_floatmain,
+  body.cookie-banner-open [data-id="zsalesiq"] {
+    display: none !important;
+  }
+}
