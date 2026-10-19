@@ -3,6 +3,7 @@ import Script from "next/script";
 import Link from "next/link";
 import useCardScrollEffect from "../../components/useCardScrollEffect";
 import PageSeo from "../../components/PageSeo";
+import SolutionTabs from "../../components/SolutionTabs";
 // Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
 const PAGE_FAQS = [
   {
@@ -66,59 +67,30 @@ const Dynamics365ForProfessionalServices = () => {
           </div>
         </div>
       </section>
-      <section className='bg-003s pd-con-69'>
-        <div className="container my-float-i">
-          <div className="row">
-            <div className="col-lg-6">
-              <div className="supprt-header-new-one">
-                <h2>What is Dynamics 365 for Professional Service Companies?</h2>
-                <p>Dynamics 365 for professional service companies supports companies that run people driven work. These firms depend on accurate time records, resource scheduling, cost tracking, and consistent communication to guide every engagement. Dynamics 365 solutions for professional services bring these activities together in one place. Microsoft provides two reliable systems that help such companies run daily operations:</p>
-                <br />
-              </div>
-            </div>
-          </div>
-
-          <div className="row g-5">
-            <div className="col-lg-6 d-flex">
-              <div className="col-whole-card">
-                <h4>1. Dynamics 365 Business Central</h4>
-                <div className="col-bag-car">
-                  <Image src="/img/wholesale-pic-02.png" alt="Dynamics 365 Business Central" width={93} height={93} />
-                </div>
-                <p><a href="/products/dynamics-365-business-central/">Dynamics 365 Business Central</a> for Professional Services works well for small to mid-sized consultancies, agencies, engineering services firms, legal practices, accounting firms, and growing advisory teams.
+      <SolutionTabs
+        id="prof-sol"
+        sectionClassName="pd-con-69"
+        title="What is Dynamics 365 for Professional Service Companies?"
+        intro={<>Dynamics 365 for professional service companies supports companies that run people driven work. These firms depend on accurate time records, resource scheduling, cost tracking, and consistent communication to guide every engagement. Dynamics 365 solutions for professional services bring these activities together in one place. Microsoft provides two reliable systems that help such companies run daily operations:</>}
+        solutions={[
+          {
+            title: "1. Dynamics 365 Business Central",
+            logos: [{"src":"/img/menu-icons/dynamics-365-businesscentral.svg","alt":"Dynamics 365 Business Central"}],
+            desc: <><a href="/products/dynamics-365-business-central/">Dynamics 365 Business Central</a> for Professional Services works well for small to mid-sized consultancies, agencies, engineering services firms, legal practices, accounting firms, and growing advisory teams.
                   The solutions available in Dynamics 365 suite help companies run projects, manage resources, handle billing, capture timesheets, track expenses, and keep financials accurate.
-                </p>
-                <p><b>Service firms choose Dynamics 365 Business Central ERP when:</b></p>
-                <ul>
-                  <li>The business wants one system for projects, resources, clients, and accounts.</li>
-                  <li>Teams need clear visibility across tasks, workloads, and deadlines.</li>
-                  <li>The company prefers simple processes with minimal customisation.</li>
-                  <li>Billing cycles need reliable tracking supported by accurate time records.</li>
-                  <li>Managers want a tool that is simple to learn and easy to maintain.</li>
-                </ul>
-              </div>
-            </div>
-            <div className="col-lg-6 d-flex">
-              <div className="col-whole-card">
-                <h4>2. Dynamics 365 Finance and Supply Chain Management</h4>
-                <div className="col-bag-car">
-                  <Image src="/img/wholesale-pic-03.png" alt="Dynamics 365 Finance and Supply Chain Management" width={386} height={96} />
-                </div>
-                <p><a href="/products/microsoft-dynamics-365-finance-operations/">Dynamics 365 Finance and Operations</a> for large service firms helps them when they need to handle large delivery teams, multi-region projects, heavy compliance, and several operating units. The system has features to support advanced project accounting, multi-currency work, complex pricing, and structured approvals.</p>
-
-                <p><b>Large service firms choose <a href="/products/microsoft-dynamics-365-finance/">Dynamics 365 Finance</a> and/or Dynamics 365 Supply Chain Management when:</b></p>
-                <ul>
-                  <li>They operate with several legal entities or several countries.</li>
-                  <li>They want reliable financial consolidation across many service lines.</li>
-                  <li>They manage complex project structures with staged delivery.</li>
-                  <li>They depend on accurate cost behaviour across long delivery cycles.</li>
-                  <li>They coordinate many teams that require structured planning and scheduling.</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+                </>,
+            when: <>Service firms choose Dynamics 365 Business Central ERP when:</>,
+            items: ["The business wants one system for projects, resources, clients, and accounts.","Teams need clear visibility across tasks, workloads, and deadlines.","The company prefers simple processes with minimal customisation.","Billing cycles need reliable tracking supported by accurate time records.","Managers want a tool that is simple to learn and easy to maintain."],
+          },
+          {
+            title: "2. Dynamics 365 Finance and Supply Chain Management",
+            logos: [{"src":"/img/menu-icons/dynamics-365-finance.svg","alt":"Dynamics 365 Finance"},{"src":"/img/menu-icons/dynamics-365-supplychainmanagement.svg","alt":"Dynamics 365 Supply Chain Management"}],
+            desc: <><a href="/products/microsoft-dynamics-365-finance-operations/">Dynamics 365 Finance and Operations</a> for large service firms helps them when they need to handle large delivery teams, multi-region projects, heavy compliance, and several operating units. The system has features to support advanced project accounting, multi-currency work, complex pricing, and structured approvals.</>,
+            when: <>Large service firms choose <a href="/products/microsoft-dynamics-365-finance/">Dynamics 365 Finance</a> and/or Dynamics 365 Supply Chain Management when:</>,
+            items: ["They operate with several legal entities or several countries.","They want reliable financial consolidation across many service lines.","They manage complex project structures with staged delivery.","They depend on accurate cost behaviour across long delivery cycles.","They coordinate many teams that require structured planning and scheduling."],
+          },
+        ]}
+      />
       <section className='bg-004s'>
         <div className="container my-float-i">
           <div className="row">

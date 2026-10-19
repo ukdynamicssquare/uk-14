@@ -3,6 +3,7 @@ import Script from "next/script";
 import Link from "next/link";
 import useCardScrollEffect from "../../components/useCardScrollEffect";
 import PageSeo from "../../components/PageSeo";
+import SolutionTabs from "../../components/SolutionTabs";
 
 const Continia = () => {
 
@@ -50,58 +51,28 @@ const Continia = () => {
           </div>
         </div>
       </section>
-      <section className='bg-003s pd-con-69'>
-        <div className="container my-float-i">
-          <div className="row">
-            <div className="col-lg-6">
-              <div className="supprt-header-new-one">
-                <h2>What is Dynamics 365 for Distribution Companies?</h2>
-                <p>Dynamics 365 for Distribution Companies comprises two major solutions from the Dynamics 365 suite:</p>
-                <br />
-              </div>
-            </div>
-          </div>
-
-          <div className="row g-5">
-            <div className="col-lg-6 d-flex">
-              <div className="col-whole-card">
-                <h4>1. Dynamics 365 Business Central</h4>
-                <div className="col-bag-car">
-                  <Image src="/img/wholesale-pic-02.png" alt="Dynamics 365 Business Central" width={93} height={93} />
-                </div>
-                <p><a href="/products/dynamics-365-business-central/">Dynamics 365 Business Central</a> for Distribution targets small to mid-sized distribution businesses that need an all-in-one ERP system with fast implementation, lower cost, and complete control over sales, inventory, purchasing, finance, and service in one unified solution.</p>
-                <p><b>Growing distribution companies would go for it when:</b></p>
-                <ul>
-                  <li>The company has limited entities but growing operations.</li>
-                  <li>It needs strong control over stock, purchases, and cash flow without heavy customisation.</li>
-                  <li>The team wants a single, easy-to-use system that handles everything from sales to invoicing.</li>
-                  <li>The business depends on accurate inventory, automated order processing, and quick decision-making.</li>
-                  <li>The focus is on scalability, not massive complexity.</li>
-                </ul>
-              </div>
-            </div>
-            <div className="col-lg-6 d-flex">
-              <div className="col-whole-card">
-                <h4>2. Dynamics 365 Finance and Supply Chain Management </h4>
-                <div className="col-bag-car">
-                  <Image src="/img/wholesale-pic-03.png" alt="Dynamics 365 Finance and Supply Chain Management" width={386} height={96} />
-                </div>
-                <p>Distribution target large, enterprise-level distribution companies with highly complex operations, multiple entities, global supply chains, and advanced manufacturing or logistics needs. Based on their business requirements, wholesale and distribution companies can choose either <a href="/products/dynamics-365-supply-chain-management/">Dynamics 365 Supply Chain Management</a> or both solutions in case they have complex finance operations.</p>
-                <p><b>Large distribution companies would go for these solutions when:</b></p>
-                <ul>
-                  <li>The company operates across multiple countries or legal entities.</li>
-                  <li>It needs deep financial consolidation, intercompany transactions, or multiple currencies.</li>
-                  <li>The supply chain involves production planning, complex procurement, or advanced warehouse automation.</li>
-                  <li>The business uses IoT, AI, or predictive maintenance for large-scale logistics.</li>
-                  <li>It has thousands of SKUs and wants detailed cost management, transportation management, and vendor collaboration portals.</li>
-                </ul>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
+      <SolutionTabs
+        id="dist-sol"
+        sectionClassName="pd-con-69"
+        title="What is Dynamics 365 for Distribution Companies?"
+        intro={<>Dynamics 365 for Distribution Companies comprises two major solutions from the Dynamics 365 suite:</>}
+        solutions={[
+          {
+            title: "1. Dynamics 365 Business Central",
+            logos: [{"src":"/img/menu-icons/dynamics-365-businesscentral.svg","alt":"Dynamics 365 Business Central"}],
+            desc: <><a href="/products/dynamics-365-business-central/">Dynamics 365 Business Central</a> for Distribution targets small to mid-sized distribution businesses that need an all-in-one ERP system with fast implementation, lower cost, and complete control over sales, inventory, purchasing, finance, and service in one unified solution.</>,
+            when: <>Growing distribution companies would go for it when:</>,
+            items: ["The company has limited entities but growing operations.","It needs strong control over stock, purchases, and cash flow without heavy customisation.","The team wants a single, easy-to-use system that handles everything from sales to invoicing.","The business depends on accurate inventory, automated order processing, and quick decision-making.","The focus is on scalability, not massive complexity."],
+          },
+          {
+            title: "2. Dynamics 365 Finance and Supply Chain Management",
+            logos: [{"src":"/img/menu-icons/dynamics-365-finance.svg","alt":"Dynamics 365 Finance"},{"src":"/img/menu-icons/dynamics-365-supplychainmanagement.svg","alt":"Dynamics 365 Supply Chain Management"}],
+            desc: <>Distribution target large, enterprise-level distribution companies with highly complex operations, multiple entities, global supply chains, and advanced manufacturing or logistics needs. Based on their business requirements, wholesale and distribution companies can choose either <a href="/products/dynamics-365-supply-chain-management/">Dynamics 365 Supply Chain Management</a> or both solutions in case they have complex finance operations.</>,
+            when: <>Large distribution companies would go for these solutions when:</>,
+            items: ["The company operates across multiple countries or legal entities.","It needs deep financial consolidation, intercompany transactions, or multiple currencies.","The supply chain involves production planning, complex procurement, or advanced warehouse automation.","The business uses IoT, AI, or predictive maintenance for large-scale logistics.","It has thousands of SKUs and wants detailed cost management, transportation management, and vendor collaboration portals."],
+          },
+        ]}
+      />
       <section className='bg-004s'>
         <div className="container my-float-i">
           <div className="row">
