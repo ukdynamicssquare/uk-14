@@ -8,8 +8,8 @@ import BlogFinanaceCard from '../../../components/BlogFinanaceCard';
 import PageSeo from "../../../components/PageSeo";
 
 const pageUrl = "https://www.dynamicssquare.co.uk/products/dynamics-365-supply-chain-management/";
-const pageTitle = "Dynamics 365 Supply Chain Management Partner | Dynamics Square UK";
-const pageDescription = "Explore Microsoft Dynamics 365 Supply Chain Management features, modules, Copilot and UK pricing. Get D365 SCM implementation and support from Dynamics Square.";
+const pageTitle = "Dynamics 365 Supply Chain Management | Dynamics Square UK";
+const pageDescription = "Optimise inventory, improve demand forecasting and streamline operations with Dynamics 365 Supply Chain Management. Partner with Dynamics Square UK for expert implementation and support.";
 const pageImage = "https://www.dynamicssquare.co.uk/img/Supplychain-banner.png";
 
 const pageSchema = {
@@ -438,8 +438,9 @@ const SupplyChainManagement = () => {
             <div className='col-lg-8'>
               <div className='solution-new-banner-one-content'>
                 <h1>Dynamics 365 Supply Chain Management</h1>
-                <span className='large-heading'>AI-Powered Supply Chain Management - seamless supply chain operations management handled by intelligence</span>
+                <span className='large-heading'>AI-Powered Supply Chain Management for Seamless, Intelligent Operations</span>
                 <p>Dynamics 365 Supply Chain Management gives you a supply chain that analyzes, predicts, and acts in real-time. Cut down lead times, help reduce overstock, and spend less time firefighting with D365 SCM. Operate with control, speed, and full clarity.</p>
+                <p>As a trusted Dynamics 365 partner in the UK, Dynamics Square helps businesses streamline supply chain operations, optimise inventory, improve demand forecasting, and achieve greater efficiency with AI-powered ERP solutions.</p>
                 <div className="text-center">
                   <Link
                     href="#exampleModal"

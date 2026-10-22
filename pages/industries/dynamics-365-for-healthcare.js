@@ -304,7 +304,7 @@ const Healthcare = () => {
           <div className='row justify-content-center'>
             <div className='col-lg-8'>
               <div className='solution-new-banner-one-content'>
-                <h1 className='large-heading'>AI-Powered Microsoft Dynamics 365 for Healthcare</h1>
+                <h1 className='large-heading'>Dynamics 365 for Healthcare</h1>
                 <p>Transform healthcare operations with Dynamics 365 for Healthcare and AI-powered solutions. Improve patient engagement, automate business processes and streamline healthcare management with integrated ERP, CRM and intelligent automation capabilities.</p>
                 <div className="text-center">
                   <Link
