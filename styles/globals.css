@@ -23383,7 +23383,7 @@ letter-spacing:3px
   width: 92%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 260px minmax(0, 1fr) 280px;
+  grid-template-columns: 260px minmax(0, 1fr);
   max-height: calc(100vh - 120px);
   overflow-y: auto;
   overscroll-behavior: contain;
@@ -23408,8 +23408,8 @@ letter-spacing:3px
 .ind-mega-rail {
   display: flex;
   flex-direction: column;
-  gap: 18px;
-  padding: 26px 16px 22px;
+  gap: 14px;
+  padding: 18px 12px 16px;
   background: #f3f2f6;
   border-right: 1px solid #e4e1ee;
 }
@@ -23509,7 +23509,7 @@ letter-spacing:3px
   display: flex;
   flex-direction: column;
   min-width: 0;
-  padding: 28px 32px 30px;
+  padding: 18px 22px 18px;
 }
 .ind-mega-head {
   display: flex;
@@ -23517,7 +23517,7 @@ letter-spacing:3px
   justify-content: space-between;
   gap: 16px;
   min-height: 32px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .ind-mega-sub {
   font-size: 15px;
@@ -23541,16 +23541,16 @@ letter-spacing:3px
 .ind-mega-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px 20px;
+  gap: 4px;
 }
 .ind-mega-grid[hidden] {
   display: none;
 }
 .navbar .ind-mega a.ind-mega-card {
-  align-items: flex-start;
-  gap: 14px;
-  padding: 12px 14px;
-  border-radius: 12px;
+  align-items: center;
+  gap: 22px;
+  padding: 15px;
+  border-radius: 8px;
   border: 1px solid transparent;
   transition: background 0.2s, border-color 0.2s;
 }
@@ -23559,9 +23559,9 @@ letter-spacing:3px
   border-color: #e4e1ee;
 }
 .ind-mega-icon {
-  flex: 0 0 52px;
-  height: 52px;
-  border-radius: 12px;
+  flex: 0 0 40px;
+  height: 40px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23570,7 +23570,7 @@ letter-spacing:3px
   transition: transform 0.2s, box-shadow 0.2s;
 }
 .navbar .ind-mega .ind-mega-icon i {
-  font-size: 22px;
+  font-size: 18px;
   color: #8e44ad;
   transition: color 0.2s;
 }
@@ -23590,8 +23590,8 @@ letter-spacing:3px
   min-width: 0;
 }
 .ind-mega-name {
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 500;
   color: #414141;
   transition: color 0.2s;
 }
@@ -23599,8 +23599,8 @@ letter-spacing:3px
   color: #625390;
 }
 .ind-mega-desc {
-  margin-top: 2px;
-  font-size: 13px;
+  margin-top: 4px;
+  font-size: 12.5px;
   font-weight: 400;
   line-height: 1.45;
   color: #858585;
@@ -23608,12 +23608,12 @@ letter-spacing:3px
 
 /* footer CTA, grows to sit at the bottom of the panel */
 .ind-mega-footer-gap {
-  flex: 1 0 24px;
+  flex: 1 0 12px;
 }
 .navbar .ind-mega a.ind-mega-footer {
   align-items: center;
   gap: 14px;
-  padding: 14px 18px;
+  padding: 10px 14px;
   border-radius: 12px;
   background: linear-gradient(90deg, #f4eef8 0%, #f3f2f6 100%);
   border: 1px solid #e9def2;
@@ -23676,64 +23676,9 @@ letter-spacing:3px
   transform: translateX(3px);
 }
 
-/* aside */
-.ind-mega-aside {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  padding: 28px 26px;
-  background: #f3f2f6;
-}
-.ind-mega-aside-title {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #000000;
-}
-.ind-mega-aside-title i {
-  margin-right: 4px;
-  color: #625390;
-}
-.ind-mega-stories {
-  display: flex;
-  flex-direction: column;
-}
-.navbar .ind-mega .ind-mega-stories a {
-  position: relative;
-  display: block;
-  padding: 10px 0 10px 16px;
-  border-bottom: 1px solid #e4e1ee;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.45;
-  color: #414141;
-  transition: color 0.2s, padding 0.2s;
-}
-.navbar .ind-mega .ind-mega-stories a:last-child {
-  border-bottom: 0;
-}
-.ind-mega-stories a::before {
-  content: "";
-  position: absolute;
-  left: 2px;
-  top: 18px;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #625390;
-}
-.navbar .ind-mega .ind-mega-stories a:hover {
-  color: #625390;
-  padding-left: 20px;
-}
-
 @media (max-width: 1299px) {
   .navbar .dropdown.megamenu .megamenu-list.ind-mega {
     grid-template-columns: 240px minmax(0, 1fr);
-  }
-  .ind-mega-aside {
-    display: none;
   }
   .ind-mega-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));

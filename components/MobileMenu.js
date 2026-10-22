@@ -4,7 +4,6 @@ import {
   SOLUTION_TABS as SOLUTION_TAB_META,
   SOLUTION_PANELS,
   INDUSTRY_TABS,
-  INDUSTRY_STORIES,
   OUR_SERVICES as OUR_SERVICES_DATA,
   COMPANY_LINKS as COMPANY_LINKS_DATA,
   BLOG_BY_PRODUCT,
@@ -46,16 +45,13 @@ const SOLUTION_TABS = SOLUTION_TAB_META.map((tab) => ({
   items: SOLUTION_PANELS[tab.id].map(toNameLink),
 }));
 
-// Same tabs as the desktop IndustriesMegaMenu, plus its Success Stories aside.
-const INDUSTRY_MOBILE_TABS = [
-  ...INDUSTRY_TABS.map((tab) => ({
-    label: tab.label,
-    items: tab.overview
-      ? [...tab.items.map(toNameLink), { href: tab.overview.href, title: tab.overview.label }]
-      : tab.items.map(toNameLink),
-  })),
-  { label: "Success Stories", items: INDUSTRY_STORIES.map(toNameLink) },
-];
+// Same tabs as the desktop IndustriesMegaMenu.
+const INDUSTRY_MOBILE_TABS = INDUSTRY_TABS.map((tab) => ({
+  label: tab.label,
+  items: tab.overview
+    ? [...tab.items.map(toNameLink), { href: tab.overview.href, title: tab.overview.label }]
+    : tab.items.map(toNameLink),
+}));
 const OUR_SERVICES = OUR_SERVICES_DATA.map(toNameLink);
 const COMPANY_LINKS = COMPANY_LINKS_DATA.map(toNameLink);
 

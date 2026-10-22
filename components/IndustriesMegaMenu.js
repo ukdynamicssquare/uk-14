@@ -1,11 +1,11 @@
 import { useState } from "react";
 import Link from "next/link";
-import { INDUSTRY_TABS, INDUSTRY_STORIES, INDUSTRY_FOOTER } from "./menuData";
+import { INDUSTRY_TABS, INDUSTRY_FOOTER } from "./menuData";
 
 /*
   Desktop Industries mega menu, same layout as canada-14's HeaderMegaMenu:
-  a rail with the menu intro and vertical tabs, the active tab's
-  industries in the middle (with a footer CTA) and a success-stories aside.
+  a rail with the menu intro and vertical tabs, and the active tab's
+  industries alongside it (with a footer CTA).
   Show/hide on hover comes from the existing .dropdown.megamenu rules.
 */
 const IndustriesMegaMenu = () => {
@@ -79,19 +79,6 @@ const IndustriesMegaMenu = () => {
           </span>
         </Link>
       </div>
-
-      <aside className="ind-mega-aside">
-        <span className="ind-mega-aside-title">
-          <i className="bi bi-trophy"></i> Success Stories
-        </span>
-        <div className="ind-mega-stories">
-          {INDUSTRY_STORIES.map((l) => (
-            <Link key={l.href} href={l.href} title={l.label}>
-              {l.label}
-            </Link>
-          ))}
-        </div>
-      </aside>
     </div>
   );
 };

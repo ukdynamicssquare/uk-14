@@ -635,14 +635,6 @@ export const INDUSTRY_TABS = [
   },
 ];
 
-export const INDUSTRY_STORIES = [
-  { href: "/case-studies/dynamics-365-finance-for-logistic-uk-multi-entity/", label: "Bertling Group: Dynamics 365 Finance for global logistics" },
-  { href: "/case-studies/business-central-for-tool-manufacturing-company/", label: "Rolson Tools: Business Central for tool manufacturing" },
-  { href: "/case-studies/business-central-reimplementation-for-food-trader/", label: "World Food Trading: Business Central for food trade" },
-  { href: "/case-studies/nav09-to-business-central-upgrade/", label: "Pasante Healthcare: NAV 2009 to Business Central" },
-  { href: "/case-studies/upgrade-from-nav09-to-business-central/", label: "BSix Sixth Form College: NAV 2009 to Business Central" },
-];
-
 export const INDUSTRY_FOOTER = {
   href: "/contact-us/",
   icon: "bi-buildings",
