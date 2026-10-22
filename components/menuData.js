@@ -572,6 +572,85 @@ export const INDUSTRIES = [
   { href: "/industries/dynamics-365-for-retail/", img: "/img/menu-icons/retail-icon.png", alt: "retail-icon", title: "Retail", desc: "Optimize retail operations with seamless user experience" },
 ];
 
+// Industries mega menu (IndustriesMegaMenu.js) — same layout as canada-14.
+const INDUSTRY_ICONS = {
+  "/industries/dynamics-365-for-distribution/": "bi-truck",
+  "/industries/microsoft-cloud-for-manufacturing/": "bi-gear-wide-connected",
+  "/industries/dynamics-365-for-education/": "bi-mortarboard",
+  "/industries/ecommerce/": "bi-cart3",
+  "/industries/professional-services/": "bi-briefcase",
+  "/industries/food-and-beverages/": "bi-cup-hot",
+  "/industries/dynamics-365-for-healthcare/": "bi-heart-pulse",
+  "/industries/dynamics-365-for-retail/": "bi-bag",
+};
+const industry = (href) => {
+  const item = INDUSTRIES.find((i) => i.href === href);
+  return { ...item, desc: item.desc.trim(), icon: INDUSTRY_ICONS[href] };
+};
+
+export const INDUSTRY_TABS = [
+  {
+    id: "all",
+    label: "All Industries",
+    icon: "bi-grid-1x2",
+    sub: "Dynamics 365 tailored to how your industry works",
+    overview: { href: "/industries/", label: "Explore all industries" },
+    items: INDUSTRIES.map((i) => industry(i.href)),
+  },
+  {
+    id: "manufacturing",
+    label: "Manufacturing",
+    icon: "bi-gear-wide-connected",
+    sub: "Plan production, control costs and track every component",
+    overview: { href: "/industries/manufacturing/", label: "Explore manufacturing" },
+    items: [
+      { href: "/industries/manufacturing/dynamics-365-for-discrete/", icon: "bi-cpu", title: "Discrete Manufacturing", desc: "BOMs, inventory and production in real time" },
+      { href: "/industries/manufacturing/dynamics-365-for-pharmaceutical/", icon: "bi-capsule", title: "Pharmaceutical", desc: "Batch control, quality and compliance" },
+      { href: "/industries/manufacturing/dynamics-365-for-medical-device/", icon: "bi-bandaid", title: "Medical Device", desc: "Traceability and regulatory compliance" },
+      { href: "/industries/manufacturing/dynamics-365-for-chemical/", icon: "bi-eyedropper", title: "Chemical", desc: "Recipes, batches and lot traceability" },
+      { href: "/industries/manufacturing/dynamics-365-for-electronics/", icon: "bi-motherboard", title: "Electronics", desc: "Multi-level BOMs and serial tracking" },
+      { href: "/industries/business-central-for-process-manufacturing/", icon: "bi-droplet-half", title: "Process Manufacturing", desc: "Formulas, batches and recipes in Business Central" },
+    ],
+  },
+  {
+    id: "commerce",
+    label: "Retail & Commerce",
+    icon: "bi-shop",
+    sub: "Unify stores, online sales and the back office",
+    items: [
+      industry("/industries/dynamics-365-for-retail/"),
+      industry("/industries/ecommerce/"),
+    ],
+  },
+  {
+    id: "services",
+    label: "Services & Public Sector",
+    icon: "bi-briefcase",
+    sub: "Run projects, people and care with confidence",
+    items: [
+      industry("/industries/professional-services/"),
+      industry("/industries/dynamics-365-for-healthcare/"),
+      industry("/industries/dynamics-365-for-education/"),
+    ],
+  },
+];
+
+export const INDUSTRY_STORIES = [
+  { href: "/case-studies/dynamics-365-finance-for-logistic-uk-multi-entity/", label: "Bertling Group: Dynamics 365 Finance for global logistics" },
+  { href: "/case-studies/business-central-for-tool-manufacturing-company/", label: "Rolson Tools: Business Central for tool manufacturing" },
+  { href: "/case-studies/business-central-reimplementation-for-food-trader/", label: "World Food Trading: Business Central for food trade" },
+  { href: "/case-studies/nav09-to-business-central-upgrade/", label: "Pasante Healthcare: NAV 2009 to Business Central" },
+  { href: "/case-studies/upgrade-from-nav09-to-business-central/", label: "BSix Sixth Form College: NAV 2009 to Business Central" },
+];
+
+export const INDUSTRY_FOOTER = {
+  href: "/contact-us/",
+  icon: "bi-buildings",
+  title: "Don't see your industry?",
+  desc: "We've delivered Dynamics 365 across dozens of sectors in the UK. Tell us about yours.",
+  cta: "Talk to an Expert",
+};
+
 export const OUR_SERVICES = [
   { href: "/our-services/dynamics-365-implementation-services/", label: "Implementation Services", icon: "bi-gear-wide-connected" },
   { href: "/our-services/dynamics-365-support-services/", label: "Support Services", icon: "bi-headset" },

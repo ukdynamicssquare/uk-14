@@ -57,6 +57,8 @@ const HeaderWork = () => {
            "/ai-solutions/microsoft-fabric": `${gname}`,
            "/industries/manufacturing/dynamics-365-for-pharmaceutical": `${gname}`,
            "/industries/manufacturing/dynamics-365-for-medical-device": `${gname}`,
+           "/industries/manufacturing/dynamics-365-for-chemical": `${gname}`,
+           "/industries/manufacturing/dynamics-365-for-electronics": `${gname}`,
            "/products": `${gname}`,
             "/industries/dynamics-365-for-healthcare": `${gname}`,
 

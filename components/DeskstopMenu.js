@@ -2,10 +2,10 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import PulseButton from "./PulseButton";
+import IndustriesMegaMenu from "./IndustriesMegaMenu";
 import {
   SOLUTION_TABS,
   SOLUTION_PANELS,
-  INDUSTRIES,
   OUR_SERVICES,
   COMPANY_LINKS,
   RESOURCE_TABS,
@@ -157,17 +157,11 @@ const DeskstopMenu = () => {
         </li>
 
         {/* ===================== INDUSTRIES ===================== */}
-        <li className="dropdown dropdown-smal-mega">
+        <li className="dropdown megamenu ind-megamenu">
           <Link href="/industries/">
             <span>Industries</span> <i className="bi bi-chevron-down"></i>
           </Link>
-          <ul>
-            {INDUSTRIES.map((item) => (
-              <li key={item.href}>
-                <ItemCard item={item} small />
-              </li>
-            ))}
-          </ul>
+          <IndustriesMegaMenu />
         </li>
 
         {/* ===================== OUR SERVICES ===================== */}

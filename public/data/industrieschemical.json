@@ -1,0 +1,47 @@
+[
+    {
+      "id": 1,
+      "question": "Is Dynamics 365 suitable for chemical manufacturing?",
+      "answer": "<p>Chemical manufacturers across a wide size range use it, from small blenders to producers with several plants. The product needs to suit the process, so we begin with the type of recipe, the number of sites and the amount of hazard handling you expect from the ERP. The comparison on this page shows how those factors point to each product.</p>"
+    },
+    {
+      "id": 2,
+      "question": "Which Dynamics 365 solution is suitable for chemical manufacturers?",
+      "answer": "<p>For fixed recipes made at a single site, Business Central is the natural choice. Formulas that scale by ingredient percentage, processes with co-products or by-products, and production at several sites move the answer towards Supply Chain Management. The table above gives the feature-by-feature detail, and our fit assessment then tests it against your plant.</p>"
+    },
+    {
+      "id": 3,
+      "question": "Does Dynamics 365 support chemical batch manufacturing?",
+      "answer": "<p>Both Microsoft ERPs can run batch production, though they approach it differently. A Business Central production order draws on a production BOM, takes the ingredient lots into the batch and creates a lot for the finished product. Supply Chain Management runs formula-based production orders for batch and continuous work alike, and co-products and by-products arrive in stock from the same order. Each batch stays linked to every ingredient lot behind it, which is the heart of chemical batch manufacturing software.</p>"
+    },
+    {
+      "id": 4,
+      "question": "Can Dynamics 365 manage formulas and recipes?",
+      "answer": "<p>Recipes live in a different place in each product. Business Central stores them as production BOMs whose versions each have a start date and a certification status, which works well for fixed quantities. Supply Chain Management treats a formula as a controlled object, with versions that need approving and activating, options to scale by quantity, by ingredient percentage or by consumption step, planning items, and handling for co-products and by-products. Whether your batch sizes change decides which one you need.</p>"
+    },
+    {
+      "id": 5,
+      "question": "Can Dynamics 365 track chemical lots and batches?",
+      "answer": "<p>Lot numbers and expiry dates can be required on ingredients, intermediates and finished goods in both products. Starting from a supplier lot, you can follow it forward to the batches and customers it supplied, and starting from a returned drum, you can follow it back to each ingredient lot inside. Supply Chain Management also records batch attributes against target values and ranges, merges batches of the same product and reserves stock by attribute, which suits customers who order a particular grade.</p>"
+    },
+    {
+      "id": 6,
+      "question": "Does Dynamics 365 support chemical quality control?",
+      "answer": "<p>Business Central's Quality Management module, introduced with the 2026 release wave, raises inspections at goods receipt and when finished output is reported, and holds back a failing lot from sale or use until someone releases it. Supply Chain Management adds quality orders, formal non-conformance cases and statistical sampling on top. Many plants also connect a laboratory information system, and we plan that connection with you at the discovery stage.</p>"
+    },
+    {
+      "id": 7,
+      "question": "Can Dynamics 365 manage hazardous materials?",
+      "answer": "<p>Supply Chain Management stores hazmat data against the product itself. Regulations including ADR, IMDG and IATA sit alongside classes, divisions, packing groups and compatibility groups, and a warning appears when a load combines groups that should travel apart. Stock of hazmat items can be compared with limits you set, and shipment paperwork including the shipper's declaration can be printed. Microsoft frames the set-up as a tool for building your own processes, so compliance still depends on how you use it. Business Central depends on AppSource extensions for hazmat data.</p>"
+    },
+    {
+      "id": 8,
+      "question": "How much does chemical manufacturing ERP implementation cost in the UK?",
+      "answer": "<p>Microsoft publishes its licence prices, so implementation is where budgets differ. A single-site Business Central project at a blender or formulator is the smaller job, and a multi-site Supply Chain Management programme with formula migration and hazmat set-up is the larger one. The final amount depends on how many people use the system, which tools connect to it and the condition of your formula data. A scoping discussion produces a quotation tied to your own recipes.</p>"
+    },
+    {
+      "id": 9,
+      "question": "Does Dynamics 365 help with GB CLP, UK REACH and COMAH obligations?",
+      "answer": "<p>It holds the records these duties depend on, while classification, registration and safety reports stay with your compliance team. Formula and item data support a classification review whenever a composition changes, annual tonnage by substance supports UK REACH registration planning, and stock quantities by substance show where a site stands against COMAH thresholds. Lot genealogy links each batch to its ingredients and its customers.</p>"
+    }
+]

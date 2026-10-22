@@ -1,0 +1,52 @@
+[
+    {
+      "id": 1,
+      "question": "What is ERP for electronics manufacturing?",
+      "answer": "<p>It is business software that joins bills of materials, component buying, production scheduling, stock, traceability and finance in a single database. Electronics gives it plenty to do, with BOMs several levels deep, frequent engineering revisions, parts that take weeks or months to arrive, and customers who want to know exactly what went into each unit.</p>"
+    },
+    {
+      "id": 2,
+      "question": "Is Dynamics 365 suitable for electronics manufacturers?",
+      "answer": "<p>Dynamics 365 covers the full range, from small contract assemblers on Business Central to multi-site OEMs on Supply Chain Management. Suitability depends on matching the product to your BOM depth, the pace of your engineering change and your number of sites, which is what the comparison on this page helps with.</p>"
+    },
+    {
+      "id": 3,
+      "question": "Can Dynamics 365 manage multi-level bills of materials?",
+      "answer": "<p>Yes, both products handle BOMs that run through several levels, from the finished product down through sub-assemblies to individual components, with routings attached for production. Business Central manages revisions through production BOM versions that apply from a starting date. In Supply Chain Management, Engineering Change Management turns a change request into an engineering change order, sends it for approval and releases it to production as a revision.</p>"
+    },
+    {
+      "id": 4,
+      "question": "Can Dynamics 365 track electronic components by lot and serial number?",
+      "answer": "<p>Any component or finished item can require a lot or serial number in both products, captured at goods-in or when a board comes off the line, then attached to each movement that follows. Searching from a supplier lot returns every unit it went into, and searching from a returned unit returns every component lot inside. This serial number tracking software comes as part of the standard product.</p>"
+    },
+    {
+      "id": 5,
+      "question": "Does Dynamics 365 support make-to-order electronics manufacturing?",
+      "answer": "<p>Business Central produces to order by holding back planning until a sales order exists, after which the production order is tied to that order and its output reserved. For heavier requirements, Supply Chain Management adds configure-to-order, where a product configuration model creates the exact variant at order entry, and engineer-to-order, where a project covers the design phase before production orders are raised.</p>"
+    },
+    {
+      "id": 6,
+      "question": "Can Dynamics 365 help manage component shortages?",
+      "answer": "<p>Good planning data earns its keep here. MRP weighs requirements against stock on hand, purchase orders already placed and each supplier's lead time, then raises action messages early enough for the buyer to chase the order, find another source or move the build date. Business Central also stores approved substitutes against the original part, so the planner can swap within the same records.</p>"
+    },
+    {
+      "id": 7,
+      "question": "Can Dynamics 365 integrate with product lifecycle management systems?",
+      "answer": "<p>The route depends on the product. Supply Chain Management is built to accept released designs, since Engineering Change Management takes in products and revisions from the PLM system for approval and release, and marketplace connectors from Microsoft partners move the data. Business Central connects through its APIs and integration tools, and each revision arrives as a production BOM version, usually with more manual handling.</p>"
+    },
+    {
+      "id": 8,
+      "question": "Which Dynamics 365 product is suitable for electronics manufacturing?",
+      "answer": "<p>Business Central Premium suits a contract manufacturer or single-site assembler with a workable multi-level BOM and occasional revisions. Manufacturers with several sites or legal entities, a regular flow of engineering change orders, or orders configured or engineered to the customer are better placed on Supply Chain Management. The table above sets the two side by side.</p>"
+    },
+    {
+      "id": 9,
+      "question": "How much does electronics manufacturing ERP implementation cost in the UK?",
+      "answer": "<p>Microsoft publishes its licence prices, which leaves implementation as the figure that varies. A single-site Business Central rollout is a smaller project than a multi-site Supply Chain Management programme with PLM integration and a large data migration. User numbers, scope and data quality shape the total, and a short scoping conversation gives you a figure based on your own BOMs.</p>"
+    },
+    {
+      "id": 10,
+      "question": "Does Dynamics 365 help with RoHS, WEEE and UKCA documentation?",
+      "answer": "<p>It holds the data these obligations depend on, while the filings and declarations stay with your compliance team. Item records can carry attributes and attached documents such as supplier RoHS declarations, sales history shows the units you have supplied to the UK for WEEE reporting, and lot and serial traceability links each unit to the component batches and the BOM revision in force when it was built.</p>"
+    }
+]
