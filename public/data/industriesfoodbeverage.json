@@ -1,0 +1,47 @@
+[
+    {
+      "id": 1,
+      "question": "What is ERP for food and beverage manufacturing?",
+      "answer": "<p>ERP for food and beverage manufacturing is a single database for the whole operation, covering buying, goods-in, recipes, production, quality, stock, dispatch and accounts. Each ingredient lot, production run and delivery is held against shared item numbers, so a question about origin or destination gets answered from one place. Microsoft's version is Dynamics 365, offered as <a href=\"/products/dynamics-365-business-central/\" class=\"u-i\">Business Central</a> for smaller and mid-sized producers, with <a href=\"/products/dynamics-365-supply-chain-management/\" class=\"u-i\">Supply Chain Management</a> covering larger or formula-led ones.</p>"
+    },
+    {
+      "id": 2,
+      "question": "Which ERP is suitable for food manufacturers?",
+      "answer": "<p>The right ERP depends on your recipes, production needs, and number of sites. Business Central Premium suits manufacturers with established recipes and one or a few locations. Supply Chain Management suits manufacturers with changing formulas, co product outputs, weight-based sales, or multiple production sites. The comparison table above highlights the key differences.</p>"
+    },
+    {
+      "id": 3,
+      "question": "Can ERP software track food batches and ingredients?",
+      "answer": "<p>Ingredients, intermediates and finished goods each receive a lot or batch number when they arrive or are produced in Dynamics 365. A production order logs the lots it consumes and opens a new lot for its output, and every later pick, transfer and delivery keeps that reference. Supply Chain Management adds batch attributes, such as a measured ingredient percentage, and can merge lots of one product.</p>"
+    },
+    {
+      "id": 4,
+      "question": "Can an ERP manage recipes and formulas?",
+      "answer": "<p>A Business Central recipe takes the form of a production bill of materials, and its versions carry start dates and certification statuses. Supply Chain Management manages the recipe as a formula under change control, where a version must be approved and activated, quantities can track batch size or each ingredient's percentage, and a single formula can produce co-products and by-products. Whether your ratios ever change from batch to batch decides which fits.</p>"
+    },
+    {
+      "id": 5,
+      "question": "Can ERP software manage allergens and expiry dates?",
+      "answer": "<p>Yes, both Business Central and Supply Chain Management help manage expiry dates and product traceability. Business Central records expiry dates for each lot and can block expired stock from being picked when strict expiry controls are enabled. It can also prioritise stock with the earliest expiry date. Supply Chain Management tracks shelf life, best before dates, and expiry periods, while accounting for customer requirements on remaining shelf life during shipment planning. Allergen information can be recorded against items or batches for production and dispatch teams. Label wording and cleaning procedures remain part of your food safety system.</p>"
+    },
+    {
+      "id": 6,
+      "question": "How does ERP software support food traceability and recalls?",
+      "answer": "<p>Tracing starts from the affected lot. The system shows every production run that used it, the finished lots those runs produced and the customers they reached. Both products trace in either direction, and Supply Chain Management reports the customers and shipped sales orders involved. The result supports the withdrawal and notification duties in UK food law and the mock recalls that customers ask for. Before go-live, we rehearse a trace against your own data.</p>"
+    },
+    {
+      "id": 7,
+      "question": "Is Microsoft Dynamics 365 suitable for food manufacturing?",
+      "answer": "<p>Yes, Microsoft Dynamics 365 supports food manufacturers, from bakeries to dairies. Business Central provides lot tracking, expiry date management, and quality inspections for smaller operations. Supply Chain Management supports formula-based production and multi-site operations. Integration with Microsoft 365, Excel, and <a href=\"/products/microsoft-power-bi/\" class=\"u-i\">Power BI</a> helps quality, finance, and production teams work with consistent data.</p>"
+    },
+    {
+      "id": 8,
+      "question": "How much does food manufacturing ERP implementation cost in the UK?",
+      "answer": "<p>Food manufacturing ERP implementation costs depend on the number of sites, recipe complexity, and project scope. A single site using Business Central requires less implementation work than a multi-site Supply Chain Management rollout involving recipe migration and traceability setup. The number of users, labelling and weighing scale integrations, and the quality of existing item and recipe data also affect the cost. A scoping discussion helps define your requirements and establish a firm quotation.</p>"
+    },
+    {
+      "id": 9,
+      "question": "Can Dynamics 365 handle UK VAT on zero-rated and standard-rated food lines?",
+      "answer": "<p>VAT rates are set up through posting groups, so zero-rated, reduced-rate and standard-rated products each post at their own rate. Business Central also supports Making Tax Digital for VAT, with digital records and submission to HMRC. We map each of your product lines to the right VAT treatment during configuration, and your accountant confirms which treatment applies to each product.</p>"
+    }
+]

@@ -32,7 +32,7 @@
     {
       "id": 7,
       "question": "Can Dynamics 365 integrate with product lifecycle management systems?",
-      "answer": "<p>The route depends on the product. Supply Chain Management is built to accept released designs, since Engineering Change Management takes in products and revisions from the PLM system for approval and release, and marketplace connectors from Microsoft partners move the data. Business Central connects through its APIs and integration tools, and each revision arrives as a production BOM version, usually with more manual handling.</p>"
+      "answer": "<p>The route depends on the product. Supply Chain Management is built to accept released designs, since Engineering Change Management takes in products and revisions from the PLM system for approval and release, and marketplace connectors from Microsoft partners move the data. Business Central connects through its APIs and <a href=\"/products/microsoft-dynamics-365/integration/\" class=\"u-i\">integration tools</a>, and each revision arrives as a production BOM version, usually with more manual handling.</p>"
     },
     {
       "id": 8,
@@ -42,7 +42,7 @@
     {
       "id": 9,
       "question": "How much does electronics manufacturing ERP implementation cost in the UK?",
-      "answer": "<p>Microsoft publishes its licence prices, which leaves implementation as the figure that varies. A single-site Business Central rollout is a smaller project than a multi-site Supply Chain Management programme with PLM integration and a large data migration. User numbers, scope and data quality shape the total, and a short scoping conversation gives you a figure based on your own BOMs.</p>"
+      "answer": "<p>Microsoft publishes its <a href=\"/products/dynamics-365-business-central/pricing-licensing/\" class=\"u-i\">licence prices</a>, which leaves implementation as the figure that varies. A single-site Business Central rollout is a smaller project than a multi-site Supply Chain Management programme with PLM integration and a large data migration. User numbers, scope and data quality shape the total, and a short scoping conversation gives you a figure based on your own BOMs.</p>"
     },
     {
       "id": 10,

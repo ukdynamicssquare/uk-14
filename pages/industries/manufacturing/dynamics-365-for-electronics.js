@@ -30,7 +30,7 @@ const Electronics = () => {
           <div className='row justify-content-center'>
             <div className='col-lg-8'>
               <div className='solution-new-banner-one-content'>
-                <h1>Dynamics 365 ERP for Electronics Manufacturing</h1>
+                <h1 className='large-heading'>Dynamics 365 ERP for Electronics Manufacturing</h1>
                 <p>Dynamics 365 for electronics manufacturing delivers one system for your product designs, parts, production and accounts. Design changes reach the shop floor, every unit traces back to its components, and you see a late part before it stops the line.</p>
                 <p>Dynamics Square configures the system the way your electronics business builds, buys and ships.</p>
                 <div className="text-center">
@@ -55,7 +55,7 @@ const Electronics = () => {
               <div className='m-b-image-nnn m-b-image-nna'>
                 <Image
                   src="/img/electronics-00.png"
-                  alt='Dynamics 365 ERP for Electronics Manufacturing'
+                  alt='Dynamics 365 ERP for electronics manufacturing: technician soldering components onto a green printed circuit board'
                   width={1097}
                   height={656}
                   priority
@@ -107,7 +107,7 @@ const Electronics = () => {
               <div className="supprt-header-new-one">
                 <h2>What Dynamics 365 ERP for Electronics Manufacturing Does for Your Business</h2>
               </div>
-              <p>Dynamics 365 ERP for electronics manufacturing is a unified system that holds your bills of materials (the parts lists behind each product), component purchasing, production, quality records and accounts. This means the design office, the buyers and the shop floor work from the same figures.</p>
+              <p>Dynamics 365 ERP for electronics manufacturing is a unified system that holds your <Link href="/products/dynamics-365-business-central/manufacturing-management/" className="u-i">bills of materials</Link> (the parts lists behind each product), component purchasing, production, quality records and accounts. This means the design office, the buyers and the shop floor work from the same figures.</p>
               <p>Dynamics 365 ERP for electronics manufacturing adapts that idea to your trade, where products are built from many parts and several layers of assemblies, designs get revised while builds are under way, and a supplier delay can arrive with little warning.</p>
               <p>When an engineer releases a revised part, Dynamics 365 for electronics manufacturing passes the revision to purchasing and production in the same system, so the buyer orders the current component, and the line builds to the current drawing.</p>
               <p style={{marginBottom:'40px'}}><b>Dynamics Square delivers this through Business Central and Supply Chain Management. The right choice depends on how many levels your parts lists have, how often engineering changes a design and how many sites you build at.</b></p>
@@ -135,7 +135,7 @@ const Electronics = () => {
           </div>
           <div className="row">
             <div className="col-lg-9">
-              <p className="erp-expect-footnote">When a customer audits you, or a market surveillance authority asks questions, you need to show which component batch went into which unit, which version of the parts list was built and which inspections each unit passed. Dynamics 365 holds those records. Your declaration of conformity, your customers&apos; supplier approvals and your ISO 9001 certificate remain the result of work your own organisation does.</p>
+              <p className="erp-expect-footnote">When a customer audits you, or a market surveillance authority asks questions, you need to show which component batch went into which unit, which version of the parts list was built and which inspections each unit passed. <Link href="/products/microsoft-dynamics-365/" className="u-i">Dynamics 365</Link> holds those records. Your declaration of conformity, your customers&apos; supplier approvals and your ISO 9001 certificate remain the result of work your own organisation does.</p>
               <Link
                 href="#exampleModal"
                 data-bs-toggle="modal"
@@ -171,7 +171,7 @@ const Electronics = () => {
             </div>
             <div className="uk-reg-row">
               <div className="uk-reg-row__icon">
-                <Image src="/img/electronics-02.png" alt="UK RoHS" width={40} height={36} />
+                <Image src="/img/electronics-02.png" alt="UK RoHS restricted hazardous substances" width={40} height={36} />
               </div>
               <div className="uk-reg-row__title">
                 <h4>UK RoHS</h4>
@@ -244,7 +244,7 @@ const Electronics = () => {
                       <div className="pharma-capability-items">
                         <div className="pharma-capability-item">
                           <Image src="/img/electronics-06.png" alt="Multi-level BOMs for boards, sub-assemblies and finished products" width={40} height={36} />
-                          <p>Bill of materials software for electronics manufacturing, with multi-level BOMs for boards, sub-assemblies and finished products, linked to routings and production orders</p>
+                          <p><Link href="/industries/business-central-for-discrete-manufacturing/" className="u-i">Bill of materials software for electronics manufacturing</Link>, with multi-level BOMs for boards, sub-assemblies and finished products, linked to routings and production orders</p>
                         </div>
                         <div className="pharma-capability-item">
                           <Image src="/img/electronics-07.png" alt="Dated production BOM versions with certification status" width={40} height={36} />
@@ -252,7 +252,7 @@ const Electronics = () => {
                         </div>
                         <div className="pharma-capability-item">
                           <Image src="/img/electronics-08.png" alt="Engineering Change Management request, approval and release" width={40} height={36} />
-                          <p>Engineering Change Management in Supply Chain Management, where a change request becomes an order, gets approved and reaches production as a released revision</p>
+                          <p>Engineering Change Management in <Link href="/products/dynamics-365-supply-chain-management/" className="u-i">Supply Chain Management</Link>, where a change request becomes an order, gets approved and reaches production as a released revision</p>
                         </div>
                       </div>
                     </div>
@@ -265,7 +265,7 @@ const Electronics = () => {
                       <div className="pharma-capability-items">
                         <div className="pharma-capability-item">
                           <Image src="/img/electronics-09.png" alt="Component stock by location and bin" width={40} height={36} />
-                          <p>Component inventory management software inside the ERP, showing stock by location and bin, with reorder policies based on supplier lead times</p>
+                          <p><Link href="/products/dynamics-365-business-central/warehouse-management/" className="u-i">Component inventory management software</Link> inside the ERP, showing stock by location and bin, with reorder policies based on supplier lead times</p>
                         </div>
                         <div className="pharma-capability-item">
                           <Image src="/img/electronics-10.png" alt="Approved substitute components" width={40} height={36} />
@@ -339,7 +339,7 @@ const Electronics = () => {
               <div className="supprt-header-new-one">
                 <h2>Dynamics 365 for Electronics Manufacturing: Business Central or Supply Chain Management?</h2>
               </div>
-              <p>Both Microsoft ERPs treat electronics as discrete manufacturing. What separates them is how deep your BOMs go, how often engineering changes land, how you take orders and how many sites or legal entities you run.</p>
+              <p>Both Microsoft ERPs treat electronics as <Link href="/industries/manufacturing/dynamics-365-for-discrete/" className="u-i">discrete manufacturing</Link>. What separates them is how deep your BOMs go, how often engineering changes land, how you take orders and how many sites or legal entities you run.</p>
             </div>
           </div>
           <div className="row g-4">
@@ -422,7 +422,7 @@ const Electronics = () => {
           </div>
           <div className="row">
             <div className="col-lg-9">
-              <p className="pharma-compare-footnote">Where engineering designs in a separate PLM tool, released revisions need a destination. Supply Chain Management provides one in Engineering Change Management, which accepts engineering products from the design stage and passes them on to the companies that produce them, with connectors from Microsoft partners, listed on the marketplace, carrying the data. Business Central receives each revision as a fresh production BOM version, loaded through integration or typed in. The route is agreed during discovery.</p>
+              <p className="pharma-compare-footnote">Where engineering designs in a separate PLM tool, released revisions need a destination. Supply Chain Management provides one in Engineering Change Management, which accepts engineering products from the design stage and passes them on to the companies that produce them, with connectors from Microsoft partners, listed on the marketplace, carrying the data. Business Central receives each revision as a fresh production BOM version, loaded through <Link href="/products/microsoft-dynamics-365/integration/" className="u-i">integration</Link> or typed in. The route is agreed during discovery.</p>
               <Link
                 href="#exampleModal"
                 data-bs-toggle="modal"
@@ -439,14 +439,14 @@ const Electronics = () => {
           <div className="row">
             <div className="col-lg-5 align-self-center order-3">
               <div className='img-backs-sid-two text-center'>
-                <Image src="/img/electronics-18.png" alt="Best ERP for electronics manufacturing fit assessment" width={540} height={630} className='im-two' />
+                <Image src="/img/electronics-18.png" alt="Engineer reviewing production data on a laptop beside electronics equipment, representing an ERP fit assessment for electronics manufacturing" width={540} height={630} className='im-two' />
               </div>
             </div>
             <div className="col-lg-1 order-2"></div>
             <div className="col-lg-6 align-self-center order-1">
               <div className="supprt-header-new-one supprt-header-new-one-ul">
                 <h2>What Is the Best ERP for Electronics Manufacturing?</h2>
-                <p>The best electronics manufacturing ERP software is whichever one matches the way you manufacture. Weekly engineering change orders across three sites call for different tools from steady volumes out of one plant, and the comparison above marks the points where the products diverge.</p>
+                <p>The best electronics manufacturing ERP software is whichever one matches the way you manufacture. Weekly engineering change orders across three sites call for different tools from steady volumes out of <Link href="/industries/manufacturing/" className="u-i">one plant</Link>, and the comparison above marks the points where the products diverge.</p>
                 <p>We begin by listening. Tell us how many levels your BOMs have, how quickly engineering changes arrive, how orders reach the line, where your sites are and which standards your customers hold you to, and our platform recommendation follows from that.</p>
 
                 <Link
@@ -466,7 +466,7 @@ const Electronics = () => {
             <div className="col-lg-8">
               <div className="pharma-timeline-head">
                 <h2>Dynamics 365 ERP for Electronics Manufacturing: How Dynamics Square Implement</h2>
-                <p>Dynamics Square implements Dynamics ERPs for electronics manufacturers in the UK via Microsoft&apos;s Success by Design framework. It has five stages that put BOM and item data quality at the front of the plan.</p>
+                <p>Dynamics Square implements Dynamics ERPs for electronics manufacturers in the UK via Microsoft&apos;s <Link href="/our-services/dynamics-365-implementation-services/" className="md-light-link">Success by Design framework</Link>. It has five stages that put BOM and item data quality at the front of the plan.</p>
               </div>
             </div>
           </div>
@@ -535,7 +535,7 @@ const Electronics = () => {
               <div className="supprt-header-new-one">
                 <h2>Dynamics 365 Pricing for Electronics Manufacturers</h2>
               </div>
-              <p>Anyone who plans or runs production in Business Central needs a Premium licence, because production orders, BOMs and MRP sit in that tier. The list below shows Microsoft&apos;s 2026 UK prices in pounds, excluding VAT, and the Team Members licence costs far less for people who only view records or approve requests.</p>
+              <p>Anyone who plans or runs production in Business Central needs a Premium licence, because production orders, BOMs and MRP sit in that tier. The list below shows Microsoft&apos;s <Link href="/products/dynamics-365-business-central/pricing-licensing/" className="u-i">2026 UK prices</Link> in pounds, excluding VAT, and the Team Members licence costs far less for people who only view records or approve requests.</p>
             </div>
           </div>
           <h3 className="pharma-pricing-group-title">Business Central</h3>
@@ -581,7 +581,7 @@ const Electronics = () => {
           </div>
           <div className="row">
             <div className="col-lg-9">
-              <p className="pharma-pricing-footnote">Implementation accounts for most of the variation in budget. A single-site electronics assembler on Business Central has a lighter project than a multi-site manufacturer on Supply Chain Management, where PLM integration and a large BOM migration add scope.</p>
+              <p className="pharma-pricing-footnote">Implementation accounts for most of the variation in budget. A single-site electronics assembler on <Link href="/dynamics-365-business-central-implementation/" className="u-i">Business Central</Link> has a lighter project than a multi-site manufacturer on <Link href="/d365-supply-chain-management-implementation/" className="u-i">Supply Chain Management</Link>, where PLM integration and a large BOM migration add scope.</p>
               <p className="pharma-pricing-footnote">The number of users, the volume of BOM and item data, and the systems you connect all shape the final figure, and we confirm it in a quote after a short scoping conversation.</p>
               <Link
                 href="#exampleModal"
@@ -598,7 +598,7 @@ const Electronics = () => {
           <div className="row">
             <div className="col-lg-5 align-self-center order-3">
               <div className='img-backs-sid-two text-center'>
-                <Image src="/img/electronics-19.png" alt="UK electronics manufacturers working with Dynamics Square" width={540} height={536} className='im-two' />
+                <Image src="/img/electronics-19.png" alt="Two engineers in safety glasses assembling electronic components, representing UK electronics manufacturers working with Dynamics Square" width={540} height={536} className='im-two' />
               </div>
             </div>
             <div className="col-lg-1 order-2"></div>
@@ -606,7 +606,7 @@ const Electronics = () => {
               <div className="supprt-header-new-one supprt-header-new-one-ul">
                 <h2>Why UK Electronics Manufacturers Work with Us</h2>
                 <p>Dynamics 365 ERP for electronics manufacturing performs only as well as the BOM and item data underneath it, so every project of ours begins at the BOM and the supplier list, with the finance ledger coming after.</p>
-                <p>If Business Central is enough for your business, we will tell you, even when Supply Chain Management would be the bigger project for us. Our consultants work in both products regularly, so what we tell you about them comes from experience. Designs and suppliers keep changing after go-live, so we stay on to help with every revision, supplier change and planning update.</p>
+                <p>If Business Central is enough for your business, we will tell you, even when Supply Chain Management would be the bigger project for us. Our consultants work in both products regularly, so what we tell you about them comes from experience. Designs and suppliers keep changing after go-live, so we stay on to <Link href="/our-services/dynamics-365-support-services/" className="u-i">help with every revision, supplier change and planning update</Link>.</p>
                 <p>Component supply decides what a production line can build next week, so we stay close to your planning and purchasing teams for as long as you want us there.</p>
 
                 <Link

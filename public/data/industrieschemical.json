@@ -32,12 +32,12 @@
     {
       "id": 7,
       "question": "Can Dynamics 365 manage hazardous materials?",
-      "answer": "<p>Supply Chain Management stores hazmat data against the product itself. Regulations including ADR, IMDG and IATA sit alongside classes, divisions, packing groups and compatibility groups, and a warning appears when a load combines groups that should travel apart. Stock of hazmat items can be compared with limits you set, and shipment paperwork including the shipper's declaration can be printed. Microsoft frames the set-up as a tool for building your own processes, so compliance still depends on how you use it. Business Central depends on AppSource extensions for hazmat data.</p>"
+      "answer": "<p>Supply Chain Management stores hazmat data against the product itself. Regulations including ADR, IMDG and IATA sit alongside classes, divisions, packing groups and compatibility groups, and a warning appears when a load combines groups that should travel apart. Stock of hazmat items can be compared with limits you set, and shipment paperwork including the shipper's declaration can be printed. Microsoft frames the set-up as a tool for building your own processes, so compliance still depends on how you use it. <a href=\"/products/dynamics-365-business-central/\" class=\"u-i\">Business Central</a> depends on AppSource extensions for hazmat data.</p>"
     },
     {
       "id": 8,
       "question": "How much does chemical manufacturing ERP implementation cost in the UK?",
-      "answer": "<p>Microsoft publishes its licence prices, so implementation is where budgets differ. A single-site Business Central project at a blender or formulator is the smaller job, and a multi-site Supply Chain Management programme with formula migration and hazmat set-up is the larger one. The final amount depends on how many people use the system, which tools connect to it and the condition of your formula data. A scoping discussion produces a quotation tied to your own recipes.</p>"
+      "answer": "<p>Microsoft publishes its <a href=\"/products/dynamics-365-business-central/pricing-licensing/\" class=\"u-i\">licence prices</a>, so implementation is where budgets differ. A single-site Business Central project at a blender or formulator is the smaller job, and a multi-site Supply Chain Management programme with formula migration and hazmat set-up is the larger one. The final amount depends on how many people use the system, which tools connect to it and the condition of your formula data. A scoping discussion produces a quotation tied to your own recipes.</p>"
     },
     {
       "id": 9,

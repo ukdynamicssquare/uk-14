@@ -320,7 +320,9 @@ module.exports = {
     // pages/about-us-old is a noindexed backup of the old About Us design
     // (its noindex is a PageSeo prop, which NOINDEX_PATTERN doesn't detect).
     const aboutOldBackup = ['/about-us-old'];
+    // pages/ai-solutions/copilot-studio is noindexed through a PageSeo prop too.
+    const copilotStudio = ['/ai-solutions/copilot-studio'];
 
-    return [...staticNoindex, ...robotsDisallow, ...blogNoindex, ...blogOldBackup, ...aboutOldBackup];
+    return [...staticNoindex, ...robotsDisallow, ...blogNoindex, ...blogOldBackup, ...aboutOldBackup, ...copilotStudio];
   },
 };

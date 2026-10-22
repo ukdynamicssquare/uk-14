@@ -8,6 +8,7 @@ export const WEBSITE_ID = `${SITE_URL}/#website`;
 
 // Hub pages that appear as a middle step in breadcrumbs.
 const CRUMB_LABELS = {
+  "/ai-solutions/": "AI Solutions",
   "/products/": "Products",
   "/products/dynamics-365-business-central/": "Dynamics 365 Business Central",
   "/products/dynamics-365-supply-chain-management/": "Dynamics 365 Supply Chain Management",

@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "question": "What is Copilot Studio?",
+    "answer": "<p>Copilot Studio is Microsoft's low-code platform for building, publishing and managing AI agents and workflows. Describe an agent in everyday language or design it graphically, link it to your data and systems, then publish it to Teams, Microsoft 365 Copilot, your website, mobile apps and more.</p>"
+  },
+  {
+    "id": 2,
+    "question": "What is Microsoft Copilot Studio used for?",
+    "answer": "<p>Businesses use Microsoft Copilot Studio to answer employee and customer questions, automate workflows, complete tasks in business systems and run autonomous agents that plan and escalate work. Typical examples include IT support, HR screening, finance reconciliation, contract review and customer service.</p>"
+  },
+  {
+    "id": 3,
+    "question": "What are Copilot Studio agents?",
+    "answer": "<p>Copilot Studio agents are AI systems that carry out business work for an individual, a team or a whole company. Some answer questions from connected knowledge, some act inside your systems, and some run independently, planning their own steps and escalating to a person when needed.</p>"
+  },
+  {
+    "id": 4,
+    "question": "How much does Copilot Studio pricing cost in the UK?",
+    "answer": "<p>Copilot Studio capacity packs cost £153.80 per pack per month for 25,000 Copilot Credits. Pay-as-you-go billing charges only for credits consumed, and the pre-purchase plan saves up to 20%. Microsoft 365 Copilot starts at £23.10 per user per month, paid yearly, excluding VAT.</p>"
+  },
+  {
+    "id": 5,
+    "question": "What is a Copilot Studio license?",
+    "answer": "<p>A Copilot Studio license is the entitlement that lets your organisation build and run agents. You can use Microsoft 365 Copilot for internal agents, or buy standalone Copilot Studio through capacity packs, pay-as-you-go or a pre-purchase plan. Makers also need a free Copilot Studio user licence assigned by an administrator.</p>"
+  },
+  {
+    "id": 6,
+    "question": "What is the difference between Microsoft 365 Copilot and standalone Copilot Studio licensing?",
+    "answer": "<p>With a Microsoft 365 Copilot licence, your people can create and run internal agents in Microsoft 365 on the Copilot Chat and Standard harnesses, and the licence price already covers it. The standalone licence adds the GitHub Copilot harness, publishing to external channels, use by people outside your licensed base and a choice of pricing options.</p>"
+  },
+  {
+    "id": 7,
+    "question": "Is Power Virtual Agents part of Copilot Studio?",
+    "answer": "<p>Yes, Microsoft has absorbed <a href=\"/products/microsoft-power-virtual-agents/\">Power Virtual Agents</a> into Copilot Studio, so existing chatbot features remain available next to the newer tools for building and orchestrating agents.</p>"
+  },
+  {
+    "id": 8,
+    "question": "What does Copilot Studio support include?",
+    "answer": "<p>Copilot Studio support from Dynamics Square covers performance monitoring, quality testing, Copilot Credit consumption reviews, governance of your agent inventory and enhancements as Microsoft releases new capabilities. Our team works with yours after go-live to keep agents accurate and affordable.</p>"
+  },
+  {
+    "id": 9,
+    "question": "How do I choose a Copilot Studio partner in the UK?",
+    "answer": "<p>Look for <a href=\"/microsoft-partners-uk/\">Microsoft Solutions Partner</a> status, certified consultants, delivery experience across Dynamics 365 and Power Platform, and a clear method from discovery to support. Dynamics Square offers all four, with a free consultation to shape your first agent.</p>"
+  },
+  {
+    "id": 10,
+    "question": "Where can I publish Copilot Studio agents?",
+    "answer": "<p>You can publish agents to Microsoft Teams, SharePoint and Microsoft 365 Copilot for employees, and to websites, apps and social platforms for customers. Publishing to external channels requires a standalone Copilot Studio licence.</p>"
+  }
+]

@@ -55,10 +55,12 @@ const HeaderWork = () => {
          "/products/microsoft-dynamics-365-customer-service": `${gname}`,
           "/ai-solutions": `${gname}`,
            "/ai-solutions/microsoft-fabric": `${gname}`,
+           "/ai-solutions/copilot-studio": `${gname}`,
            "/industries/manufacturing/dynamics-365-for-pharmaceutical": `${gname}`,
            "/industries/manufacturing/dynamics-365-for-medical-device": `${gname}`,
            "/industries/manufacturing/dynamics-365-for-chemical": `${gname}`,
            "/industries/manufacturing/dynamics-365-for-electronics": `${gname}`,
+           "/industries/manufacturing/dynamics-365-for-food-and-beverage": `${gname}`,
            "/products": `${gname}`,
             "/industries/dynamics-365-for-healthcare": `${gname}`,
 

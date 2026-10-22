@@ -30,7 +30,7 @@ const Chemical = () => {
           <div className='row justify-content-center'>
             <div className='col-lg-8'>
               <div className='solution-new-banner-one-content'>
-                <h1>Dynamics 365 ERP for Chemical Manufacturing</h1>
+                <h1 className='large-heading'>Dynamics 365 ERP for Chemical Manufacturing</h1>
                 <p>From recipe approval to the delivery note, every stage in the life of a chemical product sits in one connected system when you deploy Dynamics 365 for chemical manufacturing.</p>
                 <p>Dynamics Square help you implement a chemical manufacturing ERP that is built around your processes.</p>
                 <div className="text-center">
@@ -55,7 +55,7 @@ const Chemical = () => {
               <div className='m-b-image-nnn m-b-image-nna'>
                 <Image
                   src="/img/chemical-00.png"
-                  alt='Dynamics 365 ERP for Chemical Manufacturing'
+                  alt='Dynamics 365 ERP for chemical manufacturing: chemist in protective mask and cap inspecting a flask in a laboratory'
                   width={1097}
                   height={656}
                   priority
@@ -107,7 +107,7 @@ const Chemical = () => {
               <div className="supprt-header-new-one">
                 <h2>What Dynamics 365 ERP for Chemical Manufacturing Does for Your Business</h2>
               </div>
-              <p>Dynamics 365 ERP for chemical manufacturing gives a plant that blends, reacts, formulates or packs chemicals a single record of what it makes and how. Recipes, batches, ingredient lots, laboratory results, hazard classifications and the accounts sit in one database, so a chemist amending a formula, a planner scheduling a run and a driver collecting a pallet of drums all work from the same facts.</p>
+              <p>Dynamics 365 ERP for chemical manufacturing gives a plant that blends, reacts, formulates or packs chemicals a single record of what it makes and how. Recipes, <Link href="/industries/business-central-for-process-manufacturing/" className="u-i">batches</Link>, ingredient lots, laboratory results, hazard classifications and the accounts sit in one database, so a chemist amending a formula, a planner scheduling a run and a driver collecting a pallet of drums all work from the same facts.</p>
               <p style={{marginBottom:'40px'}}><b>Dynamics Square recommends two ERP options for chemical manufacturing which include Dynamics 365 Business Central and Supply Chain Management. The final choice rests on recipe behaviour, site count and the amount of hazard handling the ERP should take on.</b></p>
             </div>
           </div>
@@ -133,7 +133,7 @@ const Chemical = () => {
           </div>
           <div className="row">
             <div className="col-lg-9">
-              <p className="erp-expect-footnote">Your CLP classifications, safety data sheets, COSHH assessments and any COMAH duties are produced by your own people and systems. Dynamics 365 holds the records those duties lean on, such as which ingredient lots went into which batch, where hazardous stock is kept and which customers received a given batch.</p>
+              <p className="erp-expect-footnote">Your CLP classifications, safety data sheets, COSHH assessments and any COMAH duties are produced by your own people and systems. <Link href="/products/microsoft-dynamics-365/" className="u-i">Dynamics 365</Link> holds the records those duties lean on, such as which ingredient lots went into which batch, where hazardous stock is kept and which customers received a given batch.</p>
               <Link
                 href="#exampleModal"
                 data-bs-toggle="modal"
@@ -168,7 +168,7 @@ const Chemical = () => {
             </div>
             <div className="uk-reg-row">
               <div className="uk-reg-row__icon">
-                <Image src="/img/chemical-02.png" alt="UK REACH" width={40} height={36} />
+                <Image src="/img/chemical-02.png" alt="UK REACH substance registration" width={40} height={36} />
               </div>
               <div className="uk-reg-row__title">
                 <h4>UK REACH</h4>
@@ -179,7 +179,7 @@ const Chemical = () => {
             </div>
             <div className="uk-reg-row">
               <div className="uk-reg-row__icon">
-                <Image src="/img/chemical-03.png" alt="COSHH" width={40} height={36} />
+                <Image src="/img/chemical-03.png" alt="COSHH control of substances hazardous to health" width={40} height={36} />
               </div>
               <div className="uk-reg-row__title">
                 <h4>COSHH</h4>
@@ -239,7 +239,7 @@ const Chemical = () => {
                       <div className="pharma-capability-items">
                         <div className="pharma-capability-item">
                           <Image src="/img/chemical-06.png" alt="Production BOM versions with certification status" width={40} height={36} />
-                          <p>Production BOMs in Business Central, with dated versions and a certification status, so a recipe change takes effect once approved</p>
+                          <p><Link href="/products/dynamics-365-business-central/manufacturing-management/" className="u-i">Production BOMs in Business Central</Link>, with dated versions and a certification status, so a recipe change takes effect once approved</p>
                         </div>
                         <div className="pharma-capability-item">
                           <Image src="/img/chemical-07.png" alt="Formula versions that scale by quantity or ingredient percentage" width={40} height={36} />
@@ -285,7 +285,7 @@ const Chemical = () => {
                         </div>
                         <div className="pharma-capability-item">
                           <Image src="/img/chemical-13.png" alt="Lot blocking and quarantine bins" width={40} height={36} />
-                          <p>Lot blocking that holds a failing lot back from sale or use until released, with quarantine bins for stock awaiting a decision</p>
+                          <p>Lot blocking that holds a failing lot back from sale or use until released, with <Link href="/products/dynamics-365-business-central/warehouse-management/" className="u-i">quarantine bins</Link> for stock awaiting a decision</p>
                         </div>
                         <div className="pharma-capability-item">
                           <Image src="/img/chemical-14.png" alt="Quality orders and statistical sampling plans" width={40} height={36} />
@@ -310,7 +310,7 @@ const Chemical = () => {
                         </div>
                         <div className="pharma-capability-item">
                           <Image src="/img/chemical-17.png" alt="MRP, master scheduling and formula-based production orders" width={40} height={36} />
-                          <p>MRP and master scheduling in both products, plus formula-based production orders in Supply Chain Management for batch and continuous processes</p>
+                          <p><Link href="/products/dynamics-365-supply-chain-management/" className="u-i">MRP and master scheduling</Link> in both products, plus formula-based production orders in Supply Chain Management for batch and continuous processes</p>
                         </div>
                       </div>
                     </div>
@@ -417,7 +417,7 @@ const Chemical = () => {
           </div>
           <div className="row">
             <div className="col-lg-9">
-              <p className="pharma-compare-footnote">Safety data sheets themselves are usually written in a specialist SDS or environmental, health and safety (EHS) tool, with the ERP linking each product to its current version. We find out early whether you already run such a tool and how it should connect to Dynamics 365.</p>
+              <p className="pharma-compare-footnote">Safety data sheets themselves are usually written in a specialist SDS or environmental, health and safety (EHS) tool, with the ERP linking each product to its current version. We find out early whether you already run such a tool and how it should <Link href="/products/microsoft-dynamics-365/integration/" className="u-i">connect to Dynamics 365</Link>.</p>
               <Link
                 href="#exampleModal"
                 data-bs-toggle="modal"
@@ -434,14 +434,14 @@ const Chemical = () => {
           <div className="row">
             <div className="col-lg-5 align-self-center order-3">
               <div className='img-backs-sid-two text-center'>
-                <Image src="/img/chemical-18.png" alt="Best ERP for chemical manufacturing fit assessment" width={540} height={630} className='im-two' />
+                <Image src="/img/chemical-18.png" alt="Lab technician weighing a chemical sample on a precision balance, representing an ERP fit assessment for chemical manufacturing" width={540} height={630} className='im-two' />
               </div>
             </div>
             <div className="col-lg-1 order-2"></div>
             <div className="col-lg-6 align-self-center order-1">
               <div className="supprt-header-new-one supprt-header-new-one-ul">
                 <h2>What Is the Best ERP for Chemical Manufacturing?</h2>
-                <p>The best ERP for chemical manufacturing follows the route your recipes, batches and hazard paperwork take through the plant. A drum-filling operation on fixed formulas needs far less from chemical manufacturing ERP software than a plant that splits one reaction into a main product and several by-products, and the table above shows where the dividing line falls.</p>
+                <p>The best ERP for chemical manufacturing follows the route your recipes, batches and hazard paperwork take through the plant. A drum-filling operation on fixed formulas needs far less from <Link href="/industries/manufacturing/" className="u-i">chemical manufacturing ERP software</Link> than a plant that splits one reaction into a main product and several by-products, and the table above shows where the dividing line falls.</p>
                 <p>We run a fit assessment on every chemical enquiry before naming a product. It covers how your formulas behave, how large your batches are, how many sites you operate, how much hazardous stock you hold, and which rules apply to what you sell.</p>
 
                 <Link
@@ -461,7 +461,7 @@ const Chemical = () => {
             <div className="col-lg-8">
               <div className="pharma-timeline-head">
                 <h2>How Dynamics Square Implements Dynamics 365 ERP for Chemical Manufacturing</h2>
-                <p>Dynamics Square follows Microsoft&apos;s Success by Design framework for chemical ERP implementations for UK-based manufacturers, and the first weeks go on getting formula and item data into shape.</p>
+                <p>Dynamics Square follows Microsoft&apos;s <Link href="/our-services/dynamics-365-implementation-services/" className="md-light-link">Success by Design framework</Link> for chemical ERP implementations for UK-based manufacturers, and the first weeks go on getting formula and item data into shape.</p>
               </div>
             </div>
           </div>
@@ -523,7 +523,7 @@ const Chemical = () => {
               <div className="supprt-header-new-one">
                 <h2>Dynamics 365 Pricing for Chemical Manufacturers</h2>
               </div>
-              <p>Mentioned below are Microsoft’s official Dynamics 365 pricings for chemical manufacturers in pounds, excluding VAT. Business Central Essentials covers finance, sales, purchasing and inventory, and anything involving production orders, BOMs or MRP needs Premium, so check each role against the descriptions before counting seats.</p>
+              <p>Mentioned below are Microsoft’s <Link href="/products/dynamics-365-business-central/pricing-licensing/" className="u-i">official Dynamics 365 pricings</Link> for chemical manufacturers in pounds, excluding VAT. Business Central Essentials covers finance, sales, purchasing and inventory, and anything involving production orders, BOMs or MRP needs Premium, so check each role against the descriptions before counting seats.</p>
             </div>
           </div>
           <h3 className="pharma-pricing-group-title">Business Central</h3>
@@ -569,7 +569,7 @@ const Chemical = () => {
           </div>
           <div className="row">
             <div className="col-lg-9">
-              <p className="pharma-pricing-footnote">The scale of your project sets the budget. A blender or formulator running one site on Business Central needs less than a multi-site operation on Supply Chain Management with formula migration and hazmat set-up.</p>
+              <p className="pharma-pricing-footnote">The scale of your project sets the budget. A blender or formulator running one site on <Link href="/dynamics-365-business-central-implementation/" className="u-i">Business Central</Link> needs less than a multi-site operation on <Link href="/d365-supply-chain-management-implementation/" className="u-i">Supply Chain Management</Link> with formula migration and hazmat set-up.</p>
               <Link
                 href="#exampleModal"
                 data-bs-toggle="modal"
@@ -585,7 +585,7 @@ const Chemical = () => {
           <div className="row">
             <div className="col-lg-5 align-self-center order-3">
               <div className='img-backs-sid-two text-center'>
-                <Image src="/img/chemical-19.png" alt="UK chemical manufacturers working with Dynamics Square" width={540} height={536} className='im-two' />
+                <Image src="/img/chemical-19.png" alt="Team of scientists in lab coats working together at a computer, representing UK chemical manufacturers working with Dynamics Square" width={540} height={536} className='im-two' />
               </div>
             </div>
             <div className="col-lg-1 order-2"></div>
@@ -594,8 +594,8 @@ const Chemical = () => {
                 <h2>Why UK Chemical Manufacturers Work with Dynamics Square?</h2>
                 <p>Every project starts with a close read of your formulas, item master and hazard records, because reports, traceability and costing all draw on that data and any mistake in it spreads.</p>
                 <p>Dynamics Square recommends by fit and expects you to hold us to it. Ask for the reasons behind a recommendation and we set them out against your formulas, sites and stored quantities.</p>
-                <p>Dynamics Square has over 60+ implementations in manufacturing and 35+ manufacturing and supply chain consultants with deep expertise in both Business Central and Supply Chain Management. So, the differences between the products come from hands-on experience.</p>
-                <p>Formula revisions, regulatory updates such as the 2026 changes to GB CLP notification and UK REACH deadlines, and new product launches all arrive after go-live. We stay on to help your team absorb them.</p>
+                <p>Dynamics Square has over 60+ <Link href="/industries/manufacturing/" className="u-i">implementations in manufacturing</Link> and 35+ manufacturing and supply chain consultants with deep expertise in both Business Central and Supply Chain Management. So, the differences between the products come from hands-on experience.</p>
+                <p>Formula revisions, regulatory updates such as the 2026 changes to GB CLP notification and UK REACH deadlines, and new product launches all arrive after go-live. We stay on to <Link href="/our-services/dynamics-365-support-services/" className="u-i">help your team absorb them</Link>.</p>
                 <p>Dispatch stops quickly when a drum is mislabelled or a batch has gaps in its history, so we work alongside your quality and compliance people.</p>
 
                 <Link
