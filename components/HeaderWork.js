@@ -60,7 +60,7 @@ const HeaderWork = () => {
            "/industries/manufacturing/dynamics-365-for-medical-device": `${gname}`,
            "/industries/manufacturing/dynamics-365-for-chemical": `${gname}`,
            "/industries/manufacturing/dynamics-365-for-electronics": `${gname}`,
-           "/industries/manufacturing/dynamics-365-for-food-and-beverage": `${gname}`,
+           "/industries/manufacturing/dynamics-365-for-food": `${gname}`,
            "/products": `${gname}`,
             "/industries/dynamics-365-for-healthcare": `${gname}`,
 

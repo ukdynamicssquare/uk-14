@@ -40,10 +40,10 @@ const pageSchema = {
 };
 
 const ADOPTION = [
-  { icon: 'bi-building-check', title: 'Proven at scale.', text: 'Microsoft states that 90% of the Fortune 500 use Copilot Studio.' },
-  { icon: 'bi-geo-alt', title: 'A UK reference point.', text: "Virgin Money built an AI assistant with Copilot Studio and, according to Microsoft's customer story, recorded a 97% journey completion rate and 54% customer engagement on outbound messages." },
-  { icon: 'bi-lightning-charge', title: 'Speed from idea to agent.', text: 'Microsoft reports that Amgen built an R&D agent in six weeks with Copilot Studio, and that Dow identified more than 100 use cases for agents.' },
-  { icon: 'bi-cpu', title: 'A widening model choice.', text: 'Microsoft has announced GPT-5 and Anthropic models within the Copilot Studio multi-model lineup.' },
+  { icon: '/img/copilot-studio-04.png', title: 'Proven at scale.', text: 'Microsoft states that 90% of the Fortune 500 use Copilot Studio.' },
+  { icon: '/img/copilot-studio-05.png', title: 'A UK reference point.', text: "Virgin Money built an AI assistant with Copilot Studio and, according to Microsoft's customer story, recorded a 97% journey completion rate and 54% customer engagement on outbound messages." },
+  { icon: '/img/copilot-studio-06.png', title: 'Speed from idea to agent.', text: 'Microsoft reports that Amgen built an R&D agent in six weeks with Copilot Studio, and that Dow identified more than 100 use cases for agents.' },
+  { icon: '/img/copilot-studio-07.png', title: 'A widening model choice.', text: 'Microsoft has announced GPT-5 and Anthropic models within the Copilot Studio multi-model lineup.' },
 ];
 
 const AGENT_TYPES = [
@@ -55,9 +55,9 @@ const AGENT_TYPES = [
 ];
 
 const HARNESSES = [
-  { icon: 'bi-diagram-3', name: 'GitHub Copilot harness', text: 'Agents that reason through multi-step tasks and complex processes' },
-  { icon: 'bi-signpost-split', name: 'Standard harness', text: 'Predictable agents that follow defined topics and repeatable conversation paths' },
-  { icon: 'bi-chat-square-text', name: 'Copilot chat harness', text: 'Grounding Microsoft 365 Copilot Chat answers in your own company content' },
+  { icon: '/img/copilot-studio-08.png', name: 'GitHub Copilot harness', text: 'Agents that reason through multi-step tasks and complex processes' },
+  { icon: '/img/copilot-studio-09.png', name: 'Standard harness', text: 'Predictable agents that follow defined topics and repeatable conversation paths' },
+  { icon: '/img/copilot-studio-10.png', name: 'Copilot chat harness', text: 'Grounding Microsoft 365 Copilot Chat answers in your own company content' },
 ];
 
 const CAPABILITIES = [
@@ -261,10 +261,9 @@ const CopilotStudio = () => {
       <PageSeo
         type="Service"
         title="Microsoft Copilot Studio Partner - Dynamics Square UK"
-        description="Dynamics Square designs, builds and supports Microsoft Copilot Studio agents that draw on your data, act inside your systems and work where your people already work."
+        description="Partner with Dynamics Square UK for Microsoft Copilot Studio services. Build AI agents, automate workflows and improve business productivity with tailored Copilot Studio solutions."
         image="/img/copilot-studio-og.png"
         imageAlt="Microsoft Copilot Studio Partner for UK Businesses"
-        robots="noindex, nofollow"
         keywords="copilot studio partner, Microsoft copilot studio, copilot studio, what is copilot studio, copilot studio pricing, copilot studio license, copilot studio agents, copilot studio support"
         faqs={faqData}
         extraSchema={pageSchema}
@@ -274,25 +273,28 @@ const CopilotStudio = () => {
           <div className='row justify-content-center'>
             <div className='col-lg-9'>
               <div className='solution-new-banner-one-content'>
-                <h1 className='large-heading'>Microsoft Copilot Studio Partner for UK Businesses</h1>
+                <h1 className='large-heading'>Microsoft Copilot Studio Partner</h1>
                 <p>Dynamics Square designs, builds and supports Microsoft Copilot Studio agents that draw on your data, act inside your systems and work where your people already work: Microsoft Teams, Microsoft 365 Copilot, your website and your customer channels.</p>
                 <p className={styles['cs-tagline']}>Build the agents your competitors are still planning.</p>
                 <div className="text-center">
                   <ConsultButton label="Book a Copilot Studio Consultation" />
                 </div>
               </div>
+              <div className='m-b-image'>
+                <Image src="/img/copilot-studio-00.png" alt="" width={1920} height={776} quality={100} aria-hidden="true" />
+              </div>
             </div>
           </div>
         </div>
-        <div className={styles['cs-hero-img']}>
+        <div className="solution-new-banner-one-img imm-mins">
           <Image
-            src="/img/copilot-studio-00.svg"
-            alt="Copilot Studio agent canvas connected to Microsoft Teams, Microsoft 365 Copilot and a website"
-            width={1100}
-            height={520}
+            src="/img/copilot-studio-00.png"
+            alt="Copilot Studio screens showing an agent being built, its instructions and the agent working inside Microsoft Teams"
+            width={1920}
+            height={776}
+            quality={100}
             priority
-            unoptimized
-            className={styles['cs-img']}
+            className="flot-1"
           />
         </div>
       </div>
@@ -342,11 +344,10 @@ const CopilotStudio = () => {
             </div>
             <div className='col-lg-6 align-self-center'>
               <Image
-                src="/img/copilot-studio-01.svg"
-                alt="Copilot Studio agent drawing on knowledge, workflows, business systems and channels"
-                width={600}
-                height={520}
-                unoptimized
+                src="/img/copilot-studio-01.png"
+                alt="Copilot Studio home screen asking what you would like to build, with options to start an agent or a workflow"
+                width={630}
+                height={588}
                 className={styles['cs-img']}
               />
             </div>
@@ -362,7 +363,7 @@ const CopilotStudio = () => {
           <div className={styles['cs-stats']}>
             {ADOPTION.map((item) => (
               <div className={styles['cs-stat']} key={item.title}>
-                <i className={`bi ${item.icon}`} aria-hidden="true"></i>
+                <Image src={item.icon} alt="" width={40} height={40} className={styles['cs-stat__icon']} />
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
               </div>
@@ -395,7 +396,7 @@ const CopilotStudio = () => {
             <div className={styles['cs-cards3']}>
               {HARNESSES.map((h) => (
                 <div className={styles['cs-engine-card']} key={h.name}>
-                  <i className={`bi ${h.icon}`} aria-hidden="true"></i>
+                  <Image src={h.icon} alt="" width={52} height={52} className={styles['cs-engine-card__icon']} />
                   <div>
                     <h4>{h.name}</h4>
                     <p>{h.text}</p>
@@ -543,11 +544,10 @@ const CopilotStudio = () => {
             </div>
             <div className='col-lg-5 align-self-center'>
               <Image
-                src="/img/copilot-studio-02.svg"
-                alt="Dynamics 365 and Power Platform connected to Copilot Studio agents"
-                width={600}
-                height={480}
-                unoptimized
+                src="/img/copilot-studio-02.png"
+                alt="Copilot Studio stacked on Dynamics 365 and Power Platform"
+                width={593}
+                height={602}
                 className={styles['cs-img']}
               />
             </div>
@@ -590,11 +590,10 @@ const CopilotStudio = () => {
           <div className='row g-4 g-lg-5'>
             <div className='col-lg-6 align-self-center order-2 order-lg-1'>
               <Image
-                src="/img/copilot-studio-03.svg"
-                alt="Copilot Studio analytics tracking agent sessions, outcomes and Copilot Credit consumption"
-                width={600}
-                height={460}
-                unoptimized
+                src="/img/copilot-studio-03.png"
+                alt="Copilot Studio analytics showing conversation outcomes and run duration trends"
+                width={589}
+                height={540}
                 className={styles['cs-img']}
               />
             </div>

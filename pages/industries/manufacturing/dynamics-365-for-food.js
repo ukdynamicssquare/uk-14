@@ -55,7 +55,7 @@ const FoodAndBeverage = () => {
               <div className='m-b-image-nnn m-b-image-nna'>
                 <Image
                   src="/img/food-and-beverage-00.png"
-                  alt='Dynamics 365 ERP for food and beverage manufacturing: worker in hairnet and apron on a clean dairy production floor'
+                  alt='Dynamics 365 ERP for food and beverage manufacturing: operator logging a roasting batch on a laptop beside the roaster'
                   width={1097}
                   height={656}
                   priority
@@ -157,7 +157,7 @@ const FoodAndBeverage = () => {
           <div className="uk-reg-panel">
             <div className="uk-reg-row">
               <div className="uk-reg-row__icon">
-                <Image src="/img/food-and-beverage-01.png" alt="Traceability one step back and one step forward under general food law" width={40} height={36} />
+                <Image src="/img/food-and-beverage-01.png" alt="Traceability one step back and one step forward under general food law" width={48} height={48} />
               </div>
               <div className="uk-reg-row__title">
                 <h4>Traceability under general food law</h4>
@@ -168,7 +168,7 @@ const FoodAndBeverage = () => {
             </div>
             <div className="uk-reg-row">
               <div className="uk-reg-row__icon">
-                <Image src="/img/food-and-beverage-02.png" alt="Food withdrawal and recall duties" width={40} height={36} />
+                <Image src="/img/food-and-beverage-02.png" alt="Food withdrawal and recall duties" width={48} height={48} />
               </div>
               <div className="uk-reg-row__title">
                 <h4>Withdrawal and recall duties</h4>
@@ -179,7 +179,7 @@ const FoodAndBeverage = () => {
             </div>
             <div className="uk-reg-row">
               <div className="uk-reg-row__icon">
-                <Image src="/img/food-and-beverage-03.png" alt="Allergen labelling and use by and best before date marks" width={40} height={36} />
+                <Image src="/img/food-and-beverage-03.png" alt="Allergen labelling and use by and best before date marks" width={48} height={48} />
               </div>
               <div className="uk-reg-row__title">
                 <h4>Allergens and date marks</h4>
@@ -190,7 +190,7 @@ const FoodAndBeverage = () => {
             </div>
             <div className="uk-reg-row">
               <div className="uk-reg-row__icon">
-                <Image src="/img/food-and-beverage-04.png" alt="HACCP records and BRCGS customer audits" width={40} height={36} />
+                <Image src="/img/food-and-beverage-04.png" alt="HACCP records and BRCGS customer audits" width={48} height={48} />
               </div>
               <div className="uk-reg-row__title">
                 <h4>HACCP records and customer audits</h4>
@@ -220,19 +220,19 @@ const FoodAndBeverage = () => {
                       <h3>Traceability and batch genealogy</h3>
                       <div className="pharma-capability-items">
                         <div className="pharma-capability-item">
-                          <Image src="/img/food-and-beverage-05.png" alt="Lot numbers for ingredients, intermediates and finished products" width={40} height={36} />
+                          <Image src="/img/food-and-beverage-05.png" alt="Lot numbers for ingredients, intermediates and finished products" width={40} height={40} />
                           <p>Lot numbers issued to every ingredient, intermediate, pack component and finished product on arrival or manufacture</p>
                         </div>
                         <div className="pharma-capability-item">
-                          <Image src="/img/food-and-beverage-06.png" alt="Production orders logging ingredient lots and creating output lots" width={40} height={36} />
+                          <Image src="/img/food-and-beverage-06.png" alt="Production orders logging ingredient lots and creating output lots" width={40} height={40} />
                           <p>Production orders that log the ingredient lots they use and open a new lot for the product they make, which is the basis of <Link href="/industries/business-central-for-process-manufacturing/" className="u-i">food batch manufacturing software</Link></p>
                         </div>
                         <div className="pharma-capability-item">
-                          <Image src="/img/food-and-beverage-07.png" alt="Two-way item tracing from supplier lot to finished lot" width={40} height={36} />
+                          <Image src="/img/food-and-beverage-07.png" alt="Two-way item tracing from supplier lot to finished lot" width={40} height={40} />
                           <p>Item tracing in both directions, so one supplier lot reveals every finished lot it entered, and one customer complaint reveals every ingredient lot behind the pack</p>
                         </div>
                         <div className="pharma-capability-item">
-                          <Image src="/img/food-and-beverage-08.png" alt="Tracing to affected customers and shipped sales orders" width={40} height={36} />
+                          <Image src="/img/food-and-beverage-08.png" alt="Tracing to affected customers and shipped sales orders" width={40} height={40} />
                           <p>In Supply Chain Management, the trace extends to the customers and shipped sales orders affected, which is the working core of <Link href="/industries/food-and-beverages/" className="u-i">food traceability software</Link></p>
                         </div>
                       </div>
@@ -245,19 +245,19 @@ const FoodAndBeverage = () => {
                       <h3>Date marks and shelf-life control</h3>
                       <div className="pharma-capability-items">
                         <div className="pharma-capability-item">
-                          <Image src="/img/food-and-beverage-09.png" alt="Expiry dates with strict expiration posting" width={40} height={36} />
+                          <Image src="/img/food-and-beverage-09.png" alt="Expiry dates with strict expiration posting" width={40} height={40} />
                           <p>Expiry dates captured at goods-in or at production, with strict expiration posting available to keep expired lots out of picks</p>
                         </div>
                         <div className="pharma-capability-item">
-                          <Image src="/img/food-and-beverage-10.png" alt="Picking by earliest expiry date per warehouse location" width={40} height={36} />
+                          <Image src="/img/food-and-beverage-10.png" alt="Picking by earliest expiry date per warehouse location" width={40} height={40} />
                           <p><Link href="/products/dynamics-365-business-central/warehouse-management/" className="u-i">Picking by earliest expiry date</Link>, switched on per warehouse location in Business Central</p>
                         </div>
                         <div className="pharma-capability-item">
-                          <Image src="/img/food-and-beverage-11.png" alt="Shelf advice, best-before and expiry periods per product" width={40} height={36} />
+                          <Image src="/img/food-and-beverage-11.png" alt="Shelf advice, best-before and expiry periods per product" width={40} height={40} />
                           <p>In Supply Chain Management, shelf advice, best-before and expiry periods set per product, so the three dates follow the product&apos;s own rules</p>
                         </div>
                         <div className="pharma-capability-item">
-                          <Image src="/img/food-and-beverage-12.png" alt="Customer sellable days for minimum remaining shelf life" width={40} height={36} />
+                          <Image src="/img/food-and-beverage-12.png" alt="Customer sellable days for minimum remaining shelf life" width={40} height={40} />
                           <p>Sellable days per customer, which stops short-dated lots going to a customer who needs a minimum remaining life on delivery</p>
                         </div>
                       </div>
@@ -270,19 +270,19 @@ const FoodAndBeverage = () => {
                       <h3>Recipes, formulas and allergen data</h3>
                       <div className="pharma-capability-items">
                         <div className="pharma-capability-item">
-                          <Image src="/img/food-and-beverage-13.png" alt="Versioned production bills of materials for recipes" width={40} height={36} />
+                          <Image src="/img/food-and-beverage-13.png" alt="Versioned production bills of materials for recipes" width={40} height={40} />
                           <p><Link href="/products/dynamics-365-business-central/manufacturing-management/" className="u-i">Business Central production bills of materials</Link>, where each version has its own start date and certification status, so a reformulation goes live on an agreed day</p>
                         </div>
                         <div className="pharma-capability-item">
-                          <Image src="/img/food-and-beverage-14.png" alt="Approved formulas scaled by batch size or ingredient percentage" width={40} height={36} />
+                          <Image src="/img/food-and-beverage-14.png" alt="Approved formulas scaled by batch size or ingredient percentage" width={40} height={40} />
                           <p>Supply Chain Management formulas that are approved and activated before use, with quantities driven by batch size or by the percentage of each ingredient, and ingredients drawn down in stages. This is recipe and formula management software built for plants that adapt to raw material variation.</p>
                         </div>
                         <div className="pharma-capability-item">
-                          <Image src="/img/food-and-beverage-15.png" alt="Co-products and by-products from the same production run" width={40} height={36} />
+                          <Image src="/img/food-and-beverage-15.png" alt="Co-products and by-products from the same production run" width={40} height={40} />
                           <p>Co-products and by-products booked into stock from the same run, such as whey from cheesemaking or spent grain from brewing</p>
                         </div>
                         <div className="pharma-capability-item">
-                          <Image src="/img/food-and-beverage-16.png" alt="Allergen details held as item or batch attributes" width={40} height={36} />
+                          <Image src="/img/food-and-beverage-16.png" alt="Allergen details held as item or batch attributes" width={40} height={40} />
                           <p>Allergen details held as item or batch attributes, shown wherever the product appears. Label artwork and cleaning validation belong to your food safety team and labelling tools</p>
                         </div>
                       </div>
@@ -295,19 +295,19 @@ const FoodAndBeverage = () => {
                       <h3>Quality and production</h3>
                       <div className="pharma-capability-items">
                         <div className="pharma-capability-item">
-                          <Image src="/img/food-and-beverage-17.png" alt="Quality inspections on receipt and production output with lot holds" width={40} height={36} />
+                          <Image src="/img/food-and-beverage-17.png" alt="Quality inspections on receipt and production output with lot holds" width={40} height={40} />
                           <p>Business Central Quality Management, with inspections generated on receipt and on production output, and a failing lot held back from dispatch until an authorised person lifts the hold</p>
                         </div>
                         <div className="pharma-capability-item">
-                          <Image src="/img/food-and-beverage-18.png" alt="Quality orders, non-conformance cases and sampling plans" width={40} height={36} />
+                          <Image src="/img/food-and-beverage-18.png" alt="Quality orders, non-conformance cases and sampling plans" width={40} height={40} />
                           <p>Supply Chain Management quality orders, non-conformance cases and sampling plans for heavier testing</p>
                         </div>
                         <div className="pharma-capability-item">
-                          <Image src="/img/food-and-beverage-19.png" alt="MRP and master scheduling balanced against shelf life" width={40} height={36} />
+                          <Image src="/img/food-and-beverage-19.png" alt="MRP and master scheduling balanced against shelf life" width={40} height={40} />
                           <p><Link href="/products/dynamics-365-supply-chain-management/" className="u-i">MRP and master scheduling</Link> in both products, balancing demand against capacity and against the days of life left in stock</p>
                         </div>
                         <div className="pharma-capability-item">
-                          <Image src="/img/food-and-beverage-20.png" alt="Catch weight items stocked in kilograms and handled in cases" width={40} height={36} />
+                          <Image src="/img/food-and-beverage-20.png" alt="Catch weight items stocked in kilograms and handled in cases" width={40} height={40} />
                           <p>Catch weight items in Supply Chain Management, stocked in kilograms yet handled in cases that each weigh a little differently</p>
                         </div>
                       </div>
@@ -442,7 +442,7 @@ const FoodAndBeverage = () => {
           <div className="row">
             <div className="col-lg-5 align-self-center order-3">
               <div className='img-backs-sid-two text-center'>
-                <Image src="/img/food-and-beverage-21.png" alt="Food production worker in hairnet and gloves cutting curd, representing an ERP fit assessment for food manufacturers" width={540} height={630} className='im-two' />
+                <Image src="/img/food-and-beverage-21.png" alt="Baker sifting flour with recipe quantities and yield impact overlaid, representing an ERP fit assessment for food manufacturers" width={540} height={630} className='im-two' />
               </div>
             </div>
             <div className="col-lg-1 order-2"></div>
@@ -593,7 +593,7 @@ const FoodAndBeverage = () => {
           <div className="row">
             <div className="col-lg-5 align-self-center order-3">
               <div className='img-backs-sid-two text-center'>
-                <Image src="/img/food-and-beverage-22.png" alt="Food factory worker in hairnet and mask checking product on the production line, representing UK food and drink producers working with Dynamics Square" width={540} height={536} className='im-two' />
+                <Image src="/img/food-and-beverage-22.png" alt="Two business people shaking hands, representing UK food and drink producers working with Dynamics Square" width={540} height={630} className='im-two' />
               </div>
             </div>
             <div className="col-lg-1 order-2"></div>

@@ -189,10 +189,10 @@ export const solutionMenu = {
           desc: "Automate your processes to improve workflows",
         },
         {
-          href: "/products/microsoft-power-virtual-agents/",
-          icon: "/img/menu-icons/virtual agent.svg",
-          title: "Power Virtual Agents",
-          desc: "Create powerful AI Bots to maximize productivity",
+          href: "/ai-solutions/copilot-studio/",
+          icon: "/img/menu-icons/virtual-agent.svg",
+          title: "Copilot Studio",
+          desc: "Build AI agents for your business processes",
         },
       ],
     },
@@ -557,7 +557,7 @@ export const SOLUTION_PANELS = {
   power: [
     { href: "/products/microsoft-power-apps/", img: "/img/menu-icons/power-apps.svg", alt: "power-apps", title: "Power Apps", desc: "Build web & mobile apps with zero or minimal code" },
     { href: "/products/microsoft-power-automate/", img: "/img/menu-icons/power-automate.svg", alt: "power-automate", title: "Power Automate", desc: "Automate your processes to improve workflows" },
-    { href: "/products/microsoft-power-virtual-agents/", img: "/img/menu-icons/virtual agent.svg", alt: "virtual agent", title: "Power Virtual Agents", desc: "Create powerful AI Bots to maximize productivity" },
+    { href: "/ai-solutions/copilot-studio/", img: "/img/menu-icons/virtual-agent.svg", alt: "copilot studio", title: "Copilot Studio", desc: "Build AI agents for your business processes" },
   ],
 };
 
@@ -609,6 +609,7 @@ export const INDUSTRY_TABS = [
       { href: "/industries/manufacturing/dynamics-365-for-medical-device/", icon: "bi-bandaid", title: "Medical Device", desc: "Traceability and regulatory compliance" },
       { href: "/industries/manufacturing/dynamics-365-for-chemical/", icon: "bi-eyedropper", title: "Chemical", desc: "Recipes, batches and lot traceability" },
       { href: "/industries/manufacturing/dynamics-365-for-electronics/", icon: "bi-motherboard", title: "Electronics", desc: "Multi-level BOMs and serial tracking" },
+      { href: "/industries/manufacturing/dynamics-365-for-food/", icon: "bi-basket", title: "Food & Beverage", desc: "Lot tracing, expiry dates and recipes" },
       { href: "/industries/business-central-for-process-manufacturing/", icon: "bi-droplet-half", title: "Process Manufacturing", desc: "Formulas, batches and recipes in Business Central" },
     ],
   },

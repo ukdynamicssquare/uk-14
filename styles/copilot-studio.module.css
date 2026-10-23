@@ -57,11 +57,6 @@
   font-weight: 700;
   margin-bottom: 24px;
 }
-.cs-hero-img {
-  max-width: 1000px;
-  margin: 10px auto 0;
-  padding: 0 12px;
-}
 
 /* ==========================================================================
    Trust bar
@@ -136,17 +131,11 @@
   transform: translateY(-4px);
   box-shadow: 0 16px 36px rgba(45, 38, 64, 0.12);
 }
-.cs-stat :global(.bi) {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+.cs-stat__icon {
+  display: block;
   width: 48px;
   height: 48px;
   margin-bottom: 18px;
-  border-radius: 12px;
-  background: #f2eff7;
-  color: #8e44ad;
-  font-size: 22px;
 }
 .cs-stat h3 {
   color: #2d2640;
@@ -229,17 +218,10 @@
   border-color: #a347d1;
   box-shadow: 0 8px 25px rgba(80, 50, 100, 0.08);
 }
-.cs-engine-card :global(.bi) {
+.cs-engine-card__icon {
   flex-shrink: 0;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #984b6e, #60518c);
-  color: #fff;
-  font-size: 18px;
+  width: 48px;
+  height: 48px;
 }
 .cs-engine-card h4 {
   color: #2d2640;

@@ -164,6 +164,16 @@
       "source": "/erp-implementation-cost-calculator/",
       "destination": "/tools/erp-implementation-cost-calculator/",
       "statusCode": 301
+    },
+    {
+      "source": "/blog/shopify-connector-business-central/",
+      "destination": "/blog/shopify-integration-with-dynamics-365-business-central/",
+      "statusCode": 301
+    },
+    {
+      "source": "/blog/author/bhumik-sharma/",
+      "destination": "/blog/author/",
+      "statusCode": 301
     }
   ]
 }
