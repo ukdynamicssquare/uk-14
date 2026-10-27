@@ -1,7 +1,6 @@
 "use client";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { useEffect, useRef } from "react";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -82,6 +81,56 @@ const caseStudies = [
 ];
 
 export default function CaseStudies() {
+  // Swiper JS (~110 KB) is only fetched when the slider nears the viewport; the slides are server-rendered
+  // with Swiper's own classes so the first one shows (and is crawlable) before it loads.
+  const swiperRef = useRef(null);
+
+  useEffect(() => {
+    const el = swiperRef.current;
+    if (!el) return;
+    let swiper;
+    let cancelled = false;
+
+    const init = async () => {
+      const [{ default: Swiper }, { Navigation, Pagination }] = await Promise.all([
+        import("swiper"),
+        import("swiper/modules"),
+      ]);
+      if (cancelled) return;
+      swiper = new Swiper(el, {
+        modules: [Navigation, Pagination],
+        navigation: {
+          prevEl: ".case-slider-prev",
+          nextEl: ".case-slider-next",
+        },
+        pagination: {
+          el: ".case-slider-pagination",
+          clickable: true,
+        },
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        speed: 600,
+      });
+    };
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) return;
+        observer.disconnect();
+        init();
+      },
+      { rootMargin: "400px 0px" }
+    );
+    observer.observe(el);
+
+    return () => {
+      cancelled = true;
+      observer.disconnect();
+      if (swiper) swiper.destroy();
+    };
+  }, []);
+
   return (
     <section className="case-studies-section">
       <div className="container">
@@ -105,24 +154,10 @@ export default function CaseStudies() {
             <i className="bi bi-arrow-left"></i>
           </button>
 
-          <Swiper
-            modules={[Navigation, Pagination]}
-            navigation={{
-              prevEl: ".case-slider-prev",
-              nextEl: ".case-slider-next",
-            }}
-            pagination={{
-              el: ".case-slider-pagination",
-              clickable: true,
-            }}
-            slidesPerView={1}
-            spaceBetween={30}
-            loop={true}
-            speed={600}
-            className="case-studies-swiper"
-          >
+          <div ref={swiperRef} className="swiper case-studies-swiper">
+            <div className="swiper-wrapper">
             {caseStudies.map((study, index) => (
-              <SwiperSlide key={index}>
+              <div className="swiper-slide" key={index}>
                 <div className="case-study-card">
 
                   {/* LEFT */}
@@ -163,9 +198,10 @@ export default function CaseStudies() {
                   </div>
 
                 </div>
-              </SwiperSlide>
+              </div>
             ))}
-          </Swiper>
+            </div>
+          </div>
 
           {/* Next */}
           <button

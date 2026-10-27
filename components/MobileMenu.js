@@ -3,9 +3,9 @@ import Link from "next/link";
 import {
   SOLUTION_TABS as SOLUTION_TAB_META,
   SOLUTION_PANELS,
-  INDUSTRY_TABS,
-  OUR_SERVICES as OUR_SERVICES_DATA,
-  COMPANY_LINKS as COMPANY_LINKS_DATA,
+  INDUSTRY_MENU,
+  SERVICE_MENU,
+  COMPANY_MENU,
   BLOG_BY_PRODUCT,
   BLOG_BY_INDUSTRY,
   BLOG_EDITORS_PICKS,
@@ -45,15 +45,25 @@ const SOLUTION_TABS = SOLUTION_TAB_META.map((tab) => ({
   items: SOLUTION_PANELS[tab.id].map(toNameLink),
 }));
 
-// Same tabs as the desktop IndustriesMegaMenu.
-const INDUSTRY_MOBILE_TABS = INDUSTRY_TABS.map((tab) => ({
-  label: tab.label,
-  items: tab.overview
-    ? [...tab.items.map(toNameLink), { href: tab.overview.href, title: tab.overview.label }]
-    : tab.items.map(toNameLink),
-}));
-const OUR_SERVICES = OUR_SERVICES_DATA.map(toNameLink);
-const COMPANY_LINKS = COMPANY_LINKS_DATA.map(toNameLink);
+// Same items as the desktop ColumnMegaMenu: cards with sub-pages
+// (Manufacturing, Migration) open as a sub-accordion, the rest are plain links.
+const columnMenuMobile = (menu) => {
+  const items = menu.columns.flat();
+  const subLinks = (i) => i.links || i.inlineLinks;
+  return {
+    tabs: items.filter(subLinks).map((i) => ({
+      label: i.title,
+      items: [...(i.href ? [toNameLink(i)] : []), ...subLinks(i)],
+    })),
+    links: [
+      ...items.filter((i) => !subLinks(i)).map(toNameLink),
+      ...(menu.overview ? [{ href: menu.overview.href, title: menu.overview.label }] : []),
+    ],
+  };
+};
+const INDUSTRY_MOBILE = columnMenuMobile(INDUSTRY_MENU);
+const SERVICE_MOBILE = columnMenuMobile(SERVICE_MENU);
+const COMPANY_MOBILE = columnMenuMobile(COMPANY_MENU);
 
 const RESOURCE_TABS = [
   {
@@ -328,9 +338,10 @@ const MobileMenu = () => {
                     <div className="accordion-body">
                       <SubAccordion
                         id="industries-sub-accordion"
-                        tabs={INDUSTRY_MOBILE_TABS}
+                        tabs={INDUSTRY_MOBILE.tabs}
                         renderBody={(tab) => <LinkList items={tab.items} />}
                       />
+                      <LinkList items={INDUSTRY_MOBILE.links} />
                     </div>
                   </div>
                 </div>
@@ -358,7 +369,12 @@ const MobileMenu = () => {
                     data-bs-parent="#mobile-toggle-nav"
                   >
                     <div className="accordion-body">
-                      <LinkList items={OUR_SERVICES} />
+                      <LinkList items={SERVICE_MOBILE.links} />
+                      <SubAccordion
+                        id="services-sub-accordion"
+                        tabs={SERVICE_MOBILE.tabs}
+                        renderBody={(tab) => <LinkList items={tab.items} />}
+                      />
                     </div>
                   </div>
                 </div>
@@ -386,7 +402,7 @@ const MobileMenu = () => {
                     data-bs-parent="#mobile-toggle-nav"
                   >
                     <div className="accordion-body">
-                      <LinkList items={COMPANY_LINKS} />
+                      <LinkList items={COMPANY_MOBILE.links} />
                     </div>
                   </div>
                 </div>

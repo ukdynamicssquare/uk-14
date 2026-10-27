@@ -205,7 +205,7 @@ export default function FootComo() {
           {/* Brand block */}
           <div className="col-12 col-lg-3">
             <Link href="/" className={styles.brandLogo} aria-label="Dynamics Square home">
-            <img src="/img/dynamics_square_tm_logo_footer.svg" alt="Dynamics Square TM Logo" width={310} height={21} />
+            <img src="/img/dynamics_square_tm_logo_footer.svg" alt="Dynamics Square TM Logo" width={310} height={21} loading="lazy" />
             </Link>
             
             <p className={styles.brandPitch}>
@@ -297,9 +297,10 @@ export default function FootComo() {
                 <div>
                   <img
                     src="/img/Tech-For-Socil-Impact.svg"
-                    alt="Tech-For-Socil-Impact"
+                    alt="Tech for Social Impact"
                     width={200}
                     height={120}
+                    loading="lazy"
                   />
                 </div>
                 <div>
@@ -308,18 +309,21 @@ export default function FootComo() {
                     alt="UK badge"
                     width={88}
                     height={88}
+                    loading="lazy"
                   />
                 </div>
                 <img
                   src="/img/ISO_9001-2015.png"
-                  alt="microsoft-partner"
+                  alt="ISO 9001:2015 certified"
+                  loading="lazy"
                   className="footer-img"
                   width="90"
                   height="90"
                 />
                 <img
                   src="/img/ISO_9001-2015_2.png"
-                  alt="microsoft-partner"
+                  alt="ISO 27001:2022 certified"
+                  loading="lazy"
                   className="footer-img"
                   width="90"
                   height="90"

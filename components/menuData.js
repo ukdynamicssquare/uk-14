@@ -572,7 +572,8 @@ export const INDUSTRIES = [
   { href: "/industries/dynamics-365-for-retail/", img: "/img/menu-icons/retail-icon.png", alt: "retail-icon", title: "Retail", desc: "Optimize retail operations with seamless user experience" },
 ];
 
-// Industries mega menu (IndustriesMegaMenu.js) — same layout as canada-14.
+// Industries mega menu (ColumnMegaMenu.js): three columns of industry
+// cards, Manufacturing with its sub-pages listed underneath, and a promo aside.
 const INDUSTRY_ICONS = {
   "/industries/dynamics-365-for-distribution/": "bi-truck",
   "/industries/microsoft-cloud-for-manufacturing/": "bi-gear-wide-connected",
@@ -588,76 +589,94 @@ const industry = (href) => {
   return { ...item, desc: item.desc.trim(), icon: INDUSTRY_ICONS[href] };
 };
 
-export const INDUSTRY_TABS = [
-  {
-    id: "all",
-    label: "All Industries",
-    icon: "bi-grid-1x2",
-    sub: "Dynamics 365 tailored to how your industry works",
-    overview: { href: "/industries/", label: "Explore all industries" },
-    items: INDUSTRIES.map((i) => industry(i.href)),
-  },
-  {
-    id: "manufacturing",
-    label: "Manufacturing",
-    icon: "bi-gear-wide-connected",
-    sub: "Plan production, control costs and track every component",
-    overview: { href: "/industries/manufacturing/", label: "Explore manufacturing" },
-    items: [
-      { href: "/industries/manufacturing/dynamics-365-for-discrete/", icon: "bi-cpu", title: "Discrete Manufacturing", desc: "BOMs, inventory and production in real time" },
-      { href: "/industries/manufacturing/dynamics-365-for-pharmaceutical/", icon: "bi-capsule", title: "Pharmaceutical", desc: "Batch control, quality and compliance" },
-      { href: "/industries/manufacturing/dynamics-365-for-medical-device/", icon: "bi-bandaid", title: "Medical Device", desc: "Traceability and regulatory compliance" },
-      { href: "/industries/manufacturing/dynamics-365-for-chemical/", icon: "bi-eyedropper", title: "Chemical", desc: "Recipes, batches and lot traceability" },
-      { href: "/industries/manufacturing/dynamics-365-for-electronics/", icon: "bi-motherboard", title: "Electronics", desc: "Multi-level BOMs and serial tracking" },
-      { href: "/industries/manufacturing/dynamics-365-for-food/", icon: "bi-basket", title: "Food & Beverage", desc: "Lot tracing, expiry dates and recipes" },
-      { href: "/industries/business-central-for-process-manufacturing/", icon: "bi-droplet-half", title: "Process Manufacturing", desc: "Formulas, batches and recipes in Business Central" },
+export const INDUSTRY_MENU = {
+  columns: [
+    [
+      {
+        ...industry("/industries/microsoft-cloud-for-manufacturing/"),
+        href: "/industries/manufacturing/",
+        links: [
+          { href: "/industries/manufacturing/dynamics-365-for-discrete/", title: "Discrete Manufacturing" },
+          { href: "/industries/business-central-for-process-manufacturing/", title: "Process Manufacturing" },
+          { href: "/industries/manufacturing/dynamics-365-for-pharmaceutical/", title: "Pharmaceutical" },
+          { href: "/industries/manufacturing/dynamics-365-for-medical-device/", title: "Medical Device" },
+          { href: "/industries/manufacturing/dynamics-365-for-electronics/", title: "Electronics" },
+          { href: "/industries/manufacturing/dynamics-365-for-chemical/", title: "Chemical" },
+          { href: "/industries/manufacturing/dynamics-365-for-food/", title: "Food & Beverage" },
+        ],
+      },
     ],
-  },
-  {
-    id: "commerce",
-    label: "Retail & Commerce",
-    icon: "bi-shop",
-    sub: "Unify stores, online sales and the back office",
-    items: [
+    [
+      industry("/industries/dynamics-365-for-distribution/"),
       industry("/industries/dynamics-365-for-retail/"),
-      industry("/industries/ecommerce/"),
-    ],
-  },
-  {
-    id: "services",
-    label: "Services & Public Sector",
-    icon: "bi-briefcase",
-    sub: "Run projects, people and care with confidence",
-    items: [
       industry("/industries/professional-services/"),
+    ],
+    [
+      industry("/industries/ecommerce/"),
       industry("/industries/dynamics-365-for-healthcare/"),
       industry("/industries/dynamics-365-for-education/"),
     ],
+  ],
+  overview: { href: "/industries/", label: "Explore all Industries" },
+  promo: {
+    title: "Built around your sector",
+    desc: "See how businesses like yours run on Dynamics 365.",
+    cta: "Case Studies",
+    href: "/case-studies/",
   },
-];
-
-export const INDUSTRY_FOOTER = {
-  href: "/contact-us/",
-  icon: "bi-buildings",
-  title: "Don't see your industry?",
-  desc: "We've delivered Dynamics 365 across dozens of sectors in the UK. Tell us about yours.",
-  cta: "Talk to an Expert",
 };
 
-export const OUR_SERVICES = [
-  { href: "/our-services/dynamics-365-implementation-services/", label: "Implementation Services", icon: "bi-gear-wide-connected" },
-  { href: "/our-services/dynamics-365-support-services/", label: "Support Services", icon: "bi-headset" },
-  { href: "/our-services/dynamics-365-upgrade-services/", label: "Upgrade Services", icon: "bi-arrow-up-circle" },
-  { href: "/our-services/dynamics-365-training/", label: "Dynamics 365 Training", icon: "bi-mortarboard" },
-  { href: "/our-services/dynamics-365-consultant/", label: "Dynamics 365 Consultants", icon: "bi-people" },
-];
+// Our Services mega menu (ColumnMegaMenu.js), same layout as INDUSTRY_MENU.
+// Only services that have a page are listed.
+export const SERVICE_MENU = {
+  columns: [
+    [
+      { href: "/our-services/dynamics-365-implementation-services/", icon: "bi-gear-wide-connected", title: "Implementation", desc: "Tailored Dynamics 365 implementation." },
+      { href: "/our-services/dynamics-365-training/", icon: "bi-easel", title: "Dynamics 365 Training", desc: "Build skills, boost adoption." },
+    ],
+    [
+      { href: "/our-services/dynamics-365-support-services/", icon: "bi-headset", title: "Support Services", desc: "Expert support when you need it." },
+      { href: "/our-services/dynamics-365-consultant/", icon: "bi-people", title: "Dynamics 365 Consultants", desc: "Expert guidance for business growth." },
+    ],
+    [
+      { href: "/our-services/dynamics-365-upgrade-services/", icon: "bi-arrow-up-circle", title: "Upgrade", desc: "Seamless upgrades, better performance" },
+      {
+        icon: "bi-arrow-left-right",
+        title: "Migration",
+        inlineLinks: [
+          { href: "/gp-to-business-central-migration/", title: "GP-BC" },
+          { href: "/dynamics-nav-to-business-central/", title: "NAV-BC" },
+          { href: "/why-to-migrate-to-d365-finance-supply-chain/", title: "AX-Finance & Supply Chain" },
+        ],
+      },
+    ],
+  ],
+  promo: {
+    title: "One partner, start to finish",
+    desc: "Begin with discovery and add services as your project needs them.",
+    cta: "Request Callback",
+    href: "/contact-us/",
+  },
+};
 
-export const COMPANY_LINKS = [
-  { href: "/about-us/", label: "About Us", icon: "bi-building" },
-  { href: "/why-us/", label: "Why Us", icon: "bi-patch-check" },
-  { href: "/partner/", label: "Partners", icon: "bi-person-heart" },
-  { href: "/career/", label: "Careers", icon: "bi-briefcase" },
-];
+// Company mega menu (ColumnMegaMenu.js), same promo aside as Our Services.
+// Only pages that exist are listed.
+export const COMPANY_MENU = {
+  columns: [
+    [
+      { href: "/about-us/", icon: "bi-building", title: "About Us", desc: "Discover our expertise and approach." },
+      { href: "/career/", icon: "bi-briefcase", title: "Careers", desc: "Grow your career with us." },
+    ],
+    [
+      { href: "/why-us/", icon: "bi-patch-check", title: "Why Us", desc: "Why businesses choose Dynamics Square." },
+      { href: "/location/", icon: "bi-geo-alt", title: "Locations", desc: "Find us across key markets" },
+    ],
+    [
+      { href: "/partner/", icon: "bi-person-heart", title: "Partners", desc: "Trusted partnerships, lasting value." },
+    ],
+  ],
+  promo: SERVICE_MENU.promo,
+};
 
 export const RESOURCE_TABS = [
   { id: "res-one", target: "v-pills-res-one", label: "Blogs", icon: "/img/menu-icons/res-meg-00.png", active: true },

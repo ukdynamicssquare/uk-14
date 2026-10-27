@@ -5,6 +5,7 @@ import DeskstopMenu from "./DeskstopMenu";
 import MobileMenu from "./MobileMenu";
 import { useRouter } from "next/router";
 import TimerModal from "./TimerModal";
+import menuStyles from "./HeaderMenu.module.css";
 
 const HeaderWork = () => {
   const [isFixed, setIsFixed] = useState(false);
@@ -178,7 +179,7 @@ const HeaderWork = () => {
           </a>
         </div>
         <div className="container-fluid">
-          <nav id="navbar" className={`navbar${navClosing ? " dsq-nav-closing" : ""}`}>
+          <nav id="navbar" className={`navbar ${menuStyles.nav}${navClosing ? " dsq-nav-closing" : ""}`}>
             <div className="left-logo">
               <Link href="/" className="logo">
                 <div className="logo-wrapper">

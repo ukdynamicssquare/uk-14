@@ -885,12 +885,12 @@ const HomeOneNew = () => {
                     <div className="crad-img">
                       <Image
                         src="/img/case-imgs-2.jpg"
-                        alt="See how our customers drive impact"
+                        alt="BSix Sixth Form College case study"
                         width={610}
                         height={592} />
                       <p>
-                        London’s top college boosts departmental synergy by 80%
-                        with a system upgrade.
+                        BSix Sixth Form College, London’s top college, boosts
+                        departmental synergy by 80% with a system upgrade.
                       </p>
                     </div>
                     <div className="card-666-anc">
@@ -905,12 +905,12 @@ const HomeOneNew = () => {
                     <div className="crad-img">
                       <Image
                         src="/img/case-imgs-3.jpg"
-                        alt="See how our customers drive impact"
+                        alt="Omicron Engineering case study"
                         width={610}
                         height={592} />
                       <p>
-                        A car restoration company boosted ROI by 30% through
-                        custom solutions.
+                        Omicron Engineering, a car restoration company, boosted
+                        ROI by 30% through custom solutions.
                       </p>
                     </div>
                     <div className="card-666-anc">
@@ -925,12 +925,12 @@ const HomeOneNew = () => {
                     <div className="crad-img">
                       <Image
                         src="/img/case-imgs-1.jpg"
-                        alt="See how our customers drive impact"
+                        alt="CQC Ltd case study"
                         width={610}
                         height={592} />
                       <p>
-                        A renowned UK defence apparel company maximised
-                        efficiency by 50%.
+                        CQC Ltd, a renowned UK defence apparel company,
+                        maximised efficiency by 50%.
                       </p>
                     </div>
                     <div className="card-666-anc">
@@ -944,17 +944,18 @@ const HomeOneNew = () => {
                   <div className="card-666">
                     <div className="crad-img">
                       <Image
-                        src="/img/case-imgs-4.jpg"
-                        alt="See how our customers drive impact"
+                        src="/img/logistic-uk.jpg"
+                        alt="Bertling Group case study"
                         width={610}
-                        height={592} />
+                        height={592}
+                        style={{ objectFit: "cover", width: "100%", height: "auto", aspectRatio: "610 / 592" }} />
                       <p>
-                        Strategic advancements led an orthopaedic implant
-                        manufacturer to 60% more visibility.
+                        Bertling Group strengthened financial control and
+                        prepared for a multi-entity rollout.
                       </p>
                     </div>
                     <div className="card-666-anc">
-                      <a href="/case-studies/upgrading-to-dynamics-365-business-central/">
+                      <a href="/case-studies/dynamics-365-finance-for-logistic-uk-multi-entity/">
                         Read more <i className="bi bi-arrow-right"></i>
                       </a>
                     </div>

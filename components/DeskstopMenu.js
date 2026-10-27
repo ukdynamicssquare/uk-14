@@ -2,12 +2,13 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import PulseButton from "./PulseButton";
-import IndustriesMegaMenu from "./IndustriesMegaMenu";
+import ColumnMegaMenu from "./ColumnMegaMenu";
 import {
   SOLUTION_TABS,
   SOLUTION_PANELS,
-  OUR_SERVICES,
-  COMPANY_LINKS,
+  INDUSTRY_MENU,
+  SERVICE_MENU,
+  COMPANY_MENU,
   RESOURCE_TABS,
   BLOG_BY_PRODUCT,
   BLOG_BY_INDUSTRY,
@@ -42,6 +43,7 @@ function ItemCard({ item, small }) {
           <span>{item.title}</span>
           <p>{item.desc}</p>
         </div>
+        <i className="bi bi-chevron-right mm-chevron"></i>
       </Link>
     </div>
   );
@@ -161,42 +163,24 @@ const DeskstopMenu = () => {
           <Link href="/industries/">
             <span>Industries</span> <i className="bi bi-chevron-down"></i>
           </Link>
-          <IndustriesMegaMenu />
+          <ColumnMegaMenu menu={INDUSTRY_MENU} />
         </li>
 
         {/* ===================== OUR SERVICES ===================== */}
-        <li className="dropdown">
+        <li className="dropdown megamenu ind-megamenu">
           <Link href="/our-services/">
             <span>Our Services</span>
             <i className="bi bi-chevron-down"></i>
           </Link>
-          <ul className="dd-ic-list">
-            {OUR_SERVICES.map((item) => (
-              <li key={item.href}>
-                <Link href={item.href}>
-                  <span className="dd-ic" aria-hidden="true"><i className={`bi ${item.icon}`}></i></span>
-                  <span>{item.label}</span>
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <ColumnMegaMenu menu={SERVICE_MENU} />
         </li>
 
         {/* ===================== COMPANY ===================== */}
-        <li className="dropdown">
+        <li className="dropdown megamenu ind-megamenu">
           <a href="#">
             <span>Company</span> <i className="bi bi-chevron-down"></i>
           </a>
-          <ul className="dd-ic-list">
-            {COMPANY_LINKS.map((item) => (
-              <li key={item.href}>
-                <Link href={item.href}>
-                  <span className="dd-ic" aria-hidden="true"><i className={`bi ${item.icon}`}></i></span>
-                  <span>{item.label}</span>
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <ColumnMegaMenu menu={COMPANY_MENU} />
         </li>
 
         {/* ===================== RESOURCES ===================== */}
@@ -299,6 +283,7 @@ const DeskstopMenu = () => {
                                           <span>{s.title}</span>
                                           <p>{s.desc}</p>
                                         </div>
+                                        <i className="bi bi-chevron-right mm-chevron"></i>
                                       </Link>
                                     </li>
                                   ))}
