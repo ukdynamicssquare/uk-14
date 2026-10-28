@@ -532,6 +532,7 @@ export const SOLUTION_PANELS = {
   ],
   profile: [
     { href: "/ai-solutions/microsoft-fabric/", img: "/img/menu-icons/microsoft-fabric.png", alt: "microsoft-fabric", title: "Microsoft Fabric", desc: "Transform Data with Microsoft Fabric Solutions" },
+    { href: "/ai-solutions/microsoft-foundry/", img: "/img/menu-icons/azure.svg", alt: "microsoft-foundry", title: "Microsoft Foundry", desc: "Build, connect and govern AI agents" },
     { href: "/products/microsoft-power-bi/", img: "/img/menu-icons/power-bi.svg", alt: "power-bi", title: "Power BI", desc: "Create powerful visual insights, analytics" },
     { href: "/products/dynamics-365-copilot/", img: "/img/menu-icons/copilate-small.png", alt: "D365 Copilot", title: "D365 Copilot", desc: "AI-powered assistance to automate tasks and improve decisions" },
     { href: "/products/azure-machine-learning/", img: "/img/menu-icons/machine-learning.svg", alt: "Machine Learning / Azure", title: "Machine Learning / Azure", desc: "Build scalable enterprise-grade Machine Learning solutions" },

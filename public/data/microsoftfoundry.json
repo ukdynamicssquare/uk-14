@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "question": "What is Microsoft Foundry?",
+    "answer": "<p>Microsoft Foundry is the Microsoft platform for developing AI applications and agents and running them under proper control. One portal holds a catalogue of more than 11,000 models, an agent service, prebuilt tools, knowledge grounding, security settings and monitoring. Organisations build with it anything from a simple chatbot to autonomous multi-agent workflows.</p>"
+  },
+  {
+    "id": 2,
+    "question": "What are Microsoft Foundry services?",
+    "answer": "<p>Microsoft Foundry services are the natively integrated components of the platform: Foundry Models, Foundry Agent Service, Foundry Tools, Foundry IQ, Azure Machine Learning, Foundry Control Plane and Foundry Local. Foundry also gives access to wider Azure services such as Azure App Service, Azure Functions, Azure Cosmos DB, Microsoft Purview and Microsoft Entra ID.</p>"
+  },
+  {
+    "id": 3,
+    "question": "What are Microsoft Foundry agent services?",
+    "answer": "<p>Foundry Agent Service is the part of Microsoft Foundry that builds, hosts and scales AI agents. It supports multi-agent designs, connections to tools and data, hosted agents written in open-source frameworks such as Microsoft Agent Framework and LangGraph, and managed long-term memory. Agents can be created in the Foundry portal or in code through the Foundry SDK.</p>"
+  },
+  {
+    "id": 4,
+    "question": "Is Microsoft Azure AI Foundry the same as Microsoft Foundry?",
+    "answer": "<p>The two names describe one product. Azure AI Studio became Azure AI Foundry, which Microsoft now calls Microsoft Foundry, and Microsoft AI Foundry is common shorthand. Guides and code samples written under the earlier names still apply.</p>"
+  },
+  {
+    "id": 5,
+    "question": "What does Microsoft Foundry pricing look like in the UK?",
+    "answer": "<p>Microsoft Foundry pricing is consumption-based and set service by service. Pay-as-you-go follows the tokens you process, provisioned capacity follows the throughput units you reserve for a month or a year, and batch processing discounts by up to 50% the work that can wait for a next-day result. Microsoft converts its prices from US dollars at London closing spot rates, and an Azure subscription is required to build agents. Dynamics Square builds a forecast from your own workload so the figure you approve reflects your usage.</p>"
+  },
+  {
+    "id": 6,
+    "question": "How does Microsoft Foundry integration work with Dynamics 365?",
+    "answer": "<p>Foundry agents reach <a href=\"/products/microsoft-dynamics-365/\">Dynamics 365</a> through Azure Logic Apps connectors, which belong to a library of more than 1,400 pre-built connections. Once connected, agents read and update records, start approvals and respond to events within the permissions you set. Dynamics Square configures and tests each connection against your data model and approval rules.</p>"
+  },
+  {
+    "id": 7,
+    "question": "How do I connect AI agents to my business systems?",
+    "answer": "<p>Start with the connector library in Azure Logic Apps for platforms such as Dynamics 365, SAP and Salesforce, add custom tools through Model Context Protocol, and ground the agent in your documents through Foundry IQ. Microsoft Entra ID then gives each agent a least-privileged identity. Our team plans, builds and tests each connection before the agent reaches production.</p>"
+  },
+  {
+    "id": 8,
+    "question": "What do Microsoft Foundry consulting services include?",
+    "answer": "<p>Dynamics Square's Microsoft Foundry consulting services cover use-case selection, architecture and model choice, agent development, Dynamics 365 integration, governance and security configuration, evaluation and monitoring, cost forecasting and support after go-live.</p>"
+  },
+  {
+    "id": 9,
+    "question": "What is the difference between Microsoft Foundry and Copilot Studio?",
+    "answer": "<p><a href=\"/ai-solutions/copilot-studio/\">Copilot Studio</a> is the low-code route to agents that extend Microsoft 365 Copilot, and those agents can draw on Foundry Models, Foundry IQ and MCP tools. Foundry Agent Service targets professional developers who want code-first control, custom models and hosted frameworks. Many organisations run both, and we advise on which fits each use case.</p>"
+  },
+  {
+    "id": 10,
+    "question": "How do I choose a Microsoft Foundry partner in the UK?",
+    "answer": "<p>Check the partner's <a href=\"/microsoft-partners-uk/\">Microsoft designation</a>, the certifications held by the consultants who will do the work, their history with Dynamics 365 data and a documented route from workshop to support. Dynamics Square can show you each of these, and the free consultation is a practical way to meet the team.</p>"
+  }
+]

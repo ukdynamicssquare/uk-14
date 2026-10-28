@@ -57,6 +57,7 @@ const HeaderWork = () => {
           "/ai-solutions": `${gname}`,
            "/ai-solutions/microsoft-fabric": `${gname}`,
            "/ai-solutions/copilot-studio": `${gname}`,
+           "/ai-solutions/microsoft-foundry": `${gname}`,
            "/industries/manufacturing/dynamics-365-for-pharmaceutical": `${gname}`,
            "/industries/manufacturing/dynamics-365-for-medical-device": `${gname}`,
            "/industries/manufacturing/dynamics-365-for-chemical": `${gname}`,
