@@ -281,8 +281,7 @@ const MicrosoftFoundry = () => {
         title="Microsoft Foundry Consulting Services - Dynamics Square UK"
         description="Dynamics Square UK offers Microsoft Foundry consulting services. Build, connect and govern AI agents across Dynamics 365 and your business systems."
         image="/img/microsoft-foundry-og.png"
-        imageAlt="Microsoft Foundry Consulting Services for UK Businesses"
-        robots="noindex, nofollow"
+        imageAlt="Microsoft Foundry overview dashboard showing active alerts, agent count, estimated cost and token usage"
         keywords="microsoft foundry consulting services, microsoft foundry services, microsoft foundry, microsoft foundry agent services, what is microsoft foundry, microsoft ai foundry, connect ai agents, microsoft foundry integration, microsoft azure ai foundry, microsoft foundry pricing"
         faqs={faqData}
         extraSchema={pageSchema}
@@ -292,7 +291,7 @@ const MicrosoftFoundry = () => {
           <div className='row justify-content-center'>
             <div className='col-lg-9'>
               <div className='solution-new-banner-one-content'>
-                <h1 className='large-heading'>Microsoft Foundry Consulting Services for UK Businesses</h1>
+                <h1 className='large-heading'>Microsoft Foundry Consulting Services </h1>
                 <p>Dynamics Square plans, builds and runs Microsoft Foundry solutions that put AI agents to work on your orders, ledgers, documents and customer queries. Every agent we deliver reads from your own records, acts within the applications your staff open each morning and stays under the governance your risk team expects.</p>
                 <p className={styles['mf-tagline']}>Move your AI roadmap from slide deck to production while your market is still choosing a vendor.</p>
                 <div className="text-center">
@@ -300,18 +299,18 @@ const MicrosoftFoundry = () => {
                 </div>
               </div>
               <div className='m-b-image'>
-                <Image src="/img/microsoft-foundry-00.svg" alt="" width={1920} height={776} unoptimized aria-hidden="true" />
+                <Image src="/img/microsoft-foundry-00.png" alt="" width={1920} height={888} quality={100} aria-hidden="true" />
               </div>
             </div>
           </div>
         </div>
         <div className="solution-new-banner-one-img imm-mins">
           <Image
-            src="/img/microsoft-foundry-00.svg"
-            alt="Microsoft Foundry screens showing the model catalogue, an agent workflow and the Foundry Control Plane"
+            src="/img/microsoft-foundry-00.png"
+            alt="Microsoft Foundry screens showing the model leaderboard, the Discover page with featured models and the agent overview with active alerts"
             width={1920}
-            height={776}
-            unoptimized
+            height={888}
+            quality={100}
             priority
             className="flot-1"
           />
@@ -362,11 +361,10 @@ const MicrosoftFoundry = () => {
             </div>
             <div className='col-lg-6 align-self-center'>
               <Image
-                src="/img/microsoft-foundry-01.svg"
-                alt="Microsoft Foundry at the centre of Foundry Models, Agent Service, Tools, Foundry IQ, Control Plane, Azure Machine Learning and Foundry Local"
+                src="/img/microsoft-foundry-01.png"
+                alt="Microsoft Foundry agent playground with model choice, instructions, tools, knowledge, memory and guardrails settings"
                 width={630}
                 height={588}
-                unoptimized
                 className={styles['mf-img']}
               />
             </div>

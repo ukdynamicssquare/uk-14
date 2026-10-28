@@ -57,6 +57,16 @@
   font-weight: 700;
   margin-bottom: 24px;
 }
+/* The shared -80px pull overshoots the banner's 60px bottom padding and
+   pushes the dark banner image into the trust bar; sit it flush instead. */
+.mf-hero :global(.m-b-image) {
+  margin-bottom: -60px;
+}
+.mf-hero :global(.m-b-image) img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 
 /* ==========================================================================
    Trust bar

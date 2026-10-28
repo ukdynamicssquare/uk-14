@@ -320,9 +320,7 @@ module.exports = {
     // pages/about-us-old is a noindexed backup of the old About Us design
     // (its noindex is a PageSeo prop, which NOINDEX_PATTERN doesn't detect).
     const aboutOldBackup = ['/about-us-old'];
-    // pages/ai-solutions/microsoft-foundry is noindexed through a PageSeo prop too.
-    const microsoftFoundry = ['/ai-solutions/microsoft-foundry'];
 
-    return [...staticNoindex, ...robotsDisallow, ...blogNoindex, ...blogOldBackup, ...aboutOldBackup, ...microsoftFoundry];
+    return [...staticNoindex, ...robotsDisallow, ...blogNoindex, ...blogOldBackup, ...aboutOldBackup];
   },
 };
