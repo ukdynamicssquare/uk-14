@@ -55,7 +55,7 @@ const Continia = () => {
         id="dist-sol"
         sectionClassName="pd-con-69"
         title="What is Dynamics 365 for Distribution Companies?"
-        intro={<>Dynamics 365 for Distribution Companies comprises two major solutions from the Dynamics 365 suite:</>}
+        intro={<>Dynamics 365 for Distribution Companies comprises four major solutions from the Dynamics 365 suite:</>}
         solutions={[
           {
             title: "1. Dynamics 365 Business Central",
@@ -70,6 +70,20 @@ const Continia = () => {
             desc: <>Distribution target large, enterprise-level distribution companies with highly complex operations, multiple entities, global supply chains, and advanced manufacturing or logistics needs. Based on their business requirements, wholesale and distribution companies can choose either <a href="/products/dynamics-365-supply-chain-management/">Dynamics 365 Supply Chain Management</a> or both solutions in case they have complex finance operations.</>,
             when: <>Large distribution companies would go for these solutions when:</>,
             items: ["The company operates across multiple countries or legal entities.","It needs deep financial consolidation, intercompany transactions, or multiple currencies.","The supply chain involves production planning, complex procurement, or advanced warehouse automation.","The business uses IoT, AI, or predictive maintenance for large-scale logistics.","It has thousands of SKUs and wants detailed cost management, transportation management, and vendor collaboration portals."],
+          },
+          {
+            title: "3. Dynamics 365 Sales",
+            logos: [{"src":"/img/menu-icons/dynamics-365-sales.svg","alt":"Dynamics 365 Sales"}],
+            desc: <><a href="/products/microsoft-dynamics-365-sales/">Dynamics 365 Sales</a> for Distribution Companies helps wholesalers and distributors manage customer relationships, sales opportunities and the complete sales pipeline. It provides a centralised platform to track leads, manage customer accounts, monitor sales activities and improve visibility across the sales process.</>,
+            when: <>Distribution companies would choose Dynamics 365 Sales when:</>,
+            items: ["The organisation wants to build stronger customer relationships and identify new revenue opportunities.","The business needs better coordination between sales representatives and customer accounts.","The company wants to improve sales forecasting and monitor team performance.","Sales teams need clear visibility into customer interactions, sales pipelines and upcoming deals.","The business wants to manage customer accounts, leads and sales opportunities in one place."],
+          },
+          {
+            title: "4. Dynamics 365 Customer Service",
+            logos: [{"src":"/img/menu-icons/dynamics-365-customer-service.svg","alt":"Dynamics 365 Customer Service"}],
+            desc: <><a href="/products/microsoft-dynamics-365-customer-service/">Dynamics 365 Customer Service</a> for Distribution Companies helps businesses manage customer enquiries, complaints, service requests and after-sales support. It enables support teams to track customer cases, manage service-level agreements (SLAs), maintain communication history and deliver consistent customer service across multiple channels.</>,
+            when: <>Distribution companies would choose Dynamics 365 Customer Service when:</>,
+            items: ["The organisation wants to improve after-sales support and maintain long-term customer relationships.","Customer service representatives require access to customer information and interaction history.","The company needs better visibility into case status, response times and service-level agreements.","Support teams want to track complaints, product issues and order-related queries efficiently.","The business needs a centralised system to manage customer enquiries and support requests."],
           },
         ]}
       />

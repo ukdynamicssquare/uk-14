@@ -10,7 +10,8 @@ import styles from '../styles/SolutionTabs.module.css';
  *     id="dist-sol"                    // prefix for tab/panel ids
  *     sectionClassName="pd-con-69"     // extra template classes for the section
  *     title="..."                      // section h2
- *     intro={<>...</>}
+ *     intro={<>...</>}                 // or an array, one paragraph each
+ *     outro={<>...</>}                 // optional paragraph after the panels
  *     solutions={[{
  *       title, desc, when, items: [...],
  *       logos: [{ src, alt }],         // one or more product icons
@@ -20,8 +21,9 @@ import styles from '../styles/SolutionTabs.module.css';
  * Every solution's text is rendered in the HTML; only the active one is shown
  * on larger screens.
  */
-const SolutionTabs = ({ id, sectionClassName = '', title, intro, solutions }) => {
+const SolutionTabs = ({ id, sectionClassName = '', title, intro, outro, solutions }) => {
   const [active, setActive] = useState(0);
+  const introParas = Array.isArray(intro) ? intro : intro ? [intro] : [];
 
   return (
     <section className={`${sectionClassName} ${styles['sol-tabs-section']}`}>
@@ -30,11 +32,17 @@ const SolutionTabs = ({ id, sectionClassName = '', title, intro, solutions }) =>
           <div className="col-lg-8">
             <div className="supprt-header-new-one">
               <h2>{title}</h2>
-              {intro && <p>{intro}</p>}
+              {introParas.map((para, i) => (
+                <p key={i}>{para}</p>
+              ))}
             </div>
           </div>
         </div>
-        <div className={styles['sol-tabs__nav']} role="tablist" aria-label={title}>
+        <div
+          className={`${styles['sol-tabs__nav']}${solutions.length === 4 ? ` ${styles['sol-tabs__nav--four']}` : ''}`}
+          role="tablist"
+          aria-label={title}
+        >
           {solutions.map((sol, i) => (
             <button
               key={sol.title}
@@ -84,6 +92,7 @@ const SolutionTabs = ({ id, sectionClassName = '', title, intro, solutions }) =>
             </div>
           ))}
         </div>
+        {outro && <p className={styles['sol-tabs__outro']}>{outro}</p>}
       </div>
     </section>
   );

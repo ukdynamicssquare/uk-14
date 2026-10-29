@@ -4,6 +4,7 @@ import Link from "next/link";
 import useCardScrollEffect from "../../components/useCardScrollEffect";
 import PageSeo from "../../components/PageSeo";
 import SolutionTabs from "../../components/SolutionTabs";
+import ChallengeGrid from "../../components/ChallengeGrid";
 // Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
 const PAGE_FAQS = [
   {
@@ -17,6 +18,26 @@ const PAGE_FAQS = [
   {
     "question": "What are the benefits of Microsoft Dynamics 365 for the Professional Services industry?",
     "answer": "By implementing Microsoft Dynamics solutions for professional services, you can manage across your processes and bring the capability to drive challenges leading your business to drive profitability and scalability. Here are the benefits that are involved once you implement Dynamics 365 for your business: With Dynamics 365 solutions for the professional services industry, businesses can estimate revenue and keep real-time eyes on every process or activity that takes place., Enterprises can leverage opportunity management and faster their client or customer delivery by bringing transparency, real-time efficiency, and improving collaboration for timely engagement., Bring automation to your projects and simplify your billing & invoicing., Empower your resources to faster project delivery and maximize their utilization to drive productivity., Businesses can list key stakeholders, analyse management information, drive engagement profitability, and optimise growth."
+  },
+  {
+    "question": "Which ERP software is suitable for professional services companies?",
+    "answer": "Microsoft Dynamics 365 Business Central is suitable for small and mid-sized professional services firms that need financial management, project costing, resource management, timesheets and invoicing. Larger organisations with complex financial structures may benefit from Dynamics 365 Finance alongside other Dynamics 365 applications."
+  },
+  {
+    "question": "Can Microsoft Dynamics 365 manage projects and client relationships?",
+    "answer": "Yes. Dynamics 365 can support both project management and client relationship management. Dynamics 365 Project Operations helps manage project planning, resource scheduling, time tracking and project financials, while Dynamics 365 Sales manages leads, opportunities and client accounts."
+  },
+  {
+    "question": "How much does Dynamics 365 implementation cost for professional services firms?",
+    "answer": "The cost depends on the Dynamics 365 applications selected, number of users, business requirements, integrations, customisations and implementation complexity. A smaller Business Central implementation may require a different investment from an enterprise-level Finance or Project Operations implementation. A detailed assessment helps establish an accurate project budget."
+  },
+  {
+    "question": "Can Dynamics 365 integrate with existing business applications used by professional services firms?",
+    "answer": "Yes. Dynamics 365 supports integration with Microsoft Power Platform, Microsoft 365 and other business applications through available connectors, APIs and integration solutions. This helps professional services firms connect financial data, customer information, project workflows and reporting systems."
+  },
+  {
+    "question": "How does Dynamics 365 help professional services firms improve project profitability?",
+    "answer": "Dynamics 365 helps firms monitor project budgets, resource utilisation, employee hours, expenses, project costs and revenue. With Dynamics 365 Project Operations and suitable financial management applications, businesses can gain better visibility into project performance, identify cost overruns and make informed decisions to improve profitability."
   }
 ];
 
@@ -70,108 +91,59 @@ const Dynamics365ForProfessionalServices = () => {
       <SolutionTabs
         id="prof-sol"
         sectionClassName="pd-con-69"
-        title="What is Dynamics 365 for Professional Service Companies?"
-        intro={<>Dynamics 365 for professional service companies supports companies that run people driven work. These firms depend on accurate time records, resource scheduling, cost tracking, and consistent communication to guide every engagement. Dynamics 365 solutions for professional services bring these activities together in one place. Microsoft provides two reliable systems that help such companies run daily operations:</>}
+        title="What is Microsoft Dynamics 365 for Professional Services Companies?"
+        intro={[
+          <>Microsoft Dynamics 365 for professional services companies brings together <a href="/products/microsoft-dynamics-erp/">ERP</a>, <a href="/products/microsoft-dynamics-crm/">CRM</a> and project management capabilities to help firms manage their clients, projects, resources and finances. Consulting firms, IT service providers, engineering consultancies, legal practices and accounting firms need connected business processes to manage client enquiries, win new projects, allocate skilled professionals, track project costs and maintain profitability.</>,
+          <><a href="/products/microsoft-dynamics-365/">Microsoft Dynamics 365</a> offers a range of business applications that support different stages of the professional services lifecycle. From managing sales opportunities and client relationships to project delivery, resource planning, time recording and financial management, businesses can choose the right combination of solutions to match their operational requirements.</>,
+          <>Here are the key Microsoft Dynamics 365 solutions for professional services firms:</>,
+        ]}
+        outro={<>With the right combination of Dynamics 365 applications, professional services firms can connect sales, project delivery and financial operations, improve visibility across client engagements and make more informed business decisions.</>}
         solutions={[
           {
-            title: "1. Dynamics 365 Business Central",
+            title: "1. Dynamics 365 Business Central (ERP)",
             logos: [{"src":"/img/menu-icons/dynamics-365-businesscentral.svg","alt":"Dynamics 365 Business Central"}],
-            desc: <><a href="/products/dynamics-365-business-central/">Dynamics 365 Business Central</a> for Professional Services works well for small to mid-sized consultancies, agencies, engineering services firms, legal practices, accounting firms, and growing advisory teams.
-                  The solutions available in Dynamics 365 suite help companies run projects, manage resources, handle billing, capture timesheets, track expenses, and keep financials accurate.
-                </>,
-            when: <>Service firms choose Dynamics 365 Business Central ERP when:</>,
-            items: ["The business wants one system for projects, resources, clients, and accounts.","Teams need clear visibility across tasks, workloads, and deadlines.","The company prefers simple processes with minimal customisation.","Billing cycles need reliable tracking supported by accurate time records.","Managers want a tool that is simple to learn and easy to maintain."],
+            desc: <><a href="/products/dynamics-365-business-central/">Microsoft Dynamics 365 Business Central</a> is suitable for small and mid-sized professional services firms that need to manage finance, projects and day-to-day operations. It provides capabilities for project budgeting, resource management, timesheets, job costing, invoicing and financial reporting.</>,
+            when: <>Key capabilities:</>,
+            items: ["Project budgets, costs and revenue tracking.","Resource allocation and project scheduling.","Timesheet management and employee hour tracking.","Project-based invoicing and financial management.","Financial reporting and cash flow visibility."],
           },
           {
-            title: "2. Dynamics 365 Finance and Supply Chain Management",
-            logos: [{"src":"/img/menu-icons/dynamics-365-finance.svg","alt":"Dynamics 365 Finance"},{"src":"/img/menu-icons/dynamics-365-supplychainmanagement.svg","alt":"Dynamics 365 Supply Chain Management"}],
-            desc: <><a href="/products/microsoft-dynamics-365-finance-operations/">Dynamics 365 Finance and Operations</a> for large service firms helps them when they need to handle large delivery teams, multi-region projects, heavy compliance, and several operating units. The system has features to support advanced project accounting, multi-currency work, complex pricing, and structured approvals.</>,
-            when: <>Large service firms choose <a href="/products/microsoft-dynamics-365-finance/">Dynamics 365 Finance</a> and/or Dynamics 365 Supply Chain Management when:</>,
-            items: ["They operate with several legal entities or several countries.","They want reliable financial consolidation across many service lines.","They manage complex project structures with staged delivery.","They depend on accurate cost behaviour across long delivery cycles.","They coordinate many teams that require structured planning and scheduling."],
+            title: "2. Dynamics 365 Finance (Enterprise ERP)",
+            logos: [{"src":"/img/menu-icons/dynamics-365-finance.svg","alt":"Dynamics 365 Finance"}],
+            desc: <><a href="/products/microsoft-dynamics-365-finance/">Dynamics 365 Finance</a> supports larger professional services organisations with complex financial structures, multiple legal entities and international operations. It helps finance teams manage financial planning, accounting, budgeting, reporting and project-related financial processes.</>,
+            when: <>Key capabilities:</>,
+            items: ["Multi-entity and multi-currency financial management.","Budgeting and financial planning.","Project cost and revenue management.","Financial consolidation and reporting.","Structured financial controls and approvals."],
+          },
+          {
+            title: "3. Dynamics 365 Sales (CRM)",
+            logos: [{"src":"/img/menu-icons/dynamics-365-sales.svg","alt":"Dynamics 365 Sales"}],
+            desc: <><a href="/products/microsoft-dynamics-365-sales/">Dynamics 365 Sales</a> helps professional services firms manage prospective clients, sales opportunities and existing customer relationships. Sales teams can track enquiries, manage pipelines, maintain client records and monitor opportunities throughout the sales process.</>,
+            when: <>Key capabilities:</>,
+            items: ["Lead and opportunity management.","Client and contact management.","Sales pipeline and forecasting.","Proposal and sales activity tracking.","Improved coordination between sales and project teams."],
+          },
+          {
+            title: "4. Dynamics 365 Project Operations",
+            logos: [{"src":"/img/menu-icons/dynamics-365-project-management.svg","alt":"Dynamics 365 Project Operations"}],
+            desc: <><a href="/products/dynamics-365-project-operations/">Dynamics 365 Project Operations</a> is designed to support project-based businesses throughout the project lifecycle. It connects sales, project planning, resource scheduling, time and expense tracking, project delivery and financial management.</>,
+            when: <>Key capabilities:</>,
+            items: ["Project planning and task management.","Resource scheduling based on skills and availability.","Time and expense tracking.","Project costing, budgeting and profitability analysis.","Project-based billing and delivery management."],
           },
         ]}
       />
-      <section className='bg-004s'>
-        <div className="container my-float-i">
-          <div className="row">
-            <div className="col-lg-6">
-              <div className="supprt-header-new-one">
-                <h2>Challenges in the Professional Services Industry</h2>
-                <p>Service companies run work that depends on skilled people, organised workflows, and strong client communication. When any stage loses clarity, the entire delivery cycle slows down. Some challenges that UK service companies face include the following:</p>
-                <br />
-              </div>
-            </div>
-          </div>
-
-          <div className="row g-5">
-            <div className="col-lg-6 d-flex">
-              <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/professional-services-02.png" alt="Scattered Project Information" width={40} height={40}  loading="lazy" decoding="async" />
-                <h3>Scattered Project Information</h3>
-                <p>When project plans sit in different tools, teams struggle to follow tasks, deadlines, or progress. This creates confusion across delivery.</p>
-              </div>
-            </div>
-            <div className="col-lg-6 d-flex">
-              <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/professional-services-03.png" alt="Unclear Resource Availability" width={40} height={40}  loading="lazy" decoding="async" />
-                <h3>Unclear Resource Availability</h3>
-                <p>When schedules are spread across sheets, it becomes difficult to assign the right person at the right time.</p>
-              </div>
-            </div>
-            <div className="col-lg-6 d-flex">
-              <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/professional-services-04.png" alt="Inaccurate Time and Expense Records" width={40} height={40}  loading="lazy" decoding="async" />
-                <h3>Inaccurate Time and Expense Records</h3>
-                <p>When timesheets and expenses move through manual steps, billing becomes slow and approvals take longer.</p>
-              </div>
-            </div>
-            <div className="col-lg-6 d-flex">
-              <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/professional-services-05.png" alt="Weak Cost Tracking During Delivery" width={40} height={40}  loading="lazy" decoding="async" />
-                <h3>Weak Cost Tracking During Delivery</h3>
-                <p>When project costs remain separated from accounts, managers cannot understand how budgets behave during each stage.</p>
-              </div>
-            </div>
-            <div className="col-lg-6 d-flex">
-              <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/professional-services-06.png" alt="Slow Client Communication" width={40} height={40}  loading="lazy" decoding="async" />
-                <h3>Slow Client Communication</h3>
-                <p>When updates do not reach clients or internal teams, questions increase and delivery confidence weakens.</p>
-              </div>
-            </div>
-            <div className="col-lg-6 d-flex">
-              <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/professional-services-07.png" alt="Disorganised Document History" width={40} height={40}  loading="lazy" decoding="async" />
-                <h3>Disorganised Document History</h3>
-                <p>When files, proposals, contracts, and work notes stay scattered across folders, teams lose time searching for accurate information.</p>
-              </div>
-            </div>
-            <div className="col-lg-6 d-flex">
-              <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/professional-services-08.png" alt="Late Insight into Project Risks" width={40} height={40}  loading="lazy" decoding="async" />
-                <h3>Late Insight into Project Risks</h3>
-                <p>When risk signals remain unseen, small issues grow until they affect client trust and delivery timelines.</p>
-              </div>
-            </div>
-            <div className="col-lg-6 d-flex">
-              <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/professional-services-09.png" alt="Limited Visibility Across Operating Units" width={40} height={40}  loading="lazy" decoding="async" />
-                <h3>Limited Visibility Across Operating Units</h3>
-                <p>When each team follows separate tools, senior leaders struggle to see performance trends across the entire business.</p>
-              </div>
-            </div>
-            <div className="col-lg-6 d-flex">
-              <div className="solution-new-card-001 solution-new-card-009">
-                <img src="/img/professional-services-10.png" alt="Disconnected Support Records" width={40} height={40}  loading="lazy" decoding="async" />
-                <h3>Disconnected Support Records</h3>
-                <p>When service requests and support enquiries sit outside project data, clients face delays in getting the right answers.</p>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
+      <ChallengeGrid
+        title="Challenges in the Professional Services Industry"
+        intro={<>Service companies run work that depends on skilled people, organised workflows, and strong client communication. When any stage loses clarity, the entire delivery cycle slows down. Some challenges that UK service companies face include the following:</>}
+        items={[
+          { icon: "/img/professional-services-02.png", title: "Scattered Project Information", text: "When project plans sit in different tools, teams struggle to follow tasks, deadlines, or progress. This creates confusion across delivery." },
+          { icon: "/img/professional-services-03.png", title: "Unclear Resource Availability", text: "When schedules are spread across sheets, it becomes difficult to assign the right person at the right time." },
+          { icon: "/img/professional-services-04.png", title: "Inaccurate Time and Expense Records", text: "When timesheets and expenses move through manual steps, billing becomes slow and approvals take longer." },
+          { icon: "/img/professional-services-05.png", title: "Weak Cost Tracking During Delivery", text: "When project costs remain separated from accounts, managers cannot understand how budgets behave during each stage." },
+          { icon: "/img/professional-services-06.png", title: "Slow Client Communication", text: "When updates do not reach clients or internal teams, questions increase and delivery confidence weakens." },
+          { icon: "/img/professional-services-07.png", title: "Disorganised Document History", text: "When files, proposals, contracts, and work notes stay scattered across folders, teams lose time searching for accurate information." },
+          { icon: "/img/professional-services-08.png", title: "Late Insight into Project Risks", text: "When risk signals remain unseen, small issues grow until they affect client trust and delivery timelines." },
+          { icon: "/img/professional-services-09.png", title: "Limited Visibility Across Operating Units", text: "When each team follows separate tools, senior leaders struggle to see performance trends across the entire business." },
+          { icon: "/img/professional-services-10.png", title: "Disconnected Support Records", text: "When service requests and support enquiries sit outside project data, clients face delays in getting the right answers." },
+        ]}
+      />
       <section className='solution-new-banner-three pd-con-63'>
         {/* <div className="container" ref={containerRef}> */}
         <div className="container">
@@ -752,6 +724,144 @@ const Dynamics365ForProfessionalServices = () => {
                             profitability, and optimise growth.
                           </li>
                         </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="accordion-item">
+                    <h3 className="accordion-header">
+                      <button
+                        className="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faq-content-4"
+                      >
+                        Which ERP software is suitable for professional services
+                        companies?
+                      </button>
+                    </h3>
+                    <div
+                      id="faq-content-4"
+                      className="accordion-collapse collapse"
+                      data-bs-parent="#faqlist1"
+                    >
+                      <div className="accordion-body">
+                        <Link href="/products/dynamics-365-business-central/">Microsoft Dynamics 365 Business Central</Link> is
+                        suitable for small and mid-sized professional services
+                        firms that need financial management, project costing,
+                        resource management, timesheets and invoicing. Larger
+                        organisations with complex financial structures may
+                        benefit from <Link href="/products/microsoft-dynamics-365-finance/">Dynamics 365 Finance</Link> alongside
+                        other Dynamics 365 applications.
+                      </div>
+                    </div>
+                  </div>
+                  <div className="accordion-item">
+                    <h3 className="accordion-header">
+                      <button
+                        className="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faq-content-5"
+                      >
+                        Can Microsoft Dynamics 365 manage projects and client
+                        relationships?
+                      </button>
+                    </h3>
+                    <div
+                      id="faq-content-5"
+                      className="accordion-collapse collapse"
+                      data-bs-parent="#faqlist1"
+                    >
+                      <div className="accordion-body">
+                        Yes. Dynamics 365 can support both project management
+                        and client relationship management. <Link href="/products/dynamics-365-project-operations/">Dynamics 365 Project Operations</Link> helps
+                        manage project planning, resource scheduling, time
+                        tracking and project financials, while <Link href="/products/microsoft-dynamics-365-sales/">Dynamics 365 Sales</Link> manages
+                        leads, opportunities and client accounts.
+                      </div>
+                    </div>
+                  </div>
+                  <div className="accordion-item">
+                    <h3 className="accordion-header">
+                      <button
+                        className="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faq-content-6"
+                      >
+                        How much does Dynamics 365 implementation cost for
+                        professional services firms?
+                      </button>
+                    </h3>
+                    <div
+                      id="faq-content-6"
+                      className="accordion-collapse collapse"
+                      data-bs-parent="#faqlist1"
+                    >
+                      <div className="accordion-body">
+                        The cost depends on the Dynamics 365 applications
+                        selected, number of users, business requirements,
+                        integrations, customisations and implementation
+                        complexity. A smaller Business Central implementation
+                        may require a different investment from an
+                        enterprise-level Finance or Project Operations
+                        implementation. A detailed assessment helps establish
+                        an accurate project budget.
+                      </div>
+                    </div>
+                  </div>
+                  <div className="accordion-item">
+                    <h3 className="accordion-header">
+                      <button
+                        className="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faq-content-7"
+                      >
+                        Can Dynamics 365 integrate with existing business
+                        applications used by professional services firms?
+                      </button>
+                    </h3>
+                    <div
+                      id="faq-content-7"
+                      className="accordion-collapse collapse"
+                      data-bs-parent="#faqlist1"
+                    >
+                      <div className="accordion-body">
+                        Yes. Dynamics 365 supports integration with <Link href="/products/microsoft-power-platform/">Microsoft Power Platform</Link>,
+                        Microsoft 365 and other business applications through
+                        available connectors, APIs and integration solutions.
+                        This helps professional services firms connect
+                        financial data, customer information, project workflows
+                        and reporting systems.
+                      </div>
+                    </div>
+                  </div>
+                  <div className="accordion-item">
+                    <h3 className="accordion-header">
+                      <button
+                        className="accordion-button collapsed"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#faq-content-8"
+                      >
+                        How does Dynamics 365 help professional services firms
+                        improve project profitability?
+                      </button>
+                    </h3>
+                    <div
+                      id="faq-content-8"
+                      className="accordion-collapse collapse"
+                      data-bs-parent="#faqlist1"
+                    >
+                      <div className="accordion-body">
+                        Dynamics 365 helps firms monitor project budgets,
+                        resource utilisation, employee hours, expenses, project
+                        costs and revenue. With Dynamics 365 Project Operations
+                        and suitable financial management applications,
+                        businesses can gain better visibility into project
+                        performance, identify cost overruns and make informed
+                        decisions to improve profitability.
                       </div>
                     </div>
                   </div>

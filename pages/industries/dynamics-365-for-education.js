@@ -457,6 +457,25 @@ const Education = () => {
             </div>
 
             <div className='col-lg-3 col-md-4 col-sm-6 d-flex'>
+              <a href="/products/microsoft-dynamics-365-finance/" className="serv-card-666 serv-card-666-1">
+                <div className='serv-card-666-flex'>
+                  <div className="serv-card-icon-666">
+                    <img src="/img/menu-icons/dynamics-365-finance.svg" alt="" width="48" height="48" aria-hidden="true"  loading="lazy" decoding="async" />
+                  </div>
+                  <h3 className="serv-card-title-666">
+                    Microsoft Dynamics 365 Finance
+                  </h3>
+                </div>
+                <p className="serv-card-text-666">Manage enterprise finance, budgeting, reporting, payables, receivables, and multi-entity accounting for large universities and institutions.</p>
+                <div className="serv-card-footer-666">
+                  <span className="serv-card-btn-666">Get Started</span>
+                  <span className="serv-card-arrow-666"><i className="bi bi-arrow-right"></i></span>
+                </div>
+
+              </a>
+            </div>
+
+            <div className='col-lg-3 col-md-4 col-sm-6 d-flex'>
               <a href="/products/microsoft-dynamics-365-sales/" className="serv-card-666 serv-card-666-1">
                 <div className='serv-card-666-flex'>
                   <div className="serv-card-icon-666">
