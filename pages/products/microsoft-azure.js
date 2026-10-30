@@ -263,7 +263,7 @@ const MicrosoftAzure = () => {
                         Azure SQL refers to the modern SQL family (comprising
                         Azure SQL Database, Azure SQL Managed Instance, and SQL
                         Server on Azure VM) to ensure seamless migration and app
-                        modernization.
+                        modernisation.
                       </div>
                     </div>
                   </div>
@@ -291,7 +291,7 @@ const MicrosoftAzure = () => {
                         Azure Virtual Desktop helps to deploy virtual desktops
                         and remote apps with maximum potential control to any
                         device delivered on Azure to enjoy the best user
-                        experience wrapped with minimized IT costs.
+                        experience wrapped with minimised IT costs.
                       </div>
                     </div>
                   </div>
@@ -439,7 +439,7 @@ const MicrosoftAzure = () => {
                   <div className="overlay">
                     <p>
                       Increase innovation, accelerate your development strategy,
-                      faster your time to market, maximize your developer
+                      faster your time to market, maximise your developer
                       velocity, and remove development barriers. Empower your
                       developers with the right set of tools and skillsets,
                       bring collaboration, and support the continuously changing
@@ -501,7 +501,7 @@ const MicrosoftAzure = () => {
                   <div className="overlay">
                     <p>
                       Transform your raw data into real-time actionable insights
-                      and key analytics by building modernized cloud-based key
+                      and key analytics by building modernised cloud-based key
                       analytics solutions to address and fulfil your AI
                       (artificial intelligence), data warehousing, and advanced
                       analytics needs. With Azure cloud services, enable secure

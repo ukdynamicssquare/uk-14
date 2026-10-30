@@ -82,7 +82,7 @@ const Erp = () => {
                 </p>
                 <p>
                   Experts at Dynamics Square can help you to build highly
-                  customized ERP solutions for enterprises seeking to support
+                  customised ERP solutions for enterprises seeking to support
                   their continuously growing processes. Upgrading the Microsoft
                   ERP system helps enterprises to trigger their operational
                   practices by connecting and bringing processes, people, and
@@ -91,7 +91,7 @@ const Erp = () => {
                    Dynamics 365
                   </Link>{" "}
                   ERP comes with built-in intelligence and adaptability for
-                  process optimization that helps brands to innovate, drive, and
+                  process optimisation that helps brands to innovate, drive, and
                   scale.
                 </p>
               </header>
@@ -167,7 +167,7 @@ const Erp = () => {
                         in-store, and digital happening altogether. With ERP
                         implementation, you allow your customers to enjoy a
                         seamless experience. Its AI capabilities help to serve
-                        personalized delivery while improving employee
+                        personalised delivery while improving employee
                         productivity and eliminating redundancies to support
                         overall business growth.
                       </div>
@@ -294,7 +294,7 @@ const Erp = () => {
                         automate their daily data practices leveraging robotic
                         process automation. It enables manufacturing firms to
                         fulfil the customers' needs in a timely manner while
-                        managing real-time resources, optimizing services,
+                        managing real-time resources, optimising services,
                         managing costs, and production planning.
                       </div>
                     </div>
@@ -401,7 +401,7 @@ const Erp = () => {
               <div className="commen-rit-info">
                 <h2>Dynamics AX</h2>
                 <p>
-                  Optimize your finance & operations with Microsoft Dynamics AX
+                  Optimise your finance & operations with Microsoft Dynamics AX
                   (Axapta) to bring transparency across your financial flow. It
                   helps enterprises to globally manage, automate, and roll out
                   processes whether on-premises or on-cloud embedded with
@@ -602,7 +602,7 @@ const Erp = () => {
                         customers. It offers many benefits, including better
                         insights, scalability, adaptability, seamless data
                         reporting, improved efficiency, high revenue, and ease
-                        of customization as per changing business needs.
+                        of customisation as per changing business needs.
                       </p>
                     </div>
                   </div>
@@ -688,7 +688,7 @@ const Erp = () => {
                         accurate data as these two things depend on various
                         factors, like the complexity of the system, server
                         deployment, amount of data transfer, number of
-                        integrations, and type of customization.
+                        integrations, and type of customisation.
                       </p>
                     </div>
                   </div>

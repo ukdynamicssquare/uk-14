@@ -56,7 +56,7 @@ const TestForm = () => {
                                 <p>One of the biggest concerns of the businesses is to identify the exact cost of ERP implementation. Because it empowers businesses to optimise their finances, get a transparent view of ERP adaptation, and get a rough estimation of overall cost.   </p>
                                 <p>If you are also keen to know the precise cost of an ERP solution so that you can calculate ROI and value over long-term investment, Dynamics Square brings you a perfectly built ERP implementation cost calculator tool. </p>
                                 <p>This tool brings you precise data of the cost that is backed by different factors, like software cost, number of users, kind of licenses, type of deployment, training cost, and maintenance costs. </p>
-                                <p>To obtain an accurate estimate, utilize the tool below and provide simple answers related to your unique business.  </p>
+                                <p>To obtain an accurate estimate, utilise the tool below and provide simple answers related to your unique business.  </p>
                             </header>
                         </div>
                     </div>

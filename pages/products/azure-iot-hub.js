@@ -5,7 +5,7 @@ import PageSeo from "../../components/PageSeo";
 const PAGE_FAQS = [
   {
     "question": "What is Microsoft Azure IoT hub?",
-    "answer": "Azure IoT hub is a managed cloud service supports centralized messaging between IoT applications and attached assets or devices. Enterprises can connect millions of devices simultaneously while ensuring security and reliability. It allows connecting almost all the devices to your Azure IoT hub. With Azure IoT, you can connect, monitor, and control your IoT devices and stay updated with real-time device data, status, or analytics leveraging a single unified dashboard. To know more about how Azure IoT works, connect with experts at Dynamics Square, we can help you to understand its capability, and implementing Azure IoT solutions to help your enterprise to manage and streamline your IoT workflow."
+    "answer": "Azure IoT hub is a managed cloud service supports centralised messaging between IoT applications and attached assets or devices. Enterprises can connect millions of devices simultaneously while ensuring security and reliability. It allows connecting almost all the devices to your Azure IoT hub. With Azure IoT, you can connect, monitor, and control your IoT devices and stay updated with real-time device data, status, or analytics leveraging a single unified dashboard. To know more about how Azure IoT works, connect with experts at Dynamics Square, we can help you to understand its capability, and implementing Azure IoT solutions to help your enterprise to manage and streamline your IoT workflow."
   },
   {
     "question": "What is the difference between Azure IoT hub and IoT Central?",
@@ -268,7 +268,7 @@ const AzureIoTHub = () => {
                   >
                     <div className="accordion-body">
                       Azure IoT hub is a managed cloud service supports
-                      centralized messaging between IoT applications and
+                      centralised messaging between IoT applications and
                       attached assets or devices. Enterprises can connect
                       millions of devices simultaneously while ensuring security
                       and reliability. It allows connecting almost all the

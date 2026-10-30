@@ -72,7 +72,7 @@ const pageSchema = {
       "operatingSystem": "Web, Windows, iOS, Android",
       "url": "https://www.dynamicssquare.co.uk/products/dynamics-365-business-central/",
       "author": { "@type": "Organization", "name": "Microsoft" },
-      "description": "Dynamics 365 Business Central is an AI-powered ERP with powerful finance, supply chain, manufacturing, and reporting capabilities, all into one, centralized platform.",
+      "description": "Dynamics 365 Business Central is an AI-powered ERP with powerful finance, supply chain, manufacturing, and reporting capabilities, all into one, centralised platform.",
       "featureList": capabilities.map((c) => c.title)
     },
     {
@@ -133,7 +133,7 @@ const BCAdvantagesTwo = () => {
           <div className="row align-items-center gy-5">
             <div className={`col-lg-6 ${styles.heroSplit}`}>
               <h1 className={styles.heroTitle}>Dynamics 365 Business Central Advantages & Capabilities</h1>
-              <p className={styles.heroLead}>Dynamics 365 Business Central is an AI-powered ERP with powerful finance, supply chain, manufacturing, and reporting capabilities, all into one, centralized platform.</p>
+              <p className={styles.heroLead}>Dynamics 365 Business Central is an AI-powered ERP with powerful finance, supply chain, manufacturing, and reporting capabilities, all into one, centralised platform.</p>
               <p className={styles.heroLead}>Since over 55,000 companies have deployed Dynamics 365 Business Central advantages and capabilities are worth knowing from a business standpoint.</p>
               <p className={styles.heroSub}>Learn from the experts!</p>
               <div className={`${styles.heroActions} ${styles.heroActionsLeft}`}>

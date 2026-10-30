@@ -44,7 +44,7 @@ const Partner = () => {
                 <p>
                 Insight Works is a global leader in productivity solutions for manufacturers and distributors offering end-to-end software applications ranging from procurement and warehouse management to manufacturing and shipping.
                 </p>
-                <p>Insight Works specializes exclusively in add-ons for Microsoft Dynamics 365 Business Central. Products include mobile warehouse data collection, shop floor data collection, inventory management, integrated shipping, scheduling and more.</p>
+                <p>Insight Works specialises exclusively in add-ons for Microsoft Dynamics 365 Business Central. Products include mobile warehouse data collection, shop floor data collection, inventory management, integrated shipping, scheduling and more.</p>
                 <p>Insight Works is headquartered in Canada and boasts a European presence in the Netherlands and remote offices in the United States.</p>
                 <a href="https://www.dmsiworks.com/" target="_blank" rel='no-follow'>
                www.dmsiworks.com
@@ -62,7 +62,7 @@ const Partner = () => {
                 <p>
                 Anveo is a trademark of conion media GmbH located in Hamburg, Germany. Conion media GmbH was founded in 2005 to build business software with Microsoft Dynamics NAV.
                 </p>
-                <p>Our passion is to build horizontal solutions as add-ons for Microsoft Dynamics NAV. These add-ons, the Anveo product family, is highly optimized to be implemented by other Microsoft Dynamics NAV partners on their own.</p>
+                <p>Our passion is to build horizontal solutions as add-ons for Microsoft Dynamics NAV. These add-ons, the Anveo product family, is highly optimised to be implemented by other Microsoft Dynamics NAV partners on their own.</p>
                 <p>Anveo is sold worldwide via more than 200 Anveo partners</p>
                 <a href="https://www.anveonav.com/en/" target="_blank" rel='no-follow'>
                 www.anveonav.com

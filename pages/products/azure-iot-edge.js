@@ -177,7 +177,7 @@ const AzureIoTEdge = () => {
                         Remotely track and monitor your IoT Edge devices at
                         scale by integrating with the 'Azure Monitor tool'. With
                         the help of Built-in-metrics and powerful
-                        visualizations, monitor your device health and your IoT
+                        visualisations, monitor your device health and your IoT
                         Edge applications' performance.
                       </div>
                     </div>
@@ -212,7 +212,7 @@ const AzureIoTEdge = () => {
                         Securely operate and manage your Edge devices even when
                         they are in offline mode. Azure IoT Edge facilitates
                         your devices with automation wherein data gets
-                        synchronized in real-time that ensures seamless data
+                        synchronised in real-time that ensures seamless data
                         operation.
                       </div>
                     </div>
@@ -281,7 +281,7 @@ const AzureIoTEdge = () => {
                         <p>
                           Create and drive your business logic at scale with
                           Docker-compatible containers provided by Azure
-                          services or authorized Microsoft partners.
+                          services or authorised Microsoft partners.
                         </p>
                       </div>
                     </div>

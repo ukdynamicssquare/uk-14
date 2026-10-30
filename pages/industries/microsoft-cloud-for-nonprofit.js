@@ -113,10 +113,10 @@ const MicrosoftCloudForNonprofit = () => {
                     <div className="cintent-right">
                       <p>
                         Considering your specific mission-critical needs, your
-                        non-profit solution can be configured and customized to
+                        non-profit solution can be configured and customised to
                         fulfil your foundational needs and can serve the
                         purpose. The non-profit sector can drive unified
-                        fundraising, ensure centralized data comprising both the
+                        fundraising, ensure centralised data comprising both the
                         back office and frontline.
                       </p>
                     </div>
@@ -149,7 +149,7 @@ const MicrosoftCloudForNonprofit = () => {
                     </div>
                     <div className="cintent-right">
                       <p>
-                        Microsoft’s cloud solution helps to ensure personalized
+                        Microsoft’s cloud solution helps to ensure personalised
                         engagement through built-in capability, enables to
                         ensure seamless program delivery, allows to effectively
                         manage awards & donations, and drives purposeful
@@ -223,7 +223,7 @@ const MicrosoftCloudForNonprofit = () => {
                     <h3>Constituent Management</h3>
                     <p>
                       Attract, engage, and retain your donors to support your
-                      foundational base. By leveraging the centralized view of
+                      foundational base. By leveraging the centralised view of
                       constituents' data, know your donors, supports, or
                       fundraisers.
                     </p>
@@ -239,9 +239,9 @@ const MicrosoftCloudForNonprofit = () => {
                      loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
-                    <h3>Personalized Engagement</h3>
+                    <h3>Personalised Engagement</h3>
                     <p>
-                      Take advantage of personalized engagement and impact your
+                      Take advantage of personalised engagement and impact your
                       engaging campaigns wherein connect the donor with in-built
                       engaging capability via the most trusted platforms.
                     </p>
@@ -278,7 +278,7 @@ const MicrosoftCloudForNonprofit = () => {
                     <h3>Unified Data</h3>
                     <p>
                       Unify your fundraising data, campaign data, and enable
-                      non-profits to centralize back office and frontline data
+                      non-profits to centralise back office and frontline data
                       comprising programs, finance & operations, etc.
                     </p>
                   </div>
@@ -417,7 +417,7 @@ const MicrosoftCloudForNonprofit = () => {
                   <p>
                     Before moving ahead, here is a sneak peek about how
                     Microsoft Cloud for Non-Profit can help you to support your
-                    customized nonprofit activities whether to engage donors,
+                    customised nonprofit activities whether to engage donors,
                     drive successful events, manage volunteers, streamline data,
                     or get in-depth engagement analytics.
                   </p>
@@ -613,7 +613,7 @@ const MicrosoftCloudForNonprofit = () => {
                                 <div className="text-wrp-content">
                                   <h3>E-Commerce</h3>
                                   <p>
-                                    Optimize Your End-To-End Ecommerce
+                                    Optimise Your End-To-End Ecommerce
                                     Processes And Improve Your Customer
                                     Experience.
                                   </p>

@@ -46,7 +46,7 @@ const Inedex = () => {
               <span className='s-ttgs'>Consulting</span>
               <h2>Plan with Confidence,
               Execute with Precision</h2>
-              <p>Our expert consultants analyse your business needs and recommend the best Microsoft Dynamics 365 solution. Whether you need process optimization or digital transformation, we help you achieve faster ROI with future-ready strategies.</p>
+              <p>Our expert consultants analyse your business needs and recommend the best Microsoft Dynamics 365 solution. Whether you need process optimisation or digital transformation, we help you achieve faster ROI with future-ready strategies.</p>
               <div className="text-lg-start">
                 <Link
                   href="/our-services/dynamics-365-consultant/"
@@ -75,7 +75,7 @@ const Inedex = () => {
               <span className='s-ttgs'>Implementation</span>
               <h2>Seamless Microsoft
               Dynamics 365 Implementation</h2>
-              <p>Our end-to-end implementation services ensure a smooth, risk-free transition to Microsoft Dynamics 365. From initial setup to go-live, we help you minimize downtime and maximize efficiency.</p>
+              <p>Our end-to-end implementation services ensure a smooth, risk-free transition to Microsoft Dynamics 365. From initial setup to go-live, we help you minimise downtime and maximise efficiency.</p>
               <div className="text-lg-start">
                 <Link
                   href="/our-services/dynamics-365-implementation-services/"

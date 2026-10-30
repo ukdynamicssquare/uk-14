@@ -309,7 +309,7 @@ const CaseStudyGlobalTea = () => {
                     </div>
                   </div>
                   <div className="cintent-right">
-                    <p>Using the customized NAV, the employees of the company can manage the production, supply chain, inventory, finance, and similar department from a single dashboard.</p>
+                    <p>Using the customised NAV, the employees of the company can manage the production, supply chain, inventory, finance, and similar department from a single dashboard.</p>
                   </div>
                 </div>
                 <div className="content-inner-moil-1">

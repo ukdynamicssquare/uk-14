@@ -327,7 +327,7 @@ const FieldService = () => {
                 </div>
                 <p style={{ paddingTop: '30px' }}>Now resolve issues before they escalate. <a className='u-i' href="/blog/what-is-copilot-in-dynamics-365-customer-service/">Copilot in D365 Customer Service</a> helps with flagging problems early, automating case handling, and routing requests to the right agent based on context and customer sentiment.</p>
                 <p>The platform also has self-service options, a centralised knowledge base, and real-time dashboards. As a result, customers get consistent support across phone, email, chat, and other channels.</p>
-                <p>For organizations focused on service quality or operational efficiency, it provides the automation and visibility needed to manage customer service effectively.</p>
+                <p>For organisations focused on service quality or operational efficiency, it provides the automation and visibility needed to manage customer service effectively.</p>
                 <div className="text-lg-start">
                   <Link
                     href="#exampleModal"

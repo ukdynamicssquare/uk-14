@@ -134,7 +134,7 @@ const Marketing = () => {
                             height="36"
                            aria-hidden="true" />
                         </div>
-                        <span>Centralized Source</span>
+                        <span>Centralised Source</span>
                       </button>
                     </h3>
                     <div
@@ -144,7 +144,7 @@ const Marketing = () => {
                       data-bs-parent="#accnew"
                     >
                       <div className="accordion-body">
-                        The platform offers a centralized source for all types
+                        The platform offers a centralised source for all types
                         of marketing information. This way, the members do not
                         have to stay dependent upon different individuals for
                         getting any data. They can simply log into the platform
@@ -177,7 +177,7 @@ const Marketing = () => {
                             height="36"
                            aria-hidden="true"  loading="lazy" decoding="async" />
                         </div>
-                        <span>Personalized Communication</span>
+                        <span>Personalised Communication</span>
                       </button>
                     </h3>
                     <div
@@ -187,7 +187,7 @@ const Marketing = () => {
                       data-bs-parent="#accnew"
                     >
                       <div className="accordion-body">
-                        The platform offers a customized form of communication
+                        The platform offers a customised form of communication
                         for the employees. Different customers need different
                         marketing strategies depending upon the requirements and
                         the product or service that is being marketed. Dynamic
@@ -276,7 +276,7 @@ const Marketing = () => {
                         has to be sent to the customers and clients for the
                         purpose of marketing. The platform also allows the users
                         to customise these email templates so that they can be
-                        personalized as per the customer segmentation and
+                        personalised as per the customer segmentation and
                         according to the products and services for which the
                         marketing campaign is being conducted.
                       </div>
@@ -445,7 +445,7 @@ const Marketing = () => {
                     >
                       <div className="accordion-body">
                         This is a unique function available in this tool that
-                        helps the user in not just visualizing but also
+                        helps the user in not just visualising but also
                         maintaining different activities that are in connection
                         to some kind of events.
                       </div>
@@ -641,7 +641,7 @@ const Marketing = () => {
                       </h3>
                       <div className="overlay">
                         <p>
-                          Reduces management expenses and optimizes the use of
+                          Reduces management expenses and optimises the use of
                           resources thanks to a scalable platform that adapts to
                           the specific needs of the company and offers all the
                           functionalities in a single space

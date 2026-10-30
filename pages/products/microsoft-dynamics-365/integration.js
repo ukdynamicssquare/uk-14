@@ -83,7 +83,7 @@ const Integration = () => {
                                     solution, whether it is an ERP or CRM, eliminating the need to
                                     manage different solutions separately? If so, you can
                                     eliminate data silos from the business, centralise the
-                                    information, and make actionable decisions to maximize the
+                                    information, and make actionable decisions to maximise the
                                     output.{" "}
                                 </p>
                                 <p>
@@ -386,7 +386,7 @@ const Integration = () => {
                                             data-bs-parent="#accnew"
                                         >
                                             <div className="accordion-body">
-                                                <p>Provides robust business intelligence tools for analysing and visualizing Dynamics 365 data, enabling businesses to gain deeper insights into their operations and make informed decisions. </p>
+                                                <p>Provides robust business intelligence tools for analysing and visualising Dynamics 365 data, enabling businesses to gain deeper insights into their operations and make informed decisions. </p>
                                             </div>
                                         </div>
                                     </div>
@@ -575,7 +575,7 @@ const Integration = () => {
                         <div className="col-lg-7 align-self-center">
                             <div className="call_to_action-left">
                                 <h3>Empower your business with seamless Dynamics 365 integration</h3>
-                                <p>Schedule a free consultation today to learn how Dynamics Square can help you streamline your business operations and maximize the value of your Dynamics 365 investment.</p>
+                                <p>Schedule a free consultation today to learn how Dynamics Square can help you streamline your business operations and maximise the value of your Dynamics 365 investment.</p>
                                 <div className="m-o-t m-o-t-inde">
                                     <Link
                                         href="#exampleModal"

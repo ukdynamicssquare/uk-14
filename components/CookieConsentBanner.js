@@ -26,7 +26,7 @@ const CATEGORIES = [
     key: "marketing",
     label: "Marketing Cookies",
     description:
-      "Marketing cookies are used to track visitors across websites to allow publishers to display relevant and engaging advertisements. By enabling marketing cookies, you grant permission for personalized advertising across various platforms.",
+      "Marketing cookies are used to track visitors across websites to allow publishers to display relevant and engaging advertisements. By enabling marketing cookies, you grant permission for personalised advertising across various platforms.",
   },
 ];
 

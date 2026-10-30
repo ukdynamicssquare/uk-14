@@ -49,7 +49,7 @@ const UpgradeServices = () => {
             <header className="section-header">
             <h2>Why Should you Consider Changing your Microsoft Partner?</h2>
             <p>Most business owners are more concerned with implementing a <Link href="/products/microsoft-dynamics-erp/" target="_blank">Microsoft ERP solution</Link> than getting a faithful support service for a better future. Businesses need to understand that the secret to a successful business lies in availing themselves of consistent and reliable support as a priority.</p>
-            <p>Businesses expend significant effort and research when selecting an <Link href="/" target="_blank">ERP implementation partner</Link> with a long-term relationship goal. In fact, businesses have to search for a partner who can offer seamless and timely support along with effective project implementation. Because this is the only way to streamline business operations, eliminate redundancies, maximize ROI, control costs, optimise resources, increase performance, and much more. </p>
+            <p>Businesses expend significant effort and research when selecting an <Link href="/" target="_blank">ERP implementation partner</Link> with a long-term relationship goal. In fact, businesses have to search for a partner who can offer seamless and timely support along with effective project implementation. Because this is the only way to streamline business operations, eliminate redundancies, maximise ROI, control costs, optimise resources, increase performance, and much more. </p>
           </header>
             </div>
           </div>
@@ -230,7 +230,7 @@ const UpgradeServices = () => {
                         </a>
                         , we can ensure secure and reliable data migration. Our
                         Dynamics 365 data migration services are designed that
-                        comprise customized, step-by-step, and secure data
+                        comprise customised, step-by-step, and secure data
                         migration from your existing system to the newly
                         implemented ones.
                       </div>
@@ -275,7 +275,7 @@ const UpgradeServices = () => {
                         and Dynamics AX has been transformed with Dynamics 365
                         Finance & Supply Chain, our experts can ensure seamless
                         upgrade depending on your core business needs, process
-                        optimization, and integration with the existing system
+                        optimisation, and integration with the existing system
                         or other Microsoft's apps improving your entire process
                         flow and operational environment.
                       </div>
@@ -336,9 +336,9 @@ const UpgradeServices = () => {
                       data-bs-parent="#acc"
                     >
                       <div className="accordion-body">
-                        To support your continuous process optimization and
+                        To support your continuous process optimisation and
                         strategic operational flow, we provide highly embedded
-                        and customized post support services. Whether you need
+                        and customised post support services. Whether you need
                         annual support services, independent support, or prepaid
                         hour support, we are here to serve you suited to your
                         specific business context and business continuity needs.

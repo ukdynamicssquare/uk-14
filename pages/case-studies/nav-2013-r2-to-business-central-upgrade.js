@@ -57,8 +57,8 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
                     alt="Dynamics NAV 2013 R2 to Business Central Upgrade" /></div>
                   </div></div>
                 <div className="col-lg-9">
-                  <p>At Dynamics Square, we're passionate about empowering businesses to achieve their full potential. As a leading Microsoft Solutions Partner with a global reach, we've been helping organizations of all sizes streamline operations, boost productivity, and drive growth for over 14 years.</p>
-                  <p>Our team of 150+ certified experts leverage deep industry knowledge and cutting-edge Microsoft technologies to deliver tailored solutions that meet your unique needs. Whether you're looking to modernize your business processes, improve customer experiences, or enhance decision-making, we've got you covered.</p>
+                  <p>At Dynamics Square, we're passionate about empowering businesses to achieve their full potential. As a leading Microsoft Solutions Partner with a global reach, we've been helping organisations of all sizes streamline operations, boost productivity, and drive growth for over 14 years.</p>
+                  <p>Our team of 150+ certified experts leverage deep industry knowledge and cutting-edge Microsoft technologies to deliver tailored solutions that meet your unique needs. Whether you're looking to modernise your business processes, improve customer experiences, or enhance decision-making, we've got you covered.</p>
                 </div>
               </div>
             </div>
@@ -225,7 +225,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
                                loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
-                              <p>Document Automation: Utilized Continia Document Capture to automate document handling and improve efficiency.</p>
+                              <p>Document Automation: Utilised Continia Document Capture to automate document handling and improve efficiency.</p>
                             </div>
                           </div>
                         </div>
@@ -276,7 +276,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
                                aria-hidden="true"  loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
-                              <p>Customization and Configuration: Tailored the solution to meet the client's unique business processes and requirements.</p>
+                              <p>Customisation and Configuration: Tailored the solution to meet the client's unique business processes and requirements.</p>
                             </div>
                           </div>
                         </div>

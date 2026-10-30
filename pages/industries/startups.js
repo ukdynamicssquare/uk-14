@@ -78,7 +78,7 @@ const Startup = () => {
                 business. Simply upgrade your system to enlarge your business
                 capabilities and support your current as well as a futuristic
                 workflow with Microsoft Dynamics 365 solutions configured and
-                highly customized suited to your specific domain and operational
+                highly customised suited to your specific domain and operational
                 flow.
               </p>
             </header>
@@ -95,9 +95,9 @@ const Startup = () => {
                   Startups ?
                 </h2>
                 <p>
-                  Support your startup ideation and maximize your growth
-                  potential with customized offerings of Microsoft Dynamics 365
-                  for small business. Maximize your resource utilization and
+                  Support your startup ideation and maximise your growth
+                  potential with customised offerings of Microsoft Dynamics 365
+                  for small business. Maximise your resource utilisation and
                   drive scalable growth strategy in your startup business.
                 </p>
               </div>
@@ -126,7 +126,7 @@ const Startup = () => {
                     </div>
                     <div className="cintent-right">
                       <p>
-                        Bring continuous flow with customized technical
+                        Bring continuous flow with customised technical
                         sessions, content help, and online mentorship with the
                         help of Microsoft 365 Startup solutions.
                       </p>
@@ -141,8 +141,8 @@ const Startup = () => {
                     </div>
                     <div className="cintent-right">
                       <p>
-                        Start outreaching your potential customer base utilizing
-                        the highly customized and integrated system suited to
+                        Start outreaching your potential customer base utilising
+                        the highly customised and integrated system suited to
                         your hourly business needs.
                       </p>
                     </div>
@@ -168,7 +168,7 @@ const Startup = () => {
                     Dynamics 365 for Startups!
                   </h3>
                   <p>
-                    Share your customized process flow to get personalized
+                    Share your customised process flow to get personalised
                     solution
                     <br />
                     for your startup business.
@@ -210,7 +210,7 @@ const Startup = () => {
                      loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
-                    <h3>Seamless Customization</h3>
+                    <h3>Seamless Customisation</h3>
                     <p>
                       Manage your specific startup practices leveraging highly
                       configurable and seamlessly customizable Dynamics 365 for
@@ -228,7 +228,7 @@ const Startup = () => {
                      loading="lazy" decoding="async" />
                   </div>
                   <div className="card_new_content">
-                    <h3>Centralize Data</h3>
+                    <h3>Centralise Data</h3>
                     <p>
                       Get a complete view of real-time data including customer
                       insights, sales, and reports & analytics that drives
@@ -249,7 +249,7 @@ const Startup = () => {
                     <h3>Manage Customers</h3>
                     <p>
                       Connect, engage, and provide seamless support &
-                      personalized experience to your customers with Dynamics
+                      personalised experience to your customers with Dynamics
                       365 for Startups.
                     </p>
                   </div>
@@ -414,7 +414,7 @@ const Startup = () => {
                     in Your Startup?
                   </h2>
                   <p>
-                    Empower maximum resource utilization and boost your process
+                    Empower maximum resource utilisation and boost your process
                     flow with simplified and highly configured Microsoft
                     Dynamics 365 startup solutions.
                   </p>
@@ -518,7 +518,7 @@ const Startup = () => {
                                   <h3>Not for Profit</h3>
                                   <p>
                                     Bring Transparency And Drive Efficiency In
-                                    Your Non-Profit Organization With
+                                    Your Non-Profit Organisation With
                                     Microsoft Dynamics 365 For Charities.
                                   </p>
                                   <span>Explore Now</span>
@@ -544,7 +544,7 @@ const Startup = () => {
                                 <div className="text-wrp-content">
                                   <h3>E-Commerce</h3>
                                   <p>
-                                    Optimize Your End-To-End Ecommerce
+                                    Optimise Your End-To-End Ecommerce
                                     Processes And Improve Your Customer
                                     Experience.
                                   </p>

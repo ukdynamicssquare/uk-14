@@ -331,7 +331,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
                   </div>
                 </div>
                 <div className="style-grid-content">
-                  <h3>Digitally Synchronized Warehouse</h3>
+                  <h3>Digitally Synchronised Warehouse</h3>
                   <p>A hybrid warehouse model that blends robotic automation with mobile warehouse management, improving picking and dispatch accuracy.</p>
                 </div>
               </div>

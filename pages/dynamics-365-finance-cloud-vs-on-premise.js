@@ -232,7 +232,7 @@ const FinanceCloudvsOnpremise = () => {
                       <td>No</td>
                     </tr>
                     <tr>
-                      <td>Localizations</td>
+                      <td>Localisations</td>
                       <td>&nbsp;</td>
                       <td>Yes</td>
                       <td>Yes</td>
@@ -250,7 +250,7 @@ const FinanceCloudvsOnpremise = () => {
                       <td>Yes</td>
                     </tr>
                     <tr>
-                      <td>Organization administration</td>
+                      <td>Organisation administration</td>
                       <td>&nbsp;</td>
                       <td>Yes</td>
                       <td>Yes</td>

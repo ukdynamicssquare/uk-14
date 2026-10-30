@@ -62,7 +62,7 @@
   {
     "id": 2,
     "question": "What is Dynamics 365 Customer Service Insights?",
-    "answer": "<p>Dynamics 365 customer service insights enable enterprises to access actionable data related to key analytics, operational data, and other industry-related trends. These insights help businesses to make faster and smarter decisions to support growth and profitability. Leveraging customer service insights, businesses can roll out their required changes to improve customer satisfaction, maximize operational efficiency, and more.</p>"
+    "answer": "<p>Dynamics 365 customer service insights enable enterprises to access actionable data related to key analytics, operational data, and other industry-related trends. These insights help businesses to make faster and smarter decisions to support growth and profitability. Leveraging customer service insights, businesses can roll out their required changes to improve customer satisfaction, maximise operational efficiency, and more.</p>"
   },
   {
     "id": 3,
@@ -72,7 +72,7 @@
   {
     "id": 4,
     "question": "What are the key features of Dynamics 365 Customer Service?",
-    "answer": "<p>Dynamics 365 customer service comes with a number of vital features to seamlessly and effectively drive your customers, track customer behaviour to serve them a personalized solution. Here is the list of Dynamics 365 Customer Service key features:</p><ul><li>Tracking customer issues and case management</li><li>Record customer interactions pertained to a particular case</li><li>Sharing information in the knowledge database.</li><li>Creating queues and routing cases</li><li>Creating and tracking service levels</li><li>Defining service terms using entitlements</li><li>Track and manage performance through reports and dashboards</li><li>Creating and scheduling services</li><li>Taking part in chats</li><li>Managing conversations across the configured channels.</li></ul>"
+    "answer": "<p>Dynamics 365 customer service comes with a number of vital features to seamlessly and effectively drive your customers, track customer behaviour to serve them a personalised solution. Here is the list of Dynamics 365 Customer Service key features:</p><ul><li>Tracking customer issues and case management</li><li>Record customer interactions pertained to a particular case</li><li>Sharing information in the knowledge database.</li><li>Creating queues and routing cases</li><li>Creating and tracking service levels</li><li>Defining service terms using entitlements</li><li>Track and manage performance through reports and dashboards</li><li>Creating and scheduling services</li><li>Taking part in chats</li><li>Managing conversations across the configured channels.</li></ul>"
   },
   {
     "id": 5,
@@ -92,7 +92,7 @@
   {
     "id": 8,
     "question": "Can Dynamics 365 Customer Service CRM be customised for specific business needs?",
-    "answer": "<p>Yes, you can customise this solution to meet the unique needs of your business. You can utilise the <a target=\"_blank\" href=\"/products/microsoft-dynamics-365/\" class=\"u-i\">Microsoft Dynamics 365</a> ecosystem to align the solution with your business using integrations, add-ons, and customizations.</p>"
+    "answer": "<p>Yes, you can customise this solution to meet the unique needs of your business. You can utilise the <a target=\"_blank\" href=\"/products/microsoft-dynamics-365/\" class=\"u-i\">Microsoft Dynamics 365</a> ecosystem to align the solution with your business using integrations, add-ons, and customisations.</p>"
   },
   {
     "id": 9,

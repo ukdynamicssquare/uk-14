@@ -66,7 +66,7 @@ const Career = () => {
                   <h2>What Is Dynamics Square?</h2>
                   <p>
                     Dynamics Square is the UK trustworthy and Microsoft's
-                    Authorized Solutions Partner for highly customized business
+                    Authorised Solutions Partner for highly customised business
                     solutions to bring digital transformation in businesses
                     through Microsoft Business Applications.
                     <br />

@@ -17,7 +17,7 @@ const Ecommerce = () => {
       <PageSeo
         type="Service"
         title="Dynamics 365 for Ecommerce Industry | Dynamics Square"
-        description="Optimize Your End-to-End Ecommerce Processes and Improve Your Customer Experience with Microsoft Dynamics 365 for eCommerce ."
+        description="Optimise Your End-to-End Ecommerce Processes and Improve Your Customer Experience with Microsoft Dynamics 365 for eCommerce ."
         image="https://www.dynamicssquare.co.uk/img/ecommerce banner.png"
       />
       <ModalVideo
@@ -37,7 +37,7 @@ const Ecommerce = () => {
                   For Ecommerce
                 </h1>
                 <p>
-                  Optimize Your End-To-End Ecommerce Processes And Improve Your
+                  Optimise Your End-To-End Ecommerce Processes And Improve Your
                   Customer Experience With Microsoft Dynamics 365 For ECommerce
                   .
                 </p>
@@ -96,7 +96,7 @@ const Ecommerce = () => {
                 </h2>
                 <p>
                   Digitally transform your business and drive innovation in your
-                  entire Ecommerce operations by leveraging highly customized
+                  entire Ecommerce operations by leveraging highly customised
                   and integrated eCommerce solutions. Microsoft Dynamics 365
                   implementation for Ecommerce companies can help to manage and
                   accelerate the entire flow of e-commerce practices.
@@ -113,7 +113,7 @@ const Ecommerce = () => {
                     <div className="cintent-right">
                       <p>
                         Dynamics 365 for eCommerce business enables brands to
-                        automate and synchronize the data across the online
+                        automate and synchronise the data across the online
                         channels.
                       </p>
                     </div>
@@ -246,7 +246,7 @@ const Ecommerce = () => {
                     <p>
                       Interact and engage the right customers with AI-based data
                       insights and real-time reporting. Serve them a
-                      personalized experience they anticipate.
+                      personalised experience they anticipate.
                     </p>
                   </div>
                 </div>
@@ -302,7 +302,7 @@ const Ecommerce = () => {
                     <h3>Production Management</h3>
                     <p>
                       Bring transparency into your entire production cycle.
-                      Streamline your planning, organizing, directing, and
+                      Streamline your planning, organising, directing, and
                       controlling with Ecommerce ERP.
                     </p>
                   </div>
@@ -357,9 +357,9 @@ const Ecommerce = () => {
                     Every healthy conversation starts from somewhere. Let’s
                     connect, collaborate, and discuss your business values and
                     find out the best possible solution addressing your
-                    customized business requirements and impacting your
+                    customised business requirements and impacting your
                     futuristic growth. Dynamics 365 for eCommerce businesses can
-                    be customized and configured to simplify your overall
+                    be customised and configured to simplify your overall
                     operational practices.
                   </p>
                   <div className="text-center m-o-t m-o-t-hv">
@@ -525,7 +525,7 @@ const Ecommerce = () => {
                                   <h3>Not for Profit</h3>
                                   <p>
                                     Bring Transparency And Drive Efficiency In
-                                    Your Non-Profit Organization With Microsoft
+                                    Your Non-Profit Organisation With Microsoft
                                     Dynamics 365 For Charities.
                                   </p>
                                   <span>Explore Now</span>

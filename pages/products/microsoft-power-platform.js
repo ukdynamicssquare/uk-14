@@ -76,7 +76,7 @@ const PowerPlatform = () => {
                 </p>
                 <p>
                   Power BI is a business analytics solution that enables you to
-                  visualize data and share information across your organisation.
+                  visualise data and share information across your organisation.
                   It is a reporting tool capable of unifying data from multiple
                   sources (including Business Central) to create immersive,
                   interactive dashboards and reports that provide actionable

@@ -50,7 +50,7 @@ const OdooErpToBusinessCentralMigration = () => {
                     alt="Odoo ERP to Business Central Upgrade" />
                 </div>
                 <div className="col-lg-9 align-self-center">
-                  <p>The business is a trusted provider of wireless and technology solutions for businesses, with 15+ years of experience in the industry. Founded in 2008, they are a leading supplier of carrier-grade antenna and enclosure protection solutions. Also, the organisation further offers customized solutions to meet unique business needs. They offer a comprehensive range of products that includes two-way radios, public safety communications, wireless broadband, and high-quality indoor and outdoor antennas. The company offers its bespoke products to the global IoT and M2M industries.</p>
+                  <p>The business is a trusted provider of wireless and technology solutions for businesses, with 15+ years of experience in the industry. Founded in 2008, they are a leading supplier of carrier-grade antenna and enclosure protection solutions. Also, the organisation further offers customised solutions to meet unique business needs. They offer a comprehensive range of products that includes two-way radios, public safety communications, wireless broadband, and high-quality indoor and outdoor antennas. The company offers its bespoke products to the global IoT and M2M industries.</p>
                 </div>
               </div>
             </div>
@@ -224,7 +224,7 @@ const OdooErpToBusinessCentralMigration = () => {
                                aria-hidden="true"  loading="lazy" decoding="async" />
                             </div>
                             <div className="text-wrp-content">
-                              <p>Better Optimized Picking, Packing, and Shipping Processes, making it easy for another person to take over and complete the shipping process later.</p>
+                              <p>Better Optimised Picking, Packing, and Shipping Processes, making it easy for another person to take over and complete the shipping process later.</p>
                             </div>
                           </div>
                         </div>

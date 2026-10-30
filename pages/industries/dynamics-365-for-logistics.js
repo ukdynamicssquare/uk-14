@@ -78,7 +78,7 @@ const MicrosoftCloudForNonprofit = () => {
                     </div>
                     <div className="cintent-right">
                       <h3 style={{fontSize:'20px',marginBottom:'-0px'}}>Transportation Management </h3>
-                      <p>The solutions of Dynamics 365 come with transportation management where it manages and optimizes routes for faster and efficient tracking movement of stocks. Also, it optimises space to perform better warehouse operations while tracking deliveries. </p>
+                      <p>The solutions of Dynamics 365 come with transportation management where it manages and optimises routes for faster and efficient tracking movement of stocks. Also, it optimises space to perform better warehouse operations while tracking deliveries. </p>
                     </div>
                   </div>
                   <div className="content-inner-moil-1">
@@ -385,7 +385,7 @@ const MicrosoftCloudForNonprofit = () => {
                                 <div className="text-wrp-content">
                                   <h3>E-Commerce</h3>
                                   <p>
-                                    Optimize Your End-To-End Ecommerce
+                                    Optimise Your End-To-End Ecommerce
                                     Processes And Improve Your Customer
                                     Experience.
                                   </p>

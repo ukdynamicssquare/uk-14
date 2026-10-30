@@ -9,7 +9,7 @@ const MicrosoftDynamicsPartnerBirmingham = () => {
       <PageSeo
         type="Service"
         title="Microsoft Dynamics Partner in Birmingham, UK"
-        description="Looking for a trusted Microsoft Dynamics Solutions Partner in Birmingham, UK? We provide implementation, customization, and support solution. Contact us today!"
+        description="Looking for a trusted Microsoft Dynamics Solutions Partner in Birmingham, UK? We provide implementation, customisation, and support solution. Contact us today!"
         image="/img/birmingham-bg.png"
         areaServed="Birmingham"
       />
@@ -49,7 +49,7 @@ const MicrosoftDynamicsPartnerBirmingham = () => {
               <div className="commen-rit-info">
                 <h2>Cost-effective and Reliable Microsoft Partner in Birmingham, UK</h2>
 
-                <p>The ideology of modern business owners and decision-makers is changing. They prefer a costly product or a service if it solves their exact problem and helps them in a time of need. Businesses are evolving to reduce effort while increasing revenue as a result of digitalization.</p>
+                <p>The ideology of modern business owners and decision-makers is changing. They prefer a costly product or a service if it solves their exact problem and helps them in a time of need. Businesses are evolving to reduce effort while increasing revenue as a result of digitalisation.</p>
                 <p>Each business wants hassle-free, reliable, and cost-effective support to resolve the issues on time. Such businesses concentrate on growth and expanding their operations to all corners of the globe without becoming bogged down in managing processes and completing tasks on time.</p>
                 <p><Link href="/products/microsoft-dynamics-erp/">Microsoft ERP</Link>, whether it is <Link href="/products/dynamics-365-business-central/">Business Central ERP</Link> or NAV, is such a customer-centric solution that pushes a business towards revolutionising their core operations through digital means. And it proved to be true, as most business owners claimed that such advanced ERPs helped them grow their businesses, but only with the assistance of a trustworthy and helpful support partner.</p>
               </div>
@@ -69,7 +69,7 @@ const MicrosoftDynamicsPartnerBirmingham = () => {
             <div className="col-lg-9">
             <header className="section-header">
             <h2>You Deserve a Smart Solution and a Skilful Dynamics Partner</h2>
-          <p>You are putting a lot of effort into making your business grow and generating more revenue day by day. However, you can achieve the same results with less effort and by leveraging the power of Microsoft dynamic solutions.Such solutions simplify and automate most of the core processes that hinder the growth and development of organizations. You too believe that nothing is perfect in this world. What if you encounter an issue that hampers your existing processes? Such scenarios can cost you a huge amount.</p>
+          <p>You are putting a lot of effort into making your business grow and generating more revenue day by day. However, you can achieve the same results with less effort and by leveraging the power of Microsoft dynamic solutions.Such solutions simplify and automate most of the core processes that hinder the growth and development of organisations. You too believe that nothing is perfect in this world. What if you encounter an issue that hampers your existing processes? Such scenarios can cost you a huge amount.</p>
           <p>But, with the help of Microsoft Dynamics support in Birmingham, all your queries can be resolved in a matter of a few minutes. Irrespective of the issue you encounter or the level of complexity, we are just a call away to get your business back on track with enhanced performance.</p>
           <p>As a Microsoft Dynamics 365 partner in the UK, we have a team of expert professionals capable of resolving any kind of issue related to any <Link href="/products/microsoft-dynamics-365/">Microsoft Dynamics 365 application</Link>. Some of the apps are:</p>
           </header>

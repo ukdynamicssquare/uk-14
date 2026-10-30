@@ -73,7 +73,7 @@ const Startup = () => {
               <p>
                 Dynamics 365 for Food and Beverages business solution can be
                 implemented to support your entire food & beverage management
-                system. At Dynamics Square, we implement a highly customized
+                system. At Dynamics Square, we implement a highly customised
                 solution for Food & Beverage industry helping brands to
                 seamlessly manage their customers, ensure quality control, and
                 drive desired outcomes while enabling process automation and
@@ -114,8 +114,8 @@ const Startup = () => {
                       <p>
                         Dynamics 365 for Food and Beverages helps manufacturing
                         units to analyse demand, manage inventory levels, and
-                        drive real-time financial visibility to minimize costs
-                        and maximize outcomes.
+                        drive real-time financial visibility to minimise costs
+                        and maximise outcomes.
                       </p>
                     </div>
                   </div>
@@ -199,8 +199,8 @@ const Startup = () => {
                   </h2>
                   <p>
                     Bring real-time transparency into every step of your goods
-                    movement while minimizing the transportation cost and
-                    maximizing efficiency.
+                    movement while minimising the transportation cost and
+                    maximising efficiency.
                   </p>
                 </header>
               </div>
@@ -219,8 +219,8 @@ const Startup = () => {
                     <h3>Warehouse & Distribution Management</h3>
                     <p>
                       Bring real-time transparency into every step of your goods
-                      movement while minimizing the transportation cost and
-                      maximizing efficiency.
+                      movement while minimising the transportation cost and
+                      maximising efficiency.
                     </p>
                   </div>
                 </div>
@@ -253,7 +253,7 @@ const Startup = () => {
                     <h3>Customer Management</h3>
                     <p>
                       Connect, engage, and sustain a healthy relationship with
-                      your customers. Serve them a personalized deal with
+                      your customers. Serve them a personalised deal with
                       Dynamics 365 for Food & Beverages.
                     </p>
                   </div>
@@ -269,7 +269,7 @@ const Startup = () => {
                   <div className="card_new_content">
                     <h3>Manufacturing Management</h3>
                     <p>
-                      Drive seamless manufacturing from planning & organizing to
+                      Drive seamless manufacturing from planning & organising to
                       production and supply. Keep tracing and stay updated with
                       your manufacturing operations.
                     </p>
@@ -359,7 +359,7 @@ const Startup = () => {
                   <h3>Talk to Us to Reveal Your Actual Requirements</h3>
                   <p>
                     Every specific industry comprises a different set of
-                    practices and hence, requires a highly customized solution
+                    practices and hence, requires a highly customised solution
                     to drive innovation, flexibility, and scalability. So, you
                     are one step away to start driving productive results. With
                     Microsoft Dynamics 365 Food & Beverage ERP, enterprises can
@@ -521,7 +521,7 @@ const Startup = () => {
                                 <div className="text-wrp-content">
                                   <h3>E-Commerce</h3>
                                   <p>
-                                    Optimize Your End-To-End Ecommerce Processes
+                                    Optimise Your End-To-End Ecommerce Processes
                                     And Improve Your Customer Experience.
                                   </p>
                                   <span>Explore Now</span>

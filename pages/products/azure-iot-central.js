@@ -9,7 +9,7 @@ const PAGE_FAQS = [
   },
   {
     "question": "What is SLA for Azure IoT Central?",
-    "answer": "The term SLA refers to Service Level Agreement for Microsoft online services defined as a part of Microsoft volume licensing agreement. Through this SLA, Microsoft commits that Azure IoT Central will be available at least 99 percent of the overall time. SLA for Azure Central comprises a multitude of terms. To know more, experts at Dynamics are always available to help enterprises seeking to modernize their enterprise environment with IoT-connected experience."
+    "answer": "The term SLA refers to Service Level Agreement for Microsoft online services defined as a part of Microsoft volume licensing agreement. Through this SLA, Microsoft commits that Azure IoT Central will be available at least 99 percent of the overall time. SLA for Azure Central comprises a multitude of terms. To know more, experts at Dynamics are always available to help enterprises seeking to modernise their enterprise environment with IoT-connected experience."
   },
   {
     "question": "How can I access Azure IoT Central?",
@@ -32,7 +32,7 @@ const AzureIoTCentral = () => {
       <PageSeo
         type="Service"
         title="Azure IoT Central | Enterprise Grade IoT solutions"
-        description="With Azure IoT Central (SaaS) you can build IoT applications using industry-specific standardized templates for your enterprise. Know more about IoT Central."
+        description="With Azure IoT Central (SaaS) you can build IoT applications using industry-specific standardised templates for your enterprise. Know more about IoT Central."
         faqs={PAGE_FAQS}
       />
       <section className="Solution-banner hero-1 hero">
@@ -45,7 +45,7 @@ const AzureIoTCentral = () => {
               </h1>
               <p>
                 With Azure IoT Central (SaaS-based), develop IoT applications
-                using industry-specific standardized templates.
+                using industry-specific standardised templates.
               </p>
               <div>
                 <div className="text-center text-lg-start">
@@ -79,7 +79,7 @@ const AzureIoTCentral = () => {
               cloud. This IoT app platform comes with predefined standard
               templates to build industry-specific IoT apps to connect devices
               to send and receive messages or notifications in real-time. It
-              acts as an application delivery platform for IoT to centralize
+              acts as an application delivery platform for IoT to centralise
               devices and manage them at scale.
             </p>
           </header>
@@ -115,7 +115,7 @@ const AzureIoTCentral = () => {
                       <div className="accordion-body">
                         Ensure quick and seamless connectivity between your IoT
                         devices and custom-configured IoT app built using
-                        standardized easy-to-use templates.
+                        standardised easy-to-use templates.
                       </div>
                     </div>
                   </div>
@@ -268,14 +268,14 @@ const AzureIoTCentral = () => {
                     </div>
                     <div className="why-solution-wrapper-inner">
                       <h3>
-                        Centralized Device <br />
+                        Centralised Device <br />
                         Management
                       </h3>
                       <div className="overlay">
                         <p>
                           This Azure IoT cloud solution is designed to
-                          centralize and manage your devices at scale.
-                          Centralize management helps to reconfigure and update
+                          centralise and manage your devices at scale.
+                          Centralise management helps to reconfigure and update
                           the IoT devices with real-time efficiency.
                         </p>
                       </div>
@@ -411,7 +411,7 @@ const AzureIoTCentral = () => {
                       <br />
                       SLA for Azure Central comprises a multitude of terms. To
                       know more, experts at Dynamics are always available to
-                      help enterprises seeking to modernize their enterprise
+                      help enterprises seeking to modernise their enterprise
                       environment with IoT-connected experience.
                     </div>
                   </div>

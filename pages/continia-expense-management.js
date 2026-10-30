@@ -37,7 +37,7 @@ const ContiniaExpence = () => {
       <PageSeo
         type="Service"
         title="What is Continia Expense Management?"
-        description="Get Continia Expense Management to track and monitor corporate expenses and digitalize the entire reimbursement process."
+        description="Get Continia Expense Management to track and monitor corporate expenses and digitalise the entire reimbursement process."
         image="https://www.dynamicssquare.co.uk/img/exp-mangnet-banner.png"
         faqs={PAGE_FAQS}
       />

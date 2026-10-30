@@ -23,7 +23,7 @@ const PAGE_FAQS = [
   },
   {
     "question": "Do you want to simplify your tasks by intelligently automating your business?",
-    "answer": "D365 Business Central permits the employees in the organisations to create custom workflows. For example, you can set up approval workflows for purchase orders, sales orders, or expense reports. Then automation ensures that the assigned person reviews the document before proceeding. Further, automation in the inventory management process ensures that you have the right amount of stock on hand, minimizing overstocking or understocking issues. Sales and Customer Relationship Management is also streamlined through automation."
+    "answer": "D365 Business Central permits the employees in the organisations to create custom workflows. For example, you can set up approval workflows for purchase orders, sales orders, or expense reports. Then automation ensures that the assigned person reviews the document before proceeding. Further, automation in the inventory management process ensures that you have the right amount of stock on hand, minimising overstocking or understocking issues. Sales and Customer Relationship Management is also streamlined through automation."
   },
   {
     "question": "Are you worried about managing your organisation whilst working remotely or globally?",
@@ -150,7 +150,7 @@ const DynamicsNavToBusinessCentral = () => {
             <div className="col-lg-6 align-self-center">
               <div className="commen-rit-info commen-rit-info-list">
                 <h3>NAV support from Microsoft is Getting <span>Exhausted</span></h3>
-                <p>We all know that as Microsoft products age, they gradually phase out support for older versions. However, Dynamics Square recognizes the potential chaos that arises when Microsoft discontinues support for older NAV versions, including patches and fixes.</p>
+                <p>We all know that as Microsoft products age, they gradually phase out support for older versions. However, Dynamics Square recognises the potential chaos that arises when Microsoft discontinues support for older NAV versions, including patches and fixes.</p>
                 <p>Our team is committed to providing the right help, even if Microsoft support ends, or until you are ready to go for Navision upgrade to an advanced version. Also, if you have outgrown your NAV version, we will always be there to enhance it by integrating new features in the older versions.</p>
                 <p><b><i>The time is now to make a progressive shift as NAV support from Microsoft will not be till the end.</i></b></p>
               </div>
@@ -334,8 +334,8 @@ const DynamicsNavToBusinessCentral = () => {
           <div className="row pd-3335">
             <div className="col-lg-6 align-self-center">
               <div className="commen-rit-info commen-rit-info-list">
-                <h3><span>Minimize risks</span> while upgrading from NAV to the latest Business Central version</h3>
-                <p>There are several risks associated with upgrading your customized NAV Version, including compatibility issues, potential data loss, operational downtime, cost overruns, and challenges in integrating with other systems. However, with Dynamics Square, you can avoid these hassles.</p>
+                <h3><span>Minimise risks</span> while upgrading from NAV to the latest Business Central version</h3>
+                <p>There are several risks associated with upgrading your customised NAV Version, including compatibility issues, potential data loss, operational downtime, cost overruns, and challenges in integrating with other systems. However, with Dynamics Square, you can avoid these hassles.</p>
                 <p>Our NAV & Dynamics Business Central experts guarantee a seamless, risk-free transition of objects and data. They ensure an effective upgrade without disrupting your business operations.</p>
                 {/* <p><b>Maybe the NAV version is not the issue; it could be your current partner and their methodologies.</b></p> */}
               </div>
@@ -355,7 +355,7 @@ const DynamicsNavToBusinessCentral = () => {
               <div className="commen-lef-pic">
                 <img
                   src="/img/minimize-risks.png"
-                  alt="Minimize Risks"
+                  alt="Minimise Risks"
                  loading="lazy" decoding="async" />
               </div>
             </div>
@@ -382,13 +382,13 @@ const DynamicsNavToBusinessCentral = () => {
               <Swiper navigation={true} modules={[Navigation]} className="mySwiper mySwiper-testmon">
                 <SwiperSlide>
                   <div className="new-testmoinal-wrp">
-                    <p>There are several risks associated with upgrading your customized NAV Version, including compatibility issues, potential data loss, operational downtime, cost overruns, and challenges in integrating with other systems. However, with our team, you can avoid these hassles. Our NAV & Dynamics Business Central experts guarantee a seamless, risk-free transition of objects and data. They ensure an effective upgrade without disrupting your business operations.</p>
+                    <p>There are several risks associated with upgrading your customised NAV Version, including compatibility issues, potential data loss, operational downtime, cost overruns, and challenges in integrating with other systems. However, with our team, you can avoid these hassles. Our NAV & Dynamics Business Central experts guarantee a seamless, risk-free transition of objects and data. They ensure an effective upgrade without disrupting your business operations.</p>
                     <span>-Facility Manager</span>
                   </div>
                 </SwiperSlide>
                 <SwiperSlide>
                   <div className="new-testmoinal-wrp">
-                    <p>There are several risks associated with upgrading your customized NAV Version, including compatibility issues, potential data loss, operational downtime, cost overruns, and challenges in integrating with other systems. However, with our team, you can avoid these hassles. Our NAV & Dynamics Business Central experts guarantee a seamless, risk-free transition of objects and data. They ensure an effective upgrade without disrupting your business operations.</p>
+                    <p>There are several risks associated with upgrading your customised NAV Version, including compatibility issues, potential data loss, operational downtime, cost overruns, and challenges in integrating with other systems. However, with our team, you can avoid these hassles. Our NAV & Dynamics Business Central experts guarantee a seamless, risk-free transition of objects and data. They ensure an effective upgrade without disrupting your business operations.</p>
                     <span>-Facility Manager</span>
                   </div>
                 </SwiperSlide>
@@ -678,7 +678,7 @@ const DynamicsNavToBusinessCentral = () => {
                     data-bs-parent="#faqlist1"
                   >
                     <div className="accordion-body">
-                      D365 Business Central permits the employees in the organisations to create custom workflows.  For example, you can set up approval workflows for purchase orders, sales orders, or expense reports. Then automation ensures that the assigned person reviews the document before proceeding. Further, automation in the inventory management process ensures that you have the right amount of stock on hand, minimizing overstocking or understocking issues. Sales and Customer Relationship Management is also streamlined through automation.
+                      D365 Business Central permits the employees in the organisations to create custom workflows.  For example, you can set up approval workflows for purchase orders, sales orders, or expense reports. Then automation ensures that the assigned person reviews the document before proceeding. Further, automation in the inventory management process ensures that you have the right amount of stock on hand, minimising overstocking or understocking issues. Sales and Customer Relationship Management is also streamlined through automation.
                     </div>
                   </div>
                 </div>
@@ -787,13 +787,13 @@ const DynamicsNavToBusinessCentral = () => {
                 <div className="top">
                   <img
                     src="/img/rule_settings.png"
-                    alt="BC with existing Customization"
+                    alt="BC with existing Customisation"
                     width="48"
                     height="48"  loading="lazy" decoding="async" />
 
                 </div>
-                <h3>BC with existing Customization</h3>
-                <p>With this, businesses can carry over existing customizations and modifications from their previous ERP solution. Generally referred to as the &quot;Start from Modified&quot; approach, it allows businesses to retain their customizations whilst benefiting from the progressive <Link href="/dynamics-365-business-central-features/" target='_blank'>features of Business Central</Link>.</p>
+                <h3>BC with existing Customisation</h3>
+                <p>With this, businesses can carry over existing customisations and modifications from their previous ERP solution. Generally referred to as the &quot;Start from Modified&quot; approach, it allows businesses to retain their customisations whilst benefiting from the progressive <Link href="/dynamics-365-business-central-features/" target='_blank'>features of Business Central</Link>.</p>
                 {/* <Link href="/">
                   <a className="read-more">
                     <span>Know More</span>
@@ -806,12 +806,12 @@ const DynamicsNavToBusinessCentral = () => {
                 <div className="top">
                   <img
                     src="/img/switch_access_2.png"
-                    alt="Bridging Customization"
+                    alt="Bridging Customisation"
                     width="48"
                     height="48"  loading="lazy" decoding="async" />
 
                 </div>
-                <h3>Bridging Customization</h3>
+                <h3>Bridging Customisation</h3>
                 <p>This route is for organisations that want to adopt Business Central but do not need to use the entire range of its functionality. These are for businesses who want to experience Transition to the Clouds for the first time.</p>
                 {/* <Link href="/">
                   <a className="read-more">
@@ -936,7 +936,7 @@ const DynamicsNavToBusinessCentral = () => {
               <div className="nav-to-bc-feature">
                 <h3>2x</h3>
                 <span>Productivity Increases</span>
-                <p>Due to the centralized data structure, the overall efficiency and productivity of the team have increased by 2X.</p>
+                <p>Due to the centralised data structure, the overall efficiency and productivity of the team have increased by 2X.</p>
                 {/* <a href="">Read More</a> */}
               </div>
             </div>
@@ -989,23 +989,23 @@ const DynamicsNavToBusinessCentral = () => {
               <div className="upgrading-list">
                 <div className="left">
                   <div className="shapes">
-                    <img src="/img/offline_bolt.png" alt="Swift & Personalized Services"  loading="lazy" decoding="async" />
+                    <img src="/img/offline_bolt.png" alt="Swift & Personalised Services"  loading="lazy" decoding="async" />
                   </div>
                 </div>
                 <div className="right">
-                  <h4>Swift & Personalized Services</h4>
+                  <h4>Swift & Personalised Services</h4>
                   <p>Experience rapid implementation and personal interaction, be it anywhere in the world.</p>
                 </div>
               </div>
               <div className="upgrading-list">
                 <div className="left">
                   <div className="shapes">
-                    <img src="/img/readiness_score.png" alt="Maximize Efficiency and Cost Saving"  loading="lazy" decoding="async" />
+                    <img src="/img/readiness_score.png" alt="Maximise Efficiency and Cost Saving"  loading="lazy" decoding="async" />
                   </div>
                 </div>
                 <div className="right">
-                  <h4>Maximize Efficiency and Cost Saving</h4>
-                  <p>Experience rapid project execution and personalized support, no matter your location.</p>
+                  <h4>Maximise Efficiency and Cost Saving</h4>
+                  <p>Experience rapid project execution and personalised support, no matter your location.</p>
                 </div>
               </div>
             </div>
@@ -1114,7 +1114,7 @@ const DynamicsNavToBusinessCentral = () => {
             <div className="col-lg-12">
               <header className="section-header section-header-nav">
                 {/* <h2>Then we are here to deliver Good Luck with Your Upgrade!</h2> */}
-                <h3>Get Ready for a Personalized Session Now!</h3>
+                <h3>Get Ready for a Personalised Session Now!</h3>
               </header>
             </div>
           </div>

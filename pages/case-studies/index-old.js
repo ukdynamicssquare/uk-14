@@ -345,7 +345,7 @@ const CategoryListOld = () => {
                         </div>
                         <div className="commen-boc-2-info">
                           <p>
-                            Learn how a UK-based tea manufacturing brand received stress-free Dynamics NAV support from Dynamics Square through customization and dedicated services. 
+                            Learn how a UK-based tea manufacturing brand received stress-free Dynamics NAV support from Dynamics Square through customisation and dedicated services. 
                           </p>
                         </div>
                         <div className="btn-003">
@@ -454,7 +454,7 @@ const CategoryListOld = () => {
                           <img src="/img/Omicron-Engineering.jpg" alt="Omicron-Engineering" />
                         </div>
                         <div className="commen-boc-2-info">
-                          <p>A leading car restoration and customization company has enhanced their ROI by 30% with Business Central implementation. </p>
+                          <p>A leading car restoration and customisation company has enhanced their ROI by 30% with Business Central implementation. </p>
                         </div>
                         <div className="btn-003">
                           <a
@@ -838,7 +838,7 @@ const CategoryListOld = () => {
                         </div>
                         <div className="commen-boc-2-info">
                           <p>
-                            Learn how a UK-based tea manufacturing brand received stress-free Dynamics NAV support from Dynamics Square through customization and dedicated services. 
+                            Learn how a UK-based tea manufacturing brand received stress-free Dynamics NAV support from Dynamics Square through customisation and dedicated services. 
                           </p>
                         </div>
                         <div className="btn-003">

@@ -108,7 +108,7 @@ const MicrosoftDynamicsPartnerEdinburgh = () => {
                   The dedicated team of Dynamics Square has <b>14+ years</b> of
                   experience in streamlining business operations effectively and
                   providing 24x7 customer service support to level up your
-                  customer service experience, making us an authorized Microsoft
+                  customer service experience, making us an authorised Microsoft
                   Solutions Partner in Edinburgh.
                   <br />
                   <br />
@@ -141,7 +141,7 @@ const MicrosoftDynamicsPartnerEdinburgh = () => {
               Microsoft Dynamics Partner
             </h2>
             <p>
-              We Offer Highly Integrated, Customized Microsoft Business
+              We Offer Highly Integrated, Customised Microsoft Business
               Solutions
             </p>
           </header>
@@ -170,7 +170,7 @@ const MicrosoftDynamicsPartnerEdinburgh = () => {
                     >
                       <div className="accordion-body">
                         <p>
-                          Boost the growth of your business and synchronize your
+                          Boost the growth of your business and synchronise your
                           end-to-end business operations with Dynamics 365
                           Business Central.
                         </p>
@@ -178,7 +178,7 @@ const MicrosoftDynamicsPartnerEdinburgh = () => {
                           It is a unified, comprehensive cloud-based ERP
                           solution designed to align all your departments i,e.
                           finance, sales, customer service, and operations with
-                          people in a centralized approach.
+                          people in a centralised approach.
                         </p>
                         <p>
                           It also enables the organisation to manage its
@@ -203,7 +203,7 @@ const MicrosoftDynamicsPartnerEdinburgh = () => {
                           team interactions to take your organisation to the
                           next level. Your operations will be more agile thanks
                           to the Business Central solution. Make it a success
-                          throughout your operations by optimizing your
+                          throughout your operations by optimising your
                           operations with a panoramic view, tracking accuracy,
                           and scope.
                         </p>
@@ -364,7 +364,7 @@ const MicrosoftDynamicsPartnerEdinburgh = () => {
                         </p>
                         <p>
                           With us - Dynamics square - the Power BI experts in
-                          Edinburgh, automate your data visualization and vital
+                          Edinburgh, automate your data visualisation and vital
                           analytics across all of your business domains so that
                           everyone can make fast, intelligent decisions.
                         </p>
@@ -402,12 +402,12 @@ const MicrosoftDynamicsPartnerEdinburgh = () => {
                           partner in Edinburgh.
                         </p>
                         <p>
-                          We aim to give businesses a personalized and adaptable
+                          We aim to give businesses a personalised and adaptable
                           solution for their customer, sales, and marketing
                           interactions.
                         </p>
                         <p>
-                          Our CRM solution may be customized to fit the needs of
+                          Our CRM solution may be customised to fit the needs of
                           a wide range of enterprises and industries. Companies
                           may boost omnichannel efficiency by integrating CRM
                           Dynamics with existing applications or systems.
@@ -464,7 +464,7 @@ const MicrosoftDynamicsPartnerEdinburgh = () => {
                 <p>
                   We leverage Microsoft's Sure Step methodology to enhance your
                   business operations and deliver optimum security and
-                  transparency using a standard yet customized approach.We
+                  transparency using a standard yet customised approach.We
                   enable enterprises with Microsoft/s bespoke solutions fitted
                   to step-by-step procedures to promote future growth and
                   scalability.
@@ -483,7 +483,7 @@ const MicrosoftDynamicsPartnerEdinburgh = () => {
                 <p>
                   Through our smooth data and app update services, we assist
                   companies in upgrading their features and functionality,
-                  workflow optimization, operational change adaptability, and
+                  workflow optimisation, operational change adaptability, and
                   user acceptance and adaptation.
                 </p>
               </div>
@@ -541,7 +541,7 @@ const MicrosoftDynamicsPartnerEdinburgh = () => {
               <div className="parten-more">
                 <h3>Solution Tailored To The Business</h3>
                 <p>
-                  We implement a highly customized solution to support your
+                  We implement a highly customised solution to support your
                   whole business flow and drive efficiency, taking into account
                   your pain points and domain-specific requirements. We can also
                   implement standard implementation if you request it.
@@ -568,7 +568,7 @@ const MicrosoftDynamicsPartnerEdinburgh = () => {
                   adaptation by providing end-user training as necessary. To
                   ensure this, we provide end-to-end user training so that they
                   can immediately grasp the newly configured system and begin
-                  utilizing it from the first day.
+                  utilising it from the first day.
                 </p>
               </div>
               <div className="parten-more">

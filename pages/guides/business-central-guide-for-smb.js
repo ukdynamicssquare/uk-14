@@ -448,7 +448,7 @@ const PowerBIGuide = () => {
                 <p>
                   As per the various studies, it is found that small business
                   owners are confident, motivated, and optimistic about changing
-                  market demands. They accept the digitalization of businesses
+                  market demands. They accept the digitalisation of businesses
                   and work all day and night to cope with the changing business
                   environment, including inflation, increases in labour wages,
                   recession, and increasing prices of raw materials.
@@ -466,7 +466,7 @@ const PowerBIGuide = () => {
               <div className="cont-table-inner">
                 <p>
                   To eliminate such situations, SMBs have to integrate a
-                  unified, powerful, personalized, and robust application rather
+                  unified, powerful, personalised, and robust application rather
                   than choosing different applications for different operations.
                   Here comes the role of an ERP (Enterprise Resource Planning)
                   system that can manage all departments to build a strong
@@ -591,7 +591,7 @@ const PowerBIGuide = () => {
                     company.
                   </li>
                   <li>The vendor doesn't support your system.</li>
-                  <li>Unable to make any customizations as desired.</li>
+                  <li>Unable to make any customisations as desired.</li>
                   <li>
                     Fed up with performing manual and recurring processes?
                   </li>
@@ -642,7 +642,7 @@ const PowerBIGuide = () => {
                   address both specific and general requirements. Among these,
                   Microsoft Dynamics 365 Business Central is one such solution
                   that can adapt to all business requirements while also being
-                  adaptable with customizations to meet specific business needs.
+                  adaptable with customisations to meet specific business needs.
                 </p>
                 <p>
                   <b className="h3-b">What is Dynamics 365 Business Central?</b>
@@ -683,9 +683,9 @@ const PowerBIGuide = () => {
                 <p>
                   MS Dynamics Business Central provides a unified platform to
                   establish a strong connection between data and people.
-                  Specially built for SMBs, it offers incredible customization
+                  Specially built for SMBs, it offers incredible customisation
                   to meet any kind of unique business needs. Such
-                  personalization helps the business offer a great customer
+                  personalisation helps the business offer a great customer
                   experience while improving business efficiency.
                 </p>
                 <p>
@@ -922,7 +922,7 @@ const PowerBIGuide = () => {
                     costs.
                   </li>
                   <li>
-                    Easy customizations: You can personalise the software as
+                    Easy customisations: You can personalise the software as
                     desired.
                   </li>
                 </ul>
@@ -1016,7 +1016,7 @@ const PowerBIGuide = () => {
                     You want to install updates and upgrades when required.
                   </li>
                   <li>
-                    You want only a few customizations that can be fulfilled by
+                    You want only a few customisations that can be fulfilled by
                     extensions.
                   </li>
                 </ul>
@@ -1039,7 +1039,7 @@ const PowerBIGuide = () => {
                   </p>
                   <p>
                     They were looking for a robust business automation
-                    application to digitalize their existing processes and
+                    application to digitalise their existing processes and
                     streamline their business flow. They were using NAV and
                     upgraded the solution to Business Central to avail
                     themselves of modern technologies.{" "}
@@ -1103,7 +1103,7 @@ const PowerBIGuide = () => {
                   If you work for a small or medium-sized business, you may be
                   wondering, "What can Dynamics 365 Business Central offer you?"
                   The answer to this question is simple. It can optimise your
-                  existing processes, digitalize your core operations, enhance
+                  existing processes, digitalise your core operations, enhance
                   profitability, provide clear ways for seamless automation,
                   reduce complexities, make your business adaptable for modern
                   business needs, open scalability opportunities, and much more.
@@ -1192,7 +1192,7 @@ const PowerBIGuide = () => {
               </div>
               <div className="cont-table-inner">
                 <p>
-                  <b className="h3-b">Personalize the System</b>
+                  <b className="h3-b">Personalise the System</b>
                 </p>
                 <p>
                   As per the uniqueness of the business, you can easily
@@ -1655,7 +1655,7 @@ const PowerBIGuide = () => {
                 <ul>
                   <li>Offers advanced reporting capabilities.</li>
                   <li>
-                    Utilize timesheets to track and manage each milestone of a
+                    Utilise timesheets to track and manage each milestone of a
                     project.
                   </li>
                   <li>
@@ -1759,7 +1759,7 @@ const PowerBIGuide = () => {
                     zone to make data-driven decisions.
                   </li>
                   <li>
-                    Optimize the space to make more room for new items while
+                    Optimise the space to make more room for new items while
                     increasing shipment.{" "}
                   </li>
                   <li>
@@ -1772,7 +1772,7 @@ const PowerBIGuide = () => {
                     storage of items.
                   </li>
                   <li>
-                    Optimize the entire warehouse storage capacity using the
+                    Optimise the entire warehouse storage capacity using the
                     digital layout.
                   </li>
                 </ul>
@@ -1940,7 +1940,7 @@ const PowerBIGuide = () => {
                     Their business is growing, and managing it using an
                     on-premises solution is becoming more difficult day by day.
                     The business has an urgent need for automation and needs a
-                    number of customizations to meet its modern requirements.
+                    number of customisations to meet its modern requirements.
                   </p>
                   <p>
                     With the migration from SAGE to Business Central (cloud
@@ -2470,7 +2470,7 @@ const PowerBIGuide = () => {
                   <li>Shopify Locations</li>
                   <li>Adding items to Shopify </li>
                   <li>Sales Orders</li>
-                  <li>Synchronization Status</li>
+                  <li>Synchronisation Status</li>
                 </ul>
               </div>
               <div className="cont-table-inner cont-table-inner-bu-bg">

@@ -127,7 +127,7 @@ const FinancevsSapErp = () => {
                     target="_blank">
                   D365 F&O
                   </Link>{" "}
-                  is an internationally recognized ERP system, known for its
+                  is an internationally recognised ERP system, known for its
                   comparatively lower implementation costs and seamless
                   integration with other Microsoft business applications. D365
                   F&O ensures a shorter training and learning curve due to its
@@ -144,7 +144,7 @@ const FinancevsSapErp = () => {
                   'only' for multinational organisations and small-size
                   enterprises. SAP ERP usually promises to deliver on most
                   business aspects, however, costs comparatively higher than
-                  other ERP variants. Basic customizations, primarily using
+                  other ERP variants. Basic customisations, primarily using
                   third-party solutions, and simple implementation, make SAP
                   ERP a good option for businesses looking for consistency.
                 </p>
@@ -197,7 +197,7 @@ const FinancevsSapErp = () => {
                     </tr>
                     <tr>
                       <td>
-                        <strong>Customization</strong>
+                        <strong>Customisation</strong>
                       </td>
                       <td>
                         <p>
@@ -242,7 +242,7 @@ const FinancevsSapErp = () => {
                     </tr>
                     <tr>
                       <td>
-                        <strong>Benefits Realization and ROI</strong>
+                        <strong>Benefits Realisation and ROI</strong>
                       </td>
                       <td>
                         <p>Assured higher returns with faster ROI</p>
@@ -409,7 +409,7 @@ const FinancevsSapErp = () => {
               </header>
               <div className="new-ext-bc">
                 <p>
-                  Connect with Dynamics Square, the internationally recognized
+                  Connect with Dynamics Square, the internationally recognised
                   and preferred technology partners of Microsoft Dynamics, to
                   evaluate and select the best ERP solution for your business.
                 </p>

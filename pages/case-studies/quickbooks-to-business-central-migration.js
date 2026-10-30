@@ -274,7 +274,7 @@ const QuickbooksToBusinessCentralMigration = () => {
                     </div>
                   </div>
                   <div className="cintent-right">
-                    <p>Efficient automation has reduced manual work, minimized errors, and enhanced process speed. They were able to deliver at a better pace than before.</p>
+                    <p>Efficient automation has reduced manual work, minimised errors, and enhanced process speed. They were able to deliver at a better pace than before.</p>
                   </div>
                 </div>
                 <div className="content-inner-moil-1">

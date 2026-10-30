@@ -50,7 +50,7 @@ const MicrosoftDynamicsPartnerCardiff = () => {
 
                 <p>We are living in the era of technology and innovation where businesses are revolutionising the way they used to do business. The days of manual methods that come with a lot of data inaccuracy and physical exertion have gone, and businesses are moving towards automation-enhanced business solutions.</p>
                 <p>Currently, Microsoft is a pioneer when it comes to offering business solutions regardless of size, requirements, and performance expectations. The Microsoft Dynamics 365 ecosystem is so vast that you will find the perfect solution to your need without burning a hole in your pocket.</p>
-                <p>For example, you can choose Business Central for a comprehensive ERP solution, implement Dynamics 365 F&O to manage intricate financial and supply chain requirements, or utilize Power BI for advanced data reporting. Isn’t this astonishing?</p>
+                <p>For example, you can choose Business Central for a comprehensive ERP solution, implement Dynamics 365 F&O to manage intricate financial and supply chain requirements, or utilise Power BI for advanced data reporting. Isn’t this astonishing?</p>
                 <p>These examples are the tip of Microsoft’s iceberg of business solutions. However, you need to analyse your business requirements to choose a perfect solution that properly aligns with your fluctuating needs.</p>
               </div>
             </div>

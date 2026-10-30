@@ -81,7 +81,7 @@ const Inedex = () => {
                   </p>
                   <p className="ne4">
                     We analyse your requirements, understand your unique work
-                    style, and create a customized blueprint outlining solutions
+                    style, and create a customised blueprint outlining solutions
                     ideal for your business.
                   </p>
                   <p className="ne4">

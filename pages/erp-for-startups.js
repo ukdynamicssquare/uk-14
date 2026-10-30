@@ -81,7 +81,7 @@ const ErpMicrosoftCloudFor = () => {
               </div>
               <div className="col-lg-4 align-self-center">
                 <div className="card-21">
-                  <h3><span>82% </span>of organizations report challenges with data integration.</h3>
+                  <h3><span>82% </span>of organisations report challenges with data integration.</h3>
                 </div>
               </div>
               <div className="col-lg-4">
@@ -109,7 +109,7 @@ const ErpMicrosoftCloudFor = () => {
               <div className="col-lg-4">
                 <div className="card-20">
                   <h3>Resource Constraints and Project Management</h3>
-                  <p>Maximize efficiency by allocating resources smartly and tracking projects in real-time, ensuring smooth operations even with a lean team.</p>
+                  <p>Maximise efficiency by allocating resources smartly and tracking projects in real-time, ensuring smooth operations even with a lean team.</p>
                 </div>
               </div>
             </div>
@@ -345,7 +345,7 @@ const ErpMicrosoftCloudFor = () => {
                               2X
                             </div>
                             <div className='r-left'>
-                              <p>Optimized <br />Replenishment Procedures</p>
+                              <p>Optimised <br />Replenishment Procedures</p>
                             </div>
                           </div>
                           <div className='test-inf-achive'>
@@ -397,7 +397,7 @@ const ErpMicrosoftCloudFor = () => {
                           <div className='test-s-info'>
                             <figure>
                               <Image src="/img/avatar.png" alt="avatar" width={84} height={84} />
-                              <p>Impressed by Dynamics Square's ERP upgrade & customization. Their virtual collaboration made our transition seamless. Highly recommend for business growth.</p>
+                              <p>Impressed by Dynamics Square's ERP upgrade & customisation. Their virtual collaboration made our transition seamless. Highly recommend for business growth.</p>
                               <h5>Tristan Cliffe</h5>
                               <span>Director</span>
                             </figure>

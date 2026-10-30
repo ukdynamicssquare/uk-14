@@ -27,7 +27,7 @@ const FinanceImplementation = () => {
                 Dynamics 365 Finance Implementation
               </h1>
               <p>
-                Expand your business capabilities and maximize your
+                Expand your business capabilities and maximise your
                 profitability with Dynamics 365 Finance Implementation
               </p>
               <div>
@@ -87,13 +87,13 @@ const FinanceImplementation = () => {
                   efficiency even from remote locations.
                 </p>
                 <p>
-                  Experts at Dynamics Square - an authorized{" "}
+                  Experts at Dynamics Square - an authorised{" "}
                   <Link href="/">
                     Microsoft Solutions Partner
                   </Link>{" "}
                   have the proficiency to understand your complex business
                   requirement and undertake challenges involved to deliver
-                  highly customized, process-integrated, and
+                  highly customised, process-integrated, and
                   profitability-driven implementation.
                 </p>
                 <p>
@@ -149,7 +149,7 @@ const FinanceImplementation = () => {
                         Take advantage of in-depth AI insights, key financial
                         reporting, and embedded analytics to ensure financial
                         control, faster your processes, and drive agility to
-                        maximize your business outcomes.
+                        maximise your business outcomes.
                       </div>
                     </div>
                   </div>
@@ -221,7 +221,7 @@ const FinanceImplementation = () => {
                       data-bs-parent="#accneww"
                     >
                       <div className="accordion-body">
-                        Optimize your costs, maximize resource utilization,
+                        Optimise your costs, maximise resource utilisation,
                         control budget, and ensure seamless planning & analysis
                         to drive strategic impact in your global expansion while
                         reducing costs.
@@ -334,7 +334,7 @@ const FinanceImplementation = () => {
                           <p>
                             Once your project analysis gets done, we come up
                             with functional requirements defining your specific
-                            customization, configuration, and integration needs.
+                            customisation, configuration, and integration needs.
                           </p>
                         </div>
                       </SwiperSlide>
@@ -526,7 +526,7 @@ const FinanceImplementation = () => {
                   <h3>Improved Financials</h3>
                   <p>
                     When it comes to financials, implementing Dynamics 365
-                    Finance allows organizing, controlling, and managing
+                    Finance allows organising, controlling, and managing
                     financial records by simply using a general ledger as it's
                     no longer a typical job now. By taking advantage of Dynamics
                     365 Finance solution, you can effortlessly manage your

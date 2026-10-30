@@ -15,7 +15,7 @@ const Bccontinia = () => {
           <meta name="robots" content="noindex, nofollow" />
         <meta
           name="description"
-          content="Get Continia Expense Management to track and monitor corporate expenses and digitalize the entire reimbursement process."
+          content="Get Continia Expense Management to track and monitor corporate expenses and digitalise the entire reimbursement process."
         />
         <link
           rel="canonical"

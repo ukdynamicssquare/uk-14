@@ -791,7 +791,7 @@ const HomeOneNew = () => {
                             </li>
                             <li>
                               <i className="bi bi-check-circle"></i>{" "}
-                              <span>Personalized Customer Experiences</span>
+                              <span>Personalised Customer Experiences</span>
                             </li>
                           </ul>
                           <Link
@@ -827,7 +827,7 @@ const HomeOneNew = () => {
                           <span>Logistics</span>
                         </div>
                         <div className="inner-info-left">
-                          <h3>Optimize Logistics Operations with Intelligent Automation</h3>
+                          <h3>Optimise Logistics Operations with Intelligent Automation</h3>
                           <p>Enabling logistics businesses to improve visibility, efficiency, and delivery performance across the supply chain.</p>
                           <ul>
                             <li>
@@ -837,7 +837,7 @@ const HomeOneNew = () => {
                             <li>
                               <i className="bi bi-check-circle"></i>{" "}
                               <span>
-                                Warehouse & Fleet Optimization
+                                Warehouse & Fleet Optimisation
                               </span>
                             </li>
                             <li>
@@ -1140,8 +1140,8 @@ const HomeOneNew = () => {
                           <ul>
                             <li><i className="bi bi-check-circle"></i> <span>Use Copilot to reduce mundane tasks </span></li>
                             <li><i className="bi bi-check-circle"></i> <span>Ease selling with intelligent customer insights </span></li>
-                            <li><i className="bi bi-check-circle"></i> <span>Meet customer’s preferences with personalized interactions</span></li>
-                            <li><i className="bi bi-check-circle"></i> <span>Filter the right customers with AI-based scoring and visualizations</span></li>
+                            <li><i className="bi bi-check-circle"></i> <span>Meet customer’s preferences with personalised interactions</span></li>
+                            <li><i className="bi bi-check-circle"></i> <span>Filter the right customers with AI-based scoring and visualisations</span></li>
                             <li><i className="bi bi-check-circle"></i> <span>Integrated sales processes within the Microsoft Ecosystem</span></li>
                           </ul>
                         </div>
@@ -1202,7 +1202,7 @@ const HomeOneNew = () => {
                             <li><i className="bi bi-check-circle"></i> <span>Enhanced decision making with real-time insights</span></li>
                             <li><i className="bi bi-check-circle"></i> <span>Improved operational efficiency with increased productivity</span></li>
                             <li><i className="bi bi-check-circle"></i> <span>Analyse customer behaviour for tailored experience</span></li>
-                            <li><i className="bi bi-check-circle"></i> <span>Simplify data visualization and report generation</span></li>
+                            <li><i className="bi bi-check-circle"></i> <span>Simplify data visualisation and report generation</span></li>
                             <li><i className="bi bi-check-circle"></i> <span>Improves communication and enable team collaboration</span></li>
                           </ul>
                         </div>
@@ -1264,7 +1264,7 @@ const HomeOneNew = () => {
                             <li><i className="bi bi-check-circle"></i> <span>Proactive Issue Detection for Quality Assurance</span></li>
                             <li><i className="bi bi-check-circle"></i> <span>Complete Visibility for Supply Chain Efficiency</span></li>
                             <li><i className="bi bi-check-circle"></i> <span>Resource Management for Optimal Material Use</span></li>
-                            <li><i className="bi bi-check-circle"></i> <span>Maximized Equipment Effectiveness for Productivity</span></li>
+                            <li><i className="bi bi-check-circle"></i> <span>Maximised Equipment Effectiveness for Productivity</span></li>
                           </ul>
                         </div>
                       </div>
@@ -1296,7 +1296,7 @@ const HomeOneNew = () => {
                         <div className="d-colomn">
                           <figure>
                             <img src="/img/minimise-downtime.png" alt="Secure, smart and optimised Supply Chain"  loading="lazy" decoding="async" />
-                            <span>Optimized Warehouse & Fulfilment</span>
+                            <span>Optimised Warehouse & Fulfilment</span>
                           </figure>
                         </div>
                         <div className="bnn">
@@ -1322,7 +1322,7 @@ const HomeOneNew = () => {
                           <ul>
                             <li><i className="bi bi-check-circle"></i> <span>Advanced service delivery tracking and placements</span></li>
                             <li><i className="bi bi-check-circle"></i> <span>Deliver consistent support across multiple channels </span></li>
-                            <li><i className="bi bi-check-circle"></i> <span>Personalize customer interactions through AI-Insights</span></li>
+                            <li><i className="bi bi-check-circle"></i> <span>Personalise customer interactions through AI-Insights</span></li>
                             <li><i className="bi bi-check-circle"></i> <span>Improved innovation with real-time feedback and analysis.</span></li>
                             <li><i className="bi bi-check-circle"></i> <span>Enable self-service options for faster issue resolution.</span></li>
                           </ul>
@@ -1344,7 +1344,7 @@ const HomeOneNew = () => {
                         <div className="d-colomn">
                           <figure>
                             <img src="/img/Personalisation-for-customer.png" alt="Empower agents to offer great customer experience"  loading="lazy" decoding="async" />
-                            <span>AI-Driven Personalization</span>
+                            <span>AI-Driven Personalisation</span>
                           </figure>
                         </div>
                         <div className="d-colomn">

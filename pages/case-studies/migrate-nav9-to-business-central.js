@@ -263,7 +263,7 @@ const CaseStudyArteak = () => {
                             <div className="text-wrp-content">
                               <p>
                                 We helped  the company with the required
-                                customizations and integrations for seamless
+                                customisations and integrations for seamless
                                 operations.
                               </p>
                             </div>

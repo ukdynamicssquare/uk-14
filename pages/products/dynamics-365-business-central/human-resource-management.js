@@ -233,7 +233,7 @@ const HumanResourceManagements = () => {
                     <li>Employee self-service</li>
                     <li>Payroll Management</li>
                     <li>Tracking records</li>
-                    <li>Performance Optimization</li>
+                    <li>Performance Optimisation</li>
                     </ul>
                     </p>
                     </div>

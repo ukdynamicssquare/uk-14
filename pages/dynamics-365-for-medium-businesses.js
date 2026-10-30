@@ -31,7 +31,7 @@ const MicrosoftCloudForNonpro = () => {
                   <li><i className="bi bi-check-circle-fill"></i>Faster time-to-market</li>
                   <li><i className="bi bi-check-circle-fill"></i>Global reach</li>
                   <li><i className="bi bi-check-circle-fill"></i>Omnichannel customer engagements</li>
-                  <li><i className="bi bi-check-circle-fill"></i>Optimized supply chain</li>
+                  <li><i className="bi bi-check-circle-fill"></i>Optimised supply chain</li>
                   <li><i className="bi bi-check-circle-fill"></i>AI-powered insights</li>
                 </ul>
 
@@ -168,7 +168,7 @@ const MicrosoftCloudForNonpro = () => {
                       Sales</h3>
                     </div>
                     <div className="card-body">
-                      <p>Facilitates centralized customer data, AI-driven insights, lead tracking, and simplified quoting processes.</p>
+                      <p>Facilitates centralised customer data, AI-driven insights, lead tracking, and simplified quoting processes.</p>
                       <div className='cat-float'>
                         <span>Get Started</span>
                       </div>
@@ -398,7 +398,7 @@ const MicrosoftCloudForNonpro = () => {
                     <p>Gain full financial control with automated accounting, accurate forecasting, and real-time budget visibility.</p>
                   </div>
                   <div className="card-233-body">
-                    <h3><span><i className="bi bi-check2"></i></span>Optimized Supply Chain Visibility</h3>
+                    <h3><span><i className="bi bi-check2"></i></span>Optimised Supply Chain Visibility</h3>
                     <p>Address supply chain challenges with real-time insights, accurate demand forecasting, and stronger supplier relationships.</p>
                   </div>
                   <div className="card-233-body">
@@ -426,8 +426,8 @@ const MicrosoftCloudForNonpro = () => {
                     <p>Reduce manual work and streamline operations by automating key tasks, freeing up resources for innovation.</p>
                   </div>
                   <div className="card-233-body">
-                    <h3><span><i className="bi bi-check2"></i></span>Centralized Collaboration</h3>
-                    <p>Foster teamwork across departments with centralized tools that connect your entire workforce in real-time.</p>
+                    <h3><span><i className="bi bi-check2"></i></span>Centralised Collaboration</h3>
+                    <p>Foster teamwork across departments with centralised tools that connect your entire workforce in real-time.</p>
                   </div>
                   <div className="card-233-body">
                     <h3><span><i className="bi bi-check2"></i></span>Real-Time Analytics for Smarter Growth</h3>
@@ -630,7 +630,7 @@ const MicrosoftCloudForNonpro = () => {
                               2X
                             </div>
                             <div className='r-left'>
-                              <p>Optimized <br />Replenishment Procedures</p>
+                              <p>Optimised <br />Replenishment Procedures</p>
                             </div>
                           </div>
                           <div className='test-inf-achive'>
@@ -682,7 +682,7 @@ const MicrosoftCloudForNonpro = () => {
                           <div className='test-s-info'>
                             <figure>
                               <Image src="/img/avatar.png" alt="avatar" width={84} height={84} />
-                              <p>Impressed by Dynamics Square's ERP upgrade & customization. Their virtual collaboration made our transition seamless. Highly recommend for business growth.</p>
+                              <p>Impressed by Dynamics Square's ERP upgrade & customisation. Their virtual collaboration made our transition seamless. Highly recommend for business growth.</p>
                               <h5>Tristan Cliffe</h5>
                               <span>Director</span>
                             </figure>

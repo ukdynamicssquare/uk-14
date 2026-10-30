@@ -728,7 +728,7 @@ const BusinessCentral = () => {
                                 <i className="bi bi-check-lg"></i>
                               </div>
                               <div className="content">
-                                <h4>Item Categorization</h4>
+                                <h4>Item Categorisation</h4>
                                 <p>
                                   Organises the items into categories and
                                   maintains an overall overview.
@@ -1989,7 +1989,7 @@ const BusinessCentral = () => {
                           <i className="bi bi-check-lg"></i>
                         </div>
                         <div className="content">
-                          <h4>Item Categorization</h4>
+                          <h4>Item Categorisation</h4>
                           <p>
                             Organises the items into categories and maintains an
                             overall overview.
@@ -2645,7 +2645,7 @@ const BusinessCentral = () => {
                     </div>
                     <div className="why-solution-wrapper-inner">
                       <h3>
-                        Personalization
+                        Personalisation
                         <br />& Integration
                       </h3>
                       <div className="overlay">
@@ -2653,7 +2653,7 @@ const BusinessCentral = () => {
                           <Link href="/products/dynamics-365-business-central/" target="_blank">
                             D365 Business Central
                           </Link>{" "}
-                          can be easily customized to suit your business
+                          can be easily customised to suit your business
                           requirements. Businesses can get seamless integration
                           with Microsoft's products as well as other existing
                           business applications.
@@ -2806,7 +2806,7 @@ const BusinessCentral = () => {
                   </h3>
                   <p>
                     Transform your business capabilities with our highly
-                    customized and secured Business Central Implementation.
+                    customised and secured Business Central Implementation.
                   </p>
                   <div className="action-content">
                     <Link href="/dynamics-365-business-central-implementation/">
@@ -3177,7 +3177,7 @@ const BusinessCentral = () => {
                           <b>Contact our Dynamics 365 experts</b>
                         </Link>
                         , we can help you with all your questions. For instance,
-                        when you need to upgrade, what are possible personalized
+                        when you need to upgrade, what are possible personalised
                         options for you? What sort of implementation practices
                         do we follow while upgrading your existing business
                         solution to Microsoft Dynamics 365 Business Central?
@@ -3209,7 +3209,7 @@ const BusinessCentral = () => {
                         smooth experience to all users, whether administrators
                         or operators. There might be a need for training to
                         understand the workings of added integrations,
-                        customizations, and add-ons. In such a case, you can
+                        customisations, and add-ons. In such a case, you can
                         avail yourself of the learning and training provided by
                         your Business Central implementation partner, and they
                         will guide you along the right path.{" "}
@@ -3239,7 +3239,7 @@ const BusinessCentral = () => {
                         your unique business and its changing needs.
                         Irrespective of the industry, business type, and size,
                         you can customise this powerful application to simplify
-                        your business operations. In short, customizations are
+                        your business operations. In short, customisations are
                         the path to more productivity and easy business growth.
                       </p>
                     </div>
@@ -3267,7 +3267,7 @@ const BusinessCentral = () => {
                       beverages to operations, e-commerce industry to financial
                       services, and more can avail of seamless support in terms
                       of Dynamics 365 business central. Moreover, Business
-                      Central can be personalized as per your industry-specific
+                      Central can be personalised as per your industry-specific
                       needs, or custom operational navigation takes place in
                       your organisation.To get more information about how this
                       ERP solution can be implemented and leveraged by your
@@ -3339,13 +3339,13 @@ const BusinessCentral = () => {
                         So, it's up to you, you can buy Business Central suited
                         to your specific needs or user requirements. To know
                         more or which plan would be ideal for your business,
-                        Dynamics Square - Microsoft authorized Business Central
+                        Dynamics Square - Microsoft authorised Business Central
                         Consulting Services provider can help.
                       </p>
                       <p>
                         Here you need to understand that this cost is just a
                         licensing cost, it doesn't include any sort of
-                        implementation, customization, or integration cost. Your
+                        implementation, customisation, or integration cost. Your
                         actual costs can be revealed by your Dynamics 365
                         Business Central Implementation Partner once you share
                         your requirement with them.
@@ -3423,7 +3423,7 @@ const BusinessCentral = () => {
                         terms, seamless integration with Power BI can be done as
                         both are Microsoft's products, hence, Power BI fits well
                         with Dynamics 365 Business Central. Power BI can enable
-                        visualization in your reporting, key metrics, and your
+                        visualisation in your reporting, key metrics, and your
                         entire business analytics. You can create your own
                         business reports and dashboards leveraging standard
                         reporting templates and other visuals.

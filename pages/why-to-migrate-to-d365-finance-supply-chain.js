@@ -211,7 +211,7 @@ const MigrateFandSC = () => {
                             src="/img/new-icons4.png"
                             alt="Mobile Ready"  loading="lazy" decoding="async" />
                         </div>
-                        <span>Reduce Customization</span>
+                        <span>Reduce Customisation</span>
                       </button>
                     </h3>
                     <div
@@ -225,7 +225,7 @@ const MigrateFandSC = () => {
                           Customers running previous versions* of Dynamics 365
                           for Supply Chain Management can now take advantage of
                           new standard functionality that could reduce
-                          customization. Many common customizations are now
+                          customisation. Many common customisations are now
                           available as new standard functionality. This decrease
                           set up time and allows teams to spend less time coding
                           and more time enjoying the benefits.
@@ -235,7 +235,7 @@ const MigrateFandSC = () => {
                         </p>
                         <ul>
                           <li>
-                            Reduces customization by taking advantage of the
+                            Reduces customisation by taking advantage of the
                             standard functionality
                           </li>
                           <li>
@@ -260,7 +260,7 @@ const MigrateFandSC = () => {
                         <div className="wr-in">
                           <img
                             src="/img/new-icons5.png"
-                            alt="Reduce Customization"  loading="lazy" decoding="async" />
+                            alt="Reduce Customisation"  loading="lazy" decoding="async" />
                         </div>
                         <span>Reduce Hardware Costs</span>
                       </button>

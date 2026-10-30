@@ -34,7 +34,7 @@ const CaseNew = () => {
                             <div className='col-md-12'>
                                 <div className='case-new-content-text'>
                                     <h2>Client Overview</h2>
-                                    <p>A leading UK-based orthopaedic solutions provider sought to modernize its operations by implementing a robust ERP system. Facing challenges with disconnected processes, inefficient inventory management, and a lack of real-time financial insights, they required a solution to streamline workflows and enhance decision-making.</p>
+                                    <p>A leading UK-based orthopaedic solutions provider sought to modernise its operations by implementing a robust ERP system. Facing challenges with disconnected processes, inefficient inventory management, and a lack of real-time financial insights, they required a solution to streamline workflows and enhance decision-making.</p>
                                 </div>
                             </div>
                         </div>

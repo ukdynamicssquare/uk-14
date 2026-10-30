@@ -24,7 +24,7 @@ const PAGE_FAQS = [
   },
   {
     "question": "How long will it take to implement the project successfully?",
-    "answer": "There is no one-size-fits-all answer when it comes to how long it will take to implement a solution like Dynamics 365 Finance and Operations or SCM. The timeframe depends on a number of factors, such as the number of processes, the complexity of operations, integrations, and customizations. Without knowing more about your specific business and its needs, it's impossible to provide a more accurate estimate."
+    "answer": "There is no one-size-fits-all answer when it comes to how long it will take to implement a solution like Dynamics 365 Finance and Operations or SCM. The timeframe depends on a number of factors, such as the number of processes, the complexity of operations, integrations, and customisations. Without knowing more about your specific business and its needs, it's impossible to provide a more accurate estimate."
   },
   {
     "question": "Does Dynamics Square provide training?",
@@ -188,7 +188,7 @@ const SupplyChainImplementation = () => {
                         aria-expanded="false"
                         aria-controls="fin5"
                       >
-                        <span>Synchronized Departments</span>
+                        <span>Synchronised Departments</span>
                       </button>
                     </h3>
                     <div
@@ -258,7 +258,7 @@ const SupplyChainImplementation = () => {
                         aria-expanded="false"
                         aria-controls="fin3"
                       >
-                        <span>Optimize Supply Chain</span>
+                        <span>Optimise Supply Chain</span>
                       </button>
                     </h3>
                     <div
@@ -271,7 +271,7 @@ const SupplyChainImplementation = () => {
                         <p>
                           There is always a room for improvement in every
                           business. This powerful application comes with process
-                          optimization that enables the users to optimise the
+                          optimisation that enables the users to optimise the
                           existing operations and prepare the system for data
                           and demand forecasting.
                         </p>
@@ -350,7 +350,7 @@ const SupplyChainImplementation = () => {
                         aria-expanded="false"
                         aria-controls="fin8"
                       >
-                        <span>Flexible with Customizations</span>
+                        <span>Flexible with Customisations</span>
                       </button>
                     </h3>
                     <div
@@ -361,10 +361,10 @@ const SupplyChainImplementation = () => {
                     >
                       <div className="accordion-body">
                         <p>
-                          Customization and integration make a solution
+                          Customisation and integration make a solution
                           adaptable to all changing business needs as per market
                           and customer demand. D365 SCM is flexible with unique
-                          customizations to perform specific business
+                          customisations to perform specific business
                           operations, enabling more focus on growth and
                           scalability rather than being consumed with core
                           operations.
@@ -499,7 +499,7 @@ const SupplyChainImplementation = () => {
                           <p>
                             This is the last phase of whole process. In this, we
                             will make the system live so that your team can
-                            utilize the advance capabilities for your business
+                            utilise the advance capabilities for your business
                             growth.
                           </p>
                         </div>
@@ -984,7 +984,7 @@ const SupplyChainImplementation = () => {
                         Dynamics 365 Finance and Operations or SCM. The
                         timeframe depends on a number of factors, such as the
                         number of processes, the complexity of operations,
-                        integrations, and customizations. Without knowing more
+                        integrations, and customisations. Without knowing more
                         about your specific business and its needs, it's
                         impossible to provide a more accurate estimate.
                       </p>

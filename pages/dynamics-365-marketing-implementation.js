@@ -24,7 +24,7 @@ const PAGE_FAQS = [
   },
   {
     "question": "How long will it take to implement the project successfully?",
-    "answer": "Without fully comprehending the business and its needs, neither we nor anyone else can provide you a precise timeline for implementing a solution. The time is determined by a number of elements, such as the quantity of processes, the complexity of operations, integrations, and customizations."
+    "answer": "Without fully comprehending the business and its needs, neither we nor anyone else can provide you a precise timeline for implementing a solution. The time is determined by a number of elements, such as the quantity of processes, the complexity of operations, integrations, and customisations."
   },
   {
     "question": "What is the accurate cost of D365 Customer Insights – Journeys implementation?",
@@ -53,7 +53,7 @@ const MarketingImplementation = () => {
                 Customer Insights – Journeys <br /> Implementation
               </h1>
               <p>
-                Centralises customer information, utilize marketing automation,
+                Centralises customer information, utilise marketing automation,
                 and enhance overall marketing performance through implementing
                 Dynamics 365 Customer Insights – Journeys.
                 <br />
@@ -318,7 +318,7 @@ const MarketingImplementation = () => {
                     >
                       <div className="accordion-body">
                         <p>
-                          Personalization is the key to more revenue and
+                          Personalisation is the key to more revenue and
                           organisational growth. When you start to give
                           personalised offers, content, and engagement to the
                           customers, you will gain credibility and authority,
@@ -373,7 +373,7 @@ const MarketingImplementation = () => {
                         aria-expanded="false"
                         aria-controls="fin8"
                       >
-                        <span>Utilize Customer Insights</span>
+                        <span>Utilise Customer Insights</span>
                       </button>
                     </h3>
                     <div
@@ -784,7 +784,7 @@ const MarketingImplementation = () => {
               >
                 <b>
                   {" "}
-                  Looking for Customized Pricing as per your business
+                  Looking for Customised Pricing as per your business
                   requirements?{" "}
                 </b>
               </p>
@@ -954,7 +954,7 @@ const MarketingImplementation = () => {
                         timeline for implementing a solution. The time is
                         determined by a number of elements, such as the quantity
                         of processes, the complexity of operations,
-                        integrations, and customizations.
+                        integrations, and customisations.
                       </p>
                     </div>
                   </div>

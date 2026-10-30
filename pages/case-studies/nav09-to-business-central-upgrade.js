@@ -58,7 +58,7 @@ const CaseStudyPasante = () => {
                 ]}
                 title="About Pasante Healthcare"
               >
-                <p><strong>Pasante Healthcare</strong> was established in 1992 and world's leading condom manufacturing British brand, fully established in 2000 to manufacture sexual health products. They provide the best sexual health products to consumers and inspire them to make better choices for their health. Also, they are in partnership with NHS (National Health Services) and NPOs (Non-profit organizations) to provide safe products to the mass. The generally exports its products to more than 45 countries globally. Even, it is the largest condom supplier to NHS and for many charity organizations.</p>
+                <p><strong>Pasante Healthcare</strong> was established in 1992 and world's leading condom manufacturing British brand, fully established in 2000 to manufacture sexual health products. They provide the best sexual health products to consumers and inspire them to make better choices for their health. Also, they are in partnership with NHS (National Health Services) and NPOs (Non-profit organisations) to provide safe products to the mass. The generally exports its products to more than 45 countries globally. Even, it is the largest condom supplier to NHS and for many charity organisations.</p>
               </CaseStudyClientCard>
             </div>
           </div>
@@ -279,7 +279,7 @@ const CaseStudyPasante = () => {
                             <div className="text-wrp-content">
                               <p>
                                 We helped the company with the required
-                                customizations and integrations for seamless
+                                customisations and integrations for seamless
                                 operations.
                               </p>
                             </div>

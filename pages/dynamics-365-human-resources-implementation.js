@@ -28,7 +28,7 @@ const PAGE_FAQS = [
   },
   {
     "question": "How long will it take to implement the project successfully?",
-    "answer": "Without fully comprehending the business and its needs, neither we nor anyone else can provide you a precise timeline for implementing a solution. The time is determined by a number of elements, such as the quantity of processes, the complexity of operations, integrations, and customizations. See Also -: Dynamics 365 Finance Implementation, Power BI Implementation, Dynamics 365 Sales Implementation"
+    "answer": "Without fully comprehending the business and its needs, neither we nor anyone else can provide you a precise timeline for implementing a solution. The time is determined by a number of elements, such as the quantity of processes, the complexity of operations, integrations, and customisations. See Also -: Dynamics 365 Finance Implementation, Power BI Implementation, Dynamics 365 Sales Implementation"
   }
 ];
 
@@ -373,7 +373,7 @@ const HumanResourceImplementation = () => {
                         aria-expanded="false"
                         aria-controls="fin8"
                       >
-                        <span>Utilize Workforce Insights</span>
+                        <span>Utilise Workforce Insights</span>
                       </button>
                     </h3>
                     <div
@@ -500,7 +500,7 @@ const HumanResourceImplementation = () => {
                           <p>
                             In this stage of the project, our team will develop
                             a Dynamics 365 Human Resources solution that is
-                            personalized and caters to your company
+                            personalised and caters to your company
                             specifically. This will help you reach new levels of
                             growth and profitability.
                           </p>
@@ -998,7 +998,7 @@ const HumanResourceImplementation = () => {
                         timeline for implementing a solution. The time is
                         determined by a number of elements, such as the quantity
                         of processes, the complexity of operations,
-                        integrations, and customizations.{" "}
+                        integrations, and customisations.{" "}
                       </p>
                       <p>
                         <b>See Also -</b>

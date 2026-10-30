@@ -534,7 +534,7 @@ const BusinessCentralPricingLicensing = () => {
                         sized businesses. The employees of an organisation can
                         manage all the processes and operations through the
                         dashboard of Business Central. Due to its flexibility
-                        and customization, it becomes easy to streamline the
+                        and customisation, it becomes easy to streamline the
                         business. It provides the opportunity to manage the
                         entire business from one place.
                       </p>
@@ -589,7 +589,7 @@ const BusinessCentralPricingLicensing = () => {
                         Microsoft doesn't sell the license or subscription of
                         the Business Central directly to the end-users. If you
                         want to buy the license, you need to contact the
-                        authorized vendor partner, like Dynamics Square. Also,
+                        authorised vendor partner, like Dynamics Square. Also,
                         the vendor partner is responsible for all support and
                         services in case of need.
                       </p>
@@ -630,7 +630,7 @@ const BusinessCentralPricingLicensing = () => {
                       data-bs-toggle="collapse"
                       data-bs-target="#faq-content-5"
                     >
-                      Is customization available?
+                      Is customisation available?
                     </button>
                   </h3>
                   <div
@@ -641,7 +641,7 @@ const BusinessCentralPricingLicensing = () => {
                     <div className="accordion-body">
                       <p>
                         The best part about working with D365 Business
-                        Central is the freedom to work with customizations as
+                        Central is the freedom to work with customisations as
                         per the business needs. Different businesses have
                         different kinds of conditions, and to deal with such
                         modifications, you can contact a vendor partner like
@@ -826,7 +826,7 @@ const BusinessCentralPricingLicensing = () => {
                       data-bs-toggle="collapse"
                       data-bs-target="#faq-content-13"
                     >
-                      Who can install/uninstall customized extensions of
+                      Who can install/uninstall customised extensions of
                       Dynamics 365 Business Central?
                     </button>
                   </h3>

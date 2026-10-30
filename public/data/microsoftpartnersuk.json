@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "question": "What does a Microsoft partner do?",
+    "answer": "<p>A Microsoft partner helps businesses assess, implement, integrate or support Microsoft technologies. The services offered vary by provider, so businesses should check relevant experience, credentials and the scope of delivery before choosing a partner.</p>"
+  },
+  {
+    "id": 2,
+    "question": "What Microsoft solutions does Dynamics Square work with?",
+    "answer": "<p>The solutions covered on this page include Dynamics 365, Power Platform, Power BI, Azure and Microsoft 365, alongside information about Fabric and <a href=\"/ai-solutions/\">AI technologies</a>. Confirm the specific implementation and advisory services available for your project with the team.</p>"
+  },
+  {
+    "id": 3,
+    "question": "How do I choose the right Microsoft partner in the UK?",
+    "answer": "<p>Compare experience with projects similar to yours, current Microsoft credentials, customer references, implementation methods and post-launch support. Ask prospective partners how they would approach your requirements, existing data and integrations, and how project success would be measured.</p>"
+  },
+  {
+    "id": 4,
+    "question": "What should I consider when replacing a legacy Dynamics system?",
+    "answer": "<p>Migration scope depends on which customisations, integrations and reports need to be retained or rebuilt, the quality of historical data, and which existing processes should change. Clarifying these requirements before selecting a replacement helps establish realistic project costs, testing needs and timelines.</p>"
+  },
+  {
+    "id": 5,
+    "question": "What is Microsoft Fabric used for?",
+    "answer": "<p>Fabric is worth considering when data is spread across multiple sources, reporting requires substantial manual preparation, or existing tools struggle to support wider analytics needs. If your current platform meets reporting requirements, extending it may be more practical. The decision depends on data sources, integration needs, governance, and ongoing maintenance.</p>"
+  },
+  {
+    "id": 6,
+    "question": "What is Microsoft Foundry?",
+    "answer": "<p>Before starting a Foundry project, define the business problem the AI application should solve, who will use it, and which data and systems it needs to access. Establish security requirements and measurable criteria for evaluating accuracy and reliability. These decisions help determine whether Foundry is suitable and what development and integration work is required.</p>"
+  },
+  {
+    "id": 7,
+    "question": "Can Microsoft AI work with business applications?",
+    "answer": "<p>AI solutions can connect to relevant business data and workflows, subject to the capabilities of the applications and the integration approach. Permissions, data quality, security and governance should be addressed before the solution is used in operational processes.</p>"
+  },
+  {
+    "id": 8,
+    "question": "How much does a Microsoft implementation cost?",
+    "answer": "<p>Costs depend on the products selected, licensing, data migration, integrations, customisation, project complexity and support requirements. A defined scope and assessment of the existing environment help produce a more realistic estimate.</p>"
+  },
+  {
+    "id": 9,
+    "question": "How long does implementation take?",
+    "answer": "<p>Timelines depend on solution complexity, data quality, integrations, testing and user readiness. Agreeing the scope, responsibilities and key dependencies early helps establish a delivery plan that reflects the actual work involved.</p>"
+  }
+]

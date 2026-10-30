@@ -8,7 +8,7 @@ const AdvantagesfinanceScm = () => {
         <PageSeo
           type="Article"
           title="Dynamics 365 Finance & Supply Chain Management Advantages"
-          description="Check out some advantage of Dynamics 365 Finance & Supply Chain management. Optimize financials, inventory, production & more to streamline operations & drive growth."
+          description="Check out some advantage of Dynamics 365 Finance & Supply Chain management. Optimise financials, inventory, production & more to streamline operations & drive growth."
           image="/img/why-migart.png"
           extraSchema={{
               "@context": "https://schema.org",

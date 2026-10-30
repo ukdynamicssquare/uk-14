@@ -31,7 +31,7 @@ const CompareErps = () => {
     pricingNotes: "Pricing Notes",
     coreModules: "Core Modules",
     scalability: "Scalability",
-    customization: "Customization",
+    customization: "Customisation",
     usabilitySupportTraining: "Usability / Support / Training",
     analyticsSecurity: "Analytics & Security",
     keyMarketStrength: "Key Market Strength",

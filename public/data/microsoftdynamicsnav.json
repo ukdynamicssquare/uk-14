@@ -7,12 +7,12 @@
   {
     "id": 2,
     "question": "How much does Microsoft NAV Cost?",
-    "answer": "<p>No Dynamics NAV support partner can give you a fixed price before analysing the business processes and requirements. The cost depends on several factors, including company size, industry type, number of users, and storage requirements. The selection of your pack (Starter or Extended) along with the integrations and complexity of customizations decides the final price.</p>"
+    "answer": "<p>No Dynamics NAV support partner can give you a fixed price before analysing the business processes and requirements. The cost depends on several factors, including company size, industry type, number of users, and storage requirements. The selection of your pack (Starter or Extended) along with the integrations and complexity of customisations decides the final price.</p>"
   },
   {
     "id": 3,
-    "question": "Can Dynamics NAV be customized as per specific business requirements?",
-    "answer": "<p>The Dynamics NAV system is highly customizable and can be modified to perfectly fit your business requirements. You'll get a business management solution that perfectly reflects the scope of your business—nothing more and nothing less. With its own development environment and rules governing how modifications should be made, Dynamics NAV allows for customizations that are easily supported and upgraded.</p>"
+    "question": "Can Dynamics NAV be customised as per specific business requirements?",
+    "answer": "<p>The Dynamics NAV system is highly customizable and can be modified to perfectly fit your business requirements. You'll get a business management solution that perfectly reflects the scope of your business—nothing more and nothing less. With its own development environment and rules governing how modifications should be made, Dynamics NAV allows for customisations that are easily supported and upgraded.</p>"
   },
   {
     "id": 4,
@@ -42,6 +42,6 @@
   {
     "id": 9,
     "question": "Why choose Dynamics Square as your NAV implementation partner?",
-    "answer": "<p>Dynamics Square is a Microsoft Solutions Partner and has been providing Microsoft Dynamics NAV support since 2013. With a team of over 130+ highly skilled and certified consultants, we are one of the leading providers of Microsoft Dynamics NAV support in the UK.</p><p>We support SMBs in planning, controlling, executing, and optimizing business processes with the help of efficient, transparent, automated, and reliable ERP software.</p><p>We offer a comprehensive support package that includes 24/7 support, software and hardware support, and training. We believe that our experience and dedication to customer service make us the perfect partner for your Dynamics NAV needs. Contact us today to know how we can help you get the most out of your Dynamics NAV investment.</p><p><b>See Also -</b></p><ul><li><a href=\"/dynamics-365-business-central-implementation/\">Business Central Implementation</a></li><li><a href=\"/blog/dynamics-365-business-central-trial/\">Business Central Trial</a></li><li><a href=\"/d365-business-central-support/\">Dynamics 365 Business Central support</a></li></ul>"
+    "answer": "<p>Dynamics Square is a Microsoft Solutions Partner and has been providing Microsoft Dynamics NAV support since 2013. With a team of over 130+ highly skilled and certified consultants, we are one of the leading providers of Microsoft Dynamics NAV support in the UK.</p><p>We support SMBs in planning, controlling, executing, and optimising business processes with the help of efficient, transparent, automated, and reliable ERP software.</p><p>We offer a comprehensive support package that includes 24/7 support, software and hardware support, and training. We believe that our experience and dedication to customer service make us the perfect partner for your Dynamics NAV needs. Contact us today to know how we can help you get the most out of your Dynamics NAV investment.</p><p><b>See Also -</b></p><ul><li><a href=\"/dynamics-365-business-central-implementation/\">Business Central Implementation</a></li><li><a href=\"/blog/dynamics-365-business-central-trial/\">Business Central Trial</a></li><li><a href=\"/d365-business-central-support/\">Dynamics 365 Business Central support</a></li></ul>"
   }
 ]

@@ -21,7 +21,7 @@ const PAGE_FAQS = [
   },
   {
     "question": "What is the cost of Business Central customisation?",
-    "answer": "If you are going for a fresh Business Central implementation, your Microsoft ERP partner will give you a unified quote that includes the cost of the standard implementation and required customizations. However, if you already have a Business Central system and want to customise it as per evolving business needs, you need to contact your partner and purchase the Business Central support services to customise the system as per demand."
+    "answer": "If you are going for a fresh Business Central implementation, your Microsoft ERP partner will give you a unified quote that includes the cost of the standard implementation and required customisations. However, if you already have a Business Central system and want to customise it as per evolving business needs, you need to contact your partner and purchase the Business Central support services to customise the system as per demand."
   }
 ];
 
@@ -449,7 +449,7 @@ const Customisation = () => {
                     data-bs-parent="#faqlist1"
                   >
                     <div className="accordion-body">
-                      <p>If you are going for a fresh Business Central implementation, your Microsoft ERP partner will give you a unified quote that includes the cost of the standard implementation and required customizations. However, if you already have a Business Central system and want to customise it as per evolving business needs, you need to contact your partner and purchase the <a href="/d365-business-central-support/" target="_blank" ><b>Business Central support services</b></a> to customise the system as per demand. </p>
+                      <p>If you are going for a fresh Business Central implementation, your Microsoft ERP partner will give you a unified quote that includes the cost of the standard implementation and required customisations. However, if you already have a Business Central system and want to customise it as per evolving business needs, you need to contact your partner and purchase the <a href="/d365-business-central-support/" target="_blank" ><b>Business Central support services</b></a> to customise the system as per demand. </p>
                     </div>
                   </div>
                 </div>

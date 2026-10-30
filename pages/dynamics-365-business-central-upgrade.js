@@ -5,7 +5,7 @@ import PageSeo from "../components/PageSeo";
 const PAGE_FAQS = [
   {
     "question": "How do you upgrade Business Central on-premises?",
-    "answer": "Upgrading Business Central on-premises means going online or configuring your set-up on-cloud. Data can be migrated from the earlier versions of Business Central such as 14, 15, 16, and 17. Current users can also switch to cloud from version 19. To upgrade Business Central on-premises, you are required to set up a connection between your Business Central on-premises wherein you can manage cloud migration by going through Cloud Migration Management Page. The next step is to manage data migration by running the migration tool. This process goes can be performed in a single step but with limited options of migration troubleshooting. To run customized migration suited to your specific data transformation needs, experts at Dynamics Square can help. You can run on-premises data migration in two steps: Data Replication This is the step that starts when you allow 'Set Up Cloud Migration'. Once the process reaches to end, you will have the backup or copy of the on-premises data through you can very whether the migration went successful or not. Data Upgrade This is the process that starts when you allow 'Run Data Upgrade Now' using the 'Cloud Migration Management Page' in your Business Central account. After a successful migration, you are needed to test the performed data migration. To perform so, you need to run the data replication and then create a 'Sandbox' environment to ensure a safer data upgrade. To run data migration, you are required to have hard-core technical expertise in Business Central Data Migration. At Dynamics Square, we can perform such data migration as customized as suited to your current as well as futuristic business needs while applying secure, and productive methodologies."
+    "answer": "Upgrading Business Central on-premises means going online or configuring your set-up on-cloud. Data can be migrated from the earlier versions of Business Central such as 14, 15, 16, and 17. Current users can also switch to cloud from version 19. To upgrade Business Central on-premises, you are required to set up a connection between your Business Central on-premises wherein you can manage cloud migration by going through Cloud Migration Management Page. The next step is to manage data migration by running the migration tool. This process goes can be performed in a single step but with limited options of migration troubleshooting. To run customised migration suited to your specific data transformation needs, experts at Dynamics Square can help. You can run on-premises data migration in two steps: Data Replication This is the step that starts when you allow 'Set Up Cloud Migration'. Once the process reaches to end, you will have the backup or copy of the on-premises data through you can very whether the migration went successful or not. Data Upgrade This is the process that starts when you allow 'Run Data Upgrade Now' using the 'Cloud Migration Management Page' in your Business Central account. After a successful migration, you are needed to test the performed data migration. To perform so, you need to run the data replication and then create a 'Sandbox' environment to ensure a safer data upgrade. To run data migration, you are required to have hard-core technical expertise in Business Central Data Migration. At Dynamics Square, we can perform such data migration as customised as suited to your current as well as futuristic business needs while applying secure, and productive methodologies."
   },
   {
     "question": "What is the latest version of Business Central?",
@@ -17,7 +17,7 @@ const PAGE_FAQS = [
   },
   {
     "question": "How much does it cost to upgrade to Business Central?",
-    "answer": "Depending on your project complexity, upgrading costs may vary.Connect with us, we can review your system first and can share the best quote suited to your customized needs. Dial 0207 193 2502"
+    "answer": "Depending on your project complexity, upgrading costs may vary.Connect with us, we can review your system first and can share the best quote suited to your customised needs. Dial 0207 193 2502"
   }
 ];
 
@@ -83,7 +83,7 @@ const BusinessCentralUpgrade = () => {
                   <h2>Dynamics 365 Business Central Upgrade Benefits</h2>
                   <p>
                     Improve your business practices and evolve your enterprise
-                    capabilities to drive maximized growth while reserving scope
+                    capabilities to drive maximised growth while reserving scope
                     for future potentials by adopting Dynamics 365 Business
                     Central upgrade.
                   </p>
@@ -261,7 +261,7 @@ const BusinessCentralUpgrade = () => {
                       >
                         <div className="accordion-body">
                           When your business starts uplifting, processes get
-                          increased, and resources get maximized, you can't remain
+                          increased, and resources get maximised, you can't remain
                           awaited for time-consuming manual reporting. This is the
                           time when enterprises need to update their system with
                           AI & Machine Learning equipped reporting tactics that
@@ -418,7 +418,7 @@ const BusinessCentralUpgrade = () => {
                         The next step is to manage data migration by running the
                         migration tool. This process goes can be performed in a
                         single step but with limited options of migration
-                        troubleshooting. To run customized migration suited to
+                        troubleshooting. To run customised migration suited to
                         your specific data transformation needs, experts at
                         Dynamics Square can help.
                         <br />
@@ -452,7 +452,7 @@ const BusinessCentralUpgrade = () => {
                         To run data migration, you are required to have hard-core
                         technical expertise in Business Central Data Migration. At
                         Dynamics Square, we can perform such data migration as
-                        customized as suited to your current as well as futuristic
+                        customised as suited to your current as well as futuristic
                         business needs while applying secure, and productive
                         methodologies.
                       </div>
@@ -531,7 +531,7 @@ const BusinessCentralUpgrade = () => {
                       <div className="accordion-body">
                         Depending on your project complexity, upgrading costs may
                         vary.Connect with us, we can review your system first and
-                        can share the best quote suited to your customized needs.
+                        can share the best quote suited to your customised needs.
                         Dial 0207 193 2502
                       </div>
                     </div>

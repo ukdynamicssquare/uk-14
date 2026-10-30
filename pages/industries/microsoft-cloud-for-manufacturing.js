@@ -121,9 +121,9 @@ const Manufacturing = () => {
                 <p>
                   By enabling IoT-connected experience integrated with AI, Mixed
                   Reality, and Predictive technologies, Cloud Manufacturing
-                  solution is designed to maximize operational capability,
+                  solution is designed to maximise operational capability,
                   empower frontline workers, enable remote efficiency, unlock
-                  cloud-based potentials, and maximize the overall productivity
+                  cloud-based potentials, and maximise the overall productivity
                   wrapped with regulatory compliance, required privacy, and
                   transparency.
                 </p>
@@ -139,7 +139,7 @@ const Manufacturing = () => {
                     <div className="cintent-right">
                       <p>
                         Improve your employees' skills, streamline your
-                        production line, and maximize your customer satisfaction
+                        production line, and maximise your customer satisfaction
                         with highly integrated cloud manufacturing solutions.
                       </p>
                     </div>
@@ -180,9 +180,9 @@ const Manufacturing = () => {
                     <div className="cintent-right">
                       <p>
                         Start delivering new products, improved services, and
-                        maximized experiences to your customers by upskilling
+                        maximised experiences to your customers by upskilling
                         your workforce capability, introducing smart factory
-                        modernization, and enabling intelligent systems all
+                        modernisation, and enabling intelligent systems all
                         through with integrated and embedded cloud manufacturing
                         solutions.
                       </p>
@@ -208,7 +208,7 @@ const Manufacturing = () => {
                     Our Expert Team
                   </h3>
                   <p>
-                    Let's explore and extend modernized capabilities with
+                    Let's explore and extend modernised capabilities with
                     Microsoft Cloud solution for Manufacturing.
                   </p>
                   <div className="m-o-t m-o-t-inde">
@@ -344,7 +344,7 @@ const Manufacturing = () => {
                     <h3>Improved Visibility</h3>
                     <p>
                       Boost your service team's capability to proactively know
-                      their customer issues before the customer could realize
+                      their customer issues before the customer could realise
                       and quickly detect as well as resolve the problem.
                     </p>
                   </div>
@@ -426,7 +426,7 @@ const Manufacturing = () => {
               <div className="col-lg-6 d-flex align-items-center">
                 <div className="side-heading">
                   <h2>
-                    How to Adopt New Manufacturing Capabilities and Maximize
+                    How to Adopt New Manufacturing Capabilities and Maximise
                     Your Service Capability?
                   </h2>
                   <p>
@@ -455,7 +455,7 @@ const Manufacturing = () => {
               <div className="col-lg-9">
                 <div className="call-to-action-content">
                   <h3>
-                    How to Maximize Your Business Capabilities with Microsoft
+                    How to Maximise Your Business Capabilities with Microsoft
                     Cloud Manufacturing
                   </h3>
                   <p>
@@ -561,7 +561,7 @@ const Manufacturing = () => {
                                   <h3>Not for Profit</h3>
                                   <p>
                                     Bring Transparency And Drive Efficiency In
-                                    Your Non-Profit Organization With Microsoft
+                                    Your Non-Profit Organisation With Microsoft
                                     Dynamics 365 For Charities.
                                   </p>
                                   <span>Explore Now</span>
@@ -585,7 +585,7 @@ const Manufacturing = () => {
                                 <div className="text-wrp-content">
                                   <h3>E-Commerce</h3>
                                   <p>
-                                    Optimize Your End-To-End Ecommerce Processes
+                                    Optimise Your End-To-End Ecommerce Processes
                                     And Improve Your Customer Experience.
                                   </p>
                                   <span>Explore Now</span>

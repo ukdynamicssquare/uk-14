@@ -324,7 +324,7 @@ Microsoft Dynamics 365 Business Central Partner UK | Dynamics Square
                         Make security & adaptability your business mantra
                       </h3>
                       <p className="card-text">
-                        Regardless of size, security can be detrimental to businesses. Dynamics 365 Business Central is designed and deployed on an advanced security-enabled Azure cloud with multiple security features like authentication, authorization, data encryption, and auditing, to ensure enterprise-grade defences.
+                        Regardless of size, security can be detrimental to businesses. Dynamics 365 Business Central is designed and deployed on an advanced security-enabled Azure cloud with multiple security features like authentication, authorisation, data encryption, and auditing, to ensure enterprise-grade defences.
                       </p>
                     </div>
                     <Image
@@ -1926,7 +1926,7 @@ Microsoft Dynamics 365 Business Central Partner UK | Dynamics Square
 
                         </Link>
                         , we can help you with all your questions. For instance,
-                        when you need to upgrade, what are possible personalized
+                        when you need to upgrade, what are possible personalised
                         options for you? What sort of implementation practices
                         do we follow while upgrading your existing business
                         solution to Microsoft Dynamics 365 Business Central?
@@ -1958,7 +1958,7 @@ Microsoft Dynamics 365 Business Central Partner UK | Dynamics Square
                         smooth experience to all users, whether administrators
                         or operators. There might be a need for training to
                         understand the workings of added integrations,
-                        customizations, and add-ons. In such a case, you can
+                        customisations, and add-ons. In such a case, you can
                         avail yourself of the learning and training provided by
                         your Business Central implementation partner, and they
                         will guide you along the right path.{" "}
@@ -1988,7 +1988,7 @@ Microsoft Dynamics 365 Business Central Partner UK | Dynamics Square
                         your unique business and its changing needs.
                         Irrespective of the industry, business type, and size,
                         you can customise this powerful application to simplify
-                        your business operations. In short, customizations are
+                        your business operations. In short, customisations are
                         the path to more productivity and easy business growth.
                       </p>
                     </div>
@@ -2016,7 +2016,7 @@ Microsoft Dynamics 365 Business Central Partner UK | Dynamics Square
                       beverages to operations, e-commerce industry to financial
                       services, and more can avail of seamless support in terms
                       of Dynamics 365 business central. Moreover, Business
-                      Central can be personalized as per your industry-specific
+                      Central can be personalised as per your industry-specific
                       needs, or custom operational navigation takes place in
                       your organisation.To get more information about how this
                       ERP solution can be implemented and leveraged by your
@@ -2088,13 +2088,13 @@ Microsoft Dynamics 365 Business Central Partner UK | Dynamics Square
                         So, it's up to you, you can buy Business Central suited
                         to your specific needs or user requirements. To know
                         more or which plan would be ideal for your business,
-                        Dynamics Square - Microsoft authorized Business Central
+                        Dynamics Square - Microsoft authorised Business Central
                         Consulting Services provider can help.
                       </p>
                       <p>
                         Here you need to understand that this cost is just a
                         licensing cost, it doesn't include any sort of
-                        implementation, customization, or integration cost. Your
+                        implementation, customisation, or integration cost. Your
                         actual costs can be revealed by your Dynamics 365
                         Business Central Implementation Partner once you share
                         your requirement with them.
@@ -2168,7 +2168,7 @@ Microsoft Dynamics 365 Business Central Partner UK | Dynamics Square
                         you want advancement in your reporting &amp; analytics
                         terms, seamless integration with <Link href="/products/microsoft-power-bi/" target="_blank">Power BI</Link> can be done as both are Microsoft's products, hence, Power BI fits well
                         with Dynamics 365 Business Central. Power BI can enable
-                        visualization in your reporting, key metrics, and your
+                        visualisation in your reporting, key metrics, and your
                         entire business analytics. You can create your own
                         business reports and dashboards leveraging standard
                         reporting templates and other visuals.

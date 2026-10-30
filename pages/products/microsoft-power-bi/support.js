@@ -16,7 +16,7 @@ const PAGE_FAQS = [
     "answer": "For Power BI support services that are tailored to your company's unique needs, we provide variable pricing. In our opinion, the billing ought to be clear and upfront, letting you know exactly what to expect. Our purpose is to help you achieve your company objectives profitably and successfully by offering exceptional value in the form of support services."
   },
   {
-    "question": "What are the options for customizing Power BI services for my organisation?",
+    "question": "What are the options for customising Power BI services for my organisation?",
     "answer": "We offer a wide range of customisable options to ensure that our Power BI services exactly meet the particular requirements of your business. Our team can design customised Power BI solutions, integrate Power BI with your existing systems, implement robust data governance and security protocols, and provide specific training and educational programs to empower your staff."
   }
 ];
@@ -59,7 +59,7 @@ const PowerBiSupport = () => {
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/Power-BI-1024x586.webp" alt="Collect, Analyse, and Visualize Data to Create Amazing Data Experiences" width={1024} height={586}  priority = {true} />
+              <Image src="/img/Power-BI-1024x586.webp" alt="Collect, Analyse, and Visualise Data to Create Amazing Data Experiences" width={1024} height={586}  priority = {true} />
             </div>
           </div>
         </div>
@@ -70,7 +70,7 @@ const PowerBiSupport = () => {
             <div className="col-lg-9">
               <header className="section-header">
                 <h2>
-                  Collect, Analyse, and Visualize Data to Create Amazing Data
+                  Collect, Analyse, and Visualise Data to Create Amazing Data
                   Experiences
                 </h2>
                 <p>
@@ -442,7 +442,7 @@ const PowerBiSupport = () => {
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#faq-content-4"
-                    >What are the options for customizing Power BI services for my organisation? </button>
+                    >What are the options for customising Power BI services for my organisation? </button>
                   </h3>
                   <div
                     id="faq-content-4"

@@ -14,7 +14,7 @@ const Dynamics365Training = () => {
       <PageSeo
         type="Service"
         title="Microsoft Dynamics 365 Training UK | Dynamics Square"
-        description="Get Dynamics 365 trainings from the UK's leading Microsoft Solution Partners to properly utilize the solution and get most out of it."
+        description="Get Dynamics 365 trainings from the UK's leading Microsoft Solution Partners to properly utilise the solution and get most out of it."
         image="https://www.dynamicssquare.co.uk/img/Microsoft-Dynamics-365-Training.png"
       />
         <section className="Solution-banner hero-1 hero">
@@ -22,7 +22,7 @@ const Dynamics365Training = () => {
             <div className="row">
               <div className="col-lg-6 mobile-1 align-self-center">
                 <h1>Microsoft Dynamics 365 Training </h1>
-                <p>Understand all functionalities, boost productivity, and utilize Microsoft Solutions at its best by leveraging simplified Dynamics 365 training. </p>
+                <p>Understand all functionalities, boost productivity, and utilise Microsoft Solutions at its best by leveraging simplified Dynamics 365 training. </p>
                 <div className="text-center text-lg-start">
                   <Link
                     href="#exampleModal"
@@ -61,7 +61,7 @@ const Dynamics365Training = () => {
             <div className="row gx-5">
               <div className="col-lg-6 align-self-center">
                 <h2>Dynamics 365 Training Types </h2>
-                <p>Once we close an <Link href="/our-services/dynamics-365-implementation-services/">implementation</Link> deal, the training of a specific solution comes as a complement to our proposal. This lets us help you save a lot of resources by not investing in highly priced training sessions. <br /><br />However, some businesses require training at different milestones of growth, like with new integrations, customizations, and newly added add-ons. The types of training they can opt for are: </p>
+                <p>Once we close an <Link href="/our-services/dynamics-365-implementation-services/">implementation</Link> deal, the training of a specific solution comes as a complement to our proposal. This lets us help you save a lot of resources by not investing in highly priced training sessions. <br /><br />However, some businesses require training at different milestones of growth, like with new integrations, customisations, and newly added add-ons. The types of training they can opt for are: </p>
               </div>
               <div className="col-lg-6 align-self-center">
                 <div className="content-icons-modil-1">

@@ -1,9 +1,119 @@
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import styles from "../styles/bcVsSapTwo.module.css";
+import SectionNav, { useSectionNav } from "../components/bcTwo/SectionNav";
+import FaqList from "../components/bcTwo/FaqList";
+import RelatedLinks from "../components/bcTwo/RelatedLinks";
 import PageSeo from "../components/PageSeo";
 
-const Bcinsights = () => {
+const features = [
+  { icon: "bi-plug", title: "Full integration with Business Central", text: <>Business Central is a flexible <Link href="/products/microsoft-dynamics-erp/">ERP solution</Link> built specifically for SMBs, irrespective of the industry. With its advanced capabilities, it easily integrates with various solutions to enhance the overall efficiency. Insights Works is one such integration that fully integrates with Business Central, resulting in enhanced productivity and outputs.</> },
+  { icon: "bi-graph-up", title: "Real-time Reporting", text: <>It lets the staff track inventory in real-time, ensuring an efficient flow of goods from warehouse to customer. <Link href="/products/microsoft-power-bi/">Real-time reporting</Link> enables the concerned authority to calculate the cost and create a strategy accordingly. Also, it ensures users can track a process in real time and make instant decisions whenever required.</> },
+  { icon: "bi-box-seam", title: "Ensure Accurate Inventory", text: "Ensuring accurate inventory is a must for businesses to offer great delivery services. Insight Works tracks and calculates the inventory accurately. It manages the work-in-progress and matches it with the existing inventory to give accurate available inventory numbers." },
+  { icon: "bi-graph-up-arrow", title: "Enhanced ROI", text: <>When you maintain the inventory and warehouse requirements accurately, Insight Works with Business Central will help you maximise ROI while optimising the existing <Link href="/products/dynamics-365-business-central/supply-chain-management/">inventory operations</Link>.</> },
+];
 
+const warehouseFeatures = [
+  { icon: "bi-gear-wide-connected", text: "Easily conforms to the Business Central configuration." },
+  { icon: "bi-phone", text: "Manage all inventory using a handheld device." },
+  { icon: "bi-upc-scan", text: "Tracks serial number and lot number of each movement." },
+  { icon: "bi-window", text: "Comes with a responsive and interactive user interface." },
+  { icon: "bi-file-earmark-text", text: "Using a handheld device, scan all sales documents." },
+];
+
+const apps = [
+  {
+    icon: "bi-building-gear",
+    title: "Shop Floor Insights",
+    text: <>Shop Floor Insights is a <Link href="/products/dynamics-365-business-central/manufacturing-management/">Manufacturing Execution System</Link> solution that allows employees to capture floor data using barcode scanners. With digitalised data, it eliminates the chances of data entry errors, resulting in enhanced floor efficiency while tracking the entire operational data.</>,
+    items: [
+      "Automate data entry using barcodes.",
+      "Tracks employee attendance and calculates overtime, too.",
+      "Offers data insights for enhanced productivity.",
+      "Eliminate the manual time collection costs, resulting in reduced labour costs.",
+      "Tracks the sources of rework and helps reduce it.",
+    ],
+  },
+  {
+    icon: "bi-clipboard-data",
+    title: "Advanced Inventory Count",
+    text: "The Advanced Inventory Count add-on enables users to count inventory and eliminates the chances of errors associated with manual calculation. Also, it does carry historical data about a particular product before you start counting. For inventory without a proper barcode, it allows users to process counting and resolutions without any hassle.",
+    items: [
+      "It supports all kinds of inventory counts, from direct pick to optional bins.",
+      "Easy to create count sheets based on desired parameters.",
+      "Make sure to offer accurate count data.",
+      "Enables multi-user data entry.",
+      "Provides interactive user interface with integrations.",
+    ],
+  },
+  {
+    icon: "bi-truck",
+    title: "Dynamic Ship",
+    text: <>Dynamic Ship streamlines the entire <Link href="/products/dynamics-365-business-central/sales-order-management/">shipment process</Link>, eliminating the manual tasks of tracking and shipment management. It lets the employees scan the package directly and forward it for further shipment processes, which leads to huge time-saving opportunities.</>,
+    items: [
+      "Provides shipment data in real-time.",
+      "Easily integrates with 100+ global carriers.",
+      "Offers detailed information about a product.",
+      "Comes with a simple user interface and easy functionality.",
+      "Enables package tracking at all levels of delivery.",
+    ],
+  },
+];
+
+// Added FAQs: every answer is taken from facts already stated on this page.
+const faqs = [
+  {
+    id: 1,
+    question: "What is Insight Works?",
+    answer: "<p>Insight Works is a set of 15 applications, of which four are flagship applications and the remaining are available for free. It is a solution built to align with Microsoft Dynamics 365 Business Central and Microsoft Dynamics NAV, and its applications easily integrate with Business Central to offer great warehouse management capabilities and functionalities.</p>",
+  },
+  {
+    id: 2,
+    question: "Which Insight Works applications integrate with Business Central?",
+    answer: "<p>Some of the intelligent applications include Fixed Asset Count, DocXtender, Dynamic Express, WMS Express, Warehouse Insight, Shop Floor Data Collection, and Barcode Generator.</p>",
+  },
+  {
+    id: 3,
+    question: "What does Warehouse Insights do?",
+    answer: "<p>By providing an accurate mobile device with barcode integration, Warehouse Insights eliminates the cause of manual inventory tracking and incorrect warehouse movements. It includes NAV location and item tracking configuration to accurately process all warehouse transactions.</p>",
+  },
+  {
+    id: 4,
+    question: "What is Shop Floor Insights?",
+    answer: "<p>Shop Floor Insights is a Manufacturing Execution System solution that allows employees to capture floor data using barcode scanners. It automates data entry using barcodes, tracks employee attendance and calculates overtime, and tracks the sources of rework.</p>",
+  },
+  {
+    id: 5,
+    question: "How many carriers does Dynamic Ship integrate with?",
+    answer: "<p>Dynamic Ship easily integrates with 100+ global carriers. It streamlines the entire shipment process, provides shipment data in real-time, and enables package tracking at all levels of delivery.</p>",
+  },
+  {
+    id: 6,
+    question: "How does Insight Works help ensure accurate inventory?",
+    answer: "<p>Insight Works tracks and calculates the inventory accurately. It manages the work-in-progress and matches it with the existing inventory to give accurate available inventory numbers.</p>",
+  },
+];
+
+const relatedLinks = [
+  { href: "/dynamics-365-business-central-implementation/", title: "Business Central Implementation", icon: "bi-gear" },
+  { href: "/continia-for-dynamics-365-business-central/", title: "Continia for Business Central", icon: "bi-puzzle" },
+  { href: "/d365-business-central-support/", title: "Business Central Support", icon: "bi-headset" },
+  { href: "/continia-document-capture-with-business-central/", title: "Continia Document Capture", icon: "bi-file-earmark-text" },
+  { href: "/shopify-connector-business-central/", title: "Shopify Connector for Business Central", icon: "bi-bag" },
+];
+
+const sections = [
+  { id: "overview", label: "Overview" },
+  { id: "features", label: "Features" },
+  { id: "warehouse-insights", label: "Warehouse Insights" },
+  { id: "apps", label: "Insight Works Apps" },
+  { id: "faqs", label: "FAQs" },
+];
+
+const Bcinsights = () => {
+  const { active, navTop } = useSectionNav(sections);
+  const [activeApp, setActiveApp] = useState(0);
 
   return (
     <>
@@ -12,265 +122,180 @@ const Bcinsights = () => {
         title="Insight Works for Dynamics 365 Business Central"
         description="Integrate Insights Works with Business Central to optimise your entire order fulfilment process along with streamlining warehouse operations."
         image="/img/insightworks.png"
+        imageAlt="Insights Works for Dynamics 365 Business Central"
+        faqs={faqs}
       />
-      <section className="Solution-banner hero-1 hero">
+
+      {/* ===== Hero ===== */}
+      <section className={styles.hero}>
+        <div className="container">
+          <nav aria-label="breadcrumb" className={styles.crumbs}>
+            <Link href="/">Home</Link>
+            <i className="bi bi-chevron-right"></i>
+            <span>Insights Works for Dynamics 365 Business Central</span>
+          </nav>
+          <div className="row align-items-center gy-5">
+            <div className={`col-lg-6 ${styles.heroSplit}`}>
+              <h1 className={styles.heroTitle}>Insights Works for Dynamics 365 Business Central</h1>
+              <p className={styles.heroLead}>Optimise order fulfilment process, manage counter sales, and streamline warehouse operations by integrating Insights Works</p>
+              <div className={`${styles.heroActions} ${styles.heroActionsLeft}`}>
+                <Link href="#exampleModal" data-bs-toggle="modal" className="btn-get-started scrollto">
+                  <span>Integrate Now! &nbsp;<i className="bi bi-arrow-right"></i></span>
+                </Link>
+              </div>
+            </div>
+            <div className="col-lg-6">
+              <div className={styles.heroVisual}>
+                <Image src="/img/insightworks.png" alt="Insights Works for Dynamics 365 Business Central" width={991} height={666} priority sizes="(max-width: 991px) 100vw, 560px" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <SectionNav sections={sections} active={active} navTop={navTop} ctaLabel="Schedule demo" />
+
+      {/* ===== Overview ===== */}
+      <section id="overview" className={`${styles.block} ${styles.anchor}`}>
         <div className="container">
           <div className="row">
-            <div className="col-lg-6 mobile-1 align-self-center">
-              <h1>Insights Works for Dynamics 365 Business Central</h1>
-              <p>Optimise order fulfilment process, manage counter sales, and streamline warehouse operations by integrating Insights Works</p>
-              <div>
-                <div className="text-center text-lg-start">
-                  <Link
-                    href="#exampleModal"
-                    data-bs-toggle="modal"
-                    className="btn-get-started scrollto">
+            <div className={`col-lg-10 ${styles.introCol}`}>
+              <h2 className={styles.h2}>Enhance Warehouse Efficiency while leveraging Inventory Management</h2>
+              <p className={styles.lead}>When it comes to streamlining the entire warehouse operations of a business, whether production, manufacturing, or <Link href="/industries/business-central-for-distribution/">distribution</Link>, no one is superior to Insight Works. As a market leader, it provides seamless capabilities for managing and tracking stocks without error. Insight Works is a solution built to align with <Link href="/products/dynamics-365-business-central/">Microsoft Dynamics 365 Business Central</Link> and <Link href="/products/microsoft-dynamics-nav/">Microsoft Dynamics NAV</Link>.</p>
+              <p>Insight Works is a set of 15 applications, of which four are flagship applications and the remaining are available for free. These applications easily integrate with Business Central to offer great warehouse management capabilities and functionalities. Some of the intelligent applications include Fixed Asset Count, DocXtender, Dynamic Express, WMS Express, Warehouse Insight, Shop Floor Data Collection, and Barcode Generator.</p>
+              <p className={`${styles.closingLine} ${styles.closingLineDark}`}>Automate inventory management, collect floor insights, and improve your operational productivity.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-                    <span>Integrate Now!</span>
+      {/* ===== Features ===== */}
+      <section id="features" className={`${styles.block} ${styles.blockTint} ${styles.anchor}`}>
+        <div className="container">
+          <div className="row">
+            <div className={`col-lg-9 ${styles.introCol}`}>
+              <h2 className={styles.h2}>Optimise Warehouse Operations with Intelligent Insight Works Apps</h2>
+              <p>Warehouse requirements are subject to change with market fluctuations as well as customer demands. To deal with sudden changes, you require an <Link href="/wms-for-business-central/">intelligent warehouse management application</Link> like Insights Works that can accept the abrupt changes and offer an uninterrupted service. It offers various features, among which some are listed below:</p>
+            </div>
+          </div>
+          <div className={styles.reasonGrid}>
+            {features.map((f) => (
+              <article className={styles.reasonCard} key={f.title}>
+                <div className={styles.reasonHead}>
+                  <span className={styles.reasonBadge}><i className={`bi ${f.icon}`}></i></span>
+                  <h3>{f.title}</h3>
+                </div>
+                <p>{f.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
 
+      {/* ===== CTA ===== */}
+      <section className={styles.ctaBand}>
+        <div className="container">
+          <div className={styles.final}>
+            <div className={styles.finalText}>
+              <h3>Get accurate inventory levels, track stocks, enhance ROI, and avail a reliable solution for your warehouse needs with Insights Works</h3>
+              <p>Want to explore more possibilities with Insight Works?</p>
+            </div>
+            <div className={styles.finalAction}>
+              <Link href="#exampleModal" data-bs-toggle="modal" className="btn-get-started scrollto">
+                <span>Schedule demo &nbsp;<i className="bi bi-arrow-right"></i></span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== Warehouse Insights ===== */}
+      <section id="warehouse-insights" className={`${styles.block} pt-0 ${styles.anchor}`}>
+        <div className="container">
+          <div className="row">
+            <div className={`col-lg-9 ${styles.introCol}`}>
+              <h2 className={styles.h2}>Warehouse Insights</h2>
+              <p>By providing an accurate mobile device with barcode integration, Warehouse Insights eliminates the cause of manual inventory tracking and incorrect warehouse movements. It includes NAV location and item tracking configuration to accurately process all <Link href="/products/dynamics-365-business-central/warehouse-management/">warehouse transactions</Link>. Some of its features are:</p>
+            </div>
+          </div>
+          <ul className={`${styles.processGrid} mt-4 mb-0`}>
+            {warehouseFeatures.map((w) => (
+              <li key={w.text}><i className={`bi ${w.icon}`}></i>{w.text}</li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* ===== Insight Works Apps (vertical tabs) ===== */}
+      <section id="apps" className={`${styles.block} ${styles.blockTint} ${styles.anchor}`}>
+        <div className="container">
+          <div className={styles.modTabs} style={{ marginTop: 0 }}>
+            <div className={styles.modTabList} role="tablist" aria-label="Insight Works apps">
+              {apps.map((a, i) => (
+                <button
+                  key={a.title}
+                  type="button"
+                  role="tab"
+                  id={`iw-tab-${i}`}
+                  aria-selected={activeApp === i}
+                  aria-controls={`iw-panel-${i}`}
+                  className={`${styles.modTab} ${activeApp === i ? styles.modTabActive : ""}`}
+                  onClick={() => setActiveApp(i)}
+                >
+                  <i className={`bi ${a.icon}`} aria-hidden="true" style={{ fontSize: 22, width: 34, textAlign: "center" }}></i>
+                  {a.title}
+                </button>
+              ))}
+            </div>
+            <div>
+              {/* every panel stays in the HTML so all app content is crawlable */}
+              {apps.map((a, i) => (
+                <div
+                  key={a.title}
+                  id={`iw-panel-${i}`}
+                  role="tabpanel"
+                  aria-labelledby={`iw-tab-${i}`}
+                  className={`${styles.modPanel}${activeApp === i ? "" : " d-none"}`}
+                >
+                  <h3>{a.title}</h3>
+                  <p className={styles.quoteLink}>{a.text}</p>
+                  <p className="mt-3 mb-0"><strong>Some of its features are:</strong></p>
+                  <ul className={styles.capList}>
+                    {a.items.map((it) => (
+                      <li key={it}>{it}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== FAQs ===== */}
+      <section id="faqs" className={`${styles.block} ${styles.anchor}`}>
+        <div className="container">
+          <div className="row gy-5">
+            <div className="col-lg-4">
+              <div className={styles.faqAside}>
+                <h2 className={styles.h2}>Have you got questions about Insight Works?</h2>
+                <p>Click through to our FAQ for the best answers!</p>
+                <div className={`${styles.faqCtaCard} ${styles.faqCtaCardFlat}`}>
+                  <Link href="#exampleModal" data-bs-toggle="modal" className="btn-get-started scrollto" style={{ marginTop: 0 }}>
+                    <span>Integrate Now! &nbsp;<i className="bi bi-arrow-right"></i></span>
                   </Link>
                 </div>
               </div>
             </div>
-            <div className="col-lg-6 align-self-center">
-              <Image
-                src="/img/insightworks.png"
-                alt="Insights Works for Dynamics 365 Business Central"
-                width={991}
-                height={666}
-                priority = {true}
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-10 col-md-9">
-              <header className="section-header">
-                <h2>Enhance Warehouse Efficiency while leveraging Inventory Management</h2>
-                <p>When it comes to streamlining the entire warehouse operations of a business, whether production, manufacturing, or distribution, no one is superior to Insight Works. As a market leader, it provides seamless capabilities for managing and tracking stocks without error. Insight Works is a solution built to align with <Link href="/products/dynamics-365-business-central/" target="_blank">Microsoft Dynamics 365 Business Central</Link> and <Link href="/products/microsoft-dynamics-nav/" target="_blank">Microsoft Dynamics NAV</Link>.</p>
-                <p>Insight Works is a set of 15 applications, of which four are flagship applications and the remaining are available for free. These applications easily integrate with Business Central to offer great warehouse management capabilities and functionalities. Some of the intelligent applications include Fixed Asset Count, DocXtender, Dynamic Express, WMS Express, Warehouse Insight, Shop Floor Data Collection, and Barcode Generator.</p>
-                <p>Automate inventory management, collect floor insights, and improve your operational productivity.</p>
-              </header>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-8 col-md-8">
-              <header className="section-header">
-                <h2>Optimise Warehouse Operations with Intelligent Insight Works Apps</h2>
-                <p>Warehouse requirements are subject to change with market fluctuations as well as customer demands. To deal with sudden changes, you require an intelligent warehouse management application like Insights Works that can accept the abrupt changes and offer an uninterrupted service. It offers various features, among which some are listed below:</p>
-              </header>
-            </div>
-          </div>
-          <div className="row p-lg-6">
-            <div className="col-lg-6">
-              <div className="finace-acc">
-                <div className="accordion" id="accnew">
-                  <div className="accordion-item">
-                    <h3 className="accordion-header">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#fin1"
-                        aria-expanded="false"
-                        aria-controls="fin1"
-                      >
-                        <span>Full integration with Business Central</span>
-                      </button>
-                    </h3>
-                    <div
-                      id="fin1"
-                      className="accordion-collapse collapse"
-                      data-bs-parent="#accnew"
-                    >
-                      <div className="accordion-body">
-                        <p>Business Central is a flexible <Link href="/products/microsoft-dynamics-erp/" target="_blank">ERP solution</Link> built specifically for SMBs, irrespective of the industry. With its advanced capabilities, it easily integrates with various solutions to enhance the overall efficiency. Insights Works is one such integration that fully integrates with Business Central, resulting in enhanced productivity and outputs.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <hr />
-                  <div className="accordion-item">
-                    <h3 className="accordion-header">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#fin2"
-                        aria-expanded="false"
-                        aria-controls="fin2"
-                      >
-                        <span>Real-time Reporting</span>
-                      </button>
-                    </h3>
-                    <div
-                      id="fin2"
-                      className="accordion-collapse collapse"
-                      data-bs-parent="#accnew"
-                    >
-                      <div className="accordion-body">
-                        <p>It lets the staff track inventory in real-time, ensuring an efficient flow of goods from warehouse to customer. Real-time reporting enables the concerned authority to calculate the cost and create a strategy accordingly. Also, it ensures users can track a process in real time and make instant decisions whenever required.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-lg-6">
-              <div className="finace-acc">
-                <hr className="mob-disp" />
-                <div className="accordion" id="accnews">
-                  <div className="accordion-item">
-                    <h3 className="accordion-header">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#fin3"
-                        aria-expanded="false"
-                        aria-controls="fin3"
-                      >
-                        <span>Ensure Accurate Inventory</span>
-                      </button>
-                    </h3>
-                    <div
-                      id="fin3"
-                      className="accordion-collapse collapse"
-                      data-bs-parent="#accnews"
-                    >
-                      <div className="accordion-body">
-                        <p>Ensuring accurate inventory is a must for businesses to offer great delivery services. Insight Works tracks and calculates the inventory accurately. It manages the work-in-progress and matches it with the existing inventory to give accurate available inventory numbers.</p>
-                      </div>
-                    </div>
-                  </div><hr />
-                  <div className="accordion-item">
-                    <h3 className="accordion-header">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#fin4"
-                        aria-expanded="false"
-                        aria-controls="fin4"
-                      >
-                        <span>Enhanced ROI</span>
-                      </button>
-                    </h3>
-                    <div
-                      id="fin4"
-                      className="accordion-collapse collapse"
-                      data-bs-parent="#accnews"
-                    >
-                      <div className="accordion-body">
-                        <p>When you maintain the inventory and warehouse requirements accurately, Insight Works with Business Central will help you maximise ROI while optimising the existing inventory operations.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="call-to-action-center hero-4">
-        <div className="container">
-          <div className="row justify-content-center">
             <div className="col-lg-8">
-              <div className="call-to-action-content">
-                <h3>Get accurate inventory levels, track stocks, enhance ROI, and avail a reliable solution for your warehouse needs with Insights Works</h3>
-                <p>Want to explore more possibilities with Insight Works?</p>
-                <div className="text-center m-o-t new-btn-nn">
-                  <Link
-                    href="#exampleModal"
-                    data-bs-toggle="modal"
-                    className="btn-get-started scrollto">
-
-                    <span>Schedule demo</span>
-
-                  </Link>
-                </div>
-              </div>
+              <FaqList items={faqs} initialCount={6} />
             </div>
           </div>
         </div>
       </section>
-      <section className="busine_service_bottom custom05a">
-        <div className="container">
-          <div className="row">
-          <div className="col-lg-6 align-self-center">
-              <div className="side-heading-custom-01">
-                <h2>Warehouse Insights</h2>
-              </div>
-            </div>
-            <div className="col-lg-6 align-self-center">
-              <div className="busine_service_bottom-left custom012">
-                <p>By providing an accurate mobile device with barcode integration, Warehouse Insights eliminates the cause of manual inventory tracking and incorrect warehouse movements. It includes NAV location and item tracking configuration to accurately process all warehouse transactions. Some of its features are: </p>
-                <ul>
-                  <li>Easily conforms to the Business Central configuration.</li>
-                  <li>Manage all inventory using a handheld device.</li>
-                  <li>Tracks serial number and lot number of each movement.</li>
-                  <li>Comes with a responsive and interactive user interface.</li>
-                  <li>Using a handheld device, scan all sales documents.</li>
-                </ul>
-              </div>
-            </div>
-           
-          </div>
-          <div className="row g-5 pad2xyr">
-            <div className="col-lg-6">
-              <div className="style-grid-1">
-                <div className="style-grid-content">
-                  <h3>Shop Floor Insights</h3>
-                  <p>Shop Floor Insights is a Manufacturing Execution System solution that allows employees to capture floor data using barcode scanners. With digitalized data, it eliminates the chances of data entry errors, resulting in enhanced floor efficiency while tracking the entire operational data.<br /> Some of its features are: </p>
-                  <ul>
-                    <li>Automate data entry using barcodes.</li>
-                    <li>Tracks employee attendance and calculates overtime, too.</li>
-                    <li>Offers data insights for enhanced productivity.</li>
-                    <li>Eliminate the manual time collection costs, resulting in reduced labour costs.</li>
-                    <li>Tracks the sources of rework and helps reduce it.</li>
-                  </ul>
-                </div>
-              </div>
 
-              <div className="style-grid-1">
-                <div className="style-grid-content">
-                  <h3>Advanced Inventory Count</h3>
-                  <p>The Advanced Inventory Count add-on enables users to count inventory and eliminates the chances of errors associated with manual calculation. Also, it does carry historical data about a particular product before you start counting. For inventory without a proper barcode, it allows users to process counting and resolutions without any hassle.<br />Some of its features are: </p>
-                  <ul>
-                    <li>It supports all kinds of inventory counts, from direct pick to optional bins.</li>
-                    <li>Easy to create count sheets based on desired parameters.</li>
-                    <li>Make sure to offer accurate count data.</li>
-                    <li>Enables multi-user data entry.</li>
-                    <li>Provides interactive user interface with integrations.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6">
-              <div className="style-grid-1">
-                <div className="style-grid-content">
-                  <h3>Dynamic Ship</h3>
-                  <p>Dynamic Ship streamlines the entire shipment process, eliminating the manual tasks of tracking and shipment management. It lets the employees scan the package directly and forward it for further shipment processes, which leads to huge time-saving opportunities. <br />Some of its features are: </p>
-                  <ul>
-                    <li>Provides shipment data in real-time.</li>
-                    <li>Easily integrates with 100+ global carriers.</li>
-                    <li>Offers detailed information about a product.</li>
-                    <li>Comes with a simple user interface and easy functionality.</li>
-                    <li>Enables package tracking at all levels of delivery.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* ===== Internal links ===== */}
+      <RelatedLinks links={relatedLinks} />
     </>
   );
 };

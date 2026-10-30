@@ -569,7 +569,7 @@ const CustomerService = () => {
                     <i className="bi bi-check-lg"></i> Service gamification
                   </li>
                   <li>
-                    <i className="bi bi-check-lg"></i> Customization and extensibility 
+                    <i className="bi bi-check-lg"></i> Customisation and extensibility 
                   </li>
                   <li>
                     <i className="bi bi-check-lg"></i> Analytics and KPI reporting 
@@ -606,7 +606,7 @@ const CustomerService = () => {
                     <i className="bi bi-check-lg"></i> Service gamification
                   </li>
                   <li>
-                    <i className="bi bi-check-lg"></i> Customization and extensibility, etc.
+                    <i className="bi bi-check-lg"></i> Customisation and extensibility, etc.
                   </li>
                 </ul>
               </div>
@@ -635,7 +635,7 @@ const CustomerService = () => {
             <div className="col-lg-8">
               <div className="call-to-action-content">
                 <h3>Empower Exceptional Customer Service: Discover the Power of Dynamics 365 Customer Service </h3>
-                <p>Transform customer interactions into exceptional experiences with Dynamics 365 Customer Service consultants, the unified solution that empowers agents to deliver personalized support anytime, anywhere. </p>
+                <p>Transform customer interactions into exceptional experiences with Dynamics 365 Customer Service consultants, the unified solution that empowers agents to deliver personalised support anytime, anywhere. </p>
                 <div className="text-center m-o-t new-btn-nn">
                   <Link
                     href="#exampleModal"
@@ -686,7 +686,7 @@ const CustomerService = () => {
                       support system for enterprises seeking to simplify and
                       automate their customer data and improve their customer
                       experience while eliminating repetitive and redundant
-                      tasks. It enables businesses to serve personalized
+                      tasks. It enables businesses to serve personalised
                       customer experience while keeping real-time eyes through
                       an integrated dashboard.
                     </div>
@@ -716,7 +716,7 @@ const CustomerService = () => {
                       decisions to support growth and profitability. Leveraging
                       customer service insights, businesses can roll out their
                       required changes to improve customer satisfaction,
-                      maximize operational efficiency, and more.
+                      maximise operational efficiency, and more.
                     </div>
                   </div>
                 </div>
@@ -800,7 +800,7 @@ const CustomerService = () => {
                       Dynamics 365 customer service comes with a number of vital
                       features to seamlessly and effectively drive your
                       customers, track customer behaviour to serve them a
-                      personalized solution. Here is the list of Dynamics 365
+                      personalised solution. Here is the list of Dynamics 365
                       Customer Service key features:
                       <br />
                       <br />
@@ -899,7 +899,7 @@ const CustomerService = () => {
                     data-bs-parent="#faqlist1"
                   >
                     <div className="accordion-body">
-                      <p>Yes, you can customise this solution to meet the unique needs of your business. You can utilise the <Link href="/products/microsoft-dynamics-365/" target="_blank">Microsoft Dynamics 365</Link> ecosystem to align the solution with your business using integrations, add-ons, and customizations.</p>
+                      <p>Yes, you can customise this solution to meet the unique needs of your business. You can utilise the <Link href="/products/microsoft-dynamics-365/" target="_blank">Microsoft Dynamics 365</Link> ecosystem to align the solution with your business using integrations, add-ons, and customisations.</p>
                     </div>
                   </div>
                 </div>

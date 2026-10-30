@@ -66,7 +66,7 @@ const BusinessCentralFeatures = () => {
                   ensure efficient support at every touch point.
                 </p>
                 <p>
-                  Designed with high-end capability and extensive customization
+                  Designed with high-end capability and extensive customisation
                   opportunities, Business Central can be configured suited to
                   your specific operational needs from sales, service, project,
                   and operations to even optimum reporting & analytics.
@@ -204,7 +204,7 @@ const BusinessCentralFeatures = () => {
                   workloads, and more.
                 </p>
                 <p>
-                  To maximize your CRM functionality and uplift your customer
+                  To maximise your CRM functionality and uplift your customer
                   visibility, you can integrate your Business Central plan with{" "}
                   <Link href="products/microsoft-dynamics-365-sales/" target="_blank">
                   Dynamics 365 Sales.
@@ -242,8 +242,8 @@ const BusinessCentralFeatures = () => {
                    Supply Chain
                   </Link>{" "}
                   module that helps to seamlessly track your inventory level,
-                  optimise operational flow, and maximize your resource
-                  utilization with improved visibility into every process in
+                  optimise operational flow, and maximise your resource
+                  utilisation with improved visibility into every process in
                   real-time.
                 </p>
                 <p>
@@ -251,7 +251,7 @@ const BusinessCentralFeatures = () => {
                   optimise your inventory levels, track logistics flow, and
                   monitor the end-to-end operational practices in real-time
                   wrapped with informed decision-making capability to roll out
-                  efficiency and maximize profitability.
+                  efficiency and maximise profitability.
                 </p>
               </div>
             </div>
@@ -300,7 +300,7 @@ const BusinessCentralFeatures = () => {
                 <h3>Planning to Implement Business Central?</h3>
                 <p>
                   Connect and talk to our experts today. Get your system
-                  configured with Business Central features? customized as per
+                  configured with Business Central features? customised as per
                   your specific business needs.
                 </p>
                 <div className="text-center m-o-t new-btn-nn">
@@ -335,7 +335,7 @@ const BusinessCentralFeatures = () => {
                   Ensuring seamless warehousing can simplify the processes
                   dependent or directly related to warehousing. To drive a
                   seamless and transparent flow across your warehousing unit,
-                  you need a customized solution to effortlessly manage your
+                  you need a customised solution to effortlessly manage your
                   inventory levels, shipments, and fulfilment.
                 </p>
                 <p>
@@ -344,7 +344,7 @@ const BusinessCentralFeatures = () => {
                   from managing shipment, ensuring bin-wise inventories,
                   seamless purchase order creation to switch between
                   languages, and more. It allows enterprises to automate their
-                  warehousing data, enable real-time synchronization, and allows
+                  warehousing data, enable real-time synchronisation, and allows
                   them to gain real-time insights into their business processes.
                 </p>
               </div>
@@ -411,7 +411,7 @@ const BusinessCentralFeatures = () => {
                   Manufacturing operations
                   </Link>{" "}
                   that help to make smarter decisions to impact and improve the
-                  production flow, minimize costing, and enable continuity.
+                  production flow, minimise costing, and enable continuity.
                 </p>
                 <p>
                   <strong>Check Also -</strong>

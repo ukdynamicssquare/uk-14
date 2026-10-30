@@ -16,7 +16,7 @@ const PAGE_FAQS = [
   },
   {
     "question": "How long will it take to implement the project successfully?",
-    "answer": "Without first understanding the ins and outs of your business, it's difficult to provide an accurate timeline for implementing Customer Service - as there are many factors that go into the equation such as the quantity of processes, the complexity of operations, integrations, and customizations. All of these elements play a role in how long it will take to get up and running."
+    "answer": "Without first understanding the ins and outs of your business, it's difficult to provide an accurate timeline for implementing Customer Service - as there are many factors that go into the equation such as the quantity of processes, the complexity of operations, integrations, and customisations. All of these elements play a role in how long it will take to get up and running."
   },
   {
     "question": "What's my role in the entire implementation project?",
@@ -99,7 +99,7 @@ const CustomerServiceImplementation = () => {
                     Dynamics 365 Customer Service
                     </Link>{" "}
                     is a world-class business solution capable of delivering
-                    exceptional support to customers by offering a personalized,
+                    exceptional support to customers by offering a personalised,
                     productive, and efficient experience. It enhances customer
                     management and optimises the entire support operation to help
                     you earn customers' loyalty for life. It simplifies the
@@ -374,10 +374,10 @@ const CustomerServiceImplementation = () => {
                       >
                         <div className="accordion-body">
                           <p>
-                            Customization and integration make a solution
+                            Customisation and integration make a solution
                             adaptable to all changing business needs as per market
                             and customer demand. D365 Customer Service is flexible
-                            with unique customizations to perform specific
+                            with unique customisations to perform specific
                             business operations, enabling more focus on growth and
                             scalability rather than being preoccupied with core
                             operations.
@@ -639,7 +639,7 @@ const CustomerServiceImplementation = () => {
                     </h3>
                     <div className="overlay">
                       <p>
-                        We specialize in providing implementation, upgrade, and
+                        We specialise in providing implementation, upgrade, and
                         support services to businesses just like yours. Our team
                         of certified professionals have years of experience and
                         would be more than happy to help you get your business up
@@ -855,7 +855,7 @@ const CustomerServiceImplementation = () => {
                     <i className="bi bi-check-lg"></i> Service gamification
                   </li>
                   <li>
-                    <i className="bi bi-check-lg"></i> Customization and extensibility 
+                    <i className="bi bi-check-lg"></i> Customisation and extensibility 
                   </li>
                   <li>
                     <i className="bi bi-check-lg"></i> Analytics and KPI reporting 
@@ -892,7 +892,7 @@ const CustomerServiceImplementation = () => {
                     <i className="bi bi-check-lg"></i> Service gamification
                   </li>
                   <li>
-                    <i className="bi bi-check-lg"></i> Customization and extensibility, etc.
+                    <i className="bi bi-check-lg"></i> Customisation and extensibility, etc.
                   </li>
                 </ul>
               </div>
@@ -1011,7 +1011,7 @@ const CustomerServiceImplementation = () => {
                           for implementing Customer Service - as there are many
                           factors that go into the equation such as the quantity
                           of processes, the complexity of operations,
-                          integrations, and customizations. All of these elements
+                          integrations, and customisations. All of these elements
                           play a role in how long it will take to get up and
                           running.
                         </p>

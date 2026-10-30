@@ -711,7 +711,7 @@ const CloudvsOnpremise = () => {
             </div>
             <div className="col-lg-7 align-self-center">
               <div className="call_to_action-left">
-                <h3>Transform and digitalize your business to create a monopoly in the market </h3>
+                <h3>Transform and digitalise your business to create a monopoly in the market </h3>
                 <p>It’s high time you considered cloud deployment to supercharge your business growth with the minimum investment. </p>
                 <div className="m-o-t m-o-t-inde">
                   <Link

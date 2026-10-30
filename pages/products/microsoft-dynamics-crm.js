@@ -35,8 +35,8 @@ const PAGE_FAQS = [
     "answer": "Microsoft Dynamics CRM offers two deployment options to all on-premises and cloud users. The cloud deployment provides CRM online using Microsoft Azure (Microsoft's cloud storage service), where users can deploy the servers online and access the data in real-time."
   },
   {
-    "question": "Does Microsoft Dynamics 365 CRM support customizations?",
-    "answer": "Yes, it supports customizations per specific business requirements of the organisation. You will need the right Dynamics 365 implementation partner to successfully implement the application without errors."
+    "question": "Does Microsoft Dynamics 365 CRM support customisations?",
+    "answer": "Yes, it supports customisations per specific business requirements of the organisation. You will need the right Dynamics 365 implementation partner to successfully implement the application without errors."
   },
   {
     "question": "Does Microsoft Dynamics 365 CRM support integrations?",
@@ -44,7 +44,7 @@ const PAGE_FAQS = [
   },
   {
     "question": "Is it easy to implement Microsoft Dynamics 365 CRM for any business?",
-    "answer": "Dynamics 365 CRM is a flexible tool that can be customized based on specific business requirements and industry types. Being adaptive, it provides seamless features to all businesses, irrespective of their industry. Generally, growing industries opt for this powerful application as the performance can be increased or decreased using the cloud anytime."
+    "answer": "Dynamics 365 CRM is a flexible tool that can be customised based on specific business requirements and industry types. Being adaptive, it provides seamless features to all businesses, irrespective of their industry. Generally, growing industries opt for this powerful application as the performance can be increased or decreased using the cloud anytime."
   },
   {
     "question": "Does industry-specific application are available with Microsoft Dynamics CRM?",
@@ -901,7 +901,7 @@ const MicrosoftDynamicsCrm = () => {
                       data-bs-toggle="collapse"
                       data-bs-target="#faq-content-8"
                     >
-                      Does Microsoft Dynamics 365 CRM support customizations?
+                      Does Microsoft Dynamics 365 CRM support customisations?
                     </button>
                   </h3>
                   <div
@@ -910,7 +910,7 @@ const MicrosoftDynamicsCrm = () => {
                     data-bs-parent="#faqlist1"
                   >
                     <div className="accordion-body">
-                      <p>Yes, it supports customizations per specific business requirements of the organisation. You will need the right <Link
+                      <p>Yes, it supports customisations per specific business requirements of the organisation. You will need the right <Link
                         href="/our-services/dynamics-365-implementation-services/"
                         target="_blank">Dynamics 365 implementation partner</Link> to successfully implement the application without errors.</p>
                     </div>
@@ -954,7 +954,7 @@ const MicrosoftDynamicsCrm = () => {
                     data-bs-parent="#faqlist1"
                   >
                     <div className="accordion-body">
-                      <p>Dynamics 365 CRM is a flexible tool that can be customized based on specific business requirements and industry types. Being adaptive, it provides seamless features to all businesses, irrespective of their industry. Generally, growing industries opt for this powerful application as the performance can be increased or decreased using the cloud anytime.</p>
+                      <p>Dynamics 365 CRM is a flexible tool that can be customised based on specific business requirements and industry types. Being adaptive, it provides seamless features to all businesses, irrespective of their industry. Generally, growing industries opt for this powerful application as the performance can be increased or decreased using the cloud anytime.</p>
                     </div>
                   </div>
                 </div>

@@ -79,7 +79,7 @@ const MicrosoftCloudForNonprofit = () => {
                     </div>
                     <div className="cintent-right">
                       <h3 style={{fontSize:'20px',marginBottom:'-0px'}}>Flexible Solution </h3>
-                      <p>Digitalize the shopping experience by building and deploying mobile apps and web portals without hiring a developer or writing code. Also, it lets you automate costs, reduce process complexity, get deep insights, and integrate with other solutions or add-ons with ease. </p>
+                      <p>Digitalise the shopping experience by building and deploying mobile apps and web portals without hiring a developer or writing code. Also, it lets you automate costs, reduce process complexity, get deep insights, and integrate with other solutions or add-ons with ease. </p>
                     </div>
                   </div>
                   <div className="content-inner-moil-1">
@@ -226,7 +226,7 @@ const MicrosoftCloudForNonprofit = () => {
                   </div>
                   <div className="card_new_content">
                     <h3>Channel Management</h3>
-                    <p>With digitalization, we have a variety of stores (online, offline, virtual, or call centres) to sell services or products to a global audience. D365 for Retail will centralise the data of all stores and offer you a unified platform to maintain, track, plan, and execute everything from a single screen.</p>
+                    <p>With digitalisation, we have a variety of stores (online, offline, virtual, or call centres) to sell services or products to a global audience. D365 for Retail will centralise the data of all stores and offer you a unified platform to maintain, track, plan, and execute everything from a single screen.</p>
                   </div>
                 </div>
               </div>
@@ -382,7 +382,7 @@ const MicrosoftCloudForNonprofit = () => {
                                 <div className="text-wrp-content">
                                   <h3>E-Commerce</h3>
                                   <p>
-                                    Optimize Your End-To-End Ecommerce
+                                    Optimise Your End-To-End Ecommerce
                                     Processes And Improve Your Customer
                                     Experience.
                                   </p>

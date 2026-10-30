@@ -43,7 +43,7 @@ const Commerce = () => {
       <PageSeo
         type="Service"
         title="Dynamics 365 Commerce Solutions | Dynamics Square UK"
-        description="Transform your retail business with Dynamics 365 Commerce. Connect online & in-store channels, improve efficiency, and deliver personalized customer journeys."
+        description="Transform your retail business with Dynamics 365 Commerce. Connect online & in-store channels, improve efficiency, and deliver personalised customer journeys."
         image="https://www.dynamicssquare.co.uk/img/commerce-banner.png"
         faqs={PAGE_FAQS}
       />
@@ -95,7 +95,7 @@ const Commerce = () => {
                 <p>Microsoft Dynamics 365 Commerce enables businesses to provide a genuinely cohesive online, in-store, and mobile shopping experience. Every time a customer visits your store or browses your website, the experience feels tailored to them in a way that is exactly as per their expectations. The journey feels smooth, natural, and aligned with what they truly need. This is the kind of experience Dynamics 365 Commerce helps create.  </p>
                 <p>It focuses on more than just sales. It brings together every part of your retail environment, from a customer scrolling on a tablet at midnight to a team member processing returns during the day. Everything works in harmony. The result? Customer loyalty. Relationships that last and operations that move with clarity and control. </p>
                 <p>
-                  Personalize your <Link href="/products/dynamics-365-customer-engagement/" target="_blank">customer engagement</Link>, maximize revenues, boost
+                  Personalise your <Link href="/products/dynamics-365-customer-engagement/" target="_blank">customer engagement</Link>, maximise revenues, boost
                   your employee productivity, and optimise your operations, and
                   drive improved supply chain practices while reducing costs and
                   increasing efficiency.
@@ -237,7 +237,7 @@ const Commerce = () => {
                         Protect your data through Dynamics 365 fraud protection,
                         leverage <Link href="/products/microsoft-dynamics-365/" target="_blank">Dynamics 365</Link> Customer insights to have a
                         360-degree view into customer data, and drive
-                        centralization with Microsoft Bing for Commerce.
+                        centralisation with Microsoft Bing for Commerce.
                       </div>
                     </div>
                   </div>

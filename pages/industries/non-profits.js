@@ -445,7 +445,7 @@ With Dynamics 365 Solutions </h2>
                                 <div className="text-wrp-content">
                                   <h3>E-Commerce</h3>
                                   <p>
-                                    Optimize Your End-To-End Ecommerce Processes
+                                    Optimise Your End-To-End Ecommerce Processes
                                     And Improve Your Customer Experience.
                                   </p>
                                   <span>Explore Now</span>

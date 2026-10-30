@@ -57,7 +57,7 @@ const MicrosoftDynamicsPartnerLeeds = () => {
                 <p>
                   Dynamics Square is the prime Microsoft Partner in Leeds, UK.
                   We are the leaders in transforming your business with highly
-                  customized business solutions, helping organizations increase
+                  customised business solutions, helping organisations increase
                   their scalability with the comprehensive Microsoft business
                   applications.
                 </p>
@@ -103,7 +103,7 @@ const MicrosoftDynamicsPartnerLeeds = () => {
               <div className="commen-rit-info">
                 <h3>Why should you choose Dynamics 365 for your Leeds-based company?</h3>
                 <p>
-                  We are not just partners; we are authorized Microsoft Solutions
+                  We are not just partners; we are authorised Microsoft Solutions
                   Partner in Leeds having domain expertise in key areas as
                   follows -
                 </p>
@@ -154,7 +154,7 @@ const MicrosoftDynamicsPartnerLeeds = () => {
               Dynamics Square is known for its commitment to increasing
               productivity, profitability, efficiency, team communication, and
               maintaining top customer relationship management for businesses
-              with highly optimized Microsoft Business apps.
+              with highly optimised Microsoft Business apps.
             </p>
           </header>
           <div className="row p-lg-6">
@@ -272,7 +272,7 @@ const MicrosoftDynamicsPartnerLeeds = () => {
                           efficiency, and expedite time to market.
                         </p>
                         <p>
-                          D365 Supply chain benefits you in organizing and
+                          D365 Supply chain benefits you in organising and
                           managing your sales orders and their related
                           processes. Improve client satisfaction by accelerating
                           time to market, simplifying order administration, and
@@ -312,7 +312,7 @@ const MicrosoftDynamicsPartnerLeeds = () => {
                         </p>
                         <p>
                           To improve user experiences, facilitate and
-                          rationalize your customer service process from setup
+                          rationalise your customer service process from setup
                           to maintenance and administration of customer service
                           solutions.
                         </p>
@@ -387,7 +387,7 @@ const MicrosoftDynamicsPartnerLeeds = () => {
                         </p>
                         <p>
                           These services help you streamline the data
-                          visualization and help make effective and productive
+                          visualisation and help make effective and productive
                           decisions, which reduces your time taken in
                           decision-making and increases the revenue and
                           productivity of your team.
@@ -473,7 +473,7 @@ const MicrosoftDynamicsPartnerLeeds = () => {
                         </p>
                         <p>
                           We can install your business-specific solution to
-                          engage more customers and maximize income by
+                          engage more customers and maximise income by
                           understanding your sales tactics with AI-based
                           insights.
                         </p>
@@ -528,12 +528,12 @@ const MicrosoftDynamicsPartnerLeeds = () => {
                 </p>
                 <h5>Implementation methodology</h5>
                 <p>
-                  We apply a standardized yet customized approach by leveraging
+                  We apply a standardised yet customised approach by leveraging
                   Microsoft's Sure Step methodology to streamline your business
                   operations and ensure optimum security and transparency.
                 </p>
                 <p>
-                  We empower businesses with Microsoft's customized solutions
+                  We empower businesses with Microsoft's customised solutions
                   tailored to unique process flows and enable growth potential
                   and scalability.
                 </p>
@@ -550,7 +550,7 @@ const MicrosoftDynamicsPartnerLeeds = () => {
                 <h5>Upgrade Methodology</h5>
                 <p>
                   We assist businesses in upgrading their software
-                  functionality, process flow optimization, operational change
+                  functionality, process flow optimisation, operational change
                   adaptation, and user acceptance and adaptation through our
                   seamless data and app update services.
                 </p>
@@ -596,7 +596,7 @@ const MicrosoftDynamicsPartnerLeeds = () => {
               <div className="parten-more">
                 <h3>Solution Tailored To The Business</h3>
                 <p>
-                  Our Microsoft Dynamics Experts implement a highly customized
+                  Our Microsoft Dynamics Experts implement a highly customised
                   solution to support your whole business flow and drive
                   efficiency, taking into account your pain points and
                   domain-specific requirements. We can also implement standard
@@ -624,7 +624,7 @@ const MicrosoftDynamicsPartnerLeeds = () => {
                   adaptation by providing end-user training as necessary. To
                   ensure this, we provide end-to-end user training so that they
                   can immediately grasp the newly configured system and begin
-                  utilizing it from the first day.
+                  utilising it from the first day.
                 </p>
               </div>
               <div className="parten-more">

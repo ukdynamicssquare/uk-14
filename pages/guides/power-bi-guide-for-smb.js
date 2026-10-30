@@ -247,7 +247,7 @@ const PowerBIGuide = () => {
               <div className="cont-table-inner">
                 <p>
                   In today's digital world, business Intelligence plays a vital
-                  role in helping organisations assemble, integrate, visualize,
+                  role in helping organisations assemble, integrate, visualise,
                   and analyse unorganised data to make smarter and more informed
                   decisions. The digital transformation of customers is pushing
                   industries to rely totally on data for a sustainable and
@@ -274,7 +274,7 @@ const PowerBIGuide = () => {
               </div>
               <div className="cont-table-inner">
                 <p>
-                  As per the survey organized by Deloitte
+                  As per the survey organised by Deloitte
                   <a
                     href="https://www2.deloitte.com/content/dam/Deloitte/global/Documents/Deloitte-Analytics/dttl-analytics-analytics-advantage-report-061913.pdf"
                     target="_blank"
@@ -910,7 +910,7 @@ const PowerBIGuide = () => {
                 </p>
                 <p>
                   Power BI is a flexible application that allows users to
-                  customise and get more out of it. Such customizations enable
+                  customise and get more out of it. Such customisations enable
                   users to shortlist the data, change tile placements, and
                   adjust the columns for more data consumption. Also, Power BI
                   enables users to customise the viewpoints of tiles to increase
@@ -994,7 +994,7 @@ const PowerBIGuide = () => {
                   productivity.
                 </p>
                 <p>
-                  <b>6. Personalized Reporting and Dashboards</b>
+                  <b>6. Personalised Reporting and Dashboards</b>
                 </p>
                 <p>
                   A personalised dashboard makes the data reporting easy to
@@ -1020,7 +1020,7 @@ const PowerBIGuide = () => {
                 <p>
                   Power BI provides an easy-to-understand and simple user
                   interface to decrease the chances of missing even the minute
-                  details of data visualization.
+                  details of data visualisation.
                   <br className="mrg" />
                   Also, Microsoft Power BI provides an easy-to-navigate user
                   interface so that all the features and tools are easily
@@ -1204,7 +1204,7 @@ const PowerBIGuide = () => {
                   <li>
                     Power BI Dashboards are so flexible that they can be
                     embedded into any native or third-party application to make
-                    the data visualization experience smoother.
+                    the data visualisation experience smoother.
                   </li>
                   <li>
                     Dashboards are easy to personalise and customise as per your
@@ -1212,7 +1212,7 @@ const PowerBIGuide = () => {
                   </li>
                   <li>
                     A Power BI Dashboard allows users to create and show
-                    visualizations from multiple datasets and reports.
+                    visualisations from multiple datasets and reports.
                   </li>
                   <li>
                     The Power BI Dashboard enables users to view and analyse the
@@ -1224,7 +1224,7 @@ const PowerBIGuide = () => {
                   <b className="h3">Power BI Dashboards Vs. Reports</b>
                 </p>
                 <p>
-                  Power BI Dashboard is meant to summarize the data
+                  Power BI Dashboard is meant to summarise the data
                   visualisation, whereas reports are intended to show a detailed
                   representation of the data.
                   <br className="mrg" />
@@ -1606,7 +1606,7 @@ const PowerBIGuide = () => {
                 </p>
                 <p>
                   The Power BI Sales dashboard is for users, like sales managers,
-                  who have to visualize the data based on sales data, count,
+                  who have to visualise the data based on sales data, count,
                   opportunity, and more.
                   <br className="mrg" /> The purpose of the sales dashboard is
                   to evaluate the sales data, measure the sales performance, and
@@ -1746,10 +1746,10 @@ const PowerBIGuide = () => {
                     implemented Power BI
                   </Link>{" "}
                   BI to eliminate the data silos and build an efficient data
-                  visualization platform. Power BI replaced the time used to
+                  visualisation platform. Power BI replaced the time used to
                   gather and extract data with analyzing it for more results and
                   growth. Power BI enables thousands of users to interact and
-                  create personalized dashboards based on different aspects of
+                  create personalised dashboards based on different aspects of
                   the business. The organisation uses the dashboard to gain
                   insights and focus efforts on the organisation's weaker areas.
                 </p>
@@ -1757,7 +1757,7 @@ const PowerBIGuide = () => {
                   <b>Finance - Case 2:</b> PwC, the world's largest accounting
                   firm, has implemented Azure and Power BI to provide real-time
                   and useful insights. The DIA (Deals, Insights, and Analytics
-                  team) realized that most of their clients already use Power BI
+                  team) realised that most of their clients already use Power BI
                   for simple and quick visualisations. They found Power BI
                   dashboards to be an easy way to create and share valuable
                   insights with the clients throughout the deal and acquisition
@@ -2201,11 +2201,11 @@ const PowerBIGuide = () => {
                       <span>Free / $0</span>
                     </p>
                     <p>
-                    Users can create quick insights, understand the data, and share the visualization using Power BI web portal. 
+                    Users can create quick insights, understand the data, and share the visualisation using Power BI web portal. 
                     </p>
                     <ul>
                       <li>
-                      Comes with Office 365 to streamline the data processing and visualization.
+                      Comes with Office 365 to streamline the data processing and visualisation.
                       </li>
                     </ul>
                   </div>
@@ -2220,7 +2220,7 @@ const PowerBIGuide = () => {
                       <span>£10.80</span>
                     </p>
                     <p>
-                    license Power BI Pro individual for modern analytics with data visualizations. 
+                    license Power BI Pro individual for modern analytics with data visualisations. 
                     </p>
                     <ul>
                       <li>
@@ -2666,7 +2666,7 @@ const PowerBIGuide = () => {
                 <p>
                   All businesses, whether small or large, are using data science
                   and data analytics to get actionable insights and make
-                  data-driven decisions. Utilizing the data defines the future
+                  data-driven decisions. Utilising the data defines the future
                   of the business.{" "}
                 </p>
                 <p>
@@ -2697,7 +2697,7 @@ const PowerBIGuide = () => {
                 <p>
                   With our ultimate Power BI guide, we hope you've gained better
                   insights and familiar with Power BI's capabilities and how it
-                  can help you visualize data accurately to help your business
+                  can help you visualise data accurately to help your business
                   grow and scale quickly.
                 </p>
                 <p>
@@ -2774,7 +2774,7 @@ const PowerBIGuide = () => {
                   Power BI will assist businesses in simplifying difficult data,
                   analysing large amounts of data with ease, and providing users
                   with accurate visualisation, making the entire data
-                  utilization process simple.
+                  utilisation process simple.
                 </p>
                 <p>
                   We hope you enjoyed this comprehensive Power BI guide for

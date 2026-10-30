@@ -53,7 +53,7 @@ const MicrosoftDynamicsPartnerLiverpool = () => {
                 <h2>Microsoft Certified Solutions Partner in Liverpool: One-Stop Solution for all Microsoft Dynamics Issues </h2>
 
                 <p>Get all your Dynamics 365 issues fixed by a reliable, trustworthy, and cost-effective Microsoft Dynamics 365 partner based in Liverpool, UK. Being one of the major cities in the UK, various businesses from different industries are located here, providing a positive environment for growth. </p>
-                <p>As per our recent data, most of these businesses are utilizing Microsoft business applications to streamline all operations and processes with enhanced efficiency.</p>
+                <p>As per our recent data, most of these businesses are utilising Microsoft business applications to streamline all operations and processes with enhanced efficiency.</p>
                 <p><b>There are several reasons that justify the choice of Microsoft, including:</b></p>
                 <ul>
                   <li>Scalability</li>
@@ -364,7 +364,7 @@ const MicrosoftDynamicsPartnerLiverpool = () => {
               </div>
               <div className="parten-more">
                 <h3>Business-Specific Solution</h3>
-                <p>All businesses are unique, and to justify the specific business requirements, we can customise any business solution. This personalization empowers the business to deal with unique business requirements while growing at a constant pace.  </p>
+                <p>All businesses are unique, and to justify the specific business requirements, we can customise any business solution. This personalisation empowers the business to deal with unique business requirements while growing at a constant pace.  </p>
               </div>
               <div className="parten-more">
                 <h3>Highly Competitive Pricing</h3>

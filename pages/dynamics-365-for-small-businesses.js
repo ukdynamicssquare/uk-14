@@ -53,7 +53,7 @@ const MicrosoftCloudForNonpro = () => {
                 <p>Transform how your business runs with tools designed to streamline processes, scale efficiently, and fuel success.</p>
                 <ul>
                   <li><i className="bi bi-check-circle-fill"></i>  Accelerate your workflows</li>
-                  <li><i className="bi bi-check-circle-fill"></i>  Optimize your spending</li>
+                  <li><i className="bi bi-check-circle-fill"></i>  Optimise your spending</li>
                   <li><i className="bi bi-check-circle-fill"></i>  Make data-driven choices</li>
                 </ul>
 
@@ -105,7 +105,7 @@ const MicrosoftCloudForNonpro = () => {
               </div>
               <div className="col-lg-4 align-self-center">
                 <div className="card-21">
-                  <h3><span>82% </span>of organizations struggle with data integration</h3>
+                  <h3><span>82% </span>of organisations struggle with data integration</h3>
                 </div>
               </div>
               <div className="col-lg-4">
@@ -190,7 +190,7 @@ const MicrosoftCloudForNonpro = () => {
                         Sales</h3>
                     </div>
                     <div className="card-body">
-                      <p>Centralize customer data, track leads, and close deals faster with AI-driven insights and simplified quoting.</p>
+                      <p>Centralise customer data, track leads, and close deals faster with AI-driven insights and simplified quoting.</p>
                       <div className='cat-float'>
                         <span>Get Started</span>
                       </div>
@@ -210,7 +210,7 @@ const MicrosoftCloudForNonpro = () => {
                         Customer Insights</h3>
                     </div>
                     <div className="card-body">
-                      <p>Discover patterns, predict behaviour, and create personalized customer journeys.</p>
+                      <p>Discover patterns, predict behaviour, and create personalised customer journeys.</p>
                       <div className='cat-float'>
                         <span>Get Started</span>
                       </div>
@@ -230,7 +230,7 @@ const MicrosoftCloudForNonpro = () => {
                         Power Platform</h3>
                     </div>
                     <div className="card-body">
-                      <p>Create custom apps, automate repetitive tasks, and visualize key metrics with real-time dashboards.</p>
+                      <p>Create custom apps, automate repetitive tasks, and visualise key metrics with real-time dashboards.</p>
                       <div className='cat-float'>
                         <span>Get Started</span>
                       </div>
@@ -264,7 +264,7 @@ const MicrosoftCloudForNonpro = () => {
                 <div className="card-233">
                   <div className="card-233-body">
                     <h3>Affordable Solutions, Powerful Returns</h3>
-                    <p>Flexible plans designed to maximize value and deliver measurable returns.</p>
+                    <p>Flexible plans designed to maximise value and deliver measurable returns.</p>
                   </div>
                   <div className="card-233-body">
                     <h3>Quick Setup, Easy to Use</h3>
@@ -272,10 +272,10 @@ const MicrosoftCloudForNonpro = () => {
                   </div>
                   <div className="card-233-body">
                     <h3>Be More Efficient with Automation</h3>
-                    <p>Streamline workflows, minimize errors, and free up time for strategic priorities.</p>
+                    <p>Streamline workflows, minimise errors, and free up time for strategic priorities.</p>
                   </div>
                   <div className="card-233-body">
-                    <h3>Centralized Insights</h3>
+                    <h3>Centralised Insights</h3>
                     <p>Access all your data in one place to make better decisions faster.</p>
                   </div>
                   <div className="card-233-body">
@@ -465,7 +465,7 @@ const MicrosoftCloudForNonpro = () => {
                               2X
                             </div>
                             <div className='r-left'>
-                              <p>Optimized <br />Replenishment Procedures</p>
+                              <p>Optimised <br />Replenishment Procedures</p>
                             </div>
                           </div>
                           <div className='test-inf-achive'>
@@ -517,7 +517,7 @@ const MicrosoftCloudForNonpro = () => {
                           <div className='test-s-info'>
                             <figure>
                               <Image src="/img/avatar.png" alt="avatar" width={84} height={84} />
-                              <p>Impressed by Dynamics Square's ERP upgrade & customization. Their virtual collaboration made our transition seamless. Highly recommend for business growth.</p>
+                              <p>Impressed by Dynamics Square's ERP upgrade & customisation. Their virtual collaboration made our transition seamless. Highly recommend for business growth.</p>
                               <h5>Tristan Cliffe</h5>
                               <span>Director</span>
                             </figure>

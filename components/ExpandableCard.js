@@ -30,7 +30,7 @@ export default function ExpandableCard() {
     },
     {
       name: "Power Platform",
-      heading: "Revolutionize the way you work",
+      heading: "Revolutionise the way you work",
       content: "Build apps, automate workflows, gain insights from data, and enhance agile efficiency.",
     },
     {

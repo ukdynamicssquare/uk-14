@@ -236,7 +236,7 @@ If you require minor adjustments or have minor issues, our Microsoft-certified t
                           their sales practices more efficiently with real-time
                           efficiency. Understanding your sales practices, we can
                           deploy your business-specific solution to engage more
-                          customers and maximize your revenue with AI-based
+                          customers and maximise your revenue with AI-based
                           insights.
                         </p>
                       </div>
@@ -380,7 +380,7 @@ If you require minor adjustments or have minor issues, our Microsoft-certified t
                     >
                       <div className="accordion-body">
                         <p>
-                          Delivering an omnichannel, personalized, and seamless
+                          Delivering an omnichannel, personalised, and seamless
                           experience to your buyers is the hourly need. Being a
                           Dynamics 365 consultant in Bristol, Dynamics Square
                           can develop and deploy an AI-driven solution for your
@@ -447,7 +447,7 @@ If you require minor adjustments or have minor issues, our Microsoft-certified t
                         <p>
                           When your requirement goes to managing your HR
                           operations, tracking employees' performance, or to
-                          maximizing organizational agility, configuring your
+                          maximising organizational agility, configuring your
                           system with{" "}
                           <Link href="/products/dynamics-365-human-resources/">
                             Dynamics 365 Human Resources

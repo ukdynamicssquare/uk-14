@@ -127,7 +127,7 @@ const WebinarList = () => {
                           <h5 className="card-title">
                             <a href="https://www.youtube.com/watch?v=Evkj4zfpk0Q" target="_blank">Introduction to Power BI</a>
                           </h5>
-                          <p>In this webinar you're going to learn all about Power BI through live demo! Power BI is a tool that allows accounting and finance managers and professionals to have relevant information at the right time to make strategic decisions in a flexible, centralized, and secure way. Transform your business with predictive analytics, data visualization, and information in real-time, thanks to Power BI.</p>
+                          <p>In this webinar you're going to learn all about Power BI through live demo! Power BI is a tool that allows accounting and finance managers and professionals to have relevant information at the right time to make strategic decisions in a flexible, centralised, and secure way. Transform your business with predictive analytics, data visualisation, and information in real-time, thanks to Power BI.</p>
                           <div className="btn-003 btn-009"><a className="btn btn-sm btn-danger" href="https://www.youtube.com/watch?v=Evkj4zfpk0Q" target="_blank">Watch Now</a></div>
                         </div>
                       </div>

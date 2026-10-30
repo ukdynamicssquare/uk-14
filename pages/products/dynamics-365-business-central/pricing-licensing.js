@@ -258,7 +258,7 @@ const BusinessCentral = () => {
                     <h5>Consider Additional Needs</h5>
 
                     <p>
-                      Factor in integrations, customizations,
+                      Factor in integrations, customisations,
                       and storage.
                     </p>
                   </div>

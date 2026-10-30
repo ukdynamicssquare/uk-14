@@ -200,7 +200,7 @@ const MicrosoftDynamicsPartnerSheffield = () => {
                 </div>
                 <div className="style-grid-content">
                   <h3>Dynamics 365 Field Service</h3>
-                  <p>Industries that depend on on-site support representatives have a critical requirement for <Link href="/products/microsoft-dynamics-365-field-service/">Dynamics 365 Field Service</Link>. Because it can manage all representatives, track resources, and monitor support status in real-time. It offers an omnichannel experience for the business as well as the executive to offer seamless service to the customer. After the implementation, you will need a Dynamics 365 Field Service support service to bring digitalization and create a long-lasting impact on customers. </p>
+                  <p>Industries that depend on on-site support representatives have a critical requirement for <Link href="/products/microsoft-dynamics-365-field-service/">Dynamics 365 Field Service</Link>. Because it can manage all representatives, track resources, and monitor support status in real-time. It offers an omnichannel experience for the business as well as the executive to offer seamless service to the customer. After the implementation, you will need a Dynamics 365 Field Service support service to bring digitalisation and create a long-lasting impact on customers. </p>
                 </div>
               </div>
             </div>

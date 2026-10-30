@@ -278,7 +278,7 @@ const ContactUs = () => {
                               2X
                             </div>
                             <div className='r-left'>
-                              <p>Optimized <br />Replenishment Procedures</p>
+                              <p>Optimised <br />Replenishment Procedures</p>
                             </div>
                           </div>
                           <div className='test-inf-achive'>
@@ -330,7 +330,7 @@ const ContactUs = () => {
                           <div className='test-s-info'>
                             <figure>
                               <Image src="/img/avatar.png" alt="avatar" width={126} height={126} />
-                              <p>Impressed by Dynamics Square's ERP upgrade & customization. Their virtual collaboration made our transition seamless. Highly recommend for business growth.</p>
+                              <p>Impressed by Dynamics Square's ERP upgrade & customisation. Their virtual collaboration made our transition seamless. Highly recommend for business growth.</p>
                               <h5>Tristan Cliffe</h5>
                               <span>Director</span>
                             </figure>

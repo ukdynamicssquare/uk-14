@@ -98,7 +98,7 @@ const MicrosoftDynamics365Ai = () => {
                         <div className="wr-in">
                           <img src="/img/Budget.svg" alt="icons" />
                         </div>
-                        <span>Customized Transformation</span>
+                        <span>Customised Transformation</span>
                       </button>
                     </h3>
                     <div
@@ -237,7 +237,7 @@ const MicrosoftDynamics365Ai = () => {
           <div className="row justify-content-center">
             <div className="col-lg-8">
               <div className="call-to-action-content">
-                <h3>Maximize your business potentials</h3>
+                <h3>Maximise your business potentials</h3>
                 <p>Microsoft Dynamics 365Artificial Intelligence (AI)</p>
                 <div className="text-center m-o-t new-btn-nn">
                   <Link

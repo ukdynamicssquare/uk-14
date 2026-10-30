@@ -52,7 +52,7 @@ const FieldService = () => {
                 Field Service
               </h1>
               <p>
-                Streamline Your Field Operations & Optimize Your Resources
+                Streamline Your Field Operations & Optimise Your Resources
                 Leveraging Microsoft Dynamics 365 Field Service
               </p>
               <div>
@@ -161,7 +161,7 @@ const FieldService = () => {
                             height="36"
                           />
                         </div>
-                        <span>Optimize Resource Scheduling</span>
+                        <span>Optimise Resource Scheduling</span>
                       </button>
                     </h3>
                     <div
@@ -217,7 +217,7 @@ const FieldService = () => {
                         Addressing your specific business needs, you can
                         integrate your Dynamics 365 Field Service with any of
                         Microsoft's products or services to enrich your
-                        capabilities and maximize efficiency.
+                        capabilities and maximise efficiency.
                       </div>
                     </div>
                   </div>
@@ -652,7 +652,7 @@ const FieldService = () => {
           <div className="row justify-content-center">
             <div className="col-lg-8">
               <div className="call-to-action-content">
-                <h3>Maximize your business potentials</h3>
+                <h3>Maximise your business potentials</h3>
                 <p>
                   Drive new business challenges by implementing Dynamics 365
                   Field Service
@@ -881,7 +881,7 @@ const FieldService = () => {
                   >
                     <div className="accordion-body">
                       Yes, users can use the Field Service app whether online or
-                      offline as this app gets synchronized automatically
+                      offline as this app gets synchronised automatically
                       whenever the new things or data gets updated or uploaded.
                       Thus, if you are lacking with internet connection at any
                       place, you can simply tap the offline option. While
@@ -1021,7 +1021,7 @@ const FieldService = () => {
                       href="/pdf/5-innovative-ways-industry-leaders-modernize-their-field-service.pdf"
                     >
                       <i className="bi bi-file-earmark-pdf"></i>Innovative Ways
-                      Industry Leaders Modernize Their Field Service
+                      Industry Leaders Modernise Their Field Service
                     </a>
                   </li>
                   <li>

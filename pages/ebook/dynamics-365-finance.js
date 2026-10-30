@@ -149,7 +149,7 @@ const StartGuideOne = () => {
                  <p>
                  D365 Finance is an intelligent ERP (Enterprise Resource Planning) 
                  solution to manage finance and its various aspects smoothly. But, 
-                 before the modernization of industries, people used to work on 
+                 before the modernisation of industries, people used to work on 
                  everything manually.
                  </p>
                  <p>

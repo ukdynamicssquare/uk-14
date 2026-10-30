@@ -8,7 +8,7 @@ const CrmModule = () => {
       <PageSeo
         type="Service"
         title="CRM Module for Dynamics 365 Business Central | Dynamics Square UK"
-        description="Manage customer and offer best customer experience utilizing the advanced capabilities of Dynamics 365 Business Central CRM Module."
+        description="Manage customer and offer best customer experience utilising the advanced capabilities of Dynamics 365 Business Central CRM Module."
         image="/img/crm-module.png"
       />
       <section className="Solution-banner hero-1 hero">
@@ -65,7 +65,7 @@ const CrmModule = () => {
               <div className="custom002">
                 <p>Business Central is an all-in-one ERP solution capable of connecting and streamlining different departments of a business that include finance, sales, inventory, warehouse, customer service, and marketing. Being a cloud-based solution, it offers powerful capabilities to deal with modern business needs. </p>
                 <p>With a unified database, it unifies the information and simplifies business operations for enhanced output. Embedded with modern business technologies like AI, BI, and ML, Business Central comes with automation to enhance overall business efficiency and productivity. After <Link href="/dynamics-365-business-central-implementation/" target="_blank">Business Central implementation</Link>, businesses have reported a 23% reduction in operational costs, an 80% reduction in IT costs, a 2X increase in efficiency, and a 30% increase in productivity. </p>
-                <p>Being a part of the <Link href="/products/microsoft-dynamics-365/" target="_blank">Dynamics 365 group of applications</Link>, Business Central offers a number of benefits to businesses, including real-time decision-making, actionable data insights, a simple user interface, easy customization, and global connectivity to manage all locations.</p>
+                <p>Being a part of the <Link href="/products/microsoft-dynamics-365/" target="_blank">Dynamics 365 group of applications</Link>, Business Central offers a number of benefits to businesses, including real-time decision-making, actionable data insights, a simple user interface, easy customisation, and global connectivity to manage all locations.</p>
               </div>
             </div>
             <div className="col-lg-1 align-self-center"></div>

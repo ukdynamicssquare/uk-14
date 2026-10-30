@@ -126,8 +126,8 @@ const Startup = () => {
                 <p>
                   Dynamics 365 Manufacturing ERP, CRM and BI solutions helps to
                   unify manufacturing operations, enables better visibility, and
-                  boosts customer engagement while minimizing downtime and
-                  maximizing resource utilization which in turn impacts the
+                  boosts customer engagement while minimising downtime and
+                  maximising resource utilisation which in turn impacts the
                   productivity level as well as scalability.
                 </p>
               </div>
@@ -141,7 +141,7 @@ const Startup = () => {
                     </div>
                     <div className="cintent-right">
                       <p>
-                        Centralize your product information while improving
+                        Centralise your product information while improving
                         quality, safety, and quality training practices across
                         your manufacturing unit. Effectively plan and drive
                         seamless distribution. Even you can re-plan production
@@ -243,7 +243,7 @@ const Startup = () => {
                     <p>
                       Introduce new product range and service rapidly.
                       Streamline change management while improving safety,
-                      boosting quality, and maximizing productivity.{" "}
+                      boosting quality, and maximising productivity.{" "}
                     </p>
                   </div>
                 </div>
@@ -331,7 +331,7 @@ const Startup = () => {
                     <p>
                       Accelerate lead generation and identify opportunities.
                       Streamline & automate sales data and drive omnichannel
-                      experience to attain maximized results.
+                      experience to attain maximised results.
                     </p>
                   </div>
                 </div>
@@ -347,7 +347,7 @@ const Startup = () => {
                     <h3>Customer Management</h3>
                     <p>
                       Build and sustain your massive customer relationship with
-                      real-time predictive insights. Personalize your customer
+                      real-time predictive insights. Personalise your customer
                       engagement to drive sales.{" "}
                     </p>
                   </div>
@@ -677,7 +677,7 @@ const Startup = () => {
                                 <div className="text-wrp-content">
                                   <h3>E-Commerce</h3>
                                   <p>
-                                    Optimize Your End-To-End Ecommerce Processes
+                                    Optimise Your End-To-End Ecommerce Processes
                                     And Improve Your Customer Experience.
                                   </p>
                                   <span>Explore Now</span>

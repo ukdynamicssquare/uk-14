@@ -344,7 +344,7 @@ const MicrosoftDynamicsPartnerManchester = () => {
                     >
                       <div className="accordion-body">
                         <p>
-                        Access marketing automation tools, win customers, and earn loyalty by offering personalized customer journey. 
+                        Access marketing automation tools, win customers, and earn loyalty by offering personalised customer journey. 
                         </p>
                       </div>
                     </div>
@@ -425,7 +425,7 @@ const MicrosoftDynamicsPartnerManchester = () => {
                     >
                       <div className="accordion-body">
                         <p>
-                        Visualize the complex data on a single interactive dashboard and make it the key to consistent growth.  
+                        Visualise the complex data on a single interactive dashboard and make it the key to consistent growth.  
 
                     Some of the services we offer are: 
                     <ul>

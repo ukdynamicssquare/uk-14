@@ -110,7 +110,7 @@ const MicrosoftCloudForNonpro = () => {
               <div className="col-lg-4">
                 <div className="card-20">
                   <h3>Navigating Compliance Across Regions </h3>
-                  <p>Adhering to diverse regulatory frameworks across borders requires robust tools to minimize risk and maintain trust. </p>
+                  <p>Adhering to diverse regulatory frameworks across borders requires robust tools to minimise risk and maintain trust. </p>
                 </div>
               </div>
             </div>
@@ -271,7 +271,7 @@ const MicrosoftCloudForNonpro = () => {
                       Power Platform</h3>
                     </div>
                     <div className="card-body">
-                      <p>Design custom apps, automate workflows, and visualize data to streamline complex tasks. </p>
+                      <p>Design custom apps, automate workflows, and visualise data to streamline complex tasks. </p>
                       <div className='cat-float'>
                         <span>Get Started</span>
                       </div>
@@ -391,7 +391,7 @@ const MicrosoftCloudForNonpro = () => {
                   </div>
                   <div className="card-233-body">
                     <h3><span><i className="bi bi-check2"></i></span>Collaborative Excellence </h3>
-                    <p>Break down silos and enable teams to work together more effectively with centralized solutions. </p>
+                    <p>Break down silos and enable teams to work together more effectively with centralised solutions. </p>
                   </div>
                   <div className="card-233-body">
                     <h3><span><i className="bi bi-check2"></i></span>Smarter Business Growth </h3>
@@ -399,7 +399,7 @@ const MicrosoftCloudForNonpro = () => {
                   </div>
                   <div className="card-233-body">
                     <h3><span><i className="bi bi-check2"></i></span>Tools for Global Success </h3>
-                    <p>Operate seamlessly across international borders with adaptable, localized solutions.</p>
+                    <p>Operate seamlessly across international borders with adaptable, localised solutions.</p>
                   </div>
               
                  
@@ -587,7 +587,7 @@ const MicrosoftCloudForNonpro = () => {
                               2X
                             </div>
                             <div className='r-left'>
-                              <p>Optimized <br />Replenishment Procedures</p>
+                              <p>Optimised <br />Replenishment Procedures</p>
                             </div>
                           </div>
                           <div className='test-inf-achive'>
@@ -639,7 +639,7 @@ const MicrosoftCloudForNonpro = () => {
                           <div className='test-s-info'>
                             <figure>
                               <Image src="/img/avatar.png" alt="avatar" width={84} height={84} />
-                              <p>Impressed by Dynamics Square's ERP upgrade & customization. Their virtual collaboration made our transition seamless. Highly recommend for business growth.</p>
+                              <p>Impressed by Dynamics Square's ERP upgrade & customisation. Their virtual collaboration made our transition seamless. Highly recommend for business growth.</p>
                               <h5>Tristan Cliffe</h5>
                               <span>Director</span>
                             </figure>

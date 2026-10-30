@@ -62,7 +62,7 @@ const CaseStudyWiper = () => {
                 ]}
                 title="About Wiper Supply"
               >
-                <p><strong>Wiper Supply</strong> was established in 1993 and is a British-based wholesaler of hygienic disposable cleaning and wiping products. They deliver their products to national as well as international clients of restaurants, hotels, manufacturing industries, and more. They specialize in manufacturing and supplying 70 GSM heavy-duty color-coded wipes and disposable non-woven wiping products to different industries.</p>
+                <p><strong>Wiper Supply</strong> was established in 1993 and is a British-based wholesaler of hygienic disposable cleaning and wiping products. They deliver their products to national as well as international clients of restaurants, hotels, manufacturing industries, and more. They specialise in manufacturing and supplying 70 GSM heavy-duty color-coded wipes and disposable non-woven wiping products to different industries.</p>
               </CaseStudyClientCard>
             </div>
           </div>
@@ -229,7 +229,7 @@ const CaseStudyWiper = () => {
                             </div>
                             <div className="text-wrp-content">
                               <p>
-                                We used this data to send customized mails for
+                                We used this data to send customised mails for
                                 up-sale and cross-sale to a particular group of
                                 customers.
                               </p>

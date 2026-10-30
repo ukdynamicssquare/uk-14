@@ -443,7 +443,7 @@ const SupportServices = () => {
                 <div className="icons">
                   <img src="/img/service-i-05.svg" alt="" aria-hidden="true"  loading="lazy" decoding="async" />
                   <h3>
-                    Customized
+                    Customised
                     <br />
                     Support Model
                   </h3>

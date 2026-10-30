@@ -19,7 +19,7 @@ const OG_IMAGE = "https://www.dynamicssquare.co.uk/img/Dynamics-365-Finance-Bann
 const pillars = [
   { icon: "bi-lightbulb", title: "MAKE SMARTER DECISIONS", text: "Unifying financial and business operations enables businesses to deliver real-time visibility across their organisation for better and faster decisions." },
   { icon: "bi-lightning-charge", title: "TRANSFORM BUSINESS FASTER", text: "Transforming businesses by easily redesigning processes without disrupting operations is crucial for organisations to stay competitive." },
-  { icon: "bi-graph-up-arrow", title: "GROW AT YOUR PACE", text: "Helping businesses grow at their own pace is about giving them the choice and flexibility to modernize their organisations at the pace that works for them with the ability to do business anywhere, anytime." },
+  { icon: "bi-graph-up-arrow", title: "GROW AT YOUR PACE", text: "Helping businesses grow at their own pace is about giving them the choice and flexibility to modernise their organisations at the pace that works for them with the ability to do business anywhere, anytime." },
 ];
 
 const modules = [
@@ -38,7 +38,7 @@ const modules = [
     items: [
       { title: "Vendor Collaboration", text: "Streamline vendor collaboration to respond to business needs and customer demands. Dynamics 365 for Finance and Operations enables vendors to work with purchase order, invoice, and consignment inventory information. Vendors can review, accept and reject purchase orders, review the status of invoices and online payment. Users can create purchase order invoices and upload invoice documents to a portal." },
       { title: "Inventory Management", text: "Track items by inventory dimensions, including site, warehouse, pallet, location, batch, and serial number. Take advantage of multiple inventory control systems and inventory valuation methods including first in/ first out, last in/ first out, standard cost, moving, and weighted average." },
-      { title: "Multi-site Warehouse Management", text: "Manage storage locations and material handling within warehouses. Apply advanced inbound algorithms using multiple warehouse zones and replenishment strategies. Optimize picking with a choice of picking methods. Track inventory on hand per warehouse." },
+      { title: "Multi-site Warehouse Management", text: "Manage storage locations and material handling within warehouses. Apply advanced inbound algorithms using multiple warehouse zones and replenishment strategies. Optimise picking with a choice of picking methods. Track inventory on hand per warehouse." },
     ],
   },
   {
@@ -63,8 +63,8 @@ const modules = [
     id: "manufacturing", icon: "/img/Project.svg", title: "Manufacturing",
     intro: "Designed for ease of implementation and adoption, Microsoft Dynamics 365 for Finance and Operations delivers insights at all levels of the organisation to support innovation, speeds response to changing constraints, and improves quality and customer satisfaction. Microsoft Dynamics supports integration with existing systems, lowering your total cost of ownership and future-proofing your investment through continuous delivery of new innovation.",
     items: [
-      { title: "Material And Capacity Planning", text: "Optimize production and materials planning, forecasting, and scheduling. Simultaneously schedule materials and capacity. Calculate available-to-promise (ATP) and capable-to-promise (CTP) deliveries." },
-      { title: "Production Scheduling", text: "Use finite or infinite scheduling, forward and backward from various dates. Quickly (re)schedule jobs and simulate alternatives by dragging Gantt chart items. Resolve scheduling overloads by reassigning operations to alternate work centers. Optimize scheduling across the organisation with a unified resource model and scheduling engine." },
+      { title: "Material And Capacity Planning", text: "Optimise production and materials planning, forecasting, and scheduling. Simultaneously schedule materials and capacity. Calculate available-to-promise (ATP) and capable-to-promise (CTP) deliveries." },
+      { title: "Production Scheduling", text: "Use finite or infinite scheduling, forward and backward from various dates. Quickly (re)schedule jobs and simulate alternatives by dragging Gantt chart items. Resolve scheduling overloads by reassigning operations to alternate work centers. Optimise scheduling across the organisation with a unified resource model and scheduling engine." },
       { title: "Demand Forecasting", text: <>Demand Forecasting is a lightweight, yet powerful tool that enables organisations to forecast based on historical data, leverage the power of <Link href="/products/azure-machine-learning/">Azure Machine Learning</Link>, adjust the forecasts using <Link href="/products/microsoft-dynamics-365/integration/">Microsoft Excel</Link>, and import the values into Microsoft Dynamics 365 for Finance and Operations forecast models.</> },
     ],
   },
@@ -72,7 +72,7 @@ const modules = [
     id: "services", icon: "/img/services.png", title: "Services",
     items: [
       { title: "Cloud Service", text: "Microsoft Dynamics 365 helps IT professionals manage business growth, mitigate risk, improve organisational productivity, and deliver amazing customer experiences through tools that improve the speed of doing business." },
-      { title: "Mobility", text: "The Dynamics 365 for Finance and Operations mobile app empowers your organisation to mobilize your business processes. Enable employees to perform work anytime, anywhere to keep your customers happy, increase productivity, and drive business profitability." },
+      { title: "Mobility", text: "The Dynamics 365 for Finance and Operations mobile app empowers your organisation to mobilise your business processes. Enable employees to perform work anytime, anywhere to keep your customers happy, increase productivity, and drive business profitability." },
       { title: "Workspace", text: "D365 for Finance and Operations provides powerful user and role-based work-spaces that connects your people with data and processes to make better decisions." },
     ],
     outro: { title: "Integrated, Flexible And Scalable Solutions", text: "Start with D365 Finance and Operations, then add more Dynamics 365 modules as you grow." },
@@ -437,7 +437,7 @@ const FinanceOperations = () => {
         <div className="container">
           <div className={styles.final}>
             <div className={styles.finalText}>
-              <h3>Standardize adapting to changing market fluctuations with Dynamics 365 F&amp;O.</h3>
+              <h3>Standardise adapting to changing market fluctuations with Dynamics 365 F&amp;O.</h3>
               <p>Accept market and customer requirements while offering optimum satisfaction. On-board Dynamics 365 for Finance and Operations experts to give your business a must needed digital transformation.</p>
             </div>
             <div className={styles.finalAction}>

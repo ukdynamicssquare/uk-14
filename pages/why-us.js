@@ -285,7 +285,7 @@ const WhyUs = () => {
                 and proven methodologies to help clients to design, implement
                 and manage their business solutions that align to business
                 priorities, maximum return on their investment and to create
-                high performance organizations.
+                high performance organisations.
               </p>
             </header>
             <div className="row pdd1">

@@ -403,7 +403,7 @@ const Dynamics365ForConstruction = () => {
                                   <h3>Not for Profit</h3>
                                   <p>
                                     Bring Transparency And Drive Efficiency In
-                                    Your Non-Profit Organization With Microsoft
+                                    Your Non-Profit Organisation With Microsoft
                                     Dynamics 365 For Charities.
                                   </p>
                                   <span>Explore Now</span>
@@ -427,7 +427,7 @@ const Dynamics365ForConstruction = () => {
                                 <div className="text-wrp-content">
                                   <h3>E-Commerce</h3>
                                   <p>
-                                    Optimize Your End-To-End Ecommerce Processes
+                                    Optimise Your End-To-End Ecommerce Processes
                                     And Improve Your Customer Experience.
                                   </p>
                                   <span>Explore Now</span>

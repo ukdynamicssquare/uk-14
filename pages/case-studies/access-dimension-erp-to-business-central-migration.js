@@ -91,7 +91,7 @@ const AccessDimensionErpToBusinessCentralMigration = () => {
                   ]}
                   title="About Omicron Engineering"
                 >
-                  <p><strong>Omicron Engineering</strong> is a leading car restoration and customization company in the UK, specializes in classic Lancia vehicles. They also offer spare parts for classic and antique cars, with a vast inventory of over 11,000 parts available for global delivery. With their exceptional services, they have built a client base spanning over 70 countries. Their fully equipped workshop provides partial and full restorations, along with modifications such as trim, bodywork, engine enhancements, gearbox rebuilds, performance upgrades, and servicing.</p>
+                  <p><strong>Omicron Engineering</strong> is a leading car restoration and customisation company in the UK, specialises in classic Lancia vehicles. They also offer spare parts for classic and antique cars, with a vast inventory of over 11,000 parts available for global delivery. With their exceptional services, they have built a client base spanning over 70 countries. Their fully equipped workshop provides partial and full restorations, along with modifications such as trim, bodywork, engine enhancements, gearbox rebuilds, performance upgrades, and servicing.</p>
                 </CaseStudyClientCard>
               </div>
             </div>
@@ -255,7 +255,7 @@ const AccessDimensionErpToBusinessCentralMigration = () => {
                                 />
                               </div>
                               <div className="text-wrp-content">
-                                <p>The inventory management module allowed the business to manage even the minutest details of their spare parts inventory, resulting in 100% resource utilization.</p>
+                                <p>The inventory management module allowed the business to manage even the minutest details of their spare parts inventory, resulting in 100% resource utilisation.</p>
                               </div>
                             </div>
                           </div>
@@ -274,7 +274,7 @@ const AccessDimensionErpToBusinessCentralMigration = () => {
                                 />
                               </div>
                               <div className="text-wrp-content">
-                                <p>The optimization of their operations and support of their growth objectives through modern solutions.</p>
+                                <p>The optimisation of their operations and support of their growth objectives through modern solutions.</p>
                               </div>
                             </div>
                           </div>

@@ -272,12 +272,12 @@ const MicrosoftDynamics365Ai = () => {
                 <div className="style-grid-icons">
                   <Image
                     src="/img/i-cons-10.png"
-                    alt="Modernize Order Management"
+                    alt="Modernise Order Management"
                     width={104} height={104}
                   />
                 </div>
                 <div className="style-grid-content">
-                  <h3>Modernize Order Management</h3>
+                  <h3>Modernise Order Management</h3>
                   <p>Leverage the integrated <a href="/blog/crm-functionality-in-dynamics-365-business-central/">CRM capabilities</a> to perform efficient sales order management and streamline order-to-cash processes.</p>
                 </div>
               </div>

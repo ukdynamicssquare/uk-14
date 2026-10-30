@@ -234,7 +234,7 @@ const PowerVirtualAgents = () => {
                         chatbots but also helps you in creating them in a much
                         smarter way. Thus it offers you suggestions about the
                         topics on which you can create chatbots. It helps you in
-                        creating rich chats that are not just customized but are
+                        creating rich chats that are not just customised but are
                         available in natural language to convince the customers
                         and clients much better.
                         <br />
@@ -377,7 +377,7 @@ const PowerVirtualAgents = () => {
                         <p>
                           Improve customer satisfaction by enabling customers to
                           quickly self-help and resolve issues 24/7 using
-                          personalized bot conversations.
+                          personalised bot conversations.
                         </p>
                       </div>
                     </div>

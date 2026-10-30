@@ -157,7 +157,7 @@ const Dynamics365vsSalesForce = () => {
                   <li><Link href="/products/microsoft-dynamics-365-customer-service/">Dynamics 365 for Customer Service</Link></li>
                   <li><Link href="/products/microsoft-dynamics-365-field-service/">Dynamics 365 for Field Service</Link></li>
                 </ul>
-                <p>Microsoft has recently updated Microsoft Dynamics 365 CRM to <Link href="/products/dynamics-365-customer-engagement/">Microsoft Dynamics 365 Customer Engagement</Link>. It’s not just the name change; it’s a revolution towards modernization and digitalization of businesses.</p>
+                <p>Microsoft has recently updated Microsoft Dynamics 365 CRM to <Link href="/products/dynamics-365-customer-engagement/">Microsoft Dynamics 365 Customer Engagement</Link>. It’s not just the name change; it’s a revolution towards modernisation and digitalisation of businesses.</p>
                 <div className="text-center mm-t">
                   <Link
                     href="#exampleModal"
@@ -597,7 +597,7 @@ const Dynamics365vsSalesForce = () => {
               proven methodologies to help clients to design, implement and
               manage their business solutions that align to business priorities,
               maximum return on their investment and to create high performance
-              organizations.
+              organisations.
             </p>
           </header>
           <div className="row pad-3y">

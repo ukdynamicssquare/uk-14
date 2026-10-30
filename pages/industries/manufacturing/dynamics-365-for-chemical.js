@@ -483,7 +483,7 @@ const Chemical = () => {
               <div className="pharma-timeline__dot">2</div>
               <div className="pharma-timeline__card pharma-timeline__card--right">
                 <h4>Initiate</h4>
-                <p>Dynamics Square helps you finalize the platform, define scope and governance, and give formula and item data a named owner.</p>
+                <p>Dynamics Square helps you finalise the platform, define scope and governance, and give formula and item data a named owner.</p>
               </div>
             </div>
 

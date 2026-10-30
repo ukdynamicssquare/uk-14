@@ -22,7 +22,7 @@
   {
     "id": 5,
     "question": "Can the Field Service Mobile app can be used even when not connected to the internet?",
-    "answer": "<p>Yes, users can use the Field Service app whether online or offline as this app gets synchronized automatically whenever the new things or data gets updated or uploaded. Thus, if you are lacking with internet connection at any place, you can simply tap the offline option. While working offline, the information you use gets downloaded to your device only.</p>"
+    "answer": "<p>Yes, users can use the Field Service app whether online or offline as this app gets synchronised automatically whenever the new things or data gets updated or uploaded. Thus, if you are lacking with internet connection at any place, you can simply tap the offline option. While working offline, the information you use gets downloaded to your device only.</p>"
   },
   {
     "id": 6,

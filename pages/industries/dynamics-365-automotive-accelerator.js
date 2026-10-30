@@ -140,7 +140,7 @@ const Finance = () => {
               </div>
               <div className="custom-p-001">
                 <p>An automotive business consists of several complex processes, from managing different vendors to offering the best experience to customers. There are even different processes that need to be done on time using automation for smooth data flow. </p>
-                <p>Here comes the role of Dynamics 365 for the automotive industry: to streamline different processes while utilizing existing resources for a maximized output. Such a system connects the vendor with the business in real time while also catering the best services to customers. </p>
+                <p>Here comes the role of Dynamics 365 for the automotive industry: to streamline different processes while utilising existing resources for a maximised output. Such a system connects the vendor with the business in real time while also catering the best services to customers. </p>
                 <p>Dynamics 365 Automotive Accelerator offers competitive advantages to deal with changing market conditions and fluctuating customer demands. Such an ERP system directly enhances the efficiency of the business and pushes it toward achieving sustainable success.</p>
               </div>
             </div>
@@ -180,7 +180,7 @@ const Finance = () => {
                   <li>Leveraging the CDN (common data model), the D365 Automotive Accelerator allows businesses to simplify specific operations while strengthening customer relationships. </li>
                   <li>Integrating Power Platform, like <Link href="/products/microsoft-power-apps/">Power Apps</Link>, enables a business to build specific applications to deal with special customer demands. </li>
                   <li>To get more business insights, you can connect to other D365 solutions, like D365 Marketing and <Link href="/blog/connected-field-service/">Connected Field Service</Link>, to increase upsell and cross-sell opportunities based on data. </li>
-                  <li><Link href="/power-bi-implementation/">Integration with Power BI</Link> enables a business to analyse and visualize the entire automotive and customer data that includes inventory, branding, services, and more. </li>
+                  <li><Link href="/power-bi-implementation/">Integration with Power BI</Link> enables a business to analyse and visualise the entire automotive and customer data that includes inventory, branding, services, and more. </li>
                   <li>You can connect the system with B2C apps to automate recurring and manual tasks that include scheduling test drives, data entry, and fetching documentation, to build intentional conversations with customers. </li>
                   <li>Microsoft Dynamics 365 for the automotive industry offers a holistic approach to the entire business with data-driven insights while increasing customer lifetime value. </li>
                 </ul>

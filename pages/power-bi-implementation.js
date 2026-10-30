@@ -112,11 +112,11 @@ const PowerBIImplementation = () => {
                   </Link>{" "}
                   is a powerful tool designed to connect across your data
                   sources and prepare powerful reports, custom data
-                  visualizations, and other interactive insights to be
+                  visualisations, and other interactive insights to be
                   demonstrated on user dashboards. With Power BI implementation,
                   you can empower every level of people in your organisation to
                   make instant decisions to support continuity and drive
-                  maximized productivity.
+                  maximised productivity.
                 </p>
                 <p>
                   Microsoft Power BI comes with both on-premises and on-cloud
@@ -180,7 +180,7 @@ const PowerBIImplementation = () => {
                   <img src="/img/sales.svg" alt="sales"  loading="lazy" decoding="async" />
                 </div>
                 <div className="style-grid-content">
-                  <h3>Customized Implementation</h3>
+                  <h3>Customised Implementation</h3>
                   <p>
                     At Dynamics Square, Microsoft Power BI implementation can be
                     done as per enterprise-specific needs. It can be configured
@@ -198,7 +198,7 @@ const PowerBIImplementation = () => {
                 <div className="style-grid-content">
                   <h3>Data Transformation</h3>
                   <p>
-                    Creating highly customized, visual, and interactive reports
+                    Creating highly customised, visual, and interactive reports
                     is no longer a complex job now. Power BI makes everything
                     possible whereby you can create, publish, share the reports
                     within your organisation and allow them to make instant
@@ -348,7 +348,7 @@ const PowerBIImplementation = () => {
                           <p>
                             Once your project analysis gets done, we come up
                             with functional requirements defining your specific
-                            customization, configuration, and integration needs.
+                            customisation, configuration, and integration needs.
                           </p>
                         </div>
                       </SwiperSlide>

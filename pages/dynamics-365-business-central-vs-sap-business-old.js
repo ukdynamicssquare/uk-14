@@ -161,9 +161,9 @@ const BCvsSap = () => {
                       <td>Basic manufacturing functionalities; may require additional modules for complex needs</td>
                     </tr>
                     <tr>
-                      <td><strong>Customization</strong></td>
+                      <td><strong>Customisation</strong></td>
                       <td>Highly customizable through Power Platform; extensive third-party app ecosystem</td>
-                      <td>Customization possible but often requires technical expertise; fewer third-party apps</td>
+                      <td>Customisation possible but often requires technical expertise; fewer third-party apps</td>
                     </tr>
                     <tr>
                       <td><strong>Cloud-Native Capabilities</strong></td>
@@ -183,7 +183,7 @@ const BCvsSap = () => {
                     <tr>
                       <td><strong>Pricing</strong></td>
                       <td>Transparent subscription-based pricing: Essentials ($70/user/month), Premium ($100/user/month)</td>
-                      <td>Subscription-based; pricing varies based on deployment and customization needs</td>
+                      <td>Subscription-based; pricing varies based on deployment and customisation needs</td>
                     </tr>
                     <tr>
                       <td><strong>Support &amp; Training</strong></td>

@@ -12,7 +12,7 @@ const MicrosoftDynamics365MixedReality = () => {
         <title>Microsoft Dynamics 365 Remote Assist & Mixed Reality</title>
         <meta
           name="description"
-          content="Empower your workforce and optimise your operations with Dynamics 365 Mixed Reality Applications like remote assist, product visualize and guides."
+          content="Empower your workforce and optimise your operations with Dynamics 365 Mixed Reality Applications like remote assist, product visualise and guides."
         />
         <link
           rel="canonical"
@@ -37,7 +37,7 @@ const MicrosoftDynamics365MixedReality = () => {
                 Mixed Reality
               </h1>
               <p>
-              Empower Your Workforce And Optimize Your Operations With Dynamics 365 Mixed Reality Apps To Explore New Business Opportunities And Drive Scalable Growth.
+              Empower Your Workforce And Optimise Your Operations With Dynamics 365 Mixed Reality Apps To Explore New Business Opportunities And Drive Scalable Growth.
               </p>
               <div>
                 <div className="text-center text-lg-start">
@@ -70,7 +70,7 @@ const MicrosoftDynamics365MixedReality = () => {
                 What is dynamics 365 Mixed Reality
               </h2>
               <p>
-              Dynamics 365 Mixed Reality Apps enable your workforce with instant & timely collaboration to improve overall work performance, drive effective growth, and maximize desired revenues. Share & solve problems in real-time and provide instant support to your customers or clients to impact the overall organisational success.
+              Dynamics 365 Mixed Reality Apps enable your workforce with instant & timely collaboration to improve overall work performance, drive effective growth, and maximise desired revenues. Share & solve problems in real-time and provide instant support to your customers or clients to impact the overall organisational success.
               </p>
             </header>
           </div>
@@ -102,7 +102,7 @@ const MicrosoftDynamics365MixedReality = () => {
                       data-bs-parent="#accnew"
                     >
                       <div className="accordion-body">
-                       <p>Optimize operations and transform your business flow while reducing costs and delays by leveraging Microsoft Dynamics 365 Remote Assist solutions. Perform seamless remote inspections across global clients or customers embedded with video interactions, screenshots sharing, annotations, etc. utilizing Dynamics 365 Remote assist Mobile.</p>
+                       <p>Optimise operations and transform your business flow while reducing costs and delays by leveraging Microsoft Dynamics 365 Remote Assist solutions. Perform seamless remote inspections across global clients or customers embedded with video interactions, screenshots sharing, annotations, etc. utilising Dynamics 365 Remote assist Mobile.</p>
                       </div>
                     </div>
                   </div>
@@ -192,7 +192,7 @@ const MicrosoftDynamics365MixedReality = () => {
                             alt="Mixed-Reality-Product-Visualize"
                           />
                         </div>
-                        <span>Microsoft Dynamics 365 Product Visualize</span>
+                        <span>Microsoft Dynamics 365 Product Visualise</span>
                       </button>
                     </h3>
                     <div
@@ -202,7 +202,7 @@ const MicrosoftDynamics365MixedReality = () => {
                       data-bs-parent="#accnew"
                     >
                       <div className="accordion-body">
-                       <p>Accelerate your sales process, build customer trust, and close the deal faster by simply enabling your product visualization during your sales process. With Microsoft Dynamics 365 Product Visualize, empower your salespeople to visualize large, complex, customizable, or highly configurable products in a real-world environment to reduce risk and boost customer satisfaction.</p>
+                       <p>Accelerate your sales process, build customer trust, and close the deal faster by simply enabling your product visualisation during your sales process. With Microsoft Dynamics 365 Product Visualise, empower your salespeople to visualise large, complex, customizable, or highly configurable products in a real-world environment to reduce risk and boost customer satisfaction.</p>
                       </div>
                     </div>
                   </div>
@@ -310,7 +310,7 @@ const MicrosoftDynamics365MixedReality = () => {
               <div className="upgrade-box-one d-flex-fil">
                 <Image src="/img/settings_b.png" alt="settings_b" width={48} height={48} />
                 <h3>Implementation</h3>
-                <p>Unlock new business potentials with our highly customized Mixed Reality implementation.</p>
+                <p>Unlock new business potentials with our highly customised Mixed Reality implementation.</p>
                 <a href="#exampleModal" data-bs-toggle="modal">Get Started <i className="bi bi-arrow-right"></i></a>
               </div>
             </div>
@@ -501,7 +501,7 @@ const MicrosoftDynamics365MixedReality = () => {
                       improve your customer experience while reducing risks and
                       costing. Mix Reality combines physical and digital worlds
                       to interact in real-time to serve several purposes from
-                      remote services to virtual visualization to preparing
+                      remote services to virtual visualisation to preparing
                       learning guides for the users within your organisation.
                       <br />
                       <br />
@@ -550,7 +550,7 @@ const MicrosoftDynamics365MixedReality = () => {
                         <li>Microsoft Dynamics 365 Layout</li>
                         <li> Accounts Receivable</li>
                         <li>Cash & Bank Management</li>
-                        <li>Microsoft Dynamics 365 Product Visualize</li>
+                        <li>Microsoft Dynamics 365 Product Visualise</li>
                         <li>Microsoft Dynamics 365 Guides</li>
                       </ul>
                       To know more about contact <a href="/contact-us/" target="_blank">Dynamics Square Team</a>, we can
@@ -696,7 +696,7 @@ const MicrosoftDynamics365MixedReality = () => {
                       When integrated with <a href="/products/microsoft-dynamics-365-field-service/" target="_blank">Dynamics 365 Field Service</a>, it can
                       help businesses to capture the asset information. If there
                       is a piece of critical or complex information, can be
-                      transformed into easy visualization by integrating with <a href="/products/microsoft-power-bi/" target="_blank">Power BI</a> or any other enterprise-level application.
+                      transformed into easy visualisation by integrating with <a href="/products/microsoft-power-bi/" target="_blank">Power BI</a> or any other enterprise-level application.
                     </div>
                   </div>
                 </div>

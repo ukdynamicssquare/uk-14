@@ -77,7 +77,7 @@ const Dynamics365Consultant = () => {
               <div className="style-grid-1">
                 <div className="style-grid-content">
                   <h3>Architecture Planning </h3>
-                  <p>Understanding the business architecture is a complex task as it contains both transparent and hidden core processes of the business. Before going for the implementation strategy, our consultants capture information about your business, including multi-locations, complexity of business, data storage, customizations, and integrations, so that we can create a perfect business flow. </p>
+                  <p>Understanding the business architecture is a complex task as it contains both transparent and hidden core processes of the business. Before going for the implementation strategy, our consultants capture information about your business, including multi-locations, complexity of business, data storage, customisations, and integrations, so that we can create a perfect business flow. </p>
                 </div>
               </div>
               <div className="style-grid-1">
@@ -91,7 +91,7 @@ const Dynamics365Consultant = () => {
               <div className="style-grid-1">
                 <div className="style-grid-content">
                   <h3>System Migration </h3>
-                  <p>With the growth of businesses, it might be possible that you want to migrate your current system to a Microsoft business solution to avail yourself of automation, simplicity, and development. Irrespective of the solution you are using, we will migrate it to Microsoft's business solution along with your entire data, integrations, and customizations without any hassle.</p>
+                  <p>With the growth of businesses, it might be possible that you want to migrate your current system to a Microsoft business solution to avail yourself of automation, simplicity, and development. Irrespective of the solution you are using, we will migrate it to Microsoft's business solution along with your entire data, integrations, and customisations without any hassle.</p>
                 </div>
               </div>
 
@@ -125,7 +125,7 @@ const Dynamics365Consultant = () => {
               </div>
               <div className="col-lg-7 align-self-center">
                 <div className="call_to_action-left" style={{marginTop:'-30px'}}>
-                  <h3>Want to achieve great heights of your business while optimizing the processes? </h3>
+                  <h3>Want to achieve great heights of your business while optimising the processes? </h3>
                   <p>Our Dynamics 365 consultants can take your business to the next level (of growth and success).</p>
                   <div className="m-o-t m-o-t-inde">
                     <Link
@@ -166,7 +166,7 @@ const Dynamics365Consultant = () => {
               <div className="style-grid-1">
             
                 <div className="style-grid-content">
-                  <h3>Process Optimization </h3>
+                  <h3>Process Optimisation </h3>
                   <p>Once you optimise the processes, they can enhance a business's overall efficiency, enabling it to get more output with limited resources. While working with 500+ clients, our certified consultants have understood the perfect way to optimise processes while maximising them for better results.  </p>
                 </div>
               </div>

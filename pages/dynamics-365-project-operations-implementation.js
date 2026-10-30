@@ -25,7 +25,7 @@ const PAGE_FAQS = [
   },
   {
     "question": "How long will it take to successfully implement the project?",
-    "answer": "To provide an adequate and accurate timeline for implementing a solution, it is essential that we have a clear understanding of the business and its needs. The time required is contingent upon various factors, such as the number of processes, the complexity of operations, integrations, and customizations."
+    "answer": "To provide an adequate and accurate timeline for implementing a solution, it is essential that we have a clear understanding of the business and its needs. The time required is contingent upon various factors, such as the number of processes, the complexity of operations, integrations, and customisations."
   },
   {
     "question": "What's next after submitting my contact details?",
@@ -379,14 +379,14 @@ const ProjectOperationImplementation = () => {
                     >
                       <div className="accordion-body">
                         <p>
-                          Customization and integration make a solution
+                          Customisation and integration make a solution
                           adaptable to all changing business needs as per market
                           and customer demand.
                           <Link href="/products/microsoft-dynamics-365/" target="_blank">
                             D365
                           </Link>{" "}
                           Project Operations is flexible with unique
-                          customizations to perform specific business
+                          customisations to perform specific business
                           operations, enabling more focus on growth and
                           scalability rather than being consumed with core
                           operations.{" "}
@@ -800,7 +800,7 @@ const ProjectOperationImplementation = () => {
               >
                 <b>
                   {" "}
-                  Looking for Customized Pricing as per your business
+                  Looking for Customised Pricing as per your business
                   requirements?{" "}
                 </b>
               </p>
@@ -968,7 +968,7 @@ const ProjectOperationImplementation = () => {
                         clear understanding of the business and its needs. The
                         time required is contingent upon various factors, such
                         as the number of processes, the complexity of
-                        operations, integrations, and customizations.
+                        operations, integrations, and customisations.
                       </p>
                     </div>
                   </div>

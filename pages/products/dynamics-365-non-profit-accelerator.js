@@ -40,7 +40,7 @@ const NonProfitAccelerator = () => {
       <PageSeo
         type="Service"
         title="Dynamics 365 Nonprofit Accelerator | Dynamics Square UK"
-        description="Implement Dynamics 365 Nonprofit Accelerator to simplify charity operations, streamline funds management, build customise solutions, and monitor expenses while optimizing funds."
+        description="Implement Dynamics 365 Nonprofit Accelerator to simplify charity operations, streamline funds management, build customise solutions, and monitor expenses while optimising funds."
         image="/img/Dynamics-non-profit-Banner.png"
         faqs={PAGE_FAQS}
       />

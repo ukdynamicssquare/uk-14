@@ -9,15 +9,15 @@ import ChallengeGrid from "../../components/ChallengeGrid";
 const PAGE_FAQS = [
   {
     "question": "What is Microsoft Dynamics 365 for Professional Services industry?",
-    "answer": "Microsoft Dynamics 365 offers a comprehensive solution for the Professional service industry. organisations can simplify and drive their end-to-end tasks that come across their professional services domain. organisations can manage, automate, & faster their tasks, empower their workforce, and drive excellence in their business. Whether it comes to project automation, financial management, client & vendor management, or customer engagement; Dynamics 365 can help and empower everyone in your organisation from top management to executive level to simply, manage, and accelerate their tasks. With powerful decision-making capability, businesses can make instant, productive, and informed decisions to support and strengthen the bottom line and to drive maximized revenues. To know how Dynamics 365 can help your enterprise manage your professional services, connect with us, we can share the best potential deal for your business."
+    "answer": "Microsoft Dynamics 365 offers a comprehensive solution for the Professional service industry. organisations can simplify and drive their end-to-end tasks that come across their professional services domain. organisations can manage, automate, & faster their tasks, empower their workforce, and drive excellence in their business. Whether it comes to project automation, financial management, client & vendor management, or customer engagement; Dynamics 365 can help and empower everyone in your organisation from top management to executive level to simply, manage, and accelerate their tasks. With powerful decision-making capability, businesses can make instant, productive, and informed decisions to support and strengthen the bottom line and to drive maximised revenues. To know how Dynamics 365 can help your enterprise manage your professional services, connect with us, we can share the best potential deal for your business."
   },
   {
     "question": "What is included in Dynamics 365 for Professional Services industry?",
-    "answer": "Dynamics 365 comprises a range of business applications that can be combined and configured to manage your specific processes or operations. Whether you need to manage your operations, human resource, project automation, financial part, service & delivery model, production line, clients, and more, Dynamics 365 can be implemented and customized as per your customized business model addressing the core behaviour of your business. We are always here to help you out if you have any sort of queries. Do not hesitate to contact us, our experts have a solution for your specific professional services or practices."
+    "answer": "Dynamics 365 comprises a range of business applications that can be combined and configured to manage your specific processes or operations. Whether you need to manage your operations, human resource, project automation, financial part, service & delivery model, production line, clients, and more, Dynamics 365 can be implemented and customised as per your customised business model addressing the core behaviour of your business. We are always here to help you out if you have any sort of queries. Do not hesitate to contact us, our experts have a solution for your specific professional services or practices."
   },
   {
     "question": "What are the benefits of Microsoft Dynamics 365 for the Professional Services industry?",
-    "answer": "By implementing Microsoft Dynamics solutions for professional services, you can manage across your processes and bring the capability to drive challenges leading your business to drive profitability and scalability. Here are the benefits that are involved once you implement Dynamics 365 for your business: With Dynamics 365 solutions for the professional services industry, businesses can estimate revenue and keep real-time eyes on every process or activity that takes place., Enterprises can leverage opportunity management and faster their client or customer delivery by bringing transparency, real-time efficiency, and improving collaboration for timely engagement., Bring automation to your projects and simplify your billing & invoicing., Empower your resources to faster project delivery and maximize their utilization to drive productivity., Businesses can list key stakeholders, analyse management information, drive engagement profitability, and optimise growth."
+    "answer": "By implementing Microsoft Dynamics solutions for professional services, you can manage across your processes and bring the capability to drive challenges leading your business to drive profitability and scalability. Here are the benefits that are involved once you implement Dynamics 365 for your business: With Dynamics 365 solutions for the professional services industry, businesses can estimate revenue and keep real-time eyes on every process or activity that takes place., Enterprises can leverage opportunity management and faster their client or customer delivery by bringing transparency, real-time efficiency, and improving collaboration for timely engagement., Bring automation to your projects and simplify your billing & invoicing., Empower your resources to faster project delivery and maximise their utilisation to drive productivity., Businesses can list key stakeholders, analyse management information, drive engagement profitability, and optimise growth."
   },
   {
     "question": "Which ERP software is suitable for professional services companies?",
@@ -625,7 +625,7 @@ const Dynamics365ForProfessionalServices = () => {
                         With powerful decision-making capability, businesses can
                         make instant, productive, and informed decisions to
                         support and strengthen the bottom line and to drive
-                        maximized revenues.
+                        maximised revenues.
                         <br />
                         <br />
                         To know how Dynamics 365 can help your enterprise manage
@@ -658,7 +658,7 @@ const Dynamics365ForProfessionalServices = () => {
                         manage your operations, human resource, project
                         automation, financial part, service & delivery model,
                         production line, clients, and more, Dynamics 365 can be
-                        implemented and customized as per your customized
+                        implemented and customised as per your customised
                         business model addressing the core behaviour of your
                         business.
                         <br />
@@ -715,7 +715,7 @@ const Dynamics365ForProfessionalServices = () => {
                           </li>
                           <li>
                             Empower your resources to faster project delivery
-                            and maximize their utilization to drive
+                            and maximise their utilisation to drive
                             productivity.
                           </li>
                           <li>

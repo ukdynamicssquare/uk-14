@@ -304,7 +304,7 @@ const Howtochooserighterp = () => {
                       <div className="accordion-body">
                         <p>Key ERP benefits include:</p>
                         <ol>
-                          <li>Optimization of management processes</li>
+                          <li>Optimisation of management processes</li>
                           <li>Improve the decision-making process</li>
                           <li>Data security</li>
                           <li>Modularity and Scalability</li>
@@ -381,7 +381,7 @@ const Howtochooserighterp = () => {
                           <br />
                           We ask for your information in exchange for a valuable
                           resource in order to improve your browsing
-                          experience by personalizing the Dynamics Square site
+                          experience by personalising the Dynamics Square site
                           to your needs; b send information to you that we think
                           may be of interest to you by email or other means; You
                           can read more about our

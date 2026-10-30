@@ -54,13 +54,13 @@ export const solutionMenu = {
           href: "/products/dynamics-365-supply-chain-management/",
           icon: "/img/menu-icons/dynamics-365-supplychainmanagement.svg",
           title: "Supply Chain",
-          desc: "Optimize operations and drive agile Supply Chain",
+          desc: "Optimise operations and drive agile Supply Chain",
         },
         {
           href: "/products/dynamics-365-human-resources/",
           icon: "/img/menu-icons/dynamics-365-HRM.svg",
           title: "Human Resource",
-          desc: "Optimize Your Resource Utilization",
+          desc: "Optimise Your Resource Utilisation",
         },
         {
           href: "/products/microsoft-dynamics-365-commerce/",
@@ -90,7 +90,7 @@ export const solutionMenu = {
           href: "/products/microsoft-dynamics-365-marketing/",
           icon: "/img/menu-icons/dynamics-365-marketing.svg",
           title: "Marketing",
-          desc: "Maximize ROI with integrated Marketing",
+          desc: "Maximise ROI with integrated Marketing",
         },
         {
           href: "/products/microsoft-dynamics-365-field-service/",
@@ -138,7 +138,7 @@ export const solutionMenu = {
           href: "/wms-for-business-central/",
           icon: "/img/menu-icons/taskley-logo-im.png",
           title: "Tasklet's Mobile WMS",
-          desc: "Optimize warehouse operations, simplify inventory, boost profits",
+          desc: "Optimise warehouse operations, simplify inventory, boost profits",
         },
         {
           href: "/continia-document-capture-with-business-central/",
@@ -156,7 +156,7 @@ export const solutionMenu = {
           href: "/shopify-connector-business-central/",
           icon: "/img/menu-icons/shopify-integration-logo.svg",
           title: "Shopify Connector",
-          desc: "Synchronize orders, inventory, and customers across platforms",
+          desc: "Synchronise orders, inventory, and customers across platforms",
         },
         {
           href: "/yavrio-integration-with-business-central/",
@@ -315,7 +315,7 @@ export const industriesMenu = [
     href: "/industries/dynamics-365-for-retail/",
     icon: "/img/menu-icons/retail-icon.png",
     title: "Retail",
-    desc: "Optimize retail operations with seamless user experience",
+    desc: "Optimise retail operations with seamless user experience",
   },
 ];
 
@@ -397,14 +397,14 @@ export const resourcesMenu = {
       services: [
         { href: "/case-studies/#Implementation", icon: "bi-gear", title: "Implementation", desc: "Business Central | Finance" },
         { href: "/case-studies/#Upgrade", icon: "bi-back", title: "ERP Upgrade", desc: "Nav, GP, AX Upgrade" },
-        { href: "/case-studies/#Support", icon: "bi-person-add", title: "Managed Support", desc: "24×7 Support & Optimization" },
+        { href: "/case-studies/#Support", icon: "bi-person-add", title: "Managed Support", desc: "24×7 Support & Optimisation" },
       ],
       highlights: {
         heading: "Customer Success Highlights",
         links: [
           { href: "/case-studies/dynamics-365-finance-for-logistic-uk-multi-entity/", label: "Stronger Financial Control for Global Rollout | Bertling Group", highlighted: true },
           { href: "/case-studies/business-central-with-crm-implement-for-equestrian-manufacturing/", label: "162% Projected ROI with 8% Efficiency Gain | UK Manufacturer" },
-          { href: "/business-central-reimplementation-for-retail-market/", label: "Digitally Synchronized Warehouse Operations | Northern Ireland Saddlery Business" },
+          { href: "/business-central-reimplementation-for-retail-market/", label: "Digitally Synchronised Warehouse Operations | Northern Ireland Saddlery Business" },
           { href: "/case-studies/business-central-reimplementation-for-food-trader/", label: "162% Projected ROI and £32K+ Savings | World Food Trading" },
           { href: "/case-studies/nav-2013-r2-to-business-central-upgrade/", label: "Improved Efficiency and Real-Time Visibility | UK Orthodontic Supplier" },
         ],
@@ -518,14 +518,14 @@ export const SOLUTION_PANELS = {
   addon: [
     { href: "/products/dynamics-365-business-central/", img: "/img/menu-icons/dynamics-365-businesscentral.svg", alt: "dynamics-365-businesscentral", title: "Business Central", desc: "All-in-one solution for all your business practices" },
     { href: "/products/microsoft-dynamics-365-finance/", img: "/img/menu-icons/dynamics-365-finance.svg", alt: "dynamics-365-finance", title: "Finance", desc: "Improve your finance practices" },
-    { href: "/products/dynamics-365-supply-chain-management/", img: "/img/menu-icons/dynamics-365-supplychainmanagement.svg", alt: "dynamics-365-supplychainmanagement", title: "Supply Chain", desc: "Optimize operations and drive agile Supply Chain" },
-    { href: "/products/dynamics-365-human-resources/", img: "/img/menu-icons/dynamics-365-HRM.svg", alt: "dynamics-365-HRM", title: "Human Resource", desc: "Optimize Your Resource Utilization" },
+    { href: "/products/dynamics-365-supply-chain-management/", img: "/img/menu-icons/dynamics-365-supplychainmanagement.svg", alt: "dynamics-365-supplychainmanagement", title: "Supply Chain", desc: "Optimise operations and drive agile Supply Chain" },
+    { href: "/products/dynamics-365-human-resources/", img: "/img/menu-icons/dynamics-365-HRM.svg", alt: "dynamics-365-HRM", title: "Human Resource", desc: "Optimise Your Resource Utilisation" },
     { href: "/products/microsoft-dynamics-365-commerce/", img: "/img/menu-icons/dynamics-365-commerce.svg", alt: "dynamics-365-commerce", title: "Commerce", desc: "Unify Your Back-Office, In-Store, And Digital Experience" },
     { href: "/products/dynamics-365-project-operations/", img: "/img/menu-icons/dynamics-365-project-management.svg", alt: "dynamics-365-project-management", title: "Project Operations", desc: "Automate and streamline your projects" },
   ],
   CRM: [
     { href: "/products/microsoft-dynamics-365-sales/", img: "/img/menu-icons/dynamics-365-sales.svg", alt: "dynamics-365-sales", title: "Sales", desc: "Drive end-to-end sales practices" },
-    { href: "/products/microsoft-dynamics-365-marketing/", img: "/img/menu-icons/dynamics-365-marketing.svg", alt: "dynamics-365-marketing", title: "Marketing", desc: "Maximize ROI with integrated Marketing" },
+    { href: "/products/microsoft-dynamics-365-marketing/", img: "/img/menu-icons/dynamics-365-marketing.svg", alt: "dynamics-365-marketing", title: "Marketing", desc: "Maximise ROI with integrated Marketing" },
     { href: "/products/microsoft-dynamics-365-field-service/", img: "/img/menu-icons/dynamics-365-fieldservice.svg", alt: "dynamics-365-fieldservice", title: "Field Service", desc: "Drive connected and collaborated field service" },
     { href: "/products/microsoft-dynamics-365-customer-service/", img: "/img/menu-icons/dynamics-365-customer-service.svg", alt: "dynamics-365-customer-service", title: "Customer Service", desc: "Drive omnichannel customer experience" },
     { href: "/products/dynamics-365-customer-engagement/", img: "/img/menu-icons/dynamics-365-customer-engagement.svg", alt: "dynamics-365-customer-engagement", title: "Customer Engagement", desc: "Transform Your Marketing Operations" },
@@ -549,10 +549,10 @@ export const SOLUTION_PANELS = {
     { href: "/continia-for-dynamics-365-business-central/", img: "/img/menu-icons/continia.png", alt: "continia", title: "Continia integration", desc: "Scan, analyse, and process documents with optimum quality" },
     { href: "/insights-works-for-dynamics-365-business-central/", img: "/img/menu-icons/Insight_Work.png", alt: "Insight_Work", title: "Insight Works", desc: "Optimise your inventory and distribution operations effortlessly" },
     { href: "/sana-commerce-for-dynamics-365-business-central/", img: "/img/menu-icons/Sana_Commerce.png", alt: "Sana_Commerce", title: "Sana Commerce", desc: "Avail a cloud e-commerce solution to supercharge your online store" },
-    { href: "/wms-for-business-central/", img: "/img/menu-icons/taskley-logo-im.png", alt: "Sana_Commerce", title: "Tasklet's Mobile WMS", desc: "Optimize warehouse operations, simplify inventory, boost profits" },
+    { href: "/wms-for-business-central/", img: "/img/menu-icons/taskley-logo-im.png", alt: "Sana_Commerce", title: "Tasklet's Mobile WMS", desc: "Optimise warehouse operations, simplify inventory, boost profits" },
     { href: "/continia-document-capture-with-business-central/", img: "/img/menu-icons/continia.png", alt: "Sana_Commerce", title: "Continia OCR", desc: "Transform document management, streamline processing, manage easily" },
     { href: "/continia-expense-management/", img: "/img/menu-icons/continia.png", alt: "Sana_Commerce", title: "Continia Expense Management ", desc: "Monitor corporate expenses, eliminate manual errors with Continia" },
-    { href: "/shopify-connector-business-central/", img: "/img/menu-icons/shopify-integration-logo.svg", alt: "shopify-integration-logo", title: "Shopify Connector", desc: "Synchronize orders, inventory, and customers across platforms" },
+    { href: "/shopify-connector-business-central/", img: "/img/menu-icons/shopify-integration-logo.svg", alt: "shopify-integration-logo", title: "Shopify Connector", desc: "Synchronise orders, inventory, and customers across platforms" },
     { href: "/yavrio-integration-with-business-central/", img: "/img/menu-icons/image-541.png", alt: "yavrio-integration-logo", title: "Yavrio Integration", desc: "Connect banking data to ERP for automated workflows" },
   ],
   power: [
@@ -570,7 +570,7 @@ export const INDUSTRIES = [
   { href: "/industries/professional-services/", img: "/img/menu-icons/Professional-ervice.png", alt: "Professional-ervice", title: "Professional Services", desc: "Streamline administration processes leveraging automation" },
   { href: "/industries/food-and-beverages/", img: "/img/menu-icons/Food.png", alt: "Food", title: "Food & Beverages", desc: "Manage supply and inventory processes with real-time data" },
   { href: "/industries/dynamics-365-for-healthcare/", img: "/img/menu-icons/healthcare.png", alt: "healthcare", title: "Healthcare", desc: "Track clinical operations while enhancing patient experience" },
-  { href: "/industries/dynamics-365-for-retail/", img: "/img/menu-icons/retail-icon.png", alt: "retail-icon", title: "Retail", desc: "Optimize retail operations with seamless user experience" },
+  { href: "/industries/dynamics-365-for-retail/", img: "/img/menu-icons/retail-icon.png", alt: "retail-icon", title: "Retail", desc: "Optimise retail operations with seamless user experience" },
 ];
 
 // Industries mega menu (ColumnMegaMenu.js): three columns of industry
@@ -719,13 +719,13 @@ export const BLOG_EDITORS_PICKS = [
 export const CASE_STUDY_SERVICES = [
   { href: "/case-studies/#Implementation", icon: "bi-gear", title: "Implementation", desc: "Business Central | Finance" },
   { href: "/case-studies/#Upgrade", icon: "bi-back", title: "ERP Upgrade", desc: "Nav, GP, AX Upgrade" },
-  { href: "/case-studies/#Support", icon: "bi-person-add", title: "Managed Support", desc: "24×7 Support & Optimization" },
+  { href: "/case-studies/#Support", icon: "bi-person-add", title: "Managed Support", desc: "24×7 Support & Optimisation" },
 ];
 
 export const CASE_STUDY_HIGHLIGHTS = [
   { href: "/case-studies/dynamics-365-finance-for-logistic-uk-multi-entity/", label: "Stronger Financial Control for Global Rollout | Bertling Group" },
   { href: "/case-studies/business-central-with-crm-implement-for-equestrian-manufacturing/", label: "162% Projected ROI with 8% Efficiency Gain | UK Manufacturer" },
-  { href: "/case-studies/business-central-reimplementation-for-retail-market/", label: "Digitally Synchronized Warehouse Operations | Northern Ireland Saddlery Business" },
+  { href: "/case-studies/business-central-reimplementation-for-retail-market/", label: "Digitally Synchronised Warehouse Operations | Northern Ireland Saddlery Business" },
   { href: "/case-studies/business-central-reimplementation-for-food-trader/", label: "162% Projected ROI and £32K+ Savings | World Food Trading" },
   { href: "/case-studies/nav-2013-r2-to-business-central-upgrade/", label: "Improved Efficiency and Real-Time Visibility | UK Orthodontic Supplier" },
 ];

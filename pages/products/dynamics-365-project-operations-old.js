@@ -16,7 +16,7 @@ const ProjectOperations = () => {
         <title>Dynamics 365 Project Operations: Manage Projects Smarter</title>
         <meta
           name="description"
-          content="Optimize project planning, tracking, and delivery with Dynamics 365 Project Operations. Streamline workflows and boost profitability effortlessly. Contact now today! "
+          content="Optimise project planning, tracking, and delivery with Dynamics 365 Project Operations. Streamline workflows and boost profitability effortlessly. Contact now today! "
         />
         <link
           rel="canonical"
@@ -24,7 +24,7 @@ const ProjectOperations = () => {
         />
         <meta property="og:type" content="website" />
         <meta property="og:title" content=" Dynamics 365 Project Operations: Manage Projects Smarter " />
-        <meta property="og:description" content="Optimize project planning, tracking, and delivery with Dynamics 365 Project Operations. Streamline workflows and boost profitability effortlessly. Contact now today!" />
+        <meta property="og:description" content="Optimise project planning, tracking, and delivery with Dynamics 365 Project Operations. Streamline workflows and boost profitability effortlessly. Contact now today!" />
         <meta property="og:url" content="https://www.dynamicssquare.co.uk/products/dynamics-365-project-operations/" />
         <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/project-operation-banner.png" />
         <meta property="og:image:width" content="200" />
@@ -32,7 +32,7 @@ const ProjectOperations = () => {
         <meta property="og:image:type" content="image/png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Dynamics 365 Project Operations: Manage Projects Smarter" />
-        <meta name="twitter:description" content="Optimize project planning, tracking, and delivery with Dynamics 365 Project Operations. Streamline workflows and boost profitability effortlessly. Contact now today!" />
+        <meta name="twitter:description" content="Optimise project planning, tracking, and delivery with Dynamics 365 Project Operations. Streamline workflows and boost profitability effortlessly. Contact now today!" />
         <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/project-operation-banner.png" />
 
       </Head>
@@ -81,7 +81,7 @@ const ProjectOperations = () => {
             <div className="col-lg-9">
               <header className="section-header">
                 <h2>What is dynamics 365 Project Operations?</h2>
-                <p>Empower your team to drive visibility and agility for ensuring on-time project deliveries while optimizing budget for a maximum revenue with <strong>Dynamics 365 Project Operations</strong>. </p>
+                <p>Empower your team to drive visibility and agility for ensuring on-time project deliveries while optimising budget for a maximum revenue with <strong>Dynamics 365 Project Operations</strong>. </p>
 
 
 
@@ -359,8 +359,8 @@ const ProjectOperations = () => {
                   <div className="why-solution-wrapper">
                     <div className="why-solution-wrapper-inner">
                       <h3>
-                        Optimize <br />
-                        Resource Utilization
+                        Optimise <br />
+                        Resource Utilisation
                       </h3>
                       <div className="overlay">
                         <p>
@@ -737,7 +737,7 @@ Read to test the waters with D365 Project Operations? </p>
                 <p>This is where Dynamics Square comes in. With 14+ years of experience in the industry and a huge team of <Link href="/" target="_blank">Microsoft certified consultants</Link>, we are the ideal partner for your Dynamics 365 Project Operations implementation needs.</p>
                 <p>At Dynamics Square, our motto is to offer best-in-class customer satisfaction and take a collaborative approach to ensure your project's success, irrespective of the complexity or the scenario.</p>
 
-                <p>We offer end-to-end services, including <Link href="/products/microsoft-dynamics-365/" target="_blank">Dynamics 365</Link> Project Operations consulting, solution customization, deployment, on-site training, and durable support. For all businesses, we offer Microsoft's proven methodology and our expertise to deliver a tailored solution for your unique business requirements.</p>
+                <p>We offer end-to-end services, including <Link href="/products/microsoft-dynamics-365/" target="_blank">Dynamics 365</Link> Project Operations consulting, solution customisation, deployment, on-site training, and durable support. For all businesses, we offer Microsoft's proven methodology and our expertise to deliver a tailored solution for your unique business requirements.</p>
                 <p>Partnering with us means you can expect a smooth implementation process, increased productivity, and a measurable return on investment. Let's collaborate and take your business to the next level.</p>
               </div>
             </div>
@@ -1142,7 +1142,7 @@ Read to test the waters with D365 Project Operations? </p>
                       href="/pdf/5-innovative-ways-industry-leaders-modernize-their-field-service.pdf"
                     >
                       <i className="bi bi-file-earmark-pdf"></i>Innovative Ways
-                      Industry Leaders Modernize Their Field Service
+                      Industry Leaders Modernise Their Field Service
                     </a>
                   </li>
                   <li>

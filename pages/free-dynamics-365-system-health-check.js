@@ -156,7 +156,7 @@ const SystemHealth = () => {
                   Dynamics 365 system that you are not using anymore. As we know
                   Microsoft comes with regular releases and updates in their
                   products. But do you know these updates comprise improvements,
-                  customizations, and even sometimes bring full addition to
+                  customisations, and even sometimes bring full addition to
                   their product?
                 </p>
                 <p>

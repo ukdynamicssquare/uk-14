@@ -13,7 +13,7 @@ const AzureIoT = () => {
       <PageSeo
         type="Service"
         title="Microsoft Azure IoT | Connect Your Business With IoT"
-        description="Microsoft Azure IoT (internet of things) and Dynamics 365 help enterprises to bring efficiency, maximize revenue and security in their business. Get IoT solutions today."
+        description="Microsoft Azure IoT (internet of things) and Dynamics 365 help enterprises to bring efficiency, maximise revenue and security in their business. Get IoT solutions today."
         image="/img/azure-Banner.png"
       />
       <ModalVideo
@@ -276,7 +276,7 @@ const AzureIoT = () => {
                         <Link href="/products/azure-iot-edge" target="_blank">
                           &nbsp;Azure IoT Edge&nbsp;
                         </Link>
-                        on-premises to centralize data and seamlessly drive
+                        on-premises to centralise data and seamlessly drive
                         operational data in the Microsoft Azure cloud. Ensure
                         secure and remote deployment of cloud-native processes
                         or workloads including AI, Azure services, etc. to
@@ -352,12 +352,12 @@ const AzureIoT = () => {
                   <div className="why-solution-wrapper">
                     <div className="why-solution-wrapper-inner">
                       <h3>
-                        Optimize <br />
+                        Optimise <br />
                         Supply Chain
                       </h3>
                       <div className="overlay">
                         <p>
-                          Optimize your supply chain by monitoring and
+                          Optimise your supply chain by monitoring and
                           regulating in real-time. Stay updated with inventory
                           levels, warehousing flow, product delivery, and more
                           to ensure continuity.
@@ -374,7 +374,7 @@ const AzureIoT = () => {
                           Get notified whenever there is a moisture or
                           temperature imbalance, so that you can intervene in
                           production to maintain product quality standards while
-                          minimizing waste.
+                          minimising waste.
                         </p>
                       </div>
                     </div>
@@ -527,7 +527,7 @@ const AzureIoT = () => {
           <div className="row justify-content-center">
             <div className="col-lg-8">
               <div className="call-to-action-content">
-                <h3>Maximize your business potentials</h3>
+                <h3>Maximise your business potentials</h3>
                 <p>Drive new business challenges by implementing Azure IoT</p>
                 <div className="text-center m-o-t new-btn-nn">
                   <Link

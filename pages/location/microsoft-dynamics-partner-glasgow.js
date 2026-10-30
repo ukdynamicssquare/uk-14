@@ -286,7 +286,7 @@ const MicrosoftDynamicsPartnerGlasgow = () => {
                           experiences.
                         </p>
                         <p>
-                          Utilize data based on AI insights and new customer
+                          Utilise data based on AI insights and new customer
                           interactions to quickly diagnose your customers' needs
                           and provide them with an omnichannel experience.
                         </p>
@@ -417,7 +417,7 @@ const MicrosoftDynamicsPartnerGlasgow = () => {
                         </p>
                         <p>
                           We can install your business-specific solution to
-                          engage more customers and maximize income by
+                          engage more customers and maximise income by
                           understanding your sales tactics with AI-based
                           insights.
                         </p>
@@ -526,7 +526,7 @@ const MicrosoftDynamicsPartnerGlasgow = () => {
               <div className="parten-more">
                 <h3>Solution Tailored To The Business</h3>
                 <p>
-                  We implement a highly customized solution to support your
+                  We implement a highly customised solution to support your
                   whole business flow and drive efficiency, taking into account
                   your pain points and domain-specific requirements. We can also
                   implement standard implementation if you request it.
@@ -553,7 +553,7 @@ const MicrosoftDynamicsPartnerGlasgow = () => {
                   adaptation by providing end-user training as necessary. To
                   ensure this, we provide end-to-end user training so that they
                   can immediately grasp the newly configured system and begin
-                  utilizing it from the first day.
+                  utilising it from the first day.
                 </p>
               </div>
               <div className="parten-more">

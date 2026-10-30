@@ -12,7 +12,7 @@ import PageSeo from "../components/PageSeo";
 const PAGE_FAQS = [
   {
     "question": "How long will it take to implement the project successfully?",
-    "answer": "We can't give you an accurate timeline for implementing a solution until we fully understand the business and its needs. The time required is determined by several factors, including the number of processes, the complexity of operations, integrations, and customizations."
+    "answer": "We can't give you an accurate timeline for implementing a solution until we fully understand the business and its needs. The time required is determined by several factors, including the number of processes, the complexity of operations, integrations, and customisations."
   },
   {
     "question": "What's my role in the entire implementation project?",
@@ -367,7 +367,7 @@ const FieldServicesImplementation = () => {
                         aria-expanded="false"
                         aria-controls="fin8"
                       >
-                        <span>Customizations are adaptable</span>
+                        <span>Customisations are adaptable</span>
                       </button>
                     </h3>
                     <div
@@ -378,10 +378,10 @@ const FieldServicesImplementation = () => {
                     >
                       <div className="accordion-body">
                         <p>
-                          Customization and integration make a solution
+                          Customisation and integration make a solution
                           adaptable to all changing business needs as per market
                           and customer demand. D365 Field Service is flexible
-                          with unique customizations to perform specific
+                          with unique customisations to perform specific
                           business operations, enabling more focus on growth and
                           scalability rather than being consumed with core
                           operations.
@@ -800,7 +800,7 @@ const FieldServicesImplementation = () => {
               >
                 <b>
                   {" "}
-                  Looking for Customized Pricing as per your business
+                  Looking for Customised Pricing as per your business
                   requirements?{" "}
                 </b>
               </p>
@@ -882,7 +882,7 @@ const FieldServicesImplementation = () => {
                         its needs. The time required is determined by several
                         factors, including the number of processes, the
                         complexity of operations, integrations, and
-                        customizations.
+                        customisations.
                       </p>
                     </div>
                   </div>

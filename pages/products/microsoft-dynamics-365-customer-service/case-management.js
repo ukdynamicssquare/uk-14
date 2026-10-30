@@ -5,7 +5,7 @@ import PageSeo from "../../../components/PageSeo";
 
 const CasetManagement = () => {
 
-  const listcase  =['Retail and E-Commerce', 'Finance', 'Non-Profit Organizations', 'Healthcare', 'Retail and E-Commerce', ];
+  const listcase  =['Retail and E-Commerce', 'Finance', 'Non-Profit Organisations', 'Healthcare', 'Retail and E-Commerce', ];
 
 
   return (

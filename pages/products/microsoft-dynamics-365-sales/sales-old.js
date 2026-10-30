@@ -608,7 +608,7 @@ const Sales = () => {
           <div className="row justify-content-center">
             <div className="col-lg-8">
               <div className="call-to-action-content">
-                <h3>Maximize your business potentials</h3>
+                <h3>Maximise your business potentials</h3>
                 <p>
                   Drive new business challenges by implementing Dynamics 365
                   Sales
@@ -692,7 +692,7 @@ const Sales = () => {
                       to manage sales and customers using a single app
                       leveraging mobile devices. It helps to identify actual
                       customers to connect and engage with them in real-time.
-                      Utilizing sales insights and customer data, salespeople
+                      Utilising sales insights and customer data, salespeople
                       can make instant and productive decisions supporting their
                       sales campaigns. Sales managers can monitor their sales
                       team's performance and, if necessary, can guide them to
@@ -739,7 +739,7 @@ const Sales = () => {
                       customers, and drive productivity. This sales management
                       solution helps to streamline their sales data, connect &
                       engage customers, and make informed decisions leveraging
-                      sales analytics to close maximized sales in a faster
+                      sales analytics to close maximised sales in a faster
                       manner.
                       <br />
                       <br />
@@ -754,7 +754,7 @@ const Sales = () => {
                       available CRM systems, Microsoft Dynamics 365 Sales can
                       help you bring your entire sales and customers data at the
                       siloed interface that can be seamlessly accessed, edited,
-                      utilized, and shared with anyone in your organizational
+                      utilised, and shared with anyone in your organizational
                       connection even without switching apps.
                       <br />
                       <br />
@@ -881,7 +881,7 @@ const Sales = () => {
                       Dynamics 365 Sales helps to transform your entire sales
                       model. It enables businesses to improve and uplift their
                       digital sales experience. They can connect and engage the
-                      actual customers in real-time. With centralized data,
+                      actual customers in real-time. With centralised data,
                       Dynamics 365 Sales enables people to collaborate and
                       process the same customer data in real-time which helps to
                       streamline and accelerate sales.

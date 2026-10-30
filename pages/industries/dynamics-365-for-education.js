@@ -720,7 +720,7 @@ const Education = () => {
                   <div className='card557'>
                     <div className='card-233-body'>
                       <h3><span><i className="bi bi-check2"></i></span>Customised Solutions for Institutions</h3>
-                      <p>We set up Dynamics 365 solutions based on your organization's structure, the way your departments work, your business goals, and the way you need to report.</p>
+                      <p>We set up Dynamics 365 solutions based on your organisation's structure, the way your departments work, your business goals, and the way you need to report.</p>
                     </div>
                   </div>
                 </div>

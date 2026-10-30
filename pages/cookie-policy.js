@@ -36,7 +36,7 @@ const CookiePolicy = () => {
                 experience. When you visit any professional site, you are asked
                 whether to allow or disallow cookies. These cookies are
                 downloaded and saved to your system to function adequately and
-                to serve personalized information to the seeker or user.
+                to serve personalised information to the seeker or user.
               </p>
               <h3>How do Cookies work?</h3>
               <p>
@@ -50,7 +50,7 @@ const CookiePolicy = () => {
                 When you permit us to allow cookies in your system, cookies help
                 us to understand your browsing preferences or purpose of
                 visiting our website so that whenever you revisit our website,
-                we can serve a better or personalized experience to you.
+                we can serve a better or personalised experience to you.
               </p>
               <h3>How we use Cookies?</h3>
               <p>
@@ -130,7 +130,7 @@ const CookiePolicy = () => {
               <p>
                 These cookies enable us to save your record when you visit our
                 site. This could include a number of pages, exact pages, and
-                links that you follow while visiting our website. We utilize all
+                links that you follow while visiting our website. We utilise all
                 such information to improve our site relevancy and user
                 engagement.
               </p>

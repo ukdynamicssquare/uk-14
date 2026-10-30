@@ -253,7 +253,7 @@ const MigrateOnPremisesToBusinessCentralCloud = () => {
                     </div>
                   </div>
                   <div className="cintent-right">
-                    <p>Lowered operational costs through optimized Business Central features. </p>
+                    <p>Lowered operational costs through optimised Business Central features. </p>
                   </div>
                 </div>
                 <div className="content-inner-moil-1">

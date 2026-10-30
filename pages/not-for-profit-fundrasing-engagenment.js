@@ -27,7 +27,7 @@ const DynamicsNavNotFor = () => {
                 Introducing Fundraising and Engagement, a relationship
                 management platform powered by Dynamics 365 Sales. <br /> It is
                 a part of Microsoft Cloud for Nonprofit to help you upgrade the
-                engagement with supporters or donors to maximize the impact on a
+                engagement with supporters or donors to maximise the impact on a
                 mission.
               </p>
               <p>
@@ -42,7 +42,7 @@ const DynamicsNavNotFor = () => {
                     <div className="right">
                       <p>
                         Increase donors and supporters by approaching them with
-                        personalized engagement.
+                        personalised engagement.
                       </p>
                     </div>
                   </div>

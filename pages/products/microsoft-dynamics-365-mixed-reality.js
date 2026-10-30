@@ -8,11 +8,11 @@ import PageSeo from "../../components/PageSeo";
 const PAGE_FAQS = [
   {
     "question": "What is Mixed Reality and how does it work?",
-    "answer": "Mixed Reality is a next-generation solution that can be leveraged to empower people in your organisation and to improve your customer experience while reducing risks and costing. Mix Reality combines physical and digital worlds to interact in real-time to serve several purposes from remote services to virtual visualization to preparing learning guides for the users within your organisation. Mixed Reality bridges the gap between people and objects that are on distance. Here, one does not need to visit miles just to collaborate with the object, things can be managed from the distance. For instance, businesses can showcase their complicated, large, customizable products to the customers using Mixed Reality concepts or devices. Microsoft's HoloLens is an example of a Mixed Reality device."
+    "answer": "Mixed Reality is a next-generation solution that can be leveraged to empower people in your organisation and to improve your customer experience while reducing risks and costing. Mix Reality combines physical and digital worlds to interact in real-time to serve several purposes from remote services to virtual visualisation to preparing learning guides for the users within your organisation. Mixed Reality bridges the gap between people and objects that are on distance. Here, one does not need to visit miles just to collaborate with the object, things can be managed from the distance. For instance, businesses can showcase their complicated, large, customizable products to the customers using Mixed Reality concepts or devices. Microsoft's HoloLens is an example of a Mixed Reality device."
   },
   {
     "question": "What are Mixed Reality Services?",
-    "answer": "When it comes to Microsoft's Mixed Reality Services, it helps to improve your workflow, customer trust, and facilitate your workforce with the self-created Mix Reality guides to learn the required information in real-time and implement the same to ensure smoother and continuous operational flow in your organisation. Mixed Reality Services can be availed of in the following terms: Microsoft Dynamics 365 Remote Assist, Microsoft Dynamics 365 Layout, Accounts Receivable, Cash & Bank Management, Microsoft Dynamics 365 Product Visualize, Microsoft Dynamics 365 Guides To know more about contact Dynamics Square Team, we can help."
+    "answer": "When it comes to Microsoft's Mixed Reality Services, it helps to improve your workflow, customer trust, and facilitate your workforce with the self-created Mix Reality guides to learn the required information in real-time and implement the same to ensure smoother and continuous operational flow in your organisation. Mixed Reality Services can be availed of in the following terms: Microsoft Dynamics 365 Remote Assist, Microsoft Dynamics 365 Layout, Accounts Receivable, Cash & Bank Management, Microsoft Dynamics 365 Product Visualise, Microsoft Dynamics 365 Guides To know more about contact Dynamics Square Team, we can help."
   },
   {
     "question": "How businesses can improve their workflow with Mixed Reality solutions?",
@@ -28,7 +28,7 @@ const PAGE_FAQS = [
   },
   {
     "question": "What are the benefits of Mixed Reality?",
-    "answer": "As the name suggests, it combines the attributes of both AR (Augmented Reality) and VR (Virtual Reality) that allows users to create a new environment by leveraging physical and digital objects in real-time. Mixed Reality can provide a proven experience to both the consumers and businesses. Eliminating the wait time and saving the travel efforts, Mixed Reality can help to solve the problems in real-time. When integrated with Dynamics 365 Field Service, it can help businesses to capture the asset information. If there is a piece of critical or complex information, can be transformed into easy visualization by integrating with Power BI or any other enterprise-level application."
+    "answer": "As the name suggests, it combines the attributes of both AR (Augmented Reality) and VR (Virtual Reality) that allows users to create a new environment by leveraging physical and digital objects in real-time. Mixed Reality can provide a proven experience to both the consumers and businesses. Eliminating the wait time and saving the travel efforts, Mixed Reality can help to solve the problems in real-time. When integrated with Dynamics 365 Field Service, it can help businesses to capture the asset information. If there is a piece of critical or complex information, can be transformed into easy visualisation by integrating with Power BI or any other enterprise-level application."
   },
   {
     "question": "How is Mixed Reality used in Businesses?",
@@ -45,7 +45,7 @@ const MicrosoftDynamics365MixedReality = () => {
       <PageSeo
         type="Service"
         title="Microsoft Dynamics 365 Remote Assist & Mixed Reality"
-        description="Empower your workforce and optimise your operations with Dynamics 365 Mixed Reality Applications like remote assist, product visualize and guides."
+        description="Empower your workforce and optimise your operations with Dynamics 365 Mixed Reality Applications like remote assist, product visualise and guides."
         image="https://www.dynamicssquare.co.uk/img/Mixed-Reality-banner.png"
         faqs={PAGE_FAQS}
       />
@@ -100,7 +100,7 @@ const MicrosoftDynamics365MixedReality = () => {
             <p>
               Dynamics 365 Mixed Reality Apps enable your workforce with instant
               & timely collaboration to improve overall work performance, drive
-              effective growth, and maximize desired revenues. Share & solve
+              effective growth, and maximise desired revenues. Share & solve
               problems in real-time and provide instant support to your
               customers or clients to impact the overall organisational success.
             </p>
@@ -132,12 +132,12 @@ const MicrosoftDynamics365MixedReality = () => {
                       data-bs-parent="#accnew"
                     >
                       <div className="accordion-body">
-                        Optimize operations and transform your business flow
+                        Optimise operations and transform your business flow
                         while reducing costs and delays by leveraging Microsoft
                         Dynamics 365 Remote Assist solutions. Perform seamless
                         remote inspections across global clients or customers
                         embedded with video interactions, screenshots sharing,
-                        annotations, etc. utilizing Dynamics 365 Remote assist
+                        annotations, etc. utilising Dynamics 365 Remote assist
                         Mobile.
                       </div>
                     </div>
@@ -237,7 +237,7 @@ const MicrosoftDynamics365MixedReality = () => {
                             src="/img/Mixed-Reality-Product-Visualize.svg"
                             alt="Microsoft Dynamics 365 Guides"  loading="lazy" decoding="async" />
                         </div>
-                        <span>Microsoft Dynamics 365 Product Visualize</span>
+                        <span>Microsoft Dynamics 365 Product Visualise</span>
                       </button>
                     </h3>
                     <div
@@ -249,9 +249,9 @@ const MicrosoftDynamics365MixedReality = () => {
                       <div className="accordion-body">
                         Accelerate your sales process, build customer trust, and
                         close the deal faster by simply enabling your product
-                        visualization during your sales process. With Microsoft
-                        Dynamics 365 Product Visualize, empower your salespeople
-                        to visualize large, complex, customizable, or highly
+                        visualisation during your sales process. With Microsoft
+                        Dynamics 365 Product Visualise, empower your salespeople
+                        to visualise large, complex, customizable, or highly
                         configurable products in a real-world environment to
                         reduce risk and boost customer satisfaction.
                       </div>
@@ -402,7 +402,7 @@ const MicrosoftDynamics365MixedReality = () => {
                 <div className="card_new_content">
                   <h3>Implementation</h3>
                   <p>
-                    Unlock new business potentials with our highly customized
+                    Unlock new business potentials with our highly customised
                     Mixed Reality implementation.
                   </p>
                   <div className="action-content">
@@ -510,7 +510,7 @@ const MicrosoftDynamics365MixedReality = () => {
                       improve your customer experience while reducing risks and
                       costing. Mix Reality combines physical and digital worlds
                       to interact in real-time to serve several purposes from
-                      remote services to virtual visualization to preparing
+                      remote services to virtual visualisation to preparing
                       learning guides for the users within your organisation.
                       <br />
                       <br />
@@ -559,7 +559,7 @@ const MicrosoftDynamics365MixedReality = () => {
                         <li>Microsoft Dynamics 365 Layout</li>
                         <li> Accounts Receivable</li>
                         <li>Cash & Bank Management</li>
-                        <li>Microsoft Dynamics 365 Product Visualize</li>
+                        <li>Microsoft Dynamics 365 Product Visualise</li>
                         <li>Microsoft Dynamics 365 Guides</li>
                       </ul>
                       To know more about contact Dynamics Square Team, we can
@@ -705,7 +705,7 @@ const MicrosoftDynamics365MixedReality = () => {
                       When integrated with <Link href="/products/microsoft-dynamics-365-field-service/" target="_blank">Dynamics 365 Field Service</Link>, it can
                       help businesses to capture the asset information. If there
                       is a piece of critical or complex information, can be
-                      transformed into easy visualization by <Link href="/products/microsoft-power-bi/" target="_blank">integrating with
+                      transformed into easy visualisation by <Link href="/products/microsoft-power-bi/" target="_blank">integrating with
                       Power BI</Link> or any other enterprise-level application.
                     </div>
                   </div>

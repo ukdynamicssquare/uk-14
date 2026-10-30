@@ -23,13 +23,13 @@ const productCategories = [
         href: "/products/dynamics-365-supply-chain-management/",
         icon: "/img/menu-icons/dynamics-365-supplychainmanagement.svg",
         title: "Supply Chain Management",
-        desc: "Optimize operations and drive an agile, AI-driven supply chain",
+        desc: "Optimise operations and drive an agile, AI-driven supply chain",
       },
       {
         href: "/products/dynamics-365-human-resources/",
         icon: "/img/menu-icons/dynamics-365-HRM.svg",
         title: "Human Resources",
-        desc: "Optimize resource utilization with AI-assisted HR insights",
+        desc: "Optimise resource utilisation with AI-assisted HR insights",
       },
       {
         href: "/products/microsoft-dynamics-365-commerce/",
@@ -60,7 +60,7 @@ const productCategories = [
         href: "/products/microsoft-dynamics-365-marketing/",
         icon: "/img/menu-icons/dynamics-365-marketing.svg",
         title: "Marketing",
-        desc: "Maximize ROI with AI-driven, integrated marketing",
+        desc: "Maximise ROI with AI-driven, integrated marketing",
       },
       {
         href: "/products/microsoft-dynamics-365-field-service/",
@@ -116,7 +116,7 @@ const productCategories = [
   {
     id: "legacy",
     title: "Legacy Dynamics Products",
-    subtitle: "Still on an older Dynamics system? We support, upgrade, and modernize these with AI too.",
+    subtitle: "Still on an older Dynamics system? We support, upgrade, and modernise these with AI too.",
     products: [
       {
         href: "/products/microsoft-dynamics-nav/",

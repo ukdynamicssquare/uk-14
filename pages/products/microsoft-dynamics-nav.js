@@ -18,12 +18,12 @@ const OG_DESC = "Need Microsoft Dynamics NAV support? Whether you're using an ol
 const OG_IMAGE = "https://www.dynamicssquare.co.uk/img/nav-banner.png";
 
 const benefits = [
-  { icon: "bi-graph-up-arrow", title: "Maximized ROI", text: "Maximizing your ROI (return on investment) is the key to success in any business venture. Dynamics NAV helps businesses optimise the current processes, resulting in reduced costs and maximised profitability." },
+  { icon: "bi-graph-up-arrow", title: "Maximised ROI", text: "Maximising your ROI (return on investment) is the key to success in any business venture. Dynamics NAV helps businesses optimise the current processes, resulting in reduced costs and maximised profitability." },
   { icon: "bi-cloud-arrow-up", title: "Ease of Deployment", text: <>Businesses have the choice to opt for the desired deployment option. Navision generally comes with an on-premises deployment option, but you can avail yourself of the cloud deployment option by <Link href="/dynamics-nav-to-business-central/">upgrading your current NAV version to Business Central</Link>. You can also use the <Link href="/microsoft-dynamics-365-cloud-vs-on-premise/">hybrid deployment option</Link> to access the combined capability of on-premises and cloud.</> },
   { icon: "bi-window-sidebar", title: "Effective User Interface", text: "An effective user interface is essential for any system that is intended for use by a large number of people, as it will make the system more user-friendly and therefore more likely to be used. With a simple to understand user interface, it offers seamless features and functions to all users that aid them in navigating easily." },
   { icon: "bi-bar-chart-line", title: "Transparent Reporting and Planning", text: <>Dynamics NAV allows users to get accurate insights and reports to make informed decisions in real-time. It provides the visibility to track almost all performances with the help of Microsoft integrations like <Link href="/products/microsoft-dynamics-365/integration/">Excel and Office</Link>.</> },
   { icon: "bi-headset", title: "Avail Support 24x7", text: <>The basic requirement of Dynamics NAV is having an internal Dynamics NAV support team to keep the system working 24x7, even in tough times. It eliminates the dependency on third-party <Link href="/our-services/dynamics-365-support-services/">NAV support partners</Link>, resulting in a focus on business growth.</> },
-  { icon: "bi-sliders", title: "Flexible with Customizations", text: "Dynamics NAV is flexible enough to adapt itself as per the unique requirements of the business. It is totally customizable and can be tailored to offer a personalised user experience with increased productivity." },
+  { icon: "bi-sliders", title: "Flexible with Customisations", text: "Dynamics NAV is flexible enough to adapt itself as per the unique requirements of the business. It is totally customizable and can be tailored to offer a personalised user experience with increased productivity." },
   { icon: "bi-emoji-smile", title: "Better Customer Service", text: "Using Microsoft Navision, businesses can make a big difference to the level of customer service they provide. Eventually, it will be more likely to win over new customers and keep their existing ones coming back for more." },
   { icon: "bi-plug", title: "Efficient Integrations", text: <>Integrations are a crucial part of any software system. They allow different components of the system to communicate with each other and exchange data. You can add the <Link href="/products/microsoft-dynamics-365/integration/">desired integrations</Link> with the system to enhance the performance for more business growth.</> },
 ];
@@ -33,12 +33,12 @@ const differences = [
   { icon: "bi-cash-stack", title: "Upfront Investment Cost", text: <>Dynamics NAV implementation needs a huge investment to set up for a business, whereas <Link href="/dynamics-365-business-central-implementation/">Business Central implementation</Link> works on a monthly subscription basis due to cloud deployment.</> },
   { icon: "bi-tools", title: "Maintenance Cost", text: "You will need an internal IT team to support all kinds of maintenance and hardware upgrades, resulting in a lot of investment, whereas Business Central will be maintained by Microsoft at no extra cost and without hampering the current processes." },
   { icon: "bi-ui-checks-grid", title: "Simple User Interface", text: <>The user interface of NAV software is a bit complex, and new users find it difficult to understand. On the other hand, <Link href="/products/dynamics-365-business-central/advantages-capabilities/">MS Dynamics 365 Business Central</Link> offers a simple yet powerful user interface where all the functions and tools are easily accessible.</> },
-  { icon: "bi-person-gear", title: "Personalization", text: <>NAV provides limited personalization for all industries and requires significant resources to implement. Furthermore, when it comes to Business Central, <Link href="/products/dynamics-365-business-central/customisation/">extensions, add-ons, and other simple-to-implement apps</Link> are available to make the Microsoft ERP work for you.</> },
+  { icon: "bi-person-gear", title: "Personalisation", text: <>NAV provides limited personalisation for all industries and requires significant resources to implement. Furthermore, when it comes to Business Central, <Link href="/products/dynamics-365-business-central/customisation/">extensions, add-ons, and other simple-to-implement apps</Link> are available to make the Microsoft ERP work for you.</> },
 ];
 
 const services = [
   { icon: "bi-gear", title: "Implementation", text: "Drive seamless flow of your enterprise practices leveraging the power of Microsoft Dynamics NAV.", href: "#exampleModal", modal: true },
-  { icon: "bi-arrow-up-circle", title: "Upgrade", text: "Upgrade your existing legacy or old Dynamics version with latest NAV version for a modernized and efficient solution.", href: "/dynamics-nav-to-business-central/" },
+  { icon: "bi-arrow-up-circle", title: "Upgrade", text: "Upgrade your existing legacy or old Dynamics version with latest NAV version for a modernised and efficient solution.", href: "/dynamics-nav-to-business-central/" },
   { icon: "bi-person-check", title: "Support", text: "Drive consistency in your business operations and ensure smoother workflow by availing of our best Navision support.", href: "#exampleModal", modal: true },
   { icon: "bi-chat-dots", title: "Consulting", text: "Get optimum Dynamics NAV to your customised business needs.", href: "#exampleModal", modal: true },
 ];
@@ -277,7 +277,7 @@ const MicrosoftDynamicsNAV = () => {
               <i className="bi bi-boxes"></i>
               <h3>Extended Pack</h3>
               <span className={styles.caseTag}>Features</span>
-              <p>If you are a growing organisation with complex and advanced business operations, the Extended Pack is for you. Apart from the functions of the starter pack, it offers you a few more modules to manage, including manufacturing and warehousing as an add-on. Users can add more customizations and integrations as their business needs change.</p>
+              <p>If you are a growing organisation with complex and advanced business operations, the Extended Pack is for you. Apart from the functions of the starter pack, it offers you a few more modules to manage, including manufacturing and warehousing as an add-on. Users can add more customisations and integrations as their business needs change.</p>
             </article>
           </div>
         </div>

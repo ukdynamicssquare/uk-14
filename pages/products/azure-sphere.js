@@ -62,7 +62,7 @@ const AzureSphere = () => {
               Secure your millions of devices along with data, privacy, physical
               architecture, and the entire IoT infrastructure with Microsoft
               Azure Sphere. With Azure Sphere security services, enterprises can
-              maximize their equipment value and performance by ensuring
+              maximise their equipment value and performance by ensuring
               tracking and monitoring their devices in real-time. Since Azure
               IoT comes with its own Azure Sphere Operating System that adds
               extra protection layers and ensures additional security updates.
@@ -173,7 +173,7 @@ const AzureSphere = () => {
                       <div className="accordion-body">
                         Azure Sphere security services are designed to establish
                         device-to-cloud communication, help to detect threats,
-                        and maximize the connected IoT devices' security.
+                        and maximise the connected IoT devices' security.
                       </div>
                     </div>
                   </div>

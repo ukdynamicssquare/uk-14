@@ -185,7 +185,7 @@ class HeaderOld extends Component {
                                         <div className="content">
                                           <span>Supply Chain</span>
                                           <p>
-                                            Optimize operations and drive agile
+                                            Optimise operations and drive agile
                                             Supply Chain
                                           </p>
                                         </div>
@@ -324,7 +324,7 @@ class HeaderOld extends Component {
                                         <div className="content">
                                           <span>Marketing</span>
                                           <p>
-                                            Maximize ROI with integrated
+                                            Maximise ROI with integrated
                                             Marketing
                                           </p>
                                         </div>
@@ -344,7 +344,7 @@ class HeaderOld extends Component {
                                         <div className="content">
                                           <span>Human Resource</span>
                                           <p>
-                                            Optimize Your Resource Utilization
+                                            Optimise Your Resource Utilisation
                                           </p>
                                         </div>
                                       </a>
@@ -575,7 +575,7 @@ class HeaderOld extends Component {
                                         <div className="content">
                                           <span>Power Virtual Agents</span>
                                           <p>
-                                            Create powerful AI Bots to maximize
+                                            Create powerful AI Bots to maximise
                                             productivity
                                           </p>
                                         </div>
@@ -921,7 +921,7 @@ class HeaderOld extends Component {
                                         </div>
                                         <div className="content">
                                           <span>Mobile WMS BC</span>
-                                          <p>Optimize your warehouse operations, simplify your inventory management, and boost your profits</p>
+                                          <p>Optimise your warehouse operations, simplify your inventory management, and boost your profits</p>
                                         </div>
                                       </a>
                                     </div>
@@ -1244,7 +1244,7 @@ class HeaderOld extends Component {
                             </div>
                             <div className="content">
                               <span>D365 for Retail</span>
-                              <p>Optimize retail operations with seamless user experience</p>
+                              <p>Optimise retail operations with seamless user experience</p>
                             </div>
                           </a>
                         </div>

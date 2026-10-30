@@ -24,7 +24,7 @@ const PAGE_FAQS = [
   },
   {
     "question": "How long will it take to implement the project successfully?",
-    "answer": "Neither we, nor anyone else, can give you an exact time frame for implementing a solution without first understanding the business and its requirements. Various factors, including the number of processes, complexity of operations, integrations, and customizations, specify the time."
+    "answer": "Neither we, nor anyone else, can give you an exact time frame for implementing a solution without first understanding the business and its requirements. Various factors, including the number of processes, complexity of operations, integrations, and customisations, specify the time."
   },
   {
     "question": "What is the accurate cost of D365 Sales implementation?",
@@ -101,7 +101,7 @@ const ImplementationSales = () => {
                   seamlessly streamline your entire sales management, enhancing
                   the efficiency and productivity of salespeople. With
                   built-in-intelligence and actionable insights, you can
-                  revolutionize your sales processes with a personalized and
+                  revolutionise your sales processes with a personalised and
                   unified user interface. Once you opt for Dynamics 365 Sales
                   implementation, you will the following benefits:
                 </p>
@@ -169,7 +169,7 @@ const ImplementationSales = () => {
                           identify potential customers and pitch them at the
                           time of need. Dynamics 365 Sales collects accurate
                           information using different resources and helps you
-                          approach customers with personalized and prioritized
+                          approach customers with personalised and prioritized
                           details.
                         </p>
                       </div>
@@ -269,7 +269,7 @@ const ImplementationSales = () => {
                     >
                       <div className="accordion-body">
                         <p>
-                          Intelligent process optimization enables you to
+                          Intelligent process optimisation enables you to
                           perform faster and better with increased efficiency to
                           sell more using existing resources. Also, it automates
                           many of the recurring manual processes, leading to a
@@ -321,7 +321,7 @@ const ImplementationSales = () => {
                         aria-expanded="false"
                         aria-controls="fin7"
                       >
-                        <span>Optimize Sales Journey</span>
+                        <span>Optimise Sales Journey</span>
                       </button>
                     </h3>
                     <div
@@ -333,7 +333,7 @@ const ImplementationSales = () => {
                       <div className="accordion-body">
                         <p>
                           Provide a revamped experience throughout the sales
-                          journey using social insights, personalized selling,
+                          journey using social insights, personalised selling,
                           and contextual data to target the right opportunity
                           for the customer, resulting in more sales deals. Get a
                           360-degree view of the entire sales pipeline and make
@@ -353,7 +353,7 @@ const ImplementationSales = () => {
                         aria-expanded="false"
                         aria-controls="fin8"
                       >
-                        <span>Flexible with Customizations</span>
+                        <span>Flexible with Customisations</span>
                       </button>
                     </h3>
                     <div
@@ -364,10 +364,10 @@ const ImplementationSales = () => {
                     >
                       <div className="accordion-body">
                         <p>
-                          Customization and integration make a solution
+                          Customisation and integration make a solution
                           adaptable to all changing business needs as per market
                           and customer demand. Dynamics 365 Sales implementation
-                          would make the whole process of adding customizations
+                          would make the whole process of adding customisations
                           unique to perform specific business operations,
                           enabling more focus on the sales process rather than
                           being preoccupied with work.
@@ -471,7 +471,7 @@ const ImplementationSales = () => {
                           <p>
                             In this phase of D365 for Sales implementation
                             process, our team will begin working to create a
-                            personalized and appropriate sales solution that
+                            personalised and appropriate sales solution that
                             understands your needs and assists you in achieving
                             maximum growth.
                           </p>
@@ -931,7 +931,7 @@ const ImplementationSales = () => {
                         frame for implementing a solution without first
                         understanding the business and its requirements. Various
                         factors, including the number of processes, complexity
-                        of operations, integrations, and customizations, specify
+                        of operations, integrations, and customisations, specify
                         the time.
                       </p>
                     </div>

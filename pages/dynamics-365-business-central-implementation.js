@@ -293,7 +293,7 @@ const BusinessCentralImplementation = () => {
                 <div className='mycard'>
                   <div className='mycard__inner'>
                     <div className='mycard__inner-left'>
-                      <h3>Phase 2: Solution Design & Customization </h3>
+                      <h3>Phase 2: Solution Design & Customisation </h3>
                       <p>Here’s where the blueprint becomes a tailored solution. We shape Dynamics 365 Business Central around your processes, not the other way around. From custom configurations to smart integrations with third-party tools and even embedding AI agents and Copilot automation, we build with the future in mind. </p>
                       <ul>
                         <li>Configure Business Central to fit </li>
@@ -338,7 +338,7 @@ const BusinessCentralImplementation = () => {
                 <div className='mycard'>
                   <div className='mycard__inner'>
                     <div className='mycard__inner-left'>
-                      <h3>Phase 5: Ongoing Support & Optimization </h3>
+                      <h3>Phase 5: Ongoing Support & Optimisation </h3>
                       <p>Once you’re live, we stay with you for as long as you want us to be. You have our unwavering <a className="u-i" href="/d365-business-central-support/">Business Central support</a>, all the time. We monitor performance, apply <a className="u-i" href="/dynamics-365-business-central-upgrade/">updates and upgrades</a>, and are always on call for enhancements or troubleshooting. Your system evolves as your business does. </p>
                       <ul>
                         <li>Continuous monitoring & updates</li>
@@ -410,7 +410,7 @@ const BusinessCentralImplementation = () => {
                   Licensing
                   </div>
                   <div className='ol-listitem'>
-                  Customization
+                  Customisation
                   </div>
                   <div className='ol-listitem'>
                   Data Migration

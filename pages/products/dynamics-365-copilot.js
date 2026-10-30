@@ -125,7 +125,7 @@ const ErpMicrosoftCloudFor = () => {
                       <div className='card-233-body'>
                         <h3><span><i className="bi bi-check2"></i></span>Automated Follow-ups</h3>
                       </div>
-                      <p>Sends personalized email follow-ups after customer interactions.</p>
+                      <p>Sends personalised email follow-ups after customer interactions.</p>
 
                     </div>
                   </div>
@@ -201,7 +201,7 @@ const ErpMicrosoftCloudFor = () => {
                       <div className='card-233-body'>
                         <h3><span><i className="bi bi-check2"></i></span>Automated Follow-ups</h3>
                       </div>
-                      <p>Sends personalized email follow-ups after customer interactions.</p>
+                      <p>Sends personalised email follow-ups after customer interactions.</p>
 
                     </div>
                   </div>
@@ -324,7 +324,7 @@ const ErpMicrosoftCloudFor = () => {
                         <h3>Dynamics 365 Customer Service</h3>
                         <ul>
                           <li><i className="bi bi-check2"></i><span>Real-time suggestions for resolving customer issues more effectively.</span></li>
-                          <li><i className="bi bi-check2"></i><span>Helps provide AI-driven templates for faster, personalized responses.</span></li>
+                          <li><i className="bi bi-check2"></i><span>Helps provide AI-driven templates for faster, personalised responses.</span></li>
                           <li><i className="bi bi-check2"></i><span>Assists with case management by forecasting resolution times and next best actions</span></li>
                           <li><i className="bi bi-check2"></i><span>Improves the level of service by keeping track of performance and analysing feedback.</span></li>
                         </ul>
@@ -340,7 +340,7 @@ const ErpMicrosoftCloudFor = () => {
                         <img src="/img/chapter-04.png" alt="Dynamics 365 Marketing"  loading="lazy" decoding="async" />
                         <h3>Dynamics 365 Marketing</h3>
                         <ul>
-                          <li><i className="bi bi-check2"></i><span>Offers personalized campaign suggestions tailored to audience behaviour.</span></li>
+                          <li><i className="bi bi-check2"></i><span>Offers personalised campaign suggestions tailored to audience behaviour.</span></li>
                           <li><i className="bi bi-check2"></i><span>Enables automated email generation for targeted outreach.</span></li>
                           <li><i className="bi bi-check2"></i><span>Tracks campaign performance and provides actionable insights</span></li>
                           <li><i className="bi bi-check2"></i><span>Supports integration with LinkedIn for extended audience reach.</span></li>
@@ -364,7 +364,7 @@ const ErpMicrosoftCloudFor = () => {
                           <li><i className="bi bi-check2"></i><span>Keeps track of costs automatically and gives detailed financial reports.</span></li>
                           <li><i className="bi bi-check2"></i><span>Helps with budgeting and planning your finances based on predictive insights. </span></li>
                           <li><i className="bi bi-check2"></i><span>Monitors compliance with changing regulations.</span></li>
-                          <li><i className="bi bi-check2"></i><span>Makes audits easier by using AI to summarize financial info. </span></li>
+                          <li><i className="bi bi-check2"></i><span>Makes audits easier by using AI to summarise financial info. </span></li>
                         </ul>
                       </div>
                       <div className='text-al'>
@@ -394,7 +394,7 @@ const ErpMicrosoftCloudFor = () => {
                         <img src="/img/chapter-06.png" alt="Dynamics 365 Commerce"  loading="lazy" decoding="async" />
                         <h3>Dynamics 365 Commerce</h3>
                         <ul>
-                          <li><i className="bi bi-check2"></i><span>Personalizes shopping experiences with AI-driven product recommendations.</span></li>
+                          <li><i className="bi bi-check2"></i><span>Personalises shopping experiences with AI-driven product recommendations.</span></li>
                           <li><i className="bi bi-check2"></i><span>Analyses how customers act to make sales and marketing plans better.  </span></li>
                           <li><i className="bi bi-check2"></i><span>Automates order management and tracking.</span></li>
                           <li><i className="bi bi-check2"></i><span>Enhances in-store and online integration for unified commerce.</span></li>

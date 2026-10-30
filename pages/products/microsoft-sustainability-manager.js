@@ -18,7 +18,7 @@ const Microsoftsustainabilitymanager = () => {
               <h1>Microsoft Sustainability Manager</h1>
               <p>
                 A powerful solution to help you sustain climate changes with
-                centralized and comprehensive data by automating the manual
+                centralised and comprehensive data by automating the manual
                 processes to report, record, and reduce the environmental
                 impacts.
               </p>
@@ -199,7 +199,7 @@ const Microsoftsustainabilitymanager = () => {
                     >
                       <div className="accordion-body">
                         <p>
-                          It manages, visualizes, analyses, and reports the
+                          It manages, visualises, analyses, and reports the
                           consumption of resources, their impact on the
                           environment, and real-time sustainability progress.
                           <br />
@@ -283,12 +283,12 @@ const Microsoftsustainabilitymanager = () => {
                 <div className="icons size-new">
                   <img
                     src="/img/Centralize-Data-Insights.svg"
-                    alt="Centralize Data Insights"  loading="lazy" decoding="async" />
+                    alt="Centralise Data Insights"  loading="lazy" decoding="async" />
                 </div>
                 <div className="commen-boc-2-info">
-                  <h3>Centralize Data Insights</h3>
+                  <h3>Centralise Data Insights</h3>
                   <p>
-                    It centralizes entire emissions data and makes it available
+                    It centralises entire emissions data and makes it available
                     to the users for sustainable reporting, helping the business
                     to transform in a better way.
                   </p>
@@ -367,7 +367,7 @@ const Microsoftsustainabilitymanager = () => {
                   People and Planet{" "}
                 </h3>
                 <p>
-                  Minimize the environmental impacts by reducing the carbon
+                  Minimise the environmental impacts by reducing the carbon
                   footprints from devices, apps, and the cloud by implementing
                   Microsoft Cloud for Sustainability.
                 </p>

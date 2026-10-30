@@ -207,7 +207,7 @@ const IndustriesList = () => {
                   <div className="pic-body">
                     <h4>Empower Students  <br/>Transform Teaching </h4>
                     <ul>
-                      <li>Personalized Learning Experiences</li>
+                      <li>Personalised Learning Experiences</li>
                       <li>Improved Campus Management </li>
                       <li>Enhanced Alumni Engagement </li>
                     </ul>

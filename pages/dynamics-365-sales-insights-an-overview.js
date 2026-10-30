@@ -150,7 +150,7 @@ const SalesInsightsanOverview = () => {
                   get answers to crucial business questions. It also empowers
                   on-field team members, inside sales teams, and managers to
                   minimise tedious tasks, build relationships with customers via
-                  personalized engagement, and proactively lead the sales teams.
+                  personalised engagement, and proactively lead the sales teams.
                 </p>
                 <p>
                   <b>Identify what is and isn't working</b>
@@ -247,7 +247,7 @@ const SalesInsightsanOverview = () => {
               proven methodologies to help clients to design, implement and
               manage their business solutions that align to business priorities,
               maximum return on their investment and to create high performance
-              organizations.
+              organisations.
             </p>
           </header>
           <div className="row pad-3y">
