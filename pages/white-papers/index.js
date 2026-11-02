@@ -57,6 +57,29 @@ const WhitePaper = () => {
                   aria-labelledby="v-pills-home-tab"
                 >
                   <div className="row">
+                    {[
+                      { href: "/white-papers/sage-200-to-business-central/", img: "/img/sage-200-to-business-central-white-paper-banner.png", title: "Sage 200 to Business Central: The UK Migration Business Case" },
+                      { href: "/white-papers/netsuite-to-business-central/", img: "/img/netsuite-to-business-central-white-paper-banner.png", title: "Leaving NetSuite: A Business Central Renewal and Migration Playbook" },
+                      { href: "/white-papers/business-central-implementation-cost/", img: "/img/business-central-implementation-cost-white-paper-banner.png", title: "What Business Central Really Costs: A UK Implementation Budget Planner" },
+                    ].map((paper) => (
+                      <div className="col-lg-6 d-flex" key={paper.href}>
+                        <div className="card card-custom-1 p-3">
+                          <a href={paper.href} className="over-ff text-center">
+                            <img className="card-img-top" src={paper.img} alt={paper.title} loading="lazy" decoding="async" />
+                          </a>
+                          <div className="card-body">
+                            <h5 className="card-title">
+                              <a href={paper.href}>{paper.title}</a>
+                            </h5>
+                            <div className="btn-003 btn-009">
+                              <a className="btn btn-sm btn-danger" href={paper.href}>
+                                Read Now
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
                   <div className="col-lg-6 d-flex">
                       <div className="card card-custom-1 p-3">
                         <a

@@ -388,27 +388,27 @@ const DeskstopMenu = () => {
                             </div>
                             <div className="col-lg-6">
                               <div className="resor-bords">
-                                <div className="guide-cardwar">
-                                  <span className="pop-res-title">Whitepapers</span>
-                                  <p className="pop-res-title-p">Strategic resources for decision makers</p>
-                                </div>
-                                <div className="res-flex-wrap-one">
-                                  {WHITEPAPERS.map((w) => (
-                                    <div className="guide-card-01" key={w.href}>
-                                      <Link href={w.href}>
-                                        <div className="guide-card-imag">
-                                          <Image width={980} height={578} src={w.img} alt={w.alt} sizes="260px" />
-                                        </div>
-                                        <div className="guide-card-inf">
-                                          {/* <span className="guide-tags-rss">{w.tag}</span> */}
-                                          <span className="guide-card-title">{w.title}</span>
-                                        </div>
-                                      </Link>
-                                    </div>
-                                  ))}
-                                </div>
-                                <div className="comm-links-b">
-                                  <Link className="n-tag-link" href="/white-papers/">Explore All Whitepapers <i className="bi bi-arrow-right"></i></Link>
+                                {/* Same card + sub-link list as the Manufacturing entry in ColumnMegaMenu.js */}
+                                <div className="ind-mega">
+                                  <div className="ind-mega-item">
+                                    <Link className="ind-mega-card" href="/white-papers/">
+                                      <span className="ind-mega-icon">
+                                        <i className="bi bi-file-earmark-text"></i>
+                                      </span>
+                                      <span className="ind-mega-text">
+                                        <span className="ind-mega-name">Whitepapers</span>
+                                        <span className="ind-mega-desc">Strategic resources for decision makers</span>
+                                      </span>
+                                      <i className="bi bi-chevron-right ind-mega-chevron"></i>
+                                    </Link>
+                                    <ul className="ind-mega-sublinks">
+                                      {WHITEPAPERS.map((w) => (
+                                        <li key={w.href}>
+                                          <Link href={w.href}>{w.title}</Link>
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  </div>
                                 </div>
                               </div>
                             </div>

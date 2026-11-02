@@ -454,6 +454,9 @@ export const resourcesMenu = {
         heading: "Whitepapers",
         subheading: "Strategic resources for decision makers",
         items: [
+          { href: "/white-papers/sage-200-to-business-central/", image: "/img/sage-200-to-business-central-white-paper-menu.png", tag: "Whitepapers", title: "Sage 200 to Business Central: The UK Migration Business Case" },
+          { href: "/white-papers/netsuite-to-business-central/", image: "/img/netsuite-to-business-central-white-paper-menu.png", tag: "Whitepapers", title: "Leaving NetSuite: A Business Central Renewal and Migration Playbook" },
+          { href: "/white-papers/business-central-implementation-cost/", image: "/img/business-central-implementation-cost-white-paper-menu.png", tag: "Whitepapers", title: "What Business Central Really Costs: A UK Implementation Budget Planner" },
           { href: "/white-papers/microsoft-copilot/", image: "/img/white-p-one.png", tag: "Whitepapers", title: "Microsoft Copilot: The Catalyst for Transformation in Your Business" },
           { href: "/white-papers/microsoft-finance/", image: "/img/finacne-white-paper-category.png", tag: "Whitepapers", title: "Dynamics 365 Finance with Copilot WhitePaper" },
         ],
@@ -743,6 +746,9 @@ export const GUIDES = [
 ];
 
 export const WHITEPAPERS = [
+  { href: "/white-papers/sage-200-to-business-central/", img: "/img/sage-200-to-business-central-white-paper-menu.png", alt: "Sage 200 to Business Central white paper", tag: "Whitepapers", title: "Sage 200 to Business Central Migration" },
+  { href: "/white-papers/netsuite-to-business-central/", img: "/img/netsuite-to-business-central-white-paper-menu.png", alt: "NetSuite to Business Central white paper", tag: "Whitepapers", title: "NetSuite to Business Central Playbook" },
+  { href: "/white-papers/business-central-implementation-cost/", img: "/img/business-central-implementation-cost-white-paper-menu.png", alt: "Business Central implementation cost white paper", tag: "Whitepapers", title: "Business Central Implementation Cost Planner" },
   { href: "/white-papers/microsoft-copilot/", img: "/img/white-p-one.png", alt: "guide", tag: "Whitepapers", title: "Microsoft Copilot for Business Transformation" },
   { href: "/white-papers/microsoft-finance/", img: "/img/finacne-white-paper-category.png", alt: "guide", tag: "Whitepapers", title: "Dynamics 365 Finance with Copilot" },
 ];

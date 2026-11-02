@@ -209,8 +209,8 @@ export default function FootComo() {
             </Link>
             
             <p className={styles.brandPitch}>
-              A Microsoft Solutions Partner delivering Dynamics 365, Business Central and Copilot
-              across the UK, United States and Canada.
+              Dynamics Square UK is a Microsoft Solutions Partner delivering expert Dynamics 365, Business
+              Central and AI-powered Copilot solutions to help UK businesses drive digital transformation.
             </p>
 
             <div className={styles.contact}>
