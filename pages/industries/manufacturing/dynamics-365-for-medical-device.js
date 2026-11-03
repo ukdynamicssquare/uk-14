@@ -696,7 +696,7 @@ const MedicalDevice = () => {
           <div className="row">
             <div className="col-lg-5 align-self-center order-3">
               <div className='img-backs-sid-two text-center'>
-                <Image src="/img/medical-device-18.png" alt="UK medical device manufacturers working with Dynamics Square" width={540} height={536} className='im-two' />
+                <Image src="/img/medical-device-18.png" alt="UK medical device manufacturers working with Dynamics Square" width={540} height={630} className='im-two' />
               </div>
             </div>
             <div className="col-lg-1 order-2"></div>
