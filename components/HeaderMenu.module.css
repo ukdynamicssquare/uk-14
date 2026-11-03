@@ -1087,6 +1087,9 @@ display: block;
 .nav :global(.megamenu-list .n-tag-para) {
   color: #6f6a85;
 }
+.nav :global(.megamenu-list .extra-res-link a) {
+  color: #625390;
+}
 .nav :global(.megamenu-list .res-top-co a:hover),
 .nav :global(.megamenu-list .extra-res-link a:hover),
 .nav :global(.megamenu-list .n-tag-link:hover) {
