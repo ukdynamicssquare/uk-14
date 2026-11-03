@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "question": "Is Dynamics 365 suitable for plastics manufacturing?",
+        "answer": "<p>Yes, Dynamics 365 helps plastics manufacturers manage purchasing, raw materials, production, quality checks, inventory, shipping and finances in one system. Business Central suits moulders, extruders and thermoformers with established products across a few sites. Supply Chain Management suits formula-based processors and businesses managing several plants, complex scheduling and equipment maintenance. Power BI and Excel help teams analyse shared business data.</p>"
+    },
+    {
+        "id": 2,
+        "question": "Can Dynamics 365 manage plastics formulas and production batches?",
+        "answer": "<p>Yes, Business Central uses production bills of materials to define the materials needed for each product, with versions and approval controls where configured. Supply Chain Management supports formulas with fixed quantities or ingredient percentages. It can also manage co products, by products and batch test results, such as moisture or melt flow. These features help manufacturers control recipes and maintain consistent production quality.</p>"
+    },
+    {
+        "id": 3,
+        "question": "Can Dynamics 365 track raw materials and finished products?",
+        "answer": "<p>Yes, Dynamics 365 can track resin, masterbatch and additives using lot or batch numbers. Production records connect the materials used with the resulting parts, while inventory and shipping records help trace finished goods to customers. Teams can trace a supplier's resin batch forward to affected products or investigate a returned part back to its source material. Unit conversions support stock records in kilograms, bags or boxes.</p>"
+    },
+    {
+        "id": 4,
+        "question": "Can Dynamics 365 help monitor scrap and production waste?",
+        "answer": "<p>Yes, both solutions help manufacturers plan for expected material waste and record actual scrap. Business Central supports scrap recording through production output journals, with reason codes where configured. Supply Chain Management offers shop floor reporting and can return recovered regrind to inventory as a co product or by product, depending on the setup. These records help analyse waste by product, work centre and cause. Recycled content claims require separate evidence and must follow applicable UK guidance, including the Competition and Markets Authority's Green Claims Code.</p>"
+    },
+    {
+        "id": 5,
+        "question": "Which Dynamics 365 solution is suitable for plastics manufacturers?",
+        "answer": "<p>Business Central Premium suits manufacturers using established material lists and production steps across a few sites. Supply Chain Management is worth considering for formula-based production, valuable by products, multiple companies and more advanced maintenance or shop floor reporting. Dynamics Square assesses your products, production methods and plant requirements before recommending the most suitable system.</p>"
+    }
+]

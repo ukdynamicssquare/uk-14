@@ -607,6 +607,8 @@ export const INDUSTRY_MENU = {
           { href: "/industries/manufacturing/dynamics-365-for-electronics/", title: "Electronics" },
           { href: "/industries/manufacturing/dynamics-365-for-chemical/", title: "Chemical" },
           { href: "/industries/manufacturing/dynamics-365-for-food/", title: "Food & Beverage" },
+          { href: "/industries/manufacturing/dynamics-365-for-plastics/", title: "Plastics" },
+          { href: "/industries/manufacturing/dynamics-365-for-fashion/", title: "Fashion & Apparel" },
         ],
       },
     ],

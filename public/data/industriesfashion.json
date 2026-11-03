@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "question": "Is Dynamics 365 suitable for fashion and apparel manufacturing?",
+        "answer": "<p>Yes, Business Central suits clothing businesses with simpler production needs, while Supply Chain Management supports larger product ranges and multiple factories. The right choice depends on your styles, sizes, factory locations, subcontractors, and forecasting needs. Both solutions connect with Microsoft 365 and Power BI, helping teams work with shared business data.</p>"
+    },
+    {
+        "id": 2,
+        "question": "Can Dynamics 365 manage size, colour and style variations?",
+        "answer": "<p>Yes, Business Central tracks colour and size combinations as item variants, while Supply Chain Management also supports dimensions such as style, configuration, and version. For example, a T shirt available in four colours and five sizes can have 20 combinations. Partner apps can add grid-based order entry for managing size ranges.</p>"
+    },
+    {
+        "id": 3,
+        "question": "Can Dynamics 365 manage apparel production and subcontractors?",
+        "answer": "<p>Yes, both solutions support production orders, material lists, and production steps from cutting to finishing. Business Central helps manage subcontracting orders and materials sent to outside factories. Supply Chain Management adds tools for tracking subcontracted jobs, outgoing materials, and stock held by external manufacturers. Both can help track production costs, including subcontractor charges.</p>"
+    },
+    {
+        "id": 4,
+        "question": "Does Dynamics 365 support fashion demand forecasting?",
+        "answer": "<p>Yes, Business Central uses past sales to forecast demand and suggest restocking. Its forecasts combine variants and locations, so planners may need to estimate demand for individual sizes and colours. Supply Chain Management uses Azure Machine Learning to create forecasts that planners can review and adjust before production planning. New styles often require estimates based on similar products.</p>"
+    },
+    {
+        "id": 5,
+        "question": "What affects fashion ERP implementation costs in the UK?",
+        "answer": "<p>Implementation costs depend on the number of factories, product variations, data quality, and planning requirements. Additional needs, such as retailer EDI connections, barcode scanners, labelling systems, and user access, can also affect the total. Dynamics Square assesses these requirements before recommending a solution and defining the project scope.</p>"
+    }
+]

@@ -284,6 +284,44 @@ const IndustriesList = () => {
                 </a>
               </div>
             </div>
+            <div className="col-lg-4 col-md-6 d-flex">
+              <div className="indut-card-one">
+                <a href="/industries/manufacturing/dynamics-365-for-plastics/">
+                  <div className="pic">
+                    <img src="/img/industry-plastics.jpg" alt="Plastics manufacturing production line with moulded parts"  loading="lazy" decoding="async" />
+                    <h3>Plastics</h3>
+                  </div>
+                  <div className="pic-body">
+                    <h4>Account for Every Kilogram <br/>Between Delivery and Despatch</h4>
+                    <ul>
+                      <li>Materials and Resin Lots</li>
+                      <li>Planning, Moulds and Machines</li>
+                      <li>Scrap, Waste and Reporting</li>
+                    </ul>
+                    <span>Learn More</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6 d-flex">
+              <div className="indut-card-one">
+                <a href="/industries/manufacturing/dynamics-365-for-fashion/">
+                  <div className="pic">
+                    <img src="/img/industry-fashion.jpg" alt="Fashion and apparel manufacturing sewing floor"  loading="lazy" decoding="async" />
+                    <h3>Fashion &amp; Apparel</h3>
+                  </div>
+                  <div className="pic-body">
+                    <h4>Ship Each Order in the Sizes <br/>the Buyer Ordered</h4>
+                    <ul>
+                      <li>Styles, Variants and Size Scales</li>
+                      <li>Cut-and-Sew Production and Subcontractors</li>
+                      <li>Demand, Warehousing and Reporting</li>
+                    </ul>
+                    <span>Learn More</span>
+                  </div>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
