@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import CaseStudyClientCard from "../../components/CaseStudyClientCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -13,8 +14,10 @@ const QuickbooksToBusinessCentralMigration = () => {
     <>
       <PageSeo
         type="Article"
-        title="QuickBooks ERP to Business Central Migration | Case Study"
-        description="See how our in-depth case study on the migration from QuickBooks ERP to Business Central improves productivity and expansion. Find out essential information and benefits!"
+        title="Greenstar Produce: QuickBooks to Business Central Case Study | Dynamics Square"
+        description="How Greenstar Produce, an importer of Moroccan citrus fruit, moved from QuickBooks to Business Central to streamline replenishment, purchasing and sales."
+        image="https://www.dynamicssquare.co.uk/img/Greenstar.jpg"
+        imageAlt="Greenstar Produce case study – Dynamics Square"
       />
       <section className="hero-1 hero">
         <div className="container">
@@ -24,7 +27,7 @@ const QuickbooksToBusinessCentralMigration = () => {
                 <div className="top-se">
                   <span className="date-ti">Case Study</span>
                   <h1>QuickBooks ERP to Business Central Upgrade </h1>
-                  <p>Streamlined different processes of replenishment, purchase, and sales.</p>
+                  <p>How Greenstar Produce streamlined different processes of replenishment, purchase, and sales</p>
                 </div>
               </div>
             </div>
@@ -32,7 +35,7 @@ const QuickbooksToBusinessCentralMigration = () => {
               <div className="sider-over">
                 <img
                   src="/img/business-central-implementation-banner-1.svg"
-                  alt="QuickBooks ERP to Business Central Upgrade" />
+                  alt="Greenstar Produce case study" />
               </div>
             </div>
           </div>
@@ -42,16 +45,18 @@ const QuickbooksToBusinessCentralMigration = () => {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-10">
-              <div className="row bg-case">
-                <div className="col-lg-3 align-self-center text-center">
-                  <img
-                    src="/img/casestudy-pic.png"
-                    alt="QuickBooks ERP to Business Central Upgrade" />
-                </div>
-                <div className="col-lg-9 align-self-center">
-                  <p>The business is an established importer of citric fruits from Morocco, caters to a comprehensive portfolio of UK retailers. They focus on supplying fresh fruits to retailers by growing, packing, and delivering the best product that Morocco has to offer. Their operations are driven by a strong finance process that incorporates balance sheet maintenance, bank reconciliation, cash flow tracking, and maintaining a general ledger.</p>
-                </div>
-              </div>
+              <CaseStudyClientCard
+                clientName="Greenstar Produce"
+                logo="/img/case-study-logos/greenstar-produce-logo.png"
+                meta={[
+                  { icon: "bi-basket", label: "Citrus Fruit Imports" },
+                  { icon: "bi-geo-alt", label: "Morocco to UK" },
+                  { icon: "bi-arrow-up-circle", label: "QuickBooks → Business Central" },
+                ]}
+                title="About Greenstar Produce"
+              >
+                <p><strong>Greenstar Produce</strong> is an established importer of citric fruits from Morocco, caters to a comprehensive portfolio of UK retailers. They focus on supplying fresh fruits to retailers by growing, packing, and delivering the best product that Morocco has to offer. Their operations are driven by a strong finance process that incorporates balance sheet maintenance, bank reconciliation, cash flow tracking, and maintaining a general ledger.</p>
+              </CaseStudyClientCard>
             </div>
           </div>
         </div>
@@ -66,7 +71,7 @@ const QuickbooksToBusinessCentralMigration = () => {
           </header>
           <div className="row gx-5">
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/cast-stu-pic.png" alt="Case studies Dynamicsquare" width={487} height={404} />
+              <Image src="/img/cast-stu-pic.png" alt="Greenstar Produce business challenges" width={487} height={404} />
             </div>
             <div className="col-lg-6">
               <div className="content-icons-modil-1">
@@ -290,7 +295,7 @@ const QuickbooksToBusinessCentralMigration = () => {
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/Group1435.png" alt="Dynamics square casestudy" width={640} height={598} />
+              <Image src="/img/Group1435.png" alt="Greenstar Produce benefits with Dynamics Square" width={640} height={598} />
             </div>
           </div>
         </div>

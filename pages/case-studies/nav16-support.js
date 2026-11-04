@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import CaseStudyClientCard from "../../components/CaseStudyClientCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -14,8 +15,10 @@ const CaseStudyGlobalTea = () => {
     <>
       <PageSeo
         type="Article"
-        title="Dynamics NAV 2016 Support Services - Case Study"
-        description="Global Tea & Commodities Ltd. worked with Dynamics Square to get dedicated Microsoft Dynamics NAV support. Read Global Tea case story to gain insights."
+        title="Global Tea: Dynamics NAV 2016 Support Case Study | Dynamics Square"
+        description="How Global Tea, a leading UK tea and coffee distributor, enhanced its Dynamics NAV 2016 system to manage auctions with support from Dynamics Square."
+        image="https://www.dynamicssquare.co.uk/img/case-studies-7.jpg"
+        imageAlt="Global Tea case study – Dynamics Square"
       />
       <section className="hero-1 hero">
         <div className="container">
@@ -25,7 +28,7 @@ const CaseStudyGlobalTea = () => {
                 <div className="top-se">
                   <span className="date-ti">Case Study</span>
                   <h1>Dynamics NAV 2016 Support Services</h1>
-                  <p>Enhanced their Existing NAV 2016 to Manage Auctions</p>
+                  <p>How Global Tea enhanced its existing NAV 2016 to manage auctions</p>
                 </div>
               </div>
             </div>
@@ -33,7 +36,7 @@ const CaseStudyGlobalTea = () => {
               <div className="sider-over">
                 <Image
                   src="/img/business-central-implementation-banner-1.svg"
-                  alt="Dynamics NAV 2016 Support Services"
+                  alt="Global Tea case study"
                   width={1024} height={586}
                   priority={true} />
               </div>
@@ -45,16 +48,18 @@ const CaseStudyGlobalTea = () => {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-10">
-              <div className="row bg-case">
-                <div className="col-lg-3 align-self-center">
-                  <img
-                    src="/img/casestudy-pic.png"
-                    alt="Dynamics NAV 2016 Support Services" />
-                </div>
-                <div className="col-lg-9">
-                  <p>The company was founded in 1991 and a largest and fastest-growing distributors of tea, coffee, and macadamia nuts. It offers its wide range of products to all stages of the supply chain. The company has crossed the sales of $220 million to date and processed more than 70 million kilos of tea each year. Being the most prominent independent tea and coffee company in the UK, it has employed over 4,000 people around the world. In Africa, they are the largest producer of macadamia nuts.</p>
-                </div>
-              </div>
+              <CaseStudyClientCard
+                clientName="Global Tea"
+                logo="/img/case-study-logos/global-tea-logo.png"
+                meta={[
+                  { icon: "bi-cup-hot", label: "Tea & Coffee Distribution" },
+                  { icon: "bi-calendar-check", label: "Founded 1991" },
+                  { icon: "bi-life-preserver", label: "NAV 2016 Support" },
+                ]}
+                title="About Global Tea"
+              >
+                <p><strong>Global Tea</strong> was founded in 1991 and is one of the largest and fastest-growing distributors of tea, coffee, and macadamia nuts. It offers its wide range of products to all stages of the supply chain. The company has crossed the sales of $220 million to date and processed more than 70 million kilos of tea each year. Being the most prominent independent tea and coffee company in the UK, it has employed over 4,000 people around the world. In Africa, they are the largest producer of macadamia nuts.</p>
+              </CaseStudyClientCard>
             </div>
           </div>
         </div>
@@ -69,7 +74,7 @@ const CaseStudyGlobalTea = () => {
           </header>
           <div className="row gx-5">
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/cast-stu-pic.png" alt="What are The Business Challenges" width={484} height={407} />
+              <Image src="/img/cast-stu-pic.png" alt="Global Tea business challenges" width={484} height={407} />
             </div>
             <div className="col-lg-6">
               <div className="content-icons-modil-1">
@@ -335,7 +340,7 @@ const CaseStudyGlobalTea = () => {
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/Group1435.png" alt="Group1435"
+              <Image src="/img/Group1435.png" alt="Global Tea benefits with Dynamics Square"
                 width={640} height={598} />
             </div>
           </div>

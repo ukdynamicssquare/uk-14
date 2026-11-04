@@ -22709,6 +22709,9 @@ letter-spacing:3px
   line-height: 1.7;
   color: #444;
 }
+.crux-client-body p + p {
+  margin-top: 12px;
+}
 .crux-client-body p strong {
   color: #1b2f50;
 }

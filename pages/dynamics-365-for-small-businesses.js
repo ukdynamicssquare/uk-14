@@ -626,7 +626,7 @@ const MicrosoftCloudForNonpro = () => {
                   </div>
                   <div className="commen-boc-2-info">
                     <p>
-                      A medical instrument supplier and manufacturer doubled revenue and improved production capacity by upgrading to Business Central Online from Dynamics NAV.
+                      Timesco UK doubled revenue and improved production capacity by upgrading to Business Central Online from Dynamics NAV.
                     </p>
                   </div>
                   <div className="btn-003">

@@ -876,7 +876,7 @@ const SupplyChainManagement = () => {
                           <a href='/case-studies/d365-finance-and-operations-for-project-management/'>
                             <img src="/img/operations-for-project-management.jpg" width={273} height={192} alt="D365 Finance and Operations for project management case study" loading="lazy" />
                             <h3>D365 Finance and Operations for Project Management</h3>
-                            <p>How a Multi-Entity Engineering Business Built Financial Clarity and Operational Control with Microsoft Dynamics 365..</p>
+                            <p>How Sygna Built Financial Clarity and Operational Control with Microsoft Dynamics 365..</p>
                             <div className='ct--a'>
                               <span>Read More</span>
                             </div>
@@ -888,7 +888,7 @@ const SupplyChainManagement = () => {
                           <a href='/case-studies/dynamics-365-f&O-implementation-for-healthcare/'>
                             <img src="/img/f&O-implementation-for-healthcare.jpg" width={273} height={192} alt="Dynamics 365 F&O implementation for healthcare case study" loading="lazy" />
                             <h3>Dynamics 365 F&O Implementation for Healthcare</h3>
-                            <p>How a Clinical Research Organisation Improved Financial Processes and System Adoption with Dynamics 365 Finance and Operations...</p>
+                            <p>How Simbec Orion Improved Financial Processes and System Adoption with Dynamics 365 Finance and Operations...</p>
                             <div className='ct--a'>
                               <span>Read More</span>
                             </div>

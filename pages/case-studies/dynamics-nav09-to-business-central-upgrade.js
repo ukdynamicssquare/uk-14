@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import CaseStudyClientCard from "../../components/CaseStudyClientCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -16,8 +17,10 @@ const DynamicsNav09ToBusinessCentralUpgrade = () => {
     <>
       <PageSeo
         type="Article"
-        title="Dynamics NAV 2009 to Business Central Upgrade | Case Study"
-        description="Read our case study, which highlights enhanced performance, reduced procedures, and cutting-edge capabilities, on upgrading from Dynamics NAV 2009 to Business Central."
+        title="Meirion Davies & Co Ltd: NAV 2009 to Business Central Case Study | Dynamics Square"
+        description="How Meirion Davies & Co Ltd, a Denbigh agricultural supplier, upgraded from Dynamics NAV 2009 to Business Central to simplify complex processes."
+        image="https://www.dynamicssquare.co.uk/img/Meirion-Davies.jpg"
+        imageAlt="Meirion Davies & Co Ltd case study – Dynamics Square"
       />
       <section className="hero-1 hero">
         <div className="container">
@@ -27,7 +30,7 @@ const DynamicsNav09ToBusinessCentralUpgrade = () => {
                 <div className="top-se">
                   <span className="date-ti">Case Study</span>
                   <h1>Dynamics NAV 2009 to Business Central Upgrade </h1>
-                  <p>Simplified the complex processes while eliminating the useless data from the system.</p>
+                  <p>How Meirion Davies & Co Ltd simplified complex processes while eliminating useless data from the system</p>
                 </div>
               </div>
             </div>
@@ -35,7 +38,7 @@ const DynamicsNav09ToBusinessCentralUpgrade = () => {
               <div className="sider-over">
                 <img
                   src="/img/business-central-implementation-banner-1.svg"
-                  alt="Dynamics NAV 2009 to Business Central Upgrade" />
+                  alt="Meirion Davies & Co Ltd case study" />
               </div>
             </div>
           </div>
@@ -45,16 +48,18 @@ const DynamicsNav09ToBusinessCentralUpgrade = () => {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-10">
-              <div className="row bg-case">
-                <div className="col-lg-3 align-self-center text-center">
-                  <img
-                    src="/img/casestudy-pic.png"
-                    alt="Dynamics NAV 2009 to Business Central Upgrade" />
-                </div>
-                <div className="col-lg-9 align-self-center">
-                  <p>The business is a business that caters to the supply of fertilizers, cattle grooming, and agrochemicals to local farmers. They have a warehouse and retail store in Denbigh where they sell clothes & footwear too.</p>
-                </div>
-              </div>
+              <CaseStudyClientCard
+                clientName="Meirion Davies & Co Ltd"
+                logo="/img/case-study-logos/meirion-davies-logo.png"
+                meta={[
+                  { icon: "bi-tree", label: "Agricultural Supplies" },
+                  { icon: "bi-geo-alt", label: "Denbigh" },
+                  { icon: "bi-arrow-up-circle", label: "NAV 2009 → Business Central" },
+                ]}
+                title="About Meirion Davies & Co Ltd"
+              >
+                <p><strong>Meirion Davies & Co Ltd</strong> is a business that caters to the supply of fertilizers, cattle grooming, and agrochemicals to local farmers. They have a warehouse and retail store in Denbigh where they sell clothes & footwear too.</p>
+              </CaseStudyClientCard>
             </div>
           </div>
         </div>
@@ -69,7 +74,7 @@ const DynamicsNav09ToBusinessCentralUpgrade = () => {
           </header>
           <div className="row gx-5">
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/cast-stu-pic.png" alt="Case studies Dynamicsquare" width={487} height={404} />
+              <Image src="/img/cast-stu-pic.png" alt="Meirion Davies & Co Ltd business challenges" width={487} height={404} />
             </div>
             <div className="col-lg-6">
               <div className="content-icons-modil-1">
@@ -265,7 +270,7 @@ const DynamicsNav09ToBusinessCentralUpgrade = () => {
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/Group1435.png" alt="Dynamics square casestudy" width={640} height={598} />
+              <Image src="/img/Group1435.png" alt="Meirion Davies & Co Ltd benefits with Dynamics Square" width={640} height={598} />
             </div>
           </div>
         </div>

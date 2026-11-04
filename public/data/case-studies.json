@@ -17,7 +17,7 @@
   },
         {
     "id": 24,
-    "title": "How a UK-Based Global Manufacturer Rebuilt Its Operational Core and Scaled with Confidence Using Microsoft Dynamics 365",
+    "title": "How A Perry Group Rebuilt Its Operational Core and Scaled with Confidence Using Microsoft Dynamics 365",
     "image": "/img/implement-for-equestrian.jpg",
     "alt": "implement-for-equestrian",
     "slug": "/case-studies/business-central-with-crm-implement-for-equestrian-manufacturing/",
@@ -25,7 +25,7 @@
   },
         {
     "id": 25,
-    "title": "How a Multi-Entity Engineering Business Built Financial Clarity and Operational Control with Microsoft Dynamics 365",
+    "title": "How Sygna Built Financial Clarity and Operational Control with Microsoft Dynamics 365",
     "image": "/img/operations-for-project-management.jpg",
     "alt": "operations-for-project-management",
     "slug": "/case-studies/d365-finance-and-operations-for-project-management/",
@@ -33,7 +33,7 @@
   },
         {
     "id": 26,
-    "title": "How a Clinical Research Organisation Improved Financial Processes and System Adoption with Dynamics 365 Finance and Operations",
+    "title": "How Simbec Orion Improved Financial Processes and System Adoption with Dynamics 365 Finance and Operations",
     "image": "/img/f&O-implementation-for-healthcare.jpg",
     "alt": "f&O-implementation-for-healthcare",
     "slug": "/case-studies/dynamics-365-f&O-implementation-for-healthcare/",
@@ -41,7 +41,7 @@
   },
   {
     "id": 1,
-    "title": "Ireland’s Leading Saddlery Retailer Boosted Warehouse Efficiency by 60% After Moving from Dynamics NAV to Business Central On-Premise",
+    "title": "Old Mill Saddlery Boosted Warehouse Efficiency by 60% After Moving from Dynamics NAV to Business Central On-Premise",
     "image": "/img/old-mill-feature.jpg",
     "alt": "old-mill-feature",
     "slug": "/case-studies/business-central-reimplementation-for-retail-market/",
@@ -89,7 +89,7 @@
   },
   {
     "id": 7,
-    "title": "A medical instrument supplier and manufacturer doubled revenue and improved production capacity by upgrading to Business Central Online from Dynamics NAV.",
+    "title": "Timesco UK doubled revenue and improved production capacity by upgrading to Business Central Online from Dynamics NAV.",
     "image": "/img/case-studies-3.jpg",
     "alt": "timesco-logo",
     "slug": "/case-studies/nav13R2-to-business-central/",
@@ -121,7 +121,7 @@
   },
   {
     "id": 11,
-    "title": "Learn how a UK-based tea manufacturing brand received stress-free Dynamics NAV support from Dynamics Square through customisation and dedicated services.",
+    "title": "Learn how Global Tea received stress-free Dynamics NAV support from Dynamics Square through customisation and dedicated services.",
     "image": "/img/case-studies-7.jpg",
     "alt": "tea",
     "slug": "/case-studies/nav16-support/",
@@ -145,7 +145,7 @@
   },
   {
     "id": 14,
-    "title": "An established importer of citrus fruits has achieved enhanced operational efficiency by 80% with the Business Central implementation.",
+    "title": "Greenstar Produce, an established importer of citrus fruits, achieved enhanced operational efficiency by 80% with the Business Central implementation.",
     "image": "/img/Greenstar.jpg",
     "alt": "Greenstar",
     "slug": "/case-studies/quickbooks-to-business-central-migration/",
@@ -153,7 +153,7 @@
   },
   {
     "id": 15,
-    "title": "A leading supplier of carrier-grade antenna has enabled faster order processing and customer service by 60% with Business Central implementation.",
+    "title": "GTT Wireless, a leading supplier of carrier-grade antennas, enabled faster order processing and customer service by 60% with Business Central implementation.",
     "image": "/img/GTT-Wireless.jpg",
     "alt": "GTT-Wireless",
     "slug": "/case-studies/odoo-erp-to-business-central-migration/",
@@ -161,7 +161,7 @@
   },
   {
     "id": 16,
-    "title": "A leading supplier of fertilizer and agrochemicals has increased customer satisfaction by 70% with Business Central upgrade.",
+    "title": "Meirion Davies & Co Ltd, a leading supplier of fertiliser and agrochemicals, increased customer satisfaction by 70% with Business Central upgrade.",
     "image": "/img/Meirion-Davies.jpg",
     "alt": "Meirion-Davies",
     "slug": "/case-studies/dynamics-nav09-to-business-central-upgrade/",
@@ -177,7 +177,7 @@
   },
   {
     "id": 18,
-    "title": "A business leader in transformational switchboards has increased the data accuracy rate by 8% with our Power BI Support services.",
+    "title": "ComXo, a business leader in transformational switchboards, increased the data accuracy rate by 8% with our Power BI Support services.",
     "image": "/img/Comxo.jpg",
     "alt": "Comxo",
     "slug": "/case-studies/power-bi-support-solutions/",
@@ -185,7 +185,7 @@
   },
   {
     "id": 19,
-    "title": "A leading builder’s merchant support company has achieved business transparency by 60% with Business Central implementation.",
+    "title": "ALMI Group, a leading builders’ merchant support company, achieved business transparency by 60% with Business Central implementation.",
     "image": "/img/ALMI-Group.jpg",
     "alt": "ALMI-Group",
     "slug": "/case-studies/sage-erp-to-business-central/",
@@ -201,7 +201,7 @@
   },
   {
     "id": 21,
-    "title": "A leading business in the design and manufacturing of lifting and handling solution has achieved 40% more transparency in sales and stock with Power BI implementation.",
+    "title": "WH Scott, a leading business in the design and manufacturing of lifting and handling solutions, achieved 40% more transparency in sales and stock with Power BI implementation.",
     "image": "/img/WH-Scout.jpg",
     "alt": "WH-Scout",
     "slug": "/case-studies/microsoft-power-bi-implementation/",

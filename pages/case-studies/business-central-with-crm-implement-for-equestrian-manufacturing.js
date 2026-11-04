@@ -1,35 +1,19 @@
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
+import CaseStudyClientCard from "../../components/CaseStudyClientCard";
+import PageSeo from "../../components/PageSeo";
 const DynamicsNav2013BusinessCentralUpgrade = () => {
 
 
   return (
     <>
-      <Head>
-        <meta name="robots" content="noindex, nofollow" />
-        <title>Microsoft Business Central with CRM for Equestrian Manufacturing | Case Study</title>
-        <meta
-          name="description"
-          content="Unified Microsoft Dynamics 365 Business Central and Microsoft Dynamics 365 CRM for equestrian manufacturing—streamlining production, sales, and customer insights end-to-end."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/case-studies/business-central-with-crm-implement-for-equestrian-manufacturing/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Microsoft Business Central with CRM for Equestrian Manufacturing | Case Study" />
-        <meta property="og:description" content="Unified Microsoft Dynamics 365 Business Central and Microsoft Dynamics 365 CRM for equestrian manufacturing—streamlining production, sales, and customer insights end-to-end." />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/case-studies/business-central-with-crm-implement-for-equestrian-manufacturing/" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/case-v-08.png" />
-        <meta property="og:image:width" content="200" />
-        <meta property="og:image:height" content="200" />
-        <meta property="og:image:type" content="image/jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Microsoft Business Central with CRM for Equestrian Manufacturing | Case Study" />
-        <meta name="twitter:description" content="Unified Microsoft Dynamics 365 Business Central and Microsoft Dynamics 365 CRM for equestrian manufacturing—streamlining production, sales, and customer insights end-to-end." />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/case-v-08.png" />
-      </Head>
+      <PageSeo
+        type="Article"
+        title="A Perry Group: Business Central and CRM Implementation Case Study | Dynamics Square"
+        description="How A Perry Group, a manufacturer founded in 1925, replaced OrderWise with Business Central and CRM to gain control of operations and warehouse visibility."
+        image="https://www.dynamicssquare.co.uk/img/implement-for-equestrian.jpg"
+        imageAlt="A Perry Group case study – Dynamics Square"
+      />
       <section className="hero hero-new-bg">
         <div className="container">
           <div className="row justify-content-center">
@@ -38,7 +22,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
                 <div className="top-se">
                   <span className="date-ti">Case Study</span>
                   <h1>Microsoft Dynamics 365 Business Central and CRM Implementation</h1>
-                  <p>How a UK-Based Global Manufacturer Rebuilt Its Operational Core and Scaled with Confidence Using Microsoft Dynamics 365</p>
+                  <p>How A Perry Group Rebuilt Its Operational Core and Scaled with Confidence Using Microsoft Dynamics 365</p>
                 </div>
               </div>
             </div>
@@ -48,15 +32,19 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
       <section className="cast-studi-into minr">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-lg-9">
-              <div className="bg-case bg-case-cent">
-                <div className="side-heading-custom-01">
-                  <h2>A Crux of the Case Story</h2>
-                </div>
-                <div className="custom-p-001">
-                  <p>This story captures how a UK-based global manufacturer moved from an ageing and limiting ERP environment to a connected, cloud-based ecosystem. By replacing fragmented workflows with a unified system, the business gained better control over operations, improved visibility across its warehouse environment, and created a scalable foundation for future growth and automation. This 360-degree transformation carried out by Dynamics Square also strengthened alignment between its ERP platform and existing automated warehouse operations powered by HikRobots.</p>
-                </div>
-              </div>
+            <div className="col-lg-10">
+              <CaseStudyClientCard
+                clientName="A Perry Group"
+                logo="/img/case-study-logos/a-perry-group-logo.png"
+                meta={[
+                  { icon: "bi-gear-wide-connected", label: "Manufacturing & Distribution" },
+                  { icon: "bi-calendar-check", label: "Founded 1925" },
+                  { icon: "bi-building", label: "140,000 sq. ft Facility" },
+                ]}
+                title="A Crux of the Case Story"
+              >
+                <p>This story captures how <strong>A Perry Group</strong>, a UK-based global manufacturer, moved from an ageing and limiting ERP environment to a connected, cloud-based ecosystem. By replacing fragmented workflows with a unified system, the business gained better control over operations, improved visibility across its warehouse environment, and created a scalable foundation for future growth and automation. This 360-degree transformation carried out by Dynamics Square also strengthened alignment between its ERP platform and existing automated warehouse operations powered by HikRobots.</p>
+              </CaseStudyClientCard>
             </div>
           </div>
         </div>
@@ -69,7 +57,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
                 <h2>Business Overview</h2>
               </div>
               <div className="custom-p-001">
-                <p>Founded in 1925, this century-old organisation operates as a diversified enterprise with a strong presence across hardware, manufacturing, retail, and specialist product segments. Its operations are anchored in a 140,000 sq. ft facility, structured into four key divisions: trade distribution, equestrian products, garden centre-focused offerings, and a specialised manufacturing unit.</p>
+                <p>Founded in 1925, <b>A Perry Group</b> is a century-old organisation that operates as a diversified enterprise with a strong presence across hardware, manufacturing, retail, and specialist product segments. Its operations are anchored in a 140,000 sq. ft facility, structured into four key divisions: trade distribution, equestrian products, garden centre-focused offerings, and a specialised manufacturing unit.</p>
                 <p>Operationally, the business blends manufacturing capability with distribution scale. Its in-house factory handles key processes such as cutting, cropping, and chamfering, while specialised activities like plating, galvanising, and welding are managed through subcontractors. A dedicated pre-pack department converts bulk inventory into retail-ready packaging, ensuring alignment with merchant and consumer expectations.</p>
                 <p>To support its wide product range and high-volume operations, the business has built a strong operational backbone, including an automated warehouse powered by 15 HikRobots. This level of investment reflects both scale and ambition. However, while physical operations had evolved, the digital systems supporting them had not kept pace.</p>
                 <p>The company relied on OrderWise to manage sales, customer service, accounts, and warehouse operations. As the business expanded across channels, geographies, and product lines, the need for a more capable and future-ready system became clear. To resolve this, the organisation got associated with Dynamics Square.</p>
@@ -80,7 +68,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
                 <Image
                   src="/img/case-v-06.png"
                   className="fix-im"
-                  alt="case-v-06"
+                  alt="A Perry Group manufacturing and distribution business overview"
                   width={400} height={450}
                 />
               </div>
@@ -200,7 +188,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           </div>
           <div className="row gx-5">
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/case-v-07.png" alt="case-v-07" width={633} height={561} />
+              <Image src="/img/case-v-07.png" alt="A Perry Group Business Central requirements" width={633} height={561} />
             </div>
             <div className="col-lg-6 align-self-center">
               <div className="ms-c-po">
@@ -267,7 +255,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="ce-image-ce">
-                <Image src="/img/case-v-08.png" alt="Case Study" width={1036} height={699} className="img-fluid" />
+                <Image src="/img/case-v-08.png" alt="A Perry Group Business Central and CRM implementation" width={1036} height={699} className="img-fluid" />
               </div>
             </div>
           </div>

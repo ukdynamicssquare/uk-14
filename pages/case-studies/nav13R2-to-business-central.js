@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import FormCaseScroll from "../../components/FormCaseScroll";
 import Link from "next/link";
 import Image from "next/image";
+import CaseStudyClientCard from "../../components/CaseStudyClientCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -15,9 +16,10 @@ const CaseStudyTimosco = () => {
     <>
       <PageSeo
         type="Article"
-        title="NAV 13 R2 to Dynamics 365 Business Central Upgrade"
-        description="A surgical instruments UK brand collaborated with Dynamics Square to enhance their system from Dynamics NAV 13 R2 to Dynamics 365 Business Central Upgrade. Check out the case study to discover valuable insights."
-        image="/img/Dynamics-365-Business-Central.png"
+        title="Timesco UK: NAV 13 R2 to Business Central Upgrade Case Study | Dynamics Square"
+        description="How Timesco UK, a surgical instrument manufacturer, upgraded from Dynamics NAV 13 R2 to Dynamics 365 Business Central Online with Dynamics Square."
+        image="https://www.dynamicssquare.co.uk/img/case-studies-3.jpg"
+        imageAlt="Timesco UK case study – Dynamics Square"
       />
       <section className="hero-1 hero">
         <div className="container">
@@ -27,7 +29,7 @@ const CaseStudyTimosco = () => {
                 <div className="top-se">
                   <span className="date-ti">Case Study</span>
                   <h1>NAV 13 R2 to Dynamics 365 Business Central Upgrade</h1>
-                  <p>NAV 13 R2 to Dynamics 365 Business Central Online Upgrade </p>
+                  <p>How Timesco UK upgraded from NAV 13 R2 to Dynamics 365 Business Central Online</p>
                 </div>
               </div>
             </div>
@@ -35,7 +37,7 @@ const CaseStudyTimosco = () => {
               <div className="sider-over">
                 <Image
                   src="/img/Dynamics-365-Business-Central.png"
-                  alt="business centeral implementation"
+                  alt="Timesco UK case study"
                   width={1024}
                   height={597}
                   priority={true}
@@ -49,16 +51,18 @@ const CaseStudyTimosco = () => {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-10">
-              <div className="row bg-case">
-                <div className="col-lg-3 align-self-center">
-                  <img
-                    src="/img/casestudy-pic.png"
-                    alt="NAV 13 R2 to Dynamics 365 Business Central Upgrade" />
-                </div>
-                <div className="col-lg-9">
-                  <p>Established in 1964,the company is a well-known manufacturer and supplier of surgical instruments in the UK market and is continuously working to expand the same globally. The company was expanding with a product range that includes Anesthesia, Surgery, General Medical, and Podiatry in the medical industry. They were also working toward innovating and developing medical technologies to bring awareness and improve the quality of human life.</p>
-                </div>
-              </div>
+              <CaseStudyClientCard
+                clientName="Timesco UK"
+                logo="/img/case-study-logos/timesco-uk-logo.png"
+                meta={[
+                  { icon: "bi-heart-pulse", label: "Surgical Instruments" },
+                  { icon: "bi-calendar-check", label: "Established 1964" },
+                  { icon: "bi-arrow-up-circle", label: "NAV 13 R2 → Business Central" },
+                ]}
+                title="About Timesco UK"
+              >
+                <p>Established in 1964, <strong>Timesco UK</strong> is a well-known manufacturer and supplier of surgical instruments in the UK market and is continuously working to expand the same globally. The company was expanding with a product range that includes Anesthesia, Surgery, General Medical, and Podiatry in the medical industry. They were also working toward innovating and developing medical technologies to bring awareness and improve the quality of human life.</p>
+              </CaseStudyClientCard>
             </div>
           </div>
         </div>
@@ -75,7 +79,7 @@ const CaseStudyTimosco = () => {
             <div className="col-lg-6">
               <Image
                 src="/img/cast-stu-pic.png"
-                alt="What are The Business Challenges"
+                alt="Timesco UK business challenges"
                 width={484}
                 height={407} />
             </div>
@@ -315,7 +319,7 @@ const CaseStudyTimosco = () => {
             <div className="col-lg-6">
               <Image
                 src="/img/Group1435.png"
-                alt="Group1435"
+                alt="Timesco UK benefits with Dynamics Square"
                 width={640}
                 height={598}
               />

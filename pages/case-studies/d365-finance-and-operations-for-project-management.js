@@ -1,35 +1,19 @@
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
+import CaseStudyClientCard from "../../components/CaseStudyClientCard";
+import PageSeo from "../../components/PageSeo";
 const DynamicsNav2013BusinessCentralUpgrade = () => {
 
 
   return (
     <>
-      <Head>
-        <meta name="robots" content="noindex, nofollow" />
-        <title>D365 Finance & Operations for Project Management - Case Study</title>
-        <meta
-          name="description"
-          content="Streamline project management with Dynamics 365 Finance & Operations—real-time insights, cost control, and seamless execution for complex projects."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/case-studies/d365-finance-and-operations-for-project-management/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="D365 Finance & Operations for Project Management - Case Study" />
-        <meta property="og:description" content="Streamline project management with Dynamics 365 Finance & Operations—real-time insights, cost control, and seamless execution for complex projects." />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/case-studies/d365-finance-and-operations-for-project-management/" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/old-mill-feature.jpg" />
-        <meta property="og:image:width" content="200" />
-        <meta property="og:image:height" content="200" />
-        <meta property="og:image:type" content="image/jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="D365 Finance & Operations for Project Management - Case Study" />
-        <meta name="twitter:description" content="Streamline project management with Dynamics 365 Finance & Operations—real-time insights, cost control, and seamless execution for complex projects." />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/old-mill-feature.jpg" />
-      </Head>
+      <PageSeo
+        type="Article"
+        title="Sygna: FS Apps 10 to Dynamics 365 Finance & HR Case Study | Dynamics Square"
+        description="How Sygna moved six European entities from FS Apps 10 to Dynamics 365 Finance and Human Resources for clearer finances and stronger project control."
+        image="https://www.dynamicssquare.co.uk/img/operations-for-project-management.jpg"
+        imageAlt="Sygna case study – Dynamics Square"
+      />
       <section className="hero hero-new-bg">
         <div className="container">
           <div className="row justify-content-center">
@@ -38,7 +22,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
                 <div className="top-se">
                   <span className="date-ti">Case Study</span>
                   <h1>FS Apps 10 to Microsoft Dynamics 365 Finance and Human Resources Implementation and Cloud Migration </h1>
-                  <p>How a Multi-Entity Engineering Business Built Financial Clarity and Operational Control with Microsoft Dynamics 365</p>
+                  <p>How Sygna Built Financial Clarity and Operational Control with Microsoft Dynamics 365</p>
                 </div>
               </div>
             </div>
@@ -48,15 +32,19 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
       <section className="cast-studi-into minr">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-lg-9">
-              <div className="bg-case bg-case-cent">
-                <div className="side-heading-custom-01">
-                  <h2>A Crux of the Case Story</h2>
-                </div>
-                <div className="custom-p-001">
-                  <p>This case study reflects how a project-driven engineering organisation operating across multiple European entities transitioned from a legacy ERP environment to a unified, cloud-based system. Facing mounting operational complexity and the urgency to move away from an ageing shared instance, the business restructured its financial and HR operations into a connected platform. The result was improved efficiency, stronger financial control, and a scalable foundation built for continued regional expansion.</p>
-                </div>
-              </div>
+            <div className="col-lg-10">
+              <CaseStudyClientCard
+                clientName="Sygna"
+                logo="/img/case-study-logos/sygna-logo.png"
+                meta={[
+                  { icon: "bi-gear", label: "Project-Driven Engineering" },
+                  { icon: "bi-diagram-3", label: "6 Legal Entities" },
+                  { icon: "bi-arrow-up-circle", label: "FS Apps 10 → Dynamics 365" },
+                ]}
+                title="A Crux of the Case Story"
+              >
+                <p>This case study reflects how <strong>Sygna</strong>, a project-driven engineering organisation operating across multiple European entities, transitioned from a legacy ERP environment to a unified, cloud-based system. Facing mounting operational complexity and the urgency to move away from an ageing shared instance, the business restructured its financial and HR operations into a connected platform. The result was improved efficiency, stronger financial control, and a scalable foundation built for continued regional expansion.</p>
+              </CaseStudyClientCard>
             </div>
           </div>
         </div>
@@ -69,7 +57,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
                 <h2>Business Overview</h2>
               </div>
               <div className="custom-p-001">
-                <p>This organisation operates within a project-driven engineering environment, managing complex operations across multiple European regions. Its structure spans six legal entities, with plans already in place to expand to eight in the near future. Each entity contributes to a broader operational model that relies heavily on coordination across finance, projects, procurement, and workforce management.</p>
+                <p><b>Sygna</b> operates within a project-driven engineering environment, managing complex operations across multiple European regions. Its structure spans six legal entities, with plans already in place to expand to eight in the near future. Each entity contributes to a broader operational model that relies heavily on coordination across finance, projects, procurement, and workforce management.</p>
                 <p>As the business grew, so did the need for consistency and control across entities. Financial reporting, project costing, and intercompany transactions required alignment, while local compliance and operational nuances still needed to be preserved.</p>
                 <p>The organisation had been operating on a shared instance of a legacy ERP system. While this setup had supported earlier stages of growth, it began to create limitations as transaction volumes increased and operational complexity deepened.</p>
                 <p>With expansion underway and timelines defined for system retirement, the business reached a point where transformation was no longer optional. It became a necessary step to maintain operational continuity and support future growth.</p>
@@ -81,7 +69,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
                 <Image
                   src="/img/case-v-12.png"
                   className="fix-im"
-                  alt="case-v-12"
+                  alt="Sygna project-driven engineering business overview"
                   width={400} height={450}
                 />
               </div>
@@ -187,7 +175,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           </div>
           <div className="row gx-5">
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/case-v-13.png" alt="case-v-13" width={633} height={561} />
+              <Image src="/img/case-v-13.png" alt="Sygna Dynamics 365 Finance requirements" width={633} height={561} />
             </div>
             <div className="col-lg-6 align-self-center">
               <div className="ms-c-po">
@@ -259,7 +247,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="ce-image-ce">
-                <Image src="/img/case-v-14.png" width={1427} height={1048} alt="Case Study" className="img-fluid" />
+                <Image src="/img/case-v-14.png" width={1427} height={1048} alt="Sygna Dynamics 365 Finance and Human Resources implementation" className="img-fluid" />
               </div>
             </div>
           </div>
@@ -424,7 +412,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
               </div>
               <div className="content-icons-modil-1">
                 <p>This case presents a common reality for growing, multi-entity organisations. Systems that once supported operations begin to limit them as scale increases.
-                  In this instance, the organisation chose to act at the right time. Rather than extending the life of a legacy system, it invested in building a unified and future-ready platform.
+                  In this instance, Sygna chose to act at the right time. Rather than extending the life of a legacy system, it invested in building a unified and future-ready platform.
                 </p>
                 <p>The transition highlights how project-driven businesses can balance local operational needs with centralised financial control. It demonstrates that compliance, scalability, and efficiency can coexist within a single system when implemented with clarity.</p>
               </div>

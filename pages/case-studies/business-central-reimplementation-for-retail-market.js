@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import CaseStudyClientCard from "../../components/CaseStudyClientCard";
 import PageSeo from "../../components/PageSeo";
 const DynamicsNav2013BusinessCentralUpgrade = () => {
 
@@ -8,9 +9,10 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
     <>
       <PageSeo
         type="Article"
-        title="Reimplements Microsoft Business Central for Retail & warehouse"
-        description="Retail & warehouse business reimplements Microsoft Business Central to streamline WMS, cut costs, and drive operational excellence."
+        title="Old Mill Saddlery: Business Central Reimplementation Case Study | Dynamics Square"
+        description="How Old Mill Saddlery, a Northern Ireland equestrian retailer, reimplemented Business Central to transform its retail and warehouse operations."
         image="https://www.dynamicssquare.co.uk/img/old-mill-feature.jpg"
+        imageAlt="Old Mill Saddlery case study – Dynamics Square"
       />
       <section className="hero hero-new-bg">
         <div className="container">
@@ -20,7 +22,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
                 <div className="top-se">
                   <span className="date-ti">Case Study</span>
                   <h1>Microsoft Business Central Reimplementation</h1>
-                  <p>How An Ireland-based Saddlery Business Reinvented Its Retail and Warehouse Operations with Dynamics Square</p>
+                  <p>How Old Mill Saddlery Reinvented Its Retail and Warehouse Operations with Dynamics Square</p>
                 </div>
               </div>
             </div>
@@ -30,16 +32,20 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
       <section className="cast-studi-into minr">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-lg-9">
-              <div className="bg-case bg-case-cent">
-                <div className="side-heading-custom-01">
-                  <h2>A Quiet Revolution from the Far North of Ireland</h2>
-                </div>
-                <div className="custom-p-001">
-                  <p>Deep in the rugged northern stretch of Ireland, near the sea where few technology firms venture, a forward-looking saddlery brand was quietly grappling with growing operational pain points.</p>
-                  <p>The brand, a respected name among equestrian circles and local farming communities, was ready for a change. What followed was far from a regular ERP project. It became a full-fledged transformation, marked by trust, on-ground commitment, and a strategic vision for smarter retail and warehouse operations.</p>
-                </div>
-              </div>
+            <div className="col-lg-10">
+              <CaseStudyClientCard
+                clientName="Old Mill Saddlery"
+                logo="/img/case-study-logos/old-mill-saddlery-logo.png"
+                meta={[
+                  { icon: "bi-shop", label: "Equestrian Retail" },
+                  { icon: "bi-geo-alt", label: "Northern Ireland" },
+                  { icon: "bi-robot", label: "Robotic Warehouse" },
+                ]}
+                title="A Quiet Revolution from the Far North of Ireland"
+              >
+                <p>Deep in the rugged northern stretch of Ireland, near the sea where few technology firms venture, <strong>Old Mill Saddlery</strong>, a forward-looking saddlery brand, was quietly grappling with growing operational pain points.</p>
+                <p>The brand, a respected name among equestrian circles and local farming communities, was ready for a change. What followed was far from a regular ERP project. It became a full-fledged transformation, marked by trust, on-ground commitment, and a strategic vision for smarter retail and warehouse operations.</p>
+              </CaseStudyClientCard>
             </div>
           </div>
         </div>
@@ -52,7 +58,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
                 <h2>Client Overview</h2>
               </div>
               <div className="custom-p-001">
-                <p>The business is a prominent equestrian retail brand based in Northern Ireland. Known for premium riding gear, equine products, and farming supplies, the company serves both walk-in customers and online shoppers. Their retail store caters largely to local farmers, while a technologically advanced warehouse behind the store powers operations using robotics. They also sell products through their website, Amazon, and eBay.</p>
+                <p><b>Old Mill Saddlery</b> is a prominent equestrian retail brand based in Northern Ireland. Known for premium riding gear, equine products, and farming supplies, the company serves both walk-in customers and online shoppers. Their retail store caters largely to local farmers, while a technologically advanced warehouse behind the store powers operations using robotics. They also sell products through their website, Amazon, and eBay.</p>
                 <p>At its core, the business blends traditional retail with advanced warehouse robotics. However, behind this promising setup, lay systems that were underperforming, loosely connected, and difficult to maintain.</p>
               </div>
             </div>
@@ -61,7 +67,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
                 <Image
                   src="/img/case-s-01.png"
                   className="fix-im"
-                  alt="What are The Business Challenges"
+                  alt="Old Mill Saddlery equestrian retail business overview"
                   width={400} height={450} />
               </div>
             </div>
@@ -83,7 +89,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           </div>
           <div className="row gx-5">
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/cast-stu-pic.png" alt="What are The Business Challenges" width={484} height={407} />
+              <Image src="/img/cast-stu-pic.png" alt="Old Mill Saddlery business challenges" width={484} height={407} />
             </div>
             <div className="col-lg-6">
               <div className="content-icons-modil-1">
@@ -160,7 +166,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           </div>
           <div className="row gx-5">
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/case-s-02.png" alt="What the Business Needed" width={733} height={512} />
+              <Image src="/img/case-s-02.png" alt="Old Mill Saddlery Business Central requirements" width={733} height={512} />
             </div>
             <div className="col-lg-6 align-self-center">
               <div className="ms-c-po">
@@ -226,7 +232,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="ce-image-ce">
-                  <img src="/img/case-s-03.png" alt="Case Study" className="img-fluid"  loading="lazy" decoding="async" />
+                  <img src="/img/case-s-03.png" alt="Old Mill Saddlery Business Central reimplementation" className="img-fluid"  loading="lazy" decoding="async" />
               </div>
             </div>
           </div>
@@ -394,13 +400,13 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
               </div>
               <div className="content-icons-modil-1">
                 <p>This was never just about another ERP implementation. For Dynamics Square, this project was a statement. It reflected a willingness to step out of comfort zones and build deep trust in a region often overlooked by service providers. It proved that a Microsoft partner could reach the farthest corners of the Irish market, listen carefully, and then deliver solutions that matter.</p>
-                <p>The company is now on the brink of a powerful transformation. It was a project won with empathy, delivered with focus, and set to redefine what small and medium retailers in complex domains like saddlery can achieve with the right technology partner by their side.</p>
+                <p>Old Mill Saddlery is now on the brink of a powerful transformation. It was a project won with empathy, delivered with focus, and set to redefine what small and medium retailers in complex domains like saddlery can achieve with the right technology partner by their side.</p>
                 <p><b>Let this story remind others:</b> sometimes, the greatest shifts happen quietly, far from the spotlight, in places where real commitment still matters.</p>
               </div>
             </div>
             <div className="col-lg-6">
               <div className="text-center">
-                <Image src="/img/case-s-04.png" alt="Why This Case Matters" width={485} height={450} />
+                <Image src="/img/case-s-04.png" alt="Why the Old Mill Saddlery case matters" width={485} height={450} />
               </div>
             </div>
           </div>

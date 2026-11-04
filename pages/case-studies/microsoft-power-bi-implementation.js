@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import CaseStudyClientCard from "../../components/CaseStudyClientCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -16,9 +17,10 @@ const MicrosoftPowerBiImplementation = () => {
     <>
       <PageSeo
         type="Article"
-        title="Case Study: Microsoft Power BI Implementation"
-        description="Check the Microsoft Power BI Implementation Case Study: We simplified sales and stock analysis with real-time reporting."
-        image="/img/Power-BI-1024x586.webp"
+        title="WH Scott: Microsoft Power BI Implementation Case Study | Dynamics Square"
+        description="How WH Scott, a lifting and handling specialist founded in 1897, simplified sales and stock analysis with a Microsoft Power BI implementation."
+        image="https://www.dynamicssquare.co.uk/img/WH-Scout.jpg"
+        imageAlt="WH Scott case study – Dynamics Square"
       />
       <section className="hero-1 hero">
         <div className="container">
@@ -28,7 +30,7 @@ const MicrosoftPowerBiImplementation = () => {
                 <div className="top-se">
                   <span className="date-ti">Case Study</span>
                   <h1>Microsoft Power BI Implementation </h1>
-                  <p>Simplified sales and stock analysis with real-time reporting.</p>
+                  <p>How WH Scott simplified sales and stock analysis with real-time reporting</p>
                 </div>
               </div>
             </div>
@@ -36,7 +38,7 @@ const MicrosoftPowerBiImplementation = () => {
               <div className="sider-over">
                 <img
                   src="/img/Power-BI-1024x586.webp"
-                  alt="Microsoft Power BI Implementation" />
+                  alt="WH Scott case study" />
               </div>
             </div>
           </div>
@@ -46,16 +48,18 @@ const MicrosoftPowerBiImplementation = () => {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-10">
-              <div className="row bg-case">
-                <div className="col-lg-3 align-self-center text-center">
-                  <img
-                    src="/img/casestudy-pic.png"
-                    alt="Microsoft Power BI Implementation" />
-                </div>
-                <div className="col-lg-9 align-self-center">
-                  <p>Founded in 1897, the company is the leading business in the design and manufacturing of lifting and handling solutions. With a wide range of machines that include lifting equipment, load securing, hydraulic machines, height safety equipment, and machine maintenance and repair. These machines are generally used in various applications, like lifting, rigging, and handling material from one place to another. Other than offering their highly engineered machines, they also offer different services leveraging their experienced professionals, which include crane installation, maintenance, statutory maintenance, HAVS testing, design/fabrication, PAT testing, and consultancy services.</p>
-                </div>
-              </div>
+              <CaseStudyClientCard
+                clientName="WH Scott"
+                logo="/img/case-study-logos/wh-scott-logo.png"
+                meta={[
+                  { icon: "bi-gear", label: "Lifting & Handling" },
+                  { icon: "bi-calendar-check", label: "Founded 1897" },
+                  { icon: "bi-bar-chart", label: "Power BI Implementation" },
+                ]}
+                title="About WH Scott"
+              >
+                <p>Founded in 1897, <strong>WH Scott</strong> is the leading business in the design and manufacturing of lifting and handling solutions. With a wide range of machines that include lifting equipment, load securing, hydraulic machines, height safety equipment, and machine maintenance and repair. These machines are generally used in various applications, like lifting, rigging, and handling material from one place to another. Other than offering their highly engineered machines, they also offer different services leveraging their experienced professionals, which include crane installation, maintenance, statutory maintenance, HAVS testing, design/fabrication, PAT testing, and consultancy services.</p>
+              </CaseStudyClientCard>
             </div>
           </div>
         </div>
@@ -70,7 +74,7 @@ const MicrosoftPowerBiImplementation = () => {
           </header>
           <div className="row gx-5">
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/cast-stu-pic.png" alt="Case studies Dynamicsquare" width={487} height={404} />
+              <Image src="/img/cast-stu-pic.png" alt="WH Scott business challenges" width={487} height={404} />
             </div>
             <div className="col-lg-6">
               <div className="content-icons-modil-1">
@@ -283,7 +287,7 @@ const MicrosoftPowerBiImplementation = () => {
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/Group1435.png" alt="Dynamics square casestudy" width={640} height={598} />
+              <Image src="/img/Group1435.png" alt="WH Scott benefits with Dynamics Square" width={640} height={598} />
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import CaseStudyClientCard from "../../components/CaseStudyClientCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -12,8 +13,10 @@ const SageErpToBusinessCentral = () => {
     <>
       <PageSeo
         type="Article"
-        title="Sage ERP to D365 Business Central - Case Study"
-        description="Sage ERP to D365 Business Central Case Study: We resolved different operational challenges while achieving high ROI."
+        title="ALMI Group: Sage to Business Central Case Study | Dynamics Square"
+        description="How ALMI Group, a builders' merchant support company, moved from Sage to Dynamics 365 Business Central to resolve operational challenges and improve ROI."
+        image="https://www.dynamicssquare.co.uk/img/ALMI-Group.jpg"
+        imageAlt="ALMI Group case study – Dynamics Square"
       />
       <section className="hero-1 hero">
         <div className="container">
@@ -23,7 +26,7 @@ const SageErpToBusinessCentral = () => {
                 <div className="top-se">
                   <span className="date-ti">Case Study</span>
                   <h1>Sage ERP to Microsoft Dynamics 365 Business Central </h1>
-                  <p>Resolved different operational challenges while achieving high ROI.</p>
+                  <p>How ALMI Group resolved different operational challenges while achieving high ROI</p>
                 </div>
               </div>
             </div>
@@ -31,7 +34,7 @@ const SageErpToBusinessCentral = () => {
               <div className="sider-over">
                 <img
                   src="/img/business-central-implementation-banner-1.svg"
-                  alt="Sage ERP to Microsoft Dynamics 365 Business Central" />
+                  alt="ALMI Group case study" />
               </div>
             </div>
           </div>
@@ -41,16 +44,17 @@ const SageErpToBusinessCentral = () => {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-10">
-              <div className="row bg-case">
-                <div className="col-lg-3 align-self-center text-center">
-                  <img
-                    src="/img/casestudy-pic.png"
-                    alt="Sage ERP to Microsoft Dynamics 365 Business Central" />
-                </div>
-                <div className="col-lg-9 align-self-center">
-                  <p>For more than 25 years in the industry, the business has been helping builders' merchants grow their businesses. During this journey, they have built an extensive supply chain to find products that are not easily available on the market. Irrespective of the complexity of the order, whether urgent or irregular, the business will find and supply it before the deadline. This will help businesses grow by increasing the inquiry-to-order ratio. With good response time and an efficient supply chain, business has 327 active branches at the moment, with a turnaround time of less than 2 hours. They not only deal with builder's merchants but also offer their services to other merchants as well.</p>
-                </div>
-              </div>
+              <CaseStudyClientCard
+                clientName="ALMI Group"
+                meta={[
+                  { icon: "bi-bricks", label: "Builders' Merchant Support" },
+                  { icon: "bi-shop", label: "327 Active Branches" },
+                  { icon: "bi-arrow-up-circle", label: "Sage → Business Central" },
+                ]}
+                title="About ALMI Group"
+              >
+                <p>For more than 25 years in the industry, <strong>ALMI Group</strong> has been helping builders' merchants grow their businesses. During this journey, they have built an extensive supply chain to find products that are not easily available on the market. Irrespective of the complexity of the order, whether urgent or irregular, the business will find and supply it before the deadline. This will help businesses grow by increasing the inquiry-to-order ratio. With good response time and an efficient supply chain, business has 327 active branches at the moment, with a turnaround time of less than 2 hours. They not only deal with builder's merchants but also offer their services to other merchants as well.</p>
+              </CaseStudyClientCard>
             </div>
           </div>
         </div>
@@ -65,7 +69,7 @@ const SageErpToBusinessCentral = () => {
           </header>
           <div className="row gx-5">
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/cast-stu-pic.png" alt="Case studies Dynamicsquare" width={487} height={404} />
+              <Image src="/img/cast-stu-pic.png" alt="ALMI Group business challenges" width={487} height={404} />
             </div>
             <div className="col-lg-6">
               <div className="content-icons-modil-1">
@@ -291,7 +295,7 @@ const SageErpToBusinessCentral = () => {
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/Group1435.png" alt="Dynamics square casestudy" width={640} height={598} />
+              <Image src="/img/Group1435.png" alt="ALMI Group benefits with Dynamics Square" width={640} height={598} />
             </div>
           </div>
         </div>

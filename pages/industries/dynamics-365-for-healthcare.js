@@ -92,8 +92,8 @@ const healthcareCaseStudies = [
   },
   {
     title: "Medical Instrument Supplier: Business Central Upgrade",
-    text: "Learn how a medical instrument supplier and manufacturer modernised its ERP environment by moving from Dynamics NAV to Business Central. Review the case study for the reported business outcomes and implementation details.",
-    link: "Read the medical instrument supplier case study",
+    text: "Learn how Timesco UK modernised its ERP environment by moving from Dynamics NAV to Business Central. Review the case study for the reported business outcomes and implementation details.",
+    link: "Read the Timesco UK case study",
     href: "/case-studies/nav13R2-to-business-central/",
     image: "/img/case-studies-3.jpg",
     alt: "Medical instruments laid out on a sterile tray",

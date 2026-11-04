@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import CaseStudyClientCard from "../../components/CaseStudyClientCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -14,8 +15,10 @@ const OdooErpToBusinessCentralMigration = () => {
     <>
       <PageSeo
         type="Article"
-        title="Odoo ERP to Business Central Migration | Case Study"
-        description="Read our comprehensive case study on the migration of Odoo ERP to Business Central, which includes important strategies, benefits and insights for an easy migration."
+        title="GTT Wireless: Odoo to Business Central Case Study | Dynamics Square"
+        description="How GTT Wireless, a supplier of carrier-grade antennas, migrated from Odoo to Business Central to align its system with business growth."
+        image="https://www.dynamicssquare.co.uk/img/GTT-Wireless.jpg"
+        imageAlt="GTT Wireless case study – Dynamics Square"
       />
       <section className="hero-1 hero">
         <div className="container">
@@ -25,7 +28,7 @@ const OdooErpToBusinessCentralMigration = () => {
                 <div className="top-se">
                   <span className="date-ti">Case Study</span>
                   <h1>Odoo ERP to Business Central Upgrade </h1>
-                  <p>Aligned the system with business growth to achieve exponential results.</p>
+                  <p>How GTT Wireless aligned the system with business growth to achieve exponential results</p>
                 </div>
               </div>
             </div>
@@ -33,7 +36,7 @@ const OdooErpToBusinessCentralMigration = () => {
               <div className="sider-over">
                 <img
                   src="/img/business-central-implementation-banner-1.svg"
-                  alt="Odoo ERP to Business Central Upgrade" />
+                  alt="GTT Wireless case study" />
               </div>
             </div>
           </div>
@@ -43,16 +46,18 @@ const OdooErpToBusinessCentralMigration = () => {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-10">
-              <div className="row bg-case">
-                <div className="col-lg-3 align-self-center text-center">
-                  <img
-                    src="/img/casestudy-pic.png"
-                    alt="Odoo ERP to Business Central Upgrade" />
-                </div>
-                <div className="col-lg-9 align-self-center">
-                  <p>The business is a trusted provider of wireless and technology solutions for businesses, with 15+ years of experience in the industry. Founded in 2008, they are a leading supplier of carrier-grade antenna and enclosure protection solutions. Also, the organisation further offers customised solutions to meet unique business needs. They offer a comprehensive range of products that includes two-way radios, public safety communications, wireless broadband, and high-quality indoor and outdoor antennas. The company offers its bespoke products to the global IoT and M2M industries.</p>
-                </div>
-              </div>
+              <CaseStudyClientCard
+                clientName="GTT Wireless"
+                logo="/img/case-study-logos/gtt-wireless-logo.png"
+                meta={[
+                  { icon: "bi-broadcast", label: "Wireless & Antenna Solutions" },
+                  { icon: "bi-calendar-check", label: "Founded 2008" },
+                  { icon: "bi-arrow-up-circle", label: "Odoo → Business Central" },
+                ]}
+                title="About GTT Wireless"
+              >
+                <p><strong>GTT Wireless</strong> is a trusted provider of wireless and technology solutions for businesses, with 15+ years of experience in the industry. Founded in 2008, they are a leading supplier of carrier-grade antenna and enclosure protection solutions. Also, the organisation further offers customised solutions to meet unique business needs. They offer a comprehensive range of products that includes two-way radios, public safety communications, wireless broadband, and high-quality indoor and outdoor antennas. The company offers its bespoke products to the global IoT and M2M industries.</p>
+              </CaseStudyClientCard>
             </div>
           </div>
         </div>
@@ -67,7 +72,7 @@ const OdooErpToBusinessCentralMigration = () => {
           </header>
           <div className="row gx-5">
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/cast-stu-pic.png" alt="Case studies Dynamicsquare" width={487} height={404} />
+              <Image src="/img/cast-stu-pic.png" alt="GTT Wireless business challenges" width={487} height={404} />
             </div>
             <div className="col-lg-6">
               <div className="content-icons-modil-1">
@@ -292,7 +297,7 @@ const OdooErpToBusinessCentralMigration = () => {
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/Group1435.png" alt="Dynamics square casestudy" width={640} height={598} />
+              <Image src="/img/Group1435.png" alt="GTT Wireless benefits with Dynamics Square" width={640} height={598} />
             </div>
           </div>
         </div>

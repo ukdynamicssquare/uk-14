@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import CaseStudyClientCard from "../../components/CaseStudyClientCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -14,9 +15,10 @@ const PowerBiSupportSolutions = () => {
     <>
       <PageSeo
         type="Article"
-        title="Microsoft Power BI Support Service with Dynamics Square UK - Case Study"
-        description="We resolved data inefficiency issue to get real-time data from different sources. The UK's company is very happy with their Power BI support solutions."
-        image="/img/Power-BI-1024x586.webp"
+        title="ComXo: Microsoft Power BI Support Case Study | Dynamics Square"
+        description="How ComXo, a UK switchboard and business support provider, resolved data inefficiency and got real-time reporting with Microsoft Power BI support."
+        image="https://www.dynamicssquare.co.uk/img/Comxo.jpg"
+        imageAlt="ComXo case study – Dynamics Square"
       />
       <section className="hero-1 hero">
         <div className="container">
@@ -26,7 +28,7 @@ const PowerBiSupportSolutions = () => {
                 <div className="top-se">
                   <span className="date-ti">Case Study</span>
                   <h1>Microsoft Power BI Support </h1>
-                  <p>Resolved data inefficiency issue to get real-time data from different sources. </p>
+                  <p>How ComXo resolved a data inefficiency issue to get real-time data from different sources</p>
                 </div>
               </div>
             </div>
@@ -34,7 +36,7 @@ const PowerBiSupportSolutions = () => {
               <div className="sider-over">
                 <img
                   src="/img/Power-BI-1024x586.webp"
-                  alt="Microsoft Power BI Support" />
+                  alt="ComXo case study" />
               </div>
             </div>
           </div>
@@ -44,16 +46,18 @@ const PowerBiSupportSolutions = () => {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-10">
-              <div className="row bg-case">
-                <div className="col-lg-3 align-self-center text-center">
-                  <img
-                    src="/img/casestudy-pic.png"
-                    alt="Microsoft Power BI Support" />
-                </div>
-                <div className="col-lg-9 align-self-center">
-                  <p>The business is into offering transformational switchboard and business support services to numerous organisaitons of the UK. They are experts in providing a great customer experience and have been trusted by 31 out of 100 global firms. With 34 years of client experience and being the winner of 12 consecutive years for the Switchboard of the Year award, the business offers an exceptional experience combining knowledge, expertise, creativity, and passion.</p>
-                </div>
-              </div>
+              <CaseStudyClientCard
+                clientName="ComXo"
+                logo="/img/case-study-logos/comxo-logo.png"
+                meta={[
+                  { icon: "bi-telephone", label: "Switchboard & Business Support" },
+                  { icon: "bi-award", label: "34 Years of Experience" },
+                  { icon: "bi-bar-chart", label: "Power BI Support" },
+                ]}
+                title="About ComXo"
+              >
+                <p><strong>ComXo</strong> offers transformational switchboard and business support services to numerous organisaitons of the UK. They are experts in providing a great customer experience and have been trusted by 31 out of 100 global firms. With 34 years of client experience and being the winner of 12 consecutive years for the Switchboard of the Year award, the business offers an exceptional experience combining knowledge, expertise, creativity, and passion.</p>
+              </CaseStudyClientCard>
             </div>
           </div>
         </div>
@@ -68,7 +72,7 @@ const PowerBiSupportSolutions = () => {
           </header>
           <div className="row gx-5">
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/cast-stu-pic.png" alt="Case studies Dynamicsquare" width={487} height={404} />
+              <Image src="/img/cast-stu-pic.png" alt="ComXo business challenges" width={487} height={404} />
             </div>
             <div className="col-lg-6">
               <div className="content-icons-modil-1">
@@ -291,7 +295,7 @@ const PowerBiSupportSolutions = () => {
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/Group1435.png" alt="Dynamics square casestudy" width={640} height={598} />
+              <Image src="/img/Group1435.png" alt="ComXo benefits with Dynamics Square" width={640} height={598} />
             </div>
           </div>
         </div>

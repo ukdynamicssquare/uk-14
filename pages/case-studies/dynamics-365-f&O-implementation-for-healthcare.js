@@ -1,35 +1,19 @@
 import Link from "next/link";
-import Head from "next/head";
 import Image from "next/image";
+import CaseStudyClientCard from "../../components/CaseStudyClientCard";
+import PageSeo from "../../components/PageSeo";
 const DynamicsNav2013BusinessCentralUpgrade = () => {
 
 
   return (
     <>
-      <Head>
-        <meta name="robots" content="noindex, nofollow" />
-        <title>Dynamics 365 F&O Implementation for Healthcare - Dynamics Square</title>
-        <meta
-          name="description"
-          content="Dynamics Square UK delivers tailored Dynamics 365 F&O implementation for healthcare, improving compliance, finance control, and operational efficiency."
-        />
-        <link
-          rel="canonical"
-          href="https://www.dynamicssquare.co.uk/case-studies/dynamics-365-f&O-implementation-for-healthcare/"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Dynamics 365 F&O Implementation for Healthcare - Dynamics Square" />
-        <meta property="og:description" content="Dynamics Square UK delivers tailored Dynamics 365 F&O implementation for healthcare, improving compliance, finance control, and operational efficiency." />
-        <meta property="og:url" content="https://www.dynamicssquare.co.uk/case-studies/dynamics-365-f&O-implementation-for-healthcare/" />
-        <meta property="og:image" content="https://www.dynamicssquare.co.uk/img/case-v-11.png" />
-        <meta property="og:image:width" content="200" />
-        <meta property="og:image:height" content="200" />
-        <meta property="og:image:type" content="image/jpg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Dynamics 365 F&O Implementation for Healthcare - Dynamics Square" />
-        <meta name="twitter:description" content="Dynamics Square UK delivers tailored Dynamics 365 F&O implementation for healthcare, improving compliance, finance control, and operational efficiency." />
-        <meta name="twitter:image" content="https://www.dynamicssquare.co.uk/img/case-v-11.png" />
-      </Head>
+      <PageSeo
+        type="Article"
+        title="Simbec Orion: Dynamics 365 F&O Managed Support Case Study | Dynamics Square"
+        description="How Simbec Orion, a UK clinical research organisation, improved financial processes and system adoption with Dynamics 365 F&O managed support."
+        image="https://www.dynamicssquare.co.uk/img/f&O-implementation-for-healthcare.jpg"
+        imageAlt="Simbec Orion case study – Dynamics Square"
+      />
       <section className="hero hero-new-bg">
         <div className="container">
           <div className="row justify-content-center">
@@ -38,7 +22,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
                 <div className="top-se">
                   <span className="date-ti">Case Study</span>
                   <h1>Microsoft Dynamics 365 Finance and Operations Managed Support and System Optimisation   </h1>
-                  <p>How a Clinical Research Organisation Improved Financial Processes and System Adoption with Dynamics 365 Finance and Operations</p>
+                  <p>How Simbec Orion Improved Financial Processes and System Adoption with Dynamics 365 Finance and Operations</p>
                 </div>
               </div>
             </div>
@@ -48,16 +32,20 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
       <section className="cast-studi-into minr">
         <div className="container">
           <div className="row justify-content-center">
-            <div className="col-lg-9">
-              <div className="bg-case bg-case-cent">
-                <div className="side-heading-custom-01">
-                  <h2>A Crux of the Case Story</h2>
-                </div>
-                <div className="custom-p-001">
-                  <p>This case study shows how a growing clinical research organisation, operating in a highly regulated environment, moved beyond basic system usage to achieve meaningful operational efficiency. After <a href="/products/microsoft-dynamics-365-finance/">implementing Microsoft Dynamics 365 Finance and Operations</a>, the organisation faced challenges in process alignment, automation, and support responsiveness. </p>
-                  <p>By partnering with Dynamics Square, it began to refine its financial workflows, reduce manual dependency, and build a more reliable and scalable system environment.</p>
-                </div>
-              </div>
+            <div className="col-lg-10">
+              <CaseStudyClientCard
+                clientName="Simbec Orion"
+                logo="/img/case-study-logos/simbec-orion-logo.png"
+                meta={[
+                  { icon: "bi-clipboard2-pulse", label: "Clinical Research" },
+                  { icon: "bi-geo-alt", label: "United Kingdom" },
+                  { icon: "bi-people", label: "125+ Users" },
+                ]}
+                title="A Crux of the Case Story"
+              >
+                <p>This case study shows how <strong>Simbec Orion</strong>, a growing clinical research organisation operating in a highly regulated environment, moved beyond basic system usage to achieve meaningful operational efficiency. After <a href="/products/microsoft-dynamics-365-finance/">implementing Microsoft Dynamics 365 Finance and Operations</a>, the organisation faced challenges in process alignment, automation, and support responsiveness. </p>
+                <p>By partnering with Dynamics Square, it began to refine its financial workflows, reduce manual dependency, and build a more reliable and scalable system environment.</p>
+              </CaseStudyClientCard>
             </div>
           </div>
         </div>
@@ -70,7 +58,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
                 <h2>Business Overview</h2>
               </div>
               <div className="custom-p-001">
-                <p>This organisation operates within the clinical research and life sciences sector in the United Kingdom, where regulatory compliance, financial accuracy, and process efficiency are critical to daily operations. Its work involves managing complex financial structures alongside project-based activities, requiring systems that can support both precision and flexibility.</p>
+                <p><b>Simbec Orion</b> operates within the clinical research and life sciences sector in the United Kingdom, where regulatory compliance, financial accuracy, and process efficiency are critical to daily operations. Its work involves managing complex financial structures alongside project-based activities, requiring systems that can support both precision and flexibility.</p>
                 <p>The organisation implemented Microsoft Dynamics 365 Finance and Operations in a cloud-based environment towards the end of 2023. The system covered core modules including finance, human resources, profit and loss tracking, and purchase requisition processes.</p>
                 <p>With a team of over 125 users, including a finance function of approximately 13 to 14 core users, the organisation manages a steady volume of financial transactions, processing more than 400 invoices each month. Despite having a <a href="/products/microsoft-dynamics-erp/">modern ERP system</a> in place, the business soon recognised that implementation alone was not enough to achieve operational efficiency.</p>
                 <p>To move forward, the organisation began seeking a support partner who could not only maintain the system but also enhance how it was used.</p>
@@ -81,7 +69,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
                 <Image
                   src="/img/case-v-09.png"
                   className="fix-im"
-                  alt="case-v-09"
+                  alt="Simbec Orion clinical research business overview"
                   width={400} height={450}
                 />
               </div>
@@ -206,7 +194,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           </div>
           <div className="row gx-5">
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/case-v-10.png" alt="case-v-10" width={633} height={561} />
+              <Image src="/img/case-v-10.png" alt="Simbec Orion Dynamics 365 F&O requirements" width={633} height={561} />
             </div>
             <div className="col-lg-6 align-self-center">
               <div className="ms-c-po">
@@ -275,7 +263,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="ce-image-ce">
-                <Image src="/img/case-v-11.png" width={828} height={597} alt="Case Study" className="img-fluid" />
+                <Image src="/img/case-v-11.png" width={828} height={597} alt="Simbec Orion Dynamics 365 Finance and Operations managed support" className="img-fluid" />
               </div>
             </div>
           </div>
@@ -354,7 +342,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
           </div>
           <div className="row gx-5">
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/case-s-02.png" alt="case-s-02" width={733} height={512} />
+              <Image src="/img/case-s-02.png" alt="Simbec Orion results with Dynamics Square" width={733} height={512} />
             </div>
             <div className="col-lg-6 align-self-center">
               <div className="ms-c-po">
@@ -460,7 +448,7 @@ const DynamicsNav2013BusinessCentralUpgrade = () => {
               </div>
               <div className="content-icons-modil-1">
                 <p>This case study highlights an important reality. Implementing an ERP system is only the starting point. Real value is realised when the system is aligned with business processes and supported effectively.</p>
-                <p>In this instance, the organisation recognised that its challenges were not rooted in technology, but in process design, system usage, and support quality. By addressing these areas, it began to unlock the full potential of its existing investment.</p>
+                <p>In this instance, Simbec Orion recognised that its challenges were not rooted in technology, but in process design, system usage, and support quality. By addressing these areas, it began to unlock the full potential of its existing investment.</p>
               </div>
             </div>
             <div className="col-lg-6 align-self-center">
