@@ -18,8 +18,8 @@ const Fashion = () => {
     <>
       <PageSeo
         type="Service"
-        title="Dynamics 365 ERP for Fashion and Apparel Manufacturing"
-        description="Track every style, colour and size, manage cut-and-sew production and subcontractors, and trace dye lots in one system with Dynamics 365 ERP for fashion and apparel manufacturing."
+        title="Dynamics 365 for Fashion and Apparel Manufacturing"
+        description="Optimise fashion and apparel manufacturing with Dynamics 365. Manage production, inventory, supply chains and operations with a connected ERP solution."
         image="https://www.dynamicssquare.co.uk/img/fashion-00.png"
         faqs={faqData}
       >
@@ -54,7 +54,7 @@ const Fashion = () => {
               <div className='m-b-image-nnn m-b-image-nna'>
                 <Image
                   src="/img/fashion-00.png"
-                  alt='Dynamics 365 ERP for fashion and apparel manufacturing: garment worker sewing at an industrial machine on a factory floor'
+                  alt='Dynamics 365 ERP for fashion and apparel manufacturing: coloured thread spools on an industrial embroidery machine'
                   width={1097}
                   height={656}
                   priority
@@ -441,7 +441,7 @@ const Fashion = () => {
           <div className="row">
             <div className="col-lg-5 align-self-center order-3">
               <div className='img-backs-sid-two text-center'>
-                <Image src="/img/fashion-21.png" alt="Two fashion designers reviewing a pattern on a tablet, representing an ERP fit assessment for fashion manufacturers" width={540} height={630} className='im-two' />
+                <Image src="/img/fashion-21.png" alt="Fit assessment diagram linking Dynamics 365 Business Central and Dynamics 365 Supply Chain above a sewing machine, representing an ERP fit assessment for fashion manufacturers" width={540} height={672} className='im-two' />
               </div>
             </div>
             <div className="col-lg-1 order-2"></div>
@@ -592,7 +592,7 @@ const Fashion = () => {
           <div className="row">
             <div className="col-lg-5 align-self-center order-3">
               <div className='img-backs-sid-two text-center'>
-                <Image src="/img/fashion-22.png" alt="Garment factory worker folding finished knitwear, representing UK clothing makers and fashion brands working with Dynamics Square" width={540} height={536} className='im-two' />
+                <Image src="/img/fashion-22.png" alt="Two business professionals shaking hands, representing UK clothing makers and fashion brands working with Dynamics Square" width={540} height={630} className='im-two' />
               </div>
             </div>
             <div className="col-lg-1 order-2"></div>

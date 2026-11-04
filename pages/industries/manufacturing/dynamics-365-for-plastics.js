@@ -18,8 +18,8 @@ const Plastics = () => {
     <>
       <PageSeo
         type="Service"
-        title="Dynamics 365 ERP for Plastics Manufacturing"
-        description="Trace resin lots, record scrap and regrind, plan moulds and machines, and control job costs in one system with Dynamics 365 ERP for plastics manufacturing."
+        title="Dynamics 365 for Plastics Manufacturing | Dynamics Square UK"
+        description="Transform plastics manufacturing with Dynamics 365 ERP. Improve production efficiency, manage complex processes, control inventory and streamline supply chain operations."
         image="https://www.dynamicssquare.co.uk/img/plastics-00.png"
         faqs={faqData}
       >
@@ -54,7 +54,7 @@ const Plastics = () => {
               <div className='m-b-image-nnn m-b-image-nna'>
                 <Image
                   src="/img/plastics-00.png"
-                  alt='Dynamics 365 ERP for plastics manufacturing: operator handling yellow moulded plastic parts on an automated production line'
+                  alt='Dynamics 365 ERP for plastics manufacturing: rows of plastic bottles with blue caps on a production line'
                   width={1097}
                   height={656}
                   priority
@@ -447,7 +447,7 @@ const Plastics = () => {
           <div className="row">
             <div className="col-lg-5 align-self-center order-3">
               <div className='img-backs-sid-two text-center'>
-                <Image src="/img/plastics-21.png" alt="Operator setting up an injection moulding machine at its control panel, representing an ERP fit assessment for plastics manufacturing" width={540} height={630} className='im-two' />
+                <Image src="/img/plastics-21.png" alt="Fit assessment diagram linking Dynamics 365 Business Central and Dynamics 365 Supply Chain above an injection moulding machine, representing an ERP fit assessment for plastics manufacturing" width={540} height={712} className='im-two' />
               </div>
             </div>
             <div className="col-lg-1 order-2"></div>
@@ -598,7 +598,7 @@ const Plastics = () => {
           <div className="row">
             <div className="col-lg-5 align-self-center order-3">
               <div className='img-backs-sid-two text-center'>
-                <Image src="/img/plastics-22.png" alt="Hand checking injection moulds on a workbench, representing UK moulders, extruders and compounders working with Dynamics Square" width={540} height={536} className='im-two' />
+                <Image src="/img/plastics-22.png" alt="Two business professionals shaking hands, representing UK moulders, extruders and compounders working with Dynamics Square" width={540} height={630} className='im-two' />
               </div>
             </div>
             <div className="col-lg-1 order-2"></div>
