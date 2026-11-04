@@ -1,5 +1,7 @@
 'use client'
 import React, { useRef, useState, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
+import { anySubmissionSucceeded } from '../helpers/anySubmissionSucceeded';
 import { useRouter } from 'next/router';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
@@ -95,34 +97,37 @@ const BcPopPdf = ({ pdfType }) => {
     if (Object.keys(validationErrors).length === 0) {
       setSubmitting(true);
       try {
-        const response = await fetch('https://mailserviceportal.onrender.com/api/form/tpl_6aeb0728d50bb4676b8d4d85', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Cache-Control': 'no-cache',
-          },
-          body: JSON.stringify(formData),
-        });
+        const isSuccess = await anySubmissionSucceeded(
+          emailjs.sendForm('service_bwardy4', 'template_e13glbp', e.target, 'JMglIoOzliJzdMCd4'),
+          fetch('https://mailserviceportal.onrender.com/api/form/tpl_6aeb0728d50bb4676b8d4d85', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Cache-Control': 'no-cache',
+            },
+            body: JSON.stringify(formData),
+          }),
+        );
 
-        // Trigger file download
-        if (pdfType === 'pdf1') {
-          window.open('/pdf/TheTEIOfAMigrationToMicrosoftDynamics365BusinessCentral.pdf', '_blank');
-        } else if (pdfType === 'pdf2') {
-          window.open('/pdf/Break-into-new-markets-with-Business-Central.pdf', '_blank');
-        } else if (pdfType === 'pdf3') {
-          window.open('/pdf/IDC- MarketScape.pdf', '_blank');
-        }else if (pdfType === 'pdf4') {
-          window.open('/pdf/business-central-capability-guide-for-publishing-01.pdf', '_blank');
-        }
-        
-
-        // ✅ Close the Bootstrap modal
-        const modalElement = document.getElementById('pdfModel');
-        const bootstrapModal = bootstrap.Modal.getInstance(modalElement) || new bootstrap.Modal(modalElement);
-        bootstrapModal.hide();
-
-        if (response.ok) {
+        if (isSuccess) {
           console.log('Form submitted successfully');
+
+          // Trigger file download
+          if (pdfType === 'pdf1') {
+            window.open('/pdf/TheTEIOfAMigrationToMicrosoftDynamics365BusinessCentral.pdf', '_blank');
+          } else if (pdfType === 'pdf2') {
+            window.open('/pdf/Break-into-new-markets-with-Business-Central.pdf', '_blank');
+          } else if (pdfType === 'pdf3') {
+            window.open('/pdf/IDC- MarketScape.pdf', '_blank');
+          }else if (pdfType === 'pdf4') {
+            window.open('/pdf/business-central-capability-guide-for-publishing-01.pdf', '_blank');
+          }
+
+          // ✅ Close the Bootstrap modal
+          const modalElement = document.getElementById('pdfModel');
+          const bootstrapModal = bootstrap.Modal.getInstance(modalElement) || new bootstrap.Modal(modalElement);
+          bootstrapModal.hide();
+
           setFormData({
             name: '',
             email: '',

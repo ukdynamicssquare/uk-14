@@ -1,4 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
+import { anySubmissionSucceeded } from '../helpers/anySubmissionSucceeded';
 import { useRouter } from 'next/router';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
@@ -65,14 +67,17 @@ const TestForm = () => {
     if (Object.keys(validationErrors).length === 0) {
       setSubmitting(true);
       try {
-        const response = await fetch('https://mailserviceportal.onrender.com/api/form/tpl_6aeb072bd50bb4676b8d4d87', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(formData),
-        });
-        if (response.ok) {
+        const isSuccess = await anySubmissionSucceeded(
+          emailjs.sendForm('service_lqazf46', 'template_e13glbp', e.target, 'JMglIoOzliJzdMCd4'),
+          fetch('https://mailserviceportal.onrender.com/api/form/tpl_6aeb072bd50bb4676b8d4d87', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+          }),
+        );
+        if (isSuccess) {
           console.log('Form submitted successfully');
           console.log('Form Data:', formData);
           // Clear form data after successful submission

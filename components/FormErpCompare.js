@@ -1,6 +1,8 @@
 'use client';
 
 import React, { useRef, useState, useEffect, useMemo } from 'react';
+import emailjs from '@emailjs/browser';
+import { anySubmissionSucceeded } from '../helpers/anySubmissionSucceeded';
 import { useRouter } from 'next/router';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
@@ -117,24 +119,31 @@ const FormErpCompare = ({ onSuccess, selectedErps }) => {
       setSubmitting(true);
 
       try {
-        await fetch('https://mailserviceportal.onrender.com/api/form/tpl_6aeb072bd50bb4676b8d4d87', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(formData),
-        });
+        const isSuccess = await anySubmissionSucceeded(
+          emailjs.sendForm('service_o50k44u', 'template_9y7o4fr', e.target, 'HX4_bDzP6dt5FVC9H'),
+          fetch('https://mailserviceportal.onrender.com/api/form/tpl_6aeb072bd50bb4676b8d4d87', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formData),
+          }),
+        );
 
-        if (onSuccess) onSuccess();
+        if (isSuccess) {
+          if (onSuccess) onSuccess();
 
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          companyname: '',
-          currentPageUrl: '',
-          selectedErps: '',
-          defaultCountryName: '',
-          formtag: 'ERP Compare Form'
-        });
+          setFormData({
+            name: '',
+            email: '',
+            phone: '',
+            companyname: '',
+            currentPageUrl: '',
+            selectedErps: '',
+            defaultCountryName: '',
+            formtag: 'ERP Compare Form'
+          });
+        } else {
+          console.error('Form submission failed');
+        }
 
       } catch (error) {
         console.error('Error submitting form:', error);

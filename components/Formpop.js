@@ -1,4 +1,6 @@
 import React, { useRef ,useState ,useEffect } from 'react';
+import emailjs from '@emailjs/browser';
+import { anySubmissionSucceeded } from '../helpers/anySubmissionSucceeded';
 import { useRouter } from 'next/router';
 import Cookies from 'js-cookie';
 const Formpop = () => {
@@ -53,14 +55,17 @@ const handleSubmit = async (e) => {
   if (Object.keys(validationErrors).length === 0) {
     setSubmitting(true);
     try {
-      const response = await fetch('https://mailserviceportal.onrender.com/api/form/tpl_6aeb072bd50bb4676b8d4d87', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-      if (response.ok) {
+      const isSuccess = await anySubmissionSucceeded(
+        emailjs.sendForm('service_x0eo9w8', 'template_e2eswsj', e.target, 'xIFtTfBj6NR498Plv'),
+        fetch('https://mailserviceportal.onrender.com/api/form/tpl_6aeb072bd50bb4676b8d4d87', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        }),
+      );
+      if (isSuccess) {
         console.log('Form submitted successfully');
         console.log('Form Data:', formData);
         // Clear form data after successful submission
