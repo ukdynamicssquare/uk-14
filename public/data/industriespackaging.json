@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "question": "What is ERP for packaging manufacturing?",
+        "answer": "<p>Packaging manufacturing ERP is software that connects customer orders, purchasing, production, inventory, quality checks, shipping, and accounting in one system. It helps manufacturers track materials such as board, film, and ink, monitor production costs, record waste, and trace finished goods to customers. Business Central suits standard packaging operations, while Supply Chain Management supports larger businesses with more complex production needs.</p>"
+    },
+    {
+        "id": 2,
+        "question": "Is Dynamics 365 suitable for packaging manufacturers?",
+        "answer": "<p>Yes, Dynamics 365 supports manufacturers of corrugated boxes, cartons, flexible packaging, labels, and rigid containers. Business Central manages production orders, material requirements, inventory, batch tracking, and quality checks. Supply Chain Management adds advanced scheduling, custom product configurations, warehouse management, and machine maintenance. The right choice depends on your factory size, production processes, and customer requirements.</p>"
+    },
+    {
+        "id": 3,
+        "question": "Can Dynamics 365 manage custom packaging orders?",
+        "answer": "<p>Yes, Dynamics 365 manages custom packaging orders from customer requirements through production and delivery. Business Central links production orders to customer demand and supports product variations, such as different sizes and print versions. Supply Chain Management handles more complex options by creating the required material lists and production steps for each selected specification. Both products help track materials, machine time, and production costs.</p>"
+    },
+    {
+        "id": 4,
+        "question": "Can Dynamics 365 track packaging materials and production waste?",
+        "answer": "<p>Yes, Dynamics 365 assigns batch numbers to incoming materials and records which batches each production job uses. This helps trace materials from suppliers to finished products and customers. Teams can also record expected and actual waste during production. Reports show scrap by job, machine, and reason, helping manufacturers identify material losses and control production costs.</p>"
+    },
+    {
+        "id": 5,
+        "question": "Can Dynamics 365 manage packaging production scheduling and quality control?",
+        "answer": "<p>Yes, Dynamics 365 helps plan production using machine availability, working hours, and manufacturing steps. Supply Chain Management adds advanced scheduling to manage limited machine capacity and changing production priorities. For quality control, Business Central supports inspections and can block materials that fail checks. Supply Chain Management provides additional quality orders and sampling plans for more detailed testing requirements.</p>"
+    }
+]

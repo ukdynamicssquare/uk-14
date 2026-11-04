@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "question": "Is Dynamics 365 suitable for aerospace and defence manufacturing?",
+        "answer": "<p>Yes, Dynamics 365 helps aerospace and defence manufacturers manage product structures, component tracking, production costs, and delivery schedules. Business Central suits manufacturers producing parts to approved drawings and repeat orders. Supply Chain Management supports larger businesses with complex designs, frequent engineering changes, and multiple factories. Design and specialist quality software can connect with either system.</p>"
+    },
+    {
+        "id": 2,
+        "question": "Can Dynamics 365 manage complex aerospace bills of materials?",
+        "answer": "<p>Yes, Dynamics 365 manages multi-level bills of materials, showing how individual components and smaller assemblies fit into a finished product. Business Central supports approved BOM versions and component searches. Supply Chain Management adds engineering change management to control design revisions and approvals. Manufacturers can also connect their PLM system to transfer approved engineering information into the ERP.</p>"
+    },
+    {
+        "id": 3,
+        "question": "Can Dynamics 365 provide lot and serial number traceability?",
+        "answer": "<p>Yes, Dynamics 365 tracks material batches and serialised components from goods receipt through production and final delivery. Teams can trace a delivered part back to its original material batch or identify customers who received products made from a particular batch. Material certificates and inspection records can also be linked through the appropriate configuration.</p>"
+    },
+    {
+        "id": 4,
+        "question": "Does Dynamics 365 support engineer-to-order manufacturing?",
+        "answer": "<p>Yes, Supply Chain Management supports engineer-to-order manufacturing by linking production activities with projects, budgets, work breakdown structures, and milestone billing. Business Central can also manage smaller custom orders through order-based production planning and job costing. The right option depends on your project complexity, engineering changes, and contract requirements.</p>"
+    },
+    {
+        "id": 5,
+        "question": "Can Dynamics 365 support aerospace quality and compliance processes?",
+        "answer": "<p>Yes, Business Central supports quality inspections and can block materials that fail checks. Supply Chain Management offers additional tools, including quality orders, sampling plans, and nonconformance records. Aerospace manufacturers following AS9100 may use separate quality software for AS9102 First Article Inspection. Your organisation remains responsible for approvals and compliance, while Dynamics 365 helps maintain supporting production and inspection records.</p>"
+    },
+    {
+        "id": 6,
+        "question": "How much does aerospace ERP implementation cost in the UK?",
+        "answer": "<p>Aerospace ERP implementation costs in the UK depend on factory locations, product complexity, custom manufacturing needs, and the amount of data to transfer. Connecting PLM and quality systems or arranging suitable hosting for MOD-related information can also affect project scope. Dynamics Square reviews these requirements before preparing a project-specific quotation.</p>"
+    }
+]

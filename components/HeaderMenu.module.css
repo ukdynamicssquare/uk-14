@@ -935,6 +935,22 @@ display: block;
   background: none;
   box-shadow: none;
 }
+.nav :global(.ind-mega ul.ind-mega-sublinks.ind-mega-sublinks--two) {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 14px;
+  /* starts under the card icon: 16px padding + 1px border */
+  padding-left: 17px;
+}
+.nav :global(.ind-mega .ind-mega-sublinks--two a) {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.nav :global(.ind-mega .ind-mega-sublinks--two a i) {
+  font-size: 14px;
+  color: #625390;
+}
 .nav :global(.ind-mega ul.ind-mega-sublinks li) {
   flex: none;
   min-width: 0;
@@ -1321,6 +1337,10 @@ display: block;
     gap: 8px;
     /* lines up under the card title: 10px padding + 1px border + 36px icon + 10px gap */
     padding-left: 57px;
+  }
+  .nav :global(.ind-mega ul.ind-mega-sublinks.ind-mega-sublinks--two) {
+    /* starts under the card icon: 10px padding + 1px border */
+    padding-left: 11px;
   }
   .nav :global(.ind-mega .ind-mega-sublinks a) {
     font-size: 13px;

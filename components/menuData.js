@@ -577,7 +577,7 @@ export const INDUSTRIES = [
 ];
 
 // Industries mega menu (ColumnMegaMenu.js): three columns of industry
-// cards, Manufacturing with its sub-pages listed underneath, and a promo aside.
+// cards, Manufacturing with its sub-pages listed underneath.
 const INDUSTRY_ICONS = {
   "/industries/dynamics-365-for-distribution/": "bi-truck",
   "/industries/microsoft-cloud-for-manufacturing/": "bi-gear-wide-connected",
@@ -600,15 +600,18 @@ export const INDUSTRY_MENU = {
         ...industry("/industries/microsoft-cloud-for-manufacturing/"),
         href: "/industries/manufacturing/",
         links: [
-          { href: "/industries/manufacturing/dynamics-365-for-discrete/", title: "Discrete Manufacturing" },
-          { href: "/industries/business-central-for-process-manufacturing/", title: "Process Manufacturing" },
-          { href: "/industries/manufacturing/dynamics-365-for-pharmaceutical/", title: "Pharmaceutical" },
-          { href: "/industries/manufacturing/dynamics-365-for-medical-device/", title: "Medical Device" },
-          { href: "/industries/manufacturing/dynamics-365-for-electronics/", title: "Electronics" },
-          { href: "/industries/manufacturing/dynamics-365-for-chemical/", title: "Chemical" },
-          { href: "/industries/manufacturing/dynamics-365-for-food/", title: "Food & Beverage" },
-          { href: "/industries/manufacturing/dynamics-365-for-plastics/", title: "Plastics" },
-          { href: "/industries/manufacturing/dynamics-365-for-fashion/", title: "Fashion & Apparel" },
+          { href: "/industries/manufacturing/dynamics-365-for-discrete/", icon: "bi-tools", title: "Discrete" },
+          { href: "/industries/business-central-for-process-manufacturing/", icon: "bi-droplet-half", title: "Process" },
+          { href: "/industries/manufacturing/dynamics-365-for-pharmaceutical/", icon: "bi-capsule", title: "Pharmaceutical" },
+          { href: "/industries/manufacturing/dynamics-365-for-medical-device/", icon: "bi-heart-pulse", title: "Medical Device" },
+          { href: "/industries/manufacturing/dynamics-365-for-electronics/", icon: "bi-cpu", title: "Electronics" },
+          { href: "/industries/manufacturing/dynamics-365-for-chemical/", icon: "bi-eyedropper", title: "Chemical" },
+          { href: "/industries/manufacturing/dynamics-365-for-food/", icon: "bi-cup-straw", title: "Food & Beverage" },
+          { href: "/industries/manufacturing/dynamics-365-for-plastics/", icon: "bi-recycle", title: "Plastics" },
+          { href: "/industries/manufacturing/dynamics-365-for-fashion/", icon: "bi-scissors", title: "Fashion & Apparel" },
+          // { href: "/industries/manufacturing/dynamics-365-for-aerospace/", icon: "bi-airplane", title: "Aerospace & Defence" },
+          // { href: "/industries/manufacturing/dynamics-365-for-furniture/", icon: "bi-lamp", title: "Furniture" },
+          // { href: "/industries/manufacturing/dynamics-365-for-packaging/", icon: "bi-box-seam", title: "Packaging" },
         ],
       },
     ],
@@ -624,12 +627,6 @@ export const INDUSTRY_MENU = {
     ],
   ],
   overview: { href: "/industries/", label: "Explore all Industries" },
-  promo: {
-    title: "Built around your sector",
-    desc: "See how businesses like yours run on Dynamics 365.",
-    cta: "Case Studies",
-    href: "/case-studies/",
-  },
 };
 
 // Our Services mega menu (ColumnMegaMenu.js), same layout as INDUSTRY_MENU.

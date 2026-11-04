@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "question": "What is ERP for printing and label manufacturing?",
+        "answer": "<p>ERP for printing and label manufacturing is software that connects estimating, customer orders, purchasing, production, inventory, quality checks, deliveries, and accounting. It helps businesses track materials, production costs, and finished products from the initial quote to final delivery. Microsoft Dynamics 365 provides these capabilities through Business Central for smaller and mid-sized operations and Supply Chain Management for larger, more complex manufacturers.</p>"
+    },
+    {
+        "id": 2,
+        "question": "Is Dynamics 365 suitable for printing companies?",
+        "answer": "<p>Yes, Microsoft Dynamics 365 supports commercial printers, digital print businesses, wide-format producers, print finishers, and label manufacturers. Business Central supports businesses with standard products, repeat orders, and fewer production sites. Supply Chain Management offers more advanced planning and product configuration for manufacturers with several factories, complex label options, and frequent design changes. Both systems connect financial and operational information, giving teams a clearer view of business performance.</p>"
+    },
+    {
+        "id": 3,
+        "question": "Can Dynamics 365 manage print estimating and job costing?",
+        "answer": "<p>Yes, Dynamics 365 helps printing businesses estimate job costs and compare them with actual production expenses. Estimates can include paper, ink, press time, finishing, labour, and subcontracting charges. Production orders record actual material use and operating costs, allowing managers to identify differences between estimated and actual costs. Specialist print estimating software can handle sheet layouts and imposition calculations and exchange job information with Dynamics 365.</p>"
+    },
+    {
+        "id": 4,
+        "question": "Can Dynamics 365 manage custom label manufacturing?",
+        "answer": "<p>Yes, Dynamics 365 helps label manufacturers manage customer specifications, product options, material requirements, and production records. Businesses can store customer product codes, approved material lists, artwork, and production instructions for repeat orders. Supply Chain Management also offers product configuration, which checks customer selections and generates the required materials and production steps. Manufacturers can use batch tracking to trace finished label reels back to the materials used.</p>"
+    },
+    {
+        "id": 5,
+        "question": "Can Dynamics 365 schedule printing jobs and production capacity?",
+        "answer": "<p>Yes, Dynamics 365 helps printing businesses plan production across presses, die cutters, laminators, slitters, and other machines. Production plans consider customer orders, forecasts, available materials, and machine capacity. Supply Chain Management adds finite capacity scheduling, helping planners allocate work according to available machine time. Its graphical production board also helps teams review schedules and respond when priorities or machine availability change.</p>"
+    },
+    {
+        "id": 6,
+        "question": "Can Dynamics 365 track paper, ink, substrates, and other materials?",
+        "answer": "<p>Yes, Dynamics 365 tracks printing materials such as paper, board, film, adhesives, foil, ink, and printing plates. Businesses can assign batch numbers when materials arrive and record which production orders use them. The system also supports different stock units, including sheets, reels, and metres. Supply Chain Management can record additional batch details, such as material width, weight, and colour shade, helping teams select the right stock for each job.</p>"
+    },
+    {
+        "id": 7,
+        "question": "Can Dynamics 365 monitor printing waste and scrap?",
+        "answer": "<p>Yes, Dynamics 365 helps printing businesses record expected and actual material waste during production. Teams can record losses from machine setup, cutting, printing, and finishing, then compare them with planned allowances. Reports help managers identify which jobs, machines, or production stages generate the most waste. Supply Chain Management can also support the return of usable leftover reel material to stock, helping businesses manage reusable material more effectively.</p>"
+    },
+    {
+        "id": 8,
+        "question": "Which Dynamics 365 solution is suitable for printing manufacturers?",
+        "answer": "<p>Business Central Premium is a practical option for printing manufacturers with standard products, repeat customers, and one or a few production sites. Supply Chain Management is generally better for businesses managing several factories, complex label options, in-house ink mixing, master reel slitting, or frequent product revisions. Dynamics Square assesses your production methods, job types, equipment, and site requirements before recommending either solution.</p>"
+    },
+    {
+        "id": 9,
+        "question": "How much does printing ERP implementation cost in the UK?",
+        "answer": "<p>The cost of implementing printing ERP in the UK depends on the software selected, number of users, production sites, and systems that need connecting. Other costs may include data migration, staff training, estimating software integration, press connections, and ongoing support. A project covering one site and fewer production processes will generally require less work than a multi-site implementation. Dynamics Square reviews your requirements and prepares a project-specific estimate before implementation begins.</p>"
+    }
+]

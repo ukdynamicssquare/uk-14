@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "question": "Is Dynamics 365 suitable for furniture manufacturing?",
+        "answer": "<p>Yes, Dynamics 365 supports kitchen, cabinet, sofa, bed, and office furniture manufacturers. It connects purchasing, production, inventory, quality checks, deliveries, and accounting in one system. Business Central suits manufacturers with standard products and a few factories, while Supply Chain Management supports complex designs, multiple sites, and advanced production needs.</p>"
+    },
+    {
+        "id": 2,
+        "question": "Can Dynamics 365 manage custom and make-to-order furniture?",
+        "answer": "<p>Yes, Dynamics 365 can manage furniture made to customer specifications. Business Central links production orders to customer orders and records variations such as size, fabric, and finish. Supply Chain Management supports products with many custom options by checking selections against defined rules. Both systems help track material, labour, and production costs for each order.</p>"
+    },
+    {
+        "id": 3,
+        "question": "Can Dynamics 365 manage furniture bills of materials and production routings?",
+        "answer": "<p>Yes, Dynamics 365 manages bills of materials that list the parts and materials needed to make furniture. Business Central supports multiple levels of assemblies, while production routings record steps such as cutting, drilling, sanding, and upholstery. Supply Chain Management also provides engineering change management to control design revisions and ensure approved changes reach production.</p>"
+    },
+    {
+        "id": 4,
+        "question": "Can Dynamics 365 track wood, fabrics, fittings, and other materials?",
+        "answer": "<p>Yes, Dynamics 365 tracks materials such as timber, boards, fabric, foam, and fittings using batch or lot numbers. Production records show which material batches went into each furniture order. Supply Chain Management can also track material details such as fabric shade and help reserve matching batches for specific orders. This makes it easier to trace supplier materials and investigate customer complaints.</p>"
+    },
+    {
+        "id": 5,
+        "question": "How much does furniture manufacturing ERP implementation cost?",
+        "answer": "<p>Furniture ERP implementation costs depend on the software, number of factories, users, and project requirements. Expenses beyond licences include system configuration, data migration, machine integrations, and employee training. A single-site Business Central project generally requires less work than a multi-site Supply Chain Management implementation. Dynamics Square assesses your requirements before preparing a project-specific quotation.</p>"
+    }
+]

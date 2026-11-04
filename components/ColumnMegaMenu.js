@@ -46,10 +46,13 @@ const MenuCard = ({ item }) => (
       </div>
     )}
     {item.links && (
-      <ul className="ind-mega-sublinks">
+      <ul className="ind-mega-sublinks ind-mega-sublinks--two">
         {item.links.map((l) => (
           <li key={l.href}>
-            <Link href={l.href}>{l.title}</Link>
+            <Link href={l.href}>
+              <i className={`bi ${l.icon}`}></i>
+              {l.title}
+            </Link>
           </li>
         ))}
       </ul>
