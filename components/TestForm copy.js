@@ -1,6 +1,5 @@
 "use client"
 import React, { useEffect, useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
 import { useRouter } from 'next/router';
 import axios from 'axios';
 const TestForm = () => {
@@ -17,7 +16,7 @@ const TestForm = () => {
         const handleSubmit = async (e) => {
           e.preventDefault();
           try {
-            const response = await fetch('https://blognew.dynamicssquare.co.uk/api/formData', {
+            const response = await fetch('https://mailserviceportal.onrender.com/api/form/tpl_6aeb072bd50bb4676b8d4d87', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json'

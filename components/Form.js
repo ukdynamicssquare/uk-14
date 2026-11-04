@@ -1,5 +1,4 @@
 import React, { useRef, useState, useEffect } from 'react';
-import emailjs from '@emailjs/browser';
 import { useRouter } from 'next/router';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
@@ -103,10 +102,7 @@ const Form = () => {
     if (Object.keys(validationErrors).length === 0) {
       setSubmitting(true);
       try {
-        // Send form data via EmailJS
-        await emailjs.sendForm('service_x0eo9w8', 'template_e2eswsj', e.target, 'xIFtTfBj6NR498Plv');
-
-        const response = await fetch('https://blognew.dynamicssquare.co.uk/api/formData', {
+        const response = await fetch('https://mailserviceportal.onrender.com/api/form/tpl_6aeb072bd50bb4676b8d4d87', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -192,23 +188,6 @@ const Form = () => {
   // const router = useRouter();
   // const [display, setDisplay] = useState("dspn");
   // const form = useRef();
-  // const sendEmail = (e) => {
-  //   setDisplay("spinner-border text-success");
-  //   e.preventDefault();
-
-  //   emailjs.sendForm('service_x0eo9w8', 'template_e2eswsj', form.current, 'xIFtTfBj6NR498Plv')
-  //     .then((result) => {
-  //         console.log(result.text);
-  //     }, (error) => {
-  //         console.log(error.text);
-  //     });
-
-  //     setTimeout(function() {
-  //       e.target.reset();
-  //       router.push("/thank-you/");
-  //     }, 500);
-
-  // };
 
 
   return (

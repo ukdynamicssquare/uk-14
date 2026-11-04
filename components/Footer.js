@@ -1,6 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
 import Form from "./Form";
-import emailjs from '@emailjs/browser';
 import { useRouter } from 'next/router';
 // import FormFooterSubscriber from './FormFooterSubscriber';
 import Image from 'next/image';
@@ -114,11 +113,7 @@ const Footer = () => {
     if (Object.keys(validationErrors).length === 0) {
       setSubmitting(true);
       try {
-        // Send form data via EmailJS
-        await emailjs.sendForm('service_x0eo9w8', 'template_e2eswsj', e.target, 'xIFtTfBj6NR498Plv');
-        // await emailjs.sendForm('service_lqazf46', 'template_e13glbp', e.target, 'JMglIoOzliJzdMCd4');
-
-        const response = await fetch('https://blognew.dynamicssquare.co.uk/api/formData', {
+        const response = await fetch('https://mailserviceportal.onrender.com/api/form/tpl_6aeb072bd50bb4676b8d4d87', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

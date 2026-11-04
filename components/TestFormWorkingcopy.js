@@ -1,5 +1,4 @@
 import React, { useRef ,useState,useEffect } from 'react';
-import emailjs from '@emailjs/browser';
 import { useRouter } from 'next/router';
 import Cookies from 'js-cookie';
 
@@ -36,17 +35,7 @@ const TestFormWorkingcopy = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-        // Send form data via EmailJS
-        emailjs.sendForm('service_lqazf46', 'template_e13glbp', e.target, 'JMglIoOzliJzdMCd4')
-          .then((result) => {
-            console.log('EmailJS success:', result.text);
-          })
-          .catch((error) => {
-            console.error('EmailJS error:', error.text);
-          });
-
-
-      const response = await fetch('https://blognew.dynamicssquare.co.uk/api/formData', {
+      const response = await fetch('https://mailserviceportal.onrender.com/api/form/tpl_6aeb072bd50bb4676b8d4d87', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -56,10 +45,7 @@ const TestFormWorkingcopy = () => {
       if (response.ok) {
         console.log('Form submitted successfully');
         
-        // Log form data before sending via EmailJS
         console.log('Form Data:', formData);
-        
-        //add email js code here
         
         // Redirect to thank you page after submission
         setTimeout(function() {

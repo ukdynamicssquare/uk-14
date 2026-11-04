@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useRef, useState, useEffect, useMemo } from 'react';
-import emailjs from '@emailjs/browser';
 import { useRouter } from 'next/router';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
@@ -118,14 +117,7 @@ const FormErpCompare = ({ onSuccess, selectedErps }) => {
       setSubmitting(true);
 
       try {
-        await emailjs.sendForm(
-          'service_o50k44u',
-          'template_9y7o4fr',
-          e.target,
-          'HX4_bDzP6dt5FVC9H'
-        );
-
-        await fetch('https://blognew.dynamicssquare.co.uk/api/formData', {
+        await fetch('https://mailserviceportal.onrender.com/api/form/tpl_6aeb072bd50bb4676b8d4d87', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(formData),
