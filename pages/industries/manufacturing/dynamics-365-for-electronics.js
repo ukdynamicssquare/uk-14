@@ -22,9 +22,7 @@ const Electronics = () => {
         description="Manage multi-level BOMs, engineering change, component sourcing, serial number tracking and production in one system with Dynamics 365 ERP for electronics manufacturing."
         image="https://www.dynamicssquare.co.uk/img/electronics-00.png"
         faqs={faqData}
-      >
-        <meta name="robots" content="noindex, nofollow" />
-      </PageSeo>
+      />
       <div className='solution-new-banner-one solution-new-banner-one-colos'>
         <div className='container'>
           <div className='row justify-content-center'>
@@ -55,7 +53,7 @@ const Electronics = () => {
               <div className='m-b-image-nnn m-b-image-nna'>
                 <Image
                   src="/img/electronics-00.png"
-                  alt='Dynamics 365 ERP for electronics manufacturing: technician soldering components onto a green printed circuit board'
+                  alt='Dynamics 365 ERP for electronics manufacturing: printed circuit boards held in clear trays on a production line'
                   width={1097}
                   height={656}
                   priority
@@ -439,7 +437,7 @@ const Electronics = () => {
           <div className="row">
             <div className="col-lg-5 align-self-center order-3">
               <div className='img-backs-sid-two text-center'>
-                <Image src="/img/electronics-18.png" alt="Engineer reviewing production data on a laptop beside electronics equipment, representing an ERP fit assessment for electronics manufacturing" width={540} height={630} className='im-two' />
+                <Image src="/img/electronics-18.png" alt="Fit assessment diagram linking Dynamics 365 Business Central and Dynamics 365 Supply Chain above a circuit board assembly line, representing an ERP fit assessment for electronics manufacturing" width={540} height={697} className='im-two' />
               </div>
             </div>
             <div className="col-lg-1 order-2"></div>
@@ -598,7 +596,7 @@ const Electronics = () => {
           <div className="row">
             <div className="col-lg-5 align-self-center order-3">
               <div className='img-backs-sid-two text-center'>
-                <Image src="/img/electronics-19.png" alt="Two engineers in safety glasses assembling electronic components, representing UK electronics manufacturers working with Dynamics Square" width={540} height={536} className='im-two' />
+                <Image src="/img/electronics-19.png" alt="Two business professionals shaking hands, representing UK electronics manufacturers working with Dynamics Square" width={540} height={630} className='im-two' />
               </div>
             </div>
             <div className="col-lg-1 order-2"></div>

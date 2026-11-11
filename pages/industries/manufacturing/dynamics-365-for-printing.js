@@ -22,9 +22,7 @@ const Printing = () => {
         description="Optimise printing and label manufacturing with Dynamics 365. Manage production, inventory, supply chains and operations with a connected ERP solution."
         image="https://www.dynamicssquare.co.uk/img/printing-00.png"
         faqs={faqData}
-      >
-        <meta name="robots" content="noindex, nofollow" />
-      </PageSeo>
+      />
       <div className='solution-new-banner-one solution-new-banner-one-colos'>
         <div className='container'>
           <div className='row justify-content-center'>
@@ -54,7 +52,7 @@ const Printing = () => {
               <div className='m-b-image-nnn m-b-image-nna'>
                 <Image
                   src="/img/printing-00.png"
-                  alt='Dynamics 365 ERP for printing and label manufacturing: close-up of inking rollers on a printing press'
+                  alt='Dynamics 365 ERP for printing and label manufacturing: colour ink cartridges inside an open large-format printer'
                   width={1097}
                   height={656}
                   priority
@@ -452,7 +450,7 @@ const Printing = () => {
           <div className="row">
             <div className="col-lg-5 align-self-center order-3">
               <div className='img-backs-sid-two text-center'>
-                <Image src="/img/printing-21.png" alt="Fit assessment diagram linking Dynamics 365 Business Central and Dynamics 365 Supply Chain above a reel of printed labels, representing an ERP fit assessment for printing and label manufacturers" width={540} height={630} className='im-two' />
+                <Image src="/img/printing-21.png" alt="Fit assessment diagram linking Dynamics 365 Business Central and Dynamics 365 Supply Chain above a large-format printer with inks and printed sheets, representing an ERP fit assessment for printing and label manufacturers" width={540} height={696} className='im-two' />
               </div>
             </div>
             <div className="col-lg-1 order-2"></div>

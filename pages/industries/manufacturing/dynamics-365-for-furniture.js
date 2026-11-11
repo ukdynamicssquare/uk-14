@@ -23,7 +23,6 @@ const Furniture = () => {
         image="https://www.dynamicssquare.co.uk/img/furniture-00.png"
         faqs={faqData}
       >
-        <meta name="robots" content="noindex, nofollow" />
       </PageSeo>
       <div className='solution-new-banner-one solution-new-banner-one-colos'>
         <div className='container'>
@@ -54,7 +53,7 @@ const Furniture = () => {
               <div className='m-b-image-nnn m-b-image-nna'>
                 <Image
                   src="/img/furniture-00.png"
-                  alt='Dynamics 365 ERP for furniture manufacturing: woodworking machine with stacked timber on a factory floor'
+                  alt='Dynamics 365 ERP for furniture manufacturing: workers sanding wooden panels and tabletops on a furniture factory floor'
                   width={1097}
                   height={656}
                   priority
@@ -456,7 +455,7 @@ const Furniture = () => {
           <div className="row">
             <div className="col-lg-5 align-self-center order-3">
               <div className='img-backs-sid-two text-center'>
-                <Image src="/img/furniture-21.png" alt="Fit assessment diagram linking Dynamics 365 Business Central and Dynamics 365 Supply Chain above an upholstered armchair, representing an ERP fit assessment for furniture manufacturers" width={540} height={630} className='im-two' />
+                <Image src="/img/furniture-21.png" alt="Fit assessment diagram linking Dynamics 365 Business Central and Dynamics 365 Supply Chain above a furniture factory with a CNC router and a wooden chair, representing an ERP fit assessment for furniture manufacturers" width={540} height={672} className='im-two' />
               </div>
             </div>
             <div className="col-lg-1 order-2"></div>

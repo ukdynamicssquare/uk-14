@@ -22,9 +22,7 @@ const Packaging = () => {
         description="Optimise packaging manufacturing with Dynamics 365. Manage production, inventory, supply chains and operations with a connected ERP solution."
         image="https://www.dynamicssquare.co.uk/img/packaging-00.png"
         faqs={faqData}
-      >
-        <meta name="robots" content="noindex, nofollow" />
-      </PageSeo>
+      />
       <div className='solution-new-banner-one solution-new-banner-one-colos'>
         <div className='container'>
           <div className='row justify-content-center'>
@@ -458,7 +456,7 @@ const Packaging = () => {
           <div className="row">
             <div className="col-lg-5 align-self-center order-3">
               <div className='img-backs-sid-two text-center'>
-                <Image src="/img/packaging-22.png" alt="Fit assessment diagram linking Dynamics 365 Business Central and Dynamics 365 Supply Chain above stacked cartons, representing an ERP fit assessment for packaging manufacturers" width={540} height={630} className='im-two' />
+                <Image src="/img/packaging-22.png" alt="Fit assessment diagram linking Dynamics 365 Business Central and Dynamics 365 Supply Chain above an open cardboard shipping box, representing an ERP fit assessment for packaging manufacturers" width={540} height={696} className='im-two' />
               </div>
             </div>
             <div className="col-lg-1 order-2"></div>

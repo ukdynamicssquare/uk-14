@@ -22,9 +22,7 @@ const Chemical = () => {
         description="Run recipes, batches, lot traceability, quality control and hazardous materials in one system with Dynamics 365 ERP for chemical manufacturing."
         image="https://www.dynamicssquare.co.uk/img/chemical-00.png"
         faqs={faqData}
-      >
-        <meta name="robots" content="noindex, nofollow" />
-      </PageSeo>
+      />
       <div className='solution-new-banner-one solution-new-banner-one-colos'>
         <div className='container'>
           <div className='row justify-content-center'>
@@ -55,7 +53,7 @@ const Chemical = () => {
               <div className='m-b-image-nnn m-b-image-nna'>
                 <Image
                   src="/img/chemical-00.png"
-                  alt='Dynamics 365 ERP for chemical manufacturing: chemist in protective mask and cap inspecting a flask in a laboratory'
+                  alt='Dynamics 365 ERP for chemical manufacturing: gloved hand pouring green liquid from a beaker into a flask in a laboratory'
                   width={1097}
                   height={656}
                   priority
@@ -434,7 +432,7 @@ const Chemical = () => {
           <div className="row">
             <div className="col-lg-5 align-self-center order-3">
               <div className='img-backs-sid-two text-center'>
-                <Image src="/img/chemical-18.png" alt="Lab technician weighing a chemical sample on a precision balance, representing an ERP fit assessment for chemical manufacturing" width={540} height={630} className='im-two' />
+                <Image src="/img/chemical-18.png" alt="Fit assessment diagram linking Dynamics 365 Business Central and Dynamics 365 Supply Chain above laboratory glassware, representing an ERP fit assessment for chemical manufacturing" width={540} height={670} className='im-two' />
               </div>
             </div>
             <div className="col-lg-1 order-2"></div>
@@ -585,7 +583,7 @@ const Chemical = () => {
           <div className="row">
             <div className="col-lg-5 align-self-center order-3">
               <div className='img-backs-sid-two text-center'>
-                <Image src="/img/chemical-19.png" alt="Team of scientists in lab coats working together at a computer, representing UK chemical manufacturers working with Dynamics Square" width={540} height={536} className='im-two' />
+                <Image src="/img/chemical-19.png" alt="Two business professionals shaking hands, representing UK chemical manufacturers working with Dynamics Square" width={540} height={630} className='im-two' />
               </div>
             </div>
             <div className="col-lg-1 order-2"></div>

@@ -22,9 +22,7 @@ const Plastics = () => {
         description="Transform plastics manufacturing with Dynamics 365 ERP. Improve production efficiency, manage complex processes, control inventory and streamline supply chain operations."
         image="https://www.dynamicssquare.co.uk/img/plastics-00.png"
         faqs={faqData}
-      >
-        <meta name="robots" content="noindex, nofollow" />
-      </PageSeo>
+      />
       <div className='solution-new-banner-one solution-new-banner-one-colos'>
         <div className='container'>
           <div className='row justify-content-center'>

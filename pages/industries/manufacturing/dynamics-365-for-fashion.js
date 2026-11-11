@@ -22,9 +22,7 @@ const Fashion = () => {
         description="Optimise fashion and apparel manufacturing with Dynamics 365. Manage production, inventory, supply chains and operations with a connected ERP solution."
         image="https://www.dynamicssquare.co.uk/img/fashion-00.png"
         faqs={faqData}
-      >
-        <meta name="robots" content="noindex, nofollow" />
-      </PageSeo>
+      />
       <div className='solution-new-banner-one solution-new-banner-one-colos'>
         <div className='container'>
           <div className='row justify-content-center'>

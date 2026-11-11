@@ -22,10 +22,7 @@ const Aerospace = () => {
         description="Optimise aerospace and defence manufacturing with Dynamics 365. Manage production, inventory, supply chains and operations with a connected ERP solution."
         image="https://www.dynamicssquare.co.uk/img/aerospace-00.png"
         faqs={faqData}
-      >
-        
-        <meta name="robots" content="noindex, nofollow" />
-      </PageSeo>
+      />
       <div className='solution-new-banner-one solution-new-banner-one-colos'>
         <div className='container'>
           <div className='row justify-content-center'>
@@ -55,7 +52,7 @@ const Aerospace = () => {
               <div className='m-b-image-nnn m-b-image-nna'>
                 <Image
                   src="/img/aerospace-00.png"
-                  alt='Dynamics 365 ERP for aerospace and defence manufacturing: close-up of an aircraft jet engine turbine'
+                  alt='Dynamics 365 ERP for aerospace and defence manufacturing: front view of a jet aircraft with twin engines inside a hangar'
                   width={1097}
                   height={656}
                   priority
@@ -413,7 +410,7 @@ const Aerospace = () => {
           <div className="row">
             <div className="col-lg-5 align-self-center order-3">
               <div className='img-backs-sid-two text-center'>
-                <Image src="/img/aerospace-16.png" alt="Fit assessment diagram linking Dynamics 365 Business Central and Dynamics 365 Supply Chain above an aircraft, representing an ERP fit assessment for aerospace and defence manufacturers" width={540} height={630} className='im-two' />
+                <Image src="/img/aerospace-16.png" alt="Fit assessment diagram linking Dynamics 365 Business Central and Dynamics 365 Supply Chain above a jet aircraft, representing an ERP fit assessment for aerospace and defence manufacturers" width={540} height={673} className='im-two' />
               </div>
             </div>
             <div className="col-lg-1 order-2"></div>
