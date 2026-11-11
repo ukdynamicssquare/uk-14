@@ -897,7 +897,7 @@ const useActiveHeading = (ids) => {
       for (const id of ids) {
         const el = document.getElementById(id);
         if (!el) continue;
-        if (el.getBoundingClientRect().top - 190 <= 0) current = id;
+        if (el.getBoundingClientRect().top - 250 <= 0) current = id;
         else break;
       }
       setActive(current);
