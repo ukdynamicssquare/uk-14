@@ -1,2875 +1,1345 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import Script from "next/script";
 import Link from "next/link";
-// import FormGuideBusinessCentral from "../../components/FormGuideBusinessCentral";
-import FormGuide from "../../components/FormGuide";
+import s from "../../styles/bcVsSapTwo.module.css";
+import g from "../../styles/bcGuideTwo.module.css";
+import SectionNav, { useSectionNav } from "../../components/bcTwo/SectionNav";
+import FaqList from "../../components/bcTwo/FaqList";
 import PageSeo from "../../components/PageSeo";
-const PowerBIGuide = () => {
-  const [isVisible, setIsVisible] = useState(true);
-  const [display, setDisplay] = useState("ds-none");
+import FormGuide from "../../components/FormGuide";
+
+// Business Central guide for SMBs, "-two" template layout. Previous design kept (noindexed) at /guides/business-central-guide-for-smb-old/.
+// Generated from "Microsoft Dynamics 365 Business Central The Complete Guide for SMBs (2026)".
+
+const PAGE_TITLE = "Dynamics 365 Business Central For Small & Medium Business [Guide 2026]";
+const PAGE_DESC = "Learn how Dynamics 365 Business Central helps for small & Medium businesses streamline operations, boost productivity, and drive growth efficiently.";
+const H1 = "Microsoft Dynamics 365 Business Central: The Complete Guide for SMBs";
+
+const INTRO = [
+  <>Microsoft Dynamics 365 Business Central is Microsoft's ERP for small and mid-sized businesses. It replaces separate accounting, stock, sales and project tools with one system that runs finance and operations from the same data.</>,
+  <>This guide is written for UK owners, CEOs, Finance Directors and IT managers who are deciding whether Business Central fits their business. It covers what the product does, what it costs in the UK, how Copilot and AI agents work, how implementation and migration run, and where Business Central is not the right choice. Facts are checked against Microsoft documentation as of November 2026 and the current release, version 29 (2026 release wave 2).</>,
+];
+
+const GLANCE_TITLE = "Business Central at a glance";
+const GLANCE = [
+  { q: "What is it?", a: <>A cloud ERP covering finance, sales, purchasing, inventory, warehousing, projects, manufacturing and service</> },
+  { q: "Who is it for?", a: <>Growing SMBs that have outgrown entry-level accounting software such as Sage 50, Xero or QuickBooks</> },
+  { q: "How is it deployed?", a: <>Mainly as SaaS on Microsoft Azure; on-premises is still available on subscription</> },
+  { q: "UK price (list, ex VAT, billed annually)", a: <>Essentials £61.50, Premium £84.60, Team Members £6.20 per user per month</> },
+  { q: "Is Copilot included?", a: <>Yes, Copilot features are included in the online licence. Autonomous AI agents are billed separately by usage</> },
+  { q: "How often is it updated?", a: <>Two major updates a year (April and October) plus monthly minor updates</> },
+  { q: "UK compliance", a: <>Built-in Making Tax Digital for VAT; e-invoicing framework ahead of the UK's April 2029 mandate</> },
+  { q: "Typical implementation", a: <>Weeks for a simple finance-led rollout; several months for multi-entity, manufacturing or heavy integration</> },
+];
+const GLANCE_CALLOUT = <>If you already know Business Central is on your shortlist and want a scoped estimate, <Link href="/contact-us/">speak to a Business Central consultant</Link> at Dynamics Square.</>;
+
+const CHAPTERS = [
+  {
+    id: "what-is-business-central",
+    nav: "What is BC",
+    title: "What is Business Central and how it works",
+    toc: [
+      { id: "what-is-microsoft-dynamics-365-business-central", title: "What is Microsoft Dynamics 365 Business Central?", level: 3 },
+      { id: "where-business-central-came-from", title: "Where Business Central came from", level: 4 },
+      { id: "who-business-central-is-for", title: "Who Business Central is for", level: 4 },
+      { id: "business-central-editions", title: "Business Central editions", level: 4 },
+      { id: "how-business-central-works-architecture-explained", title: "How Business Central works: architecture explained", level: 3 },
+      { id: "tenants-environments-and-companies", title: "Tenants, environments and companies", level: 4 },
+      { id: "the-application-layers", title: "The application layers", level: 4 },
+      { id: "how-users-and-systems-connect", title: "How users and systems connect", level: 4 },
+      { id: "how-updates-work", title: "How updates work", level: 4 },
+    ],
+    blocks: [
+      { t: "h", level: 3, id: "what-is-microsoft-dynamics-365-business-central", text: <>What is Microsoft Dynamics 365 Business Central?</> },
+      { t: "answer", text: <>Microsoft Dynamics 365 Business Central is a cloud-based enterprise resource planning (ERP) system for small and mid-sized businesses. It manages financials, sales, purchasing, inventory, warehousing, projects, manufacturing and service in one database, with Microsoft Copilot built in.</> },
+      { t: "p", text: <>In practical terms, Business Central gives a growing company one version of the truth. A sales order reserves stock, triggers a purchase if stock is short, posts revenue and cost to the general ledger, and feeds the cash flow forecast, without anyone re-keying data between systems.</> },
+      { t: "figure", src: "/img/chapter1-9.png", w: 733, h: 449, alt: "Business Central as one cloud ERP connecting finance, sales, inventory, customer service and HR" },
+      { t: "h", level: 4, id: "where-business-central-came-from", text: <>Where Business Central came from</> },
+      { t: "p", text: <>Business Central is the successor to Microsoft Dynamics NAV, which began life as Navision. Microsoft launched Business Central in 2018, carrying NAV's proven accounting and operations logic onto a modern cloud platform. Many UK businesses still run NAV, which is why the <Link href="/dynamics-nav-to-business-central/">NAV to Business Central upgrade</Link> is one of the most common projects in the Microsoft SMB market.</> },
+      { t: "h", level: 4, id: "who-business-central-is-for", text: <>Who Business Central is for</> },
+      { t: "p", text: <>Business Central suits organisations that need more than an accounting package but less than a large-enterprise ERP. Typical fits include:</> },
+      { t: "list", ordered: false, items: [
+        <>Companies with 5 to several hundred users that have outgrown Sage 50, Xero or QuickBooks.</>,
+        <>Distributors, wholesalers and e-commerce businesses managing stock across locations.</>,
+        <>Small and mid-sized manufacturers (with the Premium licence).</>,
+        <>Project-based and professional services firms that need job costing and time recording.</>,
+        <>Multi-company groups that need intercompany postings and consolidation.</>,
+      ] },
+      { t: "p", text: <>Microsoft does not set a hard user limit. Very large or highly complex global operations usually fit <Link href="/products/microsoft-dynamics-365-finance/">Dynamics 365 Finance</Link> and Supply Chain Management better; the comparison section later in this guide explains where that line sits.</> },
+      { t: "h", level: 4, id: "business-central-editions", text: <>Business Central editions</> },
+      { t: "p", text: <>There are two full-user editions. <b>Essentials</b> covers finance, sales, purchasing, inventory, warehousing, projects and basic HR. <b>Premium</b> adds manufacturing and service management. Light users can be licensed as <b>Team Members</b>. Licensing is covered in detail in the pricing section, and you can explore the product further on our <Link href="/products/dynamics-365-business-central/">Dynamics 365 Business Central overview</Link>.</> },
+      { t: "h", level: 3, id: "how-business-central-works-architecture-explained", text: <>How Business Central works: architecture explained</> },
+      { t: "p", text: <>Business Central online is software as a service (SaaS) hosted by Microsoft on Azure. Microsoft runs the servers, database, backups, security patching and version updates; your business configures and uses the application. For UK customers, environment data is stored in Microsoft's UK Azure regions.</> },
+      { t: "h", level: 4, id: "tenants-environments-and-companies", text: <>Tenants, environments and companies</> },
+      { t: "cards", items: [
+        { title: <>Tenant</>, text: <>your organisation's Microsoft cloud account, managed through Microsoft Entra ID (formerly Azure Active Directory).</> },
+        { title: <>Environments</>, text: <>separate instances of Business Central. Each subscription includes one production environment and three sandbox environments for testing and training.</> },
+        { title: <>Companies</>, text: <>separate legal entities inside an environment, each with its own ledger, so a group can run several UK and overseas entities in one place.</> },
+      ] },
+      { t: "h", level: 4, id: "the-application-layers", text: <>The application layers</> },
+      { t: "p", text: <>Business Central is built in layers, which is why it can be tailored without breaking upgrades:</> },
+      { t: "steps", items: [
+        { title: <>Base application</>, text: <>Microsoft's standard ERP functionality.</> },
+        { title: <>Localisation</>, text: <>country-specific features. From version 27, the UK localisation runs as a set of extensions on top of the worldwide base app.</> },
+        { title: <>AppSource apps</>, text: <>certified add-ons from independent software vendors (ISVs) for document capture, warehouse scanning, payroll links, EDI and more.</> },
+        { title: <>Per-tenant extensions</>, text: <>your own customisations, written in Microsoft's AL language.</> },
+      ] },
+      { t: "p", text: <>Because customisations sit in extensions rather than inside Microsoft's code, they survive Microsoft's updates far better than the modified code bases common in older NAV systems. That is the single biggest technical difference between NAV and Business Central. If you need tailored functionality, see our approach to <Link href="/products/dynamics-365-business-central/customisation/">Business Central customisation</Link>.</> },
+      { t: "figure", src: "/img/business-central-architecture-layers.png", w: 1344, h: 784, alt: "Business Central architecture showing the four application layers: base application, localisation, AppSource apps and per-tenant extensions", captionTitle: "Business Central architecture · 4 application layers", caption: <>People and connected systems work against the same environment, while your own customisations stay separate from Microsoft's code.</> },
+      { t: "h", level: 4, id: "how-users-and-systems-connect", text: <>How users and systems connect</> },
+      { t: "cards", items: [
+        { title: <>People</>, text: <>web browser, Windows, iOS and Android apps, plus Microsoft Teams, Outlook and Excel.</> },
+        { title: <>Systems</>, text: <>REST APIs and OData, Power Platform connectors, Dataverse, and, since version 29, an MCP (Model Context Protocol) server that lets approved AI tools run data queries against Business Central.</> },
+        { title: <>Legacy integrations</>, text: <>version 29 makes disabling SOAP web services on Microsoft UI pages mandatory. Older integrations that depended on them need to move to APIs.</> },
+      ] },
+      { t: "h", level: 4, id: "how-updates-work", text: <>How updates work</> },
+      { t: "p", text: <>Microsoft ships two major updates a year, in April and October, called release waves. Monthly minor updates add features, regulatory changes and fixes in between. For a major update, administrators can schedule the upgrade on any date within a five-month window, which allows time to test extensions in a sandbox first.</> },
+      { t: "p", text: <>Since September 2026, Microsoft no longer publishes Business Central release plans. New capabilities are announced on Microsoft's AI at Work roadmap instead, so check that roadmap rather than older release-plan pages.</> },
+    ],
+  },
+  {
+    id: "features-and-reporting",
+    nav: "Features & Reporting",
+    title: "Business Central features, reporting and analytics",
+    toc: [
+      { id: "business-central-features-and-capabilities", title: "Business Central features and capabilities", level: 3 },
+      { id: "essentials-vs-premium-what-each-licence-includes", title: "Essentials vs Premium: what each licence includes", level: 4 },
+      { id: "financial-management-and-accounting", title: "Financial management and accounting", level: 4 },
+      { id: "sales-and-customer-relationship-management", title: "Sales and customer relationship management", level: 4 },
+      { id: "purchasing-and-vendor-management", title: "Purchasing and vendor management", level: 4 },
+      { id: "inventory-and-warehouse-management", title: "Inventory and warehouse management", level: 4 },
+      { id: "supply-chain-planning", title: "Supply chain planning", level: 4 },
+      { id: "manufacturing-premium", title: "Manufacturing (Premium)", level: 4 },
+      { id: "project-management-and-job-costing", title: "Project management and job costing", level: 4 },
+      { id: "service-management-premium", title: "Service management (Premium)", level: 4 },
+      { id: "human-resources-and-expenses", title: "Human resources and expenses", level: 4 },
+      { id: "sustainability-management", title: "Sustainability management", level: 4 },
+      { id: "e-commerce-and-shopify", title: "E-commerce and Shopify", level: 4 },
+      { id: "reporting-analytics-and-power-bi", title: "Reporting, analytics and Power BI", level: 3 },
+      { id: "whats-new-in-reporting-in-version-29", title: "What's new in reporting in version 29", level: 4 },
+      { id: "power-bi-integration", title: "Power BI integration", level: 4 },
+    ],
+    blocks: [
+      { t: "h", level: 3, id: "business-central-features-and-capabilities", text: <>Business Central features and capabilities</> },
+      { t: "p", text: <>Business Central's standard functionality covers most of what an SMB needs to run finance and operations. This section explains each area in business terms, flags which licence it needs, and notes where businesses usually add an extension. For a module-by-module overview, see <Link href="/products/dynamics-365-business-central/advantages-capabilities/">Business Central capabilities</Link>.</> },
+      { t: "figure", src: "/img/chapter4-1.png", w: 754, h: 494, alt: "Business Central modules: finance, supply chain, sales, service, manufacturing, warehouse, human resources and expense management" },
+      { t: "h", level: 4, id: "essentials-vs-premium-what-each-licence-includes", text: <>Essentials vs Premium: what each licence includes</> },
+      {
+        t: "table",
+        headText: ["Capability","Essentials","Premium"],
+        head: [<>Capability</>, <>Essentials</>, <>Premium</>],
+        rows: [
+          [<>Financial management, VAT, multi-currency, consolidation</>, <><span className={g.yes}><i className="bi bi-check-lg" aria-hidden="true"></i>Yes</span></>, <><span className={g.yes}><i className="bi bi-check-lg" aria-hidden="true"></i>Yes</span></>],
+          [<>Sales, purchasing and basic CRM</>, <><span className={g.yes}><i className="bi bi-check-lg" aria-hidden="true"></i>Yes</span></>, <><span className={g.yes}><i className="bi bi-check-lg" aria-hidden="true"></i>Yes</span></>],
+          [<>Inventory, multiple locations, lot and serial tracking</>, <><span className={g.yes}><i className="bi bi-check-lg" aria-hidden="true"></i>Yes</span></>, <><span className={g.yes}><i className="bi bi-check-lg" aria-hidden="true"></i>Yes</span></>],
+          [<>Warehouse management (bins, picks, put-aways, shipments)</>, <><span className={g.yes}><i className="bi bi-check-lg" aria-hidden="true"></i>Yes</span></>, <><span className={g.yes}><i className="bi bi-check-lg" aria-hidden="true"></i>Yes</span></>],
+          [<>Supply planning, demand forecasting, assembly</>, <><span className={g.yes}><i className="bi bi-check-lg" aria-hidden="true"></i>Yes</span></>, <><span className={g.yes}><i className="bi bi-check-lg" aria-hidden="true"></i>Yes</span></>],
+          [<>Project management and time sheets</>, <><span className={g.yes}><i className="bi bi-check-lg" aria-hidden="true"></i>Yes</span></>, <><span className={g.yes}><i className="bi bi-check-lg" aria-hidden="true"></i>Yes</span></>],
+          [<>Basic HR records</>, <><span className={g.yes}><i className="bi bi-check-lg" aria-hidden="true"></i>Yes</span></>, <><span className={g.yes}><i className="bi bi-check-lg" aria-hidden="true"></i>Yes</span></>],
+          [<>Shopify connector, e-documents, sustainability management</>, <><span className={g.yes}><i className="bi bi-check-lg" aria-hidden="true"></i>Yes</span></>, <><span className={g.yes}><i className="bi bi-check-lg" aria-hidden="true"></i>Yes</span></>],
+          [<>Copilot in Business Central</>, <><span className={g.yes}><i className="bi bi-check-lg" aria-hidden="true"></i>Yes</span></>, <><span className={g.yes}><i className="bi bi-check-lg" aria-hidden="true"></i>Yes</span></>],
+          [<>Manufacturing (production orders, routings, capacity planning)</>, <><span className={g.no}><i className="bi bi-dash-lg" aria-hidden="true"></i>No</span></>, <><span className={g.yes}><i className="bi bi-check-lg" aria-hidden="true"></i>Yes</span></>],
+          [<>Service management (service items, contracts, dispatching)</>, <><span className={g.no}><i className="bi bi-dash-lg" aria-hidden="true"></i>No</span></>, <><span className={g.yes}><i className="bi bi-check-lg" aria-hidden="true"></i>Yes</span></>],
+        ],
+      },
+      { t: "p", text: <>Microsoft's licensing guide defines Premium as everything in Essentials plus service order management and manufacturing. The edition is set per environment, so you cannot give some full users Premium and others Essentials in the same environment.</> },
+      { t: "h", level: 4, id: "financial-management-and-accounting", text: <>Financial management and accounting</> },
+      { t: "p", text: <>Finance is the core of Business Central and the main reason most SMBs move to it. Standard capabilities include:</> },
+      { t: "list", ordered: false, items: [
+        <>General ledger with dimensions for analysis by department, project, region or any other driver.</>,
+        <>Accounts payable and receivable, payment journals, reminders and finance charges.</>,
+        <>VAT management, including UK Making Tax Digital submission.</>,
+        <>Bank reconciliation, with Copilot suggesting matches.</>,
+        <>Multi-currency, intercompany postings and group consolidation.</>,
+        <>Budgets, cash flow forecasts, deferrals and allocation accounts.</>,
+        <>Fixed assets, including depreciation, insurance and maintenance.</>,
+        <>Subscription billing with revenue and expense recognition, for recurring-revenue businesses.</>,
+        <>Financial reporting (formerly "account schedules") for management accounts and board packs.</>,
+      ] },
+      { t: "note", label: "Example:", text: <>a UK group with three trading companies and a euro subsidiary posts intercompany recharges automatically, revalues currency balances at month end and runs a consolidated P&amp;L without exporting to spreadsheets. Our guide to <Link href="/blog/multi-entity-multi-currency-consolidation-in-business-central/">multi-entity and multi-currency consolidation</Link> explains the setup, and the <Link href="/products/dynamics-365-business-central/financial-management/">financial management module</Link> page covers the full feature list.</> },
+      { t: "h", level: 4, id: "sales-and-customer-relationship-management", text: <>Sales and customer relationship management</> },
+      { t: "p", text: <>Business Central handles the full quote-to-cash process: quotes, blanket orders, sales orders, partial shipments, invoicing, returns and credit notes. Price lists and discounts can be set by customer, group, campaign, quantity or date. Copilot can suggest sales lines from a plain-language request or an attached file.</> },
+      { t: "p", text: <>Built-in CRM covers contacts, interaction history, campaigns, segmentation and opportunity tracking, with Outlook integration. That is enough for many SMBs. Businesses with larger sales teams, pipeline forecasting or marketing automation needs usually integrate <Link href="/products/microsoft-dynamics-365-sales/">Dynamics 365 Sales</Link>. Read more about <Link href="/blog/crm-functionality-in-dynamics-365-business-central/">CRM functionality in Business Central</Link> and <Link href="/products/dynamics-365-business-central/sales-order-management/">sales order management</Link>.</> },
+      { t: "h", level: 4, id: "purchasing-and-vendor-management", text: <>Purchasing and vendor management</> },
+      { t: "p", text: <>Purchasing covers vendor records, purchase quotes, blanket and standard orders, returns, approvals, vendor price lists and invoice discounts. Item charges let you add freight, duty and insurance to stock cost for accurate landed cost. Drop shipments and special orders support businesses that ship direct from suppliers.</> },
+      { t: "p", text: <>For inbound invoices, the Payables Agent (covered in the Copilot section) can read PDF vendor invoices and prepare draft purchase invoices matched to purchase order lines for human approval.</> },
+      { t: "h", level: 4, id: "inventory-and-warehouse-management", text: <>Inventory and warehouse management</> },
+      { t: "p", text: <>Inventory control includes items, variants, stock-keeping units, multiple locations, transfers, lot and serial number tracking, item attributes and substitutions, and physical counts. Costing methods include FIFO, LIFO, average, standard and specific.</> },
+      { t: "p", text: <>Warehousing scales from simple to advanced on the same licence:</> },
+      { t: "cards", items: [
+        { title: <>Basic</>, text: <>inventory picks and put-aways at a location.</> },
+        { title: <>Advanced</>, text: <>bins, warehouse receipts and shipments, directed put-away and pick, cross-docking and FEFO (first expired, first out) picking.</> },
+      ] },
+      { t: "p", text: <>High-volume warehouses typically add handheld scanning. Tasklet Factory's <Link href="/wms-for-business-central/">Mobile WMS for Business Central</Link> is a widely used third-party option.</> },
+      { t: "h", level: 4, id: "supply-chain-planning", text: <>Supply chain planning</> },
+      { t: "p", text: <>Planning tools help you buy and make the right quantities at the right time:</> },
+      { t: "list", ordered: false, items: [
+        <>Planning and requisition worksheets that calculate supply from demand, reorder policies and lead times.</>,
+        <>Demand forecasts and reservations.</>,
+        <>Order promising, using available-to-promise and capable-to-promise logic.</>,
+        <>Assembly management, including assemble-to-order, on Essentials.</>,
+      ] },
+      { t: "p", text: <>The <Link href="/products/dynamics-365-business-central/supply-chain-management/">Business Central supply chain management</Link> page covers these features in more depth.</> },
+      { t: "h", level: 4, id: "manufacturing-premium", text: <>Manufacturing (Premium)</> },
+      { t: "p", text: <>The Premium licence adds production bills of materials, routings, work and machine centres, production orders, capacity planning, finite loading, version management and standard cost worksheets. Version 29 strengthened subcontracting, including carrying subcontracting instructions onto purchase orders and using inventory picks for subcontracted work.</> },
+      { t: "p", text: <>Business Central also includes quality management for inspections on purchase receipts, production output and assembly output; version 29 reduced manual work in quality tests. Business Central suits discrete and light process manufacturing. Manufacturers with complex process, formula or regulated batch requirements often add an industry extension; see <Link href="/industries/business-central-for-process-manufacturing/">Business Central for process manufacturing</Link>.</> },
+      { t: "h", level: 4, id: "project-management-and-job-costing", text: <>Project management and job costing</> },
+      { t: "p", text: <>Projects (previously called "jobs") let you set up tasks, budgets and resources, record time through time sheets, calculate work in progress (WIP), and invoice on fixed-price or time-and-materials terms. Project managers see budget versus actual cost and profitability in real time. Learn more about <Link href="/products/dynamics-365-business-central/project-management/">Business Central project management</Link>.</> },
+      { t: "h", level: 4, id: "service-management-premium", text: <>Service management (Premium)</> },
+      { t: "p", text: <>Service management tracks service items, service contracts and warranties, service orders and repairs, dispatching, and service pricing. It integrates with <Link href="/products/microsoft-dynamics-365-field-service/">Dynamics 365 Field Service</Link> for businesses that need mobile technician scheduling. Field Service is a separate Dynamics 365 application with its own licence. See <Link href="/products/dynamics-365-business-central/service-management/">Business Central service management</Link>.</> },
+      { t: "h", level: 4, id: "human-resources-and-expenses", text: <>Human resources and expenses</> },
+      { t: "p", text: <>Business Central includes basic HR: employee records, contracts, qualifications, absence registration and employee expense reimbursement. <b>It does not include UK payroll.</b> UK businesses run payroll in a dedicated payroll product and post journals into Business Central, or use a certified integration.</> },
+      { t: "p", text: <>For expenses, Microsoft's Expense Agent is in public preview, and established add-ons such as <Link href="/continia-expense-management/">Continia Expense Management</Link> are available today.</> },
+      { t: "h", level: 4, id: "sustainability-management", text: <>Sustainability management</> },
+      { t: "p", text: <>Business Central includes sustainability management for recording greenhouse gas emissions across scopes 1, 2 and 3, tracking water and waste, and reporting ESG figures. Version 29 extended carbon footprint tracking to fixed assets, item journals, purchase documents and service management. This matters for SMBs that supply large UK corporates and public bodies, which increasingly ask suppliers for emissions data.</> },
+      { t: "h", level: 4, id: "e-commerce-and-shopify", text: <>E-commerce and Shopify</> },
+      { t: "p", text: <>The standard Shopify connector synchronises items, prices, stock, customers and orders between Shopify and Business Central. Version 29 added management of Shopify B2B companies, catalogues and pricing, plus handling of order changes, exchanges and refunds. See our <Link href="/shopify-connector-business-central/">Shopify connector for Business Central</Link>. For B2B portals beyond Shopify, <Link href="/sana-commerce-for-dynamics-365-business-central/">Sana Commerce</Link> is a common choice.</> },
+      { t: "h", level: 3, id: "reporting-analytics-and-power-bi", text: <>Reporting, analytics and Power BI</> },
+      { t: "p", text: <>Business Central gives SMBs four layers of reporting, from quick answers inside the app to group-wide dashboards. Most businesses use all four.</> },
+      {
+        t: "table",
+        headText: ["Layer","What it does","Typical user"],
+        head: [<>Layer</>, <>What it does</>, <>Typical user</>],
+        rows: [
+          [<>Role Centres and KPIs</>, <>Live tiles and charts on each user's home page, such as overdue invoices, stock below reorder point or cash position</>, <>Everyone</>],
+          [<>Analysis mode and Copilot analysis assist</>, <>Pivot-style grouping, filtering and totals on any list, with Copilot building an analysis from a plain-English request</>, <>Finance, operations, managers</>],
+          [<>Financial reporting and Excel</>, <>Management accounts, board packs and statutory views; "Open in Excel" and Excel layouts for ad hoc work</>, <>Finance team</>],
+          [<>Power BI</>, <>Interactive dashboards across Business Central and other data sources</>, <>Directors, finance, operations leads</>],
+        ],
+      },
+      { t: "figure", src: "/img/chapter1-10.png", w: 580, h: 537, alt: "Business Central Role Centre KPIs and analytics shown on tablets" },
+      { t: "h", level: 4, id: "whats-new-in-reporting-in-version-29", text: <>What's new in reporting in version 29</> },
+      { t: "list", ordered: false, items: [
+        <>Financial report definition changes are now always logged, and you can trace where each G/L account is used across reports. This supports audit trails for management reporting.</>,
+        <>Several financial reports can be run together into a single PDF, which speeds up month-end packs.</>,
+        <>Report output can be automated, and document reports (invoices, statements) can be branded with report themes using the updated Word add-in.</>,
+        <>List views and analysis tabs can be bookmarked for reuse.</>,
+      ] },
+      { t: "h", level: 4, id: "power-bi-integration", text: <>Power BI integration</> },
+      { t: "p", text: <>Microsoft publishes Power BI apps for Business Central covering finance, sales, purchasing, inventory, projects and manufacturing, plus a Subscription Billing app. Reports can be embedded in Business Central Role Centres so users see them without switching tools. Users who view shared Power BI content generally need their own Power BI licence or access through capacity-based licensing; check this when budgeting.</> },
+      { t: "p", text: <>For groups that combine Business Central with CRM, e-commerce or legacy data, <Link href="/ai-solutions/microsoft-fabric/">Microsoft Fabric</Link> provides a governed analytics layer above individual systems.</> },
+      { t: "p", text: <>See our <Link href="/products/microsoft-power-bi/">Power BI services</Link> and examples of <Link href="/blog/power-bi-reports/">Power BI reports for finance and operations</Link>.</> },
+    ],
+  },
+  {
+    id: "copilot-and-integrations",
+    nav: "Copilot & Integrations",
+    title: "Copilot, AI agents and integrations",
+    toc: [
+      { id: "microsoft-copilot-and-ai-agents-in-business-central", title: "Microsoft Copilot and AI agents in Business Central", level: 3 },
+      { id: "copilot-features-assistance-inside-everyday-tasks", title: "Copilot features: assistance inside everyday tasks", level: 4 },
+      { id: "ai-agents-work-done-on-your-behalf", title: "AI agents: work done on your behalf", level: 4 },
+      { id: "how-agent-billing-works", title: "How agent billing works", level: 4 },
+      { id: "data-protection-and-governance", title: "Data protection and governance", level: 4 },
+      { id: "how-to-get-value-from-ai-without-losing-control", title: "How to get value from AI without losing control", level: 4 },
+      { id: "integrations-microsoft-365-power-platform-and-third-party-apps", title: "Integrations: Microsoft 365, Power Platform and third-party apps", level: 3 },
+      { id: "microsoft-365-outlook-excel-teams-and-word", title: "Microsoft 365: Outlook, Excel, Teams and Word", level: 4 },
+      { id: "microsoft-power-platform", title: "Microsoft Power Platform", level: 4 },
+      { id: "third-party-apps-and-extensions-appsource", title: "Third-party apps and extensions (AppSource)", level: 4 },
+      { id: "apis-edi-and-e-documents", title: "APIs, EDI and e-documents", level: 4 },
+    ],
+    blocks: [
+      { t: "h", level: 3, id: "microsoft-copilot-and-ai-agents-in-business-central", text: <>Microsoft Copilot and AI agents in Business Central</> },
+      { t: "p", text: <><b>Copilot in Business Central is included with Business Central online licences at no extra cost. Autonomous AI agents, such as the Sales Order Agent and Payables Agent, are billed separately by usage in Copilot Credits.</b> That distinction is the most important thing to understand when budgeting for AI in Business Central.</> },
+      { t: "p", text: <>Copilot is available in Business Central online only. On-premises deployments do not get Copilot or agents.</> },
+      { t: "h", level: 4, id: "copilot-features-assistance-inside-everyday-tasks", text: <>Copilot features: assistance inside everyday tasks</> },
+      { t: "p", text: <>Copilot features help users complete work faster, but a person stays in control of every step:</> },
+      { t: "cards", items: [
+        { title: <>Sales line suggestions</>, text: <>builds sales lines from a plain-language request or an attached file.</> },
+        { title: <>Bank reconciliation assist</>, text: <>proposes matches between bank statement lines and ledger entries.</> },
+        { title: <>Analysis assist</>, text: <>creates grouped and filtered analysis views from a typed question.</> },
+        { title: <>Marketing text</>, text: <>drafts product descriptions from item attributes for web shops and catalogues.</> },
+        { title: <>Item substitutions and number series suggestions</>, text: <>speeds up master data setup.</> },
+        { title: <>E-document matching</>, text: <>suggests links between incoming vendor e-invoices and purchase order lines.</> },
+        { title: <>Microsoft Copilot chat</>, text: <>in version 29, the earlier "Chat with Copilot" is being replaced by a Microsoft Copilot chat experience, currently in public preview, that answers questions about your Business Central data and how to use the product.</> },
+      ] },
+      { t: "h", level: 4, id: "ai-agents-work-done-on-your-behalf", text: <>AI agents: work done on your behalf</> },
+      { t: "p", text: <>Agents go further than Copilot. They monitor an inbox or a queue, carry out multi-step tasks, and hand results to a human supervisor for review.</> },
+      {
+        t: "table",
+        headText: ["Agent","Status (Nov 2026)","What it does","Human checkpoint"],
+        head: [<>Agent</>, <>Status (Nov 2026)</>, <>What it does</>, <>Human checkpoint</>],
+        rows: [
+          [<>Sales Order Agent</>, <>Generally available</>, <>Reads customer emails in a shared mailbox, checks availability, creates sales quotes and orders, drafts replies</>, <>Staff review the quote, order and email before anything is sent</>],
+          [<>Payables Agent</>, <>Generally available</>, <>Reads PDF vendor invoices from a shared mailbox, creates purchase document drafts and matches them to purchase order lines</>, <>Finance reviews drafts before approval and posting</>],
+          [<>Expense Agent</>, <>Public preview</>, <>Reads uploaded receipts, categorises expenses and prepares expense reports</>, <>Managers approve expense reports</>],
+          [<>Custom agents (agent design)</>, <>Preview</>, <>Lets organisations design their own agents in plain language, with set permissions</>, <>Defined by the agent design</>],
+        ],
+      },
+      { t: "p", text: <>Version 29 made agents easier to supervise: a dedicated task pane for all agent tasks, review of agent-generated content directly on pages, notifications on lists, and simpler agent permissions. Version 29 also improved purchase order matching in the Payables Agent.</> },
+      { t: "p", text: <>Read our explainer on the <Link href="/blog/sales-order-agent-explained-features-setup-and-benefits/">Sales Order Agent</Link> and why <Link href="/blog/why-are-ai-agents-the-game-changer-for-business-central-users/">AI agents matter for Business Central users</Link>.</> },
+      { t: "h", level: 4, id: "how-agent-billing-works", text: <>How agent billing works</> },
+      { t: "p", text: <>Microsoft publishes Copilot Credit rates for each agent action. At the time of writing:</> },
+      {
+        t: "table",
+        headText: ["Agent","Billing basis","Worked example (based on Microsoft's published rates)"],
+        head: [<>Agent</>, <>Billing basis</>, <>Worked example (based on Microsoft's published rates)</>],
+        rows: [
+          [<>Sales Order Agent</>, <>2 credits to analyse an email or generate a reply; 5 credits per availability check, quote or order action, or attachment with sales data</>, <>100 requests a month, half with an order attachment = 1,650 credits a month</>],
+          [<>Payables Agent</>, <>50 credits per invoice plus 5 credits per invoice line</>, <>100 invoices a month with 3 lines each = 6,500 credits a month</>],
+          [<>Expense Agent</>, <>50 credits per uploaded receipt</>, <>200 receipts a month = 10,000 credits a month</>],
+        ],
+      },
+      { t: "p", text: <>Credits are bought in advance as Copilot Credit packs or paid for monthly through pay-as-you-go via an Azure subscription; both can be used together, and prepaid capacity is consumed first. If capacity runs out, the agent stops until more is added, so set budgets and monitor usage in the Power Platform admin center. Check Microsoft's current Copilot Studio pricing for the per-credit cost in your currency.</> },
+      { t: "h", level: 4, id: "data-protection-and-governance", text: <>Data protection and governance</> },
+      { t: "p", text: <>Copilot respects Business Central permissions, so users only see data they are allowed to see. For UK-hosted environments, Copilot processing takes place within the UK geography. Some features may rely on Azure OpenAI services in another geography and are only available if an administrator consents to that data movement, so review the Copilot and agent capabilities page before switching features on.</> },
+      { t: "p", text: <>Since version 29, Business Central also provides an MCP server for running data queries. This allows approved AI assistants and tools to query Business Central data under your security model, which is worth planning into your AI governance policy.</> },
+      { t: "h", level: 4, id: "how-to-get-value-from-ai-without-losing-control", text: <>How to get value from AI without losing control</> },
+      { t: "list", ordered: true, items: [
+        <>Pick one high-volume, rules-based process, such as emailed purchase orders or PDF supplier invoices.</>,
+        <>Measure today's baseline: volume, minutes per document and error rate.</>,
+        <>Clean the master data the agent relies on (items, prices, vendors, units of measure).</>,
+        <>Run the agent in a sandbox, then in production with a named supervisor and a credit budget.</>,
+        <>Compare cost per document and cycle time after 60 to 90 days before expanding.</>,
+      ] },
+      { t: "p", text: <>For real-world estimates, see <Link href="/blog/copilot-business-central-time-savings/">how much time Copilot can save in Business Central</Link>. Dynamics Square's <Link href="/products/dynamics-365-copilot/">Copilot and AI agent services</Link> cover readiness checks, mailbox and permission setup, billing configuration and supervisor training, and our <Link href="/ai-solutions/copilot-studio/">Copilot Studio</Link> team builds custom agents when standard ones do not fit.</> },
+      { t: "h", level: 3, id: "integrations-microsoft-365-power-platform-and-third-party-apps", text: <>Integrations: Microsoft 365, Power Platform and third-party apps</> },
+      { t: "p", text: <>Business Central's biggest practical advantage over most SMB ERPs is how closely it works with the Microsoft tools your staff already use every day.</> },
+      { t: "h", level: 4, id: "microsoft-365-outlook-excel-teams-and-word", text: <>Microsoft 365: Outlook, Excel, Teams and Word</> },
+      { t: "cards", items: [
+        { title: <>Outlook</>, text: <>see a customer's or vendor's balance and documents alongside an email, and create quotes, orders or invoices without leaving the inbox.</> },
+        { title: <>Excel</>, text: <>open any list in Excel, edit and publish data back with the Excel add-in, and design reports with Excel layouts.</> },
+        { title: <>Teams</>, text: <>share a live Business Central record card in a chat or channel. When an administrator enables it, colleagues with an eligible Microsoft 365 licence can read records shared with them in Teams without a Business Central licence. This access is read-only and requires at least one licensed Business Central user in the organisation.</> },
+        { title: <>Word</>, text: <>design branded invoices, statements and other document layouts with the Word add-in, which was updated in version 29.</> },
+        { title: <>OneDrive and SharePoint</>, text: <>store and share files and attachments linked to Business Central records.</> },
+      ] },
+      { t: "figure", src: "/img/chapter7-1.png", w: 925, h: 549, alt: "A Business Central sales invoice shared as a live record in a Microsoft Teams channel" },
+      { t: "h", level: 4, id: "microsoft-power-platform", text: <>Microsoft Power Platform</> },
+      { t: "cards", items: [
+        { title: <><Link href="/products/microsoft-power-automate/">Power Automate</Link></>, text: <>automates approvals, notifications and cross-system workflows using the Business Central connector.</> },
+        { title: <><Link href="/products/microsoft-power-apps/">Power Apps</Link></>, text: <>builds focused mobile or web apps, such as a site-visit app or a goods-in checklist, on top of Business Central data.</> },
+        { title: <>Dataverse</>, text: <>connects Business Central with Dynamics 365 Sales, Customer Service and Field Service. Version 29 makes it easier to map new Dataverse fields into Business Central.</> },
+        { title: <>Copilot Studio</>, text: <>builds custom agents and conversational experiences connected to Business Central.</> },
+      ] },
+      { t: "p", text: <>Our guide to <Link href="/blog/business-central-with-power-platform-integration/">integrating Business Central with Power Platform</Link> shows common patterns, and our <Link href="/products/microsoft-power-platform/">Microsoft Power Platform</Link> team delivers them.</> },
+      { t: "h", level: 4, id: "third-party-apps-and-extensions-appsource", text: <>Third-party apps and extensions (AppSource)</> },
+      { t: "p", text: <>Microsoft AppSource offers a large catalogue of Business Central apps from independent software vendors. Extensions are the normal way to add specialist functionality without custom code. Common categories for UK SMBs include:</> },
+      {
+        t: "table",
+        headText: ["Need","Typical extension","Dynamics Square resource"],
+        head: [<>Need</>, <>Typical extension</>, <>Dynamics Square resource</>],
+        rows: [
+          [<>Supplier invoice capture and approval</>, <>Document capture and OCR</>, <><Link href="/continia-document-capture-with-business-central/">Continia Document Capture</Link></>],
+          [<>Bank feeds and payments</>, <>Open banking and payment integration</>, <><Link href="/yavrio-integration-with-business-central/">Yavrio integration</Link></>],
+          [<>Warehouse scanning</>, <>Mobile warehouse management</>, <><Link href="/wms-for-business-central/">Tasklet Mobile WMS</Link></>],
+          [<>Distribution and shipping</>, <>Inventory, shipping and field apps</>, <><Link href="/insights-works-for-dynamics-365-business-central/">Insight Works</Link></>],
+          [<>B2B and B2C web shops</>, <>E-commerce platforms</>, <><Link href="/shopify-connector-business-central/">Shopify connector</Link> and Sana Commerce</>],
+          [<>UK payroll</>, <>Payroll integration</>, <>Third-party payroll with journal integration</>],
+          [<>Document management</>, <>Document workflows and archiving</>, <><Link href="/continia-for-dynamics-365-business-central/">Continia for Business Central</Link></>],
+        ],
+      },
+      { t: "h", level: 4, id: "apis-edi-and-e-documents", text: <>APIs, EDI and e-documents</> },
+      { t: "p", text: <>Business Central exposes REST APIs for integration with other systems, and the E-Documents framework supports electronic invoice formats such as Peppol. Version 29 added EDI document exchange in public preview, which matters for suppliers to large retailers and distributors.</> },
+      { t: "note", label: "Good practice:", text: <>choose an established AppSource app before commissioning custom code, confirm the vendor supports each new Business Central release, and build new integrations on APIs rather than legacy SOAP web services.</> },
+    ],
+  },
+  {
+    id: "cloud-vs-on-premises",
+    nav: "Cloud vs On-premises",
+    title: "Business Central cloud vs on-premises",
+    toc: [
+      { id: "the-deployment-options", title: "The deployment options", level: 3 },
+      { id: "side-by-side-comparison", title: "Side-by-side comparison", level: 3 },
+      { id: "points-existing-on-premises-customers-should-know", title: "Points existing on-premises customers should know", level: 3 },
+      { id: "when-on-premises-can-still-make-sense", title: "When on-premises can still make sense", level: 3 },
+    ],
+    blocks: [
+      { t: "p", text: <><b>For most UK SMBs starting today, Business Central online (SaaS) is the right choice.</b> On-premises remains available, but Microsoft has moved new customers to subscription licensing only, and the newest capabilities, including Copilot and AI agents, are online-only.</> },
+      { t: "figure", src: "/img/chapter5-4.png", w: 817, h: 348, alt: "Business Central online benefits: low upfront cost, low maintenance cost, low cost of ownership and automatic updates" },
+      { t: "h", level: 3, id: "the-deployment-options", text: <>The deployment options</> },
+      { t: "cards", items: [
+        { title: <>Business Central online</>, text: <>Microsoft hosts and runs Business Central on Azure. This is the standard option.</> },
+        { title: <>On-premises</>, text: <>you install Business Central on your own servers and SQL Server, and your IT team or partner maintains it.</> },
+        { title: <>Partner-hosted or private cloud</>, text: <>the on-premises software runs on virtual machines in Azure or a partner's data centre. It is still on-premises software from a licensing and maintenance point of view, even though it is accessed over the internet.</> },
+      ] },
+      { t: "figure", src: "/img/chapter2-1.png", w: 869, h: 538, alt: "Business Central on-premises components: web client and app, web server, Business Central server and SQL database" },
+      { t: "p", text: <>There is no product called "hybrid Business Central". Some businesses run on-premises while replicating data to an online environment during a cloud migration, but that is a transition approach rather than a permanent deployment model.</> },
+      { t: "h", level: 3, id: "side-by-side-comparison", text: <>Side-by-side comparison</> },
+      {
+        t: "table",
+        headText: ["Factor","Business Central online","Business Central on-premises"],
+        head: [<>Factor</>, <>Business Central online</>, <>Business Central on-premises</>],
+        rows: [
+          [<>Infrastructure</>, <>Hosted and managed by Microsoft on Azure</>, <>Your servers or a hosting provider; you manage SQL Server, backups and security</>],
+          [<>Licensing for new customers</>, <>Monthly per-user subscription</>, <>Subscription only (perpetual licences ended for new customers on 1 April 2025)</>],
+          [<>Upfront cost</>, <>Low: no servers to buy</>, <>Higher: hardware or hosting, SQL Server and set-up</>],
+          [<>Updates</>, <>Applied by Microsoft; you choose the date within a five-month window for major updates</>, <>You plan, test and install each upgrade yourself or through your partner</>],
+          [<>Copilot and AI agents</>, <>Included (agents billed by usage)</>, <>Not available</>],
+          [<>Power Platform, Teams and Microsoft 365 features</>, <>Fullest support</>, <>Partial; some features need extra configuration or are online-only</>],
+          [<>Data location</>, <>Microsoft's UK Azure regions for UK environments</>, <>Wherever your servers are</>],
+          [<>Customisation</>, <>Via extensions and apps</>, <>Via extensions; more technical control, but heavy modification makes upgrades harder</>],
+          [<>Best for</>, <>Most SMBs</>, <>Specific regulatory, connectivity or legacy integration constraints</>],
+        ],
+      },
+      { t: "h", level: 3, id: "points-existing-on-premises-customers-should-know", text: <>Points existing on-premises customers should know</> },
+      { t: "list", ordered: false, items: [
+        <>Existing customers with perpetual licences and an active enhancement plan can continue to add users and upgrade.</>,
+        <>From October 2026, new on-premises releases use a single forward-compatible "28+" licence key, which must be refreshed before upgrading to each new version.</>,
+        <>Customers running on-premises through Dual Use Rights (an online subscription benefit) must replace their licence keys every six months, and on-premises access depends on the online subscription staying active.</>,
+        <>Each on-premises version is supported for a limited period under Microsoft's modern lifecycle policy, so staying current still requires regular upgrades.</>,
+      ] },
+      { t: "h", level: 3, id: "when-on-premises-can-still-make-sense", text: <>When on-premises can still make sense</> },
+      { t: "p", text: <>On-premises can be justified where a contract or regulator requires data to sit on your own infrastructure, where sites have unreliable internet, or where deep database-level integrations need to be rebuilt before a cloud move. In most other cases, the total cost and the loss of Copilot make online the stronger option.</> },
+      { t: "p", text: <>Moving an existing on-premises system to the cloud is a well-trodden path. Read how Dalebrook Supplies achieved a <Link href="/case-studies/migrate-on-premises-to-business-central-cloud/">cloud re-implementation from on-premises Business Central</Link>, or talk to our <Link href="/our-services/dynamics-365-upgrade-services/">Dynamics 365 upgrade team</Link> about your options.</> },
+    ],
+  },
+  {
+    id: "pricing-and-licensing",
+    nav: "Pricing & Licensing",
+    title: "Business Central licensing and pricing in the UK",
+    toc: [
+      { id: "business-central-licence-types", title: "Business Central licence types", level: 3 },
+      { id: "what-every-subscription-includes", title: "What every subscription includes", level: 3 },
+      { id: "example-licence-costs", title: "Example licence costs", level: 3 },
+      { id: "total-cost-of-ownership-what-else-to-budget-for", title: "Total cost of ownership: what else to budget for", level: 3 },
+      { id: "how-to-avoid-overpaying-for-licences", title: "How to avoid overpaying for licences", level: 3 },
+    ],
+    blocks: [
+      { t: "p", text: <><b>Business Central is licensed per named user, per month, on an annual commitment. Microsoft's UK list prices are £61.50 for Essentials, £84.60 for Premium and £6.20 for Team Members, excluding VAT.</b> Microsoft raised Business Central prices in late 2025 for the first time since launch, so quotes or articles from before then are out of date.</> },
+      { t: "h", level: 3, id: "business-central-licence-types", text: <>Business Central licence types</> },
+      { t: "figure", src: "/img/chapter5-2.png", w: 846, h: 385, alt: "Business Central licence types: Essentials and Premium full users, and Team Members additional users" },
+      {
+        t: "table",
+        headText: ["Licence","UK list price (per user/month, ex VAT, billed annually)","Who it is for","What it allows"],
+        head: [<>Licence</>, <>UK list price (per user/month, ex VAT, billed annually)</>, <>Who it is for</>, <>What it allows</>],
+        rows: [
+          [<>Essentials</>, <>£61.50</>, <>Finance, sales, purchasing, warehouse and project staff</>, <>Full use of finance, sales, purchasing, inventory, warehousing, projects, basic HR and Copilot</>],
+          [<>Premium</>, <>£84.60</>, <>Businesses that run manufacturing or service management</>, <>Everything in Essentials plus manufacturing and service management</>],
+          [<>Team Members</>, <>£6.20</>, <>Managers, approvers and occasional users</>, <>Read data, update existing records, approve or reject, manage quotes, personal details and time sheets</>],
+          [<>External Accountant</>, <>Included</>, <>Your external accountant or auditor</>, <>Access for up to three external accountants per tenant</>],
+          [<>Microsoft 365 (Teams access)</>, <>No extra cost</>, <>Any employee with an eligible Microsoft 365 licence</>, <>Read-only view of records shared in Teams</>],
+        ],
+      },
+      { t: "p", text: <>Team Members cannot create or post core transactions such as new sales orders, purchase invoices or journals. If someone raises orders or posts entries, they need an Essentials or Premium licence. Licences are bought through a Microsoft Cloud Solution Provider (CSP) partner such as Dynamics Square, and partner terms can differ from Microsoft's list prices.</> },
+      { t: "h", level: 3, id: "what-every-subscription-includes", text: <>What every subscription includes</> },
+      { t: "list", ordered: false, items: [
+        <>One production environment and three sandbox environments.</>,
+        <>80 GB of database capacity per tenant, plus 3 GB for each Essentials licence and 5 GB for each Premium licence.</>,
+        <>Copilot in Business Central (online).</>,
+        <>Microsoft-managed hosting, backups and updates.</>,
+      ] },
+      { t: "p", text: <>Extra environments and database capacity can be bought as add-ons if you outgrow the included allowance.</> },
+      { t: "h", level: 3, id: "example-licence-costs", text: <>Example licence costs</> },
+      { t: "p", text: <>These examples use UK list prices and exclude VAT, implementation and add-ons. Remember that Premium is set per environment, so all full users in a Premium environment need Premium licences.</> },
+      {
+        t: "table",
+        headText: ["Scenario","Licence mix","Monthly cost","Annual cost"],
+        head: [<>Scenario</>, <>Licence mix</>, <>Monthly cost</>, <>Annual cost</>],
+        rows: [
+          [<>10-person wholesaler</>, <>6 Essentials + 4 Team Members</>, <>£393.80</>, <>£4,725.60</>],
+          [<>40-person professional services group</>, <>20 Essentials + 20 Team Members</>, <>£1,354.00</>, <>£16,248.00</>],
+          [<>25-person manufacturer</>, <>12 Premium + 13 Team Members</>, <>£1,095.80</>, <>£13,149.60</>],
+        ],
+      },
+      { t: "h", level: 3, id: "total-cost-of-ownership-what-else-to-budget-for", text: <>Total cost of ownership: what else to budget for</> },
+      { t: "p", text: <>Licences are usually not the largest cost in year one. A realistic budget also covers:</> },
+      { t: "list", ordered: false, items: [
+        <>Implementation and configuration services.</>,
+        <>Data migration and cleansing.</>,
+        <>Training and change management.</>,
+        <>AppSource apps, which often have their own per-user or per-company fees.</>,
+        <>Power BI licences for report consumers.</>,
+        <>Copilot Credits if you use AI agents.</>,
+        <>Ongoing support and optimisation.</>,
+        <>Extra storage or environments, if needed.</>,
+        <>Internal staff time for testing and sign-off.</>,
+      ] },
+      { t: "h", level: 3, id: "how-to-avoid-overpaying-for-licences", text: <>How to avoid overpaying for licences</> },
+      { t: "list", ordered: true, items: [
+        <>Map every user to the lowest licence that covers their actual tasks; many approvers and managers only need Team Members.</>,
+        <>Only choose Premium if you will genuinely use manufacturing or service management.</>,
+        <>Use device licences for shared warehouse or shop-floor terminals.</>,
+        <>Use Microsoft 365 read-only access in Teams for staff who only need to look up information.</>,
+        <>Review licence allocation before each annual renewal.</>,
+      ] },
+      { t: "p", text: <>See our detailed <Link href="/products/dynamics-365-business-central/pricing-licensing/">Business Central pricing and licensing guide</Link> or model your own scenario with the <Link href="/tools/microsoft-dynamics-licensing-calculator/">Dynamics 365 licensing calculator</Link>. For a licence review against how your teams actually work, <Link href="/contact-us/">request Business Central licensing guidance</Link>.</> },
+    ],
+  },
+  {
+    id: "implementation-and-migration",
+    nav: "Implementation",
+    title: "Implementation, migration and compliance",
+    toc: [
+      { id: "business-central-implementation-process-timeline-and-cost", title: "Business Central implementation: process, timeline and cost", level: 3 },
+      { id: "the-implementation-phases", title: "The implementation phases", level: 4 },
+      { id: "indicative-timelines-by-project-type", title: "Indicative timelines by project type", level: 4 },
+      { id: "what-drives-implementation-cost", title: "What drives implementation cost", level: 4 },
+      { id: "business-central-readiness-checklist", title: "Business Central readiness checklist", level: 4 },
+      { id: "data-migration-and-upgrades-to-business-central", title: "Data migration and upgrades to Business Central", level: 3 },
+      { id: "migration-routes-by-source-system", title: "Migration routes by source system", level: 4 },
+      { id: "legacy-microsoft-erp-support-deadlines", title: "Legacy Microsoft ERP support deadlines", level: 4 },
+      { id: "what-to-migrate", title: "What to migrate", level: 4 },
+      { id: "six-rules-for-a-clean-migration", title: "Six rules for a clean migration", level: 4 },
+      { id: "security-permissions-compliance-and-uk-regulation", title: "Security, permissions, compliance and UK regulation", level: 3 },
+      { id: "identity-and-access", title: "Identity and access", level: 4 },
+      { id: "data-protection-and-uk-gdpr", title: "Data protection and UK GDPR", level: 4 },
+      { id: "uk-localisation-and-hmrc-compliance", title: "UK localisation and HMRC compliance", level: 4 },
+      { id: "preparing-for-uk-mandatory-e-invoicing-april-2029", title: "Preparing for UK mandatory e-invoicing (April 2029)", level: 4 },
+    ],
+    blocks: [
+      { t: "h", level: 3, id: "business-central-implementation-process-timeline-and-cost", text: <>Business Central implementation: process, timeline and cost</> },
+      { t: "p", text: <><b>A Business Central implementation typically takes from around two to three months for a finance-led, single-company rollout to six months or more for multi-entity, manufacturing or integration-heavy projects.</b> Scope, data quality and the availability of your own team drive the timeline far more than the software does.</> },
+      { t: "h", level: 4, id: "the-implementation-phases", text: <>The implementation phases</> },
+      { t: "steps", items: [
+        { title: <>Discovery and fit-gap analysis</>, text: <>map current processes, reporting needs and pain points; confirm what standard Business Central covers and where apps or extensions are needed.</> },
+        { title: <>Solution design</>, text: <>agree chart of accounts, dimensions, posting groups, approval workflows, integrations and the licence mix.</> },
+        { title: <>Configuration and build</>, text: <>set up the system, install AppSource apps, build any extensions and integrations.</> },
+        { title: <>Data migration</>, text: <>cleanse source data, run trial loads, and reconcile balances against the old system.</> },
+        { title: <>Testing and training</>, text: <>user acceptance testing on real scenarios in a sandbox; role-based training for each team.</> },
+        { title: <>Go-live and cutover</>, text: <>final data load, opening balances, parallel checks on the first period end.</> },
+        { title: <>Hypercare and optimisation</>, text: <>close support for the first weeks, then continuous improvement, including Copilot and agent adoption.</> },
+      ] },
+      { t: "p", text: <>Our article on <Link href="/blog/what-is-business-central-implementation-methodology/">Business Central implementation methodology</Link> explains how each phase is governed.</> },
+      { t: "h", level: 4, id: "indicative-timelines-by-project-type", text: <>Indicative timelines by project type</> },
+      {
+        t: "table",
+        headText: ["Project type","Typical scope","Indicative timeline"],
+        head: [<>Project type</>, <>Typical scope</>, <>Indicative timeline</>],
+        rows: [
+          [<>Finance-led</>, <>One company, finance plus sales and purchasing, few integrations</>, <>About 2 to 3 months</>],
+          [<>Distribution or e-commerce</>, <>Multiple locations, warehousing, Shopify or WMS integration</>, <>About 3 to 6 months</>],
+          [<>Manufacturing or multi-entity</>, <>Production, several companies, consolidation, more extensions</>, <>About 6 to 9 months or longer</>],
+        ],
+      },
+      { t: "h", level: 4, id: "what-drives-implementation-cost", text: <>What drives implementation cost</> },
+      { t: "p", text: <>Published UK industry ranges run from around £15,000 for a simple finance-led rollout to £100,000 or more for complex multi-entity or manufacturing projects. The main drivers are:</> },
+      { t: "list", ordered: false, items: [
+        <>Number of companies, locations and users.</>,
+        <>Modules in scope, especially manufacturing, warehousing and service.</>,
+        <>Volume and quality of data to migrate, and how many years of history you bring across.</>,
+        <>Number and complexity of integrations.</>,
+        <>Custom development versus standard functionality and AppSource apps.</>,
+        <>Reporting requirements, including Power BI.</>,
+        <>Training approach and how much your own team can take on.</>,
+      ] },
+      { t: "p", text: <>For a figure based on your business, use our <Link href="/tools/erp-implementation-cost-calculator/">ERP implementation cost calculator</Link> or download the <Link href="/white-papers/business-central-implementation-cost/">Business Central implementation cost planner</Link>.</> },
+      { t: "h", level: 4, id: "business-central-readiness-checklist", text: <>Business Central readiness checklist</> },
+      { t: "checklist", id: "check-business-central-readiness-checklist", items: [
+        <>Executive sponsor and internal project lead named, with time allocated</>,
+        <>Current processes and pain points documented for each department</>,
+        <>Reporting requirements agreed (management accounts, KPIs, board pack)</>,
+        <>Chart of accounts and dimensions reviewed and simplified</>,
+        <>Data owners assigned for customers, vendors, items and open balances</>,
+        <>Integrations listed (web shop, banking, payroll, EDI, CRM)</>,
+        <>Licence mix mapped by role (Essentials, Premium, Team Members)</>,
+        <>Go-live date set away from year end and peak trading</>,
+        <>Testing scenarios written from real transactions</>,
+        <>Training plan and super-users identified</>,
+        <>Post-go-live support arrangement agreed</>,
+      ] },
+      { t: "callout", text: <>Dynamics Square delivers <Link href="/dynamics-365-business-central-implementation/">Business Central implementation services</Link> for UK SMBs, together with role-based <Link href="/our-services/dynamics-365-training/">Dynamics 365 training</Link>. <Link href="/contact-us/">Book a scoping call</Link> to get a timeline and estimate for your requirements.</> },
+      { t: "h", level: 3, id: "data-migration-and-upgrades-to-business-central", text: <>Data migration and upgrades to Business Central</> },
+      { t: "p", text: <><b>Most businesses move to Business Central from an accounting package (Sage, Xero, QuickBooks) or from an older Microsoft ERP (Dynamics NAV or GP).</b> The migration route depends on the source system, but the principle is the same: migrate clean master data and open balances, and keep detailed history where it is genuinely needed.</> },
+      { t: "h", level: 4, id: "migration-routes-by-source-system", text: <>Migration routes by source system</> },
+      {
+        t: "table",
+        headText: ["Moving from","Typical route","Key consideration","Further reading"],
+        head: [<>Moving from</>, <>Typical route</>, <>Key consideration</>, <>Further reading</>],
+        rows: [
+          [<>Dynamics GP</>, <>Microsoft's built-in cloud migration tool for GP</>, <>GP product support ends 31 December 2029</>, <><Link href="/gp-to-business-central-migration/">GP to Business Central migration</Link></>],
+          [<>Dynamics NAV</>, <>Technical upgrade, then data migration to online</>, <>Old customisations must be rebuilt as extensions or replaced by standard features</>, <><Link href="/ebook/upgrade-nav-to-business-central/">NAV upgrade quick-start guide</Link></>],
+          [<>Sage 50 or Sage 200</>, <>Data migration using configuration packages and partner tools</>, <>Map Sage nominal codes and departments to a new chart of accounts and dimensions</>, <><Link href="/blog/sage-to-business-central-migration/">Sage to Business Central migration</Link></>],
+          [<>QuickBooks</>, <>Migration tools plus configuration packages</>, <>Move beyond class and location tracking to dimensions</>, <><Link href="/blog/quickbooks-to-microsoft-business-central-migration/">QuickBooks to Business Central migration</Link></>],
+          [<>Xero</>, <>Configuration packages and Excel templates</>, <>Separate stock or e-commerce apps usually consolidate into Business Central</>, <><Link href="/blog/xero-to-business-central-migration/">Xero to Business Central migration</Link></>],
+          [<>NetSuite</>, <>Structured data migration</>, <>Plan the subscription exit date and data extraction early</>, <><Link href="/white-papers/netsuite-to-business-central/">NetSuite to Business Central playbook</Link></>],
+        ],
+      },
+      { t: "p", text: <>Sage 200 users can also download our <Link href="/white-papers/sage-200-to-business-central/">Sage 200 to Business Central migration white paper</Link>.</> },
+      { t: "h", level: 4, id: "legacy-microsoft-erp-support-deadlines", text: <>Legacy Microsoft ERP support deadlines</> },
+      {
+        t: "table",
+        headText: ["Date","What happens"],
+        head: [<>Date</>, <>What happens</>],
+        rows: [
+          [<>1 April 2026</>, <>New customers can no longer buy Dynamics GP subscription licences</>],
+          [<>14 April 2026</>, <>Extended support ended for Dynamics NAV 2016 (earlier NAV versions are already unsupported)</>],
+          [<>11 January 2027</>, <>Extended support ends for Dynamics NAV 2017</>],
+          [<>11 January 2028</>, <>Extended support ends for Dynamics NAV 2018, the final NAV release, and for Dynamics GP 2018</>],
+          [<>31 December 2029</>, <>Dynamics GP product enhancements, tax and regulatory updates, and technical support end</>],
+          [<>30 April 2031</>, <>Dynamics GP security updates end</>],
+        ],
+      },
+      { t: "p", text: <>Running an unsupported ERP means no tax or regulatory updates. For UK businesses facing mandatory e-invoicing from April 2029, that is a material compliance risk, not just a technology issue.</> },
+      { t: "h", level: 4, id: "what-to-migrate", text: <>What to migrate</> },
+      { t: "cards", items: [
+        { title: <>Always</>, text: <>chart of accounts, customers, vendors, items, open sales and purchase documents, open receivables and payables, stock quantities and values, fixed assets, bank balances.</> },
+        { title: <>Usually</>, text: <>opening trial balance and monthly G/L balances for comparative reporting, typically for the current and previous financial year.</> },
+        { title: <>Case by case</>, text: <>detailed transaction history. Many businesses keep the old system read-only or archive history to a data store rather than importing years of detail.</> },
+      ] },
+      { t: "h", level: 4, id: "six-rules-for-a-clean-migration", text: <>Six rules for a clean migration</> },
+      { t: "list", ordered: true, items: [
+        <>Cleanse before you migrate: remove duplicates, inactive records and obsolete items.</>,
+        <>Redesign the chart of accounts and dimensions rather than copying old structures.</>,
+        <>Run at least two trial loads and reconcile every balance to the source.</>,
+        <>Choose a cutover date at a period end, away from year end and peak trading.</>,
+        <>Give business owners, not just IT, sign-off on migrated data.</>,
+        <>Keep read-only access to the old system for audit and HMRC record-keeping needs.</>,
+      ] },
+      { t: "p", text: <>Existing Business Central on-premises customers can also move to the cloud using Microsoft's cloud migration tools. Dynamics Square's <Link href="/our-services/dynamics-365-upgrade-services/">Dynamics 365 upgrade services</Link> cover NAV, GP and on-premises Business Central; for GP users, our <Link href="/ebook/gp-to-bc-migration/">GP to Business Central guide</Link> sets out the full process.</> },
+      { t: "h", level: 3, id: "security-permissions-compliance-and-uk-regulation", text: <>Security, permissions, compliance and UK regulation</> },
+      { t: "p", text: <>Business Central online combines Microsoft's cloud security with detailed, role-based control over who can see and change what. Security is shared: Microsoft secures the platform; your organisation and partner configure users, permissions and policies correctly.</> },
+      { t: "h", level: 4, id: "identity-and-access", text: <>Identity and access</> },
+      { t: "cards", items: [
+        { title: <>Sign-in</>, text: <>users authenticate through Microsoft Entra ID, so you can enforce multi-factor authentication and conditional access policies alongside your Microsoft 365 security.</> },
+        { title: <>Permissions</>, text: <>permission sets control access to pages, reports and data, and can be assigned through Entra security groups, making joiners, movers and leavers easier to manage.</> },
+        { title: <>Record-level security</>, text: <>security filters can restrict a user to specific records, such as one company, location or department.</> },
+        { title: <>Sensitive data</>, text: <>version 29 makes UI support for masking sensitive data mandatory.</> },
+        { title: <>Audit trail</>, text: <>the change log records who changed which fields and when; system fields show who created and last modified each record.</> },
+      ] },
+      { t: "h", level: 4, id: "data-protection-and-uk-gdpr", text: <>Data protection and UK GDPR</> },
+      { t: "list", ordered: false, items: [
+        <>UK environments are hosted in Microsoft's UK Azure regions.</>,
+        <>Data is encrypted in transit and at rest, and Microsoft manages backups. Administrators can restore an environment to an earlier point in time within Microsoft's retention period.</>,
+        <>Data classification and data subject tools help you respond to access and erasure requests under UK GDPR.</>,
+        <>Retention policies let you delete old log and document data that you no longer need to keep.</>,
+      ] },
+      { t: "p", text: <>For Microsoft's current certifications and audit reports, refer to the Microsoft Service Trust Portal rather than relying on third-party summaries.</> },
+      { t: "h", level: 4, id: "uk-localisation-and-hmrc-compliance", text: <>UK localisation and HMRC compliance</> },
+      { t: "p", text: <>The UK version of Business Central includes:</> },
+      { t: "list", ordered: false, items: [
+        <><b>Making Tax Digital (MTD) for VAT:</b> retrieve VAT obligations from HMRC and submit VAT returns directly from Business Central.</>,
+        <>VAT reverse charge, VAT group management, VAT reports and audit reports.</>,
+        <>APACS cheque printing and remittance advices.</>,
+        <>UK postcode lookup through the GetAddress.io extension.</>,
+      ] },
+      { t: "p", text: <>Microsoft lists functionality to resubmit a VAT return as planned for 2027 release wave 1.</> },
+      { t: "h", level: 4, id: "preparing-for-uk-mandatory-e-invoicing-april-2029", text: <>Preparing for UK mandatory e-invoicing (April 2029)</> },
+      { t: "p", text: <>The UK government has confirmed that, from 1 April 2029, VAT invoices between VAT-registered businesses, and to the public sector, must be issued and received as structured e-invoices. HMRC has confirmed a decentralised model built on the Peppol network, without real-time reporting to HMRC at launch. Detailed standards, exemptions and guidance are expected during 2027 to 2028.</> },
+      { t: "p", text: <>Business Central already includes an E-Documents framework that supports Peppol formats, and Microsoft updates the UK localisation as regulations are finalised. To prepare:</> },
+      { t: "list", ordered: true, items: [
+        <>Clean customer and vendor master data, including VAT numbers and addresses.</>,
+        <>Make sure you are on a current, supported version so you receive regulatory updates.</>,
+        <>Review how supplier invoices arrive today and whether OCR, the Payables Agent or Peppol receipt will replace manual entry.</>,
+        <>Ask your partner how your AppSource apps and integrations will handle e-invoices.</>,
+      ] },
+      { t: "callout", text: <>Not sure whether your current setup is secure and compliant? Book a <Link href="/free-dynamics-365-system-health-check/">free Dynamics 365 system health check</Link>.</> },
+    ],
+  },
+  {
+    id: "benefits-and-comparisons",
+    nav: "Industries & Comparisons",
+    title: "Scalability, benefits and how Business Central compares",
+    toc: [
+      { id: "scalability-and-industry-use-cases", title: "Scalability and industry use cases", level: 3 },
+      { id: "how-business-central-scales-with-your-business", title: "How Business Central scales with your business", level: 4 },
+      { id: "business-central-by-industry", title: "Business Central by industry", level: 4 },
+      { id: "practical-scenarios", title: "Practical scenarios", level: 4 },
+      { id: "dynamics-square-customer-stories", title: "Dynamics Square customer stories", level: 4 },
+      { id: "benefits-and-limitations-of-business-central", title: "Benefits and limitations of Business Central", level: 3 },
+      { id: "business-benefits", title: "Business benefits", level: 4 },
+      { id: "limitations-to-plan-for", title: "Limitations to plan for", level: 4 },
+      { id: "business-central-vs-other-erp-and-accounting-systems", title: "Business Central vs other ERP and accounting systems", level: 3 },
+    ],
+    blocks: [
+      { t: "h", level: 3, id: "scalability-and-industry-use-cases", text: <>Scalability and industry use cases</> },
+      { t: "h", level: 4, id: "how-business-central-scales-with-your-business", text: <>How Business Central scales with your business</> },
+      { t: "p", text: <>Business Central grows in small, predictable steps rather than through disruptive re-platforming:</> },
+      { t: "cards", items: [
+        { title: <>Users</>, text: <>add licences as you hire, and use Team Members for light users.</> },
+        { title: <>Entities</>, text: <>add companies for new subsidiaries, with intercompany postings and consolidation.</> },
+        { title: <>Countries</>, text: <>Business Central is available with local versions in many countries, which helps UK businesses opening overseas entities.</> },
+        { title: <>Capacity</>, text: <>buy more database storage or environments when needed.</> },
+        { title: <>Functionality</>, text: <>switch on modules or add AppSource apps as processes mature.</> },
+      ] },
+      { t: "p", text: <>Most SMBs never outgrow Business Central. Businesses that eventually move to Microsoft's enterprise ERP, <Link href="/products/dynamics-365-supply-chain-management/">Dynamics 365 Finance and Supply Chain Management</Link>, usually have several of these traits: complex global operations across many legal entities and currencies, advanced shared-service or treasury needs, very high transaction volumes, or complex manufacturing and warehouse automation. If you are already at that scale, compare both options before deciding.</> },
+      { t: "h", level: 4, id: "business-central-by-industry", text: <>Business Central by industry</> },
+      {
+        t: "table",
+        headText: ["Industry","Where Business Central fits well","Common additions","Learn more"],
+        head: [<>Industry</>, <>Where Business Central fits well</>, <>Common additions</>, <>Learn more</>],
+        rows: [
+          [<>Manufacturing</>, <>BOMs, routings, production orders, capacity planning, quality inspections (Premium)</>, <>Shop-floor data capture, advanced planning, process manufacturing extensions</>, <><Link href="/industries/manufacturing/">Manufacturing</Link></>],
+          [<>Wholesale and distribution</>, <>Multi-location stock, landed cost, warehouse picking, drop shipments</>, <>Mobile WMS, EDI, shipping integrations</>, <><Link href="/industries/dynamics-365-for-distribution/">Distribution</Link></>],
+          [<>Retail and e-commerce</>, <>Shopify connector, item variants, pricing, returns</>, <>B2B portals, marketplace connectors</>, <><Link href="/industries/ecommerce/">E-commerce</Link></>],
+          [<>Professional services</>, <>Projects, time sheets, WIP, project invoicing</>, <>Resource planning, expense management</>, <><Link href="/industries/professional-services/">Professional services</Link></>],
+          [<>Food and beverage</>, <>Lot tracking, expiry dates, FEFO picking, recall traceability</>, <>Process manufacturing and quality extensions</>, <><Link href="/industries/food-and-beverages/">Food and beverage</Link></>],
+        ],
+      },
+      { t: "h", level: 4, id: "practical-scenarios", text: <>Practical scenarios</> },
+      { t: "scenarios", items: [
+        { title: <>A growing wholesaler moving off Sage 50</>, text: <>Stock sits in a separate system, purchase orders are raised in spreadsheets and month end takes two weeks. In Business Central, sales orders reserve stock, the planning worksheet proposes purchase orders from reorder points, item charges capture freight and duty, and finance closes from one ledger. The Payables Agent can draft supplier invoices from emailed PDFs for review.</> },
+        { title: <>A UK manufacturer replacing NAV 2013</>, text: <>Heavy customisations make every update risky. The upgrade rebuilds only the customisations that still add value as extensions, moves standard processes to standard functionality, and adds quality inspections on goods in and production output.</> },
+      ] },
+      { t: "h", level: 4, id: "dynamics-square-customer-stories", text: <>Dynamics Square customer stories</> },
+      { t: "links", items: [
+        { href: "/case-studies/business-central-reimplementation-for-recycling-industry/", text: <>How Summit Systems, a UK plastic automation company, streamlined operations with Business Central</> },
+        { href: "/case-studies/business-central-for-tool-manufacturing-company/", text: <>How Rolson Tools restored compliance with Business Central</> },
+        { href: "/case-studies/business-central-with-crm-implement-for-equestrian-manufacturing/", text: <>Business Central and CRM implementation for a UK equestrian manufacturer</> },
+        { href: "/case-studies/business-central-reimplementation-for-food-trader/", text: <>Business Central re-implementation for a world food trading business</> },
+        { href: "/case-studies/nav-2013-r2-to-business-central-upgrade/", text: <>NAV 2013 R2 to Business Central upgrade for a UK orthodontic supplier</> },
+      ] },
+      { t: "p", text: <>Browse all <Link href="/case-studies/">Dynamics Square case studies</Link>.</> },
+      { t: "h", level: 3, id: "benefits-and-limitations-of-business-central", text: <>Benefits and limitations of Business Central</> },
+      { t: "h", level: 4, id: "business-benefits", text: <>Business benefits</> },
+      { t: "figure", src: "/img/chapter3-1.png", w: 930, h: 372, alt: "Business benefits of Dynamics 365 Business Central for SMBs" },
+      {
+        t: "table",
+        headText: ["Benefit","What it means in practice"],
+        head: [<>Benefit</>, <>What it means in practice</>],
+        rows: [
+          [<>One source of truth</>, <>Finance, stock, sales and projects share one database, so reports reconcile and decisions use current figures</>],
+          [<>Faster month end</>, <>Automated bank reconciliation, intercompany, deferrals and financial reporting reduce manual close tasks</>],
+          [<>Familiar Microsoft experience</>, <>Staff work from Outlook, Excel and Teams, which shortens training and improves adoption</>],
+          [<>AI built in</>, <>Copilot is included online; agents can take on repetitive order and invoice processing</>],
+          [<>Predictable cost</>, <>Per-user subscription with no servers to buy or maintain</>],
+          [<>Always current</>, <>Microsoft delivers regulatory updates and new features twice a year</>],
+          [<>Room to grow</>, <>Add users, companies, countries and apps without changing platform</>],
+          [<>Large partner and app ecosystem</>, <>Specialist needs are usually met by an existing AppSource app rather than custom code</>],
+        ],
+      },
+      { t: "h", level: 4, id: "limitations-to-plan-for", text: <>Limitations to plan for</> },
+      { t: "p", text: <>An honest assessment helps you budget properly and avoid surprises:</> },
+      { t: "cards", items: [
+        { title: <>No UK payroll</>, text: <>Payroll runs in a separate product, with journals or an integration into Business Central.</> },
+        { title: <>Built-in CRM is basic</>, text: <>Larger sales teams usually add Dynamics 365 Sales.</> },
+        { title: <>Manufacturing depth</>, text: <>Strong for discrete and light process manufacturing; complex process, formula or regulated batch manufacturing often needs an industry extension.</> },
+        { title: <>Specialist functions need apps</>, text: <>Warehouse scanning, document capture, EDI and advanced expense management typically come from AppSource apps with their own fees.</> },
+        { title: <>Updates need testing</>, text: <>Twice-yearly major updates are an advantage, but extensions and integrations must be tested in a sandbox each time.</> },
+        { title: <>AI costs are variable</>, text: <>Copilot is included, but agents consume paid Copilot Credits.</> },
+        { title: <>Premium applies per environment</>, text: <>You cannot mix Essentials and Premium full users in the same environment.</> },
+        { title: <>Enterprise scale</>, text: <>Very large, complex global organisations are usually better served by Dynamics 365 Finance and Supply Chain Management.</> },
+        { title: <>Partner quality matters</>, text: <>The same software can deliver very different results depending on the implementation.</> },
+      ] },
+      { t: "h", level: 3, id: "business-central-vs-other-erp-and-accounting-systems", text: <>Business Central vs other ERP and accounting systems</> },
+      { t: "p", text: <>Business Central most often competes with entry-level accounting software that a business has outgrown, and with other mid-market ERPs. The table below summarises typical positioning; always check each vendor's current editions and pricing.</> },
+      {
+        t: "table",
+        headText: ["System","Type","Typically best for","How Business Central compares"],
+        head: [<>System</>, <>Type</>, <>Typically best for</>, <>How Business Central compares</>],
+        rows: [
+          [<>Xero / QuickBooks Online</>, <>Cloud accounting software</>, <>Small businesses with straightforward accounting</>, <>Business Central adds full ERP: multi-location inventory, warehousing, manufacturing, projects, consolidation and deeper reporting</>],
+          [<>Sage 50 / Sage 200</>, <>Accounting and mid-market business software</>, <>UK SMBs already familiar with Sage</>, <>Business Central offers one cloud platform with native Microsoft 365, Power Platform and Copilot integration. See <Link href="/blog/business-central-vs-sage-50/">Business Central vs Sage 50</Link></>],
+          [<>Oracle NetSuite</>, <>Cloud-only ERP</>, <>Fast-growing, multi-entity businesses</>, <>Both are cloud ERPs; Business Central offers on-premises as an option, tighter Microsoft 365 integration and a wide partner choice</>],
+          [<>SAP Business One</>, <>SMB ERP, on-premises or partner-hosted</>, <>SMBs in SAP-centric supply chains</>, <>Business Central is Microsoft-hosted SaaS with continuous updates. See <Link href="/dynamics-365-business-central-vs-sap-business-one/">Business Central vs SAP Business One</Link></>],
+          [<>Odoo</>, <>Modular business suite, cloud or self-hosted</>, <>Businesses wanting many modules from one vendor</>, <>Business Central offers deeper accounting and Microsoft ecosystem integration; compare modules and partner support carefully</>],
+          [<>Dynamics 365 Finance and Supply Chain Management</>, <>Enterprise ERP</>, <>Large or complex global organisations</>, <>Business Central is faster and cheaper to implement for SMBs; Finance and SCM handle greater scale and complexity</>],
+        ],
+      },
+      { t: "p", text: <>Use our <Link href="/tools/top-erp-systems-comparison/">ERP comparison tool</Link> to compare options side by side, or download the <Link href="/ebook/how-to-choose-right-erp/">ultimate ERP selection guide</Link>.</> },
+    ],
+  },
+  {
+    id: "choosing-a-partner",
+    nav: "Choosing a Partner",
+    title: "Readiness, common challenges and choosing a partner",
+    toc: [
+      { id: "signs-your-business-is-ready-for-business-central", title: "Signs your business is ready for Business Central", level: 3 },
+      { id: "common-implementation-challenges-and-how-to-avoid-them", title: "Common implementation challenges and how to avoid them", level: 3 },
+      { id: "how-to-choose-a-business-central-partner", title: "How to choose a Business Central partner", level: 3 },
+      { id: "why-businesses-work-with-dynamics-square", title: "Why businesses work with Dynamics Square", level: 4 },
+    ],
+    blocks: [
+      { t: "h", level: 3, id: "signs-your-business-is-ready-for-business-central", text: <>Signs your business is ready for Business Central</> },
+      { t: "p", text: <>If three or more of these apply, it is worth a structured review:</> },
+      { t: "checklist", id: "check-signs-your-business-is-ready-for-business-central", items: [
+        <>Month end takes more than a week because data is pulled from several systems.</>,
+        <>Stock figures in your accounts and your warehouse rarely agree.</>,
+        <>Staff re-key orders between your web shop, email and accounts.</>,
+        <>You run more than one company and consolidate in spreadsheets.</>,
+        <>Management reports are built manually in Excel and are out of date when shared.</>,
+        <>Your accounting software cannot handle multi-location stock, projects or manufacturing.</>,
+        <>Approvals happen by email with no audit trail.</>,
+        <>Your current ERP is out of mainstream support, or its vendor or partner can no longer support it.</>,
+        <>Updates are avoided because customisations break.</>,
+        <>You cannot easily prepare for MTD changes or e-invoicing in 2029.</>,
+      ] },
+      { t: "p", text: <>For small and growing teams, our page on <Link href="/dynamics-365-for-small-businesses/">Dynamics 365 for small businesses</Link> outlines typical starting points.</> },
+      { t: "h", level: 3, id: "common-implementation-challenges-and-how-to-avoid-them", text: <>Common implementation challenges and how to avoid them</> },
+      {
+        t: "table",
+        headText: ["Challenge","Why it happens","How to address it"],
+        head: [<>Challenge</>, <>Why it happens</>, <>How to address it</>],
+        rows: [
+          [<>Scope creep</>, <>Requirements keep growing during the build</>, <>Agree a phase 1 scope and park non-critical items for phase 2</>],
+          [<>Poor data quality</>, <>Years of duplicates and inactive records in the old system</>, <>Cleanse before migration and assign data owners</>],
+          [<>Over-customisation</>, <>Recreating every legacy process in code</>, <>Adopt standard Business Central processes first; customise only for genuine advantage</>],
+          [<>Low user adoption</>, <>Training is generic or late</>, <>Train by role, use real scenarios, appoint super-users</>],
+          [<>Underestimated internal effort</>, <>Staff run the business and the project at once</>, <>Back-fill key roles and protect project time</>],
+          [<>Integration surprises</>, <>Third-party systems discovered late</>, <>List every integration during discovery and test early</>],
+          [<>Weak post-go-live support</>, <>Partner disengages after launch</>, <>Agree hypercare and an ongoing support model up front</>],
+        ],
+      },
+      { t: "h", level: 3, id: "how-to-choose-a-business-central-partner", text: <>How to choose a Business Central partner</> },
+      { t: "p", text: <>The partner you choose has as much influence on results as the software. Before you sign, check that the partner:</> },
+      { t: "checklist", id: "check-how-to-choose-a-business-central-partner", items: [
+        <>Holds a current Microsoft Solutions Partner designation for Business Applications</>,
+        <>Specialises in Business Central and SMBs, not only enterprise ERP</>,
+        <>Can show UK references in your industry</>,
+        <>Understands UK localisation, MTD and e-invoicing</>,
+        <>Explains clearly what is fixed price and what is time and materials</>,
+        <>Has a structured data migration method</>,
+        <>Can supply licences as a Cloud Solution Provider (CSP)</>,
+        <>Offers ongoing support with defined response times</>,
+        <>Can advise on Copilot, agents and Power Platform, not just core ERP</>,
+      ] },
+      { t: "h", level: 4, id: "why-businesses-work-with-dynamics-square", text: <>Why businesses work with Dynamics Square</> },
+      { t: "p", text: <>Dynamics Square is a Microsoft Solutions Partner for Business Applications with a Specialist designation in Small and Midsize Business Management, with offices in the UK, US and Canada and ISO 9001 and ISO 27001 certification. Our UK team covers the full Business Central lifecycle: <Link href="/our-services/dynamics-365-consultant/">consulting</Link>, implementation, migration, licensing and <Link href="/d365-business-central-support/">Business Central support</Link>. Learn more about <Link href="/why-us/">why businesses choose Dynamics Square</Link>.</> },
+    ],
+  },
+];
+
+const FAQ_TITLE = "Frequently asked questions about Business Central";
+const FAQS = [
+  {
+    "id": 1,
+    "question": "What is Dynamics 365 Business Central used for?",
+    "answer": "<p>Business Central is used to run a small or mid-sized company's finance and operations in one system. Typical uses include accounting, VAT, sales and purchase processing, stock and warehouse control, project costing, manufacturing, service management and management reporting.</p>"
+  },
+  {
+    "id": 2,
+    "question": "Is Business Central suitable for small businesses?",
+    "answer": "<p>Yes. Business Central is designed for SMBs and is commonly adopted by businesses with roughly 5 to several hundred users that have outgrown entry-level accounting software. Very small businesses with simple bookkeeping needs may find accounting software such as Xero or QuickBooks sufficient.</p>"
+  },
+  {
+    "id": 3,
+    "question": "How much does Business Central cost in the UK?",
+    "answer": "<p>Microsoft's UK list prices are £61.50 per user per month for Essentials, £84.60 for Premium and £6.20 for Team Members, excluding VAT and billed annually. Implementation, data migration, training, add-on apps and support are additional.</p>"
+  },
+  {
+    "id": 4,
+    "question": "What is the difference between Business Central Essentials and Premium?",
+    "answer": "<p>Premium includes everything in Essentials plus manufacturing and service management. Most distributors, retailers and professional services firms use Essentials; manufacturers and businesses running service contracts and dispatch need Premium.</p>"
+  },
+  {
+    "id": 5,
+    "question": "What can a Business Central Team Member do?",
+    "answer": "<p>A Team Member can read data, update existing records, approve or reject requests, manage quotes, edit their own personal details and complete time sheets. Team Members cannot create or post core transactions such as sales orders, purchase invoices or journals.</p>"
+  },
+  {
+    "id": 6,
+    "question": "Is Copilot free in Business Central?",
+    "answer": "<p>Copilot features are included with Business Central online licences at no extra cost. AI agents, such as the Sales Order Agent, Payables Agent and Expense Agent, consume Copilot Credits, which are billed separately through prepaid packs or pay-as-you-go. Copilot is not available on-premises.</p>"
+  },
+  {
+    "id": 7,
+    "question": "Can Business Central be installed on-premises?",
+    "answer": "<p>Yes, but new customers can only license on-premises Business Central through subscription; perpetual licences ended for new customers on 1 April 2025. On-premises customers manage their own infrastructure and upgrades and do not get Copilot or AI agents.</p>"
+  },
+  {
+    "id": 8,
+    "question": "How long does a Business Central implementation take?",
+    "answer": "<p>A finance-led, single-company implementation typically takes around two to three months. Distribution projects with warehousing and integrations often take three to six months, and manufacturing or multi-entity projects six months or more.</p>"
+  },
+  {
+    "id": 9,
+    "question": "Does Business Central support Making Tax Digital?",
+    "answer": "<p>Yes. The UK version of Business Central includes Making Tax Digital for VAT, allowing you to retrieve VAT obligations and submit VAT returns to HMRC directly from the system.</p>"
+  },
+  {
+    "id": 10,
+    "question": "Will Business Central support UK mandatory e-invoicing in 2029?",
+    "answer": "<p>Business Central includes an E-Documents framework that supports Peppol formats, and Microsoft updates UK localisation as regulations are finalised. HMRC's detailed specifications are expected during 2027 to 2028, so staying on a supported, current version is the most important preparation.</p>"
+  },
+  {
+    "id": 11,
+    "question": "Does Business Central include UK payroll?",
+    "answer": "<p>No. Business Central does not include UK payroll. Businesses use a dedicated payroll product and post payroll journals into Business Central, or use a third-party integration.</p>"
+  },
+  {
+    "id": 12,
+    "question": "Is Business Central the same as Dynamics NAV?",
+    "answer": "<p>Business Central is the successor to Dynamics NAV. It builds on NAV's accounting and operations logic but runs as a modern cloud service, uses extensions instead of modified source code, and adds Copilot, Power Platform integration and continuous updates.</p>"
+  },
+  {
+    "id": 13,
+    "question": "Can I migrate from Sage, Xero or QuickBooks to Business Central?",
+    "answer": "<p>Yes. Master data, open balances and summarised history are migrated using configuration packages and migration tools. The project is also a chance to redesign your chart of accounts and dimensions for better reporting.</p>"
+  },
+  {
+    "id": 14,
+    "question": "How often is Business Central updated?",
+    "answer": "<p>Microsoft releases two major updates a year, in April and October, plus monthly minor updates. Online administrators can schedule each major update within a five-month window to allow testing.</p>"
+  },
+  {
+    "id": 15,
+    "question": "Where is Business Central data stored for UK customers?",
+    "answer": "<p>Business Central online environments for UK customers are hosted in Microsoft's UK Azure regions. Administrators can confirm the Azure region of each environment in the Business Central admin centre.</p>"
+  },
+  {
+    "id": 16,
+    "question": "Is there a free trial of Business Central?",
+    "answer": "<p>Yes. Microsoft offers a free trial of Business Central so you can explore the product with demo data. A trial is most useful alongside a guided demonstration based on your own processes.</p>"
+  }
+];
+
+const NEXT = {
+  title: "Next steps: talk to a Business Central specialist",
+  intro: <>Choosing an ERP is a multi-year decision. The fastest way to know whether Business Central fits is to test it against your own processes, data and growth plans.</>,
+  lead: <>Dynamics Square UK can help you:</>,
+  items: [
+    { title: <>Evaluate fit</>, text: <>a <Link href="/contact-us/">free Business Central consultation</Link> and a demo built around your processes.</> },
+    { title: <>Implement</>, text: <>a scoped, phased rollout through our <Link href="/our-services/dynamics-365-implementation-services/">Dynamics 365 implementation services</Link>.</> },
+    { title: <>Migrate or upgrade</>, text: <>from Sage, Xero, QuickBooks, NAV, GP or on-premises Business Central.</> },
+    { title: <>License correctly</>, text: <>the right mix of Essentials, Premium and Team Members.</> },
+    { title: <>Support and optimise</>, text: <>ongoing <Link href="/our-services/dynamics-365-support-services/">Dynamics 365 support services</Link>, including Copilot and agent adoption.</> },
+  ],
+  contact: <>Call <a href="tel:+442037697689">+44 203 769 7689</a>, email <a href="mailto:info@dynamicssquare.co.uk">info@dynamicssquare.co.uk</a>, or <Link href="/contact-us/">request a callback</Link> to speak with a Business Central consultant.</>,
+};
+
+// sticky nav + scroll-spy lists (module level so their identity never changes)
+const NAV = [
+  { id: "at-a-glance", label: "At a Glance" },
+  ...CHAPTERS.map((c) => ({ id: c.id, label: c.nav })),
+  { id: "faqs", label: "FAQs" },
+];
+const HEADING_IDS = CHAPTERS.flatMap((c) => c.toc.map((t) => t.id));
+const pad = (n) => String(n).padStart(2, "0");
+// chapter sidebar sits this far below the top of the sticky section nav (nav height + breathing room)
+const ASIDE_GAP = 96;
+
+// last chapter heading that has scrolled past the sticky navs
+const useActiveHeading = (ids) => {
+  const [active, setActive] = useState(null);
   useEffect(() => {
-    window.addEventListener("scroll", listenToScroll);
-    return () => window.removeEventListener("scroll", listenToScroll);
+    let frame = 0;
+    const update = () => {
+      let current = null;
+      for (const id of ids) {
+        const el = document.getElementById(id);
+        if (!el) continue;
+        if (el.getBoundingClientRect().top - 190 <= 0) current = id;
+        else break;
+      }
+      setActive(current);
+    };
+    const onScroll = () => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(update);
+    };
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  }, [ids]);
+  return active;
+};
+
+const ReadingProgress = () => {
+  const bar = useRef(null);
+  useEffect(() => {
+    let frame = 0;
+    const update = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const ratio = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+      if (bar.current) bar.current.style.transform = `scaleX(${ratio})`;
+    };
+    const onScroll = () => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(update);
+    };
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
   }, []);
+  return (
+    <div className={g.progress} aria-hidden="true">
+      <span ref={bar} />
+    </div>
+  );
+};
 
-  const listenToScroll = () => {
-    let heightToShowFrom = 600;
-    let heightToHideFrom = 48500;
-    const winScroll =
-      document.body.scrollTop || document.documentElement.scrollTop;
-
-    if (winScroll > heightToShowFrom) {
-      setDisplay("hd-div");
-      isVisible && // to limit setting state only the first time
-        setIsVisible(true);
-    } else {
-      setDisplay("hd-div");
-      setIsVisible(false);
+// tickable checklist; ticks are kept in this browser only
+const Checklist = ({ id, items }) => {
+  const key = `bc-guide-two:${id}`;
+  const [done, setDone] = useState(() => items.map(() => false));
+  useEffect(() => {
+    try {
+      const saved = JSON.parse(window.localStorage.getItem(key) || "null");
+      if (Array.isArray(saved) && saved.length === items.length) setDone(saved.map(Boolean));
+    } catch (e) {
+      // storage unavailable: start unticked
     }
-
-    if (winScroll > heightToHideFrom) {
-      setIsVisible(false);
+  }, [key, items.length]);
+  const toggle = (i) => {
+    const next = done.map((v, j) => (j === i ? !v : v));
+    setDone(next);
+    try {
+      window.localStorage.setItem(key, JSON.stringify(next));
+    } catch (e) {
+      // storage unavailable: ticks last for this visit only
     }
   };
+  const count = done.filter(Boolean).length;
+  return (
+    <div className={g.checklist}>
+      <div className={g.checkMeter} aria-hidden="true">
+        <div className={g.checkTrack}>
+          <span style={{ width: `${(count / items.length) * 100}%` }} />
+        </div>
+        <em>
+          {count} / {items.length}
+        </em>
+      </div>
+      <ul>
+        {items.map((item, i) => (
+          <li key={i}>
+            <label className={done[i] ? g.checkDone : undefined}>
+              <input type="checkbox" checked={done[i]} onChange={() => toggle(i)} />
+              <span>{item}</span>
+            </label>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+const Figure = ({ b }) => (
+  <figure className={g.figure}>
+    <div className={g.figureFrame}>
+      <Image src={b.src} alt={b.alt} width={b.w} height={b.h} sizes="(max-width: 991px) 100vw, 820px" />
+    </div>
+    {b.captionTitle && (
+      <figcaption>
+        <strong>{b.captionTitle}</strong>
+        <span>{b.caption}</span>
+      </figcaption>
+    )}
+  </figure>
+);
+
+const DataTable = ({ b }) => (
+  <div className={g.tableWrap}>
+    <table className={g.table}>
+      <thead>
+        <tr>
+          {b.head.map((h, i) => (
+            <th key={i} scope="col">
+              {h}
+            </th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {b.rows.map((row, ri) => (
+          <tr key={ri}>
+            {row.map((cell, ci) =>
+              ci === 0 ? (
+                <th key={ci} scope="row">
+                  {cell}
+                </th>
+              ) : (
+                <td key={ci} data-label={b.headText[ci]}>
+                  {cell}
+                </td>
+              )
+            )}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+);
+
+const Block = ({ b }) => {
+  switch (b.t) {
+    case "h":
+      return b.level === 3 ? (
+        <h3 id={b.id} className={g.h3}>
+          {b.text}
+        </h3>
+      ) : (
+        <h4 id={b.id} className={g.h4}>
+          {b.text}
+        </h4>
+      );
+    case "p":
+      return <p>{b.text}</p>;
+    case "answer":
+      return (
+        <div className={g.answer}>
+          <p>{b.text}</p>
+        </div>
+      );
+    case "note":
+      return (
+        <div className={g.note}>
+          <i className="bi bi-lightbulb" aria-hidden="true"></i>
+          <p>
+            <b>{b.label}</b> {b.text}
+          </p>
+        </div>
+      );
+    case "callout":
+      return (
+        <div className={`${s.callout} ${g.callout}`}>
+          <p>{b.text}</p>
+        </div>
+      );
+    case "figure":
+      return <Figure b={b} />;
+    case "table":
+      return <DataTable b={b} />;
+    case "list":
+      return b.ordered ? (
+        <ol className={g.numbered}>
+          {b.items.map((item, i) => (
+            <li key={i}>{item}</li>
+          ))}
+        </ol>
+      ) : (
+        <ul className={g.bullets}>
+          {b.items.map((item, i) => (
+            <li key={i}>{item}</li>
+          ))}
+        </ul>
+      );
+    case "checklist":
+      return <Checklist id={b.id} items={b.items} />;
+    case "cards":
+      return (
+        <div className={g.cardGrid}>
+          {b.items.map((item, i) => (
+            <div className={g.card} key={i}>
+              <strong>{item.title}</strong>
+              <p>{item.text}</p>
+            </div>
+          ))}
+        </div>
+      );
+    case "steps":
+      return (
+        <ol className={g.stepper}>
+          {b.items.map((item, i) => (
+            <li key={i}>
+              <span className={g.stepNo} aria-hidden="true">
+                {i + 1}
+              </span>
+              <div>
+                <strong>{item.title}</strong>
+                <p>{item.text}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      );
+    case "scenarios":
+      return (
+        <div className={g.scenarioGrid}>
+          {b.items.map((item, i) => (
+            <article className={g.scenario} key={i}>
+              <strong>{item.title}</strong>
+              <p>{item.text}</p>
+            </article>
+          ))}
+        </div>
+      );
+    case "links":
+      return (
+        <ul className={g.linkGrid}>
+          {b.items.map((item) => (
+            <li key={item.href}>
+              <Link href={item.href} className={g.linkCard}>
+                <span>{item.text}</span>
+                <i className="bi bi-arrow-up-right" aria-hidden="true"></i>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      );
+    default:
+      return null;
+  }
+};
+
+const BusinessCentralGuideTwo = () => {
+  const { active, navTop } = useSectionNav(NAV);
+  const activeHeading = useActiveHeading(HEADING_IDS);
+
   return (
     <>
-      <PageSeo
-        type="Article"
-        title="Dynamics 365 Business Central For Small Business [Guide 2026]"
-        description="Learn how Dynamics 365 Business Central helps for small businesses streamline operations, boost productivity, and drive growth efficiently."
-        image="/img/chapter5-5.png"
-      />
-      <section className="banner-guide hero-1 hero">
+      <PageSeo type="Article" title={PAGE_TITLE} description={PAGE_DESC} image="/img/chapter5-5.png" imageAlt="Microsoft Dynamics 365 Business Central guide for SMBs" faqs={FAQS} />
+      <ReadingProgress />
+
+      {/* ===== Hero ===== */}
+      <section className={`${s.hero} ${g.hero}`}>
         <div className="container">
-          <div className="row">
-            <div className="col-lg-5 align-self-center">
-              <div className="guide-left">
-                <h1>The Ultimate Business Central Guide for SMBs </h1>
-                <p>
-                  This is a comprehensive Microsoft Dynamics 365 Business
-                  Central guide for SMBs to help them automate most of the
-                  processes and push their businesses towards digital
-                  transformation along with enhanced scalability and
-                  profitability.
+          <nav aria-label="breadcrumb" className={s.crumbs}>
+            <Link href="/">Home</Link>
+            <i className="bi bi-chevron-right"></i>
+            <Link href="/guides/">Guides</Link>
+            <i className="bi bi-chevron-right"></i>
+            <span>{H1}</span>
+          </nav>
+          <div className="row align-items-center gy-5">
+            <div className={`col-lg-7 ${s.heroSplit}`}>
+              <h1 className={`${s.heroTitle} ${g.heroTitle}`}>{H1}</h1>
+              {INTRO.map((text, i) => (
+                <p className={`${s.heroLead} ${g.heroLead}`} key={i}>
+                  {text}
                 </p>
-                <p>
-                  So, if you want to accelerate your business toward easy growth
-                  and make it ready for tough times, this guide is for you.
-                </p>
-              </div>
-            </div>
-            <div className="col-lg-7 align-self-center text-center">
-              <Image
-                src="/img/chapter5-5.png"
-                alt="what is business central"
-                width={992}
-                height={499}
-                priority = {true}
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="tbale-wrr-bg">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-6">
-              <header className="section-header">
-                <h2>Table of Contents</h2>
-              </header>
-            </div>
-          </div>
-          <div className="row justify-content-center">
-            <div className="col-lg-3 col-6">
-              <div className="table-of-content-list text-center">
-                <a href="#tabs-1" rel="" target="_self">
-                  <img src="/img/business-central-logo-3.png" alt="Dynamics 365 Business Central logo" />
-                  <h3>Chapter 1</h3>
-                  <p>Understanding ERP and Business Central </p>
-                </a>
-              </div>
-            </div>
-            <div className="col-lg-3 col-6">
-              <div className="table-of-content-list text-center">
-                <a href="#tabs-2" rel="" target="_self">
-                  <img
-                    src="/img/power-2.png"
-                    alt="Business Central Features and Benefits"
-                   loading="lazy" decoding="async" />
-                  <h3>Chapter 2</h3>
-                  <p>Where Business Central can be Deployed?</p>
-                </a>
-              </div>
-            </div>
-            <div className="col-lg-3 col-6">
-              <div className="table-of-content-list text-center">
-                <a href="#tabs-3" rel="" target="_self">
-                  <img
-                    src="/img/power-3.png"
-                    alt="Business Central Dashboard Examples"
-                   loading="lazy" decoding="async" />
-                  <h3>Chapter 3</h3>
-                  <p>
-                    Business Central Benefits
-                  </p>
-                </a>
-              </div>
-            </div>
-            <div className="col-lg-3 col-6">
-              <div className="table-of-content-list text-center">
-                <a href="#tabs-4" rel="" target="_self">
-                  <img
-                    src="/img/power-4.png"
-                    alt="Business Central Integration & Automation"
-                   loading="lazy" decoding="async" />
-                  <h3>Chapter 4</h3>
-                  <p>
-                    Business Central Pricing and Licensing
-                  </p>
-                </a>
-              </div>
-            </div>
-            <div className="col-lg-3 col-6">
-              <div className="table-of-content-list text-center">
-                <a href="#tabs-5" rel="" target="_self">
-                  <img
-                    src="/img/power-5.png"
-                    alt="Business Central Versions, Pricing & Licensing"
-                   loading="lazy" decoding="async" />
-                  <h3>Chapter 5</h3>
-                  <p>
-                    Business Central Capabilities
-                  </p>
-                </a>
-              </div>
-            </div>
-            <div className="col-lg-3 col-6">
-              <div className="table-of-content-list text-center">
-                <a href="#tabs-6" rel="" target="_self">
-                  <img
-                    src="/img/power-6.png"
-                    alt="Business Central vs Others BI Tools"
-                   loading="lazy" decoding="async" />
-                  <h3>Chapter 6</h3>
-                  <p>Business Central vs Other Tools</p>
-                </a>
-              </div>
-            </div>
-            <div className="col-lg-3 col-6">
-              <div className="table-of-content-list text-center">
-                <a href="#tabs-7" rel="" target="_self">
-                  <img
-                    src="/img/group-2330.png"
-                    alt="Future Scope of Business Central"
-                   loading="lazy" decoding="async" />
-                  <h3>Chapter 7</h3>
-                  <p>What's new in Business Central 2026? </p>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {isVisible && (
-        <div className={display}>
-          <ul>
-            <li>
-              <a href="#tabs-1" rel="" target="_self">
-                1. Understanding ERP
-              </a>
-            </li>
-            <li>
-              <a href="#tabs-2" rel="" target="_self">
-                2. Deployment Options
-              </a>
-            </li>
-            <li>
-              <a href="#tabs-3" rel="" target="_self">
-                3. Benefits Of BC
-              </a>
-            </li>
-            <li>
-              <a href="#tabs-4" rel="" target="_self">
-                4. Capabilities Of BC
-              </a>
-            </li>
-            <li>
-              <a href="#tabs-5" rel="" target="_self">
-                5. Pricing & Licensing
-              </a>
-            </li>
-            <li>
-              <a href="#tabs-6" rel="" target="_self">
-                6. BC vs. Others
-              </a>
-            </li>
-            <li>
-              <a href="#tabs-7" rel="" target="_self">
-                7. What's New in BC
-              </a>
-            </li>
-          </ul>
-        </div>
-      )}
-      {/* <section className="color-gr">
-        <div className="container">
-          <div className="row justify-content-center g-4">
-            <div className="col-lg-12">
-              <div className="cont-table-inner">
-                <h2>The Ultimate Business Central Guide for SMBs (2026)</h2>
-                <p>
-                  Data is everywhere, but you need the right tool to extract it.
-                </p>
-                <p>
-                  Artificial intelligence (AI) and business intelligence (BI)
-                  are the tools that are helping businesses to collect and make
-                  use of digital customer data. Data management and consumption
-                  is a constant challenge for businesses, but with the help of
-                  AI and BI, they can form useful insights from the data they
-                  collect.
-                </p>
-                <p>
-                  Businesses do understand the need to visually understand and
-                  utilise the data. This would force them to use technology to
-                  make data-driven and technology-driven decisions in order to
-                  achieve rapid growth.
-                </p>
-                <p>
-                  Modern organisations accept the fact that data analysis and
-                  visualisation are the keys to predicting market and competitor
-                  behaviour, customer changing requirements, product
-                  profitability, and taking rewarding decisions.
-                </p>
-                <p>
-                  According to the most recent statistics, data analysis and
-                  visualisation make decisions for small, medium, and large
-                  businesses 5X faster and more efficient.
-                </p>
-              </div>
-              <div className="iner-pp">
-                <img
-                  src="/img/group-2175.png"
-                  alt="Data visualisation makes 5X faster decisions"
-                />
-              </div>
-              <div className="cont-table-inner">
-                <p>
-                  In today's digital world, business Intelligence plays a vital
-                  role in helping organisations assemble, integrate, visualize,
-                  and analyse unorganised data to make smarter and more informed
-                  decisions. The digital transformation of customers is pushing
-                  industries to rely totally on data for a sustainable and
-                  profitable business.
-                </p>
-                <p>
-                  As per report, 7 out of 10 Businesses rate finding data as
-                  very crucial.{" "}
-                  <a
-                    href="https://techjury.net/blog/business-intelligence-statistics/#gref"
-                    target="_blank"
-                  >
-                    (Source)
-                  </a>
-                </p>
-              </div>
-              <div className="iner-pp">
-                <img
-                  src="/img/group-2176.png"
-                  alt="70% of businesses rate data as crucial"
-                />
-              </div>
-              <div className="cont-table-inner">
-                <p>
-                  As per the survey organized by Deloitte
-                  <a
-                    href="https://www2.deloitte.com/content/dam/Deloitte/global/Documents/Deloitte-Analytics/dttl-analytics-analytics-advantage-report-061913.pdf"
-                    target="_blank"
-                  >
-                    (Source)
-                  </a>
-                </p>
-                <ol>
-                  <li>
-                    49% of participants agree that data analytics helps them
-                    make good decisions.
-                  </li>
-                  <li>
-                    16% admits that data enables them for better strategic
-                    initiatives.
-                  </li>
-                  <li>
-                    10% agrees that data insights help them make strong
-                    relationship with customers.
-                  </li>
-                </ol>
-              </div>
-              <div className="iner-pp">
-                <img
-                  src="/img/group-2174.png"
-                  alt="Deloitte Survey on Data Analytics"
-                />
-              </div>
-              <div className="cont-table-inner">
-                <p>
-                  To stay ahead of the competition, industries must follow the
-                  data trends. If we talk about top 3 business intelligence
-                  trends of 2022, they are:{" "}
-                </p>
-                <ol>
-                  <li>Data Visualisation</li>
-                  <li>Data Quality Management</li>
-                  <li>Self-Service Business Intelligence</li>
-                </ol>
-              </div>
-              <div className="iner-pp">
-                <img
-                  src="/img/group-2183.png"
-                  alt="top 3 business intelligence trends of 2022"
-                />
-              </div>
-              <div className="cont-table-inner">
-                <p>
-                  You probably agree with the above statistics but might be
-                  wondering about the methods and applications to use the data
-                  and make it work for your business.
-                </p>
-                <p>
-                  <Link href="/products/microsoft-power-bi/">
-                    Microsoft Power BI
-                  </Link>{" "}
-                  is a business intelligence application that allows
-                  organisations to{" "}
-                  <a
-                    href="https://www.dynamicssquare.co.uk/blog/how-to-generate-interactive-reports-in-power-bi/"
-                    rel=""
-                    target="_self"
-                  >
-                    visualise and report
-                  </a>{" "}
-                  a pile of data on a single dashboard in a ready-to-use manner.
-                  With the capabilities of presentation, distribution, and
-                  integration, it is one of Microsoft's products that is a
-                  must-have for today's businesses, whether small or large.
-                </p>
-                <p>
-                  Power BI enables the organisation to track customers as well
-                  as competitors using available metrics, whether demographics,
-                  age, or the number of sales.
-                </p>
-                <p>
-                  Power BI can be the steppingstone of your business to become
-                  successful by extracting the useful insights from your data.
-                </p>
-                <p>
-                  <b className="h3">Want to know how?</b>
-                </p>
-                <p>
-                  If yes, this{" "}
-                  <a
-                    href="https://www.dynamicssquare.co.uk/blog/an-introduction-to-microsoft-power-bi/"
-                    target="_self"
-                    rel=""
-                  >
-                    Power BI user guide
-                  </a>{" "}
-                  is for the people like you who want to explore the
-                  possibilities and opportunities of a data-driven business
-                  growth.
-                </p>
-              </div>
-              <div className="iner-pp">
-              <Link href="#powerBIModals">
-                  <a data-bs-toggle="modal" ><img
-                    src="/img/powerb-guide-call-to-banner-2.png"
-                    alt="power-guide"
-                  /></a>
+              ))}
+              <div className={`${s.heroActions} ${s.heroActionsLeft}`}>
+                <Link href="#exampleModal" data-bs-toggle="modal" className="btn-get-started scrollto">
+                  <span>
+                    Book a Free Consultation &nbsp;<i className="bi bi-arrow-right"></i>
+                  </span>
+                </Link>
+                <Link href="#powerBIModals" data-bs-toggle="modal" className={`${s.ghostBtn} ${g.ghostBtn}`}>
+                  Download as PDF <i className="bi bi-file-earmark-pdf"></i>
                 </Link>
               </div>
             </div>
-          </div>
-        </div>
-      </section> */}
-      <section
-        id="tabs-1"
-        className="col-yellow"
-        style={{ background: "#04828c" }}
-      >
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-8">
-              <header className="section-header section-header-tabless">
-                <h2>
-                  <strong>Chapter 1</strong> Understanding ERP and Business
-                  Central
-                </h2>
-                <p>
-                  In this chapter, we will get to know about the need of ERP for
-                  SMBs, and its various aspects
-                </p>
-                <div className="balnde-imge-mode">
-                  <img
-                    src="/img/business-central-logo-3.png"
-                    alt="Dynamics 365 Business Central logo"
-                    className="shape-1 shape-2"  loading="lazy" decoding="async" />
-                  <img
-                    src="/img/over-lay-shape.png"
-                    alt=""
-                    className="overlay-1"
-                   aria-hidden="true"  loading="lazy" decoding="async" />
-                </div>
-              </header>
+            <div className="col-lg-5">
+              <div className={s.heroVisual}>
+                <Image src="/img/chapter5-5.png" alt="Microsoft Dynamics 365 Business Central Role Centre on a laptop" width={992} height={499} priority sizes="(max-width: 991px) 100vw, 480px" />
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <section className="color-whi">
+
+      <SectionNav sections={NAV} active={active} navTop={navTop} showCta={false} />
+
+      {/* ===== At a glance ===== */}
+      <section id="at-a-glance" className={`${s.block} ${s.anchor}`}>
         <div className="container">
-          <div className="row justify-content-center g-4">
-            <div className="col-lg-12">
-              <div className="cont-table-inner">
-                <p>
-                  Mostly all small businesses work on the same psychology and
-                  desire the same factors, like earning more customers, growing
-                  daily, minimising the competition, understanding the exact
-                  customer requirements, providing seamless support, and much
-                  more.
-                </p>
-                <p>
-                  They put a lot of effort and resources into meeting customer
-                  demand, and whenever the organisation meets its target, that
-                  means it is growing and generating revenue as well.
-                </p>
+          <h2 className={s.h2}>{GLANCE_TITLE}</h2>
+          <dl className={g.glanceGrid}>
+            {GLANCE.map((item) => (
+              <div className={g.glanceCard} key={item.q}>
+                <dt>{item.q}</dt>
+                <dd>{item.a}</dd>
               </div>
-              <div className="iner-pp">
-                <img src="/img/chapter1-1.png" alt="Chapter 1 Understanding ERP and Business Central"  loading="lazy" decoding="async" />
-              </div>
-              <div className="cont-table-inner">
-                <p>
-                  As per the various studies, it is found that small business
-                  owners are confident, motivated, and optimistic about changing
-                  market demands. They accept the digitalisation of businesses
-                  and work all day and night to cope with the changing business
-                  environment, including inflation, increases in labour wages,
-                  recession, and increasing prices of raw materials.
-                </p>
-                <p>
-                  And it is a truth for such small businesses that, as they grow
-                  with time, they start to use the latest technologies in the
-                  form of different applications and tools. These tools simplify
-                  complex processes, but managing them is itself a tidy task.
-                </p>
-              </div>
-              <div className="iner-pp">
-                <img src="/img/chapter1-2.png" alt="Chapter 1 Understanding ERP and Business Central"  loading="lazy" decoding="async" />
-              </div>
-              <div className="cont-table-inner">
-                <p>
-                  To eliminate such situations, SMBs have to integrate a
-                  unified, powerful, personalised, and robust application rather
-                  than choosing different applications for different operations.
-                  Here comes the role of an ERP (Enterprise Resource Planning)
-                  system that can manage all departments to build a strong
-                  infrastructure for seamless data flow and accelerate business
-                  growth with more opportunities for revenue generation.
-                </p>
-              </div>
-              <div className="iner-pp">
-                <img src="/img/chapter1-3.png" alt="Chapter 1 Understanding ERP and Business Central"  loading="lazy" decoding="async" />
-              </div>
-              <div className="cont-table-inner">
-                <p>
-                  A lot of ERPs are available on the market right now that claim
-                  to be SMB-oriented solutions. Among those, <Link href ="/products/dynamics-365-business-central/">Microsoft Dynamics
-                  365 Business Central</Link> is the most popular, efficient,
-                  cost-effective, and powerful ERP built specifically to deal
-                  with SMBs and their core processes. Before getting more into
-                  Business Central, let's understand the top issues a SMB has to
-                  face without a proper ERP solution.
-                </p>
-              </div>
-              <div className="iner-pp">
-                <img src="/img/chapter1-4.png" alt="Chapter 1 Understanding ERP and Business Central"  loading="lazy" decoding="async" />
-              </div>
-              <div className="cont-table-inner">
-                <p>
-                  <b className="h3-b">
-                    Unaligned Systems, Departments, and People
-                  </b>
-                </p>
-                <p>
-                  How can we measure the growth of a company? Whenever a company
-                  grows, it hires more workers, adopts more tools, aligns with
-                  modern technologies, starts global functions, and much more.
-                  But we forget a critical factor here: complexity. With
-                  expansion comes increased complexity, which can stymie smooth
-                  business operations and create gaps between systems,
-                  departments, and people.
-                </p>
-                <p>
-                  The inefficient ERP or outdated legacy system makes the
-                  overall situation worse as their core technology becomes
-                  obsolete and is unable to meet the basic requirements to even
-                  sustain the current business flow.
-                </p>
-              </div>
-              <div className="iner-pp">
-                <img src="/img/chapter1-5.png" alt="Chapter 1 Understanding ERP and Business Central"  loading="lazy" decoding="async" />
-              </div>
-              <div className="cont-table-inner">
-                <p>
-                  When you start to grow, customers start to expect a better
-                  experience from the business. And failure to deliver may
-                  result in both customer and revenue loss. If you want to
-                  eliminate all such situations, you need to implement a unified
-                  business management solution capable of understanding your
-                  business requirements and adapting to future needs too.
-                </p>
-                <p>
-                  <b className="h3-b">Understanding Business Demands</b>
-                </p>
-                <p>
-                  As a result of market and competitor influences, customer
-                  demands are constantly changing. The tools and applications
-                  you used or relied on to understand customer behaviour might
-                  be blocking your ability to understand customer expectations
-                  or the exact scenario of the market.{" "}
-                </p>
-                <p>
-                  Your current tools might be supporting you today, but do they
-                  guarantee you will be supported in the future too? We
-                  understand that it isn't easy to <Link href="/dynamics-365-business-central-implementation/">implement an ERP</Link> solution
-                  overnight, but you can start building the perfect ERP strategy
-                  today.
-                </p>
-              </div>
-              <div className="iner-pp">
-                <img src="/img/chapter1-6.png" alt="Chapter 1 Understanding ERP and Business Central"  loading="lazy" decoding="async" />
-              </div>
-              <div className="cont-table-inner">
-                <p>
-                  You might feel like planning can be done in a day or money can
-                  make implementation possible in a single day. If so, you are
-                  totally wrong. Just make a rough calculation of the cost of
-                  lost sales over time, the number of dissatisfied customers,
-                  the low overall customer experience, losing customers to
-                  competitors, not predicting the customer's requirements, and
-                  much more. Once you calculate the cost, you would leave this
-                  guide in place and start ERP planning. Below are some signs
-                  you need to evaluate right now as per your current business
-                  condition.{" "}
-                </p>
+            ))}
+          </dl>
+          <div className={`${s.callout} ${g.callout}`}>
+            <p>{GLANCE_CALLOUT}</p>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== Table of contents ===== */}
+      <section id="table-of-contents" className={`${s.block} ${s.blockTint} ${s.anchor}`}>
+        <div className="container">
+          <h2 className={s.h2}>Table of Contents</h2>
+          <ol className={g.tocGrid}>
+            {CHAPTERS.map((c, i) => (
+              <li className={g.tocCard} key={c.id}>
+                <a href={`#${c.id}`} className={g.tocHead}>
+                  <span className={g.tocNum}>{pad(i + 1)}</span>
+                  <span className={g.tocTitle}>{c.title}</span>
+                </a>
                 <ul>
-                  <li>Unable to simplify the complex data silos?</li>
-                  <li>Tired of removing duplicate data from your system?</li>
-                  <li>Perform recurring operations using manual methods?</li>
-                  <li>Have a fear of data leaks and data security?</li>
-                  <li>Facing issues while creating and sharing reports?</li>
+                  {c.toc
+                    .filter((t) => t.level === 3)
+                    .map((t) => (
+                      <li key={t.id}>
+                        <a href={`#${t.id}`}>{t.title}</a>
+                      </li>
+                    ))}
                 </ul>
-                <p>
-                  If you are dealing with such issues, your business has an
-                  urgent requirement for the right ERP solution.
-                </p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      {/* ===== Chapters ===== */}
+      {CHAPTERS.map((c, i) => (
+        <section key={c.id} id={c.id} className={`${s.block} ${i % 2 ? s.blockTint : ""} ${s.anchor}`}>
+          <div className="container">
+            <header className={g.chapterHead}>
+              <span className={g.chapterNum} aria-hidden="true">
+                {pad(i + 1)}
+              </span>
+              <div>
+                <span className={s.kicker}>Chapter {i + 1}</span>
+                <h2 className={`${s.h2} ${g.chapterTitle}`}>{c.title}</h2>
               </div>
-              <div className="iner-pp">
-                <img src="/img/chapter1-7.png" alt="Chapter 1 Understanding ERP and Business Central"  loading="lazy" decoding="async" />
+            </header>
+            <div className={g.layout}>
+              <aside className={g.aside} style={{ top: navTop + ASIDE_GAP, maxHeight: `calc(100vh - ${navTop + ASIDE_GAP + 20}px)` }}>
+                <nav aria-label={`Chapter ${i + 1}`}>
+                  <ul>
+                    {c.toc.map((t) => (
+                      <li key={t.id} className={t.level === 4 ? g.asideSub : undefined}>
+                        <a href={`#${t.id}`} className={activeHeading === t.id ? g.asideActive : undefined} aria-current={activeHeading === t.id ? "true" : undefined}>
+                          {t.title}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </nav>
+              </aside>
+              <div className={g.article}>
+                {c.blocks.map((b, bi) => (
+                  <Block b={b} key={bi} />
+                ))}
               </div>
-              <div className="cont-table-inner">
-                <p>
-                  <b className="h3-b">
-                    How to Check a Legacy ERP System Outdated or Not?
-                  </b>
-                </p>
-                <p>
-                  If you are currently using an ERP system for your business and
-                  want to know whether it is outdated or not, you can check the
-                  below signs:{" "}
-                </p>
-                <ul>
-                  <li>
-                    There is no longer any support available from the ERP
-                    company.
-                  </li>
-                  <li>The vendor doesn't support your system.</li>
-                  <li>Unable to make any customisations as desired.</li>
-                  <li>
-                    Fed up with performing manual and recurring processes?
-                  </li>
-                  <li>Unable to get real-time updates on processes.</li>
-                  <li>
-                    Report generation and sharing become crucial, and your ERP
-                    lacks these capabilities.
-                  </li>
-                  <li>
-                    Your system isn't adaptable to changing business needs.
-                  </li>
-                  <li>The user interface is not easy to understand.</li>
-                  <li>
-                    You are facing a lot of lag and performance issues while
-                    dealing with daily tasks.{" "}
-                  </li>
-                  <li>Operational and maintenance costs become high.</li>
-                  <li>Hardware and software updates are costly.</li>
-                </ul>
-                <p>
-                  The above-listed points are the basic signs you should check
-                  with your existing system. If only a few of them match, you
-                  need to consider migrating to another ERP solution.
-                </p>
-                <p>
-                  Before choosing an ERP solution, you need to do a lot of
-                  research because a perfect ERP solution can accelerate your
-                  business' growth, whereas a wrong choice can cause you huge
-                  financial loss and downgrade the business' growth too.
-                </p>
-                <p>
-                  You need to put effort into choosing an ERP system rather than
-                  aligning your business with it later.
-                </p>
-              </div>
-              <div className="iner-pp">
-                <img src="/img/chapter1-8.png" alt="Chapter 1 Understanding ERP and Business Central"  loading="lazy" decoding="async" />
-              </div>
-              <div className="cont-table-inner">
-                <p>
-                  There are a lot of factors to consider before selecting an
-                  ERP, including company type and size, number of processes,
-                  different departments, complexity of operations, deployment
-                  mode, data size, and number of users.
-                </p>
-                <p>
-                  Various ERP systems are currently available on the market to
-                  address both specific and general requirements. Among these,
-                  Microsoft Dynamics 365 Business Central is one such solution
-                  that can adapt to all business requirements while also being
-                  adaptable with customisations to meet specific business needs.
-                </p>
-                <p>
-                  <b className="h3-b">What is Dynamics 365 Business Central?</b>
-                </p>
-                <p>
-                  Microsoft Dynamics 365 Business Central is a SaaS (Software as
-                  a Service) based, simple yet powerful application capable of
-                  streamlining entire business operations toward continuous
-                  growth and sustainability.
-                </p>
-              </div>
-              <div className="iner-pp">
-                <img src="/img/chapter1-9.png" alt="Chapter 1 Understanding ERP and Business Central"  loading="lazy" decoding="async" />
-              </div>
-              <div className="cont-table-inner">
-                <p>
-                  It is a cloud-based business management application that can
-                  manage and connect almost all departments together, including
-                  finance, sales, operations, customer service, inventory, and
-                  production. It helps growing businesses supervise and control
-                  their operations while eliminating redundancies and
-                  complexities from the system.
-                </p>
-                <p>
-                  Previously known as <Link href="/products/microsoft-dynamics-nav/">Dynamics NAV</Link> or Navision, it carries
-                  powerful functionalities to give SMBs an upper hand with
-                  smooth and efficient business management. When we compare the
-                  capabilities of NAV with modern business methodologies, they
-                  become weak and useless. This is where Microsoft understood
-                  the needs of modern businesses and introduced Business Central
-                  as an evolved version of Business Central in 2018.
-                </p>
-              </div>
-              <div className="iner-pp">
-                <img src="/img/chapter1-10.png" alt="Chapter 1 Understanding ERP and Business Central"  loading="lazy" decoding="async" />
-              </div>
-              <div className="cont-table-inner">
-                <p>
-                  MS Dynamics Business Central provides a unified platform to
-                  establish a strong connection between data and people.
-                  Specially built for SMBs, it offers incredible customisation
-                  to meet any kind of unique business needs. Such
-                  personalisation helps the business offer a great customer
-                  experience while improving business efficiency.
-                </p>
-                <p>
-                  Microsoft BC uses the latest technologies, including AI
-                  (artificial intelligence), ML (machine learning), big data,
-                  and <Link href="/products/microsoft-dynamics-365/mixed-reality/">mixed reality</Link>, to offer automation, eliminating most of
-                  the manual and recurring tasks from the system's complex data
-                  silos.{" "}
-                </p>
-                <p>
-                  Microsoft ERP provides unexceptional flexibility when it comes
-                  to deploying the servers of Microsoft BC. In the next section,
-                  we will learn about the different deployment options offered
-                  by <Link href="/products/microsoft-dynamics-365/">Microsoft Dynamics 365</Link> and which option is best for your
-                  business.
-                </p>
-              </div>
-              <div className="cont-table-inner">
-                <div className="ttx">Use Case:</div>
-                <div className="clint-qt">
-                  <img
-                    src="/img/quote-up@2x.png"
-                    alt=""
-                    className="left"
-                   aria-hidden="true"  loading="lazy" decoding="async" />
-                  <p>
-                    <span style={{ color: "#ee3442", fontWeight: "500" }}>
-                      Kambukka
+            </div>
+            {/* download banner: opens FormGuide's PDF form */}
+            <Link href="#powerBIModals" data-bs-toggle="modal" className={`${g.downloadBanner} ${g.chapterCta}`}>
+              <Image src={`/img/bc-guide-download-cta-${(i % 3) + 1}.png`} alt="Download the Business Central guide for SMBs as a PDF" width={1260} height={511} sizes="(max-width: 1199px) 100vw, 1100px" />
+            </Link>
+          </div>
+        </section>
+      ))}
+
+      {/* ===== FAQs ===== */}
+      <section id="faqs" className={`${s.block} ${s.anchor}`}>
+        <div className="container">
+          <div className="row gy-5">
+            <div className="col-lg-4">
+              <div className={s.faqAside}>
+                <h2 className={s.h2}>{FAQ_TITLE}</h2>
+                <div className={`${s.faqCtaCard} ${s.faqCtaCardFlat} text-center`}>
+                  <Image src="/img/MaskGroup8.png" alt="Business Central consultant" width={339} height={483} sizes="(max-width: 991px) 60vw, 240px" style={{ width: "60%", height: "auto", margin: "0 auto" }} />
+                  <Link href="#exampleModal" data-bs-toggle="modal" className="btn-get-started scrollto">
+                    <span>
+                      Book a Free Consultation &nbsp;<i className="bi bi-arrow-right"></i>
                     </span>
-                    , a Belgian premium brand, has implemented Business Central
-                    and integrated a Shopify store to streamline invoicing and
-                    update inventory in real-time.
-                  </p>
-                  <p>
-                    After implementation, the company is now able to check
-                    inventory levels and replenish them before products run out
-                    of stock. Also, it lets you understand the customer's
-                    preferences to provide a better experience.
-                  </p>
-                  <p>
-                    All of the changes brought about by Business Central enable
-                    the company to increase its sales every month while focusing
-                    on the needs of its customers.
-                  </p>
-                  <div className="text-right-t">
-                    <img
-                      src="/img/quote-down@2x.png"
-                      alt=""
-                      className="righ"
-                     aria-hidden="true"  loading="lazy" decoding="async" />
-                  </div>
+                  </Link>
                 </div>
               </div>
-              <div className="iner-pp">
-              <Link href="#powerBIModals" data-bs-toggle="modal">
-                  <img
-                    src="/img/business-guide-call-to-banner-1.png"
-                    alt="Chapter 2 Where Business Central can be Deployed?"  loading="lazy" decoding="async" />
-                </Link>
-              </div>
             </div>
-          </div>
-        </div>
-      </section>
-      <section id="tabs-2" className="col-yellow col-yel">
-        <div className="container">
-          <div className="row justify-content-center">
             <div className="col-lg-8">
-              <header className="section-header section-header-tabless">
-                <h2>
-                  <strong>Chapter 2</strong>Where Business Central can be
-                  Deployed?
-                </h2>
-                <p>
-                  In this chapter, we will understand the various deployment
-                  options and their fundamental differences.
-                </p>
-                <div className="balnde-imge-mode">
-                  <img
-                    src="/img/Business-Central-depolyed.png"
-                    alt="Chapter 2 Where Business Central can be Deployed?"
-                    className="shape-1 shape-2"  loading="lazy" decoding="async" />
-                  <img
-                    src="/img/over-lay-shape.png"
-                    alt=""
-                    className="overlay-1"
-                   aria-hidden="true"  loading="lazy" decoding="async" />
-                </div>
-              </header>
+              <FaqList items={FAQS} initialCount={8} step={8} />
             </div>
           </div>
         </div>
       </section>
-      <section className="color-whi">
+
+      {/* ===== Next steps ===== */}
+      <section id="next-steps" className={`${s.ctaBand} ${s.anchor}`}>
         <div className="container">
-          <div className="row justify-content-center g-4">
-            <div className="col-lg-12">
-              <div className="cont-table-inner">
-                <p>
-                  Generally, there are three deployment options available for
-                  all business needs, i.e., cloud, on-premises, and hybrid. You
-                  need to be proactive while selecting the best deployment
-                  option because it can enhance the overall efficiency of the
-                  business if chosen correctly. For example, if you choose
-                  on-premises deployment options but do not want to invest in a
-                  high initial cost, you are making the wrong decision.
-                  Likewise, if you have high security concerns and can't trust
-                  anyone when it comes to securing data at any cost, the cloud
-                  deployment option will be your only option.
-                </p>
+          <div className={g.nextBox}>
+            <div className="row align-items-center gy-4">
+              <div className="col-lg-7">
+                <h2 className={`${s.h2} ${s.h2Light}`}>{NEXT.title}</h2>
+                <p>{NEXT.intro}</p>
+                <p>{NEXT.lead}</p>
               </div>
-              <div className="iner-pp">
-                <img src="/img/chapter2-1.png" alt="Chapter 2 Where Business Central can be Deployed?"  loading="lazy" decoding="async" />
-              </div>
-              <div className="cont-table-inner">
-                <p>
-                  Microsoft understands both the business and its customers, and
-                  it offers solutions to meet all needs. You can choose any
-                  deployment option based on your business requirements,
-                  available resources, complexity of business operations, and
-                  much more.
-                </p>
-                <p>
-                  Before choosing a deployment option, you need to evaluate the
-                  following factors:{" "}
-                </p>
-                <ul>
-                  <li>
-                    Do your company's requirements change as the market and
-                    customer demands change?
-                  </li>
-                  <li>
-                    What suits you best—heavy initial and maintenance costs or
-                    recurring monthly payments?
-                  </li>
-                  <li>Do you have global operations?</li>
-                  <li>Do you have an in-house IT support team?</li>
-                </ul>
-                <p>
-                  Once you have an answer to these questions, you can proceed to
-                  understand the deployment options.
-                </p>
-                <p>
-                  <b className="h3-b">Cloud Deployment</b>
-                </p>
-                <p>
-                  Cloud deployment is the most cost-effective and flexible
-                  deployment option of all. One of the primary advantages of
-                  cloud deployment is that it allows users to stay connected to
-                  the servers 24 hours a day, seven days a week, and make
-                  actionable decisions based on real-time insights. Users can
-                  connect with the data using any device, whether it is a web
-                  browser or a designated app.
-                </p>
-              </div>
-              <div className="iner-pp">
-                <img src="/img/chapter2-2.png" alt="Chapter 2 Where Business Central can be Deployed?"  loading="lazy" decoding="async" />
-              </div>
-              <div className="cont-table-inner">
-                <p>It offers numerous benefits to users, which are:</p>
-                <ul>
-                  <li>
-                    Lower up-front cost - Due to monthly subscription-based
-                    model.
-                  </li>
-                  <li>Zero maintenance cost - Microsoft will manage it.</li>
-                  <li>
-                    Auto installation of updates and <Link href="/dynamics-nav-to-business-central/">upgrades</Link> - Microsoft will
-                    take care of it automatically.
-                  </li>
-
-                  <li>
-                    Suitable for all - Irrespective of business type and size.{" "}
-                  </li>
-                  <li>
-                    Secured servers - Fully secured servers and data centres
-                    with the trust of Microsoft.{" "}
-                  </li>
-                  <li>
-                    Real-time insights - Users can access the processes and
-                    operations anytime and from anywhere.{" "}
-                  </li>
-                  <li>
-                    Easy to Scale - Users can enhance the server's performance
-                    while adding more hardware easily.
-                  </li>
-                </ul>
-                <p>
-                  Microsoft Azure is the cloud deployment service available
-                  through a monthly subscription based on specific business
-                  requirements and the desired Business Central license. About
-                  licencing, we will read about it in the <Link href="/products/dynamics-365-business-central/pricing-licensing/">Business Central
-                  Pricing and Licensing</Link> section.
-                </p>
-                <p>
-                  <b className="h3-b">On-Premises Deployment</b>
-                </p>
-                <p>
-                  The on-premises deployment model has been around for a long
-                  time, and people still prefer it over other options when data
-                  security is a top priority. You can deploy it on your own
-                  servers, depending on your desired hardware and software
-                  specifications. To run the system 24×7, you will need a lot of
-                  resources, including IT support and other resources to support
-                  the entire system.
-                </p>
-              </div>
-              <div className="iner-pp">
-                <img src="/img/chapter2-3.png" alt="Chapter 2 Where Business Central can be Deployed?"  loading="lazy" decoding="async" />
-              </div>
-              <div className="cont-table-inner">
-                <p>Some of the on-premises deployment benefits are:</p>
-                <ul>
-                  <li>
-                    Personal servers: Own your personal IT infrastructure rather
-                    than relying on others.
-                  </li>
-                  <li>
-                    No internet dependency: Users can connect to the system at
-                    any time, but only on company premises.
-                  </li>
-                  <li>
-                    Total data control: Users control the data's ownership and
-                    secure it as required.
-                  </li>
-                  <li>
-                    Upgrade only when needed: You have the choice to upgrade and
-                    apply the latest changes whenever required.
-                  </li>
-                  <li>
-                    No subscription fee: There is no need to pay any fees
-                    because you have complete control over everything. You only
-                    have to deal with the software purchase and implementation
-                    costs.
-                  </li>
-                  <li>
-                    Easy customisations: You can personalise the software as
-                    desired.
-                  </li>
-                </ul>
-                <p>
-                  <b className="h3-b">Hybrid Deployment</b>
-                </p>
-                <p>
-                  The hybrid deployment has mixed capabilities of cloud as well
-                  as on-premises deployment options. It allows you to host a set
-                  of data on company premises and store the rest on cloud
-                  servers as per your requirements.{" "}
-                </p>
-              </div>
-
-              <div className="iner-pp">
-                <img src="/img/chapter2-4.png" alt="Chapter 2 Where Business Central can be Deployed?"  loading="lazy" decoding="async" />
-              </div>
-              <div className="cont-table-inner">
-                <p>
-                  <b>For example</b>, most secure data can be accessed in-house,
-                  whereas data required for global operations can be hosted on
-                  the cloud. It totally depends on you as well as your business
-                  requirements. Also, the hybrid deployment option allows the
-                  users to try out both deployments so that they can determine
-                  which is the best option as per their needs and later move the
-                  entire data to a specific deployment option.{" "}
-                </p>
-              </div>
-              <div className="iner-pp">
-                <img src="/img/chapter2-5.png" alt="Chapter 2 Where Business Central can be Deployed?"  loading="lazy" decoding="async" />
-              </div>
-              <div className="cont-table-inner">
-                <p>
-                  <b className="h3-b">
-                    Differences Between Cloud and On-Premises
-                  </b>
-                </p>
-                <p>
-                  In general, cloud deployment and on-premises deployment are
-                  totally different. Below, a few basic differences are given:{" "}
-                </p>
-              </div>
-              <div className="iner-pp">
-                <img src="/img/chapter2-6.png" alt="Chapter 2 Where Business Central can be Deployed?"  loading="lazy" decoding="async" />
-              </div>
-              <div className="cont-table-inner">
-                <p>
-                  <b className="h3-b">
-                    Where should I Host Dynamics 365 Business Central?{" "}
-                  </b>
-                </p>
-                <p>
-                  Until now, you should have a solid understanding of cloud,
-                  on-premises, and hybrid deployment options. You may be
-                  perplexed as to which of these is the best. Let me help you
-                  with this:
-                </p>
-                <p>
-                  <b>Select cloud deployment if:</b>
-                </p>
-                <ul>
-                  <li>
-                    You have global operations and want data availability 24x7.
-                  </li>
-                  <li>
-                    You don't have much money to pay for the initial costs.{" "}
-                  </li>
-                  <li>
-                    You don't have a special IT team to support similar
-                    operations.{" "}
-                  </li>
-                  <li>You've just started a business or are a startup. </li>
-                  <li>
-                    You want a personalised solution at a cost-effective price.{" "}
-                  </li>
-                  <li>You want an easily scalable system.</li>
-                </ul>
-                <p>
-                  <b>Choose on-premises deployment if:</b>
-                </p>
-                <ul>
-                  <li>
-                    You are a government or banking enterprise where data
-                    security is a critical concern.
-                  </li>
-                  <li>
-                    You have enough resources to implement and maintain a
-                    Microsoft ERP.
-                  </li>
-                  <li>
-                    You want to install updates and upgrades when required.
-                  </li>
-                  <li>
-                    You want only a few customisations that can be fulfilled by
-                    extensions.
-                  </li>
-                </ul>
-              </div>
-              <div className="cont-table-inner">
-                <div className="ttx">Use Case:</div>
-                <div className="clint-qt">
-                  <img
-                    src="/img/quote-up@2x.png"
-                    alt=""
-                    className="left"
-                   aria-hidden="true"  loading="lazy" decoding="async" />
-                  <p>
-                    <span style={{ color: "#ee3442", fontWeight: "500" }}>
-                      Liftstar Group
-                    </span>
-                    , a stairlift manufacturing company, has implemented
-                    Microsoft Dynamics 365 Business Central to lower processing
-                    costs while increasing service quality.
-                  </p>
-                  <p>
-                    They were looking for a robust business automation
-                    application to digitalise their existing processes and
-                    streamline their business flow. They were using NAV and
-                    upgraded the solution to Business Central to avail
-                    themselves of modern technologies.{" "}
-                  </p>
-                  <p>
-                    With Business Central, they integrated the agilesWorkflow
-                    add-on to make their core processes efficient and
-                    productive. They are now able to automate most of the bulky
-                    processes using predefined parameters and support them after
-                    reducing the throughput times.
-                  </p>
-                  <div className="text-right-t">
-                    <img
-                      src="/img/quote-down@2x.png"
-                      alt=""
-                      className="righ"
-                     aria-hidden="true"  loading="lazy" decoding="async" />
-                  </div>
+              <div className="col-lg-5">
+                <div className={g.nextVisual}>
+                  <Image src="/img/chapter7-6.png" alt="Dynamics 365 Business Central Role Centre on a laptop" width={1190} height={948} sizes="(max-width: 991px) 100vw, 440px" />
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-      <section id="tabs-3" className="col-yellow col-blue">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-8">
-              <header className="section-header section-header-tabless">
-                <h2>
-                  <strong>Chapter 3</strong>Business Central Benefits:
-                  <br />
-                  Discover Top Reasons why SMBs Choose It{" "}
-                </h2>
-                <p>
-                  In this chapter, we will understand the top benefit of
-                  Business Central and how they can help you grow.
-                </p>
-                <div className="balnde-imge-mode">
-                  <img
-                    src="/img/Business-Central-Benefits.png"
-                    alt="Chapter 3 Business Central Benefits: Discover Top Reasons why SMBs Choose It"
-                    className="shape-1 shape-2"  loading="lazy" decoding="async" />
-                  <img
-                    src="/img/over-lay-shape.png"
-                    alt=""
-                    className="overlay-1"
-                   aria-hidden="true"  loading="lazy" decoding="async" />
+            <div className={g.nextGrid}>
+              {NEXT.items.map((item, i) => (
+                <div className={g.nextCard} key={i}>
+                  <strong>{item.title}</strong>
+                  <p>{item.text}</p>
                 </div>
-              </header>
+              ))}
             </div>
+            <p className={g.nextContact}>{NEXT.contact}</p>
           </div>
         </div>
       </section>
-      <section className="color-whi">
-        <div className="container">
-          <div className="row justify-content-center g-4">
-            <div className="col-lg-12">
-              <div className="cont-table-inner">
-                <p>
-                  If you work for a small or medium-sized business, you may be
-                  wondering, "What can Dynamics 365 Business Central offer you?"
-                  The answer to this question is simple. It can optimise your
-                  existing processes, digitalise your core operations, enhance
-                  profitability, provide clear ways for seamless automation,
-                  reduce complexities, make your business adaptable for modern
-                  business needs, open scalability opportunities, and much more.
-                </p>
-                <p>
-                  Microsoft Business Central provides numerous benefits to SMBs
-                  while encouraging them to grow more quickly. Specially
-                  designed for small and medium businesses, it helps such
-                  industries create an ideal environment where data and people
-                  connect with each other to start a digital transformation
-                  journey. Some of the top benefits a user can avail while using
-                  Dynamics 365 Business Central are:
-                </p>
-              </div>
-
-              <div className="iner-pp">
-                <img src="/img/chapter3-1.png" alt="Chapter 3 Business Central Benefits: Discover Top Reasons why SMBs Choose It"  loading="lazy" decoding="async" />
-              </div>
-              <div className="cont-table-inner">
-                <p>
-                  <b className="h3-b">Global Connectivity</b>
-                </p>
-                <p>
-                  Microsoft recognised this modern-day need and provided cloud
-                  connectivity to connect and collaborate globally via
-                  cloud-based ERP. Users can connect to the system, processes,
-                  people, and data from anywhere, regardless of device or
-                  location boundaries, thanks to Business Central cloud
-                  deployment.
-                </p>
-              </div>
-              <div className="iner-pp">
-                <img src="/img/chapter3-2.png" alt="Chapter 3 Business Central Benefits: Discover Top Reasons why SMBs Choose It"  loading="lazy" decoding="async" />
-              </div>
-
-              <div className="cont-table-inner">
-                <p>
-                  Microsoft recognised this modern-day need and provided cloud
-                  connectivity to connect and collaborate globally via
-                  cloud-based ERP. Users can connect to the system, processes,
-                  people, and data from anywhere, regardless of device or
-                  location boundaries, thanks to Business Central cloud
-                  deployment.
-                </p>
-                <p>
-                  <b className="h3-b">Enjoy the Easy Scalability</b>
-                </p>
-                <p>
-                  One of the most appealing aspects of using a cloud-based ERP
-                  is the ability to scale hardware and software requirements on
-                  the fly. Based on your business growth, you can enhance the
-                  performance of your database as well as your business
-                  application to accelerate the growth of your business.
-                </p>
-                <p>
-                  <b className="h3-b">Avail the Automation</b>
-                </p>
-                <p>
-                  Automation makes the operations seamless. Microsoft Dynamics
-                  365 Business Central uses the power of AI, BI, and ML to
-                  provide automation capabilities to eliminate most of the
-                  manual and recurring tasks from the system. Even so, it
-                  provides many other features, including audit trails, easy
-                  workflows, and data encryption, to offer enhanced
-                  productivity.
-                </p>
-                <p>SMBs choose ERP systems over standalone platforms because</p>
-              </div>
-              <div className="iner-pp">
-                <img src="/img/chapter3-3.png" alt="Chapter 3 Business Central Benefits: Discover Top Reasons why SMBs Choose It"  loading="lazy" decoding="async" />
-              </div>
-              <div className="cont-table-inner">
-                <p>
-                  <b className="h3-b">Get Data on the Move</b>
-                </p>
-                <p>
-                  <Link href="/products/microsoft-dynamics-erp/">Microsoft ERP</Link> (BC) offers a unified data platform to connect
-                  the data of all departments to provide real-time visibility of
-                  all processes, enabling users to take data-based actionable
-                  decisions. You can use this data to prevent problems in real
-                  time and generate more ROI as expected.
-                </p>
-              </div>
-              <div className="iner-pp">
-                <img src="/img/chapter3-4.png" alt="Chapter 3 Business Central Benefits: Discover Top Reasons why SMBs Choose It"  loading="lazy" decoding="async" />
-              </div>
-              <div className="cont-table-inner">
-                <p>
-                  <b className="h3-b">Personalise the System</b>
-                </p>
-                <p>
-                  As per the uniqueness of the business, you can easily
-                  customise the business application to align it with your
-                  business requirements and make the application work for you
-                  even in tough times. Using extensions, add-ons, and
-                  integrations, you can easily modify Business Central to fit
-                  your business.
-                </p>
-                <p>
-                  <b className="h3-b">Track each Moment of Project</b>
-                </p>
-                <p>
-                  Project tracking in real-time enables users to take data-based
-                  actionable decisions whenever they find any kind of error in
-                  the whole process. Also, it enhances the productivity,
-                  optimises the processes, and leads the project towards great
-                  profitability.
-                </p>
-                <p>
-                  For each project, it creates a timeline and informs the user
-                  about the status in real-time, making it easy for users to
-                  create and share reports. This enabled them to manage and
-                  distribute resources as well as the budget in order to produce
-                  more with fewer resources.
-                </p>
-                <p>
-                  <b className="h3-b">Get your Data fully Secured</b>
-                </p>
-                <p>
-                  With Microsoft's trust, whether you save your data to the
-                  cloud or on-premises, your data will be safe and fully
-                  protected from the outside world. Also, it lets you decide the
-                  data access for employees while sharing data with the assigned
-                  person only.
-                </p>
-                <p>
-                  Modern businesses' most valuable asset is data. This
-                  application is so powerful that it respects the privacy of its
-                  customers and adheres to international GDPR compliance to
-                  ensure data security for all.{" "}
-                </p>
-              </div>
-              <div className="iner-pp">
-                <img src="/img/chapter3-5.png" alt="Chapter 3 Business Central Benefits: Discover Top Reasons why SMBs Choose It"  loading="lazy" decoding="async" />
-              </div>
-              <div className="cont-table-inner">
-                <p>
-                  <b className="h3-b">Keep Updating and Upgrading</b>
-                </p>
-                <p>
-                  The ways of doing business change over time due to the
-                  influence of technology, innovation, the environment, and
-                  complexity. The only solution is to keep adapting, updating,
-                  and upgrading with time; otherwise, you are going to be left
-                  out.
-                </p>
-              </div>
-
-              <div className="iner-pp">
-                <img src="/img/chapter3-6.png" alt="Chapter 3 Business Central Benefits: Discover Top Reasons why SMBs Choose It"  loading="lazy" decoding="async" />
-              </div>
-              <div className="cont-table-inner">
-                <p>
-                  Microsoft is so futuristic that it makes products adaptable
-                  for all changes, whether small or big, based on the urgency of
-                  the requirement. Business Central ERP is one such product that
-                  allows its users to keep growing while adapting the latest
-                  technologies. Whenever a new update, upgrade, or change is
-                  available, Microsoft will ensure that it is implemented
-                  successfully without hampering your existing process. Plus, it
-                  offers you the flexibility to start with the current
-                  requirements and scale as your business grows.
-                </p>
-              </div>
-
-              <div className="cont-table-inner">
-                <div className="ttx">Use Case:</div>
-                <div className="clint-qt">
-                  <img
-                    src="/img/quote-up@2x.png"
-                    alt=""
-                    className="left"
-                   aria-hidden="true"  loading="lazy" decoding="async" />
-                  <p>
-                    <span style={{ color: "#ee3442", fontWeight: "500" }}>
-                      Leysieffer GmbH & Co.
-                    </span>{" "}
-                    KG, a traditional confectionery company, was using an
-                    ineffective and outdated legacy ERP system. Due to
-                    unimaginable situations like lockdown, the global health
-                    crisis, and more, they understood the importance of an
-                    e-commerce solution to manage online as well as in-store
-                    sales. They want all processes to be transparent, and they
-                    want to use automation to get the manual processes done
-                    automatically. All these issues led them to implement a
-                    centralised ERP system.{" "}
-                  </p>
-                  <p>
-                    They implemented Microsoft Dynamics 365 Business Central in
-                    the cloud to resolve all their current business management
-                    issues. After implementation, they are now able to manage
-                    the entire business using a single centralised dashboard.
-                    Within a few years, the company registered a{" "}
-                    <b>300% growth</b> in online sales.
-                  </p>
-                  <div className="text-right-t">
-                    <img
-                      src="/img/quote-down@2x.png"
-                      alt=""
-                      className="righ"
-                     aria-hidden="true"  loading="lazy" decoding="async" />
-                  </div>
-                </div>
-              </div>
-              <div className="iner-pp">
-              <Link href="#powerBIModals" data-bs-toggle="modal">
-                  <img
-                    src="/img/business-guide-call-to-banner-2.png"
-                    alt="Chapter 4 Business Central Capabilities: Accelerate your Business Growth using Existing Resources"  loading="lazy" decoding="async" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="tabs-4" className="col-yellow col-red">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-8">
-              <header className="section-header section-header-tabless">
-                <h2>
-                  <strong>Chapter 4</strong>Business Central Capabilities:
-                  <br />
-                  Accelerate your Business Growth using Existing Resources{" "}
-                </h2>
-                <p>
-                  In this chapter, we will understand the core capabilities of
-                  Business Central offered for all SMBs.
-                </p>
-                <div className="balnde-imge-mode">
-                  <img
-                    src="/img/Busines-cent-Accelerate.png"
-                    alt="Chapter 4 Business Central Capabilities: Accelerate your Business Growth using Existing Resources"
-                    className="shape-1 shape-2"  loading="lazy" decoding="async" />
-                  <img
-                    src="/img/over-lay-shape.png"
-                    alt=""
-                    className="overlay-1"
-                   aria-hidden="true"  loading="lazy" decoding="async" />
-                </div>
-              </header>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="color-whi">
-        <div className="container">
-          <div className="row justify-content-center g-4">
-            <div className="col-lg-12">
-              <div className="cont-table-inner">
-                <p>
-                  Microsoft BC connects all department and offers numerous
-                  capabilities to SMBs ensuring their sustainable growth while
-                  generating more revenue. It is a SMB-centric business
-                  application that understand the working of a business and
-                  thereafter provides reliable solution to get the business
-                  going in tough times too. Business Central or D365 BC offers
-                  below capabilities to such businesses which are:{" "}
-                </p>
-              </div>
-
-              <div className="iner-pp">
-                <img src="/img/chapter4-2.png" alt="Chapter 4 Business Central Capabilities: Accelerate your Business Growth using Existing Resources"  loading="lazy" decoding="async" />
-              </div>
-              <div className="iner-pp">
-                <img src="/img/chapter4-1.png" alt="Chapter 4 Business Central Capabilities: Accelerate your Business Growth using Existing Resources"  loading="lazy" decoding="async" />
-              </div>
-              <div className="cont-table-inner">
-                <p>
-                  <b className="h3-b">Financial Management</b>
-                </p>
-                <p>
-                  Managing the finances of an organisation and simplifying its
-                  data is one of the most critical and important tasks to
-                  perform. Irrespective of the efforts an SMB puts in to manage
-                  such operations, a number of irregularities still appear at
-                  the end, like recurring data, low team collaboration,
-                  disconnected departments, and more.{" "}
-                </p>
-                <p>
-                  When it comes to offering a unified platform where all data
-                  can be stored and accessed easily, there is nothing better
-                  than Business Central; Microsoft’s top business application
-                  for SMBs.
-                </p>
-                <p>
-                  It connects the data across various sections of the finance
-                  department, including accounting, inventory, purchase, sales,
-                  and invoices. Even so, it boosts the entire financial
-                  transaction while providing accurate reporting based on the
-                  data captured from accounts.
-                </p>
-                <p>
-                  <b>Some of the features of financial management are:</b>
-                </p>
-                <ul>
-                  <li>
-                    Access built-in reports to view data in charts and reports.
-                  </li>
-                  <li>Make data-based, actionable decisions in real-time. </li>
-                  <li>
-                    Avail the accounts receivable and payable capabilities while
-                    boosting reporting.
-                  </li>
-                  <li>
-                    Access the General Ledger module to accelerate financial
-                    and accounting performance.
-                  </li>
-                  <li>
-                    Analyze the challenges, costs, and revenue using the
-                    Accounting module.{" "}
-                  </li>
-                </ul>
-                <p>
-                  <b>Some of the core Financial Management modules are:</b>
-                </p>
-                <div className="row">
-                  <div className="col-lg-6">
-                    <ul>
-                      <li>Budgets </li>
-                      <li>Account Schedules</li>
-                      <li>Consolidation</li>
-                      <li>Intercompany Postings</li>
-                      <li>Cash Flow Forecast </li>
-                      <li>Fixed Assets </li>
-                      <li>General Ledger </li>
-                      <li>Dimensions </li>
-                      <li>Multiple Currencies </li>
-                    </ul>
-                  </div>
-                  <div className="col-lg-6">
-                    <ul>
-                      <li>Fixed Assets Allocation </li>
-                      <li>Bank Account Reconciliation </li>
-                      <li>Check Writing </li>
-                      <li>Bank Account Management </li>
-                      <li>Electronic Payments and Direct Debits </li>
-                      <li>Easy Payment Process for customers </li>
-                      <li>Fixed Assets - Insurance </li>
-                      <li>Fixed Assets - Maintenance </li>
-                      <li>Cost Accounting</li>
-                    </ul>
-                  </div>
-                </div>
-                <p>
-                  <b className="h3-b">Supply Chain Management</b>
-                </p>
-                <p>
-                  Business Central Supply Chain Management functionality offers
-                  top-notch functionality to efficiently manage the core
-                  business processes, from ordering the raw material to
-                  successful deliveries. It allows the organisations to capture
-                  each detail of a product while delivering it on time,
-                  resulting in higher customer engagement and full satisfaction.
-                </p>
-                <p>
-                  Some of the core business central supply chain management
-                  feature include:
-                </p>
-                <ul>
-                  <li>
-                    Built-in intelligence enables stock forecasting to fill them
-                    before a particular product goes out-of-stock.{" "}
-                  </li>
-                  <li>
-                    Get an overview of the entire inventory in real-time to get
-                    updates about each process in action.
-                  </li>
-                  <li>
-                    The cycling counting module allows you to track each item
-                    moving from one location to another.
-                  </li>
-                  <li>
-                    Collaborate with vendors, manufacturers, and suppliers to
-                    reduce gaps in communication.
-                  </li>
-                  <li>Modify the internal system based on compliance.</li>
-                </ul>
-                <p>
-                  <b className="h3-b">
-                    Some of the core Financial Management modules are:
-                  </b>
-                </p>
-                <div className="row">
-                  <div className="col-lg-6">
-                    <ul>
-                      <li>Vendor Catalog Items </li>
-                      <li>Basic Inventory </li>
-                      <li>Item Categories </li>
-                      <li>Item Changes </li>
-                      <li>Item Cross References </li>
-                      <li>Item Substitutions </li>
-                      <li>Purchase Invoice Discounts </li>
-                      <li>Purchase Line Discounting </li>
-                      <li>Alternative Vendors </li>
-                      <li>Purchase Invoicing </li>
-                      <li>Purchase Order Management </li>
-                      <li>Purchase Return Order Management </li>
-                      <li>Alternative Order Addresses </li>
-                      <li>Location Transfers</li>
-                    </ul>
-                  </div>
-                  <div className="col-lg-6">
-                    <ul>
-                      <li>Shipping Agents </li>
-                      <li>Calendars </li>
-                      <li>Item Attributes </li>
-                      <li>Item Tracking </li>
-                      <li>Multiple Locations </li>
-                      <li>Stock-Keeping Units </li>
-                      <li>Item Budgets </li>
-                      <li>Analysis Reports </li>
-                      <li>Cycle Counting </li>
-                      <li>Supply Planning </li>
-                      <li>Demand Forecasting </li>
-                      <li>Sales Forecasting </li>
-                      <li>Order Promising </li>
-                      <li>Drop Shipments </li>
-                      <li>Order Planning</li>
-                    </ul>
-                  </div>
-                </div>
-                <p>
-                  <b className="h3-b">Sales Management</b>
-                </p>
-                <p>
-                  Efficient sales management in an organisation opens up more
-                  opportunities for generating revenue from existing operations.
-                  The sales management module of Dynamics 365 Business Central
-                  enables users to follow effective sales and marketing
-                  practices, resulting in a smoother and more seamless sales
-                  journey.
-                </p>
-                <p>
-                  <b>
-                    Some of the core business central sales management feature
-                    include:
-                  </b>
-                </p>
-                <ul>
-                  <li>
-                    Capture data on all leads and prioritise them based on lead
-                    conversion possibilities.
-                  </li>
-                  <li>
-                    Suggest cross-selling and up-selling opportunities to new
-                    customers.{" "}
-                  </li>
-                  <li>
-                    Offer flexible pricing and discounts to new as well as old
-                    customers to generate more revenue.{" "}
-                  </li>
-                  <li>
-                    Create invoices, sales agreements, and contracts for the
-                    customers automatically.{" "}
-                  </li>
-                  <li>
-                    Track customer returns, replacements, and repairs with
-                    real-time data.
-                  </li>
-                </ul>
-                <p>
-                  <b className="h3-b">
-                    Some of the core sales management modules are:
-                  </b>
-                </p>
-                <ul>
-                  <li>Opportunity Management </li>
-                  <li>Microsoft Dynamics Sales Integration </li>
-                  <li>Sales Invoicing </li>
-                  <li>Contact Management </li>
-                  <li>Campaign Management </li>
-                  <li>Interaction & Document Management </li>
-                  <li>Sales Invoice Discounts </li>
-                  <li>Alternative Shipping Addresses </li>
-                  <li>Sales Return Order Management </li>
-                  <li>Sales Order Management </li>
-                  <li>Sales Line Pricing & Distribution </li>
-                  <li>Campaign Pricing </li>
-                </ul>
-                <p>
-                  <b className="h3-b">Service Management </b>
-                </p>
-                <p>
-                  Providing customers with seamless services allows a company to
-                  earn more revenue while also increasing customer satisfaction.
-                  The Business Central Service Management module offers such
-                  functions and tools to offer a seamless service experience to
-                  all customers. Users can avail of these services to simplify
-                  the entire service distribution system while providing optimum
-                  customer satisfaction.
-                </p>
-                <p>
-                  <b>
-                    Some of the core business central service management
-                    features include:
-                  </b>
-                </p>
-                <ul>
-                  <li>
-                    Provides an overview of all service personnel along with
-                    their assigned tasks.
-                  </li>
-                  <li>
-                    Track and deliver service agreements to customers whenever
-                    required.{" "}
-                  </li>
-                  <li>
-                    Resolve after-sales issues depending on the situation.{" "}
-                  </li>
-                  <li>
-                    Track and manage service items or shipped goods from sales
-                    to after-sales service to make the entire process smooth and
-                    simple.{" "}
-                  </li>
-                  <li>
-                    Tracks all aspects of a service, including spare parts,
-                    service items, labour charges, technician information,
-                    support ticket status, and much more.
-                  </li>
-                </ul>
-                <p>
-                  <b>Some of the service management modules are:</b>
-                </p>
-                <ul>
-                  <li>Planning and Dispatching</li>
-                  <li>Service Item Management </li>
-                  <li>Service Contract Management </li>
-                  <li>Service Order Management</li>
-                  <li>Service Price Management</li>
-                </ul>
-                <p>
-                  <b className="h3-b">Project Management </b>
-                </p>
-                <p>
-                  Project management in a business is crucial to delivering a
-                  particular project on time and earning a strong customer
-                  experience.It includes a lot of tasks, including scheduling a
-                  resource, managing budgets, tracking progress in real-time,
-                  structuring a project, managing a timesheet, allocating basic
-                  resources, and generating reports.{" "}
-                </p>
-                <p>
-                  <b>
-                    Some of the core business central project management
-                    features are:
-                  </b>
-                </p>
-                <ul>
-                  <li>Offers advanced reporting capabilities.</li>
-                  <li>
-                    Utilise timesheets to track and manage each milestone of a
-                    project.
-                  </li>
-                  <li>
-                    Track and modify budgets in real-time for maximised revenue
-                    with limited resources.
-                  </li>
-                  <li>
-                    Tracks and creates customer invoices based on quotes and
-                    actual costs.
-                  </li>
-                  <li>
-                    Pushes resources to deliver a project before its deadline
-                    while being profitable.
-                  </li>
-                </ul>
-                <p>
-                  <b>Some of the project management modules are:</b>
-                </p>
-                <ul>
-                  <li>Multiple Costs </li>
-                  <li>Capacity Management</li>
-                  <li>Basic Resources</li>
-                  <li>Timesheets</li>
-                  <li>Jobs</li>
-                </ul>
-                <p>
-                  <b className="h3-b">Manufacturing</b>
-                </p>
-                <p>
-                  The Manufacturing module of Business Central tracks the status
-                  of all products, from raw materials to the final product,
-                  during the entire manufacturing process. This module lets you
-                  streamline all aspects of the manufacturing processes,
-                  including planning, scheduling, distribution, and inventory
-                  while simplifying the entire process.{" "}
-                </p>
-                <p>
-                  <b>
-                    Some of the core business central manufacturing features
-                    include:
-                  </b>
-                </p>
-                <ul>
-                  <li>
-                    Enables businesses to use limited resources to restrict
-                    over-manufacturing based on capacity.{" "}
-                  </li>
-                  <li>
-                    Execute the necessary manufacturing process even in odd
-                    situations.
-                  </li>
-                  <li>
-                    Tracks all data, including raw materials, resources,
-                    sub-parts, and the final product's production limit.{" "}
-                  </li>
-                  <li>
-                    Tracks raw material consumption, output, waste, and other
-                    parameters to calculate the ROI.
-                  </li>
-                  <li>
-                    Create reports based on post-production results and update
-                    inventory accordingly.{" "}
-                  </li>
-                </ul>
-                <p>
-                  <b>Some of the Business Central Manufacturing modules are:</b>
-                </p>
-                <ul>
-                  <li>Version Management</li>
-                  <li>Production Orders</li>
-                  <li>Finite Loading</li>
-                  <li>Assembly Management</li>
-                  <li>Standard Cost Worksheet</li>
-                  <li>Production Bill of Materials</li>
-                  <li>Basic Capacity Planning</li>
-                  <li>Machine Centers</li>
-                </ul>
-                <p>
-                  <b className="h3-b">Warehouse Management</b>
-                </p>
-                <p>
-                  There are several processes that come in between receiving
-                  goods in a warehouse and shipping them out for distribution or
-                  deliveries. Business central warehouse management manages such
-                  goods for an efficient product flow from finalised product to
-                  delivering it to the right person. It consists of a number of
-                  tasks, including moving items between the warehouse, tracking
-                  item location, collecting items for production and
-                  distribution, counting stocks, and reclassifying products
-                  based on certain parameters.
-                </p>
-                <p>
-                  <b>
-                    Some of the core business central warehouse management
-                    features include:
-                  </b>
-                </p>
-                <ul>
-                  <li>
-                    Avail real-time data about product location, quantity, and
-                    zone to make data-driven decisions.
-                  </li>
-                  <li>
-                    Optimise the space to make more room for new items while
-                    increasing shipment.{" "}
-                  </li>
-                  <li>
-                    Streamline the cross-docking process and efficiently ship
-                    different items to different vendors.
-                  </li>
-                  <li>
-                    Classify items based on category, size, type, colour, and
-                    other parameters to effectively manage the receiving and
-                    storage of items.
-                  </li>
-                  <li>
-                    Optimise the entire warehouse storage capacity using the
-                    digital layout.
-                  </li>
-                </ul>
-                <p>
-                  <b>
-                    Some of the Business Central Warehouse Management modules
-                    are:
-                  </b>
-                </p>
-                <ul>
-                  <li>Warehouse Management Systems</li>
-                  <li>Internal Picks and Put-Aways</li>
-                  <li>Inventory Pick & Inventory Put Away</li>
-                  <li>Warehouse Receipt</li>
-                  <li>Warehouse Shipment</li>
-                  <li>Bin</li>
-                  <li>Bin Setup</li>
-                </ul>
-                <p>
-                  <b>How to manage complex warehouse processes?</b>
-                </p>
-                <p>
-                  Many businesses have huge warehouses to manage all their
-                  products and their storage requirements. Managing the
-                  processes of such a warehouse using a basic or standard
-                  solution is really a challenge.
-                </p>
-                <p>
-                  For such businesses, Business Central allows the integration
-                  of Mobile WMS from Tasklet Factory to accelerate the standard
-                  warehouse functions and make the processes more efficient and
-                  effective. Mobile WMS is capable of optimising the existing
-                  processes while providing access to an attractive graphical
-                  user-interface. If you want to learn more about <Link href="/wms-for-business-central/">Mobile WMS for Business central</Link> and
-                  how it can help you manage your specific warehouse operations,
-                  our consultants can help.
-                </p>
-                <p>
-                  <a href="/contact-us">Contact us now and let gets started.</a>
-                </p>
-                <p>
-                  <b className="h3-b">Human Resource </b>
-                </p>
-                <p>
-                  Managing human resources in an organisation is one of the
-                  crucial tasks that must be managed efficiently to retain,
-                  attract, and develop the employees. It simplifies complicated
-                  HR processes for the benefit of administrative personnel. With
-                  accurate data reporting, admin staff can access the employee
-                  data anytime, track attendance, manage absences, maintain the
-                  employee record, and much more.
-                </p>
-                <p>
-                  <b>
-                    Some of the core Business Central Human Resource features
-                    include:
-                  </b>
-                </p>
-                <ul>
-                  <li>
-                    It lets you track each employee's efficiency and performance
-                    on a monthly basis.
-                  </li>
-                  <li>
-                    Offers detailed record of each employee, including
-                    contracts, qualifications, and other confidential
-                    information.
-                  </li>
-                  <li>
-                    Manage and track the absence and presence of all employees
-                    automatically.
-                  </li>
-                  <li>
-                    Enhances employees' personal development while tracking the
-                    learning and training sessions.
-                  </li>
-                  <li>
-                    You can avail seamless reporting, as it offers 13 different
-                    kinds of report generation and can be later exported to
-                    Excel.
-                  </li>
-                </ul>
-                <p>
-                  <b>Some of Business Central Human Resource modules are:</b>
-                </p>
-                <ul>
-                  <li>Human Resource Setup</li>
-                  <li>People Management</li>
-                  <li>Cause of Inactivity</li>
-                  <li>Unions</li>
-                  <li>Benefit Management</li>
-                  <li>Employment Contracts</li>
-                  <li>Compensation Management</li>
-                  <li>Employee Development </li>
-                  <li>Employee Statistics</li>
-                </ul>
-                <p>
-                  <b className="h3-b">Expense Management</b>
-                </p>
-                <p>
-                  Tracking and calculating employee expenses is a cumbersome
-                  process, but businesses still have to deal with it. It might
-                  be that you belong to an organisation where there is a need
-                  for advanced expense management to streamline all complex
-                  expenses. In such a scenario, Continia can help you out.
-                </p>
-                <p>
-                  Continia is an advanced expense management application built
-                  specially for NAV and Business Central to eliminate the need
-                  for a specific solution while managing all employees'
-                  expenses. It integrates as an add-on on all deployment
-                  options.
-                </p>
-                <p>Key features of Continia:</p>
-                <ul>
-                  <li>
-                    The integration of Google Maps allows users to specify the
-                    starting and ending points of a journey, resulting in the
-                    automatic calculation of the journey cost.
-                  </li>
-                  <li>
-                    Continia can be assessed using any mobile application,
-                    whether for iOS or Android.
-                  </li>
-                  <li>
-                    Users can submit the expense details in real-time and also
-                    upload receipts online.
-                  </li>
-                  <li>
-                    It cross-checks the transactions with the receipts and
-                    notifies the user about any missing or flagged receipts.
-                  </li>
-                  <li>
-                    Once the details of the expense are submitted, the user will
-                    get the real-time status of approval, disapproval, comments,
-                    clarification, and more.
-                  </li>
-                </ul>
-                If you want to know how Continia can streamline all expense
-                management tasks of your employees while saving a lot of
-                company's money,{" "}
-                <Link href="/contact-us/">
-                  contact Dynamics Square
-                </Link>
-                .
-              </div>
-
-              <div className="cont-table-inner">
-                <div className="ttx">Use Case:</div>
-                <div className="clint-qt">
-                  <img
-                    src="/img/quote-up@2x.png"
-                    alt=""
-                    className="left"
-                   aria-hidden="true"  loading="lazy" decoding="async" />
-                  <p>
-                    <span style={{ color: "#ee3442", fontWeight: "500" }}>
-                      Ultimation Industries
-                    </span>
-                    , a leading conveyer manufacturer, has upgraded their
-                    on-premises SAGE ERP system to Microsoft Dynamics 365
-                    Business Central to upgrade their <Link href="/products/microsoft-dynamics-crm/">CRM system</Link>.{" "}
-                  </p>
-                  <p>
-                    Their business is growing, and managing it using an
-                    on-premises solution is becoming more difficult day by day.
-                    The business has an urgent need for automation and needs a
-                    number of customisations to meet its modern requirements.
-                  </p>
-                  <p>
-                    With the migration from SAGE to Business Central (cloud
-                    deployment), they can now streamline their financial tasks
-                    using automation, like prepayments and bank account
-                    reconciliation using Avalara tax extensions. Also, they
-                    integrated Business Central with Microsoft native
-                    applications, including Excel, <Link href="/products/microsoft-power-bi/">Power BI</Link>, and Outlook, to
-                    enhance efficiency and productivity.
-                  </p>
-                  <div className="text-right-t">
-                    <img
-                      src="/img/quote-down@2x.png"
-                      alt=""
-                      className="righ"
-                     aria-hidden="true"  loading="lazy" decoding="async" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="tabs-5" className="col-yellow col-per">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-8">
-              <header className="section-header section-header-tabless">
-                <h2>
-                  <strong>Chapter 5</strong>Microsoft Business Central Pricing
-                  and Licensing: Cost-effective and Efficient
-                </h2>
-                <p>
-                  In this chapter, we will get to know the current pricing and
-                  licensing plans of Business Central.
-                </p>
-                <div className="balnde-imge-mode">
-                  <img
-                    src="/img/PowerBi-Licensing.png"
-                    alt="Power BI Versions, Pricing, and Licensing"
-                    className="shape-1 shape-2"
-                   loading="lazy" decoding="async" />
-                  <img
-                    src="/img/over-lay-shape.png"
-                    alt=""
-                    className="overlay-1"
-                   aria-hidden="true"  loading="lazy" decoding="async" />
-                </div>
-              </header>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="color-whi">
-        <div className="container">
-          <div className="row justify-content-center g-4">
-            <div className="col-lg-12">
-              <div className="cont-table-inner">
-                <p>
-                  Microsoft Dynamics 365 Business Central is one of the most
-                  cost-effective, reliable, productive, and efficient ERP
-                  solutions for small and midsized businesses. Earlier, NAV
-                  (previous version of BC) had to invest a lot of money in
-                  setting up and maintaining the ERP because of the on-premises
-                  deployment option. However, following the major update in
-                  2018, Microsoft now offers an updated version of NAV with
-                  cloud deployment via a monthly subscription. It is now
-                  low-cost and has straightforward licencing options.
-                </p>
-                <p>
-                  <b className="h3-b">
-                    Dynamics 365 Business Central Licensing Plans
-                  </b>
-                </p>
-                <p>
-                  Business Central is one of the applications from Microsoft
-                  Dynamics 365 (a group of ERP and CRM applications) that can be
-                  accessed using a unified Dynamics 365 license. Also, you can
-                  access the separate apps of this suite by purchasing a
-                  separate Business Central license. Moreover, you can check out
-                  the <Link href="https://blog.dynamicssquare.co.uk/dynamics-365-pricing-and-licensing/">Microsoft Dynamics 365 pricing</Link> to get more information.
-                </p>
-                <p>
-                  When it comes to Business Central licensing, the user
-                  subscriptions are classified into two types:
-                </p>
-              </div>
-
-              <div className="iner-pp">
-                <img src="/img/chapter5-1.png" alt="Chapter 5 Microsoft Business Central Pricing and Licensing: Cost-effective and Efficient"  loading="lazy" decoding="async" />
-              </div>
-              <div className="cont-table-inner">
-                <p>
-                  <b className="h3-b">Full Users</b>
-                </p>
-                <p>
-                  Those users who require access to the total functionality of
-                  the Business Central features and capabilities fall under
-                  "full user" licensing. Such users are:
-                </p>
-                <ul>
-                  <li> Sales Employees</li>
-                  <li>Customer Service Representative</li>
-                  <li>Finance Employees</li>
-                  <li>Supply Chain Managers</li>
-                </ul>
-                <p>
-                  In the Full User subscription, there are two kinds of licences
-                  available: Essentials and Premium.
-                </p>
-              </div>
-              <div className="iner-pp">
-                <img src="/img/chapter5-2.png" alt="Chapter 5 Microsoft Business Central Pricing and Licensing: Cost-effective and Efficient"  loading="lazy" decoding="async" />
-              </div>
-              <div className="cont-table-inner">
-                <p>
-                  <b className="h3-b">Additional Users </b>
-                </p>
-                <p>
-                  The users with restricted access to use Business Central are
-                  considered as Additional Users. They can be the ones who
-                  perform tasks, like consuming reports, feeding data, doing
-                  basic or recurring tasks, and much more. Furthermore, such
-                  users may be required to perform a specific task only with
-                  complexities.
-                </p>
-                <p>
-                  In the Additional Users subscription, there is only one
-                  licence available: Team Members
-                </p>
-                <p>
-                  <b className="h3-b">
-                    Dynamics 365 Business Central Team Member License
-                  </b>
-                </p>
-                <p>
-                  The Team Member licence is the basic licence offered to
-                  Business Central users. It comes with limited and restricted
-                  access and offers only limited functionality of MS Dynamics
-                  365 BC. Such users can collect and perform a specific task,
-                  like data upload, data entry, report sharing, and much more.
-                </p>
-                <p>
-                  <b>Business Central Team Member License users can:</b>
-                </p>
-                <ul>
-                  <li>Read and update the data.</li>
-                  <li>Update tasks in workflows.</li>
-                  <li>
-                    Edit, create, update, and delete a quote given to a
-                    customer.
-                  </li>
-                  <li>
-                    Edit, create, update, and delete the personal information.
-                  </li>
-                  <li>Create and edit time sheets for further approval.</li>
-                </ul>
-                <p>
-                  <b className="h3-b">
-                    Dynamics 365 Business Central Essential License
-                  </b>
-                </p>
-                <p>
-                  The Essential licence provides users with almost all features
-                  and functionality. Such users can access anything they need to
-                  access the full functionalities of MS D365 BC to efficiently
-                  run a small business.{" "}
-                </p>
-                <p>
-                  <b>
-                    Business Central Essential license users can use the below
-                    capabilities:
-                  </b>
-                </p>
-                <ul>
-                  <li>Human Resources Management</li>
-                  <li>Financial Management</li>
-                  <li>Customer Relationship Management</li>
-                  <li>Project Management</li>
-                  <li>Supply Chain Management</li>
-                  <li>E-Services</li>
-                  <li>Warehouse Management</li>
-                </ul>
-                <p>
-                  <b className="h3-b">
-                    Dynamics 365 Business Central Premium License
-                  </b>
-                </p>
-                <p>
-                  Users of the Business Central Premium licence can access more
-                  capabilities than Essential licence users. Comparatively, it
-                  is costlier than the rest of the user-subscription licenses.
-                  Other than the basis for Business Central capabilities, it
-                  offers:{" "}
-                </p>
-              </div>
-              <div className="iner-pp">
-                <img src="/img/chapter5-3.png" alt="Chapter 5 Microsoft Business Central Pricing and Licensing: Cost-effective and Efficient"  loading="lazy" decoding="async" />
-              </div>
-              <div className="cont-table-inner">
-                <p>
-                  <b className="h3-b">
-                    Microsoft Dynamics 365 Business Central Pricing UK
-                  </b>
-                </p>
-              </div>
-              <div className="iner-pp">
-                <img src="/img/chapter5-6.png" alt="Chapter 5 Microsoft Business Central Pricing and Licensing: Cost-effective and Efficient"  loading="lazy" decoding="async" />
-              </div>
-              <div className="cont-table-inner">
-                <p>
-                  <b className="h3-b">
-                    Major Cost Benefits of moving to Business Central Cloud
-                  </b>
-                </p>
-                <p>
-                  For the sake of reliability and scalability, all SMBs are
-                  moving towards cloud-based Business Central to enhance overall
-                  efficiency, avail data 24x7, make it easy to scale, and
-                  deliver unmatched high performance to mould the business and
-                  generate sustainable revenue.
-                </p>
-                <p>
-                  Not only this, but there is also one more major benefit of
-                  moving to the cloud: it saves a lot of money, as Business
-                  Central offers significantly lower upfront and operating costs
-                  when compared with the traditional mode of deployment, i.e.,
-                  on-premises deployment.
-                </p>
-                <p>
-                  If you opt for Business Central in the cloud, you can save a
-                  lot of money by various means:
-                </p>
-              </div>
-              <div className="iner-pp">
-                <img src="/img/chapter5-4.png" alt="Chapter 5 Microsoft Business Central Pricing and Licensing: Cost-effective and Efficient"  loading="lazy" decoding="async" />
-              </div>
-              <div className="cont-table-inner">
-                <p>
-                  <b className="h3-b">Low Maintenance Cost</b>
-                </p>
-                <p>
-                  This is one of the best parts of being a cloud-based ERP user.
-                  If you are opting for Business Central, Microsoft will take
-                  care of all routine maintenance, patches, and fixes
-                  automatically. In the entire scenario, you do not require an
-                  IT staff to maintain the server and database. All kinds of
-                  maintenance will be done by Microsoft without any extra cost.
-                </p>
-                <p>
-                  <b className="h3-b">Low Cost of Ownership</b>
-                </p>
-                <p>
-                  Due to cloud-based data servers, you don't need to worry about
-                  building server infrastructure, which costs a tonne of money.
-                </p>
-                <p>
-                  Even when businesses grow, the requirement for more hardware
-                  and software increases too. This upgrade increases the cost
-                  too, but not with the Dynamics 365 Business Central cloud. By
-                  contacting your Business Central support partner, you can
-                  easily increase or decrease the server's performance at a low
-                  cost.
-                </p>
-                <p>
-                  <b className="h3-b">Low upfront Cost</b>
-                </p>
-                <p>
-                  When compared to cloud server deployment, on-premises server
-                  deployment is significantly more expensive. As Business
-                  Central is a SaaS application, you have to pay monthly based
-                  on the number of users. In case you need extra cloud space,
-                  upgrade the system while increasing a little bit of your
-                  monthly subscription.
-                </p>
-                <p>
-                  <b className="h3-b">Automatic Updates and Upgrades </b>
-                </p>
-                <p>
-                  Generally, Microsoft releases updates and upgrades two times a
-                  year. With on-premises deployment, businesses have to hire
-                  third-party vendors (when their internal team is not
-                  available) to install updates or upgrades and pay them a hefty
-                  amount. But, with cloud-based ERP, Microsoft takes care of
-                  updates and upgrades and automatically instals them whenever
-                  they are released without hampering the current processes or
-                  operations of a business and without any extra cost.
-                </p>
-              </div>
-              <div className="iner-pp">
-                <img src="/img/chapter5-5.png" alt="Chapter 5 Microsoft Business Central Pricing and Licensing: Cost-effective and Efficient"  loading="lazy" decoding="async" />
-              </div>
-
-              <div className="cont-table-inner">
-                <div className="ttx">Use Case:</div>
-                <div className="clint-qt">
-                  <img
-                    src="/img/quote-up@2x.png"
-                    alt=""
-                    className="left"
-                   aria-hidden="true"  loading="lazy" decoding="async" />
-                  <p>
-                    <span style={{ color: "#ee3442", fontWeight: "500" }}>
-                      Unger Fabrikker{" "}
-                    </span>
-                    s, an electronic security and fire system manufacturer in
-                    England, was using a legacy system, resulting in reduced
-                    efficiencies and bad customer experiences. They were looking
-                    for a system that comes with field service management to
-                    streamline all field operations. After a lot of research,
-                    they opted for Microsoft Dynamics 365 Business Central due
-                    to the availability of the <Link href="/products/microsoft-dynamics-365-field-service/">Microsoft Dynamics 365 Field
-                    Service</Link> module. With this implementation, they started to
-                    automate most of the field tasks, resulting in more time to
-                    provide a better customer experience.{" "}
-                  </p>
-                  <p>
-                    Earlier, the service team took more than 5 minutes to book
-                    an interview, and after implementation, it only took a few
-                    seconds. Also, the sales team can create, edit, and share
-                    the quotations faster and easier.
-                  </p>
-                  <div className="text-right-t">
-                    <img
-                      src="/img/quote-down@2x.png"
-                      alt=""
-                      className="righ"
-                     aria-hidden="true"  loading="lazy" decoding="async" />
-                  </div>
-                </div>
-              </div>
-              <div className="iner-pp">
-              <Link href="#powerBIModals" data-bs-toggle="modal">
-                  <img
-                    src="/img/business-guide-call-to-banner-3.png"
-                    alt="Chapter 6 Business Central vs Other Tools"  loading="lazy" decoding="async" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="tabs-6" className="col-yellow col-perpul">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-8">
-              <header className="section-header section-header-tabless">
-                <h2>
-                  <strong>Chapter 6</strong>Business Central vs Other Tools
-                </h2>
-                <p>
-                  In this chapter, we will compare the Business Central with top
-                  similar tools available in the market.{" "}
-                </p>
-                <div className="balnde-imge-mode">
-                  <img
-                    src="/img/PowerBi-vs.png"
-                    alt="Power BI vs. Competitors"
-                    className="shape-1 shape-2"
-                   loading="lazy" decoding="async" />
-                  <img
-                    src="/img/over-lay-shape.png"
-                    alt=""
-                    className="overlay-1"
-                   aria-hidden="true"  loading="lazy" decoding="async" />
-                </div>
-              </header>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="color-whi">
-        <div className="container">
-          <div className="row justify-content-center g-4">
-            <div className="col-lg-12">
-              <div className="cont-table-inner">
-                <p>
-                  There are various other similar tools that users can compare
-                  with Business Central. The comparison with top competitors is
-                  given below:{" "}
-                </p>
-              </div>
-              <div className="iner-pp">
-                <img src="/img/chapter6-1.png" alt="Chapter 6 Business Central vs Other Tools"  loading="lazy" decoding="async" />
-              </div>
-              <div className="iner-pp">
-                <img src="/img/chapter6-2.png" alt="Chapter 6 Business Central vs Other Tools"  loading="lazy" decoding="async" />
-              </div>
-              <div className="iner-pp">
-                <img src="/img/chapter6-3.png" alt="Chapter 6 Business Central vs Other Tools"  loading="lazy" decoding="async" />
-              </div>
-              <div className="iner-pp">
-                <img src="/img/chapter6-4.png" alt="Chapter 6 Business Central vs Other Tools"  loading="lazy" decoding="async" />
-              </div>
-              <div className="iner-pp">
-                <img src="/img/chapter6-5.png" alt="Chapter 6 Business Central vs Other Tools"  loading="lazy" decoding="async" />
-              </div>
-              <div className="iner-pp">
-                <img src="/img/chapter6-6.png" alt="Chapter 6 Business Central vs Other Tools"  loading="lazy" decoding="async" />
-              </div>
-              <div className="cont-table-inner">
-                <div className="ttx">Use Case:</div>
-                <div className="clint-qt">
-                  <img
-                    src="/img/quote-up@2x.png"
-                    alt=""
-                    className="left"
-                   aria-hidden="true"  loading="lazy" decoding="async" />
-                  <p>
-                    <span style={{ color: "#ee3442", fontWeight: "500" }}>
-                      SPY Alarms
-                    </span>
-                    is the UK's leading manufacturer of cleaning and hygiene
-                    products. They were using an outdated and complex ERP
-                    system, which was costly and inefficient.
-                  </p>
-                  <p>
-                    They were facing a lot of problems with the existing system,
-                    like that it was not user-friendly, followed improper
-                    quality control and administrative processes, lacked
-                    automation, relied on old technology to deal with modern
-                    issues, and did not comply with the latest legal
-                    requirements.
-                  </p>
-                  <p>
-                    The company implemented Microsoft Business Central for the
-                    sake of accessibility, user friendliness, and simplicity.
-                    They chose cloud deployment and integrated Microsoft Office
-                    365 with SharePoint to make the business smoother and more
-                    efficient. Usually, they tend to invest a lot of resources
-                    to update the existing system, but with Business Central,
-                    time, resources, and effort investments have been eliminated
-                    from the system because Microsoft updates the system
-                    automatically without obstructing any process.
-                  </p>
-                  <div className="text-right-t">
-                    <img
-                      src="/img/quote-down@2x.png"
-                      alt=""
-                      className="righ"
-                     aria-hidden="true"  loading="lazy" decoding="async" />
-                  </div>
-                </div>
-              </div>
-              <div className="iner-pp">
-              <Link href="#powerBIModals" data-bs-toggle="modal">
-                  <img
-                    src="/img/business-guide-call-to-banner-1.png"
-                    alt="Chapter 7 What's new in Business Central 2026?"  loading="lazy" decoding="async" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="tabs-7" className="col-yellow col-green">
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-8">
-              <header className="section-header section-header-tabless">
-                <h2>
-                  <strong>Chapter 7</strong>What's new in Business Central 2026?
-                </h2>
-                <p>
-                  In this chapter, we will get to know the most recent changes
-                  and expected updates in Business Central.{" "}
-                </p>
-                <div className="balnde-imge-mode">
-                  <img
-                    src="/img/busine-integration.png"
-                    alt="Chapter 7 What's new in Business Central 2026?"
-                    className="shape-1 shape-2"  loading="lazy" decoding="async" />
-                  <img
-                    src="/img/over-lay-shape.png"
-                    alt=""
-                    className="overlay-1"
-                   aria-hidden="true"  loading="lazy" decoding="async" />
-                </div>
-              </header>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="color-whi">
-        <div className="container">
-          <div className="row justify-content-center g-4">
-            <div className="col-lg-12">
-              <div className="cont-table-inner">
-                <p>
-                  In this chapter, we will get to know the most recent changes
-                  and expected updates in Business Central.
-                </p>
-                <p>
-                  Microsoft generally rolls out the update twice a year. In
-                  2022, updates were released first in April and again in
-                  September as Wave 2. Below are the improvements and updates
-                  released recently.
-                </p>
-                <p>
-                  Here are the Business Central 2022 release wave 2 updates:
-                </p>
-              </div>
-
-              <div className="cont-table-inner cont-table-inner-bu-bg">
-                <p>
-                  <b className="h3-b">Track products used in projects</b>
-                </p>
-                <p>
-                  This will let you track the item using the lot number, serial
-                  number, or package details throughout the entire item
-                  transaction flow. Users will get a separate Item Tracking
-                  Window option on the Job Planning Lines page to track the
-                  items.
-                </p>
-              </div>
-
-              <div className="cont-table-inner cont-table-inner-bu-bg">
-                <p>
-                  <b className="h3-b">Improvements with Shopify integration</b>
-                </p>
-                <p>
-                  With the collaboration of Shopify, Microsoft has improved the
-                  following features:
-                </p>
-                <ul>
-                  <li>Shopify Shop Card</li>
-                  <li>Shopify Locations</li>
-                  <li>Adding items to Shopify </li>
-                  <li>Sales Orders</li>
-                  <li>Synchronisation Status</li>
-                </ul>
-              </div>
-              <div className="cont-table-inner cont-table-inner-bu-bg">
-                <p>
-                  <b className="h3-b">
-                    Track product costs at each stage (Inventory Management){" "}
-                  </b>
-                </p>
-                <p>
-                  In the movement of a product from one place to another, it
-                  includes extra costs at each stage, like physical handling,
-                  fright charges, insurance, transportation, and more. This
-                  updated feature allows the organisation to track the entire
-                  extra cost of the item along with the product cost, thereby
-                  telling you the actual cost to the company.
-                </p>
-              </div>
-              <div className="cont-table-inner cont-table-inner-bu-bg">
-                <p>
-                  <b className="h3-b">
-                    Specify item variant codes (becomes mandatory)
-                  </b>
-                </p>
-                <p>
-                  This updated feature will classify similar and non-similar
-                  items based on variant codes to help users identify the exact
-                  product easily. You can access this feature as Variant
-                  Mandatory if Exists option available in the Inventory Setup
-                  page.{" "}
-                </p>
-              </div>
-              <div className="cont-table-inner cont-table-inner-bu-bg">
-                <p>
-                  <b className="h3-b">Sorting filters in Planning Worksheet </b>
-                </p>
-                <p>
-                  This feature enables you to filter lines on the Planning
-                  Worksheet and Requisition Worksheet pages by specifying a
-                  column name.
-                </p>
-              </div>
-              <div className="cont-table-inner cont-table-inner-bu-bg">
-                <p>
-                  <b className="h3-b">Find Document Lines easily</b>
-                </p>
-                <p>
-                  In reporting and analysis, document lines are used to perform
-                  a specific analysis. This feature will let you find the
-                  desired data using the in-product search field.
-                </p>
-              </div>
-              <div className="cont-table-inner cont-table-inner-bu-bg">
-                <p>
-                  <b className="h3-b">
-                    Account Schedules renamed as Financial Reporting
-                  </b>
-                </p>
-                <p>
-                  New users face issues while understanding the Account
-                  Schedules option. Microsoft renamed this feature to Financial
-                  Reporting; a combination of rows and columns along with some
-                  additional features.
-                </p>
-              </div>
-              <div className="cont-table-inner cont-table-inner-bu-bg">
-                <p>
-                  <b className="h3-b">
-                    Feed text for VAT Clause for local requirements
-                  </b>
-                </p>
-                <p>
-                  Now, users can enter the required long text on the VAT Clause
-                  because most of the countries need a detailed text to be
-                  submitted for the VAT Clause.{" "}
-                </p>
-              </div>
-              <div className="cont-table-inner cont-table-inner-bu-bg">
-                <p>
-                  <b className="h3-b">Improved Bank Reconciliation </b>
-                </p>
-                <p>
-                  It enables the users to cross match the check entries based on
-                  the data available on Check Ledger leads to an efficient bank
-                  reconciliation
-                </p>
-              </div>
-              <div className="cont-table-inner">
-                <p>
-                  <b className="h3-b">Latest Updates in Business Central </b>
-                </p>
-                <ul>
-                  <li>
-                    With Business Central (the latest release being 2026 release wave 2, v29), the
-                    users of Microsoft Teams can access the Business Central
-                    data without owning a Business Central license.
-                  </li>
-                </ul>
-              </div>
-
-              <div className="iner-pp">
-                <img src="/img/chapter7-1.png" alt="Chapter 7 What's new in Business Central 2026?"  loading="lazy" decoding="async" />
-              </div>
-
-              <div className="cont-table-inner">
-                <ul>
-                  <li>
-                    Modern Action bar has been released with 2022 release wave 2
-                    to help you create, extend, and customise pages in BC.
-                  </li>
-                </ul>
-              </div>
-
-              <div className="iner-pp">
-                <img src="/img/chapter7-2.png" alt="Chapter 7 What's new in Business Central 2026?"  loading="lazy" decoding="async" />
-              </div>
-
-              <div className="cont-table-inner">
-                <ul>
-                  <li>
-                    Microsoft announces a reduction in prices for Business
-                    Central Add-on environments.{" "}
-                  </li>
-                </ul>
-              </div>
-
-              <div className="iner-pp">
-                <img src="/img/chapter7-3.png" alt="Chapter 7 What's new in Business Central 2026?"  loading="lazy" decoding="async" />
-              </div>
-
-              <div className="cont-table-inner">
-                <ul>
-                  <li>
-                    You can now customise menus to suit your purpose and
-                    preference without any limitations.
-                  </li>
-                </ul>
-              </div>
-
-              <div className="iner-pp">
-                <img src="/img/chapter7-4.png" alt="Chapter 7 What's new in Business Central 2026?"  loading="lazy" decoding="async" />
-              </div>
-
-              <div className="cont-table-inner">
-                <p>
-                  <b className="h3-b">Features to be Expected in 2025 Wave 1</b>
-                </p>
-                <ul>
-                  <li>
-                    Here is the list of features expected to be added in 2025
-                    release wave 1.
-                  </li>
-                </ul>
-              </div>
-
-              <div className="iner-pp">
-                <img src="/img/chapter7-5.png" alt="Chapter 7 What's new in Business Central 2026?"  loading="lazy" decoding="async" />
-              </div>
-
-              <div className="cont-table-inner">
-                <p>
-                  <b className="h3-b">Latest Updates in Business Central </b>
-                </p>
-                <p>
-                  MS Dynamics Business Central is an effective and efficient
-                  solution when it comes to seamless business management. In
-                  general, it is an all-in-one business management solution
-                  built to streamline and connect all processes of a business,
-                  resulting in continuous growth and high profitability.
-                </p>
-                <p>
-                  When we compare it with the similar business management
-                  solutions available on the market, it offers numerous
-                  functions, features, and benefits to the users that no one
-                  else offers. With all such functionalities, it is still
-                  cost-effective as well as productive. Below are a few points
-                  that make it unique when compared to other ERPs.
-                </p>
-              </div>
-
-              <div className="iner-pp">
-                <img src="/img/chapter7-6.png" alt="Chapter 7 What's new in Business Central 2026?"  loading="lazy" decoding="async" />
-              </div>
-
-              <div className="cont-table-inner">
-                <p>
-                  <b className="h3-b">Adaptable to Modern Technology </b>
-                </p>
-                <p>
-                  Technology advancement is subject to change over time.
-                  Businesses are trying hard to update and upgrade their
-                  technology to improve existing products or applications.
-                  Microsoft is already investing a lot of resources in
-                  innovation and development to make its products more
-                  efficient. Business Central is the most flexible solution
-                  built by Microsoft that can adapt and utilise new technologies
-                  as per modern business needs.{" "}
-                </p>
-              </div>
-              <div className="cont-table-inner">
-                <p>
-                  <b className="h3-b">User-friendly and Attractive Interface</b>
-                </p>
-                <p>
-                  Business Central (Microsoft's top ERP) offers a simple yet
-                  attractive user interface, irrespective of the device you are
-                  using to access the data or the processes. The functions and
-                  features are consistent across all devices, whether you access
-                  them via mobile, web, or tablet.
-                </p>
-              </div>
-              <div className="cont-table-inner">
-                <p>
-                  <b className="h3-b">Built for SMBs</b>
-                </p>
-                <p>
-                  All of Microsoft Dynamics 365 Business Central's functions and
-                  features are designed to help small businesses grow and scale.
-                  Even so, you can avail of Business Central automation to
-                  perform most of the manual and recurring tasks so that you can
-                  save more time to find more opportunities for business growth.
-                </p>
-              </div>
-              <div className="cont-table-inner">
-                <p>
-                  <b className="h3-b">Suits all Industries</b>
-                </p>
-                <p>
-                  Business Central seamlessly fits into all businesses,
-                  irrespective of the size, type, and complexity of operations.
-                  All industries can use Dynamics 365 Business Central essential
-                  features to support core features and use various integrations
-                  for advanced module functionality.
-                </p>
-              </div>
-              <div className="cont-table-inner">
-                <p>
-                  <b className="h3-b">Offers Various Modules</b>
-                </p>
-                <p>
-                  All businesses run on unique methodologies. To support this,
-                  you can access all Microsoft Business Central modules and
-                  support any business in terms of uniqueness. All these
-                  Business Central modules are available to all users, but at
-                  varying levels of licensing.
-                </p>
-              </div>
-              <div className="iner-pp">
-              <Link href="#powerBIModals" data-bs-toggle="modal">
-                  <img
-                    src="/img/business-guide-call-to-banner-3.png"
-                    alt="Conclusion"  loading="lazy" decoding="async" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section
-        id="tabs-8"
-        className="col-yellow col-green"
-        style={{ background: "#5f774b" }}
-      >
-        <div className="container">
-          <div className="row justify-content-center">
-            <div className="col-lg-8">
-              <header className="section-header section-header-tabless">
-                <h2>Conclusion</h2>
-
-                <div className="balnde-imge-mode">
-                  <img
-                    src="/img/business-FAQ.png"
-                    alt="Conclusion"
-                    className="shape-1 shape-2"  loading="lazy" decoding="async" />
-                  <img
-                    src="/img/over-lay-shape.png"
-                    alt=""
-                    className="overlay-1"
-                   aria-hidden="true"  loading="lazy" decoding="async" />
-                </div>
-              </header>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="color-whi">
-        <div className="container">
-          <div className="row justify-content-center g-4">
-            <div className="col-lg-12">
-              <div className="cont-table-inner">
-                <p>
-                  <b className="h3-b">
-                    What is the Future of Business Central?
-                  </b>
-                </p>
-                <p>
-                  Microsoft is evolving day by day and so are its products. When
-                  we compare Microsoft products over the last five years, we can
-                  see significant changes in the technology they use, as well as
-                  the addition of efficient products to Microsoft's ecosystem.
-                  One of the major changes is the adaptation of cloud-based
-                  services for almost all services.{" "}
-                </p>
-                <p>
-                  Microsoft Business Central features, which were first released
-                  in 2018, are embracing new technologies to provide a more
-                  efficient ERP solution. BC is digitally transforming the way a
-                  small business used to work. And still, Microsoft is working
-                  hard to upgrade the efficiency of this application by
-                  incorporating the latest technology.
-                </p>
-                <p>
-                  The future of Business Central is pretty clear. As we have
-                  seen with the major update from <Link href="/dynamics-nav-to-business-central/">NAV to Business Central</Link> to
-                  address modern business problems, Microsoft will continue to
-                  update and upgrade this solution while enhancing core
-                  performance to cater to the best solution for all changing
-                  modern needs.
-                </p>
-              </div>
-
-              <div className="cont-table-inner">
-                <p>
-                  <b className="h3-b">
-                    How can one implement Business Central?
-                  </b>
-                </p>
-                <p>
-                  If you have been reading this guide from the beginning, you
-                  have solid knowledge about Business Central and how it can
-                  help you with easy growth and rapid scalability. Dynamics 365
-                  Business Central implementation is straightforward. What you
-                  need to do is search for a reliable <Link href="/dynamics-365-business-central-implementation/">Dynamics 365 Business
-                  Central implementation partner</Link>, like Dynamics Square.{" "}
-                </p>
-                <p>
-                  At Dynamics Square, we have been providing seamless Business
-                  Central support and services to businesses for the past ten
-                  years. As a certified Microsoft Solutions Partner in the UK, we have the
-                  resources and expertise needed to provide you with the best
-                  possible solution for any issue you may be facing. We have a
-                  dedicated team of consultants who are experienced in ERP, CRM,
-                  BI, and cloud technologies.
-                </p>
-                <p>
-                  They will work closely with you to understand your business
-                  operations and develop a personalised solution that meets your
-                  specific needs. With decades of experience in the field, our
-                  team is confident that we can help your business succeed, even
-                  in tough times.{" "}
-                </p>
-              </div>
-
-              <div className="cont-table-inner">
-                <div className="ttx">Use Case:</div>
-                <div className="clint-qt">
-                  <img
-                    src="/img/quote-up@2x.png"
-                    alt=""
-                    className="left"
-                   aria-hidden="true"  loading="lazy" decoding="async" />
-                  <p>
-                    <span style={{ color: "#ee3442", fontWeight: "500" }}>
-                      Klepper Lifestyle GmbH
-                    </span>{" "}
-                    is a well-known brand for manufacturing foldable kayaks.
-                    They were using three different solutions to manage the
-                    entire amount of data they got from the company's online
-                    shop but still faced issues when it came to transparent
-                    processes.
-                  </p>
-                  <p>
-                    They export data from the online store into Excel and
-                    manually process it, resulting in errors and mismatched
-                    data.{" "}
-                  </p>
-                  <p>
-                    Klepper replaces all specific systems with MSD 365 Business
-                    Central in the cloud using Azure data servers. The process
-                    of invoice approval has become smooth, transparent, and
-                    digital. This implementation allows the company to utilise a
-                    single system to manage all ERP and CRM needs.{" "}
-                  </p>
-                  <div className="text-right-t">
-                    <img
-                      src="/img/quote-down@2x.png"
-                      alt=""
-                      className="righ"
-                     aria-hidden="true"  loading="lazy" decoding="async" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* <FormGuideBusinessCentral /> */}
       <FormGuide />
     </>
   );
 };
 
-export default PowerBIGuide;
+export default BusinessCentralGuideTwo;

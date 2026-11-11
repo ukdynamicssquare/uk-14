@@ -1,0 +1,984 @@
+/* =====================================================================
+   Business Central guide for SMBs — version two
+   pages/guides/business-central-guide-for-smb-two.js
+
+   Long-form guide pieces only. The hero, sticky section nav, blocks,
+   callout banner and FAQ accordion come from bcVsSapTwo.module.css.
+   Palette: #984b6e -> #60518c gradient, #8e44ad accent, #2d2640 /
+   #4a3b69 deep purples, #f6f4f9 tint, #ebe6f2 borders.
+   ===================================================================== */
+
+
+/* =====================================================================
+   SECTION: Reading progress
+   ===================================================================== */
+.progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 1100;
+  pointer-events: none;
+}
+.progress span {
+  display: block;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  background: linear-gradient(to right, #984b6e, #8e44ad, #60518c);
+}
+
+
+/* =====================================================================
+   SECTION: Hero
+   ===================================================================== */
+h1.heroTitle {
+  font-size: 46px !important;
+}
+p.heroLead {
+  margin: 0;
+  max-width: 680px;
+}
+p.heroLead + p.heroLead {
+  margin-top: 14px;
+}
+.hero :global(.btn-get-started) {
+  margin-top: 0;
+}
+a.ghostBtn {
+  margin-top: 0;
+}
+
+
+/* =====================================================================
+   SECTION: Download banner (opens the PDF form modal)
+   ===================================================================== */
+.downloadBanner.chapterCta {
+  margin-top: 72px;
+}
+.downloadBanner {
+  display: block;
+  max-width: 1100px;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.downloadBanner img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.downloadBanner:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 44px rgba(45, 38, 64, 0.12);
+}
+
+
+/* =====================================================================
+   SECTION: At a glance
+   ===================================================================== */
+.glanceGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin: 30px 0 0;
+}
+.glanceCard {
+  padding: 22px 20px;
+  border-radius: 16px;
+  background: #fff;
+  border: 1px solid #ebe6f2;
+  box-shadow: 0 10px 26px rgba(45, 38, 64, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+.glanceCard:hover {
+  transform: translateY(-4px);
+  border-color: #c9b6e0;
+  box-shadow: 0 16px 34px rgba(45, 38, 64, 0.08);
+}
+.glanceCard dt {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #8e44ad;
+  margin-bottom: 10px;
+}
+.glanceCard dd {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.55;
+  color: #463d52;
+}
+
+
+/* =====================================================================
+   SECTION: Table of contents
+   ===================================================================== */
+.tocGrid {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+.tocCard {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 22px;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid #ebe6f2;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+.tocCard:hover {
+  transform: translateY(-4px);
+  border-color: #c9b6e0;
+  box-shadow: 0 16px 34px rgba(45, 38, 64, 0.08);
+}
+.tocHead {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.tocNum {
+  font-family: Anton, sans-serif;
+  font-size: 34px;
+  line-height: 1;
+  background-image: linear-gradient(to right, #984b6e, #60518c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.tocTitle {
+  font-family: Lato, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.3;
+  color: #2d2640;
+  transition: color 0.2s;
+}
+.tocHead:hover .tocTitle {
+  color: #8e44ad;
+}
+.tocCard ul {
+  list-style: none;
+  margin: auto 0 0;
+  padding: 12px 0 0;
+  border-top: 1px solid #f0ecf5;
+}
+.tocCard ul a {
+  display: block;
+  padding: 4px 0;
+  font-size: 14px;
+  line-height: 1.45;
+  color: #6d6780 !important;
+}
+.tocCard ul a:hover {
+  color: #8e44ad !important;
+}
+
+
+/* =====================================================================
+   SECTION: Chapter layout (sticky section list + article)
+   ===================================================================== */
+.chapterHead {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  margin-bottom: 44px;
+}
+.chapterNum {
+  flex: 0 0 auto;
+  font-family: Anton, sans-serif;
+  font-size: 96px;
+  line-height: 0.9;
+  color: transparent;
+  -webkit-text-stroke: 2px #c9b6e0;
+}
+h2.chapterTitle {
+  margin-bottom: 0;
+}
+.layout {
+  display: grid;
+  grid-template-columns: 250px minmax(0, 1fr);
+  gap: 56px;
+  align-items: start;
+}
+/* top / max-height are set inline from the section nav's position */
+.aside {
+  position: sticky;
+  top: 170px;
+  max-height: calc(100vh - 190px);
+  overflow-y: auto;
+  padding-right: 6px;
+  scrollbar-width: thin;
+}
+.aside ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-left: 2px solid #ebe6f2;
+}
+.aside li a {
+  display: block;
+  margin-left: -2px;
+  padding: 7px 0 7px 16px;
+  border-left: 2px solid transparent;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #6d6780 !important;
+  transition: color 0.2s, border-color 0.2s;
+}
+.aside li.asideSub a {
+  padding-left: 28px;
+  font-size: 13.5px;
+  font-weight: 500;
+}
+.aside li a:hover {
+  color: #2d2640 !important;
+}
+.aside li a.asideActive {
+  color: #8e44ad !important;
+  border-left-color: #8e44ad;
+}
+
+
+/* =====================================================================
+   SECTION: Article typography
+   ===================================================================== */
+.article {
+  max-width: 860px;
+  min-width: 0;
+}
+.article > p,
+.article li {
+  font-size: 17px;
+  line-height: 1.75;
+  color: #463d52;
+}
+.article > p {
+  margin-bottom: 18px;
+}
+.article a {
+  color: #8e44ad;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgba(142, 68, 173, 0.35);
+  text-underline-offset: 3px;
+}
+.article a:hover {
+  color: #60518c;
+  text-decoration-color: currentColor;
+}
+.article b {
+  font-weight: 700;
+  color: #2d2640;
+}
+.h3 {
+  font-family: Lato, sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.25;
+  color: #2d2640;
+  margin: 56px 0 18px;
+  scroll-margin-top: 150px;
+}
+.article > .h3:first-child {
+  margin-top: 0;
+}
+.article > .h3:not(:first-child) {
+  padding-top: 48px;
+  border-top: 1px solid #ebe6f2;
+}
+.h4 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: Lato, sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #4a3b69;
+  margin: 38px 0 14px;
+  scroll-margin-top: 150px;
+}
+.h4::before {
+  content: "";
+  flex: 0 0 auto;
+  width: 9px;
+  height: 9px;
+  border-radius: 2px;
+  background: linear-gradient(135deg, #984b6e, #60518c);
+}
+
+/* summary answer (whole-paragraph bold in the source doc) */
+.answer {
+  margin: 0 0 24px;
+  padding: 24px 28px;
+  border-radius: 16px;
+  border-left: 4px solid #8e44ad;
+  background: linear-gradient(135deg, rgba(152, 75, 110, 0.08), rgba(96, 81, 140, 0.11));
+}
+.answer p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.7;
+  color: #2d2640;
+}
+
+/* "Example:" / "Good practice:" */
+.note {
+  display: flex;
+  gap: 14px;
+  margin: 26px 0;
+  padding: 20px 22px;
+  border-radius: 14px;
+  background: #fff8e8;
+  border: 1px solid #f3e2b7;
+}
+.note i {
+  font-size: 22px;
+  line-height: 1.3;
+  color: #c58b00;
+}
+.note p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #463d52;
+}
+
+/* doc CTA paragraphs on the template's gradient callout */
+div.callout {
+  margin: 30px 0;
+}
+div.callout p {
+  font-size: 17px;
+  line-height: 1.6;
+}
+div.callout a,
+.article div.callout a {
+  color: #fff !important;
+  font-weight: 700;
+  text-decoration: underline !important;
+  text-decoration-color: rgba(255, 255, 255, 0.6) !important;
+  text-underline-offset: 3px;
+}
+
+
+/* =====================================================================
+   SECTION: Lists, cards, steps
+   ===================================================================== */
+.bullets,
+.numbered {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+}
+.bullets li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+}
+.bullets li::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 11px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #984b6e, #60518c);
+  box-shadow: 0 0 0 4px rgba(142, 68, 173, 0.12);
+}
+.numbered {
+  counter-reset: num;
+}
+.numbered li {
+  position: relative;
+  min-height: 32px;
+  padding-left: 48px;
+  margin-bottom: 14px;
+  counter-increment: num;
+}
+.numbered li::before {
+  content: counter(num);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 800;
+  color: #fff;
+  background: linear-gradient(135deg, #984b6e, #60518c);
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin: 6px 0 28px;
+}
+.card {
+  padding: 22px;
+  border-radius: 16px;
+  background: #fff;
+  border: 1px solid #ebe6f2;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+.card:hover {
+  transform: translateY(-3px);
+  border-color: #c9b6e0;
+  box-shadow: 0 14px 30px rgba(45, 38, 64, 0.08);
+}
+.card strong,
+.stepper strong {
+  display: block;
+  font-family: Lato, sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  color: #2d2640;
+  margin-bottom: 6px;
+}
+.card p,
+.stepper p {
+  margin: 0;
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: #5b5768;
+}
+
+.stepper {
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 28px;
+}
+.stepper::before {
+  content: "";
+  position: absolute;
+  left: 21px;
+  top: 10px;
+  bottom: 10px;
+  width: 2px;
+  background: linear-gradient(to bottom, #984b6e, #60518c);
+  opacity: 0.35;
+}
+.stepper li {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  padding-bottom: 22px;
+}
+.stepper li:last-child {
+  padding-bottom: 0;
+}
+.stepNo {
+  position: relative;
+  z-index: 1;
+  flex: 0 0 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Anton, sans-serif;
+  font-size: 18px;
+  color: #fff;
+  background: linear-gradient(135deg, #984b6e, #60518c);
+  border: 4px solid #fff;
+  box-shadow: 0 8px 18px rgba(96, 81, 140, 0.3);
+}
+.stepper li > div {
+  padding-top: 9px;
+}
+
+/* practical scenarios */
+.scenarioGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin: 8px 0 28px;
+}
+.scenario {
+  position: relative;
+  padding: 26px 24px 24px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: linear-gradient(160deg, #2d2640, #4a3b69);
+}
+.scenario::after {
+  content: "\201C";
+  position: absolute;
+  right: 18px;
+  top: -14px;
+  font-family: Georgia, serif;
+  font-size: 110px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+}
+.scenario strong {
+  display: block;
+  font-family: Lato, sans-serif;
+  font-size: 19px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.scenario p {
+  margin: 0;
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #e4dcf0;
+}
+.article .scenario a {
+  color: #fff;
+}
+
+/* customer stories */
+.linkGrid {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 26px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.article .linkGrid li {
+  margin: 0;
+}
+.article a.linkCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  height: 100%;
+  padding: 18px 20px;
+  border-radius: 14px;
+  background: #fff;
+  border: 1px solid #ebe6f2;
+  font-size: 15.5px;
+  line-height: 1.5;
+  color: #2d2640;
+  text-decoration: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.article a.linkCard i {
+  flex: 0 0 auto;
+  font-size: 18px;
+  color: #8e44ad;
+  transition: transform 0.2s;
+}
+.article a.linkCard:hover {
+  border-color: #c9b6e0;
+  box-shadow: 0 14px 30px rgba(45, 38, 64, 0.08);
+  color: #8e44ad;
+}
+.article a.linkCard:hover i {
+  transform: translate(3px, -3px);
+}
+
+
+/* =====================================================================
+   SECTION: Checklists (ticks stay in the visitor's browser)
+   ===================================================================== */
+.checklist {
+  margin: 10px 0 28px;
+  padding: 22px 24px;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid #ebe6f2;
+  box-shadow: 0 12px 30px rgba(45, 38, 64, 0.05);
+}
+.checkMeter {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+.checkTrack {
+  flex: 1 1 auto;
+  height: 8px;
+  border-radius: 8px;
+  background: #f0ecf5;
+  overflow: hidden;
+}
+.checkTrack span {
+  display: block;
+  height: 100%;
+  border-radius: 8px;
+  background: linear-gradient(to right, #984b6e, #60518c);
+  transition: width 0.3s ease;
+}
+.checkMeter em {
+  flex: 0 0 auto;
+  font-style: normal;
+  font-size: 13px;
+  font-weight: 700;
+  color: #8e44ad;
+}
+.checklist ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px 16px;
+}
+.article .checklist li {
+  margin: 0;
+}
+.checklist label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 12px;
+  font-size: 15.5px;
+  line-height: 1.5;
+  color: #463d52;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.checklist label:hover {
+  background: #f6f4f9;
+}
+.checklist input {
+  flex: 0 0 auto;
+  width: 19px;
+  height: 19px;
+  margin-top: 2px;
+  accent-color: #8e44ad;
+  cursor: pointer;
+}
+.checklist label.checkDone {
+  background: #f3ecfa;
+}
+.checklist label.checkDone span {
+  color: #2d2640;
+  font-weight: 600;
+}
+
+
+/* =====================================================================
+   SECTION: Tables (stack into cards on phones)
+   ===================================================================== */
+.tableWrap {
+  margin: 10px 0 30px;
+  border-radius: 16px;
+  border: 1px solid #ebe6f2;
+  background: #fff;
+  overflow-x: auto;
+  box-shadow: 0 12px 30px rgba(45, 38, 64, 0.05);
+}
+.table {
+  width: 100%;
+  margin: 0;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+.table thead th {
+  padding: 14px 18px;
+  text-align: left;
+  vertical-align: bottom;
+  font-family: Lato, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: #fff;
+  background: linear-gradient(120deg, #984b6e, #60518c);
+}
+.table tbody th,
+.table tbody td {
+  padding: 14px 18px;
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.6;
+  color: #463d52;
+  border-top: 1px solid #f0ecf5;
+}
+.table tbody th {
+  min-width: 160px;
+  font-weight: 700;
+  color: #2d2640;
+}
+.table tbody tr:nth-child(even) {
+  background: #faf9fc;
+}
+.table tbody tr:hover {
+  background: #f6f1fb;
+}
+.yes,
+.no {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+}
+.yes {
+  color: #1e7a46;
+}
+.no {
+  color: #9a8fae;
+}
+
+
+/* =====================================================================
+   SECTION: Figures
+   ===================================================================== */
+.figure {
+  margin: 30px 0 34px;
+}
+.figureFrame {
+  padding: 18px;
+  border-radius: 20px;
+  background: #fff;
+  border: 1px solid #ebe6f2;
+  box-shadow: 0 20px 44px rgba(45, 38, 64, 0.08);
+  text-align: center;
+}
+.figureFrame img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.figure figcaption {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #6d6780;
+}
+.figure figcaption strong {
+  display: block;
+  margin-bottom: 4px;
+  font-family: Lato, sans-serif;
+  font-size: 16px;
+  color: #2d2640;
+}
+
+
+/* =====================================================================
+   SECTION: Next steps
+   ===================================================================== */
+.nextBox {
+  position: relative;
+  padding: 56px 60px;
+  border-radius: 28px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(231, 166, 196, 0.35), transparent 45%),
+    linear-gradient(130deg, #984b6e 0%, #60518c 55%, #4a3b69 100%);
+}
+.nextBox p {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #f0e8f7;
+}
+.nextBox a {
+  color: #fff !important;
+  font-weight: 700;
+  text-decoration: underline !important;
+  text-decoration-color: rgba(255, 255, 255, 0.6) !important;
+  text-underline-offset: 3px;
+}
+.nextVisual img {
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 30px 50px rgba(10, 6, 25, 0.35);
+}
+.nextGrid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 34px;
+}
+.nextCard {
+  padding: 20px 18px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.nextCard strong {
+  display: block;
+  margin-bottom: 6px;
+  font-family: Lato, sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  color: #fff;
+}
+.nextBox .nextCard p {
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+.nextBox p.nextContact {
+  margin: 30px 0 0;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 19px;
+  font-weight: 600;
+  color: #fff;
+}
+
+
+/* =====================================================================
+   SECTION: Responsive
+   ===================================================================== */
+@media (max-width: 1199px) {
+  .glanceGrid,
+  .tocGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .layout {
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 40px;
+  }
+  .nextGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 991px) {
+  h1.heroTitle {
+    font-size: 36px !important;
+  }
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .aside {
+    display: none;
+  }
+  .chapterNum {
+    font-size: 64px;
+  }
+  .nextBox {
+    padding: 40px 28px;
+  }
+  .nextGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 767px) {
+  .cardGrid,
+  .scenarioGrid,
+  .linkGrid,
+  .checklist ul {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .h3 {
+    font-size: 24px;
+  }
+  .h4 {
+    font-size: 19px;
+  }
+  .article > p,
+  .article li {
+    font-size: 16px;
+  }
+  .answer {
+    padding: 20px;
+  }
+  .answer p {
+    font-size: 17px;
+  }
+
+  /* each row becomes a card; td labels come from data-label */
+  .tableWrap {
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    overflow: visible;
+  }
+  .table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+  .table,
+  .table tbody,
+  .table tr,
+  .table th,
+  .table td {
+    display: block;
+    width: 100%;
+  }
+  .table tbody tr {
+    margin-bottom: 14px;
+    border: 1px solid #ebe6f2;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #fff !important;
+  }
+  .table tbody th {
+    min-width: 0;
+    border-top: 0;
+    background: #f6f4f9;
+  }
+  .table tbody td {
+    display: grid;
+    grid-template-columns: 40% minmax(0, 1fr);
+    gap: 12px;
+  }
+  .table tbody td::before {
+    content: attr(data-label);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: #8e44ad;
+  }
+}
+@media (max-width: 576px) {
+  h1.heroTitle {
+    font-size: 30px !important;
+  }
+  .glanceGrid,
+  .tocGrid,
+  .nextGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .chapterHead {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .chapterNum {
+    font-size: 52px;
+  }
+  .nextBox {
+    padding: 32px 20px;
+    border-radius: 20px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .glanceCard,
+  .tocCard,
+  .card,
+  .checkTrack span {
+    transition: none;
+  }
+  .glanceCard:hover,
+  .tocCard:hover,
+  .card:hover {
+    transform: none;
+  }
+}

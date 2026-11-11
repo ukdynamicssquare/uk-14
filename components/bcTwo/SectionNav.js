@@ -40,7 +40,7 @@ export const useSectionNav = (sections) => {
   return { active, navTop };
 };
 
-const SectionNav = ({ sections, active, navTop, ctaLabel = "Book a Free Consultation" }) => {
+const SectionNav = ({ sections, active, navTop, ctaLabel = "Book a Free Consultation", showCta = true }) => {
   const listRef = useRef(null);
   const [edges, setEdges] = useState({ left: false, right: false });
 
@@ -105,9 +105,11 @@ const SectionNav = ({ sections, active, navTop, ctaLabel = "Book a Free Consulta
               </button>
             )}
           </div>
-          <Link href="#exampleModal" data-bs-toggle="modal" className={styles.navCta}>
-            {ctaLabel} <i className="bi bi-arrow-right"></i>
-          </Link>
+          {showCta && (
+            <Link href="#exampleModal" data-bs-toggle="modal" className={styles.navCta}>
+              {ctaLabel} <i className="bi bi-arrow-right"></i>
+            </Link>
+          )}
         </div>
       </div>
     </nav>

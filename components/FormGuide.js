@@ -99,13 +99,37 @@ const fetchCountryCodeByIP = () => {
   };
 
 
+  // Bootstrap leaves body.modal-open (overflow: hidden) and a .modal-backdrop behind if we
+  // change page while the modal is open; <body> is shared across Next pages, so the next
+  // page (and the guide again after Back) could not scroll. Close it fully first.
+  const closeModalCleanly = () => {
+    const el = document.getElementById("powerBIModals");
+    try {
+      const instance = window.bootstrap && window.bootstrap.Modal && window.bootstrap.Modal.getInstance(el);
+      if (instance) instance.hide();
+    } catch (err) {
+      // bootstrap JS not on window: the manual cleanup below still runs
+    }
+    if (el) {
+      el.classList.remove("show");
+      el.style.display = "none";
+      el.setAttribute("aria-hidden", "true");
+      el.removeAttribute("aria-modal");
+      el.removeAttribute("role");
+    }
+    document.querySelectorAll(".modal-backdrop").forEach((b) => b.remove());
+    document.body.classList.remove("modal-open");
+    document.body.style.removeProperty("overflow");
+    document.body.style.removeProperty("padding-right");
+  };
+
   const sendEmail = async (e) => {
     e.preventDefault();
     if (!validate()) {
       return;
     }
-
-
+    // disable Submit + show the spinner while sending (also stops double submits)
+    setDisplay(true);
 
     try {
       const result = await emailjs.sendForm('service_4voumj7', 'template_68k24ku', form.current, 'mJ38M6WTmU7KRrtuZ');
@@ -118,20 +142,23 @@ const fetchCountryCodeByIP = () => {
       });
 
       const redirectMapping = {
-          '/guides/power-bi-guide-for-smb/': 'https://www.dynamicssquare.co.uk/guides/download/power-guide-pdf/',
-          '/guides/business-central-guide-for-smb/': 'https://www.dynamicssquare.co.uk/guides/download/pdf-business-central-guide/',
+          '/guides/power-bi-guide-for-smb/': '/guides/download/power-guide-pdf/',
+          '/guides/business-central-guide-for-smb/': '/guides/download/pdf-business-central-guide/',
+          '/guides/business-central-guide-for-smb-old/': '/guides/download/pdf-business-central-guide/',
         };
 
-        const redirectUrl = redirectMapping[router.asPath];
-        router.push(redirectUrl);
-
-
-
+        // asPath keeps "#powerBIModals" (added by the banner link) and any query string; match on the path only
+        const currentPath = router.asPath.split(/[?#]/)[0];
+        const redirectUrl = redirectMapping[currentPath];
+        // stay disabled while the download page loads; re-enable if there is nowhere to go
+        if (redirectUrl) {
+          closeModalCleanly();
+          router.push(redirectUrl);
+        } else setDisplay(false);
 
       // router.push("https://www.dynamicssquare.co.uk/guides/download/power-guide-pdf/");
     } catch (error) {
       console.error(error.text);
-    } finally {
       setDisplay(false);
     }
   };
