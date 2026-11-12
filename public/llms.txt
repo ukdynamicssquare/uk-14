@@ -34,7 +34,7 @@ This file lists the most useful pages on dynamicssquare.co.uk for large language
 - [Power BI Implementation](https://www.dynamicssquare.co.uk/power-bi-implementation/): Power BI implementation process and services for UK businesses.
 - [Power BI Support](https://www.dynamicssquare.co.uk/products/microsoft-power-bi/support/): Power BI support and services for analytics and reporting.
 - [Microsoft Fabric Partner](https://www.dynamicssquare.co.uk/ai-solutions/microsoft-fabric/): Microsoft Fabric implementation, analytics, Power BI integration and support.
-- [Free Dynamics 365 System Health Check](https://www.dynamicssquare.co.uk/free-dynamics-365-system-health-check/): A free review of Dynamics CRM or ERP performance.
+- [Free Dynamics 365 System Health Check](https://www.dynamicssquare.co.uk/dynamics-365-health-check/): A free review of Dynamics CRM or ERP performance.
 - [Free ERP Readiness Assessment](https://www.dynamicssquare.co.uk/free-erp-readiness-assessment/): A free assessment of readiness for an ERP project.
 
 ## Products

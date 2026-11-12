@@ -55,7 +55,7 @@ const faqs = [
 
 const relatedLinks = [
   { href: "/our-services/dynamics-365-upgrade-services/", title: "Dynamics 365 Upgrade Services", icon: "bi-arrow-up-circle" },
-  { href: "/free-dynamics-365-system-health-check/", title: "Free Dynamics 365 System Health Check", icon: "bi-clipboard-pulse" },
+  { href: "/dynamics-365-health-check/", title: "Free Dynamics 365 System Health Check", icon: "bi-clipboard-pulse" },
   { href: "/microsoft-dynamics-365-cloud-vs-on-premise/", title: "Dynamics 365 Cloud vs On-Premise", icon: "bi-cloud" },
   { href: "/gp-to-business-central-migration/", title: "GP to Business Central Migration", icon: "bi-arrow-left-right" },
 ];

@@ -290,7 +290,7 @@ Microsoft does not provide day-to-day Dynamics 365 support directly to most busi
 Solution selection, implementation strategy, architecture planning (multi-location, data storage, customisations, integrations), software customisation, system migration and 24/7 troubleshooting. Consultant roles: functional consultants, technical consultants, ERP/CRM architects, business analysts and Power Platform specialists.
 
 ### 3.5 Audit Services (Free Dynamics 365 System Health Check)
-**URL:** https://www.dynamicssquare.co.uk/free-dynamics-365-system-health-check/
+**URL:** https://www.dynamicssquare.co.uk/dynamics-365-health-check/
 A free review of an existing Dynamics ERP or CRM system across six areas: (1) process performance and training gaps, (2) unused paid features and new release features, (3) code audit, including unsupported code and SOAP-to-Web-API changes, (4) upgrade analysis and cloud vs on-premises recommendation, (5) data health, (6) licensing and storage optimisation.
 
 ### 3.6 Training Services

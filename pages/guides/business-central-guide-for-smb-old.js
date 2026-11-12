@@ -1038,7 +1038,7 @@ const PowerBIGuide = () => {
                   <li>Review how supplier invoices arrive today and whether OCR, the Payables Agent or Peppol receipt will replace manual entry.</li>
                   <li>Ask your partner how your AppSource apps and integrations will handle e-invoices.</li>
                 </ol>
-                <p>Not sure whether your current setup is secure and compliant? Book a <Link href="/free-dynamics-365-system-health-check/">free Dynamics 365 system health check</Link>.</p>
+                <p>Not sure whether your current setup is secure and compliant? Book a <Link href="/dynamics-365-health-check/">free Dynamics 365 system health check</Link>.</p>
               </div>
             </div>
           </div>

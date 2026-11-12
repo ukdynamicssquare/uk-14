@@ -1,0 +1,265 @@
+/* =====================================================================
+   Microsoft Dynamics 365 for Nonprofits and Charities
+   pages/industries/non-profits.js
+   Extras on top of the shared "-two" template (bcVsSapTwo.module.css).
+   ===================================================================== */
+
+/* ---------- outcomes: two-column icon rows ---------- */
+.outcomes {
+  list-style: none;
+  padding: 0;
+  margin: 26px 0 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 34px;
+}
+.outcomes li {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 18px 0;
+  border-bottom: 1px solid #ebe6f2;
+  font-size: 15.5px;
+  line-height: 1.55;
+  color: #5b5768;
+}
+.outcomes li > i {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #984b6e, #60518c);
+  color: #fff;
+  font-size: 18px;
+}
+.outcomes strong {
+  display: block;
+  margin-bottom: 2px;
+  font-family: Lato, sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  color: #2d2640;
+}
+.outcomes a {
+  color: #8e44ad !important;
+  text-decoration: underline !important;
+  text-decoration-color: rgba(142, 68, 173, 0.45);
+  text-underline-offset: 3px;
+  font-weight: 600;
+}
+
+/* ---------- consultant call-to-action card ---------- */
+.consult {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  align-items: end;
+  gap: 0 40px;
+  padding: 0 44px;
+  border-radius: 26px;
+  background:
+    radial-gradient(circle at 0% 100%, rgba(231, 166, 196, 0.35), transparent 45%),
+    #f6f1fa;
+  border: 1px solid #ebe6f2;
+  overflow: hidden;
+}
+.consultPhoto {
+  align-self: end;
+  line-height: 0;
+}
+.consultPhoto img {
+  width: 100%;
+  height: auto;
+}
+.consultBody {
+  padding: 44px 0;
+  align-self: center;
+}
+.consultBody h2 {
+  font-family: Lato, sans-serif;
+  font-size: 30px;
+  font-weight: 900;
+  color: #2d2640;
+  margin-bottom: 12px;
+}
+.consultBody p {
+  font-size: 16px;
+  color: #463d52;
+  margin-bottom: 12px;
+}
+.consultBody p:last-of-type {
+  margin-bottom: 22px;
+}
+
+/* ---------- capabilities: dark section with icon cards ---------- */
+.capLead.capLead {
+  color: #d8cdea;
+}
+.capGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 34px;
+}
+.capItem {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 22px 26px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: background 0.3s, transform 0.3s;
+}
+.capItem:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-4px);
+}
+.capIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(10, 6, 20, 0.3);
+}
+.capIcon img {
+  width: 34px;
+  height: 34px;
+}
+.capItem h3 {
+  font-family: Lato, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.capItem p {
+  margin: 0;
+  font-size: 15px;
+  color: #d8cdea;
+}
+.capItem p a {
+  color: #f3c6dc !important;
+  text-decoration: underline !important;
+  text-decoration-color: rgba(243, 198, 220, 0.55);
+  text-underline-offset: 3px;
+  font-weight: 600;
+}
+
+/* ---------- financial visibility: checklist panel ---------- */
+.checkPanel {
+  margin: 20px 0 22px;
+  padding: 22px 24px 14px;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid #ebe6f2;
+  box-shadow: 0 16px 36px rgba(45, 38, 64, 0.06);
+}
+.checkPanel ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 24px;
+  margin: 0;
+}
+.panelTitle {
+  font-family: Lato, sans-serif;
+  font-weight: 800;
+  font-size: 17px;
+  color: #2d2640;
+  margin-bottom: 6px;
+}
+
+/* ---------- impact: numbered list ---------- */
+.impactList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: imp;
+  border-radius: 20px;
+  background: #fff;
+  border: 1px solid #ebe6f2;
+  overflow: hidden;
+}
+.impactList li {
+  counter-increment: imp;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 16px 22px;
+  font-size: 15.5px;
+  font-weight: 600;
+  color: #2d2640;
+  transition: background 0.25s;
+}
+.impactList li + li {
+  border-top: 1px solid #f0ecf5;
+}
+.impactList li:hover {
+  background: #fbf8fd;
+}
+.impactList li::before {
+  content: counter(imp, decimal-leading-zero);
+  flex: 0 0 auto;
+  min-width: 34px;
+  font-family: Lato, sans-serif;
+  font-size: 22px;
+  font-weight: 900;
+  background-image: linear-gradient(to right, #984b6e, #60518c);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.impactTitle {
+  font-family: Lato, sans-serif;
+  font-weight: 800;
+  font-size: 17px;
+  color: #2d2640;
+  margin-bottom: 14px;
+}
+
+@media (max-width: 1199px) {
+  .capGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 991px) {
+  .consult {
+    grid-template-columns: 1fr;
+    padding: 0 28px;
+  }
+  .consultPhoto {
+    order: 2;
+    max-width: 220px;
+    margin: 0 auto;
+  }
+  .consultBody {
+    padding: 34px 0 10px;
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .outcomes,
+  .checkPanel ul {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 575px) {
+  .capGrid {
+    grid-template-columns: 1fr;
+  }
+  .consult {
+    padding: 0 18px;
+  }
+  .consultBody h2 {
+    font-size: 24px;
+  }
+  .impactList li {
+    padding: 14px 16px;
+    gap: 12px;
+  }
+}

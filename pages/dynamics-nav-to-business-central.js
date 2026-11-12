@@ -544,7 +544,7 @@ const DynamicsNavToBusinessCentral = () => {
                   <p>Upgrading an ERP is quite a critical decision for organisations as it is done through ample research and the involvement of the right ERP Implementation partner.</p>
                   <div className="bb-tn">
                     <Link
-                      href="/free-dynamics-365-system-health-check/"
+                      href="/dynamics-365-health-check/"
                       target='_blank'
                       className="btn btn-md">Get Your NAV Audit Now <i className="bi bi-arrow-right"></i></Link>
                   </div>

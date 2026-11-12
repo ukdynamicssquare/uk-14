@@ -1,6 +1,11 @@
 {
   "redirects": [
     {
+      "source": "/free-dynamics-365-system-health-check/",
+      "destination": "/dynamics-365-health-check/",
+      "statusCode": 301
+    },
+    {
       "source": "/aboutus-new/",
       "destination": "/about-us/",
       "statusCode": 301

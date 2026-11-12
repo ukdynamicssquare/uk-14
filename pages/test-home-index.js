@@ -930,7 +930,7 @@ export default function HomeOld() {
               </div>
               <br />
               <Link
-                href="/free-dynamics-365-system-health-check/"
+                href="/dynamics-365-health-check/"
                 className="read-more"
                 data-aos="fade-left"
                 data-aos-delay="500"

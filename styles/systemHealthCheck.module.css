@@ -1,0 +1,327 @@
+/* =====================================================================
+   Free Dynamics 365 System Health Check
+   pages/dynamics-365-health-check.js
+   Small extras on top of the shared "-two" template (bcVsSapTwo.module.css).
+   ===================================================================== */
+
+/* ---------- What's included: module cards + sticky form ---------- */
+.moduleStack {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.moduleCard {
+  position: relative;
+  padding: 30px 30px 26px;
+  border-radius: 20px;
+  background: #fff;
+  border: 1px solid #ebe6f2;
+  box-shadow: 0 14px 34px rgba(45, 38, 64, 0.06);
+  overflow: hidden;
+  transition: box-shadow 0.3s, border-color 0.3s;
+}
+.moduleCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(to bottom, #984b6e, #60518c);
+}
+.moduleCard:hover {
+  border-color: #c9b6e0;
+  box-shadow: 0 22px 44px rgba(45, 38, 64, 0.1);
+}
+.moduleHead {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+.moduleHead h3 {
+  font-family: Lato, sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: #2d2640;
+  margin: 0;
+}
+.moduleIcon {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #984b6e, #60518c);
+  color: #fff;
+  font-size: 21px;
+  box-shadow: 0 10px 22px rgba(96, 81, 140, 0.3);
+}
+.moduleText p {
+  font-size: 15.5px;
+}
+.moduleText p:last-child {
+  margin-bottom: 0;
+}
+.moduleMedia {
+  border-radius: 16px;
+  background: linear-gradient(160deg, #f6f1fa, #eef0fa);
+  padding: 12px;
+}
+.moduleMedia img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.moduleList {
+  margin-top: 20px;
+  padding: 20px 22px 14px;
+  border-radius: 16px;
+  background: #f8f5fb;
+}
+.moduleList ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 24px;
+  margin-top: 8px;
+}
+.moduleClosing {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin: 20px 0 0;
+  padding-top: 18px;
+  border-top: 1px dashed #d9cde8;
+  font-size: 15.5px;
+  font-weight: 600;
+  color: #2d2640;
+}
+.moduleClosing i {
+  flex: 0 0 auto;
+  color: #8e44ad;
+  font-size: 20px;
+  line-height: 1.2;
+}
+.moduleClosing a {
+  color: #8e44ad;
+}
+
+.formAside {
+  position: sticky;
+  top: 170px;
+}
+.formCard {
+  padding: 28px 26px 10px;
+  border-radius: 20px;
+  background: #fff;
+  border: 1px solid #ebe6f2;
+  border-top: 4px solid #8e44ad;
+  box-shadow: 0 20px 44px rgba(45, 38, 64, 0.1);
+}
+.formCard h3 {
+  font-family: Lato, sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  color: #2d2640;
+  margin-bottom: 18px;
+}
+
+@media (max-width: 991px) {
+  .formAside {
+    position: static;
+  }
+}
+@media (max-width: 575px) {
+  .moduleCard {
+    padding: 24px 18px 20px;
+  }
+  .moduleHead h3 {
+    font-size: 19px;
+  }
+  .moduleList ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Final request CTA ---------- */
+.cta {
+  position: relative;
+  overflow: hidden;
+  padding: 60px 56px;
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(231, 166, 196, 0.35), transparent 40%),
+    linear-gradient(130deg, #984b6e 0%, #60518c 55%, #3f3160 100%);
+  box-shadow: 0 30px 60px rgba(63, 49, 96, 0.25);
+}
+.cta::before,
+.cta::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  pointer-events: none;
+}
+.cta::before {
+  width: 420px;
+  height: 420px;
+  right: -120px;
+  top: -160px;
+}
+.cta::after {
+  width: 260px;
+  height: 260px;
+  right: 40px;
+  bottom: -150px;
+  background: rgba(255, 255, 255, 0.05);
+}
+.ctaTitle {
+  color: #fff !important;
+  font-family: Lato, sans-serif;
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+.ctaLead {
+  color: #f0e8f7;
+  font-size: 17px;
+  margin-bottom: 26px;
+}
+.ctaPoints {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.ctaPoints li {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 14px 18px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #fff;
+  font-size: 15.5px;
+  line-height: 1.55;
+  backdrop-filter: blur(4px);
+}
+.ctaPoints li i {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 11px;
+  background: #fff;
+  color: #8e44ad;
+  font-size: 17px;
+}
+.ctaCard {
+  padding: 26px 26px 30px;
+  border-radius: 22px;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 24px 50px rgba(30, 20, 50, 0.3);
+}
+.ctaVisual {
+  margin: 0 auto 18px;
+  max-width: 260px;
+  padding: 10px;
+  border-radius: 18px;
+  background: linear-gradient(160deg, #f6f1fa, #eef0fa);
+}
+.ctaVisual img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.ctaCardText {
+  font-family: Lato, sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: #2d2640;
+  margin-bottom: 18px;
+}
+@media (max-width: 991px) {
+  .cta {
+    padding: 44px 28px;
+  }
+  .ctaTitle {
+    font-size: 30px;
+  }
+}
+@media (max-width: 575px) {
+  .cta {
+    padding: 34px 18px;
+    border-radius: 22px;
+  }
+  .ctaTitle {
+    font-size: 25px;
+  }
+  .ctaPoints li {
+    padding: 12px 14px;
+  }
+}
+
+.listTitle {
+  font-family: Lato, sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  color: #2d2640;
+  margin: 0 0 4px;
+}
+
+
+/* sign cards: last tile is a gradient note spanning two columns */
+.signNote {
+  grid-column: span 2;
+  display: flex;
+  align-items: center;
+  padding: 26px 28px;
+  border-radius: 18px;
+  background: linear-gradient(120deg, #984b6e, #60518c);
+}
+.signNote p {
+  margin: 0;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+/* four-step process */
+.steps4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.steps4::before {
+  left: 12%;
+  right: 12%;
+}
+
+.benefitCard p strong {
+  color: #2d2640;
+}
+
+@media (max-width: 991px) {
+  .signNote {
+    grid-column: 1 / -1;
+  }
+  .steps4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 40px;
+  }
+  .steps4::before {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .steps4 {
+    grid-template-columns: 1fr;
+  }
+}

@@ -612,7 +612,7 @@ const CHAPTERS = [
         <>Review how supplier invoices arrive today and whether OCR, the Payables Agent or Peppol receipt will replace manual entry.</>,
         <>Ask your partner how your AppSource apps and integrations will handle e-invoices.</>,
       ] },
-      { t: "callout", text: <>Not sure whether your current setup is secure and compliant? Book a <Link href="/free-dynamics-365-system-health-check/">free Dynamics 365 system health check</Link>.</> },
+      { t: "callout", text: <>Not sure whether your current setup is secure and compliant? Book a <Link href="/dynamics-365-health-check/">free Dynamics 365 system health check</Link>.</> },
     ],
   },
   {
