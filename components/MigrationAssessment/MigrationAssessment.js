@@ -63,6 +63,8 @@ export default function MigrationAssessment({ initialCatalog = null }) {
   const [lead, setLead] = useState({ name: "", email: "", company: "", phone: "" });
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
+  const [pdfBusy, setPdfBusy] = useState(false);
+  const [pdfError, setPdfError] = useState(null);
   const [sendError, setSendError] = useState(null);
 
   useEffect(() => {
@@ -101,6 +103,35 @@ export default function MigrationAssessment({ initialCatalog = null }) {
 
   const p = currency ? catalog?.pricing?.[currency] : null;
   const m = useMemo(() => (catalog ? assess(catalog, p, input) : null), [catalog, p, input]);
+
+  // Builds the PDF in the browser; the generator (and jsPDF) load only on click.
+  // The tab is opened straight away (inside the click) so pop-up blockers allow it,
+  // then pointed at the PDF once it has been built.
+  const downloadPdf = async () => {
+    setPdfBusy(true);
+    setPdfError(null);
+    const tab = window.open("", "_blank");
+    if (tab) {
+      tab.opener = null;
+      tab.document.title = "Preparing your report…";
+      tab.document.body.innerHTML =
+        '<p style="font:16px/1.5 system-ui,sans-serif;color:#55505F;padding:32px">Preparing your report…</p>';
+    }
+    try {
+      const { buildReport } = await import("./reportPdf");
+      const { doc, filename } = await buildReport({ catalog, m, input, lead, currency });
+      if (tab && !tab.closed) {
+        tab.location.href = URL.createObjectURL(doc.output("blob"));
+      } else {
+        doc.save(filename); // pop-ups blocked: fall back to a normal download
+      }
+    } catch (err) {
+      if (tab && !tab.closed) tab.close();
+      setPdfError("The report could not be created. Please try again.");
+    } finally {
+      setPdfBusy(false);
+    }
+  };
 
   const send = async () => {
     setSending(true);
@@ -395,16 +426,7 @@ export default function MigrationAssessment({ initialCatalog = null }) {
               </div>
             )}
 
-            {sent && m.risks.length > 0 && (
-              <div className="ma-flags">
-                {m.risks.map((f, i) => (
-                  <div className={"ma-flag f-" + f.kind} key={i}>
-                    <span className="ma-flag-title">{f.title}</span>
-                    <span className="ma-flag-body">{f.body}</span>
-                  </div>
-                ))}
-              </div>
-            )}
+            {/* risks are written up in the PDF report, so the results screen leaves them out */}
 
             {sent && m.licence && (
               <p className="ma-foot">
@@ -415,6 +437,13 @@ export default function MigrationAssessment({ initialCatalog = null }) {
                   : " Prices in this currency are placeholders pending verification."}
               </p>
             )}
+
+            {sent && (
+              <button type="button" className="ma-cta-pdf" onClick={downloadPdf} disabled={pdfBusy}>
+                <Icon name="file-earmark-arrow-down" /> {pdfBusy ? "Preparing your report…" : "Download full report"}
+              </button>
+            )}
+            {sent && pdfError && <span className="ma-err">{pdfError}</span>}
 
             {sent && (
               <div className="ma-cta-row">
@@ -587,6 +616,11 @@ padding:56px 12px 80px;-webkit-font-smoothing:antialiased;scroll-margin-top:90px
 .ma-grid{display:grid;grid-template-columns:minmax(0,1fr) 408px;gap:20px;align-items:start}
 .ma-grid.done{grid-template-columns:minmax(0,560px);justify-content:center}
 .ma-grid.done .ma-side{position:static}
+.ma-cta-pdf{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:52px;margin-top:6px;
+border:0;border-radius:5px;background:var(--plum);color:#fff;font-size:16px;font-weight:600;transition:background .15s}
+.ma-cta-pdf:hover{background:#63305D}
+.ma-cta-pdf:disabled{opacity:.7;cursor:progress}
+.ma-cta-pdf .bi{font-size:18px;line-height:1}
 .ma-cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
 .ma-cta-main,.ma-cta-call{flex:1 1 220px;display:inline-flex;align-items:center;justify-content:center;gap:10px;
 min-height:52px;padding:0 20px;border-radius:5px;font-size:16px;font-weight:600;text-decoration:none;transition:background .15s,border-color .15s,color .15s}
