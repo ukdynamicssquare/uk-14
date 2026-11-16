@@ -7,6 +7,8 @@
   max-width: calc(100vw - 32px);
   background: #fff;
   border-radius: 18px;
+  -webkit-box-shadow: 0 24px 60px rgba(35, 18, 43, 0.28), 0 2px 8px rgba(35, 18, 43, 0.08);
+  -moz-box-shadow: 0 24px 60px rgba(35, 18, 43, 0.28), 0 2px 8px rgba(35, 18, 43, 0.08);
   box-shadow: 0 24px 60px rgba(35, 18, 43, 0.28), 0 2px 8px rgba(35, 18, 43, 0.08);
   overflow: hidden;
   animation: slideUp 0.45s cubic-bezier(0.22, 1, 0.36, 1);
@@ -98,11 +100,15 @@
   background: linear-gradient(135deg, #23122b 0%, #5a2470 100%);
   color: #fff;
   border: 1px solid transparent;
+  -webkit-box-shadow: 0 6px 16px rgba(90, 36, 112, 0.35);
+  -moz-box-shadow: 0 6px 16px rgba(90, 36, 112, 0.35);
   box-shadow: 0 6px 16px rgba(90, 36, 112, 0.35);
 }
 
 .btnPrimary:hover {
   transform: translateY(-1px);
+  -webkit-box-shadow: 0 10px 22px rgba(90, 36, 112, 0.45);
+  -moz-box-shadow: 0 10px 22px rgba(90, 36, 112, 0.45);
   box-shadow: 0 10px 22px rgba(90, 36, 112, 0.45);
 }
 
@@ -125,9 +131,12 @@
   width: 100%;
   max-width: 560px;
   max-height: calc(100vh - 32px);
+  max-height: calc(100dvh - 32px);
   overflow-y: auto;
   background: #fff;
   border-radius: 20px;
+  -webkit-box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
   animation: popIn 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -243,6 +252,8 @@
   height: 18px;
   border-radius: 50%;
   background: #fff;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
   transition: transform 0.2s ease;
 }

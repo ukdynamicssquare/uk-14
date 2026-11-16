@@ -44,12 +44,16 @@
 }
 .sol-tabs__tab:hover {
   transform: translateY(-2px);
+  -webkit-box-shadow: 0 12px 26px rgba(45, 38, 64, 0.1);
+  -moz-box-shadow: 0 12px 26px rgba(45, 38, 64, 0.1);
   box-shadow: 0 12px 26px rgba(45, 38, 64, 0.1);
 }
 .sol-tabs__tab:global(.is-active) {
   background: linear-gradient(135deg, #4a3b69 0%, #2d2640 100%);
   border-color: transparent;
   color: #fff;
+  -webkit-box-shadow: 0 16px 34px rgba(45, 38, 64, 0.25);
+  -moz-box-shadow: 0 16px 34px rgba(45, 38, 64, 0.25);
   box-shadow: 0 16px 34px rgba(45, 38, 64, 0.25);
 }
 /* Pointer linking the active tab to the panel below */
@@ -97,6 +101,8 @@
   border-radius: 24px;
   background: #fff;
   border: 1px solid #ebe7f2;
+  -webkit-box-shadow: 0 18px 44px rgba(45, 38, 64, 0.08);
+  -moz-box-shadow: 0 18px 44px rgba(45, 38, 64, 0.08);
   box-shadow: 0 18px 44px rgba(45, 38, 64, 0.08);
 }
 .sol-tabs__panel:global(.is-active) {

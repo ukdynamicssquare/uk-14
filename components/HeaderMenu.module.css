@@ -3,10 +3,6 @@
   Moved out of styles/globals.css. `.nav` is the <nav class="navbar">; menu
   markup keeps its plain class names, so they are wrapped in :global().
 */
-
-.nav {
-  padding: 0;
-}
 .nav {
   padding: 10px 30px !important;
 }
@@ -124,6 +120,10 @@
 
   z-index: 99;
 
+  -webkit-box-shadow: 0 0 30px rgb(127 137 161 / 25%);
+
+  -moz-box-shadow: 0 0 30px rgb(127 137 161 / 25%);
+
   box-shadow: 0 0 30px rgb(127 137 161 / 25%);
   border-radius: 4px;
   overflow: hidden;
@@ -202,7 +202,7 @@
 .nav :global(.megamenu ul li .active:hover),
 .nav :global(.megamenu ul li a:hover) {
   color: var(--color-white);
-  background: var(--color-primary);
+  background: var(--color-primary, transparent);
 }
 .nav :global(.dropdown.megamenu .megamenu-list .left-list) {
   flex: 75%;
@@ -270,6 +270,8 @@
   background: 0 0;
   display: flex;
   flex-wrap: wrap;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
   box-shadow: none;
 }
 :where(.nav) :global(.right-list .rigt-list-menu li) {
@@ -406,6 +408,8 @@
 :where(.nav) :global(.right-list .rigt-list-menu.rigt-list-menu-new li a:hover) {
   color: inherit !important;
   background: #ffffff;
+  -webkit-box-shadow: 4px 4px 15px 0px rgb(0 0 0 / 19%);
+  -moz-box-shadow: 4px 4px 15px 0px rgb(0 0 0 / 19%);
   box-shadow: 4px 4px 15px 0px rgb(0 0 0 / 19%);
 }
 :where(.nav) :global(.p-relativ) {
@@ -539,6 +543,8 @@ opacity: 1;
     left: inherit;
     padding: 0px 0px;
     background: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
     box-shadow: none;
     margin: 0px 0px;
     border-radius: 0px;
@@ -568,9 +574,6 @@ white-space: normal;
 .nav :global(.dropdown.megamenu .megamenu-list.megamenu-list-resource .left-list){
 flex: 100%;
     max-width: 100%;
-}
-.nav :global(.dropdown.megamenu .megamenu-list.megamenu-list-resource .tab-content){
-padding: 20px 10px 10px;
 }
 .nav :global(.dropdown.megamenu .megamenu-list.megamenu-list-resource .left-list .nav-pills){
       flex: 0 0 18% !important;
@@ -643,7 +646,6 @@ text-align: right;
 }
 :where(.nav) :global(.res-st-oo1 li .ccc-card span){
   display: block;
-    margin: 0px 0px;
     margin: 0px 0px 5px;
 }
 :where(.nav) :global(.res-st-oo1 .ccc-img){
@@ -791,9 +793,6 @@ display: block;
   margin-bottom: 0;
 }
 @media (max-width:1400px){
-  :where(.nav) :global(.res-flex-wrap .guide-card-01:last-child) {
-    /* display: none; */
-  }
 }
 .nav :global(.dropdown.megamenu.ind-megamenu) {
   position: static;
@@ -807,9 +806,12 @@ display: block;
   gap: 15px;
   padding: 15px;
   max-height: calc(100vh - 120px);
+  max-height: calc(100dvh - 120px);
   overflow-y: auto;
   background: #ffffff;
   border-radius: 14px;
+  -webkit-box-shadow: 0 30px 60px -18px rgb(98 83 144 / 30%), 0 0 0 1px rgb(98 83 144 / 6%);
+  -moz-box-shadow: 0 30px 60px -18px rgb(98 83 144 / 30%), 0 0 0 1px rgb(98 83 144 / 6%);
   box-shadow: 0 30px 60px -18px rgb(98 83 144 / 30%), 0 0 0 1px rgb(98 83 144 / 6%);
 }
 .nav :global(.ind-mega a),
@@ -933,6 +935,8 @@ display: block;
   opacity: 1;
   visibility: visible;
   background: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
   box-shadow: none;
 }
 .nav :global(.ind-mega ul.ind-mega-sublinks.ind-mega-sublinks--two) {
@@ -1191,7 +1195,6 @@ display: block;
   border-radius: 0;
 }
 .nav :global(.dropdown.megamenu .megamenu-list.megamenu-list-resource .tab-content) {
-  background-color: #f3f2f6;
   border-radius: 0 10px 10px 10px;
 }
 .nav :global(.dropdown.megamenu.megamenu-new .megamenu-list),
@@ -1313,6 +1316,7 @@ display: block;
 .nav :global(.dropdown.megamenu.megamenu-new .megamenu-list),
 .nav :global(.dropdown.megamenu .megamenu-list.megamenu-list-resource) {
   max-height: calc(100vh - 120px);
+  max-height: calc(100dvh - 120px);
   overflow-y: auto;
   overscroll-behavior: contain;
 }

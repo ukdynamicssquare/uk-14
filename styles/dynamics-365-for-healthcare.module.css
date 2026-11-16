@@ -55,6 +55,8 @@
   background: linear-gradient(135deg, #4a3b69 0%, #2d2640 100%);
   border-color: transparent;
   color: #fff;
+  -webkit-box-shadow: 0 12px 28px rgba(45, 38, 64, 0.25);
+  -moz-box-shadow: 0 12px 28px rgba(45, 38, 64, 0.25);
   box-shadow: 0 12px 28px rgba(45, 38, 64, 0.25);
 }
 .hc-apps__tab:global(.is-active) :global(.bi) {
@@ -79,6 +81,8 @@
   background: #fff;
   border-radius: 16px;
   border-top: 4px solid #8e44ad;
+  -webkit-box-shadow: 0 16px 40px rgba(45, 38, 64, 0.08);
+  -moz-box-shadow: 0 16px 40px rgba(45, 38, 64, 0.08);
   box-shadow: 0 16px 40px rgba(45, 38, 64, 0.08);
   overflow: hidden;
 }
@@ -211,6 +215,8 @@
   padding: 36px 32px;
   border-radius: 18px;
   background: linear-gradient(160deg, #4a3b69 0%, #2d2640 100%);
+  -webkit-box-shadow: 0 18px 40px rgba(45, 38, 64, 0.22);
+  -moz-box-shadow: 0 18px 40px rgba(45, 38, 64, 0.22);
   box-shadow: 0 18px 40px rgba(45, 38, 64, 0.22);
 }
 .hc-case-intro h2 {
@@ -248,6 +254,8 @@
   border: 1px solid #ebe7f2;
   border-radius: 16px;
   overflow: hidden;
+  -webkit-box-shadow: 0 -6px 24px rgba(45, 38, 64, 0.08);
+  -moz-box-shadow: 0 -6px 24px rgba(45, 38, 64, 0.08);
   box-shadow: 0 -6px 24px rgba(45, 38, 64, 0.08);
   transform: scale(var(--stack-scale, 1));
   transform-origin: center top;
@@ -267,6 +275,8 @@
 }
 .hc-case-item:hover {
   border-color: #d6c8ea;
+  -webkit-box-shadow: 0 -6px 24px rgba(45, 38, 64, 0.08), 0 16px 36px rgba(45, 38, 64, 0.12);
+  -moz-box-shadow: 0 -6px 24px rgba(45, 38, 64, 0.08), 0 16px 36px rgba(45, 38, 64, 0.12);
   box-shadow: 0 -6px 24px rgba(45, 38, 64, 0.08), 0 16px 36px rgba(45, 38, 64, 0.12);
 }
 .hc-case-item__img {
@@ -405,6 +415,8 @@
   background: #fff;
   border-radius: 18px;
   overflow: hidden;
+  -webkit-box-shadow: 0 10px 30px rgba(45, 38, 64, 0.06);
+  -moz-box-shadow: 0 10px 30px rgba(45, 38, 64, 0.06);
   box-shadow: 0 10px 30px rgba(45, 38, 64, 0.06);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   isolation: isolate;
@@ -434,6 +446,8 @@
 }
 .hc-challenge:hover {
   transform: translateY(-6px);
+  -webkit-box-shadow: 0 20px 44px rgba(45, 38, 64, 0.22);
+  -moz-box-shadow: 0 20px 44px rgba(45, 38, 64, 0.22);
   box-shadow: 0 20px 44px rgba(45, 38, 64, 0.22);
 }
 .hc-challenge:hover::after {
@@ -548,6 +562,8 @@
   padding: 34px 32px 30px;
   border-radius: 20px;
   background: linear-gradient(135deg, #4a3b69 0%, #2d2640 100%);
+  -webkit-box-shadow: 0 18px 40px rgba(45, 38, 64, 0.22);
+  -moz-box-shadow: 0 18px 40px rgba(45, 38, 64, 0.22);
   box-shadow: 0 18px 40px rgba(45, 38, 64, 0.22);
   overflow: hidden;
 }
@@ -596,6 +612,8 @@
 }
 .hc-what-point:hover {
   transform: translateX(6px);
+  -webkit-box-shadow: 0 12px 28px rgba(45, 38, 64, 0.1);
+  -moz-box-shadow: 0 12px 28px rgba(45, 38, 64, 0.1);
   box-shadow: 0 12px 28px rgba(45, 38, 64, 0.1);
 }
 .hc-what-point__icon {
@@ -714,6 +732,8 @@
 .hc-why-row:global(.is-open) {
   background: #fff;
   border-color: #e0d6ee;
+  -webkit-box-shadow: 0 14px 32px rgba(45, 38, 64, 0.1);
+  -moz-box-shadow: 0 14px 32px rgba(45, 38, 64, 0.1);
   box-shadow: 0 14px 32px rgba(45, 38, 64, 0.1);
 }
 .hc-why-row__toggle {
@@ -784,6 +804,8 @@
   font-family: Lato, "Lato Fallback", sans-serif;
   font-size: 13px;
   font-weight: 800;
+  -webkit-box-shadow: 0 0 0 4px #F1ECF7, 0 6px 14px rgba(142, 68, 173, 0.28);
+  -moz-box-shadow: 0 0 0 4px #F1ECF7, 0 6px 14px rgba(142, 68, 173, 0.28);
   box-shadow: 0 0 0 4px #F1ECF7, 0 6px 14px rgba(142, 68, 173, 0.28);
   transition: transform 0.25s ease;
 }
@@ -826,6 +848,8 @@
   left: -34px;
   border-radius: 50%;
   background: radial-gradient(circle, rgba(230, 223, 240, 0.9) 55%, rgba(230, 223, 240, 0) 72%);
+  -webkit-box-shadow: 0 0 0 1px #ebe7f2;
+  -moz-box-shadow: 0 0 0 1px #ebe7f2;
   box-shadow: 0 0 0 1px #ebe7f2;
 }
 .hc-why-ring__img {
@@ -837,6 +861,8 @@
   border-radius: 50%;
   overflow: hidden;
   background: #e6dff0;
+  -webkit-box-shadow: 0 0 0 10px #fff, 0 20px 44px rgba(45, 38, 64, 0.18);
+  -moz-box-shadow: 0 0 0 10px #fff, 0 20px 44px rgba(45, 38, 64, 0.18);
   box-shadow: 0 0 0 10px #fff, 0 20px 44px rgba(45, 38, 64, 0.18);
 }
 /* Scaled and shifted so the faces sit in the circle and the badge baked
@@ -857,6 +883,8 @@
   height: auto;
   border-radius: 18%;
   border: 4px solid #fff;
+  -webkit-box-shadow: 0 14px 30px rgba(45, 38, 64, 0.25);
+  -moz-box-shadow: 0 14px 30px rgba(45, 38, 64, 0.25);
   box-shadow: 0 14px 30px rgba(45, 38, 64, 0.25);
 }
 .hc-why-goal {

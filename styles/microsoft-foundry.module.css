@@ -134,11 +134,15 @@
   border-radius: 14px;
   padding: 30px 24px 26px;
   border-top: 4px solid #8e44ad;
+  -webkit-box-shadow: 0 10px 30px rgba(45, 38, 64, 0.07);
+  -moz-box-shadow: 0 10px 30px rgba(45, 38, 64, 0.07);
   box-shadow: 0 10px 30px rgba(45, 38, 64, 0.07);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .mf-stat:hover {
   transform: translateY(-4px);
+  -webkit-box-shadow: 0 16px 36px rgba(45, 38, 64, 0.12);
+  -moz-box-shadow: 0 16px 36px rgba(45, 38, 64, 0.12);
   box-shadow: 0 16px 36px rgba(45, 38, 64, 0.12);
 }
 .mf-stat__icon {
@@ -166,6 +170,8 @@
 .mf-table-wrap {
   background: #fff;
   border-radius: 14px;
+  -webkit-box-shadow: 0 10px 30px rgba(45, 38, 64, 0.07);
+  -moz-box-shadow: 0 10px 30px rgba(45, 38, 64, 0.07);
   box-shadow: 0 10px 30px rgba(45, 38, 64, 0.07);
   overflow: hidden;
 }
@@ -196,11 +202,6 @@
   color: #4a3b69;
   font-weight: 700;
 }
-.mf-table td.mf-num {
-  color: #93446f;
-  font-weight: 700;
-  white-space: nowrap;
-}
 
 /* ==========================================================================
    Harness cards
@@ -226,6 +227,8 @@
 }
 .mf-engine-card:hover {
   border-color: #a347d1;
+  -webkit-box-shadow: 0 8px 25px rgba(80, 50, 100, 0.08);
+  -moz-box-shadow: 0 8px 25px rgba(80, 50, 100, 0.08);
   box-shadow: 0 8px 25px rgba(80, 50, 100, 0.08);
 }
 .mf-engine-card__icon {
@@ -258,6 +261,8 @@
   background: #fff;
   border-radius: 14px;
   padding: 28px 24px;
+  -webkit-box-shadow: 0 10px 30px rgba(45, 38, 64, 0.07);
+  -moz-box-shadow: 0 10px 30px rgba(45, 38, 64, 0.07);
   box-shadow: 0 10px 30px rgba(45, 38, 64, 0.07);
   height: 100%;
 }
@@ -328,6 +333,8 @@
   border-left: 5px solid #8e44ad;
   border-radius: 0 14px 14px 0;
   padding: 28px;
+  -webkit-box-shadow: 0 10px 30px rgba(45, 38, 64, 0.07);
+  -moz-box-shadow: 0 10px 30px rgba(45, 38, 64, 0.07);
   box-shadow: 0 10px 30px rgba(45, 38, 64, 0.07);
 }
 .mf-example p {
@@ -404,6 +411,8 @@
   background: #fff;
   border-radius: 14px;
   padding: 30px 28px;
+  -webkit-box-shadow: 0 10px 30px rgba(45, 38, 64, 0.07);
+  -moz-box-shadow: 0 10px 30px rgba(45, 38, 64, 0.07);
   box-shadow: 0 10px 30px rgba(45, 38, 64, 0.07);
 }
 .mf-rules p {
@@ -455,6 +464,8 @@
   background: #fff;
   border-radius: 18px;
   padding: 44px 48px;
+  -webkit-box-shadow: 0 16px 40px rgba(45, 38, 64, 0.08);
+  -moz-box-shadow: 0 16px 40px rgba(45, 38, 64, 0.08);
   box-shadow: 0 16px 40px rgba(45, 38, 64, 0.08);
   border-top: 4px solid #8e44ad;
 }
@@ -504,6 +515,8 @@
   /* Each row becomes a card; td labels come from data-label */
   .mf-table-wrap {
     background: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
     box-shadow: none;
     border-radius: 0;
   }
@@ -524,6 +537,8 @@
   .mf-table tr {
     background: #fff;
     border-radius: 12px;
+    -webkit-box-shadow: 0 6px 20px rgba(45, 38, 64, 0.08);
+    -moz-box-shadow: 0 6px 20px rgba(45, 38, 64, 0.08);
     box-shadow: 0 6px 20px rgba(45, 38, 64, 0.08);
     margin-bottom: 14px;
     overflow: hidden;

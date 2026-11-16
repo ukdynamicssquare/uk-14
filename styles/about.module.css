@@ -137,8 +137,6 @@ content: '';
 }
 
 .statRow strong {
-  display: block;
-  line-height: 1.2;
   color: #fff;
     font-weight: 500;
     font-size: 40px;
@@ -285,13 +283,6 @@ content: '';
   font-size: var(--h2-font-size);
   margin-bottom: 12px;
 }
-
-.teamSection > .container > p {
-  color: #d9cbea;
-  max-width: 720px;
-  margin-bottom: 40px;
-  font-size: 16px;
-}
 .teamSection p{
     color: #fff;
     max-width: 900px;
@@ -319,6 +310,8 @@ content: '';
   border-radius: 50%;
   background: #fff;
   color: var(--about-purple);
+  -webkit-box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
   z-index: 5;
 }
@@ -376,6 +369,8 @@ content: '';
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.25);
+  -webkit-box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
   color: #fff;
   text-align: center;
@@ -518,6 +513,8 @@ content: '';
 
 .techItem:hover {
   color: var(--about-purple);
+  -webkit-box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  -moz-box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
   transform: translateY(-2px);
 }
@@ -562,15 +559,8 @@ color: var(--about-heading);
 
 .deliverSection ul li {
   color: #555;
-  font-size: 16px;
   margin-bottom: 6px;
     font-size:16px
-}
-
-.deliverSection > .container > .row > div > p {
-  color: #555;
-  font-size: 16px;
-  line-height: 1.7;
 }
 
 .ringWrap {
@@ -605,11 +595,6 @@ color: var(--about-heading);
   mask-image: linear-gradient(90deg, transparent 0%, transparent 42%, #000 58%);
 }
 
-.ctaBanner .container {
-  position: relative;
-  z-index: 1;
-}
-
 .ctaBanner h2 {
   color: #fff;
   background: linear-gradient(90deg, #F36789 0%, #EDE9FF 100%);
@@ -638,12 +623,6 @@ color: var(--about-heading);
   font-weight: var(--heading-font-weight);
   font-size: var(--h2-font-size);
   margin-bottom: 14px;
-}
-
-.servicesSection > .container > .row > div > p {
-  color: #555;
-  font-size: 16px;
-  max-width: 720px;
 }
 
 .serviceCard {
@@ -813,7 +792,6 @@ color: var(--about-heading);
 
   /* smaller pin, anchored at its tip so the map position stays the same */
   scale: var(--pin-scale, 0.78);
-  transform-origin: 50% 100%;
 
   /*
     Smooth hover animation
@@ -863,6 +841,12 @@ color: var(--about-heading);
   align-items: center;
   justify-content: center;
 
+  -webkit-box-shadow:
+    0 12px 20px rgba(0, 0, 0, 0.18);
+
+  -moz-box-shadow:
+    0 12px 20px rgba(0, 0, 0, 0.18);
+
   box-shadow:
     0 12px 20px rgba(0, 0, 0, 0.18);
 }
@@ -892,7 +876,10 @@ color: var(--about-heading);
 
   border: 5px solid #ffffff;
 
-  box-shadow:
+  -webkit-box-shadow:
+    0 2px 5px rgba(0, 0, 0, 0.08);
+
+  -moz-box-shadow:
     0 2px 5px rgba(0, 0, 0, 0.08);
 }
 
@@ -915,27 +902,6 @@ color: var(--about-heading);
    PIN SHADOW
 ========================================= */
 
-.pinShadow {
-  position: absolute;
-
-  bottom: -4px;
-
-  left: 50%;
-
-  width: 55px;
-  height: 12px;
-
-  transform: translateX(-50%);
-
-  background: rgba(0, 0, 0, 0.18);
-
-  border-radius: 50%;
-
-  filter: blur(5px);
-
-  z-index: -1;
-}
-
 
 /* =========================================
    LOCATION POSITIONS
@@ -946,70 +912,35 @@ color: var(--about-heading);
    CANADA
 */
 
-.canada {
-  left: 16.2%;
-  top: 33%;
-}
-
 
 /*
    USA
 */
-
-.usa {
-  left: 16.3%;
-  top: 52%;
-}
 
 
 /*
    UNITED KINGDOM
 */
 
-.uk {
-  left: 43.6%;
-  top: 9%;
-}
-
 
 /*
    NETHERLANDS
 */
-
-.netherlands {
-  left: 50.8%;
-  top: 9%;
-}
 
 
 /*
    INDIA
 */
 
-.india {
-  left: 67.1%;
-  top: 30.5%;
-}
-
 
 /*
    SINGAPORE
 */
 
-.singapore {
-  left: 72.8%;
-  top: 46%;
-}
-
 
 /*
    AUSTRALIA
 */
-
-.australia {
-  left: 76%;
-  top: 67%;
-}
 
 
 /* =========================================
@@ -1024,30 +955,19 @@ color: var(--about-heading);
 
   transform: translateX(-50%);
 
-  padding: 6px 12px;
-
   background: #ffffff;
 
-  color: #333333;
-
   font-size: 16px;
-  font-weight: 600;
 
   line-height: 1;
 
   white-space: nowrap;
 
-  border-radius: 6px;
-
-  box-shadow:
+  -webkit-box-shadow:
     0 5px 15px rgba(0, 0, 0, 0.12);
 
-  opacity: 0;
-  visibility: hidden;
-
-  transition:
-    opacity 0.25s ease,
-    visibility 0.25s ease;
+  -moz-box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.12);
 }
 
 
@@ -1066,10 +986,6 @@ color: var(--about-heading);
   padding: 60px 0 65px;
   background: #f4f3f7;
   color: #454348;
-}
-
-.aboutMethodology .container {
-  max-width: 1150px;
 }
 
 
@@ -1399,50 +1315,6 @@ color: var(--about-heading);
    CLOCK ICON
 ========================================================= */
 
-.aboutMethodologyClock {
-  position: relative;
-
-  width: 17px;
-  height: 17px;
-
-  border: 3px solid #fff;
-
-  border-radius: 50%;
-}
-
-.aboutMethodologyClock::before {
-  content: "";
-
-  position: absolute;
-
-  left: 50%;
-  top: 1px;
-
-  width: 2px;
-  height: 7px;
-
-  background: #fff;
-
-  transform: translateX(-50%);
-}
-
-.aboutMethodologyClock::after {
-  content: "";
-
-  position: absolute;
-
-  left: 50%;
-  top: 8px;
-
-  width: 6px;
-  height: 2px;
-
-  background: #fff;
-
-  transform-origin: left center;
-  transform: rotate(35deg);
-}
-
 
 /* =========================================================
    SURE STEP ICON
@@ -1452,57 +1324,6 @@ color: var(--about-heading);
   border-radius: 3px;
 }
 
-.aboutMethodologyStep {
-  position: relative;
-
-  width: 18px;
-  height: 22px;
-
-  border-left: 4px solid #fff;
-  border-right: 4px solid #fff;
-}
-
-.aboutMethodologyStep::before {
-  content: "";
-
-  position: absolute;
-
-  left: 50%;
-  top: 0;
-
-  width: 2px;
-  height: 100%;
-
-  background: #fff;
-
-  transform: translateX(-50%);
-}
-
-.aboutMethodologyStep b {
-  position: absolute;
-
-  left: 50%;
-  top: 50%;
-
-  width: 13px;
-  height: 13px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 50%;
-
-  background: #a75dbb;
-
-  color: #fff;
-
-  font-size: 16px;
-  line-height: 1;
-
-  transform: translate(-50%, -50%);
-}
-
 
 /* =========================================================
    SUCCESS BY DESIGN ICON
@@ -1510,41 +1331,6 @@ color: var(--about-heading);
 
 .aboutMethodologyIcon3 {
   background: transparent;
-}
-
-.aboutMethodologyDesign {
-  position: relative;
-
-  width: 28px;
-  height: 28px;
-}
-
-.aboutMethodologyDesign i {
-  position: absolute;
-
-  display: block;
-
-  width: 11px;
-  height: 11px;
-
-  border-radius: 50%;
-
-  background: #a257bd;
-}
-
-.aboutMethodologyDesign i:nth-child(1) {
-  left: 9px;
-  top: 0;
-}
-
-.aboutMethodologyDesign i:nth-child(2) {
-  left: 0;
-  bottom: 1px;
-}
-
-.aboutMethodologyDesign i:nth-child(3) {
-  right: 0;
-  bottom: 1px;
 }
 
 
@@ -1750,7 +1536,6 @@ color: var(--about-heading);
   }
 
   .aboutMethodologyCard {
-    min-height: 280px;
     margin-bottom: 20px;
   }
 
@@ -1868,7 +1653,6 @@ color: var(--about-heading);
 
   .statRow {
     flex-direction: column;
-    gap: 16px;
   }
 
   .partnerBadge {
@@ -1927,12 +1711,6 @@ color: var(--about-heading);
 
     border-width: 4px;
   }
-
-
-  .pinShadow {
-    width: 45px;
-    height: 10px;
-  }
 }
 
 
@@ -1968,12 +1746,6 @@ color: var(--about-heading);
 
     border-width: 4px;
   }
-
-
-  .pinShadow {
-    width: 40px;
-    height: 9px;
-  }
 }
 
 
@@ -1996,9 +1768,6 @@ color: var(--about-heading);
       The map keeps a minimum width and the
       section can scroll horizontally.
     */
-    min-width: 700px;
-
-    width: 700px;
 
     aspect-ratio: 1800 / 758;
   }
@@ -2019,19 +1788,6 @@ color: var(--about-heading);
   .pinIcon {
     width: 39px;
     height: 39px;
-
-    border-width: 3px;
-  }
-
-
-  .pinShadow {
-    width: 35px;
-    height: 8px;
-  }
-
-
-  .locationLabel {
-    display: none;
   }
 }
 
@@ -2219,10 +1975,6 @@ color: var(--about-heading);
     padding: 0;
   }
 
-  .teamSection > .container > p {
-    margin-bottom: 28px;
-  }
-
   .teamCallout {
     margin-top: 50px;
     gap: 16px;
@@ -2263,9 +2015,8 @@ color: var(--about-heading);
   }
 
   .partnerSection p,
-  .trustedSection p,
-  .deliverSection > .container > .row > div > p,
-  .deliverSection ul li {
+.trustedSection p,
+.deliverSection ul li {
     font-size: 15px;
     line-height: 1.7;
   }
@@ -2330,29 +2081,15 @@ color: var(--about-heading);
 .globalMap .locationPin:nth-child(7) { --i: 6; }
 
 .mapIn .pinBody {
-  animation: pinDrop 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) both;
   animation-delay: calc(var(--i, 0) * 0.15s);
 }
 
 .mapIn .pinIcon {
-  animation: pinPop 0.45s cubic-bezier(0.34, 1.56, 0.64, 1) both;
   animation-delay: calc(var(--i, 0) * 0.15s + 0.4s);
 }
 
 .mapIn .locationPin {
-  animation: pinFloat 3.2s ease-in-out infinite;
   animation-delay: calc(var(--i, 0) * 0.15s + 1.2s);
-}
-
-@keyframes pinDrop {
-  from {
-    opacity: 0;
-    translate: 0 -60px;
-  }
-  to {
-    opacity: 1;
-    translate: 0 0;
-  }
 }
 
 @keyframes pinPop {
@@ -2406,7 +2143,6 @@ color: var(--about-heading);
   opacity: 1;
   visibility: visible;
   top: calc(100% + 2px);
-  padding: 5px 11px;
   font-size: 16px;
   font-weight: 700;
   color: #4a3f6d;
@@ -2530,12 +2266,6 @@ color: var(--about-heading);
 @media (max-width: 767px) {
   .locationLabel {
     display: block;
-    padding: 4px 8px;
-    font-size: 15px;
-  }
-
-  .locationPin::after {
-    display: none;
   }
 }
 
@@ -2619,6 +2349,8 @@ color: var(--about-heading);
 
 /* Pin flag ring: thin purple outline so flags read crisply on the white */
 .pinIcon {
+  -webkit-box-shadow: 0 0 0 1px rgba(122, 63, 160, 0.15), 0 2px 5px rgba(0, 0, 0, 0.08);
+  -moz-box-shadow: 0 0 0 1px rgba(122, 63, 160, 0.15), 0 2px 5px rgba(0, 0, 0, 0.08);
   box-shadow: 0 0 0 1px rgba(122, 63, 160, 0.15), 0 2px 5px rgba(0, 0, 0, 0.08);
 }
 
@@ -2626,6 +2358,8 @@ color: var(--about-heading);
 .locationLabel {
   border: 1px solid rgba(122, 63, 160, 0.12);
   border-radius: 999px;
+  -webkit-box-shadow: 0 4px 12px rgba(74, 63, 109, 0.12);
+  -moz-box-shadow: 0 4px 12px rgba(74, 63, 109, 0.12);
   box-shadow: 0 4px 12px rgba(74, 63, 109, 0.12);
   letter-spacing: 0.01em;
 }
@@ -2656,11 +2390,6 @@ color: var(--about-heading);
   width: calc(var(--pin-w) * 0.7);
   height: calc(var(--pin-w) * 0.7);
   border-width: calc(var(--pin-w) * 0.058);
-}
-
-.pinShadow {
-  width: calc(var(--pin-w) * 0.64);
-  height: calc(var(--pin-w) * 0.14);
 }
 
 .locationPin::after {
@@ -2759,9 +2488,6 @@ color: var(--about-heading);
   }
 
   /* stop the CTA copy running under the photo on the right */
-  .ctaBanner .row > div {
-    max-width: 68%;
-  }
 }
 
 @media (max-width: 991px) {
@@ -2884,6 +2610,8 @@ color: var(--about-heading);
   background: #fff;
   border: 1px solid rgba(122, 63, 160, 0.15);
   border-radius: 10px;
+  -webkit-box-shadow: 0 10px 28px rgba(46, 39, 68, 0.18);
+  -moz-box-shadow: 0 10px 28px rgba(46, 39, 68, 0.18);
   box-shadow: 0 10px 28px rgba(46, 39, 68, 0.18);
   color: #4a4458;
   font-size: 13px;

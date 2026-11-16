@@ -38,7 +38,6 @@
 }
 
 .btn-get-started {
-  color: #fff;
   font-size: 16px;
 }
 
@@ -242,6 +241,8 @@
   align-items: center;
   padding: 30px 40px;
   border-radius: 8px;
+  -webkit-box-shadow: 30px 30px 90px 0 rgba(115, 110, 130, 0.35);
+  -moz-box-shadow: 30px 30px 90px 0 rgba(115, 110, 130, 0.35);
   box-shadow: 30px 30px 90px 0 rgba(115, 110, 130, 0.35);
   background-image: radial-gradient(
       circle at 124% -39%,
@@ -442,6 +443,8 @@
 .erp-expect-card {
   background: #fff;
   border-radius: 12px;
+  -webkit-box-shadow: 0 6px 24px rgba(20, 10, 40, 0.08);
+  -moz-box-shadow: 0 6px 24px rgba(20, 10, 40, 0.08);
   box-shadow: 0 6px 24px rgba(20, 10, 40, 0.08);
   padding: 28px;
   width: 100%;
@@ -500,6 +503,8 @@
   background: #fff;
   border-radius: 12px;
   padding: 20px;
+  -webkit-box-shadow: 0 4px 14px rgba(20, 10, 40, 0.08);
+  -moz-box-shadow: 0 4px 14px rgba(20, 10, 40, 0.08);
   box-shadow: 0 4px 14px rgba(20, 10, 40, 0.08);
   flex: 1 1 200px;
 }
@@ -526,6 +531,8 @@
   background: #f2eff7;
   border-radius: 16px;
   padding: 10px 30px;
+  -webkit-box-shadow: 0 20px 40px rgba(96, 81, 140, 0.15);
+  -moz-box-shadow: 0 20px 40px rgba(96, 81, 140, 0.15);
   box-shadow: 0 20px 40px rgba(96, 81, 140, 0.15);
   margin-top: 30px;
   border: 1px solid rgba(142, 68, 173, 0.2);
@@ -619,6 +626,8 @@
   margin-top: 40px;
   border-radius: 12px;
   overflow: hidden;
+  -webkit-box-shadow: 0 15px 40px rgba(45, 38, 64, 0.12);
+  -moz-box-shadow: 0 15px 40px rgba(45, 38, 64, 0.12);
   box-shadow: 0 15px 40px rgba(45, 38, 64, 0.12);
 }
 
@@ -678,6 +687,8 @@
   background: #fff;
   border-radius: 10px;
   padding: 22px 26px;
+  -webkit-box-shadow: 0 10px 30px rgba(15, 8, 30, 0.25);
+  -moz-box-shadow: 0 10px 30px rgba(15, 8, 30, 0.25);
   box-shadow: 0 10px 30px rgba(15, 8, 30, 0.25);
 }
 
@@ -721,6 +732,8 @@
   align-items: center;
   justify-content: center;
   justify-self: center;
+  -webkit-box-shadow: 0 4px 14px rgba(142, 68, 173, 0.5);
+  -moz-box-shadow: 0 4px 14px rgba(142, 68, 173, 0.5);
   box-shadow: 0 4px 14px rgba(142, 68, 173, 0.5);
 }
 
@@ -784,9 +797,6 @@
 }
 
 @media (max-width: 768px) {
-  .btn-get-started {
-    padding: 0.8rem 1.5rem;
-  }
 }
 
 @media (max-width: 1440px) {
@@ -998,6 +1008,8 @@
 }
 
 .faq .accordion-button:focus {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
   box-shadow: none;
 }
 

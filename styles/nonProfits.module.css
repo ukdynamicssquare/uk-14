@@ -125,6 +125,8 @@
   margin-bottom: 18px;
   border-radius: 50%;
   background: #fff;
+  -webkit-box-shadow: 0 10px 24px rgba(10, 6, 20, 0.3);
+  -moz-box-shadow: 0 10px 24px rgba(10, 6, 20, 0.3);
   box-shadow: 0 10px 24px rgba(10, 6, 20, 0.3);
 }
 .capIcon img {
@@ -158,6 +160,8 @@
   border-radius: 18px;
   background: #fff;
   border: 1px solid #ebe6f2;
+  -webkit-box-shadow: 0 16px 36px rgba(45, 38, 64, 0.06);
+  -moz-box-shadow: 0 16px 36px rgba(45, 38, 64, 0.06);
   box-shadow: 0 16px 36px rgba(45, 38, 64, 0.06);
 }
 .checkPanel ul {

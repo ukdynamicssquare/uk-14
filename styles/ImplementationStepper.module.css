@@ -17,6 +17,8 @@
   height: 420px;
   border: 1px solid rgba(214, 200, 234, 0.12);
   border-radius: 50%;
+  -webkit-box-shadow: 0 0 0 60px rgba(214, 200, 234, 0.03);
+  -moz-box-shadow: 0 0 0 60px rgba(214, 200, 234, 0.03);
   box-shadow: 0 0 0 60px rgba(214, 200, 234, 0.03);
   pointer-events: none;
 }
@@ -149,6 +151,8 @@
   background: var(--color-red);
   color: #fff;
   font-size: 36px;
+  -webkit-box-shadow: 0 14px 30px rgba(187, 43, 54, 0.4);
+  -moz-box-shadow: 0 14px 30px rgba(187, 43, 54, 0.4);
   box-shadow: 0 14px 30px rgba(187, 43, 54, 0.4);
 }
 .impl-stepper__content {
@@ -201,6 +205,8 @@
   background: #fff;
   color: #2d2640;
   font-weight: 700;
+  -webkit-box-shadow: 0 12px 30px rgba(15, 8, 30, 0.3);
+  -moz-box-shadow: 0 12px 30px rgba(15, 8, 30, 0.3);
   box-shadow: 0 12px 30px rgba(15, 8, 30, 0.3);
   transition: transform 0.2s ease;
 }
@@ -274,7 +280,6 @@
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
   }
   .impl-stepper__track::-webkit-scrollbar {

@@ -49,6 +49,8 @@ p.chg-intro {
   background: #fff;
   border-color: #e0d6ee;
   transform: translateY(-4px);
+  -webkit-box-shadow: 0 18px 40px rgba(45, 38, 64, 0.1);
+  -moz-box-shadow: 0 18px 40px rgba(45, 38, 64, 0.1);
   box-shadow: 0 18px 40px rgba(45, 38, 64, 0.1);
 }
 .chg-card:hover::before {

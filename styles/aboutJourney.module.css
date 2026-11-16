@@ -21,6 +21,7 @@
   position: relative;
   /* sized so the whole map (heading and quote overlay its top-left) fits inside the screen while it is pinned */
   width: max(min(100%, calc((100vh - 145px) * 2.017)), min(100%, 900px));
+  width: max(min(100%, calc((100dvh - 145px) * 2.017)), min(100%, 900px));
   margin: 0 auto;
   aspect-ratio: 1781 / 883;
   container-type: inline-size;
@@ -34,6 +35,7 @@
 
   .stage {
     width: max(min(100%, calc((100vh - 185px) * 2.017)), min(100%, 900px));
+    width: max(min(100%, calc((100dvh - 185px) * 2.017)), min(100%, 900px));
   }
 }
 
@@ -324,6 +326,8 @@
     font-size: 20px;
     position: relative;
     z-index: 1;
+    -webkit-box-shadow: 0 6px 14px rgba(90, 30, 130, 0.3);
+    -moz-box-shadow: 0 6px 14px rgba(90, 30, 130, 0.3);
     box-shadow: 0 6px 14px rgba(90, 30, 130, 0.3);
   }
 

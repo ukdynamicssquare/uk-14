@@ -72,6 +72,8 @@ a.ghostBtn {
 }
 .downloadBanner:hover {
   transform: translateY(-4px);
+  -webkit-box-shadow: 0 20px 44px rgba(45, 38, 64, 0.12);
+  -moz-box-shadow: 0 20px 44px rgba(45, 38, 64, 0.12);
   box-shadow: 0 20px 44px rgba(45, 38, 64, 0.12);
 }
 
@@ -90,12 +92,16 @@ a.ghostBtn {
   border-radius: 16px;
   background: #fff;
   border: 1px solid #ebe6f2;
+  -webkit-box-shadow: 0 10px 26px rgba(45, 38, 64, 0.05);
+  -moz-box-shadow: 0 10px 26px rgba(45, 38, 64, 0.05);
   box-shadow: 0 10px 26px rgba(45, 38, 64, 0.05);
   transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
 }
 .glanceCard:hover {
   transform: translateY(-4px);
   border-color: #c9b6e0;
+  -webkit-box-shadow: 0 16px 34px rgba(45, 38, 64, 0.08);
+  -moz-box-shadow: 0 16px 34px rgba(45, 38, 64, 0.08);
   box-shadow: 0 16px 34px rgba(45, 38, 64, 0.08);
 }
 .glanceCard dt {
@@ -137,6 +143,8 @@ a.ghostBtn {
 .tocCard:hover {
   transform: translateY(-4px);
   border-color: #c9b6e0;
+  -webkit-box-shadow: 0 16px 34px rgba(45, 38, 64, 0.08);
+  -moz-box-shadow: 0 16px 34px rgba(45, 38, 64, 0.08);
   box-shadow: 0 16px 34px rgba(45, 38, 64, 0.08);
 }
 .tocHead {
@@ -214,6 +222,7 @@ h2.chapterTitle {
   position: sticky;
   top: 170px;
   max-height: calc(100vh - 190px);
+  max-height: calc(100dvh - 190px);
   overflow-y: auto;
   padding-right: 6px;
   scrollbar-width: thin;
@@ -396,6 +405,8 @@ div.callout a,
   height: 9px;
   border-radius: 50%;
   background: linear-gradient(135deg, #984b6e, #60518c);
+  -webkit-box-shadow: 0 0 0 4px rgba(142, 68, 173, 0.12);
+  -moz-box-shadow: 0 0 0 4px rgba(142, 68, 173, 0.12);
   box-shadow: 0 0 0 4px rgba(142, 68, 173, 0.12);
 }
 .numbered {
@@ -441,6 +452,8 @@ div.callout a,
 .card:hover {
   transform: translateY(-3px);
   border-color: #c9b6e0;
+  -webkit-box-shadow: 0 14px 30px rgba(45, 38, 64, 0.08);
+  -moz-box-shadow: 0 14px 30px rgba(45, 38, 64, 0.08);
   box-shadow: 0 14px 30px rgba(45, 38, 64, 0.08);
 }
 .card strong,
@@ -519,6 +532,8 @@ div.callout a,
   color: #fff;
   background: linear-gradient(135deg, #984b6e, #60518c);
   border: 4px solid #fff;
+  -webkit-box-shadow: 0 8px 18px rgba(96, 81, 140, 0.3);
+  -moz-box-shadow: 0 8px 18px rgba(96, 81, 140, 0.3);
   box-shadow: 0 8px 18px rgba(96, 81, 140, 0.3);
 }
 .stepper li > div {
@@ -604,6 +619,8 @@ div.callout a,
 }
 .article a.linkCard:hover {
   border-color: #c9b6e0;
+  -webkit-box-shadow: 0 14px 30px rgba(45, 38, 64, 0.08);
+  -moz-box-shadow: 0 14px 30px rgba(45, 38, 64, 0.08);
   box-shadow: 0 14px 30px rgba(45, 38, 64, 0.08);
   color: #8e44ad;
 }
@@ -621,6 +638,8 @@ div.callout a,
   border-radius: 18px;
   background: #fff;
   border: 1px solid #ebe6f2;
+  -webkit-box-shadow: 0 12px 30px rgba(45, 38, 64, 0.05);
+  -moz-box-shadow: 0 12px 30px rgba(45, 38, 64, 0.05);
   box-shadow: 0 12px 30px rgba(45, 38, 64, 0.05);
 }
 .checkMeter {
@@ -703,6 +722,8 @@ div.callout a,
   border: 1px solid #ebe6f2;
   background: #fff;
   overflow-x: auto;
+  -webkit-box-shadow: 0 12px 30px rgba(45, 38, 64, 0.05);
+  -moz-box-shadow: 0 12px 30px rgba(45, 38, 64, 0.05);
   box-shadow: 0 12px 30px rgba(45, 38, 64, 0.05);
 }
 .table {
@@ -768,6 +789,8 @@ div.callout a,
   border-radius: 20px;
   background: #fff;
   border: 1px solid #ebe6f2;
+  -webkit-box-shadow: 0 20px 44px rgba(45, 38, 64, 0.08);
+  -moz-box-shadow: 0 20px 44px rgba(45, 38, 64, 0.08);
   box-shadow: 0 20px 44px rgba(45, 38, 64, 0.08);
   text-align: center;
 }
@@ -821,6 +844,8 @@ div.callout a,
   width: 100%;
   height: auto;
   border-radius: 18px;
+  -webkit-box-shadow: 0 30px 50px rgba(10, 6, 25, 0.35);
+  -moz-box-shadow: 0 30px 50px rgba(10, 6, 25, 0.35);
   box-shadow: 0 30px 50px rgba(10, 6, 25, 0.35);
 }
 .nextGrid {
@@ -922,6 +947,8 @@ div.callout a,
   .tableWrap {
     border: 0;
     background: transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
     box-shadow: none;
     overflow: visible;
   }
