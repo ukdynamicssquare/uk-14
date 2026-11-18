@@ -15,66 +15,59 @@ const HeaderWork = () => {
   // route change starts.
   const [navClosing, setNavClosing] = useState(false);
   const router = useRouter();
-  const gname = "services-header"
-  const headerClassMap = {
-    "/": "specific-header",
-    "/index-new": "specific-header",
-    "/the-ultimate-guide-to-microsoft-dynamics-365": "specific-header",
-    "/products/dynamics-365-business-central/bc-support": `${gname}`,
-    "/dynamics-365-business-central-implementation": `${gname}`,
-    "/d365-business-central-support": `${gname}`,
-    "/products/dynamics-365-business-central": `${gname}`,
-    "/products/microsoft-dynamics-365-finance": `${gname}`,
-    "/products/dynamics-365-supply-chain-management": `${gname}`,
-    "/products/dynamics-365-business-central/financial-management": `${gname}`,
-    "/products/dynamics-365-business-central/sales-order-management": `${gname}`,
-    "/products/dynamics-365-business-central/supply-chain-management": `${gname}`,
-    "/products/microsoft-dynamics-365-sales": `${gname}`,
-    "/products/dynamics-365-business-central/warehouse-management": `${gname}`,
-    "/products/dynamics-365-business-central/project-management": `${gname}`,
-    "/yavrio-integration-with-business-central": `${gname}`,
-    "/products/dynamics-365-business-central/service-management": `${gname}`,
-    "/products/dynamics-365-human-resources": `${gname}`,
-    "/products/dynamics-365-human-resources": `${gname}`,
-    "/products/dynamics-365-project-operations": `${gname}`,
-    "/continia-for-dynamics-365-business-central": `${gname}`,
-    "/industries/professional-services": `${gname}`,
-    "/continia-expense-management": `${gname}`,
-    "/case-studies/business-central-reimplementation-for-food-trader": `${gname}`,
-    "/case-studies/business-central-reimplementation-for-recycling-industry": `${gname}`,
-    "/industries/manufacturing/dynamics-365-for-discrete": `${gname}`,
-    "/industries/dynamics-365-for-distribution": `${gname}`,
-    "/case-studies/business-central-for-tool-manufacturing-company": `${gname}`,
-    "/case-studies/dynamics-365-finance-for-logistic-uk-multi-entity": `${gname}`,
-    "/case-studies/business-central-with-crm-implement-for-equestrian-manufacturing": `${gname}`,
-    "/case-studies/d365-finance-and-operations-for-project-management": `${gname}`,
-    "/case-studies/dynamics-365-f&O-implementation-for-healthcare": `${gname}`,
-    "/products/microsoft-dynamics-crm": `${gname}`,
-    "/products/dynamics-365-business-central/pricing-licensing": `${gname}`,
-        "/industries/dynamics-365-for-education": `${gname}`,
-         "/products/microsoft-dynamics-365-field-service": `${gname}`,
-         "/products/microsoft-dynamics-365-customer-service": `${gname}`,
-          "/ai-solutions": `${gname}`,
-           "/ai-solutions/microsoft-fabric": `${gname}`,
-           "/ai-solutions/copilot-studio": `${gname}`,
-           "/ai-solutions/microsoft-foundry": `${gname}`,
-           "/industries/manufacturing/dynamics-365-for-pharmaceutical": `${gname}`,
-           "/industries/manufacturing/dynamics-365-for-medical-device": `${gname}`,
-           "/industries/manufacturing/dynamics-365-for-chemical": `${gname}`,
-           "/industries/manufacturing/dynamics-365-for-electronics": `${gname}`,
-           "/industries/manufacturing/dynamics-365-for-food": `${gname}`,
-           "/industries/manufacturing/dynamics-365-for-plastics": `${gname}`,
-           "/industries/manufacturing/dynamics-365-for-fashion": `${gname}`,
-           "/industries/manufacturing/dynamics-365-for-packaging": `${gname}`,
-           "/industries/manufacturing/dynamics-365-for-furniture": `${gname}`,
-           "/industries/manufacturing/dynamics-365-for-aerospace": `${gname}`,
-           "/industries/manufacturing/dynamics-365-for-printing": `${gname}`,
-           "/products": `${gname}`,
-            "/industries/dynamics-365-for-healthcare": `${gname}`,
-
-
-    "/book-a-demo": `${gname}`,
+  // Header class by route. Each key is a URL prefix; the slugs listed under
+  // it are appended to make the full route. Add a page by adding its slug.
+  const specificHeaderRoutes = ["/", "/index-new", "/the-ultimate-guide-to-microsoft-dynamics-365"];
+  const servicesHeaderGroups = {
+    "/": [
+      "dynamics-365-business-central-implementation", "d365-business-central-support",
+      "yavrio-integration-with-business-central", "continia-for-dynamics-365-business-central",
+      "continia-expense-management", "book-a-demo", "products", "ai-solutions",
+    ],
+    "/products/": [
+      "dynamics-365-business-central", "microsoft-dynamics-365-finance", "dynamics-365-supply-chain-management",
+      "microsoft-dynamics-365-sales", "dynamics-365-human-resources", "dynamics-365-project-operations",
+      "microsoft-dynamics-crm", "microsoft-dynamics-365-field-service", "microsoft-dynamics-365-customer-service",
+    ],
+    "/products/dynamics-365-business-central/": [
+      "bc-support", "financial-management", "sales-order-management", "supply-chain-management",
+      "warehouse-management", "project-management", "service-management", "pricing-licensing",
+    ],
+    "/ai-solutions/": ["microsoft-fabric", "copilot-studio", "microsoft-foundry"],
+    "/industries/": ["professional-services"],
+    "/industries/dynamics-365-for-": ["distribution", "education", "healthcare"],
+    "/industries/manufacturing/dynamics-365-for-": [
+      "discrete", "pharmaceutical", "medical-device", "chemical", "electronics", "food",
+      "plastics", "fashion", "packaging", "furniture", "aerospace", "printing",
+    ],
+    "/case-studies/": [
+      "business-central-reimplementation-for-food-trader",
+      "business-central-reimplementation-for-recycling-industry",
+      "business-central-for-tool-manufacturing-company",
+      "dynamics-365-finance-for-logistic-uk-multi-entity",
+      "business-central-with-crm-implement-for-equestrian-manufacturing",
+      "d365-finance-and-operations-for-project-management",
+      "dynamics-365-f&O-implementation-for-healthcare",
+      "business-central-support-and-upgrade-for-manufacturing",
+      "netsuite-to-business-central-migration",
+      "business-central-shopify-support-for-outdoor-clothing",
+      "business-central-field-service-implementation-rescue",
+      "copilot-and-power-platform-for-construction",
+      "nav-2017-to-business-central-with-field-service",
+      "sage-200-to-business-central-for-charity",
+      "dynamics-365-finance-operations-for-non-profit",
+      "business-central-for-construction-aggregates-and-property",
+      "quickbooks-to-business-central-for-professional-services",
+      "laundre-business-central-sustainable-denim",
+    ],
   };
+
+  const headerClassMap = Object.fromEntries([
+    ...specificHeaderRoutes.map((route) => [route, "specific-header"]),
+    ...Object.entries(servicesHeaderGroups).flatMap(([prefix, slugs]) =>
+      slugs.map((slug) => [prefix + slug, "services-header"])
+    ),
+  ]);
   // const hide = ["/contact-us", "/thank-you"];
   const currentHeaderClass = headerClassMap[router.pathname] || "";
 

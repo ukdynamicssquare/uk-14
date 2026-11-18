@@ -83,7 +83,7 @@ body a:hover {
   text-decoration: none;
 }
 .u-i{
-  text-decoration:underline
+  /* text-decoration:underline */
 }
 .about-banner h2,
 .extr-cont span a,
@@ -4787,7 +4787,7 @@ section {
 .pad10x,
 .pad2xyr,
 .webin-top-left {
-  padding-top: 60px;
+  padding-top: 30px;
 }
 .azurleft ul li {
   font-size: 16px;
@@ -23020,7 +23020,7 @@ letter-spacing:3px
 .busnes-upgrade-serve-one .solution-new-banner-sub-head a.u-i,
 .solution-new-six .solution-new-banner-sub-head a.u-i {
   color: #954b70;
-  text-underline-offset: 3px;
+  /* text-underline-offset: 3px; */
 }
 .scm-icon {
   width: 48px;

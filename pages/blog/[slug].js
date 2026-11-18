@@ -1985,15 +1985,6 @@ function Post({
           color: var(--bp-red);
           font-weight: 600;
           text-decoration: none;
-          background-image: linear-gradient(var(--bp-red-soft), var(--bp-red-soft));
-          background-size: 100% 35%;
-          background-position: 0 90%;
-          background-repeat: no-repeat;
-          transition: background-size 0.2s ease;
-        }
-
-        .bp-content a[class="u-i"]:not([style]):hover {
-          background-size: 100% 90%;
         }
 
         /* CMS call-to-action box, recoloured to the page palette */

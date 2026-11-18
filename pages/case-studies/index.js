@@ -1023,7 +1023,7 @@ const handleTabChange = (tab) => {
         }
 
         .case-card-featured .case-card-content h3 {
-          font-size: 31px;
+          font-size: 24px;
         }
 
 
