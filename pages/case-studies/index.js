@@ -968,7 +968,7 @@ const handleTabChange = (tab) => {
 
         .case-grid {
           display: grid;
-          grid-template-columns: repeat(2, minmax(0, 1fr));
+          grid-template-columns: repeat(3, minmax(0, 1fr));
           gap: 28px;
         }
 
@@ -1023,7 +1023,7 @@ const handleTabChange = (tab) => {
         }
 
         .case-card-featured .case-card-content h3 {
-          font-size: 24px;
+          font-size: 18px;
         }
 
 
@@ -1118,10 +1118,10 @@ const handleTabChange = (tab) => {
         .case-card-content h3 {
           margin: 0;
           color: #111827;
-          font-size: 21px;
+          font-size: 18px;
           line-height: 1.3;
           letter-spacing: -.35px;
-          font-weight: 700;
+          font-weight: 600;
         }
 
         .case-card-content h3 a {
@@ -1303,6 +1303,10 @@ const handleTabChange = (tab) => {
             margin-top: 20px;
           }
 
+          .case-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+
           .case-card-featured {
             grid-template-columns: 1fr;
           }
@@ -1452,7 +1456,7 @@ const handleTabChange = (tab) => {
           }
 
           .case-card-featured .case-card-content h3 {
-            font-size: 25px;
+            font-size: 18px;
           }
 
           .case-card-content {
@@ -1460,7 +1464,7 @@ const handleTabChange = (tab) => {
           }
 
           .case-card-content h3 {
-            font-size: 20px;
+            font-size: 18px;
           }
 
           .case-cta {
