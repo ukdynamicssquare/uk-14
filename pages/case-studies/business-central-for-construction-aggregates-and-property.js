@@ -8,8 +8,8 @@ const HopkinsEstatesBusinessCentral = () => {
     <>
       <PageSeo
         type="Article"
-        title="Business Central for Construction and Aggregates | Hopkins Estates"
-        description="How Hopkins Estates moved to Dynamics 365 Business Central and Power BI, integrated QuarryMinder with its ERP and automated supplier invoice processing."
+        title="NAV to Business Central for Aggregates | Hopkins Estates Case Study"
+        description="Hopkins Estates replaced Dynamics NAV 2009 with Business Central, integrating QuarryMinder invoicing, Continia document capture and Power BI dashboards."
       >
         {/* Pending client naming approval: keep noindex until sign-off */}
         <meta name="robots" content="noindex, follow" />

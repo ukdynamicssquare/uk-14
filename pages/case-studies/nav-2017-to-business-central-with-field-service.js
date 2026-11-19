@@ -8,8 +8,8 @@ const StephensNav2017ToBusinessCentral = () => {
     <>
       <PageSeo
         type="Article"
-        title="NAV 2017 to Business Central with Field Service | Case Study"
-        description="How Stephens Catering Equipment is upgrading from NAV 2017 to Business Central SaaS and replacing its bespoke field service app with Dynamics 365 Field Service."
+        title="Dynamics NAV to Business Central Upgrade | Stephens Catering Case Study"
+        description="Stephens Catering upgraded from Dynamics NAV 2017 to Business Central SaaS and replaced its in-house engineer app with Dynamics 365 Field Service."
       >
         {/* Pending client naming approval: keep noindex until sign-off */}
         <meta name="robots" content="noindex, follow" />

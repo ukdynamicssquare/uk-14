@@ -8,8 +8,8 @@ const BedmaxBusinessCentralSupportUpgrade = () => {
     <>
       <PageSeo
         type="Article"
-        title="Business Central Support and Upgrade for Manufacturing | Case Study"
-        description="How Bedmax changed support partners and upgraded Dynamics 365 Business Central on-premises from version 22 to 25."
+        title="Business Central On-Premises Upgrade & Support | Bedmax Case Study"
+        description="See how Bedmax moved its Business Central on-premises support to Dynamics Square and upgraded from version 22 to 25 without replacing the system."
         image="/img/bedmax-case-study.png"
         imageAlt="Bedmax case study – Dynamics Square"
       >

@@ -8,8 +8,8 @@ const MisHealthcareImplementationRescue = () => {
     <>
       <PageSeo
         type="Article"
-        title="Business Central and Field Service Rescue | MIS Healthcare Case Study"
-        description="How MIS Healthcare stabilised a stalled Dynamics 365 Business Central and Field Service project and got it back on track for go-live."
+        title="Business Central & Field Service Rescue | MIS Healthcare Case Study"
+        description="A stalled Business Central and Field Service project at MIS Healthcare: how we assessed the build, traced integration failures and planned go-live."
         image="/img/mis-healthcare-case-study.png"
         imageAlt="MIS Healthcare case study – Dynamics Square"
       >

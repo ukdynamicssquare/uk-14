@@ -9,7 +9,7 @@ const TraffiNetSuiteToBusinessCentral = () => {
       <PageSeo
         type="Article"
         title="NetSuite to Business Central Migration | Traffi Case Study"
-        description="How Traffi moved from NetSuite OneWorld to Dynamics 365 Business Central to unite finance, warehousing and reporting across four countries."
+        description="How Traffi replaced NetSuite OneWorld with Business Central across the UK, Italy, US and Canada, with HubSpot, warehouse scanning and Power BI connected."
         image="/img/traffi-case-study.png"
         imageAlt="Traffi UK case study – Dynamics Square"
       >

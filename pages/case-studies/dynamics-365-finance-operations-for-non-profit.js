@@ -8,8 +8,8 @@ const AcbfFinanceOperationsNonProfit = () => {
     <>
       <PageSeo
         type="Article"
-        title="Dynamics 365 F&O for a Non-Profit: 60% Lower Cost | ACBF Case Study"
-        description="How the African Capacity Building Foundation implemented Dynamics 365 Finance and Operations across 48 countries and cut implementation cost by over 60%."
+        title="Dynamics 365 Finance & Operations for Nonprofits | ACBF Case Study"
+        description="ACBF, active in 48 African countries, implemented Dynamics 365 Finance & Operations at over 60% lower cost than other partner quotes."
       >
         {/* Pending client naming approval: keep noindex until sign-off */}
         <meta name="robots" content="noindex, follow" />

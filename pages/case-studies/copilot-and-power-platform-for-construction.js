@@ -8,8 +8,8 @@ const ExcelPowerCopilotPowerPlatform = () => {
     <>
       <PageSeo
         type="Article"
-        title="Copilot and Power Platform for Construction | Case Study"
-        description="How Excel Power Construction connected projects, people, plant and procurement with Microsoft Copilot and Power Platform."
+        title="Copilot & Power Platform for Construction | Excel Power"
+        description="How Excel Power Construction uses Microsoft 365 Copilot, Power Automate and Power BI to track requests, allocate plant and report site progress live."
         image="/img/excel-power-construction-case-study.png"
         imageAlt="Excel Power Construction case study – Dynamics Square"
       >

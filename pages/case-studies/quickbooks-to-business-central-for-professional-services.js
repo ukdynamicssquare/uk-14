@@ -8,8 +8,8 @@ const ForensxQuickBooksToBusinessCentral = () => {
     <>
       <PageSeo
         type="Article"
-        title="QuickBooks to Business Central for Professional Services | Case Study"
-        description="How a forensic accounting and architecture firm moved from QuickBooks to Dynamics 365 Business Central for project finance, timesheets and WIP."
+        title="QuickBooks to Business Central for Services Firms | Forensx Case Study"
+        description="Forensx replaced QuickBooks and spreadsheets with Business Central for multi-entity finance, project costing, WIP tracking and timesheet approvals."
       >
         {/* Pending client naming approval: keep noindex until sign-off */}
         <meta name="robots" content="noindex, follow" />

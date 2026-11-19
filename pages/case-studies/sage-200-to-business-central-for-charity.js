@@ -8,8 +8,8 @@ const RafaSage200ToBusinessCentral = () => {
     <>
       <PageSeo
         type="Article"
-        title="Sage 200 to Business Central for a Charity | RAFA Case Study"
-        description="How the Royal Air Forces Association is replacing Sage 200 with Dynamics 365 Business Central across its charity and five subsidiaries."
+        title="Sage 200 to Business Central Migration for Charity | RAFA"
+        description="How the Royal Air Forces Association replaced Sage 200 with Business Central for fund, entity and VAT reporting across the charity and its subsidiaries."
         image="/img/rafa-case-study.png"
         imageAlt="Royal Air Forces Association case study – Dynamics Square"
       >

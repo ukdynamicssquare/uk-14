@@ -8,8 +8,8 @@ const LaundReBusinessCentralSustainableDenim = () => {
     <>
       <PageSeo
         type="Article"
-        title="LaundRe Case Study | Business Central for Sustainable Denim"
-        description="How LaundRe, an East London circular denim finishing hub, uses Dynamics 365 Business Central to run production, track water and energy use and prepare for growth."
+        title="QuickBooks to Business Central for Textiles | LaundRe Case Study"
+        description="LaundRe replaced QuickBooks with Business Central for denim finishing, avoiding over £32,000 in costs with a projected 172% ROI over three years."
       >
         {/* Pending client naming approval: keep noindex until sign-off */}
         <meta name="robots" content="noindex, follow" />

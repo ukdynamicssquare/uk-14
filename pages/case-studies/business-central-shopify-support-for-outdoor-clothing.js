@@ -8,8 +8,8 @@ const AcaiBusinessCentralShopifySupport = () => {
     <>
       <PageSeo
         type="Article"
-        title="Business Central and Shopify Support | ACAI Outdoorwear Case Study"
-        description="How ACAI Outdoorwear switched support partners to fix its Business Central and Shopify integration and manage retail and wholesale stock."
+        title="Business Central & Shopify Support | ACAI Outdoorwear Case Study"
+        description="ACAI Outdoorwear moved Business Central support and licensing to Dynamics Square. See how we reviewed its Shopify integration and wholesale stock setup."
         image="/img/acai-outdoorwear-case-study.png"
         imageAlt="ACAI Outdoorwear case study – Dynamics Square"
       >
