@@ -12,10 +12,7 @@ const ExcelPowerCopilotPowerPlatform = () => {
         description="How Excel Power Construction uses Microsoft 365 Copilot, Power Automate and Power BI to track requests, allocate plant and report site progress live."
         image="/img/excel-power-construction-case-study.png"
         imageAlt="Excel Power Construction case study – Dynamics Square"
-      >
-        {/* Pending client naming approval: keep noindex until sign-off */}
-        <meta name="robots" content="noindex, follow" />
-      </PageSeo>
+      />
       <section className="hero hero-new-bg">
         <div className="container">
           <div className="row justify-content-center">

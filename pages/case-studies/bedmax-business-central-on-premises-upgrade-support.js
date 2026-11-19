@@ -12,10 +12,7 @@ const BedmaxBusinessCentralSupportUpgrade = () => {
         description="See how Bedmax moved its Business Central on-premises support to Dynamics Square and upgraded from version 22 to 25 without replacing the system."
         image="/img/bedmax-case-study.png"
         imageAlt="Bedmax case study – Dynamics Square"
-      >
-        {/* Pending client naming approval: keep noindex until sign-off */}
-        <meta name="robots" content="noindex, follow" />
-      </PageSeo>
+      />
       <section className="hero hero-new-bg">
         <div className="container">
           <div className="row justify-content-center">

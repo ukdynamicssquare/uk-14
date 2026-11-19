@@ -12,10 +12,7 @@ const TraffiNetSuiteToBusinessCentral = () => {
         description="How Traffi replaced NetSuite OneWorld with Business Central across the UK, Italy, US and Canada, with HubSpot, warehouse scanning and Power BI connected."
         image="/img/traffi-case-study.png"
         imageAlt="Traffi UK case study – Dynamics Square"
-      >
-        {/* Pending client naming approval: keep noindex until sign-off */}
-        <meta name="robots" content="noindex, follow" />
-      </PageSeo>
+      />
       <section className="hero hero-new-bg">
         <div className="container">
           <div className="row justify-content-center">

@@ -12,10 +12,7 @@ const RafaSage200ToBusinessCentral = () => {
         description="How the Royal Air Forces Association replaced Sage 200 with Business Central for fund, entity and VAT reporting across the charity and its subsidiaries."
         image="/img/rafa-case-study.png"
         imageAlt="Royal Air Forces Association case study – Dynamics Square"
-      >
-        {/* Pending client naming approval: keep noindex until sign-off */}
-        <meta name="robots" content="noindex, follow" />
-      </PageSeo>
+      />
       <section className="hero hero-new-bg">
         <div className="container">
           <div className="row justify-content-center">
@@ -203,7 +200,7 @@ const RafaSage200ToBusinessCentral = () => {
           </div>
           <div className="row gx-5">
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/case-v-04.png" alt="Royal Air Forces Association Sage 200 to Business Central requirements" width={633} height={561} />
+              <Image src="/img/case-v-33.png" alt="Royal Air Forces Association Sage 200 to Business Central requirements" width={633} height={561} />
             </div>
             <div className="col-lg-6 align-self-center">
               <div className="ms-c-po">
@@ -277,7 +274,7 @@ const RafaSage200ToBusinessCentral = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="ce-image-ce">
-                <Image src="/img/case-v-05.png" alt="Royal Air Forces Association Sage 200 to Business Central" width={872} height={519} className="img-fluid" />
+                <Image src="/img/case-v-34.png" alt="Royal Air Forces Association Sage 200 to Business Central" width={872} height={519} className="img-fluid" />
               </div>
             </div>
           </div>

@@ -10,10 +10,7 @@ const StephensNav2017ToBusinessCentral = () => {
         type="Article"
         title="Dynamics NAV to Business Central Upgrade | Stephens Catering Case Study"
         description="Stephens Catering upgraded from Dynamics NAV 2017 to Business Central SaaS and replaced its in-house engineer app with Dynamics 365 Field Service."
-      >
-        {/* Pending client naming approval: keep noindex until sign-off */}
-        <meta name="robots" content="noindex, follow" />
-      </PageSeo>
+      />
       <section className="hero hero-new-bg">
         <div className="container">
           <div className="row justify-content-center">

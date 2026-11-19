@@ -12,10 +12,7 @@ const AcaiBusinessCentralShopifySupport = () => {
         description="ACAI Outdoorwear moved Business Central support and licensing to Dynamics Square. See how we reviewed its Shopify integration and wholesale stock setup."
         image="/img/acai-outdoorwear-case-study.png"
         imageAlt="ACAI Outdoorwear case study – Dynamics Square"
-      >
-        {/* Pending client naming approval: keep noindex until sign-off */}
-        <meta name="robots" content="noindex, follow" />
-      </PageSeo>
+      />
       <section className="hero hero-new-bg">
         <div className="container">
           <div className="row justify-content-center">

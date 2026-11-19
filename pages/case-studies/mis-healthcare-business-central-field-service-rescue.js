@@ -12,10 +12,7 @@ const MisHealthcareImplementationRescue = () => {
         description="A stalled Business Central and Field Service project at MIS Healthcare: how we assessed the build, traced integration failures and planned go-live."
         image="/img/mis-healthcare-case-study.png"
         imageAlt="MIS Healthcare case study – Dynamics Square"
-      >
-        {/* Pending client naming approval: keep noindex until sign-off */}
-        <meta name="robots" content="noindex, follow" />
-      </PageSeo>
+      />
       <section className="hero hero-new-bg">
         <div className="container">
           <div className="row justify-content-center">
