@@ -12,7 +12,7 @@
     "title": "How Bedmax Changed Support Partners and Upgraded Microsoft Dynamics 365 Business Central to Build a Stronger Base for Production and Quality Data",
     "image": "/img/bedmax-case-study.png",
     "alt": "bedmax-case-study",
-    "slug": "/case-studies/business-central-support-and-upgrade-for-manufacturing/",
+    "slug": "/case-studies/bedmax-business-central-on-premises-upgrade-support/",
     "category": "Support"
   },
   {
@@ -20,7 +20,7 @@
     "title": "How Traffi Replaced NetSuite OneWorld with Microsoft Dynamics 365 Business Central to Unite Finance, Warehousing and Reporting Across Four Countries",
     "image": "/img/traffi-case-study.png",
     "alt": "traffi-case-study",
-    "slug": "/case-studies/netsuite-to-business-central-migration/",
+    "slug": "/case-studies/traffi-netsuite-to-business-central-migration/",
     "category": "Implementation"
   },
   {
@@ -28,7 +28,7 @@
     "title": "How ACAI Outdoorwear Switched Support Partners to Fix Its Business Central and Shopify Integration and Take Control of Retail and Wholesale Stock",
     "image": "/img/acai-outdoorwear-case-study.png",
     "alt": "acai-outdoorwear-case-study",
-    "slug": "/case-studies/business-central-shopify-support-for-outdoor-clothing/",
+    "slug": "/case-studies/acai-outdoorwear-business-central-shopify-support/",
     "category": "Support"
   },
   {
@@ -36,7 +36,7 @@
     "title": "How MIS Healthcare Brought in Dynamics Square to Stabilise a Stalled Business Central and Field Service Project and Get It Back on Track for Go-Live",
     "image": "/img/mis-healthcare-case-study.png",
     "alt": "mis-healthcare-case-study",
-    "slug": "/case-studies/business-central-field-service-implementation-rescue/",
+    "slug": "/case-studies/mis-healthcare-business-central-field-service-rescue/",
     "category": "Implementation"
   },
   {
@@ -44,7 +44,7 @@
     "title": "How Excel Power Construction Is Connecting Projects, People, Plant and Procurement with Microsoft Copilot and Power Platform",
     "image": "/img/excel-power-construction-case-study.png",
     "alt": "excel-power-construction-case-study",
-    "slug": "/case-studies/copilot-and-power-platform-for-construction/",
+    "slug": "/case-studies/excel-power-construction-copilot-power-platform/",
     "category": "Implementation"
   },
   {
@@ -52,7 +52,7 @@
     "title": "How Stephens Catering Equipment Is Moving from NAV 2017 to Business Central SaaS and Replacing Its Bespoke Field Service App with Dynamics 365 Field Service",
     "image": "/img/case-v-29.png",
     "alt": "case-v-29",
-    "slug": "/case-studies/nav-2017-to-business-central-with-field-service/",
+    "slug": "/case-studies/stephens-catering-dynamics-nav-to-business-central-upgrade/",
     "category": "Upgrade"
   },
   {
@@ -60,7 +60,7 @@
     "title": "How the Royal Air Forces Association Is Replacing Sage 200 with Microsoft Dynamics 365 Business Central to Unite Finance, Warehousing and Reporting Across Its Charity and Subsidiaries",
     "image": "/img/rafa-case-study.png",
     "alt": "rafa-case-study",
-    "slug": "/case-studies/sage-200-to-business-central-for-charity/",
+    "slug": "/case-studies/rafa-sage-200-to-business-central-charity/",
     "category": "Implementation"
   },
   {
@@ -68,7 +68,7 @@
     "title": "How the African Capacity Building Foundation Reduced Its Overall ERP Implementation Cost by Over 60% While Unifying Finance and Operations Across 48 Countries",
     "image": "/img/case-v-06.png",
     "alt": "case-v-06",
-    "slug": "/case-studies/dynamics-365-finance-operations-for-non-profit/",
+    "slug": "/case-studies/acbf-dynamics-365-finance-operations-nonprofit/",
     "category": "Implementation"
   },
   {
@@ -76,7 +76,7 @@
     "title": "How Hopkins Estates Replaced a Dated ERP with Microsoft Dynamics 365 Business Central and Power BI, and Kept QuarryMinder at the Centre of Field Invoicing",
     "image": "/img/case-v-09.png",
     "alt": "case-v-09",
-    "slug": "/case-studies/business-central-for-construction-aggregates-and-property/",
+    "slug": "/case-studies/hopkins-estates-nav-to-business-central-aggregates/",
     "category": "Implementation"
   },
   {
@@ -84,7 +84,7 @@
     "title": "How a Growing Forensic Accounting and Architecture Firm Built a Scalable, Project-Driven ERP Foundation with Microsoft Dynamics 365 Business Central",
     "image": "/img/case-v-12.png",
     "alt": "case-v-12",
-    "slug": "/case-studies/quickbooks-to-business-central-for-professional-services/",
+    "slug": "/case-studies/forensx-quickbooks-to-business-central-professional-services/",
     "category": "Implementation"
   },
   {
@@ -92,7 +92,7 @@
     "title": "How LaundRe, a Circular Denim Finishing Hub in East London, Built a Scalable Digital Core with Microsoft Dynamics 365 Business Central and Dynamics Square’s Expertise",
     "image": "/img/case-v-00.png",
     "alt": "case-v-00",
-    "slug": "/case-studies/laundre-business-central-sustainable-denim/",
+    "slug": "/case-studies/laundre-quickbooks-to-business-central-textiles/",
     "category": "Implementation"
   },
         {
