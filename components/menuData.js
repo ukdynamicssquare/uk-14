@@ -502,13 +502,13 @@ export const resourcesMenu = {
    ===================================================================== */
 
 export const SOLUTION_TABS = [
-  { id: "home", target: "v-pills-home", label: "Company By Size", active: true },
-  { id: "addon", target: "v-pills-addon", label: "AI-Powered ERP" },
-  { id: "CRM", target: "v-pills-CRM", label: "AI-Powered CRM" },
-  { id: "settingss", target: "v-pills-settingss", label: "Integrations", href: "#" },
-  { id: "profile", target: "v-pills-profile", label: "Data & AI Solutions" },
-  { id: "settings", target: "v-pills-settings", label: "Legacy Dynamics", href: "#" },
-  { id: "power", target: "v-pills-power", label: "AI-Intelligent Apps", href: "#" },
+  { id: "home", target: "v-pills-home", label: "Company By Size", href: "/solutions/company-by-size/", active: true },
+  { id: "addon", target: "v-pills-addon", label: "AI-Powered ERP", href: "/products/" },
+  { id: "CRM", target: "v-pills-CRM", label: "AI-Powered CRM", href: "/solutions/ai-powered-crm/" },
+  { id: "settingss", target: "v-pills-settingss", label: "Integrations", href: "/solutions/integrations/" },
+  { id: "profile", target: "v-pills-profile", label: "Data & AI Solutions", href: "/solutions/data-and-ai-solutions/" },
+  { id: "settings", target: "v-pills-settings", label: "Legacy Dynamics", href: "/solutions/legacy-dynamics/" },
+  { id: "power", target: "v-pills-power", label: "AI-Intelligent Apps", href: "/solutions/ai-intelligent-apps/" },
 ];
 
 export const SOLUTION_PANELS = {
@@ -683,10 +683,10 @@ export const COMPANY_MENU = {
 };
 
 export const RESOURCE_TABS = [
-  { id: "res-one", target: "v-pills-res-one", label: "Blogs", icon: "/img/menu-icons/res-meg-00.png", active: true },
-  { id: "res-two", target: "v-pills-res-two", label: "Case Studies", icon: "/img/menu-icons/res-meg-01.png" },
-  { id: "res-three", target: "v-pills-res-three", label: "eBooks", icon: "/img/menu-icons/res-meg-03.png" },
-  { id: "res-four", target: "v-pills-res-four", label: "Guides", icon: "/img/menu-icons/res-meg-04.png" },
+  { id: "res-one", target: "v-pills-res-one", label: "Blogs", icon: "/img/menu-icons/res-meg-00.png", href: "/blog/", active: true },
+  { id: "res-two", target: "v-pills-res-two", label: "Case Studies", icon: "/img/menu-icons/res-meg-01.png", href: "/case-studies/" },
+  { id: "res-three", target: "v-pills-res-three", label: "eBooks", icon: "/img/menu-icons/res-meg-03.png", href: "/ebook/" },
+  { id: "res-four", target: "v-pills-res-four", label: "Guides", icon: "/img/menu-icons/res-meg-04.png", href: "/guides/" },
   { id: "res-five", target: "v-pills-res-five", label: "Tools", icon: "/img/menu-icons/res-meg-05.png" },
   { id: "res-six", target: "v-pills-res-six", label: "Webcasts", icon: "/img/menu-icons/res-meg-06.png" },
 ];

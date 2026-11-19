@@ -1,0 +1,153 @@
+/* Styles for pages/industries/dynamics-365-for-accounting-firms.js
+   The page uses the shared manufacturing sub-industry template (global
+   classes in globals.css). This file only holds the few additions it needs. */
+
+/* Hero: two CTAs side by side; the second is an outline version of
+   .btn-get-started (which sets its colours with !important). */
+.af-hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0 16px;
+}
+.af-btn-outline {
+  background: transparent !important;
+  color: #bb2b36 !important;
+  border: 1px solid #bb2b36;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+}
+.af-btn-outline:hover,
+.af-btn-outline:focus-visible {
+  background: #bb2b36 !important;
+  color: #fff !important;
+}
+
+/* Trust strip: the numbers look like the template's h3 stats but stay
+   paragraphs, so the page's first heading after the h1 is an h2. */
+/* six "At a Glance" facts (the template has three), so a fixed grid
+   instead of the template's wrapping flex row */
+.af-glance {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr 1fr 1fr;
+  align-items: center;
+  gap: 24px;
+}
+.af-glance > * {
+  min-width: 0;
+}
+.af-glance .af-glance__num {
+  color: #fff;
+  font-family: Anton;
+  font-size: 42px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+.af-glance__text {
+  max-width: 170px;
+}
+.af-glance__text :global(.bi) {
+  display: block;
+  margin-bottom: 8px;
+  color: #fff;
+  font-size: 30px;
+  line-height: 1;
+}
+
+/* Card and row titles: h3 elements styled like the template's h4s,
+   so heading levels don't skip. */
+.af-card-title {
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #2d2640;
+}
+.af-reg-title {
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #60518c;
+}
+.af-compare-title {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #60518c;
+}
+.af-step-title {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #2d2640;
+}
+
+/* Icons: Bootstrap Icons in place of the template's 40px PNG icons,
+   tinted with the template's purple. */
+.af-icon :global(.bi) {
+  color: #60518c;
+  font-size: 22px;
+  line-height: 1;
+}
+.af-cap-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  background: #e7dbf2;
+}
+.af-cap-icon :global(.bi) {
+  color: #60518c;
+  font-size: 22px;
+  line-height: 1;
+}
+
+/* Template's "/user/month" purple is 3.8-4.45:1 on the price cards;
+   a darker shade of the same purple meets AA (4.5:1) on this page. */
+.af-pricing :global(.pharma-pricing-card__price span) {
+  color: #5b3fa8;
+}
+
+/* Second comparison section follows the first directly. */
+.af-crm-section {
+  padding-top: 10px;
+}
+.af-cta-gap {
+  margin-top: 20px;
+}
+.af-footnote-follow {
+  margin-bottom: 20px;
+  color: #5b5768;
+}
+
+@media (max-width: 1199px) {
+  .af-glance .af-glance__num {
+    font-size: 36px;
+  }
+}
+@media (max-width: 991px) {
+  .af-glance {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .af-glance__text {
+    max-width: 100%;
+  }
+}
+@media (max-width: 575px) {
+  .af-glance {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .af-glance > :first-child {
+    grid-column: 1 / -1;
+  }
+}
+@media (max-width: 575px) {
+  .af-hero-ctas :global(.btn-get-started) {
+    width: 100%;
+  }
+}

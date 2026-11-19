@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import PulseButton from "./PulseButton";
@@ -71,6 +71,15 @@ function FeaturedArticle() {
 }
 
 const DeskstopMenu = () => {
+  // Solution and Resources tabs switch on hover; clicking a tab opens its core page.
+  const [activeSol, setActiveSol] = useState(
+    (SOLUTION_TABS.find((t) => t.active) || SOLUTION_TABS[0]).target
+  );
+  const [activeRes, setActiveRes] = useState(
+    (RESOURCE_TABS.find((t) => t.active) || RESOURCE_TABS[0]).target
+  );
+  const resPane = (target) => `tab-pane fade${activeRes === target ? " show active" : ""}`;
+
   return (
     <>
       <ul>
@@ -92,15 +101,22 @@ const DeskstopMenu = () => {
                   {SOLUTION_TABS.map((tab) => (
                     <div
                       key={tab.id}
-                      className={`nav-link${tab.active ? " active" : ""}`}
+                      className={`nav-link${activeSol === tab.target ? " active" : ""}`}
                       id={`${tab.target}-tab`}
-                      data-bs-toggle="pill"
-                      data-bs-target={`#${tab.target}`}
-                      {...(!tab.active ? { "aria-selected": "false" } : {})}
+                      role="tab"
+                      aria-selected={activeSol === tab.target}
+                      onMouseEnter={() => setActiveSol(tab.target)}
+                      onFocus={() => setActiveSol(tab.target)}
                     >
-                      <a href={tab.href || "#"}>
-                        <span>{tab.label}</span>
-                      </a>
+                      {tab.href && tab.href !== "#" ? (
+                        <Link href={tab.href}>
+                          <span>{tab.label}</span>
+                        </Link>
+                      ) : (
+                        <a href="#" onClick={(e) => e.preventDefault()}>
+                          <span>{tab.label}</span>
+                        </a>
+                      )}
                     </div>
                   ))}
                 </div>
@@ -108,7 +124,7 @@ const DeskstopMenu = () => {
                   {SOLUTION_TABS.map((tab) => (
                     <div
                       key={tab.id}
-                      className={`tab-pane${tab.id === "addon" || tab.id === "CRM" ? " cc-height" : ""} fade${tab.active ? " show active" : ""}`}
+                      className={`tab-pane${tab.id === "addon" || tab.id === "CRM" ? " cc-height" : ""} fade${activeSol === tab.target ? " show active" : ""}`}
                       id={tab.target}
                     >
                       <div className="container">
@@ -201,22 +217,31 @@ const DeskstopMenu = () => {
                   {RESOURCE_TABS.map((tab) => (
                     <div
                       key={tab.id}
-                      className={`nav-link${tab.active ? " active" : ""}`}
+                      className={`nav-link${activeRes === tab.target ? " active" : ""}`}
                       id={`${tab.target}-tab`}
-                      data-bs-toggle="pill"
-                      data-bs-target={`#${tab.target}`}
+                      role="tab"
+                      aria-selected={activeRes === tab.target}
+                      onMouseEnter={() => setActiveRes(tab.target)}
+                      onFocus={() => setActiveRes(tab.target)}
                     >
-                      <a href="#">
-                        <Image src={tab.icon} alt={tab.label} width={24} height={24} />
-                        <span>{tab.label}</span>
-                      </a>
+                      {tab.href ? (
+                        <Link href={tab.href}>
+                          <Image src={tab.icon} alt={tab.label} width={24} height={24} />
+                          <span>{tab.label}</span>
+                        </Link>
+                      ) : (
+                        <a href="#" onClick={(e) => e.preventDefault()}>
+                          <Image src={tab.icon} alt={tab.label} width={24} height={24} />
+                          <span>{tab.label}</span>
+                        </a>
+                      )}
                     </div>
                   ))}
                 </div>
 
                 <div className="tab-content" id="v-pills-tabContent">
                   {/* ---------- Blogs ---------- */}
-                  <div className="tab-pane fade show active" id="v-pills-res-one">
+                  <div className={resPane("v-pills-res-one")} id="v-pills-res-one">
                     <div className="container-fluid">
                       <div className="row">
                         <div className="col-lg-9 bg-0-gray-t">
@@ -264,7 +289,7 @@ const DeskstopMenu = () => {
                   </div>
 
                   {/* ---------- Case Studies ---------- */}
-                  <div className="tab-pane fade" id="v-pills-res-two">
+                  <div className={resPane("v-pills-res-two")} id="v-pills-res-two">
                     <div className="container-fluid">
                       <div className="row">
                         <div className="col-lg-9 bg-0-gray-t">
@@ -313,7 +338,7 @@ const DeskstopMenu = () => {
                   </div>
 
                   {/* ---------- eBooks ---------- */}
-                  <div className="tab-pane fade" id="v-pills-res-three">
+                  <div className={resPane("v-pills-res-three")} id="v-pills-res-three">
                     <div className="container-fluid">
                       <div className="row">
                         <div className="col-lg-3 d-flex  bg-0-gray-t">
@@ -355,7 +380,7 @@ const DeskstopMenu = () => {
                   </div>
 
                   {/* ---------- Guides ---------- */}
-                  <div className="tab-pane fade" id="v-pills-res-four">
+                  <div className={resPane("v-pills-res-four")} id="v-pills-res-four">
                     <div className="container-fluid">
                       <div className="row">
                         <div className="col-lg-9 d-flex bg-0-gray-t">
@@ -422,7 +447,7 @@ const DeskstopMenu = () => {
                   </div>
 
                   {/* ---------- Tools ---------- */}
-                  <div className="tab-pane fade" id="v-pills-res-five">
+                  <div className={resPane("v-pills-res-five")} id="v-pills-res-five">
                     <div className="container-fluid">
                       <div className="row">
                         <div className="col-lg-9 d-flex bg-0-gray-t">
@@ -465,7 +490,7 @@ const DeskstopMenu = () => {
                   </div>
 
                   {/* ---------- Webcasts ---------- */}
-                  <div className="tab-pane fade" id="v-pills-res-six">
+                  <div className={resPane("v-pills-res-six")} id="v-pills-res-six">
                     <div className="container-fluid">
                       <div className="row">
                         <div className="col-lg-12 bg-0-gray-t">

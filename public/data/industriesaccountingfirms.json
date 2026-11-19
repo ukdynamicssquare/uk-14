@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "question": "Which Microsoft Dynamics 365 solution is suitable for accounting firms?",
+        "answer": "<p>Dynamics 365 Business Central suits most small and mid-sized accounting firms. It manages finances, client jobs, timesheets, unfinished work, invoices and VAT returns. Larger firms with multiple companies or international operations may need Dynamics 365 Finance and Project Operations. Other applications, such as Sales, Customer Service and Customer Insights, support client management, queries and marketing.</p>"
+    },
+    {
+        "id": 2,
+        "question": "How can accounting firms use Dynamics 365 to automate financial operations?",
+        "answer": "<p>Dynamics 365 automates routine accounting tasks, including invoice generation, unfinished work calculations, bank reconciliation and VAT reporting. Subscription Billing manages recurring client fees, while Copilot and the Payables Agent help process supplier invoices and match transactions. Power Automate connects different systems and reduces repetitive manual work.</p>"
+    },
+    {
+        "id": 3,
+        "question": "What is the best ERP software for accounting and advisory firms in the UK?",
+        "answer": "<p>Microsoft Dynamics 365 Business Central is a suitable choice for most UK accounting firms. It manages finances, client jobs, invoicing and Making Tax Digital (MTD) VAT reporting. Larger accounting networks with multiple companies and complex reporting requirements may benefit from Dynamics 365 Finance and Project Operations.</p>"
+    },
+    {
+        "id": 4,
+        "question": "How does Business Central help accounting and financial advisory businesses?",
+        "answer": "<p>Business Central manages an accounting firm's finances and client assignments in one system. Firms can track working hours, job budgets, unfinished work, client fees and recurring invoices. It also supports VAT reporting, bank reconciliation and financial reporting, helping partners monitor revenue and profitability.</p>"
+    },
+    {
+        "id": 5,
+        "question": "Which ERP system supports financial reporting and client management for accounting firms?",
+        "answer": "<p>Dynamics 365 Business Central and Dynamics 365 Sales work together to support financial reporting and client management. Business Central manages accounts, invoices, unfinished work and profitability, while Sales tracks client relationships, referrals and business opportunities. Adding Customer Insights helps firms manage marketing campaigns and client communications.</p>"
+    }
+]

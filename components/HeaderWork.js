@@ -34,7 +34,11 @@ const HeaderWork = () => {
       "warehouse-management", "project-management", "service-management", "pricing-licensing",
     ],
     "/ai-solutions/": ["microsoft-fabric", "copilot-studio", "microsoft-foundry"],
-    "/industries/": ["professional-services"],
+    "/solutions/": [
+      "company-by-size", "ai-powered-crm", "integrations", "legacy-dynamics", "ai-intelligent-apps",
+      "data-and-ai-solutions",
+    ],
+    "/industries/": ["professional-services", "dynamics-365-for-accounting-firms"],
     "/industries/dynamics-365-for-": ["distribution", "education", "healthcare"],
     "/industries/manufacturing/dynamics-365-for-": [
       "discrete", "pharmaceutical", "medical-device", "chemical", "electronics", "food",
