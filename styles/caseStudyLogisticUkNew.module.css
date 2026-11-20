@@ -1,0 +1,771 @@
+/* Styles for pages/case-studies/dynamics-365-finance-for-logistic-uk-multi-entity-new.js
+   Direction: industrial freight report. Anton display type (self-hosted in
+   fonts.css), ink + warm paper + brand red, square corners, hairline rules,
+   real logistics photography. No gradients, no drop shadows. */
+
+.page {
+  --ink: #111418;
+  --ink-2: #2a2f36;
+  --paper: #f3f0ea;
+  --rule: #d9d4ca;
+  --rule-dark: rgb(255 255 255 / 16%);
+  --red: #bb2b36;
+  --text: #3b4048;
+  --display: Anton, "Arial Narrow", sans-serif;
+  color: var(--text);
+}
+
+.page p {
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.page a:not(:global(.btn-get-started)) {
+  color: var(--red);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.page a:focus-visible,
+.page button:focus-visible {
+  outline: 3px solid var(--red);
+  outline-offset: 3px;
+}
+
+.display {
+  font-family: var(--display);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  line-height: 1.06;
+  color: var(--ink);
+}
+.h2 {
+  composes: display;
+  font-size: clamp(34px, 4.4vw, 58px);
+  margin-bottom: 20px;
+}
+
+.section {
+  padding: 104px 0;
+}
+.paper {
+  background: var(--paper);
+}
+.ruleTop {
+  border-top: 1px solid var(--ink);
+  padding-top: 18px;
+}
+
+/* ================= HERO ================= */
+.hero {
+  background: var(--ink);
+  color: #fff;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  min-height: 640px;
+}
+.heroText {
+  padding: 150px 56px 72px max(24px, calc((100vw - 1296px) / 2 + 12px));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.heroTag {
+  align-self: flex-start;
+  background: var(--red);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 7px 12px;
+  margin-bottom: 28px;
+}
+.hero h1 {
+  font-family: var(--display);
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: clamp(40px, 5vw, 76px) !important; /* globals.css forces h1 sizes with !important */
+  line-height: 1;
+  letter-spacing: 0.005em;
+  margin-bottom: 28px;
+}
+.heroSub {
+  color: rgb(255 255 255 / 78%);
+  font-size: 19px !important;
+  max-width: 560px;
+  margin: 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--rule-dark);
+}
+.heroPhoto {
+  position: relative;
+  min-height: 360px;
+}
+.heroPhoto img {
+  object-fit: cover;
+}
+
+/* fact strip under hero */
+.facts {
+  background: #fff;
+  border-bottom: 1px solid var(--rule);
+}
+.factRow {
+  display: grid;
+  grid-template-columns: 1.2fr repeat(3, 1fr);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.factRow > li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 26px 28px;
+  border-left: 1px solid var(--rule);
+  color: var(--ink);
+  font-size: 17px;
+  font-weight: 600;
+}
+.factRow > li:first-child {
+  border-left: 0;
+  padding-left: 0;
+}
+.factRow i {
+  color: var(--red);
+  font-size: 22px;
+}
+.factLogo img {
+  max-height: 44px;
+  width: auto;
+}
+
+/* ================= CRUX ================= */
+.crux {
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+  gap: 48px;
+}
+.cruxHead {
+  font-family: var(--display);
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--red);
+  font-size: 28px;
+  line-height: 1.1;
+  margin: 0;
+}
+.cruxText {
+  font-size: clamp(20px, 2vw, 26px) !important;
+  line-height: 1.55 !important;
+  color: var(--ink);
+  margin: 0;
+  font-weight: 400;
+}
+
+/* ================= OVERVIEW ================= */
+.overview {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 64px;
+  align-items: stretch;
+}
+.overviewPhoto {
+  position: relative;
+  min-height: 520px;
+  border-radius: 14px;
+  overflow: hidden;
+}
+.overviewPhoto img {
+  object-fit: cover;
+}
+.overviewBody {
+  max-width: 680px;
+}
+.overviewBody p {
+  margin: 0 0 18px;
+  break-inside: avoid;
+}
+.overviewBody p:first-child::first-letter {
+  font-family: var(--display);
+  float: left;
+  font-size: 64px;
+  line-height: 0.9;
+  padding: 6px 10px 0 0;
+  color: var(--red);
+}
+
+/* ================= CHALLENGES (dark) ================= */
+.dark {
+  background: var(--ink);
+  color: rgb(255 255 255 / 80%);
+}
+.dark .h2 {
+  color: #fff;
+}
+.splitHead {
+  display: grid;
+  grid-template-columns: 6fr 6fr;
+  gap: 48px;
+  align-items: end;
+  margin-bottom: 56px;
+}
+.splitHead p {
+  margin: 0;
+}
+.dark .splitHead p {
+  color: rgb(255 255 255 / 72%);
+}
+.issueList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 48px;
+  border-top: 1px solid var(--rule-dark);
+}
+.issueList li {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 16px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--rule-dark);
+  color: #fff;
+  font-size: 17px;
+  line-height: 1.6;
+}
+.issueList i {
+  color: #f0646f;
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+/* ================= NEEDS ================= */
+.needsWrap {
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+  gap: 64px;
+}
+.needsAside p {
+  margin-bottom: 32px;
+}
+.needsAside img {
+  width: 100%;
+  height: auto;
+}
+.needsGrid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 2px solid var(--ink);
+}
+.needsGrid li {
+  padding: 26px 24px 26px 0;
+  border-bottom: 1px solid var(--rule);
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 1.6;
+  display: flex;
+  gap: 14px;
+}
+.needsGrid li:nth-child(even) {
+  padding-left: 24px;
+  border-left: 1px solid var(--rule);
+}
+.needsGrid i {
+  color: var(--red);
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+/* full-bleed statement band */
+.statement {
+  background: var(--red);
+  color: #fff;
+  padding: 64px 0;
+}
+.statement p {
+  font-family: var(--display);
+  text-transform: uppercase;
+  font-size: clamp(28px, 3.6vw, 48px) !important;
+  line-height: 1.1 !important;
+  color: #fff;
+  margin: 0;
+  max-width: 1000px;
+}
+.statement b {
+  font-weight: 400;
+}
+
+/* ================= OBJECTIVES ================= */
+.objGrid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px 32px;
+}
+.objGrid li {
+  border-top: 3px solid var(--ink);
+  padding-top: 20px;
+}
+.objGrid li p {
+  color: var(--ink);
+  margin: 0;
+}
+.objLead {
+  grid-column: span 2;
+  grid-row: span 2;
+  border-top-color: var(--red) !important;
+}
+.objLead p {
+  font-family: var(--display);
+  text-transform: uppercase;
+  font-size: clamp(26px, 2.6vw, 38px) !important;
+  line-height: 1.1 !important;
+}
+
+/* ================= SOLUTIONS (tabs) ================= */
+.solutionHead {
+  display: grid;
+  grid-template-columns: 6fr 6fr;
+  gap: 48px;
+  align-items: end;
+  margin-bottom: 48px;
+}
+.solutionHead p {
+  margin: 0;
+}
+.tabs {
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+  border-top: 2px solid var(--ink);
+}
+.tabList {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--rule);
+}
+.tab {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--rule);
+  text-align: left;
+  padding: 22px 24px 22px 0;
+  font-size: 17px;
+  font-weight: 600;
+  color: #6b7079;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  min-height: 48px;
+  transition: color 0.15s ease;
+}
+.tab:hover {
+  color: var(--ink);
+}
+.tab i {
+  opacity: 0;
+  color: var(--red);
+  transition: opacity 0.15s ease;
+}
+.tabActive {
+  color: var(--ink);
+  box-shadow: inset 4px 0 0 var(--red);
+  padding-left: 20px;
+}
+.tabActive i {
+  opacity: 1;
+}
+.panel {
+  padding: 36px 0 36px 48px;
+}
+.panel h3 {
+  font-family: var(--display);
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--ink);
+  font-size: clamp(26px, 2.4vw, 34px);
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+.panel ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.panel > ul > li {
+  padding: 16px 0 16px 28px;
+  border-bottom: 1px solid var(--rule);
+  position: relative;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--ink);
+}
+.panel > ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 27px;
+  width: 12px;
+  height: 2px;
+  background: var(--red);
+}
+.panel li ul {
+  margin-top: 12px;
+}
+.panel li li {
+  padding: 4px 0 4px 18px;
+  position: relative;
+  color: var(--text);
+}
+.panel li li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+}
+.dashShot {
+  margin-top: 72px;
+  text-align: center;
+}
+.dashShot img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ================= RESULTS ================= */
+.results {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 0;
+  background: var(--ink);
+}
+.resultsPhoto {
+  position: relative;
+  min-height: 560px;
+  overflow: hidden;
+}
+.resultsPhoto img {
+  object-fit: cover;
+}
+.resultsBody {
+  padding: 96px max(24px, calc((100vw - 1296px) / 2 + 12px)) 96px 64px;
+  color: rgb(255 255 255 / 78%);
+}
+.resultsBody .h2 {
+  color: #fff;
+}
+.resultsBody > p {
+  margin-bottom: 40px;
+}
+.resultList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+  border-top: 1px solid var(--rule-dark);
+}
+.resultList li {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 12px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--rule-dark);
+  color: #fff;
+  font-size: 17px;
+  line-height: 1.55;
+}
+.resultList i {
+  color: #4fc28c;
+  font-size: 22px;
+  line-height: 1.1;
+}
+
+/* ================= WHY / NEXT ================= */
+.why {
+  display: grid;
+  grid-template-columns: 6fr 6fr;
+  gap: 64px;
+}
+.whyBody p {
+  margin-bottom: 18px;
+}
+.nextTitle {
+  color: var(--ink);
+  font-size: 19px !important;
+  margin-bottom: 8px;
+}
+.nextList {
+  list-style: none;
+  margin: 0 0 32px;
+  padding: 0;
+  border-top: 2px solid var(--ink);
+}
+.nextList li {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 12px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--rule);
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 1.6;
+}
+.nextList i {
+  color: var(--red);
+  font-size: 18px;
+  line-height: 1.5;
+}
+.closing {
+  border-left: 3px solid var(--red);
+  padding-left: 24px;
+}
+.closing p {
+  margin-bottom: 14px;
+}
+.closing p:last-child {
+  margin: 0;
+  color: var(--ink);
+  font-weight: 600;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tab,
+  .tab i {
+    transition: none;
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1199.98px) {
+  .objGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 991.98px) {
+  .section {
+    padding: 72px 0;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+  .heroText {
+    padding: 130px 24px 48px;
+  }
+  .heroPhoto {
+    min-height: 300px;
+  }
+  .factRow {
+    grid-template-columns: 1fr 1fr;
+  }
+  .factRow > li {
+    padding: 20px 16px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .factRow > li:nth-child(odd) {
+    border-left: 0;
+    padding-left: 0;
+  }
+  .crux,
+  .overview,
+  .splitHead,
+  .needsWrap,
+  .solutionHead,
+  .why {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .overviewPhoto {
+    min-height: 340px;
+  }
+  .tabs {
+    grid-template-columns: 1fr;
+  }
+  .tabList {
+    border-right: 0;
+  }
+  .panel {
+    padding: 32px 0 0;
+  }
+  .results {
+    grid-template-columns: 1fr;
+  }
+  .resultsPhoto {
+    min-height: 300px;
+  }
+  .resultsBody {
+    padding: 64px 24px;
+  }
+}
+@media (max-width: 767.98px) {
+  .issueList,
+  .needsGrid,
+  .resultList {
+    grid-template-columns: 1fr;
+  }
+  .needsGrid li:nth-child(even) {
+    padding-left: 0;
+    border-left: 0;
+  }
+  .objGrid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .objLead {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+@media (max-width: 575.98px) {
+  .section {
+    padding: 56px 0;
+  }
+  .heroText {
+    padding: 112px 16px 40px;
+  }
+  .factRow {
+    grid-template-columns: 1fr;
+  }
+  .factRow > li {
+    border-left: 0;
+    padding-left: 0;
+  }
+  .statement {
+    padding: 48px 0;
+  }
+  .resultsBody {
+    padding: 56px 16px;
+  }
+}
+
+/* The ship photo ships with a baked-in white frame; scale it so the
+   frame falls outside the crop. */
+.resultsPhoto img.shipCrop {
+  transform: scale(1.24);
+  transform-origin: 38% 42%;
+}
+
+/* ================= POLISH ================= */
+
+/* reading progress */
+.progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  z-index: 1100;
+  background: var(--red);
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  pointer-events: none;
+}
+
+/* big numeral in the fact strip */
+.factNum {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 1;
+  color: var(--red);
+}
+
+/* scroll reveal: content is visible by default; hiding only applies once
+   JS has marked the page ready, and never with reduced motion */
+.ready [data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.6s cubic-bezier(0.2, 0.7, 0.2, 1);
+  transition-delay: var(--d, 0ms);
+}
+.ready [data-reveal].in {
+  opacity: 1;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .ready [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* hero photo slow settle */
+.heroPhoto {
+  overflow: hidden;
+}
+.heroPhoto img {
+  animation: settle 1.6s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+@keyframes settle {
+  from { transform: scale(1.06); }
+  to { transform: scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .heroPhoto img { animation: none; }
+}
+
+/* challenge rows respond to pointer */
+.issueList li {
+  transition: background-color 0.2s ease, padding 0.2s ease;
+}
+@media (hover: hover) {
+  .issueList li:hover {
+    background: rgb(255 255 255 / 4%);
+  }
+}
+
+/* phase panels: tabs on desktop, every phase listed on smaller screens */
+.panelOff {
+  display: none;
+}
+.tabCount {
+  font-family: var(--display);
+  color: var(--red);
+  font-size: 15px;
+  margin-right: 12px;
+  font-weight: 400;
+}
+.tabLabel {
+  display: flex;
+  align-items: baseline;
+}
+@media (max-width: 991.98px) {
+  .tabList {
+    display: none;
+  }
+  .panelOff {
+    display: block;
+  }
+  .panel {
+    border-bottom: 1px solid var(--rule);
+    padding: 32px 0;
+  }
+}
+
+/* Anton has one weight; stop the browser faking bold on <b> */
+.statement b,
+.objLead p,
+.panel h3,
+.cruxHead {
+  font-weight: 400 !important;
+  font-synthesis: none;
+}
+@media (max-width: 991.98px) {
+  .panel > ul > li:last-child {
+    border-bottom: 0;
+  }
+}
