@@ -201,7 +201,7 @@ const BusinessCentral = () => {
               <div className='solution-new-banner-sub-head'>
                 <h2>What is Dynamics 365 Business Central?</h2>
                 <p>Microsoft Dynamics 365 Business Central ties together your finance, operations, sales, customer service, project management and more to deliver a 360-degree business management system through AI, automation, and real-time insights.</p>
-                <p>D365 Business Central brings your teams and business processes in sync and serves as one smart system. This helps you stay steady, save time, and make better decisions to take your business into the right direction. With the option of <a className='u-i' href="/products/dynamics-365-business-central/customisation/">Businesses Central customisation</a>, companies can add/remove Business Central functionalities cater to their operational requirements.</p>
+                <p>D365 Business Central brings your teams and business processes in sync and serves as one smart system. This helps you stay steady, save time, and make better decisions to take your business into the right direction. With the option of <a className='u-i' href="/products/dynamics-365-business-central/customisation/">Business Central customisation</a>, companies can add/remove Business Central functionalities cater to their operational requirements.</p>
                 <p><b>In short, Microsoft Business Central is:</b></p>
                 <ul className='banner-sub-head-list'>
                   <li><i className="bi bi-check2"></i> All-in-one system for finance and operations</li>
@@ -671,7 +671,6 @@ const BusinessCentral = () => {
                   <ul>
                     <li>Faster approvals flow</li>
                     <li>Reduced manual errors</li>
-                    <li>Smarter workflows</li>
                     <li>Smarter workflows</li>
                   </ul>
                 </div>

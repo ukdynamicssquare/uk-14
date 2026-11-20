@@ -503,7 +503,7 @@ const DeskstopMenu = () => {
                               <div className="guide-card-01" key={w.href}>
                                 <a target="_blank" href={w.href} rel="noreferrer">
                                   <div className="guide-card-imag">
-                                    <Image width={411} height={216} src={w.img} alt="potcast" sizes="260px" />
+                                    <Image width={411} height={216} src={w.img} alt="podcast" sizes="260px" />
                                   </div>
                                   <div className="guide-card-inf">
                                     <span className="guide-card-title">{w.title}</span>
