@@ -1023,7 +1023,7 @@ const handleTabChange = (tab) => {
         }
 
         .case-card-featured .case-card-content h3 {
-          font-size: 18px;
+          font-size: 17px;
         }
 
 
@@ -1118,9 +1118,8 @@ const handleTabChange = (tab) => {
         .case-card-content h3 {
           margin: 0;
           color: #111827;
-          font-size: 18px;
-          line-height: 1.3;
-          letter-spacing: -.35px;
+          font-size: 17px;
+          line-height: 1.4;
           font-weight: 600;
         }
 
@@ -1143,8 +1142,8 @@ const handleTabChange = (tab) => {
           align-items: center;
           gap: 10px;
           color: #dc2626;
-          font-size: 12px;
-          font-weight: 750;
+          font-size: 14px;
+          font-weight: 600;
           transition: gap .2s ease;
         }
 
@@ -1456,7 +1455,7 @@ const handleTabChange = (tab) => {
           }
 
           .case-card-featured .case-card-content h3 {
-            font-size: 18px;
+            font-size: 17px;
           }
 
           .case-card-content {
