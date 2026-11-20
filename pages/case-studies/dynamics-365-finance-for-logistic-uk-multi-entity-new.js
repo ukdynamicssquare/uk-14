@@ -175,8 +175,9 @@ const BertlingCaseStudyNew = () => {
         image="https://www.dynamicssquare.co.uk/img/logistic-uk.jpg"
         imageAlt="Bertling Group case study – Dynamics Square"
         canonical="https://www.dynamicssquare.co.uk/case-studies/dynamics-365-finance-for-logistic-uk-multi-entity/"
-        robots="noindex, nofollow"
-      />
+      >
+        <meta name="robots" content="noindex, nofollow" />
+      </PageSeo>
 
       <div className={s.page} ref={rootRef}>
         <div className={s.progress} ref={barRef} aria-hidden="true"></div>

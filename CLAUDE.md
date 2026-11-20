@@ -6,6 +6,31 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Marketing site for Dynamics Square UK (https://www.dynamicssquare.co.uk). Next.js 14 **Pages Router**, React 18, plain JavaScript (no TypeScript), Bootstrap/react-bootstrap plus CSS Modules. Deployed on Vercel; Node 22.
 
+## Git Rules
+
+- **Never run `git push` or `git pull` without the user's explicit permission.** Ask first, every time.
+- Don't commit without permission either, and don't offer to commit. The user handles git.
+
+## New Page Rule
+
+**Every new page must be `noindex, nofollow`** until the user says it can go live.
+
+Write the robots tag as a literal `<meta>` element, because the sitemap only skips pages whose source matches `<meta name="robots" content="...noindex...">` (`NOINDEX_PATTERN` in `next-sitemap.config.js`):
+
+```jsx
+// Page using PageSeo: put the tag in as a child, and don't also pass the robots prop
+<PageSeo type="Service" title="..." description="...">
+  <meta name="robots" content="noindex, nofollow" />
+</PageSeo>
+
+// Page with its own <Head>
+<Head>
+  <meta name="robots" content="noindex, nofollow" />
+</Head>
+```
+
+PageSeo's `robots="noindex, nofollow"` prop does set the tag on the page, but the sitemap check doesn't see it, so the page still ends up in the sitemap.
+
 ## Key Technologies
 
 - **Framework:** Next.js 14.2 (Pages Router), React 18.3, JavaScript (no TypeScript)

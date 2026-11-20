@@ -28,8 +28,9 @@ const AboutUs = () => {
         description="Learn about Dynamics Square and explore what makes us unique and one of the most trusted Dynamics 365 Business Central partners in the UK and Europe region."
         image="https://www.dynamicssquare.co.uk/img/about-pic.png"
         canonical="https://www.dynamicssquare.co.uk/about-us/"
-        robots="noindex, nofollow"
-      />
+      >
+        <meta name="robots" content="noindex, nofollow" />
+      </PageSeo>
       <section className="Solution-banner hero-1 hero about-banner">
         <div className="container">
           <div className="row">

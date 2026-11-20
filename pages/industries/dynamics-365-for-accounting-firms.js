@@ -230,8 +230,9 @@ const AccountingFirms = () => {
         description="Use Dynamics 365 apps for your accounting and advisory practice. Connected ERP and CRM for time, WIP, fee notes, MTD VAT and client relationships in the UK."
         image="https://www.dynamicssquare.co.uk/img/professional-services-01.png"
         faqs={faqData}
-        robots="noindex, nofollow"
-      />
+      >
+        <meta name="robots" content="noindex, nofollow" />
+      </PageSeo>
       <div className='solution-new-banner-one solution-new-banner-one-colos'>
         <div className='container'>
           <div className='row justify-content-center'>
