@@ -10,10 +10,9 @@ const HopkinsEstatesBusinessCentral = () => {
         type="Article"
         title="NAV to Business Central for Aggregates | Hopkins Estates Case Study"
         description="Hopkins Estates replaced Dynamics NAV 2009 with Business Central, integrating QuarryMinder invoicing, Continia document capture and Power BI dashboards."
-      >
-        {/* Pending client naming approval: keep noindex until sign-off */}
-        <meta name="robots" content="noindex, follow" />
-      </PageSeo>
+        image="/img/hopkins-estates-case-study.png"
+        imageAlt="Hopkins Estates case study – Dynamics Square"
+      />
       <section className="hero hero-new-bg">
         <div className="container">
           <div className="row justify-content-center">
@@ -35,7 +34,7 @@ const HopkinsEstatesBusinessCentral = () => {
             <div className="col-lg-10">
               <CaseStudyClientCard
                 clientName="Hopkins Estates"
-                logo="/img/case-study-logos/hopkins-estates-logo.svg"
+                logo="/img/case-study-logos/hopkins-estates-logo.png"
                 meta={[
                   { icon: "bi-building", label: "Construction & Aggregates" },
                   { icon: "bi-geo-alt", label: "Wincanton, UK" },
@@ -68,7 +67,7 @@ const HopkinsEstatesBusinessCentral = () => {
             <div className="col-lg-6 align-self-center">
               <div className="busine_service_bottom-left custom012">
                 <Image
-                  src="/img/case-v-09.png"
+                  src="/img/case-v-38.png"
                   className="fix-im"
                   alt="Hopkins Estates business overview"
                   width={400} height={450}
@@ -202,7 +201,7 @@ const HopkinsEstatesBusinessCentral = () => {
           </div>
           <div className="row gx-5">
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/case-v-10.png" alt="Hopkins Estates Business Central implementation requirements" width={633} height={561} />
+              <Image src="/img/case-v-39.png" alt="Hopkins Estates Business Central implementation requirements" width={633} height={561} />
             </div>
             <div className="col-lg-6 align-self-center">
               <div className="ms-c-po">
@@ -271,7 +270,7 @@ const HopkinsEstatesBusinessCentral = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="ce-image-ce">
-                <Image src="/img/case-v-11.png" alt="Hopkins Estates Business Central implementation" width={828} height={597} className="img-fluid" />
+                <Image src="/img/case-v-40.png" alt="Hopkins Estates Business Central implementation" width={1110} height={724} className="img-fluid" />
               </div>
             </div>
           </div>

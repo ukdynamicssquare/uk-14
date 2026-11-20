@@ -10,10 +10,7 @@ const AcbfFinanceOperationsNonProfit = () => {
         type="Article"
         title="Dynamics 365 Finance & Operations for Nonprofits | ACBF Case Study"
         description="ACBF, active in 48 African countries, implemented Dynamics 365 Finance & Operations at over 60% lower cost than other partner quotes."
-      >
-        {/* Pending client naming approval: keep noindex until sign-off */}
-        <meta name="robots" content="noindex, follow" />
-      </PageSeo>
+      />
       <section className="hero hero-new-bg">
         <div className="container">
           <div className="row justify-content-center">
@@ -67,7 +64,7 @@ const AcbfFinanceOperationsNonProfit = () => {
             <div className="col-lg-6 align-self-center">
               <div className="busine_service_bottom-left custom012">
                 <Image
-                  src="/img/case-v-06.png"
+                  src="/img/case-v-35.png"
                   className="fix-im"
                   alt="African Capacity Building Foundation business overview"
                   width={400} height={450}
@@ -201,7 +198,7 @@ const AcbfFinanceOperationsNonProfit = () => {
           </div>
           <div className="row gx-5">
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/case-v-07.png" alt="African Capacity Building Foundation Dynamics 365 Finance and Operations requirements" width={633} height={561} />
+              <Image src="/img/case-v-36.png" alt="African Capacity Building Foundation Dynamics 365 Finance and Operations requirements" width={633} height={561} />
             </div>
             <div className="col-lg-6 align-self-center">
               <div className="ms-c-po">
@@ -275,7 +272,7 @@ const AcbfFinanceOperationsNonProfit = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="ce-image-ce">
-                <Image src="/img/case-v-08.png" alt="African Capacity Building Foundation Dynamics 365 Finance and Operations" width={1036} height={699} className="img-fluid" />
+                <Image src="/img/case-v-37.png" alt="African Capacity Building Foundation Dynamics 365 Finance and Operations" width={1028} height={628} className="img-fluid" />
               </div>
             </div>
           </div>

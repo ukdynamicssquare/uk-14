@@ -10,10 +10,9 @@ const ForensxQuickBooksToBusinessCentral = () => {
         type="Article"
         title="QuickBooks to Business Central for Services Firms | Forensx Case Study"
         description="Forensx replaced QuickBooks and spreadsheets with Business Central for multi-entity finance, project costing, WIP tracking and timesheet approvals."
-      >
-        {/* Pending client naming approval: keep noindex until sign-off */}
-        <meta name="robots" content="noindex, follow" />
-      </PageSeo>
+        image="/img/forensx-case-study.png"
+        imageAlt="Forensx case study – Dynamics Square"
+      />
       <section className="hero hero-new-bg">
         <div className="container">
           <div className="row justify-content-center">
@@ -67,7 +66,7 @@ const ForensxQuickBooksToBusinessCentral = () => {
             <div className="col-lg-6 align-self-center">
               <div className="busine_service_bottom-left custom012">
                 <Image
-                  src="/img/case-v-12.png"
+                  src="/img/case-v-41.png"
                   className="fix-im"
                   alt="Forensx business overview"
                   width={400} height={450}
@@ -211,7 +210,7 @@ const ForensxQuickBooksToBusinessCentral = () => {
           </div>
           <div className="row gx-5">
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/case-v-13.png" alt="Forensx QuickBooks to Business Central requirements" width={633} height={561} />
+              <Image src="/img/case-v-42.png" alt="Forensx QuickBooks to Business Central requirements" width={633} height={561} />
             </div>
             <div className="col-lg-6 align-self-center">
               <div className="ms-c-po">
@@ -296,7 +295,7 @@ const ForensxQuickBooksToBusinessCentral = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="ce-image-ce">
-                <Image src="/img/case-v-14.png" alt="Forensx QuickBooks to Business Central" width={1427} height={1048} className="img-fluid" />
+                <Image src="/img/case-v-43.png" alt="Forensx QuickBooks to Business Central" width={999} height={519} className="img-fluid" />
               </div>
             </div>
           </div>
