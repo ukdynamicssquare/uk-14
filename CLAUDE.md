@@ -15,6 +15,8 @@ Marketing site for Dynamics Square UK (https://www.dynamicssquare.co.uk). Next.j
 
 **Every new page must be `noindex, nofollow`** until the user says it can go live.
 
+This applies only to brand-new page files. **When adding or updating content on an existing page, never add `noindex` or `nofollow`**, and don't change its existing robots tag, canonical or sitemap status. Live pages must stay indexed.
+
 Write the robots tag as a literal `<meta>` element, because the sitemap only skips pages whose source matches `<meta name="robots" content="...noindex...">` (`NOINDEX_PATTERN` in `next-sitemap.config.js`):
 
 ```jsx
@@ -30,6 +32,29 @@ Write the robots tag as a literal `<meta>` element, because the sitemap only ski
 ```
 
 PageSeo's `robots="noindex, nofollow"` prop does set the tag on the page, but the sitemap check doesn't see it, so the page still ends up in the sitemap.
+
+## Code Style
+
+Write code the way an experienced developer on this team would, not like generated "vibe code":
+
+- Match the surrounding file: same naming, quotes, indentation, component style and CSS approach.
+- Keep changes small and focused on the task. Don't refactor, rename or reformat code you weren't asked to touch.
+- No emoji, banner or "✅ FIXED" style comments. Comment only where the *why* isn't obvious, in plain sentences.
+- Don't add abstractions, helpers, wrappers or config for one-time use. Reuse what exists (`PageSeo`, `SiteImage`, `helpers/schema.js`) before writing new code.
+- No placeholder code, dead code, `console.log` debugging or commented-out blocks left behind.
+- Use clear, specific names (`caseStudyCards`, not `data2` or `newArr`).
+- Don't make new copies of files (`-copy`, `-new`, `-back`) unless asked. Edit the file the route actually uses.
+
+## Content Writing
+
+Any page copy, headings, meta titles/descriptions, FAQs, alt text or blog text must read as if a person at Dynamics Square wrote it:
+
+- UK English spelling and phrasing (optimise, organisation, licence as a noun).
+- Plain, direct sentences that say something specific: real figures, client results, product names. No filler or empty claims.
+- Avoid AI-sounding words and patterns: "delve", "seamless", "unlock", "elevate", "robust", "game-changer", "in today's fast-paced world", "it's not just X, it's Y", forced groups of three.
+- Go easy on em dashes, exclamation marks and bold text. Vary sentence length.
+- Write for the reader (finance directors, operations leads, IT managers), not for search engines. Use keywords where they fit naturally.
+- When moving a page to a new design, keep the existing copy word for word unless the user asks for new content.
 
 ## Key Technologies
 
