@@ -129,7 +129,6 @@ const LEGAL_LINKS = [
   { label: "Privacy Policy", href: "/privacy-policy/" },
   { label: "Terms of Use", href: "/terms-of-use/" },
   { label: "Cookie Policy", href: "/cookie-policy/" },
-  { label: "Accessibility", href: "/accessibility/" },
   { label: "Modern Slavery Statement", href: "/modern-slavery-act/" },
   { label: "Sitemap", href: "/sitemap.xml/" },
 ];

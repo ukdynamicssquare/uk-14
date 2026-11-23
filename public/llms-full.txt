@@ -944,7 +944,6 @@ Additional delivery offices: Amersfoort (Netherlands), Gurugram (India), Singapo
 - GDPR-aligned privacy practices: https://www.dynamicssquare.co.uk/privacy-policy/
 - Terms of Use: https://www.dynamicssquare.co.uk/terms-of-use/
 - Cookie Policy: https://www.dynamicssquare.co.uk/cookie-policy/
-- Accessibility Statement: https://www.dynamicssquare.co.uk/accessibility/
 - Modern Slavery Statement: https://www.dynamicssquare.co.uk/modern-slavery-act/
 
 ---

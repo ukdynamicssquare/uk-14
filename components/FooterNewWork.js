@@ -669,8 +669,6 @@ const FooterNew = () => {
                     <span class="legal-sep">|</span>
                     <a href="#">Cookies</a>
                     <span class="legal-sep">|</span>
-                    <a href="#">Accessibility</a>
-                    <span class="legal-sep">|</span>
                     <a href="#">Sitemap</a>
                   </div>
                   <div class="col-12 col-md-4 text-md-end social-icons">
