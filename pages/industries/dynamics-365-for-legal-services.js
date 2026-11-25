@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from "next/image";
 import Link from "next/link";
 import useCardScrollEffect from "../../components/useCardScrollEffect";
@@ -179,6 +179,11 @@ const ModalCta = ({ children, className = "" }) => (
 const LegalServices = () => {
 
   useCardScrollEffect()
+  const [visibleCount, setVisibleCount] = useState(5);
+
+  const handleLoadMore = () => {
+    setVisibleCount((prev) => prev + 3);
+  };
 
   return (
     <>
@@ -618,7 +623,7 @@ const LegalServices = () => {
           <div className="row justify-content-center mar-top-7">
             <div className="col-lg-8">
               <div className="accordion accordion-flush" id="faqlist1">
-                {faqData.map((faq) => (
+                {faqData.slice(0, visibleCount).map((faq) => (
                   <div className="accordion-item" key={faq.id}>
                     <h3 className="accordion-header">
                       <button
@@ -645,6 +650,13 @@ const LegalServices = () => {
                   </div>
                 ))}
               </div>
+              {visibleCount < faqData.length && (
+                <div className="text-center mt-4">
+                  <button className="btn faq-btn-l btn-get-started" onClick={handleLoadMore}>
+                    Load More <i className="bi bi-chevron-down"></i>
+                  </button>
+                </div>
+              )}
             </div>
           </div>
         </div>
