@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import Image from "next/image";
 import Link from "next/link";
-import useCardScrollEffect from "../../components/useCardScrollEffect";
-import faqData from '../../public/data/industriesaccountingfirms.json';
-import PageSeo from "../../components/PageSeo";
-import styles from "../../styles/dynamics-365-for-accounting-firms.module.css";
+import useCardScrollEffect from "../../../components/useCardScrollEffect";
+import faqData from '../../../public/data/industriesaccountingfirms.json';
+import PageSeo from "../../../components/PageSeo";
+import styles from "../../../styles/dynamics-365-for-accounting-firms.module.css";
 
 const apps = [
   {
@@ -226,8 +226,8 @@ const AccountingFirms = () => {
     <>
       <PageSeo
         type="Service"
-        title="Dynamics 365 for Accounting Firms | Dynamics Square UK"
-        description="Use Dynamics 365 apps for your accounting and advisory practice. Connected ERP and CRM for time, WIP, fee notes, MTD VAT and client relationships in the UK."
+        title="Dynamics 365 for Accounting | Dynamics Square UK"
+        description="Transform your accounting with Dynamics 365. Manage finances, automate reporting and improve financial visibility with Microsoft Dynamics 365 experts at Dynamics Square UK."
         image="https://www.dynamicssquare.co.uk/img/professional-services-01.png"
         faqs={faqData}
       >

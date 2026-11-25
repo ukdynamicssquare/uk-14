@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import Image from "next/image";
 import Link from "next/link";
-import faqData from '../../public/data/industriesbusinessservices.json';
-import PageSeo from "../../components/PageSeo";
-import styles from "../../styles/dynamics-365-for-services-industries.module.css";
+import faqData from '../../../public/data/industriesbusinessservices.json';
+import PageSeo from "../../../components/PageSeo";
+import styles from "../../../styles/dynamics-365-for-services-industries.module.css";
 
 const overview = [
   { icon: "bi-calculator", lead: "Business Central", text: <>connects <Link href="/products/dynamics-365-business-central/financial-management/" className="u-i">financial management</Link> with <Link href="/products/dynamics-365-business-central/project-management/" className="u-i">project accounting</Link>, resource capacity, timesheets and purchasing.</> },
@@ -294,7 +294,7 @@ const BusinessServices = () => {
       <PageSeo
         type="Service"
         title="Dynamics 365 for Business Services | Dynamics Square UK"
-        description="Dynamics 365 for UK consultancies, IT service providers and engineering firms. Connect sales, project delivery, resource planning, finance and client billing."
+        description="Transform business services with Microsoft Dynamics 365 CRM and ERP solutions. Improve client management, automate workflows and drive growth with Dynamics Square UK."
         image="/img/bc-support-banner.png"
         faqs={faqData}
       >
@@ -340,10 +340,7 @@ const BusinessServices = () => {
         <div className="container">
           <div className="row align-items-center gy-4">
             <div className="col-lg-9">
-              <div className={`partner-trust-strip__stats ${styles['si-glance']} ${styles['si-glance--five']}`}>
-                <div className="partner-trust-strip__label">
-                  <span>Serving businesses across the UK, USA and Canada</span>
-                </div>
+              <div className={`partner-trust-strip__stats ${styles['si-glance']} ${styles['si-glance--row']}`}>
                 <div className="partner-trust-strip__item">
                   <p className={styles['si-glance__num']}>500+</p>
                   <p>clients worldwide</p>

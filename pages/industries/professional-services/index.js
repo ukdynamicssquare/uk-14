@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
-import useCardScrollEffect from "../../components/useCardScrollEffect";
-import PageSeo from "../../components/PageSeo";
-import SolutionTabs from "../../components/SolutionTabs";
-import ChallengeGrid from "../../components/ChallengeGrid";
+import useCardScrollEffect from "../../../components/useCardScrollEffect";
+import PageSeo from "../../../components/PageSeo";
+import SolutionTabs from "../../../components/SolutionTabs";
+import ChallengeGrid from "../../../components/ChallengeGrid";
 // Mirrors the FAQ accordion rendered on this page (used for FAQPage schema).
 const PAGE_FAQS = [
   {

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import Image from "next/image";
 import Link from "next/link";
-import useCardScrollEffect from "../../components/useCardScrollEffect";
-import faqData from '../../public/data/industrieslegalservices.json';
-import PageSeo from "../../components/PageSeo";
-import styles from "../../styles/dynamics-365-for-legal-services.module.css";
+import useCardScrollEffect from "../../../components/useCardScrollEffect";
+import faqData from '../../../public/data/industrieslegalservices.json';
+import PageSeo from "../../../components/PageSeo";
+import styles from "../../../styles/dynamics-365-for-legal-services.module.css";
 
 const solutions = [
   {
@@ -190,7 +190,7 @@ const LegalServices = () => {
       <PageSeo
         type="Service"
         title="Dynamics 365 for Legal Services | Dynamics Square UK"
-        description="Dynamics 365 for UK law firms: Business Central for matter accounting and billing, Dynamics 365 Sales for client intake, conflict searches and legal CRM."
+        description="Simplify legal operations with Dynamics 365 for legal services. Improve client management, automate processes and enhance productivity with Dynamics Square UK."
         image="/img/professional-services-01.png"
         faqs={faqData}
       >
@@ -236,9 +236,6 @@ const LegalServices = () => {
           <div className="row align-items-center gy-4">
             <div className="col-lg-9">
               <div className={`partner-trust-strip__stats ${styles['ls-glance']}`}>
-                <div className="partner-trust-strip__label">
-                  <span>Serving UK, USA and Canada businesses</span>
-                </div>
                 <div className="partner-trust-strip__item">
                   <p className={styles['ls-glance__num']}>500+</p>
                   <p>Innovative Implementations</p>

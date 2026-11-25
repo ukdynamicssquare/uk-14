@@ -1,10 +1,10 @@
 import React from 'react';
 import Image from "next/image";
 import Link from "next/link";
-import useCardScrollEffect from "../../components/useCardScrollEffect";
-import faqData from '../../public/data/industriesmarketingagencies.json';
-import PageSeo from "../../components/PageSeo";
-import styles from "../../styles/dynamics-365-for-services-industries.module.css";
+import useCardScrollEffect from "../../../components/useCardScrollEffect";
+import faqData from '../../../public/data/industriesmarketingagencies.json';
+import PageSeo from "../../../components/PageSeo";
+import styles from "../../../styles/dynamics-365-for-services-industries.module.css";
 
 const solutions = [
   {
@@ -223,9 +223,6 @@ const MarketingCreativeAgencies = () => {
           <div className="row align-items-center gy-4">
             <div className="col-lg-9">
               <div className={`partner-trust-strip__stats ${styles['si-glance']}`}>
-                <div className="partner-trust-strip__label">
-                  <span>Serving UK, USA and Canada businesses</span>
-                </div>
                 <div className="partner-trust-strip__item">
                   <p className={styles['si-glance__num']}>500+</p>
                   <p>Clients Worldwide</p>
@@ -253,27 +250,16 @@ const MarketingCreativeAgencies = () => {
         </div>
       </section>
 
-      <section className={styles['si-section']}>
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-9">
-              <div className="supprt-header-new-one">
-                <h2>What is Dynamics 365 for marketing and creative agencies?</h2>
-              </div>
-              <p><Link href="/products/microsoft-dynamics-365/" className="u-i">Microsoft Dynamics 365</Link> can support agency management by connecting client relationships with project delivery and financial control. Dynamics 365 Sales manages new business and client accounts, while Business Central or Project Operations supports job budgets, resource planning, timesheets and billing.</p>
-              <p className="mb-0">The right combination depends on your agency&apos;s size, delivery model and financial processes.</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section className="erp-expect-section">
         <div className="container">
           <div className="row">
             <div className="col-lg-8">
               <div className="supprt-header-new-one">
-                <h2>Microsoft Dynamics 365 Solutions for Creative Agencies</h2>
+                  <h2>What is Dynamics 365 for marketing and creative agencies?</h2>
               </div>
+               <p><Link href="/products/microsoft-dynamics-365/" className="u-i">Microsoft Dynamics 365</Link> can support agency management by connecting client relationships with project delivery and financial control. Dynamics 365 Sales manages new business and client accounts, while Business Central or Project Operations supports job budgets, resource planning, timesheets and billing.</p>
+              <p className="mb-0">The right combination depends on your agency&apos;s size, delivery model and financial processes.</p>
               <p>An agency sells hours, ideas and media. Profit can disappear through small gaps in the process: an extra round of amends nobody records, a freelancer booked outside the agreed budget or a media invoice passed on without the correct mark-up.</p>
               <p>Connecting sales, project delivery and finance helps agencies identify these issues before they affect project margins.</p>
               <p className={styles['si-callout']}><b>Why it matters:</b> Consider a 40-person agency running 30 client jobs at once. If each job absorbs 10 unbilled hours a month at an £85 blended rate, the agency writes off £25,500 a month, or £306,000 a year. This is an illustrative calculation, not a guaranteed saving.</p>

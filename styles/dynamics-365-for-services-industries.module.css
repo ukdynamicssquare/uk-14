@@ -1,5 +1,5 @@
-/* Styles for pages/industries/dynamics-365-for-marketing-creative-agencies.js
-   and pages/industries/dynamics-365-for-business-services.js.
+/* Styles for pages/industries/professional-services/marketing-creative-agencies.js
+   and pages/industries/professional-services/business-services.js.
    Both use the shared manufacturing sub-industry template (global classes in
    globals.css). This file only holds the additions they need. */
 
@@ -27,9 +27,9 @@
   line-height: 1;
 }
 
-/* Five facts on one row (the template has three) */
+/* Four facts on one row (the template has three) */
 @media (min-width: 992px) {
-  .si-glance--five {
+  .si-glance--row {
     flex-wrap: nowrap;
     gap: 20px;
   }

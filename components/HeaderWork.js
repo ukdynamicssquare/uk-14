@@ -38,7 +38,10 @@ const HeaderWork = () => {
       "company-by-size", "ai-powered-crm", "integrations", "legacy-dynamics", "ai-intelligent-apps",
       "data-and-ai-solutions",
     ],
-    "/industries/": ["professional-services", "dynamics-365-for-accounting-firms"],
+    "/industries/": ["professional-services"],
+    "/industries/professional-services/": [
+      "business-services", "accounting", "legal-services", "marketing-creative-agencies",
+    ],
     "/industries/dynamics-365-for-": ["distribution", "education", "healthcare"],
     "/industries/manufacturing/dynamics-365-for-": [
       "discrete", "pharmaceutical", "medical-device", "chemical", "electronics", "food",
