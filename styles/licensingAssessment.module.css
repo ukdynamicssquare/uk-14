@@ -574,14 +574,14 @@
 .next {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  min-height: 52px;
-  padding: 0 22px 0 26px;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 18px 0 20px;
   border: 0;
   border-radius: 5px;
   background: var(--red);
   color: #fff;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
   transition: background 0.15s;
 }
@@ -986,10 +986,6 @@
   }
   .stepper {
     gap: 12px;
-  }
-  .next {
-    min-height: 48px;
-    font-size: 17px;
   }
   .verdict {
     padding: 28px 16px 22px;
