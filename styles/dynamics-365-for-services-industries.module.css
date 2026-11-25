@@ -1,0 +1,362 @@
+/* Styles for pages/industries/dynamics-365-for-marketing-creative-agencies.js
+   and pages/industries/dynamics-365-for-business-services.js.
+   Both use the shared manufacturing sub-industry template (global classes in
+   globals.css). This file only holds the additions they need. */
+
+.si-hero-cta {
+  display: flex;
+  justify-content: center;
+}
+
+/* Trust strip: the numbers look like the template's h3 stats but stay
+   paragraphs, so the page's first heading after the h1 is an h2. */
+.si-glance .si-glance__num {
+  color: #fff;
+  font-family: Anton;
+  font-size: 42px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+.si-glance__text :global(.bi) {
+  display: block;
+  margin-bottom: 8px;
+  color: #fff;
+  font-size: 30px;
+  line-height: 1;
+}
+
+/* Five facts on one row (the template has three) */
+@media (min-width: 992px) {
+  .si-glance--five {
+    flex-wrap: nowrap;
+    gap: 20px;
+  }
+}
+
+.si-section {
+  padding: 60px 0;
+}
+.si-callout {
+  margin: 24px 0 32px;
+  padding: 28px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 6px 24px rgba(20, 10, 40, 0.08);
+}
+.si-note {
+  margin-bottom: 0;
+  color: #5b5768;
+  font-size: 14px;
+}
+.si-note-cta {
+  margin-bottom: 20px;
+  color: #5b5768;
+  font-size: 14px;
+}
+.si-cta-gap {
+  margin-top: 30px;
+}
+.si-gap {
+  margin-top: 30px;
+}
+
+/* Card and row titles: h3 elements styled like the template's h4s,
+   so heading levels don't skip. */
+.si-card-title {
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #2d2640;
+}
+.si-reg-title {
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #60518c;
+}
+.si-compare-title {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #60518c;
+}
+.si-sub-title {
+  margin: 40px 0 16px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #2d2640;
+}
+
+/* Cards with more than one paragraph */
+.si-card {
+  display: flex;
+  flex-direction: column;
+}
+.si-card p + p {
+  margin-top: 12px;
+}
+.si-card .si-best-for {
+  margin-top: auto;
+  padding-top: 12px;
+}
+.si-reg-desc p + p {
+  margin-top: 12px;
+}
+
+.si-icon :global(.bi) {
+  color: #60518c;
+  font-size: 22px;
+  line-height: 1;
+}
+.si-icon-box {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  background: #e7dbf2;
+}
+.si-icon-box :global(.bi) {
+  color: #60518c;
+  font-size: 22px;
+  line-height: 1;
+}
+
+/* Capability cards on the dark background */
+.si-on-dark {
+  margin-bottom: 24px;
+  color: #e6def2;
+}
+.si-cap-items {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.si-cap-items b {
+  color: #2d2640;
+}
+.si-cap-items b a,
+.si-lead a,
+.si-table th a {
+  color: inherit;
+  text-decoration: underline;
+}
+.si-cap-cards {
+  margin-bottom: -40px;
+}
+
+/* Tables */
+.si-table tbody th {
+  padding: 16px 24px;
+  border: none;
+  font-weight: 700;
+  text-align: left;
+  vertical-align: top;
+}
+.si-table tfoot th,
+.si-table tfoot td {
+  padding: 16px 24px;
+  border: none;
+  background: #e7dbf2;
+  font-weight: 700;
+}
+.si-table-after {
+  margin-top: 30px;
+}
+
+/* Heading, table and copy on the dark implementation section */
+.si-dark h3 {
+  margin: 30px 0 0;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+}
+.si-dark p,
+.si-dark a {
+  color: #e6def2;
+}
+.si-dark a {
+  text-decoration: underline;
+}
+.si-dark a:hover {
+  color: #fff;
+}
+.si-dark table {
+  background: #fff;
+}
+
+/* Application panels: copy on the left, key capabilities on the right */
+.si-app {
+  margin-top: 24px;
+  padding: 36px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 6px 24px rgba(20, 10, 40, 0.08);
+}
+.si-app__head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+.si-app__head img {
+  flex-shrink: 0;
+}
+.si-app__head h3 {
+  margin-bottom: 0;
+  color: #2d2640;
+  font-size: 20px;
+  font-weight: 700;
+}
+.si-app__link {
+  color: #bb2b36;
+  font-weight: 600;
+  text-decoration: underline;
+}
+/* The capabilities sit beside the copy but stay between intro and detail in
+   the source, so the reading order matches the content. */
+@media (min-width: 992px) {
+  .si-app__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto 1fr;
+    column-gap: 40px;
+  }
+  .si-app__list {
+    grid-row: 1 / span 2;
+    grid-column: 2;
+  }
+}
+.si-app__list {
+  align-self: start;
+  padding: 26px;
+  border-radius: 12px;
+  background: #f2eff7;
+}
+.si-check-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.si-check-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+.si-check-list li:last-child {
+  margin-bottom: 0;
+}
+.si-check-list :global(.bi) {
+  margin-top: 2px;
+  color: #8e44ad;
+  font-size: 18px;
+}
+
+.si-panel {
+  margin: 24px 0;
+  padding: 30px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 6px 24px rgba(20, 10, 40, 0.08);
+}
+.si-panel h3 {
+  margin-bottom: 18px;
+  color: #2d2640;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.si-bullets {
+  margin: 24px 0;
+  padding-left: 20px;
+}
+.si-bullets li {
+  margin-bottom: 10px;
+}
+
+.si-totals {
+  margin: 24px 0;
+  padding: 26px;
+  border-radius: 12px;
+  background: #e6e0f2;
+}
+.si-totals p {
+  margin-bottom: 4px;
+  color: #2d2640;
+  font-size: 18px;
+}
+.si-totals p:last-child {
+  margin-bottom: 0;
+}
+
+/* Reasons and other icon lists */
+.si-reasons {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px 40px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.si-reasons li {
+  display: flex;
+  gap: 18px;
+}
+.si-reasons p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1199px) {
+  .si-cap-items {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 991px) {
+  .si-app__list {
+    margin: 8px 0 24px;
+  }
+  .si-cap-cards {
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 767px) {
+  .si-cap-items {
+    grid-template-columns: minmax(0, 1fr);
+    margin: 0;
+  }
+  .si-reasons {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  /* Tighter cells, so more columns show without swiping */
+  .si-table {
+    font-size: 14px;
+  }
+  .si-table--wide {
+    min-width: 560px;
+  }
+  :global(.pharma-compare-table) .si-table thead th,
+  :global(.pharma-compare-table) .si-table tbody td,
+  .si-table tbody th,
+  .si-table tfoot th,
+  .si-table tfoot td {
+    padding: 12px;
+  }
+}
+@media (max-width: 575px) {
+  .si-hero-cta :global(.btn-get-started) {
+    width: 100%;
+  }
+  .si-app,
+  .si-panel {
+    padding: 24px;
+  }
+  .si-app__list {
+    padding: 20px;
+  }
+}

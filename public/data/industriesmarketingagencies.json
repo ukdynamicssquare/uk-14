@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "question": "How can Microsoft Dynamics 365 help marketing agencies?",
+        "answer": "<p>It connects new business, project delivery and finance. Sales tracks pitches and client accounts, while Business Central or Project Operations supports job budgets, resource management, timesheets and billing. Power BI can provide reporting on project and client profitability.</p>"
+    },
+    {
+        "id": 2,
+        "question": "Which CRM software is suitable for creative agencies in the UK?",
+        "answer": "<p>Dynamics 365 Sales suits agencies that need structured pipeline management, account planning and links to Microsoft 365. Outlook activity tracking needs to be enabled and configured. An agency that only needs a basic contact list may be better served by a lighter CRM.</p>"
+    },
+    {
+        "id": 3,
+        "question": "Can Dynamics 365 manage creative projects, budgets and resources?",
+        "answer": "<p>Yes, but the right application depends on the level of control required. Business Central provides resource capacity, project accounting and billing. Project Operations offers more detailed resource requests and skills-based scheduling for complex delivery teams.</p>"
+    },
+    {
+        "id": 4,
+        "question": "Can Dynamics 365 automate agency operations?",
+        "answer": "<p>Power Automate can route estimate, timesheet and purchase-order approvals. Configured workflows can flag budget thresholds, missing contractor records and overdue actions. AI agents can assist with selected administrative tasks, but availability, licensing and human review requirements depend on the specific agent.</p>"
+    },
+    {
+        "id": 5,
+        "question": "What does Dynamics 365 cost for a marketing agency?",
+        "answer": "<p>Costs depend on the applications and licences assigned to each user. Business Central Essentials starts at £61.50 per user per month, Sales Professional at £50.00 and Project Operations at £103.80, based on the November 2026 UK list prices shown above. Implementation, integrations and additional capacity are priced separately.</p>"
+    }
+]

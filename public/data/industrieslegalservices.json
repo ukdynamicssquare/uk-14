@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "question": "How can law firms use Microsoft Dynamics 365?",
+        "answer": "<p>As the finance and client relationship backbone of the practice: Business Central for accounting, time and matter billing; Dynamics 365 Sales for enquiries, onboarding, conflict searches and business development. Both work inside Outlook and Teams.</p>"
+    },
+    {
+        "id": 2,
+        "question": "Which CRM software is suitable for law firms in the UK?",
+        "answer": "<p>It depends on firm size and existing systems. Firms on Microsoft 365 often choose Dynamics 365 Sales for its Outlook and Teams integration and configurable legal workflows. Firms wanting one packaged product may prefer a practice management system.</p>"
+    },
+    {
+        "id": 3,
+        "question": "Can Dynamics 365 help law firms manage client relationships?",
+        "answer": "<p>Yes. Dynamics 365 Sales gives every partner one view of each client, logs emails and meetings automatically, tracks panels and cross-selling once configured, and uses Copilot to summarise correspondence.</p>"
+    },
+    {
+        "id": 4,
+        "question": "How can legal firms automate client onboarding and follow-ups?",
+        "answer": "<p>With Power Automate workflows that send engagement letters, request ID checks, assign due diligence tasks and run conflict searches, holding the matter until every step is recorded. Reminders and Copilot drafts handle follow-ups.</p>"
+    },
+    {
+        "id": 5,
+        "question": "What Microsoft solutions help legal services businesses improve operations?",
+        "answer": "<p>Business Central for finance, Dynamics 365 Sales for CRM, Power Automate for onboarding and approvals, Power BI for utilisation and lockup reporting, Copilot Studio for intake agents and, for larger firms, Project Operations for resource planning. Most firms start with one or two.</p>"
+    },
+    {
+        "id": 6,
+        "question": "Is Dynamics 365 suitable for legal client management?",
+        "answer": "<p>Yes, once configured. As standard, it is a general-purpose CRM, so legal fields, conflict search, matter records and onboarding rules are added during implementation. It works alongside specialist case management for litigation or conveyancing rather than replacing it.</p>"
+    },
+    {
+        "id": 7,
+        "question": "How much does Dynamics 365 cost for a UK law firm?",
+        "answer": "<p>From £61.50 per user per month for Business Central Essentials and £50.00 for Sales Professional, plus Business Central Team Members licences from £6.20 for time entry. A 30-fee-earner firm typically pays about £15,600 a year, plus implementation.</p>"
+    },
+    {
+        "id": 8,
+        "question": "Does Dynamics 365 replace our case or document management system?",
+        "answer": "<p>No. Dynamics 365 owns client, business development and financial data; integrations pass client and matter details to your case and document systems, so data is entered once.</p>"
+    }
+]

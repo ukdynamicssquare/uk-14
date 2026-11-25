@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "question": "How can Microsoft Dynamics 365 help business services companies?",
+        "answer": "<p>Dynamics 365 can connect customer management, project delivery and finance. Sales manages leads and client accounts, while Business Central or Project Operations supports project costs, resource time and billing. Power BI can provide reporting on project performance, revenue and utilisation when the required data model is configured.</p>"
+    },
+    {
+        "id": 2,
+        "question": "Which ERP software is suitable for professional services businesses?",
+        "answer": "<p>Business Central is worth considering for firms that need financial management, project accounting, resource capacity and timesheets in one system. Project Operations is more suitable for organisations with complex project delivery, resource scheduling and contract requirements. Larger businesses may also need Dynamics 365 Finance.</p>"
+    },
+    {
+        "id": 3,
+        "question": "What Microsoft Dynamics 365 solutions support service-based businesses?",
+        "answer": "<p>The main options include Business Central, Project Operations and Dynamics 365 Sales. Businesses that provide ongoing customer support can also consider Customer Service, while those managing on-site work may need Field Service. Power Platform and Power BI can extend workflows and reporting.</p>"
+    },
+    {
+        "id": 4,
+        "question": "How can service companies manage projects, finances and customer relationships in one place?",
+        "answer": "<p>A connected solution can link opportunities and customer records with project and financial information. For example, Dynamics 365 Sales and Business Central can be integrated using Dataverse and configured integration mappings. The integration and project creation process need to be designed around the firm's workflows.</p>"
+    },
+    {
+        "id": 5,
+        "question": "Can Business Central help professional services companies manage operations?",
+        "answer": "<p>Yes. Business Central supports project budgets, resource capacity, timesheets, project costs, purchasing, invoicing and financial management. It can suit firms that need project accounting alongside their finance processes. Businesses requiring more advanced resource scheduling and project contract management should also assess Project Operations.</p>"
+    },
+    {
+        "id": 6,
+        "question": "Which Microsoft ERP and CRM solutions are suitable for UK service businesses?",
+        "answer": "<p>Business Central with Dynamics 365 Sales is a potential combination for growing service businesses that need finance, project accounting and customer management. Project Operations may be more appropriate for complex project delivery. Customer Service and Field Service can support additional customer and on-site service requirements.</p>"
+    },
+    {
+        "id": 7,
+        "question": "How much does Dynamics 365 cost for a UK service business?",
+        "answer": "<p>Microsoft UK list prices include Business Central Essentials at £61.50 per user per month, Sales Professional at £50.00 and Project Operations at £103.80, when paid annually and excluding VAT. Customer Service Professional is £38.40 per user per month. Team Members licences are £6.20, subject to permitted-use restrictions. Implementation, integrations, support and additional capacity are separate costs.</p>"
+    },
+    {
+        "id": 8,
+        "question": "Does Dynamics 365 replace a specialist PSA tool?",
+        "answer": "<p>It can replace some professional services automation processes, depending on the firm's requirements. Business Central supports project accounting and resource capacity, while Project Operations provides more extensive project and resource-management capabilities. If a firm already uses a specialist PSA platform, integrating it with Business Central for financial management may be a better option.</p>"
+    },
+    {
+        "id": 9,
+        "question": "Can Dynamics 365 manage multi-entity professional services operations?",
+        "answer": "<p>Business Central supports multiple companies, intercompany processes and financial consolidation. The configuration needs to reflect the firm's legal entities, currencies, reporting requirements and intercompany transactions. Organisations with more complex enterprise financial structures should also assess Dynamics 365 Finance.</p>"
+    },
+    {
+        "id": 10,
+        "question": "Can consultants record time and expenses in Dynamics 365?",
+        "answer": "<p>Yes. Business Central supports project timesheets, while Project Operations provides project time and expense management. The appropriate process depends on the application, user roles and licence permissions. Some AI-assisted time and expense experiences are available as production-ready previews in supported Project Operations environments.</p>"
+    }
+]
