@@ -10,10 +10,9 @@ const LaundReBusinessCentralSustainableDenim = () => {
         type="Article"
         title="QuickBooks to Business Central for Textiles | LaundRe Case Study"
         description="LaundRe replaced QuickBooks with Business Central for denim finishing, avoiding over £32,000 in costs with a projected 172% ROI over three years."
-      >
-        {/* Pending client naming approval: keep noindex until sign-off */}
-        <meta name="robots" content="noindex, follow" />
-      </PageSeo>
+        image="/img/laundre-case-study.png"
+        imageAlt="LaundRe case study – Dynamics Square"
+      />
       <section className="hero hero-new-bg">
         <div className="container">
           <div className="row justify-content-center">
@@ -72,7 +71,7 @@ const LaundReBusinessCentralSustainableDenim = () => {
             <div className="col-lg-6 align-self-center">
               <div className="busine_service_bottom-left custom012">
                 <Image
-                  src="/img/case-v-00.png"
+                  src="/img/case-v-44.png"
                   className="fix-im"
                   alt="LaundRe business overview"
                   width={400} height={450}
@@ -206,7 +205,7 @@ const LaundReBusinessCentralSustainableDenim = () => {
           </div>
           <div className="row gx-5">
             <div className="col-lg-6 align-self-center">
-              <Image src="/img/case-v-01.png" alt="LaundRe Business Central for sustainable denim requirements" width={633} height={561} />
+              <Image src="/img/case-v-45.png" alt="LaundRe Business Central for sustainable denim requirements" width={633} height={561} />
             </div>
             <div className="col-lg-6 align-self-center">
               <div className="ms-c-po">
@@ -275,7 +274,7 @@ const LaundReBusinessCentralSustainableDenim = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="ce-image-ce">
-                <Image src="/img/case-v-02.png" alt="LaundRe Business Central for sustainable denim" width={863} height={597} className="img-fluid" />
+                <Image src="/img/case-v-46.png" alt="LaundRe Business Central for sustainable denim" width={986} height={716} className="img-fluid" />
               </div>
             </div>
           </div>

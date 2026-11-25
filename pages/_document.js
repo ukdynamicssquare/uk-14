@@ -27,10 +27,7 @@ class MyDocument extends Document {
           <meta property="og:site_name" content="Dynamics Square UK" />
           <meta name="twitter:site" content="@dsquare_uk" />
           <meta name="msvalidate.01" content="EE56DA95B952D734B4521A0EFA1F0E8B" />
-          <meta
-            name="google-site-verification"
-            content="uAsN7nCfnYQszC3rCTid53T7TSRjV1aotOCInjwu6lI"
-          />
+          <meta name="google-site-verification" content="7jLl3Qq0n43g-Po3-QmFLQO6EfNlTSFuZin_ho8VCpE" />
           {/* Microsoft Clarity is loaded from _app.js with strategy="lazyOnload" */}
         </Head>
         <body>
