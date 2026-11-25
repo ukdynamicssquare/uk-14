@@ -341,7 +341,7 @@ const Healthcare = () => {
             <div className="col-lg-1 order-2"></div>
             <div className="col-lg-6 order-1">
               <div className="supprt-header-new-one supprt-header-new-one-ul">
-                <h2>AI-Powered Dynamics 365 for Healthcare: Smarter Business Management</h2>
+                <h2>Dynamics 365 for Healthcare: Smarter Business Management</h2>
                 <p>Healthcare organisations need reliable systems to manage business operations, coordinate teams and respond to changing service demands. Disconnected applications, manual processes and limited reporting can make it difficult to maintain visibility across departments.</p>
                 <p><Link href="/products/microsoft-dynamics-365/" className="u-i">Microsoft Dynamics 365</Link> offers ERP and CRM applications that help healthcare organisations manage financial operations, customer relationships, inventory, service requests and business data. Combined with AI-powered capabilities, Microsoft Cloud and <Link href="/products/microsoft-power-platform/" className="u-i">Power Platform</Link>, these solutions can help automate routine tasks, improve productivity and support better business decisions.</p>
                 <p>As a trusted <Link href="/microsoft-partners-uk/" className="u-i">Microsoft Dynamics 365 partner in the UK</Link>, Dynamics Square helps healthcare businesses identify suitable solutions, implement business applications and integrate systems around their operational requirements. Whether you need to improve financial control, streamline administration or adopt AI-powered capabilities, our team can help you plan the right approach.</p>

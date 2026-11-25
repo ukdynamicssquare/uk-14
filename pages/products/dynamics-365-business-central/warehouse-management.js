@@ -56,8 +56,8 @@ const WarehouseManagement = () => {
     <>
        <PageSeo
          type="Service"
-         title="Warehouse Management in Business Central (WMS) | Inventory Management"
-         description="Optimise warehouse operations with D365 Business Central for efficient inventory management, streamlined logistics and boost efficiency."
+         title="Business Central for Warehouse Management | Dynamics Square UK"
+         description="Optimise warehouse operations with Business Central warehouse management. Streamline inventory, picking, put-away and stock control with Dynamics Square UK."
          image="https://www.dynamicssquare.co.uk/img/BC-Warehouse-Management.png"
          faqs={PAGE_FAQS}
        />
@@ -66,7 +66,7 @@ const WarehouseManagement = () => {
           <div className='row justify-content-center'>
             <div className='col-lg-8'>
               <div className='solution-new-banner-one-content'>
-                <h1>Dynamics 365 Business Central Warehouse Management</h1>
+                <h1>Dynamics 365 Business Central for Warehouse Management</h1>
                 <span className='large-heading'>Command Every Corner of Your Warehouse with AI-powered Solution</span>
                 <p>Warehousing slips into chaos when systems don’t talk. Dynamics 365 Business Central Warehouse Management turns that noise into clarity. This ensures every scan, stock move, and shipment drives precision, not confusion.</p>
                 <div className="text-center">

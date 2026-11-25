@@ -177,7 +177,7 @@ const MarketingCreativeAgencies = () => {
       <PageSeo
         type="Service"
         title="Dynamics 365 for Marketing & Creative Agencies | Dynamics Square UK"
-        description="Dynamics 365 for UK marketing and creative agencies. Connect pitches, job budgets, resource planning, timesheets and billing with Sales and Business Central."
+        description="Manage clients, projects, finances and creative workflows with Microsoft Dynamics 365 for marketing and creative agencies. Explore tailored solutions with Dynamics Square UK."
         image="/img/professional-services-01.png"
         faqs={faqData}
       >
