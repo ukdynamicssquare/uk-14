@@ -179,6 +179,11 @@
       "source": "/blog/author/bhumik-sharma/",
       "destination": "/blog/author/",
       "statusCode": 301
+    },
+    {
+      "source": "/blog/microsoft-dynamics-365-partners-in-the-uk/",
+      "destination": "/",
+      "statusCode": 301
     }
   ]
 }
